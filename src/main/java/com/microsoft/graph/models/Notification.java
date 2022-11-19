@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class Notification extends Entity implements Parsable {
     /** Sets how long (in seconds) this notification content will stay in each platform's notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification will stay in the user's Windows Action Center. */
     private Integer _displayTimeToLive;
@@ -24,9 +25,10 @@ public class Notification extends Entity implements Parsable {
     /** Target policy object handles notification delivery policy for endpoint types that should be targeted (Windows, iOS, Android and WebPush) for the given user. */
     private TargetPolicyEndpoints _targetPolicy;
     /**
-     * Instantiates a new Notification and sets the default values.
+     * Instantiates a new notification and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Notification() {
         super();
         this.setOdataType("#microsoft.graph.notification");
@@ -34,7 +36,7 @@ public class Notification extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Notification
+     * @return a notification
      */
     @javax.annotation.Nonnull
     public static Notification createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -64,15 +66,15 @@ public class Notification extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Notification currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayTimeToLive", (n) -> { currentObject.setDisplayTimeToLive(n.getIntegerValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("groupName", (n) -> { currentObject.setGroupName(n.getStringValue()); });
-            this.put("payload", (n) -> { currentObject.setPayload(n.getObjectValue(PayloadTypes::createFromDiscriminatorValue)); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getEnumValue(Priority.class)); });
-            this.put("targetHostName", (n) -> { currentObject.setTargetHostName(n.getStringValue()); });
-            this.put("targetPolicy", (n) -> { currentObject.setTargetPolicy(n.getObjectValue(TargetPolicyEndpoints::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayTimeToLive", (n) -> { currentObject.setDisplayTimeToLive(n.getIntegerValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("groupName", (n) -> { currentObject.setGroupName(n.getStringValue()); });
+        deserializerMap.put("payload", (n) -> { currentObject.setPayload(n.getObjectValue(PayloadTypes::createFromDiscriminatorValue)); });
+        deserializerMap.put("priority", (n) -> { currentObject.setPriority(n.getEnumValue(Priority.class)); });
+        deserializerMap.put("targetHostName", (n) -> { currentObject.setTargetHostName(n.getStringValue()); });
+        deserializerMap.put("targetPolicy", (n) -> { currentObject.setTargetPolicy(n.getObjectValue(TargetPolicyEndpoints::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the groupName property value. The name of the group that this notification belongs to. It is set by the developer for the purpose of grouping notifications together.
@@ -119,6 +121,7 @@ public class Notification extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +138,7 @@ public class Notification extends Entity implements Parsable {
      * @param value Value to set for the displayTimeToLive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayTimeToLive(@javax.annotation.Nullable final Integer value) {
         this._displayTimeToLive = value;
     }
@@ -143,6 +147,7 @@ public class Notification extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -151,6 +156,7 @@ public class Notification extends Entity implements Parsable {
      * @param value Value to set for the groupName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupName(@javax.annotation.Nullable final String value) {
         this._groupName = value;
     }
@@ -159,6 +165,7 @@ public class Notification extends Entity implements Parsable {
      * @param value Value to set for the payload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayload(@javax.annotation.Nullable final PayloadTypes value) {
         this._payload = value;
     }
@@ -167,6 +174,7 @@ public class Notification extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Priority value) {
         this._priority = value;
     }
@@ -175,6 +183,7 @@ public class Notification extends Entity implements Parsable {
      * @param value Value to set for the targetHostName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetHostName(@javax.annotation.Nullable final String value) {
         this._targetHostName = value;
     }
@@ -183,6 +192,7 @@ public class Notification extends Entity implements Parsable {
      * @param value Value to set for the targetPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetPolicy(@javax.annotation.Nullable final TargetPolicyEndpoints value) {
         this._targetPolicy = value;
     }

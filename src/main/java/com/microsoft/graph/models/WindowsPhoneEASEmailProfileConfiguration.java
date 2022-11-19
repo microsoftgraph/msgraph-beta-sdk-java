@@ -32,6 +32,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * Instantiates a new WindowsPhoneEASEmailProfileConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsPhoneEASEmailProfileConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsPhoneEASEmailProfileConfiguration");
@@ -93,18 +94,18 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPhoneEASEmailProfileConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
-            this.put("applyOnlyToWindowsPhone81", (n) -> { currentObject.setApplyOnlyToWindowsPhone81(n.getBooleanValue()); });
-            this.put("durationOfEmailToSync", (n) -> { currentObject.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration.class)); });
-            this.put("emailAddressSource", (n) -> { currentObject.setEmailAddressSource(n.getEnumValue(UserEmailSource.class)); });
-            this.put("emailSyncSchedule", (n) -> { currentObject.setEmailSyncSchedule(n.getEnumValue(EmailSyncSchedule.class)); });
-            this.put("hostName", (n) -> { currentObject.setHostName(n.getStringValue()); });
-            this.put("requireSsl", (n) -> { currentObject.setRequireSsl(n.getBooleanValue()); });
-            this.put("syncCalendar", (n) -> { currentObject.setSyncCalendar(n.getBooleanValue()); });
-            this.put("syncContacts", (n) -> { currentObject.setSyncContacts(n.getBooleanValue()); });
-            this.put("syncTasks", (n) -> { currentObject.setSyncTasks(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
+        deserializerMap.put("applyOnlyToWindowsPhone81", (n) -> { currentObject.setApplyOnlyToWindowsPhone81(n.getBooleanValue()); });
+        deserializerMap.put("durationOfEmailToSync", (n) -> { currentObject.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration.class)); });
+        deserializerMap.put("emailAddressSource", (n) -> { currentObject.setEmailAddressSource(n.getEnumValue(UserEmailSource.class)); });
+        deserializerMap.put("emailSyncSchedule", (n) -> { currentObject.setEmailSyncSchedule(n.getEnumValue(EmailSyncSchedule.class)); });
+        deserializerMap.put("hostName", (n) -> { currentObject.setHostName(n.getStringValue()); });
+        deserializerMap.put("requireSsl", (n) -> { currentObject.setRequireSsl(n.getBooleanValue()); });
+        deserializerMap.put("syncCalendar", (n) -> { currentObject.setSyncCalendar(n.getBooleanValue()); });
+        deserializerMap.put("syncContacts", (n) -> { currentObject.setSyncContacts(n.getBooleanValue()); });
+        deserializerMap.put("syncTasks", (n) -> { currentObject.setSyncTasks(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hostName property value. Exchange location that (URL) that the native mail app connects to.
@@ -151,11 +152,11 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("accountName", this.getAccountName());
-        writer.writeBooleanValue("applyOnlyToWindowsPhone81", this.getApplyOnlyToWindowsPhone81());
         writer.writeEnumValue("durationOfEmailToSync", this.getDurationOfEmailToSync());
         writer.writeEnumValue("emailAddressSource", this.getEmailAddressSource());
         writer.writeEnumValue("emailSyncSchedule", this.getEmailSyncSchedule());
@@ -170,6 +171,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * @param value Value to set for the accountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountName(@javax.annotation.Nullable final String value) {
         this._accountName = value;
     }
@@ -178,6 +180,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * @param value Value to set for the applyOnlyToWindowsPhone81 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplyOnlyToWindowsPhone81(@javax.annotation.Nullable final Boolean value) {
         this._applyOnlyToWindowsPhone81 = value;
     }
@@ -186,6 +189,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * @param value Value to set for the durationOfEmailToSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationOfEmailToSync(@javax.annotation.Nullable final EmailSyncDuration value) {
         this._durationOfEmailToSync = value;
     }
@@ -194,6 +198,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * @param value Value to set for the emailAddressSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddressSource(@javax.annotation.Nullable final UserEmailSource value) {
         this._emailAddressSource = value;
     }
@@ -202,6 +207,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * @param value Value to set for the emailSyncSchedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailSyncSchedule(@javax.annotation.Nullable final EmailSyncSchedule value) {
         this._emailSyncSchedule = value;
     }
@@ -210,6 +216,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * @param value Value to set for the hostName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHostName(@javax.annotation.Nullable final String value) {
         this._hostName = value;
     }
@@ -218,6 +225,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * @param value Value to set for the requireSsl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireSsl(@javax.annotation.Nullable final Boolean value) {
         this._requireSsl = value;
     }
@@ -226,6 +234,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * @param value Value to set for the syncCalendar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSyncCalendar(@javax.annotation.Nullable final Boolean value) {
         this._syncCalendar = value;
     }
@@ -234,6 +243,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * @param value Value to set for the syncContacts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSyncContacts(@javax.annotation.Nullable final Boolean value) {
         this._syncContacts = value;
     }
@@ -242,6 +252,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
      * @param value Value to set for the syncTasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSyncTasks(@javax.annotation.Nullable final Boolean value) {
         this._syncTasks = value;
     }

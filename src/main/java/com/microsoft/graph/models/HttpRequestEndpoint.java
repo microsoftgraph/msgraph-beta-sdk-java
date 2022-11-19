@@ -14,6 +14,7 @@ public class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration im
      * Instantiates a new HttpRequestEndpoint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public HttpRequestEndpoint() {
         super();
         this.setOdataType("#microsoft.graph.httpRequestEndpoint");
@@ -35,9 +36,9 @@ public class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HttpRequestEndpoint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("targetUrl", (n) -> { currentObject.setTargetUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("targetUrl", (n) -> { currentObject.setTargetUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the targetUrl property value. The targetUrl property
@@ -52,6 +53,7 @@ public class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class HttpRequestEndpoint extends CustomExtensionEndpointConfiguration im
      * @param value Value to set for the targetUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetUrl(@javax.annotation.Nullable final String value) {
         this._targetUrl = value;
     }

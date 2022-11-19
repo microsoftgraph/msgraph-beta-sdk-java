@@ -21,6 +21,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * Instantiates a new media and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Media() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.media");
@@ -50,11 +51,11 @@ public class Media implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Media currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("isTranscriptionShown", (n) -> { currentObject.setIsTranscriptionShown(n.getBooleanValue()); });
-            this.put("mediaSource", (n) -> { currentObject.setMediaSource(n.getObjectValue(MediaSource::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("isTranscriptionShown", (n) -> { currentObject.setIsTranscriptionShown(n.getBooleanValue()); });
+        deserializerMap.put("mediaSource", (n) -> { currentObject.setMediaSource(n.getObjectValue(MediaSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isTranscriptionShown property value. If a file has a transcript, this setting controls if the closed captions / transcription for the media file should be shown to people during viewing. Read-Write.
@@ -85,6 +86,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isTranscriptionShown", this.getIsTranscriptionShown());
@@ -97,6 +99,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isTranscriptionShown property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsTranscriptionShown(@javax.annotation.Nullable final Boolean value) {
         this._isTranscriptionShown = value;
     }
@@ -113,6 +117,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mediaSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaSource(@javax.annotation.Nullable final MediaSource value) {
         this._mediaSource = value;
     }
@@ -121,6 +126,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

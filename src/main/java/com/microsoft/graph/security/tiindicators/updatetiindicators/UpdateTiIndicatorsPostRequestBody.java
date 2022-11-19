@@ -19,6 +19,7 @@ public class UpdateTiIndicatorsPostRequestBody implements AdditionalDataHolder, 
      * Instantiates a new updateTiIndicatorsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateTiIndicatorsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -47,9 +48,9 @@ public class UpdateTiIndicatorsPostRequestBody implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateTiIndicatorsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(TiIndicator::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getCollectionOfObjectValues(TiIndicator::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The value property
@@ -64,6 +65,7 @@ public class UpdateTiIndicatorsPostRequestBody implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("value", this.getValue());
@@ -74,6 +76,7 @@ public class UpdateTiIndicatorsPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +85,7 @@ public class UpdateTiIndicatorsPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final java.util.List<TiIndicator> value) {
         this._value = value;
     }

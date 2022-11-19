@@ -27,6 +27,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      * Instantiates a new templateParameter and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TemplateParameter() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.managedTenants.templateParameter");
@@ -72,14 +73,14 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TemplateParameter currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("jsonAllowedValues", (n) -> { currentObject.setJsonAllowedValues(n.getStringValue()); });
-            this.put("jsonDefaultValue", (n) -> { currentObject.setJsonDefaultValue(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("valueType", (n) -> { currentObject.setValueType(n.getEnumValue(ManagementParameterValueType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("jsonAllowedValues", (n) -> { currentObject.setJsonAllowedValues(n.getStringValue()); });
+        deserializerMap.put("jsonDefaultValue", (n) -> { currentObject.setJsonDefaultValue(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("valueType", (n) -> { currentObject.setValueType(n.getEnumValue(ManagementParameterValueType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the jsonAllowedValues property value. The allowed values for the template parameter represented by a serialized string of JSON. Optional. Read-only.
@@ -118,6 +119,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -133,6 +135,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +144,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -149,6 +153,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -157,6 +162,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the jsonAllowedValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJsonAllowedValues(@javax.annotation.Nullable final String value) {
         this._jsonAllowedValues = value;
     }
@@ -165,6 +171,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the jsonDefaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJsonDefaultValue(@javax.annotation.Nullable final String value) {
         this._jsonDefaultValue = value;
     }
@@ -173,6 +180,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -181,6 +189,7 @@ public class TemplateParameter implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the valueType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValueType(@javax.annotation.Nullable final ManagementParameterValueType value) {
         this._valueType = value;
     }

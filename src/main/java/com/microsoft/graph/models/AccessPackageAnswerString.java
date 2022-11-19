@@ -14,6 +14,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
      * Instantiates a new AccessPackageAnswerString and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageAnswerString() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageAnswerString");
@@ -35,9 +36,9 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAnswerString currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The value stored on the requestor's user profile, if this answer is configured to be stored as a specific attribute.
@@ -52,6 +53,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class AccessPackageAnswerString extends AccessPackageAnswer implements Pa
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final String value) {
         this._value = value;
     }

@@ -32,6 +32,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
      * Instantiates a new AndroidWorkProfileEnterpriseWiFiConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidWorkProfileEnterpriseWiFiConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidWorkProfileEnterpriseWiFiConfiguration");
@@ -69,18 +70,18 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidWorkProfileEnterpriseWiFiConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod.class)); });
-            this.put("eapType", (n) -> { currentObject.setEapType(n.getEnumValue(AndroidEapType.class)); });
-            this.put("identityCertificateForClientAuthentication", (n) -> { currentObject.setIdentityCertificateForClientAuthentication(n.getObjectValue(AndroidWorkProfileCertificateProfileBase::createFromDiscriminatorValue)); });
-            this.put("innerAuthenticationProtocolForEapTtls", (n) -> { currentObject.setInnerAuthenticationProtocolForEapTtls(n.getEnumValue(NonEapAuthenticationMethodForEapTtlsType.class)); });
-            this.put("innerAuthenticationProtocolForPeap", (n) -> { currentObject.setInnerAuthenticationProtocolForPeap(n.getEnumValue(NonEapAuthenticationMethodForPeap.class)); });
-            this.put("outerIdentityPrivacyTemporaryValue", (n) -> { currentObject.setOuterIdentityPrivacyTemporaryValue(n.getStringValue()); });
-            this.put("proxyAutomaticConfigurationUrl", (n) -> { currentObject.setProxyAutomaticConfigurationUrl(n.getStringValue()); });
-            this.put("proxySettings", (n) -> { currentObject.setProxySettings(n.getEnumValue(WiFiProxySetting.class)); });
-            this.put("rootCertificateForServerValidation", (n) -> { currentObject.setRootCertificateForServerValidation(n.getObjectValue(AndroidWorkProfileTrustedRootCertificate::createFromDiscriminatorValue)); });
-            this.put("trustedServerCertificateNames", (n) -> { currentObject.setTrustedServerCertificateNames(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod.class)); });
+        deserializerMap.put("eapType", (n) -> { currentObject.setEapType(n.getEnumValue(AndroidEapType.class)); });
+        deserializerMap.put("identityCertificateForClientAuthentication", (n) -> { currentObject.setIdentityCertificateForClientAuthentication(n.getObjectValue(AndroidWorkProfileCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("innerAuthenticationProtocolForEapTtls", (n) -> { currentObject.setInnerAuthenticationProtocolForEapTtls(n.getEnumValue(NonEapAuthenticationMethodForEapTtlsType.class)); });
+        deserializerMap.put("innerAuthenticationProtocolForPeap", (n) -> { currentObject.setInnerAuthenticationProtocolForPeap(n.getEnumValue(NonEapAuthenticationMethodForPeap.class)); });
+        deserializerMap.put("outerIdentityPrivacyTemporaryValue", (n) -> { currentObject.setOuterIdentityPrivacyTemporaryValue(n.getStringValue()); });
+        deserializerMap.put("proxyAutomaticConfigurationUrl", (n) -> { currentObject.setProxyAutomaticConfigurationUrl(n.getStringValue()); });
+        deserializerMap.put("proxySettings", (n) -> { currentObject.setProxySettings(n.getEnumValue(WiFiProxySetting.class)); });
+        deserializerMap.put("rootCertificateForServerValidation", (n) -> { currentObject.setRootCertificateForServerValidation(n.getObjectValue(AndroidWorkProfileTrustedRootCertificate::createFromDiscriminatorValue)); });
+        deserializerMap.put("trustedServerCertificateNames", (n) -> { currentObject.setTrustedServerCertificateNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the identityCertificateForClientAuthentication property value. Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication). This is the certificate presented by client to the Wi-Fi endpoint. The authentication server sitting behind the Wi-Fi endpoint must accept this certificate to successfully establish a Wi-Fi connection.
@@ -151,6 +152,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -170,6 +172,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final WiFiAuthenticationMethod value) {
         this._authenticationMethod = value;
     }
@@ -178,6 +181,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
      * @param value Value to set for the eapType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEapType(@javax.annotation.Nullable final AndroidEapType value) {
         this._eapType = value;
     }
@@ -186,6 +190,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
      * @param value Value to set for the identityCertificateForClientAuthentication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final AndroidWorkProfileCertificateProfileBase value) {
         this._identityCertificateForClientAuthentication = value;
     }
@@ -194,6 +199,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
      * @param value Value to set for the innerAuthenticationProtocolForEapTtls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInnerAuthenticationProtocolForEapTtls(@javax.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
         this._innerAuthenticationProtocolForEapTtls = value;
     }
@@ -202,6 +208,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
      * @param value Value to set for the innerAuthenticationProtocolForPeap property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInnerAuthenticationProtocolForPeap(@javax.annotation.Nullable final NonEapAuthenticationMethodForPeap value) {
         this._innerAuthenticationProtocolForPeap = value;
     }
@@ -210,6 +217,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
      * @param value Value to set for the outerIdentityPrivacyTemporaryValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOuterIdentityPrivacyTemporaryValue(@javax.annotation.Nullable final String value) {
         this._outerIdentityPrivacyTemporaryValue = value;
     }
@@ -218,6 +226,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
      * @param value Value to set for the proxyAutomaticConfigurationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyAutomaticConfigurationUrl(@javax.annotation.Nullable final String value) {
         this._proxyAutomaticConfigurationUrl = value;
     }
@@ -226,6 +235,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
      * @param value Value to set for the proxySettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxySettings(@javax.annotation.Nullable final WiFiProxySetting value) {
         this._proxySettings = value;
     }
@@ -234,6 +244,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
      * @param value Value to set for the rootCertificateForServerValidation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootCertificateForServerValidation(@javax.annotation.Nullable final AndroidWorkProfileTrustedRootCertificate value) {
         this._rootCertificateForServerValidation = value;
     }
@@ -242,6 +253,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
      * @param value Value to set for the trustedServerCertificateNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrustedServerCertificateNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._trustedServerCertificateNames = value;
     }

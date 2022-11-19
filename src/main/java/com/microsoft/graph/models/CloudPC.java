@@ -8,11 +8,14 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class CloudPC extends Entity implements Parsable {
     /** The Azure Active Directory (Azure AD) device ID of the Cloud PC. */
     private String _aadDeviceId;
     /** The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC is able to be connected or not. */
     private CloudPcConnectivityResult _connectivityResult;
+    /** The diskEncryptionState property */
+    private CloudPcDiskEncryptionState _diskEncryptionState;
     /** The display name of the Cloud PC. */
     private String _displayName;
     /** The date and time when the grace period ends and reprovisioning/deprovisioning happens. Required only if the status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
@@ -52,9 +55,10 @@ public class CloudPC extends Entity implements Parsable {
     /** The user principal name (UPN) of the user assigned to the Cloud PC. */
     private String _userPrincipalName;
     /**
-     * Instantiates a new CloudPC and sets the default values.
+     * Instantiates a new cloudPC and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPC() {
         super();
         this.setOdataType("#microsoft.graph.cloudPC");
@@ -62,7 +66,7 @@ public class CloudPC extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPC
+     * @return a cloudPC
      */
     @javax.annotation.Nonnull
     public static CloudPC createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -86,6 +90,14 @@ public class CloudPC extends Entity implements Parsable {
         return this._connectivityResult;
     }
     /**
+     * Gets the diskEncryptionState property value. The diskEncryptionState property
+     * @return a cloudPcDiskEncryptionState
+     */
+    @javax.annotation.Nullable
+    public CloudPcDiskEncryptionState getDiskEncryptionState() {
+        return this._diskEncryptionState;
+    }
+    /**
      * Gets the displayName property value. The display name of the Cloud PC.
      * @return a string
      */
@@ -100,29 +112,30 @@ public class CloudPC extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPC currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("aadDeviceId", (n) -> { currentObject.setAadDeviceId(n.getStringValue()); });
-            this.put("connectivityResult", (n) -> { currentObject.setConnectivityResult(n.getObjectValue(CloudPcConnectivityResult::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("gracePeriodEndDateTime", (n) -> { currentObject.setGracePeriodEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("imageDisplayName", (n) -> { currentObject.setImageDisplayName(n.getStringValue()); });
-            this.put("lastLoginResult", (n) -> { currentObject.setLastLoginResult(n.getObjectValue(CloudPcLoginResult::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastRemoteActionResult", (n) -> { currentObject.setLastRemoteActionResult(n.getObjectValue(CloudPcRemoteActionResult::createFromDiscriminatorValue)); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-            this.put("managedDeviceName", (n) -> { currentObject.setManagedDeviceName(n.getStringValue()); });
-            this.put("onPremisesConnectionName", (n) -> { currentObject.setOnPremisesConnectionName(n.getStringValue()); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getEnumValue(CloudPcOperatingSystem.class)); });
-            this.put("provisioningPolicyId", (n) -> { currentObject.setProvisioningPolicyId(n.getStringValue()); });
-            this.put("provisioningPolicyName", (n) -> { currentObject.setProvisioningPolicyName(n.getStringValue()); });
-            this.put("servicePlanId", (n) -> { currentObject.setServicePlanId(n.getStringValue()); });
-            this.put("servicePlanName", (n) -> { currentObject.setServicePlanName(n.getStringValue()); });
-            this.put("servicePlanType", (n) -> { currentObject.setServicePlanType(n.getEnumValue(CloudPcServicePlanType.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CloudPcStatus.class)); });
-            this.put("statusDetails", (n) -> { currentObject.setStatusDetails(n.getObjectValue(CloudPcStatusDetails::createFromDiscriminatorValue)); });
-            this.put("userAccountType", (n) -> { currentObject.setUserAccountType(n.getEnumValue(CloudPcUserAccountType.class)); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("aadDeviceId", (n) -> { currentObject.setAadDeviceId(n.getStringValue()); });
+        deserializerMap.put("connectivityResult", (n) -> { currentObject.setConnectivityResult(n.getObjectValue(CloudPcConnectivityResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("diskEncryptionState", (n) -> { currentObject.setDiskEncryptionState(n.getEnumValue(CloudPcDiskEncryptionState.class)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("gracePeriodEndDateTime", (n) -> { currentObject.setGracePeriodEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("imageDisplayName", (n) -> { currentObject.setImageDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastLoginResult", (n) -> { currentObject.setLastLoginResult(n.getObjectValue(CloudPcLoginResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastRemoteActionResult", (n) -> { currentObject.setLastRemoteActionResult(n.getObjectValue(CloudPcRemoteActionResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
+        deserializerMap.put("managedDeviceName", (n) -> { currentObject.setManagedDeviceName(n.getStringValue()); });
+        deserializerMap.put("onPremisesConnectionName", (n) -> { currentObject.setOnPremisesConnectionName(n.getStringValue()); });
+        deserializerMap.put("osVersion", (n) -> { currentObject.setOsVersion(n.getEnumValue(CloudPcOperatingSystem.class)); });
+        deserializerMap.put("provisioningPolicyId", (n) -> { currentObject.setProvisioningPolicyId(n.getStringValue()); });
+        deserializerMap.put("provisioningPolicyName", (n) -> { currentObject.setProvisioningPolicyName(n.getStringValue()); });
+        deserializerMap.put("servicePlanId", (n) -> { currentObject.setServicePlanId(n.getStringValue()); });
+        deserializerMap.put("servicePlanName", (n) -> { currentObject.setServicePlanName(n.getStringValue()); });
+        deserializerMap.put("servicePlanType", (n) -> { currentObject.setServicePlanType(n.getEnumValue(CloudPcServicePlanType.class)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CloudPcStatus.class)); });
+        deserializerMap.put("statusDetails", (n) -> { currentObject.setStatusDetails(n.getObjectValue(CloudPcStatusDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("userAccountType", (n) -> { currentObject.setUserAccountType(n.getEnumValue(CloudPcUserAccountType.class)); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the gracePeriodEndDateTime property value. The date and time when the grace period ends and reprovisioning/deprovisioning happens. Required only if the status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -273,11 +286,13 @@ public class CloudPC extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("aadDeviceId", this.getAadDeviceId());
         writer.writeObjectValue("connectivityResult", this.getConnectivityResult());
+        writer.writeEnumValue("diskEncryptionState", this.getDiskEncryptionState());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("gracePeriodEndDateTime", this.getGracePeriodEndDateTime());
         writer.writeStringValue("imageDisplayName", this.getImageDisplayName());
@@ -303,6 +318,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the aadDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAadDeviceId(@javax.annotation.Nullable final String value) {
         this._aadDeviceId = value;
     }
@@ -311,14 +327,25 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the connectivityResult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectivityResult(@javax.annotation.Nullable final CloudPcConnectivityResult value) {
         this._connectivityResult = value;
+    }
+    /**
+     * Sets the diskEncryptionState property value. The diskEncryptionState property
+     * @param value Value to set for the diskEncryptionState property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDiskEncryptionState(@javax.annotation.Nullable final CloudPcDiskEncryptionState value) {
+        this._diskEncryptionState = value;
     }
     /**
      * Sets the displayName property value. The display name of the Cloud PC.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -327,6 +354,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the gracePeriodEndDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGracePeriodEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._gracePeriodEndDateTime = value;
     }
@@ -335,6 +363,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the imageDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImageDisplayName(@javax.annotation.Nullable final String value) {
         this._imageDisplayName = value;
     }
@@ -343,6 +372,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the lastLoginResult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastLoginResult(@javax.annotation.Nullable final CloudPcLoginResult value) {
         this._lastLoginResult = value;
     }
@@ -351,6 +381,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -359,6 +390,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the lastRemoteActionResult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastRemoteActionResult(@javax.annotation.Nullable final CloudPcRemoteActionResult value) {
         this._lastRemoteActionResult = value;
     }
@@ -367,6 +399,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
     }
@@ -375,6 +408,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceName(@javax.annotation.Nullable final String value) {
         this._managedDeviceName = value;
     }
@@ -383,6 +417,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the onPremisesConnectionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesConnectionName(@javax.annotation.Nullable final String value) {
         this._onPremisesConnectionName = value;
     }
@@ -391,6 +426,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final CloudPcOperatingSystem value) {
         this._osVersion = value;
     }
@@ -399,6 +435,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the provisioningPolicyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisioningPolicyId(@javax.annotation.Nullable final String value) {
         this._provisioningPolicyId = value;
     }
@@ -407,6 +444,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the provisioningPolicyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisioningPolicyName(@javax.annotation.Nullable final String value) {
         this._provisioningPolicyName = value;
     }
@@ -415,6 +453,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the servicePlanId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePlanId(@javax.annotation.Nullable final String value) {
         this._servicePlanId = value;
     }
@@ -423,6 +462,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the servicePlanName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePlanName(@javax.annotation.Nullable final String value) {
         this._servicePlanName = value;
     }
@@ -431,6 +471,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the servicePlanType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePlanType(@javax.annotation.Nullable final CloudPcServicePlanType value) {
         this._servicePlanType = value;
     }
@@ -439,6 +480,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final CloudPcStatus value) {
         this._status = value;
     }
@@ -447,6 +489,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the statusDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatusDetails(@javax.annotation.Nullable final CloudPcStatusDetails value) {
         this._statusDetails = value;
     }
@@ -455,6 +498,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the userAccountType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAccountType(@javax.annotation.Nullable final CloudPcUserAccountType value) {
         this._userAccountType = value;
     }
@@ -463,6 +507,7 @@ public class CloudPC extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

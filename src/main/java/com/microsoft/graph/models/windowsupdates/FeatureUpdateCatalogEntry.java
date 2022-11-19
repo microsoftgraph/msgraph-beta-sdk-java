@@ -14,6 +14,7 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      * Instantiates a new FeatureUpdateCatalogEntry and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FeatureUpdateCatalogEntry() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.featureUpdateCatalogEntry");
@@ -35,9 +36,9 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FeatureUpdateCatalogEntry currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the version property value. The version of the feature update. Read-only.
@@ -52,6 +53,7 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

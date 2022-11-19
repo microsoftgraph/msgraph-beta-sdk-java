@@ -14,6 +14,7 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
      * Instantiates a new EducationIdentityCreationConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationIdentityCreationConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.educationIdentityCreationConfiguration");
@@ -35,9 +36,9 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationIdentityCreationConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("userDomains", (n) -> { currentObject.setUserDomains(n.getCollectionOfObjectValues(EducationIdentityDomain::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("userDomains", (n) -> { currentObject.setUserDomains(n.getCollectionOfObjectValues(EducationIdentityDomain::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the userDomains property value. The userDomains property
@@ -52,6 +53,7 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
      * @param value Value to set for the userDomains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDomains(@javax.annotation.Nullable final java.util.List<EducationIdentityDomain> value) {
         this._userDomains = value;
     }

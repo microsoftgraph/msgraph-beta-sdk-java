@@ -25,6 +25,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * Instantiates a new GroupPolicyUploadedDefinitionFile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyUploadedDefinitionFile() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyUploadedDefinitionFile");
@@ -62,14 +63,14 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyUploadedDefinitionFile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("defaultLanguageCode", (n) -> { currentObject.setDefaultLanguageCode(n.getStringValue()); });
-            this.put("groupPolicyOperations", (n) -> { currentObject.setGroupPolicyOperations(n.getCollectionOfObjectValues(GroupPolicyOperation::createFromDiscriminatorValue)); });
-            this.put("groupPolicyUploadedLanguageFiles", (n) -> { currentObject.setGroupPolicyUploadedLanguageFiles(n.getCollectionOfObjectValues(GroupPolicyUploadedLanguageFile::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(GroupPolicyUploadedDefinitionFileStatus.class)); });
-            this.put("uploadDateTime", (n) -> { currentObject.setUploadDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("defaultLanguageCode", (n) -> { currentObject.setDefaultLanguageCode(n.getStringValue()); });
+        deserializerMap.put("groupPolicyOperations", (n) -> { currentObject.setGroupPolicyOperations(n.getCollectionOfObjectValues(GroupPolicyOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("groupPolicyUploadedLanguageFiles", (n) -> { currentObject.setGroupPolicyUploadedLanguageFiles(n.getCollectionOfObjectValues(GroupPolicyUploadedLanguageFile::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(GroupPolicyUploadedDefinitionFileStatus.class)); });
+        deserializerMap.put("uploadDateTime", (n) -> { currentObject.setUploadDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupPolicyOperations property value. The list of operations on the uploaded ADMX file.
@@ -108,6 +109,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +125,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
         this._content = value;
     }
@@ -131,6 +134,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * @param value Value to set for the defaultLanguageCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultLanguageCode(@javax.annotation.Nullable final String value) {
         this._defaultLanguageCode = value;
     }
@@ -139,6 +143,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * @param value Value to set for the groupPolicyOperations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyOperations(@javax.annotation.Nullable final java.util.List<GroupPolicyOperation> value) {
         this._groupPolicyOperations = value;
     }
@@ -147,6 +152,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * @param value Value to set for the groupPolicyUploadedLanguageFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyUploadedLanguageFiles(@javax.annotation.Nullable final java.util.List<GroupPolicyUploadedLanguageFile> value) {
         this._groupPolicyUploadedLanguageFiles = value;
     }
@@ -155,6 +161,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final GroupPolicyUploadedDefinitionFileStatus value) {
         this._status = value;
     }
@@ -163,6 +170,7 @@ public class GroupPolicyUploadedDefinitionFile extends GroupPolicyDefinitionFile
      * @param value Value to set for the uploadDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUploadDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._uploadDateTime = value;
     }

@@ -14,6 +14,7 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
      * Instantiates a new WindowsAppXAppAssignmentSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsAppXAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.windowsAppXAppAssignmentSettings");
@@ -35,9 +36,9 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsAppXAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("useDeviceContext", (n) -> { currentObject.setUseDeviceContext(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("useDeviceContext", (n) -> { currentObject.setUseDeviceContext(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the useDeviceContext property value. Whether or not to use device execution context for Windows AppX mobile app.
@@ -52,6 +53,7 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
      * @param value Value to set for the useDeviceContext property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseDeviceContext(@javax.annotation.Nullable final Boolean value) {
         this._useDeviceContext = value;
     }

@@ -25,6 +25,7 @@ public class BulkManagedDeviceActionResult implements AdditionalDataHolder, Pars
      * Instantiates a new bulkManagedDeviceActionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BulkManagedDeviceActionResult() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.bulkManagedDeviceActionResult");
@@ -62,13 +63,13 @@ public class BulkManagedDeviceActionResult implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BulkManagedDeviceActionResult currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("failedDeviceIds", (n) -> { currentObject.setFailedDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("notFoundDeviceIds", (n) -> { currentObject.setNotFoundDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("notSupportedDeviceIds", (n) -> { currentObject.setNotSupportedDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("successfulDeviceIds", (n) -> { currentObject.setSuccessfulDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("failedDeviceIds", (n) -> { currentObject.setFailedDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("notFoundDeviceIds", (n) -> { currentObject.setNotFoundDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("notSupportedDeviceIds", (n) -> { currentObject.setNotSupportedDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("successfulDeviceIds", (n) -> { currentObject.setSuccessfulDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the notFoundDeviceIds property value. Not found devices
@@ -107,6 +108,7 @@ public class BulkManagedDeviceActionResult implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("failedDeviceIds", this.getFailedDeviceIds());
@@ -121,6 +123,7 @@ public class BulkManagedDeviceActionResult implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class BulkManagedDeviceActionResult implements AdditionalDataHolder, Pars
      * @param value Value to set for the failedDeviceIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedDeviceIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._failedDeviceIds = value;
     }
@@ -137,6 +141,7 @@ public class BulkManagedDeviceActionResult implements AdditionalDataHolder, Pars
      * @param value Value to set for the notFoundDeviceIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotFoundDeviceIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._notFoundDeviceIds = value;
     }
@@ -145,6 +150,7 @@ public class BulkManagedDeviceActionResult implements AdditionalDataHolder, Pars
      * @param value Value to set for the notSupportedDeviceIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotSupportedDeviceIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._notSupportedDeviceIds = value;
     }
@@ -153,6 +159,7 @@ public class BulkManagedDeviceActionResult implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -161,6 +168,7 @@ public class BulkManagedDeviceActionResult implements AdditionalDataHolder, Pars
      * @param value Value to set for the successfulDeviceIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessfulDeviceIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._successfulDeviceIds = value;
     }

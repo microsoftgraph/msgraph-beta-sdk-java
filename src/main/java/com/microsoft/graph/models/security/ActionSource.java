@@ -3,7 +3,7 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the evaluateApplication method. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum ActionSource implements ValuedEnum {
     Manual("manual"),
     Automatic("automatic"),

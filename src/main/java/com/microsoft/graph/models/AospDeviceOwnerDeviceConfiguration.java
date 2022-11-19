@@ -40,6 +40,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * Instantiates a new AospDeviceOwnerDeviceConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AospDeviceOwnerDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.aospDeviceOwnerDeviceConfiguration");
@@ -101,22 +102,22 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AospDeviceOwnerDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appsBlockInstallFromUnknownSources", (n) -> { currentObject.setAppsBlockInstallFromUnknownSources(n.getBooleanValue()); });
-            this.put("bluetoothBlockConfiguration", (n) -> { currentObject.setBluetoothBlockConfiguration(n.getBooleanValue()); });
-            this.put("bluetoothBlocked", (n) -> { currentObject.setBluetoothBlocked(n.getBooleanValue()); });
-            this.put("cameraBlocked", (n) -> { currentObject.setCameraBlocked(n.getBooleanValue()); });
-            this.put("factoryResetBlocked", (n) -> { currentObject.setFactoryResetBlocked(n.getBooleanValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(AndroidDeviceOwnerRequiredPasswordType.class)); });
-            this.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
-            this.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
-            this.put("securityAllowDebuggingFeatures", (n) -> { currentObject.setSecurityAllowDebuggingFeatures(n.getBooleanValue()); });
-            this.put("storageBlockExternalMedia", (n) -> { currentObject.setStorageBlockExternalMedia(n.getBooleanValue()); });
-            this.put("storageBlockUsbFileTransfer", (n) -> { currentObject.setStorageBlockUsbFileTransfer(n.getBooleanValue()); });
-            this.put("wifiBlockEditConfigurations", (n) -> { currentObject.setWifiBlockEditConfigurations(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appsBlockInstallFromUnknownSources", (n) -> { currentObject.setAppsBlockInstallFromUnknownSources(n.getBooleanValue()); });
+        deserializerMap.put("bluetoothBlockConfiguration", (n) -> { currentObject.setBluetoothBlockConfiguration(n.getBooleanValue()); });
+        deserializerMap.put("bluetoothBlocked", (n) -> { currentObject.setBluetoothBlocked(n.getBooleanValue()); });
+        deserializerMap.put("cameraBlocked", (n) -> { currentObject.setCameraBlocked(n.getBooleanValue()); });
+        deserializerMap.put("factoryResetBlocked", (n) -> { currentObject.setFactoryResetBlocked(n.getBooleanValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(AndroidDeviceOwnerRequiredPasswordType.class)); });
+        deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
+        deserializerMap.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
+        deserializerMap.put("securityAllowDebuggingFeatures", (n) -> { currentObject.setSecurityAllowDebuggingFeatures(n.getBooleanValue()); });
+        deserializerMap.put("storageBlockExternalMedia", (n) -> { currentObject.setStorageBlockExternalMedia(n.getBooleanValue()); });
+        deserializerMap.put("storageBlockUsbFileTransfer", (n) -> { currentObject.setStorageBlockUsbFileTransfer(n.getBooleanValue()); });
+        deserializerMap.put("wifiBlockEditConfigurations", (n) -> { currentObject.setWifiBlockEditConfigurations(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the passwordMinimumLength property value. Indicates the minimum length of the password required on the device. Valid values 4 to 16
@@ -195,6 +196,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -218,6 +220,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the appsBlockInstallFromUnknownSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsBlockInstallFromUnknownSources(@javax.annotation.Nullable final Boolean value) {
         this._appsBlockInstallFromUnknownSources = value;
     }
@@ -226,6 +229,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the bluetoothBlockConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBluetoothBlockConfiguration(@javax.annotation.Nullable final Boolean value) {
         this._bluetoothBlockConfiguration = value;
     }
@@ -234,6 +238,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the bluetoothBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBluetoothBlocked(@javax.annotation.Nullable final Boolean value) {
         this._bluetoothBlocked = value;
     }
@@ -242,6 +247,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the cameraBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCameraBlocked(@javax.annotation.Nullable final Boolean value) {
         this._cameraBlocked = value;
     }
@@ -250,6 +256,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the factoryResetBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFactoryResetBlocked(@javax.annotation.Nullable final Boolean value) {
         this._factoryResetBlocked = value;
     }
@@ -258,6 +265,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -266,6 +274,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
@@ -274,6 +283,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -282,6 +292,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
         this._passwordSignInFailureCountBeforeFactoryReset = value;
     }
@@ -290,6 +301,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the screenCaptureBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
         this._screenCaptureBlocked = value;
     }
@@ -298,6 +310,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the securityAllowDebuggingFeatures property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityAllowDebuggingFeatures(@javax.annotation.Nullable final Boolean value) {
         this._securityAllowDebuggingFeatures = value;
     }
@@ -306,6 +319,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the storageBlockExternalMedia property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageBlockExternalMedia(@javax.annotation.Nullable final Boolean value) {
         this._storageBlockExternalMedia = value;
     }
@@ -314,6 +328,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the storageBlockUsbFileTransfer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageBlockUsbFileTransfer(@javax.annotation.Nullable final Boolean value) {
         this._storageBlockUsbFileTransfer = value;
     }
@@ -322,6 +337,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the wifiBlockEditConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiBlockEditConfigurations(@javax.annotation.Nullable final Boolean value) {
         this._wifiBlockEditConfigurations = value;
     }

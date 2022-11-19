@@ -15,7 +15,7 @@ public class DirectoryAudit extends Entity implements Parsable {
     private String _activityDisplayName;
     /** Indicates additional details on the activity. */
     private java.util.List<KeyValue> _additionalDetails;
-    /** Indicates which resource category that's targeted by the activity. (For example: User Management, Group Management etc..) */
+    /** Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. */
     private String _category;
     /** Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services. */
     private String _correlationId;
@@ -37,6 +37,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * Instantiates a new DirectoryAudit and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectoryAudit() {
         super();
         this.setOdataType("#microsoft.graph.directoryAudit");
@@ -76,7 +77,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return this._additionalDetails;
     }
     /**
-     * Gets the category property value. Indicates which resource category that's targeted by the activity. (For example: User Management, Group Management etc..)
+     * Gets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -98,20 +99,20 @@ public class DirectoryAudit extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DirectoryAudit currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
-            this.put("activityDisplayName", (n) -> { currentObject.setActivityDisplayName(n.getStringValue()); });
-            this.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
-            this.put("category", (n) -> { currentObject.setCategory(n.getStringValue()); });
-            this.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
-            this.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getObjectValue(AuditActivityInitiator::createFromDiscriminatorValue)); });
-            this.put("loggedByService", (n) -> { currentObject.setLoggedByService(n.getStringValue()); });
-            this.put("operationType", (n) -> { currentObject.setOperationType(n.getStringValue()); });
-            this.put("result", (n) -> { currentObject.setResult(n.getEnumValue(OperationResult.class)); });
-            this.put("resultReason", (n) -> { currentObject.setResultReason(n.getStringValue()); });
-            this.put("targetResources", (n) -> { currentObject.setTargetResources(n.getCollectionOfObjectValues(TargetResource::createFromDiscriminatorValue)); });
-            this.put("userAgent", (n) -> { currentObject.setUserAgent(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("activityDisplayName", (n) -> { currentObject.setActivityDisplayName(n.getStringValue()); });
+        deserializerMap.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("category", (n) -> { currentObject.setCategory(n.getStringValue()); });
+        deserializerMap.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
+        deserializerMap.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getObjectValue(AuditActivityInitiator::createFromDiscriminatorValue)); });
+        deserializerMap.put("loggedByService", (n) -> { currentObject.setLoggedByService(n.getStringValue()); });
+        deserializerMap.put("operationType", (n) -> { currentObject.setOperationType(n.getStringValue()); });
+        deserializerMap.put("result", (n) -> { currentObject.setResult(n.getEnumValue(OperationResult.class)); });
+        deserializerMap.put("resultReason", (n) -> { currentObject.setResultReason(n.getStringValue()); });
+        deserializerMap.put("targetResources", (n) -> { currentObject.setTargetResources(n.getCollectionOfObjectValues(TargetResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("userAgent", (n) -> { currentObject.setUserAgent(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the initiatedBy property value. The initiatedBy property
@@ -174,6 +175,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -195,6 +197,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the activityDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._activityDateTime = value;
     }
@@ -203,6 +206,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the activityDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityDisplayName(@javax.annotation.Nullable final String value) {
         this._activityDisplayName = value;
     }
@@ -211,14 +215,16 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the additionalDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalDetails(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
         this._additionalDetails = value;
     }
     /**
-     * Sets the category property value. Indicates which resource category that's targeted by the activity. (For example: User Management, Group Management etc..)
+     * Sets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final String value) {
         this._category = value;
     }
@@ -227,6 +233,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the correlationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCorrelationId(@javax.annotation.Nullable final String value) {
         this._correlationId = value;
     }
@@ -235,6 +242,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the initiatedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatedBy(@javax.annotation.Nullable final AuditActivityInitiator value) {
         this._initiatedBy = value;
     }
@@ -243,6 +251,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the loggedByService property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoggedByService(@javax.annotation.Nullable final String value) {
         this._loggedByService = value;
     }
@@ -251,6 +260,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the operationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperationType(@javax.annotation.Nullable final String value) {
         this._operationType = value;
     }
@@ -259,6 +269,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the result property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResult(@javax.annotation.Nullable final OperationResult value) {
         this._result = value;
     }
@@ -267,6 +278,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the resultReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResultReason(@javax.annotation.Nullable final String value) {
         this._resultReason = value;
     }
@@ -275,6 +287,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the targetResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetResources(@javax.annotation.Nullable final java.util.List<TargetResource> value) {
         this._targetResources = value;
     }
@@ -283,6 +296,7 @@ public class DirectoryAudit extends Entity implements Parsable {
      * @param value Value to set for the userAgent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAgent(@javax.annotation.Nullable final String value) {
         this._userAgent = value;
     }

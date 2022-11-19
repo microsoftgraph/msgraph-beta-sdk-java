@@ -8,30 +8,31 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MacOSLobApp extends MobileLobApp implements Parsable {
-    /** The build number of MacOS Line of Business (LoB) app. */
+    /** The build number of the package. This should match the package CFBundleShortVersionString of the .pkg file. */
     private String _buildNumber;
-    /** The bundle id. */
+    /** The primary bundleId of the package. */
     private String _bundleId;
-    /** The app list in this bundle package */
+    /** List of ComplexType macOSLobChildApp objects. Represents the apps expected to be installed by the package. */
     private java.util.List<MacOSLobChildApp> _childApps;
-    /** The identity version. */
+    /** The identity version. This property is being deprecated in 2211(November 2022). */
     private String _identityVersion;
-    /** A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for macOS Line of Business (LoB) apps that use a self update feature. */
+    /** When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature. */
     private Boolean _ignoreVersionDetection;
-    /** A boolean to control whether the app will be installed as managed (requires macOS 11.0 and other PKG restrictions). */
+    /** When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged. */
     private Boolean _installAsManaged;
-    /** The MD5 hash codes */
+    /** The MD5 hash codes. This is empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file. */
     private java.util.List<String> _md5Hash;
-    /** The chunk size for MD5 hash */
+    /** The chunk size for MD5 hash. This is '0' or empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file. */
     private Integer _md5HashChunkSize;
-    /** The value for the minimum applicable operating system. */
+    /** ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application. */
     private MacOSMinimumOperatingSystem _minimumSupportedOperatingSystem;
-    /** The version number of MacOS Line of Business (LoB) app. */
+    /** The version number of the package. This should match the package CFBundleVersion in the packageinfo file. */
     private String _versionNumber;
     /**
      * Instantiates a new MacOSLobApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSLobApp() {
         super();
         this.setOdataType("#microsoft.graph.macOSLobApp");
@@ -47,7 +48,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         return new MacOSLobApp();
     }
     /**
-     * Gets the buildNumber property value. The build number of MacOS Line of Business (LoB) app.
+     * Gets the buildNumber property value. The build number of the package. This should match the package CFBundleShortVersionString of the .pkg file.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -55,7 +56,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         return this._buildNumber;
     }
     /**
-     * Gets the bundleId property value. The bundle id.
+     * Gets the bundleId property value. The primary bundleId of the package.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -63,7 +64,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         return this._bundleId;
     }
     /**
-     * Gets the childApps property value. The app list in this bundle package
+     * Gets the childApps property value. List of ComplexType macOSLobChildApp objects. Represents the apps expected to be installed by the package.
      * @return a macOSLobChildApp
      */
     @javax.annotation.Nullable
@@ -77,21 +78,21 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSLobApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("buildNumber", (n) -> { currentObject.setBuildNumber(n.getStringValue()); });
-            this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
-            this.put("childApps", (n) -> { currentObject.setChildApps(n.getCollectionOfObjectValues(MacOSLobChildApp::createFromDiscriminatorValue)); });
-            this.put("identityVersion", (n) -> { currentObject.setIdentityVersion(n.getStringValue()); });
-            this.put("ignoreVersionDetection", (n) -> { currentObject.setIgnoreVersionDetection(n.getBooleanValue()); });
-            this.put("installAsManaged", (n) -> { currentObject.setInstallAsManaged(n.getBooleanValue()); });
-            this.put("md5Hash", (n) -> { currentObject.setMd5Hash(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("md5HashChunkSize", (n) -> { currentObject.setMd5HashChunkSize(n.getIntegerValue()); });
-            this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(MacOSMinimumOperatingSystem::createFromDiscriminatorValue)); });
-            this.put("versionNumber", (n) -> { currentObject.setVersionNumber(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("buildNumber", (n) -> { currentObject.setBuildNumber(n.getStringValue()); });
+        deserializerMap.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
+        deserializerMap.put("childApps", (n) -> { currentObject.setChildApps(n.getCollectionOfObjectValues(MacOSLobChildApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("identityVersion", (n) -> { currentObject.setIdentityVersion(n.getStringValue()); });
+        deserializerMap.put("ignoreVersionDetection", (n) -> { currentObject.setIgnoreVersionDetection(n.getBooleanValue()); });
+        deserializerMap.put("installAsManaged", (n) -> { currentObject.setInstallAsManaged(n.getBooleanValue()); });
+        deserializerMap.put("md5Hash", (n) -> { currentObject.setMd5Hash(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("md5HashChunkSize", (n) -> { currentObject.setMd5HashChunkSize(n.getIntegerValue()); });
+        deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(MacOSMinimumOperatingSystem::createFromDiscriminatorValue)); });
+        deserializerMap.put("versionNumber", (n) -> { currentObject.setVersionNumber(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the identityVersion property value. The identity version.
+     * Gets the identityVersion property value. The identity version. This property is being deprecated in 2211(November 2022).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -99,7 +100,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         return this._identityVersion;
     }
     /**
-     * Gets the ignoreVersionDetection property value. A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for macOS Line of Business (LoB) apps that use a self update feature.
+     * Gets the ignoreVersionDetection property value. When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -107,7 +108,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         return this._ignoreVersionDetection;
     }
     /**
-     * Gets the installAsManaged property value. A boolean to control whether the app will be installed as managed (requires macOS 11.0 and other PKG restrictions).
+     * Gets the installAsManaged property value. When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -115,7 +116,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         return this._installAsManaged;
     }
     /**
-     * Gets the md5Hash property value. The MD5 hash codes
+     * Gets the md5Hash property value. The MD5 hash codes. This is empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -123,7 +124,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         return this._md5Hash;
     }
     /**
-     * Gets the md5HashChunkSize property value. The chunk size for MD5 hash
+     * Gets the md5HashChunkSize property value. The chunk size for MD5 hash. This is '0' or empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -131,7 +132,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         return this._md5HashChunkSize;
     }
     /**
-     * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
+     * Gets the minimumSupportedOperatingSystem property value. ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application.
      * @return a macOSMinimumOperatingSystem
      */
     @javax.annotation.Nullable
@@ -139,7 +140,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         return this._minimumSupportedOperatingSystem;
     }
     /**
-     * Gets the versionNumber property value. The version number of MacOS Line of Business (LoB) app.
+     * Gets the versionNumber property value. The version number of the package. This should match the package CFBundleVersion in the packageinfo file.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -151,6 +152,7 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -166,82 +168,92 @@ public class MacOSLobApp extends MobileLobApp implements Parsable {
         writer.writeStringValue("versionNumber", this.getVersionNumber());
     }
     /**
-     * Sets the buildNumber property value. The build number of MacOS Line of Business (LoB) app.
+     * Sets the buildNumber property value. The build number of the package. This should match the package CFBundleShortVersionString of the .pkg file.
      * @param value Value to set for the buildNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBuildNumber(@javax.annotation.Nullable final String value) {
         this._buildNumber = value;
     }
     /**
-     * Sets the bundleId property value. The bundle id.
+     * Sets the bundleId property value. The primary bundleId of the package.
      * @param value Value to set for the bundleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBundleId(@javax.annotation.Nullable final String value) {
         this._bundleId = value;
     }
     /**
-     * Sets the childApps property value. The app list in this bundle package
+     * Sets the childApps property value. List of ComplexType macOSLobChildApp objects. Represents the apps expected to be installed by the package.
      * @param value Value to set for the childApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildApps(@javax.annotation.Nullable final java.util.List<MacOSLobChildApp> value) {
         this._childApps = value;
     }
     /**
-     * Sets the identityVersion property value. The identity version.
+     * Sets the identityVersion property value. The identity version. This property is being deprecated in 2211(November 2022).
      * @param value Value to set for the identityVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityVersion(@javax.annotation.Nullable final String value) {
         this._identityVersion = value;
     }
     /**
-     * Sets the ignoreVersionDetection property value. A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for macOS Line of Business (LoB) apps that use a self update feature.
+     * Sets the ignoreVersionDetection property value. When TRUE, indicates that the app's version will NOT be used to detect if the app is installed on a device. When FALSE, indicates that the app's version will be used to detect if the app is installed on a device. Set this to true for apps that use a self update feature.
      * @param value Value to set for the ignoreVersionDetection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIgnoreVersionDetection(@javax.annotation.Nullable final Boolean value) {
         this._ignoreVersionDetection = value;
     }
     /**
-     * Sets the installAsManaged property value. A boolean to control whether the app will be installed as managed (requires macOS 11.0 and other PKG restrictions).
+     * Sets the installAsManaged property value. When TRUE, indicates that the app will be installed as managed (requires macOS 11.0 and other managed package restrictions). When FALSE, indicates that the app will be installed as unmanaged.
      * @param value Value to set for the installAsManaged property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallAsManaged(@javax.annotation.Nullable final Boolean value) {
         this._installAsManaged = value;
     }
     /**
-     * Sets the md5Hash property value. The MD5 hash codes
+     * Sets the md5Hash property value. The MD5 hash codes. This is empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
      * @param value Value to set for the md5Hash property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMd5Hash(@javax.annotation.Nullable final java.util.List<String> value) {
         this._md5Hash = value;
     }
     /**
-     * Sets the md5HashChunkSize property value. The chunk size for MD5 hash
+     * Sets the md5HashChunkSize property value. The chunk size for MD5 hash. This is '0' or empty if the package was uploaded directly. If the Intune App Wrapping Tool is used to create a .intunemac, this value can be found inside the Detection.xml file.
      * @param value Value to set for the md5HashChunkSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMd5HashChunkSize(@javax.annotation.Nullable final Integer value) {
         this._md5HashChunkSize = value;
     }
     /**
-     * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
+     * Sets the minimumSupportedOperatingSystem property value. ComplexType macOSMinimumOperatingSystem that indicates the minimum operating system applicable for the application.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final MacOSMinimumOperatingSystem value) {
         this._minimumSupportedOperatingSystem = value;
     }
     /**
-     * Sets the versionNumber property value. The version number of MacOS Line of Business (LoB) app.
+     * Sets the versionNumber property value. The version number of the package. This should match the package CFBundleVersion in the packageinfo file.
      * @param value Value to set for the versionNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersionNumber(@javax.annotation.Nullable final String value) {
         this._versionNumber = value;
     }

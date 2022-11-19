@@ -23,6 +23,7 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
      * Instantiates a new updateDefinitionValuesPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateDefinitionValuesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -67,11 +68,11 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateDefinitionValuesPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("added", (n) -> { currentObject.setAdded(n.getCollectionOfObjectValues(GroupPolicyDefinitionValue::createFromDiscriminatorValue)); });
-            this.put("deletedIds", (n) -> { currentObject.setDeletedIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("updated", (n) -> { currentObject.setUpdated(n.getCollectionOfObjectValues(GroupPolicyDefinitionValue::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("added", (n) -> { currentObject.setAdded(n.getCollectionOfObjectValues(GroupPolicyDefinitionValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("deletedIds", (n) -> { currentObject.setDeletedIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("updated", (n) -> { currentObject.setUpdated(n.getCollectionOfObjectValues(GroupPolicyDefinitionValue::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the updated property value. The updated property
@@ -86,6 +87,7 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("added", this.getAdded());
@@ -98,6 +100,7 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the added property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdded(@javax.annotation.Nullable final java.util.List<GroupPolicyDefinitionValue> value) {
         this._added = value;
     }
@@ -106,6 +109,7 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -114,6 +118,7 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the deletedIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeletedIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._deletedIds = value;
     }
@@ -122,6 +127,7 @@ public class UpdateDefinitionValuesPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the updated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdated(@javax.annotation.Nullable final java.util.List<GroupPolicyDefinitionValue> value) {
         this._updated = value;
     }

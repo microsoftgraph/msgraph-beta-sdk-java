@@ -18,6 +18,7 @@ public class ValidateXmlPostRequestBody implements AdditionalDataHolder, Parsabl
      * Instantiates a new validateXmlPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ValidateXmlPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,9 +47,9 @@ public class ValidateXmlPostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ValidateXmlPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("officeConfigurationXml", (n) -> { currentObject.setOfficeConfigurationXml(n.getByteArrayValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("officeConfigurationXml", (n) -> { currentObject.setOfficeConfigurationXml(n.getByteArrayValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the officeConfigurationXml property value. The officeConfigurationXml property
@@ -63,6 +64,7 @@ public class ValidateXmlPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("officeConfigurationXml", this.getOfficeConfigurationXml());
@@ -73,6 +75,7 @@ public class ValidateXmlPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class ValidateXmlPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the officeConfigurationXml property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOfficeConfigurationXml(@javax.annotation.Nullable final byte[] value) {
         this._officeConfigurationXml = value;
     }

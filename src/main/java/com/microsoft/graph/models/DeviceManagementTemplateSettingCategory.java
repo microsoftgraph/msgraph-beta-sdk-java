@@ -14,6 +14,7 @@ public class DeviceManagementTemplateSettingCategory extends DeviceManagementSet
      * Instantiates a new DeviceManagementTemplateSettingCategory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementTemplateSettingCategory() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementTemplateSettingCategory");
@@ -35,9 +36,9 @@ public class DeviceManagementTemplateSettingCategory extends DeviceManagementSet
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementTemplateSettingCategory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("recommendedSettings", (n) -> { currentObject.setRecommendedSettings(n.getCollectionOfObjectValues(DeviceManagementSettingInstance::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("recommendedSettings", (n) -> { currentObject.setRecommendedSettings(n.getCollectionOfObjectValues(DeviceManagementSettingInstance::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the recommendedSettings property value. The settings this category contains
@@ -52,6 +53,7 @@ public class DeviceManagementTemplateSettingCategory extends DeviceManagementSet
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementTemplateSettingCategory extends DeviceManagementSet
      * @param value Value to set for the recommendedSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendedSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementSettingInstance> value) {
         this._recommendedSettings = value;
     }

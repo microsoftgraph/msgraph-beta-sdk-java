@@ -18,6 +18,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
      * Instantiates a new TenantAppManagementPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TenantAppManagementPolicy() {
         super();
         this.setOdataType("#microsoft.graph.tenantAppManagementPolicy");
@@ -47,11 +48,11 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantAppManagementPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicationRestrictions", (n) -> { currentObject.setApplicationRestrictions(n.getObjectValue(AppManagementConfiguration::createFromDiscriminatorValue)); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("servicePrincipalRestrictions", (n) -> { currentObject.setServicePrincipalRestrictions(n.getObjectValue(AppManagementConfiguration::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationRestrictions", (n) -> { currentObject.setApplicationRestrictions(n.getObjectValue(AppManagementConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("servicePrincipalRestrictions", (n) -> { currentObject.setServicePrincipalRestrictions(n.getObjectValue(AppManagementConfiguration::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabled property value. Denotes whether the policy is enabled. Default value is false.
@@ -74,6 +75,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the applicationRestrictions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationRestrictions(@javax.annotation.Nullable final AppManagementConfiguration value) {
         this._applicationRestrictions = value;
     }
@@ -94,6 +97,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }
@@ -102,6 +106,7 @@ public class TenantAppManagementPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the servicePrincipalRestrictions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalRestrictions(@javax.annotation.Nullable final AppManagementConfiguration value) {
         this._servicePrincipalRestrictions = value;
     }

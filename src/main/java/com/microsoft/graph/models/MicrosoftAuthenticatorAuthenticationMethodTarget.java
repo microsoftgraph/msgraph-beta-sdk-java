@@ -10,14 +10,11 @@ import java.util.Objects;
 public class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMethodTarget implements Parsable {
     /** The authenticationMode property */
     private MicrosoftAuthenticatorAuthenticationMode _authenticationMode;
-    /** The displayAppInformationRequiredState property */
-    private AdvancedConfigState _displayAppInformationRequiredState;
-    /** The numberMatchingRequiredState property */
-    private AdvancedConfigState _numberMatchingRequiredState;
     /**
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodTarget and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MicrosoftAuthenticatorAuthenticationMethodTarget() {
         super();
         this.setOdataType("#microsoft.graph.microsoftAuthenticatorAuthenticationMethodTarget");
@@ -41,68 +38,34 @@ public class MicrosoftAuthenticatorAuthenticationMethodTarget extends Authentica
         return this._authenticationMode;
     }
     /**
-     * Gets the displayAppInformationRequiredState property value. The displayAppInformationRequiredState property
-     * @return a advancedConfigState
-     */
-    @javax.annotation.Nullable
-    public AdvancedConfigState getDisplayAppInformationRequiredState() {
-        return this._displayAppInformationRequiredState;
-    }
-    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftAuthenticatorAuthenticationMethodTarget currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authenticationMode", (n) -> { currentObject.setAuthenticationMode(n.getEnumValue(MicrosoftAuthenticatorAuthenticationMode.class)); });
-            this.put("displayAppInformationRequiredState", (n) -> { currentObject.setDisplayAppInformationRequiredState(n.getEnumValue(AdvancedConfigState.class)); });
-            this.put("numberMatchingRequiredState", (n) -> { currentObject.setNumberMatchingRequiredState(n.getEnumValue(AdvancedConfigState.class)); });
-        }};
-    }
-    /**
-     * Gets the numberMatchingRequiredState property value. The numberMatchingRequiredState property
-     * @return a advancedConfigState
-     */
-    @javax.annotation.Nullable
-    public AdvancedConfigState getNumberMatchingRequiredState() {
-        return this._numberMatchingRequiredState;
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationMode", (n) -> { currentObject.setAuthenticationMode(n.getEnumValue(MicrosoftAuthenticatorAuthenticationMode.class)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("authenticationMode", this.getAuthenticationMode());
-        writer.writeEnumValue("displayAppInformationRequiredState", this.getDisplayAppInformationRequiredState());
-        writer.writeEnumValue("numberMatchingRequiredState", this.getNumberMatchingRequiredState());
     }
     /**
      * Sets the authenticationMode property value. The authenticationMode property
      * @param value Value to set for the authenticationMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMode(@javax.annotation.Nullable final MicrosoftAuthenticatorAuthenticationMode value) {
         this._authenticationMode = value;
-    }
-    /**
-     * Sets the displayAppInformationRequiredState property value. The displayAppInformationRequiredState property
-     * @param value Value to set for the displayAppInformationRequiredState property.
-     * @return a void
-     */
-    public void setDisplayAppInformationRequiredState(@javax.annotation.Nullable final AdvancedConfigState value) {
-        this._displayAppInformationRequiredState = value;
-    }
-    /**
-     * Sets the numberMatchingRequiredState property value. The numberMatchingRequiredState property
-     * @param value Value to set for the numberMatchingRequiredState property.
-     * @return a void
-     */
-    public void setNumberMatchingRequiredState(@javax.annotation.Nullable final AdvancedConfigState value) {
-        this._numberMatchingRequiredState = value;
     }
 }

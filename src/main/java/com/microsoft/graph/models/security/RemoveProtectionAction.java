@@ -12,6 +12,7 @@ public class RemoveProtectionAction extends InformationProtectionAction implemen
      * Instantiates a new RemoveProtectionAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RemoveProtectionAction() {
         super();
         this.setOdataType("#microsoft.graph.security.removeProtectionAction");
@@ -33,14 +34,15 @@ public class RemoveProtectionAction extends InformationProtectionAction implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemoveProtectionAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

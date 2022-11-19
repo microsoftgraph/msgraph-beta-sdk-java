@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Casts the previous resource to application. */
 public class Connector extends Entity implements Parsable {
     /** The external IP address as detected by the the connector server. Read-only. */
     private String _externalIp;
@@ -21,6 +21,7 @@ public class Connector extends Entity implements Parsable {
      * Instantiates a new connector and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Connector() {
         super();
         this.setOdataType("#microsoft.graph.connector");
@@ -50,12 +51,12 @@ public class Connector extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Connector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("externalIp", (n) -> { currentObject.setExternalIp(n.getStringValue()); });
-            this.put("machineName", (n) -> { currentObject.setMachineName(n.getStringValue()); });
-            this.put("memberOf", (n) -> { currentObject.setMemberOf(n.getCollectionOfObjectValues(ConnectorGroup::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ConnectorStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("externalIp", (n) -> { currentObject.setExternalIp(n.getStringValue()); });
+        deserializerMap.put("machineName", (n) -> { currentObject.setMachineName(n.getStringValue()); });
+        deserializerMap.put("memberOf", (n) -> { currentObject.setMemberOf(n.getCollectionOfObjectValues(ConnectorGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ConnectorStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the machineName property value. The machine name the connector is installed and running on.
@@ -86,6 +87,7 @@ public class Connector extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class Connector extends Entity implements Parsable {
      * @param value Value to set for the externalIp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalIp(@javax.annotation.Nullable final String value) {
         this._externalIp = value;
     }
@@ -107,6 +110,7 @@ public class Connector extends Entity implements Parsable {
      * @param value Value to set for the machineName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMachineName(@javax.annotation.Nullable final String value) {
         this._machineName = value;
     }
@@ -115,6 +119,7 @@ public class Connector extends Entity implements Parsable {
      * @param value Value to set for the memberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberOf(@javax.annotation.Nullable final java.util.List<ConnectorGroup> value) {
         this._memberOf = value;
     }
@@ -123,6 +128,7 @@ public class Connector extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ConnectorStatus value) {
         this._status = value;
     }

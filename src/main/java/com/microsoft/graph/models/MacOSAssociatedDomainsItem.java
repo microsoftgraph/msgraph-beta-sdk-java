@@ -24,6 +24,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * Instantiates a new macOSAssociatedDomainsItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSAssociatedDomainsItem() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.macOSAssociatedDomainsItem");
@@ -77,12 +78,12 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSAssociatedDomainsItem currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("applicationIdentifier", (n) -> { currentObject.setApplicationIdentifier(n.getStringValue()); });
-            this.put("directDownloadsEnabled", (n) -> { currentObject.setDirectDownloadsEnabled(n.getBooleanValue()); });
-            this.put("domains", (n) -> { currentObject.setDomains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("applicationIdentifier", (n) -> { currentObject.setApplicationIdentifier(n.getStringValue()); });
+        deserializerMap.put("directDownloadsEnabled", (n) -> { currentObject.setDirectDownloadsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("domains", (n) -> { currentObject.setDomains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -97,6 +98,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("applicationIdentifier", this.getApplicationIdentifier());
@@ -110,6 +112,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the applicationIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationIdentifier(@javax.annotation.Nullable final String value) {
         this._applicationIdentifier = value;
     }
@@ -126,6 +130,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the directDownloadsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectDownloadsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._directDownloadsEnabled = value;
     }
@@ -134,6 +139,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the domains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._domains = value;
     }
@@ -142,6 +148,7 @@ public class MacOSAssociatedDomainsItem implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

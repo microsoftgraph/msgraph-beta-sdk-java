@@ -18,6 +18,7 @@ public class HasPayloadLinksPostRequestBody implements AdditionalDataHolder, Par
      * Instantiates a new hasPayloadLinksPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public HasPayloadLinksPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,9 +47,9 @@ public class HasPayloadLinksPostRequestBody implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HasPayloadLinksPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("payloadIds", (n) -> { currentObject.setPayloadIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("payloadIds", (n) -> { currentObject.setPayloadIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the payloadIds property value. The payloadIds property
@@ -63,6 +64,7 @@ public class HasPayloadLinksPostRequestBody implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("payloadIds", this.getPayloadIds());
@@ -73,6 +75,7 @@ public class HasPayloadLinksPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class HasPayloadLinksPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the payloadIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._payloadIds = value;
     }

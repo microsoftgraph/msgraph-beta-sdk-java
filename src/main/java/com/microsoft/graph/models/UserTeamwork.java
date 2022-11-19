@@ -16,6 +16,7 @@ public class UserTeamwork extends Entity implements Parsable {
      * Instantiates a new userTeamwork and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserTeamwork() {
         super();
         this.setOdataType("#microsoft.graph.userTeamwork");
@@ -45,10 +46,10 @@ public class UserTeamwork extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserTeamwork currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("associatedTeams", (n) -> { currentObject.setAssociatedTeams(n.getCollectionOfObjectValues(AssociatedTeamInfo::createFromDiscriminatorValue)); });
-            this.put("installedApps", (n) -> { currentObject.setInstalledApps(n.getCollectionOfObjectValues(UserScopeTeamsAppInstallation::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("associatedTeams", (n) -> { currentObject.setAssociatedTeams(n.getCollectionOfObjectValues(AssociatedTeamInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("installedApps", (n) -> { currentObject.setInstalledApps(n.getCollectionOfObjectValues(UserScopeTeamsAppInstallation::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the installedApps property value. The apps installed in the personal scope of this user.
@@ -63,6 +64,7 @@ public class UserTeamwork extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class UserTeamwork extends Entity implements Parsable {
      * @param value Value to set for the associatedTeams property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssociatedTeams(@javax.annotation.Nullable final java.util.List<AssociatedTeamInfo> value) {
         this._associatedTeams = value;
     }
@@ -82,6 +85,7 @@ public class UserTeamwork extends Entity implements Parsable {
      * @param value Value to set for the installedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstalledApps(@javax.annotation.Nullable final java.util.List<UserScopeTeamsAppInstallation> value) {
         this._installedApps = value;
     }

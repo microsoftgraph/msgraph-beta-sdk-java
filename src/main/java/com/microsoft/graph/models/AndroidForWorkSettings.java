@@ -28,9 +28,10 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
     /** Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted' */
     private java.util.List<String> _targetGroupIds;
     /**
-     * Instantiates a new AndroidForWorkSettings and sets the default values.
+     * Instantiates a new androidForWorkSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidForWorkSettings() {
         super();
         this.setOdataType("#microsoft.graph.androidForWorkSettings");
@@ -38,7 +39,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidForWorkSettings
+     * @return a androidForWorkSettings
      */
     @javax.annotation.Nonnull
     public static AndroidForWorkSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -76,17 +77,17 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidForWorkSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("bindStatus", (n) -> { currentObject.setBindStatus(n.getEnumValue(AndroidForWorkBindStatus.class)); });
-            this.put("deviceOwnerManagementEnabled", (n) -> { currentObject.setDeviceOwnerManagementEnabled(n.getBooleanValue()); });
-            this.put("enrollmentTarget", (n) -> { currentObject.setEnrollmentTarget(n.getEnumValue(AndroidForWorkEnrollmentTarget.class)); });
-            this.put("lastAppSyncDateTime", (n) -> { currentObject.setLastAppSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastAppSyncStatus", (n) -> { currentObject.setLastAppSyncStatus(n.getEnumValue(AndroidForWorkSyncStatus.class)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("ownerOrganizationName", (n) -> { currentObject.setOwnerOrganizationName(n.getStringValue()); });
-            this.put("ownerUserPrincipalName", (n) -> { currentObject.setOwnerUserPrincipalName(n.getStringValue()); });
-            this.put("targetGroupIds", (n) -> { currentObject.setTargetGroupIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("bindStatus", (n) -> { currentObject.setBindStatus(n.getEnumValue(AndroidForWorkBindStatus.class)); });
+        deserializerMap.put("deviceOwnerManagementEnabled", (n) -> { currentObject.setDeviceOwnerManagementEnabled(n.getBooleanValue()); });
+        deserializerMap.put("enrollmentTarget", (n) -> { currentObject.setEnrollmentTarget(n.getEnumValue(AndroidForWorkEnrollmentTarget.class)); });
+        deserializerMap.put("lastAppSyncDateTime", (n) -> { currentObject.setLastAppSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastAppSyncStatus", (n) -> { currentObject.setLastAppSyncStatus(n.getEnumValue(AndroidForWorkSyncStatus.class)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("ownerOrganizationName", (n) -> { currentObject.setOwnerOrganizationName(n.getStringValue()); });
+        deserializerMap.put("ownerUserPrincipalName", (n) -> { currentObject.setOwnerUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("targetGroupIds", (n) -> { currentObject.setTargetGroupIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastAppSyncDateTime property value. Last completion time for app sync
@@ -141,6 +142,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +161,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      * @param value Value to set for the bindStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBindStatus(@javax.annotation.Nullable final AndroidForWorkBindStatus value) {
         this._bindStatus = value;
     }
@@ -167,6 +170,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      * @param value Value to set for the deviceOwnerManagementEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceOwnerManagementEnabled(@javax.annotation.Nullable final Boolean value) {
         this._deviceOwnerManagementEnabled = value;
     }
@@ -175,6 +179,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      * @param value Value to set for the enrollmentTarget property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentTarget(@javax.annotation.Nullable final AndroidForWorkEnrollmentTarget value) {
         this._enrollmentTarget = value;
     }
@@ -183,6 +188,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      * @param value Value to set for the lastAppSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastAppSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastAppSyncDateTime = value;
     }
@@ -191,6 +197,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      * @param value Value to set for the lastAppSyncStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastAppSyncStatus(@javax.annotation.Nullable final AndroidForWorkSyncStatus value) {
         this._lastAppSyncStatus = value;
     }
@@ -199,6 +206,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -207,6 +215,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      * @param value Value to set for the ownerOrganizationName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnerOrganizationName(@javax.annotation.Nullable final String value) {
         this._ownerOrganizationName = value;
     }
@@ -215,6 +224,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      * @param value Value to set for the ownerUserPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnerUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._ownerUserPrincipalName = value;
     }
@@ -223,6 +233,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
      * @param value Value to set for the targetGroupIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetGroupIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._targetGroupIds = value;
     }

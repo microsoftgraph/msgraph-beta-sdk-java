@@ -28,6 +28,7 @@ public class PaymentTerm extends Entity implements Parsable {
      * Instantiates a new paymentTerm and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PaymentTerm() {
         super();
         this.setOdataType("#microsoft.graph.paymentTerm");
@@ -97,15 +98,15 @@ public class PaymentTerm extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PaymentTerm currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("calculateDiscountOnCreditMemos", (n) -> { currentObject.setCalculateDiscountOnCreditMemos(n.getBooleanValue()); });
-            this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
-            this.put("discountDateCalculation", (n) -> { currentObject.setDiscountDateCalculation(n.getStringValue()); });
-            this.put("discountPercent", (n) -> { currentObject.setDiscountPercent(n.getBigDecimalValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("dueDateCalculation", (n) -> { currentObject.setDueDateCalculation(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("calculateDiscountOnCreditMemos", (n) -> { currentObject.setCalculateDiscountOnCreditMemos(n.getBooleanValue()); });
+        deserializerMap.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
+        deserializerMap.put("discountDateCalculation", (n) -> { currentObject.setDiscountDateCalculation(n.getStringValue()); });
+        deserializerMap.put("discountPercent", (n) -> { currentObject.setDiscountPercent(n.getBigDecimalValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("dueDateCalculation", (n) -> { currentObject.setDueDateCalculation(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -120,6 +121,7 @@ public class PaymentTerm extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -136,6 +138,7 @@ public class PaymentTerm extends Entity implements Parsable {
      * @param value Value to set for the calculateDiscountOnCreditMemos property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalculateDiscountOnCreditMemos(@javax.annotation.Nullable final Boolean value) {
         this._calculateDiscountOnCreditMemos = value;
     }
@@ -144,6 +147,7 @@ public class PaymentTerm extends Entity implements Parsable {
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final String value) {
         this._code = value;
     }
@@ -152,6 +156,7 @@ public class PaymentTerm extends Entity implements Parsable {
      * @param value Value to set for the discountDateCalculation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscountDateCalculation(@javax.annotation.Nullable final String value) {
         this._discountDateCalculation = value;
     }
@@ -160,6 +165,7 @@ public class PaymentTerm extends Entity implements Parsable {
      * @param value Value to set for the discountPercent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscountPercent(@javax.annotation.Nullable final BigDecimal value) {
         this._discountPercent = value;
     }
@@ -168,6 +174,7 @@ public class PaymentTerm extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -176,6 +183,7 @@ public class PaymentTerm extends Entity implements Parsable {
      * @param value Value to set for the dueDateCalculation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDueDateCalculation(@javax.annotation.Nullable final String value) {
         this._dueDateCalculation = value;
     }
@@ -184,6 +192,7 @@ public class PaymentTerm extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }

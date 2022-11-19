@@ -27,6 +27,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * Instantiates a new parseExpressionResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ParseExpressionResponse() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.parseExpressionResponse");
@@ -80,14 +81,14 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ParseExpressionResponse currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
-            this.put("evaluationResult", (n) -> { currentObject.setEvaluationResult(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("evaluationSucceeded", (n) -> { currentObject.setEvaluationSucceeded(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("parsedExpression", (n) -> { currentObject.setParsedExpression(n.getObjectValue(AttributeMappingSource::createFromDiscriminatorValue)); });
-            this.put("parsingSucceeded", (n) -> { currentObject.setParsingSucceeded(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("error", (n) -> { currentObject.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
+        deserializerMap.put("evaluationResult", (n) -> { currentObject.setEvaluationResult(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("evaluationSucceeded", (n) -> { currentObject.setEvaluationSucceeded(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("parsedExpression", (n) -> { currentObject.setParsedExpression(n.getObjectValue(AttributeMappingSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("parsingSucceeded", (n) -> { currentObject.setParsingSucceeded(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -118,6 +119,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("error", this.getError());
@@ -133,6 +135,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +144,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final PublicError value) {
         this._error = value;
     }
@@ -149,6 +153,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the evaluationResult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvaluationResult(@javax.annotation.Nullable final java.util.List<String> value) {
         this._evaluationResult = value;
     }
@@ -157,6 +162,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the evaluationSucceeded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvaluationSucceeded(@javax.annotation.Nullable final Boolean value) {
         this._evaluationSucceeded = value;
     }
@@ -165,6 +171,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -173,6 +180,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the parsedExpression property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParsedExpression(@javax.annotation.Nullable final AttributeMappingSource value) {
         this._parsedExpression = value;
     }
@@ -181,6 +189,7 @@ public class ParseExpressionResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the parsingSucceeded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParsingSucceeded(@javax.annotation.Nullable final Boolean value) {
         this._parsingSucceeded = value;
     }

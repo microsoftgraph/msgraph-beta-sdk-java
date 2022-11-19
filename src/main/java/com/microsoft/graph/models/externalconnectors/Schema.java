@@ -14,9 +14,10 @@ public class Schema extends Entity implements Parsable {
     /** The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128. */
     private java.util.List<Property> _properties;
     /**
-     * Instantiates a new Schema and sets the default values.
+     * Instantiates a new schema and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Schema() {
         super();
         this.setOdataType("#microsoft.graph.externalConnectors.schema");
@@ -24,7 +25,7 @@ public class Schema extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Schema
+     * @return a schema
      */
     @javax.annotation.Nonnull
     public static Schema createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -46,10 +47,10 @@ public class Schema extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Schema currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("baseType", (n) -> { currentObject.setBaseType(n.getStringValue()); });
-            this.put("properties", (n) -> { currentObject.setProperties(n.getCollectionOfObjectValues(Property::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("baseType", (n) -> { currentObject.setBaseType(n.getStringValue()); });
+        deserializerMap.put("properties", (n) -> { currentObject.setProperties(n.getCollectionOfObjectValues(Property::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the properties property value. The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.
@@ -64,6 +65,7 @@ public class Schema extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class Schema extends Entity implements Parsable {
      * @param value Value to set for the baseType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBaseType(@javax.annotation.Nullable final String value) {
         this._baseType = value;
     }
@@ -83,6 +86,7 @@ public class Schema extends Entity implements Parsable {
      * @param value Value to set for the properties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProperties(@javax.annotation.Nullable final java.util.List<Property> value) {
         this._properties = value;
     }

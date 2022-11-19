@@ -14,6 +14,7 @@ public class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRights
      * Instantiates a new SubjectRightsRequestEnumeratedMailboxLocation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SubjectRightsRequestEnumeratedMailboxLocation() {
         super();
         this.setOdataType("#microsoft.graph.subjectRightsRequestEnumeratedMailboxLocation");
@@ -35,9 +36,9 @@ public class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRights
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubjectRightsRequestEnumeratedMailboxLocation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("upns", (n) -> { currentObject.setUpns(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("upns", (n) -> { currentObject.setUpns(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the upns property value. Collection of mailboxes that should be included in the search. Includes the UPN (user principal name) of each mailbox, for example, Monica.Thompson@contoso.com.
@@ -52,6 +53,7 @@ public class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRights
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class SubjectRightsRequestEnumeratedMailboxLocation extends SubjectRights
      * @param value Value to set for the upns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpns(@javax.annotation.Nullable final java.util.List<String> value) {
         this._upns = value;
     }

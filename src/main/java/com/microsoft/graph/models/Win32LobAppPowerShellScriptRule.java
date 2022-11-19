@@ -28,6 +28,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * Instantiates a new Win32LobAppPowerShellScriptRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Win32LobAppPowerShellScriptRule() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppPowerShellScriptRule");
@@ -73,16 +74,16 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppPowerShellScriptRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("comparisonValue", (n) -> { currentObject.setComparisonValue(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("enforceSignatureCheck", (n) -> { currentObject.setEnforceSignatureCheck(n.getBooleanValue()); });
-            this.put("operationType", (n) -> { currentObject.setOperationType(n.getEnumValue(Win32LobAppPowerShellScriptRuleOperationType.class)); });
-            this.put("operator", (n) -> { currentObject.setOperator(n.getEnumValue(Win32LobAppRuleOperator.class)); });
-            this.put("runAs32Bit", (n) -> { currentObject.setRunAs32Bit(n.getBooleanValue()); });
-            this.put("runAsAccount", (n) -> { currentObject.setRunAsAccount(n.getEnumValue(RunAsAccountType.class)); });
-            this.put("scriptContent", (n) -> { currentObject.setScriptContent(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("comparisonValue", (n) -> { currentObject.setComparisonValue(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enforceSignatureCheck", (n) -> { currentObject.setEnforceSignatureCheck(n.getBooleanValue()); });
+        deserializerMap.put("operationType", (n) -> { currentObject.setOperationType(n.getEnumValue(Win32LobAppPowerShellScriptRuleOperationType.class)); });
+        deserializerMap.put("operator", (n) -> { currentObject.setOperator(n.getEnumValue(Win32LobAppRuleOperator.class)); });
+        deserializerMap.put("runAs32Bit", (n) -> { currentObject.setRunAs32Bit(n.getBooleanValue()); });
+        deserializerMap.put("runAsAccount", (n) -> { currentObject.setRunAsAccount(n.getEnumValue(RunAsAccountType.class)); });
+        deserializerMap.put("scriptContent", (n) -> { currentObject.setScriptContent(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the operationType property value. Contains all supported Powershell Script output detection type.
@@ -129,6 +130,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * @param value Value to set for the comparisonValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComparisonValue(@javax.annotation.Nullable final String value) {
         this._comparisonValue = value;
     }
@@ -154,6 +157,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -162,6 +166,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * @param value Value to set for the enforceSignatureCheck property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnforceSignatureCheck(@javax.annotation.Nullable final Boolean value) {
         this._enforceSignatureCheck = value;
     }
@@ -170,6 +175,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * @param value Value to set for the operationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperationType(@javax.annotation.Nullable final Win32LobAppPowerShellScriptRuleOperationType value) {
         this._operationType = value;
     }
@@ -178,6 +184,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * @param value Value to set for the operator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperator(@javax.annotation.Nullable final Win32LobAppRuleOperator value) {
         this._operator = value;
     }
@@ -186,6 +193,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * @param value Value to set for the runAs32Bit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunAs32Bit(@javax.annotation.Nullable final Boolean value) {
         this._runAs32Bit = value;
     }
@@ -194,6 +202,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * @param value Value to set for the runAsAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunAsAccount(@javax.annotation.Nullable final RunAsAccountType value) {
         this._runAsAccount = value;
     }
@@ -202,6 +211,7 @@ public class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements 
      * @param value Value to set for the scriptContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScriptContent(@javax.annotation.Nullable final String value) {
         this._scriptContent = value;
     }

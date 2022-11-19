@@ -26,6 +26,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
      * Instantiates a new deviceManagementScriptDeviceState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementScriptDeviceState() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementScriptDeviceState");
@@ -63,14 +64,14 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementScriptDeviceState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });
-            this.put("errorDescription", (n) -> { currentObject.setErrorDescription(n.getStringValue()); });
-            this.put("lastStateUpdateDateTime", (n) -> { currentObject.setLastStateUpdateDateTime(n.getOffsetDateTimeValue()); });
-            this.put("managedDevice", (n) -> { currentObject.setManagedDevice(n.getObjectValue(ManagedDevice::createFromDiscriminatorValue)); });
-            this.put("resultMessage", (n) -> { currentObject.setResultMessage(n.getStringValue()); });
-            this.put("runState", (n) -> { currentObject.setRunState(n.getEnumValue(RunState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });
+        deserializerMap.put("errorDescription", (n) -> { currentObject.setErrorDescription(n.getStringValue()); });
+        deserializerMap.put("lastStateUpdateDateTime", (n) -> { currentObject.setLastStateUpdateDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managedDevice", (n) -> { currentObject.setManagedDevice(n.getObjectValue(ManagedDevice::createFromDiscriminatorValue)); });
+        deserializerMap.put("resultMessage", (n) -> { currentObject.setResultMessage(n.getStringValue()); });
+        deserializerMap.put("runState", (n) -> { currentObject.setRunState(n.getEnumValue(RunState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastStateUpdateDateTime property value. Latest time the device management script executes.
@@ -109,6 +110,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -124,6 +126,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final Integer value) {
         this._errorCode = value;
     }
@@ -132,6 +135,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
      * @param value Value to set for the errorDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDescription(@javax.annotation.Nullable final String value) {
         this._errorDescription = value;
     }
@@ -140,6 +144,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
      * @param value Value to set for the lastStateUpdateDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastStateUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastStateUpdateDateTime = value;
     }
@@ -148,6 +153,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
      * @param value Value to set for the managedDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDevice(@javax.annotation.Nullable final ManagedDevice value) {
         this._managedDevice = value;
     }
@@ -156,6 +162,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
      * @param value Value to set for the resultMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResultMessage(@javax.annotation.Nullable final String value) {
         this._resultMessage = value;
     }
@@ -164,6 +171,7 @@ public class DeviceManagementScriptDeviceState extends Entity implements Parsabl
      * @param value Value to set for the runState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunState(@javax.annotation.Nullable final RunState value) {
         this._runState = value;
     }

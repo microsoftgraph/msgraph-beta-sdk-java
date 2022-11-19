@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class FileSecurityProfile extends Entity implements Parsable {
     /** The activityGroupNames property */
     private java.util.List<String> _activityGroupNames;
@@ -42,9 +43,10 @@ public class FileSecurityProfile extends Entity implements Parsable {
     /** The vulnerabilityStates property */
     private java.util.List<VulnerabilityState> _vulnerabilityStates;
     /**
-     * Instantiates a new FileSecurityProfile and sets the default values.
+     * Instantiates a new fileSecurityProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FileSecurityProfile() {
         super();
         this.setOdataType("#microsoft.graph.fileSecurityProfile");
@@ -52,7 +54,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FileSecurityProfile
+     * @return a fileSecurityProfile
      */
     @javax.annotation.Nonnull
     public static FileSecurityProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -106,24 +108,24 @@ public class FileSecurityProfile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileSecurityProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activityGroupNames", (n) -> { currentObject.setActivityGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("azureSubscriptionId", (n) -> { currentObject.setAzureSubscriptionId(n.getStringValue()); });
-            this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
-            this.put("certificateThumbprint", (n) -> { currentObject.setCertificateThumbprint(n.getStringValue()); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("fileType", (n) -> { currentObject.setFileType(n.getStringValue()); });
-            this.put("firstSeenDateTime", (n) -> { currentObject.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("hashes", (n) -> { currentObject.setHashes(n.getCollectionOfObjectValues(FileHash::createFromDiscriminatorValue)); });
-            this.put("lastSeenDateTime", (n) -> { currentObject.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("malwareStates", (n) -> { currentObject.setMalwareStates(n.getCollectionOfObjectValues(MalwareState::createFromDiscriminatorValue)); });
-            this.put("names", (n) -> { currentObject.setNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
-            this.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("vendorInformation", (n) -> { currentObject.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
-            this.put("vulnerabilityStates", (n) -> { currentObject.setVulnerabilityStates(n.getCollectionOfObjectValues(VulnerabilityState::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activityGroupNames", (n) -> { currentObject.setActivityGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("azureSubscriptionId", (n) -> { currentObject.setAzureSubscriptionId(n.getStringValue()); });
+        deserializerMap.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
+        deserializerMap.put("certificateThumbprint", (n) -> { currentObject.setCertificateThumbprint(n.getStringValue()); });
+        deserializerMap.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("fileType", (n) -> { currentObject.setFileType(n.getStringValue()); });
+        deserializerMap.put("firstSeenDateTime", (n) -> { currentObject.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("hashes", (n) -> { currentObject.setHashes(n.getCollectionOfObjectValues(FileHash::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastSeenDateTime", (n) -> { currentObject.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("malwareStates", (n) -> { currentObject.setMalwareStates(n.getCollectionOfObjectValues(MalwareState::createFromDiscriminatorValue)); });
+        deserializerMap.put("names", (n) -> { currentObject.setNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
+        deserializerMap.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
+        deserializerMap.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("vendorInformation", (n) -> { currentObject.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
+        deserializerMap.put("vulnerabilityStates", (n) -> { currentObject.setVulnerabilityStates(n.getCollectionOfObjectValues(VulnerabilityState::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the fileType property value. The fileType property
@@ -218,6 +220,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -243,6 +246,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the activityGroupNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityGroupNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._activityGroupNames = value;
     }
@@ -251,6 +255,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the azureSubscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureSubscriptionId(@javax.annotation.Nullable final String value) {
         this._azureSubscriptionId = value;
     }
@@ -259,6 +264,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
         this._azureTenantId = value;
     }
@@ -267,6 +273,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the certificateThumbprint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateThumbprint(@javax.annotation.Nullable final String value) {
         this._certificateThumbprint = value;
     }
@@ -275,6 +282,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._extensions = value;
     }
@@ -283,6 +291,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the fileType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileType(@javax.annotation.Nullable final String value) {
         this._fileType = value;
     }
@@ -291,6 +300,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the firstSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._firstSeenDateTime = value;
     }
@@ -299,6 +309,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the hashes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHashes(@javax.annotation.Nullable final java.util.List<FileHash> value) {
         this._hashes = value;
     }
@@ -307,6 +318,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSeenDateTime = value;
     }
@@ -315,6 +327,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the malwareStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMalwareStates(@javax.annotation.Nullable final java.util.List<MalwareState> value) {
         this._malwareStates = value;
     }
@@ -323,6 +336,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the names property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._names = value;
     }
@@ -331,6 +345,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the riskScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
         this._riskScore = value;
     }
@@ -339,6 +354,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Long value) {
         this._size = value;
     }
@@ -347,6 +363,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
     }
@@ -355,6 +372,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
         this._vendorInformation = value;
     }
@@ -363,6 +381,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the vulnerabilityStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVulnerabilityStates(@javax.annotation.Nullable final java.util.List<VulnerabilityState> value) {
         this._vulnerabilityStates = value;
     }

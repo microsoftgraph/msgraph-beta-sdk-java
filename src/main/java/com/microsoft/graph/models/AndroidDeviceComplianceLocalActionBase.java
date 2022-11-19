@@ -16,6 +16,7 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements Pa
      * Instantiates a new AndroidDeviceComplianceLocalActionBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceComplianceLocalActionBase() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceComplianceLocalActionBase");
@@ -45,9 +46,9 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceComplianceLocalActionBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("gracePeriodInMinutes", (n) -> { currentObject.setGracePeriodInMinutes(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("gracePeriodInMinutes", (n) -> { currentObject.setGracePeriodInMinutes(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the gracePeriodInMinutes property value. Number of minutes to wait till a local action is enforced. Valid values 0 to 2147483647
@@ -62,6 +63,7 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -72,6 +74,7 @@ public class AndroidDeviceComplianceLocalActionBase extends Entity implements Pa
      * @param value Value to set for the gracePeriodInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGracePeriodInMinutes(@javax.annotation.Nullable final Integer value) {
         this._gracePeriodInMinutes = value;
     }

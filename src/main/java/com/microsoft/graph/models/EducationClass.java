@@ -52,6 +52,7 @@ public class EducationClass extends Entity implements Parsable {
      * Instantiates a new EducationClass and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationClass() {
         super();
         this.setOdataType("#microsoft.graph.educationClass");
@@ -177,28 +178,28 @@ public class EducationClass extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationClass currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignmentCategories", (n) -> { currentObject.setAssignmentCategories(n.getCollectionOfObjectValues(EducationCategory::createFromDiscriminatorValue)); });
-            this.put("assignmentDefaults", (n) -> { currentObject.setAssignmentDefaults(n.getObjectValue(EducationAssignmentDefaults::createFromDiscriminatorValue)); });
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(EducationAssignment::createFromDiscriminatorValue)); });
-            this.put("assignmentSettings", (n) -> { currentObject.setAssignmentSettings(n.getObjectValue(EducationAssignmentSettings::createFromDiscriminatorValue)); });
-            this.put("classCode", (n) -> { currentObject.setClassCode(n.getStringValue()); });
-            this.put("course", (n) -> { currentObject.setCourse(n.getObjectValue(EducationCourse::createFromDiscriminatorValue)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
-            this.put("externalName", (n) -> { currentObject.setExternalName(n.getStringValue()); });
-            this.put("externalSource", (n) -> { currentObject.setExternalSource(n.getEnumValue(EducationExternalSource.class)); });
-            this.put("externalSourceDetail", (n) -> { currentObject.setExternalSourceDetail(n.getStringValue()); });
-            this.put("grade", (n) -> { currentObject.setGrade(n.getStringValue()); });
-            this.put("group", (n) -> { currentObject.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
-            this.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
-            this.put("schools", (n) -> { currentObject.setSchools(n.getCollectionOfObjectValues(EducationSchool::createFromDiscriminatorValue)); });
-            this.put("teachers", (n) -> { currentObject.setTeachers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
-            this.put("term", (n) -> { currentObject.setTerm(n.getObjectValue(EducationTerm::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignmentCategories", (n) -> { currentObject.setAssignmentCategories(n.getCollectionOfObjectValues(EducationCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignmentDefaults", (n) -> { currentObject.setAssignmentDefaults(n.getObjectValue(EducationAssignmentDefaults::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(EducationAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignmentSettings", (n) -> { currentObject.setAssignmentSettings(n.getObjectValue(EducationAssignmentSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("classCode", (n) -> { currentObject.setClassCode(n.getStringValue()); });
+        deserializerMap.put("course", (n) -> { currentObject.setCourse(n.getObjectValue(EducationCourse::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
+        deserializerMap.put("externalName", (n) -> { currentObject.setExternalName(n.getStringValue()); });
+        deserializerMap.put("externalSource", (n) -> { currentObject.setExternalSource(n.getEnumValue(EducationExternalSource.class)); });
+        deserializerMap.put("externalSourceDetail", (n) -> { currentObject.setExternalSourceDetail(n.getStringValue()); });
+        deserializerMap.put("grade", (n) -> { currentObject.setGrade(n.getStringValue()); });
+        deserializerMap.put("group", (n) -> { currentObject.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
+        deserializerMap.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
+        deserializerMap.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("schools", (n) -> { currentObject.setSchools(n.getCollectionOfObjectValues(EducationSchool::createFromDiscriminatorValue)); });
+        deserializerMap.put("teachers", (n) -> { currentObject.setTeachers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("term", (n) -> { currentObject.setTerm(n.getObjectValue(EducationTerm::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the grade property value. Grade level of the class.
@@ -261,6 +262,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -290,6 +292,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the assignmentCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentCategories(@javax.annotation.Nullable final java.util.List<EducationCategory> value) {
         this._assignmentCategories = value;
     }
@@ -298,6 +301,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the assignmentDefaults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentDefaults(@javax.annotation.Nullable final EducationAssignmentDefaults value) {
         this._assignmentDefaults = value;
     }
@@ -306,6 +310,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<EducationAssignment> value) {
         this._assignments = value;
     }
@@ -314,6 +319,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the assignmentSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentSettings(@javax.annotation.Nullable final EducationAssignmentSettings value) {
         this._assignmentSettings = value;
     }
@@ -322,6 +328,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the classCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassCode(@javax.annotation.Nullable final String value) {
         this._classCode = value;
     }
@@ -330,6 +337,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the course property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCourse(@javax.annotation.Nullable final EducationCourse value) {
         this._course = value;
     }
@@ -338,6 +346,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -346,6 +355,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -354,6 +364,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -362,6 +373,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the externalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
         this._externalId = value;
     }
@@ -370,6 +382,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the externalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalName(@javax.annotation.Nullable final String value) {
         this._externalName = value;
     }
@@ -378,6 +391,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the externalSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalSource(@javax.annotation.Nullable final EducationExternalSource value) {
         this._externalSource = value;
     }
@@ -386,6 +400,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the externalSourceDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalSourceDetail(@javax.annotation.Nullable final String value) {
         this._externalSourceDetail = value;
     }
@@ -394,6 +409,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the grade property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGrade(@javax.annotation.Nullable final String value) {
         this._grade = value;
     }
@@ -402,6 +418,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the group property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroup(@javax.annotation.Nullable final Group value) {
         this._group = value;
     }
@@ -410,6 +427,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the mailNickname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailNickname(@javax.annotation.Nullable final String value) {
         this._mailNickname = value;
     }
@@ -418,6 +436,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<EducationUser> value) {
         this._members = value;
     }
@@ -426,6 +445,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the schools property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchools(@javax.annotation.Nullable final java.util.List<EducationSchool> value) {
         this._schools = value;
     }
@@ -434,6 +454,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the teachers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeachers(@javax.annotation.Nullable final java.util.List<EducationUser> value) {
         this._teachers = value;
     }
@@ -442,6 +463,7 @@ public class EducationClass extends Entity implements Parsable {
      * @param value Value to set for the term property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTerm(@javax.annotation.Nullable final EducationTerm value) {
         this._term = value;
     }

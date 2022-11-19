@@ -19,6 +19,7 @@ public class DeviceHealthScriptAssignment extends Entity implements Parsable {
      * Instantiates a new deviceHealthScriptAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceHealthScriptAssignment() {
         super();
         this.setOdataType("#microsoft.graph.deviceHealthScriptAssignment");
@@ -40,11 +41,11 @@ public class DeviceHealthScriptAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("runRemediationScript", (n) -> { currentObject.setRunRemediationScript(n.getBooleanValue()); });
-            this.put("runSchedule", (n) -> { currentObject.setRunSchedule(n.getObjectValue(DeviceHealthScriptRunSchedule::createFromDiscriminatorValue)); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("runRemediationScript", (n) -> { currentObject.setRunRemediationScript(n.getBooleanValue()); });
+        deserializerMap.put("runSchedule", (n) -> { currentObject.setRunSchedule(n.getObjectValue(DeviceHealthScriptRunSchedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the runRemediationScript property value. Determine whether we want to run detection script only or run both detection script and remediation script
@@ -75,6 +76,7 @@ public class DeviceHealthScriptAssignment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +89,7 @@ public class DeviceHealthScriptAssignment extends Entity implements Parsable {
      * @param value Value to set for the runRemediationScript property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunRemediationScript(@javax.annotation.Nullable final Boolean value) {
         this._runRemediationScript = value;
     }
@@ -95,6 +98,7 @@ public class DeviceHealthScriptAssignment extends Entity implements Parsable {
      * @param value Value to set for the runSchedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunSchedule(@javax.annotation.Nullable final DeviceHealthScriptRunSchedule value) {
         this._runSchedule = value;
     }
@@ -103,6 +107,7 @@ public class DeviceHealthScriptAssignment extends Entity implements Parsable {
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this._target = value;
     }

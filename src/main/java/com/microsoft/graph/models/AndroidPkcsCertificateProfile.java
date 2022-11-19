@@ -22,6 +22,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
      * Instantiates a new AndroidPkcsCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidPkcsCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.androidPkcsCertificateProfile");
@@ -67,13 +68,13 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidPkcsCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certificateTemplateName", (n) -> { currentObject.setCertificateTemplateName(n.getStringValue()); });
-            this.put("certificationAuthority", (n) -> { currentObject.setCertificationAuthority(n.getStringValue()); });
-            this.put("certificationAuthorityName", (n) -> { currentObject.setCertificationAuthorityName(n.getStringValue()); });
-            this.put("managedDeviceCertificateStates", (n) -> { currentObject.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
-            this.put("subjectAlternativeNameFormatString", (n) -> { currentObject.setSubjectAlternativeNameFormatString(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certificateTemplateName", (n) -> { currentObject.setCertificateTemplateName(n.getStringValue()); });
+        deserializerMap.put("certificationAuthority", (n) -> { currentObject.setCertificationAuthority(n.getStringValue()); });
+        deserializerMap.put("certificationAuthorityName", (n) -> { currentObject.setCertificationAuthorityName(n.getStringValue()); });
+        deserializerMap.put("managedDeviceCertificateStates", (n) -> { currentObject.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
+        deserializerMap.put("subjectAlternativeNameFormatString", (n) -> { currentObject.setSubjectAlternativeNameFormatString(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
@@ -96,6 +97,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
      * @param value Value to set for the certificateTemplateName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateTemplateName(@javax.annotation.Nullable final String value) {
         this._certificateTemplateName = value;
     }
@@ -118,6 +121,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
      * @param value Value to set for the certificationAuthority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationAuthority(@javax.annotation.Nullable final String value) {
         this._certificationAuthority = value;
     }
@@ -126,6 +130,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
      * @param value Value to set for the certificationAuthorityName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationAuthorityName(@javax.annotation.Nullable final String value) {
         this._certificationAuthorityName = value;
     }
@@ -134,6 +139,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
      * @param value Value to set for the managedDeviceCertificateStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
         this._managedDeviceCertificateStates = value;
     }
@@ -142,6 +148,7 @@ public class AndroidPkcsCertificateProfile extends AndroidCertificateProfileBase
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectAlternativeNameFormatString(@javax.annotation.Nullable final String value) {
         this._subjectAlternativeNameFormatString = value;
     }

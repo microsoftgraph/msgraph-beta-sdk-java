@@ -22,6 +22,7 @@ public class VpnRoute implements AdditionalDataHolder, Parsable {
      * Instantiates a new vpnRoute and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VpnRoute() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.vpnRoute");
@@ -59,11 +60,11 @@ public class VpnRoute implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VpnRoute currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("destinationPrefix", (n) -> { currentObject.setDestinationPrefix(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("prefixSize", (n) -> { currentObject.setPrefixSize(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("destinationPrefix", (n) -> { currentObject.setDestinationPrefix(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("prefixSize", (n) -> { currentObject.setPrefixSize(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -86,6 +87,7 @@ public class VpnRoute implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("destinationPrefix", this.getDestinationPrefix());
@@ -98,6 +100,7 @@ public class VpnRoute implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +109,7 @@ public class VpnRoute implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the destinationPrefix property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDestinationPrefix(@javax.annotation.Nullable final String value) {
         this._destinationPrefix = value;
     }
@@ -114,6 +118,7 @@ public class VpnRoute implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -122,6 +127,7 @@ public class VpnRoute implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the prefixSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrefixSize(@javax.annotation.Nullable final Integer value) {
         this._prefixSize = value;
     }

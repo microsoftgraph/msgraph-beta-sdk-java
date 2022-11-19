@@ -32,6 +32,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * Instantiates a new macOSSoftwareUpdateCategorySummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSSoftwareUpdateCategorySummary() {
         super();
         this.setOdataType("#microsoft.graph.macOSSoftwareUpdateCategorySummary");
@@ -77,17 +78,17 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSSoftwareUpdateCategorySummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("failedUpdateCount", (n) -> { currentObject.setFailedUpdateCount(n.getIntegerValue()); });
-            this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("successfulUpdateCount", (n) -> { currentObject.setSuccessfulUpdateCount(n.getIntegerValue()); });
-            this.put("totalUpdateCount", (n) -> { currentObject.setTotalUpdateCount(n.getIntegerValue()); });
-            this.put("updateCategory", (n) -> { currentObject.setUpdateCategory(n.getEnumValue(MacOSSoftwareUpdateCategory.class)); });
-            this.put("updateStateSummaries", (n) -> { currentObject.setUpdateStateSummaries(n.getCollectionOfObjectValues(MacOSSoftwareUpdateStateSummary::createFromDiscriminatorValue)); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("failedUpdateCount", (n) -> { currentObject.setFailedUpdateCount(n.getIntegerValue()); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("successfulUpdateCount", (n) -> { currentObject.setSuccessfulUpdateCount(n.getIntegerValue()); });
+        deserializerMap.put("totalUpdateCount", (n) -> { currentObject.setTotalUpdateCount(n.getIntegerValue()); });
+        deserializerMap.put("updateCategory", (n) -> { currentObject.setUpdateCategory(n.getEnumValue(MacOSSoftwareUpdateCategory.class)); });
+        deserializerMap.put("updateStateSummaries", (n) -> { currentObject.setUpdateStateSummaries(n.getCollectionOfObjectValues(MacOSSoftwareUpdateStateSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastUpdatedDateTime property value. Last date time the report for this device was updated.
@@ -142,6 +143,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,6 +162,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -168,6 +171,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -176,6 +180,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * @param value Value to set for the failedUpdateCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedUpdateCount(@javax.annotation.Nullable final Integer value) {
         this._failedUpdateCount = value;
     }
@@ -184,6 +189,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastUpdatedDateTime = value;
     }
@@ -192,6 +198,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * @param value Value to set for the successfulUpdateCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessfulUpdateCount(@javax.annotation.Nullable final Integer value) {
         this._successfulUpdateCount = value;
     }
@@ -200,6 +207,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * @param value Value to set for the totalUpdateCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalUpdateCount(@javax.annotation.Nullable final Integer value) {
         this._totalUpdateCount = value;
     }
@@ -208,6 +216,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * @param value Value to set for the updateCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateCategory(@javax.annotation.Nullable final MacOSSoftwareUpdateCategory value) {
         this._updateCategory = value;
     }
@@ -216,6 +225,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * @param value Value to set for the updateStateSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateStateSummaries(@javax.annotation.Nullable final java.util.List<MacOSSoftwareUpdateStateSummary> value) {
         this._updateStateSummaries = value;
     }
@@ -224,6 +234,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

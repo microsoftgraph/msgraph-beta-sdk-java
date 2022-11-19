@@ -49,6 +49,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * Instantiates a new audio and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Audio() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.audio");
@@ -150,25 +151,25 @@ public class Audio implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Audio currentObject = this;
-        return new HashMap<>(17) {{
-            this.put("album", (n) -> { currentObject.setAlbum(n.getStringValue()); });
-            this.put("albumArtist", (n) -> { currentObject.setAlbumArtist(n.getStringValue()); });
-            this.put("artist", (n) -> { currentObject.setArtist(n.getStringValue()); });
-            this.put("bitrate", (n) -> { currentObject.setBitrate(n.getLongValue()); });
-            this.put("composers", (n) -> { currentObject.setComposers(n.getStringValue()); });
-            this.put("copyright", (n) -> { currentObject.setCopyright(n.getStringValue()); });
-            this.put("disc", (n) -> { currentObject.setDisc(n.getIntegerValue()); });
-            this.put("discCount", (n) -> { currentObject.setDiscCount(n.getIntegerValue()); });
-            this.put("duration", (n) -> { currentObject.setDuration(n.getLongValue()); });
-            this.put("genre", (n) -> { currentObject.setGenre(n.getStringValue()); });
-            this.put("hasDrm", (n) -> { currentObject.setHasDrm(n.getBooleanValue()); });
-            this.put("isVariableBitrate", (n) -> { currentObject.setIsVariableBitrate(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-            this.put("track", (n) -> { currentObject.setTrack(n.getIntegerValue()); });
-            this.put("trackCount", (n) -> { currentObject.setTrackCount(n.getIntegerValue()); });
-            this.put("year", (n) -> { currentObject.setYear(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(17);
+        deserializerMap.put("album", (n) -> { currentObject.setAlbum(n.getStringValue()); });
+        deserializerMap.put("albumArtist", (n) -> { currentObject.setAlbumArtist(n.getStringValue()); });
+        deserializerMap.put("artist", (n) -> { currentObject.setArtist(n.getStringValue()); });
+        deserializerMap.put("bitrate", (n) -> { currentObject.setBitrate(n.getLongValue()); });
+        deserializerMap.put("composers", (n) -> { currentObject.setComposers(n.getStringValue()); });
+        deserializerMap.put("copyright", (n) -> { currentObject.setCopyright(n.getStringValue()); });
+        deserializerMap.put("disc", (n) -> { currentObject.setDisc(n.getIntegerValue()); });
+        deserializerMap.put("discCount", (n) -> { currentObject.setDiscCount(n.getIntegerValue()); });
+        deserializerMap.put("duration", (n) -> { currentObject.setDuration(n.getLongValue()); });
+        deserializerMap.put("genre", (n) -> { currentObject.setGenre(n.getStringValue()); });
+        deserializerMap.put("hasDrm", (n) -> { currentObject.setHasDrm(n.getBooleanValue()); });
+        deserializerMap.put("isVariableBitrate", (n) -> { currentObject.setIsVariableBitrate(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
+        deserializerMap.put("track", (n) -> { currentObject.setTrack(n.getIntegerValue()); });
+        deserializerMap.put("trackCount", (n) -> { currentObject.setTrackCount(n.getIntegerValue()); });
+        deserializerMap.put("year", (n) -> { currentObject.setYear(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the genre property value. The genre of this audio file.
@@ -239,6 +240,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("album", this.getAlbum());
@@ -265,6 +267,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -273,6 +276,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the album property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlbum(@javax.annotation.Nullable final String value) {
         this._album = value;
     }
@@ -281,6 +285,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the albumArtist property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlbumArtist(@javax.annotation.Nullable final String value) {
         this._albumArtist = value;
     }
@@ -289,6 +294,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the artist property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setArtist(@javax.annotation.Nullable final String value) {
         this._artist = value;
     }
@@ -297,6 +303,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the bitrate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitrate(@javax.annotation.Nullable final Long value) {
         this._bitrate = value;
     }
@@ -305,6 +312,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the composers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComposers(@javax.annotation.Nullable final String value) {
         this._composers = value;
     }
@@ -313,6 +321,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the copyright property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCopyright(@javax.annotation.Nullable final String value) {
         this._copyright = value;
     }
@@ -321,6 +330,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the disc property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisc(@javax.annotation.Nullable final Integer value) {
         this._disc = value;
     }
@@ -329,6 +339,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the discCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscCount(@javax.annotation.Nullable final Integer value) {
         this._discCount = value;
     }
@@ -337,6 +348,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the duration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDuration(@javax.annotation.Nullable final Long value) {
         this._duration = value;
     }
@@ -345,6 +357,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the genre property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGenre(@javax.annotation.Nullable final String value) {
         this._genre = value;
     }
@@ -353,6 +366,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the hasDrm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasDrm(@javax.annotation.Nullable final Boolean value) {
         this._hasDrm = value;
     }
@@ -361,6 +375,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isVariableBitrate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsVariableBitrate(@javax.annotation.Nullable final Boolean value) {
         this._isVariableBitrate = value;
     }
@@ -369,6 +384,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -377,6 +393,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }
@@ -385,6 +402,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the track property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrack(@javax.annotation.Nullable final Integer value) {
         this._track = value;
     }
@@ -393,6 +411,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the trackCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrackCount(@javax.annotation.Nullable final Integer value) {
         this._trackCount = value;
     }
@@ -401,6 +420,7 @@ public class Audio implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the year property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setYear(@javax.annotation.Nullable final Integer value) {
         this._year = value;
     }

@@ -39,6 +39,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * Instantiates a new WindowsWifiConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsWifiConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsWifiConfiguration");
@@ -91,21 +92,21 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsWifiConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("connectAutomatically", (n) -> { currentObject.setConnectAutomatically(n.getBooleanValue()); });
-            this.put("connectToPreferredNetwork", (n) -> { currentObject.setConnectToPreferredNetwork(n.getBooleanValue()); });
-            this.put("connectWhenNetworkNameIsHidden", (n) -> { currentObject.setConnectWhenNetworkNameIsHidden(n.getBooleanValue()); });
-            this.put("forceFIPSCompliance", (n) -> { currentObject.setForceFIPSCompliance(n.getBooleanValue()); });
-            this.put("meteredConnectionLimit", (n) -> { currentObject.setMeteredConnectionLimit(n.getEnumValue(MeteredConnectionLimitType.class)); });
-            this.put("networkName", (n) -> { currentObject.setNetworkName(n.getStringValue()); });
-            this.put("preSharedKey", (n) -> { currentObject.setPreSharedKey(n.getStringValue()); });
-            this.put("proxyAutomaticConfigurationUrl", (n) -> { currentObject.setProxyAutomaticConfigurationUrl(n.getStringValue()); });
-            this.put("proxyManualAddress", (n) -> { currentObject.setProxyManualAddress(n.getStringValue()); });
-            this.put("proxyManualPort", (n) -> { currentObject.setProxyManualPort(n.getIntegerValue()); });
-            this.put("proxySetting", (n) -> { currentObject.setProxySetting(n.getEnumValue(WiFiProxySetting.class)); });
-            this.put("ssid", (n) -> { currentObject.setSsid(n.getStringValue()); });
-            this.put("wifiSecurityType", (n) -> { currentObject.setWifiSecurityType(n.getEnumValue(WiFiSecurityType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("connectAutomatically", (n) -> { currentObject.setConnectAutomatically(n.getBooleanValue()); });
+        deserializerMap.put("connectToPreferredNetwork", (n) -> { currentObject.setConnectToPreferredNetwork(n.getBooleanValue()); });
+        deserializerMap.put("connectWhenNetworkNameIsHidden", (n) -> { currentObject.setConnectWhenNetworkNameIsHidden(n.getBooleanValue()); });
+        deserializerMap.put("forceFIPSCompliance", (n) -> { currentObject.setForceFIPSCompliance(n.getBooleanValue()); });
+        deserializerMap.put("meteredConnectionLimit", (n) -> { currentObject.setMeteredConnectionLimit(n.getEnumValue(MeteredConnectionLimitType.class)); });
+        deserializerMap.put("networkName", (n) -> { currentObject.setNetworkName(n.getStringValue()); });
+        deserializerMap.put("preSharedKey", (n) -> { currentObject.setPreSharedKey(n.getStringValue()); });
+        deserializerMap.put("proxyAutomaticConfigurationUrl", (n) -> { currentObject.setProxyAutomaticConfigurationUrl(n.getStringValue()); });
+        deserializerMap.put("proxyManualAddress", (n) -> { currentObject.setProxyManualAddress(n.getStringValue()); });
+        deserializerMap.put("proxyManualPort", (n) -> { currentObject.setProxyManualPort(n.getIntegerValue()); });
+        deserializerMap.put("proxySetting", (n) -> { currentObject.setProxySetting(n.getEnumValue(WiFiProxySetting.class)); });
+        deserializerMap.put("ssid", (n) -> { currentObject.setSsid(n.getStringValue()); });
+        deserializerMap.put("wifiSecurityType", (n) -> { currentObject.setWifiSecurityType(n.getEnumValue(WiFiSecurityType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the forceFIPSCompliance property value. Specify whether to force FIPS compliance.
@@ -192,6 +193,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -214,6 +216,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the connectAutomatically property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectAutomatically(@javax.annotation.Nullable final Boolean value) {
         this._connectAutomatically = value;
     }
@@ -222,6 +225,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the connectToPreferredNetwork property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectToPreferredNetwork(@javax.annotation.Nullable final Boolean value) {
         this._connectToPreferredNetwork = value;
     }
@@ -230,6 +234,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the connectWhenNetworkNameIsHidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectWhenNetworkNameIsHidden(@javax.annotation.Nullable final Boolean value) {
         this._connectWhenNetworkNameIsHidden = value;
     }
@@ -238,6 +243,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the forceFIPSCompliance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setForceFIPSCompliance(@javax.annotation.Nullable final Boolean value) {
         this._forceFIPSCompliance = value;
     }
@@ -246,6 +252,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the meteredConnectionLimit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeteredConnectionLimit(@javax.annotation.Nullable final MeteredConnectionLimitType value) {
         this._meteredConnectionLimit = value;
     }
@@ -254,6 +261,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the networkName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkName(@javax.annotation.Nullable final String value) {
         this._networkName = value;
     }
@@ -262,6 +270,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the preSharedKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreSharedKey(@javax.annotation.Nullable final String value) {
         this._preSharedKey = value;
     }
@@ -270,6 +279,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the proxyAutomaticConfigurationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyAutomaticConfigurationUrl(@javax.annotation.Nullable final String value) {
         this._proxyAutomaticConfigurationUrl = value;
     }
@@ -278,6 +288,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the proxyManualAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyManualAddress(@javax.annotation.Nullable final String value) {
         this._proxyManualAddress = value;
     }
@@ -286,6 +297,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the proxyManualPort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyManualPort(@javax.annotation.Nullable final Integer value) {
         this._proxyManualPort = value;
     }
@@ -294,6 +306,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the proxySetting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxySetting(@javax.annotation.Nullable final WiFiProxySetting value) {
         this._proxySetting = value;
     }
@@ -302,6 +315,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the ssid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSsid(@javax.annotation.Nullable final String value) {
         this._ssid = value;
     }
@@ -310,6 +324,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the wifiSecurityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiSecurityType(@javax.annotation.Nullable final WiFiSecurityType value) {
         this._wifiSecurityType = value;
     }

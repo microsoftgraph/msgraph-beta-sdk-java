@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics application performance entity contains app performance details. */
 public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Entity implements Parsable {
     /** The number of devices where the app has been active. Valid values -2147483648 to 2147483647 */
     private Integer _activeDeviceCount;
@@ -29,9 +30,10 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     /** The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647 */
     private Integer _meanTimeToFailureInMinutes;
     /**
-     * Instantiates a new UserExperienceAnalyticsAppHealthApplicationPerformance and sets the default values.
+     * Instantiates a new userExperienceAnalyticsAppHealthApplicationPerformance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsAppHealthApplicationPerformance() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsAppHealthApplicationPerformance");
@@ -39,7 +41,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsAppHealthApplicationPerformance
+     * @return a userExperienceAnalyticsAppHealthApplicationPerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthApplicationPerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -125,18 +127,18 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsAppHealthApplicationPerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeDeviceCount", (n) -> { currentObject.setActiveDeviceCount(n.getIntegerValue()); });
-            this.put("appCrashCount", (n) -> { currentObject.setAppCrashCount(n.getIntegerValue()); });
-            this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
-            this.put("appHangCount", (n) -> { currentObject.setAppHangCount(n.getIntegerValue()); });
-            this.put("appHealthScore", (n) -> { currentObject.setAppHealthScore(n.getDoubleValue()); });
-            this.put("appHealthStatus", (n) -> { currentObject.setAppHealthStatus(n.getStringValue()); });
-            this.put("appName", (n) -> { currentObject.setAppName(n.getStringValue()); });
-            this.put("appPublisher", (n) -> { currentObject.setAppPublisher(n.getStringValue()); });
-            this.put("appUsageDuration", (n) -> { currentObject.setAppUsageDuration(n.getIntegerValue()); });
-            this.put("meanTimeToFailureInMinutes", (n) -> { currentObject.setMeanTimeToFailureInMinutes(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeDeviceCount", (n) -> { currentObject.setActiveDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("appCrashCount", (n) -> { currentObject.setAppCrashCount(n.getIntegerValue()); });
+        deserializerMap.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("appHangCount", (n) -> { currentObject.setAppHangCount(n.getIntegerValue()); });
+        deserializerMap.put("appHealthScore", (n) -> { currentObject.setAppHealthScore(n.getDoubleValue()); });
+        deserializerMap.put("appHealthStatus", (n) -> { currentObject.setAppHealthStatus(n.getStringValue()); });
+        deserializerMap.put("appName", (n) -> { currentObject.setAppName(n.getStringValue()); });
+        deserializerMap.put("appPublisher", (n) -> { currentObject.setAppPublisher(n.getStringValue()); });
+        deserializerMap.put("appUsageDuration", (n) -> { currentObject.setAppUsageDuration(n.getIntegerValue()); });
+        deserializerMap.put("meanTimeToFailureInMinutes", (n) -> { currentObject.setMeanTimeToFailureInMinutes(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the meanTimeToFailureInMinutes property value. The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
@@ -151,6 +153,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -170,6 +173,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * @param value Value to set for the activeDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._activeDeviceCount = value;
     }
@@ -178,6 +182,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * @param value Value to set for the appCrashCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppCrashCount(@javax.annotation.Nullable final Integer value) {
         this._appCrashCount = value;
     }
@@ -186,6 +191,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
         this._appDisplayName = value;
     }
@@ -194,6 +200,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * @param value Value to set for the appHangCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppHangCount(@javax.annotation.Nullable final Integer value) {
         this._appHangCount = value;
     }
@@ -202,6 +209,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * @param value Value to set for the appHealthScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppHealthScore(@javax.annotation.Nullable final Double value) {
         this._appHealthScore = value;
     }
@@ -210,6 +218,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * @param value Value to set for the appHealthStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppHealthStatus(@javax.annotation.Nullable final String value) {
         this._appHealthStatus = value;
     }
@@ -218,6 +227,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * @param value Value to set for the appName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppName(@javax.annotation.Nullable final String value) {
         this._appName = value;
     }
@@ -226,6 +236,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * @param value Value to set for the appPublisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppPublisher(@javax.annotation.Nullable final String value) {
         this._appPublisher = value;
     }
@@ -234,6 +245,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * @param value Value to set for the appUsageDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppUsageDuration(@javax.annotation.Nullable final Integer value) {
         this._appUsageDuration = value;
     }
@@ -242,6 +254,7 @@ public class UserExperienceAnalyticsAppHealthApplicationPerformance extends Enti
      * @param value Value to set for the meanTimeToFailureInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeanTimeToFailureInMinutes(@javax.annotation.Nullable final Integer value) {
         this._meanTimeToFailureInMinutes = value;
     }

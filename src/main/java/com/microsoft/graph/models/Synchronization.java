@@ -18,6 +18,7 @@ public class Synchronization extends Entity implements Parsable {
      * Instantiates a new synchronization and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Synchronization() {
         super();
         this.setOdataType("#microsoft.graph.synchronization");
@@ -39,11 +40,11 @@ public class Synchronization extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Synchronization currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("jobs", (n) -> { currentObject.setJobs(n.getCollectionOfObjectValues(SynchronizationJob::createFromDiscriminatorValue)); });
-            this.put("secrets", (n) -> { currentObject.setSecrets(n.getCollectionOfObjectValues(SynchronizationSecretKeyStringValuePair::createFromDiscriminatorValue)); });
-            this.put("templates", (n) -> { currentObject.setTemplates(n.getCollectionOfObjectValues(SynchronizationTemplate::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("jobs", (n) -> { currentObject.setJobs(n.getCollectionOfObjectValues(SynchronizationJob::createFromDiscriminatorValue)); });
+        deserializerMap.put("secrets", (n) -> { currentObject.setSecrets(n.getCollectionOfObjectValues(SynchronizationSecretKeyStringValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("templates", (n) -> { currentObject.setTemplates(n.getCollectionOfObjectValues(SynchronizationTemplate::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the jobs property value. Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.
@@ -74,6 +75,7 @@ public class Synchronization extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class Synchronization extends Entity implements Parsable {
      * @param value Value to set for the jobs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJobs(@javax.annotation.Nullable final java.util.List<SynchronizationJob> value) {
         this._jobs = value;
     }
@@ -94,6 +97,7 @@ public class Synchronization extends Entity implements Parsable {
      * @param value Value to set for the secrets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecrets(@javax.annotation.Nullable final java.util.List<SynchronizationSecretKeyStringValuePair> value) {
         this._secrets = value;
     }
@@ -102,6 +106,7 @@ public class Synchronization extends Entity implements Parsable {
      * @param value Value to set for the templates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplates(@javax.annotation.Nullable final java.util.List<SynchronizationTemplate> value) {
         this._templates = value;
     }

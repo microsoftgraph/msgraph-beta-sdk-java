@@ -14,6 +14,7 @@ public class Todo extends Entity implements Parsable {
      * Instantiates a new todo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Todo() {
         super();
         this.setOdataType("#microsoft.graph.todo");
@@ -35,9 +36,9 @@ public class Todo extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Todo currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("lists", (n) -> { currentObject.setLists(n.getCollectionOfObjectValues(TodoTaskList::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("lists", (n) -> { currentObject.setLists(n.getCollectionOfObjectValues(TodoTaskList::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lists property value. The task lists in the users mailbox.
@@ -52,6 +53,7 @@ public class Todo extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class Todo extends Entity implements Parsable {
      * @param value Value to set for the lists property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLists(@javax.annotation.Nullable final java.util.List<TodoTaskList> value) {
         this._lists = value;
     }

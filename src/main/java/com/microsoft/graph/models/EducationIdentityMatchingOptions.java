@@ -25,6 +25,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * Instantiates a new educationIdentityMatchingOptions and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationIdentityMatchingOptions() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.educationIdentityMatchingOptions");
@@ -62,13 +63,13 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationIdentityMatchingOptions currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getEnumValue(EducationUserRole.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sourcePropertyName", (n) -> { currentObject.setSourcePropertyName(n.getStringValue()); });
-            this.put("targetDomain", (n) -> { currentObject.setTargetDomain(n.getStringValue()); });
-            this.put("targetPropertyName", (n) -> { currentObject.setTargetPropertyName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getEnumValue(EducationUserRole.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sourcePropertyName", (n) -> { currentObject.setSourcePropertyName(n.getStringValue()); });
+        deserializerMap.put("targetDomain", (n) -> { currentObject.setTargetDomain(n.getStringValue()); });
+        deserializerMap.put("targetPropertyName", (n) -> { currentObject.setTargetPropertyName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,6 +108,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("appliesTo", this.getAppliesTo());
@@ -121,6 +123,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * @param value Value to set for the appliesTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliesTo(@javax.annotation.Nullable final EducationUserRole value) {
         this._appliesTo = value;
     }
@@ -137,6 +141,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -145,6 +150,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * @param value Value to set for the sourcePropertyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourcePropertyName(@javax.annotation.Nullable final String value) {
         this._sourcePropertyName = value;
     }
@@ -153,6 +159,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * @param value Value to set for the targetDomain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetDomain(@javax.annotation.Nullable final String value) {
         this._targetDomain = value;
     }
@@ -161,6 +168,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, P
      * @param value Value to set for the targetPropertyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetPropertyName(@javax.annotation.Nullable final String value) {
         this._targetPropertyName = value;
     }

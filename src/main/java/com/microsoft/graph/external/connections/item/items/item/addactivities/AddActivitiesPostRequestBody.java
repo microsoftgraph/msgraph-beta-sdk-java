@@ -19,6 +19,7 @@ public class AddActivitiesPostRequestBody implements AdditionalDataHolder, Parsa
      * Instantiates a new addActivitiesPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AddActivitiesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -55,15 +56,16 @@ public class AddActivitiesPostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AddActivitiesPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(ExternalActivity::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(ExternalActivity::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("activities", this.getActivities());
@@ -74,6 +76,7 @@ public class AddActivitiesPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the activities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivities(@javax.annotation.Nullable final java.util.List<ExternalActivity> value) {
         this._activities = value;
     }
@@ -82,6 +85,7 @@ public class AddActivitiesPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }

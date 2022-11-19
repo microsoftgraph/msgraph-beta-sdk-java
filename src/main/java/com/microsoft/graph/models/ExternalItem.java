@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ExternalItem extends Entity implements Parsable {
     /** The acl property */
     private java.util.List<Acl> _acl;
@@ -19,6 +19,7 @@ public class ExternalItem extends Entity implements Parsable {
      * Instantiates a new externalItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExternalItem() {
         super();
         this.setOdataType("#microsoft.graph.externalItem");
@@ -56,11 +57,11 @@ public class ExternalItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExternalItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("acl", (n) -> { currentObject.setAcl(n.getCollectionOfObjectValues(Acl::createFromDiscriminatorValue)); });
-            this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(ExternalItemContent::createFromDiscriminatorValue)); });
-            this.put("properties", (n) -> { currentObject.setProperties(n.getObjectValue(Properties::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("acl", (n) -> { currentObject.setAcl(n.getCollectionOfObjectValues(Acl::createFromDiscriminatorValue)); });
+        deserializerMap.put("content", (n) -> { currentObject.setContent(n.getObjectValue(ExternalItemContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("properties", (n) -> { currentObject.setProperties(n.getObjectValue(Properties::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the properties property value. The properties property
@@ -75,6 +76,7 @@ public class ExternalItem extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +89,7 @@ public class ExternalItem extends Entity implements Parsable {
      * @param value Value to set for the acl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcl(@javax.annotation.Nullable final java.util.List<Acl> value) {
         this._acl = value;
     }
@@ -95,6 +98,7 @@ public class ExternalItem extends Entity implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final ExternalItemContent value) {
         this._content = value;
     }
@@ -103,6 +107,7 @@ public class ExternalItem extends Entity implements Parsable {
      * @param value Value to set for the properties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProperties(@javax.annotation.Nullable final Properties value) {
         this._properties = value;
     }

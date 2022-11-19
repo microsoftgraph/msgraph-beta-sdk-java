@@ -16,6 +16,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends An
      * Instantiates a new AndroidDeviceComplianceLocalActionLockDeviceWithPasscode and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceComplianceLocalActionLockDeviceWithPasscode() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceComplianceLocalActionLockDeviceWithPasscode");
@@ -37,10 +38,10 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends An
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceComplianceLocalActionLockDeviceWithPasscode currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("passcode", (n) -> { currentObject.setPasscode(n.getStringValue()); });
-            this.put("passcodeSignInFailureCountBeforeWipe", (n) -> { currentObject.setPasscodeSignInFailureCountBeforeWipe(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("passcode", (n) -> { currentObject.setPasscode(n.getStringValue()); });
+        deserializerMap.put("passcodeSignInFailureCountBeforeWipe", (n) -> { currentObject.setPasscodeSignInFailureCountBeforeWipe(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the passcode property value. Passcode to reset to Android device. This property is read-only.
@@ -63,10 +64,10 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends An
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("passcode", this.getPasscode());
         writer.writeIntegerValue("passcodeSignInFailureCountBeforeWipe", this.getPasscodeSignInFailureCountBeforeWipe());
     }
     /**
@@ -74,6 +75,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends An
      * @param value Value to set for the passcode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscode(@javax.annotation.Nullable final String value) {
         this._passcode = value;
     }
@@ -82,6 +84,7 @@ public class AndroidDeviceComplianceLocalActionLockDeviceWithPasscode extends An
      * @param value Value to set for the passcodeSignInFailureCountBeforeWipe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeSignInFailureCountBeforeWipe(@javax.annotation.Nullable final Integer value) {
         this._passcodeSignInFailureCountBeforeWipe = value;
     }

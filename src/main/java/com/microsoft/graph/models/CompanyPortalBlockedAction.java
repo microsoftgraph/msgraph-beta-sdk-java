@@ -24,6 +24,7 @@ public class CompanyPortalBlockedAction implements AdditionalDataHolder, Parsabl
      * Instantiates a new companyPortalBlockedAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CompanyPortalBlockedAction() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.companyPortalBlockedAction");
@@ -61,12 +62,12 @@ public class CompanyPortalBlockedAction implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CompanyPortalBlockedAction currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(CompanyPortalAction.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("ownerType", (n) -> { currentObject.setOwnerType(n.getEnumValue(OwnerType.class)); });
-            this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(DevicePlatformType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("action", (n) -> { currentObject.setAction(n.getEnumValue(CompanyPortalAction.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("ownerType", (n) -> { currentObject.setOwnerType(n.getEnumValue(OwnerType.class)); });
+        deserializerMap.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(DevicePlatformType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -97,6 +98,7 @@ public class CompanyPortalBlockedAction implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("action", this.getAction());
@@ -110,6 +112,7 @@ public class CompanyPortalBlockedAction implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the action property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAction(@javax.annotation.Nullable final CompanyPortalAction value) {
         this._action = value;
     }
@@ -118,6 +121,7 @@ public class CompanyPortalBlockedAction implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -126,6 +130,7 @@ public class CompanyPortalBlockedAction implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -134,6 +139,7 @@ public class CompanyPortalBlockedAction implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the ownerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnerType(@javax.annotation.Nullable final OwnerType value) {
         this._ownerType = value;
     }
@@ -142,6 +148,7 @@ public class CompanyPortalBlockedAction implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the platform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final DevicePlatformType value) {
         this._platform = value;
     }

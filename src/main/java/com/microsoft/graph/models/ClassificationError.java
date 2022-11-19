@@ -14,6 +14,7 @@ public class ClassificationError extends ClassifcationErrorBase implements Parsa
      * Instantiates a new ClassificationError and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ClassificationError() {
         super();
         this.setOdataType("#microsoft.graph.classificationError");
@@ -43,15 +44,16 @@ public class ClassificationError extends ClassifcationErrorBase implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClassificationError currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfObjectValues(ClassifcationErrorBase::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfObjectValues(ClassifcationErrorBase::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class ClassificationError extends ClassifcationErrorBase implements Parsa
      * @param value Value to set for the details property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final java.util.List<ClassifcationErrorBase> value) {
         this._details = value;
     }

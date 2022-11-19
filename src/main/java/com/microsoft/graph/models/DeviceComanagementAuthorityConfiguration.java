@@ -18,6 +18,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      * Instantiates a new DeviceComanagementAuthorityConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceComanagementAuthorityConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.deviceComanagementAuthorityConfiguration");
@@ -47,11 +48,11 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComanagementAuthorityConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("configurationManagerAgentCommandLineArgument", (n) -> { currentObject.setConfigurationManagerAgentCommandLineArgument(n.getStringValue()); });
-            this.put("installConfigurationManagerAgent", (n) -> { currentObject.setInstallConfigurationManagerAgent(n.getBooleanValue()); });
-            this.put("managedDeviceAuthority", (n) -> { currentObject.setManagedDeviceAuthority(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("configurationManagerAgentCommandLineArgument", (n) -> { currentObject.setConfigurationManagerAgentCommandLineArgument(n.getStringValue()); });
+        deserializerMap.put("installConfigurationManagerAgent", (n) -> { currentObject.setInstallConfigurationManagerAgent(n.getBooleanValue()); });
+        deserializerMap.put("managedDeviceAuthority", (n) -> { currentObject.setManagedDeviceAuthority(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the installConfigurationManagerAgent property value. CoManagement Authority configuration InstallConfigurationManagerAgent
@@ -74,6 +75,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      * @param value Value to set for the configurationManagerAgentCommandLineArgument property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationManagerAgentCommandLineArgument(@javax.annotation.Nullable final String value) {
         this._configurationManagerAgentCommandLineArgument = value;
     }
@@ -94,6 +97,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      * @param value Value to set for the installConfigurationManagerAgent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallConfigurationManagerAgent(@javax.annotation.Nullable final Boolean value) {
         this._installConfigurationManagerAgent = value;
     }
@@ -102,6 +106,7 @@ public class DeviceComanagementAuthorityConfiguration extends DeviceEnrollmentCo
      * @param value Value to set for the managedDeviceAuthority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceAuthority(@javax.annotation.Nullable final Integer value) {
         this._managedDeviceAuthority = value;
     }

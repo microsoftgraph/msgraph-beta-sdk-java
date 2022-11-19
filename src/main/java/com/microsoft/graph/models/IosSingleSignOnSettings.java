@@ -28,6 +28,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * Instantiates a new iosSingleSignOnSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosSingleSignOnSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.iosSingleSignOnSettings");
@@ -81,14 +82,14 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosSingleSignOnSettings currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("allowedAppsList", (n) -> { currentObject.setAllowedAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("allowedUrls", (n) -> { currentObject.setAllowedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("kerberosPrincipalName", (n) -> { currentObject.setKerberosPrincipalName(n.getStringValue()); });
-            this.put("kerberosRealm", (n) -> { currentObject.setKerberosRealm(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("allowedAppsList", (n) -> { currentObject.setAllowedAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("allowedUrls", (n) -> { currentObject.setAllowedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("kerberosPrincipalName", (n) -> { currentObject.setKerberosPrincipalName(n.getStringValue()); });
+        deserializerMap.put("kerberosRealm", (n) -> { currentObject.setKerberosRealm(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the kerberosPrincipalName property value. A Kerberos principal name. If not provided, the user is prompted for one during profile installation.
@@ -119,6 +120,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("allowedAppsList", this.getAllowedAppsList());
@@ -134,6 +136,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +145,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowedAppsList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedAppsList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._allowedAppsList = value;
     }
@@ -150,6 +154,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowedUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedUrls = value;
     }
@@ -158,6 +163,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -166,6 +172,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the kerberosPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKerberosPrincipalName(@javax.annotation.Nullable final String value) {
         this._kerberosPrincipalName = value;
     }
@@ -174,6 +181,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the kerberosRealm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKerberosRealm(@javax.annotation.Nullable final String value) {
         this._kerberosRealm = value;
     }
@@ -182,6 +190,7 @@ public class IosSingleSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

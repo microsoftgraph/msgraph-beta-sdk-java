@@ -29,6 +29,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
      * Instantiates a new windowsKioskForceUpdateSchedule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsKioskForceUpdateSchedule() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.windowsKioskForceUpdateSchedule");
@@ -74,14 +75,14 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskForceUpdateSchedule currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("dayofMonth", (n) -> { currentObject.setDayofMonth(n.getIntegerValue()); });
-            this.put("dayofWeek", (n) -> { currentObject.setDayofWeek(n.getEnumValue(DayOfWeek.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getEnumValue(Windows10AppsUpdateRecurrence.class)); });
-            this.put("runImmediatelyIfAfterStartDateTime", (n) -> { currentObject.setRunImmediatelyIfAfterStartDateTime(n.getBooleanValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("dayofMonth", (n) -> { currentObject.setDayofMonth(n.getIntegerValue()); });
+        deserializerMap.put("dayofWeek", (n) -> { currentObject.setDayofWeek(n.getEnumValue(DayOfWeek.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recurrence", (n) -> { currentObject.setRecurrence(n.getEnumValue(Windows10AppsUpdateRecurrence.class)); });
+        deserializerMap.put("runImmediatelyIfAfterStartDateTime", (n) -> { currentObject.setRunImmediatelyIfAfterStartDateTime(n.getBooleanValue()); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -120,6 +121,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("dayofMonth", this.getDayofMonth());
@@ -135,6 +137,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -143,6 +146,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
      * @param value Value to set for the dayofMonth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDayofMonth(@javax.annotation.Nullable final Integer value) {
         this._dayofMonth = value;
     }
@@ -151,6 +155,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
      * @param value Value to set for the dayofWeek property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDayofWeek(@javax.annotation.Nullable final DayOfWeek value) {
         this._dayofWeek = value;
     }
@@ -159,6 +164,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -167,6 +173,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
      * @param value Value to set for the recurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrence(@javax.annotation.Nullable final Windows10AppsUpdateRecurrence value) {
         this._recurrence = value;
     }
@@ -175,6 +182,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
      * @param value Value to set for the runImmediatelyIfAfterStartDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunImmediatelyIfAfterStartDateTime(@javax.annotation.Nullable final Boolean value) {
         this._runImmediatelyIfAfterStartDateTime = value;
     }
@@ -183,6 +191,7 @@ public class WindowsKioskForceUpdateSchedule implements AdditionalDataHolder, Pa
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }

@@ -21,6 +21,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
      * Instantiates a new cloudPcRestorePointSetting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcRestorePointSetting() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.cloudPcRestorePointSetting");
@@ -50,11 +51,11 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcRestorePointSetting currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("frequencyInHours", (n) -> { currentObject.setFrequencyInHours(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("userRestoreEnabled", (n) -> { currentObject.setUserRestoreEnabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("frequencyInHours", (n) -> { currentObject.setFrequencyInHours(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("userRestoreEnabled", (n) -> { currentObject.setUserRestoreEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the frequencyInHours property value. The time interval in hours to take snapshots (restore points) of a Cloud PC automatically. Possible values are 4, 6, 12, 16, and 24. The default frequency is 12 hours.
@@ -85,6 +86,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("frequencyInHours", this.getFrequencyInHours());
@@ -97,6 +99,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the frequencyInHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFrequencyInHours(@javax.annotation.Nullable final Integer value) {
         this._frequencyInHours = value;
     }
@@ -113,6 +117,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +126,7 @@ public class CloudPcRestorePointSetting implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the userRestoreEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRestoreEnabled(@javax.annotation.Nullable final Boolean value) {
         this._userRestoreEnabled = value;
     }

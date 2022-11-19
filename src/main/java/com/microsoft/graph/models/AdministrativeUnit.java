@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of administrativeUnit entities. */
 public class AdministrativeUnit extends DirectoryObject implements Parsable {
     /** An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search. */
     private String _description;
@@ -23,9 +24,10 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     /** Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership or Public. If not set, the default behavior is Public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit. */
     private String _visibility;
     /**
-     * Instantiates a new AdministrativeUnit and sets the default values.
+     * Instantiates a new administrativeUnit and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AdministrativeUnit() {
         super();
         this.setOdataType("#microsoft.graph.administrativeUnit");
@@ -33,7 +35,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AdministrativeUnit
+     * @return a administrativeUnit
      */
     @javax.annotation.Nonnull
     public static AdministrativeUnit createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -71,15 +73,15 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AdministrativeUnit currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("isMemberManagementRestricted", (n) -> { currentObject.setIsMemberManagementRestricted(n.getBooleanValue()); });
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("scopedRoleMembers", (n) -> { currentObject.setScopedRoleMembers(n.getCollectionOfObjectValues(ScopedRoleMembership::createFromDiscriminatorValue)); });
-            this.put("visibility", (n) -> { currentObject.setVisibility(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("isMemberManagementRestricted", (n) -> { currentObject.setIsMemberManagementRestricted(n.getBooleanValue()); });
+        deserializerMap.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("scopedRoleMembers", (n) -> { currentObject.setScopedRoleMembers(n.getCollectionOfObjectValues(ScopedRoleMembership::createFromDiscriminatorValue)); });
+        deserializerMap.put("visibility", (n) -> { currentObject.setVisibility(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isMemberManagementRestricted property value. The isMemberManagementRestricted property
@@ -118,6 +120,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +137,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -142,6 +146,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -150,6 +155,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -158,6 +164,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * @param value Value to set for the isMemberManagementRestricted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMemberManagementRestricted(@javax.annotation.Nullable final Boolean value) {
         this._isMemberManagementRestricted = value;
     }
@@ -166,6 +173,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._members = value;
     }
@@ -174,6 +182,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * @param value Value to set for the scopedRoleMembers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScopedRoleMembers(@javax.annotation.Nullable final java.util.List<ScopedRoleMembership> value) {
         this._scopedRoleMembers = value;
     }
@@ -182,6 +191,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
      * @param value Value to set for the visibility property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVisibility(@javax.annotation.Nullable final String value) {
         this._visibility = value;
     }

@@ -21,6 +21,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Par
      * Instantiates a new conditionalAccessRuleSatisfied and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConditionalAccessRuleSatisfied() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.conditionalAccessRuleSatisfied");
@@ -58,11 +59,11 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessRuleSatisfied currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("conditionalAccessCondition", (n) -> { currentObject.setConditionalAccessCondition(n.getEnumValue(ConditionalAccessConditions.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("ruleSatisfied", (n) -> { currentObject.setRuleSatisfied(n.getEnumValue(ConditionalAccessRule.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("conditionalAccessCondition", (n) -> { currentObject.setConditionalAccessCondition(n.getEnumValue(ConditionalAccessConditions.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("ruleSatisfied", (n) -> { currentObject.setRuleSatisfied(n.getEnumValue(ConditionalAccessRule.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -85,6 +86,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("conditionalAccessCondition", this.getConditionalAccessCondition());
@@ -97,6 +99,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Par
      * @param value Value to set for the conditionalAccessCondition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionalAccessCondition(@javax.annotation.Nullable final ConditionalAccessConditions value) {
         this._conditionalAccessCondition = value;
     }
@@ -113,6 +117,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Par
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +126,7 @@ public class ConditionalAccessRuleSatisfied implements AdditionalDataHolder, Par
      * @param value Value to set for the ruleSatisfied property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRuleSatisfied(@javax.annotation.Nullable final ConditionalAccessRule value) {
         this._ruleSatisfied = value;
     }

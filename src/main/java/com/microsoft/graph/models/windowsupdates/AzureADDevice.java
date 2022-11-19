@@ -16,6 +16,7 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
      * Instantiates a new AzureADDevice and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AzureADDevice() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.azureADDevice");
@@ -53,16 +54,17 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AzureADDevice currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("enrollments", (n) -> { currentObject.setEnrollments(n.getCollectionOfObjectValues(UpdatableAssetEnrollment::createFromDiscriminatorValue)); });
-            this.put("errors", (n) -> { currentObject.setErrors(n.getCollectionOfObjectValues(UpdatableAssetError::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("enrollments", (n) -> { currentObject.setEnrollments(n.getCollectionOfObjectValues(UpdatableAssetEnrollment::createFromDiscriminatorValue)); });
+        deserializerMap.put("errors", (n) -> { currentObject.setErrors(n.getCollectionOfObjectValues(UpdatableAssetError::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
      * @param value Value to set for the enrollments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollments(@javax.annotation.Nullable final java.util.List<UpdatableAssetEnrollment> value) {
         this._enrollments = value;
     }
@@ -82,6 +85,7 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
      * @param value Value to set for the errors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrors(@javax.annotation.Nullable final java.util.List<UpdatableAssetError> value) {
         this._errors = value;
     }

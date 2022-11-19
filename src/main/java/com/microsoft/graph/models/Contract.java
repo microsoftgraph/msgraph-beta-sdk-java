@@ -20,6 +20,7 @@ public class Contract extends DirectoryObject implements Parsable {
      * Instantiates a new Contract and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Contract() {
         super();
         this.setOdataType("#microsoft.graph.contract");
@@ -73,18 +74,19 @@ public class Contract extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Contract currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contractType", (n) -> { currentObject.setContractType(n.getStringValue()); });
-            this.put("customerId", (n) -> { currentObject.setCustomerId(n.getStringValue()); });
-            this.put("defaultDomainName", (n) -> { currentObject.setDefaultDomainName(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contractType", (n) -> { currentObject.setContractType(n.getStringValue()); });
+        deserializerMap.put("customerId", (n) -> { currentObject.setCustomerId(n.getStringValue()); });
+        deserializerMap.put("defaultDomainName", (n) -> { currentObject.setDefaultDomainName(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class Contract extends DirectoryObject implements Parsable {
      * @param value Value to set for the contractType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContractType(@javax.annotation.Nullable final String value) {
         this._contractType = value;
     }
@@ -106,6 +109,7 @@ public class Contract extends DirectoryObject implements Parsable {
      * @param value Value to set for the customerId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerId(@javax.annotation.Nullable final String value) {
         this._customerId = value;
     }
@@ -114,6 +118,7 @@ public class Contract extends DirectoryObject implements Parsable {
      * @param value Value to set for the defaultDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultDomainName(@javax.annotation.Nullable final String value) {
         this._defaultDomainName = value;
     }
@@ -122,6 +127,7 @@ public class Contract extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }

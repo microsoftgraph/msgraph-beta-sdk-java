@@ -17,7 +17,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     /** Extended Key Usage (EKU) settings. */
     private java.util.List<ExtendedKeyUsage> _extendedKeyUsages;
     /** SCEP Hash Algorithm. */
-    private java.util.List<String> _hashAlgorithm;
+    private java.util.List<HashAlgorithms> _hashAlgorithm;
     /** Key Size Options. */
     private KeySize _keySize;
     /** Key Storage Provider (KSP) Import Options. */
@@ -38,6 +38,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * Instantiates a new Windows10XSCEPCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10XSCEPCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.windows10XSCEPCertificateProfile");
@@ -91,28 +92,28 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10XSCEPCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certificateStore", (n) -> { currentObject.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
-            this.put("certificateValidityPeriodScale", (n) -> { currentObject.setCertificateValidityPeriodScale(n.getEnumValue(CertificateValidityPeriodScale.class)); });
-            this.put("certificateValidityPeriodValue", (n) -> { currentObject.setCertificateValidityPeriodValue(n.getIntegerValue()); });
-            this.put("extendedKeyUsages", (n) -> { currentObject.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
-            this.put("hashAlgorithm", (n) -> { currentObject.setHashAlgorithm(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("keySize", (n) -> { currentObject.setKeySize(n.getEnumValue(KeySize.class)); });
-            this.put("keyStorageProvider", (n) -> { currentObject.setKeyStorageProvider(n.getEnumValue(KeyStorageProviderOption.class)); });
-            this.put("keyUsage", (n) -> { currentObject.setKeyUsage(n.getEnumValue(KeyUsages.class)); });
-            this.put("renewalThresholdPercentage", (n) -> { currentObject.setRenewalThresholdPercentage(n.getIntegerValue()); });
-            this.put("rootCertificateId", (n) -> { currentObject.setRootCertificateId(n.getStringValue()); });
-            this.put("scepServerUrls", (n) -> { currentObject.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("subjectAlternativeNameFormats", (n) -> { currentObject.setSubjectAlternativeNameFormats(n.getCollectionOfObjectValues(Windows10XCustomSubjectAlternativeName::createFromDiscriminatorValue)); });
-            this.put("subjectNameFormatString", (n) -> { currentObject.setSubjectNameFormatString(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certificateStore", (n) -> { currentObject.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
+        deserializerMap.put("certificateValidityPeriodScale", (n) -> { currentObject.setCertificateValidityPeriodScale(n.getEnumValue(CertificateValidityPeriodScale.class)); });
+        deserializerMap.put("certificateValidityPeriodValue", (n) -> { currentObject.setCertificateValidityPeriodValue(n.getIntegerValue()); });
+        deserializerMap.put("extendedKeyUsages", (n) -> { currentObject.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
+        deserializerMap.put("hashAlgorithm", (n) -> { currentObject.setHashAlgorithm(n.getCollectionOfEnumValues(HashAlgorithms.class)); });
+        deserializerMap.put("keySize", (n) -> { currentObject.setKeySize(n.getEnumValue(KeySize.class)); });
+        deserializerMap.put("keyStorageProvider", (n) -> { currentObject.setKeyStorageProvider(n.getEnumValue(KeyStorageProviderOption.class)); });
+        deserializerMap.put("keyUsage", (n) -> { currentObject.setKeyUsage(n.getEnumValue(KeyUsages.class)); });
+        deserializerMap.put("renewalThresholdPercentage", (n) -> { currentObject.setRenewalThresholdPercentage(n.getIntegerValue()); });
+        deserializerMap.put("rootCertificateId", (n) -> { currentObject.setRootCertificateId(n.getStringValue()); });
+        deserializerMap.put("scepServerUrls", (n) -> { currentObject.setScepServerUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("subjectAlternativeNameFormats", (n) -> { currentObject.setSubjectAlternativeNameFormats(n.getCollectionOfObjectValues(Windows10XCustomSubjectAlternativeName::createFromDiscriminatorValue)); });
+        deserializerMap.put("subjectNameFormatString", (n) -> { currentObject.setSubjectNameFormatString(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hashAlgorithm property value. SCEP Hash Algorithm.
-     * @return a string
+     * @return a hashAlgorithms
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getHashAlgorithm() {
+    public java.util.List<HashAlgorithms> getHashAlgorithm() {
         return this._hashAlgorithm;
     }
     /**
@@ -184,6 +185,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -191,7 +193,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
         writer.writeEnumValue("certificateValidityPeriodScale", this.getCertificateValidityPeriodScale());
         writer.writeIntegerValue("certificateValidityPeriodValue", this.getCertificateValidityPeriodValue());
         writer.writeCollectionOfObjectValues("extendedKeyUsages", this.getExtendedKeyUsages());
-        writer.writeCollectionOfPrimitiveValues("hashAlgorithm", this.getHashAlgorithm());
+        writer.writeCollectionOfEnumValues("hashAlgorithm", this.getHashAlgorithm());
         writer.writeEnumValue("keySize", this.getKeySize());
         writer.writeEnumValue("keyStorageProvider", this.getKeyStorageProvider());
         writer.writeEnumValue("keyUsage", this.getKeyUsage());
@@ -206,6 +208,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * @param value Value to set for the certificateStore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateStore(@javax.annotation.Nullable final CertificateStore value) {
         this._certificateStore = value;
     }
@@ -214,6 +217,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * @param value Value to set for the certificateValidityPeriodScale property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateValidityPeriodScale(@javax.annotation.Nullable final CertificateValidityPeriodScale value) {
         this._certificateValidityPeriodScale = value;
     }
@@ -222,6 +226,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * @param value Value to set for the certificateValidityPeriodValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateValidityPeriodValue(@javax.annotation.Nullable final Integer value) {
         this._certificateValidityPeriodValue = value;
     }
@@ -230,6 +235,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * @param value Value to set for the extendedKeyUsages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtendedKeyUsages(@javax.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
         this._extendedKeyUsages = value;
     }
@@ -238,7 +244,8 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * @param value Value to set for the hashAlgorithm property.
      * @return a void
      */
-    public void setHashAlgorithm(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setHashAlgorithm(@javax.annotation.Nullable final java.util.List<HashAlgorithms> value) {
         this._hashAlgorithm = value;
     }
     /**
@@ -246,6 +253,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * @param value Value to set for the keySize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeySize(@javax.annotation.Nullable final KeySize value) {
         this._keySize = value;
     }
@@ -254,6 +262,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * @param value Value to set for the keyStorageProvider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyStorageProvider(@javax.annotation.Nullable final KeyStorageProviderOption value) {
         this._keyStorageProvider = value;
     }
@@ -262,6 +271,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * @param value Value to set for the keyUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyUsage(@javax.annotation.Nullable final KeyUsages value) {
         this._keyUsage = value;
     }
@@ -270,6 +280,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * @param value Value to set for the renewalThresholdPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRenewalThresholdPercentage(@javax.annotation.Nullable final Integer value) {
         this._renewalThresholdPercentage = value;
     }
@@ -278,6 +289,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * @param value Value to set for the rootCertificateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootCertificateId(@javax.annotation.Nullable final String value) {
         this._rootCertificateId = value;
     }
@@ -286,6 +298,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * @param value Value to set for the scepServerUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScepServerUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._scepServerUrls = value;
     }
@@ -294,6 +307,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * @param value Value to set for the subjectAlternativeNameFormats property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectAlternativeNameFormats(@javax.annotation.Nullable final java.util.List<Windows10XCustomSubjectAlternativeName> value) {
         this._subjectAlternativeNameFormats = value;
     }
@@ -302,6 +316,7 @@ public class Windows10XSCEPCertificateProfile extends Windows10XCertificateProfi
      * @param value Value to set for the subjectNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectNameFormatString(@javax.annotation.Nullable final String value) {
         this._subjectNameFormatString = value;
     }

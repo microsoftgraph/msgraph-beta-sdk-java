@@ -14,6 +14,7 @@ public class WorkbookFilter extends Entity implements Parsable {
      * Instantiates a new workbookFilter and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookFilter() {
         super();
         this.setOdataType("#microsoft.graph.workbookFilter");
@@ -43,15 +44,16 @@ public class WorkbookFilter extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookFilter currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("criteria", (n) -> { currentObject.setCriteria(n.getObjectValue(WorkbookFilterCriteria::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("criteria", (n) -> { currentObject.setCriteria(n.getObjectValue(WorkbookFilterCriteria::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class WorkbookFilter extends Entity implements Parsable {
      * @param value Value to set for the criteria property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCriteria(@javax.annotation.Nullable final WorkbookFilterCriteria value) {
         this._criteria = value;
     }

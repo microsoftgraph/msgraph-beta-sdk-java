@@ -20,6 +20,7 @@ public class TriggerDeviceScopeActionPostRequestBody implements AdditionalDataHo
      * Instantiates a new triggerDeviceScopeActionPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TriggerDeviceScopeActionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,16 +65,17 @@ public class TriggerDeviceScopeActionPostRequestBody implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TriggerDeviceScopeActionPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
-            this.put("deviceScopeId", (n) -> { currentObject.setDeviceScopeId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
+        deserializerMap.put("deviceScopeId", (n) -> { currentObject.setDeviceScopeId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("actionName", this.getActionName());
@@ -85,6 +87,7 @@ public class TriggerDeviceScopeActionPostRequestBody implements AdditionalDataHo
      * @param value Value to set for the actionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionName(@javax.annotation.Nullable final String value) {
         this._actionName = value;
     }
@@ -93,6 +96,7 @@ public class TriggerDeviceScopeActionPostRequestBody implements AdditionalDataHo
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -101,6 +105,7 @@ public class TriggerDeviceScopeActionPostRequestBody implements AdditionalDataHo
      * @param value Value to set for the deviceScopeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceScopeId(@javax.annotation.Nullable final String value) {
         this._deviceScopeId = value;
     }

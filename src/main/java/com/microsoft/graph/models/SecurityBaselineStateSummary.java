@@ -26,6 +26,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * Instantiates a new securityBaselineStateSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecurityBaselineStateSummary() {
         super();
         this.setOdataType("#microsoft.graph.securityBaselineStateSummary");
@@ -70,14 +71,14 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityBaselineStateSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("conflictCount", (n) -> { currentObject.setConflictCount(n.getIntegerValue()); });
-            this.put("errorCount", (n) -> { currentObject.setErrorCount(n.getIntegerValue()); });
-            this.put("notApplicableCount", (n) -> { currentObject.setNotApplicableCount(n.getIntegerValue()); });
-            this.put("notSecureCount", (n) -> { currentObject.setNotSecureCount(n.getIntegerValue()); });
-            this.put("secureCount", (n) -> { currentObject.setSecureCount(n.getIntegerValue()); });
-            this.put("unknownCount", (n) -> { currentObject.setUnknownCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("conflictCount", (n) -> { currentObject.setConflictCount(n.getIntegerValue()); });
+        deserializerMap.put("errorCount", (n) -> { currentObject.setErrorCount(n.getIntegerValue()); });
+        deserializerMap.put("notApplicableCount", (n) -> { currentObject.setNotApplicableCount(n.getIntegerValue()); });
+        deserializerMap.put("notSecureCount", (n) -> { currentObject.setNotSecureCount(n.getIntegerValue()); });
+        deserializerMap.put("secureCount", (n) -> { currentObject.setSecureCount(n.getIntegerValue()); });
+        deserializerMap.put("unknownCount", (n) -> { currentObject.setUnknownCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable devices
@@ -116,6 +117,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -131,6 +133,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * @param value Value to set for the conflictCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConflictCount(@javax.annotation.Nullable final Integer value) {
         this._conflictCount = value;
     }
@@ -139,6 +142,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * @param value Value to set for the errorCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCount(@javax.annotation.Nullable final Integer value) {
         this._errorCount = value;
     }
@@ -147,6 +151,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * @param value Value to set for the notApplicableCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotApplicableCount(@javax.annotation.Nullable final Integer value) {
         this._notApplicableCount = value;
     }
@@ -155,6 +160,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * @param value Value to set for the notSecureCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotSecureCount(@javax.annotation.Nullable final Integer value) {
         this._notSecureCount = value;
     }
@@ -163,6 +169,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * @param value Value to set for the secureCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecureCount(@javax.annotation.Nullable final Integer value) {
         this._secureCount = value;
     }
@@ -171,6 +178,7 @@ public class SecurityBaselineStateSummary extends Entity implements Parsable {
      * @param value Value to set for the unknownCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnknownCount(@javax.annotation.Nullable final Integer value) {
         this._unknownCount = value;
     }

@@ -58,6 +58,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * Instantiates a new DepMacOSEnrollmentProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DepMacOSEnrollmentProfile() {
         super();
         this.setOdataType("#microsoft.graph.depMacOSEnrollmentProfile");
@@ -119,31 +120,31 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DepMacOSEnrollmentProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessibilityScreenDisabled", (n) -> { currentObject.setAccessibilityScreenDisabled(n.getBooleanValue()); });
-            this.put("autoUnlockWithWatchDisabled", (n) -> { currentObject.setAutoUnlockWithWatchDisabled(n.getBooleanValue()); });
-            this.put("chooseYourLockScreenDisabled", (n) -> { currentObject.setChooseYourLockScreenDisabled(n.getBooleanValue()); });
-            this.put("dontAutoPopulatePrimaryAccountInfo", (n) -> { currentObject.setDontAutoPopulatePrimaryAccountInfo(n.getBooleanValue()); });
-            this.put("enableRestrictEditing", (n) -> { currentObject.setEnableRestrictEditing(n.getBooleanValue()); });
-            this.put("fileVaultDisabled", (n) -> { currentObject.setFileVaultDisabled(n.getBooleanValue()); });
-            this.put("iCloudDiagnosticsDisabled", (n) -> { currentObject.setICloudDiagnosticsDisabled(n.getBooleanValue()); });
-            this.put("iCloudStorageDisabled", (n) -> { currentObject.setICloudStorageDisabled(n.getBooleanValue()); });
-            this.put("isLocalPrimaryAccount", (n) -> { currentObject.setIsLocalPrimaryAccount(n.getBooleanValue()); });
-            this.put("isPrimaryUser", (n) -> { currentObject.setIsPrimaryUser(n.getBooleanValue()); });
-            this.put("lockPrimaryAccountInfo", (n) -> { currentObject.setLockPrimaryAccountInfo(n.getBooleanValue()); });
-            this.put("managedLocalUserShortName", (n) -> { currentObject.setManagedLocalUserShortName(n.getBooleanValue()); });
-            this.put("passCodeDisabled", (n) -> { currentObject.setPassCodeDisabled(n.getBooleanValue()); });
-            this.put("prefillAccountInfo", (n) -> { currentObject.setPrefillAccountInfo(n.getBooleanValue()); });
-            this.put("primaryAccountFullName", (n) -> { currentObject.setPrimaryAccountFullName(n.getStringValue()); });
-            this.put("primaryAccountUserName", (n) -> { currentObject.setPrimaryAccountUserName(n.getStringValue()); });
-            this.put("primaryUser", (n) -> { currentObject.setPrimaryUser(n.getStringValue()); });
-            this.put("primaryUserFullName", (n) -> { currentObject.setPrimaryUserFullName(n.getStringValue()); });
-            this.put("registrationDisabled", (n) -> { currentObject.setRegistrationDisabled(n.getBooleanValue()); });
-            this.put("requestRequiresNetworkTether", (n) -> { currentObject.setRequestRequiresNetworkTether(n.getBooleanValue()); });
-            this.put("setPrimarySetupAccountAsRegularUser", (n) -> { currentObject.setSetPrimarySetupAccountAsRegularUser(n.getBooleanValue()); });
-            this.put("skipPrimarySetupAccountCreation", (n) -> { currentObject.setSkipPrimarySetupAccountCreation(n.getBooleanValue()); });
-            this.put("zoomDisabled", (n) -> { currentObject.setZoomDisabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessibilityScreenDisabled", (n) -> { currentObject.setAccessibilityScreenDisabled(n.getBooleanValue()); });
+        deserializerMap.put("autoUnlockWithWatchDisabled", (n) -> { currentObject.setAutoUnlockWithWatchDisabled(n.getBooleanValue()); });
+        deserializerMap.put("chooseYourLockScreenDisabled", (n) -> { currentObject.setChooseYourLockScreenDisabled(n.getBooleanValue()); });
+        deserializerMap.put("dontAutoPopulatePrimaryAccountInfo", (n) -> { currentObject.setDontAutoPopulatePrimaryAccountInfo(n.getBooleanValue()); });
+        deserializerMap.put("enableRestrictEditing", (n) -> { currentObject.setEnableRestrictEditing(n.getBooleanValue()); });
+        deserializerMap.put("fileVaultDisabled", (n) -> { currentObject.setFileVaultDisabled(n.getBooleanValue()); });
+        deserializerMap.put("iCloudDiagnosticsDisabled", (n) -> { currentObject.setICloudDiagnosticsDisabled(n.getBooleanValue()); });
+        deserializerMap.put("iCloudStorageDisabled", (n) -> { currentObject.setICloudStorageDisabled(n.getBooleanValue()); });
+        deserializerMap.put("isLocalPrimaryAccount", (n) -> { currentObject.setIsLocalPrimaryAccount(n.getBooleanValue()); });
+        deserializerMap.put("isPrimaryUser", (n) -> { currentObject.setIsPrimaryUser(n.getBooleanValue()); });
+        deserializerMap.put("lockPrimaryAccountInfo", (n) -> { currentObject.setLockPrimaryAccountInfo(n.getBooleanValue()); });
+        deserializerMap.put("managedLocalUserShortName", (n) -> { currentObject.setManagedLocalUserShortName(n.getBooleanValue()); });
+        deserializerMap.put("passCodeDisabled", (n) -> { currentObject.setPassCodeDisabled(n.getBooleanValue()); });
+        deserializerMap.put("prefillAccountInfo", (n) -> { currentObject.setPrefillAccountInfo(n.getBooleanValue()); });
+        deserializerMap.put("primaryAccountFullName", (n) -> { currentObject.setPrimaryAccountFullName(n.getStringValue()); });
+        deserializerMap.put("primaryAccountUserName", (n) -> { currentObject.setPrimaryAccountUserName(n.getStringValue()); });
+        deserializerMap.put("primaryUser", (n) -> { currentObject.setPrimaryUser(n.getStringValue()); });
+        deserializerMap.put("primaryUserFullName", (n) -> { currentObject.setPrimaryUserFullName(n.getStringValue()); });
+        deserializerMap.put("registrationDisabled", (n) -> { currentObject.setRegistrationDisabled(n.getBooleanValue()); });
+        deserializerMap.put("requestRequiresNetworkTether", (n) -> { currentObject.setRequestRequiresNetworkTether(n.getBooleanValue()); });
+        deserializerMap.put("setPrimarySetupAccountAsRegularUser", (n) -> { currentObject.setSetPrimarySetupAccountAsRegularUser(n.getBooleanValue()); });
+        deserializerMap.put("skipPrimarySetupAccountCreation", (n) -> { currentObject.setSkipPrimarySetupAccountCreation(n.getBooleanValue()); });
+        deserializerMap.put("zoomDisabled", (n) -> { currentObject.setZoomDisabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileVaultDisabled property value. Indicates if file vault is disabled
@@ -294,6 +295,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -326,6 +328,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the accessibilityScreenDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessibilityScreenDisabled(@javax.annotation.Nullable final Boolean value) {
         this._accessibilityScreenDisabled = value;
     }
@@ -334,6 +337,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the autoUnlockWithWatchDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoUnlockWithWatchDisabled(@javax.annotation.Nullable final Boolean value) {
         this._autoUnlockWithWatchDisabled = value;
     }
@@ -342,6 +346,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the chooseYourLockScreenDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChooseYourLockScreenDisabled(@javax.annotation.Nullable final Boolean value) {
         this._chooseYourLockScreenDisabled = value;
     }
@@ -350,6 +355,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the dontAutoPopulatePrimaryAccountInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDontAutoPopulatePrimaryAccountInfo(@javax.annotation.Nullable final Boolean value) {
         this._dontAutoPopulatePrimaryAccountInfo = value;
     }
@@ -358,6 +364,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the enableRestrictEditing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableRestrictEditing(@javax.annotation.Nullable final Boolean value) {
         this._enableRestrictEditing = value;
     }
@@ -366,6 +373,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the fileVaultDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultDisabled(@javax.annotation.Nullable final Boolean value) {
         this._fileVaultDisabled = value;
     }
@@ -374,6 +382,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the iCloudDiagnosticsDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudDiagnosticsDisabled(@javax.annotation.Nullable final Boolean value) {
         this._iCloudDiagnosticsDisabled = value;
     }
@@ -382,6 +391,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the iCloudStorageDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudStorageDisabled(@javax.annotation.Nullable final Boolean value) {
         this._iCloudStorageDisabled = value;
     }
@@ -390,6 +400,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the isLocalPrimaryAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsLocalPrimaryAccount(@javax.annotation.Nullable final Boolean value) {
         this._isLocalPrimaryAccount = value;
     }
@@ -398,6 +409,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the isPrimaryUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPrimaryUser(@javax.annotation.Nullable final Boolean value) {
         this._isPrimaryUser = value;
     }
@@ -406,6 +418,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the lockPrimaryAccountInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLockPrimaryAccountInfo(@javax.annotation.Nullable final Boolean value) {
         this._lockPrimaryAccountInfo = value;
     }
@@ -414,6 +427,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the managedLocalUserShortName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedLocalUserShortName(@javax.annotation.Nullable final Boolean value) {
         this._managedLocalUserShortName = value;
     }
@@ -422,6 +436,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the passCodeDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPassCodeDisabled(@javax.annotation.Nullable final Boolean value) {
         this._passCodeDisabled = value;
     }
@@ -430,6 +445,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the prefillAccountInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrefillAccountInfo(@javax.annotation.Nullable final Boolean value) {
         this._prefillAccountInfo = value;
     }
@@ -438,6 +454,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the primaryAccountFullName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrimaryAccountFullName(@javax.annotation.Nullable final String value) {
         this._primaryAccountFullName = value;
     }
@@ -446,6 +463,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the primaryAccountUserName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrimaryAccountUserName(@javax.annotation.Nullable final String value) {
         this._primaryAccountUserName = value;
     }
@@ -454,6 +472,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the primaryUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrimaryUser(@javax.annotation.Nullable final String value) {
         this._primaryUser = value;
     }
@@ -462,6 +481,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the primaryUserFullName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrimaryUserFullName(@javax.annotation.Nullable final String value) {
         this._primaryUserFullName = value;
     }
@@ -470,6 +490,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the registrationDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistrationDisabled(@javax.annotation.Nullable final Boolean value) {
         this._registrationDisabled = value;
     }
@@ -478,6 +499,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the requestRequiresNetworkTether property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestRequiresNetworkTether(@javax.annotation.Nullable final Boolean value) {
         this._requestRequiresNetworkTether = value;
     }
@@ -486,6 +508,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the setPrimarySetupAccountAsRegularUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSetPrimarySetupAccountAsRegularUser(@javax.annotation.Nullable final Boolean value) {
         this._setPrimarySetupAccountAsRegularUser = value;
     }
@@ -494,6 +517,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the skipPrimarySetupAccountCreation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkipPrimarySetupAccountCreation(@javax.annotation.Nullable final Boolean value) {
         this._skipPrimarySetupAccountCreation = value;
     }
@@ -502,6 +526,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      * @param value Value to set for the zoomDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setZoomDisabled(@javax.annotation.Nullable final Boolean value) {
         this._zoomDisabled = value;
     }

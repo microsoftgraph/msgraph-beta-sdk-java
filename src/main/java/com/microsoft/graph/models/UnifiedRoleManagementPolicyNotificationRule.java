@@ -22,6 +22,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
      * Instantiates a new UnifiedRoleManagementPolicyNotificationRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleManagementPolicyNotificationRule() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicyNotificationRule");
@@ -43,13 +44,13 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleManagementPolicyNotificationRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("isDefaultRecipientsEnabled", (n) -> { currentObject.setIsDefaultRecipientsEnabled(n.getBooleanValue()); });
-            this.put("notificationLevel", (n) -> { currentObject.setNotificationLevel(n.getStringValue()); });
-            this.put("notificationRecipients", (n) -> { currentObject.setNotificationRecipients(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("notificationType", (n) -> { currentObject.setNotificationType(n.getStringValue()); });
-            this.put("recipientType", (n) -> { currentObject.setRecipientType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isDefaultRecipientsEnabled", (n) -> { currentObject.setIsDefaultRecipientsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("notificationLevel", (n) -> { currentObject.setNotificationLevel(n.getStringValue()); });
+        deserializerMap.put("notificationRecipients", (n) -> { currentObject.setNotificationRecipients(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("notificationType", (n) -> { currentObject.setNotificationType(n.getStringValue()); });
+        deserializerMap.put("recipientType", (n) -> { currentObject.setRecipientType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefaultRecipientsEnabled property value. Indicates whether a default recipient will receive the notification email.
@@ -96,6 +97,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
      * @param value Value to set for the isDefaultRecipientsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefaultRecipientsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isDefaultRecipientsEnabled = value;
     }
@@ -118,6 +121,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
      * @param value Value to set for the notificationLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationLevel(@javax.annotation.Nullable final String value) {
         this._notificationLevel = value;
     }
@@ -126,6 +130,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
      * @param value Value to set for the notificationRecipients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationRecipients(@javax.annotation.Nullable final java.util.List<String> value) {
         this._notificationRecipients = value;
     }
@@ -134,6 +139,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
      * @param value Value to set for the notificationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationType(@javax.annotation.Nullable final String value) {
         this._notificationType = value;
     }
@@ -142,6 +148,7 @@ public class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleMana
      * @param value Value to set for the recipientType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipientType(@javax.annotation.Nullable final String value) {
         this._recipientType = value;
     }

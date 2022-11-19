@@ -20,6 +20,7 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * Instantiates a new ApplicationSignInSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ApplicationSignInSummary() {
         super();
         this.setOdataType("#microsoft.graph.applicationSignInSummary");
@@ -57,12 +58,12 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApplicationSignInSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
-            this.put("failedSignInCount", (n) -> { currentObject.setFailedSignInCount(n.getLongValue()); });
-            this.put("successfulSignInCount", (n) -> { currentObject.setSuccessfulSignInCount(n.getLongValue()); });
-            this.put("successPercentage", (n) -> { currentObject.setSuccessPercentage(n.getDoubleValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("failedSignInCount", (n) -> { currentObject.setFailedSignInCount(n.getLongValue()); });
+        deserializerMap.put("successfulSignInCount", (n) -> { currentObject.setSuccessfulSignInCount(n.getLongValue()); });
+        deserializerMap.put("successPercentage", (n) -> { currentObject.setSuccessPercentage(n.getDoubleValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the successfulSignInCount property value. Count of successful sign-ins made by the application.
@@ -85,6 +86,7 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
         this._appDisplayName = value;
     }
@@ -106,6 +109,7 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * @param value Value to set for the failedSignInCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedSignInCount(@javax.annotation.Nullable final Long value) {
         this._failedSignInCount = value;
     }
@@ -114,6 +118,7 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * @param value Value to set for the successfulSignInCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessfulSignInCount(@javax.annotation.Nullable final Long value) {
         this._successfulSignInCount = value;
     }
@@ -122,6 +127,7 @@ public class ApplicationSignInSummary extends Entity implements Parsable {
      * @param value Value to set for the successPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessPercentage(@javax.annotation.Nullable final Double value) {
         this._successPercentage = value;
     }

@@ -24,6 +24,7 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
      * Instantiates a new uploadSecretPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UploadSecretPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -60,12 +61,12 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UploadSecretPostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("exp", (n) -> { currentObject.setExp(n.getLongValue()); });
-            this.put("k", (n) -> { currentObject.setK(n.getStringValue()); });
-            this.put("nbf", (n) -> { currentObject.setNbf(n.getLongValue()); });
-            this.put("use", (n) -> { currentObject.setUse(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("exp", (n) -> { currentObject.setExp(n.getLongValue()); });
+        deserializerMap.put("k", (n) -> { currentObject.setK(n.getStringValue()); });
+        deserializerMap.put("nbf", (n) -> { currentObject.setNbf(n.getLongValue()); });
+        deserializerMap.put("use", (n) -> { currentObject.setUse(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the k property value. The k property
@@ -96,6 +97,7 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLongValue("exp", this.getExp());
@@ -109,6 +111,7 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the exp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExp(@javax.annotation.Nullable final Long value) {
         this._exp = value;
     }
@@ -125,6 +129,7 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the k property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setK(@javax.annotation.Nullable final String value) {
         this._k = value;
     }
@@ -133,6 +138,7 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the nbf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNbf(@javax.annotation.Nullable final Long value) {
         this._nbf = value;
     }
@@ -141,6 +147,7 @@ public class UploadSecretPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the use property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUse(@javax.annotation.Nullable final String value) {
         this._use = value;
     }

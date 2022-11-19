@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum VpnIntegrityAlgorithmType implements ValuedEnum {
     /** SHA2-256 */
     Sha2_256("sha2_256"),

@@ -26,6 +26,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * Instantiates a new SecurityConfigurationTask and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecurityConfigurationTask() {
         super();
         this.setOdataType("#microsoft.graph.securityConfigurationTask");
@@ -71,15 +72,15 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityConfigurationTask currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicablePlatform", (n) -> { currentObject.setApplicablePlatform(n.getEnumValue(EndpointSecurityConfigurationApplicablePlatform.class)); });
-            this.put("endpointSecurityPolicy", (n) -> { currentObject.setEndpointSecurityPolicy(n.getEnumValue(EndpointSecurityConfigurationType.class)); });
-            this.put("endpointSecurityPolicyProfile", (n) -> { currentObject.setEndpointSecurityPolicyProfile(n.getEnumValue(EndpointSecurityConfigurationProfileType.class)); });
-            this.put("insights", (n) -> { currentObject.setInsights(n.getStringValue()); });
-            this.put("intendedSettings", (n) -> { currentObject.setIntendedSettings(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("managedDeviceCount", (n) -> { currentObject.setManagedDeviceCount(n.getIntegerValue()); });
-            this.put("managedDevices", (n) -> { currentObject.setManagedDevices(n.getCollectionOfObjectValues(VulnerableManagedDevice::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicablePlatform", (n) -> { currentObject.setApplicablePlatform(n.getEnumValue(EndpointSecurityConfigurationApplicablePlatform.class)); });
+        deserializerMap.put("endpointSecurityPolicy", (n) -> { currentObject.setEndpointSecurityPolicy(n.getEnumValue(EndpointSecurityConfigurationType.class)); });
+        deserializerMap.put("endpointSecurityPolicyProfile", (n) -> { currentObject.setEndpointSecurityPolicyProfile(n.getEnumValue(EndpointSecurityConfigurationProfileType.class)); });
+        deserializerMap.put("insights", (n) -> { currentObject.setInsights(n.getStringValue()); });
+        deserializerMap.put("intendedSettings", (n) -> { currentObject.setIntendedSettings(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedDeviceCount", (n) -> { currentObject.setManagedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("managedDevices", (n) -> { currentObject.setManagedDevices(n.getCollectionOfObjectValues(VulnerableManagedDevice::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the insights property value. Information about the mitigation.
@@ -118,6 +119,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +136,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * @param value Value to set for the applicablePlatform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicablePlatform(@javax.annotation.Nullable final EndpointSecurityConfigurationApplicablePlatform value) {
         this._applicablePlatform = value;
     }
@@ -142,6 +145,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * @param value Value to set for the endpointSecurityPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpointSecurityPolicy(@javax.annotation.Nullable final EndpointSecurityConfigurationType value) {
         this._endpointSecurityPolicy = value;
     }
@@ -150,6 +154,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * @param value Value to set for the endpointSecurityPolicyProfile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpointSecurityPolicyProfile(@javax.annotation.Nullable final EndpointSecurityConfigurationProfileType value) {
         this._endpointSecurityPolicyProfile = value;
     }
@@ -158,6 +163,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * @param value Value to set for the insights property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInsights(@javax.annotation.Nullable final String value) {
         this._insights = value;
     }
@@ -166,6 +172,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * @param value Value to set for the intendedSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntendedSettings(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._intendedSettings = value;
     }
@@ -174,6 +181,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * @param value Value to set for the managedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._managedDeviceCount = value;
     }
@@ -182,6 +190,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
      * @param value Value to set for the managedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDevices(@javax.annotation.Nullable final java.util.List<VulnerableManagedDevice> value) {
         this._managedDevices = value;
     }

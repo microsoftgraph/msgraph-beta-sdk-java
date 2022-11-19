@@ -19,6 +19,7 @@ public class DeviceManagementResourceAccessProfileAssignment extends Entity impl
      * Instantiates a new deviceManagementResourceAccessProfileAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementResourceAccessProfileAssignment() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementResourceAccessProfileAssignment");
@@ -40,11 +41,11 @@ public class DeviceManagementResourceAccessProfileAssignment extends Entity impl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementResourceAccessProfileAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("intent", (n) -> { currentObject.setIntent(n.getEnumValue(DeviceManagementResourceAccessProfileIntent.class)); });
-            this.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("intent", (n) -> { currentObject.setIntent(n.getEnumValue(DeviceManagementResourceAccessProfileIntent.class)); });
+        deserializerMap.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
+        deserializerMap.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the intent property value. The administrator intent for the assignment of the profile.
@@ -75,6 +76,7 @@ public class DeviceManagementResourceAccessProfileAssignment extends Entity impl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +89,7 @@ public class DeviceManagementResourceAccessProfileAssignment extends Entity impl
      * @param value Value to set for the intent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntent(@javax.annotation.Nullable final DeviceManagementResourceAccessProfileIntent value) {
         this._intent = value;
     }
@@ -95,6 +98,7 @@ public class DeviceManagementResourceAccessProfileAssignment extends Entity impl
      * @param value Value to set for the sourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceId(@javax.annotation.Nullable final String value) {
         this._sourceId = value;
     }
@@ -103,6 +107,7 @@ public class DeviceManagementResourceAccessProfileAssignment extends Entity impl
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this._target = value;
     }

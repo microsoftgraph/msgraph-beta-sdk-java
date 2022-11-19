@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ImageInfo implements AdditionalDataHolder, Parsable {
-    /** Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image */
+    /** Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example  a high contrast image */
     private Boolean _addImageQuery;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
@@ -25,6 +25,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new imageInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ImageInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.imageInfo");
@@ -40,7 +41,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
         return new ImageInfo();
     }
     /**
-     * Gets the addImageQuery property value. Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image
+     * Gets the addImageQuery property value. Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example  a high contrast image
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -78,13 +79,13 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImageInfo currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("addImageQuery", (n) -> { currentObject.setAddImageQuery(n.getBooleanValue()); });
-            this.put("alternateText", (n) -> { currentObject.setAlternateText(n.getStringValue()); });
-            this.put("alternativeText", (n) -> { currentObject.setAlternativeText(n.getStringValue()); });
-            this.put("iconUrl", (n) -> { currentObject.setIconUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("addImageQuery", (n) -> { currentObject.setAddImageQuery(n.getBooleanValue()); });
+        deserializerMap.put("alternateText", (n) -> { currentObject.setAlternateText(n.getStringValue()); });
+        deserializerMap.put("alternativeText", (n) -> { currentObject.setAlternativeText(n.getStringValue()); });
+        deserializerMap.put("iconUrl", (n) -> { currentObject.setIconUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the iconUrl property value. Optional; URI that points to an icon which represents the application used to generate the activity
@@ -107,6 +108,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("addImageQuery", this.getAddImageQuery());
@@ -117,10 +119,11 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the addImageQuery property value. Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example – a high contrast image
+     * Sets the addImageQuery property value. Optional; parameter used to indicate the server is able to render image dynamically in response to parameterization. For example  a high contrast image
      * @param value Value to set for the addImageQuery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddImageQuery(@javax.annotation.Nullable final Boolean value) {
         this._addImageQuery = value;
     }
@@ -129,6 +132,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -137,6 +141,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the alternateText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlternateText(@javax.annotation.Nullable final String value) {
         this._alternateText = value;
     }
@@ -145,6 +150,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the alternativeText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlternativeText(@javax.annotation.Nullable final String value) {
         this._alternativeText = value;
     }
@@ -153,6 +159,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the iconUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIconUrl(@javax.annotation.Nullable final String value) {
         this._iconUrl = value;
     }
@@ -161,6 +168,7 @@ public class ImageInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

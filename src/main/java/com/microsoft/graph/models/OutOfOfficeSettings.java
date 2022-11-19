@@ -21,6 +21,7 @@ public class OutOfOfficeSettings implements AdditionalDataHolder, Parsable {
      * Instantiates a new outOfOfficeSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OutOfOfficeSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.outOfOfficeSettings");
@@ -50,11 +51,11 @@ public class OutOfOfficeSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OutOfOfficeSettings currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("isOutOfOffice", (n) -> { currentObject.setIsOutOfOffice(n.getBooleanValue()); });
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("isOutOfOffice", (n) -> { currentObject.setIsOutOfOffice(n.getBooleanValue()); });
+        deserializerMap.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isOutOfOffice property value. True if either:It is currently in the out of office time window configured on the Outlook or Teams client.There is currently an event on the user's calendar that's marked as Show as Out of OfficeOtherwise, false.
@@ -85,6 +86,7 @@ public class OutOfOfficeSettings implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isOutOfOffice", this.getIsOutOfOffice());
@@ -97,6 +99,7 @@ public class OutOfOfficeSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class OutOfOfficeSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isOutOfOffice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsOutOfOffice(@javax.annotation.Nullable final Boolean value) {
         this._isOutOfOffice = value;
     }
@@ -113,6 +117,7 @@ public class OutOfOfficeSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the message property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final String value) {
         this._message = value;
     }
@@ -121,6 +126,7 @@ public class OutOfOfficeSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

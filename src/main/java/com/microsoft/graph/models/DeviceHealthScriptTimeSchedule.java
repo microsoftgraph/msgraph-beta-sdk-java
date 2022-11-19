@@ -19,6 +19,7 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
      * Instantiates a new DeviceHealthScriptTimeSchedule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceHealthScriptTimeSchedule() {
         super();
         this.setOdataType("#microsoft.graph.deviceHealthScriptTimeSchedule");
@@ -48,10 +49,10 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptTimeSchedule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("time", (n) -> { currentObject.setTime(n.getLocalTimeValue()); });
-            this.put("useUtc", (n) -> { currentObject.setUseUtc(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("time", (n) -> { currentObject.setTime(n.getLocalTimeValue()); });
+        deserializerMap.put("useUtc", (n) -> { currentObject.setUseUtc(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the time property value. At what time the script is scheduled to run. This collection can contain a maximum of 20 elements.
@@ -74,6 +75,7 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -85,6 +87,7 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
      * @param value Value to set for the time property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTime(@javax.annotation.Nullable final LocalTime value) {
         this._time = value;
     }
@@ -93,6 +96,7 @@ public class DeviceHealthScriptTimeSchedule extends DeviceHealthScriptRunSchedul
      * @param value Value to set for the useUtc property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseUtc(@javax.annotation.Nullable final Boolean value) {
         this._useUtc = value;
     }

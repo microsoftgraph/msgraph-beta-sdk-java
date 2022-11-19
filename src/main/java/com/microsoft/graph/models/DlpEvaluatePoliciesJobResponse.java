@@ -14,6 +14,7 @@ public class DlpEvaluatePoliciesJobResponse extends JobResponseBase implements P
      * Instantiates a new DlpEvaluatePoliciesJobResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DlpEvaluatePoliciesJobResponse() {
         super();
         this.setOdataType("#microsoft.graph.dlpEvaluatePoliciesJobResponse");
@@ -35,9 +36,9 @@ public class DlpEvaluatePoliciesJobResponse extends JobResponseBase implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DlpEvaluatePoliciesJobResponse currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("result", (n) -> { currentObject.setResult(n.getObjectValue(DlpPoliciesJobResult::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("result", (n) -> { currentObject.setResult(n.getObjectValue(DlpPoliciesJobResult::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the result property value. The result property
@@ -52,6 +53,7 @@ public class DlpEvaluatePoliciesJobResponse extends JobResponseBase implements P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DlpEvaluatePoliciesJobResponse extends JobResponseBase implements P
      * @param value Value to set for the result property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResult(@javax.annotation.Nullable final DlpPoliciesJobResult value) {
         this._result = value;
     }

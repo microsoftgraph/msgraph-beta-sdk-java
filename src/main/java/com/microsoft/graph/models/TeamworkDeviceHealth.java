@@ -31,6 +31,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
      * Instantiates a new teamworkDeviceHealth and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkDeviceHealth() {
         super();
         this.setOdataType("#microsoft.graph.teamworkDeviceHealth");
@@ -76,17 +77,17 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkDeviceHealth currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("connection", (n) -> { currentObject.setConnection(n.getObjectValue(TeamworkConnection::createFromDiscriminatorValue)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("hardwareHealth", (n) -> { currentObject.setHardwareHealth(n.getObjectValue(TeamworkHardwareHealth::createFromDiscriminatorValue)); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("loginStatus", (n) -> { currentObject.setLoginStatus(n.getObjectValue(TeamworkLoginStatus::createFromDiscriminatorValue)); });
-            this.put("peripheralsHealth", (n) -> { currentObject.setPeripheralsHealth(n.getObjectValue(TeamworkPeripheralsHealth::createFromDiscriminatorValue)); });
-            this.put("softwareUpdateHealth", (n) -> { currentObject.setSoftwareUpdateHealth(n.getObjectValue(TeamworkSoftwareUpdateHealth::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("connection", (n) -> { currentObject.setConnection(n.getObjectValue(TeamworkConnection::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("hardwareHealth", (n) -> { currentObject.setHardwareHealth(n.getObjectValue(TeamworkHardwareHealth::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("loginStatus", (n) -> { currentObject.setLoginStatus(n.getObjectValue(TeamworkLoginStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("peripheralsHealth", (n) -> { currentObject.setPeripheralsHealth(n.getObjectValue(TeamworkPeripheralsHealth::createFromDiscriminatorValue)); });
+        deserializerMap.put("softwareUpdateHealth", (n) -> { currentObject.setSoftwareUpdateHealth(n.getObjectValue(TeamworkSoftwareUpdateHealth::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the hardwareHealth property value. Health details about the device hardware.
@@ -141,6 +142,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +161,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
      * @param value Value to set for the connection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnection(@javax.annotation.Nullable final TeamworkConnection value) {
         this._connection = value;
     }
@@ -167,6 +170,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -175,6 +179,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -183,6 +188,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
      * @param value Value to set for the hardwareHealth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHardwareHealth(@javax.annotation.Nullable final TeamworkHardwareHealth value) {
         this._hardwareHealth = value;
     }
@@ -191,6 +197,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -199,6 +206,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -207,6 +215,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
      * @param value Value to set for the loginStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoginStatus(@javax.annotation.Nullable final TeamworkLoginStatus value) {
         this._loginStatus = value;
     }
@@ -215,6 +224,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
      * @param value Value to set for the peripheralsHealth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeripheralsHealth(@javax.annotation.Nullable final TeamworkPeripheralsHealth value) {
         this._peripheralsHealth = value;
     }
@@ -223,6 +233,7 @@ public class TeamworkDeviceHealth extends Entity implements Parsable {
      * @param value Value to set for the softwareUpdateHealth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareUpdateHealth(@javax.annotation.Nullable final TeamworkSoftwareUpdateHealth value) {
         this._softwareUpdateHealth = value;
     }

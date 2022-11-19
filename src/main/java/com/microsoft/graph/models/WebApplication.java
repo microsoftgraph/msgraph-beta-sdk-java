@@ -29,6 +29,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * Instantiates a new webApplication and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WebApplication() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.webApplication");
@@ -58,15 +59,15 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WebApplication currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("homePageUrl", (n) -> { currentObject.setHomePageUrl(n.getStringValue()); });
-            this.put("implicitGrantSettings", (n) -> { currentObject.setImplicitGrantSettings(n.getObjectValue(ImplicitGrantSettings::createFromDiscriminatorValue)); });
-            this.put("logoutUrl", (n) -> { currentObject.setLogoutUrl(n.getStringValue()); });
-            this.put("oauth2AllowImplicitFlow", (n) -> { currentObject.setOauth2AllowImplicitFlow(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("redirectUris", (n) -> { currentObject.setRedirectUris(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("redirectUriSettings", (n) -> { currentObject.setRedirectUriSettings(n.getCollectionOfObjectValues(RedirectUriSettings::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("homePageUrl", (n) -> { currentObject.setHomePageUrl(n.getStringValue()); });
+        deserializerMap.put("implicitGrantSettings", (n) -> { currentObject.setImplicitGrantSettings(n.getObjectValue(ImplicitGrantSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("logoutUrl", (n) -> { currentObject.setLogoutUrl(n.getStringValue()); });
+        deserializerMap.put("oauth2AllowImplicitFlow", (n) -> { currentObject.setOauth2AllowImplicitFlow(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("redirectUris", (n) -> { currentObject.setRedirectUris(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("redirectUriSettings", (n) -> { currentObject.setRedirectUriSettings(n.getCollectionOfObjectValues(RedirectUriSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the homePageUrl property value. Home page or landing page of the application.
@@ -129,6 +130,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("homePageUrl", this.getHomePageUrl());
@@ -145,6 +147,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the homePageUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomePageUrl(@javax.annotation.Nullable final String value) {
         this._homePageUrl = value;
     }
@@ -161,6 +165,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the implicitGrantSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImplicitGrantSettings(@javax.annotation.Nullable final ImplicitGrantSettings value) {
         this._implicitGrantSettings = value;
     }
@@ -169,6 +174,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the logoutUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogoutUrl(@javax.annotation.Nullable final String value) {
         this._logoutUrl = value;
     }
@@ -177,6 +183,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the oauth2AllowImplicitFlow property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOauth2AllowImplicitFlow(@javax.annotation.Nullable final Boolean value) {
         this._oauth2AllowImplicitFlow = value;
     }
@@ -185,6 +192,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -193,6 +201,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the redirectUris property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRedirectUris(@javax.annotation.Nullable final java.util.List<String> value) {
         this._redirectUris = value;
     }
@@ -201,6 +210,7 @@ public class WebApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the redirectUriSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRedirectUriSettings(@javax.annotation.Nullable final java.util.List<RedirectUriSettings> value) {
         this._redirectUriSettings = value;
     }

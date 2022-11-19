@@ -16,7 +16,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     /** True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise. */
     private Boolean _collation;
     /** The color modes supported by the printer. Valid values are described in the following table. */
-    private java.util.List<String> _colorModes;
+    private java.util.List<PrintColorMode> _colorModes;
     /** A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types. */
     private java.util.List<String> _contentTypes;
     /** The range of copies per job supported by the printer. */
@@ -24,13 +24,13 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     /** The list of print resolutions in DPI that are supported by the printer. */
     private java.util.List<Integer> _dpis;
     /** The list of duplex modes that are supported by the printer. Valid values are described in the following table. */
-    private java.util.List<String> _duplexModes;
+    private java.util.List<PrintDuplexMode> _duplexModes;
     /** The feedDirections property */
-    private java.util.List<String> _feedDirections;
+    private java.util.List<PrinterFeedDirection> _feedDirections;
     /** The list of feed orientations that are supported by the printer. */
-    private java.util.List<String> _feedOrientations;
+    private java.util.List<PrinterFeedOrientation> _feedOrientations;
     /** Finishing processes the printer supports for a printed document. */
-    private java.util.List<String> _finishings;
+    private java.util.List<PrintFinishing> _finishings;
     /** Supported input bins for the printer. */
     private java.util.List<String> _inputBins;
     /** True if color printing is supported by the printer; false otherwise. Read-only. */
@@ -46,47 +46,47 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     /** The media types supported by the printer. */
     private java.util.List<String> _mediaTypes;
     /** The presentation directions supported by the printer. Supported values are described in the following table. */
-    private java.util.List<String> _multipageLayouts;
+    private java.util.List<PrintMultipageLayout> _multipageLayouts;
     /** The OdataType property */
     private String _odataType;
     /** The print orientations supported by the printer. Valid values are described in the following table. */
-    private java.util.List<String> _orientations;
+    private java.util.List<PrintOrientation> _orientations;
     /** The printer's supported output bins (trays). */
     private java.util.List<String> _outputBins;
     /** Supported number of Input Pages to impose upon a single Impression. */
     private java.util.List<Integer> _pagesPerSheet;
     /** The print qualities supported by the printer. */
-    private java.util.List<String> _qualities;
+    private java.util.List<PrintQuality> _qualities;
     /** A list of supported right margins(in microns) for the printer. */
     private java.util.List<Integer> _rightMargins;
     /** Supported print scalings. */
-    private java.util.List<String> _scalings;
+    private java.util.List<PrintScaling> _scalings;
     /** The supportedColorConfigurations property */
-    private java.util.List<String> _supportedColorConfigurations;
+    private java.util.List<PrintColorConfiguration> _supportedColorConfigurations;
     /** The supportedCopiesPerJob property */
     private IntegerRange _supportedCopiesPerJob;
     /** The supportedDocumentMimeTypes property */
     private java.util.List<String> _supportedDocumentMimeTypes;
     /** The supportedDuplexConfigurations property */
-    private java.util.List<String> _supportedDuplexConfigurations;
+    private java.util.List<PrintDuplexConfiguration> _supportedDuplexConfigurations;
     /** The supportedFinishings property */
-    private java.util.List<String> _supportedFinishings;
+    private java.util.List<PrintFinishing> _supportedFinishings;
     /** The supportedMediaColors property */
     private java.util.List<String> _supportedMediaColors;
     /** The supportedMediaSizes property */
     private java.util.List<String> _supportedMediaSizes;
     /** The supportedMediaTypes property */
-    private java.util.List<String> _supportedMediaTypes;
+    private java.util.List<PrintMediaType> _supportedMediaTypes;
     /** The supportedOrientations property */
-    private java.util.List<String> _supportedOrientations;
+    private java.util.List<PrintOrientation> _supportedOrientations;
     /** The supportedOutputBins property */
     private java.util.List<String> _supportedOutputBins;
     /** The supportedPagesPerSheet property */
     private IntegerRange _supportedPagesPerSheet;
     /** The supportedPresentationDirections property */
-    private java.util.List<String> _supportedPresentationDirections;
+    private java.util.List<PrintPresentationDirection> _supportedPresentationDirections;
     /** The supportedPrintQualities property */
-    private java.util.List<String> _supportedPrintQualities;
+    private java.util.List<PrintQuality> _supportedPrintQualities;
     /** True if the printer supports scaling PDF pages to match the print media size; false otherwise. */
     private Boolean _supportsFitPdfToPage;
     /** A list of supported top margins(in microns) for the printer. */
@@ -95,6 +95,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * Instantiates a new printerCapabilities and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrinterCapabilities() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.printerCapabilities");
@@ -135,10 +136,10 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the colorModes property value. The color modes supported by the printer. Valid values are described in the following table.
-     * @return a string
+     * @return a printColorMode
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getColorModes() {
+    public java.util.List<PrintColorMode> getColorModes() {
         return this._colorModes;
     }
     /**
@@ -167,26 +168,26 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the duplexModes property value. The list of duplex modes that are supported by the printer. Valid values are described in the following table.
-     * @return a string
+     * @return a printDuplexMode
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getDuplexModes() {
+    public java.util.List<PrintDuplexMode> getDuplexModes() {
         return this._duplexModes;
     }
     /**
      * Gets the feedDirections property value. The feedDirections property
-     * @return a string
+     * @return a printerFeedDirection
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getFeedDirections() {
+    public java.util.List<PrinterFeedDirection> getFeedDirections() {
         return this._feedDirections;
     }
     /**
      * Gets the feedOrientations property value. The list of feed orientations that are supported by the printer.
-     * @return a string
+     * @return a printerFeedOrientation
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getFeedOrientations() {
+    public java.util.List<PrinterFeedOrientation> getFeedOrientations() {
         return this._feedOrientations;
     }
     /**
@@ -196,55 +197,55 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterCapabilities currentObject = this;
-        return new HashMap<>(40) {{
-            this.put("bottomMargins", (n) -> { currentObject.setBottomMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
-            this.put("collation", (n) -> { currentObject.setCollation(n.getBooleanValue()); });
-            this.put("colorModes", (n) -> { currentObject.setColorModes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("contentTypes", (n) -> { currentObject.setContentTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("copiesPerJob", (n) -> { currentObject.setCopiesPerJob(n.getObjectValue(IntegerRange::createFromDiscriminatorValue)); });
-            this.put("dpis", (n) -> { currentObject.setDpis(n.getCollectionOfPrimitiveValues(Integer.class)); });
-            this.put("duplexModes", (n) -> { currentObject.setDuplexModes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("feedDirections", (n) -> { currentObject.setFeedDirections(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("feedOrientations", (n) -> { currentObject.setFeedOrientations(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("finishings", (n) -> { currentObject.setFinishings(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("inputBins", (n) -> { currentObject.setInputBins(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isColorPrintingSupported", (n) -> { currentObject.setIsColorPrintingSupported(n.getBooleanValue()); });
-            this.put("isPageRangeSupported", (n) -> { currentObject.setIsPageRangeSupported(n.getBooleanValue()); });
-            this.put("leftMargins", (n) -> { currentObject.setLeftMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
-            this.put("mediaColors", (n) -> { currentObject.setMediaColors(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("mediaSizes", (n) -> { currentObject.setMediaSizes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("mediaTypes", (n) -> { currentObject.setMediaTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("multipageLayouts", (n) -> { currentObject.setMultipageLayouts(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("orientations", (n) -> { currentObject.setOrientations(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("outputBins", (n) -> { currentObject.setOutputBins(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("pagesPerSheet", (n) -> { currentObject.setPagesPerSheet(n.getCollectionOfPrimitiveValues(Integer.class)); });
-            this.put("qualities", (n) -> { currentObject.setQualities(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("rightMargins", (n) -> { currentObject.setRightMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
-            this.put("scalings", (n) -> { currentObject.setScalings(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("supportedColorConfigurations", (n) -> { currentObject.setSupportedColorConfigurations(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("supportedCopiesPerJob", (n) -> { currentObject.setSupportedCopiesPerJob(n.getObjectValue(IntegerRange::createFromDiscriminatorValue)); });
-            this.put("supportedDocumentMimeTypes", (n) -> { currentObject.setSupportedDocumentMimeTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("supportedDuplexConfigurations", (n) -> { currentObject.setSupportedDuplexConfigurations(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("supportedFinishings", (n) -> { currentObject.setSupportedFinishings(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("supportedMediaColors", (n) -> { currentObject.setSupportedMediaColors(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("supportedMediaSizes", (n) -> { currentObject.setSupportedMediaSizes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("supportedMediaTypes", (n) -> { currentObject.setSupportedMediaTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("supportedOrientations", (n) -> { currentObject.setSupportedOrientations(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("supportedOutputBins", (n) -> { currentObject.setSupportedOutputBins(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("supportedPagesPerSheet", (n) -> { currentObject.setSupportedPagesPerSheet(n.getObjectValue(IntegerRange::createFromDiscriminatorValue)); });
-            this.put("supportedPresentationDirections", (n) -> { currentObject.setSupportedPresentationDirections(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("supportedPrintQualities", (n) -> { currentObject.setSupportedPrintQualities(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("supportsFitPdfToPage", (n) -> { currentObject.setSupportsFitPdfToPage(n.getBooleanValue()); });
-            this.put("topMargins", (n) -> { currentObject.setTopMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(40);
+        deserializerMap.put("bottomMargins", (n) -> { currentObject.setBottomMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
+        deserializerMap.put("collation", (n) -> { currentObject.setCollation(n.getBooleanValue()); });
+        deserializerMap.put("colorModes", (n) -> { currentObject.setColorModes(n.getCollectionOfEnumValues(PrintColorMode.class)); });
+        deserializerMap.put("contentTypes", (n) -> { currentObject.setContentTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("copiesPerJob", (n) -> { currentObject.setCopiesPerJob(n.getObjectValue(IntegerRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("dpis", (n) -> { currentObject.setDpis(n.getCollectionOfPrimitiveValues(Integer.class)); });
+        deserializerMap.put("duplexModes", (n) -> { currentObject.setDuplexModes(n.getCollectionOfEnumValues(PrintDuplexMode.class)); });
+        deserializerMap.put("feedDirections", (n) -> { currentObject.setFeedDirections(n.getCollectionOfEnumValues(PrinterFeedDirection.class)); });
+        deserializerMap.put("feedOrientations", (n) -> { currentObject.setFeedOrientations(n.getCollectionOfEnumValues(PrinterFeedOrientation.class)); });
+        deserializerMap.put("finishings", (n) -> { currentObject.setFinishings(n.getCollectionOfEnumValues(PrintFinishing.class)); });
+        deserializerMap.put("inputBins", (n) -> { currentObject.setInputBins(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isColorPrintingSupported", (n) -> { currentObject.setIsColorPrintingSupported(n.getBooleanValue()); });
+        deserializerMap.put("isPageRangeSupported", (n) -> { currentObject.setIsPageRangeSupported(n.getBooleanValue()); });
+        deserializerMap.put("leftMargins", (n) -> { currentObject.setLeftMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
+        deserializerMap.put("mediaColors", (n) -> { currentObject.setMediaColors(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("mediaSizes", (n) -> { currentObject.setMediaSizes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("mediaTypes", (n) -> { currentObject.setMediaTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("multipageLayouts", (n) -> { currentObject.setMultipageLayouts(n.getCollectionOfEnumValues(PrintMultipageLayout.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("orientations", (n) -> { currentObject.setOrientations(n.getCollectionOfEnumValues(PrintOrientation.class)); });
+        deserializerMap.put("outputBins", (n) -> { currentObject.setOutputBins(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("pagesPerSheet", (n) -> { currentObject.setPagesPerSheet(n.getCollectionOfPrimitiveValues(Integer.class)); });
+        deserializerMap.put("qualities", (n) -> { currentObject.setQualities(n.getCollectionOfEnumValues(PrintQuality.class)); });
+        deserializerMap.put("rightMargins", (n) -> { currentObject.setRightMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
+        deserializerMap.put("scalings", (n) -> { currentObject.setScalings(n.getCollectionOfEnumValues(PrintScaling.class)); });
+        deserializerMap.put("supportedColorConfigurations", (n) -> { currentObject.setSupportedColorConfigurations(n.getCollectionOfEnumValues(PrintColorConfiguration.class)); });
+        deserializerMap.put("supportedCopiesPerJob", (n) -> { currentObject.setSupportedCopiesPerJob(n.getObjectValue(IntegerRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("supportedDocumentMimeTypes", (n) -> { currentObject.setSupportedDocumentMimeTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("supportedDuplexConfigurations", (n) -> { currentObject.setSupportedDuplexConfigurations(n.getCollectionOfEnumValues(PrintDuplexConfiguration.class)); });
+        deserializerMap.put("supportedFinishings", (n) -> { currentObject.setSupportedFinishings(n.getCollectionOfEnumValues(PrintFinishing.class)); });
+        deserializerMap.put("supportedMediaColors", (n) -> { currentObject.setSupportedMediaColors(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("supportedMediaSizes", (n) -> { currentObject.setSupportedMediaSizes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("supportedMediaTypes", (n) -> { currentObject.setSupportedMediaTypes(n.getCollectionOfEnumValues(PrintMediaType.class)); });
+        deserializerMap.put("supportedOrientations", (n) -> { currentObject.setSupportedOrientations(n.getCollectionOfEnumValues(PrintOrientation.class)); });
+        deserializerMap.put("supportedOutputBins", (n) -> { currentObject.setSupportedOutputBins(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("supportedPagesPerSheet", (n) -> { currentObject.setSupportedPagesPerSheet(n.getObjectValue(IntegerRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("supportedPresentationDirections", (n) -> { currentObject.setSupportedPresentationDirections(n.getCollectionOfEnumValues(PrintPresentationDirection.class)); });
+        deserializerMap.put("supportedPrintQualities", (n) -> { currentObject.setSupportedPrintQualities(n.getCollectionOfEnumValues(PrintQuality.class)); });
+        deserializerMap.put("supportsFitPdfToPage", (n) -> { currentObject.setSupportsFitPdfToPage(n.getBooleanValue()); });
+        deserializerMap.put("topMargins", (n) -> { currentObject.setTopMargins(n.getCollectionOfPrimitiveValues(Integer.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the finishings property value. Finishing processes the printer supports for a printed document.
-     * @return a string
+     * @return a printFinishing
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getFinishings() {
+    public java.util.List<PrintFinishing> getFinishings() {
         return this._finishings;
     }
     /**
@@ -305,10 +306,10 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the multipageLayouts property value. The presentation directions supported by the printer. Supported values are described in the following table.
-     * @return a string
+     * @return a printMultipageLayout
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getMultipageLayouts() {
+    public java.util.List<PrintMultipageLayout> getMultipageLayouts() {
         return this._multipageLayouts;
     }
     /**
@@ -321,10 +322,10 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the orientations property value. The print orientations supported by the printer. Valid values are described in the following table.
-     * @return a string
+     * @return a printOrientation
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getOrientations() {
+    public java.util.List<PrintOrientation> getOrientations() {
         return this._orientations;
     }
     /**
@@ -345,10 +346,10 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the qualities property value. The print qualities supported by the printer.
-     * @return a string
+     * @return a printQuality
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getQualities() {
+    public java.util.List<PrintQuality> getQualities() {
         return this._qualities;
     }
     /**
@@ -361,18 +362,18 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the scalings property value. Supported print scalings.
-     * @return a string
+     * @return a printScaling
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getScalings() {
+    public java.util.List<PrintScaling> getScalings() {
         return this._scalings;
     }
     /**
      * Gets the supportedColorConfigurations property value. The supportedColorConfigurations property
-     * @return a string
+     * @return a printColorConfiguration
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getSupportedColorConfigurations() {
+    public java.util.List<PrintColorConfiguration> getSupportedColorConfigurations() {
         return this._supportedColorConfigurations;
     }
     /**
@@ -393,18 +394,18 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the supportedDuplexConfigurations property value. The supportedDuplexConfigurations property
-     * @return a string
+     * @return a printDuplexConfiguration
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getSupportedDuplexConfigurations() {
+    public java.util.List<PrintDuplexConfiguration> getSupportedDuplexConfigurations() {
         return this._supportedDuplexConfigurations;
     }
     /**
      * Gets the supportedFinishings property value. The supportedFinishings property
-     * @return a string
+     * @return a printFinishing
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getSupportedFinishings() {
+    public java.util.List<PrintFinishing> getSupportedFinishings() {
         return this._supportedFinishings;
     }
     /**
@@ -425,18 +426,18 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the supportedMediaTypes property value. The supportedMediaTypes property
-     * @return a string
+     * @return a printMediaType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getSupportedMediaTypes() {
+    public java.util.List<PrintMediaType> getSupportedMediaTypes() {
         return this._supportedMediaTypes;
     }
     /**
      * Gets the supportedOrientations property value. The supportedOrientations property
-     * @return a string
+     * @return a printOrientation
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getSupportedOrientations() {
+    public java.util.List<PrintOrientation> getSupportedOrientations() {
         return this._supportedOrientations;
     }
     /**
@@ -457,18 +458,18 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the supportedPresentationDirections property value. The supportedPresentationDirections property
-     * @return a string
+     * @return a printPresentationDirection
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getSupportedPresentationDirections() {
+    public java.util.List<PrintPresentationDirection> getSupportedPresentationDirections() {
         return this._supportedPresentationDirections;
     }
     /**
      * Gets the supportedPrintQualities property value. The supportedPrintQualities property
-     * @return a string
+     * @return a printQuality
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getSupportedPrintQualities() {
+    public java.util.List<PrintQuality> getSupportedPrintQualities() {
         return this._supportedPrintQualities;
     }
     /**
@@ -492,18 +493,19 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("bottomMargins", this.getBottomMargins());
         writer.writeBooleanValue("collation", this.getCollation());
-        writer.writeCollectionOfPrimitiveValues("colorModes", this.getColorModes());
+        writer.writeCollectionOfEnumValues("colorModes", this.getColorModes());
         writer.writeCollectionOfPrimitiveValues("contentTypes", this.getContentTypes());
         writer.writeObjectValue("copiesPerJob", this.getCopiesPerJob());
         writer.writeCollectionOfPrimitiveValues("dpis", this.getDpis());
-        writer.writeCollectionOfPrimitiveValues("duplexModes", this.getDuplexModes());
-        writer.writeCollectionOfPrimitiveValues("feedDirections", this.getFeedDirections());
-        writer.writeCollectionOfPrimitiveValues("feedOrientations", this.getFeedOrientations());
-        writer.writeCollectionOfPrimitiveValues("finishings", this.getFinishings());
+        writer.writeCollectionOfEnumValues("duplexModes", this.getDuplexModes());
+        writer.writeCollectionOfEnumValues("feedDirections", this.getFeedDirections());
+        writer.writeCollectionOfEnumValues("feedOrientations", this.getFeedOrientations());
+        writer.writeCollectionOfEnumValues("finishings", this.getFinishings());
         writer.writeCollectionOfPrimitiveValues("inputBins", this.getInputBins());
         writer.writeBooleanValue("isColorPrintingSupported", this.getIsColorPrintingSupported());
         writer.writeBooleanValue("isPageRangeSupported", this.getIsPageRangeSupported());
@@ -511,27 +513,27 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfPrimitiveValues("mediaColors", this.getMediaColors());
         writer.writeCollectionOfPrimitiveValues("mediaSizes", this.getMediaSizes());
         writer.writeCollectionOfPrimitiveValues("mediaTypes", this.getMediaTypes());
-        writer.writeCollectionOfPrimitiveValues("multipageLayouts", this.getMultipageLayouts());
+        writer.writeCollectionOfEnumValues("multipageLayouts", this.getMultipageLayouts());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeCollectionOfPrimitiveValues("orientations", this.getOrientations());
+        writer.writeCollectionOfEnumValues("orientations", this.getOrientations());
         writer.writeCollectionOfPrimitiveValues("outputBins", this.getOutputBins());
         writer.writeCollectionOfPrimitiveValues("pagesPerSheet", this.getPagesPerSheet());
-        writer.writeCollectionOfPrimitiveValues("qualities", this.getQualities());
+        writer.writeCollectionOfEnumValues("qualities", this.getQualities());
         writer.writeCollectionOfPrimitiveValues("rightMargins", this.getRightMargins());
-        writer.writeCollectionOfPrimitiveValues("scalings", this.getScalings());
-        writer.writeCollectionOfPrimitiveValues("supportedColorConfigurations", this.getSupportedColorConfigurations());
+        writer.writeCollectionOfEnumValues("scalings", this.getScalings());
+        writer.writeCollectionOfEnumValues("supportedColorConfigurations", this.getSupportedColorConfigurations());
         writer.writeObjectValue("supportedCopiesPerJob", this.getSupportedCopiesPerJob());
         writer.writeCollectionOfPrimitiveValues("supportedDocumentMimeTypes", this.getSupportedDocumentMimeTypes());
-        writer.writeCollectionOfPrimitiveValues("supportedDuplexConfigurations", this.getSupportedDuplexConfigurations());
-        writer.writeCollectionOfPrimitiveValues("supportedFinishings", this.getSupportedFinishings());
+        writer.writeCollectionOfEnumValues("supportedDuplexConfigurations", this.getSupportedDuplexConfigurations());
+        writer.writeCollectionOfEnumValues("supportedFinishings", this.getSupportedFinishings());
         writer.writeCollectionOfPrimitiveValues("supportedMediaColors", this.getSupportedMediaColors());
         writer.writeCollectionOfPrimitiveValues("supportedMediaSizes", this.getSupportedMediaSizes());
-        writer.writeCollectionOfPrimitiveValues("supportedMediaTypes", this.getSupportedMediaTypes());
-        writer.writeCollectionOfPrimitiveValues("supportedOrientations", this.getSupportedOrientations());
+        writer.writeCollectionOfEnumValues("supportedMediaTypes", this.getSupportedMediaTypes());
+        writer.writeCollectionOfEnumValues("supportedOrientations", this.getSupportedOrientations());
         writer.writeCollectionOfPrimitiveValues("supportedOutputBins", this.getSupportedOutputBins());
         writer.writeObjectValue("supportedPagesPerSheet", this.getSupportedPagesPerSheet());
-        writer.writeCollectionOfPrimitiveValues("supportedPresentationDirections", this.getSupportedPresentationDirections());
-        writer.writeCollectionOfPrimitiveValues("supportedPrintQualities", this.getSupportedPrintQualities());
+        writer.writeCollectionOfEnumValues("supportedPresentationDirections", this.getSupportedPresentationDirections());
+        writer.writeCollectionOfEnumValues("supportedPrintQualities", this.getSupportedPrintQualities());
         writer.writeBooleanValue("supportsFitPdfToPage", this.getSupportsFitPdfToPage());
         writer.writeCollectionOfPrimitiveValues("topMargins", this.getTopMargins());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -541,6 +543,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -549,6 +552,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the bottomMargins property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBottomMargins(@javax.annotation.Nullable final java.util.List<Integer> value) {
         this._bottomMargins = value;
     }
@@ -557,6 +561,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the collation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCollation(@javax.annotation.Nullable final Boolean value) {
         this._collation = value;
     }
@@ -565,7 +570,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the colorModes property.
      * @return a void
      */
-    public void setColorModes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setColorModes(@javax.annotation.Nullable final java.util.List<PrintColorMode> value) {
         this._colorModes = value;
     }
     /**
@@ -573,6 +579,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contentTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._contentTypes = value;
     }
@@ -581,6 +588,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the copiesPerJob property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCopiesPerJob(@javax.annotation.Nullable final IntegerRange value) {
         this._copiesPerJob = value;
     }
@@ -589,6 +597,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the dpis property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDpis(@javax.annotation.Nullable final java.util.List<Integer> value) {
         this._dpis = value;
     }
@@ -597,7 +606,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the duplexModes property.
      * @return a void
      */
-    public void setDuplexModes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setDuplexModes(@javax.annotation.Nullable final java.util.List<PrintDuplexMode> value) {
         this._duplexModes = value;
     }
     /**
@@ -605,7 +615,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the feedDirections property.
      * @return a void
      */
-    public void setFeedDirections(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setFeedDirections(@javax.annotation.Nullable final java.util.List<PrinterFeedDirection> value) {
         this._feedDirections = value;
     }
     /**
@@ -613,7 +624,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the feedOrientations property.
      * @return a void
      */
-    public void setFeedOrientations(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setFeedOrientations(@javax.annotation.Nullable final java.util.List<PrinterFeedOrientation> value) {
         this._feedOrientations = value;
     }
     /**
@@ -621,7 +633,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the finishings property.
      * @return a void
      */
-    public void setFinishings(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setFinishings(@javax.annotation.Nullable final java.util.List<PrintFinishing> value) {
         this._finishings = value;
     }
     /**
@@ -629,6 +642,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the inputBins property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInputBins(@javax.annotation.Nullable final java.util.List<String> value) {
         this._inputBins = value;
     }
@@ -637,6 +651,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isColorPrintingSupported property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsColorPrintingSupported(@javax.annotation.Nullable final Boolean value) {
         this._isColorPrintingSupported = value;
     }
@@ -645,6 +660,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isPageRangeSupported property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPageRangeSupported(@javax.annotation.Nullable final Boolean value) {
         this._isPageRangeSupported = value;
     }
@@ -653,6 +669,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the leftMargins property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLeftMargins(@javax.annotation.Nullable final java.util.List<Integer> value) {
         this._leftMargins = value;
     }
@@ -661,6 +678,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mediaColors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaColors(@javax.annotation.Nullable final java.util.List<String> value) {
         this._mediaColors = value;
     }
@@ -669,6 +687,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mediaSizes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaSizes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._mediaSizes = value;
     }
@@ -677,6 +696,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mediaTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._mediaTypes = value;
     }
@@ -685,7 +705,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the multipageLayouts property.
      * @return a void
      */
-    public void setMultipageLayouts(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setMultipageLayouts(@javax.annotation.Nullable final java.util.List<PrintMultipageLayout> value) {
         this._multipageLayouts = value;
     }
     /**
@@ -693,6 +714,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -701,7 +723,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the orientations property.
      * @return a void
      */
-    public void setOrientations(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setOrientations(@javax.annotation.Nullable final java.util.List<PrintOrientation> value) {
         this._orientations = value;
     }
     /**
@@ -709,6 +732,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the outputBins property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutputBins(@javax.annotation.Nullable final java.util.List<String> value) {
         this._outputBins = value;
     }
@@ -717,6 +741,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the pagesPerSheet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPagesPerSheet(@javax.annotation.Nullable final java.util.List<Integer> value) {
         this._pagesPerSheet = value;
     }
@@ -725,7 +750,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the qualities property.
      * @return a void
      */
-    public void setQualities(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setQualities(@javax.annotation.Nullable final java.util.List<PrintQuality> value) {
         this._qualities = value;
     }
     /**
@@ -733,6 +759,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the rightMargins property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRightMargins(@javax.annotation.Nullable final java.util.List<Integer> value) {
         this._rightMargins = value;
     }
@@ -741,7 +768,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the scalings property.
      * @return a void
      */
-    public void setScalings(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setScalings(@javax.annotation.Nullable final java.util.List<PrintScaling> value) {
         this._scalings = value;
     }
     /**
@@ -749,7 +777,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedColorConfigurations property.
      * @return a void
      */
-    public void setSupportedColorConfigurations(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setSupportedColorConfigurations(@javax.annotation.Nullable final java.util.List<PrintColorConfiguration> value) {
         this._supportedColorConfigurations = value;
     }
     /**
@@ -757,6 +786,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedCopiesPerJob property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedCopiesPerJob(@javax.annotation.Nullable final IntegerRange value) {
         this._supportedCopiesPerJob = value;
     }
@@ -765,6 +795,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedDocumentMimeTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedDocumentMimeTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._supportedDocumentMimeTypes = value;
     }
@@ -773,7 +804,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedDuplexConfigurations property.
      * @return a void
      */
-    public void setSupportedDuplexConfigurations(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setSupportedDuplexConfigurations(@javax.annotation.Nullable final java.util.List<PrintDuplexConfiguration> value) {
         this._supportedDuplexConfigurations = value;
     }
     /**
@@ -781,7 +813,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedFinishings property.
      * @return a void
      */
-    public void setSupportedFinishings(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setSupportedFinishings(@javax.annotation.Nullable final java.util.List<PrintFinishing> value) {
         this._supportedFinishings = value;
     }
     /**
@@ -789,6 +822,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedMediaColors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedMediaColors(@javax.annotation.Nullable final java.util.List<String> value) {
         this._supportedMediaColors = value;
     }
@@ -797,6 +831,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedMediaSizes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedMediaSizes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._supportedMediaSizes = value;
     }
@@ -805,7 +840,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedMediaTypes property.
      * @return a void
      */
-    public void setSupportedMediaTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setSupportedMediaTypes(@javax.annotation.Nullable final java.util.List<PrintMediaType> value) {
         this._supportedMediaTypes = value;
     }
     /**
@@ -813,7 +849,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedOrientations property.
      * @return a void
      */
-    public void setSupportedOrientations(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setSupportedOrientations(@javax.annotation.Nullable final java.util.List<PrintOrientation> value) {
         this._supportedOrientations = value;
     }
     /**
@@ -821,6 +858,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedOutputBins property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedOutputBins(@javax.annotation.Nullable final java.util.List<String> value) {
         this._supportedOutputBins = value;
     }
@@ -829,6 +867,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedPagesPerSheet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedPagesPerSheet(@javax.annotation.Nullable final IntegerRange value) {
         this._supportedPagesPerSheet = value;
     }
@@ -837,7 +876,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedPresentationDirections property.
      * @return a void
      */
-    public void setSupportedPresentationDirections(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setSupportedPresentationDirections(@javax.annotation.Nullable final java.util.List<PrintPresentationDirection> value) {
         this._supportedPresentationDirections = value;
     }
     /**
@@ -845,7 +885,8 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportedPrintQualities property.
      * @return a void
      */
-    public void setSupportedPrintQualities(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setSupportedPrintQualities(@javax.annotation.Nullable final java.util.List<PrintQuality> value) {
         this._supportedPrintQualities = value;
     }
     /**
@@ -853,6 +894,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportsFitPdfToPage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportsFitPdfToPage(@javax.annotation.Nullable final Boolean value) {
         this._supportsFitPdfToPage = value;
     }
@@ -861,6 +903,7 @@ public class PrinterCapabilities implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the topMargins property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTopMargins(@javax.annotation.Nullable final java.util.List<Integer> value) {
         this._topMargins = value;
     }

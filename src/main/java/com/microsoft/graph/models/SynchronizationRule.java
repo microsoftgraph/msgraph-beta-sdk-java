@@ -33,6 +33,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      * Instantiates a new synchronizationRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SynchronizationRule() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.synchronizationRule");
@@ -70,17 +71,17 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationRule currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("editable", (n) -> { currentObject.setEditable(n.getBooleanValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("metadata", (n) -> { currentObject.setMetadata(n.getCollectionOfObjectValues(StringKeyStringValuePair::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("objectMappings", (n) -> { currentObject.setObjectMappings(n.getCollectionOfObjectValues(ObjectMapping::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("sourceDirectoryName", (n) -> { currentObject.setSourceDirectoryName(n.getStringValue()); });
-            this.put("targetDirectoryName", (n) -> { currentObject.setTargetDirectoryName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("editable", (n) -> { currentObject.setEditable(n.getBooleanValue()); });
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        deserializerMap.put("metadata", (n) -> { currentObject.setMetadata(n.getCollectionOfObjectValues(StringKeyStringValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("objectMappings", (n) -> { currentObject.setObjectMappings(n.getCollectionOfObjectValues(ObjectMapping::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("sourceDirectoryName", (n) -> { currentObject.setSourceDirectoryName(n.getStringValue()); });
+        deserializerMap.put("targetDirectoryName", (n) -> { currentObject.setTargetDirectoryName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. Synchronization rule identifier. Must be one of the identifiers recognized by the synchronization engine. Supported rule identifiers can be found in the synchronization template returned by the API.
@@ -151,6 +152,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("editable", this.getEditable());
@@ -169,6 +171,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -177,6 +180,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the editable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEditable(@javax.annotation.Nullable final Boolean value) {
         this._editable = value;
     }
@@ -185,6 +189,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -193,6 +198,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the metadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetadata(@javax.annotation.Nullable final java.util.List<StringKeyStringValuePair> value) {
         this._metadata = value;
     }
@@ -201,6 +207,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -209,6 +216,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the objectMappings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setObjectMappings(@javax.annotation.Nullable final java.util.List<ObjectMapping> value) {
         this._objectMappings = value;
     }
@@ -217,6 +225,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -225,6 +234,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }
@@ -233,6 +243,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sourceDirectoryName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceDirectoryName(@javax.annotation.Nullable final String value) {
         this._sourceDirectoryName = value;
     }
@@ -241,6 +252,7 @@ public class SynchronizationRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the targetDirectoryName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetDirectoryName(@javax.annotation.Nullable final String value) {
         this._targetDirectoryName = value;
     }

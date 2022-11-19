@@ -19,6 +19,7 @@ public class TenantRelationship extends Entity implements Parsable {
      * Instantiates a new TenantRelationship and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TenantRelationship() {
         super();
         this.setOdataType("#microsoft.graph.tenantRelationship");
@@ -56,11 +57,11 @@ public class TenantRelationship extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantRelationship currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("delegatedAdminCustomers", (n) -> { currentObject.setDelegatedAdminCustomers(n.getCollectionOfObjectValues(DelegatedAdminCustomer::createFromDiscriminatorValue)); });
-            this.put("delegatedAdminRelationships", (n) -> { currentObject.setDelegatedAdminRelationships(n.getCollectionOfObjectValues(DelegatedAdminRelationship::createFromDiscriminatorValue)); });
-            this.put("managedTenants", (n) -> { currentObject.setManagedTenants(n.getObjectValue(ManagedTenant::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("delegatedAdminCustomers", (n) -> { currentObject.setDelegatedAdminCustomers(n.getCollectionOfObjectValues(DelegatedAdminCustomer::createFromDiscriminatorValue)); });
+        deserializerMap.put("delegatedAdminRelationships", (n) -> { currentObject.setDelegatedAdminRelationships(n.getCollectionOfObjectValues(DelegatedAdminRelationship::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedTenants", (n) -> { currentObject.setManagedTenants(n.getObjectValue(ManagedTenant::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the managedTenants property value. The operations available to interact with the multi-tenant management platform.
@@ -75,6 +76,7 @@ public class TenantRelationship extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +89,7 @@ public class TenantRelationship extends Entity implements Parsable {
      * @param value Value to set for the delegatedAdminCustomers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDelegatedAdminCustomers(@javax.annotation.Nullable final java.util.List<DelegatedAdminCustomer> value) {
         this._delegatedAdminCustomers = value;
     }
@@ -95,6 +98,7 @@ public class TenantRelationship extends Entity implements Parsable {
      * @param value Value to set for the delegatedAdminRelationships property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDelegatedAdminRelationships(@javax.annotation.Nullable final java.util.List<DelegatedAdminRelationship> value) {
         this._delegatedAdminRelationships = value;
     }
@@ -103,6 +107,7 @@ public class TenantRelationship extends Entity implements Parsable {
      * @param value Value to set for the managedTenants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedTenants(@javax.annotation.Nullable final ManagedTenant value) {
         this._managedTenants = value;
     }

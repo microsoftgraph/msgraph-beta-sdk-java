@@ -20,6 +20,7 @@ public class UploadDepTokenPostRequestBody implements AdditionalDataHolder, Pars
      * Instantiates a new uploadDepTokenPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UploadDepTokenPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,16 +65,17 @@ public class UploadDepTokenPostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UploadDepTokenPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("appleId", (n) -> { currentObject.setAppleId(n.getStringValue()); });
-            this.put("depToken", (n) -> { currentObject.setDepToken(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("appleId", (n) -> { currentObject.setAppleId(n.getStringValue()); });
+        deserializerMap.put("depToken", (n) -> { currentObject.setDepToken(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appleId", this.getAppleId());
@@ -85,6 +87,7 @@ public class UploadDepTokenPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +96,7 @@ public class UploadDepTokenPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the appleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppleId(@javax.annotation.Nullable final String value) {
         this._appleId = value;
     }
@@ -101,6 +105,7 @@ public class UploadDepTokenPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the depToken property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDepToken(@javax.annotation.Nullable final String value) {
         this._depToken = value;
     }

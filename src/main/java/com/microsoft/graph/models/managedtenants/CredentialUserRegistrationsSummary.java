@@ -37,6 +37,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      * Instantiates a new credentialUserRegistrationsSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CredentialUserRegistrationsSummary() {
         super();
         this.setOdataType("#microsoft.graph.managedTenants.credentialUserRegistrationsSummary");
@@ -58,19 +59,19 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CredentialUserRegistrationsSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("lastRefreshedDateTime", (n) -> { currentObject.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("mfaAndSsprCapableUserCount", (n) -> { currentObject.setMfaAndSsprCapableUserCount(n.getIntegerValue()); });
-            this.put("mfaConditionalAccessPolicyState", (n) -> { currentObject.setMfaConditionalAccessPolicyState(n.getStringValue()); });
-            this.put("mfaExcludedUserCount", (n) -> { currentObject.setMfaExcludedUserCount(n.getIntegerValue()); });
-            this.put("mfaRegisteredUserCount", (n) -> { currentObject.setMfaRegisteredUserCount(n.getIntegerValue()); });
-            this.put("securityDefaultsEnabled", (n) -> { currentObject.setSecurityDefaultsEnabled(n.getBooleanValue()); });
-            this.put("ssprEnabledUserCount", (n) -> { currentObject.setSsprEnabledUserCount(n.getIntegerValue()); });
-            this.put("ssprRegisteredUserCount", (n) -> { currentObject.setSsprRegisteredUserCount(n.getIntegerValue()); });
-            this.put("tenantDisplayName", (n) -> { currentObject.setTenantDisplayName(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("totalUserCount", (n) -> { currentObject.setTotalUserCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("lastRefreshedDateTime", (n) -> { currentObject.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("mfaAndSsprCapableUserCount", (n) -> { currentObject.setMfaAndSsprCapableUserCount(n.getIntegerValue()); });
+        deserializerMap.put("mfaConditionalAccessPolicyState", (n) -> { currentObject.setMfaConditionalAccessPolicyState(n.getStringValue()); });
+        deserializerMap.put("mfaExcludedUserCount", (n) -> { currentObject.setMfaExcludedUserCount(n.getIntegerValue()); });
+        deserializerMap.put("mfaRegisteredUserCount", (n) -> { currentObject.setMfaRegisteredUserCount(n.getIntegerValue()); });
+        deserializerMap.put("securityDefaultsEnabled", (n) -> { currentObject.setSecurityDefaultsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("ssprEnabledUserCount", (n) -> { currentObject.setSsprEnabledUserCount(n.getIntegerValue()); });
+        deserializerMap.put("ssprRegisteredUserCount", (n) -> { currentObject.setSsprRegisteredUserCount(n.getIntegerValue()); });
+        deserializerMap.put("tenantDisplayName", (n) -> { currentObject.setTenantDisplayName(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
+        deserializerMap.put("totalUserCount", (n) -> { currentObject.setTotalUserCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
@@ -165,6 +166,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -185,6 +187,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      * @param value Value to set for the lastRefreshedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastRefreshedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastRefreshedDateTime = value;
     }
@@ -193,6 +196,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      * @param value Value to set for the mfaAndSsprCapableUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMfaAndSsprCapableUserCount(@javax.annotation.Nullable final Integer value) {
         this._mfaAndSsprCapableUserCount = value;
     }
@@ -201,6 +205,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      * @param value Value to set for the mfaConditionalAccessPolicyState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMfaConditionalAccessPolicyState(@javax.annotation.Nullable final String value) {
         this._mfaConditionalAccessPolicyState = value;
     }
@@ -209,6 +214,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      * @param value Value to set for the mfaExcludedUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMfaExcludedUserCount(@javax.annotation.Nullable final Integer value) {
         this._mfaExcludedUserCount = value;
     }
@@ -217,6 +223,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      * @param value Value to set for the mfaRegisteredUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMfaRegisteredUserCount(@javax.annotation.Nullable final Integer value) {
         this._mfaRegisteredUserCount = value;
     }
@@ -225,6 +232,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      * @param value Value to set for the securityDefaultsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityDefaultsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._securityDefaultsEnabled = value;
     }
@@ -233,6 +241,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      * @param value Value to set for the ssprEnabledUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSsprEnabledUserCount(@javax.annotation.Nullable final Integer value) {
         this._ssprEnabledUserCount = value;
     }
@@ -241,6 +250,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      * @param value Value to set for the ssprRegisteredUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSsprRegisteredUserCount(@javax.annotation.Nullable final Integer value) {
         this._ssprRegisteredUserCount = value;
     }
@@ -249,6 +259,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
         this._tenantDisplayName = value;
     }
@@ -257,6 +268,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
@@ -265,6 +277,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      * @param value Value to set for the totalUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalUserCount(@javax.annotation.Nullable final Integer value) {
         this._totalUserCount = value;
     }

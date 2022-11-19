@@ -45,6 +45,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * Instantiates a new accessReviewScheduleDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewScheduleDefinition() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewScheduleDefinition");
@@ -130,24 +131,24 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewScheduleDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("additionalNotificationRecipients", (n) -> { currentObject.setAdditionalNotificationRecipients(n.getCollectionOfObjectValues(AccessReviewNotificationRecipientItem::createFromDiscriminatorValue)); });
-            this.put("backupReviewers", (n) -> { currentObject.setBackupReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("descriptionForAdmins", (n) -> { currentObject.setDescriptionForAdmins(n.getStringValue()); });
-            this.put("descriptionForReviewers", (n) -> { currentObject.setDescriptionForReviewers(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("fallbackReviewers", (n) -> { currentObject.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
-            this.put("instanceEnumerationScope", (n) -> { currentObject.setInstanceEnumerationScope(n.getObjectValue(AccessReviewScope::createFromDiscriminatorValue)); });
-            this.put("instances", (n) -> { currentObject.setInstances(n.getCollectionOfObjectValues(AccessReviewInstance::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
-            this.put("scope", (n) -> { currentObject.setScope(n.getObjectValue(AccessReviewScope::createFromDiscriminatorValue)); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(AccessReviewScheduleSettings::createFromDiscriminatorValue)); });
-            this.put("stageSettings", (n) -> { currentObject.setStageSettings(n.getCollectionOfObjectValues(AccessReviewStageSettings::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("additionalNotificationRecipients", (n) -> { currentObject.setAdditionalNotificationRecipients(n.getCollectionOfObjectValues(AccessReviewNotificationRecipientItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("backupReviewers", (n) -> { currentObject.setBackupReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("descriptionForAdmins", (n) -> { currentObject.setDescriptionForAdmins(n.getStringValue()); });
+        deserializerMap.put("descriptionForReviewers", (n) -> { currentObject.setDescriptionForReviewers(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("fallbackReviewers", (n) -> { currentObject.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("instanceEnumerationScope", (n) -> { currentObject.setInstanceEnumerationScope(n.getObjectValue(AccessReviewScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("instances", (n) -> { currentObject.setInstances(n.getCollectionOfObjectValues(AccessReviewInstance::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("scope", (n) -> { currentObject.setScope(n.getObjectValue(AccessReviewScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(AccessReviewScheduleSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("stageSettings", (n) -> { currentObject.setStageSettings(n.getCollectionOfObjectValues(AccessReviewStageSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the instanceEnumerationScope property value. This property is required when scoping a review to guest users' access across all Microsoft 365 groups and determines which Microsoft 365 groups are reviewed. Each group will become a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope. Supports $select. For examples of options for configuring instanceEnumerationScope, see Configure the scope of your access review definition using the Microsoft Graph API.
@@ -218,6 +219,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -243,6 +245,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param value Value to set for the additionalNotificationRecipients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalNotificationRecipients(@javax.annotation.Nullable final java.util.List<AccessReviewNotificationRecipientItem> value) {
         this._additionalNotificationRecipients = value;
     }
@@ -251,6 +254,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param value Value to set for the backupReviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBackupReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this._backupReviewers = value;
     }
@@ -259,6 +263,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final UserIdentity value) {
         this._createdBy = value;
     }
@@ -267,6 +272,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -275,6 +281,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param value Value to set for the descriptionForAdmins property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescriptionForAdmins(@javax.annotation.Nullable final String value) {
         this._descriptionForAdmins = value;
     }
@@ -283,6 +290,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param value Value to set for the descriptionForReviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescriptionForReviewers(@javax.annotation.Nullable final String value) {
         this._descriptionForReviewers = value;
     }
@@ -291,6 +299,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -299,6 +308,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param value Value to set for the fallbackReviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFallbackReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this._fallbackReviewers = value;
     }
@@ -307,6 +317,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param value Value to set for the instanceEnumerationScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstanceEnumerationScope(@javax.annotation.Nullable final AccessReviewScope value) {
         this._instanceEnumerationScope = value;
     }
@@ -315,6 +326,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param value Value to set for the instances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstances(@javax.annotation.Nullable final java.util.List<AccessReviewInstance> value) {
         this._instances = value;
     }
@@ -323,6 +335,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -331,6 +344,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param value Value to set for the reviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this._reviewers = value;
     }
@@ -339,6 +353,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param value Value to set for the scope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final AccessReviewScope value) {
         this._scope = value;
     }
@@ -347,6 +362,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final AccessReviewScheduleSettings value) {
         this._settings = value;
     }
@@ -355,6 +371,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param value Value to set for the stageSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStageSettings(@javax.annotation.Nullable final java.util.List<AccessReviewStageSettings> value) {
         this._stageSettings = value;
     }
@@ -363,6 +380,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }

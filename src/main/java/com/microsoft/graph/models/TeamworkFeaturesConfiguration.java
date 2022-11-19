@@ -27,6 +27,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * Instantiates a new teamworkFeaturesConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkFeaturesConfiguration() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.teamworkFeaturesConfiguration");
@@ -64,14 +65,14 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkFeaturesConfiguration currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("emailToSendLogsAndFeedback", (n) -> { currentObject.setEmailToSendLogsAndFeedback(n.getStringValue()); });
-            this.put("isAutoScreenShareEnabled", (n) -> { currentObject.setIsAutoScreenShareEnabled(n.getBooleanValue()); });
-            this.put("isBluetoothBeaconingEnabled", (n) -> { currentObject.setIsBluetoothBeaconingEnabled(n.getBooleanValue()); });
-            this.put("isHideMeetingNamesEnabled", (n) -> { currentObject.setIsHideMeetingNamesEnabled(n.getBooleanValue()); });
-            this.put("isSendLogsAndFeedbackEnabled", (n) -> { currentObject.setIsSendLogsAndFeedbackEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("emailToSendLogsAndFeedback", (n) -> { currentObject.setEmailToSendLogsAndFeedback(n.getStringValue()); });
+        deserializerMap.put("isAutoScreenShareEnabled", (n) -> { currentObject.setIsAutoScreenShareEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isBluetoothBeaconingEnabled", (n) -> { currentObject.setIsBluetoothBeaconingEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isHideMeetingNamesEnabled", (n) -> { currentObject.setIsHideMeetingNamesEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isSendLogsAndFeedbackEnabled", (n) -> { currentObject.setIsSendLogsAndFeedbackEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isAutoScreenShareEnabled property value. True if auto screen shared is enabled.
@@ -118,6 +119,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("emailToSendLogsAndFeedback", this.getEmailToSendLogsAndFeedback());
@@ -133,6 +135,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +144,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the emailToSendLogsAndFeedback property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailToSendLogsAndFeedback(@javax.annotation.Nullable final String value) {
         this._emailToSendLogsAndFeedback = value;
     }
@@ -149,6 +153,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the isAutoScreenShareEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAutoScreenShareEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isAutoScreenShareEnabled = value;
     }
@@ -157,6 +162,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the isBluetoothBeaconingEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsBluetoothBeaconingEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isBluetoothBeaconingEnabled = value;
     }
@@ -165,6 +171,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the isHideMeetingNamesEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsHideMeetingNamesEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isHideMeetingNamesEnabled = value;
     }
@@ -173,6 +180,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the isSendLogsAndFeedbackEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSendLogsAndFeedbackEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isSendLogsAndFeedbackEnabled = value;
     }
@@ -181,6 +189,7 @@ public class TeamworkFeaturesConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

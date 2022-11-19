@@ -12,6 +12,7 @@ public class DeviceHealthScriptHourlySchedule extends DeviceHealthScriptRunSched
      * Instantiates a new DeviceHealthScriptHourlySchedule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceHealthScriptHourlySchedule() {
         super();
         this.setOdataType("#microsoft.graph.deviceHealthScriptHourlySchedule");
@@ -33,14 +34,15 @@ public class DeviceHealthScriptHourlySchedule extends DeviceHealthScriptRunSched
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptHourlySchedule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

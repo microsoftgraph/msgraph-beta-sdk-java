@@ -26,6 +26,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
      * Instantiates a new estimateStatisticsOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EstimateStatisticsOperation() {
         super();
         this.setOdataType("#microsoft.graph.ediscovery.estimateStatisticsOperation");
@@ -47,15 +48,15 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EstimateStatisticsOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("indexedItemCount", (n) -> { currentObject.setIndexedItemCount(n.getLongValue()); });
-            this.put("indexedItemsSize", (n) -> { currentObject.setIndexedItemsSize(n.getLongValue()); });
-            this.put("mailboxCount", (n) -> { currentObject.setMailboxCount(n.getIntegerValue()); });
-            this.put("siteCount", (n) -> { currentObject.setSiteCount(n.getIntegerValue()); });
-            this.put("sourceCollection", (n) -> { currentObject.setSourceCollection(n.getObjectValue(SourceCollection::createFromDiscriminatorValue)); });
-            this.put("unindexedItemCount", (n) -> { currentObject.setUnindexedItemCount(n.getLongValue()); });
-            this.put("unindexedItemsSize", (n) -> { currentObject.setUnindexedItemsSize(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("indexedItemCount", (n) -> { currentObject.setIndexedItemCount(n.getLongValue()); });
+        deserializerMap.put("indexedItemsSize", (n) -> { currentObject.setIndexedItemsSize(n.getLongValue()); });
+        deserializerMap.put("mailboxCount", (n) -> { currentObject.setMailboxCount(n.getIntegerValue()); });
+        deserializerMap.put("siteCount", (n) -> { currentObject.setSiteCount(n.getIntegerValue()); });
+        deserializerMap.put("sourceCollection", (n) -> { currentObject.setSourceCollection(n.getObjectValue(SourceCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("unindexedItemCount", (n) -> { currentObject.setUnindexedItemCount(n.getLongValue()); });
+        deserializerMap.put("unindexedItemsSize", (n) -> { currentObject.setUnindexedItemsSize(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the indexedItemCount property value. The estimated count of items for the sourceCollection that matched the content query.
@@ -118,6 +119,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +136,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
      * @param value Value to set for the indexedItemCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIndexedItemCount(@javax.annotation.Nullable final Long value) {
         this._indexedItemCount = value;
     }
@@ -142,6 +145,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
      * @param value Value to set for the indexedItemsSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIndexedItemsSize(@javax.annotation.Nullable final Long value) {
         this._indexedItemsSize = value;
     }
@@ -150,6 +154,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
      * @param value Value to set for the mailboxCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailboxCount(@javax.annotation.Nullable final Integer value) {
         this._mailboxCount = value;
     }
@@ -158,6 +163,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
      * @param value Value to set for the siteCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteCount(@javax.annotation.Nullable final Integer value) {
         this._siteCount = value;
     }
@@ -166,6 +172,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
      * @param value Value to set for the sourceCollection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceCollection(@javax.annotation.Nullable final SourceCollection value) {
         this._sourceCollection = value;
     }
@@ -174,6 +181,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
      * @param value Value to set for the unindexedItemCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnindexedItemCount(@javax.annotation.Nullable final Long value) {
         this._unindexedItemCount = value;
     }
@@ -182,6 +190,7 @@ public class EstimateStatisticsOperation extends CaseOperation implements Parsab
      * @param value Value to set for the unindexedItemsSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnindexedItemsSize(@javax.annotation.Nullable final Long value) {
         this._unindexedItemsSize = value;
     }

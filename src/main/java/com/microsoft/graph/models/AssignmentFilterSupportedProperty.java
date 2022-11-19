@@ -23,13 +23,14 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     /** Regex string to do validation on the property value. */
     private String _propertyRegexConstraint;
     /** List of all supported operators on this property. */
-    private java.util.List<String> _supportedOperators;
+    private java.util.List<AssignmentFilterOperator> _supportedOperators;
     /** List of all supported values for this propery, empty if everything is supported. */
     private java.util.List<String> _supportedValues;
     /**
      * Instantiates a new assignmentFilterSupportedProperty and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignmentFilterSupportedProperty() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.assignmentFilterSupportedProperty");
@@ -67,15 +68,15 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentFilterSupportedProperty currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("dataType", (n) -> { currentObject.setDataType(n.getStringValue()); });
-            this.put("isCollection", (n) -> { currentObject.setIsCollection(n.getBooleanValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("propertyRegexConstraint", (n) -> { currentObject.setPropertyRegexConstraint(n.getStringValue()); });
-            this.put("supportedOperators", (n) -> { currentObject.setSupportedOperators(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("supportedValues", (n) -> { currentObject.setSupportedValues(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("dataType", (n) -> { currentObject.setDataType(n.getStringValue()); });
+        deserializerMap.put("isCollection", (n) -> { currentObject.setIsCollection(n.getBooleanValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("propertyRegexConstraint", (n) -> { currentObject.setPropertyRegexConstraint(n.getStringValue()); });
+        deserializerMap.put("supportedOperators", (n) -> { currentObject.setSupportedOperators(n.getCollectionOfEnumValues(AssignmentFilterOperator.class)); });
+        deserializerMap.put("supportedValues", (n) -> { currentObject.setSupportedValues(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isCollection property value. Indicates whether the property is a collection type or not.
@@ -111,10 +112,10 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
     }
     /**
      * Gets the supportedOperators property value. List of all supported operators on this property.
-     * @return a string
+     * @return a assignmentFilterOperator
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getSupportedOperators() {
+    public java.util.List<AssignmentFilterOperator> getSupportedOperators() {
         return this._supportedOperators;
     }
     /**
@@ -130,6 +131,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("dataType", this.getDataType());
@@ -137,7 +139,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("propertyRegexConstraint", this.getPropertyRegexConstraint());
-        writer.writeCollectionOfPrimitiveValues("supportedOperators", this.getSupportedOperators());
+        writer.writeCollectionOfEnumValues("supportedOperators", this.getSupportedOperators());
         writer.writeCollectionOfPrimitiveValues("supportedValues", this.getSupportedValues());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -146,6 +148,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -154,6 +157,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
      * @param value Value to set for the dataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataType(@javax.annotation.Nullable final String value) {
         this._dataType = value;
     }
@@ -162,6 +166,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
      * @param value Value to set for the isCollection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCollection(@javax.annotation.Nullable final Boolean value) {
         this._isCollection = value;
     }
@@ -170,6 +175,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -178,6 +184,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -186,6 +193,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
      * @param value Value to set for the propertyRegexConstraint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPropertyRegexConstraint(@javax.annotation.Nullable final String value) {
         this._propertyRegexConstraint = value;
     }
@@ -194,7 +202,8 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
      * @param value Value to set for the supportedOperators property.
      * @return a void
      */
-    public void setSupportedOperators(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setSupportedOperators(@javax.annotation.Nullable final java.util.List<AssignmentFilterOperator> value) {
         this._supportedOperators = value;
     }
     /**
@@ -202,6 +211,7 @@ public class AssignmentFilterSupportedProperty implements AdditionalDataHolder, 
      * @param value Value to set for the supportedValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedValues(@javax.annotation.Nullable final java.util.List<String> value) {
         this._supportedValues = value;
     }

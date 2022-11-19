@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analyte remote connection entity. */
 public class UserExperienceAnalyticsRemoteConnection extends Entity implements Parsable {
     /** The sign in failure percentage of Cloud PC Device. Valid values 0 to 100 */
     private Double _cloudPcFailurePercentage;
@@ -35,9 +36,10 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     /** The user experience analytics virtual network. */
     private String _virtualNetwork;
     /**
-     * Instantiates a new UserExperienceAnalyticsRemoteConnection and sets the default values.
+     * Instantiates a new userExperienceAnalyticsRemoteConnection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsRemoteConnection() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsRemoteConnection");
@@ -45,7 +47,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsRemoteConnection
+     * @return a userExperienceAnalyticsRemoteConnection
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsRemoteConnection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -123,21 +125,21 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsRemoteConnection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("cloudPcFailurePercentage", (n) -> { currentObject.setCloudPcFailurePercentage(n.getDoubleValue()); });
-            this.put("cloudPcRoundTripTime", (n) -> { currentObject.setCloudPcRoundTripTime(n.getDoubleValue()); });
-            this.put("cloudPcSignInTime", (n) -> { currentObject.setCloudPcSignInTime(n.getDoubleValue()); });
-            this.put("coreBootTime", (n) -> { currentObject.setCoreBootTime(n.getDoubleValue()); });
-            this.put("coreSignInTime", (n) -> { currentObject.setCoreSignInTime(n.getDoubleValue()); });
-            this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getIntegerValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("remoteSignInTime", (n) -> { currentObject.setRemoteSignInTime(n.getDoubleValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("virtualNetwork", (n) -> { currentObject.setVirtualNetwork(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("cloudPcFailurePercentage", (n) -> { currentObject.setCloudPcFailurePercentage(n.getDoubleValue()); });
+        deserializerMap.put("cloudPcRoundTripTime", (n) -> { currentObject.setCloudPcRoundTripTime(n.getDoubleValue()); });
+        deserializerMap.put("cloudPcSignInTime", (n) -> { currentObject.setCloudPcSignInTime(n.getDoubleValue()); });
+        deserializerMap.put("coreBootTime", (n) -> { currentObject.setCoreBootTime(n.getDoubleValue()); });
+        deserializerMap.put("coreSignInTime", (n) -> { currentObject.setCoreSignInTime(n.getDoubleValue()); });
+        deserializerMap.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
+        deserializerMap.put("remoteSignInTime", (n) -> { currentObject.setRemoteSignInTime(n.getDoubleValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("virtualNetwork", (n) -> { currentObject.setVirtualNetwork(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the manufacturer property value. The user experience analytics manufacturer.
@@ -184,6 +186,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -206,6 +209,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      * @param value Value to set for the cloudPcFailurePercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPcFailurePercentage(@javax.annotation.Nullable final Double value) {
         this._cloudPcFailurePercentage = value;
     }
@@ -214,6 +218,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      * @param value Value to set for the cloudPcRoundTripTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPcRoundTripTime(@javax.annotation.Nullable final Double value) {
         this._cloudPcRoundTripTime = value;
     }
@@ -222,6 +227,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      * @param value Value to set for the cloudPcSignInTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPcSignInTime(@javax.annotation.Nullable final Double value) {
         this._cloudPcSignInTime = value;
     }
@@ -230,6 +236,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      * @param value Value to set for the coreBootTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCoreBootTime(@javax.annotation.Nullable final Double value) {
         this._coreBootTime = value;
     }
@@ -238,6 +245,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      * @param value Value to set for the coreSignInTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCoreSignInTime(@javax.annotation.Nullable final Double value) {
         this._coreSignInTime = value;
     }
@@ -246,6 +254,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      * @param value Value to set for the deviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._deviceCount = value;
     }
@@ -254,6 +263,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -262,6 +272,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -270,6 +281,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -278,6 +290,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
@@ -286,6 +299,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      * @param value Value to set for the remoteSignInTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteSignInTime(@javax.annotation.Nullable final Double value) {
         this._remoteSignInTime = value;
     }
@@ -294,6 +308,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }
@@ -302,6 +317,7 @@ public class UserExperienceAnalyticsRemoteConnection extends Entity implements P
      * @param value Value to set for the virtualNetwork property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVirtualNetwork(@javax.annotation.Nullable final String value) {
         this._virtualNetwork = value;
     }

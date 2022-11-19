@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows Driver Update Profile */
 public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     /** An enum type to represent approval type of a driver update profile. */
     private DriverUpdateProfileApprovalType _approvalType;
@@ -34,9 +35,10 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     /** List of Scope Tags for this Driver Update entity. */
     private java.util.List<String> _roleScopeTagIds;
     /**
-     * Instantiates a new WindowsDriverUpdateProfile and sets the default values.
+     * Instantiates a new windowsDriverUpdateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDriverUpdateProfile() {
         super();
         this.setOdataType("#microsoft.graph.windowsDriverUpdateProfile");
@@ -44,7 +46,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsDriverUpdateProfile
+     * @return a windowsDriverUpdateProfile
      */
     @javax.annotation.Nonnull
     public static WindowsDriverUpdateProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -122,20 +124,20 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDriverUpdateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("approvalType", (n) -> { currentObject.setApprovalType(n.getEnumValue(DriverUpdateProfileApprovalType.class)); });
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(WindowsDriverUpdateProfileAssignment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deploymentDeferralInDays", (n) -> { currentObject.setDeploymentDeferralInDays(n.getIntegerValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("deviceReporting", (n) -> { currentObject.setDeviceReporting(n.getIntegerValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("driverInventories", (n) -> { currentObject.setDriverInventories(n.getCollectionOfObjectValues(WindowsDriverUpdateInventory::createFromDiscriminatorValue)); });
-            this.put("inventorySyncStatus", (n) -> { currentObject.setInventorySyncStatus(n.getObjectValue(WindowsDriverUpdateProfileInventorySyncStatus::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("newUpdates", (n) -> { currentObject.setNewUpdates(n.getIntegerValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("approvalType", (n) -> { currentObject.setApprovalType(n.getEnumValue(DriverUpdateProfileApprovalType.class)); });
+        deserializerMap.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(WindowsDriverUpdateProfileAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deploymentDeferralInDays", (n) -> { currentObject.setDeploymentDeferralInDays(n.getIntegerValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("deviceReporting", (n) -> { currentObject.setDeviceReporting(n.getIntegerValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("driverInventories", (n) -> { currentObject.setDriverInventories(n.getCollectionOfObjectValues(WindowsDriverUpdateInventory::createFromDiscriminatorValue)); });
+        deserializerMap.put("inventorySyncStatus", (n) -> { currentObject.setInventorySyncStatus(n.getObjectValue(WindowsDriverUpdateProfileInventorySyncStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("newUpdates", (n) -> { currentObject.setNewUpdates(n.getIntegerValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the inventorySyncStatus property value. Driver inventory sync status for this profile.
@@ -174,6 +176,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -195,6 +198,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the approvalType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApprovalType(@javax.annotation.Nullable final DriverUpdateProfileApprovalType value) {
         this._approvalType = value;
     }
@@ -203,6 +207,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<WindowsDriverUpdateProfileAssignment> value) {
         this._assignments = value;
     }
@@ -211,6 +216,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -219,6 +225,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the deploymentDeferralInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentDeferralInDays(@javax.annotation.Nullable final Integer value) {
         this._deploymentDeferralInDays = value;
     }
@@ -227,6 +234,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -235,6 +243,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the deviceReporting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceReporting(@javax.annotation.Nullable final Integer value) {
         this._deviceReporting = value;
     }
@@ -243,6 +252,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -251,6 +261,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the driverInventories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDriverInventories(@javax.annotation.Nullable final java.util.List<WindowsDriverUpdateInventory> value) {
         this._driverInventories = value;
     }
@@ -259,6 +270,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the inventorySyncStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInventorySyncStatus(@javax.annotation.Nullable final WindowsDriverUpdateProfileInventorySyncStatus value) {
         this._inventorySyncStatus = value;
     }
@@ -267,6 +279,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -275,6 +288,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the newUpdates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNewUpdates(@javax.annotation.Nullable final Integer value) {
         this._newUpdates = value;
     }
@@ -283,6 +297,7 @@ public class WindowsDriverUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }

@@ -21,6 +21,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
      * Instantiates a new windowsPrivacyDataAccessControlItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsPrivacyDataAccessControlItem() {
         super();
         this.setOdataType("#microsoft.graph.windowsPrivacyDataAccessControlItem");
@@ -74,18 +75,19 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPrivacyDataAccessControlItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessLevel", (n) -> { currentObject.setAccessLevel(n.getEnumValue(WindowsPrivacyDataAccessLevel.class)); });
-            this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
-            this.put("appPackageFamilyName", (n) -> { currentObject.setAppPackageFamilyName(n.getStringValue()); });
-            this.put("dataCategory", (n) -> { currentObject.setDataCategory(n.getEnumValue(WindowsPrivacyDataCategory.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessLevel", (n) -> { currentObject.setAccessLevel(n.getEnumValue(WindowsPrivacyDataAccessLevel.class)); });
+        deserializerMap.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("appPackageFamilyName", (n) -> { currentObject.setAppPackageFamilyName(n.getStringValue()); });
+        deserializerMap.put("dataCategory", (n) -> { currentObject.setDataCategory(n.getEnumValue(WindowsPrivacyDataCategory.class)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
      * @param value Value to set for the accessLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessLevel(@javax.annotation.Nullable final WindowsPrivacyDataAccessLevel value) {
         this._accessLevel = value;
     }
@@ -107,6 +110,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
         this._appDisplayName = value;
     }
@@ -115,6 +119,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
      * @param value Value to set for the appPackageFamilyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppPackageFamilyName(@javax.annotation.Nullable final String value) {
         this._appPackageFamilyName = value;
     }
@@ -123,6 +128,7 @@ public class WindowsPrivacyDataAccessControlItem extends Entity implements Parsa
      * @param value Value to set for the dataCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataCategory(@javax.annotation.Nullable final WindowsPrivacyDataCategory value) {
         this._dataCategory = value;
     }

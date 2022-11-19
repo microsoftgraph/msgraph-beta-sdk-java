@@ -26,6 +26,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      * Instantiates a new LanguageProficiency and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LanguageProficiency() {
         super();
         this.setOdataType("#microsoft.graph.languageProficiency");
@@ -55,15 +56,15 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LanguageProficiency currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("proficiency", (n) -> { currentObject.setProficiency(n.getEnumValue(LanguageProficiencyLevel.class)); });
-            this.put("reading", (n) -> { currentObject.setReading(n.getEnumValue(LanguageProficiencyLevel.class)); });
-            this.put("spoken", (n) -> { currentObject.setSpoken(n.getEnumValue(LanguageProficiencyLevel.class)); });
-            this.put("tag", (n) -> { currentObject.setTag(n.getStringValue()); });
-            this.put("thumbnailUrl", (n) -> { currentObject.setThumbnailUrl(n.getStringValue()); });
-            this.put("written", (n) -> { currentObject.setWritten(n.getEnumValue(LanguageProficiencyLevel.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("proficiency", (n) -> { currentObject.setProficiency(n.getEnumValue(LanguageProficiencyLevel.class)); });
+        deserializerMap.put("reading", (n) -> { currentObject.setReading(n.getEnumValue(LanguageProficiencyLevel.class)); });
+        deserializerMap.put("spoken", (n) -> { currentObject.setSpoken(n.getEnumValue(LanguageProficiencyLevel.class)); });
+        deserializerMap.put("tag", (n) -> { currentObject.setTag(n.getStringValue()); });
+        deserializerMap.put("thumbnailUrl", (n) -> { currentObject.setThumbnailUrl(n.getStringValue()); });
+        deserializerMap.put("written", (n) -> { currentObject.setWritten(n.getEnumValue(LanguageProficiencyLevel.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the proficiency property value. The proficiency property
@@ -118,6 +119,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +136,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -142,6 +145,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      * @param value Value to set for the proficiency property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProficiency(@javax.annotation.Nullable final LanguageProficiencyLevel value) {
         this._proficiency = value;
     }
@@ -150,6 +154,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      * @param value Value to set for the reading property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReading(@javax.annotation.Nullable final LanguageProficiencyLevel value) {
         this._reading = value;
     }
@@ -158,6 +163,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      * @param value Value to set for the spoken property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpoken(@javax.annotation.Nullable final LanguageProficiencyLevel value) {
         this._spoken = value;
     }
@@ -166,6 +172,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      * @param value Value to set for the tag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTag(@javax.annotation.Nullable final String value) {
         this._tag = value;
     }
@@ -174,6 +181,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      * @param value Value to set for the thumbnailUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
         this._thumbnailUrl = value;
     }
@@ -182,6 +190,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
      * @param value Value to set for the written property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWritten(@javax.annotation.Nullable final LanguageProficiencyLevel value) {
         this._written = value;
     }

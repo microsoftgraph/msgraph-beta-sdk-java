@@ -21,6 +21,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
      * Instantiates a new informationProtectionPolicySetting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InformationProtectionPolicySetting() {
         super();
         this.setOdataType("#microsoft.graph.security.informationProtectionPolicySetting");
@@ -50,12 +51,12 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InformationProtectionPolicySetting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultLabelId", (n) -> { currentObject.setDefaultLabelId(n.getStringValue()); });
-            this.put("isDowngradeJustificationRequired", (n) -> { currentObject.setIsDowngradeJustificationRequired(n.getBooleanValue()); });
-            this.put("isMandatory", (n) -> { currentObject.setIsMandatory(n.getBooleanValue()); });
-            this.put("moreInfoUrl", (n) -> { currentObject.setMoreInfoUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultLabelId", (n) -> { currentObject.setDefaultLabelId(n.getStringValue()); });
+        deserializerMap.put("isDowngradeJustificationRequired", (n) -> { currentObject.setIsDowngradeJustificationRequired(n.getBooleanValue()); });
+        deserializerMap.put("isMandatory", (n) -> { currentObject.setIsMandatory(n.getBooleanValue()); });
+        deserializerMap.put("moreInfoUrl", (n) -> { currentObject.setMoreInfoUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isDowngradeJustificationRequired property value. Exposes whether justification input is required on label downgrade.
@@ -86,6 +87,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
      * @param value Value to set for the defaultLabelId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultLabelId(@javax.annotation.Nullable final String value) {
         this._defaultLabelId = value;
     }
@@ -107,6 +110,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
      * @param value Value to set for the isDowngradeJustificationRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDowngradeJustificationRequired(@javax.annotation.Nullable final Boolean value) {
         this._isDowngradeJustificationRequired = value;
     }
@@ -115,6 +119,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
      * @param value Value to set for the isMandatory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMandatory(@javax.annotation.Nullable final Boolean value) {
         this._isMandatory = value;
     }
@@ -123,6 +128,7 @@ public class InformationProtectionPolicySetting extends Entity implements Parsab
      * @param value Value to set for the moreInfoUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMoreInfoUrl(@javax.annotation.Nullable final String value) {
         this._moreInfoUrl = value;
     }

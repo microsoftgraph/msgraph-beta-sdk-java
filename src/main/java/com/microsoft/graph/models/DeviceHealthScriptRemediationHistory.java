@@ -23,6 +23,7 @@ public class DeviceHealthScriptRemediationHistory implements AdditionalDataHolde
      * Instantiates a new deviceHealthScriptRemediationHistory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceHealthScriptRemediationHistory() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceHealthScriptRemediationHistory");
@@ -52,11 +53,11 @@ public class DeviceHealthScriptRemediationHistory implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptRemediationHistory currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("historyData", (n) -> { currentObject.setHistoryData(n.getCollectionOfObjectValues(DeviceHealthScriptRemediationHistoryData::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("historyData", (n) -> { currentObject.setHistoryData(n.getCollectionOfObjectValues(DeviceHealthScriptRemediationHistoryData::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the historyData property value. The number of devices remediated by the device health script on the given date.
@@ -87,6 +88,7 @@ public class DeviceHealthScriptRemediationHistory implements AdditionalDataHolde
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("historyData", this.getHistoryData());
@@ -99,6 +101,7 @@ public class DeviceHealthScriptRemediationHistory implements AdditionalDataHolde
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -107,6 +110,7 @@ public class DeviceHealthScriptRemediationHistory implements AdditionalDataHolde
      * @param value Value to set for the historyData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHistoryData(@javax.annotation.Nullable final java.util.List<DeviceHealthScriptRemediationHistoryData> value) {
         this._historyData = value;
     }
@@ -115,6 +119,7 @@ public class DeviceHealthScriptRemediationHistory implements AdditionalDataHolde
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -123,6 +128,7 @@ public class DeviceHealthScriptRemediationHistory implements AdditionalDataHolde
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

@@ -25,6 +25,7 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
      * Instantiates a new updateAudiencePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateAudiencePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -69,12 +70,12 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateAudiencePostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("addExclusions", (n) -> { currentObject.setAddExclusions(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
-            this.put("addMembers", (n) -> { currentObject.setAddMembers(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
-            this.put("removeExclusions", (n) -> { currentObject.setRemoveExclusions(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
-            this.put("removeMembers", (n) -> { currentObject.setRemoveMembers(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("addExclusions", (n) -> { currentObject.setAddExclusions(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
+        deserializerMap.put("addMembers", (n) -> { currentObject.setAddMembers(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
+        deserializerMap.put("removeExclusions", (n) -> { currentObject.setRemoveExclusions(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
+        deserializerMap.put("removeMembers", (n) -> { currentObject.setRemoveMembers(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the removeExclusions property value. The removeExclusions property
@@ -97,6 +98,7 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("addExclusions", this.getAddExclusions());
@@ -110,6 +112,7 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the addExclusions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddExclusions(@javax.annotation.Nullable final java.util.List<UpdatableAsset> value) {
         this._addExclusions = value;
     }
@@ -118,6 +121,7 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -126,6 +130,7 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the addMembers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddMembers(@javax.annotation.Nullable final java.util.List<UpdatableAsset> value) {
         this._addMembers = value;
     }
@@ -134,6 +139,7 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the removeExclusions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoveExclusions(@javax.annotation.Nullable final java.util.List<UpdatableAsset> value) {
         this._removeExclusions = value;
     }
@@ -142,6 +148,7 @@ public class UpdateAudiencePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the removeMembers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoveMembers(@javax.annotation.Nullable final java.util.List<UpdatableAsset> value) {
         this._removeMembers = value;
     }

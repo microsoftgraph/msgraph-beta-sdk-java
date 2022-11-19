@@ -23,6 +23,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
      * Instantiates a new deviceComplianceScriptRunSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceComplianceScriptRunSummary() {
         super();
         this.setOdataType("#microsoft.graph.deviceComplianceScriptRunSummary");
@@ -60,13 +61,13 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceScriptRunSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("detectionScriptErrorDeviceCount", (n) -> { currentObject.setDetectionScriptErrorDeviceCount(n.getIntegerValue()); });
-            this.put("detectionScriptPendingDeviceCount", (n) -> { currentObject.setDetectionScriptPendingDeviceCount(n.getIntegerValue()); });
-            this.put("issueDetectedDeviceCount", (n) -> { currentObject.setIssueDetectedDeviceCount(n.getIntegerValue()); });
-            this.put("lastScriptRunDateTime", (n) -> { currentObject.setLastScriptRunDateTime(n.getOffsetDateTimeValue()); });
-            this.put("noIssueDetectedDeviceCount", (n) -> { currentObject.setNoIssueDetectedDeviceCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("detectionScriptErrorDeviceCount", (n) -> { currentObject.setDetectionScriptErrorDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("detectionScriptPendingDeviceCount", (n) -> { currentObject.setDetectionScriptPendingDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("issueDetectedDeviceCount", (n) -> { currentObject.setIssueDetectedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("lastScriptRunDateTime", (n) -> { currentObject.setLastScriptRunDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("noIssueDetectedDeviceCount", (n) -> { currentObject.setNoIssueDetectedDeviceCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the issueDetectedDeviceCount property value. Number of devices for which the detection script found an issue. Valid values -2147483648 to 2147483647
@@ -97,6 +98,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
      * @param value Value to set for the detectionScriptErrorDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionScriptErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._detectionScriptErrorDeviceCount = value;
     }
@@ -119,6 +122,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
      * @param value Value to set for the detectionScriptPendingDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionScriptPendingDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._detectionScriptPendingDeviceCount = value;
     }
@@ -127,6 +131,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
      * @param value Value to set for the issueDetectedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssueDetectedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._issueDetectedDeviceCount = value;
     }
@@ -135,6 +140,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
      * @param value Value to set for the lastScriptRunDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastScriptRunDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastScriptRunDateTime = value;
     }
@@ -143,6 +149,7 @@ public class DeviceComplianceScriptRunSummary extends Entity implements Parsable
      * @param value Value to set for the noIssueDetectedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNoIssueDetectedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._noIssueDetectedDeviceCount = value;
     }

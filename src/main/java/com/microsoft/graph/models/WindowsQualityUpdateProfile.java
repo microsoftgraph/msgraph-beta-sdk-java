@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows Quality Update Profile */
 public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     /** The list of group assignments of the profile. */
     private java.util.List<WindowsQualityUpdateProfileAssignment> _assignments;
@@ -28,9 +29,10 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     /** List of Scope Tags for this Quality Update entity. */
     private java.util.List<String> _roleScopeTagIds;
     /**
-     * Instantiates a new WindowsQualityUpdateProfile and sets the default values.
+     * Instantiates a new windowsQualityUpdateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsQualityUpdateProfile() {
         super();
         this.setOdataType("#microsoft.graph.windowsQualityUpdateProfile");
@@ -38,7 +40,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsQualityUpdateProfile
+     * @return a windowsQualityUpdateProfile
      */
     @javax.annotation.Nonnull
     public static WindowsQualityUpdateProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -100,17 +102,17 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsQualityUpdateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(WindowsQualityUpdateProfileAssignment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deployableContentDisplayName", (n) -> { currentObject.setDeployableContentDisplayName(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("expeditedUpdateSettings", (n) -> { currentObject.setExpeditedUpdateSettings(n.getObjectValue(ExpeditedWindowsQualityUpdateSettings::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("releaseDateDisplayName", (n) -> { currentObject.setReleaseDateDisplayName(n.getStringValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(WindowsQualityUpdateProfileAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deployableContentDisplayName", (n) -> { currentObject.setDeployableContentDisplayName(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("expeditedUpdateSettings", (n) -> { currentObject.setExpeditedUpdateSettings(n.getObjectValue(ExpeditedWindowsQualityUpdateSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("releaseDateDisplayName", (n) -> { currentObject.setReleaseDateDisplayName(n.getStringValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date time that the profile was last modified.
@@ -141,6 +143,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +162,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<WindowsQualityUpdateProfileAssignment> value) {
         this._assignments = value;
     }
@@ -167,6 +171,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -175,6 +180,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the deployableContentDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployableContentDisplayName(@javax.annotation.Nullable final String value) {
         this._deployableContentDisplayName = value;
     }
@@ -183,6 +189,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -191,6 +198,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -199,6 +207,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the expeditedUpdateSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpeditedUpdateSettings(@javax.annotation.Nullable final ExpeditedWindowsQualityUpdateSettings value) {
         this._expeditedUpdateSettings = value;
     }
@@ -207,6 +216,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -215,6 +225,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the releaseDateDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReleaseDateDisplayName(@javax.annotation.Nullable final String value) {
         this._releaseDateDisplayName = value;
     }
@@ -223,6 +234,7 @@ public class WindowsQualityUpdateProfile extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }

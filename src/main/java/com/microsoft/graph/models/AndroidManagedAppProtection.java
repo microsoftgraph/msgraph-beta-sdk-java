@@ -94,6 +94,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * Instantiates a new AndroidManagedAppProtection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidManagedAppProtection() {
         super();
         this.setOdataType("#microsoft.graph.androidManagedAppProtection");
@@ -315,49 +316,49 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidManagedAppProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedAndroidDeviceManufacturers", (n) -> { currentObject.setAllowedAndroidDeviceManufacturers(n.getStringValue()); });
-            this.put("allowedAndroidDeviceModels", (n) -> { currentObject.setAllowedAndroidDeviceModels(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("appActionIfAndroidDeviceManufacturerNotAllowed", (n) -> { currentObject.setAppActionIfAndroidDeviceManufacturerNotAllowed(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfAndroidDeviceModelNotAllowed", (n) -> { currentObject.setAppActionIfAndroidDeviceModelNotAllowed(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfAndroidSafetyNetAppsVerificationFailed", (n) -> { currentObject.setAppActionIfAndroidSafetyNetAppsVerificationFailed(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfAndroidSafetyNetDeviceAttestationFailed", (n) -> { currentObject.setAppActionIfAndroidSafetyNetDeviceAttestationFailed(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfDeviceLockNotSet", (n) -> { currentObject.setAppActionIfDeviceLockNotSet(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfDevicePasscodeComplexityLessThanHigh", (n) -> { currentObject.setAppActionIfDevicePasscodeComplexityLessThanHigh(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfDevicePasscodeComplexityLessThanLow", (n) -> { currentObject.setAppActionIfDevicePasscodeComplexityLessThanLow(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfDevicePasscodeComplexityLessThanMedium", (n) -> { currentObject.setAppActionIfDevicePasscodeComplexityLessThanMedium(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("approvedKeyboards", (n) -> { currentObject.setApprovedKeyboards(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("apps", (n) -> { currentObject.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
-            this.put("biometricAuthenticationBlocked", (n) -> { currentObject.setBiometricAuthenticationBlocked(n.getBooleanValue()); });
-            this.put("blockAfterCompanyPortalUpdateDeferralInDays", (n) -> { currentObject.setBlockAfterCompanyPortalUpdateDeferralInDays(n.getIntegerValue()); });
-            this.put("connectToVpnOnLaunch", (n) -> { currentObject.setConnectToVpnOnLaunch(n.getBooleanValue()); });
-            this.put("customBrowserDisplayName", (n) -> { currentObject.setCustomBrowserDisplayName(n.getStringValue()); });
-            this.put("customBrowserPackageId", (n) -> { currentObject.setCustomBrowserPackageId(n.getStringValue()); });
-            this.put("customDialerAppDisplayName", (n) -> { currentObject.setCustomDialerAppDisplayName(n.getStringValue()); });
-            this.put("customDialerAppPackageId", (n) -> { currentObject.setCustomDialerAppPackageId(n.getStringValue()); });
-            this.put("deployedAppCount", (n) -> { currentObject.setDeployedAppCount(n.getIntegerValue()); });
-            this.put("deploymentSummary", (n) -> { currentObject.setDeploymentSummary(n.getObjectValue(ManagedAppPolicyDeploymentSummary::createFromDiscriminatorValue)); });
-            this.put("deviceLockRequired", (n) -> { currentObject.setDeviceLockRequired(n.getBooleanValue()); });
-            this.put("disableAppEncryptionIfDeviceEncryptionIsEnabled", (n) -> { currentObject.setDisableAppEncryptionIfDeviceEncryptionIsEnabled(n.getBooleanValue()); });
-            this.put("encryptAppData", (n) -> { currentObject.setEncryptAppData(n.getBooleanValue()); });
-            this.put("exemptedAppPackages", (n) -> { currentObject.setExemptedAppPackages(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("fingerprintAndBiometricEnabled", (n) -> { currentObject.setFingerprintAndBiometricEnabled(n.getBooleanValue()); });
-            this.put("keyboardsRestricted", (n) -> { currentObject.setKeyboardsRestricted(n.getBooleanValue()); });
-            this.put("minimumRequiredCompanyPortalVersion", (n) -> { currentObject.setMinimumRequiredCompanyPortalVersion(n.getStringValue()); });
-            this.put("minimumRequiredPatchVersion", (n) -> { currentObject.setMinimumRequiredPatchVersion(n.getStringValue()); });
-            this.put("minimumWarningCompanyPortalVersion", (n) -> { currentObject.setMinimumWarningCompanyPortalVersion(n.getStringValue()); });
-            this.put("minimumWarningPatchVersion", (n) -> { currentObject.setMinimumWarningPatchVersion(n.getStringValue()); });
-            this.put("minimumWipeCompanyPortalVersion", (n) -> { currentObject.setMinimumWipeCompanyPortalVersion(n.getStringValue()); });
-            this.put("minimumWipePatchVersion", (n) -> { currentObject.setMinimumWipePatchVersion(n.getStringValue()); });
-            this.put("requireClass3Biometrics", (n) -> { currentObject.setRequireClass3Biometrics(n.getBooleanValue()); });
-            this.put("requiredAndroidSafetyNetAppsVerificationType", (n) -> { currentObject.setRequiredAndroidSafetyNetAppsVerificationType(n.getEnumValue(AndroidManagedAppSafetyNetAppsVerificationType.class)); });
-            this.put("requiredAndroidSafetyNetDeviceAttestationType", (n) -> { currentObject.setRequiredAndroidSafetyNetDeviceAttestationType(n.getEnumValue(AndroidManagedAppSafetyNetDeviceAttestationType.class)); });
-            this.put("requiredAndroidSafetyNetEvaluationType", (n) -> { currentObject.setRequiredAndroidSafetyNetEvaluationType(n.getEnumValue(AndroidManagedAppSafetyNetEvaluationType.class)); });
-            this.put("requirePinAfterBiometricChange", (n) -> { currentObject.setRequirePinAfterBiometricChange(n.getBooleanValue()); });
-            this.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
-            this.put("warnAfterCompanyPortalUpdateDeferralInDays", (n) -> { currentObject.setWarnAfterCompanyPortalUpdateDeferralInDays(n.getIntegerValue()); });
-            this.put("wipeAfterCompanyPortalUpdateDeferralInDays", (n) -> { currentObject.setWipeAfterCompanyPortalUpdateDeferralInDays(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedAndroidDeviceManufacturers", (n) -> { currentObject.setAllowedAndroidDeviceManufacturers(n.getStringValue()); });
+        deserializerMap.put("allowedAndroidDeviceModels", (n) -> { currentObject.setAllowedAndroidDeviceModels(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("appActionIfAndroidDeviceManufacturerNotAllowed", (n) -> { currentObject.setAppActionIfAndroidDeviceManufacturerNotAllowed(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfAndroidDeviceModelNotAllowed", (n) -> { currentObject.setAppActionIfAndroidDeviceModelNotAllowed(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfAndroidSafetyNetAppsVerificationFailed", (n) -> { currentObject.setAppActionIfAndroidSafetyNetAppsVerificationFailed(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfAndroidSafetyNetDeviceAttestationFailed", (n) -> { currentObject.setAppActionIfAndroidSafetyNetDeviceAttestationFailed(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfDeviceLockNotSet", (n) -> { currentObject.setAppActionIfDeviceLockNotSet(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfDevicePasscodeComplexityLessThanHigh", (n) -> { currentObject.setAppActionIfDevicePasscodeComplexityLessThanHigh(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfDevicePasscodeComplexityLessThanLow", (n) -> { currentObject.setAppActionIfDevicePasscodeComplexityLessThanLow(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfDevicePasscodeComplexityLessThanMedium", (n) -> { currentObject.setAppActionIfDevicePasscodeComplexityLessThanMedium(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("approvedKeyboards", (n) -> { currentObject.setApprovedKeyboards(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("apps", (n) -> { currentObject.setApps(n.getCollectionOfObjectValues(ManagedMobileApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("biometricAuthenticationBlocked", (n) -> { currentObject.setBiometricAuthenticationBlocked(n.getBooleanValue()); });
+        deserializerMap.put("blockAfterCompanyPortalUpdateDeferralInDays", (n) -> { currentObject.setBlockAfterCompanyPortalUpdateDeferralInDays(n.getIntegerValue()); });
+        deserializerMap.put("connectToVpnOnLaunch", (n) -> { currentObject.setConnectToVpnOnLaunch(n.getBooleanValue()); });
+        deserializerMap.put("customBrowserDisplayName", (n) -> { currentObject.setCustomBrowserDisplayName(n.getStringValue()); });
+        deserializerMap.put("customBrowserPackageId", (n) -> { currentObject.setCustomBrowserPackageId(n.getStringValue()); });
+        deserializerMap.put("customDialerAppDisplayName", (n) -> { currentObject.setCustomDialerAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("customDialerAppPackageId", (n) -> { currentObject.setCustomDialerAppPackageId(n.getStringValue()); });
+        deserializerMap.put("deployedAppCount", (n) -> { currentObject.setDeployedAppCount(n.getIntegerValue()); });
+        deserializerMap.put("deploymentSummary", (n) -> { currentObject.setDeploymentSummary(n.getObjectValue(ManagedAppPolicyDeploymentSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceLockRequired", (n) -> { currentObject.setDeviceLockRequired(n.getBooleanValue()); });
+        deserializerMap.put("disableAppEncryptionIfDeviceEncryptionIsEnabled", (n) -> { currentObject.setDisableAppEncryptionIfDeviceEncryptionIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("encryptAppData", (n) -> { currentObject.setEncryptAppData(n.getBooleanValue()); });
+        deserializerMap.put("exemptedAppPackages", (n) -> { currentObject.setExemptedAppPackages(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("fingerprintAndBiometricEnabled", (n) -> { currentObject.setFingerprintAndBiometricEnabled(n.getBooleanValue()); });
+        deserializerMap.put("keyboardsRestricted", (n) -> { currentObject.setKeyboardsRestricted(n.getBooleanValue()); });
+        deserializerMap.put("minimumRequiredCompanyPortalVersion", (n) -> { currentObject.setMinimumRequiredCompanyPortalVersion(n.getStringValue()); });
+        deserializerMap.put("minimumRequiredPatchVersion", (n) -> { currentObject.setMinimumRequiredPatchVersion(n.getStringValue()); });
+        deserializerMap.put("minimumWarningCompanyPortalVersion", (n) -> { currentObject.setMinimumWarningCompanyPortalVersion(n.getStringValue()); });
+        deserializerMap.put("minimumWarningPatchVersion", (n) -> { currentObject.setMinimumWarningPatchVersion(n.getStringValue()); });
+        deserializerMap.put("minimumWipeCompanyPortalVersion", (n) -> { currentObject.setMinimumWipeCompanyPortalVersion(n.getStringValue()); });
+        deserializerMap.put("minimumWipePatchVersion", (n) -> { currentObject.setMinimumWipePatchVersion(n.getStringValue()); });
+        deserializerMap.put("requireClass3Biometrics", (n) -> { currentObject.setRequireClass3Biometrics(n.getBooleanValue()); });
+        deserializerMap.put("requiredAndroidSafetyNetAppsVerificationType", (n) -> { currentObject.setRequiredAndroidSafetyNetAppsVerificationType(n.getEnumValue(AndroidManagedAppSafetyNetAppsVerificationType.class)); });
+        deserializerMap.put("requiredAndroidSafetyNetDeviceAttestationType", (n) -> { currentObject.setRequiredAndroidSafetyNetDeviceAttestationType(n.getEnumValue(AndroidManagedAppSafetyNetDeviceAttestationType.class)); });
+        deserializerMap.put("requiredAndroidSafetyNetEvaluationType", (n) -> { currentObject.setRequiredAndroidSafetyNetEvaluationType(n.getEnumValue(AndroidManagedAppSafetyNetEvaluationType.class)); });
+        deserializerMap.put("requirePinAfterBiometricChange", (n) -> { currentObject.setRequirePinAfterBiometricChange(n.getBooleanValue()); });
+        deserializerMap.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
+        deserializerMap.put("warnAfterCompanyPortalUpdateDeferralInDays", (n) -> { currentObject.setWarnAfterCompanyPortalUpdateDeferralInDays(n.getIntegerValue()); });
+        deserializerMap.put("wipeAfterCompanyPortalUpdateDeferralInDays", (n) -> { currentObject.setWipeAfterCompanyPortalUpdateDeferralInDays(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fingerprintAndBiometricEnabled property value. If null, this setting will be ignored. If false both fingerprints and biometrics will not be enabled. If true, both fingerprints and biometrics will be enabled.
@@ -492,6 +493,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -542,6 +544,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the allowedAndroidDeviceManufacturers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedAndroidDeviceManufacturers(@javax.annotation.Nullable final String value) {
         this._allowedAndroidDeviceManufacturers = value;
     }
@@ -550,6 +553,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the allowedAndroidDeviceModels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedAndroidDeviceModels(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedAndroidDeviceModels = value;
     }
@@ -558,6 +562,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the appActionIfAndroidDeviceManufacturerNotAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfAndroidDeviceManufacturerNotAllowed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfAndroidDeviceManufacturerNotAllowed = value;
     }
@@ -566,6 +571,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the appActionIfAndroidDeviceModelNotAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfAndroidDeviceModelNotAllowed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfAndroidDeviceModelNotAllowed = value;
     }
@@ -574,6 +580,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the appActionIfAndroidSafetyNetAppsVerificationFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfAndroidSafetyNetAppsVerificationFailed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfAndroidSafetyNetAppsVerificationFailed = value;
     }
@@ -582,6 +589,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the appActionIfAndroidSafetyNetDeviceAttestationFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfAndroidSafetyNetDeviceAttestationFailed(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfAndroidSafetyNetDeviceAttestationFailed = value;
     }
@@ -590,6 +598,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the appActionIfDeviceLockNotSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfDeviceLockNotSet(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfDeviceLockNotSet = value;
     }
@@ -598,6 +607,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanHigh property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfDevicePasscodeComplexityLessThanHigh(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfDevicePasscodeComplexityLessThanHigh = value;
     }
@@ -606,6 +616,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanLow property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfDevicePasscodeComplexityLessThanLow(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfDevicePasscodeComplexityLessThanLow = value;
     }
@@ -614,6 +625,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanMedium property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfDevicePasscodeComplexityLessThanMedium(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfDevicePasscodeComplexityLessThanMedium = value;
     }
@@ -622,6 +634,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the approvedKeyboards property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApprovedKeyboards(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._approvedKeyboards = value;
     }
@@ -630,6 +643,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the apps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApps(@javax.annotation.Nullable final java.util.List<ManagedMobileApp> value) {
         this._apps = value;
     }
@@ -638,6 +652,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the biometricAuthenticationBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBiometricAuthenticationBlocked(@javax.annotation.Nullable final Boolean value) {
         this._biometricAuthenticationBlocked = value;
     }
@@ -646,6 +661,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the blockAfterCompanyPortalUpdateDeferralInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockAfterCompanyPortalUpdateDeferralInDays(@javax.annotation.Nullable final Integer value) {
         this._blockAfterCompanyPortalUpdateDeferralInDays = value;
     }
@@ -654,6 +670,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the connectToVpnOnLaunch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectToVpnOnLaunch(@javax.annotation.Nullable final Boolean value) {
         this._connectToVpnOnLaunch = value;
     }
@@ -662,6 +679,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the customBrowserDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomBrowserDisplayName(@javax.annotation.Nullable final String value) {
         this._customBrowserDisplayName = value;
     }
@@ -670,6 +688,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the customBrowserPackageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomBrowserPackageId(@javax.annotation.Nullable final String value) {
         this._customBrowserPackageId = value;
     }
@@ -678,6 +697,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the customDialerAppDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomDialerAppDisplayName(@javax.annotation.Nullable final String value) {
         this._customDialerAppDisplayName = value;
     }
@@ -686,6 +706,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the customDialerAppPackageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomDialerAppPackageId(@javax.annotation.Nullable final String value) {
         this._customDialerAppPackageId = value;
     }
@@ -694,6 +715,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the deployedAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployedAppCount(@javax.annotation.Nullable final Integer value) {
         this._deployedAppCount = value;
     }
@@ -702,6 +724,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the deploymentSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentSummary(@javax.annotation.Nullable final ManagedAppPolicyDeploymentSummary value) {
         this._deploymentSummary = value;
     }
@@ -710,6 +733,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the deviceLockRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceLockRequired(@javax.annotation.Nullable final Boolean value) {
         this._deviceLockRequired = value;
     }
@@ -718,6 +742,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the disableAppEncryptionIfDeviceEncryptionIsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableAppEncryptionIfDeviceEncryptionIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._disableAppEncryptionIfDeviceEncryptionIsEnabled = value;
     }
@@ -726,6 +751,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the encryptAppData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptAppData(@javax.annotation.Nullable final Boolean value) {
         this._encryptAppData = value;
     }
@@ -734,6 +760,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the exemptedAppPackages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExemptedAppPackages(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._exemptedAppPackages = value;
     }
@@ -742,6 +769,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the fingerprintAndBiometricEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFingerprintAndBiometricEnabled(@javax.annotation.Nullable final Boolean value) {
         this._fingerprintAndBiometricEnabled = value;
     }
@@ -750,6 +778,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the keyboardsRestricted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyboardsRestricted(@javax.annotation.Nullable final Boolean value) {
         this._keyboardsRestricted = value;
     }
@@ -758,6 +787,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the minimumRequiredCompanyPortalVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredCompanyPortalVersion(@javax.annotation.Nullable final String value) {
         this._minimumRequiredCompanyPortalVersion = value;
     }
@@ -766,6 +796,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the minimumRequiredPatchVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredPatchVersion(@javax.annotation.Nullable final String value) {
         this._minimumRequiredPatchVersion = value;
     }
@@ -774,6 +805,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the minimumWarningCompanyPortalVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWarningCompanyPortalVersion(@javax.annotation.Nullable final String value) {
         this._minimumWarningCompanyPortalVersion = value;
     }
@@ -782,6 +814,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the minimumWarningPatchVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWarningPatchVersion(@javax.annotation.Nullable final String value) {
         this._minimumWarningPatchVersion = value;
     }
@@ -790,6 +823,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the minimumWipeCompanyPortalVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWipeCompanyPortalVersion(@javax.annotation.Nullable final String value) {
         this._minimumWipeCompanyPortalVersion = value;
     }
@@ -798,6 +832,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the minimumWipePatchVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWipePatchVersion(@javax.annotation.Nullable final String value) {
         this._minimumWipePatchVersion = value;
     }
@@ -806,6 +841,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the requireClass3Biometrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireClass3Biometrics(@javax.annotation.Nullable final Boolean value) {
         this._requireClass3Biometrics = value;
     }
@@ -814,6 +850,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the requiredAndroidSafetyNetAppsVerificationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredAndroidSafetyNetAppsVerificationType(@javax.annotation.Nullable final AndroidManagedAppSafetyNetAppsVerificationType value) {
         this._requiredAndroidSafetyNetAppsVerificationType = value;
     }
@@ -822,6 +859,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the requiredAndroidSafetyNetDeviceAttestationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredAndroidSafetyNetDeviceAttestationType(@javax.annotation.Nullable final AndroidManagedAppSafetyNetDeviceAttestationType value) {
         this._requiredAndroidSafetyNetDeviceAttestationType = value;
     }
@@ -830,6 +868,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the requiredAndroidSafetyNetEvaluationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredAndroidSafetyNetEvaluationType(@javax.annotation.Nullable final AndroidManagedAppSafetyNetEvaluationType value) {
         this._requiredAndroidSafetyNetEvaluationType = value;
     }
@@ -838,6 +877,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the requirePinAfterBiometricChange property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequirePinAfterBiometricChange(@javax.annotation.Nullable final Boolean value) {
         this._requirePinAfterBiometricChange = value;
     }
@@ -846,6 +886,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the screenCaptureBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
         this._screenCaptureBlocked = value;
     }
@@ -854,6 +895,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the warnAfterCompanyPortalUpdateDeferralInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWarnAfterCompanyPortalUpdateDeferralInDays(@javax.annotation.Nullable final Integer value) {
         this._warnAfterCompanyPortalUpdateDeferralInDays = value;
     }
@@ -862,6 +904,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
      * @param value Value to set for the wipeAfterCompanyPortalUpdateDeferralInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWipeAfterCompanyPortalUpdateDeferralInDays(@javax.annotation.Nullable final Integer value) {
         this._wipeAfterCompanyPortalUpdateDeferralInDays = value;
     }

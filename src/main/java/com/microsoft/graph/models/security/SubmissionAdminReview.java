@@ -24,6 +24,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
      * Instantiates a new submissionAdminReview and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SubmissionAdminReview() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.security.submissionAdminReview");
@@ -53,12 +54,12 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubmissionAdminReview currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("reviewBy", (n) -> { currentObject.setReviewBy(n.getStringValue()); });
-            this.put("reviewDateTime", (n) -> { currentObject.setReviewDateTime(n.getOffsetDateTimeValue()); });
-            this.put("reviewResult", (n) -> { currentObject.setReviewResult(n.getEnumValue(SubmissionResultCategory.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("reviewBy", (n) -> { currentObject.setReviewBy(n.getStringValue()); });
+        deserializerMap.put("reviewDateTime", (n) -> { currentObject.setReviewDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("reviewResult", (n) -> { currentObject.setReviewResult(n.getEnumValue(SubmissionResultCategory.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -97,6 +98,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -110,6 +112,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -126,6 +130,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the reviewBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewBy(@javax.annotation.Nullable final String value) {
         this._reviewBy = value;
     }
@@ -134,6 +139,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the reviewDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._reviewDateTime = value;
     }
@@ -142,6 +148,7 @@ public class SubmissionAdminReview implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the reviewResult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewResult(@javax.annotation.Nullable final SubmissionResultCategory value) {
         this._reviewResult = value;
     }

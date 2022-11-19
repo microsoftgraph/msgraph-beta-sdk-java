@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class DirectoryDefinition extends Entity implements Parsable {
     /** The discoverabilities property */
     private DirectoryDefinitionDiscoverabilities _discoverabilities;
@@ -26,6 +26,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
      * Instantiates a new directoryDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectoryDefinition() {
         super();
         this.setOdataType("#microsoft.graph.directoryDefinition");
@@ -63,14 +64,14 @@ public class DirectoryDefinition extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DirectoryDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("discoverabilities", (n) -> { currentObject.setDiscoverabilities(n.getEnumValue(DirectoryDefinitionDiscoverabilities.class)); });
-            this.put("discoveryDateTime", (n) -> { currentObject.setDiscoveryDateTime(n.getOffsetDateTimeValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("objects", (n) -> { currentObject.setObjects(n.getCollectionOfObjectValues(ObjectDefinition::createFromDiscriminatorValue)); });
-            this.put("readOnly", (n) -> { currentObject.setReadOnly(n.getBooleanValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("discoverabilities", (n) -> { currentObject.setDiscoverabilities(n.getEnumValue(DirectoryDefinitionDiscoverabilities.class)); });
+        deserializerMap.put("discoveryDateTime", (n) -> { currentObject.setDiscoveryDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("objects", (n) -> { currentObject.setObjects(n.getCollectionOfObjectValues(ObjectDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("readOnly", (n) -> { currentObject.setReadOnly(n.getBooleanValue()); });
+        deserializerMap.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. Name of the directory. Must be unique within the synchronization schema. Not nullable.
@@ -109,6 +110,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -124,6 +126,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the discoverabilities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscoverabilities(@javax.annotation.Nullable final DirectoryDefinitionDiscoverabilities value) {
         this._discoverabilities = value;
     }
@@ -132,6 +135,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the discoveryDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscoveryDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._discoveryDateTime = value;
     }
@@ -140,6 +144,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -148,6 +153,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the objects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setObjects(@javax.annotation.Nullable final java.util.List<ObjectDefinition> value) {
         this._objects = value;
     }
@@ -156,6 +162,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the readOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReadOnly(@javax.annotation.Nullable final Boolean value) {
         this._readOnly = value;
     }
@@ -164,6 +171,7 @@ public class DirectoryDefinition extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

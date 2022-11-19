@@ -14,6 +14,7 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
      * Instantiates a new DeviceManagementSettingFileConstraint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingFileConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingFileConstraint");
@@ -35,9 +36,9 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingFileConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("supportedExtensions", (n) -> { currentObject.setSupportedExtensions(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("supportedExtensions", (n) -> { currentObject.setSupportedExtensions(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the supportedExtensions property value. Acceptable file extensions to upload for this setting
@@ -52,6 +53,7 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementSettingFileConstraint extends DeviceManagementConst
      * @param value Value to set for the supportedExtensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedExtensions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._supportedExtensions = value;
     }

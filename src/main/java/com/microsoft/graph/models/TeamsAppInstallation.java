@@ -18,6 +18,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
      * Instantiates a new teamsAppInstallation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamsAppInstallation() {
         super();
         this.setOdataType("#microsoft.graph.teamsAppInstallation");
@@ -46,10 +47,10 @@ public class TeamsAppInstallation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamsAppInstallation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("teamsApp", (n) -> { currentObject.setTeamsApp(n.getObjectValue(TeamsApp::createFromDiscriminatorValue)); });
-            this.put("teamsAppDefinition", (n) -> { currentObject.setTeamsAppDefinition(n.getObjectValue(TeamsAppDefinition::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("teamsApp", (n) -> { currentObject.setTeamsApp(n.getObjectValue(TeamsApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("teamsAppDefinition", (n) -> { currentObject.setTeamsAppDefinition(n.getObjectValue(TeamsAppDefinition::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the teamsApp property value. The app that is installed.
@@ -72,6 +73,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -83,6 +85,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
      * @param value Value to set for the teamsApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsApp(@javax.annotation.Nullable final TeamsApp value) {
         this._teamsApp = value;
     }
@@ -91,6 +94,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
      * @param value Value to set for the teamsAppDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsAppDefinition(@javax.annotation.Nullable final TeamsAppDefinition value) {
         this._teamsAppDefinition = value;
     }

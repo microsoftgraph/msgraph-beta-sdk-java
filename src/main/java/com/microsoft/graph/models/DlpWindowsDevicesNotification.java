@@ -16,6 +16,7 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
      * Instantiates a new DlpWindowsDevicesNotification and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DlpWindowsDevicesNotification() {
         super();
         this.setOdataType("#microsoft.graph.dlpWindowsDevicesNotification");
@@ -45,10 +46,10 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DlpWindowsDevicesNotification currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contentName", (n) -> { currentObject.setContentName(n.getStringValue()); });
-            this.put("lastModfiedBy", (n) -> { currentObject.setLastModfiedBy(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contentName", (n) -> { currentObject.setContentName(n.getStringValue()); });
+        deserializerMap.put("lastModfiedBy", (n) -> { currentObject.setLastModfiedBy(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModfiedBy property value. The lastModfiedBy property
@@ -63,6 +64,7 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
      * @param value Value to set for the contentName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentName(@javax.annotation.Nullable final String value) {
         this._contentName = value;
     }
@@ -82,6 +85,7 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
      * @param value Value to set for the lastModfiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModfiedBy(@javax.annotation.Nullable final String value) {
         this._lastModfiedBy = value;
     }

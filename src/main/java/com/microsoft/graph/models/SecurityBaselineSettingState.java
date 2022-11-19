@@ -29,6 +29,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * Instantiates a new securityBaselineSettingState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecurityBaselineSettingState() {
         super();
         this.setOdataType("#microsoft.graph.securityBaselineSettingState");
@@ -66,16 +67,16 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SecurityBaselineSettingState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contributingPolicies", (n) -> { currentObject.setContributingPolicies(n.getCollectionOfObjectValues(SecurityBaselineContributingPolicy::createFromDiscriminatorValue)); });
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
-            this.put("settingCategoryId", (n) -> { currentObject.setSettingCategoryId(n.getStringValue()); });
-            this.put("settingCategoryName", (n) -> { currentObject.setSettingCategoryName(n.getStringValue()); });
-            this.put("settingId", (n) -> { currentObject.setSettingId(n.getStringValue()); });
-            this.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
-            this.put("sourcePolicies", (n) -> { currentObject.setSourcePolicies(n.getCollectionOfObjectValues(SettingSource::createFromDiscriminatorValue)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(SecurityBaselineComplianceState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contributingPolicies", (n) -> { currentObject.setContributingPolicies(n.getCollectionOfObjectValues(SecurityBaselineContributingPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
+        deserializerMap.put("settingCategoryId", (n) -> { currentObject.setSettingCategoryId(n.getStringValue()); });
+        deserializerMap.put("settingCategoryName", (n) -> { currentObject.setSettingCategoryName(n.getStringValue()); });
+        deserializerMap.put("settingId", (n) -> { currentObject.setSettingId(n.getStringValue()); });
+        deserializerMap.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
+        deserializerMap.put("sourcePolicies", (n) -> { currentObject.setSourcePolicies(n.getCollectionOfObjectValues(SettingSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(SecurityBaselineComplianceState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the settingCategoryId property value. The setting category id which this setting belongs to
@@ -130,6 +131,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -147,6 +149,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the contributingPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContributingPolicies(@javax.annotation.Nullable final java.util.List<SecurityBaselineContributingPolicy> value) {
         this._contributingPolicies = value;
     }
@@ -155,6 +158,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final String value) {
         this._errorCode = value;
     }
@@ -163,6 +167,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the settingCategoryId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingCategoryId(@javax.annotation.Nullable final String value) {
         this._settingCategoryId = value;
     }
@@ -171,6 +176,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the settingCategoryName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingCategoryName(@javax.annotation.Nullable final String value) {
         this._settingCategoryName = value;
     }
@@ -179,6 +185,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the settingId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingId(@javax.annotation.Nullable final String value) {
         this._settingId = value;
     }
@@ -187,6 +194,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the settingName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingName(@javax.annotation.Nullable final String value) {
         this._settingName = value;
     }
@@ -195,6 +203,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the sourcePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourcePolicies(@javax.annotation.Nullable final java.util.List<SettingSource> value) {
         this._sourcePolicies = value;
     }
@@ -203,6 +212,7 @@ public class SecurityBaselineSettingState extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final SecurityBaselineComplianceState value) {
         this._state = value;
     }

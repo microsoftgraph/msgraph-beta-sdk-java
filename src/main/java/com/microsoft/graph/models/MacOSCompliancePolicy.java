@@ -54,6 +54,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * Instantiates a new MacOSCompliancePolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSCompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.macOSCompliancePolicy");
@@ -99,29 +100,29 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSCompliancePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("advancedThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setAdvancedThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
-            this.put("deviceThreatProtectionEnabled", (n) -> { currentObject.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
-            this.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
-            this.put("firewallBlockAllIncoming", (n) -> { currentObject.setFirewallBlockAllIncoming(n.getBooleanValue()); });
-            this.put("firewallEnabled", (n) -> { currentObject.setFirewallEnabled(n.getBooleanValue()); });
-            this.put("firewallEnableStealthMode", (n) -> { currentObject.setFirewallEnableStealthMode(n.getBooleanValue()); });
-            this.put("gatekeeperAllowedAppSource", (n) -> { currentObject.setGatekeeperAllowedAppSource(n.getEnumValue(MacOSGatekeeperAppSources.class)); });
-            this.put("osMaximumBuildVersion", (n) -> { currentObject.setOsMaximumBuildVersion(n.getStringValue()); });
-            this.put("osMaximumVersion", (n) -> { currentObject.setOsMaximumVersion(n.getStringValue()); });
-            this.put("osMinimumBuildVersion", (n) -> { currentObject.setOsMinimumBuildVersion(n.getStringValue()); });
-            this.put("osMinimumVersion", (n) -> { currentObject.setOsMinimumVersion(n.getStringValue()); });
-            this.put("passwordBlockSimple", (n) -> { currentObject.setPasswordBlockSimple(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumCharacterSetCount", (n) -> { currentObject.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeLock", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
-            this.put("storageRequireEncryption", (n) -> { currentObject.setStorageRequireEncryption(n.getBooleanValue()); });
-            this.put("systemIntegrityProtectionEnabled", (n) -> { currentObject.setSystemIntegrityProtectionEnabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("advancedThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setAdvancedThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
+        deserializerMap.put("deviceThreatProtectionEnabled", (n) -> { currentObject.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
+        deserializerMap.put("firewallBlockAllIncoming", (n) -> { currentObject.setFirewallBlockAllIncoming(n.getBooleanValue()); });
+        deserializerMap.put("firewallEnabled", (n) -> { currentObject.setFirewallEnabled(n.getBooleanValue()); });
+        deserializerMap.put("firewallEnableStealthMode", (n) -> { currentObject.setFirewallEnableStealthMode(n.getBooleanValue()); });
+        deserializerMap.put("gatekeeperAllowedAppSource", (n) -> { currentObject.setGatekeeperAllowedAppSource(n.getEnumValue(MacOSGatekeeperAppSources.class)); });
+        deserializerMap.put("osMaximumBuildVersion", (n) -> { currentObject.setOsMaximumBuildVersion(n.getStringValue()); });
+        deserializerMap.put("osMaximumVersion", (n) -> { currentObject.setOsMaximumVersion(n.getStringValue()); });
+        deserializerMap.put("osMinimumBuildVersion", (n) -> { currentObject.setOsMinimumBuildVersion(n.getStringValue()); });
+        deserializerMap.put("osMinimumVersion", (n) -> { currentObject.setOsMinimumVersion(n.getStringValue()); });
+        deserializerMap.put("passwordBlockSimple", (n) -> { currentObject.setPasswordBlockSimple(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumCharacterSetCount", (n) -> { currentObject.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeLock", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
+        deserializerMap.put("storageRequireEncryption", (n) -> { currentObject.setStorageRequireEncryption(n.getBooleanValue()); });
+        deserializerMap.put("systemIntegrityProtectionEnabled", (n) -> { currentObject.setSystemIntegrityProtectionEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the firewallBlockAllIncoming property value. Corresponds to the 'Block all incoming connections' option.
@@ -272,6 +273,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -302,6 +304,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the advancedThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
         this._advancedThreatProtectionRequiredSecurityLevel = value;
     }
@@ -310,6 +313,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the deviceThreatProtectionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceThreatProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._deviceThreatProtectionEnabled = value;
     }
@@ -318,6 +322,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
         this._deviceThreatProtectionRequiredSecurityLevel = value;
     }
@@ -326,6 +331,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the firewallBlockAllIncoming property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallBlockAllIncoming(@javax.annotation.Nullable final Boolean value) {
         this._firewallBlockAllIncoming = value;
     }
@@ -334,6 +340,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the firewallEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallEnabled(@javax.annotation.Nullable final Boolean value) {
         this._firewallEnabled = value;
     }
@@ -342,6 +349,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the firewallEnableStealthMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallEnableStealthMode(@javax.annotation.Nullable final Boolean value) {
         this._firewallEnableStealthMode = value;
     }
@@ -350,6 +358,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the gatekeeperAllowedAppSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGatekeeperAllowedAppSource(@javax.annotation.Nullable final MacOSGatekeeperAppSources value) {
         this._gatekeeperAllowedAppSource = value;
     }
@@ -358,6 +367,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the osMaximumBuildVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMaximumBuildVersion(@javax.annotation.Nullable final String value) {
         this._osMaximumBuildVersion = value;
     }
@@ -366,6 +376,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the osMaximumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
         this._osMaximumVersion = value;
     }
@@ -374,6 +385,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the osMinimumBuildVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMinimumBuildVersion(@javax.annotation.Nullable final String value) {
         this._osMinimumBuildVersion = value;
     }
@@ -382,6 +394,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the osMinimumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
         this._osMinimumVersion = value;
     }
@@ -390,6 +403,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the passwordBlockSimple property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockSimple(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockSimple = value;
     }
@@ -398,6 +412,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -406,6 +421,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumCharacterSetCount = value;
     }
@@ -414,6 +430,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -422,6 +439,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeLock = value;
     }
@@ -430,6 +448,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordBlockCount = value;
     }
@@ -438,6 +457,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequired = value;
     }
@@ -446,6 +466,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -454,6 +475,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the storageRequireEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRequireEncryption(@javax.annotation.Nullable final Boolean value) {
         this._storageRequireEncryption = value;
     }
@@ -462,6 +484,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      * @param value Value to set for the systemIntegrityProtectionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemIntegrityProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._systemIntegrityProtectionEnabled = value;
     }

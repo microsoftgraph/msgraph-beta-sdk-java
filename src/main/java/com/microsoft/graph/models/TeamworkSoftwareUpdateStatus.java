@@ -23,6 +23,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
      * Instantiates a new teamworkSoftwareUpdateStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkSoftwareUpdateStatus() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.teamworkSoftwareUpdateStatus");
@@ -68,12 +69,12 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkSoftwareUpdateStatus currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("availableVersion", (n) -> { currentObject.setAvailableVersion(n.getStringValue()); });
-            this.put("currentVersion", (n) -> { currentObject.setCurrentVersion(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("softwareFreshness", (n) -> { currentObject.setSoftwareFreshness(n.getEnumValue(TeamworkSoftwareFreshness.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("availableVersion", (n) -> { currentObject.setAvailableVersion(n.getStringValue()); });
+        deserializerMap.put("currentVersion", (n) -> { currentObject.setCurrentVersion(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("softwareFreshness", (n) -> { currentObject.setSoftwareFreshness(n.getEnumValue(TeamworkSoftwareFreshness.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -96,6 +97,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("availableVersion", this.getAvailableVersion());
@@ -109,6 +111,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
      * @param value Value to set for the availableVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailableVersion(@javax.annotation.Nullable final String value) {
         this._availableVersion = value;
     }
@@ -125,6 +129,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
      * @param value Value to set for the currentVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrentVersion(@javax.annotation.Nullable final String value) {
         this._currentVersion = value;
     }
@@ -133,6 +138,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +147,7 @@ public class TeamworkSoftwareUpdateStatus implements AdditionalDataHolder, Parsa
      * @param value Value to set for the softwareFreshness property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareFreshness(@javax.annotation.Nullable final TeamworkSoftwareFreshness value) {
         this._softwareFreshness = value;
     }

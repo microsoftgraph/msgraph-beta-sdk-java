@@ -23,6 +23,7 @@ public class TeamworkDeviceActivity extends Entity implements Parsable {
      * Instantiates a new teamworkDeviceActivity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkDeviceActivity() {
         super();
         this.setOdataType("#microsoft.graph.teamworkDeviceActivity");
@@ -68,13 +69,13 @@ public class TeamworkDeviceActivity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkDeviceActivity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activePeripherals", (n) -> { currentObject.setActivePeripherals(n.getObjectValue(TeamworkActivePeripherals::createFromDiscriminatorValue)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activePeripherals", (n) -> { currentObject.setActivePeripherals(n.getObjectValue(TeamworkActivePeripherals::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user who last modified the device activity details.
@@ -97,6 +98,7 @@ public class TeamworkDeviceActivity extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class TeamworkDeviceActivity extends Entity implements Parsable {
      * @param value Value to set for the activePeripherals property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivePeripherals(@javax.annotation.Nullable final TeamworkActivePeripherals value) {
         this._activePeripherals = value;
     }
@@ -119,6 +122,7 @@ public class TeamworkDeviceActivity extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -127,6 +131,7 @@ public class TeamworkDeviceActivity extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -135,6 +140,7 @@ public class TeamworkDeviceActivity extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -143,6 +149,7 @@ public class TeamworkDeviceActivity extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }

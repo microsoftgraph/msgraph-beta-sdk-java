@@ -16,6 +16,7 @@ public class AddFooter extends MarkContent implements Parsable {
      * Instantiates a new AddFooter and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AddFooter() {
         super();
         this.setOdataType("#microsoft.graph.addFooter");
@@ -45,10 +46,10 @@ public class AddFooter extends MarkContent implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AddFooter currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("alignment", (n) -> { currentObject.setAlignment(n.getEnumValue(Alignment.class)); });
-            this.put("margin", (n) -> { currentObject.setMargin(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("alignment", (n) -> { currentObject.setAlignment(n.getEnumValue(Alignment.class)); });
+        deserializerMap.put("margin", (n) -> { currentObject.setMargin(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the margin property value. The margin property
@@ -63,6 +64,7 @@ public class AddFooter extends MarkContent implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class AddFooter extends MarkContent implements Parsable {
      * @param value Value to set for the alignment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlignment(@javax.annotation.Nullable final Alignment value) {
         this._alignment = value;
     }
@@ -82,6 +85,7 @@ public class AddFooter extends MarkContent implements Parsable {
      * @param value Value to set for the margin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMargin(@javax.annotation.Nullable final Integer value) {
         this._margin = value;
     }

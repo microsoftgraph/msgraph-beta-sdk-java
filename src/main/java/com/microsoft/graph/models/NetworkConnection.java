@@ -58,6 +58,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * Instantiates a new networkConnection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public NetworkConnection() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.networkConnection");
@@ -151,29 +152,29 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NetworkConnection currentObject = this;
-        return new HashMap<>(21) {{
-            this.put("applicationName", (n) -> { currentObject.setApplicationName(n.getStringValue()); });
-            this.put("destinationAddress", (n) -> { currentObject.setDestinationAddress(n.getStringValue()); });
-            this.put("destinationDomain", (n) -> { currentObject.setDestinationDomain(n.getStringValue()); });
-            this.put("destinationLocation", (n) -> { currentObject.setDestinationLocation(n.getStringValue()); });
-            this.put("destinationPort", (n) -> { currentObject.setDestinationPort(n.getStringValue()); });
-            this.put("destinationUrl", (n) -> { currentObject.setDestinationUrl(n.getStringValue()); });
-            this.put("direction", (n) -> { currentObject.setDirection(n.getEnumValue(ConnectionDirection.class)); });
-            this.put("domainRegisteredDateTime", (n) -> { currentObject.setDomainRegisteredDateTime(n.getOffsetDateTimeValue()); });
-            this.put("localDnsName", (n) -> { currentObject.setLocalDnsName(n.getStringValue()); });
-            this.put("natDestinationAddress", (n) -> { currentObject.setNatDestinationAddress(n.getStringValue()); });
-            this.put("natDestinationPort", (n) -> { currentObject.setNatDestinationPort(n.getStringValue()); });
-            this.put("natSourceAddress", (n) -> { currentObject.setNatSourceAddress(n.getStringValue()); });
-            this.put("natSourcePort", (n) -> { currentObject.setNatSourcePort(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("protocol", (n) -> { currentObject.setProtocol(n.getEnumValue(SecurityNetworkProtocol.class)); });
-            this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
-            this.put("sourceAddress", (n) -> { currentObject.setSourceAddress(n.getStringValue()); });
-            this.put("sourceLocation", (n) -> { currentObject.setSourceLocation(n.getStringValue()); });
-            this.put("sourcePort", (n) -> { currentObject.setSourcePort(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ConnectionStatus.class)); });
-            this.put("urlParameters", (n) -> { currentObject.setUrlParameters(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(21);
+        deserializerMap.put("applicationName", (n) -> { currentObject.setApplicationName(n.getStringValue()); });
+        deserializerMap.put("destinationAddress", (n) -> { currentObject.setDestinationAddress(n.getStringValue()); });
+        deserializerMap.put("destinationDomain", (n) -> { currentObject.setDestinationDomain(n.getStringValue()); });
+        deserializerMap.put("destinationLocation", (n) -> { currentObject.setDestinationLocation(n.getStringValue()); });
+        deserializerMap.put("destinationPort", (n) -> { currentObject.setDestinationPort(n.getStringValue()); });
+        deserializerMap.put("destinationUrl", (n) -> { currentObject.setDestinationUrl(n.getStringValue()); });
+        deserializerMap.put("direction", (n) -> { currentObject.setDirection(n.getEnumValue(ConnectionDirection.class)); });
+        deserializerMap.put("domainRegisteredDateTime", (n) -> { currentObject.setDomainRegisteredDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("localDnsName", (n) -> { currentObject.setLocalDnsName(n.getStringValue()); });
+        deserializerMap.put("natDestinationAddress", (n) -> { currentObject.setNatDestinationAddress(n.getStringValue()); });
+        deserializerMap.put("natDestinationPort", (n) -> { currentObject.setNatDestinationPort(n.getStringValue()); });
+        deserializerMap.put("natSourceAddress", (n) -> { currentObject.setNatSourceAddress(n.getStringValue()); });
+        deserializerMap.put("natSourcePort", (n) -> { currentObject.setNatSourcePort(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("protocol", (n) -> { currentObject.setProtocol(n.getEnumValue(SecurityNetworkProtocol.class)); });
+        deserializerMap.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
+        deserializerMap.put("sourceAddress", (n) -> { currentObject.setSourceAddress(n.getStringValue()); });
+        deserializerMap.put("sourceLocation", (n) -> { currentObject.setSourceLocation(n.getStringValue()); });
+        deserializerMap.put("sourcePort", (n) -> { currentObject.setSourcePort(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ConnectionStatus.class)); });
+        deserializerMap.put("urlParameters", (n) -> { currentObject.setUrlParameters(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the localDnsName property value. The local DNS name resolution as it appears in the host's local DNS cache (for example, in case the 'hosts' file was tampered with).
@@ -284,6 +285,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("applicationName", this.getApplicationName());
@@ -314,6 +316,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -322,6 +325,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the applicationName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationName(@javax.annotation.Nullable final String value) {
         this._applicationName = value;
     }
@@ -330,6 +334,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the destinationAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDestinationAddress(@javax.annotation.Nullable final String value) {
         this._destinationAddress = value;
     }
@@ -338,6 +343,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the destinationDomain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDestinationDomain(@javax.annotation.Nullable final String value) {
         this._destinationDomain = value;
     }
@@ -346,6 +352,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the destinationLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDestinationLocation(@javax.annotation.Nullable final String value) {
         this._destinationLocation = value;
     }
@@ -354,6 +361,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the destinationPort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDestinationPort(@javax.annotation.Nullable final String value) {
         this._destinationPort = value;
     }
@@ -362,6 +370,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the destinationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDestinationUrl(@javax.annotation.Nullable final String value) {
         this._destinationUrl = value;
     }
@@ -370,6 +379,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the direction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirection(@javax.annotation.Nullable final ConnectionDirection value) {
         this._direction = value;
     }
@@ -378,6 +388,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the domainRegisteredDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainRegisteredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._domainRegisteredDateTime = value;
     }
@@ -386,6 +397,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the localDnsName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalDnsName(@javax.annotation.Nullable final String value) {
         this._localDnsName = value;
     }
@@ -394,6 +406,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the natDestinationAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNatDestinationAddress(@javax.annotation.Nullable final String value) {
         this._natDestinationAddress = value;
     }
@@ -402,6 +415,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the natDestinationPort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNatDestinationPort(@javax.annotation.Nullable final String value) {
         this._natDestinationPort = value;
     }
@@ -410,6 +424,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the natSourceAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNatSourceAddress(@javax.annotation.Nullable final String value) {
         this._natSourceAddress = value;
     }
@@ -418,6 +433,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the natSourcePort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNatSourcePort(@javax.annotation.Nullable final String value) {
         this._natSourcePort = value;
     }
@@ -426,6 +442,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -434,6 +451,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the protocol property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProtocol(@javax.annotation.Nullable final SecurityNetworkProtocol value) {
         this._protocol = value;
     }
@@ -442,6 +460,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the riskScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
         this._riskScore = value;
     }
@@ -450,6 +469,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sourceAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceAddress(@javax.annotation.Nullable final String value) {
         this._sourceAddress = value;
     }
@@ -458,6 +478,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sourceLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceLocation(@javax.annotation.Nullable final String value) {
         this._sourceLocation = value;
     }
@@ -466,6 +487,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sourcePort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourcePort(@javax.annotation.Nullable final String value) {
         this._sourcePort = value;
     }
@@ -474,6 +496,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ConnectionStatus value) {
         this._status = value;
     }
@@ -482,6 +505,7 @@ public class NetworkConnection implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the urlParameters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrlParameters(@javax.annotation.Nullable final String value) {
         this._urlParameters = value;
     }

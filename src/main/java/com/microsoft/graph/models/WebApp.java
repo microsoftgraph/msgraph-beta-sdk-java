@@ -16,6 +16,7 @@ public class WebApp extends MobileApp implements Parsable {
      * Instantiates a new WebApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WebApp() {
         super();
         this.setOdataType("#microsoft.graph.webApp");
@@ -45,10 +46,10 @@ public class WebApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WebApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appUrl", (n) -> { currentObject.setAppUrl(n.getStringValue()); });
-            this.put("useManagedBrowser", (n) -> { currentObject.setUseManagedBrowser(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appUrl", (n) -> { currentObject.setAppUrl(n.getStringValue()); });
+        deserializerMap.put("useManagedBrowser", (n) -> { currentObject.setUseManagedBrowser(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the useManagedBrowser property value. Whether or not to use managed browser. This property is only applicable for Android and IOS.
@@ -63,6 +64,7 @@ public class WebApp extends MobileApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class WebApp extends MobileApp implements Parsable {
      * @param value Value to set for the appUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppUrl(@javax.annotation.Nullable final String value) {
         this._appUrl = value;
     }
@@ -82,6 +85,7 @@ public class WebApp extends MobileApp implements Parsable {
      * @param value Value to set for the useManagedBrowser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseManagedBrowser(@javax.annotation.Nullable final Boolean value) {
         this._useManagedBrowser = value;
     }

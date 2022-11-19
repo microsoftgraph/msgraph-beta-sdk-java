@@ -14,6 +14,7 @@ public class KeyIntegerValuePair extends KeyTypedValuePair implements Parsable {
      * Instantiates a new KeyIntegerValuePair and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public KeyIntegerValuePair() {
         super();
         this.setOdataType("#microsoft.graph.keyIntegerValuePair");
@@ -35,9 +36,9 @@ public class KeyIntegerValuePair extends KeyTypedValuePair implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final KeyIntegerValuePair currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The integer value of the key-value pair.
@@ -52,6 +53,7 @@ public class KeyIntegerValuePair extends KeyTypedValuePair implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class KeyIntegerValuePair extends KeyTypedValuePair implements Parsable {
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final Integer value) {
         this._value = value;
     }

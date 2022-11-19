@@ -25,6 +25,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      * Instantiates a new teamsTabConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamsTabConfiguration() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.teamsTabConfiguration");
@@ -70,13 +71,13 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamsTabConfiguration currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("contentUrl", (n) -> { currentObject.setContentUrl(n.getStringValue()); });
-            this.put("entityId", (n) -> { currentObject.setEntityId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("removeUrl", (n) -> { currentObject.setRemoveUrl(n.getStringValue()); });
-            this.put("websiteUrl", (n) -> { currentObject.setWebsiteUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("contentUrl", (n) -> { currentObject.setContentUrl(n.getStringValue()); });
+        deserializerMap.put("entityId", (n) -> { currentObject.setEntityId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("removeUrl", (n) -> { currentObject.setRemoveUrl(n.getStringValue()); });
+        deserializerMap.put("websiteUrl", (n) -> { currentObject.setWebsiteUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,6 +108,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("contentUrl", this.getContentUrl());
@@ -121,6 +123,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contentUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentUrl(@javax.annotation.Nullable final String value) {
         this._contentUrl = value;
     }
@@ -137,6 +141,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the entityId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEntityId(@javax.annotation.Nullable final String value) {
         this._entityId = value;
     }
@@ -145,6 +150,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -153,6 +159,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the removeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoveUrl(@javax.annotation.Nullable final String value) {
         this._removeUrl = value;
     }
@@ -161,6 +168,7 @@ public class TeamsTabConfiguration implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the websiteUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebsiteUrl(@javax.annotation.Nullable final String value) {
         this._websiteUrl = value;
     }

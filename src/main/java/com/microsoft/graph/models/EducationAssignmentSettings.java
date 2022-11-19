@@ -14,6 +14,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
      * Instantiates a new EducationAssignmentSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.educationAssignmentSettings");
@@ -35,9 +36,9 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("submissionAnimationDisabled", (n) -> { currentObject.setSubmissionAnimationDisabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("submissionAnimationDisabled", (n) -> { currentObject.setSubmissionAnimationDisabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the submissionAnimationDisabled property value. Indicates whether turn-in celebration animation will be shown. A value of true indicates that the animation will not be shown. Default value is false.
@@ -52,6 +53,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
      * @param value Value to set for the submissionAnimationDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubmissionAnimationDisabled(@javax.annotation.Nullable final Boolean value) {
         this._submissionAnimationDisabled = value;
     }

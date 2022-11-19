@@ -36,6 +36,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      * Instantiates a new findMeetingTimesPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FindMeetingTimesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -72,16 +73,16 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FindMeetingTimesPostRequestBody currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("attendees", (n) -> { currentObject.setAttendees(n.getCollectionOfObjectValues(AttendeeBase::createFromDiscriminatorValue)); });
-            this.put("isOrganizerOptional", (n) -> { currentObject.setIsOrganizerOptional(n.getBooleanValue()); });
-            this.put("locationConstraint", (n) -> { currentObject.setLocationConstraint(n.getObjectValue(LocationConstraint::createFromDiscriminatorValue)); });
-            this.put("maxCandidates", (n) -> { currentObject.setMaxCandidates(n.getIntegerValue()); });
-            this.put("meetingDuration", (n) -> { currentObject.setMeetingDuration(n.getPeriodValue()); });
-            this.put("minimumAttendeePercentage", (n) -> { currentObject.setMinimumAttendeePercentage(n.getDoubleValue()); });
-            this.put("returnSuggestionReasons", (n) -> { currentObject.setReturnSuggestionReasons(n.getBooleanValue()); });
-            this.put("timeConstraint", (n) -> { currentObject.setTimeConstraint(n.getObjectValue(TimeConstraint::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("attendees", (n) -> { currentObject.setAttendees(n.getCollectionOfObjectValues(AttendeeBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("isOrganizerOptional", (n) -> { currentObject.setIsOrganizerOptional(n.getBooleanValue()); });
+        deserializerMap.put("locationConstraint", (n) -> { currentObject.setLocationConstraint(n.getObjectValue(LocationConstraint::createFromDiscriminatorValue)); });
+        deserializerMap.put("maxCandidates", (n) -> { currentObject.setMaxCandidates(n.getIntegerValue()); });
+        deserializerMap.put("meetingDuration", (n) -> { currentObject.setMeetingDuration(n.getPeriodValue()); });
+        deserializerMap.put("minimumAttendeePercentage", (n) -> { currentObject.setMinimumAttendeePercentage(n.getDoubleValue()); });
+        deserializerMap.put("returnSuggestionReasons", (n) -> { currentObject.setReturnSuggestionReasons(n.getBooleanValue()); });
+        deserializerMap.put("timeConstraint", (n) -> { currentObject.setTimeConstraint(n.getObjectValue(TimeConstraint::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isOrganizerOptional property value. The isOrganizerOptional property
@@ -144,6 +145,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("attendees", this.getAttendees());
@@ -161,6 +163,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -169,6 +172,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      * @param value Value to set for the attendees property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttendees(@javax.annotation.Nullable final java.util.List<AttendeeBase> value) {
         this._attendees = value;
     }
@@ -177,6 +181,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      * @param value Value to set for the isOrganizerOptional property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsOrganizerOptional(@javax.annotation.Nullable final Boolean value) {
         this._isOrganizerOptional = value;
     }
@@ -185,6 +190,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      * @param value Value to set for the locationConstraint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocationConstraint(@javax.annotation.Nullable final LocationConstraint value) {
         this._locationConstraint = value;
     }
@@ -193,6 +199,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      * @param value Value to set for the maxCandidates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxCandidates(@javax.annotation.Nullable final Integer value) {
         this._maxCandidates = value;
     }
@@ -201,6 +208,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      * @param value Value to set for the meetingDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeetingDuration(@javax.annotation.Nullable final Period value) {
         this._meetingDuration = value;
     }
@@ -209,6 +217,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      * @param value Value to set for the minimumAttendeePercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumAttendeePercentage(@javax.annotation.Nullable final Double value) {
         this._minimumAttendeePercentage = value;
     }
@@ -217,6 +226,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      * @param value Value to set for the returnSuggestionReasons property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReturnSuggestionReasons(@javax.annotation.Nullable final Boolean value) {
         this._returnSuggestionReasons = value;
     }
@@ -225,6 +235,7 @@ public class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, Pa
      * @param value Value to set for the timeConstraint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeConstraint(@javax.annotation.Nullable final TimeConstraint value) {
         this._timeConstraint = value;
     }

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device performance entity contains device performance details. */
 public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity implements Parsable {
     /** The friendly name of the application for which the event occurred. */
     private String _appDisplayName;
@@ -24,9 +25,10 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     /** The type of the event. */
     private String _eventType;
     /**
-     * Instantiates a new UserExperienceAnalyticsAppHealthDevicePerformanceDetails and sets the default values.
+     * Instantiates a new userExperienceAnalyticsAppHealthDevicePerformanceDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsAppHealthDevicePerformanceDetails() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsAppHealthDevicePerformanceDetails");
@@ -34,7 +36,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsAppHealthDevicePerformanceDetails
+     * @return a userExperienceAnalyticsAppHealthDevicePerformanceDetails
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthDevicePerformanceDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -104,21 +106,22 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsAppHealthDevicePerformanceDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
-            this.put("appPublisher", (n) -> { currentObject.setAppPublisher(n.getStringValue()); });
-            this.put("appVersion", (n) -> { currentObject.setAppVersion(n.getStringValue()); });
-            this.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
-            this.put("eventType", (n) -> { currentObject.setEventType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("appPublisher", (n) -> { currentObject.setAppPublisher(n.getStringValue()); });
+        deserializerMap.put("appVersion", (n) -> { currentObject.setAppVersion(n.getStringValue()); });
+        deserializerMap.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });
+        deserializerMap.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("eventType", (n) -> { currentObject.setEventType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +138,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
         this._appDisplayName = value;
     }
@@ -143,6 +147,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * @param value Value to set for the appPublisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppPublisher(@javax.annotation.Nullable final String value) {
         this._appPublisher = value;
     }
@@ -151,6 +156,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * @param value Value to set for the appVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppVersion(@javax.annotation.Nullable final String value) {
         this._appVersion = value;
     }
@@ -159,6 +165,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * @param value Value to set for the deviceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
         this._deviceDisplayName = value;
     }
@@ -167,6 +174,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -175,6 +183,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._eventDateTime = value;
     }
@@ -183,6 +192,7 @@ public class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends En
      * @param value Value to set for the eventType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventType(@javax.annotation.Nullable final String value) {
         this._eventType = value;
     }

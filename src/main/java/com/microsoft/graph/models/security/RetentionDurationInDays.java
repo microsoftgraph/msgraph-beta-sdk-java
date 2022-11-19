@@ -14,6 +14,7 @@ public class RetentionDurationInDays extends RetentionDuration implements Parsab
      * Instantiates a new RetentionDurationInDays and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RetentionDurationInDays() {
         super();
         this.setOdataType("#microsoft.graph.security.retentionDurationInDays");
@@ -43,15 +44,16 @@ public class RetentionDurationInDays extends RetentionDuration implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RetentionDurationInDays currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("days", (n) -> { currentObject.setDays(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("days", (n) -> { currentObject.setDays(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class RetentionDurationInDays extends RetentionDuration implements Parsab
      * @param value Value to set for the days property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDays(@javax.annotation.Nullable final Integer value) {
         this._days = value;
     }

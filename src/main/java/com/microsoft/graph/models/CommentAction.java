@@ -23,6 +23,7 @@ public class CommentAction implements AdditionalDataHolder, Parsable {
      * Instantiates a new commentAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CommentAction() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.commentAction");
@@ -52,12 +53,12 @@ public class CommentAction implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CommentAction currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("isReply", (n) -> { currentObject.setIsReply(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("parentAuthor", (n) -> { currentObject.setParentAuthor(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfObjectValues(IdentitySet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("isReply", (n) -> { currentObject.setIsReply(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("parentAuthor", (n) -> { currentObject.setParentAuthor(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfObjectValues(IdentitySet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isReply property value. If true, this activity was a reply to an existing comment thread.
@@ -96,6 +97,7 @@ public class CommentAction implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isReply", this.getIsReply());
@@ -109,6 +111,7 @@ public class CommentAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class CommentAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isReply property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsReply(@javax.annotation.Nullable final Boolean value) {
         this._isReply = value;
     }
@@ -125,6 +129,7 @@ public class CommentAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -133,6 +138,7 @@ public class CommentAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the parentAuthor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentAuthor(@javax.annotation.Nullable final IdentitySet value) {
         this._parentAuthor = value;
     }
@@ -141,6 +147,7 @@ public class CommentAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the participants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParticipants(@javax.annotation.Nullable final java.util.List<IdentitySet> value) {
         this._participants = value;
     }

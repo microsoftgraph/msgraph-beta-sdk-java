@@ -23,6 +23,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      * Instantiates a new Office365GroupsActivityStorage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Office365GroupsActivityStorage() {
         super();
         this.setOdataType("#microsoft.graph.office365GroupsActivityStorage");
@@ -44,13 +45,13 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Office365GroupsActivityStorage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("mailboxStorageUsedInBytes", (n) -> { currentObject.setMailboxStorageUsedInBytes(n.getLongValue()); });
-            this.put("reportDate", (n) -> { currentObject.setReportDate(n.getLocalDateValue()); });
-            this.put("reportPeriod", (n) -> { currentObject.setReportPeriod(n.getStringValue()); });
-            this.put("reportRefreshDate", (n) -> { currentObject.setReportRefreshDate(n.getLocalDateValue()); });
-            this.put("siteStorageUsedInBytes", (n) -> { currentObject.setSiteStorageUsedInBytes(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("mailboxStorageUsedInBytes", (n) -> { currentObject.setMailboxStorageUsedInBytes(n.getLongValue()); });
+        deserializerMap.put("reportDate", (n) -> { currentObject.setReportDate(n.getLocalDateValue()); });
+        deserializerMap.put("reportPeriod", (n) -> { currentObject.setReportPeriod(n.getStringValue()); });
+        deserializerMap.put("reportRefreshDate", (n) -> { currentObject.setReportRefreshDate(n.getLocalDateValue()); });
+        deserializerMap.put("siteStorageUsedInBytes", (n) -> { currentObject.setSiteStorageUsedInBytes(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mailboxStorageUsedInBytes property value. The storage used in group mailbox.
@@ -97,6 +98,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      * @param value Value to set for the mailboxStorageUsedInBytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailboxStorageUsedInBytes(@javax.annotation.Nullable final Long value) {
         this._mailboxStorageUsedInBytes = value;
     }
@@ -119,6 +122,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      * @param value Value to set for the reportDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportDate(@javax.annotation.Nullable final LocalDate value) {
         this._reportDate = value;
     }
@@ -127,6 +131,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      * @param value Value to set for the reportPeriod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportPeriod(@javax.annotation.Nullable final String value) {
         this._reportPeriod = value;
     }
@@ -135,6 +140,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      * @param value Value to set for the reportRefreshDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportRefreshDate(@javax.annotation.Nullable final LocalDate value) {
         this._reportRefreshDate = value;
     }
@@ -143,6 +149,7 @@ public class Office365GroupsActivityStorage extends Entity implements Parsable {
      * @param value Value to set for the siteStorageUsedInBytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteStorageUsedInBytes(@javax.annotation.Nullable final Long value) {
         this._siteStorageUsedInBytes = value;
     }

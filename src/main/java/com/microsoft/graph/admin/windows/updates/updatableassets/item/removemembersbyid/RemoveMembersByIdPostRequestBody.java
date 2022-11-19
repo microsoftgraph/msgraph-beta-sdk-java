@@ -20,6 +20,7 @@ public class RemoveMembersByIdPostRequestBody implements AdditionalDataHolder, P
      * Instantiates a new removeMembersByIdPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RemoveMembersByIdPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -48,10 +49,10 @@ public class RemoveMembersByIdPostRequestBody implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemoveMembersByIdPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("ids", (n) -> { currentObject.setIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("memberEntityType", (n) -> { currentObject.setMemberEntityType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("ids", (n) -> { currentObject.setIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("memberEntityType", (n) -> { currentObject.setMemberEntityType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ids property value. The ids property
@@ -74,6 +75,7 @@ public class RemoveMembersByIdPostRequestBody implements AdditionalDataHolder, P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("ids", this.getIds());
@@ -85,6 +87,7 @@ public class RemoveMembersByIdPostRequestBody implements AdditionalDataHolder, P
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +96,7 @@ public class RemoveMembersByIdPostRequestBody implements AdditionalDataHolder, P
      * @param value Value to set for the ids property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._ids = value;
     }
@@ -101,6 +105,7 @@ public class RemoveMembersByIdPostRequestBody implements AdditionalDataHolder, P
      * @param value Value to set for the memberEntityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberEntityType(@javax.annotation.Nullable final String value) {
         this._memberEntityType = value;
     }

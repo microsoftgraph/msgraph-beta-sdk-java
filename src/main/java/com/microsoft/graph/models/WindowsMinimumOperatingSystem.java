@@ -44,6 +44,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * Instantiates a new windowsMinimumOperatingSystem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.windowsMinimumOperatingSystem");
@@ -73,22 +74,22 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsMinimumOperatingSystem currentObject = this;
-        return new HashMap<>(14) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("v10_0", (n) -> { currentObject.setV10_0(n.getBooleanValue()); });
-            this.put("v10_1607", (n) -> { currentObject.setV10_1607(n.getBooleanValue()); });
-            this.put("v10_1703", (n) -> { currentObject.setV10_1703(n.getBooleanValue()); });
-            this.put("v10_1709", (n) -> { currentObject.setV10_1709(n.getBooleanValue()); });
-            this.put("v10_1803", (n) -> { currentObject.setV10_1803(n.getBooleanValue()); });
-            this.put("v10_1809", (n) -> { currentObject.setV10_1809(n.getBooleanValue()); });
-            this.put("v10_1903", (n) -> { currentObject.setV10_1903(n.getBooleanValue()); });
-            this.put("v10_1909", (n) -> { currentObject.setV10_1909(n.getBooleanValue()); });
-            this.put("v10_2004", (n) -> { currentObject.setV10_2004(n.getBooleanValue()); });
-            this.put("v10_21H1", (n) -> { currentObject.setV10_21H1(n.getBooleanValue()); });
-            this.put("v10_2H20", (n) -> { currentObject.setV10_2H20(n.getBooleanValue()); });
-            this.put("v8_0", (n) -> { currentObject.setV8_0(n.getBooleanValue()); });
-            this.put("v8_1", (n) -> { currentObject.setV8_1(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(14);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("v10_0", (n) -> { currentObject.setV10_0(n.getBooleanValue()); });
+        deserializerMap.put("v10_1607", (n) -> { currentObject.setV10_1607(n.getBooleanValue()); });
+        deserializerMap.put("v10_1703", (n) -> { currentObject.setV10_1703(n.getBooleanValue()); });
+        deserializerMap.put("v10_1709", (n) -> { currentObject.setV10_1709(n.getBooleanValue()); });
+        deserializerMap.put("v10_1803", (n) -> { currentObject.setV10_1803(n.getBooleanValue()); });
+        deserializerMap.put("v10_1809", (n) -> { currentObject.setV10_1809(n.getBooleanValue()); });
+        deserializerMap.put("v10_1903", (n) -> { currentObject.setV10_1903(n.getBooleanValue()); });
+        deserializerMap.put("v10_1909", (n) -> { currentObject.setV10_1909(n.getBooleanValue()); });
+        deserializerMap.put("v10_2004", (n) -> { currentObject.setV10_2004(n.getBooleanValue()); });
+        deserializerMap.put("v10_21H1", (n) -> { currentObject.setV10_21H1(n.getBooleanValue()); });
+        deserializerMap.put("v10_2H20", (n) -> { currentObject.setV10_2H20(n.getBooleanValue()); });
+        deserializerMap.put("v8_0", (n) -> { currentObject.setV8_0(n.getBooleanValue()); });
+        deserializerMap.put("v8_1", (n) -> { currentObject.setV8_1(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -207,6 +208,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -230,6 +232,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -238,6 +241,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -246,6 +250,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v10_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_0(@javax.annotation.Nullable final Boolean value) {
         this._v10_0 = value;
     }
@@ -254,6 +259,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v10_1607 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_1607(@javax.annotation.Nullable final Boolean value) {
         this._v10_1607 = value;
     }
@@ -262,6 +268,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v10_1703 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_1703(@javax.annotation.Nullable final Boolean value) {
         this._v10_1703 = value;
     }
@@ -270,6 +277,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v10_1709 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_1709(@javax.annotation.Nullable final Boolean value) {
         this._v10_1709 = value;
     }
@@ -278,6 +286,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v10_1803 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_1803(@javax.annotation.Nullable final Boolean value) {
         this._v10_1803 = value;
     }
@@ -286,6 +295,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v10_1809 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_1809(@javax.annotation.Nullable final Boolean value) {
         this._v10_1809 = value;
     }
@@ -294,6 +304,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v10_1903 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_1903(@javax.annotation.Nullable final Boolean value) {
         this._v10_1903 = value;
     }
@@ -302,6 +313,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v10_1909 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_1909(@javax.annotation.Nullable final Boolean value) {
         this._v10_1909 = value;
     }
@@ -310,6 +322,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v10_2004 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_2004(@javax.annotation.Nullable final Boolean value) {
         this._v10_2004 = value;
     }
@@ -318,6 +331,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v10_21H1 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_21H1(@javax.annotation.Nullable final Boolean value) {
         this._v10_21H1 = value;
     }
@@ -326,6 +340,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v10_2H20 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_2H20(@javax.annotation.Nullable final Boolean value) {
         this._v10_2H20 = value;
     }
@@ -334,6 +349,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v8_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV8_0(@javax.annotation.Nullable final Boolean value) {
         this._v8_0 = value;
     }
@@ -342,6 +358,7 @@ public class WindowsMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v8_1 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV8_1(@javax.annotation.Nullable final Boolean value) {
         this._v8_1 = value;
     }

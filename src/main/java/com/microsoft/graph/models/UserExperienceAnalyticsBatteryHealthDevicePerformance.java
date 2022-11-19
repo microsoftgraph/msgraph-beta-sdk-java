@@ -7,10 +7,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics battery health device performance entity contains device level battery information. */
 public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entity implements Parsable {
     /** Estimated battery age. Unit in days. Valid values -2147483648 to 2147483647 */
     private Integer _batteryAgeInDays;
-    /** A weighted average of a device’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647 */
+    /** A weighted average of a devices maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647 */
     private Integer _deviceBatteryHealthScore;
     /** The unique identifier of the device, Intune DeviceID. */
     private String _deviceId;
@@ -27,9 +28,10 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     /** The model name of the device. */
     private String _model;
     /**
-     * Instantiates a new UserExperienceAnalyticsBatteryHealthDevicePerformance and sets the default values.
+     * Instantiates a new userExperienceAnalyticsBatteryHealthDevicePerformance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsBatteryHealthDevicePerformance() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsBatteryHealthDevicePerformance");
@@ -37,7 +39,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBatteryHealthDevicePerformance
+     * @return a userExperienceAnalyticsBatteryHealthDevicePerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthDevicePerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +55,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         return this._batteryAgeInDays;
     }
     /**
-     * Gets the deviceBatteryHealthScore property value. A weighted average of a device’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
+     * Gets the deviceBatteryHealthScore property value. A weighted average of a devices maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -91,17 +93,17 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsBatteryHealthDevicePerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("batteryAgeInDays", (n) -> { currentObject.setBatteryAgeInDays(n.getIntegerValue()); });
-            this.put("deviceBatteryHealthScore", (n) -> { currentObject.setDeviceBatteryHealthScore(n.getIntegerValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("estimatedRuntimeInMinutes", (n) -> { currentObject.setEstimatedRuntimeInMinutes(n.getIntegerValue()); });
-            this.put("healthStatus", (n) -> { currentObject.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("maxCapacityPercentage", (n) -> { currentObject.setMaxCapacityPercentage(n.getIntegerValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("batteryAgeInDays", (n) -> { currentObject.setBatteryAgeInDays(n.getIntegerValue()); });
+        deserializerMap.put("deviceBatteryHealthScore", (n) -> { currentObject.setDeviceBatteryHealthScore(n.getIntegerValue()); });
+        deserializerMap.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("estimatedRuntimeInMinutes", (n) -> { currentObject.setEstimatedRuntimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("healthStatus", (n) -> { currentObject.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
+        deserializerMap.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("maxCapacityPercentage", (n) -> { currentObject.setMaxCapacityPercentage(n.getIntegerValue()); });
+        deserializerMap.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
@@ -140,6 +142,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,14 +161,16 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * @param value Value to set for the batteryAgeInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBatteryAgeInDays(@javax.annotation.Nullable final Integer value) {
         this._batteryAgeInDays = value;
     }
     /**
-     * Sets the deviceBatteryHealthScore property value. A weighted average of a device’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
+     * Sets the deviceBatteryHealthScore property value. A weighted average of a devices maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
      * @param value Value to set for the deviceBatteryHealthScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceBatteryHealthScore(@javax.annotation.Nullable final Integer value) {
         this._deviceBatteryHealthScore = value;
     }
@@ -174,6 +179,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -182,6 +188,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -190,6 +197,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * @param value Value to set for the estimatedRuntimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEstimatedRuntimeInMinutes(@javax.annotation.Nullable final Integer value) {
         this._estimatedRuntimeInMinutes = value;
     }
@@ -198,6 +206,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthStatus(@javax.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
         this._healthStatus = value;
     }
@@ -206,6 +215,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -214,6 +224,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * @param value Value to set for the maxCapacityPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxCapacityPercentage(@javax.annotation.Nullable final Integer value) {
         this._maxCapacityPercentage = value;
     }
@@ -222,6 +233,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }

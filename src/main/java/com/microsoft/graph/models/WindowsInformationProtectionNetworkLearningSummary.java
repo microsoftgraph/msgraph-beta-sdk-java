@@ -7,15 +7,17 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Windows Information Protection Network learning Summary entity. */
 public class WindowsInformationProtectionNetworkLearningSummary extends Entity implements Parsable {
     /** Device Count */
     private Integer _deviceCount;
     /** Website url */
     private String _url;
     /**
-     * Instantiates a new WindowsInformationProtectionNetworkLearningSummary and sets the default values.
+     * Instantiates a new windowsInformationProtectionNetworkLearningSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsInformationProtectionNetworkLearningSummary() {
         super();
         this.setOdataType("#microsoft.graph.windowsInformationProtectionNetworkLearningSummary");
@@ -23,7 +25,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsInformationProtectionNetworkLearningSummary
+     * @return a windowsInformationProtectionNetworkLearningSummary
      */
     @javax.annotation.Nonnull
     public static WindowsInformationProtectionNetworkLearningSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -45,10 +47,10 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtectionNetworkLearningSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getIntegerValue()); });
-            this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the url property value. Website url
@@ -63,6 +65,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +77,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      * @param value Value to set for the deviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._deviceCount = value;
     }
@@ -82,6 +86,7 @@ public class WindowsInformationProtectionNetworkLearningSummary extends Entity i
      * @param value Value to set for the url property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrl(@javax.annotation.Nullable final String value) {
         this._url = value;
     }

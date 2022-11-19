@@ -28,9 +28,10 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     /** The Type of the CodeSigning Cert as Symantec Cert. */
     private OffsetDateTime _uploadDateTime;
     /**
-     * Instantiates a new SymantecCodeSigningCertificate and sets the default values.
+     * Instantiates a new symantecCodeSigningCertificate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SymantecCodeSigningCertificate() {
         super();
         this.setOdataType("#microsoft.graph.symantecCodeSigningCertificate");
@@ -38,7 +39,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SymantecCodeSigningCertificate
+     * @return a symantecCodeSigningCertificate
      */
     @javax.annotation.Nonnull
     public static SymantecCodeSigningCertificate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -68,17 +69,17 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SymantecCodeSigningCertificate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("issuer", (n) -> { currentObject.setIssuer(n.getStringValue()); });
-            this.put("issuerName", (n) -> { currentObject.setIssuerName(n.getStringValue()); });
-            this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CertificateStatus.class)); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
-            this.put("subjectName", (n) -> { currentObject.setSubjectName(n.getStringValue()); });
-            this.put("uploadDateTime", (n) -> { currentObject.setUploadDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("issuer", (n) -> { currentObject.setIssuer(n.getStringValue()); });
+        deserializerMap.put("issuerName", (n) -> { currentObject.setIssuerName(n.getStringValue()); });
+        deserializerMap.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CertificateStatus.class)); });
+        deserializerMap.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
+        deserializerMap.put("subjectName", (n) -> { currentObject.setSubjectName(n.getStringValue()); });
+        deserializerMap.put("uploadDateTime", (n) -> { currentObject.setUploadDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the issuer property value. The Issuer value for the cert.
@@ -141,6 +142,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +161,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
         this._content = value;
     }
@@ -167,6 +170,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -175,6 +179,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * @param value Value to set for the issuer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuer(@javax.annotation.Nullable final String value) {
         this._issuer = value;
     }
@@ -183,6 +188,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * @param value Value to set for the issuerName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuerName(@javax.annotation.Nullable final String value) {
         this._issuerName = value;
     }
@@ -191,6 +197,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * @param value Value to set for the password property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPassword(@javax.annotation.Nullable final String value) {
         this._password = value;
     }
@@ -199,6 +206,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final CertificateStatus value) {
         this._status = value;
     }
@@ -207,6 +215,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
         this._subject = value;
     }
@@ -215,6 +224,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * @param value Value to set for the subjectName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectName(@javax.annotation.Nullable final String value) {
         this._subjectName = value;
     }
@@ -223,6 +233,7 @@ public class SymantecCodeSigningCertificate extends Entity implements Parsable {
      * @param value Value to set for the uploadDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUploadDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._uploadDateTime = value;
     }

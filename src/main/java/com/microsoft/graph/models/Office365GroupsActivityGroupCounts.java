@@ -23,6 +23,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * Instantiates a new Office365GroupsActivityGroupCounts and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Office365GroupsActivityGroupCounts() {
         super();
         this.setOdataType("#microsoft.graph.office365GroupsActivityGroupCounts");
@@ -52,13 +53,13 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Office365GroupsActivityGroupCounts currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("active", (n) -> { currentObject.setActive(n.getLongValue()); });
-            this.put("reportDate", (n) -> { currentObject.setReportDate(n.getLocalDateValue()); });
-            this.put("reportPeriod", (n) -> { currentObject.setReportPeriod(n.getStringValue()); });
-            this.put("reportRefreshDate", (n) -> { currentObject.setReportRefreshDate(n.getLocalDateValue()); });
-            this.put("total", (n) -> { currentObject.setTotal(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("active", (n) -> { currentObject.setActive(n.getLongValue()); });
+        deserializerMap.put("reportDate", (n) -> { currentObject.setReportDate(n.getLocalDateValue()); });
+        deserializerMap.put("reportPeriod", (n) -> { currentObject.setReportPeriod(n.getStringValue()); });
+        deserializerMap.put("reportRefreshDate", (n) -> { currentObject.setReportRefreshDate(n.getLocalDateValue()); });
+        deserializerMap.put("total", (n) -> { currentObject.setTotal(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the reportDate property value. The date on which a number of groups were active.
@@ -97,6 +98,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * @param value Value to set for the active property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActive(@javax.annotation.Nullable final Long value) {
         this._active = value;
     }
@@ -119,6 +122,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * @param value Value to set for the reportDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportDate(@javax.annotation.Nullable final LocalDate value) {
         this._reportDate = value;
     }
@@ -127,6 +131,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * @param value Value to set for the reportPeriod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportPeriod(@javax.annotation.Nullable final String value) {
         this._reportPeriod = value;
     }
@@ -135,6 +140,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * @param value Value to set for the reportRefreshDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportRefreshDate(@javax.annotation.Nullable final LocalDate value) {
         this._reportRefreshDate = value;
     }
@@ -143,6 +149,7 @@ public class Office365GroupsActivityGroupCounts extends Entity implements Parsab
      * @param value Value to set for the total property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotal(@javax.annotation.Nullable final Long value) {
         this._total = value;
     }

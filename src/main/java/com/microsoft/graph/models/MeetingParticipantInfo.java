@@ -11,7 +11,7 @@ import java.util.Objects;
 public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Identity information of the participant. */
+    /** Identity information of the participant. Only the user property is used for onlineMeeting participants. */
     private IdentitySet _identity;
     /** The OdataType property */
     private String _odataType;
@@ -23,6 +23,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new meetingParticipantInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MeetingParticipantInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.meetingParticipantInfo");
@@ -52,15 +53,15 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingParticipantInfo currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("role", (n) -> { currentObject.setRole(n.getEnumValue(OnlineMeetingRole.class)); });
-            this.put("upn", (n) -> { currentObject.setUpn(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("role", (n) -> { currentObject.setRole(n.getEnumValue(OnlineMeetingRole.class)); });
+        deserializerMap.put("upn", (n) -> { currentObject.setUpn(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the identity property value. Identity information of the participant.
+     * Gets the identity property value. Identity information of the participant. Only the user property is used for onlineMeeting participants.
      * @return a identitySet
      */
     @javax.annotation.Nullable
@@ -96,6 +97,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("identity", this.getIdentity());
@@ -109,14 +111,16 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
     /**
-     * Sets the identity property value. Identity information of the participant.
+     * Sets the identity property value. Identity information of the participant. Only the user property is used for onlineMeeting participants.
      * @param value Value to set for the identity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentity(@javax.annotation.Nullable final IdentitySet value) {
         this._identity = value;
     }
@@ -125,6 +129,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -133,6 +138,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the role property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRole(@javax.annotation.Nullable final OnlineMeetingRole value) {
         this._role = value;
     }
@@ -141,6 +147,7 @@ public class MeetingParticipantInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the upn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpn(@javax.annotation.Nullable final String value) {
         this._upn = value;
     }

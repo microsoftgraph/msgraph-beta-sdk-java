@@ -34,6 +34,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
      * Instantiates a new RelyingPartyDetailedSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RelyingPartyDetailedSummary() {
         super();
         this.setOdataType("#microsoft.graph.relyingPartyDetailedSummary");
@@ -63,19 +64,19 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RelyingPartyDetailedSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("failedSignInCount", (n) -> { currentObject.setFailedSignInCount(n.getLongValue()); });
-            this.put("migrationStatus", (n) -> { currentObject.setMigrationStatus(n.getEnumValue(MigrationStatus.class)); });
-            this.put("migrationValidationDetails", (n) -> { currentObject.setMigrationValidationDetails(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("relyingPartyId", (n) -> { currentObject.setRelyingPartyId(n.getStringValue()); });
-            this.put("relyingPartyName", (n) -> { currentObject.setRelyingPartyName(n.getStringValue()); });
-            this.put("replyUrls", (n) -> { currentObject.setReplyUrls(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("serviceId", (n) -> { currentObject.setServiceId(n.getStringValue()); });
-            this.put("signInSuccessRate", (n) -> { currentObject.setSignInSuccessRate(n.getDoubleValue()); });
-            this.put("successfulSignInCount", (n) -> { currentObject.setSuccessfulSignInCount(n.getLongValue()); });
-            this.put("totalSignInCount", (n) -> { currentObject.setTotalSignInCount(n.getLongValue()); });
-            this.put("uniqueUserCount", (n) -> { currentObject.setUniqueUserCount(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("failedSignInCount", (n) -> { currentObject.setFailedSignInCount(n.getLongValue()); });
+        deserializerMap.put("migrationStatus", (n) -> { currentObject.setMigrationStatus(n.getEnumValue(MigrationStatus.class)); });
+        deserializerMap.put("migrationValidationDetails", (n) -> { currentObject.setMigrationValidationDetails(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("relyingPartyId", (n) -> { currentObject.setRelyingPartyId(n.getStringValue()); });
+        deserializerMap.put("relyingPartyName", (n) -> { currentObject.setRelyingPartyName(n.getStringValue()); });
+        deserializerMap.put("replyUrls", (n) -> { currentObject.setReplyUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("serviceId", (n) -> { currentObject.setServiceId(n.getStringValue()); });
+        deserializerMap.put("signInSuccessRate", (n) -> { currentObject.setSignInSuccessRate(n.getDoubleValue()); });
+        deserializerMap.put("successfulSignInCount", (n) -> { currentObject.setSuccessfulSignInCount(n.getLongValue()); });
+        deserializerMap.put("totalSignInCount", (n) -> { currentObject.setTotalSignInCount(n.getLongValue()); });
+        deserializerMap.put("uniqueUserCount", (n) -> { currentObject.setUniqueUserCount(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the migrationStatus property value. The migrationStatus property
@@ -162,6 +163,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -182,6 +184,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
      * @param value Value to set for the failedSignInCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedSignInCount(@javax.annotation.Nullable final Long value) {
         this._failedSignInCount = value;
     }
@@ -190,6 +193,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
      * @param value Value to set for the migrationStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMigrationStatus(@javax.annotation.Nullable final MigrationStatus value) {
         this._migrationStatus = value;
     }
@@ -198,6 +202,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
      * @param value Value to set for the migrationValidationDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMigrationValidationDetails(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._migrationValidationDetails = value;
     }
@@ -206,6 +211,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
      * @param value Value to set for the relyingPartyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelyingPartyId(@javax.annotation.Nullable final String value) {
         this._relyingPartyId = value;
     }
@@ -214,6 +220,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
      * @param value Value to set for the relyingPartyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelyingPartyName(@javax.annotation.Nullable final String value) {
         this._relyingPartyName = value;
     }
@@ -222,6 +229,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
      * @param value Value to set for the replyUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReplyUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._replyUrls = value;
     }
@@ -230,6 +238,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
      * @param value Value to set for the serviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceId(@javax.annotation.Nullable final String value) {
         this._serviceId = value;
     }
@@ -238,6 +247,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
      * @param value Value to set for the signInSuccessRate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInSuccessRate(@javax.annotation.Nullable final Double value) {
         this._signInSuccessRate = value;
     }
@@ -246,6 +256,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
      * @param value Value to set for the successfulSignInCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessfulSignInCount(@javax.annotation.Nullable final Long value) {
         this._successfulSignInCount = value;
     }
@@ -254,6 +265,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
      * @param value Value to set for the totalSignInCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalSignInCount(@javax.annotation.Nullable final Long value) {
         this._totalSignInCount = value;
     }
@@ -262,6 +274,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
      * @param value Value to set for the uniqueUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUniqueUserCount(@javax.annotation.Nullable final Long value) {
         this._uniqueUserCount = value;
     }

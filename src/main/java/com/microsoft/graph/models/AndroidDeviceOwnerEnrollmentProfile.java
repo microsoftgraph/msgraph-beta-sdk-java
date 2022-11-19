@@ -54,6 +54,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * Instantiates a new androidDeviceOwnerEnrollmentProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerEnrollmentProfile() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerEnrollmentProfile");
@@ -147,28 +148,28 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerEnrollmentProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accountId", (n) -> { currentObject.setAccountId(n.getStringValue()); });
-            this.put("configureWifi", (n) -> { currentObject.setConfigureWifi(n.getBooleanValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("enrolledDeviceCount", (n) -> { currentObject.setEnrolledDeviceCount(n.getIntegerValue()); });
-            this.put("enrollmentMode", (n) -> { currentObject.setEnrollmentMode(n.getEnumValue(AndroidDeviceOwnerEnrollmentMode.class)); });
-            this.put("enrollmentTokenType", (n) -> { currentObject.setEnrollmentTokenType(n.getEnumValue(AndroidDeviceOwnerEnrollmentTokenType.class)); });
-            this.put("enrollmentTokenUsageCount", (n) -> { currentObject.setEnrollmentTokenUsageCount(n.getIntegerValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("qrCodeContent", (n) -> { currentObject.setQrCodeContent(n.getStringValue()); });
-            this.put("qrCodeImage", (n) -> { currentObject.setQrCodeImage(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("tokenCreationDateTime", (n) -> { currentObject.setTokenCreationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("tokenExpirationDateTime", (n) -> { currentObject.setTokenExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("tokenValue", (n) -> { currentObject.setTokenValue(n.getStringValue()); });
-            this.put("wifiHidden", (n) -> { currentObject.setWifiHidden(n.getBooleanValue()); });
-            this.put("wifiPassword", (n) -> { currentObject.setWifiPassword(n.getStringValue()); });
-            this.put("wifiSecurityType", (n) -> { currentObject.setWifiSecurityType(n.getEnumValue(AospWifiSecurityType.class)); });
-            this.put("wifiSsid", (n) -> { currentObject.setWifiSsid(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountId", (n) -> { currentObject.setAccountId(n.getStringValue()); });
+        deserializerMap.put("configureWifi", (n) -> { currentObject.setConfigureWifi(n.getBooleanValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enrolledDeviceCount", (n) -> { currentObject.setEnrolledDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("enrollmentMode", (n) -> { currentObject.setEnrollmentMode(n.getEnumValue(AndroidDeviceOwnerEnrollmentMode.class)); });
+        deserializerMap.put("enrollmentTokenType", (n) -> { currentObject.setEnrollmentTokenType(n.getEnumValue(AndroidDeviceOwnerEnrollmentTokenType.class)); });
+        deserializerMap.put("enrollmentTokenUsageCount", (n) -> { currentObject.setEnrollmentTokenUsageCount(n.getIntegerValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("qrCodeContent", (n) -> { currentObject.setQrCodeContent(n.getStringValue()); });
+        deserializerMap.put("qrCodeImage", (n) -> { currentObject.setQrCodeImage(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("tokenCreationDateTime", (n) -> { currentObject.setTokenCreationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("tokenExpirationDateTime", (n) -> { currentObject.setTokenExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("tokenValue", (n) -> { currentObject.setTokenValue(n.getStringValue()); });
+        deserializerMap.put("wifiHidden", (n) -> { currentObject.setWifiHidden(n.getBooleanValue()); });
+        deserializerMap.put("wifiPassword", (n) -> { currentObject.setWifiPassword(n.getStringValue()); });
+        deserializerMap.put("wifiSecurityType", (n) -> { currentObject.setWifiSecurityType(n.getEnumValue(AospWifiSecurityType.class)); });
+        deserializerMap.put("wifiSsid", (n) -> { currentObject.setWifiSsid(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. Date time the enrollment profile was last modified.
@@ -263,6 +264,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -292,6 +294,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the accountId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountId(@javax.annotation.Nullable final String value) {
         this._accountId = value;
     }
@@ -300,6 +303,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the configureWifi property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigureWifi(@javax.annotation.Nullable final Boolean value) {
         this._configureWifi = value;
     }
@@ -308,6 +312,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -316,6 +321,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -324,6 +330,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -332,6 +339,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the enrolledDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrolledDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._enrolledDeviceCount = value;
     }
@@ -340,6 +348,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the enrollmentMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentMode(@javax.annotation.Nullable final AndroidDeviceOwnerEnrollmentMode value) {
         this._enrollmentMode = value;
     }
@@ -348,6 +357,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the enrollmentTokenType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentTokenType(@javax.annotation.Nullable final AndroidDeviceOwnerEnrollmentTokenType value) {
         this._enrollmentTokenType = value;
     }
@@ -356,6 +366,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the enrollmentTokenUsageCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentTokenUsageCount(@javax.annotation.Nullable final Integer value) {
         this._enrollmentTokenUsageCount = value;
     }
@@ -364,6 +375,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -372,6 +384,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the qrCodeContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQrCodeContent(@javax.annotation.Nullable final String value) {
         this._qrCodeContent = value;
     }
@@ -380,6 +393,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the qrCodeImage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQrCodeImage(@javax.annotation.Nullable final MimeContent value) {
         this._qrCodeImage = value;
     }
@@ -388,6 +402,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -396,6 +411,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the tokenCreationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._tokenCreationDateTime = value;
     }
@@ -404,6 +420,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the tokenExpirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._tokenExpirationDateTime = value;
     }
@@ -412,6 +429,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the tokenValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenValue(@javax.annotation.Nullable final String value) {
         this._tokenValue = value;
     }
@@ -420,6 +438,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the wifiHidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiHidden(@javax.annotation.Nullable final Boolean value) {
         this._wifiHidden = value;
     }
@@ -428,6 +447,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the wifiPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiPassword(@javax.annotation.Nullable final String value) {
         this._wifiPassword = value;
     }
@@ -436,6 +456,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the wifiSecurityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiSecurityType(@javax.annotation.Nullable final AospWifiSecurityType value) {
         this._wifiSecurityType = value;
     }
@@ -444,6 +465,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the wifiSsid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiSsid(@javax.annotation.Nullable final String value) {
         this._wifiSsid = value;
     }

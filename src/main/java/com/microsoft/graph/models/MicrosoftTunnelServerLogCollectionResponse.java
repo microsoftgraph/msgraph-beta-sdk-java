@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that stores the server log collection status. */
 public class MicrosoftTunnelServerLogCollectionResponse extends Entity implements Parsable {
     /** The end time of the logs collected */
     private OffsetDateTime _endDateTime;
@@ -21,12 +22,13 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     private Long _sizeInBytes;
     /** The start time of the logs collected */
     private OffsetDateTime _startDateTime;
-    /** Enum type that represent the status of log collection. */
+    /** Enum type that represent the status of log collection */
     private MicrosoftTunnelLogCollectionStatus _status;
     /**
-     * Instantiates a new MicrosoftTunnelServerLogCollectionResponse and sets the default values.
+     * Instantiates a new microsoftTunnelServerLogCollectionResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MicrosoftTunnelServerLogCollectionResponse() {
         super();
         this.setOdataType("#microsoft.graph.microsoftTunnelServerLogCollectionResponse");
@@ -34,7 +36,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftTunnelServerLogCollectionResponse
+     * @return a microsoftTunnelServerLogCollectionResponse
      */
     @javax.annotation.Nonnull
     public static MicrosoftTunnelServerLogCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -64,15 +66,15 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftTunnelServerLogCollectionResponse currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("expiryDateTime", (n) -> { currentObject.setExpiryDateTime(n.getOffsetDateTimeValue()); });
-            this.put("requestDateTime", (n) -> { currentObject.setRequestDateTime(n.getOffsetDateTimeValue()); });
-            this.put("serverId", (n) -> { currentObject.setServerId(n.getStringValue()); });
-            this.put("sizeInBytes", (n) -> { currentObject.setSizeInBytes(n.getLongValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(MicrosoftTunnelLogCollectionStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("expiryDateTime", (n) -> { currentObject.setExpiryDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("requestDateTime", (n) -> { currentObject.setRequestDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("serverId", (n) -> { currentObject.setServerId(n.getStringValue()); });
+        deserializerMap.put("sizeInBytes", (n) -> { currentObject.setSizeInBytes(n.getLongValue()); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(MicrosoftTunnelLogCollectionStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the requestDateTime property value. The time when the log collection was requested
@@ -107,7 +109,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
         return this._startDateTime;
     }
     /**
-     * Gets the status property value. Enum type that represent the status of log collection.
+     * Gets the status property value. Enum type that represent the status of log collection
      * @return a microsoftTunnelLogCollectionStatus
      */
     @javax.annotation.Nullable
@@ -119,6 +121,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +138,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -143,6 +147,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
      * @param value Value to set for the expiryDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpiryDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expiryDateTime = value;
     }
@@ -151,6 +156,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
      * @param value Value to set for the requestDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._requestDateTime = value;
     }
@@ -159,6 +165,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
      * @param value Value to set for the serverId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServerId(@javax.annotation.Nullable final String value) {
         this._serverId = value;
     }
@@ -167,6 +174,7 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
      * @param value Value to set for the sizeInBytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSizeInBytes(@javax.annotation.Nullable final Long value) {
         this._sizeInBytes = value;
     }
@@ -175,14 +183,16 @@ public class MicrosoftTunnelServerLogCollectionResponse extends Entity implement
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
     /**
-     * Sets the status property value. Enum type that represent the status of log collection.
+     * Sets the status property value. Enum type that represent the status of log collection
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final MicrosoftTunnelLogCollectionStatus value) {
         this._status = value;
     }

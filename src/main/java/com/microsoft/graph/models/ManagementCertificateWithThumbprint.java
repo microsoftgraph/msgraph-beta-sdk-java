@@ -21,6 +21,7 @@ public class ManagementCertificateWithThumbprint implements AdditionalDataHolder
      * Instantiates a new managementCertificateWithThumbprint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagementCertificateWithThumbprint() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.managementCertificateWithThumbprint");
@@ -58,11 +59,11 @@ public class ManagementCertificateWithThumbprint implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagementCertificateWithThumbprint currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("certificate", (n) -> { currentObject.setCertificate(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("thumbprint", (n) -> { currentObject.setThumbprint(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("certificate", (n) -> { currentObject.setCertificate(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("thumbprint", (n) -> { currentObject.setThumbprint(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -85,6 +86,7 @@ public class ManagementCertificateWithThumbprint implements AdditionalDataHolder
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("certificate", this.getCertificate());
@@ -97,6 +99,7 @@ public class ManagementCertificateWithThumbprint implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class ManagementCertificateWithThumbprint implements AdditionalDataHolder
      * @param value Value to set for the certificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificate(@javax.annotation.Nullable final String value) {
         this._certificate = value;
     }
@@ -113,6 +117,7 @@ public class ManagementCertificateWithThumbprint implements AdditionalDataHolder
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +126,7 @@ public class ManagementCertificateWithThumbprint implements AdditionalDataHolder
      * @param value Value to set for the thumbprint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbprint(@javax.annotation.Nullable final String value) {
         this._thumbprint = value;
     }

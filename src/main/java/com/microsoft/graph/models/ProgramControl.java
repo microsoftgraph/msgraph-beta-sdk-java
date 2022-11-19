@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ProgramControl extends Entity implements Parsable {
     /** The controlId of the control, in particular the identifier of an access review. Required on create. */
     private String _controlId;
@@ -32,6 +32,7 @@ public class ProgramControl extends Entity implements Parsable {
      * Instantiates a new programControl and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProgramControl() {
         super();
         this.setOdataType("#microsoft.graph.programControl");
@@ -85,17 +86,17 @@ public class ProgramControl extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProgramControl currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("controlId", (n) -> { currentObject.setControlId(n.getStringValue()); });
-            this.put("controlTypeId", (n) -> { currentObject.setControlTypeId(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("owner", (n) -> { currentObject.setOwner(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
-            this.put("program", (n) -> { currentObject.setProgram(n.getObjectValue(Program::createFromDiscriminatorValue)); });
-            this.put("programId", (n) -> { currentObject.setProgramId(n.getStringValue()); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(ProgramResource::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("controlId", (n) -> { currentObject.setControlId(n.getStringValue()); });
+        deserializerMap.put("controlTypeId", (n) -> { currentObject.setControlTypeId(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("owner", (n) -> { currentObject.setOwner(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("program", (n) -> { currentObject.setProgram(n.getObjectValue(Program::createFromDiscriminatorValue)); });
+        deserializerMap.put("programId", (n) -> { currentObject.setProgramId(n.getStringValue()); });
+        deserializerMap.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(ProgramResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the owner property value. The user who created the program control.
@@ -142,6 +143,7 @@ public class ProgramControl extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,6 +162,7 @@ public class ProgramControl extends Entity implements Parsable {
      * @param value Value to set for the controlId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setControlId(@javax.annotation.Nullable final String value) {
         this._controlId = value;
     }
@@ -168,6 +171,7 @@ public class ProgramControl extends Entity implements Parsable {
      * @param value Value to set for the controlTypeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setControlTypeId(@javax.annotation.Nullable final String value) {
         this._controlTypeId = value;
     }
@@ -176,6 +180,7 @@ public class ProgramControl extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -184,6 +189,7 @@ public class ProgramControl extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -192,6 +198,7 @@ public class ProgramControl extends Entity implements Parsable {
      * @param value Value to set for the owner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwner(@javax.annotation.Nullable final UserIdentity value) {
         this._owner = value;
     }
@@ -200,6 +207,7 @@ public class ProgramControl extends Entity implements Parsable {
      * @param value Value to set for the program property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProgram(@javax.annotation.Nullable final Program value) {
         this._program = value;
     }
@@ -208,6 +216,7 @@ public class ProgramControl extends Entity implements Parsable {
      * @param value Value to set for the programId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProgramId(@javax.annotation.Nullable final String value) {
         this._programId = value;
     }
@@ -216,6 +225,7 @@ public class ProgramControl extends Entity implements Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final ProgramResource value) {
         this._resource = value;
     }
@@ -224,6 +234,7 @@ public class ProgramControl extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }

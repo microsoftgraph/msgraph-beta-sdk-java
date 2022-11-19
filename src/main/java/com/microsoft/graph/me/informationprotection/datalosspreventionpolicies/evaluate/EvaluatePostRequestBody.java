@@ -24,6 +24,7 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new evaluatePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EvaluatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -60,11 +61,11 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EvaluatePostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("evaluationInput", (n) -> { currentObject.setEvaluationInput(n.getObjectValue(DlpEvaluationInput::createFromDiscriminatorValue)); });
-            this.put("notificationInfo", (n) -> { currentObject.setNotificationInfo(n.getObjectValue(DlpNotification::createFromDiscriminatorValue)); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("evaluationInput", (n) -> { currentObject.setEvaluationInput(n.getObjectValue(DlpEvaluationInput::createFromDiscriminatorValue)); });
+        deserializerMap.put("notificationInfo", (n) -> { currentObject.setNotificationInfo(n.getObjectValue(DlpNotification::createFromDiscriminatorValue)); });
+        deserializerMap.put("target", (n) -> { currentObject.setTarget(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the notificationInfo property value. The notificationInfo property
@@ -87,6 +88,7 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("evaluationInput", this.getEvaluationInput());
@@ -99,6 +101,7 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -107,6 +110,7 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the evaluationInput property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvaluationInput(@javax.annotation.Nullable final DlpEvaluationInput value) {
         this._evaluationInput = value;
     }
@@ -115,6 +119,7 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the notificationInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationInfo(@javax.annotation.Nullable final DlpNotification value) {
         this._notificationInfo = value;
     }
@@ -123,6 +128,7 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final String value) {
         this._target = value;
     }

@@ -14,6 +14,7 @@ public class DeviceManagementIntentSettingCategory extends DeviceManagementSetti
      * Instantiates a new DeviceManagementIntentSettingCategory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementIntentSettingCategory() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementIntentSettingCategory");
@@ -35,9 +36,9 @@ public class DeviceManagementIntentSettingCategory extends DeviceManagementSetti
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementIntentSettingCategory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("settings", (n) -> { currentObject.setSettings(n.getCollectionOfObjectValues(DeviceManagementSettingInstance::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("settings", (n) -> { currentObject.setSettings(n.getCollectionOfObjectValues(DeviceManagementSettingInstance::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the settings property value. The settings this category contains
@@ -52,6 +53,7 @@ public class DeviceManagementIntentSettingCategory extends DeviceManagementSetti
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementIntentSettingCategory extends DeviceManagementSetti
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementSettingInstance> value) {
         this._settings = value;
     }

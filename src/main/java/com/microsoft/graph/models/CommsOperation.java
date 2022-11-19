@@ -31,6 +31,7 @@ public class CommsOperation extends Entity implements Parsable {
      * Instantiates a new commsOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CommsOperation() {
         super();
         this.setOdataType("#microsoft.graph.commsOperation");
@@ -78,11 +79,11 @@ public class CommsOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CommsOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
-            this.put("resultInfo", (n) -> { currentObject.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(OperationStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
+        deserializerMap.put("resultInfo", (n) -> { currentObject.setResultInfo(n.getObjectValue(ResultInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(OperationStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the resultInfo property value. The result information. Read-only.
@@ -105,6 +106,7 @@ public class CommsOperation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -117,6 +119,7 @@ public class CommsOperation extends Entity implements Parsable {
      * @param value Value to set for the clientContext property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientContext(@javax.annotation.Nullable final String value) {
         this._clientContext = value;
     }
@@ -125,6 +128,7 @@ public class CommsOperation extends Entity implements Parsable {
      * @param value Value to set for the resultInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResultInfo(@javax.annotation.Nullable final ResultInfo value) {
         this._resultInfo = value;
     }
@@ -133,6 +137,7 @@ public class CommsOperation extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final OperationStatus value) {
         this._status = value;
     }

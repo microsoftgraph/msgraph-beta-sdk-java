@@ -14,6 +14,7 @@ public class IpEvidence extends AlertEvidence implements Parsable {
      * Instantiates a new IpEvidence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IpEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.ipEvidence");
@@ -35,9 +36,9 @@ public class IpEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IpEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ipAddress property value. The value of the IP Address, can be either in V4 address or V6 address format.
@@ -52,6 +53,7 @@ public class IpEvidence extends AlertEvidence implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class IpEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
     }

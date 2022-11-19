@@ -14,6 +14,7 @@ public class PlannerProgressTaskBoardTaskFormat extends PlannerDelta implements 
      * Instantiates a new plannerProgressTaskBoardTaskFormat and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerProgressTaskBoardTaskFormat() {
         super();
         this.setOdataType("#microsoft.graph.plannerProgressTaskBoardTaskFormat");
@@ -35,9 +36,9 @@ public class PlannerProgressTaskBoardTaskFormat extends PlannerDelta implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerProgressTaskBoardTaskFormat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("orderHint", (n) -> { currentObject.setOrderHint(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("orderHint", (n) -> { currentObject.setOrderHint(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the orderHint property value. Hint value used to order the task on the Progress view of the Task Board. The format is defined as outlined here.
@@ -52,6 +53,7 @@ public class PlannerProgressTaskBoardTaskFormat extends PlannerDelta implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class PlannerProgressTaskBoardTaskFormat extends PlannerDelta implements 
      * @param value Value to set for the orderHint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrderHint(@javax.annotation.Nullable final String value) {
         this._orderHint = value;
     }

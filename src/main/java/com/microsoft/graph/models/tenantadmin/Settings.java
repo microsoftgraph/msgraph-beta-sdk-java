@@ -71,6 +71,7 @@ public class Settings extends Entity implements Parsable {
      * Instantiates a new settings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Settings() {
         super();
         this.setOdataType("#microsoft.graph.tenantAdmin.settings");
@@ -124,37 +125,37 @@ public class Settings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Settings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedDomainGuidsForSyncApp", (n) -> { currentObject.setAllowedDomainGuidsForSyncApp(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("availableManagedPathsForSiteCreation", (n) -> { currentObject.setAvailableManagedPathsForSiteCreation(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("deletedUserPersonalSiteRetentionPeriodInDays", (n) -> { currentObject.setDeletedUserPersonalSiteRetentionPeriodInDays(n.getIntegerValue()); });
-            this.put("excludedFileExtensionsForSyncApp", (n) -> { currentObject.setExcludedFileExtensionsForSyncApp(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("idleSessionSignOut", (n) -> { currentObject.setIdleSessionSignOut(n.getObjectValue(IdleSessionSignOut::createFromDiscriminatorValue)); });
-            this.put("imageTaggingOption", (n) -> { currentObject.setImageTaggingOption(n.getEnumValue(ImageTaggingChoice.class)); });
-            this.put("isCommentingOnSitePagesEnabled", (n) -> { currentObject.setIsCommentingOnSitePagesEnabled(n.getBooleanValue()); });
-            this.put("isFileActivityNotificationEnabled", (n) -> { currentObject.setIsFileActivityNotificationEnabled(n.getBooleanValue()); });
-            this.put("isLegacyAuthProtocolsEnabled", (n) -> { currentObject.setIsLegacyAuthProtocolsEnabled(n.getBooleanValue()); });
-            this.put("isLoopEnabled", (n) -> { currentObject.setIsLoopEnabled(n.getBooleanValue()); });
-            this.put("isMacSyncAppEnabled", (n) -> { currentObject.setIsMacSyncAppEnabled(n.getBooleanValue()); });
-            this.put("isRequireAcceptingUserToMatchInvitedUserEnabled", (n) -> { currentObject.setIsRequireAcceptingUserToMatchInvitedUserEnabled(n.getBooleanValue()); });
-            this.put("isResharingByExternalUsersEnabled", (n) -> { currentObject.setIsResharingByExternalUsersEnabled(n.getBooleanValue()); });
-            this.put("isSharePointMobileNotificationEnabled", (n) -> { currentObject.setIsSharePointMobileNotificationEnabled(n.getBooleanValue()); });
-            this.put("isSharePointNewsfeedEnabled", (n) -> { currentObject.setIsSharePointNewsfeedEnabled(n.getBooleanValue()); });
-            this.put("isSiteCreationEnabled", (n) -> { currentObject.setIsSiteCreationEnabled(n.getBooleanValue()); });
-            this.put("isSiteCreationUIEnabled", (n) -> { currentObject.setIsSiteCreationUIEnabled(n.getBooleanValue()); });
-            this.put("isSitePagesCreationEnabled", (n) -> { currentObject.setIsSitePagesCreationEnabled(n.getBooleanValue()); });
-            this.put("isSitesStorageLimitAutomatic", (n) -> { currentObject.setIsSitesStorageLimitAutomatic(n.getBooleanValue()); });
-            this.put("isSyncButtonHiddenOnPersonalSite", (n) -> { currentObject.setIsSyncButtonHiddenOnPersonalSite(n.getBooleanValue()); });
-            this.put("isUnmanagedSyncAppForTenantRestricted", (n) -> { currentObject.setIsUnmanagedSyncAppForTenantRestricted(n.getBooleanValue()); });
-            this.put("personalSiteDefaultStorageLimitInMB", (n) -> { currentObject.setPersonalSiteDefaultStorageLimitInMB(n.getLongValue()); });
-            this.put("sharingAllowedDomainList", (n) -> { currentObject.setSharingAllowedDomainList(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("sharingBlockedDomainList", (n) -> { currentObject.setSharingBlockedDomainList(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("sharingCapability", (n) -> { currentObject.setSharingCapability(n.getEnumValue(SharingCapabilities.class)); });
-            this.put("sharingDomainRestrictionMode", (n) -> { currentObject.setSharingDomainRestrictionMode(n.getEnumValue(SharingDomainRestrictionMode.class)); });
-            this.put("siteCreationDefaultManagedPath", (n) -> { currentObject.setSiteCreationDefaultManagedPath(n.getStringValue()); });
-            this.put("siteCreationDefaultStorageLimitInMB", (n) -> { currentObject.setSiteCreationDefaultStorageLimitInMB(n.getIntegerValue()); });
-            this.put("tenantDefaultTimezone", (n) -> { currentObject.setTenantDefaultTimezone(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedDomainGuidsForSyncApp", (n) -> { currentObject.setAllowedDomainGuidsForSyncApp(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("availableManagedPathsForSiteCreation", (n) -> { currentObject.setAvailableManagedPathsForSiteCreation(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("deletedUserPersonalSiteRetentionPeriodInDays", (n) -> { currentObject.setDeletedUserPersonalSiteRetentionPeriodInDays(n.getIntegerValue()); });
+        deserializerMap.put("excludedFileExtensionsForSyncApp", (n) -> { currentObject.setExcludedFileExtensionsForSyncApp(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("idleSessionSignOut", (n) -> { currentObject.setIdleSessionSignOut(n.getObjectValue(IdleSessionSignOut::createFromDiscriminatorValue)); });
+        deserializerMap.put("imageTaggingOption", (n) -> { currentObject.setImageTaggingOption(n.getEnumValue(ImageTaggingChoice.class)); });
+        deserializerMap.put("isCommentingOnSitePagesEnabled", (n) -> { currentObject.setIsCommentingOnSitePagesEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isFileActivityNotificationEnabled", (n) -> { currentObject.setIsFileActivityNotificationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isLegacyAuthProtocolsEnabled", (n) -> { currentObject.setIsLegacyAuthProtocolsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isLoopEnabled", (n) -> { currentObject.setIsLoopEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isMacSyncAppEnabled", (n) -> { currentObject.setIsMacSyncAppEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isRequireAcceptingUserToMatchInvitedUserEnabled", (n) -> { currentObject.setIsRequireAcceptingUserToMatchInvitedUserEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isResharingByExternalUsersEnabled", (n) -> { currentObject.setIsResharingByExternalUsersEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isSharePointMobileNotificationEnabled", (n) -> { currentObject.setIsSharePointMobileNotificationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isSharePointNewsfeedEnabled", (n) -> { currentObject.setIsSharePointNewsfeedEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isSiteCreationEnabled", (n) -> { currentObject.setIsSiteCreationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isSiteCreationUIEnabled", (n) -> { currentObject.setIsSiteCreationUIEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isSitePagesCreationEnabled", (n) -> { currentObject.setIsSitePagesCreationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isSitesStorageLimitAutomatic", (n) -> { currentObject.setIsSitesStorageLimitAutomatic(n.getBooleanValue()); });
+        deserializerMap.put("isSyncButtonHiddenOnPersonalSite", (n) -> { currentObject.setIsSyncButtonHiddenOnPersonalSite(n.getBooleanValue()); });
+        deserializerMap.put("isUnmanagedSyncAppForTenantRestricted", (n) -> { currentObject.setIsUnmanagedSyncAppForTenantRestricted(n.getBooleanValue()); });
+        deserializerMap.put("personalSiteDefaultStorageLimitInMB", (n) -> { currentObject.setPersonalSiteDefaultStorageLimitInMB(n.getLongValue()); });
+        deserializerMap.put("sharingAllowedDomainList", (n) -> { currentObject.setSharingAllowedDomainList(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("sharingBlockedDomainList", (n) -> { currentObject.setSharingBlockedDomainList(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("sharingCapability", (n) -> { currentObject.setSharingCapability(n.getEnumValue(SharingCapabilities.class)); });
+        deserializerMap.put("sharingDomainRestrictionMode", (n) -> { currentObject.setSharingDomainRestrictionMode(n.getEnumValue(SharingDomainRestrictionMode.class)); });
+        deserializerMap.put("siteCreationDefaultManagedPath", (n) -> { currentObject.setSiteCreationDefaultManagedPath(n.getStringValue()); });
+        deserializerMap.put("siteCreationDefaultStorageLimitInMB", (n) -> { currentObject.setSiteCreationDefaultStorageLimitInMB(n.getIntegerValue()); });
+        deserializerMap.put("tenantDefaultTimezone", (n) -> { currentObject.setTenantDefaultTimezone(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the idleSessionSignOut property value. Specifies the idle session sign-out policies for the tenant.
@@ -361,6 +362,7 @@ public class Settings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -399,6 +401,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the allowedDomainGuidsForSyncApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedDomainGuidsForSyncApp(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedDomainGuidsForSyncApp = value;
     }
@@ -407,6 +410,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the availableManagedPathsForSiteCreation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailableManagedPathsForSiteCreation(@javax.annotation.Nullable final java.util.List<String> value) {
         this._availableManagedPathsForSiteCreation = value;
     }
@@ -415,6 +419,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the deletedUserPersonalSiteRetentionPeriodInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeletedUserPersonalSiteRetentionPeriodInDays(@javax.annotation.Nullable final Integer value) {
         this._deletedUserPersonalSiteRetentionPeriodInDays = value;
     }
@@ -423,6 +428,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the excludedFileExtensionsForSyncApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludedFileExtensionsForSyncApp(@javax.annotation.Nullable final java.util.List<String> value) {
         this._excludedFileExtensionsForSyncApp = value;
     }
@@ -431,6 +437,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the idleSessionSignOut property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdleSessionSignOut(@javax.annotation.Nullable final IdleSessionSignOut value) {
         this._idleSessionSignOut = value;
     }
@@ -439,6 +446,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the imageTaggingOption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImageTaggingOption(@javax.annotation.Nullable final ImageTaggingChoice value) {
         this._imageTaggingOption = value;
     }
@@ -447,6 +455,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the isCommentingOnSitePagesEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCommentingOnSitePagesEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isCommentingOnSitePagesEnabled = value;
     }
@@ -455,6 +464,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the isFileActivityNotificationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsFileActivityNotificationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isFileActivityNotificationEnabled = value;
     }
@@ -463,6 +473,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the isLegacyAuthProtocolsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsLegacyAuthProtocolsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isLegacyAuthProtocolsEnabled = value;
     }
@@ -471,6 +482,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the isLoopEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsLoopEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isLoopEnabled = value;
     }
@@ -479,6 +491,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the isMacSyncAppEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMacSyncAppEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isMacSyncAppEnabled = value;
     }
@@ -487,6 +500,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the isRequireAcceptingUserToMatchInvitedUserEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRequireAcceptingUserToMatchInvitedUserEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isRequireAcceptingUserToMatchInvitedUserEnabled = value;
     }
@@ -495,6 +509,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the isResharingByExternalUsersEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsResharingByExternalUsersEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isResharingByExternalUsersEnabled = value;
     }
@@ -503,6 +518,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the isSharePointMobileNotificationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSharePointMobileNotificationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isSharePointMobileNotificationEnabled = value;
     }
@@ -511,6 +527,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the isSharePointNewsfeedEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSharePointNewsfeedEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isSharePointNewsfeedEnabled = value;
     }
@@ -519,6 +536,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the isSiteCreationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSiteCreationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isSiteCreationEnabled = value;
     }
@@ -527,6 +545,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the isSiteCreationUIEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSiteCreationUIEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isSiteCreationUIEnabled = value;
     }
@@ -535,6 +554,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the isSitePagesCreationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSitePagesCreationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isSitePagesCreationEnabled = value;
     }
@@ -543,6 +563,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the isSitesStorageLimitAutomatic property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSitesStorageLimitAutomatic(@javax.annotation.Nullable final Boolean value) {
         this._isSitesStorageLimitAutomatic = value;
     }
@@ -551,6 +572,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the isSyncButtonHiddenOnPersonalSite property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSyncButtonHiddenOnPersonalSite(@javax.annotation.Nullable final Boolean value) {
         this._isSyncButtonHiddenOnPersonalSite = value;
     }
@@ -559,6 +581,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the isUnmanagedSyncAppForTenantRestricted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsUnmanagedSyncAppForTenantRestricted(@javax.annotation.Nullable final Boolean value) {
         this._isUnmanagedSyncAppForTenantRestricted = value;
     }
@@ -567,6 +590,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the personalSiteDefaultStorageLimitInMB property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersonalSiteDefaultStorageLimitInMB(@javax.annotation.Nullable final Long value) {
         this._personalSiteDefaultStorageLimitInMB = value;
     }
@@ -575,6 +599,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the sharingAllowedDomainList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharingAllowedDomainList(@javax.annotation.Nullable final java.util.List<String> value) {
         this._sharingAllowedDomainList = value;
     }
@@ -583,6 +608,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the sharingBlockedDomainList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharingBlockedDomainList(@javax.annotation.Nullable final java.util.List<String> value) {
         this._sharingBlockedDomainList = value;
     }
@@ -591,6 +617,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the sharingCapability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharingCapability(@javax.annotation.Nullable final SharingCapabilities value) {
         this._sharingCapability = value;
     }
@@ -599,6 +626,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the sharingDomainRestrictionMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharingDomainRestrictionMode(@javax.annotation.Nullable final SharingDomainRestrictionMode value) {
         this._sharingDomainRestrictionMode = value;
     }
@@ -607,6 +635,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the siteCreationDefaultManagedPath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteCreationDefaultManagedPath(@javax.annotation.Nullable final String value) {
         this._siteCreationDefaultManagedPath = value;
     }
@@ -615,6 +644,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the siteCreationDefaultStorageLimitInMB property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteCreationDefaultStorageLimitInMB(@javax.annotation.Nullable final Integer value) {
         this._siteCreationDefaultStorageLimitInMB = value;
     }
@@ -623,6 +653,7 @@ public class Settings extends Entity implements Parsable {
      * @param value Value to set for the tenantDefaultTimezone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantDefaultTimezone(@javax.annotation.Nullable final String value) {
         this._tenantDefaultTimezone = value;
     }

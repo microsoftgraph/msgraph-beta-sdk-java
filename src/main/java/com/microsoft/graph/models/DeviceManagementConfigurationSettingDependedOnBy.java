@@ -21,6 +21,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
      * Instantiates a new deviceManagementConfigurationSettingDependedOnBy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingDependedOnBy() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationSettingDependedOnBy");
@@ -58,11 +59,11 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSettingDependedOnBy currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("dependedOnBy", (n) -> { currentObject.setDependedOnBy(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("dependedOnBy", (n) -> { currentObject.setDependedOnBy(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -85,6 +86,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("dependedOnBy", this.getDependedOnBy());
@@ -97,6 +99,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
      * @param value Value to set for the dependedOnBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDependedOnBy(@javax.annotation.Nullable final String value) {
         this._dependedOnBy = value;
     }
@@ -113,6 +117,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +126,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
      * @param value Value to set for the required property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequired(@javax.annotation.Nullable final Boolean value) {
         this._required = value;
     }

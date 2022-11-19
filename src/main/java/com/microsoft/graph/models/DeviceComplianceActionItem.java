@@ -21,6 +21,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
      * Instantiates a new deviceComplianceActionItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceComplianceActionItem() {
         super();
         this.setOdataType("#microsoft.graph.deviceComplianceActionItem");
@@ -50,12 +51,12 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceActionItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("actionType", (n) -> { currentObject.setActionType(n.getEnumValue(DeviceComplianceActionType.class)); });
-            this.put("gracePeriodHours", (n) -> { currentObject.setGracePeriodHours(n.getIntegerValue()); });
-            this.put("notificationMessageCCList", (n) -> { currentObject.setNotificationMessageCCList(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("notificationTemplateId", (n) -> { currentObject.setNotificationTemplateId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actionType", (n) -> { currentObject.setActionType(n.getEnumValue(DeviceComplianceActionType.class)); });
+        deserializerMap.put("gracePeriodHours", (n) -> { currentObject.setGracePeriodHours(n.getIntegerValue()); });
+        deserializerMap.put("notificationMessageCCList", (n) -> { currentObject.setNotificationMessageCCList(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("notificationTemplateId", (n) -> { currentObject.setNotificationTemplateId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the gracePeriodHours property value. Number of hours to wait till the action will be enforced. Valid values 0 to 8760
@@ -86,6 +87,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
      * @param value Value to set for the actionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionType(@javax.annotation.Nullable final DeviceComplianceActionType value) {
         this._actionType = value;
     }
@@ -107,6 +110,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
      * @param value Value to set for the gracePeriodHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGracePeriodHours(@javax.annotation.Nullable final Integer value) {
         this._gracePeriodHours = value;
     }
@@ -115,6 +119,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
      * @param value Value to set for the notificationMessageCCList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationMessageCCList(@javax.annotation.Nullable final java.util.List<String> value) {
         this._notificationMessageCCList = value;
     }
@@ -123,6 +128,7 @@ public class DeviceComplianceActionItem extends Entity implements Parsable {
      * @param value Value to set for the notificationTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationTemplateId(@javax.annotation.Nullable final String value) {
         this._notificationTemplateId = value;
     }

@@ -30,6 +30,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
      * Instantiates a new detectedSensitiveContentBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DetectedSensitiveContentBase() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.detectedSensitiveContentBase");
@@ -84,14 +85,14 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DetectedSensitiveContentBase currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("confidence", (n) -> { currentObject.setConfidence(n.getIntegerValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recommendedConfidence", (n) -> { currentObject.setRecommendedConfidence(n.getIntegerValue()); });
-            this.put("uniqueCount", (n) -> { currentObject.setUniqueCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("confidence", (n) -> { currentObject.setConfidence(n.getIntegerValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recommendedConfidence", (n) -> { currentObject.setRecommendedConfidence(n.getIntegerValue()); });
+        deserializerMap.put("uniqueCount", (n) -> { currentObject.setUniqueCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The id property
@@ -130,6 +131,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("confidence", this.getConfidence());
@@ -145,6 +147,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
      * @param value Value to set for the confidence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfidence(@javax.annotation.Nullable final Integer value) {
         this._confidence = value;
     }
@@ -161,6 +165,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -169,6 +174,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -177,6 +183,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -185,6 +192,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
      * @param value Value to set for the recommendedConfidence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendedConfidence(@javax.annotation.Nullable final Integer value) {
         this._recommendedConfidence = value;
     }
@@ -193,6 +201,7 @@ public class DetectedSensitiveContentBase implements AdditionalDataHolder, Parsa
      * @param value Value to set for the uniqueCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUniqueCount(@javax.annotation.Nullable final Integer value) {
         this._uniqueCount = value;
     }

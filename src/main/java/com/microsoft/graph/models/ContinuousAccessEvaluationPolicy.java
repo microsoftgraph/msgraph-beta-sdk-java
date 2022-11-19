@@ -24,6 +24,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
      * Instantiates a new ContinuousAccessEvaluationPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ContinuousAccessEvaluationPolicy() {
         super();
         this.setOdataType("#microsoft.graph.continuousAccessEvaluationPolicy");
@@ -61,14 +62,14 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ContinuousAccessEvaluationPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("groups", (n) -> { currentObject.setGroups(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("migrate", (n) -> { currentObject.setMigrate(n.getBooleanValue()); });
-            this.put("users", (n) -> { currentObject.setUsers(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("groups", (n) -> { currentObject.setGroups(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("migrate", (n) -> { currentObject.setMigrate(n.getBooleanValue()); });
+        deserializerMap.put("users", (n) -> { currentObject.setUsers(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the groups property value. The collection of group identifiers in scope for evaluation. All groups are in scope when the collection is empty. Read-only.
@@ -107,6 +108,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -130,6 +133,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -138,6 +142,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
      * @param value Value to set for the groups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroups(@javax.annotation.Nullable final java.util.List<String> value) {
         this._groups = value;
     }
@@ -146,6 +151,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }
@@ -154,6 +160,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
      * @param value Value to set for the migrate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMigrate(@javax.annotation.Nullable final Boolean value) {
         this._migrate = value;
     }
@@ -162,6 +169,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
      * @param value Value to set for the users property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._users = value;
     }

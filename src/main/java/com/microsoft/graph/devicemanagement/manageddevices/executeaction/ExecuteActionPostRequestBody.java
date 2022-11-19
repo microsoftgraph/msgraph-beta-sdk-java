@@ -39,6 +39,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * Instantiates a new executeActionPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExecuteActionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -107,19 +108,19 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExecuteActionPostRequestBody currentObject = this;
-        return new HashMap<>(11) {{
-            this.put("actionName", (n) -> { currentObject.setActionName(n.getEnumValue(ManagedDeviceRemoteAction.class)); });
-            this.put("carrierUrl", (n) -> { currentObject.setCarrierUrl(n.getStringValue()); });
-            this.put("deprovisionReason", (n) -> { currentObject.setDeprovisionReason(n.getStringValue()); });
-            this.put("deviceIds", (n) -> { currentObject.setDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("keepEnrollmentData", (n) -> { currentObject.setKeepEnrollmentData(n.getBooleanValue()); });
-            this.put("keepUserData", (n) -> { currentObject.setKeepUserData(n.getBooleanValue()); });
-            this.put("notificationBody", (n) -> { currentObject.setNotificationBody(n.getStringValue()); });
-            this.put("notificationTitle", (n) -> { currentObject.setNotificationTitle(n.getStringValue()); });
-            this.put("organizationalUnitPath", (n) -> { currentObject.setOrganizationalUnitPath(n.getStringValue()); });
-            this.put("persistEsimDataPlan", (n) -> { currentObject.setPersistEsimDataPlan(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(11);
+        deserializerMap.put("actionName", (n) -> { currentObject.setActionName(n.getEnumValue(ManagedDeviceRemoteAction.class)); });
+        deserializerMap.put("carrierUrl", (n) -> { currentObject.setCarrierUrl(n.getStringValue()); });
+        deserializerMap.put("deprovisionReason", (n) -> { currentObject.setDeprovisionReason(n.getStringValue()); });
+        deserializerMap.put("deviceIds", (n) -> { currentObject.setDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("keepEnrollmentData", (n) -> { currentObject.setKeepEnrollmentData(n.getBooleanValue()); });
+        deserializerMap.put("keepUserData", (n) -> { currentObject.setKeepUserData(n.getBooleanValue()); });
+        deserializerMap.put("notificationBody", (n) -> { currentObject.setNotificationBody(n.getStringValue()); });
+        deserializerMap.put("notificationTitle", (n) -> { currentObject.setNotificationTitle(n.getStringValue()); });
+        deserializerMap.put("organizationalUnitPath", (n) -> { currentObject.setOrganizationalUnitPath(n.getStringValue()); });
+        deserializerMap.put("persistEsimDataPlan", (n) -> { currentObject.setPersistEsimDataPlan(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the keepEnrollmentData property value. The keepEnrollmentData property
@@ -174,6 +175,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("actionName", this.getActionName());
@@ -194,6 +196,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the actionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionName(@javax.annotation.Nullable final ManagedDeviceRemoteAction value) {
         this._actionName = value;
     }
@@ -202,6 +205,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -210,6 +214,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the carrierUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCarrierUrl(@javax.annotation.Nullable final String value) {
         this._carrierUrl = value;
     }
@@ -218,6 +223,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the deprovisionReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeprovisionReason(@javax.annotation.Nullable final String value) {
         this._deprovisionReason = value;
     }
@@ -226,6 +232,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the deviceIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._deviceIds = value;
     }
@@ -234,6 +241,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -242,6 +250,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the keepEnrollmentData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeepEnrollmentData(@javax.annotation.Nullable final Boolean value) {
         this._keepEnrollmentData = value;
     }
@@ -250,6 +259,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the keepUserData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeepUserData(@javax.annotation.Nullable final Boolean value) {
         this._keepUserData = value;
     }
@@ -258,6 +268,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the notificationBody property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationBody(@javax.annotation.Nullable final String value) {
         this._notificationBody = value;
     }
@@ -266,6 +277,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the notificationTitle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationTitle(@javax.annotation.Nullable final String value) {
         this._notificationTitle = value;
     }
@@ -274,6 +286,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the organizationalUnitPath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizationalUnitPath(@javax.annotation.Nullable final String value) {
         this._organizationalUnitPath = value;
     }
@@ -282,6 +295,7 @@ public class ExecuteActionPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the persistEsimDataPlan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersistEsimDataPlan(@javax.annotation.Nullable final Boolean value) {
         this._persistEsimDataPlan = value;
     }

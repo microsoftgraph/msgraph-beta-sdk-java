@@ -14,6 +14,7 @@ public class AnonymousGuestConversationMember extends ConversationMember impleme
      * Instantiates a new AnonymousGuestConversationMember and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AnonymousGuestConversationMember() {
         super();
         this.setOdataType("#microsoft.graph.anonymousGuestConversationMember");
@@ -43,15 +44,16 @@ public class AnonymousGuestConversationMember extends ConversationMember impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AnonymousGuestConversationMember currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("anonymousGuestId", (n) -> { currentObject.setAnonymousGuestId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("anonymousGuestId", (n) -> { currentObject.setAnonymousGuestId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class AnonymousGuestConversationMember extends ConversationMember impleme
      * @param value Value to set for the anonymousGuestId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnonymousGuestId(@javax.annotation.Nullable final String value) {
         this._anonymousGuestId = value;
     }

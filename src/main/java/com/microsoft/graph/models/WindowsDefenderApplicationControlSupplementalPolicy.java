@@ -36,6 +36,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * Instantiates a new windowsDefenderApplicationControlSupplementalPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDefenderApplicationControlSupplementalPolicy() {
         super();
         this.setOdataType("#microsoft.graph.windowsDefenderApplicationControlSupplementalPolicy");
@@ -121,19 +122,19 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsDefenderApplicationControlSupplementalPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(WindowsDefenderApplicationControlSupplementalPolicyAssignment::createFromDiscriminatorValue)); });
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("contentFileName", (n) -> { currentObject.setContentFileName(n.getStringValue()); });
-            this.put("creationDateTime", (n) -> { currentObject.setCreationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deploySummary", (n) -> { currentObject.setDeploySummary(n.getObjectValue(WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("deviceStatuses", (n) -> { currentObject.setDeviceStatuses(n.getCollectionOfObjectValues(WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(WindowsDefenderApplicationControlSupplementalPolicyAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("contentFileName", (n) -> { currentObject.setContentFileName(n.getStringValue()); });
+        deserializerMap.put("creationDateTime", (n) -> { currentObject.setCreationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deploySummary", (n) -> { currentObject.setDeploySummary(n.getObjectValue(WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("deviceStatuses", (n) -> { currentObject.setDeviceStatuses(n.getCollectionOfObjectValues(WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the WindowsDefenderApplicationControl supplemental policy was last modified.
@@ -164,6 +165,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -184,6 +186,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<WindowsDefenderApplicationControlSupplementalPolicyAssignment> value) {
         this._assignments = value;
     }
@@ -192,6 +195,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
         this._content = value;
     }
@@ -200,6 +204,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * @param value Value to set for the contentFileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentFileName(@javax.annotation.Nullable final String value) {
         this._contentFileName = value;
     }
@@ -208,6 +213,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * @param value Value to set for the creationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._creationDateTime = value;
     }
@@ -216,6 +222,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * @param value Value to set for the deploySummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploySummary(@javax.annotation.Nullable final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary value) {
         this._deploySummary = value;
     }
@@ -224,6 +231,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -232,6 +240,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * @param value Value to set for the deviceStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStatuses(@javax.annotation.Nullable final java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> value) {
         this._deviceStatuses = value;
     }
@@ -240,6 +249,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -248,6 +258,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -256,6 +267,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -264,6 +276,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

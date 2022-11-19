@@ -24,6 +24,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
      * Instantiates a new Win32LobAppFileSystemDetection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Win32LobAppFileSystemDetection() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppFileSystemDetection");
@@ -69,14 +70,14 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppFileSystemDetection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("check32BitOn64System", (n) -> { currentObject.setCheck32BitOn64System(n.getBooleanValue()); });
-            this.put("detectionType", (n) -> { currentObject.setDetectionType(n.getEnumValue(Win32LobAppFileSystemDetectionType.class)); });
-            this.put("detectionValue", (n) -> { currentObject.setDetectionValue(n.getStringValue()); });
-            this.put("fileOrFolderName", (n) -> { currentObject.setFileOrFolderName(n.getStringValue()); });
-            this.put("operator", (n) -> { currentObject.setOperator(n.getEnumValue(Win32LobAppDetectionOperator.class)); });
-            this.put("path", (n) -> { currentObject.setPath(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("check32BitOn64System", (n) -> { currentObject.setCheck32BitOn64System(n.getBooleanValue()); });
+        deserializerMap.put("detectionType", (n) -> { currentObject.setDetectionType(n.getEnumValue(Win32LobAppFileSystemDetectionType.class)); });
+        deserializerMap.put("detectionValue", (n) -> { currentObject.setDetectionValue(n.getStringValue()); });
+        deserializerMap.put("fileOrFolderName", (n) -> { currentObject.setFileOrFolderName(n.getStringValue()); });
+        deserializerMap.put("operator", (n) -> { currentObject.setOperator(n.getEnumValue(Win32LobAppDetectionOperator.class)); });
+        deserializerMap.put("path", (n) -> { currentObject.setPath(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileOrFolderName property value. The file or folder name to detect Win32 Line of Business (LoB) app
@@ -107,6 +108,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
      * @param value Value to set for the check32BitOn64System property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCheck32BitOn64System(@javax.annotation.Nullable final Boolean value) {
         this._check32BitOn64System = value;
     }
@@ -130,6 +133,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
      * @param value Value to set for the detectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionType(@javax.annotation.Nullable final Win32LobAppFileSystemDetectionType value) {
         this._detectionType = value;
     }
@@ -138,6 +142,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
      * @param value Value to set for the detectionValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionValue(@javax.annotation.Nullable final String value) {
         this._detectionValue = value;
     }
@@ -146,6 +151,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
      * @param value Value to set for the fileOrFolderName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileOrFolderName(@javax.annotation.Nullable final String value) {
         this._fileOrFolderName = value;
     }
@@ -154,6 +160,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
      * @param value Value to set for the operator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperator(@javax.annotation.Nullable final Win32LobAppDetectionOperator value) {
         this._operator = value;
     }
@@ -162,6 +169,7 @@ public class Win32LobAppFileSystemDetection extends Win32LobAppDetection impleme
      * @param value Value to set for the path property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPath(@javax.annotation.Nullable final String value) {
         this._path = value;
     }

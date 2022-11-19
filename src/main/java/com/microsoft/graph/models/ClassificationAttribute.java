@@ -21,6 +21,7 @@ public class ClassificationAttribute implements AdditionalDataHolder, Parsable {
      * Instantiates a new classificationAttribute and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ClassificationAttribute() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.classificationAttribute");
@@ -66,11 +67,11 @@ public class ClassificationAttribute implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClassificationAttribute currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("confidence", (n) -> { currentObject.setConfidence(n.getIntegerValue()); });
-            this.put("count", (n) -> { currentObject.setCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("confidence", (n) -> { currentObject.setConfidence(n.getIntegerValue()); });
+        deserializerMap.put("count", (n) -> { currentObject.setCount(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -85,6 +86,7 @@ public class ClassificationAttribute implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("confidence", this.getConfidence());
@@ -97,6 +99,7 @@ public class ClassificationAttribute implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class ClassificationAttribute implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the confidence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfidence(@javax.annotation.Nullable final Integer value) {
         this._confidence = value;
     }
@@ -113,6 +117,7 @@ public class ClassificationAttribute implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the count property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCount(@javax.annotation.Nullable final Integer value) {
         this._count = value;
     }
@@ -121,6 +126,7 @@ public class ClassificationAttribute implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

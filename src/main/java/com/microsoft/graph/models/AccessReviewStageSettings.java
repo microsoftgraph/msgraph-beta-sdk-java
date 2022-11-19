@@ -36,6 +36,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * Instantiates a new accessReviewStageSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewStageSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.accessReviewStageSettings");
@@ -97,18 +98,18 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewStageSettings currentObject = this;
-        return new HashMap<>(10) {{
-            this.put("decisionsThatWillMoveToNextStage", (n) -> { currentObject.setDecisionsThatWillMoveToNextStage(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("dependsOn", (n) -> { currentObject.setDependsOn(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("durationInDays", (n) -> { currentObject.setDurationInDays(n.getIntegerValue()); });
-            this.put("fallbackReviewers", (n) -> { currentObject.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recommendationInsightSettings", (n) -> { currentObject.setRecommendationInsightSettings(n.getCollectionOfObjectValues(AccessReviewRecommendationInsightSetting::createFromDiscriminatorValue)); });
-            this.put("recommendationLookBackDuration", (n) -> { currentObject.setRecommendationLookBackDuration(n.getPeriodValue()); });
-            this.put("recommendationsEnabled", (n) -> { currentObject.setRecommendationsEnabled(n.getBooleanValue()); });
-            this.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
-            this.put("stageId", (n) -> { currentObject.setStageId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("decisionsThatWillMoveToNextStage", (n) -> { currentObject.setDecisionsThatWillMoveToNextStage(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("dependsOn", (n) -> { currentObject.setDependsOn(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("durationInDays", (n) -> { currentObject.setDurationInDays(n.getIntegerValue()); });
+        deserializerMap.put("fallbackReviewers", (n) -> { currentObject.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recommendationInsightSettings", (n) -> { currentObject.setRecommendationInsightSettings(n.getCollectionOfObjectValues(AccessReviewRecommendationInsightSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("recommendationLookBackDuration", (n) -> { currentObject.setRecommendationLookBackDuration(n.getPeriodValue()); });
+        deserializerMap.put("recommendationsEnabled", (n) -> { currentObject.setRecommendationsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("stageId", (n) -> { currentObject.setStageId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -163,6 +164,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("decisionsThatWillMoveToNextStage", this.getDecisionsThatWillMoveToNextStage());
@@ -182,6 +184,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -190,6 +193,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the decisionsThatWillMoveToNextStage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecisionsThatWillMoveToNextStage(@javax.annotation.Nullable final java.util.List<String> value) {
         this._decisionsThatWillMoveToNextStage = value;
     }
@@ -198,6 +202,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the dependsOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDependsOn(@javax.annotation.Nullable final java.util.List<String> value) {
         this._dependsOn = value;
     }
@@ -206,6 +211,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the durationInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationInDays(@javax.annotation.Nullable final Integer value) {
         this._durationInDays = value;
     }
@@ -214,6 +220,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the fallbackReviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFallbackReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this._fallbackReviewers = value;
     }
@@ -222,6 +229,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -230,6 +238,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the recommendationInsightSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendationInsightSettings(@javax.annotation.Nullable final java.util.List<AccessReviewRecommendationInsightSetting> value) {
         this._recommendationInsightSettings = value;
     }
@@ -238,6 +247,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the recommendationLookBackDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendationLookBackDuration(@javax.annotation.Nullable final Period value) {
         this._recommendationLookBackDuration = value;
     }
@@ -246,6 +256,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the recommendationsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendationsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._recommendationsEnabled = value;
     }
@@ -254,6 +265,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the reviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this._reviewers = value;
     }
@@ -262,6 +274,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the stageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStageId(@javax.annotation.Nullable final String value) {
         this._stageId = value;
     }

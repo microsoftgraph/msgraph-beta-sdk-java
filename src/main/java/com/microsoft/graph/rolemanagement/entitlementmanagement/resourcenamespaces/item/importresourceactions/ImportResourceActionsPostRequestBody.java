@@ -22,6 +22,7 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * Instantiates a new importResourceActionsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ImportResourceActionsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -50,11 +51,11 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImportResourceActionsPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("format", (n) -> { currentObject.setFormat(n.getStringValue()); });
-            this.put("overwriteResourceNamespace", (n) -> { currentObject.setOverwriteResourceNamespace(n.getBooleanValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("format", (n) -> { currentObject.setFormat(n.getStringValue()); });
+        deserializerMap.put("overwriteResourceNamespace", (n) -> { currentObject.setOverwriteResourceNamespace(n.getBooleanValue()); });
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the format property value. The format property
@@ -85,6 +86,7 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("format", this.getFormat());
@@ -97,6 +99,7 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the format property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final String value) {
         this._format = value;
     }
@@ -113,6 +117,7 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the overwriteResourceNamespace property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOverwriteResourceNamespace(@javax.annotation.Nullable final Boolean value) {
         this._overwriteResourceNamespace = value;
     }
@@ -121,6 +126,7 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final String value) {
         this._value = value;
     }

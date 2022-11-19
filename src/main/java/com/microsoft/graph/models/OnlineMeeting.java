@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the commsApplication singleton. */
 public class OnlineMeeting extends Entity implements Parsable {
     /** Indicates whether attendees can turn on their camera. */
     private Boolean _allowAttendeeToEnableCamera;
@@ -15,14 +16,12 @@ public class OnlineMeeting extends Entity implements Parsable {
     private Boolean _allowAttendeeToEnableMic;
     /** Specifies who can be a presenter in a meeting. */
     private OnlineMeetingPresenters _allowedPresenters;
-    /** Specifies the mode of meeting chat. */
-    private MeetingChatMode _allowMeetingChat;
     /** Indicates if Teams reactions are enabled for the meeting. */
     private Boolean _allowTeamworkReactions;
     /** The content stream of the alternative recording of a Microsoft Teams live event. Read-only. */
     private byte[] _alternativeRecording;
     /** The anonymizeIdentityForRoles property */
-    private java.util.List<String> _anonymizeIdentityForRoles;
+    private java.util.List<OnlineMeetingRole> _anonymizeIdentityForRoles;
     /** The attendance reports of an online meeting. Read-only. */
     private java.util.List<MeetingAttendanceReport> _attendanceReports;
     /** The content stream of the attendee report of a Teams live event. Read-only. */
@@ -32,7 +31,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     /** Settings related to a live event. */
     private BroadcastMeetingSettings _broadcastSettings;
     /** The capabilities property */
-    private java.util.List<String> _capabilities;
+    private java.util.List<MeetingCapabilities> _capabilities;
     /** The chat information associated with this online meeting. */
     private ChatInfo _chatInfo;
     /** The meeting creation time in UTC. Read-only. */
@@ -76,9 +75,10 @@ public class OnlineMeeting extends Entity implements Parsable {
     /** The virtualAppointment property */
     private VirtualAppointment _virtualAppointment;
     /**
-     * Instantiates a new OnlineMeeting and sets the default values.
+     * Instantiates a new onlineMeeting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnlineMeeting() {
         super();
         this.setOdataType("#microsoft.graph.onlineMeeting");
@@ -86,7 +86,7 @@ public class OnlineMeeting extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnlineMeeting
+     * @return a onlineMeeting
      */
     @javax.annotation.Nonnull
     public static OnlineMeeting createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -118,14 +118,6 @@ public class OnlineMeeting extends Entity implements Parsable {
         return this._allowedPresenters;
     }
     /**
-     * Gets the allowMeetingChat property value. Specifies the mode of meeting chat.
-     * @return a meetingChatMode
-     */
-    @javax.annotation.Nullable
-    public MeetingChatMode getAllowMeetingChat() {
-        return this._allowMeetingChat;
-    }
-    /**
      * Gets the allowTeamworkReactions property value. Indicates if Teams reactions are enabled for the meeting.
      * @return a boolean
      */
@@ -143,10 +135,10 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the anonymizeIdentityForRoles property value. The anonymizeIdentityForRoles property
-     * @return a string
+     * @return a onlineMeetingRole
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getAnonymizeIdentityForRoles() {
+    public java.util.List<OnlineMeetingRole> getAnonymizeIdentityForRoles() {
         return this._anonymizeIdentityForRoles;
     }
     /**
@@ -183,10 +175,10 @@ public class OnlineMeeting extends Entity implements Parsable {
     }
     /**
      * Gets the capabilities property value. The capabilities property
-     * @return a string
+     * @return a meetingCapabilities
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getCapabilities() {
+    public java.util.List<MeetingCapabilities> getCapabilities() {
         return this._capabilities;
     }
     /**
@@ -228,41 +220,40 @@ public class OnlineMeeting extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnlineMeeting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowAttendeeToEnableCamera", (n) -> { currentObject.setAllowAttendeeToEnableCamera(n.getBooleanValue()); });
-            this.put("allowAttendeeToEnableMic", (n) -> { currentObject.setAllowAttendeeToEnableMic(n.getBooleanValue()); });
-            this.put("allowedPresenters", (n) -> { currentObject.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters.class)); });
-            this.put("allowMeetingChat", (n) -> { currentObject.setAllowMeetingChat(n.getEnumValue(MeetingChatMode.class)); });
-            this.put("allowTeamworkReactions", (n) -> { currentObject.setAllowTeamworkReactions(n.getBooleanValue()); });
-            this.put("alternativeRecording", (n) -> { currentObject.setAlternativeRecording(n.getByteArrayValue()); });
-            this.put("anonymizeIdentityForRoles", (n) -> { currentObject.setAnonymizeIdentityForRoles(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("attendanceReports", (n) -> { currentObject.setAttendanceReports(n.getCollectionOfObjectValues(MeetingAttendanceReport::createFromDiscriminatorValue)); });
-            this.put("attendeeReport", (n) -> { currentObject.setAttendeeReport(n.getByteArrayValue()); });
-            this.put("audioConferencing", (n) -> { currentObject.setAudioConferencing(n.getObjectValue(AudioConferencing::createFromDiscriminatorValue)); });
-            this.put("broadcastSettings", (n) -> { currentObject.setBroadcastSettings(n.getObjectValue(BroadcastMeetingSettings::createFromDiscriminatorValue)); });
-            this.put("capabilities", (n) -> { currentObject.setCapabilities(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("chatInfo", (n) -> { currentObject.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
-            this.put("creationDateTime", (n) -> { currentObject.setCreationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
-            this.put("isBroadcast", (n) -> { currentObject.setIsBroadcast(n.getBooleanValue()); });
-            this.put("isEntryExitAnnounced", (n) -> { currentObject.setIsEntryExitAnnounced(n.getBooleanValue()); });
-            this.put("joinInformation", (n) -> { currentObject.setJoinInformation(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("joinMeetingIdSettings", (n) -> { currentObject.setJoinMeetingIdSettings(n.getObjectValue(JoinMeetingIdSettings::createFromDiscriminatorValue)); });
-            this.put("joinUrl", (n) -> { currentObject.setJoinUrl(n.getStringValue()); });
-            this.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
-            this.put("lobbyBypassSettings", (n) -> { currentObject.setLobbyBypassSettings(n.getObjectValue(LobbyBypassSettings::createFromDiscriminatorValue)); });
-            this.put("meetingAttendanceReport", (n) -> { currentObject.setMeetingAttendanceReport(n.getObjectValue(MeetingAttendanceReport::createFromDiscriminatorValue)); });
-            this.put("participants", (n) -> { currentObject.setParticipants(n.getObjectValue(MeetingParticipants::createFromDiscriminatorValue)); });
-            this.put("recordAutomatically", (n) -> { currentObject.setRecordAutomatically(n.getBooleanValue()); });
-            this.put("recording", (n) -> { currentObject.setRecording(n.getByteArrayValue()); });
-            this.put("registration", (n) -> { currentObject.setRegistration(n.getObjectValue(MeetingRegistration::createFromDiscriminatorValue)); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
-            this.put("transcripts", (n) -> { currentObject.setTranscripts(n.getCollectionOfObjectValues(CallTranscript::createFromDiscriminatorValue)); });
-            this.put("videoTeleconferenceId", (n) -> { currentObject.setVideoTeleconferenceId(n.getStringValue()); });
-            this.put("virtualAppointment", (n) -> { currentObject.setVirtualAppointment(n.getObjectValue(VirtualAppointment::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowAttendeeToEnableCamera", (n) -> { currentObject.setAllowAttendeeToEnableCamera(n.getBooleanValue()); });
+        deserializerMap.put("allowAttendeeToEnableMic", (n) -> { currentObject.setAllowAttendeeToEnableMic(n.getBooleanValue()); });
+        deserializerMap.put("allowedPresenters", (n) -> { currentObject.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters.class)); });
+        deserializerMap.put("allowTeamworkReactions", (n) -> { currentObject.setAllowTeamworkReactions(n.getBooleanValue()); });
+        deserializerMap.put("alternativeRecording", (n) -> { currentObject.setAlternativeRecording(n.getByteArrayValue()); });
+        deserializerMap.put("anonymizeIdentityForRoles", (n) -> { currentObject.setAnonymizeIdentityForRoles(n.getCollectionOfEnumValues(OnlineMeetingRole.class)); });
+        deserializerMap.put("attendanceReports", (n) -> { currentObject.setAttendanceReports(n.getCollectionOfObjectValues(MeetingAttendanceReport::createFromDiscriminatorValue)); });
+        deserializerMap.put("attendeeReport", (n) -> { currentObject.setAttendeeReport(n.getByteArrayValue()); });
+        deserializerMap.put("audioConferencing", (n) -> { currentObject.setAudioConferencing(n.getObjectValue(AudioConferencing::createFromDiscriminatorValue)); });
+        deserializerMap.put("broadcastSettings", (n) -> { currentObject.setBroadcastSettings(n.getObjectValue(BroadcastMeetingSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("capabilities", (n) -> { currentObject.setCapabilities(n.getCollectionOfEnumValues(MeetingCapabilities.class)); });
+        deserializerMap.put("chatInfo", (n) -> { currentObject.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("creationDateTime", (n) -> { currentObject.setCreationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
+        deserializerMap.put("isBroadcast", (n) -> { currentObject.setIsBroadcast(n.getBooleanValue()); });
+        deserializerMap.put("isEntryExitAnnounced", (n) -> { currentObject.setIsEntryExitAnnounced(n.getBooleanValue()); });
+        deserializerMap.put("joinInformation", (n) -> { currentObject.setJoinInformation(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("joinMeetingIdSettings", (n) -> { currentObject.setJoinMeetingIdSettings(n.getObjectValue(JoinMeetingIdSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("joinUrl", (n) -> { currentObject.setJoinUrl(n.getStringValue()); });
+        deserializerMap.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
+        deserializerMap.put("lobbyBypassSettings", (n) -> { currentObject.setLobbyBypassSettings(n.getObjectValue(LobbyBypassSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("meetingAttendanceReport", (n) -> { currentObject.setMeetingAttendanceReport(n.getObjectValue(MeetingAttendanceReport::createFromDiscriminatorValue)); });
+        deserializerMap.put("participants", (n) -> { currentObject.setParticipants(n.getObjectValue(MeetingParticipants::createFromDiscriminatorValue)); });
+        deserializerMap.put("recordAutomatically", (n) -> { currentObject.setRecordAutomatically(n.getBooleanValue()); });
+        deserializerMap.put("recording", (n) -> { currentObject.setRecording(n.getByteArrayValue()); });
+        deserializerMap.put("registration", (n) -> { currentObject.setRegistration(n.getObjectValue(MeetingRegistration::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
+        deserializerMap.put("transcripts", (n) -> { currentObject.setTranscripts(n.getCollectionOfObjectValues(CallTranscript::createFromDiscriminatorValue)); });
+        deserializerMap.put("videoTeleconferenceId", (n) -> { currentObject.setVideoTeleconferenceId(n.getStringValue()); });
+        deserializerMap.put("virtualAppointment", (n) -> { currentObject.setVirtualAppointment(n.getObjectValue(VirtualAppointment::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isBroadcast property value. Indicates whether this is a Teams live event.
@@ -405,21 +396,21 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("allowAttendeeToEnableCamera", this.getAllowAttendeeToEnableCamera());
         writer.writeBooleanValue("allowAttendeeToEnableMic", this.getAllowAttendeeToEnableMic());
         writer.writeEnumValue("allowedPresenters", this.getAllowedPresenters());
-        writer.writeEnumValue("allowMeetingChat", this.getAllowMeetingChat());
         writer.writeBooleanValue("allowTeamworkReactions", this.getAllowTeamworkReactions());
         writer.writeByteArrayValue("alternativeRecording", this.getAlternativeRecording());
-        writer.writeCollectionOfPrimitiveValues("anonymizeIdentityForRoles", this.getAnonymizeIdentityForRoles());
+        writer.writeCollectionOfEnumValues("anonymizeIdentityForRoles", this.getAnonymizeIdentityForRoles());
         writer.writeCollectionOfObjectValues("attendanceReports", this.getAttendanceReports());
         writer.writeByteArrayValue("attendeeReport", this.getAttendeeReport());
         writer.writeObjectValue("audioConferencing", this.getAudioConferencing());
         writer.writeObjectValue("broadcastSettings", this.getBroadcastSettings());
-        writer.writeCollectionOfPrimitiveValues("capabilities", this.getCapabilities());
+        writer.writeCollectionOfEnumValues("capabilities", this.getCapabilities());
         writer.writeObjectValue("chatInfo", this.getChatInfo());
         writer.writeOffsetDateTimeValue("creationDateTime", this.getCreationDateTime());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
@@ -447,6 +438,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the allowAttendeeToEnableCamera property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowAttendeeToEnableCamera(@javax.annotation.Nullable final Boolean value) {
         this._allowAttendeeToEnableCamera = value;
     }
@@ -455,6 +447,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the allowAttendeeToEnableMic property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowAttendeeToEnableMic(@javax.annotation.Nullable final Boolean value) {
         this._allowAttendeeToEnableMic = value;
     }
@@ -463,22 +456,16 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the allowedPresenters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedPresenters(@javax.annotation.Nullable final OnlineMeetingPresenters value) {
         this._allowedPresenters = value;
-    }
-    /**
-     * Sets the allowMeetingChat property value. Specifies the mode of meeting chat.
-     * @param value Value to set for the allowMeetingChat property.
-     * @return a void
-     */
-    public void setAllowMeetingChat(@javax.annotation.Nullable final MeetingChatMode value) {
-        this._allowMeetingChat = value;
     }
     /**
      * Sets the allowTeamworkReactions property value. Indicates if Teams reactions are enabled for the meeting.
      * @param value Value to set for the allowTeamworkReactions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowTeamworkReactions(@javax.annotation.Nullable final Boolean value) {
         this._allowTeamworkReactions = value;
     }
@@ -487,6 +474,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the alternativeRecording property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlternativeRecording(@javax.annotation.Nullable final byte[] value) {
         this._alternativeRecording = value;
     }
@@ -495,7 +483,8 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the anonymizeIdentityForRoles property.
      * @return a void
      */
-    public void setAnonymizeIdentityForRoles(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setAnonymizeIdentityForRoles(@javax.annotation.Nullable final java.util.List<OnlineMeetingRole> value) {
         this._anonymizeIdentityForRoles = value;
     }
     /**
@@ -503,6 +492,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the attendanceReports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttendanceReports(@javax.annotation.Nullable final java.util.List<MeetingAttendanceReport> value) {
         this._attendanceReports = value;
     }
@@ -511,6 +501,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the attendeeReport property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttendeeReport(@javax.annotation.Nullable final byte[] value) {
         this._attendeeReport = value;
     }
@@ -519,6 +510,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the audioConferencing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAudioConferencing(@javax.annotation.Nullable final AudioConferencing value) {
         this._audioConferencing = value;
     }
@@ -527,6 +519,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the broadcastSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBroadcastSettings(@javax.annotation.Nullable final BroadcastMeetingSettings value) {
         this._broadcastSettings = value;
     }
@@ -535,7 +528,8 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the capabilities property.
      * @return a void
      */
-    public void setCapabilities(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setCapabilities(@javax.annotation.Nullable final java.util.List<MeetingCapabilities> value) {
         this._capabilities = value;
     }
     /**
@@ -543,6 +537,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the chatInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChatInfo(@javax.annotation.Nullable final ChatInfo value) {
         this._chatInfo = value;
     }
@@ -551,6 +546,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the creationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._creationDateTime = value;
     }
@@ -559,6 +555,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -567,6 +564,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the externalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
         this._externalId = value;
     }
@@ -575,6 +573,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the isBroadcast property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsBroadcast(@javax.annotation.Nullable final Boolean value) {
         this._isBroadcast = value;
     }
@@ -583,6 +582,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the isEntryExitAnnounced property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEntryExitAnnounced(@javax.annotation.Nullable final Boolean value) {
         this._isEntryExitAnnounced = value;
     }
@@ -591,6 +591,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the joinInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinInformation(@javax.annotation.Nullable final ItemBody value) {
         this._joinInformation = value;
     }
@@ -599,6 +600,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the joinMeetingIdSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinMeetingIdSettings(@javax.annotation.Nullable final JoinMeetingIdSettings value) {
         this._joinMeetingIdSettings = value;
     }
@@ -607,6 +609,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the joinUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinUrl(@javax.annotation.Nullable final String value) {
         this._joinUrl = value;
     }
@@ -615,6 +618,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the joinWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinWebUrl(@javax.annotation.Nullable final String value) {
         this._joinWebUrl = value;
     }
@@ -623,6 +627,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the lobbyBypassSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLobbyBypassSettings(@javax.annotation.Nullable final LobbyBypassSettings value) {
         this._lobbyBypassSettings = value;
     }
@@ -631,6 +636,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the meetingAttendanceReport property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeetingAttendanceReport(@javax.annotation.Nullable final MeetingAttendanceReport value) {
         this._meetingAttendanceReport = value;
     }
@@ -639,6 +645,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the participants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParticipants(@javax.annotation.Nullable final MeetingParticipants value) {
         this._participants = value;
     }
@@ -647,6 +654,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the recordAutomatically property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecordAutomatically(@javax.annotation.Nullable final Boolean value) {
         this._recordAutomatically = value;
     }
@@ -655,6 +663,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the recording property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecording(@javax.annotation.Nullable final byte[] value) {
         this._recording = value;
     }
@@ -663,6 +672,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the registration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistration(@javax.annotation.Nullable final MeetingRegistration value) {
         this._registration = value;
     }
@@ -671,6 +681,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -679,6 +690,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
         this._subject = value;
     }
@@ -687,6 +699,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the transcripts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTranscripts(@javax.annotation.Nullable final java.util.List<CallTranscript> value) {
         this._transcripts = value;
     }
@@ -695,6 +708,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the videoTeleconferenceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVideoTeleconferenceId(@javax.annotation.Nullable final String value) {
         this._videoTeleconferenceId = value;
     }
@@ -703,6 +717,7 @@ public class OnlineMeeting extends Entity implements Parsable {
      * @param value Value to set for the virtualAppointment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVirtualAppointment(@javax.annotation.Nullable final VirtualAppointment value) {
         this._virtualAppointment = value;
     }

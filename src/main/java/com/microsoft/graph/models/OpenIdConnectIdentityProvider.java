@@ -28,6 +28,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * Instantiates a new OpenIdConnectIdentityProvider and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OpenIdConnectIdentityProvider() {
         super();
         this.setOdataType("#microsoft.graph.openIdConnectIdentityProvider");
@@ -81,16 +82,16 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OpenIdConnectIdentityProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("claimsMapping", (n) -> { currentObject.setClaimsMapping(n.getObjectValue(ClaimsMapping::createFromDiscriminatorValue)); });
-            this.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
-            this.put("clientSecret", (n) -> { currentObject.setClientSecret(n.getStringValue()); });
-            this.put("domainHint", (n) -> { currentObject.setDomainHint(n.getStringValue()); });
-            this.put("metadataUrl", (n) -> { currentObject.setMetadataUrl(n.getStringValue()); });
-            this.put("responseMode", (n) -> { currentObject.setResponseMode(n.getEnumValue(OpenIdConnectResponseMode.class)); });
-            this.put("responseType", (n) -> { currentObject.setResponseType(n.getEnumValue(OpenIdConnectResponseTypes.class)); });
-            this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("claimsMapping", (n) -> { currentObject.setClaimsMapping(n.getObjectValue(ClaimsMapping::createFromDiscriminatorValue)); });
+        deserializerMap.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
+        deserializerMap.put("clientSecret", (n) -> { currentObject.setClientSecret(n.getStringValue()); });
+        deserializerMap.put("domainHint", (n) -> { currentObject.setDomainHint(n.getStringValue()); });
+        deserializerMap.put("metadataUrl", (n) -> { currentObject.setMetadataUrl(n.getStringValue()); });
+        deserializerMap.put("responseMode", (n) -> { currentObject.setResponseMode(n.getEnumValue(OpenIdConnectResponseMode.class)); });
+        deserializerMap.put("responseType", (n) -> { currentObject.setResponseType(n.getEnumValue(OpenIdConnectResponseTypes.class)); });
+        deserializerMap.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the metadataUrl property value. The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service's public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in .well-known/openid-configuration. Provide the metadata URL for the OpenID Connect identity provider you add. Read-only. Required.
@@ -129,6 +130,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param value Value to set for the claimsMapping property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClaimsMapping(@javax.annotation.Nullable final ClaimsMapping value) {
         this._claimsMapping = value;
     }
@@ -154,6 +157,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param value Value to set for the clientId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientId(@javax.annotation.Nullable final String value) {
         this._clientId = value;
     }
@@ -162,6 +166,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param value Value to set for the clientSecret property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientSecret(@javax.annotation.Nullable final String value) {
         this._clientSecret = value;
     }
@@ -170,6 +175,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param value Value to set for the domainHint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainHint(@javax.annotation.Nullable final String value) {
         this._domainHint = value;
     }
@@ -178,6 +184,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param value Value to set for the metadataUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetadataUrl(@javax.annotation.Nullable final String value) {
         this._metadataUrl = value;
     }
@@ -186,6 +193,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param value Value to set for the responseMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResponseMode(@javax.annotation.Nullable final OpenIdConnectResponseMode value) {
         this._responseMode = value;
     }
@@ -194,6 +202,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param value Value to set for the responseType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResponseType(@javax.annotation.Nullable final OpenIdConnectResponseTypes value) {
         this._responseType = value;
     }
@@ -202,6 +211,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
      * @param value Value to set for the scope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final String value) {
         this._scope = value;
     }

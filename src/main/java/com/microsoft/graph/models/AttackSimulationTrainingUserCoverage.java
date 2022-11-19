@@ -15,12 +15,13 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
     private AttackSimulationUser _attackSimulationUser;
     /** The OdataType property */
     private String _odataType;
-    /** List of assigned trainings' and their statuses for the user. */
+    /** List of assigned trainings and their statuses for the user. */
     private java.util.List<UserTrainingStatusInfo> _userTrainings;
     /**
      * Instantiates a new attackSimulationTrainingUserCoverage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AttackSimulationTrainingUserCoverage() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.attackSimulationTrainingUserCoverage");
@@ -58,11 +59,11 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttackSimulationTrainingUserCoverage currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("attackSimulationUser", (n) -> { currentObject.setAttackSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("userTrainings", (n) -> { currentObject.setUserTrainings(n.getCollectionOfObjectValues(UserTrainingStatusInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("attackSimulationUser", (n) -> { currentObject.setAttackSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("userTrainings", (n) -> { currentObject.setUserTrainings(n.getCollectionOfObjectValues(UserTrainingStatusInfo::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -73,7 +74,7 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
         return this._odataType;
     }
     /**
-     * Gets the userTrainings property value. List of assigned trainings' and their statuses for the user.
+     * Gets the userTrainings property value. List of assigned trainings and their statuses for the user.
      * @return a userTrainingStatusInfo
      */
     @javax.annotation.Nullable
@@ -85,6 +86,7 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("attackSimulationUser", this.getAttackSimulationUser());
@@ -97,6 +99,7 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
      * @param value Value to set for the attackSimulationUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttackSimulationUser(@javax.annotation.Nullable final AttackSimulationUser value) {
         this._attackSimulationUser = value;
     }
@@ -113,14 +117,16 @@ public class AttackSimulationTrainingUserCoverage implements AdditionalDataHolde
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
     /**
-     * Sets the userTrainings property value. List of assigned trainings' and their statuses for the user.
+     * Sets the userTrainings property value. List of assigned trainings and their statuses for the user.
      * @param value Value to set for the userTrainings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserTrainings(@javax.annotation.Nullable final java.util.List<UserTrainingStatusInfo> value) {
         this._userTrainings = value;
     }

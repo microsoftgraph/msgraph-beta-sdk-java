@@ -3,7 +3,7 @@ package com.microsoft.graph.models.identitygovernance;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum WorkflowExecutionType implements ValuedEnum {
     Scheduled("scheduled"),
     OnDemand("onDemand"),

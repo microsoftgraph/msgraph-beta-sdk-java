@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class AccessPackageAssignmentResourceRole extends Entity implements Parsable {
     /** The access package assignments resulting in this role assignment. Read-only. Nullable. */
     private java.util.List<AccessPackageAssignment> _accessPackageAssignments;
@@ -27,6 +27,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      * Instantiates a new accessPackageAssignmentResourceRole and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageAssignmentResourceRole() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageAssignmentResourceRole");
@@ -80,15 +81,15 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentResourceRole currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessPackageAssignments", (n) -> { currentObject.setAccessPackageAssignments(n.getCollectionOfObjectValues(AccessPackageAssignment::createFromDiscriminatorValue)); });
-            this.put("accessPackageResourceRole", (n) -> { currentObject.setAccessPackageResourceRole(n.getObjectValue(AccessPackageResourceRole::createFromDiscriminatorValue)); });
-            this.put("accessPackageResourceScope", (n) -> { currentObject.setAccessPackageResourceScope(n.getObjectValue(AccessPackageResourceScope::createFromDiscriminatorValue)); });
-            this.put("accessPackageSubject", (n) -> { currentObject.setAccessPackageSubject(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
-            this.put("originId", (n) -> { currentObject.setOriginId(n.getStringValue()); });
-            this.put("originSystem", (n) -> { currentObject.setOriginSystem(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackageAssignments", (n) -> { currentObject.setAccessPackageAssignments(n.getCollectionOfObjectValues(AccessPackageAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageResourceRole", (n) -> { currentObject.setAccessPackageResourceRole(n.getObjectValue(AccessPackageResourceRole::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageResourceScope", (n) -> { currentObject.setAccessPackageResourceScope(n.getObjectValue(AccessPackageResourceScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageSubject", (n) -> { currentObject.setAccessPackageSubject(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
+        deserializerMap.put("originId", (n) -> { currentObject.setOriginId(n.getStringValue()); });
+        deserializerMap.put("originSystem", (n) -> { currentObject.setOriginSystem(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the originId property value. A unique identifier relative to the origin system, corresponding to the originId property of the accessPackageResourceRole.
@@ -119,6 +120,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +137,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      * @param value Value to set for the accessPackageAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageAssignments(@javax.annotation.Nullable final java.util.List<AccessPackageAssignment> value) {
         this._accessPackageAssignments = value;
     }
@@ -143,6 +146,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      * @param value Value to set for the accessPackageResourceRole property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResourceRole(@javax.annotation.Nullable final AccessPackageResourceRole value) {
         this._accessPackageResourceRole = value;
     }
@@ -151,6 +155,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      * @param value Value to set for the accessPackageResourceScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResourceScope(@javax.annotation.Nullable final AccessPackageResourceScope value) {
         this._accessPackageResourceScope = value;
     }
@@ -159,6 +164,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      * @param value Value to set for the accessPackageSubject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageSubject(@javax.annotation.Nullable final AccessPackageSubject value) {
         this._accessPackageSubject = value;
     }
@@ -167,6 +173,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      * @param value Value to set for the originId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginId(@javax.annotation.Nullable final String value) {
         this._originId = value;
     }
@@ -175,6 +182,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      * @param value Value to set for the originSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginSystem(@javax.annotation.Nullable final String value) {
         this._originSystem = value;
     }
@@ -183,6 +191,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }

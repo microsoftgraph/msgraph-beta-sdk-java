@@ -14,6 +14,7 @@ public class OnTokenIssuanceStartListener extends AuthenticationEventListener im
      * Instantiates a new OnTokenIssuanceStartListener and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnTokenIssuanceStartListener() {
         super();
         this.setOdataType("#microsoft.graph.onTokenIssuanceStartListener");
@@ -35,9 +36,9 @@ public class OnTokenIssuanceStartListener extends AuthenticationEventListener im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnTokenIssuanceStartListener currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("handler", (n) -> { currentObject.setHandler(n.getObjectValue(OnTokenIssuanceStartHandler::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("handler", (n) -> { currentObject.setHandler(n.getObjectValue(OnTokenIssuanceStartHandler::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the handler property value. The handler property
@@ -52,6 +53,7 @@ public class OnTokenIssuanceStartListener extends AuthenticationEventListener im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class OnTokenIssuanceStartListener extends AuthenticationEventListener im
      * @param value Value to set for the handler property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHandler(@javax.annotation.Nullable final OnTokenIssuanceStartHandler value) {
         this._handler = value;
     }

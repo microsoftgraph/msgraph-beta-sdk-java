@@ -20,6 +20,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
      * Instantiates a new AuthenticationMethodConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthenticationMethodConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.authenticationMethodConfiguration");
@@ -53,9 +54,9 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationMethodConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(AuthenticationMethodState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(AuthenticationMethodState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the state property value. The state of the policy. Possible values are: enabled, disabled.
@@ -70,6 +71,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -80,6 +82,7 @@ public class AuthenticationMethodConfiguration extends Entity implements Parsabl
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final AuthenticationMethodState value) {
         this._state = value;
     }

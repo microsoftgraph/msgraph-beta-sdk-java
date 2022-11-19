@@ -7,14 +7,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class WorkflowVersion extends WorkflowBase implements Parsable {
-    /** The versionNumber property */
+    /** The version of the workflow.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby. */
     private Integer _versionNumber;
     /**
      * Instantiates a new workflowVersion and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkflowVersion() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.workflowVersion");
@@ -36,12 +37,12 @@ public class WorkflowVersion extends WorkflowBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkflowVersion currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("versionNumber", (n) -> { currentObject.setVersionNumber(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("versionNumber", (n) -> { currentObject.setVersionNumber(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the versionNumber property value. The versionNumber property
+     * Gets the versionNumber property value. The version of the workflow.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -53,16 +54,18 @@ public class WorkflowVersion extends WorkflowBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("versionNumber", this.getVersionNumber());
     }
     /**
-     * Sets the versionNumber property value. The versionNumber property
+     * Sets the versionNumber property value. The version of the workflow.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the versionNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersionNumber(@javax.annotation.Nullable final Integer value) {
         this._versionNumber = value;
     }

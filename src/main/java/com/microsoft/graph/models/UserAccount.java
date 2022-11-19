@@ -30,6 +30,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * Instantiates a new userAccount and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserAccount() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.userAccount");
@@ -67,15 +68,15 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserAccount currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastSeenDateTime", (n) -> { currentObject.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
-            this.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
-            this.put("signinName", (n) -> { currentObject.setSigninName(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AccountStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastSeenDateTime", (n) -> { currentObject.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
+        deserializerMap.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
+        deserializerMap.put("signinName", (n) -> { currentObject.setSigninName(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AccountStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastSeenDateTime property value. The lastSeenDateTime property
@@ -130,6 +131,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -146,6 +148,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -154,6 +157,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -162,6 +166,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSeenDateTime = value;
     }
@@ -170,6 +175,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -178,6 +184,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the riskScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
         this._riskScore = value;
     }
@@ -186,6 +193,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the service property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setService(@javax.annotation.Nullable final String value) {
         this._service = value;
     }
@@ -194,6 +202,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the signinName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSigninName(@javax.annotation.Nullable final String value) {
         this._signinName = value;
     }
@@ -202,6 +211,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final AccountStatus value) {
         this._status = value;
     }

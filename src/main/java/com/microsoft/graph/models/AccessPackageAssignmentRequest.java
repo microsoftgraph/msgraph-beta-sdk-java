@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     /** The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable. Supports $expand. */
     private AccessPackage _accessPackage;
@@ -34,7 +34,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     private String _requestState;
     /** More information on the request processing status. Read-only. */
     private String _requestStatus;
-    /** One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only. */
+    /** One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd, UserUpdate or UserRemove. Read-only. */
     private String _requestType;
     /** The range of dates that access is to be assigned to the requestor. Read-only. */
     private RequestSchedule _schedule;
@@ -42,6 +42,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * Instantiates a new accessPackageAssignmentRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageAssignmentRequest() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageAssignmentRequest");
@@ -119,22 +120,22 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessPackage", (n) -> { currentObject.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
-            this.put("accessPackageAssignment", (n) -> { currentObject.setAccessPackageAssignment(n.getObjectValue(AccessPackageAssignment::createFromDiscriminatorValue)); });
-            this.put("answers", (n) -> { currentObject.setAnswers(n.getCollectionOfObjectValues(AccessPackageAnswer::createFromDiscriminatorValue)); });
-            this.put("completedDate", (n) -> { currentObject.setCompletedDate(n.getOffsetDateTimeValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("customExtensionHandlerInstances", (n) -> { currentObject.setCustomExtensionHandlerInstances(n.getCollectionOfObjectValues(CustomExtensionHandlerInstance::createFromDiscriminatorValue)); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("isValidationOnly", (n) -> { currentObject.setIsValidationOnly(n.getBooleanValue()); });
-            this.put("justification", (n) -> { currentObject.setJustification(n.getStringValue()); });
-            this.put("requestor", (n) -> { currentObject.setRequestor(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
-            this.put("requestState", (n) -> { currentObject.setRequestState(n.getStringValue()); });
-            this.put("requestStatus", (n) -> { currentObject.setRequestStatus(n.getStringValue()); });
-            this.put("requestType", (n) -> { currentObject.setRequestType(n.getStringValue()); });
-            this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackage", (n) -> { currentObject.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageAssignment", (n) -> { currentObject.setAccessPackageAssignment(n.getObjectValue(AccessPackageAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("answers", (n) -> { currentObject.setAnswers(n.getCollectionOfObjectValues(AccessPackageAnswer::createFromDiscriminatorValue)); });
+        deserializerMap.put("completedDate", (n) -> { currentObject.setCompletedDate(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("customExtensionHandlerInstances", (n) -> { currentObject.setCustomExtensionHandlerInstances(n.getCollectionOfObjectValues(CustomExtensionHandlerInstance::createFromDiscriminatorValue)); });
+        deserializerMap.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("isValidationOnly", (n) -> { currentObject.setIsValidationOnly(n.getBooleanValue()); });
+        deserializerMap.put("justification", (n) -> { currentObject.setJustification(n.getStringValue()); });
+        deserializerMap.put("requestor", (n) -> { currentObject.setRequestor(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
+        deserializerMap.put("requestState", (n) -> { currentObject.setRequestState(n.getStringValue()); });
+        deserializerMap.put("requestStatus", (n) -> { currentObject.setRequestStatus(n.getStringValue()); });
+        deserializerMap.put("requestType", (n) -> { currentObject.setRequestType(n.getStringValue()); });
+        deserializerMap.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isValidationOnly property value. True if the request is not to be processed for assignment.
@@ -177,7 +178,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this._requestStatus;
     }
     /**
-     * Gets the requestType property value. One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+     * Gets the requestType property value. One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd, UserUpdate or UserRemove. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -197,6 +198,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -220,6 +222,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the accessPackage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackage(@javax.annotation.Nullable final AccessPackage value) {
         this._accessPackage = value;
     }
@@ -228,6 +231,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageAssignment(@javax.annotation.Nullable final AccessPackageAssignment value) {
         this._accessPackageAssignment = value;
     }
@@ -236,6 +240,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the answers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnswers(@javax.annotation.Nullable final java.util.List<AccessPackageAnswer> value) {
         this._answers = value;
     }
@@ -244,6 +249,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the completedDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedDate(@javax.annotation.Nullable final OffsetDateTime value) {
         this._completedDate = value;
     }
@@ -252,6 +258,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -260,6 +267,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the customExtensionHandlerInstances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomExtensionHandlerInstances(@javax.annotation.Nullable final java.util.List<CustomExtensionHandlerInstance> value) {
         this._customExtensionHandlerInstances = value;
     }
@@ -268,6 +276,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -276,6 +285,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the isValidationOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsValidationOnly(@javax.annotation.Nullable final Boolean value) {
         this._isValidationOnly = value;
     }
@@ -284,6 +294,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the justification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJustification(@javax.annotation.Nullable final String value) {
         this._justification = value;
     }
@@ -292,6 +303,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the requestor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestor(@javax.annotation.Nullable final AccessPackageSubject value) {
         this._requestor = value;
     }
@@ -300,6 +312,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the requestState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestState(@javax.annotation.Nullable final String value) {
         this._requestState = value;
     }
@@ -308,14 +321,16 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the requestStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestStatus(@javax.annotation.Nullable final String value) {
         this._requestStatus = value;
     }
     /**
-     * Sets the requestType property value. One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+     * Sets the requestType property value. One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd, UserUpdate or UserRemove. Read-only.
      * @param value Value to set for the requestType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestType(@javax.annotation.Nullable final String value) {
         this._requestType = value;
     }
@@ -324,6 +339,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the schedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedule(@javax.annotation.Nullable final RequestSchedule value) {
         this._schedule = value;
     }

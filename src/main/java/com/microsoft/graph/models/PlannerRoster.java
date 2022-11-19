@@ -17,6 +17,7 @@ public class PlannerRoster extends Entity implements Parsable {
      * Instantiates a new plannerRoster and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerRoster() {
         super();
         this.setOdataType("#microsoft.graph.plannerRoster");
@@ -38,10 +39,10 @@ public class PlannerRoster extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerRoster currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(PlannerRosterMember::createFromDiscriminatorValue)); });
-            this.put("plans", (n) -> { currentObject.setPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(PlannerRosterMember::createFromDiscriminatorValue)); });
+        deserializerMap.put("plans", (n) -> { currentObject.setPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the members property value. Retrieves the members of the plannerRoster.
@@ -64,6 +65,7 @@ public class PlannerRoster extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class PlannerRoster extends Entity implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<PlannerRosterMember> value) {
         this._members = value;
     }
@@ -83,6 +86,7 @@ public class PlannerRoster extends Entity implements Parsable {
      * @param value Value to set for the plans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlans(@javax.annotation.Nullable final java.util.List<PlannerPlan> value) {
         this._plans = value;
     }

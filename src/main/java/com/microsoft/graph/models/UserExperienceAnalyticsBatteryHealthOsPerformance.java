@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics battery health os performance entity contains battery related information for all operating system versions in their organization. */
 public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity implements Parsable {
     /** Number of active devices for that os version. Valid values -2147483648 to 2147483647 */
     private Integer _activeDevices;
@@ -14,16 +15,17 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     private Integer _averageBatteryAgeInDays;
     /** The mean of the estimated runtimes on full charge for all devices running a particular operating system version. Unit in minutes. Valid values -2147483648 to 2147483647 */
     private Integer _averageEstimatedRuntimeInMinutes;
-    /** The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values -2147483648 to 2147483647 */
+    /** The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values -2147483648 to 2147483647 */
     private Integer _averageMaxCapacityPercentage;
     /** Build number of the operating system. */
     private String _osBuildNumber;
     /** Version of the operating system. */
     private String _osVersion;
     /**
-     * Instantiates a new UserExperienceAnalyticsBatteryHealthOsPerformance and sets the default values.
+     * Instantiates a new userExperienceAnalyticsBatteryHealthOsPerformance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsBatteryHealthOsPerformance() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsBatteryHealthOsPerformance");
@@ -31,7 +33,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBatteryHealthOsPerformance
+     * @return a userExperienceAnalyticsBatteryHealthOsPerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthOsPerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -63,7 +65,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
         return this._averageEstimatedRuntimeInMinutes;
     }
     /**
-     * Gets the averageMaxCapacityPercentage property value. The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values -2147483648 to 2147483647
+     * Gets the averageMaxCapacityPercentage property value. The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -77,14 +79,14 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsBatteryHealthOsPerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeDevices", (n) -> { currentObject.setActiveDevices(n.getIntegerValue()); });
-            this.put("averageBatteryAgeInDays", (n) -> { currentObject.setAverageBatteryAgeInDays(n.getIntegerValue()); });
-            this.put("averageEstimatedRuntimeInMinutes", (n) -> { currentObject.setAverageEstimatedRuntimeInMinutes(n.getIntegerValue()); });
-            this.put("averageMaxCapacityPercentage", (n) -> { currentObject.setAverageMaxCapacityPercentage(n.getIntegerValue()); });
-            this.put("osBuildNumber", (n) -> { currentObject.setOsBuildNumber(n.getStringValue()); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeDevices", (n) -> { currentObject.setActiveDevices(n.getIntegerValue()); });
+        deserializerMap.put("averageBatteryAgeInDays", (n) -> { currentObject.setAverageBatteryAgeInDays(n.getIntegerValue()); });
+        deserializerMap.put("averageEstimatedRuntimeInMinutes", (n) -> { currentObject.setAverageEstimatedRuntimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("averageMaxCapacityPercentage", (n) -> { currentObject.setAverageMaxCapacityPercentage(n.getIntegerValue()); });
+        deserializerMap.put("osBuildNumber", (n) -> { currentObject.setOsBuildNumber(n.getStringValue()); });
+        deserializerMap.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the osBuildNumber property value. Build number of the operating system.
@@ -107,6 +109,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +125,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
      * @param value Value to set for the activeDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveDevices(@javax.annotation.Nullable final Integer value) {
         this._activeDevices = value;
     }
@@ -130,6 +134,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
      * @param value Value to set for the averageBatteryAgeInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageBatteryAgeInDays(@javax.annotation.Nullable final Integer value) {
         this._averageBatteryAgeInDays = value;
     }
@@ -138,14 +143,16 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
      * @param value Value to set for the averageEstimatedRuntimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageEstimatedRuntimeInMinutes(@javax.annotation.Nullable final Integer value) {
         this._averageEstimatedRuntimeInMinutes = value;
     }
     /**
-     * Sets the averageMaxCapacityPercentage property value. The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values -2147483648 to 2147483647
+     * Sets the averageMaxCapacityPercentage property value. The mean of the maximum capacity for all devices running a particular operating system version. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values -2147483648 to 2147483647
      * @param value Value to set for the averageMaxCapacityPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageMaxCapacityPercentage(@javax.annotation.Nullable final Integer value) {
         this._averageMaxCapacityPercentage = value;
     }
@@ -154,6 +161,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
      * @param value Value to set for the osBuildNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsBuildNumber(@javax.annotation.Nullable final String value) {
         this._osBuildNumber = value;
     }
@@ -162,6 +170,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformance extends Entity im
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
         this._osVersion = value;
     }

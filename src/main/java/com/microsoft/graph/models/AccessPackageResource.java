@@ -17,7 +17,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     private java.util.List<AccessPackageResourceScope> _accessPackageResourceScopes;
     /** The name of the user or application that first added this resource. Read-only. */
     private String _addedBy;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
     private OffsetDateTime _addedOn;
     /** Contains information about the attributes to be collected from the requestor and sent to the resource application. */
     private java.util.List<AccessPackageResourceAttribute> _attributes;
@@ -25,7 +25,7 @@ public class AccessPackageResource extends Entity implements Parsable {
     private String _description;
     /** The display name of the resource, such as the application name, group name or site name. */
     private String _displayName;
-    /** True if the resource is not yet available for assignment. */
+    /** True if the resource is not yet available for assignment. Read-only. */
     private Boolean _isPendingOnboarding;
     /** The unique identifier of the resource in the origin system. In the case of an Azure AD group, this is the identifier of the group. */
     private String _originId;
@@ -39,6 +39,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      * Instantiates a new accessPackageResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageResource() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageResource");
@@ -86,7 +87,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this._addedBy;
     }
     /**
-     * Gets the addedOn property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the addedOn property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -124,24 +125,24 @@ public class AccessPackageResource extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessPackageResourceEnvironment", (n) -> { currentObject.setAccessPackageResourceEnvironment(n.getObjectValue(AccessPackageResourceEnvironment::createFromDiscriminatorValue)); });
-            this.put("accessPackageResourceRoles", (n) -> { currentObject.setAccessPackageResourceRoles(n.getCollectionOfObjectValues(AccessPackageResourceRole::createFromDiscriminatorValue)); });
-            this.put("accessPackageResourceScopes", (n) -> { currentObject.setAccessPackageResourceScopes(n.getCollectionOfObjectValues(AccessPackageResourceScope::createFromDiscriminatorValue)); });
-            this.put("addedBy", (n) -> { currentObject.setAddedBy(n.getStringValue()); });
-            this.put("addedOn", (n) -> { currentObject.setAddedOn(n.getOffsetDateTimeValue()); });
-            this.put("attributes", (n) -> { currentObject.setAttributes(n.getCollectionOfObjectValues(AccessPackageResourceAttribute::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isPendingOnboarding", (n) -> { currentObject.setIsPendingOnboarding(n.getBooleanValue()); });
-            this.put("originId", (n) -> { currentObject.setOriginId(n.getStringValue()); });
-            this.put("originSystem", (n) -> { currentObject.setOriginSystem(n.getStringValue()); });
-            this.put("resourceType", (n) -> { currentObject.setResourceType(n.getStringValue()); });
-            this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackageResourceEnvironment", (n) -> { currentObject.setAccessPackageResourceEnvironment(n.getObjectValue(AccessPackageResourceEnvironment::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageResourceRoles", (n) -> { currentObject.setAccessPackageResourceRoles(n.getCollectionOfObjectValues(AccessPackageResourceRole::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageResourceScopes", (n) -> { currentObject.setAccessPackageResourceScopes(n.getCollectionOfObjectValues(AccessPackageResourceScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("addedBy", (n) -> { currentObject.setAddedBy(n.getStringValue()); });
+        deserializerMap.put("addedOn", (n) -> { currentObject.setAddedOn(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("attributes", (n) -> { currentObject.setAttributes(n.getCollectionOfObjectValues(AccessPackageResourceAttribute::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isPendingOnboarding", (n) -> { currentObject.setIsPendingOnboarding(n.getBooleanValue()); });
+        deserializerMap.put("originId", (n) -> { currentObject.setOriginId(n.getStringValue()); });
+        deserializerMap.put("originSystem", (n) -> { currentObject.setOriginSystem(n.getStringValue()); });
+        deserializerMap.put("resourceType", (n) -> { currentObject.setResourceType(n.getStringValue()); });
+        deserializerMap.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the isPendingOnboarding property value. True if the resource is not yet available for assignment.
+     * Gets the isPendingOnboarding property value. True if the resource is not yet available for assignment. Read-only.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -185,6 +186,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -207,6 +209,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResourceEnvironment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResourceEnvironment(@javax.annotation.Nullable final AccessPackageResourceEnvironment value) {
         this._accessPackageResourceEnvironment = value;
     }
@@ -215,6 +218,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResourceRoles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResourceRoles(@javax.annotation.Nullable final java.util.List<AccessPackageResourceRole> value) {
         this._accessPackageResourceRoles = value;
     }
@@ -223,6 +227,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResourceScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResourceScopes(@javax.annotation.Nullable final java.util.List<AccessPackageResourceScope> value) {
         this._accessPackageResourceScopes = value;
     }
@@ -231,14 +236,16 @@ public class AccessPackageResource extends Entity implements Parsable {
      * @param value Value to set for the addedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddedBy(@javax.annotation.Nullable final String value) {
         this._addedBy = value;
     }
     /**
-     * Sets the addedOn property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the addedOn property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the addedOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddedOn(@javax.annotation.Nullable final OffsetDateTime value) {
         this._addedOn = value;
     }
@@ -247,6 +254,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      * @param value Value to set for the attributes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttributes(@javax.annotation.Nullable final java.util.List<AccessPackageResourceAttribute> value) {
         this._attributes = value;
     }
@@ -255,6 +263,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -263,14 +272,16 @@ public class AccessPackageResource extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
     /**
-     * Sets the isPendingOnboarding property value. True if the resource is not yet available for assignment.
+     * Sets the isPendingOnboarding property value. True if the resource is not yet available for assignment. Read-only.
      * @param value Value to set for the isPendingOnboarding property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPendingOnboarding(@javax.annotation.Nullable final Boolean value) {
         this._isPendingOnboarding = value;
     }
@@ -279,6 +290,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      * @param value Value to set for the originId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginId(@javax.annotation.Nullable final String value) {
         this._originId = value;
     }
@@ -287,6 +299,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      * @param value Value to set for the originSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginSystem(@javax.annotation.Nullable final String value) {
         this._originSystem = value;
     }
@@ -295,6 +308,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      * @param value Value to set for the resourceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceType(@javax.annotation.Nullable final String value) {
         this._resourceType = value;
     }
@@ -303,6 +317,7 @@ public class AccessPackageResource extends Entity implements Parsable {
      * @param value Value to set for the url property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrl(@javax.annotation.Nullable final String value) {
         this._url = value;
     }

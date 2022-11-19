@@ -18,6 +18,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
      * Instantiates a new MobileAppSupersedence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppSupersedence() {
         super();
         this.setOdataType("#microsoft.graph.mobileAppSupersedence");
@@ -39,11 +40,11 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppSupersedence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("supersededAppCount", (n) -> { currentObject.setSupersededAppCount(n.getIntegerValue()); });
-            this.put("supersedenceType", (n) -> { currentObject.setSupersedenceType(n.getEnumValue(MobileAppSupersedenceType.class)); });
-            this.put("supersedingAppCount", (n) -> { currentObject.setSupersedingAppCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("supersededAppCount", (n) -> { currentObject.setSupersededAppCount(n.getIntegerValue()); });
+        deserializerMap.put("supersedenceType", (n) -> { currentObject.setSupersedenceType(n.getEnumValue(MobileAppSupersedenceType.class)); });
+        deserializerMap.put("supersedingAppCount", (n) -> { currentObject.setSupersedingAppCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the supersededAppCount property value. The total number of apps directly or indirectly superseded by the child app.
@@ -74,6 +75,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
      * @param value Value to set for the supersededAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupersededAppCount(@javax.annotation.Nullable final Integer value) {
         this._supersededAppCount = value;
     }
@@ -94,6 +97,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
      * @param value Value to set for the supersedenceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupersedenceType(@javax.annotation.Nullable final MobileAppSupersedenceType value) {
         this._supersedenceType = value;
     }
@@ -102,6 +106,7 @@ public class MobileAppSupersedence extends MobileAppRelationship implements Pars
      * @param value Value to set for the supersedingAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupersedingAppCount(@javax.annotation.Nullable final Integer value) {
         this._supersedingAppCount = value;
     }

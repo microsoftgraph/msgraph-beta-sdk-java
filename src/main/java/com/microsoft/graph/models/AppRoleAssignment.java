@@ -28,6 +28,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * Instantiates a new appRoleAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppRoleAssignment() {
         super();
         this.setOdataType("#microsoft.graph.appRoleAssignment");
@@ -65,15 +66,15 @@ public class AppRoleAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppRoleAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appRoleId", (n) -> { currentObject.setAppRoleId(n.getStringValue()); });
-            this.put("creationTimestamp", (n) -> { currentObject.setCreationTimestamp(n.getOffsetDateTimeValue()); });
-            this.put("principalDisplayName", (n) -> { currentObject.setPrincipalDisplayName(n.getStringValue()); });
-            this.put("principalId", (n) -> { currentObject.setPrincipalId(n.getStringValue()); });
-            this.put("principalType", (n) -> { currentObject.setPrincipalType(n.getStringValue()); });
-            this.put("resourceDisplayName", (n) -> { currentObject.setResourceDisplayName(n.getStringValue()); });
-            this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appRoleId", (n) -> { currentObject.setAppRoleId(n.getStringValue()); });
+        deserializerMap.put("creationTimestamp", (n) -> { currentObject.setCreationTimestamp(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("principalDisplayName", (n) -> { currentObject.setPrincipalDisplayName(n.getStringValue()); });
+        deserializerMap.put("principalId", (n) -> { currentObject.setPrincipalId(n.getStringValue()); });
+        deserializerMap.put("principalType", (n) -> { currentObject.setPrincipalType(n.getStringValue()); });
+        deserializerMap.put("resourceDisplayName", (n) -> { currentObject.setResourceDisplayName(n.getStringValue()); });
+        deserializerMap.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the principalDisplayName property value. The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith).
@@ -120,6 +121,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -136,6 +138,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the appRoleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRoleId(@javax.annotation.Nullable final String value) {
         this._appRoleId = value;
     }
@@ -144,6 +147,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the creationTimestamp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreationTimestamp(@javax.annotation.Nullable final OffsetDateTime value) {
         this._creationTimestamp = value;
     }
@@ -152,6 +156,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the principalDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipalDisplayName(@javax.annotation.Nullable final String value) {
         this._principalDisplayName = value;
     }
@@ -160,6 +165,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the principalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipalId(@javax.annotation.Nullable final String value) {
         this._principalId = value;
     }
@@ -168,6 +174,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the principalType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipalType(@javax.annotation.Nullable final String value) {
         this._principalType = value;
     }
@@ -176,6 +183,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the resourceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceDisplayName(@javax.annotation.Nullable final String value) {
         this._resourceDisplayName = value;
     }
@@ -184,6 +192,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the resourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceId(@javax.annotation.Nullable final String value) {
         this._resourceId = value;
     }

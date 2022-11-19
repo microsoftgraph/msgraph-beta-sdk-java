@@ -15,6 +15,7 @@ public class DeviceManagementScriptGroupAssignment extends Entity implements Par
      * Instantiates a new deviceManagementScriptGroupAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementScriptGroupAssignment() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementScriptGroupAssignment");
@@ -36,9 +37,9 @@ public class DeviceManagementScriptGroupAssignment extends Entity implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementScriptGroupAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("targetGroupId", (n) -> { currentObject.setTargetGroupId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("targetGroupId", (n) -> { currentObject.setTargetGroupId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the targetGroupId property value. The Id of the Azure Active Directory group we are targeting the script to.
@@ -53,6 +54,7 @@ public class DeviceManagementScriptGroupAssignment extends Entity implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class DeviceManagementScriptGroupAssignment extends Entity implements Par
      * @param value Value to set for the targetGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetGroupId(@javax.annotation.Nullable final String value) {
         this._targetGroupId = value;
     }

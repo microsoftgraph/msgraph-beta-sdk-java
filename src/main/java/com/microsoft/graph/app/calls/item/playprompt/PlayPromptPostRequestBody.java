@@ -23,6 +23,7 @@ public class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable
      * Instantiates a new playPromptPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlayPromptPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -59,11 +60,11 @@ public class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlayPromptPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
-            this.put("loop", (n) -> { currentObject.setLoop(n.getBooleanValue()); });
-            this.put("prompts", (n) -> { currentObject.setPrompts(n.getCollectionOfObjectValues(Prompt::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
+        deserializerMap.put("loop", (n) -> { currentObject.setLoop(n.getBooleanValue()); });
+        deserializerMap.put("prompts", (n) -> { currentObject.setPrompts(n.getCollectionOfObjectValues(Prompt::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the loop property value. The loop property
@@ -86,6 +87,7 @@ public class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("clientContext", this.getClientContext());
@@ -98,6 +100,7 @@ public class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +109,7 @@ public class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable
      * @param value Value to set for the clientContext property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientContext(@javax.annotation.Nullable final String value) {
         this._clientContext = value;
     }
@@ -114,6 +118,7 @@ public class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable
      * @param value Value to set for the loop property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoop(@javax.annotation.Nullable final Boolean value) {
         this._loop = value;
     }
@@ -122,6 +127,7 @@ public class PlayPromptPostRequestBody implements AdditionalDataHolder, Parsable
      * @param value Value to set for the prompts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrompts(@javax.annotation.Nullable final java.util.List<Prompt> value) {
         this._prompts = value;
     }

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that encapsulates all information required for a user's PFX certificates. */
 public class UserPFXCertificate extends Entity implements Parsable {
     /** Date/time when this PFX certificate was imported. */
     private OffsetDateTime _createdDateTime;
@@ -34,9 +35,10 @@ public class UserPFXCertificate extends Entity implements Parsable {
     /** User Principal Name of the PFX certificate. */
     private String _userPrincipalName;
     /**
-     * Instantiates a new UserPFXCertificate and sets the default values.
+     * Instantiates a new userPFXCertificate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserPFXCertificate() {
         super();
         this.setOdataType("#microsoft.graph.userPFXCertificate");
@@ -44,7 +46,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserPFXCertificate
+     * @return a userPFXCertificate
      */
     @javax.annotation.Nonnull
     public static UserPFXCertificate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -90,20 +92,20 @@ public class UserPFXCertificate extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserPFXCertificate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("encryptedPfxBlob", (n) -> { currentObject.setEncryptedPfxBlob(n.getByteArrayValue()); });
-            this.put("encryptedPfxPassword", (n) -> { currentObject.setEncryptedPfxPassword(n.getStringValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("intendedPurpose", (n) -> { currentObject.setIntendedPurpose(n.getEnumValue(UserPfxIntendedPurpose.class)); });
-            this.put("keyName", (n) -> { currentObject.setKeyName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("paddingScheme", (n) -> { currentObject.setPaddingScheme(n.getEnumValue(UserPfxPaddingScheme.class)); });
-            this.put("providerName", (n) -> { currentObject.setProviderName(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("thumbprint", (n) -> { currentObject.setThumbprint(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("encryptedPfxBlob", (n) -> { currentObject.setEncryptedPfxBlob(n.getByteArrayValue()); });
+        deserializerMap.put("encryptedPfxPassword", (n) -> { currentObject.setEncryptedPfxPassword(n.getStringValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("intendedPurpose", (n) -> { currentObject.setIntendedPurpose(n.getEnumValue(UserPfxIntendedPurpose.class)); });
+        deserializerMap.put("keyName", (n) -> { currentObject.setKeyName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("paddingScheme", (n) -> { currentObject.setPaddingScheme(n.getEnumValue(UserPfxPaddingScheme.class)); });
+        deserializerMap.put("providerName", (n) -> { currentObject.setProviderName(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("thumbprint", (n) -> { currentObject.setThumbprint(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the intendedPurpose property value. Supported values for the intended purpose of a user PFX certificate.
@@ -174,6 +176,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -195,6 +198,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -203,6 +207,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      * @param value Value to set for the encryptedPfxBlob property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptedPfxBlob(@javax.annotation.Nullable final byte[] value) {
         this._encryptedPfxBlob = value;
     }
@@ -211,6 +216,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      * @param value Value to set for the encryptedPfxPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptedPfxPassword(@javax.annotation.Nullable final String value) {
         this._encryptedPfxPassword = value;
     }
@@ -219,6 +225,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -227,6 +234,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      * @param value Value to set for the intendedPurpose property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntendedPurpose(@javax.annotation.Nullable final UserPfxIntendedPurpose value) {
         this._intendedPurpose = value;
     }
@@ -235,6 +243,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      * @param value Value to set for the keyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyName(@javax.annotation.Nullable final String value) {
         this._keyName = value;
     }
@@ -243,6 +252,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -251,6 +261,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      * @param value Value to set for the paddingScheme property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPaddingScheme(@javax.annotation.Nullable final UserPfxPaddingScheme value) {
         this._paddingScheme = value;
     }
@@ -259,6 +270,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      * @param value Value to set for the providerName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProviderName(@javax.annotation.Nullable final String value) {
         this._providerName = value;
     }
@@ -267,6 +279,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -275,6 +288,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      * @param value Value to set for the thumbprint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbprint(@javax.annotation.Nullable final String value) {
         this._thumbprint = value;
     }
@@ -283,6 +297,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

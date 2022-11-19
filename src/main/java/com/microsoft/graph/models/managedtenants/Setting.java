@@ -27,6 +27,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * Instantiates a new setting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Setting() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.managedTenants.setting");
@@ -64,14 +65,14 @@ public class Setting implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Setting currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("jsonValue", (n) -> { currentObject.setJsonValue(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("overwriteAllowed", (n) -> { currentObject.setOverwriteAllowed(n.getBooleanValue()); });
-            this.put("settingId", (n) -> { currentObject.setSettingId(n.getStringValue()); });
-            this.put("valueType", (n) -> { currentObject.setValueType(n.getEnumValue(ManagementParameterValueType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("jsonValue", (n) -> { currentObject.setJsonValue(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("overwriteAllowed", (n) -> { currentObject.setOverwriteAllowed(n.getBooleanValue()); });
+        deserializerMap.put("settingId", (n) -> { currentObject.setSettingId(n.getStringValue()); });
+        deserializerMap.put("valueType", (n) -> { currentObject.setValueType(n.getEnumValue(ManagementParameterValueType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the jsonValue property value. The value for the setting serialized as string of JSON. Required. Read-only.
@@ -118,6 +119,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -133,6 +135,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +144,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -149,6 +153,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the jsonValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJsonValue(@javax.annotation.Nullable final String value) {
         this._jsonValue = value;
     }
@@ -157,6 +162,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -165,6 +171,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the overwriteAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOverwriteAllowed(@javax.annotation.Nullable final Boolean value) {
         this._overwriteAllowed = value;
     }
@@ -173,6 +180,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the settingId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingId(@javax.annotation.Nullable final String value) {
         this._settingId = value;
     }
@@ -181,6 +189,7 @@ public class Setting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the valueType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValueType(@javax.annotation.Nullable final ManagementParameterValueType value) {
         this._valueType = value;
     }

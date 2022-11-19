@@ -32,6 +32,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      * Instantiates a new cloudPcOnPremisesConnectionHealthCheck and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcOnPremisesConnectionHealthCheck() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.cloudPcOnPremisesConnectionHealthCheck");
@@ -93,16 +94,16 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcOnPremisesConnectionHealthCheck currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("errorType", (n) -> { currentObject.setErrorType(n.getEnumValue(CloudPcOnPremisesConnectionHealthCheckErrorType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recommendedAction", (n) -> { currentObject.setRecommendedAction(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CloudPcOnPremisesConnectionStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("errorType", (n) -> { currentObject.setErrorType(n.getEnumValue(CloudPcOnPremisesConnectionHealthCheckErrorType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recommendedAction", (n) -> { currentObject.setRecommendedAction(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CloudPcOnPremisesConnectionStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -141,6 +142,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("additionalDetails", this.getAdditionalDetails());
@@ -158,6 +160,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -166,6 +169,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      * @param value Value to set for the additionalDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalDetails(@javax.annotation.Nullable final String value) {
         this._additionalDetails = value;
     }
@@ -174,6 +178,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -182,6 +187,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -190,6 +196,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      * @param value Value to set for the errorType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorType(@javax.annotation.Nullable final CloudPcOnPremisesConnectionHealthCheckErrorType value) {
         this._errorType = value;
     }
@@ -198,6 +205,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -206,6 +214,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      * @param value Value to set for the recommendedAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendedAction(@javax.annotation.Nullable final String value) {
         this._recommendedAction = value;
     }
@@ -214,6 +223,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -222,6 +232,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final CloudPcOnPremisesConnectionStatus value) {
         this._status = value;
     }

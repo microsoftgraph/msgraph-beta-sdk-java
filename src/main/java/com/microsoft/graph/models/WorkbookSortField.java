@@ -29,6 +29,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      * Instantiates a new workbookSortField and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookSortField() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.workbookSortField");
@@ -82,15 +83,15 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkbookSortField currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("ascending", (n) -> { currentObject.setAscending(n.getBooleanValue()); });
-            this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
-            this.put("dataOption", (n) -> { currentObject.setDataOption(n.getStringValue()); });
-            this.put("icon", (n) -> { currentObject.setIcon(n.getObjectValue(WorkbookIcon::createFromDiscriminatorValue)); });
-            this.put("key", (n) -> { currentObject.setKey(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sortOn", (n) -> { currentObject.setSortOn(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("ascending", (n) -> { currentObject.setAscending(n.getBooleanValue()); });
+        deserializerMap.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
+        deserializerMap.put("dataOption", (n) -> { currentObject.setDataOption(n.getStringValue()); });
+        deserializerMap.put("icon", (n) -> { currentObject.setIcon(n.getObjectValue(WorkbookIcon::createFromDiscriminatorValue)); });
+        deserializerMap.put("key", (n) -> { currentObject.setKey(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sortOn", (n) -> { currentObject.setSortOn(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the icon property value. Represents the icon that is the target of the condition if the sorting is on the cell's icon.
@@ -129,6 +130,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("ascending", this.getAscending());
@@ -145,6 +147,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ascending property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAscending(@javax.annotation.Nullable final Boolean value) {
         this._ascending = value;
     }
@@ -161,6 +165,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the color property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColor(@javax.annotation.Nullable final String value) {
         this._color = value;
     }
@@ -169,6 +174,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the dataOption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataOption(@javax.annotation.Nullable final String value) {
         this._dataOption = value;
     }
@@ -177,6 +183,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the icon property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIcon(@javax.annotation.Nullable final WorkbookIcon value) {
         this._icon = value;
     }
@@ -185,6 +192,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the key property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKey(@javax.annotation.Nullable final Integer value) {
         this._key = value;
     }
@@ -193,6 +201,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -201,6 +210,7 @@ public class WorkbookSortField implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sortOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSortOn(@javax.annotation.Nullable final String value) {
         this._sortOn = value;
     }

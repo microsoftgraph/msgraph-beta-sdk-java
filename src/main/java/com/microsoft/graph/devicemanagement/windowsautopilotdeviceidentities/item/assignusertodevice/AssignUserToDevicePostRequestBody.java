@@ -20,6 +20,7 @@ public class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, 
      * Instantiates a new assignUserToDevicePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignUserToDevicePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -56,10 +57,10 @@ public class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignUserToDevicePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("addressableUserName", (n) -> { currentObject.setAddressableUserName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("addressableUserName", (n) -> { currentObject.setAddressableUserName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the userPrincipalName property value. The userPrincipalName property
@@ -74,6 +75,7 @@ public class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("addressableUserName", this.getAddressableUserName());
@@ -85,6 +87,7 @@ public class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +96,7 @@ public class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the addressableUserName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddressableUserName(@javax.annotation.Nullable final String value) {
         this._addressableUserName = value;
     }
@@ -101,6 +105,7 @@ public class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

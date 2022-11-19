@@ -16,6 +16,7 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
      * Instantiates a new DeviceManagementSettingIntegerConstraint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingIntegerConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingIntegerConstraint");
@@ -37,10 +38,10 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingIntegerConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("maximumValue", (n) -> { currentObject.setMaximumValue(n.getIntegerValue()); });
-            this.put("minimumValue", (n) -> { currentObject.setMinimumValue(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("maximumValue", (n) -> { currentObject.setMaximumValue(n.getIntegerValue()); });
+        deserializerMap.put("minimumValue", (n) -> { currentObject.setMinimumValue(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the maximumValue property value. The maximum permitted value
@@ -63,6 +64,7 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
      * @param value Value to set for the maximumValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumValue(@javax.annotation.Nullable final Integer value) {
         this._maximumValue = value;
     }
@@ -82,6 +85,7 @@ public class DeviceManagementSettingIntegerConstraint extends DeviceManagementCo
      * @param value Value to set for the minimumValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumValue(@javax.annotation.Nullable final Integer value) {
         this._minimumValue = value;
     }

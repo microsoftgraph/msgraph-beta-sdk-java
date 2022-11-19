@@ -8,38 +8,41 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The minimum operating system required for a MacOS app. */
+/** The minimum operating system required for a macOS app. */
 public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** The OdataType property */
     private String _odataType;
-    /** Mac OS 10.10 or later. */
+    /** When TRUE, indicates OS X 10.10 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE. */
     private Boolean _v10_10;
-    /** Mac OS 10.11 or later. */
+    /** When TRUE, indicates OS X 10.11 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE. */
     private Boolean _v10_11;
-    /** Mac OS 10.12 or later. */
+    /** When TRUE, indicates macOS 10.12 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE. */
     private Boolean _v10_12;
-    /** Mac OS 10.13 or later. */
+    /** When TRUE, indicates macOS 10.13 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE. */
     private Boolean _v10_13;
-    /** Mac OS 10.14 or later. */
+    /** When TRUE, indicates macOS 10.14 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE. */
     private Boolean _v10_14;
-    /** Mac OS 10.15 or later. */
+    /** When TRUE, indicates macOS 10.15 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE. */
     private Boolean _v10_15;
-    /** Mac OS 10.7 or later. */
+    /** When TRUE, indicates Mac OS X 10.7 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE. */
     private Boolean _v10_7;
-    /** Mac OS 10.8 or later. */
+    /** When TRUE, indicates OS X 10.8 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE. */
     private Boolean _v10_8;
-    /** Mac OS 10.9 or later. */
+    /** When TRUE, indicates OS X 10.9 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE. */
     private Boolean _v10_9;
-    /** Mac OS 11.0 or later. */
+    /** When TRUE, indicates macOS 11.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE. */
     private Boolean _v11_0;
-    /** Mac OS 12.0 or later. */
+    /** When TRUE, indicates macOS 12.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE. */
     private Boolean _v12_0;
+    /** When TRUE, indicates macOS 13.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE. */
+    private Boolean _v13_0;
     /**
      * Instantiates a new macOSMinimumOperatingSystem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.macOSMinimumOperatingSystem");
@@ -69,20 +72,21 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSMinimumOperatingSystem currentObject = this;
-        return new HashMap<>(12) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("v10_10", (n) -> { currentObject.setV10_10(n.getBooleanValue()); });
-            this.put("v10_11", (n) -> { currentObject.setV10_11(n.getBooleanValue()); });
-            this.put("v10_12", (n) -> { currentObject.setV10_12(n.getBooleanValue()); });
-            this.put("v10_13", (n) -> { currentObject.setV10_13(n.getBooleanValue()); });
-            this.put("v10_14", (n) -> { currentObject.setV10_14(n.getBooleanValue()); });
-            this.put("v10_15", (n) -> { currentObject.setV10_15(n.getBooleanValue()); });
-            this.put("v10_7", (n) -> { currentObject.setV10_7(n.getBooleanValue()); });
-            this.put("v10_8", (n) -> { currentObject.setV10_8(n.getBooleanValue()); });
-            this.put("v10_9", (n) -> { currentObject.setV10_9(n.getBooleanValue()); });
-            this.put("v11_0", (n) -> { currentObject.setV11_0(n.getBooleanValue()); });
-            this.put("v12_0", (n) -> { currentObject.setV12_0(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(13);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("v10_10", (n) -> { currentObject.setV10_10(n.getBooleanValue()); });
+        deserializerMap.put("v10_11", (n) -> { currentObject.setV10_11(n.getBooleanValue()); });
+        deserializerMap.put("v10_12", (n) -> { currentObject.setV10_12(n.getBooleanValue()); });
+        deserializerMap.put("v10_13", (n) -> { currentObject.setV10_13(n.getBooleanValue()); });
+        deserializerMap.put("v10_14", (n) -> { currentObject.setV10_14(n.getBooleanValue()); });
+        deserializerMap.put("v10_15", (n) -> { currentObject.setV10_15(n.getBooleanValue()); });
+        deserializerMap.put("v10_7", (n) -> { currentObject.setV10_7(n.getBooleanValue()); });
+        deserializerMap.put("v10_8", (n) -> { currentObject.setV10_8(n.getBooleanValue()); });
+        deserializerMap.put("v10_9", (n) -> { currentObject.setV10_9(n.getBooleanValue()); });
+        deserializerMap.put("v11_0", (n) -> { currentObject.setV11_0(n.getBooleanValue()); });
+        deserializerMap.put("v12_0", (n) -> { currentObject.setV12_0(n.getBooleanValue()); });
+        deserializerMap.put("v13_0", (n) -> { currentObject.setV13_0(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -93,7 +97,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
         return this._odataType;
     }
     /**
-     * Gets the v10_10 property value. Mac OS 10.10 or later.
+     * Gets the v10_10 property value. When TRUE, indicates OS X 10.10 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -101,7 +105,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
         return this._v10_10;
     }
     /**
-     * Gets the v10_11 property value. Mac OS 10.11 or later.
+     * Gets the v10_11 property value. When TRUE, indicates OS X 10.11 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -109,7 +113,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
         return this._v10_11;
     }
     /**
-     * Gets the v10_12 property value. Mac OS 10.12 or later.
+     * Gets the v10_12 property value. When TRUE, indicates macOS 10.12 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -117,7 +121,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
         return this._v10_12;
     }
     /**
-     * Gets the v10_13 property value. Mac OS 10.13 or later.
+     * Gets the v10_13 property value. When TRUE, indicates macOS 10.13 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -125,7 +129,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
         return this._v10_13;
     }
     /**
-     * Gets the v10_14 property value. Mac OS 10.14 or later.
+     * Gets the v10_14 property value. When TRUE, indicates macOS 10.14 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -133,7 +137,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
         return this._v10_14;
     }
     /**
-     * Gets the v10_15 property value. Mac OS 10.15 or later.
+     * Gets the v10_15 property value. When TRUE, indicates macOS 10.15 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -141,7 +145,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
         return this._v10_15;
     }
     /**
-     * Gets the v10_7 property value. Mac OS 10.7 or later.
+     * Gets the v10_7 property value. When TRUE, indicates Mac OS X 10.7 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -149,7 +153,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
         return this._v10_7;
     }
     /**
-     * Gets the v10_8 property value. Mac OS 10.8 or later.
+     * Gets the v10_8 property value. When TRUE, indicates OS X 10.8 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -157,7 +161,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
         return this._v10_8;
     }
     /**
-     * Gets the v10_9 property value. Mac OS 10.9 or later.
+     * Gets the v10_9 property value. When TRUE, indicates OS X 10.9 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -165,7 +169,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
         return this._v10_9;
     }
     /**
-     * Gets the v11_0 property value. Mac OS 11.0 or later.
+     * Gets the v11_0 property value. When TRUE, indicates macOS 11.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -173,7 +177,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
         return this._v11_0;
     }
     /**
-     * Gets the v12_0 property value. Mac OS 12.0 or later.
+     * Gets the v12_0 property value. When TRUE, indicates macOS 12.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -181,10 +185,19 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
         return this._v12_0;
     }
     /**
+     * Gets the v13_0 property value. When TRUE, indicates macOS 13.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getV13_0() {
+        return this._v13_0;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -199,6 +212,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
         writer.writeBooleanValue("v10_9", this.getV10_9());
         writer.writeBooleanValue("v11_0", this.getV11_0());
         writer.writeBooleanValue("v12_0", this.getV12_0());
+        writer.writeBooleanValue("v13_0", this.getV13_0());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -206,6 +220,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -214,95 +229,116 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Parsab
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
     /**
-     * Sets the v10_10 property value. Mac OS 10.10 or later.
+     * Sets the v10_10 property value. When TRUE, indicates OS X 10.10 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @param value Value to set for the v10_10 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_10(@javax.annotation.Nullable final Boolean value) {
         this._v10_10 = value;
     }
     /**
-     * Sets the v10_11 property value. Mac OS 10.11 or later.
+     * Sets the v10_11 property value. When TRUE, indicates OS X 10.11 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @param value Value to set for the v10_11 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_11(@javax.annotation.Nullable final Boolean value) {
         this._v10_11 = value;
     }
     /**
-     * Sets the v10_12 property value. Mac OS 10.12 or later.
+     * Sets the v10_12 property value. When TRUE, indicates macOS 10.12 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @param value Value to set for the v10_12 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_12(@javax.annotation.Nullable final Boolean value) {
         this._v10_12 = value;
     }
     /**
-     * Sets the v10_13 property value. Mac OS 10.13 or later.
+     * Sets the v10_13 property value. When TRUE, indicates macOS 10.13 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @param value Value to set for the v10_13 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_13(@javax.annotation.Nullable final Boolean value) {
         this._v10_13 = value;
     }
     /**
-     * Sets the v10_14 property value. Mac OS 10.14 or later.
+     * Sets the v10_14 property value. When TRUE, indicates macOS 10.14 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @param value Value to set for the v10_14 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_14(@javax.annotation.Nullable final Boolean value) {
         this._v10_14 = value;
     }
     /**
-     * Sets the v10_15 property value. Mac OS 10.15 or later.
+     * Sets the v10_15 property value. When TRUE, indicates macOS 10.15 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @param value Value to set for the v10_15 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_15(@javax.annotation.Nullable final Boolean value) {
         this._v10_15 = value;
     }
     /**
-     * Sets the v10_7 property value. Mac OS 10.7 or later.
+     * Sets the v10_7 property value. When TRUE, indicates Mac OS X 10.7 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @param value Value to set for the v10_7 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_7(@javax.annotation.Nullable final Boolean value) {
         this._v10_7 = value;
     }
     /**
-     * Sets the v10_8 property value. Mac OS 10.8 or later.
+     * Sets the v10_8 property value. When TRUE, indicates OS X 10.8 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @param value Value to set for the v10_8 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_8(@javax.annotation.Nullable final Boolean value) {
         this._v10_8 = value;
     }
     /**
-     * Sets the v10_9 property value. Mac OS 10.9 or later.
+     * Sets the v10_9 property value. When TRUE, indicates OS X 10.9 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @param value Value to set for the v10_9 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_9(@javax.annotation.Nullable final Boolean value) {
         this._v10_9 = value;
     }
     /**
-     * Sets the v11_0 property value. Mac OS 11.0 or later.
+     * Sets the v11_0 property value. When TRUE, indicates macOS 11.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @param value Value to set for the v11_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV11_0(@javax.annotation.Nullable final Boolean value) {
         this._v11_0 = value;
     }
     /**
-     * Sets the v12_0 property value. Mac OS 12.0 or later.
+     * Sets the v12_0 property value. When TRUE, indicates macOS 12.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
      * @param value Value to set for the v12_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV12_0(@javax.annotation.Nullable final Boolean value) {
         this._v12_0 = value;
+    }
+    /**
+     * Sets the v13_0 property value. When TRUE, indicates macOS 13.0 or later is required to install the app. When FALSE, indicates some other OS version is the minimum OS to install the app. Default value is FALSE.
+     * @param value Value to set for the v13_0 property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setV13_0(@javax.annotation.Nullable final Boolean value) {
+        this._v13_0 = value;
     }
 }

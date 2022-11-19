@@ -57,6 +57,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * Instantiates a new onPremisesPublishing and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnPremisesPublishing() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.onPremisesPublishing");
@@ -126,29 +127,29 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnPremisesPublishing currentObject = this;
-        return new HashMap<>(21) {{
-            this.put("alternateUrl", (n) -> { currentObject.setAlternateUrl(n.getStringValue()); });
-            this.put("applicationServerTimeout", (n) -> { currentObject.setApplicationServerTimeout(n.getStringValue()); });
-            this.put("applicationType", (n) -> { currentObject.setApplicationType(n.getStringValue()); });
-            this.put("externalAuthenticationType", (n) -> { currentObject.setExternalAuthenticationType(n.getEnumValue(ExternalAuthenticationType.class)); });
-            this.put("externalUrl", (n) -> { currentObject.setExternalUrl(n.getStringValue()); });
-            this.put("internalUrl", (n) -> { currentObject.setInternalUrl(n.getStringValue()); });
-            this.put("isBackendCertificateValidationEnabled", (n) -> { currentObject.setIsBackendCertificateValidationEnabled(n.getBooleanValue()); });
-            this.put("isHttpOnlyCookieEnabled", (n) -> { currentObject.setIsHttpOnlyCookieEnabled(n.getBooleanValue()); });
-            this.put("isOnPremPublishingEnabled", (n) -> { currentObject.setIsOnPremPublishingEnabled(n.getBooleanValue()); });
-            this.put("isPersistentCookieEnabled", (n) -> { currentObject.setIsPersistentCookieEnabled(n.getBooleanValue()); });
-            this.put("isSecureCookieEnabled", (n) -> { currentObject.setIsSecureCookieEnabled(n.getBooleanValue()); });
-            this.put("isStateSessionEnabled", (n) -> { currentObject.setIsStateSessionEnabled(n.getBooleanValue()); });
-            this.put("isTranslateHostHeaderEnabled", (n) -> { currentObject.setIsTranslateHostHeaderEnabled(n.getBooleanValue()); });
-            this.put("isTranslateLinksInBodyEnabled", (n) -> { currentObject.setIsTranslateLinksInBodyEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("onPremisesApplicationSegments", (n) -> { currentObject.setOnPremisesApplicationSegments(n.getCollectionOfObjectValues(OnPremisesApplicationSegment::createFromDiscriminatorValue)); });
-            this.put("singleSignOnSettings", (n) -> { currentObject.setSingleSignOnSettings(n.getObjectValue(OnPremisesPublishingSingleSignOn::createFromDiscriminatorValue)); });
-            this.put("useAlternateUrlForTranslationAndRedirect", (n) -> { currentObject.setUseAlternateUrlForTranslationAndRedirect(n.getBooleanValue()); });
-            this.put("verifiedCustomDomainCertificatesMetadata", (n) -> { currentObject.setVerifiedCustomDomainCertificatesMetadata(n.getObjectValue(VerifiedCustomDomainCertificatesMetadata::createFromDiscriminatorValue)); });
-            this.put("verifiedCustomDomainKeyCredential", (n) -> { currentObject.setVerifiedCustomDomainKeyCredential(n.getObjectValue(KeyCredential::createFromDiscriminatorValue)); });
-            this.put("verifiedCustomDomainPasswordCredential", (n) -> { currentObject.setVerifiedCustomDomainPasswordCredential(n.getObjectValue(PasswordCredential::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(21);
+        deserializerMap.put("alternateUrl", (n) -> { currentObject.setAlternateUrl(n.getStringValue()); });
+        deserializerMap.put("applicationServerTimeout", (n) -> { currentObject.setApplicationServerTimeout(n.getStringValue()); });
+        deserializerMap.put("applicationType", (n) -> { currentObject.setApplicationType(n.getStringValue()); });
+        deserializerMap.put("externalAuthenticationType", (n) -> { currentObject.setExternalAuthenticationType(n.getEnumValue(ExternalAuthenticationType.class)); });
+        deserializerMap.put("externalUrl", (n) -> { currentObject.setExternalUrl(n.getStringValue()); });
+        deserializerMap.put("internalUrl", (n) -> { currentObject.setInternalUrl(n.getStringValue()); });
+        deserializerMap.put("isBackendCertificateValidationEnabled", (n) -> { currentObject.setIsBackendCertificateValidationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isHttpOnlyCookieEnabled", (n) -> { currentObject.setIsHttpOnlyCookieEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isOnPremPublishingEnabled", (n) -> { currentObject.setIsOnPremPublishingEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isPersistentCookieEnabled", (n) -> { currentObject.setIsPersistentCookieEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isSecureCookieEnabled", (n) -> { currentObject.setIsSecureCookieEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isStateSessionEnabled", (n) -> { currentObject.setIsStateSessionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isTranslateHostHeaderEnabled", (n) -> { currentObject.setIsTranslateHostHeaderEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isTranslateLinksInBodyEnabled", (n) -> { currentObject.setIsTranslateLinksInBodyEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("onPremisesApplicationSegments", (n) -> { currentObject.setOnPremisesApplicationSegments(n.getCollectionOfObjectValues(OnPremisesApplicationSegment::createFromDiscriminatorValue)); });
+        deserializerMap.put("singleSignOnSettings", (n) -> { currentObject.setSingleSignOnSettings(n.getObjectValue(OnPremisesPublishingSingleSignOn::createFromDiscriminatorValue)); });
+        deserializerMap.put("useAlternateUrlForTranslationAndRedirect", (n) -> { currentObject.setUseAlternateUrlForTranslationAndRedirect(n.getBooleanValue()); });
+        deserializerMap.put("verifiedCustomDomainCertificatesMetadata", (n) -> { currentObject.setVerifiedCustomDomainCertificatesMetadata(n.getObjectValue(VerifiedCustomDomainCertificatesMetadata::createFromDiscriminatorValue)); });
+        deserializerMap.put("verifiedCustomDomainKeyCredential", (n) -> { currentObject.setVerifiedCustomDomainKeyCredential(n.getObjectValue(KeyCredential::createFromDiscriminatorValue)); });
+        deserializerMap.put("verifiedCustomDomainPasswordCredential", (n) -> { currentObject.setVerifiedCustomDomainPasswordCredential(n.getObjectValue(PasswordCredential::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the internalUrl property value. The internal url of the application. For example, https://intranet/.
@@ -283,6 +284,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("alternateUrl", this.getAlternateUrl());
@@ -313,6 +315,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -321,6 +324,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the alternateUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlternateUrl(@javax.annotation.Nullable final String value) {
         this._alternateUrl = value;
     }
@@ -329,6 +333,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the applicationServerTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationServerTimeout(@javax.annotation.Nullable final String value) {
         this._applicationServerTimeout = value;
     }
@@ -337,6 +342,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the applicationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationType(@javax.annotation.Nullable final String value) {
         this._applicationType = value;
     }
@@ -345,6 +351,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the externalAuthenticationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalAuthenticationType(@javax.annotation.Nullable final ExternalAuthenticationType value) {
         this._externalAuthenticationType = value;
     }
@@ -353,6 +360,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the externalUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalUrl(@javax.annotation.Nullable final String value) {
         this._externalUrl = value;
     }
@@ -361,6 +369,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the internalUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInternalUrl(@javax.annotation.Nullable final String value) {
         this._internalUrl = value;
     }
@@ -369,6 +378,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isBackendCertificateValidationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsBackendCertificateValidationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isBackendCertificateValidationEnabled = value;
     }
@@ -377,6 +387,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isHttpOnlyCookieEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsHttpOnlyCookieEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isHttpOnlyCookieEnabled = value;
     }
@@ -385,6 +396,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isOnPremPublishingEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsOnPremPublishingEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isOnPremPublishingEnabled = value;
     }
@@ -393,6 +405,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isPersistentCookieEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPersistentCookieEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isPersistentCookieEnabled = value;
     }
@@ -401,6 +414,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isSecureCookieEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSecureCookieEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isSecureCookieEnabled = value;
     }
@@ -409,6 +423,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isStateSessionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsStateSessionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isStateSessionEnabled = value;
     }
@@ -417,6 +432,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isTranslateHostHeaderEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsTranslateHostHeaderEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isTranslateHostHeaderEnabled = value;
     }
@@ -425,6 +441,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isTranslateLinksInBodyEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsTranslateLinksInBodyEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isTranslateLinksInBodyEnabled = value;
     }
@@ -433,6 +450,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -441,6 +459,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the onPremisesApplicationSegments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesApplicationSegments(@javax.annotation.Nullable final java.util.List<OnPremisesApplicationSegment> value) {
         this._onPremisesApplicationSegments = value;
     }
@@ -449,6 +468,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the singleSignOnSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleSignOnSettings(@javax.annotation.Nullable final OnPremisesPublishingSingleSignOn value) {
         this._singleSignOnSettings = value;
     }
@@ -457,6 +477,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the useAlternateUrlForTranslationAndRedirect property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseAlternateUrlForTranslationAndRedirect(@javax.annotation.Nullable final Boolean value) {
         this._useAlternateUrlForTranslationAndRedirect = value;
     }
@@ -465,6 +486,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the verifiedCustomDomainCertificatesMetadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVerifiedCustomDomainCertificatesMetadata(@javax.annotation.Nullable final VerifiedCustomDomainCertificatesMetadata value) {
         this._verifiedCustomDomainCertificatesMetadata = value;
     }
@@ -473,6 +495,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the verifiedCustomDomainKeyCredential property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVerifiedCustomDomainKeyCredential(@javax.annotation.Nullable final KeyCredential value) {
         this._verifiedCustomDomainKeyCredential = value;
     }
@@ -481,6 +504,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the verifiedCustomDomainPasswordCredential property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVerifiedCustomDomainPasswordCredential(@javax.annotation.Nullable final PasswordCredential value) {
         this._verifiedCustomDomainPasswordCredential = value;
     }

@@ -19,6 +19,7 @@ public class ValidateFilterPostRequestBody implements AdditionalDataHolder, Pars
      * Instantiates a new validateFilterPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ValidateFilterPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -55,15 +56,16 @@ public class ValidateFilterPostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ValidateFilterPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("deviceAndAppManagementAssignmentFilter", (n) -> { currentObject.setDeviceAndAppManagementAssignmentFilter(n.getObjectValue(DeviceAndAppManagementAssignmentFilter::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("deviceAndAppManagementAssignmentFilter", (n) -> { currentObject.setDeviceAndAppManagementAssignmentFilter(n.getObjectValue(DeviceAndAppManagementAssignmentFilter::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("deviceAndAppManagementAssignmentFilter", this.getDeviceAndAppManagementAssignmentFilter());
@@ -74,6 +76,7 @@ public class ValidateFilterPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +85,7 @@ public class ValidateFilterPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the deviceAndAppManagementAssignmentFilter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceAndAppManagementAssignmentFilter(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentFilter value) {
         this._deviceAndAppManagementAssignmentFilter = value;
     }

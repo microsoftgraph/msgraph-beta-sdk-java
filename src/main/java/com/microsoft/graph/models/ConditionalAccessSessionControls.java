@@ -29,6 +29,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * Instantiates a new conditionalAccessSessionControls and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConditionalAccessSessionControls() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.conditionalAccessSessionControls");
@@ -90,15 +91,15 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessSessionControls currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("applicationEnforcedRestrictions", (n) -> { currentObject.setApplicationEnforcedRestrictions(n.getObjectValue(ApplicationEnforcedRestrictionsSessionControl::createFromDiscriminatorValue)); });
-            this.put("cloudAppSecurity", (n) -> { currentObject.setCloudAppSecurity(n.getObjectValue(CloudAppSecuritySessionControl::createFromDiscriminatorValue)); });
-            this.put("continuousAccessEvaluation", (n) -> { currentObject.setContinuousAccessEvaluation(n.getObjectValue(ContinuousAccessEvaluationSessionControl::createFromDiscriminatorValue)); });
-            this.put("disableResilienceDefaults", (n) -> { currentObject.setDisableResilienceDefaults(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("persistentBrowser", (n) -> { currentObject.setPersistentBrowser(n.getObjectValue(PersistentBrowserSessionControl::createFromDiscriminatorValue)); });
-            this.put("signInFrequency", (n) -> { currentObject.setSignInFrequency(n.getObjectValue(SignInFrequencySessionControl::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("applicationEnforcedRestrictions", (n) -> { currentObject.setApplicationEnforcedRestrictions(n.getObjectValue(ApplicationEnforcedRestrictionsSessionControl::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudAppSecurity", (n) -> { currentObject.setCloudAppSecurity(n.getObjectValue(CloudAppSecuritySessionControl::createFromDiscriminatorValue)); });
+        deserializerMap.put("continuousAccessEvaluation", (n) -> { currentObject.setContinuousAccessEvaluation(n.getObjectValue(ContinuousAccessEvaluationSessionControl::createFromDiscriminatorValue)); });
+        deserializerMap.put("disableResilienceDefaults", (n) -> { currentObject.setDisableResilienceDefaults(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("persistentBrowser", (n) -> { currentObject.setPersistentBrowser(n.getObjectValue(PersistentBrowserSessionControl::createFromDiscriminatorValue)); });
+        deserializerMap.put("signInFrequency", (n) -> { currentObject.setSignInFrequency(n.getObjectValue(SignInFrequencySessionControl::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -129,6 +130,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("applicationEnforcedRestrictions", this.getApplicationEnforcedRestrictions());
@@ -145,6 +147,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the applicationEnforcedRestrictions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationEnforcedRestrictions(@javax.annotation.Nullable final ApplicationEnforcedRestrictionsSessionControl value) {
         this._applicationEnforcedRestrictions = value;
     }
@@ -161,6 +165,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the cloudAppSecurity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudAppSecurity(@javax.annotation.Nullable final CloudAppSecuritySessionControl value) {
         this._cloudAppSecurity = value;
     }
@@ -169,6 +174,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the continuousAccessEvaluation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContinuousAccessEvaluation(@javax.annotation.Nullable final ContinuousAccessEvaluationSessionControl value) {
         this._continuousAccessEvaluation = value;
     }
@@ -177,6 +183,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the disableResilienceDefaults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableResilienceDefaults(@javax.annotation.Nullable final Boolean value) {
         this._disableResilienceDefaults = value;
     }
@@ -185,6 +192,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -193,6 +201,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the persistentBrowser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersistentBrowser(@javax.annotation.Nullable final PersistentBrowserSessionControl value) {
         this._persistentBrowser = value;
     }
@@ -201,6 +210,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the signInFrequency property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInFrequency(@javax.annotation.Nullable final SignInFrequencySessionControl value) {
         this._signInFrequency = value;
     }

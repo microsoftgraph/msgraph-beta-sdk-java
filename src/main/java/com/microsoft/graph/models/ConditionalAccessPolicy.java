@@ -30,6 +30,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * Instantiates a new conditionalAccessPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConditionalAccessPolicy() {
         super();
         this.setOdataType("#microsoft.graph.conditionalAccessPolicy");
@@ -83,16 +84,16 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConditionalAccessPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("conditions", (n) -> { currentObject.setConditions(n.getObjectValue(ConditionalAccessConditionSet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("grantControls", (n) -> { currentObject.setGrantControls(n.getObjectValue(ConditionalAccessGrantControls::createFromDiscriminatorValue)); });
-            this.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("sessionControls", (n) -> { currentObject.setSessionControls(n.getObjectValue(ConditionalAccessSessionControls::createFromDiscriminatorValue)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ConditionalAccessPolicyState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("conditions", (n) -> { currentObject.setConditions(n.getObjectValue(ConditionalAccessConditionSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("grantControls", (n) -> { currentObject.setGrantControls(n.getObjectValue(ConditionalAccessGrantControls::createFromDiscriminatorValue)); });
+        deserializerMap.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("sessionControls", (n) -> { currentObject.setSessionControls(n.getObjectValue(ConditionalAccessSessionControls::createFromDiscriminatorValue)); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(ConditionalAccessPolicyState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the grantControls property value. Specifies the grant controls that must be fulfilled to pass the policy.
@@ -131,6 +132,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -148,6 +150,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the conditions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditions(@javax.annotation.Nullable final ConditionalAccessConditionSet value) {
         this._conditions = value;
     }
@@ -156,6 +159,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -164,6 +168,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -172,6 +177,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -180,6 +186,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the grantControls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGrantControls(@javax.annotation.Nullable final ConditionalAccessGrantControls value) {
         this._grantControls = value;
     }
@@ -188,6 +195,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._modifiedDateTime = value;
     }
@@ -196,6 +204,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the sessionControls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessionControls(@javax.annotation.Nullable final ConditionalAccessSessionControls value) {
         this._sessionControls = value;
     }
@@ -204,6 +213,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ConditionalAccessPolicyState value) {
         this._state = value;
     }

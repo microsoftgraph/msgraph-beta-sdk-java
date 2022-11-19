@@ -16,6 +16,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
      * Instantiates a new CommunicationsApplicationInstanceIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CommunicationsApplicationInstanceIdentity() {
         super();
         this.setOdataType("#microsoft.graph.communicationsApplicationInstanceIdentity");
@@ -37,10 +38,10 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CommunicationsApplicationInstanceIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
+        deserializerMap.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hidden property value. True if the participant would not like to be shown in other participants' rosters.
@@ -63,6 +64,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
      * @param value Value to set for the hidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHidden(@javax.annotation.Nullable final Boolean value) {
         this._hidden = value;
     }
@@ -82,6 +85,7 @@ public class CommunicationsApplicationInstanceIdentity extends Identity implemen
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }

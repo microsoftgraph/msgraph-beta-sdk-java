@@ -14,6 +14,7 @@ public class RotateBitLockerKeysDeviceActionResult extends DeviceActionResult im
      * Instantiates a new RotateBitLockerKeysDeviceActionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RotateBitLockerKeysDeviceActionResult() {
         super();
         this.setOdataType("#microsoft.graph.rotateBitLockerKeysDeviceActionResult");
@@ -43,15 +44,16 @@ public class RotateBitLockerKeysDeviceActionResult extends DeviceActionResult im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RotateBitLockerKeysDeviceActionResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class RotateBitLockerKeysDeviceActionResult extends DeviceActionResult im
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final Integer value) {
         this._errorCode = value;
     }

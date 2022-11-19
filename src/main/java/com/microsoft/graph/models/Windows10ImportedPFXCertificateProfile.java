@@ -16,6 +16,7 @@ public class Windows10ImportedPFXCertificateProfile extends WindowsCertificatePr
      * Instantiates a new Windows10ImportedPFXCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10ImportedPFXCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.windows10ImportedPFXCertificateProfile");
@@ -37,10 +38,10 @@ public class Windows10ImportedPFXCertificateProfile extends WindowsCertificatePr
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10ImportedPFXCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("intendedPurpose", (n) -> { currentObject.setIntendedPurpose(n.getEnumValue(IntendedPurpose.class)); });
-            this.put("managedDeviceCertificateStates", (n) -> { currentObject.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("intendedPurpose", (n) -> { currentObject.setIntendedPurpose(n.getEnumValue(IntendedPurpose.class)); });
+        deserializerMap.put("managedDeviceCertificateStates", (n) -> { currentObject.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the intendedPurpose property value. PFX Import Options.
@@ -63,6 +64,7 @@ public class Windows10ImportedPFXCertificateProfile extends WindowsCertificatePr
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class Windows10ImportedPFXCertificateProfile extends WindowsCertificatePr
      * @param value Value to set for the intendedPurpose property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntendedPurpose(@javax.annotation.Nullable final IntendedPurpose value) {
         this._intendedPurpose = value;
     }
@@ -82,6 +85,7 @@ public class Windows10ImportedPFXCertificateProfile extends WindowsCertificatePr
      * @param value Value to set for the managedDeviceCertificateStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
         this._managedDeviceCertificateStates = value;
     }

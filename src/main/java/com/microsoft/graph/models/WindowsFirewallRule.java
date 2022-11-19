@@ -50,6 +50,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * Instantiates a new windowsFirewallRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsFirewallRule() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.windowsFirewallRule");
@@ -111,25 +112,25 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsFirewallRule currentObject = this;
-        return new HashMap<>(17) {{
-            this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(StateManagementSetting.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("edgeTraversal", (n) -> { currentObject.setEdgeTraversal(n.getEnumValue(StateManagementSetting.class)); });
-            this.put("filePath", (n) -> { currentObject.setFilePath(n.getStringValue()); });
-            this.put("interfaceTypes", (n) -> { currentObject.setInterfaceTypes(n.getEnumValue(WindowsFirewallRuleInterfaceTypes.class)); });
-            this.put("localAddressRanges", (n) -> { currentObject.setLocalAddressRanges(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("localPortRanges", (n) -> { currentObject.setLocalPortRanges(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("localUserAuthorizations", (n) -> { currentObject.setLocalUserAuthorizations(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("packageFamilyName", (n) -> { currentObject.setPackageFamilyName(n.getStringValue()); });
-            this.put("profileTypes", (n) -> { currentObject.setProfileTypes(n.getEnumValue(WindowsFirewallRuleNetworkProfileTypes.class)); });
-            this.put("protocol", (n) -> { currentObject.setProtocol(n.getIntegerValue()); });
-            this.put("remoteAddressRanges", (n) -> { currentObject.setRemoteAddressRanges(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("remotePortRanges", (n) -> { currentObject.setRemotePortRanges(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("serviceName", (n) -> { currentObject.setServiceName(n.getStringValue()); });
-            this.put("trafficDirection", (n) -> { currentObject.setTrafficDirection(n.getEnumValue(WindowsFirewallRuleTrafficDirectionType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(17);
+        deserializerMap.put("action", (n) -> { currentObject.setAction(n.getEnumValue(StateManagementSetting.class)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("edgeTraversal", (n) -> { currentObject.setEdgeTraversal(n.getEnumValue(StateManagementSetting.class)); });
+        deserializerMap.put("filePath", (n) -> { currentObject.setFilePath(n.getStringValue()); });
+        deserializerMap.put("interfaceTypes", (n) -> { currentObject.setInterfaceTypes(n.getEnumValue(WindowsFirewallRuleInterfaceTypes.class)); });
+        deserializerMap.put("localAddressRanges", (n) -> { currentObject.setLocalAddressRanges(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("localPortRanges", (n) -> { currentObject.setLocalPortRanges(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("localUserAuthorizations", (n) -> { currentObject.setLocalUserAuthorizations(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("packageFamilyName", (n) -> { currentObject.setPackageFamilyName(n.getStringValue()); });
+        deserializerMap.put("profileTypes", (n) -> { currentObject.setProfileTypes(n.getEnumValue(WindowsFirewallRuleNetworkProfileTypes.class)); });
+        deserializerMap.put("protocol", (n) -> { currentObject.setProtocol(n.getIntegerValue()); });
+        deserializerMap.put("remoteAddressRanges", (n) -> { currentObject.setRemoteAddressRanges(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("remotePortRanges", (n) -> { currentObject.setRemotePortRanges(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("serviceName", (n) -> { currentObject.setServiceName(n.getStringValue()); });
+        deserializerMap.put("trafficDirection", (n) -> { currentObject.setTrafficDirection(n.getEnumValue(WindowsFirewallRuleTrafficDirectionType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the filePath property value. The full file path of an app that's affected by the firewall rule.
@@ -240,6 +241,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("action", this.getAction());
@@ -266,6 +268,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the action property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAction(@javax.annotation.Nullable final StateManagementSetting value) {
         this._action = value;
     }
@@ -274,6 +277,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -282,6 +286,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -290,6 +295,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -298,6 +304,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the edgeTraversal property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeTraversal(@javax.annotation.Nullable final StateManagementSetting value) {
         this._edgeTraversal = value;
     }
@@ -306,6 +313,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the filePath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilePath(@javax.annotation.Nullable final String value) {
         this._filePath = value;
     }
@@ -314,6 +322,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the interfaceTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInterfaceTypes(@javax.annotation.Nullable final WindowsFirewallRuleInterfaceTypes value) {
         this._interfaceTypes = value;
     }
@@ -322,6 +331,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the localAddressRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalAddressRanges(@javax.annotation.Nullable final java.util.List<String> value) {
         this._localAddressRanges = value;
     }
@@ -330,6 +340,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the localPortRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalPortRanges(@javax.annotation.Nullable final java.util.List<String> value) {
         this._localPortRanges = value;
     }
@@ -338,6 +349,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the localUserAuthorizations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalUserAuthorizations(@javax.annotation.Nullable final String value) {
         this._localUserAuthorizations = value;
     }
@@ -346,6 +358,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -354,6 +367,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the packageFamilyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackageFamilyName(@javax.annotation.Nullable final String value) {
         this._packageFamilyName = value;
     }
@@ -362,6 +376,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the profileTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProfileTypes(@javax.annotation.Nullable final WindowsFirewallRuleNetworkProfileTypes value) {
         this._profileTypes = value;
     }
@@ -370,6 +385,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the protocol property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProtocol(@javax.annotation.Nullable final Integer value) {
         this._protocol = value;
     }
@@ -378,6 +394,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the remoteAddressRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteAddressRanges(@javax.annotation.Nullable final java.util.List<String> value) {
         this._remoteAddressRanges = value;
     }
@@ -386,6 +403,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the remotePortRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemotePortRanges(@javax.annotation.Nullable final java.util.List<String> value) {
         this._remotePortRanges = value;
     }
@@ -394,6 +412,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the serviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceName(@javax.annotation.Nullable final String value) {
         this._serviceName = value;
     }
@@ -402,6 +421,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the trafficDirection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrafficDirection(@javax.annotation.Nullable final WindowsFirewallRuleTrafficDirectionType value) {
         this._trafficDirection = value;
     }

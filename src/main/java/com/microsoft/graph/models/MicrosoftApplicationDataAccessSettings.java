@@ -16,6 +16,7 @@ public class MicrosoftApplicationDataAccessSettings extends Entity implements Pa
      * Instantiates a new microsoftApplicationDataAccessSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MicrosoftApplicationDataAccessSettings() {
         super();
         this.setOdataType("#microsoft.graph.microsoftApplicationDataAccessSettings");
@@ -45,10 +46,10 @@ public class MicrosoftApplicationDataAccessSettings extends Entity implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftApplicationDataAccessSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("disabledForGroup", (n) -> { currentObject.setDisabledForGroup(n.getStringValue()); });
-            this.put("isEnabledForAllMicrosoftApplications", (n) -> { currentObject.setIsEnabledForAllMicrosoftApplications(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("disabledForGroup", (n) -> { currentObject.setDisabledForGroup(n.getStringValue()); });
+        deserializerMap.put("isEnabledForAllMicrosoftApplications", (n) -> { currentObject.setIsEnabledForAllMicrosoftApplications(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabledForAllMicrosoftApplications property value. When set to true, all users in the organization can access in a Microsoft app any Microsoft 365 data that the user has been authorized to access. The Microsoft app can be a Microsoft 365 app (for example, Excel, Outlook) or non-Microsoft 365 app (for example, Edge). The default is true.  It is possible to disable this access for a subset of users in an Azure AD security group, by specifying the group in the disabledForGroup property.  When set to false, all users can access authorized Microsoft 365 data only in a Microsoft 365 app.
@@ -63,6 +64,7 @@ public class MicrosoftApplicationDataAccessSettings extends Entity implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class MicrosoftApplicationDataAccessSettings extends Entity implements Pa
      * @param value Value to set for the disabledForGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisabledForGroup(@javax.annotation.Nullable final String value) {
         this._disabledForGroup = value;
     }
@@ -82,6 +85,7 @@ public class MicrosoftApplicationDataAccessSettings extends Entity implements Pa
      * @param value Value to set for the isEnabledForAllMicrosoftApplications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabledForAllMicrosoftApplications(@javax.annotation.Nullable final Boolean value) {
         this._isEnabledForAllMicrosoftApplications = value;
     }

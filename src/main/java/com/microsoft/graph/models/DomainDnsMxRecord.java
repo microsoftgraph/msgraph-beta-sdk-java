@@ -16,6 +16,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
      * Instantiates a new DomainDnsMxRecord and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DomainDnsMxRecord() {
         super();
         this.setOdataType("#microsoft.graph.domainDnsMxRecord");
@@ -37,10 +38,10 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DomainDnsMxRecord currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("mailExchange", (n) -> { currentObject.setMailExchange(n.getStringValue()); });
-            this.put("preference", (n) -> { currentObject.setPreference(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("mailExchange", (n) -> { currentObject.setMailExchange(n.getStringValue()); });
+        deserializerMap.put("preference", (n) -> { currentObject.setPreference(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mailExchange property value. Value used when configuring the answer/destination/value of the MX record at the DNS host.
@@ -63,6 +64,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the mailExchange property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailExchange(@javax.annotation.Nullable final String value) {
         this._mailExchange = value;
     }
@@ -82,6 +85,7 @@ public class DomainDnsMxRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the preference property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreference(@javax.annotation.Nullable final Integer value) {
         this._preference = value;
     }

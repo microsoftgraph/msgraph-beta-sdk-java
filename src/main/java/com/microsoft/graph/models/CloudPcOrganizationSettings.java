@@ -20,6 +20,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
      * Instantiates a new CloudPcOrganizationSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcOrganizationSettings() {
         super();
         this.setOdataType("#microsoft.graph.cloudPcOrganizationSettings");
@@ -49,12 +50,12 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcOrganizationSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("enableMEMAutoEnroll", (n) -> { currentObject.setEnableMEMAutoEnroll(n.getBooleanValue()); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getEnumValue(CloudPcOperatingSystem.class)); });
-            this.put("userAccountType", (n) -> { currentObject.setUserAccountType(n.getEnumValue(CloudPcUserAccountType.class)); });
-            this.put("windowsSettings", (n) -> { currentObject.setWindowsSettings(n.getObjectValue(CloudPcWindowsSettings::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("enableMEMAutoEnroll", (n) -> { currentObject.setEnableMEMAutoEnroll(n.getBooleanValue()); });
+        deserializerMap.put("osVersion", (n) -> { currentObject.setOsVersion(n.getEnumValue(CloudPcOperatingSystem.class)); });
+        deserializerMap.put("userAccountType", (n) -> { currentObject.setUserAccountType(n.getEnumValue(CloudPcUserAccountType.class)); });
+        deserializerMap.put("windowsSettings", (n) -> { currentObject.setWindowsSettings(n.getObjectValue(CloudPcWindowsSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue.
@@ -85,6 +86,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
      * @param value Value to set for the enableMEMAutoEnroll property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableMEMAutoEnroll(@javax.annotation.Nullable final Boolean value) {
         this._enableMEMAutoEnroll = value;
     }
@@ -106,6 +109,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final CloudPcOperatingSystem value) {
         this._osVersion = value;
     }
@@ -114,6 +118,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
      * @param value Value to set for the userAccountType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAccountType(@javax.annotation.Nullable final CloudPcUserAccountType value) {
         this._userAccountType = value;
     }
@@ -122,6 +127,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
      * @param value Value to set for the windowsSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsSettings(@javax.annotation.Nullable final CloudPcWindowsSettings value) {
         this._windowsSettings = value;
     }

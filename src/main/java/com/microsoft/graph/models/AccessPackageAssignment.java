@@ -41,6 +41,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * Instantiates a new accessPackageAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageAssignment() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageAssignment");
@@ -142,22 +143,22 @@ public class AccessPackageAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessPackage", (n) -> { currentObject.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
-            this.put("accessPackageAssignmentPolicy", (n) -> { currentObject.setAccessPackageAssignmentPolicy(n.getObjectValue(AccessPackageAssignmentPolicy::createFromDiscriminatorValue)); });
-            this.put("accessPackageAssignmentRequests", (n) -> { currentObject.setAccessPackageAssignmentRequests(n.getCollectionOfObjectValues(AccessPackageAssignmentRequest::createFromDiscriminatorValue)); });
-            this.put("accessPackageAssignmentResourceRoles", (n) -> { currentObject.setAccessPackageAssignmentResourceRoles(n.getCollectionOfObjectValues(AccessPackageAssignmentResourceRole::createFromDiscriminatorValue)); });
-            this.put("accessPackageId", (n) -> { currentObject.setAccessPackageId(n.getStringValue()); });
-            this.put("assignmentPolicyId", (n) -> { currentObject.setAssignmentPolicyId(n.getStringValue()); });
-            this.put("assignmentState", (n) -> { currentObject.setAssignmentState(n.getStringValue()); });
-            this.put("assignmentStatus", (n) -> { currentObject.setAssignmentStatus(n.getStringValue()); });
-            this.put("catalogId", (n) -> { currentObject.setCatalogId(n.getStringValue()); });
-            this.put("expiredDateTime", (n) -> { currentObject.setExpiredDateTime(n.getOffsetDateTimeValue()); });
-            this.put("isExtended", (n) -> { currentObject.setIsExtended(n.getBooleanValue()); });
-            this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
-            this.put("targetId", (n) -> { currentObject.setTargetId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackage", (n) -> { currentObject.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageAssignmentPolicy", (n) -> { currentObject.setAccessPackageAssignmentPolicy(n.getObjectValue(AccessPackageAssignmentPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageAssignmentRequests", (n) -> { currentObject.setAccessPackageAssignmentRequests(n.getCollectionOfObjectValues(AccessPackageAssignmentRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageAssignmentResourceRoles", (n) -> { currentObject.setAccessPackageAssignmentResourceRoles(n.getCollectionOfObjectValues(AccessPackageAssignmentResourceRole::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageId", (n) -> { currentObject.setAccessPackageId(n.getStringValue()); });
+        deserializerMap.put("assignmentPolicyId", (n) -> { currentObject.setAssignmentPolicyId(n.getStringValue()); });
+        deserializerMap.put("assignmentState", (n) -> { currentObject.setAssignmentState(n.getStringValue()); });
+        deserializerMap.put("assignmentStatus", (n) -> { currentObject.setAssignmentStatus(n.getStringValue()); });
+        deserializerMap.put("catalogId", (n) -> { currentObject.setCatalogId(n.getStringValue()); });
+        deserializerMap.put("expiredDateTime", (n) -> { currentObject.setExpiredDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("isExtended", (n) -> { currentObject.setIsExtended(n.getBooleanValue()); });
+        deserializerMap.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
+        deserializerMap.put("targetId", (n) -> { currentObject.setTargetId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isExtended property value. Indicates whether the access package assignment is extended. Read-only.
@@ -196,6 +197,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -219,6 +221,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param value Value to set for the accessPackage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackage(@javax.annotation.Nullable final AccessPackage value) {
         this._accessPackage = value;
     }
@@ -227,6 +230,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignmentPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageAssignmentPolicy(@javax.annotation.Nullable final AccessPackageAssignmentPolicy value) {
         this._accessPackageAssignmentPolicy = value;
     }
@@ -235,6 +239,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignmentRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageAssignmentRequests(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentRequest> value) {
         this._accessPackageAssignmentRequests = value;
     }
@@ -243,6 +248,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignmentResourceRoles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageAssignmentResourceRoles(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentResourceRole> value) {
         this._accessPackageAssignmentResourceRoles = value;
     }
@@ -251,6 +257,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param value Value to set for the accessPackageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageId(@javax.annotation.Nullable final String value) {
         this._accessPackageId = value;
     }
@@ -259,6 +266,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param value Value to set for the assignmentPolicyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentPolicyId(@javax.annotation.Nullable final String value) {
         this._assignmentPolicyId = value;
     }
@@ -267,6 +275,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param value Value to set for the assignmentState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentState(@javax.annotation.Nullable final String value) {
         this._assignmentState = value;
     }
@@ -275,6 +284,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param value Value to set for the assignmentStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentStatus(@javax.annotation.Nullable final String value) {
         this._assignmentStatus = value;
     }
@@ -283,6 +293,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param value Value to set for the catalogId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCatalogId(@javax.annotation.Nullable final String value) {
         this._catalogId = value;
     }
@@ -291,6 +302,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param value Value to set for the expiredDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpiredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expiredDateTime = value;
     }
@@ -299,6 +311,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param value Value to set for the isExtended property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsExtended(@javax.annotation.Nullable final Boolean value) {
         this._isExtended = value;
     }
@@ -307,6 +320,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param value Value to set for the schedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedule(@javax.annotation.Nullable final RequestSchedule value) {
         this._schedule = value;
     }
@@ -315,6 +329,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final AccessPackageSubject value) {
         this._target = value;
     }
@@ -323,6 +338,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
      * @param value Value to set for the targetId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetId(@javax.annotation.Nullable final String value) {
         this._targetId = value;
     }

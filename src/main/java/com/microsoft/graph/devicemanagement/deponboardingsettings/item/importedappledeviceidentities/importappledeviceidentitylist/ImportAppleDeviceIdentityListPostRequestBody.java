@@ -21,6 +21,7 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
      * Instantiates a new importAppleDeviceIdentityListPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ImportAppleDeviceIdentityListPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,10 +50,10 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImportAppleDeviceIdentityListPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("importedAppleDeviceIdentities", (n) -> { currentObject.setImportedAppleDeviceIdentities(n.getCollectionOfObjectValues(ImportedAppleDeviceIdentity::createFromDiscriminatorValue)); });
-            this.put("overwriteImportedDeviceIdentities", (n) -> { currentObject.setOverwriteImportedDeviceIdentities(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("importedAppleDeviceIdentities", (n) -> { currentObject.setImportedAppleDeviceIdentities(n.getCollectionOfObjectValues(ImportedAppleDeviceIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("overwriteImportedDeviceIdentities", (n) -> { currentObject.setOverwriteImportedDeviceIdentities(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the importedAppleDeviceIdentities property value. The importedAppleDeviceIdentities property
@@ -75,6 +76,7 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("importedAppleDeviceIdentities", this.getImportedAppleDeviceIdentities());
@@ -86,6 +88,7 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -94,6 +97,7 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
      * @param value Value to set for the importedAppleDeviceIdentities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportedAppleDeviceIdentities(@javax.annotation.Nullable final java.util.List<ImportedAppleDeviceIdentity> value) {
         this._importedAppleDeviceIdentities = value;
     }
@@ -102,6 +106,7 @@ public class ImportAppleDeviceIdentityListPostRequestBody implements AdditionalD
      * @param value Value to set for the overwriteImportedDeviceIdentities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOverwriteImportedDeviceIdentities(@javax.annotation.Nullable final Boolean value) {
         this._overwriteImportedDeviceIdentities = value;
     }

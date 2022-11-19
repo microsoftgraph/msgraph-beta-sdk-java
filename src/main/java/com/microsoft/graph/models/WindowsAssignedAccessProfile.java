@@ -12,11 +12,11 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
     private java.util.List<String> _appUserModelIds;
     /** These are the paths of the Desktop Apps that will be available on the Start menu and the only apps the user will be able to launch. */
     private java.util.List<String> _desktopAppPaths;
-    /** This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned. */
+    /** This is a friendly nameused to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned. */
     private String _profileName;
     /** This setting allows the admin to specify whether the Task Bar is shown or not. */
     private Boolean _showTaskBar;
-    /** Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format. */
+    /** Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format. */
     private byte[] _startMenuLayoutXml;
     /** The user accounts that will be locked to this kiosk configuration. */
     private java.util.List<String> _userAccounts;
@@ -24,6 +24,7 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
      * Instantiates a new WindowsAssignedAccessProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsAssignedAccessProfile() {
         super();
         this.setOdataType("#microsoft.graph.windowsAssignedAccessProfile");
@@ -61,17 +62,17 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsAssignedAccessProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appUserModelIds", (n) -> { currentObject.setAppUserModelIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("desktopAppPaths", (n) -> { currentObject.setDesktopAppPaths(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("profileName", (n) -> { currentObject.setProfileName(n.getStringValue()); });
-            this.put("showTaskBar", (n) -> { currentObject.setShowTaskBar(n.getBooleanValue()); });
-            this.put("startMenuLayoutXml", (n) -> { currentObject.setStartMenuLayoutXml(n.getByteArrayValue()); });
-            this.put("userAccounts", (n) -> { currentObject.setUserAccounts(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appUserModelIds", (n) -> { currentObject.setAppUserModelIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("desktopAppPaths", (n) -> { currentObject.setDesktopAppPaths(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("profileName", (n) -> { currentObject.setProfileName(n.getStringValue()); });
+        deserializerMap.put("showTaskBar", (n) -> { currentObject.setShowTaskBar(n.getBooleanValue()); });
+        deserializerMap.put("startMenuLayoutXml", (n) -> { currentObject.setStartMenuLayoutXml(n.getByteArrayValue()); });
+        deserializerMap.put("userAccounts", (n) -> { currentObject.setUserAccounts(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
-     * Gets the profileName property value. This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
+     * Gets the profileName property value. This is a friendly nameused to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -87,7 +88,7 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
         return this._showTaskBar;
     }
     /**
-     * Gets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
+     * Gets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -107,6 +108,7 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
      * @param value Value to set for the appUserModelIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppUserModelIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._appUserModelIds = value;
     }
@@ -130,14 +133,16 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
      * @param value Value to set for the desktopAppPaths property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDesktopAppPaths(@javax.annotation.Nullable final java.util.List<String> value) {
         this._desktopAppPaths = value;
     }
     /**
-     * Sets the profileName property value. This is a friendly name used to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
+     * Sets the profileName property value. This is a friendly nameused to identify a group of applications, the layout of these apps on the start menu and the users to whom this kiosk configuration is assigned.
      * @param value Value to set for the profileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProfileName(@javax.annotation.Nullable final String value) {
         this._profileName = value;
     }
@@ -146,14 +151,16 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
      * @param value Value to set for the showTaskBar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowTaskBar(@javax.annotation.Nullable final Boolean value) {
         this._showTaskBar = value;
     }
     /**
-     * Sets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
+     * Sets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      * @param value Value to set for the startMenuLayoutXml property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuLayoutXml(@javax.annotation.Nullable final byte[] value) {
         this._startMenuLayoutXml = value;
     }
@@ -162,6 +169,7 @@ public class WindowsAssignedAccessProfile extends Entity implements Parsable {
      * @param value Value to set for the userAccounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAccounts(@javax.annotation.Nullable final java.util.List<String> value) {
         this._userAccounts = value;
     }

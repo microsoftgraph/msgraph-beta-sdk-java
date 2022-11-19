@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class DelegatedAdminServiceManagementDetail extends Entity implements Parsable {
     /** The URL of the management portal for the managed service. Read-only. */
     private String _serviceManagementUrl;
@@ -17,6 +17,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * Instantiates a new delegatedAdminServiceManagementDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DelegatedAdminServiceManagementDetail() {
         super();
         this.setOdataType("#microsoft.graph.delegatedAdminServiceManagementDetail");
@@ -38,10 +39,10 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DelegatedAdminServiceManagementDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("serviceManagementUrl", (n) -> { currentObject.setServiceManagementUrl(n.getStringValue()); });
-            this.put("serviceName", (n) -> { currentObject.setServiceName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("serviceManagementUrl", (n) -> { currentObject.setServiceManagementUrl(n.getStringValue()); });
+        deserializerMap.put("serviceName", (n) -> { currentObject.setServiceName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the serviceManagementUrl property value. The URL of the management portal for the managed service. Read-only.
@@ -64,6 +65,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * @param value Value to set for the serviceManagementUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceManagementUrl(@javax.annotation.Nullable final String value) {
         this._serviceManagementUrl = value;
     }
@@ -83,6 +86,7 @@ public class DelegatedAdminServiceManagementDetail extends Entity implements Par
      * @param value Value to set for the serviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceName(@javax.annotation.Nullable final String value) {
         this._serviceName = value;
     }

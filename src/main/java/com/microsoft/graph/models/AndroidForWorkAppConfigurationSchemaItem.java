@@ -36,6 +36,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
      * Instantiates a new androidForWorkAppConfigurationSchemaItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidForWorkAppConfigurationSchemaItem() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.androidForWorkAppConfigurationSchemaItem");
@@ -121,18 +122,18 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidForWorkAppConfigurationSchemaItem currentObject = this;
-        return new HashMap<>(10) {{
-            this.put("dataType", (n) -> { currentObject.setDataType(n.getEnumValue(AndroidForWorkAppConfigurationSchemaItemDataType.class)); });
-            this.put("defaultBoolValue", (n) -> { currentObject.setDefaultBoolValue(n.getBooleanValue()); });
-            this.put("defaultIntValue", (n) -> { currentObject.setDefaultIntValue(n.getIntegerValue()); });
-            this.put("defaultStringArrayValue", (n) -> { currentObject.setDefaultStringArrayValue(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defaultStringValue", (n) -> { currentObject.setDefaultStringValue(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("schemaItemKey", (n) -> { currentObject.setSchemaItemKey(n.getStringValue()); });
-            this.put("selections", (n) -> { currentObject.setSelections(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("dataType", (n) -> { currentObject.setDataType(n.getEnumValue(AndroidForWorkAppConfigurationSchemaItemDataType.class)); });
+        deserializerMap.put("defaultBoolValue", (n) -> { currentObject.setDefaultBoolValue(n.getBooleanValue()); });
+        deserializerMap.put("defaultIntValue", (n) -> { currentObject.setDefaultIntValue(n.getIntegerValue()); });
+        deserializerMap.put("defaultStringArrayValue", (n) -> { currentObject.setDefaultStringArrayValue(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defaultStringValue", (n) -> { currentObject.setDefaultStringValue(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("schemaItemKey", (n) -> { currentObject.setSchemaItemKey(n.getStringValue()); });
+        deserializerMap.put("selections", (n) -> { currentObject.setSelections(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -163,6 +164,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("dataType", this.getDataType());
@@ -182,6 +184,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -190,6 +193,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
      * @param value Value to set for the dataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataType(@javax.annotation.Nullable final AndroidForWorkAppConfigurationSchemaItemDataType value) {
         this._dataType = value;
     }
@@ -198,6 +202,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
      * @param value Value to set for the defaultBoolValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultBoolValue(@javax.annotation.Nullable final Boolean value) {
         this._defaultBoolValue = value;
     }
@@ -206,6 +211,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
      * @param value Value to set for the defaultIntValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultIntValue(@javax.annotation.Nullable final Integer value) {
         this._defaultIntValue = value;
     }
@@ -214,6 +220,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
      * @param value Value to set for the defaultStringArrayValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultStringArrayValue(@javax.annotation.Nullable final java.util.List<String> value) {
         this._defaultStringArrayValue = value;
     }
@@ -222,6 +229,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
      * @param value Value to set for the defaultStringValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultStringValue(@javax.annotation.Nullable final String value) {
         this._defaultStringValue = value;
     }
@@ -230,6 +238,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -238,6 +247,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -246,6 +256,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -254,6 +265,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
      * @param value Value to set for the schemaItemKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchemaItemKey(@javax.annotation.Nullable final String value) {
         this._schemaItemKey = value;
     }
@@ -262,6 +274,7 @@ public class AndroidForWorkAppConfigurationSchemaItem implements AdditionalDataH
      * @param value Value to set for the selections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSelections(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._selections = value;
     }

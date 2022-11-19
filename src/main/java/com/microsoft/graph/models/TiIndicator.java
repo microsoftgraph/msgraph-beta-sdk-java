@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class TiIndicator extends Entity implements Parsable {
     /** The action to apply if the indicator is matched from within the targetProduct security tool. Possible values are: unknown, allow, block, alert. Required. */
     private TiAction _action;
@@ -17,7 +18,7 @@ public class TiIndicator extends Entity implements Parsable {
     private String _additionalInformation;
     /** Stamped by the system when the indicator is ingested. The Azure Active Directory tenant id of submitting client. Required. */
     private String _azureTenantId;
-    /** An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0 – 100 with 100 being the highest. */
+    /** An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0  100 with 100 being the highest. */
     private Integer _confidence;
     /** Brief description (100 characters or less) of the threat represented by the indicator. Required. */
     private String _description;
@@ -45,7 +46,7 @@ public class TiIndicator extends Entity implements Parsable {
     private String _emailXMailer;
     /** DateTime string indicating when the Indicator expires. All indicators must have an expiration date to avoid stale indicators persisting in the system. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required. */
     private OffsetDateTime _expirationDateTime;
-    /** An identification number that ties the indicator back to the indicator provider’s system (e.g. a foreign key). */
+    /** An identification number that ties the indicator back to the indicator providers system (e.g. a foreign key). */
     private String _externalId;
     /** The fileCompileDateTime property */
     private OffsetDateTime _fileCompileDateTime;
@@ -69,9 +70,9 @@ public class TiIndicator extends Entity implements Parsable {
     private String _fileType;
     /** Stamped by the system when the indicator is ingested. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _ingestedDateTime;
-    /** Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to ‘False’ to deactivate indicators in the system. */
+    /** Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to False to deactivate indicators in the system. */
     private Boolean _isActive;
-    /** A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See ‘killChain values’ below for exact values. */
+    /** A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See killChain values below for exact values. */
     private java.util.List<String> _killChain;
     /** Scenarios in which the indicator may cause false positives. This should be human-readable text. */
     private String _knownFalsePositives;
@@ -109,9 +110,9 @@ public class TiIndicator extends Entity implements Parsable {
     private String _networkSourceIPv6;
     /** The networkSourcePort property */
     private Integer _networkSourcePort;
-    /** Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools will not notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false. */
+    /** Determines if the indicator should trigger an event that is visible to an end-user. When set to true, security tools will not notify the end user that a hit has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false. */
     private Boolean _passiveOnly;
-    /** An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero is not severe at all. Default value is 3. */
+    /** An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0  5 where 5 is the most severe and zero is not severe at all. Default value is 3. */
     private Integer _severity;
     /** A JSON array of strings that stores arbitrary tags/keywords. */
     private java.util.List<String> _tags;
@@ -126,9 +127,10 @@ public class TiIndicator extends Entity implements Parsable {
     /** The userAgent property */
     private String _userAgent;
     /**
-     * Instantiates a new TiIndicator and sets the default values.
+     * Instantiates a new tiIndicator and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TiIndicator() {
         super();
         this.setOdataType("#microsoft.graph.tiIndicator");
@@ -136,7 +138,7 @@ public class TiIndicator extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TiIndicator
+     * @return a tiIndicator
      */
     @javax.annotation.Nonnull
     public static TiIndicator createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -176,7 +178,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this._azureTenantId;
     }
     /**
-     * Gets the confidence property value. An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0 – 100 with 100 being the highest.
+     * Gets the confidence property value. An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0  100 with 100 being the highest.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -288,7 +290,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this._expirationDateTime;
     }
     /**
-     * Gets the externalId property value. An identification number that ties the indicator back to the indicator provider’s system (e.g. a foreign key).
+     * Gets the externalId property value. An identification number that ties the indicator back to the indicator providers system (e.g. a foreign key).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -302,66 +304,66 @@ public class TiIndicator extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TiIndicator currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(TiAction.class)); });
-            this.put("activityGroupNames", (n) -> { currentObject.setActivityGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getStringValue()); });
-            this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
-            this.put("confidence", (n) -> { currentObject.setConfidence(n.getIntegerValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("diamondModel", (n) -> { currentObject.setDiamondModel(n.getEnumValue(DiamondModel.class)); });
-            this.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });
-            this.put("emailEncoding", (n) -> { currentObject.setEmailEncoding(n.getStringValue()); });
-            this.put("emailLanguage", (n) -> { currentObject.setEmailLanguage(n.getStringValue()); });
-            this.put("emailRecipient", (n) -> { currentObject.setEmailRecipient(n.getStringValue()); });
-            this.put("emailSenderAddress", (n) -> { currentObject.setEmailSenderAddress(n.getStringValue()); });
-            this.put("emailSenderName", (n) -> { currentObject.setEmailSenderName(n.getStringValue()); });
-            this.put("emailSourceDomain", (n) -> { currentObject.setEmailSourceDomain(n.getStringValue()); });
-            this.put("emailSourceIpAddress", (n) -> { currentObject.setEmailSourceIpAddress(n.getStringValue()); });
-            this.put("emailSubject", (n) -> { currentObject.setEmailSubject(n.getStringValue()); });
-            this.put("emailXMailer", (n) -> { currentObject.setEmailXMailer(n.getStringValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
-            this.put("fileCompileDateTime", (n) -> { currentObject.setFileCompileDateTime(n.getOffsetDateTimeValue()); });
-            this.put("fileCreatedDateTime", (n) -> { currentObject.setFileCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("fileHashType", (n) -> { currentObject.setFileHashType(n.getEnumValue(FileHashType.class)); });
-            this.put("fileHashValue", (n) -> { currentObject.setFileHashValue(n.getStringValue()); });
-            this.put("fileMutexName", (n) -> { currentObject.setFileMutexName(n.getStringValue()); });
-            this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
-            this.put("filePacker", (n) -> { currentObject.setFilePacker(n.getStringValue()); });
-            this.put("filePath", (n) -> { currentObject.setFilePath(n.getStringValue()); });
-            this.put("fileSize", (n) -> { currentObject.setFileSize(n.getLongValue()); });
-            this.put("fileType", (n) -> { currentObject.setFileType(n.getStringValue()); });
-            this.put("ingestedDateTime", (n) -> { currentObject.setIngestedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
-            this.put("killChain", (n) -> { currentObject.setKillChain(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("knownFalsePositives", (n) -> { currentObject.setKnownFalsePositives(n.getStringValue()); });
-            this.put("lastReportedDateTime", (n) -> { currentObject.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("malwareFamilyNames", (n) -> { currentObject.setMalwareFamilyNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("networkCidrBlock", (n) -> { currentObject.setNetworkCidrBlock(n.getStringValue()); });
-            this.put("networkDestinationAsn", (n) -> { currentObject.setNetworkDestinationAsn(n.getLongValue()); });
-            this.put("networkDestinationCidrBlock", (n) -> { currentObject.setNetworkDestinationCidrBlock(n.getStringValue()); });
-            this.put("networkDestinationIPv4", (n) -> { currentObject.setNetworkDestinationIPv4(n.getStringValue()); });
-            this.put("networkDestinationIPv6", (n) -> { currentObject.setNetworkDestinationIPv6(n.getStringValue()); });
-            this.put("networkDestinationPort", (n) -> { currentObject.setNetworkDestinationPort(n.getIntegerValue()); });
-            this.put("networkIPv4", (n) -> { currentObject.setNetworkIPv4(n.getStringValue()); });
-            this.put("networkIPv6", (n) -> { currentObject.setNetworkIPv6(n.getStringValue()); });
-            this.put("networkPort", (n) -> { currentObject.setNetworkPort(n.getIntegerValue()); });
-            this.put("networkProtocol", (n) -> { currentObject.setNetworkProtocol(n.getIntegerValue()); });
-            this.put("networkSourceAsn", (n) -> { currentObject.setNetworkSourceAsn(n.getLongValue()); });
-            this.put("networkSourceCidrBlock", (n) -> { currentObject.setNetworkSourceCidrBlock(n.getStringValue()); });
-            this.put("networkSourceIPv4", (n) -> { currentObject.setNetworkSourceIPv4(n.getStringValue()); });
-            this.put("networkSourceIPv6", (n) -> { currentObject.setNetworkSourceIPv6(n.getStringValue()); });
-            this.put("networkSourcePort", (n) -> { currentObject.setNetworkSourcePort(n.getIntegerValue()); });
-            this.put("passiveOnly", (n) -> { currentObject.setPassiveOnly(n.getBooleanValue()); });
-            this.put("severity", (n) -> { currentObject.setSeverity(n.getIntegerValue()); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("targetProduct", (n) -> { currentObject.setTargetProduct(n.getStringValue()); });
-            this.put("threatType", (n) -> { currentObject.setThreatType(n.getStringValue()); });
-            this.put("tlpLevel", (n) -> { currentObject.setTlpLevel(n.getEnumValue(TlpLevel.class)); });
-            this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
-            this.put("userAgent", (n) -> { currentObject.setUserAgent(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("action", (n) -> { currentObject.setAction(n.getEnumValue(TiAction.class)); });
+        deserializerMap.put("activityGroupNames", (n) -> { currentObject.setActivityGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("additionalInformation", (n) -> { currentObject.setAdditionalInformation(n.getStringValue()); });
+        deserializerMap.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
+        deserializerMap.put("confidence", (n) -> { currentObject.setConfidence(n.getIntegerValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("diamondModel", (n) -> { currentObject.setDiamondModel(n.getEnumValue(DiamondModel.class)); });
+        deserializerMap.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });
+        deserializerMap.put("emailEncoding", (n) -> { currentObject.setEmailEncoding(n.getStringValue()); });
+        deserializerMap.put("emailLanguage", (n) -> { currentObject.setEmailLanguage(n.getStringValue()); });
+        deserializerMap.put("emailRecipient", (n) -> { currentObject.setEmailRecipient(n.getStringValue()); });
+        deserializerMap.put("emailSenderAddress", (n) -> { currentObject.setEmailSenderAddress(n.getStringValue()); });
+        deserializerMap.put("emailSenderName", (n) -> { currentObject.setEmailSenderName(n.getStringValue()); });
+        deserializerMap.put("emailSourceDomain", (n) -> { currentObject.setEmailSourceDomain(n.getStringValue()); });
+        deserializerMap.put("emailSourceIpAddress", (n) -> { currentObject.setEmailSourceIpAddress(n.getStringValue()); });
+        deserializerMap.put("emailSubject", (n) -> { currentObject.setEmailSubject(n.getStringValue()); });
+        deserializerMap.put("emailXMailer", (n) -> { currentObject.setEmailXMailer(n.getStringValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
+        deserializerMap.put("fileCompileDateTime", (n) -> { currentObject.setFileCompileDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("fileCreatedDateTime", (n) -> { currentObject.setFileCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("fileHashType", (n) -> { currentObject.setFileHashType(n.getEnumValue(FileHashType.class)); });
+        deserializerMap.put("fileHashValue", (n) -> { currentObject.setFileHashValue(n.getStringValue()); });
+        deserializerMap.put("fileMutexName", (n) -> { currentObject.setFileMutexName(n.getStringValue()); });
+        deserializerMap.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
+        deserializerMap.put("filePacker", (n) -> { currentObject.setFilePacker(n.getStringValue()); });
+        deserializerMap.put("filePath", (n) -> { currentObject.setFilePath(n.getStringValue()); });
+        deserializerMap.put("fileSize", (n) -> { currentObject.setFileSize(n.getLongValue()); });
+        deserializerMap.put("fileType", (n) -> { currentObject.setFileType(n.getStringValue()); });
+        deserializerMap.put("ingestedDateTime", (n) -> { currentObject.setIngestedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
+        deserializerMap.put("killChain", (n) -> { currentObject.setKillChain(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("knownFalsePositives", (n) -> { currentObject.setKnownFalsePositives(n.getStringValue()); });
+        deserializerMap.put("lastReportedDateTime", (n) -> { currentObject.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("malwareFamilyNames", (n) -> { currentObject.setMalwareFamilyNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("networkCidrBlock", (n) -> { currentObject.setNetworkCidrBlock(n.getStringValue()); });
+        deserializerMap.put("networkDestinationAsn", (n) -> { currentObject.setNetworkDestinationAsn(n.getLongValue()); });
+        deserializerMap.put("networkDestinationCidrBlock", (n) -> { currentObject.setNetworkDestinationCidrBlock(n.getStringValue()); });
+        deserializerMap.put("networkDestinationIPv4", (n) -> { currentObject.setNetworkDestinationIPv4(n.getStringValue()); });
+        deserializerMap.put("networkDestinationIPv6", (n) -> { currentObject.setNetworkDestinationIPv6(n.getStringValue()); });
+        deserializerMap.put("networkDestinationPort", (n) -> { currentObject.setNetworkDestinationPort(n.getIntegerValue()); });
+        deserializerMap.put("networkIPv4", (n) -> { currentObject.setNetworkIPv4(n.getStringValue()); });
+        deserializerMap.put("networkIPv6", (n) -> { currentObject.setNetworkIPv6(n.getStringValue()); });
+        deserializerMap.put("networkPort", (n) -> { currentObject.setNetworkPort(n.getIntegerValue()); });
+        deserializerMap.put("networkProtocol", (n) -> { currentObject.setNetworkProtocol(n.getIntegerValue()); });
+        deserializerMap.put("networkSourceAsn", (n) -> { currentObject.setNetworkSourceAsn(n.getLongValue()); });
+        deserializerMap.put("networkSourceCidrBlock", (n) -> { currentObject.setNetworkSourceCidrBlock(n.getStringValue()); });
+        deserializerMap.put("networkSourceIPv4", (n) -> { currentObject.setNetworkSourceIPv4(n.getStringValue()); });
+        deserializerMap.put("networkSourceIPv6", (n) -> { currentObject.setNetworkSourceIPv6(n.getStringValue()); });
+        deserializerMap.put("networkSourcePort", (n) -> { currentObject.setNetworkSourcePort(n.getIntegerValue()); });
+        deserializerMap.put("passiveOnly", (n) -> { currentObject.setPassiveOnly(n.getBooleanValue()); });
+        deserializerMap.put("severity", (n) -> { currentObject.setSeverity(n.getIntegerValue()); });
+        deserializerMap.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("targetProduct", (n) -> { currentObject.setTargetProduct(n.getStringValue()); });
+        deserializerMap.put("threatType", (n) -> { currentObject.setThreatType(n.getStringValue()); });
+        deserializerMap.put("tlpLevel", (n) -> { currentObject.setTlpLevel(n.getEnumValue(TlpLevel.class)); });
+        deserializerMap.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
+        deserializerMap.put("userAgent", (n) -> { currentObject.setUserAgent(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileCompileDateTime property value. The fileCompileDateTime property
@@ -452,7 +454,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this._ingestedDateTime;
     }
     /**
-     * Gets the isActive property value. Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to ‘False’ to deactivate indicators in the system.
+     * Gets the isActive property value. Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to False to deactivate indicators in the system.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -460,7 +462,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this._isActive;
     }
     /**
-     * Gets the killChain property value. A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See ‘killChain values’ below for exact values.
+     * Gets the killChain property value. A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See killChain values below for exact values.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -612,7 +614,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this._networkSourcePort;
     }
     /**
-     * Gets the passiveOnly property value. Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools will not notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
+     * Gets the passiveOnly property value. Determines if the indicator should trigger an event that is visible to an end-user. When set to true, security tools will not notify the end user that a hit has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -620,7 +622,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this._passiveOnly;
     }
     /**
-     * Gets the severity property value. An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero is not severe at all. Default value is 3.
+     * Gets the severity property value. An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0  5 where 5 is the most severe and zero is not severe at all. Default value is 3.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -680,6 +682,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -747,6 +750,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the action property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAction(@javax.annotation.Nullable final TiAction value) {
         this._action = value;
     }
@@ -755,6 +759,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the activityGroupNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityGroupNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._activityGroupNames = value;
     }
@@ -763,6 +768,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the additionalInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalInformation(@javax.annotation.Nullable final String value) {
         this._additionalInformation = value;
     }
@@ -771,14 +777,16 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
         this._azureTenantId = value;
     }
     /**
-     * Sets the confidence property value. An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0 – 100 with 100 being the highest.
+     * Sets the confidence property value. An integer representing the confidence the data within the indicator accurately identifies malicious behavior. Acceptable values are 0  100 with 100 being the highest.
      * @param value Value to set for the confidence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfidence(@javax.annotation.Nullable final Integer value) {
         this._confidence = value;
     }
@@ -787,6 +795,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -795,6 +804,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the diamondModel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiamondModel(@javax.annotation.Nullable final DiamondModel value) {
         this._diamondModel = value;
     }
@@ -803,6 +813,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the domainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainName(@javax.annotation.Nullable final String value) {
         this._domainName = value;
     }
@@ -811,6 +822,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailEncoding property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailEncoding(@javax.annotation.Nullable final String value) {
         this._emailEncoding = value;
     }
@@ -819,6 +831,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailLanguage(@javax.annotation.Nullable final String value) {
         this._emailLanguage = value;
     }
@@ -827,6 +840,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailRecipient property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailRecipient(@javax.annotation.Nullable final String value) {
         this._emailRecipient = value;
     }
@@ -835,6 +849,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailSenderAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailSenderAddress(@javax.annotation.Nullable final String value) {
         this._emailSenderAddress = value;
     }
@@ -843,6 +858,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailSenderName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailSenderName(@javax.annotation.Nullable final String value) {
         this._emailSenderName = value;
     }
@@ -851,6 +867,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailSourceDomain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailSourceDomain(@javax.annotation.Nullable final String value) {
         this._emailSourceDomain = value;
     }
@@ -859,6 +876,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailSourceIpAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailSourceIpAddress(@javax.annotation.Nullable final String value) {
         this._emailSourceIpAddress = value;
     }
@@ -867,6 +885,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailSubject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailSubject(@javax.annotation.Nullable final String value) {
         this._emailSubject = value;
     }
@@ -875,6 +894,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the emailXMailer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailXMailer(@javax.annotation.Nullable final String value) {
         this._emailXMailer = value;
     }
@@ -883,14 +903,16 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
     /**
-     * Sets the externalId property value. An identification number that ties the indicator back to the indicator provider’s system (e.g. a foreign key).
+     * Sets the externalId property value. An identification number that ties the indicator back to the indicator providers system (e.g. a foreign key).
      * @param value Value to set for the externalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
         this._externalId = value;
     }
@@ -899,6 +921,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the fileCompileDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileCompileDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._fileCompileDateTime = value;
     }
@@ -907,6 +930,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the fileCreatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._fileCreatedDateTime = value;
     }
@@ -915,6 +939,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the fileHashType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileHashType(@javax.annotation.Nullable final FileHashType value) {
         this._fileHashType = value;
     }
@@ -923,6 +948,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the fileHashValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileHashValue(@javax.annotation.Nullable final String value) {
         this._fileHashValue = value;
     }
@@ -931,6 +957,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the fileMutexName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileMutexName(@javax.annotation.Nullable final String value) {
         this._fileMutexName = value;
     }
@@ -939,6 +966,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the fileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileName(@javax.annotation.Nullable final String value) {
         this._fileName = value;
     }
@@ -947,6 +975,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the filePacker property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilePacker(@javax.annotation.Nullable final String value) {
         this._filePacker = value;
     }
@@ -955,6 +984,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the filePath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilePath(@javax.annotation.Nullable final String value) {
         this._filePath = value;
     }
@@ -963,6 +993,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the fileSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileSize(@javax.annotation.Nullable final Long value) {
         this._fileSize = value;
     }
@@ -971,6 +1002,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the fileType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileType(@javax.annotation.Nullable final String value) {
         this._fileType = value;
     }
@@ -979,22 +1011,25 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the ingestedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIngestedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._ingestedDateTime = value;
     }
     /**
-     * Sets the isActive property value. Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to ‘False’ to deactivate indicators in the system.
+     * Sets the isActive property value. Used to deactivate indicators within system. By default, any indicator submitted is set as active. However, providers may submit existing indicators with this set to False to deactivate indicators in the system.
      * @param value Value to set for the isActive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsActive(@javax.annotation.Nullable final Boolean value) {
         this._isActive = value;
     }
     /**
-     * Sets the killChain property value. A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See ‘killChain values’ below for exact values.
+     * Sets the killChain property value. A JSON array of strings that describes which point or points on the Kill Chain this indicator targets. See killChain values below for exact values.
      * @param value Value to set for the killChain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKillChain(@javax.annotation.Nullable final java.util.List<String> value) {
         this._killChain = value;
     }
@@ -1003,6 +1038,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the knownFalsePositives property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKnownFalsePositives(@javax.annotation.Nullable final String value) {
         this._knownFalsePositives = value;
     }
@@ -1011,6 +1047,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the lastReportedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastReportedDateTime = value;
     }
@@ -1019,6 +1056,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the malwareFamilyNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMalwareFamilyNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._malwareFamilyNames = value;
     }
@@ -1027,6 +1065,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkCidrBlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkCidrBlock(@javax.annotation.Nullable final String value) {
         this._networkCidrBlock = value;
     }
@@ -1035,6 +1074,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkDestinationAsn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkDestinationAsn(@javax.annotation.Nullable final Long value) {
         this._networkDestinationAsn = value;
     }
@@ -1043,6 +1083,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkDestinationCidrBlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkDestinationCidrBlock(@javax.annotation.Nullable final String value) {
         this._networkDestinationCidrBlock = value;
     }
@@ -1051,6 +1092,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkDestinationIPv4 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkDestinationIPv4(@javax.annotation.Nullable final String value) {
         this._networkDestinationIPv4 = value;
     }
@@ -1059,6 +1101,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkDestinationIPv6 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkDestinationIPv6(@javax.annotation.Nullable final String value) {
         this._networkDestinationIPv6 = value;
     }
@@ -1067,6 +1110,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkDestinationPort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkDestinationPort(@javax.annotation.Nullable final Integer value) {
         this._networkDestinationPort = value;
     }
@@ -1075,6 +1119,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkIPv4 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkIPv4(@javax.annotation.Nullable final String value) {
         this._networkIPv4 = value;
     }
@@ -1083,6 +1128,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkIPv6 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkIPv6(@javax.annotation.Nullable final String value) {
         this._networkIPv6 = value;
     }
@@ -1091,6 +1137,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkPort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkPort(@javax.annotation.Nullable final Integer value) {
         this._networkPort = value;
     }
@@ -1099,6 +1146,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkProtocol property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkProtocol(@javax.annotation.Nullable final Integer value) {
         this._networkProtocol = value;
     }
@@ -1107,6 +1155,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkSourceAsn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkSourceAsn(@javax.annotation.Nullable final Long value) {
         this._networkSourceAsn = value;
     }
@@ -1115,6 +1164,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkSourceCidrBlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkSourceCidrBlock(@javax.annotation.Nullable final String value) {
         this._networkSourceCidrBlock = value;
     }
@@ -1123,6 +1173,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkSourceIPv4 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkSourceIPv4(@javax.annotation.Nullable final String value) {
         this._networkSourceIPv4 = value;
     }
@@ -1131,6 +1182,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkSourceIPv6 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkSourceIPv6(@javax.annotation.Nullable final String value) {
         this._networkSourceIPv6 = value;
     }
@@ -1139,22 +1191,25 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the networkSourcePort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkSourcePort(@javax.annotation.Nullable final Integer value) {
         this._networkSourcePort = value;
     }
     /**
-     * Sets the passiveOnly property value. Determines if the indicator should trigger an event that is visible to an end-user. When set to ‘true,’ security tools will not notify the end user that a ‘hit’ has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
+     * Sets the passiveOnly property value. Determines if the indicator should trigger an event that is visible to an end-user. When set to true, security tools will not notify the end user that a hit has occurred. This is most often treated as audit or silent mode by security products where they will simply log that a match occurred but will not perform the action. Default value is false.
      * @param value Value to set for the passiveOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPassiveOnly(@javax.annotation.Nullable final Boolean value) {
         this._passiveOnly = value;
     }
     /**
-     * Sets the severity property value. An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0 – 5 where 5 is the most severe and zero is not severe at all. Default value is 3.
+     * Sets the severity property value. An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0  5 where 5 is the most severe and zero is not severe at all. Default value is 3.
      * @param value Value to set for the severity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSeverity(@javax.annotation.Nullable final Integer value) {
         this._severity = value;
     }
@@ -1163,6 +1218,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
     }
@@ -1171,6 +1227,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the targetProduct property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetProduct(@javax.annotation.Nullable final String value) {
         this._targetProduct = value;
     }
@@ -1179,6 +1236,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the threatType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThreatType(@javax.annotation.Nullable final String value) {
         this._threatType = value;
     }
@@ -1187,6 +1245,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the tlpLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTlpLevel(@javax.annotation.Nullable final TlpLevel value) {
         this._tlpLevel = value;
     }
@@ -1195,6 +1254,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the url property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrl(@javax.annotation.Nullable final String value) {
         this._url = value;
     }
@@ -1203,6 +1263,7 @@ public class TiIndicator extends Entity implements Parsable {
      * @param value Value to set for the userAgent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAgent(@javax.annotation.Nullable final String value) {
         this._userAgent = value;
     }

@@ -18,6 +18,7 @@ public class EnablePostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new enablePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EnablePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -54,15 +55,16 @@ public class EnablePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EnablePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("enable", (n) -> { currentObject.setEnable(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("enable", (n) -> { currentObject.setEnable(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("enable", this.getEnable());
@@ -73,6 +75,7 @@ public class EnablePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class EnablePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the enable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnable(@javax.annotation.Nullable final Boolean value) {
         this._enable = value;
     }

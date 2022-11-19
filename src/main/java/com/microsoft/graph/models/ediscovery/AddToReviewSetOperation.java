@@ -16,6 +16,7 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      * Instantiates a new AddToReviewSetOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AddToReviewSetOperation() {
         super();
         this.setOdataType("#microsoft.graph.ediscovery.addToReviewSetOperation");
@@ -37,10 +38,10 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AddToReviewSetOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("reviewSet", (n) -> { currentObject.setReviewSet(n.getObjectValue(ReviewSet::createFromDiscriminatorValue)); });
-            this.put("sourceCollection", (n) -> { currentObject.setSourceCollection(n.getObjectValue(SourceCollection::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("reviewSet", (n) -> { currentObject.setReviewSet(n.getObjectValue(ReviewSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("sourceCollection", (n) -> { currentObject.setSourceCollection(n.getObjectValue(SourceCollection::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the reviewSet property value. The review set to which items matching the source collection query are added to.
@@ -63,6 +64,7 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      * @param value Value to set for the reviewSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewSet(@javax.annotation.Nullable final ReviewSet value) {
         this._reviewSet = value;
     }
@@ -82,6 +85,7 @@ public class AddToReviewSetOperation extends CaseOperation implements Parsable {
      * @param value Value to set for the sourceCollection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceCollection(@javax.annotation.Nullable final SourceCollection value) {
         this._sourceCollection = value;
     }

@@ -26,6 +26,7 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
      * Instantiates a new deviceManagementConfigurationChoiceSettingValueTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingValueTemplate() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingValueTemplate");
@@ -63,13 +64,13 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationChoiceSettingValueTemplate currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getObjectValue(DeviceManagementConfigurationChoiceSettingValueDefaultTemplate::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recommendedValueDefinition", (n) -> { currentObject.setRecommendedValueDefinition(n.getObjectValue(DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate::createFromDiscriminatorValue)); });
-            this.put("requiredValueDefinition", (n) -> { currentObject.setRequiredValueDefinition(n.getObjectValue(DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate::createFromDiscriminatorValue)); });
-            this.put("settingValueTemplateId", (n) -> { currentObject.setSettingValueTemplateId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getObjectValue(DeviceManagementConfigurationChoiceSettingValueDefaultTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recommendedValueDefinition", (n) -> { currentObject.setRecommendedValueDefinition(n.getObjectValue(DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("requiredValueDefinition", (n) -> { currentObject.setRequiredValueDefinition(n.getObjectValue(DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("settingValueTemplateId", (n) -> { currentObject.setSettingValueTemplateId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -108,6 +109,7 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("defaultValue", this.getDefaultValue());
@@ -122,6 +124,7 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +133,7 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final DeviceManagementConfigurationChoiceSettingValueDefaultTemplate value) {
         this._defaultValue = value;
     }
@@ -138,6 +142,7 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -146,6 +151,7 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
      * @param value Value to set for the recommendedValueDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendedValueDefinition(@javax.annotation.Nullable final DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate value) {
         this._recommendedValueDefinition = value;
     }
@@ -154,6 +160,7 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
      * @param value Value to set for the requiredValueDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredValueDefinition(@javax.annotation.Nullable final DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate value) {
         this._requiredValueDefinition = value;
     }
@@ -162,6 +169,7 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
      * @param value Value to set for the settingValueTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingValueTemplateId(@javax.annotation.Nullable final String value) {
         this._settingValueTemplateId = value;
     }

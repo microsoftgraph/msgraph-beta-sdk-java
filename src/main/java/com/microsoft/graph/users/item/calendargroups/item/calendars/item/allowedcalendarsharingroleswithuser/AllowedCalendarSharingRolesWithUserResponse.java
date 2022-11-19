@@ -1,6 +1,7 @@
 package com.microsoft.graph.users.item.calendargroups.item.calendars.item.allowedcalendarsharingroleswithuser;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
+import com.microsoft.graph.models.BaseCollectionPaginationCountResponse;
+import com.microsoft.graph.models.CalendarRoleType;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -9,17 +10,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /** Provides operations to call the allowedCalendarSharingRoles method. */
-public class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDataHolder, Parsable {
-    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+public class AllowedCalendarSharingRolesWithUserResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /** The value property */
-    private java.util.List<String> _value;
+    private java.util.List<CalendarRoleType> _value;
     /**
      * Instantiates a new allowedCalendarSharingRolesWithUserResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AllowedCalendarSharingRolesWithUserResponse() {
-        this.setAdditionalData(new HashMap<>());
+        super();
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,30 +32,22 @@ public class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDa
         return new AllowedCalendarSharingRolesWithUserResponse();
     }
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a Map<String, Object>
-     */
-    @javax.annotation.Nonnull
-    public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
-    }
-    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AllowedCalendarSharingRolesWithUserResponse currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getCollectionOfEnumValues(CalendarRoleType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The value property
-     * @return a string
+     * @return a calendarRoleType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getValue() {
+    public java.util.List<CalendarRoleType> getValue() {
         return this._value;
     }
     /**
@@ -63,25 +55,19 @@ public class AllowedCalendarSharingRolesWithUserResponse implements AdditionalDa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeCollectionOfPrimitiveValues("value", this.getValue());
-        writer.writeAdditionalData(this.getAdditionalData());
-    }
-    /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
-     * @return a void
-     */
-    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        super.serialize(writer);
+        writer.writeCollectionOfEnumValues("value", this.getValue());
     }
     /**
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
      * @return a void
      */
-    public void setValue(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setValue(@javax.annotation.Nullable final java.util.List<CalendarRoleType> value) {
         this._value = value;
     }
 }

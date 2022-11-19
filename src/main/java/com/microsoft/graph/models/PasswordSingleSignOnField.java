@@ -25,6 +25,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
      * Instantiates a new passwordSingleSignOnField and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PasswordSingleSignOnField() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.passwordSingleSignOnField");
@@ -70,13 +71,13 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PasswordSingleSignOnField currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("customizedLabel", (n) -> { currentObject.setCustomizedLabel(n.getStringValue()); });
-            this.put("defaultLabel", (n) -> { currentObject.setDefaultLabel(n.getStringValue()); });
-            this.put("fieldId", (n) -> { currentObject.setFieldId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("customizedLabel", (n) -> { currentObject.setCustomizedLabel(n.getStringValue()); });
+        deserializerMap.put("defaultLabel", (n) -> { currentObject.setDefaultLabel(n.getStringValue()); });
+        deserializerMap.put("fieldId", (n) -> { currentObject.setFieldId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fieldId property value. Id used to identity the field type. This is an internal id and possible values are param_1, param_2, param_userName, param_password.
@@ -107,6 +108,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("customizedLabel", this.getCustomizedLabel());
@@ -121,6 +123,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
      * @param value Value to set for the customizedLabel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomizedLabel(@javax.annotation.Nullable final String value) {
         this._customizedLabel = value;
     }
@@ -137,6 +141,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
      * @param value Value to set for the defaultLabel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultLabel(@javax.annotation.Nullable final String value) {
         this._defaultLabel = value;
     }
@@ -145,6 +150,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
      * @param value Value to set for the fieldId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFieldId(@javax.annotation.Nullable final String value) {
         this._fieldId = value;
     }
@@ -153,6 +159,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -161,6 +168,7 @@ public class PasswordSingleSignOnField implements AdditionalDataHolder, Parsable
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }

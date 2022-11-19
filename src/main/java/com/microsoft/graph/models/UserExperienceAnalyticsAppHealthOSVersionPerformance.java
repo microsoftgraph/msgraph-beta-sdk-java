@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device OS version performance entity contains OS version performance details. */
 public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity implements Parsable {
     /** The number of active devices for the OS version. Valid values -2147483648 to 2147483647 */
     private Integer _activeDeviceCount;
@@ -21,9 +22,10 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
     /** The overall app health status of the OS version. */
     private String _osVersionAppHealthStatus;
     /**
-     * Instantiates a new UserExperienceAnalyticsAppHealthOSVersionPerformance and sets the default values.
+     * Instantiates a new userExperienceAnalyticsAppHealthOSVersionPerformance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsAppHealthOSVersionPerformance() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsAppHealthOSVersionPerformance");
@@ -31,7 +33,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsAppHealthOSVersionPerformance
+     * @return a userExperienceAnalyticsAppHealthOSVersionPerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthOSVersionPerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -53,14 +55,14 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsAppHealthOSVersionPerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeDeviceCount", (n) -> { currentObject.setActiveDeviceCount(n.getIntegerValue()); });
-            this.put("meanTimeToFailureInMinutes", (n) -> { currentObject.setMeanTimeToFailureInMinutes(n.getIntegerValue()); });
-            this.put("osBuildNumber", (n) -> { currentObject.setOsBuildNumber(n.getStringValue()); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
-            this.put("osVersionAppHealthScore", (n) -> { currentObject.setOsVersionAppHealthScore(n.getDoubleValue()); });
-            this.put("osVersionAppHealthStatus", (n) -> { currentObject.setOsVersionAppHealthStatus(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeDeviceCount", (n) -> { currentObject.setActiveDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("meanTimeToFailureInMinutes", (n) -> { currentObject.setMeanTimeToFailureInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("osBuildNumber", (n) -> { currentObject.setOsBuildNumber(n.getStringValue()); });
+        deserializerMap.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
+        deserializerMap.put("osVersionAppHealthScore", (n) -> { currentObject.setOsVersionAppHealthScore(n.getDoubleValue()); });
+        deserializerMap.put("osVersionAppHealthStatus", (n) -> { currentObject.setOsVersionAppHealthStatus(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the meanTimeToFailureInMinutes property value. The mean time to failure for the OS version in minutes. Valid values -2147483648 to 2147483647
@@ -107,6 +109,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +125,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * @param value Value to set for the activeDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._activeDeviceCount = value;
     }
@@ -130,6 +134,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * @param value Value to set for the meanTimeToFailureInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeanTimeToFailureInMinutes(@javax.annotation.Nullable final Integer value) {
         this._meanTimeToFailureInMinutes = value;
     }
@@ -138,6 +143,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * @param value Value to set for the osBuildNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsBuildNumber(@javax.annotation.Nullable final String value) {
         this._osBuildNumber = value;
     }
@@ -146,6 +152,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
         this._osVersion = value;
     }
@@ -154,6 +161,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * @param value Value to set for the osVersionAppHealthScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersionAppHealthScore(@javax.annotation.Nullable final Double value) {
         this._osVersionAppHealthScore = value;
     }
@@ -162,6 +170,7 @@ public class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
      * @param value Value to set for the osVersionAppHealthStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersionAppHealthStatus(@javax.annotation.Nullable final String value) {
         this._osVersionAppHealthStatus = value;
     }

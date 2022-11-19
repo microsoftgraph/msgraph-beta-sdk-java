@@ -23,6 +23,7 @@ public class UnenrollAssetsByIdPostRequestBody implements AdditionalDataHolder, 
      * Instantiates a new unenrollAssetsByIdPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnenrollAssetsByIdPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -51,11 +52,11 @@ public class UnenrollAssetsByIdPostRequestBody implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnenrollAssetsByIdPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("ids", (n) -> { currentObject.setIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("memberEntityType", (n) -> { currentObject.setMemberEntityType(n.getStringValue()); });
-            this.put("updateCategory", (n) -> { currentObject.setUpdateCategory(n.getEnumValue(UpdateCategory.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("ids", (n) -> { currentObject.setIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("memberEntityType", (n) -> { currentObject.setMemberEntityType(n.getStringValue()); });
+        deserializerMap.put("updateCategory", (n) -> { currentObject.setUpdateCategory(n.getEnumValue(UpdateCategory.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the ids property value. The ids property
@@ -86,6 +87,7 @@ public class UnenrollAssetsByIdPostRequestBody implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("ids", this.getIds());
@@ -98,6 +100,7 @@ public class UnenrollAssetsByIdPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +109,7 @@ public class UnenrollAssetsByIdPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the ids property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._ids = value;
     }
@@ -114,6 +118,7 @@ public class UnenrollAssetsByIdPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the memberEntityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberEntityType(@javax.annotation.Nullable final String value) {
         this._memberEntityType = value;
     }
@@ -122,6 +127,7 @@ public class UnenrollAssetsByIdPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the updateCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateCategory(@javax.annotation.Nullable final UpdateCategory value) {
         this._updateCategory = value;
     }

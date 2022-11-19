@@ -21,6 +21,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, Parsabl
      * Instantiates a new appManagementConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppManagementConfiguration() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.appManagementConfiguration");
@@ -50,11 +51,11 @@ public class AppManagementConfiguration implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppManagementConfiguration currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("keyCredentials", (n) -> { currentObject.setKeyCredentials(n.getCollectionOfObjectValues(KeyCredentialConfiguration::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("passwordCredentials", (n) -> { currentObject.setPasswordCredentials(n.getCollectionOfObjectValues(PasswordCredentialConfiguration::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("keyCredentials", (n) -> { currentObject.setKeyCredentials(n.getCollectionOfObjectValues(KeyCredentialConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("passwordCredentials", (n) -> { currentObject.setPasswordCredentials(n.getCollectionOfObjectValues(PasswordCredentialConfiguration::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the keyCredentials property value. Collection of keyCredential restrictions settings to be applied to an application or service principal.
@@ -85,6 +86,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("keyCredentials", this.getKeyCredentials());
@@ -97,6 +99,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the keyCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyCredentials(@javax.annotation.Nullable final java.util.List<KeyCredentialConfiguration> value) {
         this._keyCredentials = value;
     }
@@ -113,6 +117,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +126,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the passwordCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordCredentials(@javax.annotation.Nullable final java.util.List<PasswordCredentialConfiguration> value) {
         this._passwordCredentials = value;
     }

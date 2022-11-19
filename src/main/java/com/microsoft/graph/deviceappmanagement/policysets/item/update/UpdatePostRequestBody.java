@@ -26,6 +26,7 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new updatePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -78,12 +79,12 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdatePostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("addedPolicySetItems", (n) -> { currentObject.setAddedPolicySetItems(n.getCollectionOfObjectValues(PolicySetItem::createFromDiscriminatorValue)); });
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(PolicySetAssignment::createFromDiscriminatorValue)); });
-            this.put("deletedPolicySetItems", (n) -> { currentObject.setDeletedPolicySetItems(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("updatedPolicySetItems", (n) -> { currentObject.setUpdatedPolicySetItems(n.getCollectionOfObjectValues(PolicySetItem::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("addedPolicySetItems", (n) -> { currentObject.setAddedPolicySetItems(n.getCollectionOfObjectValues(PolicySetItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(PolicySetAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("deletedPolicySetItems", (n) -> { currentObject.setDeletedPolicySetItems(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("updatedPolicySetItems", (n) -> { currentObject.setUpdatedPolicySetItems(n.getCollectionOfObjectValues(PolicySetItem::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the updatedPolicySetItems property value. The updatedPolicySetItems property
@@ -98,6 +99,7 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("addedPolicySetItems", this.getAddedPolicySetItems());
@@ -111,6 +113,7 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the addedPolicySetItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddedPolicySetItems(@javax.annotation.Nullable final java.util.List<PolicySetItem> value) {
         this._addedPolicySetItems = value;
     }
@@ -119,6 +122,7 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -127,6 +131,7 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<PolicySetAssignment> value) {
         this._assignments = value;
     }
@@ -135,6 +140,7 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deletedPolicySetItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeletedPolicySetItems(@javax.annotation.Nullable final java.util.List<String> value) {
         this._deletedPolicySetItems = value;
     }
@@ -143,6 +149,7 @@ public class UpdatePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the updatedPolicySetItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdatedPolicySetItems(@javax.annotation.Nullable final java.util.List<PolicySetItem> value) {
         this._updatedPolicySetItems = value;
     }

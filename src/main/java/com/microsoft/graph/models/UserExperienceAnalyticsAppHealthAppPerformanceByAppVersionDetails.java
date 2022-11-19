@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics application performance entity contains app performance by app version details. */
 public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends Entity implements Parsable {
     /** The number of crashes for the app. Valid values -2147483648 to 2147483647 */
     private Integer _appCrashCount;
@@ -25,9 +26,10 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
     /** Is the version of application the most used version for that app. */
     private Boolean _isMostUsedVersion;
     /**
-     * Instantiates a new UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails and sets the default values.
+     * Instantiates a new userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails");
@@ -35,7 +37,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails
+     * @return a userExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -97,16 +99,16 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appCrashCount", (n) -> { currentObject.setAppCrashCount(n.getIntegerValue()); });
-            this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
-            this.put("appName", (n) -> { currentObject.setAppName(n.getStringValue()); });
-            this.put("appPublisher", (n) -> { currentObject.setAppPublisher(n.getStringValue()); });
-            this.put("appVersion", (n) -> { currentObject.setAppVersion(n.getStringValue()); });
-            this.put("deviceCountWithCrashes", (n) -> { currentObject.setDeviceCountWithCrashes(n.getIntegerValue()); });
-            this.put("isLatestUsedVersion", (n) -> { currentObject.setIsLatestUsedVersion(n.getBooleanValue()); });
-            this.put("isMostUsedVersion", (n) -> { currentObject.setIsMostUsedVersion(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appCrashCount", (n) -> { currentObject.setAppCrashCount(n.getIntegerValue()); });
+        deserializerMap.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("appName", (n) -> { currentObject.setAppName(n.getStringValue()); });
+        deserializerMap.put("appPublisher", (n) -> { currentObject.setAppPublisher(n.getStringValue()); });
+        deserializerMap.put("appVersion", (n) -> { currentObject.setAppVersion(n.getStringValue()); });
+        deserializerMap.put("deviceCountWithCrashes", (n) -> { currentObject.setDeviceCountWithCrashes(n.getIntegerValue()); });
+        deserializerMap.put("isLatestUsedVersion", (n) -> { currentObject.setIsLatestUsedVersion(n.getBooleanValue()); });
+        deserializerMap.put("isMostUsedVersion", (n) -> { currentObject.setIsMostUsedVersion(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isLatestUsedVersion property value. Is the version of application the latest version for that app that is in use.
@@ -129,6 +131,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +149,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      * @param value Value to set for the appCrashCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppCrashCount(@javax.annotation.Nullable final Integer value) {
         this._appCrashCount = value;
     }
@@ -154,6 +158,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
         this._appDisplayName = value;
     }
@@ -162,6 +167,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      * @param value Value to set for the appName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppName(@javax.annotation.Nullable final String value) {
         this._appName = value;
     }
@@ -170,6 +176,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      * @param value Value to set for the appPublisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppPublisher(@javax.annotation.Nullable final String value) {
         this._appPublisher = value;
     }
@@ -178,6 +185,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      * @param value Value to set for the appVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppVersion(@javax.annotation.Nullable final String value) {
         this._appVersion = value;
     }
@@ -186,6 +194,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      * @param value Value to set for the deviceCountWithCrashes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCountWithCrashes(@javax.annotation.Nullable final Integer value) {
         this._deviceCountWithCrashes = value;
     }
@@ -194,6 +203,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      * @param value Value to set for the isLatestUsedVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsLatestUsedVersion(@javax.annotation.Nullable final Boolean value) {
         this._isLatestUsedVersion = value;
     }
@@ -202,6 +212,7 @@ public class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails e
      * @param value Value to set for the isMostUsedVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMostUsedVersion(@javax.annotation.Nullable final Boolean value) {
         this._isMostUsedVersion = value;
     }

@@ -23,6 +23,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
      * Instantiates a new EducationalActivity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationalActivity() {
         super();
         this.setOdataType("#microsoft.graph.educationalActivity");
@@ -60,13 +61,13 @@ public class EducationalActivity extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationalActivity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("completionMonthYear", (n) -> { currentObject.setCompletionMonthYear(n.getLocalDateValue()); });
-            this.put("endMonthYear", (n) -> { currentObject.setEndMonthYear(n.getLocalDateValue()); });
-            this.put("institution", (n) -> { currentObject.setInstitution(n.getObjectValue(InstitutionData::createFromDiscriminatorValue)); });
-            this.put("program", (n) -> { currentObject.setProgram(n.getObjectValue(EducationalActivityDetail::createFromDiscriminatorValue)); });
-            this.put("startMonthYear", (n) -> { currentObject.setStartMonthYear(n.getLocalDateValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("completionMonthYear", (n) -> { currentObject.setCompletionMonthYear(n.getLocalDateValue()); });
+        deserializerMap.put("endMonthYear", (n) -> { currentObject.setEndMonthYear(n.getLocalDateValue()); });
+        deserializerMap.put("institution", (n) -> { currentObject.setInstitution(n.getObjectValue(InstitutionData::createFromDiscriminatorValue)); });
+        deserializerMap.put("program", (n) -> { currentObject.setProgram(n.getObjectValue(EducationalActivityDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("startMonthYear", (n) -> { currentObject.setStartMonthYear(n.getLocalDateValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the institution property value. The institution property
@@ -97,6 +98,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
      * @param value Value to set for the completionMonthYear property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletionMonthYear(@javax.annotation.Nullable final LocalDate value) {
         this._completionMonthYear = value;
     }
@@ -119,6 +122,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
      * @param value Value to set for the endMonthYear property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndMonthYear(@javax.annotation.Nullable final LocalDate value) {
         this._endMonthYear = value;
     }
@@ -127,6 +131,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
      * @param value Value to set for the institution property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstitution(@javax.annotation.Nullable final InstitutionData value) {
         this._institution = value;
     }
@@ -135,6 +140,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
      * @param value Value to set for the program property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProgram(@javax.annotation.Nullable final EducationalActivityDetail value) {
         this._program = value;
     }
@@ -143,6 +149,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
      * @param value Value to set for the startMonthYear property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMonthYear(@javax.annotation.Nullable final LocalDate value) {
         this._startMonthYear = value;
     }

@@ -27,6 +27,7 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
      * Instantiates a new customUpdateTimeWindow and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CustomUpdateTimeWindow() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.customUpdateTimeWindow");
@@ -72,13 +73,13 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomUpdateTimeWindow currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("endDay", (n) -> { currentObject.setEndDay(n.getEnumValue(DayOfWeek.class)); });
-            this.put("endTime", (n) -> { currentObject.setEndTime(n.getLocalTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("startDay", (n) -> { currentObject.setStartDay(n.getEnumValue(DayOfWeek.class)); });
-            this.put("startTime", (n) -> { currentObject.setStartTime(n.getLocalTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("endDay", (n) -> { currentObject.setEndDay(n.getEnumValue(DayOfWeek.class)); });
+        deserializerMap.put("endTime", (n) -> { currentObject.setEndTime(n.getLocalTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("startDay", (n) -> { currentObject.setStartDay(n.getEnumValue(DayOfWeek.class)); });
+        deserializerMap.put("startTime", (n) -> { currentObject.setStartTime(n.getLocalTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -109,6 +110,7 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("endDay", this.getEndDay());
@@ -123,6 +125,7 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -131,6 +134,7 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the endDay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDay(@javax.annotation.Nullable final DayOfWeek value) {
         this._endDay = value;
     }
@@ -139,6 +143,7 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the endTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndTime(@javax.annotation.Nullable final LocalTime value) {
         this._endTime = value;
     }
@@ -147,6 +152,7 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -155,6 +161,7 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the startDay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDay(@javax.annotation.Nullable final DayOfWeek value) {
         this._startDay = value;
     }
@@ -163,6 +170,7 @@ public class CustomUpdateTimeWindow implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the startTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartTime(@javax.annotation.Nullable final LocalTime value) {
         this._startTime = value;
     }

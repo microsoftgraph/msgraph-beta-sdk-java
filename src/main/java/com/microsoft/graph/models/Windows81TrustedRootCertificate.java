@@ -18,6 +18,7 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
      * Instantiates a new windows81TrustedRootCertificate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows81TrustedRootCertificate() {
         super();
         this.setOdataType("#microsoft.graph.windows81TrustedRootCertificate");
@@ -55,11 +56,11 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows81TrustedRootCertificate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certFileName", (n) -> { currentObject.setCertFileName(n.getStringValue()); });
-            this.put("destinationStore", (n) -> { currentObject.setDestinationStore(n.getEnumValue(CertificateDestinationStore.class)); });
-            this.put("trustedRootCertificate", (n) -> { currentObject.setTrustedRootCertificate(n.getByteArrayValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certFileName", (n) -> { currentObject.setCertFileName(n.getStringValue()); });
+        deserializerMap.put("destinationStore", (n) -> { currentObject.setDestinationStore(n.getEnumValue(CertificateDestinationStore.class)); });
+        deserializerMap.put("trustedRootCertificate", (n) -> { currentObject.setTrustedRootCertificate(n.getByteArrayValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the trustedRootCertificate property value. Trusted Root Certificate
@@ -74,6 +75,7 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
      * @param value Value to set for the certFileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertFileName(@javax.annotation.Nullable final String value) {
         this._certFileName = value;
     }
@@ -94,6 +97,7 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
      * @param value Value to set for the destinationStore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDestinationStore(@javax.annotation.Nullable final CertificateDestinationStore value) {
         this._destinationStore = value;
     }
@@ -102,6 +106,7 @@ public class Windows81TrustedRootCertificate extends DeviceConfiguration impleme
      * @param value Value to set for the trustedRootCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrustedRootCertificate(@javax.annotation.Nullable final byte[] value) {
         this._trustedRootCertificate = value;
     }

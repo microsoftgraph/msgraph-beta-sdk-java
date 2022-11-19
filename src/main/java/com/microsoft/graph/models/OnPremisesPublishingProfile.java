@@ -26,6 +26,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * Instantiates a new OnPremisesPublishingProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnPremisesPublishingProfile() {
         super();
         this.setOdataType("#microsoft.graph.onPremisesPublishingProfile");
@@ -79,15 +80,15 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnPremisesPublishingProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("agentGroups", (n) -> { currentObject.setAgentGroups(n.getCollectionOfObjectValues(OnPremisesAgentGroup::createFromDiscriminatorValue)); });
-            this.put("agents", (n) -> { currentObject.setAgents(n.getCollectionOfObjectValues(OnPremisesAgent::createFromDiscriminatorValue)); });
-            this.put("connectorGroups", (n) -> { currentObject.setConnectorGroups(n.getCollectionOfObjectValues(ConnectorGroup::createFromDiscriminatorValue)); });
-            this.put("connectors", (n) -> { currentObject.setConnectors(n.getCollectionOfObjectValues(Connector::createFromDiscriminatorValue)); });
-            this.put("hybridAgentUpdaterConfiguration", (n) -> { currentObject.setHybridAgentUpdaterConfiguration(n.getObjectValue(HybridAgentUpdaterConfiguration::createFromDiscriminatorValue)); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("publishedResources", (n) -> { currentObject.setPublishedResources(n.getCollectionOfObjectValues(PublishedResource::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("agentGroups", (n) -> { currentObject.setAgentGroups(n.getCollectionOfObjectValues(OnPremisesAgentGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("agents", (n) -> { currentObject.setAgents(n.getCollectionOfObjectValues(OnPremisesAgent::createFromDiscriminatorValue)); });
+        deserializerMap.put("connectorGroups", (n) -> { currentObject.setConnectorGroups(n.getCollectionOfObjectValues(ConnectorGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("connectors", (n) -> { currentObject.setConnectors(n.getCollectionOfObjectValues(Connector::createFromDiscriminatorValue)); });
+        deserializerMap.put("hybridAgentUpdaterConfiguration", (n) -> { currentObject.setHybridAgentUpdaterConfiguration(n.getObjectValue(HybridAgentUpdaterConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("publishedResources", (n) -> { currentObject.setPublishedResources(n.getCollectionOfObjectValues(PublishedResource::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the hybridAgentUpdaterConfiguration property value. Represents a hybridAgentUpdaterConfiguration object.
@@ -118,6 +119,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +136,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param value Value to set for the agentGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgentGroups(@javax.annotation.Nullable final java.util.List<OnPremisesAgentGroup> value) {
         this._agentGroups = value;
     }
@@ -142,6 +145,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param value Value to set for the agents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgents(@javax.annotation.Nullable final java.util.List<OnPremisesAgent> value) {
         this._agents = value;
     }
@@ -150,6 +154,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param value Value to set for the connectorGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectorGroups(@javax.annotation.Nullable final java.util.List<ConnectorGroup> value) {
         this._connectorGroups = value;
     }
@@ -158,6 +163,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param value Value to set for the connectors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectors(@javax.annotation.Nullable final java.util.List<Connector> value) {
         this._connectors = value;
     }
@@ -166,6 +172,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param value Value to set for the hybridAgentUpdaterConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHybridAgentUpdaterConfiguration(@javax.annotation.Nullable final HybridAgentUpdaterConfiguration value) {
         this._hybridAgentUpdaterConfiguration = value;
     }
@@ -174,6 +181,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }
@@ -182,6 +190,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param value Value to set for the publishedResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishedResources(@javax.annotation.Nullable final java.util.List<PublishedResource> value) {
         this._publishedResources = value;
     }

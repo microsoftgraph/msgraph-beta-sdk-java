@@ -14,6 +14,7 @@ public class WindowsKioskActiveDirectoryGroup extends WindowsKioskUser implement
      * Instantiates a new WindowsKioskActiveDirectoryGroup and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsKioskActiveDirectoryGroup() {
         super();
         this.setOdataType("#microsoft.graph.windowsKioskActiveDirectoryGroup");
@@ -35,9 +36,9 @@ public class WindowsKioskActiveDirectoryGroup extends WindowsKioskUser implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskActiveDirectoryGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("groupName", (n) -> { currentObject.setGroupName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("groupName", (n) -> { currentObject.setGroupName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupName property value. The name of the AD group that will be locked to this kiosk configuration
@@ -52,6 +53,7 @@ public class WindowsKioskActiveDirectoryGroup extends WindowsKioskUser implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class WindowsKioskActiveDirectoryGroup extends WindowsKioskUser implement
      * @param value Value to set for the groupName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupName(@javax.annotation.Nullable final String value) {
         this._groupName = value;
     }

@@ -33,6 +33,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
      * Instantiates a new PersonCertification and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PersonCertification() {
         super();
         this.setOdataType("#microsoft.graph.personCertification");
@@ -86,18 +87,18 @@ public class PersonCertification extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PersonCertification currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certificationId", (n) -> { currentObject.setCertificationId(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("endDate", (n) -> { currentObject.setEndDate(n.getLocalDateValue()); });
-            this.put("issuedDate", (n) -> { currentObject.setIssuedDate(n.getLocalDateValue()); });
-            this.put("issuingAuthority", (n) -> { currentObject.setIssuingAuthority(n.getStringValue()); });
-            this.put("issuingCompany", (n) -> { currentObject.setIssuingCompany(n.getStringValue()); });
-            this.put("startDate", (n) -> { currentObject.setStartDate(n.getLocalDateValue()); });
-            this.put("thumbnailUrl", (n) -> { currentObject.setThumbnailUrl(n.getStringValue()); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certificationId", (n) -> { currentObject.setCertificationId(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("endDate", (n) -> { currentObject.setEndDate(n.getLocalDateValue()); });
+        deserializerMap.put("issuedDate", (n) -> { currentObject.setIssuedDate(n.getLocalDateValue()); });
+        deserializerMap.put("issuingAuthority", (n) -> { currentObject.setIssuingAuthority(n.getStringValue()); });
+        deserializerMap.put("issuingCompany", (n) -> { currentObject.setIssuingCompany(n.getStringValue()); });
+        deserializerMap.put("startDate", (n) -> { currentObject.setStartDate(n.getLocalDateValue()); });
+        deserializerMap.put("thumbnailUrl", (n) -> { currentObject.setThumbnailUrl(n.getStringValue()); });
+        deserializerMap.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the issuedDate property value. The date that the certification was issued.
@@ -152,6 +153,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -171,6 +173,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
      * @param value Value to set for the certificationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationId(@javax.annotation.Nullable final String value) {
         this._certificationId = value;
     }
@@ -179,6 +182,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -187,6 +191,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -195,6 +200,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
      * @param value Value to set for the endDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDate(@javax.annotation.Nullable final LocalDate value) {
         this._endDate = value;
     }
@@ -203,6 +209,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
      * @param value Value to set for the issuedDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuedDate(@javax.annotation.Nullable final LocalDate value) {
         this._issuedDate = value;
     }
@@ -211,6 +218,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
      * @param value Value to set for the issuingAuthority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuingAuthority(@javax.annotation.Nullable final String value) {
         this._issuingAuthority = value;
     }
@@ -219,6 +227,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
      * @param value Value to set for the issuingCompany property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuingCompany(@javax.annotation.Nullable final String value) {
         this._issuingCompany = value;
     }
@@ -227,6 +236,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
      * @param value Value to set for the startDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDate(@javax.annotation.Nullable final LocalDate value) {
         this._startDate = value;
     }
@@ -235,6 +245,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
      * @param value Value to set for the thumbnailUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
         this._thumbnailUrl = value;
     }
@@ -243,6 +254,7 @@ public class PersonCertification extends ItemFacet implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

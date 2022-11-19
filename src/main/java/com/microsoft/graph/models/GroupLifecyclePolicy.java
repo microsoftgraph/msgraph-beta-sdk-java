@@ -19,6 +19,7 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
      * Instantiates a new groupLifecyclePolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupLifecyclePolicy() {
         super();
         this.setOdataType("#microsoft.graph.groupLifecyclePolicy");
@@ -48,11 +49,11 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupLifecyclePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("alternateNotificationEmails", (n) -> { currentObject.setAlternateNotificationEmails(n.getStringValue()); });
-            this.put("groupLifetimeInDays", (n) -> { currentObject.setGroupLifetimeInDays(n.getIntegerValue()); });
-            this.put("managedGroupTypes", (n) -> { currentObject.setManagedGroupTypes(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("alternateNotificationEmails", (n) -> { currentObject.setAlternateNotificationEmails(n.getStringValue()); });
+        deserializerMap.put("groupLifetimeInDays", (n) -> { currentObject.setGroupLifetimeInDays(n.getIntegerValue()); });
+        deserializerMap.put("managedGroupTypes", (n) -> { currentObject.setManagedGroupTypes(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupLifetimeInDays property value. Number of days before a group expires and needs to be renewed. Once renewed, the group expiration is extended by the number of days defined.
@@ -75,6 +76,7 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +89,7 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
      * @param value Value to set for the alternateNotificationEmails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlternateNotificationEmails(@javax.annotation.Nullable final String value) {
         this._alternateNotificationEmails = value;
     }
@@ -95,6 +98,7 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
      * @param value Value to set for the groupLifetimeInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupLifetimeInDays(@javax.annotation.Nullable final Integer value) {
         this._groupLifetimeInDays = value;
     }
@@ -103,6 +107,7 @@ public class GroupLifecyclePolicy extends Entity implements Parsable {
      * @param value Value to set for the managedGroupTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedGroupTypes(@javax.annotation.Nullable final String value) {
         this._managedGroupTypes = value;
     }

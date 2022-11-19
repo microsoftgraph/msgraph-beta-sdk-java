@@ -9,12 +9,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
-    /** The rule property */
+    /** The rule for the subject set. Lifecycle Workflows supports a rich set of user properties for configuring the rules using $filter query expressions. For more information, see supported user and query parameters. */
     private String _rule;
     /**
      * Instantiates a new RuleBasedSubjectSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RuleBasedSubjectSet() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.ruleBasedSubjectSet");
@@ -36,12 +37,12 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RuleBasedSubjectSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("rule", (n) -> { currentObject.setRule(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("rule", (n) -> { currentObject.setRule(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the rule property value. The rule property
+     * Gets the rule property value. The rule for the subject set. Lifecycle Workflows supports a rich set of user properties for configuring the rules using $filter query expressions. For more information, see supported user and query parameters.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -53,16 +54,18 @@ public class RuleBasedSubjectSet extends SubjectSet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("rule", this.getRule());
     }
     /**
-     * Sets the rule property value. The rule property
+     * Sets the rule property value. The rule for the subject set. Lifecycle Workflows supports a rich set of user properties for configuring the rules using $filter query expressions. For more information, see supported user and query parameters.
      * @param value Value to set for the rule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRule(@javax.annotation.Nullable final String value) {
         this._rule = value;
     }

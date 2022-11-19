@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
     /** Ids of the app specific scopes when the assignment scopes are app specific. The scopes of an assignment determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. App scopes are scopes that are defined and understood by this application only. */
     private java.util.List<String> _appScopeIds;
@@ -31,9 +32,10 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
     /** Identifier of the unifiedRoleDefinition the assignment is for. */
     private String _roleDefinitionId;
     /**
-     * Instantiates a new UnifiedRoleAssignmentMultiple and sets the default values.
+     * Instantiates a new unifiedRoleAssignmentMultiple and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleAssignmentMultiple() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleAssignmentMultiple");
@@ -41,7 +43,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleAssignmentMultiple
+     * @return a unifiedRoleAssignmentMultiple
      */
     @javax.annotation.Nonnull
     public static UnifiedRoleAssignmentMultiple createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -111,19 +113,19 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleAssignmentMultiple currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appScopeIds", (n) -> { currentObject.setAppScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("appScopes", (n) -> { currentObject.setAppScopes(n.getCollectionOfObjectValues(AppScope::createFromDiscriminatorValue)); });
-            this.put("condition", (n) -> { currentObject.setCondition(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("directoryScopeIds", (n) -> { currentObject.setDirectoryScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("directoryScopes", (n) -> { currentObject.setDirectoryScopes(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("principalIds", (n) -> { currentObject.setPrincipalIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("principals", (n) -> { currentObject.setPrincipals(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("roleDefinition", (n) -> { currentObject.setRoleDefinition(n.getObjectValue(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
-            this.put("roleDefinitionId", (n) -> { currentObject.setRoleDefinitionId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appScopeIds", (n) -> { currentObject.setAppScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("appScopes", (n) -> { currentObject.setAppScopes(n.getCollectionOfObjectValues(AppScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("condition", (n) -> { currentObject.setCondition(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("directoryScopeIds", (n) -> { currentObject.setDirectoryScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("directoryScopes", (n) -> { currentObject.setDirectoryScopes(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("principalIds", (n) -> { currentObject.setPrincipalIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("principals", (n) -> { currentObject.setPrincipals(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleDefinition", (n) -> { currentObject.setRoleDefinition(n.getObjectValue(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleDefinitionId", (n) -> { currentObject.setRoleDefinitionId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the principalIds property value. Identifiers of the principals to which the assignment is granted.  Supports $filter (any operator only).
@@ -162,6 +164,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -182,6 +185,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the appScopeIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppScopeIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._appScopeIds = value;
     }
@@ -190,6 +194,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the appScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppScopes(@javax.annotation.Nullable final java.util.List<AppScope> value) {
         this._appScopes = value;
     }
@@ -198,6 +203,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the condition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCondition(@javax.annotation.Nullable final String value) {
         this._condition = value;
     }
@@ -206,6 +212,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -214,6 +221,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the directoryScopeIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectoryScopeIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._directoryScopeIds = value;
     }
@@ -222,6 +230,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the directoryScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectoryScopes(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._directoryScopes = value;
     }
@@ -230,6 +239,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -238,6 +248,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the principalIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipalIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._principalIds = value;
     }
@@ -246,6 +257,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the principals property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipals(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._principals = value;
     }
@@ -254,6 +266,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the roleDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinition(@javax.annotation.Nullable final UnifiedRoleDefinition value) {
         this._roleDefinition = value;
     }
@@ -262,6 +275,7 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements Parsable {
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
         this._roleDefinitionId = value;
     }

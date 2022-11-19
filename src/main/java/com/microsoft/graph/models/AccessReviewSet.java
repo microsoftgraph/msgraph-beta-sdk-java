@@ -20,6 +20,7 @@ public class AccessReviewSet extends Entity implements Parsable {
      * Instantiates a new AccessReviewSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewSet() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewSet");
@@ -57,12 +58,12 @@ public class AccessReviewSet extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessReviewSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("decisions", (n) -> { currentObject.setDecisions(n.getCollectionOfObjectValues(AccessReviewInstanceDecisionItem::createFromDiscriminatorValue)); });
-            this.put("definitions", (n) -> { currentObject.setDefinitions(n.getCollectionOfObjectValues(AccessReviewScheduleDefinition::createFromDiscriminatorValue)); });
-            this.put("historyDefinitions", (n) -> { currentObject.setHistoryDefinitions(n.getCollectionOfObjectValues(AccessReviewHistoryDefinition::createFromDiscriminatorValue)); });
-            this.put("policy", (n) -> { currentObject.setPolicy(n.getObjectValue(AccessReviewPolicy::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("decisions", (n) -> { currentObject.setDecisions(n.getCollectionOfObjectValues(AccessReviewInstanceDecisionItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("definitions", (n) -> { currentObject.setDefinitions(n.getCollectionOfObjectValues(AccessReviewScheduleDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("historyDefinitions", (n) -> { currentObject.setHistoryDefinitions(n.getCollectionOfObjectValues(AccessReviewHistoryDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("policy", (n) -> { currentObject.setPolicy(n.getObjectValue(AccessReviewPolicy::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the historyDefinitions property value. Represents a collection of access review history data and the scopes used to collect that data.
@@ -85,6 +86,7 @@ public class AccessReviewSet extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class AccessReviewSet extends Entity implements Parsable {
      * @param value Value to set for the decisions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecisions(@javax.annotation.Nullable final java.util.List<AccessReviewInstanceDecisionItem> value) {
         this._decisions = value;
     }
@@ -106,6 +109,7 @@ public class AccessReviewSet extends Entity implements Parsable {
      * @param value Value to set for the definitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitions(@javax.annotation.Nullable final java.util.List<AccessReviewScheduleDefinition> value) {
         this._definitions = value;
     }
@@ -114,6 +118,7 @@ public class AccessReviewSet extends Entity implements Parsable {
      * @param value Value to set for the historyDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHistoryDefinitions(@javax.annotation.Nullable final java.util.List<AccessReviewHistoryDefinition> value) {
         this._historyDefinitions = value;
     }
@@ -122,6 +127,7 @@ public class AccessReviewSet extends Entity implements Parsable {
      * @param value Value to set for the policy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicy(@javax.annotation.Nullable final AccessReviewPolicy value) {
         this._policy = value;
     }

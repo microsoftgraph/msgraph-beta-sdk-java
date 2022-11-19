@@ -22,6 +22,7 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new assignPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -58,10 +59,10 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("appProvisioningConfigurationGroupAssignments", (n) -> { currentObject.setAppProvisioningConfigurationGroupAssignments(n.getCollectionOfObjectValues(MobileAppProvisioningConfigGroupAssignment::createFromDiscriminatorValue)); });
-            this.put("iOSLobAppProvisioningConfigAssignments", (n) -> { currentObject.setIOSLobAppProvisioningConfigAssignments(n.getCollectionOfObjectValues(IosLobAppProvisioningConfigurationAssignment::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("appProvisioningConfigurationGroupAssignments", (n) -> { currentObject.setAppProvisioningConfigurationGroupAssignments(n.getCollectionOfObjectValues(MobileAppProvisioningConfigGroupAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("iOSLobAppProvisioningConfigAssignments", (n) -> { currentObject.setIOSLobAppProvisioningConfigAssignments(n.getCollectionOfObjectValues(IosLobAppProvisioningConfigurationAssignment::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the iOSLobAppProvisioningConfigAssignments property value. The iOSLobAppProvisioningConfigAssignments property
@@ -76,6 +77,7 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("appProvisioningConfigurationGroupAssignments", this.getAppProvisioningConfigurationGroupAssignments());
@@ -87,6 +89,7 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -95,6 +98,7 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the appProvisioningConfigurationGroupAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppProvisioningConfigurationGroupAssignments(@javax.annotation.Nullable final java.util.List<MobileAppProvisioningConfigGroupAssignment> value) {
         this._appProvisioningConfigurationGroupAssignments = value;
     }
@@ -103,6 +107,7 @@ public class AssignPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the iOSLobAppProvisioningConfigAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIOSLobAppProvisioningConfigAssignments(@javax.annotation.Nullable final java.util.List<IosLobAppProvisioningConfigurationAssignment> value) {
         this._iOSLobAppProvisioningConfigAssignments = value;
     }

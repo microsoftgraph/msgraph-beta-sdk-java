@@ -8,13 +8,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device startup score history. */
 public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsable {
     /** The user experience analytics device startup date time. */
     private OffsetDateTime _startupDateTime;
     /**
-     * Instantiates a new UserExperienceAnalyticsScoreHistory and sets the default values.
+     * Instantiates a new userExperienceAnalyticsScoreHistory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsScoreHistory() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsScoreHistory");
@@ -22,7 +24,7 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsScoreHistory
+     * @return a userExperienceAnalyticsScoreHistory
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsScoreHistory createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,9 +38,9 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsScoreHistory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("startupDateTime", (n) -> { currentObject.setStartupDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("startupDateTime", (n) -> { currentObject.setStartupDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the startupDateTime property value. The user experience analytics device startup date time.
@@ -53,6 +55,7 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +66,7 @@ public class UserExperienceAnalyticsScoreHistory extends Entity implements Parsa
      * @param value Value to set for the startupDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartupDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startupDateTime = value;
     }

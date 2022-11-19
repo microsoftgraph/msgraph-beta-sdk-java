@@ -18,6 +18,7 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
      * Instantiates a new CrossTenantAccessPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CrossTenantAccessPolicy() {
         super();
         this.setOdataType("#microsoft.graph.crossTenantAccessPolicy");
@@ -55,11 +56,11 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CrossTenantAccessPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedCloudEndpoints", (n) -> { currentObject.setAllowedCloudEndpoints(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("default", (n) -> { currentObject.setDefault(n.getObjectValue(CrossTenantAccessPolicyConfigurationDefault::createFromDiscriminatorValue)); });
-            this.put("partners", (n) -> { currentObject.setPartners(n.getCollectionOfObjectValues(CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedCloudEndpoints", (n) -> { currentObject.setAllowedCloudEndpoints(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("default", (n) -> { currentObject.setDefault(n.getObjectValue(CrossTenantAccessPolicyConfigurationDefault::createFromDiscriminatorValue)); });
+        deserializerMap.put("partners", (n) -> { currentObject.setPartners(n.getCollectionOfObjectValues(CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the partners property value. Defines partner-specific configurations for external Azure Active Directory organizations.
@@ -74,6 +75,7 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
      * @param value Value to set for the allowedCloudEndpoints property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedCloudEndpoints(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedCloudEndpoints = value;
     }
@@ -94,6 +97,7 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
      * @param value Value to set for the default property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefault(@javax.annotation.Nullable final CrossTenantAccessPolicyConfigurationDefault value) {
         this._default_escaped = value;
     }
@@ -102,6 +106,7 @@ public class CrossTenantAccessPolicy extends TenantRelationshipAccessPolicyBase 
      * @param value Value to set for the partners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartners(@javax.annotation.Nullable final java.util.List<CrossTenantAccessPolicyConfigurationPartner> value) {
         this._partners = value;
     }

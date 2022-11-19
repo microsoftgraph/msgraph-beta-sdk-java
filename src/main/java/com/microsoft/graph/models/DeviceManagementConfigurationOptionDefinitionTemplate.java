@@ -22,6 +22,7 @@ public class DeviceManagementConfigurationOptionDefinitionTemplate implements Ad
      * Instantiates a new deviceManagementConfigurationOptionDefinitionTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationOptionDefinitionTemplate() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationOptionDefinitionTemplate");
@@ -59,11 +60,11 @@ public class DeviceManagementConfigurationOptionDefinitionTemplate implements Ad
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationOptionDefinitionTemplate currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingInstanceTemplate::createFromDiscriminatorValue)); });
-            this.put("itemId", (n) -> { currentObject.setItemId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingInstanceTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("itemId", (n) -> { currentObject.setItemId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the itemId property value. Option ItemId
@@ -86,6 +87,7 @@ public class DeviceManagementConfigurationOptionDefinitionTemplate implements Ad
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("children", this.getChildren());
@@ -98,6 +100,7 @@ public class DeviceManagementConfigurationOptionDefinitionTemplate implements Ad
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +109,7 @@ public class DeviceManagementConfigurationOptionDefinitionTemplate implements Ad
      * @param value Value to set for the children property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildren(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingInstanceTemplate> value) {
         this._children = value;
     }
@@ -114,6 +118,7 @@ public class DeviceManagementConfigurationOptionDefinitionTemplate implements Ad
      * @param value Value to set for the itemId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItemId(@javax.annotation.Nullable final String value) {
         this._itemId = value;
     }
@@ -122,6 +127,7 @@ public class DeviceManagementConfigurationOptionDefinitionTemplate implements Ad
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

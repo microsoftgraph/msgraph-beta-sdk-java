@@ -16,6 +16,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
      * Instantiates a new ItemIdResolver and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemIdResolver() {
         super();
         this.setOdataType("#microsoft.graph.externalConnectors.itemIdResolver");
@@ -37,10 +38,10 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemIdResolver currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("itemId", (n) -> { currentObject.setItemId(n.getStringValue()); });
-            this.put("urlMatchInfo", (n) -> { currentObject.setUrlMatchInfo(n.getObjectValue(UrlMatchInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("itemId", (n) -> { currentObject.setItemId(n.getStringValue()); });
+        deserializerMap.put("urlMatchInfo", (n) -> { currentObject.setUrlMatchInfo(n.getObjectValue(UrlMatchInfo::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the itemId property value. Pattern that specifies how to form the ID of the external item that the URL represents. The named groups from the regular expression in urlPattern within the urlMatchInfo can be referenced by inserting the group name inside curly brackets.
@@ -63,6 +64,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
      * @param value Value to set for the itemId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItemId(@javax.annotation.Nullable final String value) {
         this._itemId = value;
     }
@@ -82,6 +85,7 @@ public class ItemIdResolver extends UrlToItemResolverBase implements Parsable {
      * @param value Value to set for the urlMatchInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrlMatchInfo(@javax.annotation.Nullable final UrlMatchInfo value) {
         this._urlMatchInfo = value;
     }

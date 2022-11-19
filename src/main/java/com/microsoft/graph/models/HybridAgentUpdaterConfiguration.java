@@ -24,6 +24,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * Instantiates a new hybridAgentUpdaterConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public HybridAgentUpdaterConfiguration() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.hybridAgentUpdaterConfiguration");
@@ -69,12 +70,12 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HybridAgentUpdaterConfiguration currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("allowUpdateConfigurationOverride", (n) -> { currentObject.setAllowUpdateConfigurationOverride(n.getBooleanValue()); });
-            this.put("deferUpdateDateTime", (n) -> { currentObject.setDeferUpdateDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("updateWindow", (n) -> { currentObject.setUpdateWindow(n.getObjectValue(UpdateWindow::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("allowUpdateConfigurationOverride", (n) -> { currentObject.setAllowUpdateConfigurationOverride(n.getBooleanValue()); });
+        deserializerMap.put("deferUpdateDateTime", (n) -> { currentObject.setDeferUpdateDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("updateWindow", (n) -> { currentObject.setUpdateWindow(n.getObjectValue(UpdateWindow::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -97,6 +98,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowUpdateConfigurationOverride", this.getAllowUpdateConfigurationOverride());
@@ -110,6 +112,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * @param value Value to set for the allowUpdateConfigurationOverride property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowUpdateConfigurationOverride(@javax.annotation.Nullable final Boolean value) {
         this._allowUpdateConfigurationOverride = value;
     }
@@ -126,6 +130,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * @param value Value to set for the deferUpdateDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeferUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._deferUpdateDateTime = value;
     }
@@ -134,6 +139,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -142,6 +148,7 @@ public class HybridAgentUpdaterConfiguration implements AdditionalDataHolder, Pa
      * @param value Value to set for the updateWindow property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateWindow(@javax.annotation.Nullable final UpdateWindow value) {
         this._updateWindow = value;
     }

@@ -37,6 +37,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * Instantiates a new importedAppleDeviceIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ImportedAppleDeviceIdentity() {
         super();
         this.setOdataType("#microsoft.graph.importedAppleDeviceIdentity");
@@ -97,19 +98,19 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImportedAppleDeviceIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("discoverySource", (n) -> { currentObject.setDiscoverySource(n.getEnumValue(DiscoverySource.class)); });
-            this.put("enrollmentState", (n) -> { currentObject.setEnrollmentState(n.getEnumValue(EnrollmentState.class)); });
-            this.put("isDeleted", (n) -> { currentObject.setIsDeleted(n.getBooleanValue()); });
-            this.put("isSupervised", (n) -> { currentObject.setIsSupervised(n.getBooleanValue()); });
-            this.put("lastContactedDateTime", (n) -> { currentObject.setLastContactedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(Platform.class)); });
-            this.put("requestedEnrollmentProfileAssignmentDateTime", (n) -> { currentObject.setRequestedEnrollmentProfileAssignmentDateTime(n.getOffsetDateTimeValue()); });
-            this.put("requestedEnrollmentProfileId", (n) -> { currentObject.setRequestedEnrollmentProfileId(n.getStringValue()); });
-            this.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("discoverySource", (n) -> { currentObject.setDiscoverySource(n.getEnumValue(DiscoverySource.class)); });
+        deserializerMap.put("enrollmentState", (n) -> { currentObject.setEnrollmentState(n.getEnumValue(EnrollmentState.class)); });
+        deserializerMap.put("isDeleted", (n) -> { currentObject.setIsDeleted(n.getBooleanValue()); });
+        deserializerMap.put("isSupervised", (n) -> { currentObject.setIsSupervised(n.getBooleanValue()); });
+        deserializerMap.put("lastContactedDateTime", (n) -> { currentObject.setLastContactedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(Platform.class)); });
+        deserializerMap.put("requestedEnrollmentProfileAssignmentDateTime", (n) -> { currentObject.setRequestedEnrollmentProfileAssignmentDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("requestedEnrollmentProfileId", (n) -> { currentObject.setRequestedEnrollmentProfileId(n.getStringValue()); });
+        deserializerMap.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isDeleted property value. Indicates if the device is deleted from Apple Business Manager
@@ -172,6 +173,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -192,6 +194,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -200,6 +203,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -208,6 +212,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the discoverySource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscoverySource(@javax.annotation.Nullable final DiscoverySource value) {
         this._discoverySource = value;
     }
@@ -216,6 +221,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the enrollmentState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentState(@javax.annotation.Nullable final EnrollmentState value) {
         this._enrollmentState = value;
     }
@@ -224,6 +230,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the isDeleted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDeleted(@javax.annotation.Nullable final Boolean value) {
         this._isDeleted = value;
     }
@@ -232,6 +239,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the isSupervised property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSupervised(@javax.annotation.Nullable final Boolean value) {
         this._isSupervised = value;
     }
@@ -240,6 +248,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the lastContactedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastContactedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastContactedDateTime = value;
     }
@@ -248,6 +257,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the platform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final Platform value) {
         this._platform = value;
     }
@@ -256,6 +266,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the requestedEnrollmentProfileAssignmentDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestedEnrollmentProfileAssignmentDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._requestedEnrollmentProfileAssignmentDateTime = value;
     }
@@ -264,6 +275,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the requestedEnrollmentProfileId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestedEnrollmentProfileId(@javax.annotation.Nullable final String value) {
         this._requestedEnrollmentProfileId = value;
     }
@@ -272,6 +284,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the serialNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSerialNumber(@javax.annotation.Nullable final String value) {
         this._serialNumber = value;
     }

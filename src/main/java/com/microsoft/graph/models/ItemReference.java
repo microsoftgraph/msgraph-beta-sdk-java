@@ -33,6 +33,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * Instantiates a new itemReference and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemReference() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.itemReference");
@@ -78,17 +79,17 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemReference currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("driveId", (n) -> { currentObject.setDriveId(n.getStringValue()); });
-            this.put("driveType", (n) -> { currentObject.setDriveType(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("path", (n) -> { currentObject.setPath(n.getStringValue()); });
-            this.put("shareId", (n) -> { currentObject.setShareId(n.getStringValue()); });
-            this.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
-            this.put("siteId", (n) -> { currentObject.setSiteId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("driveId", (n) -> { currentObject.setDriveId(n.getStringValue()); });
+        deserializerMap.put("driveType", (n) -> { currentObject.setDriveType(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("path", (n) -> { currentObject.setPath(n.getStringValue()); });
+        deserializerMap.put("shareId", (n) -> { currentObject.setShareId(n.getStringValue()); });
+        deserializerMap.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
+        deserializerMap.put("siteId", (n) -> { currentObject.setSiteId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. Unique identifier of the item in the drive. Read-only.
@@ -151,6 +152,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("driveId", this.getDriveId());
@@ -169,6 +171,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -177,6 +180,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the driveId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDriveId(@javax.annotation.Nullable final String value) {
         this._driveId = value;
     }
@@ -185,6 +189,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the driveType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDriveType(@javax.annotation.Nullable final String value) {
         this._driveType = value;
     }
@@ -193,6 +198,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -201,6 +207,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -209,6 +216,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -217,6 +225,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the path property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPath(@javax.annotation.Nullable final String value) {
         this._path = value;
     }
@@ -225,6 +234,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the shareId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShareId(@javax.annotation.Nullable final String value) {
         this._shareId = value;
     }
@@ -233,6 +243,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sharepointIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharepointIds(@javax.annotation.Nullable final SharepointIds value) {
         this._sharepointIds = value;
     }
@@ -241,6 +252,7 @@ public class ItemReference implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the siteId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteId(@javax.annotation.Nullable final String value) {
         this._siteId = value;
     }

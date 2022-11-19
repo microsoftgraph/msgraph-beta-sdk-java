@@ -21,6 +21,7 @@ public class HideForUserPostRequestBody implements AdditionalDataHolder, Parsabl
      * Instantiates a new hideForUserPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public HideForUserPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,10 +50,10 @@ public class HideForUserPostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HideForUserPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("user", (n) -> { currentObject.setUser(n.getObjectValue(TeamworkUserIdentity::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
+        deserializerMap.put("user", (n) -> { currentObject.setUser(n.getObjectValue(TeamworkUserIdentity::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the tenantId property value. The tenantId property
@@ -75,6 +76,7 @@ public class HideForUserPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("tenantId", this.getTenantId());
@@ -86,6 +88,7 @@ public class HideForUserPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -94,6 +97,7 @@ public class HideForUserPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
@@ -102,6 +106,7 @@ public class HideForUserPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the user property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUser(@javax.annotation.Nullable final TeamworkUserIdentity value) {
         this._user = value;
     }

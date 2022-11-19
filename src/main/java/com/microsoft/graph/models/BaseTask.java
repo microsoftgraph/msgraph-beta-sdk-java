@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class BaseTask extends Entity implements Parsable {
     /** The date and time when the task was last modified. By default, it is in UTC. You can provide a custom time zone in the request header. The property value uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2020 would look like this: '2020-01-01T00:00:00Z'. */
     private OffsetDateTime _bodyLastModifiedDateTime;
@@ -47,6 +47,7 @@ public class BaseTask extends Entity implements Parsable {
      * Instantiates a new baseTask and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BaseTask() {
         super();
         this.setOdataType("#microsoft.graph.baseTask");
@@ -131,24 +132,24 @@ public class BaseTask extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BaseTask currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("bodyLastModifiedDateTime", (n) -> { currentObject.setBodyLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("checklistItems", (n) -> { currentObject.setChecklistItems(n.getCollectionOfObjectValues(ChecklistItem::createFromDiscriminatorValue)); });
-            this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("linkedResources", (n) -> { currentObject.setLinkedResources(n.getCollectionOfObjectValues(LinkedResource_v2::createFromDiscriminatorValue)); });
-            this.put("parentList", (n) -> { currentObject.setParentList(n.getObjectValue(BaseTaskList::createFromDiscriminatorValue)); });
-            this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(TaskStatus_v2.class)); });
-            this.put("textBody", (n) -> { currentObject.setTextBody(n.getStringValue()); });
-            this.put("viewpoint", (n) -> { currentObject.setViewpoint(n.getObjectValue(TaskViewpoint::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("bodyLastModifiedDateTime", (n) -> { currentObject.setBodyLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("checklistItems", (n) -> { currentObject.setChecklistItems(n.getCollectionOfObjectValues(ChecklistItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("linkedResources", (n) -> { currentObject.setLinkedResources(n.getCollectionOfObjectValues(LinkedResource_v2::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentList", (n) -> { currentObject.setParentList(n.getObjectValue(BaseTaskList::createFromDiscriminatorValue)); });
+        deserializerMap.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(TaskStatus_v2.class)); });
+        deserializerMap.put("textBody", (n) -> { currentObject.setTextBody(n.getStringValue()); });
+        deserializerMap.put("viewpoint", (n) -> { currentObject.setViewpoint(n.getObjectValue(TaskViewpoint::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the importance property value. The importance property
@@ -227,6 +228,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -252,6 +254,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param value Value to set for the bodyLastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBodyLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._bodyLastModifiedDateTime = value;
     }
@@ -260,6 +263,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param value Value to set for the checklistItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChecklistItems(@javax.annotation.Nullable final java.util.List<ChecklistItem> value) {
         this._checklistItems = value;
     }
@@ -268,6 +272,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._completedDateTime = value;
     }
@@ -276,6 +281,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -284,6 +290,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -292,6 +299,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param value Value to set for the dueDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDueDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._dueDateTime = value;
     }
@@ -300,6 +308,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -308,6 +317,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param value Value to set for the importance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportance(@javax.annotation.Nullable final Importance value) {
         this._importance = value;
     }
@@ -316,6 +326,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -324,6 +335,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param value Value to set for the linkedResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLinkedResources(@javax.annotation.Nullable final java.util.List<LinkedResource_v2> value) {
         this._linkedResources = value;
     }
@@ -332,6 +344,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param value Value to set for the parentList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentList(@javax.annotation.Nullable final BaseTaskList value) {
         this._parentList = value;
     }
@@ -340,6 +353,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param value Value to set for the recurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrence(@javax.annotation.Nullable final PatternedRecurrence value) {
         this._recurrence = value;
     }
@@ -348,6 +362,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._startDateTime = value;
     }
@@ -356,6 +371,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final TaskStatus_v2 value) {
         this._status = value;
     }
@@ -364,6 +380,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param value Value to set for the textBody property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTextBody(@javax.annotation.Nullable final String value) {
         this._textBody = value;
     }
@@ -372,6 +389,7 @@ public class BaseTask extends Entity implements Parsable {
      * @param value Value to set for the viewpoint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setViewpoint(@javax.annotation.Nullable final TaskViewpoint value) {
         this._viewpoint = value;
     }

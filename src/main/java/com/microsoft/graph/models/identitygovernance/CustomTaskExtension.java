@@ -12,20 +12,21 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CustomTaskExtension extends CustomCalloutExtension implements Parsable {
-    /** The callbackConfiguration property */
+    /** The callback configuration for a custom extension. */
     private CustomExtensionCallbackConfiguration _callbackConfiguration;
-    /** The createdBy property */
+    /** The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand. */
     private User _createdBy;
-    /** The createdDateTime property */
+    /** When the custom task extension was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby. */
     private OffsetDateTime _createdDateTime;
-    /** The lastModifiedBy property */
+    /** The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand. */
     private User _lastModifiedBy;
-    /** The lastModifiedDateTime property */
+    /** When the custom extension was last modified.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby. */
     private OffsetDateTime _lastModifiedDateTime;
     /**
      * Instantiates a new CustomTaskExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CustomTaskExtension() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.customTaskExtension");
@@ -41,7 +42,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         return new CustomTaskExtension();
     }
     /**
-     * Gets the callbackConfiguration property value. The callbackConfiguration property
+     * Gets the callbackConfiguration property value. The callback configuration for a custom extension.
      * @return a customExtensionCallbackConfiguration
      */
     @javax.annotation.Nullable
@@ -49,7 +50,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         return this._callbackConfiguration;
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
      * @return a user
      */
     @javax.annotation.Nullable
@@ -57,7 +58,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         return this._createdBy;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. When the custom task extension was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -71,16 +72,16 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomTaskExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("callbackConfiguration", (n) -> { currentObject.setCallbackConfiguration(n.getObjectValue(CustomExtensionCallbackConfiguration::createFromDiscriminatorValue)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("callbackConfiguration", (n) -> { currentObject.setCallbackConfiguration(n.getObjectValue(CustomExtensionCallbackConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
      * @return a user
      */
     @javax.annotation.Nullable
@@ -88,7 +89,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         return this._lastModifiedBy;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. When the custom extension was last modified.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -100,6 +101,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,42 +112,47 @@ public class CustomTaskExtension extends CustomCalloutExtension implements Parsa
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
     }
     /**
-     * Sets the callbackConfiguration property value. The callbackConfiguration property
+     * Sets the callbackConfiguration property value. The callback configuration for a custom extension.
      * @param value Value to set for the callbackConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallbackConfiguration(@javax.annotation.Nullable final CustomExtensionCallbackConfiguration value) {
         this._callbackConfiguration = value;
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final User value) {
         this._createdBy = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. When the custom task extension was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final User value) {
         this._lastModifiedBy = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. When the custom extension was last modified.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }

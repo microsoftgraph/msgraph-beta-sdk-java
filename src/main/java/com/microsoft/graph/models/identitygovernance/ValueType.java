@@ -3,7 +3,7 @@ package com.microsoft.graph.models.identitygovernance;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum ValueType implements ValuedEnum {
     Enum_escaped("enum_escaped"),
     String("string"),

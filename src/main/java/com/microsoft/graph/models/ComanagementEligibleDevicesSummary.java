@@ -23,10 +23,13 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     private Integer _needsOsUpdateCount;
     /** The OdataType property */
     private String _odataType;
+    /** Count of devices scheduled for Co-Management enrollment. Valid values 0 to 9999999 */
+    private Integer _scheduledForEnrollmentCount;
     /**
      * Instantiates a new comanagementEligibleDevicesSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ComanagementEligibleDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.comanagementEligibleDevicesSummary");
@@ -80,14 +83,15 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ComanagementEligibleDevicesSummary currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("comanagedCount", (n) -> { currentObject.setComanagedCount(n.getIntegerValue()); });
-            this.put("eligibleButNotAzureAdJoinedCount", (n) -> { currentObject.setEligibleButNotAzureAdJoinedCount(n.getIntegerValue()); });
-            this.put("eligibleCount", (n) -> { currentObject.setEligibleCount(n.getIntegerValue()); });
-            this.put("ineligibleCount", (n) -> { currentObject.setIneligibleCount(n.getIntegerValue()); });
-            this.put("needsOsUpdateCount", (n) -> { currentObject.setNeedsOsUpdateCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("comanagedCount", (n) -> { currentObject.setComanagedCount(n.getIntegerValue()); });
+        deserializerMap.put("eligibleButNotAzureAdJoinedCount", (n) -> { currentObject.setEligibleButNotAzureAdJoinedCount(n.getIntegerValue()); });
+        deserializerMap.put("eligibleCount", (n) -> { currentObject.setEligibleCount(n.getIntegerValue()); });
+        deserializerMap.put("ineligibleCount", (n) -> { currentObject.setIneligibleCount(n.getIntegerValue()); });
+        deserializerMap.put("needsOsUpdateCount", (n) -> { currentObject.setNeedsOsUpdateCount(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("scheduledForEnrollmentCount", (n) -> { currentObject.setScheduledForEnrollmentCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ineligibleCount property value. Count of devices ineligible for Co-Management
@@ -114,10 +118,19 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
         return this._odataType;
     }
     /**
+     * Gets the scheduledForEnrollmentCount property value. Count of devices scheduled for Co-Management enrollment. Valid values 0 to 9999999
+     * @return a integer
+     */
+    @javax.annotation.Nullable
+    public Integer getScheduledForEnrollmentCount() {
+        return this._scheduledForEnrollmentCount;
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("comanagedCount", this.getComanagedCount());
@@ -126,6 +139,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
         writer.writeIntegerValue("ineligibleCount", this.getIneligibleCount());
         writer.writeIntegerValue("needsOsUpdateCount", this.getNeedsOsUpdateCount());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeIntegerValue("scheduledForEnrollmentCount", this.getScheduledForEnrollmentCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -133,6 +147,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +156,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
      * @param value Value to set for the comanagedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComanagedCount(@javax.annotation.Nullable final Integer value) {
         this._comanagedCount = value;
     }
@@ -149,6 +165,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
      * @param value Value to set for the eligibleButNotAzureAdJoinedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEligibleButNotAzureAdJoinedCount(@javax.annotation.Nullable final Integer value) {
         this._eligibleButNotAzureAdJoinedCount = value;
     }
@@ -157,6 +174,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
      * @param value Value to set for the eligibleCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEligibleCount(@javax.annotation.Nullable final Integer value) {
         this._eligibleCount = value;
     }
@@ -165,6 +183,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
      * @param value Value to set for the ineligibleCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIneligibleCount(@javax.annotation.Nullable final Integer value) {
         this._ineligibleCount = value;
     }
@@ -173,6 +192,7 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
      * @param value Value to set for the needsOsUpdateCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNeedsOsUpdateCount(@javax.annotation.Nullable final Integer value) {
         this._needsOsUpdateCount = value;
     }
@@ -181,7 +201,17 @@ public class ComanagementEligibleDevicesSummary implements AdditionalDataHolder,
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
+    }
+    /**
+     * Sets the scheduledForEnrollmentCount property value. Count of devices scheduled for Co-Management enrollment. Valid values 0 to 9999999
+     * @param value Value to set for the scheduledForEnrollmentCount property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setScheduledForEnrollmentCount(@javax.annotation.Nullable final Integer value) {
+        this._scheduledForEnrollmentCount = value;
     }
 }

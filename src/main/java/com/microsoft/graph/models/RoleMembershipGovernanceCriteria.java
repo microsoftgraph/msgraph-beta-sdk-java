@@ -16,6 +16,7 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
      * Instantiates a new RoleMembershipGovernanceCriteria and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RoleMembershipGovernanceCriteria() {
         super();
         this.setOdataType("#microsoft.graph.roleMembershipGovernanceCriteria");
@@ -37,10 +38,10 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RoleMembershipGovernanceCriteria currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("roleId", (n) -> { currentObject.setRoleId(n.getStringValue()); });
-            this.put("roleTemplateId", (n) -> { currentObject.setRoleTemplateId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("roleId", (n) -> { currentObject.setRoleId(n.getStringValue()); });
+        deserializerMap.put("roleTemplateId", (n) -> { currentObject.setRoleTemplateId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the roleId property value. The roleId property
@@ -63,6 +64,7 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
      * @param value Value to set for the roleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleId(@javax.annotation.Nullable final String value) {
         this._roleId = value;
     }
@@ -82,6 +85,7 @@ public class RoleMembershipGovernanceCriteria extends GovernanceCriteria impleme
      * @param value Value to set for the roleTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleTemplateId(@javax.annotation.Nullable final String value) {
         this._roleTemplateId = value;
     }

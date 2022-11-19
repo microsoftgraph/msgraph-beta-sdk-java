@@ -25,6 +25,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
      * Instantiates a new validateCredentialsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ValidateCredentialsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -69,12 +70,12 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ValidateCredentialsPostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("applicationIdentifier", (n) -> { currentObject.setApplicationIdentifier(n.getStringValue()); });
-            this.put("credentials", (n) -> { currentObject.setCredentials(n.getCollectionOfObjectValues(SynchronizationSecretKeyStringValuePair::createFromDiscriminatorValue)); });
-            this.put("templateId", (n) -> { currentObject.setTemplateId(n.getStringValue()); });
-            this.put("useSavedCredentials", (n) -> { currentObject.setUseSavedCredentials(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("applicationIdentifier", (n) -> { currentObject.setApplicationIdentifier(n.getStringValue()); });
+        deserializerMap.put("credentials", (n) -> { currentObject.setCredentials(n.getCollectionOfObjectValues(SynchronizationSecretKeyStringValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("templateId", (n) -> { currentObject.setTemplateId(n.getStringValue()); });
+        deserializerMap.put("useSavedCredentials", (n) -> { currentObject.setUseSavedCredentials(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the templateId property value. The templateId property
@@ -97,6 +98,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("applicationIdentifier", this.getApplicationIdentifier());
@@ -110,6 +112,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the applicationIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationIdentifier(@javax.annotation.Nullable final String value) {
         this._applicationIdentifier = value;
     }
@@ -126,6 +130,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the credentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCredentials(@javax.annotation.Nullable final java.util.List<SynchronizationSecretKeyStringValuePair> value) {
         this._credentials = value;
     }
@@ -134,6 +139,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the templateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateId(@javax.annotation.Nullable final String value) {
         this._templateId = value;
     }
@@ -142,6 +148,7 @@ public class ValidateCredentialsPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the useSavedCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseSavedCredentials(@javax.annotation.Nullable final Boolean value) {
         this._useSavedCredentials = value;
     }

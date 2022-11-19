@@ -18,6 +18,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
      * Instantiates a new GroupPolicyPresentationDropdownList and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationDropdownList() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyPresentationDropdownList");
@@ -47,11 +48,11 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyPresentationDropdownList currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultItem", (n) -> { currentObject.setDefaultItem(n.getObjectValue(GroupPolicyPresentationDropdownListItem::createFromDiscriminatorValue)); });
-            this.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(GroupPolicyPresentationDropdownListItem::createFromDiscriminatorValue)); });
-            this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultItem", (n) -> { currentObject.setDefaultItem(n.getObjectValue(GroupPolicyPresentationDropdownListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(GroupPolicyPresentationDropdownListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the items property value. Represents a set of localized display names and their associated values.
@@ -74,6 +75,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
      * @param value Value to set for the defaultItem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultItem(@javax.annotation.Nullable final GroupPolicyPresentationDropdownListItem value) {
         this._defaultItem = value;
     }
@@ -94,6 +97,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
      * @param value Value to set for the items property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItems(@javax.annotation.Nullable final java.util.List<GroupPolicyPresentationDropdownListItem> value) {
         this._items = value;
     }
@@ -102,6 +106,7 @@ public class GroupPolicyPresentationDropdownList extends GroupPolicyUploadedPres
      * @param value Value to set for the required property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequired(@javax.annotation.Nullable final Boolean value) {
         this._required = value;
     }

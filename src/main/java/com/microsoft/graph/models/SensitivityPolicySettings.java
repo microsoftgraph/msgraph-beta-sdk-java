@@ -20,6 +20,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
      * Instantiates a new sensitivityPolicySettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SensitivityPolicySettings() {
         super();
         this.setOdataType("#microsoft.graph.sensitivityPolicySettings");
@@ -57,12 +58,12 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SensitivityPolicySettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicableTo", (n) -> { currentObject.setApplicableTo(n.getEnumValue(SensitivityLabelTarget.class)); });
-            this.put("downgradeSensitivityRequiresJustification", (n) -> { currentObject.setDowngradeSensitivityRequiresJustification(n.getBooleanValue()); });
-            this.put("helpWebUrl", (n) -> { currentObject.setHelpWebUrl(n.getStringValue()); });
-            this.put("isMandatory", (n) -> { currentObject.setIsMandatory(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicableTo", (n) -> { currentObject.setApplicableTo(n.getEnumValue(SensitivityLabelTarget.class)); });
+        deserializerMap.put("downgradeSensitivityRequiresJustification", (n) -> { currentObject.setDowngradeSensitivityRequiresJustification(n.getBooleanValue()); });
+        deserializerMap.put("helpWebUrl", (n) -> { currentObject.setHelpWebUrl(n.getStringValue()); });
+        deserializerMap.put("isMandatory", (n) -> { currentObject.setIsMandatory(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the helpWebUrl property value. The helpWebUrl property
@@ -85,6 +86,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
      * @param value Value to set for the applicableTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicableTo(@javax.annotation.Nullable final SensitivityLabelTarget value) {
         this._applicableTo = value;
     }
@@ -106,6 +109,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
      * @param value Value to set for the downgradeSensitivityRequiresJustification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDowngradeSensitivityRequiresJustification(@javax.annotation.Nullable final Boolean value) {
         this._downgradeSensitivityRequiresJustification = value;
     }
@@ -114,6 +118,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
      * @param value Value to set for the helpWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHelpWebUrl(@javax.annotation.Nullable final String value) {
         this._helpWebUrl = value;
     }
@@ -122,6 +127,7 @@ public class SensitivityPolicySettings extends Entity implements Parsable {
      * @param value Value to set for the isMandatory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMandatory(@javax.annotation.Nullable final Boolean value) {
         this._isMandatory = value;
     }

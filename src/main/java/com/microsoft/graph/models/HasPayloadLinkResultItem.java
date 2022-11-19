@@ -21,11 +21,12 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
     /** Key of the Payload, In the format of Guid. */
     private String _payloadId;
     /** The reason where the link comes from. */
-    private java.util.List<String> _sources;
+    private java.util.List<DeviceAndAppManagementAssignmentSource> _sources;
     /**
      * Instantiates a new hasPayloadLinkResultItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public HasPayloadLinkResultItem() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.hasPayloadLinkResultItem");
@@ -63,13 +64,13 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HasPayloadLinkResultItem currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("error", (n) -> { currentObject.setError(n.getStringValue()); });
-            this.put("hasLink", (n) -> { currentObject.setHasLink(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("payloadId", (n) -> { currentObject.setPayloadId(n.getStringValue()); });
-            this.put("sources", (n) -> { currentObject.setSources(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("error", (n) -> { currentObject.setError(n.getStringValue()); });
+        deserializerMap.put("hasLink", (n) -> { currentObject.setHasLink(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("payloadId", (n) -> { currentObject.setPayloadId(n.getStringValue()); });
+        deserializerMap.put("sources", (n) -> { currentObject.setSources(n.getCollectionOfEnumValues(DeviceAndAppManagementAssignmentSource.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the hasLink property value. Indicate whether a payload has any link or not.
@@ -97,10 +98,10 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
     }
     /**
      * Gets the sources property value. The reason where the link comes from.
-     * @return a string
+     * @return a deviceAndAppManagementAssignmentSource
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getSources() {
+    public java.util.List<DeviceAndAppManagementAssignmentSource> getSources() {
         return this._sources;
     }
     /**
@@ -108,13 +109,14 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("error", this.getError());
         writer.writeBooleanValue("hasLink", this.getHasLink());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("payloadId", this.getPayloadId());
-        writer.writeCollectionOfPrimitiveValues("sources", this.getSources());
+        writer.writeCollectionOfEnumValues("sources", this.getSources());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -122,6 +124,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +133,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final String value) {
         this._error = value;
     }
@@ -138,6 +142,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the hasLink property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasLink(@javax.annotation.Nullable final Boolean value) {
         this._hasLink = value;
     }
@@ -146,6 +151,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -154,6 +160,7 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the payloadId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadId(@javax.annotation.Nullable final String value) {
         this._payloadId = value;
     }
@@ -162,7 +169,8 @@ public class HasPayloadLinkResultItem implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the sources property.
      * @return a void
      */
-    public void setSources(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setSources(@javax.annotation.Nullable final java.util.List<DeviceAndAppManagementAssignmentSource> value) {
         this._sources = value;
     }
 }

@@ -8,8 +8,9 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ServicePrincipal extends DirectoryObject implements Parsable {
-    /** true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, not, in). */
+    /** true if the service principal account is enabled; otherwise, false. If set to false, then no users will be able to sign in to this app, even if they are assigned to it. Supports $filter (eq, ne, not, in). */
     private Boolean _accountEnabled;
     /** Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on. */
     private java.util.List<AddIn> _addIns;
@@ -93,7 +94,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private String _preferredTokenSigningKeyThumbprint;
     /** The delegated permissions exposed by the application. For more information see the oauth2PermissionScopes property on the application entity's api property. Not nullable. Note: This property is named oauth2PermissionScopes in v1.0. */
     private java.util.List<PermissionScope> _publishedPermissionScopes;
-    /** The publisherName property */
+    /** The name of the Azure AD tenant that published the application. */
     private String _publisherName;
     /** The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable. */
     private java.util.List<String> _replyUrls;
@@ -105,7 +106,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     private java.util.List<String> _servicePrincipalNames;
     /** Identifies if the service principal represents an application or a managed identity. This is set by Azure AD internally. For a service principal that represents an application this is set as Application. For a service principal that represent a managed identity this is set as ManagedIdentity. The SocialIdp type is for internal use. */
     private String _servicePrincipalType;
-    /** Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only. */
+    /** Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organizations Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organizations Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organizations Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only. */
     private String _signInAudience;
     /** The synchronization property */
     private Synchronization _synchronization;
@@ -122,9 +123,10 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     /** Specifies the verified publisher of the application which this service principal represents. */
     private VerifiedPublisher _verifiedPublisher;
     /**
-     * Instantiates a new ServicePrincipal and sets the default values.
+     * Instantiates a new servicePrincipal and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServicePrincipal() {
         super();
         this.setOdataType("#microsoft.graph.servicePrincipal");
@@ -132,7 +134,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ServicePrincipal
+     * @return a servicePrincipal
      */
     @javax.annotation.Nonnull
     public static ServicePrincipal createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -140,7 +142,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return new ServicePrincipal();
     }
     /**
-     * Gets the accountEnabled property value. true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, not, in).
+     * Gets the accountEnabled property value. true if the service principal account is enabled; otherwise, false. If set to false, then no users will be able to sign in to this app, even if they are assigned to it. Supports $filter (eq, ne, not, in).
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -330,64 +332,64 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServicePrincipal currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
-            this.put("addIns", (n) -> { currentObject.setAddIns(n.getCollectionOfObjectValues(AddIn::createFromDiscriminatorValue)); });
-            this.put("alternativeNames", (n) -> { currentObject.setAlternativeNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("appDescription", (n) -> { currentObject.setAppDescription(n.getStringValue()); });
-            this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("applicationTemplateId", (n) -> { currentObject.setApplicationTemplateId(n.getStringValue()); });
-            this.put("appManagementPolicies", (n) -> { currentObject.setAppManagementPolicies(n.getCollectionOfObjectValues(AppManagementPolicy::createFromDiscriminatorValue)); });
-            this.put("appOwnerOrganizationId", (n) -> { currentObject.setAppOwnerOrganizationId(n.getStringValue()); });
-            this.put("appRoleAssignedTo", (n) -> { currentObject.setAppRoleAssignedTo(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
-            this.put("appRoleAssignmentRequired", (n) -> { currentObject.setAppRoleAssignmentRequired(n.getBooleanValue()); });
-            this.put("appRoleAssignments", (n) -> { currentObject.setAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
-            this.put("appRoles", (n) -> { currentObject.setAppRoles(n.getCollectionOfObjectValues(AppRole::createFromDiscriminatorValue)); });
-            this.put("claimsMappingPolicies", (n) -> { currentObject.setClaimsMappingPolicies(n.getCollectionOfObjectValues(ClaimsMappingPolicy::createFromDiscriminatorValue)); });
-            this.put("createdObjects", (n) -> { currentObject.setCreatedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("customSecurityAttributes", (n) -> { currentObject.setCustomSecurityAttributes(n.getObjectValue(CustomSecurityAttributeValue::createFromDiscriminatorValue)); });
-            this.put("delegatedPermissionClassifications", (n) -> { currentObject.setDelegatedPermissionClassifications(n.getCollectionOfObjectValues(DelegatedPermissionClassification::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("disabledByMicrosoftStatus", (n) -> { currentObject.setDisabledByMicrosoftStatus(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("endpoints", (n) -> { currentObject.setEndpoints(n.getCollectionOfObjectValues(Endpoint::createFromDiscriminatorValue)); });
-            this.put("errorUrl", (n) -> { currentObject.setErrorUrl(n.getStringValue()); });
-            this.put("federatedIdentityCredentials", (n) -> { currentObject.setFederatedIdentityCredentials(n.getCollectionOfObjectValues(FederatedIdentityCredential::createFromDiscriminatorValue)); });
-            this.put("homepage", (n) -> { currentObject.setHomepage(n.getStringValue()); });
-            this.put("homeRealmDiscoveryPolicies", (n) -> { currentObject.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
-            this.put("info", (n) -> { currentObject.setInfo(n.getObjectValue(InformationalUrl::createFromDiscriminatorValue)); });
-            this.put("keyCredentials", (n) -> { currentObject.setKeyCredentials(n.getCollectionOfObjectValues(KeyCredential::createFromDiscriminatorValue)); });
-            this.put("licenseDetails", (n) -> { currentObject.setLicenseDetails(n.getCollectionOfObjectValues(LicenseDetails::createFromDiscriminatorValue)); });
-            this.put("loginUrl", (n) -> { currentObject.setLoginUrl(n.getStringValue()); });
-            this.put("logoutUrl", (n) -> { currentObject.setLogoutUrl(n.getStringValue()); });
-            this.put("memberOf", (n) -> { currentObject.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
-            this.put("notificationEmailAddresses", (n) -> { currentObject.setNotificationEmailAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("oauth2PermissionGrants", (n) -> { currentObject.setOauth2PermissionGrants(n.getCollectionOfObjectValues(OAuth2PermissionGrant::createFromDiscriminatorValue)); });
-            this.put("ownedObjects", (n) -> { currentObject.setOwnedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("owners", (n) -> { currentObject.setOwners(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("passwordCredentials", (n) -> { currentObject.setPasswordCredentials(n.getCollectionOfObjectValues(PasswordCredential::createFromDiscriminatorValue)); });
-            this.put("passwordSingleSignOnSettings", (n) -> { currentObject.setPasswordSingleSignOnSettings(n.getObjectValue(PasswordSingleSignOnSettings::createFromDiscriminatorValue)); });
-            this.put("preferredSingleSignOnMode", (n) -> { currentObject.setPreferredSingleSignOnMode(n.getStringValue()); });
-            this.put("preferredTokenSigningKeyEndDateTime", (n) -> { currentObject.setPreferredTokenSigningKeyEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("preferredTokenSigningKeyThumbprint", (n) -> { currentObject.setPreferredTokenSigningKeyThumbprint(n.getStringValue()); });
-            this.put("publishedPermissionScopes", (n) -> { currentObject.setPublishedPermissionScopes(n.getCollectionOfObjectValues(PermissionScope::createFromDiscriminatorValue)); });
-            this.put("publisherName", (n) -> { currentObject.setPublisherName(n.getStringValue()); });
-            this.put("replyUrls", (n) -> { currentObject.setReplyUrls(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("samlMetadataUrl", (n) -> { currentObject.setSamlMetadataUrl(n.getStringValue()); });
-            this.put("samlSingleSignOnSettings", (n) -> { currentObject.setSamlSingleSignOnSettings(n.getObjectValue(SamlSingleSignOnSettings::createFromDiscriminatorValue)); });
-            this.put("servicePrincipalNames", (n) -> { currentObject.setServicePrincipalNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("servicePrincipalType", (n) -> { currentObject.setServicePrincipalType(n.getStringValue()); });
-            this.put("signInAudience", (n) -> { currentObject.setSignInAudience(n.getStringValue()); });
-            this.put("synchronization", (n) -> { currentObject.setSynchronization(n.getObjectValue(Synchronization::createFromDiscriminatorValue)); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("tokenEncryptionKeyId", (n) -> { currentObject.setTokenEncryptionKeyId(n.getStringValue()); });
-            this.put("tokenIssuancePolicies", (n) -> { currentObject.setTokenIssuancePolicies(n.getCollectionOfObjectValues(TokenIssuancePolicy::createFromDiscriminatorValue)); });
-            this.put("tokenLifetimePolicies", (n) -> { currentObject.setTokenLifetimePolicies(n.getCollectionOfObjectValues(TokenLifetimePolicy::createFromDiscriminatorValue)); });
-            this.put("transitiveMemberOf", (n) -> { currentObject.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("verifiedPublisher", (n) -> { currentObject.setVerifiedPublisher(n.getObjectValue(VerifiedPublisher::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
+        deserializerMap.put("addIns", (n) -> { currentObject.setAddIns(n.getCollectionOfObjectValues(AddIn::createFromDiscriminatorValue)); });
+        deserializerMap.put("alternativeNames", (n) -> { currentObject.setAlternativeNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("appDescription", (n) -> { currentObject.setAppDescription(n.getStringValue()); });
+        deserializerMap.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
+        deserializerMap.put("applicationTemplateId", (n) -> { currentObject.setApplicationTemplateId(n.getStringValue()); });
+        deserializerMap.put("appManagementPolicies", (n) -> { currentObject.setAppManagementPolicies(n.getCollectionOfObjectValues(AppManagementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("appOwnerOrganizationId", (n) -> { currentObject.setAppOwnerOrganizationId(n.getStringValue()); });
+        deserializerMap.put("appRoleAssignedTo", (n) -> { currentObject.setAppRoleAssignedTo(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("appRoleAssignmentRequired", (n) -> { currentObject.setAppRoleAssignmentRequired(n.getBooleanValue()); });
+        deserializerMap.put("appRoleAssignments", (n) -> { currentObject.setAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("appRoles", (n) -> { currentObject.setAppRoles(n.getCollectionOfObjectValues(AppRole::createFromDiscriminatorValue)); });
+        deserializerMap.put("claimsMappingPolicies", (n) -> { currentObject.setClaimsMappingPolicies(n.getCollectionOfObjectValues(ClaimsMappingPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdObjects", (n) -> { currentObject.setCreatedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("customSecurityAttributes", (n) -> { currentObject.setCustomSecurityAttributes(n.getObjectValue(CustomSecurityAttributeValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("delegatedPermissionClassifications", (n) -> { currentObject.setDelegatedPermissionClassifications(n.getCollectionOfObjectValues(DelegatedPermissionClassification::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("disabledByMicrosoftStatus", (n) -> { currentObject.setDisabledByMicrosoftStatus(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("endpoints", (n) -> { currentObject.setEndpoints(n.getCollectionOfObjectValues(Endpoint::createFromDiscriminatorValue)); });
+        deserializerMap.put("errorUrl", (n) -> { currentObject.setErrorUrl(n.getStringValue()); });
+        deserializerMap.put("federatedIdentityCredentials", (n) -> { currentObject.setFederatedIdentityCredentials(n.getCollectionOfObjectValues(FederatedIdentityCredential::createFromDiscriminatorValue)); });
+        deserializerMap.put("homepage", (n) -> { currentObject.setHomepage(n.getStringValue()); });
+        deserializerMap.put("homeRealmDiscoveryPolicies", (n) -> { currentObject.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("info", (n) -> { currentObject.setInfo(n.getObjectValue(InformationalUrl::createFromDiscriminatorValue)); });
+        deserializerMap.put("keyCredentials", (n) -> { currentObject.setKeyCredentials(n.getCollectionOfObjectValues(KeyCredential::createFromDiscriminatorValue)); });
+        deserializerMap.put("licenseDetails", (n) -> { currentObject.setLicenseDetails(n.getCollectionOfObjectValues(LicenseDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("loginUrl", (n) -> { currentObject.setLoginUrl(n.getStringValue()); });
+        deserializerMap.put("logoutUrl", (n) -> { currentObject.setLogoutUrl(n.getStringValue()); });
+        deserializerMap.put("memberOf", (n) -> { currentObject.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
+        deserializerMap.put("notificationEmailAddresses", (n) -> { currentObject.setNotificationEmailAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("oauth2PermissionGrants", (n) -> { currentObject.setOauth2PermissionGrants(n.getCollectionOfObjectValues(OAuth2PermissionGrant::createFromDiscriminatorValue)); });
+        deserializerMap.put("ownedObjects", (n) -> { currentObject.setOwnedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("owners", (n) -> { currentObject.setOwners(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("passwordCredentials", (n) -> { currentObject.setPasswordCredentials(n.getCollectionOfObjectValues(PasswordCredential::createFromDiscriminatorValue)); });
+        deserializerMap.put("passwordSingleSignOnSettings", (n) -> { currentObject.setPasswordSingleSignOnSettings(n.getObjectValue(PasswordSingleSignOnSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("preferredSingleSignOnMode", (n) -> { currentObject.setPreferredSingleSignOnMode(n.getStringValue()); });
+        deserializerMap.put("preferredTokenSigningKeyEndDateTime", (n) -> { currentObject.setPreferredTokenSigningKeyEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("preferredTokenSigningKeyThumbprint", (n) -> { currentObject.setPreferredTokenSigningKeyThumbprint(n.getStringValue()); });
+        deserializerMap.put("publishedPermissionScopes", (n) -> { currentObject.setPublishedPermissionScopes(n.getCollectionOfObjectValues(PermissionScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("publisherName", (n) -> { currentObject.setPublisherName(n.getStringValue()); });
+        deserializerMap.put("replyUrls", (n) -> { currentObject.setReplyUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("samlMetadataUrl", (n) -> { currentObject.setSamlMetadataUrl(n.getStringValue()); });
+        deserializerMap.put("samlSingleSignOnSettings", (n) -> { currentObject.setSamlSingleSignOnSettings(n.getObjectValue(SamlSingleSignOnSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("servicePrincipalNames", (n) -> { currentObject.setServicePrincipalNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("servicePrincipalType", (n) -> { currentObject.setServicePrincipalType(n.getStringValue()); });
+        deserializerMap.put("signInAudience", (n) -> { currentObject.setSignInAudience(n.getStringValue()); });
+        deserializerMap.put("synchronization", (n) -> { currentObject.setSynchronization(n.getObjectValue(Synchronization::createFromDiscriminatorValue)); });
+        deserializerMap.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("tokenEncryptionKeyId", (n) -> { currentObject.setTokenEncryptionKeyId(n.getStringValue()); });
+        deserializerMap.put("tokenIssuancePolicies", (n) -> { currentObject.setTokenIssuancePolicies(n.getCollectionOfObjectValues(TokenIssuancePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("tokenLifetimePolicies", (n) -> { currentObject.setTokenLifetimePolicies(n.getCollectionOfObjectValues(TokenLifetimePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("transitiveMemberOf", (n) -> { currentObject.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("verifiedPublisher", (n) -> { currentObject.setVerifiedPublisher(n.getObjectValue(VerifiedPublisher::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the homepage property value. Home page or landing page of the application.
@@ -542,7 +544,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._publishedPermissionScopes;
     }
     /**
-     * Gets the publisherName property value. The publisherName property
+     * Gets the publisherName property value. The name of the Azure AD tenant that published the application.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -590,7 +592,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this._servicePrincipalType;
     }
     /**
-     * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
+     * Gets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organizations Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organizations Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organizations Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -658,6 +660,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -719,10 +722,11 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeObjectValue("verifiedPublisher", this.getVerifiedPublisher());
     }
     /**
-     * Sets the accountEnabled property value. true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, not, in).
+     * Sets the accountEnabled property value. true if the service principal account is enabled; otherwise, false. If set to false, then no users will be able to sign in to this app, even if they are assigned to it. Supports $filter (eq, ne, not, in).
      * @param value Value to set for the accountEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountEnabled(@javax.annotation.Nullable final Boolean value) {
         this._accountEnabled = value;
     }
@@ -731,6 +735,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the addIns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddIns(@javax.annotation.Nullable final java.util.List<AddIn> value) {
         this._addIns = value;
     }
@@ -739,6 +744,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the alternativeNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlternativeNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._alternativeNames = value;
     }
@@ -747,6 +753,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDescription(@javax.annotation.Nullable final String value) {
         this._appDescription = value;
     }
@@ -755,6 +762,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
         this._appDisplayName = value;
     }
@@ -763,6 +771,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }
@@ -771,6 +780,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the applicationTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationTemplateId(@javax.annotation.Nullable final String value) {
         this._applicationTemplateId = value;
     }
@@ -779,6 +789,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appManagementPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppManagementPolicies(@javax.annotation.Nullable final java.util.List<AppManagementPolicy> value) {
         this._appManagementPolicies = value;
     }
@@ -787,6 +798,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appOwnerOrganizationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppOwnerOrganizationId(@javax.annotation.Nullable final String value) {
         this._appOwnerOrganizationId = value;
     }
@@ -795,6 +807,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appRoleAssignedTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRoleAssignedTo(@javax.annotation.Nullable final java.util.List<AppRoleAssignment> value) {
         this._appRoleAssignedTo = value;
     }
@@ -803,6 +816,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appRoleAssignmentRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRoleAssignmentRequired(@javax.annotation.Nullable final Boolean value) {
         this._appRoleAssignmentRequired = value;
     }
@@ -811,6 +825,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appRoleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRoleAssignments(@javax.annotation.Nullable final java.util.List<AppRoleAssignment> value) {
         this._appRoleAssignments = value;
     }
@@ -819,6 +834,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the appRoles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRoles(@javax.annotation.Nullable final java.util.List<AppRole> value) {
         this._appRoles = value;
     }
@@ -827,6 +843,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the claimsMappingPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClaimsMappingPolicies(@javax.annotation.Nullable final java.util.List<ClaimsMappingPolicy> value) {
         this._claimsMappingPolicies = value;
     }
@@ -835,6 +852,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the createdObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedObjects(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._createdObjects = value;
     }
@@ -843,6 +861,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the customSecurityAttributes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSecurityAttributes(@javax.annotation.Nullable final CustomSecurityAttributeValue value) {
         this._customSecurityAttributes = value;
     }
@@ -851,6 +870,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the delegatedPermissionClassifications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDelegatedPermissionClassifications(@javax.annotation.Nullable final java.util.List<DelegatedPermissionClassification> value) {
         this._delegatedPermissionClassifications = value;
     }
@@ -859,6 +879,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -867,6 +888,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the disabledByMicrosoftStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisabledByMicrosoftStatus(@javax.annotation.Nullable final String value) {
         this._disabledByMicrosoftStatus = value;
     }
@@ -875,6 +897,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -883,6 +906,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the endpoints property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpoints(@javax.annotation.Nullable final java.util.List<Endpoint> value) {
         this._endpoints = value;
     }
@@ -891,6 +915,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the errorUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorUrl(@javax.annotation.Nullable final String value) {
         this._errorUrl = value;
     }
@@ -899,6 +924,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the federatedIdentityCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFederatedIdentityCredentials(@javax.annotation.Nullable final java.util.List<FederatedIdentityCredential> value) {
         this._federatedIdentityCredentials = value;
     }
@@ -907,6 +933,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the homepage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomepage(@javax.annotation.Nullable final String value) {
         this._homepage = value;
     }
@@ -915,6 +942,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the homeRealmDiscoveryPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeRealmDiscoveryPolicies(@javax.annotation.Nullable final java.util.List<HomeRealmDiscoveryPolicy> value) {
         this._homeRealmDiscoveryPolicies = value;
     }
@@ -923,6 +951,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the info property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInfo(@javax.annotation.Nullable final InformationalUrl value) {
         this._info = value;
     }
@@ -931,6 +960,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the keyCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyCredentials(@javax.annotation.Nullable final java.util.List<KeyCredential> value) {
         this._keyCredentials = value;
     }
@@ -939,6 +969,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the licenseDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicenseDetails(@javax.annotation.Nullable final java.util.List<LicenseDetails> value) {
         this._licenseDetails = value;
     }
@@ -947,6 +978,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the loginUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoginUrl(@javax.annotation.Nullable final String value) {
         this._loginUrl = value;
     }
@@ -955,6 +987,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the logoutUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogoutUrl(@javax.annotation.Nullable final String value) {
         this._logoutUrl = value;
     }
@@ -963,6 +996,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the memberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._memberOf = value;
     }
@@ -971,6 +1005,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final String value) {
         this._notes = value;
     }
@@ -979,6 +1014,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the notificationEmailAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationEmailAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
         this._notificationEmailAddresses = value;
     }
@@ -987,6 +1023,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the oauth2PermissionGrants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOauth2PermissionGrants(@javax.annotation.Nullable final java.util.List<OAuth2PermissionGrant> value) {
         this._oauth2PermissionGrants = value;
     }
@@ -995,6 +1032,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the ownedObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnedObjects(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._ownedObjects = value;
     }
@@ -1003,6 +1041,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the owners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwners(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._owners = value;
     }
@@ -1011,6 +1050,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the passwordCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordCredentials(@javax.annotation.Nullable final java.util.List<PasswordCredential> value) {
         this._passwordCredentials = value;
     }
@@ -1019,6 +1059,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the passwordSingleSignOnSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordSingleSignOnSettings(@javax.annotation.Nullable final PasswordSingleSignOnSettings value) {
         this._passwordSingleSignOnSettings = value;
     }
@@ -1027,6 +1068,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the preferredSingleSignOnMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredSingleSignOnMode(@javax.annotation.Nullable final String value) {
         this._preferredSingleSignOnMode = value;
     }
@@ -1035,6 +1077,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the preferredTokenSigningKeyEndDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredTokenSigningKeyEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._preferredTokenSigningKeyEndDateTime = value;
     }
@@ -1043,6 +1086,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the preferredTokenSigningKeyThumbprint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredTokenSigningKeyThumbprint(@javax.annotation.Nullable final String value) {
         this._preferredTokenSigningKeyThumbprint = value;
     }
@@ -1051,14 +1095,16 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the publishedPermissionScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishedPermissionScopes(@javax.annotation.Nullable final java.util.List<PermissionScope> value) {
         this._publishedPermissionScopes = value;
     }
     /**
-     * Sets the publisherName property value. The publisherName property
+     * Sets the publisherName property value. The name of the Azure AD tenant that published the application.
      * @param value Value to set for the publisherName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisherName(@javax.annotation.Nullable final String value) {
         this._publisherName = value;
     }
@@ -1067,6 +1113,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the replyUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReplyUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._replyUrls = value;
     }
@@ -1075,6 +1122,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the samlMetadataUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSamlMetadataUrl(@javax.annotation.Nullable final String value) {
         this._samlMetadataUrl = value;
     }
@@ -1083,6 +1131,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the samlSingleSignOnSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSamlSingleSignOnSettings(@javax.annotation.Nullable final SamlSingleSignOnSettings value) {
         this._samlSingleSignOnSettings = value;
     }
@@ -1091,6 +1140,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the servicePrincipalNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._servicePrincipalNames = value;
     }
@@ -1099,14 +1149,16 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the servicePrincipalType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalType(@javax.annotation.Nullable final String value) {
         this._servicePrincipalType = value;
     }
     /**
-     * Sets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
+     * Sets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organizations Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organizations Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organizations Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.
      * @param value Value to set for the signInAudience property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInAudience(@javax.annotation.Nullable final String value) {
         this._signInAudience = value;
     }
@@ -1115,6 +1167,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the synchronization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSynchronization(@javax.annotation.Nullable final Synchronization value) {
         this._synchronization = value;
     }
@@ -1123,6 +1176,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
     }
@@ -1131,6 +1185,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the tokenEncryptionKeyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenEncryptionKeyId(@javax.annotation.Nullable final String value) {
         this._tokenEncryptionKeyId = value;
     }
@@ -1139,6 +1194,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the tokenIssuancePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenIssuancePolicies(@javax.annotation.Nullable final java.util.List<TokenIssuancePolicy> value) {
         this._tokenIssuancePolicies = value;
     }
@@ -1147,6 +1203,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the tokenLifetimePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenLifetimePolicies(@javax.annotation.Nullable final java.util.List<TokenLifetimePolicy> value) {
         this._tokenLifetimePolicies = value;
     }
@@ -1155,6 +1212,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the transitiveMemberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransitiveMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._transitiveMemberOf = value;
     }
@@ -1163,6 +1221,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      * @param value Value to set for the verifiedPublisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVerifiedPublisher(@javax.annotation.Nullable final VerifiedPublisher value) {
         this._verifiedPublisher = value;
     }

@@ -47,9 +47,10 @@ public class Profile extends Entity implements Parsable {
     /** Represents detailed information about websites associated with a user in various services. */
     private java.util.List<PersonWebsite> _websites;
     /**
-     * Instantiates a new Profile and sets the default values.
+     * Instantiates a new profile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Profile() {
         super();
         this.setOdataType("#microsoft.graph.profile");
@@ -57,7 +58,7 @@ public class Profile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Profile
+     * @return a profile
      */
     @javax.annotation.Nonnull
     public static Profile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -127,27 +128,27 @@ public class Profile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Profile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("account", (n) -> { currentObject.setAccount(n.getCollectionOfObjectValues(UserAccountInformation::createFromDiscriminatorValue)); });
-            this.put("addresses", (n) -> { currentObject.setAddresses(n.getCollectionOfObjectValues(ItemAddress::createFromDiscriminatorValue)); });
-            this.put("anniversaries", (n) -> { currentObject.setAnniversaries(n.getCollectionOfObjectValues(PersonAnnualEvent::createFromDiscriminatorValue)); });
-            this.put("awards", (n) -> { currentObject.setAwards(n.getCollectionOfObjectValues(PersonAward::createFromDiscriminatorValue)); });
-            this.put("certifications", (n) -> { currentObject.setCertifications(n.getCollectionOfObjectValues(PersonCertification::createFromDiscriminatorValue)); });
-            this.put("educationalActivities", (n) -> { currentObject.setEducationalActivities(n.getCollectionOfObjectValues(EducationalActivity::createFromDiscriminatorValue)); });
-            this.put("emails", (n) -> { currentObject.setEmails(n.getCollectionOfObjectValues(ItemEmail::createFromDiscriminatorValue)); });
-            this.put("interests", (n) -> { currentObject.setInterests(n.getCollectionOfObjectValues(PersonInterest::createFromDiscriminatorValue)); });
-            this.put("languages", (n) -> { currentObject.setLanguages(n.getCollectionOfObjectValues(LanguageProficiency::createFromDiscriminatorValue)); });
-            this.put("names", (n) -> { currentObject.setNames(n.getCollectionOfObjectValues(PersonName::createFromDiscriminatorValue)); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getCollectionOfObjectValues(PersonAnnotation::createFromDiscriminatorValue)); });
-            this.put("patents", (n) -> { currentObject.setPatents(n.getCollectionOfObjectValues(ItemPatent::createFromDiscriminatorValue)); });
-            this.put("phones", (n) -> { currentObject.setPhones(n.getCollectionOfObjectValues(ItemPhone::createFromDiscriminatorValue)); });
-            this.put("positions", (n) -> { currentObject.setPositions(n.getCollectionOfObjectValues(WorkPosition::createFromDiscriminatorValue)); });
-            this.put("projects", (n) -> { currentObject.setProjects(n.getCollectionOfObjectValues(ProjectParticipation::createFromDiscriminatorValue)); });
-            this.put("publications", (n) -> { currentObject.setPublications(n.getCollectionOfObjectValues(ItemPublication::createFromDiscriminatorValue)); });
-            this.put("skills", (n) -> { currentObject.setSkills(n.getCollectionOfObjectValues(SkillProficiency::createFromDiscriminatorValue)); });
-            this.put("webAccounts", (n) -> { currentObject.setWebAccounts(n.getCollectionOfObjectValues(WebAccount::createFromDiscriminatorValue)); });
-            this.put("websites", (n) -> { currentObject.setWebsites(n.getCollectionOfObjectValues(PersonWebsite::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("account", (n) -> { currentObject.setAccount(n.getCollectionOfObjectValues(UserAccountInformation::createFromDiscriminatorValue)); });
+        deserializerMap.put("addresses", (n) -> { currentObject.setAddresses(n.getCollectionOfObjectValues(ItemAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("anniversaries", (n) -> { currentObject.setAnniversaries(n.getCollectionOfObjectValues(PersonAnnualEvent::createFromDiscriminatorValue)); });
+        deserializerMap.put("awards", (n) -> { currentObject.setAwards(n.getCollectionOfObjectValues(PersonAward::createFromDiscriminatorValue)); });
+        deserializerMap.put("certifications", (n) -> { currentObject.setCertifications(n.getCollectionOfObjectValues(PersonCertification::createFromDiscriminatorValue)); });
+        deserializerMap.put("educationalActivities", (n) -> { currentObject.setEducationalActivities(n.getCollectionOfObjectValues(EducationalActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("emails", (n) -> { currentObject.setEmails(n.getCollectionOfObjectValues(ItemEmail::createFromDiscriminatorValue)); });
+        deserializerMap.put("interests", (n) -> { currentObject.setInterests(n.getCollectionOfObjectValues(PersonInterest::createFromDiscriminatorValue)); });
+        deserializerMap.put("languages", (n) -> { currentObject.setLanguages(n.getCollectionOfObjectValues(LanguageProficiency::createFromDiscriminatorValue)); });
+        deserializerMap.put("names", (n) -> { currentObject.setNames(n.getCollectionOfObjectValues(PersonName::createFromDiscriminatorValue)); });
+        deserializerMap.put("notes", (n) -> { currentObject.setNotes(n.getCollectionOfObjectValues(PersonAnnotation::createFromDiscriminatorValue)); });
+        deserializerMap.put("patents", (n) -> { currentObject.setPatents(n.getCollectionOfObjectValues(ItemPatent::createFromDiscriminatorValue)); });
+        deserializerMap.put("phones", (n) -> { currentObject.setPhones(n.getCollectionOfObjectValues(ItemPhone::createFromDiscriminatorValue)); });
+        deserializerMap.put("positions", (n) -> { currentObject.setPositions(n.getCollectionOfObjectValues(WorkPosition::createFromDiscriminatorValue)); });
+        deserializerMap.put("projects", (n) -> { currentObject.setProjects(n.getCollectionOfObjectValues(ProjectParticipation::createFromDiscriminatorValue)); });
+        deserializerMap.put("publications", (n) -> { currentObject.setPublications(n.getCollectionOfObjectValues(ItemPublication::createFromDiscriminatorValue)); });
+        deserializerMap.put("skills", (n) -> { currentObject.setSkills(n.getCollectionOfObjectValues(SkillProficiency::createFromDiscriminatorValue)); });
+        deserializerMap.put("webAccounts", (n) -> { currentObject.setWebAccounts(n.getCollectionOfObjectValues(WebAccount::createFromDiscriminatorValue)); });
+        deserializerMap.put("websites", (n) -> { currentObject.setWebsites(n.getCollectionOfObjectValues(PersonWebsite::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the interests property value. Provides detailed information about interests the user has associated with themselves in various services.
@@ -250,6 +251,7 @@ public class Profile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -278,6 +280,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the account property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccount(@javax.annotation.Nullable final java.util.List<UserAccountInformation> value) {
         this._account = value;
     }
@@ -286,6 +289,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the addresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddresses(@javax.annotation.Nullable final java.util.List<ItemAddress> value) {
         this._addresses = value;
     }
@@ -294,6 +298,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the anniversaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnniversaries(@javax.annotation.Nullable final java.util.List<PersonAnnualEvent> value) {
         this._anniversaries = value;
     }
@@ -302,6 +307,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the awards property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAwards(@javax.annotation.Nullable final java.util.List<PersonAward> value) {
         this._awards = value;
     }
@@ -310,6 +316,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the certifications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertifications(@javax.annotation.Nullable final java.util.List<PersonCertification> value) {
         this._certifications = value;
     }
@@ -318,6 +325,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the educationalActivities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEducationalActivities(@javax.annotation.Nullable final java.util.List<EducationalActivity> value) {
         this._educationalActivities = value;
     }
@@ -326,6 +334,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the emails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmails(@javax.annotation.Nullable final java.util.List<ItemEmail> value) {
         this._emails = value;
     }
@@ -334,6 +343,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the interests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInterests(@javax.annotation.Nullable final java.util.List<PersonInterest> value) {
         this._interests = value;
     }
@@ -342,6 +352,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the languages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguages(@javax.annotation.Nullable final java.util.List<LanguageProficiency> value) {
         this._languages = value;
     }
@@ -350,6 +361,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the names property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNames(@javax.annotation.Nullable final java.util.List<PersonName> value) {
         this._names = value;
     }
@@ -358,6 +370,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final java.util.List<PersonAnnotation> value) {
         this._notes = value;
     }
@@ -366,6 +379,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the patents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPatents(@javax.annotation.Nullable final java.util.List<ItemPatent> value) {
         this._patents = value;
     }
@@ -374,6 +388,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the phones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhones(@javax.annotation.Nullable final java.util.List<ItemPhone> value) {
         this._phones = value;
     }
@@ -382,6 +397,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the positions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPositions(@javax.annotation.Nullable final java.util.List<WorkPosition> value) {
         this._positions = value;
     }
@@ -390,6 +406,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the projects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProjects(@javax.annotation.Nullable final java.util.List<ProjectParticipation> value) {
         this._projects = value;
     }
@@ -398,6 +415,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the publications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublications(@javax.annotation.Nullable final java.util.List<ItemPublication> value) {
         this._publications = value;
     }
@@ -406,6 +424,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the skills property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkills(@javax.annotation.Nullable final java.util.List<SkillProficiency> value) {
         this._skills = value;
     }
@@ -414,6 +433,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the webAccounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebAccounts(@javax.annotation.Nullable final java.util.List<WebAccount> value) {
         this._webAccounts = value;
     }
@@ -422,6 +442,7 @@ public class Profile extends Entity implements Parsable {
      * @param value Value to set for the websites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebsites(@javax.annotation.Nullable final java.util.List<PersonWebsite> value) {
         this._websites = value;
     }

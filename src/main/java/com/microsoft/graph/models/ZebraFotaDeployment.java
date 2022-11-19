@@ -23,6 +23,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
      * Instantiates a new zebraFotaDeployment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ZebraFotaDeployment() {
         super();
         this.setOdataType("#microsoft.graph.zebraFotaDeployment");
@@ -84,19 +85,20 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ZebraFotaDeployment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deploymentAssignments", (n) -> { currentObject.setDeploymentAssignments(n.getCollectionOfObjectValues(AndroidFotaDeploymentAssignment::createFromDiscriminatorValue)); });
-            this.put("deploymentSettings", (n) -> { currentObject.setDeploymentSettings(n.getObjectValue(ZebraFotaDeploymentSettings::createFromDiscriminatorValue)); });
-            this.put("deploymentStatus", (n) -> { currentObject.setDeploymentStatus(n.getObjectValue(ZebraFotaDeploymentStatus::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deploymentAssignments", (n) -> { currentObject.setDeploymentAssignments(n.getCollectionOfObjectValues(AndroidFotaDeploymentAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("deploymentSettings", (n) -> { currentObject.setDeploymentSettings(n.getObjectValue(ZebraFotaDeploymentSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("deploymentStatus", (n) -> { currentObject.setDeploymentStatus(n.getObjectValue(ZebraFotaDeploymentStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +113,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
      * @param value Value to set for the deploymentAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentAssignments(@javax.annotation.Nullable final java.util.List<AndroidFotaDeploymentAssignment> value) {
         this._deploymentAssignments = value;
     }
@@ -119,6 +122,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
      * @param value Value to set for the deploymentSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentSettings(@javax.annotation.Nullable final ZebraFotaDeploymentSettings value) {
         this._deploymentSettings = value;
     }
@@ -127,6 +131,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
      * @param value Value to set for the deploymentStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentStatus(@javax.annotation.Nullable final ZebraFotaDeploymentStatus value) {
         this._deploymentStatus = value;
     }
@@ -135,6 +140,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -143,6 +149,7 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }

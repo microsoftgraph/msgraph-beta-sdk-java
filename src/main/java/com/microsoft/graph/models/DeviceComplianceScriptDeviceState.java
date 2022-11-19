@@ -28,6 +28,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      * Instantiates a new deviceComplianceScriptDeviceState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceComplianceScriptDeviceState() {
         super();
         this.setOdataType("#microsoft.graph.deviceComplianceScriptDeviceState");
@@ -65,15 +66,15 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceScriptDeviceState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("detectionState", (n) -> { currentObject.setDetectionState(n.getEnumValue(RunState.class)); });
-            this.put("expectedStateUpdateDateTime", (n) -> { currentObject.setExpectedStateUpdateDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastStateUpdateDateTime", (n) -> { currentObject.setLastStateUpdateDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("managedDevice", (n) -> { currentObject.setManagedDevice(n.getObjectValue(ManagedDevice::createFromDiscriminatorValue)); });
-            this.put("scriptError", (n) -> { currentObject.setScriptError(n.getStringValue()); });
-            this.put("scriptOutput", (n) -> { currentObject.setScriptOutput(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("detectionState", (n) -> { currentObject.setDetectionState(n.getEnumValue(RunState.class)); });
+        deserializerMap.put("expectedStateUpdateDateTime", (n) -> { currentObject.setExpectedStateUpdateDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastStateUpdateDateTime", (n) -> { currentObject.setLastStateUpdateDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managedDevice", (n) -> { currentObject.setManagedDevice(n.getObjectValue(ManagedDevice::createFromDiscriminatorValue)); });
+        deserializerMap.put("scriptError", (n) -> { currentObject.setScriptError(n.getStringValue()); });
+        deserializerMap.put("scriptOutput", (n) -> { currentObject.setScriptOutput(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastStateUpdateDateTime property value. The last timestamp of when the device compliance script executed
@@ -120,6 +121,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -136,6 +138,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      * @param value Value to set for the detectionState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionState(@javax.annotation.Nullable final RunState value) {
         this._detectionState = value;
     }
@@ -144,6 +147,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      * @param value Value to set for the expectedStateUpdateDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpectedStateUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expectedStateUpdateDateTime = value;
     }
@@ -152,6 +156,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      * @param value Value to set for the lastStateUpdateDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastStateUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastStateUpdateDateTime = value;
     }
@@ -160,6 +165,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSyncDateTime = value;
     }
@@ -168,6 +174,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      * @param value Value to set for the managedDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDevice(@javax.annotation.Nullable final ManagedDevice value) {
         this._managedDevice = value;
     }
@@ -176,6 +183,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      * @param value Value to set for the scriptError property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScriptError(@javax.annotation.Nullable final String value) {
         this._scriptError = value;
     }
@@ -184,6 +192,7 @@ public class DeviceComplianceScriptDeviceState extends Entity implements Parsabl
      * @param value Value to set for the scriptOutput property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScriptOutput(@javax.annotation.Nullable final String value) {
         this._scriptOutput = value;
     }

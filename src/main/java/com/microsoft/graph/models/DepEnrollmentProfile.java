@@ -44,7 +44,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     private Integer _sharedIPadMaximumUserCount;
     /** Indicates if siri setup pane is disabled */
     private Boolean _siriDisabled;
-    /** Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information. */
+    /** Supervised mode, True to enable, false otherwise. See https://learn.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information. */
     private Boolean _supervisedModeEnabled;
     /** Support department information */
     private String _supportDepartment;
@@ -60,6 +60,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * Instantiates a new DepEnrollmentProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DepEnrollmentProfile() {
         super();
         this.setOdataType("#microsoft.graph.depEnrollmentProfile");
@@ -121,32 +122,32 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DepEnrollmentProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appleIdDisabled", (n) -> { currentObject.setAppleIdDisabled(n.getBooleanValue()); });
-            this.put("applePayDisabled", (n) -> { currentObject.setApplePayDisabled(n.getBooleanValue()); });
-            this.put("awaitDeviceConfiguredConfirmation", (n) -> { currentObject.setAwaitDeviceConfiguredConfirmation(n.getBooleanValue()); });
-            this.put("diagnosticsDisabled", (n) -> { currentObject.setDiagnosticsDisabled(n.getBooleanValue()); });
-            this.put("enableSharedIPad", (n) -> { currentObject.setEnableSharedIPad(n.getBooleanValue()); });
-            this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
-            this.put("isMandatory", (n) -> { currentObject.setIsMandatory(n.getBooleanValue()); });
-            this.put("iTunesPairingMode", (n) -> { currentObject.setITunesPairingMode(n.getEnumValue(ITunesPairingMode.class)); });
-            this.put("locationDisabled", (n) -> { currentObject.setLocationDisabled(n.getBooleanValue()); });
-            this.put("macOSFileVaultDisabled", (n) -> { currentObject.setMacOSFileVaultDisabled(n.getBooleanValue()); });
-            this.put("macOSRegistrationDisabled", (n) -> { currentObject.setMacOSRegistrationDisabled(n.getBooleanValue()); });
-            this.put("managementCertificates", (n) -> { currentObject.setManagementCertificates(n.getCollectionOfObjectValues(ManagementCertificateWithThumbprint::createFromDiscriminatorValue)); });
-            this.put("passCodeDisabled", (n) -> { currentObject.setPassCodeDisabled(n.getBooleanValue()); });
-            this.put("profileRemovalDisabled", (n) -> { currentObject.setProfileRemovalDisabled(n.getBooleanValue()); });
-            this.put("restoreBlocked", (n) -> { currentObject.setRestoreBlocked(n.getBooleanValue()); });
-            this.put("restoreFromAndroidDisabled", (n) -> { currentObject.setRestoreFromAndroidDisabled(n.getBooleanValue()); });
-            this.put("sharedIPadMaximumUserCount", (n) -> { currentObject.setSharedIPadMaximumUserCount(n.getIntegerValue()); });
-            this.put("siriDisabled", (n) -> { currentObject.setSiriDisabled(n.getBooleanValue()); });
-            this.put("supervisedModeEnabled", (n) -> { currentObject.setSupervisedModeEnabled(n.getBooleanValue()); });
-            this.put("supportDepartment", (n) -> { currentObject.setSupportDepartment(n.getStringValue()); });
-            this.put("supportPhoneNumber", (n) -> { currentObject.setSupportPhoneNumber(n.getStringValue()); });
-            this.put("termsAndConditionsDisabled", (n) -> { currentObject.setTermsAndConditionsDisabled(n.getBooleanValue()); });
-            this.put("touchIdDisabled", (n) -> { currentObject.setTouchIdDisabled(n.getBooleanValue()); });
-            this.put("zoomDisabled", (n) -> { currentObject.setZoomDisabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appleIdDisabled", (n) -> { currentObject.setAppleIdDisabled(n.getBooleanValue()); });
+        deserializerMap.put("applePayDisabled", (n) -> { currentObject.setApplePayDisabled(n.getBooleanValue()); });
+        deserializerMap.put("awaitDeviceConfiguredConfirmation", (n) -> { currentObject.setAwaitDeviceConfiguredConfirmation(n.getBooleanValue()); });
+        deserializerMap.put("diagnosticsDisabled", (n) -> { currentObject.setDiagnosticsDisabled(n.getBooleanValue()); });
+        deserializerMap.put("enableSharedIPad", (n) -> { currentObject.setEnableSharedIPad(n.getBooleanValue()); });
+        deserializerMap.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("isMandatory", (n) -> { currentObject.setIsMandatory(n.getBooleanValue()); });
+        deserializerMap.put("iTunesPairingMode", (n) -> { currentObject.setITunesPairingMode(n.getEnumValue(ITunesPairingMode.class)); });
+        deserializerMap.put("locationDisabled", (n) -> { currentObject.setLocationDisabled(n.getBooleanValue()); });
+        deserializerMap.put("macOSFileVaultDisabled", (n) -> { currentObject.setMacOSFileVaultDisabled(n.getBooleanValue()); });
+        deserializerMap.put("macOSRegistrationDisabled", (n) -> { currentObject.setMacOSRegistrationDisabled(n.getBooleanValue()); });
+        deserializerMap.put("managementCertificates", (n) -> { currentObject.setManagementCertificates(n.getCollectionOfObjectValues(ManagementCertificateWithThumbprint::createFromDiscriminatorValue)); });
+        deserializerMap.put("passCodeDisabled", (n) -> { currentObject.setPassCodeDisabled(n.getBooleanValue()); });
+        deserializerMap.put("profileRemovalDisabled", (n) -> { currentObject.setProfileRemovalDisabled(n.getBooleanValue()); });
+        deserializerMap.put("restoreBlocked", (n) -> { currentObject.setRestoreBlocked(n.getBooleanValue()); });
+        deserializerMap.put("restoreFromAndroidDisabled", (n) -> { currentObject.setRestoreFromAndroidDisabled(n.getBooleanValue()); });
+        deserializerMap.put("sharedIPadMaximumUserCount", (n) -> { currentObject.setSharedIPadMaximumUserCount(n.getIntegerValue()); });
+        deserializerMap.put("siriDisabled", (n) -> { currentObject.setSiriDisabled(n.getBooleanValue()); });
+        deserializerMap.put("supervisedModeEnabled", (n) -> { currentObject.setSupervisedModeEnabled(n.getBooleanValue()); });
+        deserializerMap.put("supportDepartment", (n) -> { currentObject.setSupportDepartment(n.getStringValue()); });
+        deserializerMap.put("supportPhoneNumber", (n) -> { currentObject.setSupportPhoneNumber(n.getStringValue()); });
+        deserializerMap.put("termsAndConditionsDisabled", (n) -> { currentObject.setTermsAndConditionsDisabled(n.getBooleanValue()); });
+        deserializerMap.put("touchIdDisabled", (n) -> { currentObject.setTouchIdDisabled(n.getBooleanValue()); });
+        deserializerMap.put("zoomDisabled", (n) -> { currentObject.setZoomDisabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefault property value. Indicates if this is the default profile
@@ -253,7 +254,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
         return this._siriDisabled;
     }
     /**
-     * Gets the supervisedModeEnabled property value. Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
+     * Gets the supervisedModeEnabled property value. Supervised mode, True to enable, false otherwise. See https://learn.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -305,6 +306,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -338,6 +340,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the appleIdDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppleIdDisabled(@javax.annotation.Nullable final Boolean value) {
         this._appleIdDisabled = value;
     }
@@ -346,6 +349,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the applePayDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplePayDisabled(@javax.annotation.Nullable final Boolean value) {
         this._applePayDisabled = value;
     }
@@ -354,6 +358,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the awaitDeviceConfiguredConfirmation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAwaitDeviceConfiguredConfirmation(@javax.annotation.Nullable final Boolean value) {
         this._awaitDeviceConfiguredConfirmation = value;
     }
@@ -362,6 +367,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the diagnosticsDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiagnosticsDisabled(@javax.annotation.Nullable final Boolean value) {
         this._diagnosticsDisabled = value;
     }
@@ -370,6 +376,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the enableSharedIPad property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableSharedIPad(@javax.annotation.Nullable final Boolean value) {
         this._enableSharedIPad = value;
     }
@@ -378,6 +385,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the isDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
         this._isDefault = value;
     }
@@ -386,6 +394,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the isMandatory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMandatory(@javax.annotation.Nullable final Boolean value) {
         this._isMandatory = value;
     }
@@ -394,6 +403,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the iTunesPairingMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setITunesPairingMode(@javax.annotation.Nullable final ITunesPairingMode value) {
         this._iTunesPairingMode = value;
     }
@@ -402,6 +412,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the locationDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocationDisabled(@javax.annotation.Nullable final Boolean value) {
         this._locationDisabled = value;
     }
@@ -410,6 +421,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the macOSFileVaultDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacOSFileVaultDisabled(@javax.annotation.Nullable final Boolean value) {
         this._macOSFileVaultDisabled = value;
     }
@@ -418,6 +430,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the macOSRegistrationDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacOSRegistrationDisabled(@javax.annotation.Nullable final Boolean value) {
         this._macOSRegistrationDisabled = value;
     }
@@ -426,6 +439,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the managementCertificates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementCertificates(@javax.annotation.Nullable final java.util.List<ManagementCertificateWithThumbprint> value) {
         this._managementCertificates = value;
     }
@@ -434,6 +448,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the passCodeDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPassCodeDisabled(@javax.annotation.Nullable final Boolean value) {
         this._passCodeDisabled = value;
     }
@@ -442,6 +457,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the profileRemovalDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProfileRemovalDisabled(@javax.annotation.Nullable final Boolean value) {
         this._profileRemovalDisabled = value;
     }
@@ -450,6 +466,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the restoreBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestoreBlocked(@javax.annotation.Nullable final Boolean value) {
         this._restoreBlocked = value;
     }
@@ -458,6 +475,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the restoreFromAndroidDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestoreFromAndroidDisabled(@javax.annotation.Nullable final Boolean value) {
         this._restoreFromAndroidDisabled = value;
     }
@@ -466,6 +484,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the sharedIPadMaximumUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedIPadMaximumUserCount(@javax.annotation.Nullable final Integer value) {
         this._sharedIPadMaximumUserCount = value;
     }
@@ -474,14 +493,16 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the siriDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiriDisabled(@javax.annotation.Nullable final Boolean value) {
         this._siriDisabled = value;
     }
     /**
-     * Sets the supervisedModeEnabled property value. Supervised mode, True to enable, false otherwise. See https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
+     * Sets the supervisedModeEnabled property value. Supervised mode, True to enable, false otherwise. See https://learn.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
      * @param value Value to set for the supervisedModeEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupervisedModeEnabled(@javax.annotation.Nullable final Boolean value) {
         this._supervisedModeEnabled = value;
     }
@@ -490,6 +511,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the supportDepartment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportDepartment(@javax.annotation.Nullable final String value) {
         this._supportDepartment = value;
     }
@@ -498,6 +520,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the supportPhoneNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportPhoneNumber(@javax.annotation.Nullable final String value) {
         this._supportPhoneNumber = value;
     }
@@ -506,6 +529,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the termsAndConditionsDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermsAndConditionsDisabled(@javax.annotation.Nullable final Boolean value) {
         this._termsAndConditionsDisabled = value;
     }
@@ -514,6 +538,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the touchIdDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTouchIdDisabled(@javax.annotation.Nullable final Boolean value) {
         this._touchIdDisabled = value;
     }
@@ -522,6 +547,7 @@ public class DepEnrollmentProfile extends EnrollmentProfile implements Parsable 
      * @param value Value to set for the zoomDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setZoomDisabled(@javax.annotation.Nullable final Boolean value) {
         this._zoomDisabled = value;
     }

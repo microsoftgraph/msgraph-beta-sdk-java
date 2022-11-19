@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class GovernanceRoleAssignmentRequest extends Entity implements Parsable {
     /** Required. The state of the assignment. The possible values are: Eligible (for eligible assignment),  Active (if it is directly assigned), Active (by administrators, or activated on an eligible assignment by the users). */
     private String _assignmentState;
@@ -40,6 +40,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      * Instantiates a new governanceRoleAssignmentRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GovernanceRoleAssignmentRequest() {
         super();
         this.setOdataType("#microsoft.graph.governanceRoleAssignmentRequest");
@@ -69,21 +70,21 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GovernanceRoleAssignmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignmentState", (n) -> { currentObject.setAssignmentState(n.getStringValue()); });
-            this.put("linkedEligibleRoleAssignmentId", (n) -> { currentObject.setLinkedEligibleRoleAssignmentId(n.getStringValue()); });
-            this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
-            this.put("requestedDateTime", (n) -> { currentObject.setRequestedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(GovernanceResource::createFromDiscriminatorValue)); });
-            this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
-            this.put("roleDefinition", (n) -> { currentObject.setRoleDefinition(n.getObjectValue(GovernanceRoleDefinition::createFromDiscriminatorValue)); });
-            this.put("roleDefinitionId", (n) -> { currentObject.setRoleDefinitionId(n.getStringValue()); });
-            this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(GovernanceSchedule::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(GovernanceRoleAssignmentRequestStatus::createFromDiscriminatorValue)); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getObjectValue(GovernanceSubject::createFromDiscriminatorValue)); });
-            this.put("subjectId", (n) -> { currentObject.setSubjectId(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignmentState", (n) -> { currentObject.setAssignmentState(n.getStringValue()); });
+        deserializerMap.put("linkedEligibleRoleAssignmentId", (n) -> { currentObject.setLinkedEligibleRoleAssignmentId(n.getStringValue()); });
+        deserializerMap.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
+        deserializerMap.put("requestedDateTime", (n) -> { currentObject.setRequestedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(GovernanceResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
+        deserializerMap.put("roleDefinition", (n) -> { currentObject.setRoleDefinition(n.getObjectValue(GovernanceRoleDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleDefinitionId", (n) -> { currentObject.setRoleDefinitionId(n.getStringValue()); });
+        deserializerMap.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(GovernanceSchedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(GovernanceRoleAssignmentRequestStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("subject", (n) -> { currentObject.setSubject(n.getObjectValue(GovernanceSubject::createFromDiscriminatorValue)); });
+        deserializerMap.put("subjectId", (n) -> { currentObject.setSubjectId(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the linkedEligibleRoleAssignmentId property value. If this is a request for role activation, it represents the id of the eligible assignment being referred; Otherwise, the value is null.
@@ -186,6 +187,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -208,6 +210,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      * @param value Value to set for the assignmentState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentState(@javax.annotation.Nullable final String value) {
         this._assignmentState = value;
     }
@@ -216,6 +219,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      * @param value Value to set for the linkedEligibleRoleAssignmentId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLinkedEligibleRoleAssignmentId(@javax.annotation.Nullable final String value) {
         this._linkedEligibleRoleAssignmentId = value;
     }
@@ -224,6 +228,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      * @param value Value to set for the reason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReason(@javax.annotation.Nullable final String value) {
         this._reason = value;
     }
@@ -232,6 +237,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      * @param value Value to set for the requestedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._requestedDateTime = value;
     }
@@ -240,6 +246,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      * @param value Value to set for the resource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final GovernanceResource value) {
         this._resource = value;
     }
@@ -248,6 +255,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      * @param value Value to set for the resourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceId(@javax.annotation.Nullable final String value) {
         this._resourceId = value;
     }
@@ -256,6 +264,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      * @param value Value to set for the roleDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinition(@javax.annotation.Nullable final GovernanceRoleDefinition value) {
         this._roleDefinition = value;
     }
@@ -264,6 +273,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
         this._roleDefinitionId = value;
     }
@@ -272,6 +282,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      * @param value Value to set for the schedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedule(@javax.annotation.Nullable final GovernanceSchedule value) {
         this._schedule = value;
     }
@@ -280,6 +291,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final GovernanceRoleAssignmentRequestStatus value) {
         this._status = value;
     }
@@ -288,6 +300,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final GovernanceSubject value) {
         this._subject = value;
     }
@@ -296,6 +309,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      * @param value Value to set for the subjectId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectId(@javax.annotation.Nullable final String value) {
         this._subjectId = value;
     }
@@ -304,6 +318,7 @@ public class GovernanceRoleAssignmentRequest extends Entity implements Parsable 
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }

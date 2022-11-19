@@ -22,6 +22,7 @@ public class EvaluateApplicationPostRequestBody implements AdditionalDataHolder,
      * Instantiates a new evaluateApplicationPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EvaluateApplicationPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -58,10 +59,10 @@ public class EvaluateApplicationPostRequestBody implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EvaluateApplicationPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("contentInfo", (n) -> { currentObject.setContentInfo(n.getObjectValue(ContentInfo::createFromDiscriminatorValue)); });
-            this.put("labelingOptions", (n) -> { currentObject.setLabelingOptions(n.getObjectValue(LabelingOptions::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("contentInfo", (n) -> { currentObject.setContentInfo(n.getObjectValue(ContentInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("labelingOptions", (n) -> { currentObject.setLabelingOptions(n.getObjectValue(LabelingOptions::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the labelingOptions property value. The labelingOptions property
@@ -76,6 +77,7 @@ public class EvaluateApplicationPostRequestBody implements AdditionalDataHolder,
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("contentInfo", this.getContentInfo());
@@ -87,6 +89,7 @@ public class EvaluateApplicationPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -95,6 +98,7 @@ public class EvaluateApplicationPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the contentInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentInfo(@javax.annotation.Nullable final ContentInfo value) {
         this._contentInfo = value;
     }
@@ -103,6 +107,7 @@ public class EvaluateApplicationPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the labelingOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabelingOptions(@javax.annotation.Nullable final LabelingOptions value) {
         this._labelingOptions = value;
     }

@@ -64,6 +64,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * Instantiates a new WindowsInformationProtection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsInformationProtection() {
         super();
         this.setOdataType("#microsoft.graph.windowsInformationProtection");
@@ -213,33 +214,33 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsInformationProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
-            this.put("azureRightsManagementServicesAllowed", (n) -> { currentObject.setAzureRightsManagementServicesAllowed(n.getBooleanValue()); });
-            this.put("dataRecoveryCertificate", (n) -> { currentObject.setDataRecoveryCertificate(n.getObjectValue(WindowsInformationProtectionDataRecoveryCertificate::createFromDiscriminatorValue)); });
-            this.put("enforcementLevel", (n) -> { currentObject.setEnforcementLevel(n.getEnumValue(WindowsInformationProtectionEnforcementLevel.class)); });
-            this.put("enterpriseDomain", (n) -> { currentObject.setEnterpriseDomain(n.getStringValue()); });
-            this.put("enterpriseInternalProxyServers", (n) -> { currentObject.setEnterpriseInternalProxyServers(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
-            this.put("enterpriseIPRanges", (n) -> { currentObject.setEnterpriseIPRanges(n.getCollectionOfObjectValues(WindowsInformationProtectionIPRangeCollection::createFromDiscriminatorValue)); });
-            this.put("enterpriseIPRangesAreAuthoritative", (n) -> { currentObject.setEnterpriseIPRangesAreAuthoritative(n.getBooleanValue()); });
-            this.put("enterpriseNetworkDomainNames", (n) -> { currentObject.setEnterpriseNetworkDomainNames(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
-            this.put("enterpriseProtectedDomainNames", (n) -> { currentObject.setEnterpriseProtectedDomainNames(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
-            this.put("enterpriseProxiedDomains", (n) -> { currentObject.setEnterpriseProxiedDomains(n.getCollectionOfObjectValues(WindowsInformationProtectionProxiedDomainCollection::createFromDiscriminatorValue)); });
-            this.put("enterpriseProxyServers", (n) -> { currentObject.setEnterpriseProxyServers(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
-            this.put("enterpriseProxyServersAreAuthoritative", (n) -> { currentObject.setEnterpriseProxyServersAreAuthoritative(n.getBooleanValue()); });
-            this.put("exemptAppLockerFiles", (n) -> { currentObject.setExemptAppLockerFiles(n.getCollectionOfObjectValues(WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue)); });
-            this.put("exemptApps", (n) -> { currentObject.setExemptApps(n.getCollectionOfObjectValues(WindowsInformationProtectionApp::createFromDiscriminatorValue)); });
-            this.put("iconsVisible", (n) -> { currentObject.setIconsVisible(n.getBooleanValue()); });
-            this.put("indexingEncryptedStoresOrItemsBlocked", (n) -> { currentObject.setIndexingEncryptedStoresOrItemsBlocked(n.getBooleanValue()); });
-            this.put("isAssigned", (n) -> { currentObject.setIsAssigned(n.getBooleanValue()); });
-            this.put("neutralDomainResources", (n) -> { currentObject.setNeutralDomainResources(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
-            this.put("protectedAppLockerFiles", (n) -> { currentObject.setProtectedAppLockerFiles(n.getCollectionOfObjectValues(WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue)); });
-            this.put("protectedApps", (n) -> { currentObject.setProtectedApps(n.getCollectionOfObjectValues(WindowsInformationProtectionApp::createFromDiscriminatorValue)); });
-            this.put("protectionUnderLockConfigRequired", (n) -> { currentObject.setProtectionUnderLockConfigRequired(n.getBooleanValue()); });
-            this.put("revokeOnUnenrollDisabled", (n) -> { currentObject.setRevokeOnUnenrollDisabled(n.getBooleanValue()); });
-            this.put("rightsManagementServicesTemplateId", (n) -> { currentObject.setRightsManagementServicesTemplateId(n.getStringValue()); });
-            this.put("smbAutoEncryptedFileExtensions", (n) -> { currentObject.setSmbAutoEncryptedFileExtensions(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("azureRightsManagementServicesAllowed", (n) -> { currentObject.setAzureRightsManagementServicesAllowed(n.getBooleanValue()); });
+        deserializerMap.put("dataRecoveryCertificate", (n) -> { currentObject.setDataRecoveryCertificate(n.getObjectValue(WindowsInformationProtectionDataRecoveryCertificate::createFromDiscriminatorValue)); });
+        deserializerMap.put("enforcementLevel", (n) -> { currentObject.setEnforcementLevel(n.getEnumValue(WindowsInformationProtectionEnforcementLevel.class)); });
+        deserializerMap.put("enterpriseDomain", (n) -> { currentObject.setEnterpriseDomain(n.getStringValue()); });
+        deserializerMap.put("enterpriseInternalProxyServers", (n) -> { currentObject.setEnterpriseInternalProxyServers(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("enterpriseIPRanges", (n) -> { currentObject.setEnterpriseIPRanges(n.getCollectionOfObjectValues(WindowsInformationProtectionIPRangeCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("enterpriseIPRangesAreAuthoritative", (n) -> { currentObject.setEnterpriseIPRangesAreAuthoritative(n.getBooleanValue()); });
+        deserializerMap.put("enterpriseNetworkDomainNames", (n) -> { currentObject.setEnterpriseNetworkDomainNames(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("enterpriseProtectedDomainNames", (n) -> { currentObject.setEnterpriseProtectedDomainNames(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("enterpriseProxiedDomains", (n) -> { currentObject.setEnterpriseProxiedDomains(n.getCollectionOfObjectValues(WindowsInformationProtectionProxiedDomainCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("enterpriseProxyServers", (n) -> { currentObject.setEnterpriseProxyServers(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("enterpriseProxyServersAreAuthoritative", (n) -> { currentObject.setEnterpriseProxyServersAreAuthoritative(n.getBooleanValue()); });
+        deserializerMap.put("exemptAppLockerFiles", (n) -> { currentObject.setExemptAppLockerFiles(n.getCollectionOfObjectValues(WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue)); });
+        deserializerMap.put("exemptApps", (n) -> { currentObject.setExemptApps(n.getCollectionOfObjectValues(WindowsInformationProtectionApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("iconsVisible", (n) -> { currentObject.setIconsVisible(n.getBooleanValue()); });
+        deserializerMap.put("indexingEncryptedStoresOrItemsBlocked", (n) -> { currentObject.setIndexingEncryptedStoresOrItemsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("isAssigned", (n) -> { currentObject.setIsAssigned(n.getBooleanValue()); });
+        deserializerMap.put("neutralDomainResources", (n) -> { currentObject.setNeutralDomainResources(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("protectedAppLockerFiles", (n) -> { currentObject.setProtectedAppLockerFiles(n.getCollectionOfObjectValues(WindowsInformationProtectionAppLockerFile::createFromDiscriminatorValue)); });
+        deserializerMap.put("protectedApps", (n) -> { currentObject.setProtectedApps(n.getCollectionOfObjectValues(WindowsInformationProtectionApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("protectionUnderLockConfigRequired", (n) -> { currentObject.setProtectionUnderLockConfigRequired(n.getBooleanValue()); });
+        deserializerMap.put("revokeOnUnenrollDisabled", (n) -> { currentObject.setRevokeOnUnenrollDisabled(n.getBooleanValue()); });
+        deserializerMap.put("rightsManagementServicesTemplateId", (n) -> { currentObject.setRightsManagementServicesTemplateId(n.getStringValue()); });
+        deserializerMap.put("smbAutoEncryptedFileExtensions", (n) -> { currentObject.setSmbAutoEncryptedFileExtensions(n.getCollectionOfObjectValues(WindowsInformationProtectionResourceCollection::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the iconsVisible property value. Determines whether overlays are added to icons for WIP protected files in Explorer and enterprise only app tiles in the Start menu. Starting in Windows 10, version 1703 this setting also configures the visibility of the WIP icon in the title bar of a WIP-protected app
@@ -326,6 +327,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -360,6 +362,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<TargetedManagedAppPolicyAssignment> value) {
         this._assignments = value;
     }
@@ -368,6 +371,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the azureRightsManagementServicesAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureRightsManagementServicesAllowed(@javax.annotation.Nullable final Boolean value) {
         this._azureRightsManagementServicesAllowed = value;
     }
@@ -376,6 +380,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the dataRecoveryCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataRecoveryCertificate(@javax.annotation.Nullable final WindowsInformationProtectionDataRecoveryCertificate value) {
         this._dataRecoveryCertificate = value;
     }
@@ -384,6 +389,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the enforcementLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnforcementLevel(@javax.annotation.Nullable final WindowsInformationProtectionEnforcementLevel value) {
         this._enforcementLevel = value;
     }
@@ -392,6 +398,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the enterpriseDomain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseDomain(@javax.annotation.Nullable final String value) {
         this._enterpriseDomain = value;
     }
@@ -400,6 +407,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the enterpriseInternalProxyServers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseInternalProxyServers(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionResourceCollection> value) {
         this._enterpriseInternalProxyServers = value;
     }
@@ -408,6 +416,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the enterpriseIPRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseIPRanges(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionIPRangeCollection> value) {
         this._enterpriseIPRanges = value;
     }
@@ -416,6 +425,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the enterpriseIPRangesAreAuthoritative property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseIPRangesAreAuthoritative(@javax.annotation.Nullable final Boolean value) {
         this._enterpriseIPRangesAreAuthoritative = value;
     }
@@ -424,6 +434,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the enterpriseNetworkDomainNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseNetworkDomainNames(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionResourceCollection> value) {
         this._enterpriseNetworkDomainNames = value;
     }
@@ -432,6 +443,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the enterpriseProtectedDomainNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseProtectedDomainNames(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionResourceCollection> value) {
         this._enterpriseProtectedDomainNames = value;
     }
@@ -440,6 +452,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the enterpriseProxiedDomains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseProxiedDomains(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionProxiedDomainCollection> value) {
         this._enterpriseProxiedDomains = value;
     }
@@ -448,6 +461,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the enterpriseProxyServers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseProxyServers(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionResourceCollection> value) {
         this._enterpriseProxyServers = value;
     }
@@ -456,6 +470,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the enterpriseProxyServersAreAuthoritative property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseProxyServersAreAuthoritative(@javax.annotation.Nullable final Boolean value) {
         this._enterpriseProxyServersAreAuthoritative = value;
     }
@@ -464,6 +479,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the exemptAppLockerFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExemptAppLockerFiles(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionAppLockerFile> value) {
         this._exemptAppLockerFiles = value;
     }
@@ -472,6 +488,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the exemptApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExemptApps(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionApp> value) {
         this._exemptApps = value;
     }
@@ -480,6 +497,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the iconsVisible property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIconsVisible(@javax.annotation.Nullable final Boolean value) {
         this._iconsVisible = value;
     }
@@ -488,6 +506,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the indexingEncryptedStoresOrItemsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIndexingEncryptedStoresOrItemsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._indexingEncryptedStoresOrItemsBlocked = value;
     }
@@ -496,6 +515,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the isAssigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAssigned(@javax.annotation.Nullable final Boolean value) {
         this._isAssigned = value;
     }
@@ -504,6 +524,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the neutralDomainResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNeutralDomainResources(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionResourceCollection> value) {
         this._neutralDomainResources = value;
     }
@@ -512,6 +533,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the protectedAppLockerFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProtectedAppLockerFiles(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionAppLockerFile> value) {
         this._protectedAppLockerFiles = value;
     }
@@ -520,6 +542,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the protectedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProtectedApps(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionApp> value) {
         this._protectedApps = value;
     }
@@ -528,6 +551,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the protectionUnderLockConfigRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProtectionUnderLockConfigRequired(@javax.annotation.Nullable final Boolean value) {
         this._protectionUnderLockConfigRequired = value;
     }
@@ -536,6 +560,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the revokeOnUnenrollDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRevokeOnUnenrollDisabled(@javax.annotation.Nullable final Boolean value) {
         this._revokeOnUnenrollDisabled = value;
     }
@@ -544,6 +569,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the rightsManagementServicesTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRightsManagementServicesTemplateId(@javax.annotation.Nullable final String value) {
         this._rightsManagementServicesTemplateId = value;
     }
@@ -552,6 +578,7 @@ public class WindowsInformationProtection extends ManagedAppPolicy implements Pa
      * @param value Value to set for the smbAutoEncryptedFileExtensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmbAutoEncryptedFileExtensions(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionResourceCollection> value) {
         this._smbAutoEncryptedFileExtensions = value;
     }

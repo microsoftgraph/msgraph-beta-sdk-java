@@ -32,6 +32,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      * Instantiates a new positionDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PositionDetail() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.positionDetail");
@@ -85,16 +86,16 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PositionDetail currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("company", (n) -> { currentObject.setCompany(n.getObjectValue(CompanyDetail::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("endMonthYear", (n) -> { currentObject.setEndMonthYear(n.getLocalDateValue()); });
-            this.put("jobTitle", (n) -> { currentObject.setJobTitle(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("role", (n) -> { currentObject.setRole(n.getStringValue()); });
-            this.put("startMonthYear", (n) -> { currentObject.setStartMonthYear(n.getLocalDateValue()); });
-            this.put("summary", (n) -> { currentObject.setSummary(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("company", (n) -> { currentObject.setCompany(n.getObjectValue(CompanyDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("endMonthYear", (n) -> { currentObject.setEndMonthYear(n.getLocalDateValue()); });
+        deserializerMap.put("jobTitle", (n) -> { currentObject.setJobTitle(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("role", (n) -> { currentObject.setRole(n.getStringValue()); });
+        deserializerMap.put("startMonthYear", (n) -> { currentObject.setStartMonthYear(n.getLocalDateValue()); });
+        deserializerMap.put("summary", (n) -> { currentObject.setSummary(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the jobTitle property value. The title held when in that position.
@@ -141,6 +142,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("company", this.getCompany());
@@ -158,6 +160,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -166,6 +169,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the company property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompany(@javax.annotation.Nullable final CompanyDetail value) {
         this._company = value;
     }
@@ -174,6 +178,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -182,6 +187,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the endMonthYear property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndMonthYear(@javax.annotation.Nullable final LocalDate value) {
         this._endMonthYear = value;
     }
@@ -190,6 +196,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the jobTitle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJobTitle(@javax.annotation.Nullable final String value) {
         this._jobTitle = value;
     }
@@ -198,6 +205,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -206,6 +214,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the role property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRole(@javax.annotation.Nullable final String value) {
         this._role = value;
     }
@@ -214,6 +223,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the startMonthYear property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMonthYear(@javax.annotation.Nullable final LocalDate value) {
         this._startMonthYear = value;
     }
@@ -222,6 +232,7 @@ public class PositionDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the summary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSummary(@javax.annotation.Nullable final String value) {
         this._summary = value;
     }

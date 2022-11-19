@@ -35,6 +35,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * Instantiates a new workloadActionDeploymentStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkloadActionDeploymentStatus() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.managedTenants.workloadActionDeploymentStatus");
@@ -96,17 +97,17 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkloadActionDeploymentStatus currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("actionId", (n) -> { currentObject.setActionId(n.getStringValue()); });
-            this.put("deployedPolicyId", (n) -> { currentObject.setDeployedPolicyId(n.getStringValue()); });
-            this.put("error", (n) -> { currentObject.setError(n.getObjectValue(GenericError::createFromDiscriminatorValue)); });
-            this.put("excludeGroups", (n) -> { currentObject.setExcludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("includeAllUsers", (n) -> { currentObject.setIncludeAllUsers(n.getBooleanValue()); });
-            this.put("includeGroups", (n) -> { currentObject.setIncludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("lastDeploymentDateTime", (n) -> { currentObject.setLastDeploymentDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(WorkloadActionStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("actionId", (n) -> { currentObject.setActionId(n.getStringValue()); });
+        deserializerMap.put("deployedPolicyId", (n) -> { currentObject.setDeployedPolicyId(n.getStringValue()); });
+        deserializerMap.put("error", (n) -> { currentObject.setError(n.getObjectValue(GenericError::createFromDiscriminatorValue)); });
+        deserializerMap.put("excludeGroups", (n) -> { currentObject.setExcludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("includeAllUsers", (n) -> { currentObject.setIncludeAllUsers(n.getBooleanValue()); });
+        deserializerMap.put("includeGroups", (n) -> { currentObject.setIncludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("lastDeploymentDateTime", (n) -> { currentObject.setLastDeploymentDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(WorkloadActionStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the includeAllUsers property value. The includeAllUsers property
@@ -153,6 +154,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("actionId", this.getActionId());
@@ -171,6 +173,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the actionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionId(@javax.annotation.Nullable final String value) {
         this._actionId = value;
     }
@@ -179,6 +182,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -187,6 +191,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the deployedPolicyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployedPolicyId(@javax.annotation.Nullable final String value) {
         this._deployedPolicyId = value;
     }
@@ -195,6 +200,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final GenericError value) {
         this._error = value;
     }
@@ -203,6 +209,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the excludeGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludeGroups(@javax.annotation.Nullable final java.util.List<String> value) {
         this._excludeGroups = value;
     }
@@ -211,6 +218,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the includeAllUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeAllUsers(@javax.annotation.Nullable final Boolean value) {
         this._includeAllUsers = value;
     }
@@ -219,6 +227,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the includeGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeGroups(@javax.annotation.Nullable final java.util.List<String> value) {
         this._includeGroups = value;
     }
@@ -227,6 +236,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the lastDeploymentDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastDeploymentDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastDeploymentDateTime = value;
     }
@@ -235,6 +245,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -243,6 +254,7 @@ public class WorkloadActionDeploymentStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final WorkloadActionStatus value) {
         this._status = value;
     }
