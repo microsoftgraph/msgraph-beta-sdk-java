@@ -31,6 +31,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      * Instantiates a new deviceConfigurationDeviceOverview and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceConfigurationDeviceOverview() {
         super();
         this.setOdataType("#microsoft.graph.deviceConfigurationDeviceOverview");
@@ -84,17 +85,17 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceConfigurationDeviceOverview currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("configurationVersion", (n) -> { currentObject.setConfigurationVersion(n.getIntegerValue()); });
-            this.put("conflictCount", (n) -> { currentObject.setConflictCount(n.getIntegerValue()); });
-            this.put("errorCount", (n) -> { currentObject.setErrorCount(n.getIntegerValue()); });
-            this.put("failedCount", (n) -> { currentObject.setFailedCount(n.getIntegerValue()); });
-            this.put("lastUpdateDateTime", (n) -> { currentObject.setLastUpdateDateTime(n.getOffsetDateTimeValue()); });
-            this.put("notApplicableCount", (n) -> { currentObject.setNotApplicableCount(n.getIntegerValue()); });
-            this.put("notApplicablePlatformCount", (n) -> { currentObject.setNotApplicablePlatformCount(n.getIntegerValue()); });
-            this.put("pendingCount", (n) -> { currentObject.setPendingCount(n.getIntegerValue()); });
-            this.put("successCount", (n) -> { currentObject.setSuccessCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("configurationVersion", (n) -> { currentObject.setConfigurationVersion(n.getIntegerValue()); });
+        deserializerMap.put("conflictCount", (n) -> { currentObject.setConflictCount(n.getIntegerValue()); });
+        deserializerMap.put("errorCount", (n) -> { currentObject.setErrorCount(n.getIntegerValue()); });
+        deserializerMap.put("failedCount", (n) -> { currentObject.setFailedCount(n.getIntegerValue()); });
+        deserializerMap.put("lastUpdateDateTime", (n) -> { currentObject.setLastUpdateDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("notApplicableCount", (n) -> { currentObject.setNotApplicableCount(n.getIntegerValue()); });
+        deserializerMap.put("notApplicablePlatformCount", (n) -> { currentObject.setNotApplicablePlatformCount(n.getIntegerValue()); });
+        deserializerMap.put("pendingCount", (n) -> { currentObject.setPendingCount(n.getIntegerValue()); });
+        deserializerMap.put("successCount", (n) -> { currentObject.setSuccessCount(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the lastUpdateDateTime property value. Last update time
@@ -141,6 +142,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +161,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      * @param value Value to set for the configurationVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationVersion(@javax.annotation.Nullable final Integer value) {
         this._configurationVersion = value;
     }
@@ -167,6 +170,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      * @param value Value to set for the conflictCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConflictCount(@javax.annotation.Nullable final Integer value) {
         this._conflictCount = value;
     }
@@ -175,6 +179,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      * @param value Value to set for the errorCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCount(@javax.annotation.Nullable final Integer value) {
         this._errorCount = value;
     }
@@ -183,6 +188,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      * @param value Value to set for the failedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedCount(@javax.annotation.Nullable final Integer value) {
         this._failedCount = value;
     }
@@ -191,6 +197,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      * @param value Value to set for the lastUpdateDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastUpdateDateTime = value;
     }
@@ -199,6 +206,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      * @param value Value to set for the notApplicableCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotApplicableCount(@javax.annotation.Nullable final Integer value) {
         this._notApplicableCount = value;
     }
@@ -207,6 +215,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      * @param value Value to set for the notApplicablePlatformCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotApplicablePlatformCount(@javax.annotation.Nullable final Integer value) {
         this._notApplicablePlatformCount = value;
     }
@@ -215,6 +224,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      * @param value Value to set for the pendingCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingCount(@javax.annotation.Nullable final Integer value) {
         this._pendingCount = value;
     }
@@ -223,6 +233,7 @@ public class DeviceConfigurationDeviceOverview extends Entity implements Parsabl
      * @param value Value to set for the successCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessCount(@javax.annotation.Nullable final Integer value) {
         this._successCount = value;
     }

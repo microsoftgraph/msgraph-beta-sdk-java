@@ -15,6 +15,7 @@ public class AssignmentFilterEvaluationStatusDetails extends Entity implements P
      * Instantiates a new assignmentFilterEvaluationStatusDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignmentFilterEvaluationStatusDetails() {
         super();
         this.setOdataType("#microsoft.graph.assignmentFilterEvaluationStatusDetails");
@@ -36,9 +37,9 @@ public class AssignmentFilterEvaluationStatusDetails extends Entity implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentFilterEvaluationStatusDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("payloadId", (n) -> { currentObject.setPayloadId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("payloadId", (n) -> { currentObject.setPayloadId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the payloadId property value. PayloadId on which filter has been applied.
@@ -53,6 +54,7 @@ public class AssignmentFilterEvaluationStatusDetails extends Entity implements P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class AssignmentFilterEvaluationStatusDetails extends Entity implements P
      * @param value Value to set for the payloadId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadId(@javax.annotation.Nullable final String value) {
         this._payloadId = value;
     }

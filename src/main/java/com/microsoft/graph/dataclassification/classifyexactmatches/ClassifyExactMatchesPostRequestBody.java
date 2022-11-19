@@ -25,6 +25,7 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
      * Instantiates a new classifyExactMatchesPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ClassifyExactMatchesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -61,12 +62,12 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClassifyExactMatchesPostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("contentClassifications", (n) -> { currentObject.setContentClassifications(n.getCollectionOfObjectValues(ContentClassification::createFromDiscriminatorValue)); });
-            this.put("sensitiveTypeIds", (n) -> { currentObject.setSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
-            this.put("timeoutInMs", (n) -> { currentObject.setTimeoutInMs(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("contentClassifications", (n) -> { currentObject.setContentClassifications(n.getCollectionOfObjectValues(ContentClassification::createFromDiscriminatorValue)); });
+        deserializerMap.put("sensitiveTypeIds", (n) -> { currentObject.setSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
+        deserializerMap.put("timeoutInMs", (n) -> { currentObject.setTimeoutInMs(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the sensitiveTypeIds property value. The sensitiveTypeIds property
@@ -97,6 +98,7 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("contentClassifications", this.getContentClassifications());
@@ -110,6 +112,7 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the contentClassifications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentClassifications(@javax.annotation.Nullable final java.util.List<ContentClassification> value) {
         this._contentClassifications = value;
     }
@@ -126,6 +130,7 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the sensitiveTypeIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitiveTypeIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._sensitiveTypeIds = value;
     }
@@ -134,6 +139,7 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final String value) {
         this._text = value;
     }
@@ -142,6 +148,7 @@ public class ClassifyExactMatchesPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the timeoutInMs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeoutInMs(@javax.annotation.Nullable final String value) {
         this._timeoutInMs = value;
     }

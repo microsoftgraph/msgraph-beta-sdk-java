@@ -10,6 +10,8 @@ import java.util.Map;
 import java.util.Objects;
 /** Windows Log Collection request entity. */
 public class DeviceLogCollectionResponse extends Entity implements Parsable {
+    /** The User Principal Name (UPN) of the user that enrolled the device */
+    private String _enrolledByUser;
     /** The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18 */
     private Long _errorCode;
     /** The DateTime of the expiration of the logs */
@@ -30,6 +32,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * Instantiates a new deviceLogCollectionResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceLogCollectionResponse() {
         super();
         this.setOdataType("#microsoft.graph.deviceLogCollectionResponse");
@@ -43,6 +46,14 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     public static DeviceLogCollectionResponse createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new DeviceLogCollectionResponse();
+    }
+    /**
+     * Gets the enrolledByUser property value. The User Principal Name (UPN) of the user that enrolled the device
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getEnrolledByUser() {
+        return this._enrolledByUser;
     }
     /**
      * Gets the errorCode property value. The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
@@ -67,16 +78,17 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceLogCollectionResponse currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getLongValue()); });
-            this.put("expirationDateTimeUTC", (n) -> { currentObject.setExpirationDateTimeUTC(n.getOffsetDateTimeValue()); });
-            this.put("initiatedByUserPrincipalName", (n) -> { currentObject.setInitiatedByUserPrincipalName(n.getStringValue()); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-            this.put("receivedDateTimeUTC", (n) -> { currentObject.setReceivedDateTimeUTC(n.getOffsetDateTimeValue()); });
-            this.put("requestedDateTimeUTC", (n) -> { currentObject.setRequestedDateTimeUTC(n.getOffsetDateTimeValue()); });
-            this.put("size", (n) -> { currentObject.setSize(n.getDoubleValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("enrolledByUser", (n) -> { currentObject.setEnrolledByUser(n.getStringValue()); });
+        deserializerMap.put("errorCode", (n) -> { currentObject.setErrorCode(n.getLongValue()); });
+        deserializerMap.put("expirationDateTimeUTC", (n) -> { currentObject.setExpirationDateTimeUTC(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("initiatedByUserPrincipalName", (n) -> { currentObject.setInitiatedByUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
+        deserializerMap.put("receivedDateTimeUTC", (n) -> { currentObject.setReceivedDateTimeUTC(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("requestedDateTimeUTC", (n) -> { currentObject.setRequestedDateTimeUTC(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("size", (n) -> { currentObject.setSize(n.getDoubleValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the initiatedByUserPrincipalName property value. The UPN for who initiated the request
@@ -131,9 +143,11 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("enrolledByUser", this.getEnrolledByUser());
         writer.writeLongValue("errorCode", this.getErrorCode());
         writer.writeOffsetDateTimeValue("expirationDateTimeUTC", this.getExpirationDateTimeUTC());
         writer.writeStringValue("initiatedByUserPrincipalName", this.getInitiatedByUserPrincipalName());
@@ -144,10 +158,20 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
         writer.writeStringValue("status", this.getStatus());
     }
     /**
+     * Sets the enrolledByUser property value. The User Principal Name (UPN) of the user that enrolled the device
+     * @param value Value to set for the enrolledByUser property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setEnrolledByUser(@javax.annotation.Nullable final String value) {
+        this._enrolledByUser = value;
+    }
+    /**
      * Sets the errorCode property value. The error code, if any. Valid values -9.22337203685478E+18 to 9.22337203685478E+18
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final Long value) {
         this._errorCode = value;
     }
@@ -156,6 +180,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTimeUTC property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTimeUTC(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTimeUTC = value;
     }
@@ -164,6 +189,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the initiatedByUserPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatedByUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._initiatedByUserPrincipalName = value;
     }
@@ -172,6 +198,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
     }
@@ -180,6 +207,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the receivedDateTimeUTC property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReceivedDateTimeUTC(@javax.annotation.Nullable final OffsetDateTime value) {
         this._receivedDateTimeUTC = value;
     }
@@ -188,6 +216,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the requestedDateTimeUTC property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestedDateTimeUTC(@javax.annotation.Nullable final OffsetDateTime value) {
         this._requestedDateTimeUTC = value;
     }
@@ -196,6 +225,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Double value) {
         this._size = value;
     }
@@ -204,6 +234,7 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }

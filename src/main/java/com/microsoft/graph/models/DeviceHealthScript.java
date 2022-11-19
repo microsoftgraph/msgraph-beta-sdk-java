@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Intune will provide customer the ability to run their Powershell Health scripts (remediation + detection) on the enrolled windows 10 Azure Active Directory joined devices. */
 public class DeviceHealthScript extends Entity implements Parsable {
     /** The list of group assignments for the device health script */
     private java.util.List<DeviceHealthScriptAssignment> _assignments;
@@ -48,9 +49,10 @@ public class DeviceHealthScript extends Entity implements Parsable {
     /** Version of the device health script */
     private String _version;
     /**
-     * Instantiates a new DeviceHealthScript and sets the default values.
+     * Instantiates a new deviceHealthScript and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceHealthScript() {
         super();
         this.setOdataType("#microsoft.graph.deviceHealthScript");
@@ -58,7 +60,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceHealthScript
+     * @return a deviceHealthScript
      */
     @javax.annotation.Nonnull
     public static DeviceHealthScript createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -136,27 +138,27 @@ public class DeviceHealthScript extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScript currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceHealthScriptAssignment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("detectionScriptContent", (n) -> { currentObject.setDetectionScriptContent(n.getByteArrayValue()); });
-            this.put("detectionScriptParameters", (n) -> { currentObject.setDetectionScriptParameters(n.getCollectionOfObjectValues(DeviceHealthScriptParameter::createFromDiscriminatorValue)); });
-            this.put("deviceRunStates", (n) -> { currentObject.setDeviceRunStates(n.getCollectionOfObjectValues(DeviceHealthScriptDeviceState::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("enforceSignatureCheck", (n) -> { currentObject.setEnforceSignatureCheck(n.getBooleanValue()); });
-            this.put("highestAvailableVersion", (n) -> { currentObject.setHighestAvailableVersion(n.getStringValue()); });
-            this.put("isGlobalScript", (n) -> { currentObject.setIsGlobalScript(n.getBooleanValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
-            this.put("remediationScriptContent", (n) -> { currentObject.setRemediationScriptContent(n.getByteArrayValue()); });
-            this.put("remediationScriptParameters", (n) -> { currentObject.setRemediationScriptParameters(n.getCollectionOfObjectValues(DeviceHealthScriptParameter::createFromDiscriminatorValue)); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("runAs32Bit", (n) -> { currentObject.setRunAs32Bit(n.getBooleanValue()); });
-            this.put("runAsAccount", (n) -> { currentObject.setRunAsAccount(n.getEnumValue(RunAsAccountType.class)); });
-            this.put("runSummary", (n) -> { currentObject.setRunSummary(n.getObjectValue(DeviceHealthScriptRunSummary::createFromDiscriminatorValue)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceHealthScriptAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("detectionScriptContent", (n) -> { currentObject.setDetectionScriptContent(n.getByteArrayValue()); });
+        deserializerMap.put("detectionScriptParameters", (n) -> { currentObject.setDetectionScriptParameters(n.getCollectionOfObjectValues(DeviceHealthScriptParameter::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceRunStates", (n) -> { currentObject.setDeviceRunStates(n.getCollectionOfObjectValues(DeviceHealthScriptDeviceState::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enforceSignatureCheck", (n) -> { currentObject.setEnforceSignatureCheck(n.getBooleanValue()); });
+        deserializerMap.put("highestAvailableVersion", (n) -> { currentObject.setHighestAvailableVersion(n.getStringValue()); });
+        deserializerMap.put("isGlobalScript", (n) -> { currentObject.setIsGlobalScript(n.getBooleanValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
+        deserializerMap.put("remediationScriptContent", (n) -> { currentObject.setRemediationScriptContent(n.getByteArrayValue()); });
+        deserializerMap.put("remediationScriptParameters", (n) -> { currentObject.setRemediationScriptParameters(n.getCollectionOfObjectValues(DeviceHealthScriptParameter::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("runAs32Bit", (n) -> { currentObject.setRunAs32Bit(n.getBooleanValue()); });
+        deserializerMap.put("runAsAccount", (n) -> { currentObject.setRunAsAccount(n.getEnumValue(RunAsAccountType.class)); });
+        deserializerMap.put("runSummary", (n) -> { currentObject.setRunSummary(n.getObjectValue(DeviceHealthScriptRunSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the highestAvailableVersion property value. Highest available version for a Microsoft Proprietary script
@@ -251,11 +253,11 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeByteArrayValue("detectionScriptContent", this.getDetectionScriptContent());
         writer.writeCollectionOfObjectValues("detectionScriptParameters", this.getDetectionScriptParameters());
@@ -264,7 +266,6 @@ public class DeviceHealthScript extends Entity implements Parsable {
         writer.writeBooleanValue("enforceSignatureCheck", this.getEnforceSignatureCheck());
         writer.writeStringValue("highestAvailableVersion", this.getHighestAvailableVersion());
         writer.writeBooleanValue("isGlobalScript", this.getIsGlobalScript());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("publisher", this.getPublisher());
         writer.writeByteArrayValue("remediationScriptContent", this.getRemediationScriptContent());
         writer.writeCollectionOfObjectValues("remediationScriptParameters", this.getRemediationScriptParameters());
@@ -279,6 +280,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<DeviceHealthScriptAssignment> value) {
         this._assignments = value;
     }
@@ -287,6 +289,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -295,6 +298,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -303,6 +307,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the detectionScriptContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionScriptContent(@javax.annotation.Nullable final byte[] value) {
         this._detectionScriptContent = value;
     }
@@ -311,6 +316,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the detectionScriptParameters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionScriptParameters(@javax.annotation.Nullable final java.util.List<DeviceHealthScriptParameter> value) {
         this._detectionScriptParameters = value;
     }
@@ -319,6 +325,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the deviceRunStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceRunStates(@javax.annotation.Nullable final java.util.List<DeviceHealthScriptDeviceState> value) {
         this._deviceRunStates = value;
     }
@@ -327,6 +334,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -335,6 +343,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the enforceSignatureCheck property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnforceSignatureCheck(@javax.annotation.Nullable final Boolean value) {
         this._enforceSignatureCheck = value;
     }
@@ -343,6 +352,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the highestAvailableVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHighestAvailableVersion(@javax.annotation.Nullable final String value) {
         this._highestAvailableVersion = value;
     }
@@ -351,6 +361,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the isGlobalScript property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsGlobalScript(@javax.annotation.Nullable final Boolean value) {
         this._isGlobalScript = value;
     }
@@ -359,6 +370,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -367,6 +379,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
         this._publisher = value;
     }
@@ -375,6 +388,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the remediationScriptContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediationScriptContent(@javax.annotation.Nullable final byte[] value) {
         this._remediationScriptContent = value;
     }
@@ -383,6 +397,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the remediationScriptParameters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediationScriptParameters(@javax.annotation.Nullable final java.util.List<DeviceHealthScriptParameter> value) {
         this._remediationScriptParameters = value;
     }
@@ -391,6 +406,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -399,6 +415,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the runAs32Bit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunAs32Bit(@javax.annotation.Nullable final Boolean value) {
         this._runAs32Bit = value;
     }
@@ -407,6 +424,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the runAsAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunAsAccount(@javax.annotation.Nullable final RunAsAccountType value) {
         this._runAsAccount = value;
     }
@@ -415,6 +433,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the runSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunSummary(@javax.annotation.Nullable final DeviceHealthScriptRunSummary value) {
         this._runSummary = value;
     }
@@ -423,6 +442,7 @@ public class DeviceHealthScript extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

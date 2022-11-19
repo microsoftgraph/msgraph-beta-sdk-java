@@ -23,7 +23,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
     private java.util.List<String> _enforcedGrantControls;
     /** Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls'). */
     private java.util.List<String> _enforcedSessionControls;
-    /** List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didn’t apply, because the DevicePlatform condition was a match. */
+    /** List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didnt apply, because the DevicePlatform condition was a match. */
     private java.util.List<ConditionalAccessRuleSatisfied> _excludeRulesSatisfied;
     /** Identifier of the conditional access policy. */
     private String _id;
@@ -39,6 +39,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * Instantiates a new appliedConditionalAccessPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppliedConditionalAccessPolicy() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.appliedConditionalAccessPolicy");
@@ -110,7 +111,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
         return this._enforcedSessionControls;
     }
     /**
-     * Gets the excludeRulesSatisfied property value. List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didn’t apply, because the DevicePlatform condition was a match.
+     * Gets the excludeRulesSatisfied property value. List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didnt apply, because the DevicePlatform condition was a match.
      * @return a conditionalAccessRuleSatisfied
      */
     @javax.annotation.Nullable
@@ -124,20 +125,20 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppliedConditionalAccessPolicy currentObject = this;
-        return new HashMap<>(12) {{
-            this.put("authenticationStrength", (n) -> { currentObject.setAuthenticationStrength(n.getObjectValue(AuthenticationStrength::createFromDiscriminatorValue)); });
-            this.put("conditionsNotSatisfied", (n) -> { currentObject.setConditionsNotSatisfied(n.getEnumValue(ConditionalAccessConditions.class)); });
-            this.put("conditionsSatisfied", (n) -> { currentObject.setConditionsSatisfied(n.getEnumValue(ConditionalAccessConditions.class)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("enforcedGrantControls", (n) -> { currentObject.setEnforcedGrantControls(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("enforcedSessionControls", (n) -> { currentObject.setEnforcedSessionControls(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("excludeRulesSatisfied", (n) -> { currentObject.setExcludeRulesSatisfied(n.getCollectionOfObjectValues(ConditionalAccessRuleSatisfied::createFromDiscriminatorValue)); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("includeRulesSatisfied", (n) -> { currentObject.setIncludeRulesSatisfied(n.getCollectionOfObjectValues(ConditionalAccessRuleSatisfied::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("result", (n) -> { currentObject.setResult(n.getEnumValue(AppliedConditionalAccessPolicyResult.class)); });
-            this.put("sessionControlsNotSatisfied", (n) -> { currentObject.setSessionControlsNotSatisfied(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(12);
+        deserializerMap.put("authenticationStrength", (n) -> { currentObject.setAuthenticationStrength(n.getObjectValue(AuthenticationStrength::createFromDiscriminatorValue)); });
+        deserializerMap.put("conditionsNotSatisfied", (n) -> { currentObject.setConditionsNotSatisfied(n.getEnumValue(ConditionalAccessConditions.class)); });
+        deserializerMap.put("conditionsSatisfied", (n) -> { currentObject.setConditionsSatisfied(n.getEnumValue(ConditionalAccessConditions.class)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enforcedGrantControls", (n) -> { currentObject.setEnforcedGrantControls(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("enforcedSessionControls", (n) -> { currentObject.setEnforcedSessionControls(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("excludeRulesSatisfied", (n) -> { currentObject.setExcludeRulesSatisfied(n.getCollectionOfObjectValues(ConditionalAccessRuleSatisfied::createFromDiscriminatorValue)); });
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        deserializerMap.put("includeRulesSatisfied", (n) -> { currentObject.setIncludeRulesSatisfied(n.getCollectionOfObjectValues(ConditionalAccessRuleSatisfied::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("result", (n) -> { currentObject.setResult(n.getEnumValue(AppliedConditionalAccessPolicyResult.class)); });
+        deserializerMap.put("sessionControlsNotSatisfied", (n) -> { currentObject.setSessionControlsNotSatisfied(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the id property value. Identifier of the conditional access policy.
@@ -184,6 +185,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("authenticationStrength", this.getAuthenticationStrength());
@@ -205,6 +207,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -213,6 +216,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the authenticationStrength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationStrength(@javax.annotation.Nullable final AuthenticationStrength value) {
         this._authenticationStrength = value;
     }
@@ -221,6 +225,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the conditionsNotSatisfied property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionsNotSatisfied(@javax.annotation.Nullable final ConditionalAccessConditions value) {
         this._conditionsNotSatisfied = value;
     }
@@ -229,6 +234,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the conditionsSatisfied property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionsSatisfied(@javax.annotation.Nullable final ConditionalAccessConditions value) {
         this._conditionsSatisfied = value;
     }
@@ -237,6 +243,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -245,6 +252,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the enforcedGrantControls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnforcedGrantControls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._enforcedGrantControls = value;
     }
@@ -253,14 +261,16 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the enforcedSessionControls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnforcedSessionControls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._enforcedSessionControls = value;
     }
     /**
-     * Sets the excludeRulesSatisfied property value. List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didn’t apply, because the DevicePlatform condition was a match.
+     * Sets the excludeRulesSatisfied property value. List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didnt apply, because the DevicePlatform condition was a match.
      * @param value Value to set for the excludeRulesSatisfied property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludeRulesSatisfied(@javax.annotation.Nullable final java.util.List<ConditionalAccessRuleSatisfied> value) {
         this._excludeRulesSatisfied = value;
     }
@@ -269,6 +279,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -277,6 +288,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the includeRulesSatisfied property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeRulesSatisfied(@javax.annotation.Nullable final java.util.List<ConditionalAccessRuleSatisfied> value) {
         this._includeRulesSatisfied = value;
     }
@@ -285,6 +297,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -293,6 +306,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the result property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResult(@javax.annotation.Nullable final AppliedConditionalAccessPolicyResult value) {
         this._result = value;
     }
@@ -301,6 +315,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Par
      * @param value Value to set for the sessionControlsNotSatisfied property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessionControlsNotSatisfied(@javax.annotation.Nullable final java.util.List<String> value) {
         this._sessionControlsNotSatisfied = value;
     }

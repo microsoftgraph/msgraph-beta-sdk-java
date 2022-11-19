@@ -24,6 +24,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * Instantiates a new ReferenceAttachment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ReferenceAttachment() {
         super();
         this.setOdataType("#microsoft.graph.referenceAttachment");
@@ -45,14 +46,14 @@ public class ReferenceAttachment extends Attachment implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ReferenceAttachment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("isFolder", (n) -> { currentObject.setIsFolder(n.getBooleanValue()); });
-            this.put("permission", (n) -> { currentObject.setPermission(n.getEnumValue(ReferenceAttachmentPermission.class)); });
-            this.put("previewUrl", (n) -> { currentObject.setPreviewUrl(n.getStringValue()); });
-            this.put("providerType", (n) -> { currentObject.setProviderType(n.getEnumValue(ReferenceAttachmentProvider.class)); });
-            this.put("sourceUrl", (n) -> { currentObject.setSourceUrl(n.getStringValue()); });
-            this.put("thumbnailUrl", (n) -> { currentObject.setThumbnailUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isFolder", (n) -> { currentObject.setIsFolder(n.getBooleanValue()); });
+        deserializerMap.put("permission", (n) -> { currentObject.setPermission(n.getEnumValue(ReferenceAttachmentPermission.class)); });
+        deserializerMap.put("previewUrl", (n) -> { currentObject.setPreviewUrl(n.getStringValue()); });
+        deserializerMap.put("providerType", (n) -> { currentObject.setProviderType(n.getEnumValue(ReferenceAttachmentProvider.class)); });
+        deserializerMap.put("sourceUrl", (n) -> { currentObject.setSourceUrl(n.getStringValue()); });
+        deserializerMap.put("thumbnailUrl", (n) -> { currentObject.setThumbnailUrl(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isFolder property value. Specifies whether the attachment is a link to a folder. Must set this to true if sourceUrl is a link to a folder. Optional.
@@ -107,6 +108,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * @param value Value to set for the isFolder property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsFolder(@javax.annotation.Nullable final Boolean value) {
         this._isFolder = value;
     }
@@ -130,6 +133,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * @param value Value to set for the permission property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermission(@javax.annotation.Nullable final ReferenceAttachmentPermission value) {
         this._permission = value;
     }
@@ -138,6 +142,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * @param value Value to set for the previewUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreviewUrl(@javax.annotation.Nullable final String value) {
         this._previewUrl = value;
     }
@@ -146,6 +151,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * @param value Value to set for the providerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProviderType(@javax.annotation.Nullable final ReferenceAttachmentProvider value) {
         this._providerType = value;
     }
@@ -154,6 +160,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * @param value Value to set for the sourceUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceUrl(@javax.annotation.Nullable final String value) {
         this._sourceUrl = value;
     }
@@ -162,6 +169,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
      * @param value Value to set for the thumbnailUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
         this._thumbnailUrl = value;
     }

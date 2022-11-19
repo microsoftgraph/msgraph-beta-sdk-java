@@ -18,6 +18,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
      * Instantiates a new EncryptWithUserDefinedRights and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EncryptWithUserDefinedRights() {
         super();
         this.setOdataType("#microsoft.graph.encryptWithUserDefinedRights");
@@ -63,17 +64,18 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EncryptWithUserDefinedRights currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowAdHocPermissions", (n) -> { currentObject.setAllowAdHocPermissions(n.getBooleanValue()); });
-            this.put("allowMailForwarding", (n) -> { currentObject.setAllowMailForwarding(n.getBooleanValue()); });
-            this.put("decryptionRightsManagementTemplateId", (n) -> { currentObject.setDecryptionRightsManagementTemplateId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowAdHocPermissions", (n) -> { currentObject.setAllowAdHocPermissions(n.getBooleanValue()); });
+        deserializerMap.put("allowMailForwarding", (n) -> { currentObject.setAllowMailForwarding(n.getBooleanValue()); });
+        deserializerMap.put("decryptionRightsManagementTemplateId", (n) -> { currentObject.setDecryptionRightsManagementTemplateId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
      * @param value Value to set for the allowAdHocPermissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowAdHocPermissions(@javax.annotation.Nullable final Boolean value) {
         this._allowAdHocPermissions = value;
     }
@@ -94,6 +97,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
      * @param value Value to set for the allowMailForwarding property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowMailForwarding(@javax.annotation.Nullable final Boolean value) {
         this._allowMailForwarding = value;
     }
@@ -102,6 +106,7 @@ public class EncryptWithUserDefinedRights extends EncryptContent implements Pars
      * @param value Value to set for the decryptionRightsManagementTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecryptionRightsManagementTemplateId(@javax.annotation.Nullable final String value) {
         this._decryptionRightsManagementTemplateId = value;
     }

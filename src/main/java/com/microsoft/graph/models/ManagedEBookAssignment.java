@@ -18,6 +18,7 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      * Instantiates a new managedEBookAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedEBookAssignment() {
         super();
         this.setOdataType("#microsoft.graph.managedEBookAssignment");
@@ -46,10 +47,10 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedEBookAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("installIntent", (n) -> { currentObject.setInstallIntent(n.getEnumValue(InstallIntent.class)); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("installIntent", (n) -> { currentObject.setInstallIntent(n.getEnumValue(InstallIntent.class)); });
+        deserializerMap.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the installIntent property value. Possible values for the install intent chosen by the admin.
@@ -72,6 +73,7 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -83,6 +85,7 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      * @param value Value to set for the installIntent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallIntent(@javax.annotation.Nullable final InstallIntent value) {
         this._installIntent = value;
     }
@@ -91,6 +94,7 @@ public class ManagedEBookAssignment extends Entity implements Parsable {
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this._target = value;
     }

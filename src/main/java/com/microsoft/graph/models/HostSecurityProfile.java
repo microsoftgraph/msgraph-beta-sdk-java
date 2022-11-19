@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class HostSecurityProfile extends Entity implements Parsable {
     /** The azureSubscriptionId property */
     private String _azureSubscriptionId;
@@ -46,9 +47,10 @@ public class HostSecurityProfile extends Entity implements Parsable {
     /** The vendorInformation property */
     private SecurityVendorInformation _vendorInformation;
     /**
-     * Instantiates a new HostSecurityProfile and sets the default values.
+     * Instantiates a new hostSecurityProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public HostSecurityProfile() {
         super();
         this.setOdataType("#microsoft.graph.hostSecurityProfile");
@@ -56,7 +58,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a HostSecurityProfile
+     * @return a hostSecurityProfile
      */
     @javax.annotation.Nonnull
     public static HostSecurityProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -86,26 +88,26 @@ public class HostSecurityProfile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final HostSecurityProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("azureSubscriptionId", (n) -> { currentObject.setAzureSubscriptionId(n.getStringValue()); });
-            this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
-            this.put("firstSeenDateTime", (n) -> { currentObject.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("fqdn", (n) -> { currentObject.setFqdn(n.getStringValue()); });
-            this.put("isAzureAdJoined", (n) -> { currentObject.setIsAzureAdJoined(n.getBooleanValue()); });
-            this.put("isAzureAdRegistered", (n) -> { currentObject.setIsAzureAdRegistered(n.getBooleanValue()); });
-            this.put("isHybridAzureDomainJoined", (n) -> { currentObject.setIsHybridAzureDomainJoined(n.getBooleanValue()); });
-            this.put("lastSeenDateTime", (n) -> { currentObject.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("logonUsers", (n) -> { currentObject.setLogonUsers(n.getCollectionOfObjectValues(LogonUser::createFromDiscriminatorValue)); });
-            this.put("netBiosName", (n) -> { currentObject.setNetBiosName(n.getStringValue()); });
-            this.put("networkInterfaces", (n) -> { currentObject.setNetworkInterfaces(n.getCollectionOfObjectValues(NetworkInterface::createFromDiscriminatorValue)); });
-            this.put("os", (n) -> { currentObject.setOs(n.getStringValue()); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
-            this.put("parentHost", (n) -> { currentObject.setParentHost(n.getStringValue()); });
-            this.put("relatedHostIds", (n) -> { currentObject.setRelatedHostIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("vendorInformation", (n) -> { currentObject.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("azureSubscriptionId", (n) -> { currentObject.setAzureSubscriptionId(n.getStringValue()); });
+        deserializerMap.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
+        deserializerMap.put("firstSeenDateTime", (n) -> { currentObject.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("fqdn", (n) -> { currentObject.setFqdn(n.getStringValue()); });
+        deserializerMap.put("isAzureAdJoined", (n) -> { currentObject.setIsAzureAdJoined(n.getBooleanValue()); });
+        deserializerMap.put("isAzureAdRegistered", (n) -> { currentObject.setIsAzureAdRegistered(n.getBooleanValue()); });
+        deserializerMap.put("isHybridAzureDomainJoined", (n) -> { currentObject.setIsHybridAzureDomainJoined(n.getBooleanValue()); });
+        deserializerMap.put("lastSeenDateTime", (n) -> { currentObject.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("logonUsers", (n) -> { currentObject.setLogonUsers(n.getCollectionOfObjectValues(LogonUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("netBiosName", (n) -> { currentObject.setNetBiosName(n.getStringValue()); });
+        deserializerMap.put("networkInterfaces", (n) -> { currentObject.setNetworkInterfaces(n.getCollectionOfObjectValues(NetworkInterface::createFromDiscriminatorValue)); });
+        deserializerMap.put("os", (n) -> { currentObject.setOs(n.getStringValue()); });
+        deserializerMap.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
+        deserializerMap.put("parentHost", (n) -> { currentObject.setParentHost(n.getStringValue()); });
+        deserializerMap.put("relatedHostIds", (n) -> { currentObject.setRelatedHostIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
+        deserializerMap.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("vendorInformation", (n) -> { currentObject.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the firstSeenDateTime property value. The firstSeenDateTime property
@@ -240,6 +242,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -267,6 +270,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the azureSubscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureSubscriptionId(@javax.annotation.Nullable final String value) {
         this._azureSubscriptionId = value;
     }
@@ -275,6 +279,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
         this._azureTenantId = value;
     }
@@ -283,6 +288,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the firstSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._firstSeenDateTime = value;
     }
@@ -291,6 +297,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the fqdn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFqdn(@javax.annotation.Nullable final String value) {
         this._fqdn = value;
     }
@@ -299,6 +306,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the isAzureAdJoined property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAzureAdJoined(@javax.annotation.Nullable final Boolean value) {
         this._isAzureAdJoined = value;
     }
@@ -307,6 +315,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the isAzureAdRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAzureAdRegistered(@javax.annotation.Nullable final Boolean value) {
         this._isAzureAdRegistered = value;
     }
@@ -315,6 +324,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the isHybridAzureDomainJoined property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsHybridAzureDomainJoined(@javax.annotation.Nullable final Boolean value) {
         this._isHybridAzureDomainJoined = value;
     }
@@ -323,6 +333,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSeenDateTime = value;
     }
@@ -331,6 +342,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the logonUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogonUsers(@javax.annotation.Nullable final java.util.List<LogonUser> value) {
         this._logonUsers = value;
     }
@@ -339,6 +351,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the netBiosName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetBiosName(@javax.annotation.Nullable final String value) {
         this._netBiosName = value;
     }
@@ -347,6 +360,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the networkInterfaces property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkInterfaces(@javax.annotation.Nullable final java.util.List<NetworkInterface> value) {
         this._networkInterfaces = value;
     }
@@ -355,6 +369,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the os property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOs(@javax.annotation.Nullable final String value) {
         this._os = value;
     }
@@ -363,6 +378,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
         this._osVersion = value;
     }
@@ -371,6 +387,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the parentHost property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentHost(@javax.annotation.Nullable final String value) {
         this._parentHost = value;
     }
@@ -379,6 +396,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the relatedHostIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelatedHostIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._relatedHostIds = value;
     }
@@ -387,6 +405,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the riskScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
         this._riskScore = value;
     }
@@ -395,6 +414,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
     }
@@ -403,6 +423,7 @@ public class HostSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
         this._vendorInformation = value;
     }

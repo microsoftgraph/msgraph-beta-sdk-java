@@ -22,6 +22,7 @@ public class AssignmentFilterTypeAndEvaluationResult implements AdditionalDataHo
      * Instantiates a new assignmentFilterTypeAndEvaluationResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignmentFilterTypeAndEvaluationResult() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.assignmentFilterTypeAndEvaluationResult");
@@ -67,11 +68,11 @@ public class AssignmentFilterTypeAndEvaluationResult implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentFilterTypeAndEvaluationResult currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("assignmentFilterType", (n) -> { currentObject.setAssignmentFilterType(n.getEnumValue(DeviceAndAppManagementAssignmentFilterType.class)); });
-            this.put("evaluationResult", (n) -> { currentObject.setEvaluationResult(n.getEnumValue(AssignmentFilterEvaluationResult.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("assignmentFilterType", (n) -> { currentObject.setAssignmentFilterType(n.getEnumValue(DeviceAndAppManagementAssignmentFilterType.class)); });
+        deserializerMap.put("evaluationResult", (n) -> { currentObject.setEvaluationResult(n.getEnumValue(AssignmentFilterEvaluationResult.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -86,6 +87,7 @@ public class AssignmentFilterTypeAndEvaluationResult implements AdditionalDataHo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("assignmentFilterType", this.getAssignmentFilterType());
@@ -98,6 +100,7 @@ public class AssignmentFilterTypeAndEvaluationResult implements AdditionalDataHo
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +109,7 @@ public class AssignmentFilterTypeAndEvaluationResult implements AdditionalDataHo
      * @param value Value to set for the assignmentFilterType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilterType(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentFilterType value) {
         this._assignmentFilterType = value;
     }
@@ -114,6 +118,7 @@ public class AssignmentFilterTypeAndEvaluationResult implements AdditionalDataHo
      * @param value Value to set for the evaluationResult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvaluationResult(@javax.annotation.Nullable final AssignmentFilterEvaluationResult value) {
         this._evaluationResult = value;
     }
@@ -122,6 +127,7 @@ public class AssignmentFilterTypeAndEvaluationResult implements AdditionalDataHo
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

@@ -24,6 +24,8 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     private Boolean _disableUserStatusTrackingAfterFirstUser;
     /** Set installation progress timeout in minutes */
     private Integer _installProgressTimeoutInMinutes;
+    /** Allows quality updates installation during OOBE */
+    private Boolean _installQualityUpdates;
     /** Selected applications to track the installation status */
     private java.util.List<String> _selectedMobileAppIds;
     /** Show or hide installation progress to user */
@@ -34,6 +36,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * Instantiates a new Windows10EnrollmentCompletionPageConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10EnrollmentCompletionPageConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10EnrollmentCompletionPageConfiguration");
@@ -111,19 +114,20 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows10EnrollmentCompletionPageConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowDeviceResetOnInstallFailure", (n) -> { currentObject.setAllowDeviceResetOnInstallFailure(n.getBooleanValue()); });
-            this.put("allowDeviceUseOnInstallFailure", (n) -> { currentObject.setAllowDeviceUseOnInstallFailure(n.getBooleanValue()); });
-            this.put("allowLogCollectionOnInstallFailure", (n) -> { currentObject.setAllowLogCollectionOnInstallFailure(n.getBooleanValue()); });
-            this.put("allowNonBlockingAppInstallation", (n) -> { currentObject.setAllowNonBlockingAppInstallation(n.getBooleanValue()); });
-            this.put("blockDeviceSetupRetryByUser", (n) -> { currentObject.setBlockDeviceSetupRetryByUser(n.getBooleanValue()); });
-            this.put("customErrorMessage", (n) -> { currentObject.setCustomErrorMessage(n.getStringValue()); });
-            this.put("disableUserStatusTrackingAfterFirstUser", (n) -> { currentObject.setDisableUserStatusTrackingAfterFirstUser(n.getBooleanValue()); });
-            this.put("installProgressTimeoutInMinutes", (n) -> { currentObject.setInstallProgressTimeoutInMinutes(n.getIntegerValue()); });
-            this.put("selectedMobileAppIds", (n) -> { currentObject.setSelectedMobileAppIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("showInstallationProgress", (n) -> { currentObject.setShowInstallationProgress(n.getBooleanValue()); });
-            this.put("trackInstallProgressForAutopilotOnly", (n) -> { currentObject.setTrackInstallProgressForAutopilotOnly(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowDeviceResetOnInstallFailure", (n) -> { currentObject.setAllowDeviceResetOnInstallFailure(n.getBooleanValue()); });
+        deserializerMap.put("allowDeviceUseOnInstallFailure", (n) -> { currentObject.setAllowDeviceUseOnInstallFailure(n.getBooleanValue()); });
+        deserializerMap.put("allowLogCollectionOnInstallFailure", (n) -> { currentObject.setAllowLogCollectionOnInstallFailure(n.getBooleanValue()); });
+        deserializerMap.put("allowNonBlockingAppInstallation", (n) -> { currentObject.setAllowNonBlockingAppInstallation(n.getBooleanValue()); });
+        deserializerMap.put("blockDeviceSetupRetryByUser", (n) -> { currentObject.setBlockDeviceSetupRetryByUser(n.getBooleanValue()); });
+        deserializerMap.put("customErrorMessage", (n) -> { currentObject.setCustomErrorMessage(n.getStringValue()); });
+        deserializerMap.put("disableUserStatusTrackingAfterFirstUser", (n) -> { currentObject.setDisableUserStatusTrackingAfterFirstUser(n.getBooleanValue()); });
+        deserializerMap.put("installProgressTimeoutInMinutes", (n) -> { currentObject.setInstallProgressTimeoutInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("installQualityUpdates", (n) -> { currentObject.setInstallQualityUpdates(n.getBooleanValue()); });
+        deserializerMap.put("selectedMobileAppIds", (n) -> { currentObject.setSelectedMobileAppIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("showInstallationProgress", (n) -> { currentObject.setShowInstallationProgress(n.getBooleanValue()); });
+        deserializerMap.put("trackInstallProgressForAutopilotOnly", (n) -> { currentObject.setTrackInstallProgressForAutopilotOnly(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the installProgressTimeoutInMinutes property value. Set installation progress timeout in minutes
@@ -132,6 +136,14 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
     @javax.annotation.Nullable
     public Integer getInstallProgressTimeoutInMinutes() {
         return this._installProgressTimeoutInMinutes;
+    }
+    /**
+     * Gets the installQualityUpdates property value. Allows quality updates installation during OOBE
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getInstallQualityUpdates() {
+        return this._installQualityUpdates;
     }
     /**
      * Gets the selectedMobileAppIds property value. Selected applications to track the installation status
@@ -162,6 +174,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -173,6 +186,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         writer.writeStringValue("customErrorMessage", this.getCustomErrorMessage());
         writer.writeBooleanValue("disableUserStatusTrackingAfterFirstUser", this.getDisableUserStatusTrackingAfterFirstUser());
         writer.writeIntegerValue("installProgressTimeoutInMinutes", this.getInstallProgressTimeoutInMinutes());
+        writer.writeBooleanValue("installQualityUpdates", this.getInstallQualityUpdates());
         writer.writeCollectionOfPrimitiveValues("selectedMobileAppIds", this.getSelectedMobileAppIds());
         writer.writeBooleanValue("showInstallationProgress", this.getShowInstallationProgress());
         writer.writeBooleanValue("trackInstallProgressForAutopilotOnly", this.getTrackInstallProgressForAutopilotOnly());
@@ -182,6 +196,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the allowDeviceResetOnInstallFailure property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowDeviceResetOnInstallFailure(@javax.annotation.Nullable final Boolean value) {
         this._allowDeviceResetOnInstallFailure = value;
     }
@@ -190,6 +205,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the allowDeviceUseOnInstallFailure property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowDeviceUseOnInstallFailure(@javax.annotation.Nullable final Boolean value) {
         this._allowDeviceUseOnInstallFailure = value;
     }
@@ -198,6 +214,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the allowLogCollectionOnInstallFailure property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowLogCollectionOnInstallFailure(@javax.annotation.Nullable final Boolean value) {
         this._allowLogCollectionOnInstallFailure = value;
     }
@@ -206,6 +223,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the allowNonBlockingAppInstallation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowNonBlockingAppInstallation(@javax.annotation.Nullable final Boolean value) {
         this._allowNonBlockingAppInstallation = value;
     }
@@ -214,6 +232,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the blockDeviceSetupRetryByUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockDeviceSetupRetryByUser(@javax.annotation.Nullable final Boolean value) {
         this._blockDeviceSetupRetryByUser = value;
     }
@@ -222,6 +241,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the customErrorMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomErrorMessage(@javax.annotation.Nullable final String value) {
         this._customErrorMessage = value;
     }
@@ -230,6 +250,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the disableUserStatusTrackingAfterFirstUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableUserStatusTrackingAfterFirstUser(@javax.annotation.Nullable final Boolean value) {
         this._disableUserStatusTrackingAfterFirstUser = value;
     }
@@ -238,14 +259,25 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the installProgressTimeoutInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallProgressTimeoutInMinutes(@javax.annotation.Nullable final Integer value) {
         this._installProgressTimeoutInMinutes = value;
+    }
+    /**
+     * Sets the installQualityUpdates property value. Allows quality updates installation during OOBE
+     * @param value Value to set for the installQualityUpdates property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setInstallQualityUpdates(@javax.annotation.Nullable final Boolean value) {
+        this._installQualityUpdates = value;
     }
     /**
      * Sets the selectedMobileAppIds property value. Selected applications to track the installation status
      * @param value Value to set for the selectedMobileAppIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSelectedMobileAppIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._selectedMobileAppIds = value;
     }
@@ -254,6 +286,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the showInstallationProgress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowInstallationProgress(@javax.annotation.Nullable final Boolean value) {
         this._showInstallationProgress = value;
     }
@@ -262,6 +295,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
      * @param value Value to set for the trackInstallProgressForAutopilotOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrackInstallProgressForAutopilotOnly(@javax.annotation.Nullable final Boolean value) {
         this._trackInstallProgressForAutopilotOnly = value;
     }

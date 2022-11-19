@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class MeetingRegistrationQuestion extends Entity implements Parsable {
     /** Answer input type of the custom registration question. */
     private AnswerInputType _answerInputType;
@@ -21,6 +21,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
      * Instantiates a new meetingRegistrationQuestion and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MeetingRegistrationQuestion() {
         super();
         this.setOdataType("#microsoft.graph.meetingRegistrationQuestion");
@@ -66,12 +67,12 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MeetingRegistrationQuestion currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("answerInputType", (n) -> { currentObject.setAnswerInputType(n.getEnumValue(AnswerInputType.class)); });
-            this.put("answerOptions", (n) -> { currentObject.setAnswerOptions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isRequired", (n) -> { currentObject.setIsRequired(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("answerInputType", (n) -> { currentObject.setAnswerInputType(n.getEnumValue(AnswerInputType.class)); });
+        deserializerMap.put("answerOptions", (n) -> { currentObject.setAnswerOptions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isRequired", (n) -> { currentObject.setIsRequired(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isRequired property value. Indicates whether the question is required. Default value is false.
@@ -86,6 +87,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
      * @param value Value to set for the answerInputType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnswerInputType(@javax.annotation.Nullable final AnswerInputType value) {
         this._answerInputType = value;
     }
@@ -107,6 +110,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
      * @param value Value to set for the answerOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnswerOptions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._answerOptions = value;
     }
@@ -115,6 +119,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -123,6 +128,7 @@ public class MeetingRegistrationQuestion extends Entity implements Parsable {
      * @param value Value to set for the isRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRequired(@javax.annotation.Nullable final Boolean value) {
         this._isRequired = value;
     }

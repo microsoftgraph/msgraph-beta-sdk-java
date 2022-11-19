@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class SensitivityLabel extends Entity implements Parsable {
     /** The applicableTo property */
     private SensitivityLabelTarget _applicableTo;
@@ -39,6 +39,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * Instantiates a new sensitivityLabel and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SensitivityLabel() {
         super();
         this.setOdataType("#microsoft.graph.sensitivityLabel");
@@ -108,21 +109,21 @@ public class SensitivityLabel extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SensitivityLabel currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicableTo", (n) -> { currentObject.setApplicableTo(n.getEnumValue(SensitivityLabelTarget.class)); });
-            this.put("applicationMode", (n) -> { currentObject.setApplicationMode(n.getEnumValue(ApplicationMode.class)); });
-            this.put("assignedPolicies", (n) -> { currentObject.setAssignedPolicies(n.getCollectionOfObjectValues(LabelPolicy::createFromDiscriminatorValue)); });
-            this.put("autoLabeling", (n) -> { currentObject.setAutoLabeling(n.getObjectValue(AutoLabeling::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
-            this.put("isEndpointProtectionEnabled", (n) -> { currentObject.setIsEndpointProtectionEnabled(n.getBooleanValue()); });
-            this.put("labelActions", (n) -> { currentObject.setLabelActions(n.getCollectionOfObjectValues(LabelActionBase::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("sublabels", (n) -> { currentObject.setSublabels(n.getCollectionOfObjectValues(SensitivityLabel::createFromDiscriminatorValue)); });
-            this.put("toolTip", (n) -> { currentObject.setToolTip(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicableTo", (n) -> { currentObject.setApplicableTo(n.getEnumValue(SensitivityLabelTarget.class)); });
+        deserializerMap.put("applicationMode", (n) -> { currentObject.setApplicationMode(n.getEnumValue(ApplicationMode.class)); });
+        deserializerMap.put("assignedPolicies", (n) -> { currentObject.setAssignedPolicies(n.getCollectionOfObjectValues(LabelPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("autoLabeling", (n) -> { currentObject.setAutoLabeling(n.getObjectValue(AutoLabeling::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("isEndpointProtectionEnabled", (n) -> { currentObject.setIsEndpointProtectionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("labelActions", (n) -> { currentObject.setLabelActions(n.getCollectionOfObjectValues(LabelActionBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("sublabels", (n) -> { currentObject.setSublabels(n.getCollectionOfObjectValues(SensitivityLabel::createFromDiscriminatorValue)); });
+        deserializerMap.put("toolTip", (n) -> { currentObject.setToolTip(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isDefault property value. The isDefault property
@@ -185,6 +186,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -207,6 +209,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * @param value Value to set for the applicableTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicableTo(@javax.annotation.Nullable final SensitivityLabelTarget value) {
         this._applicableTo = value;
     }
@@ -215,6 +218,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * @param value Value to set for the applicationMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationMode(@javax.annotation.Nullable final ApplicationMode value) {
         this._applicationMode = value;
     }
@@ -223,6 +227,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * @param value Value to set for the assignedPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedPolicies(@javax.annotation.Nullable final java.util.List<LabelPolicy> value) {
         this._assignedPolicies = value;
     }
@@ -231,6 +236,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * @param value Value to set for the autoLabeling property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoLabeling(@javax.annotation.Nullable final AutoLabeling value) {
         this._autoLabeling = value;
     }
@@ -239,6 +245,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -247,6 +254,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -255,6 +263,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * @param value Value to set for the isDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
         this._isDefault = value;
     }
@@ -263,6 +272,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * @param value Value to set for the isEndpointProtectionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEndpointProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEndpointProtectionEnabled = value;
     }
@@ -271,6 +281,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * @param value Value to set for the labelActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabelActions(@javax.annotation.Nullable final java.util.List<LabelActionBase> value) {
         this._labelActions = value;
     }
@@ -279,6 +290,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -287,6 +299,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }
@@ -295,6 +308,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * @param value Value to set for the sublabels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSublabels(@javax.annotation.Nullable final java.util.List<SensitivityLabel> value) {
         this._sublabels = value;
     }
@@ -303,6 +317,7 @@ public class SensitivityLabel extends Entity implements Parsable {
      * @param value Value to set for the toolTip property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setToolTip(@javax.annotation.Nullable final String value) {
         this._toolTip = value;
     }

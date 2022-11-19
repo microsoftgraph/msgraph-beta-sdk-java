@@ -43,6 +43,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * Instantiates a new managedDeviceCompliance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedDeviceCompliance() {
         super();
         this.setOdataType("#microsoft.graph.managedTenants.managedDeviceCompliance");
@@ -80,22 +81,22 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceCompliance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("complianceStatus", (n) -> { currentObject.setComplianceStatus(n.getStringValue()); });
-            this.put("deviceType", (n) -> { currentObject.setDeviceType(n.getStringValue()); });
-            this.put("inGracePeriodUntilDateTime", (n) -> { currentObject.setInGracePeriodUntilDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastRefreshedDateTime", (n) -> { currentObject.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-            this.put("managedDeviceName", (n) -> { currentObject.setManagedDeviceName(n.getStringValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("osDescription", (n) -> { currentObject.setOsDescription(n.getStringValue()); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
-            this.put("ownerType", (n) -> { currentObject.setOwnerType(n.getStringValue()); });
-            this.put("tenantDisplayName", (n) -> { currentObject.setTenantDisplayName(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("complianceStatus", (n) -> { currentObject.setComplianceStatus(n.getStringValue()); });
+        deserializerMap.put("deviceType", (n) -> { currentObject.setDeviceType(n.getStringValue()); });
+        deserializerMap.put("inGracePeriodUntilDateTime", (n) -> { currentObject.setInGracePeriodUntilDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastRefreshedDateTime", (n) -> { currentObject.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
+        deserializerMap.put("managedDeviceName", (n) -> { currentObject.setManagedDeviceName(n.getStringValue()); });
+        deserializerMap.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
+        deserializerMap.put("osDescription", (n) -> { currentObject.setOsDescription(n.getStringValue()); });
+        deserializerMap.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
+        deserializerMap.put("ownerType", (n) -> { currentObject.setOwnerType(n.getStringValue()); });
+        deserializerMap.put("tenantDisplayName", (n) -> { currentObject.setTenantDisplayName(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the inGracePeriodUntilDateTime property value. The date and time when the grace period will expire. Optional. Read-only.
@@ -198,6 +199,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -221,6 +223,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * @param value Value to set for the complianceStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceStatus(@javax.annotation.Nullable final String value) {
         this._complianceStatus = value;
     }
@@ -229,6 +232,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * @param value Value to set for the deviceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceType(@javax.annotation.Nullable final String value) {
         this._deviceType = value;
     }
@@ -237,6 +241,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * @param value Value to set for the inGracePeriodUntilDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInGracePeriodUntilDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._inGracePeriodUntilDateTime = value;
     }
@@ -245,6 +250,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * @param value Value to set for the lastRefreshedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastRefreshedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastRefreshedDateTime = value;
     }
@@ -253,6 +259,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSyncDateTime = value;
     }
@@ -261,6 +268,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
     }
@@ -269,6 +277,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceName(@javax.annotation.Nullable final String value) {
         this._managedDeviceName = value;
     }
@@ -277,6 +286,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -285,6 +295,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
@@ -293,6 +304,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * @param value Value to set for the osDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsDescription(@javax.annotation.Nullable final String value) {
         this._osDescription = value;
     }
@@ -301,6 +313,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
         this._osVersion = value;
     }
@@ -309,6 +322,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * @param value Value to set for the ownerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnerType(@javax.annotation.Nullable final String value) {
         this._ownerType = value;
     }
@@ -317,6 +331,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
         this._tenantDisplayName = value;
     }
@@ -325,6 +340,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }

@@ -34,6 +34,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
      * Instantiates a new windowsNetworkIsolationPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsNetworkIsolationPolicy() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.windowsNetworkIsolationPolicy");
@@ -119,17 +120,17 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsNetworkIsolationPolicy currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("enterpriseCloudResources", (n) -> { currentObject.setEnterpriseCloudResources(n.getCollectionOfObjectValues(ProxiedDomain::createFromDiscriminatorValue)); });
-            this.put("enterpriseInternalProxyServers", (n) -> { currentObject.setEnterpriseInternalProxyServers(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("enterpriseIPRanges", (n) -> { currentObject.setEnterpriseIPRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
-            this.put("enterpriseIPRangesAreAuthoritative", (n) -> { currentObject.setEnterpriseIPRangesAreAuthoritative(n.getBooleanValue()); });
-            this.put("enterpriseNetworkDomainNames", (n) -> { currentObject.setEnterpriseNetworkDomainNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("enterpriseProxyServers", (n) -> { currentObject.setEnterpriseProxyServers(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("enterpriseProxyServersAreAuthoritative", (n) -> { currentObject.setEnterpriseProxyServersAreAuthoritative(n.getBooleanValue()); });
-            this.put("neutralDomainResources", (n) -> { currentObject.setNeutralDomainResources(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("enterpriseCloudResources", (n) -> { currentObject.setEnterpriseCloudResources(n.getCollectionOfObjectValues(ProxiedDomain::createFromDiscriminatorValue)); });
+        deserializerMap.put("enterpriseInternalProxyServers", (n) -> { currentObject.setEnterpriseInternalProxyServers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("enterpriseIPRanges", (n) -> { currentObject.setEnterpriseIPRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("enterpriseIPRangesAreAuthoritative", (n) -> { currentObject.setEnterpriseIPRangesAreAuthoritative(n.getBooleanValue()); });
+        deserializerMap.put("enterpriseNetworkDomainNames", (n) -> { currentObject.setEnterpriseNetworkDomainNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("enterpriseProxyServers", (n) -> { currentObject.setEnterpriseProxyServers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("enterpriseProxyServersAreAuthoritative", (n) -> { currentObject.setEnterpriseProxyServersAreAuthoritative(n.getBooleanValue()); });
+        deserializerMap.put("neutralDomainResources", (n) -> { currentObject.setNeutralDomainResources(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the neutralDomainResources property value. List of domain names that can used for work or personal resource.
@@ -152,6 +153,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("enterpriseCloudResources", this.getEnterpriseCloudResources());
@@ -170,6 +172,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -178,6 +181,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
      * @param value Value to set for the enterpriseCloudResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseCloudResources(@javax.annotation.Nullable final java.util.List<ProxiedDomain> value) {
         this._enterpriseCloudResources = value;
     }
@@ -186,6 +190,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
      * @param value Value to set for the enterpriseInternalProxyServers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseInternalProxyServers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._enterpriseInternalProxyServers = value;
     }
@@ -194,6 +199,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
      * @param value Value to set for the enterpriseIPRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseIPRanges(@javax.annotation.Nullable final java.util.List<IpRange> value) {
         this._enterpriseIPRanges = value;
     }
@@ -202,6 +208,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
      * @param value Value to set for the enterpriseIPRangesAreAuthoritative property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseIPRangesAreAuthoritative(@javax.annotation.Nullable final Boolean value) {
         this._enterpriseIPRangesAreAuthoritative = value;
     }
@@ -210,6 +217,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
      * @param value Value to set for the enterpriseNetworkDomainNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseNetworkDomainNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._enterpriseNetworkDomainNames = value;
     }
@@ -218,6 +226,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
      * @param value Value to set for the enterpriseProxyServers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseProxyServers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._enterpriseProxyServers = value;
     }
@@ -226,6 +235,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
      * @param value Value to set for the enterpriseProxyServersAreAuthoritative property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseProxyServersAreAuthoritative(@javax.annotation.Nullable final Boolean value) {
         this._enterpriseProxyServersAreAuthoritative = value;
     }
@@ -234,6 +244,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
      * @param value Value to set for the neutralDomainResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNeutralDomainResources(@javax.annotation.Nullable final java.util.List<String> value) {
         this._neutralDomainResources = value;
     }
@@ -242,6 +253,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

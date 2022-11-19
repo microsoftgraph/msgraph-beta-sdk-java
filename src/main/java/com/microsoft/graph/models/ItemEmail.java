@@ -18,6 +18,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
      * Instantiates a new ItemEmail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemEmail() {
         super();
         this.setOdataType("#microsoft.graph.itemEmail");
@@ -55,11 +56,11 @@ public class ItemEmail extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemEmail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(EmailType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getEnumValue(EmailType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the type property value. The type property
@@ -74,6 +75,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddress(@javax.annotation.Nullable final String value) {
         this._address = value;
     }
@@ -94,6 +97,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -102,6 +106,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final EmailType value) {
         this._type = value;
     }

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class WindowsUpdateState extends Entity implements Parsable {
     /** Device display name. */
     private String _deviceDisplayName;
@@ -32,6 +32,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
      * Instantiates a new windowsUpdateState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsUpdateState() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdateState");
@@ -77,17 +78,17 @@ public class WindowsUpdateState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsUpdateState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("featureUpdateVersion", (n) -> { currentObject.setFeatureUpdateVersion(n.getStringValue()); });
-            this.put("lastScanDateTime", (n) -> { currentObject.setLastScanDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("qualityUpdateVersion", (n) -> { currentObject.setQualityUpdateVersion(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(WindowsUpdateStatus.class)); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });
+        deserializerMap.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("featureUpdateVersion", (n) -> { currentObject.setFeatureUpdateVersion(n.getStringValue()); });
+        deserializerMap.put("lastScanDateTime", (n) -> { currentObject.setLastScanDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("qualityUpdateVersion", (n) -> { currentObject.setQualityUpdateVersion(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(WindowsUpdateStatus.class)); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the lastScanDateTime property value. The date time that the Windows Update Agent did a successful scan.
@@ -142,6 +143,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,6 +162,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
      * @param value Value to set for the deviceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
         this._deviceDisplayName = value;
     }
@@ -168,6 +171,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -176,6 +180,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
      * @param value Value to set for the featureUpdateVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeatureUpdateVersion(@javax.annotation.Nullable final String value) {
         this._featureUpdateVersion = value;
     }
@@ -184,6 +189,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
      * @param value Value to set for the lastScanDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastScanDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastScanDateTime = value;
     }
@@ -192,6 +198,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSyncDateTime = value;
     }
@@ -200,6 +207,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
      * @param value Value to set for the qualityUpdateVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQualityUpdateVersion(@javax.annotation.Nullable final String value) {
         this._qualityUpdateVersion = value;
     }
@@ -208,6 +216,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final WindowsUpdateStatus value) {
         this._status = value;
     }
@@ -216,6 +225,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -224,6 +234,7 @@ public class WindowsUpdateState extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

@@ -21,6 +21,7 @@ public class DeviceManagementSettingCategory extends Entity implements Parsable 
      * Instantiates a new deviceManagementSettingCategory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingCategory() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingCategory");
@@ -58,11 +59,11 @@ public class DeviceManagementSettingCategory extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingCategory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("hasRequiredSetting", (n) -> { currentObject.setHasRequiredSetting(n.getBooleanValue()); });
-            this.put("settingDefinitions", (n) -> { currentObject.setSettingDefinitions(n.getCollectionOfObjectValues(DeviceManagementSettingDefinition::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("hasRequiredSetting", (n) -> { currentObject.setHasRequiredSetting(n.getBooleanValue()); });
+        deserializerMap.put("settingDefinitions", (n) -> { currentObject.setSettingDefinitions(n.getCollectionOfObjectValues(DeviceManagementSettingDefinition::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the hasRequiredSetting property value. The category contains top level required setting
@@ -85,6 +86,7 @@ public class DeviceManagementSettingCategory extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -97,6 +99,7 @@ public class DeviceManagementSettingCategory extends Entity implements Parsable 
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -105,6 +108,7 @@ public class DeviceManagementSettingCategory extends Entity implements Parsable 
      * @param value Value to set for the hasRequiredSetting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasRequiredSetting(@javax.annotation.Nullable final Boolean value) {
         this._hasRequiredSetting = value;
     }
@@ -113,6 +117,7 @@ public class DeviceManagementSettingCategory extends Entity implements Parsable 
      * @param value Value to set for the settingDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingDefinitions(@javax.annotation.Nullable final java.util.List<DeviceManagementSettingDefinition> value) {
         this._settingDefinitions = value;
     }

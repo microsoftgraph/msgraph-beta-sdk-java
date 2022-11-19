@@ -28,6 +28,8 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
     private AndroidForWorkRequiredPasswordType _passwordRequiredType;
     /** Number of sign in failures allowed before factory reset. Valid values 1 to 16 */
     private Integer _passwordSignInFailureCountBeforeFactoryReset;
+    /** The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+. */
+    private AndroidRequiredPasswordComplexity _requiredPasswordComplexity;
     /** Require the Android Verify apps feature is turned on. */
     private Boolean _securityRequireVerifyApps;
     /** Enable lockdown mode for always-on VPN. */
@@ -90,12 +92,15 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
     private AndroidForWorkRequiredPasswordType _workProfilePasswordRequiredType;
     /** Number of sign in failures allowed before work profile is removed and all corporate data deleted. Valid values 1 to 16 */
     private Integer _workProfilePasswordSignInFailureCountBeforeFactoryReset;
+    /** The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+. */
+    private AndroidRequiredPasswordComplexity _workProfileRequiredPasswordComplexity;
     /** Password is required or not for work profile */
     private Boolean _workProfileRequirePassword;
     /**
      * Instantiates a new AndroidForWorkGeneralDeviceConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidForWorkGeneralDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidForWorkGeneralDeviceConfiguration");
@@ -117,50 +122,52 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidForWorkGeneralDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("passwordBlockFaceUnlock", (n) -> { currentObject.setPasswordBlockFaceUnlock(n.getBooleanValue()); });
-            this.put("passwordBlockFingerprintUnlock", (n) -> { currentObject.setPasswordBlockFingerprintUnlock(n.getBooleanValue()); });
-            this.put("passwordBlockIrisUnlock", (n) -> { currentObject.setPasswordBlockIrisUnlock(n.getBooleanValue()); });
-            this.put("passwordBlockTrustAgents", (n) -> { currentObject.setPasswordBlockTrustAgents(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(AndroidForWorkRequiredPasswordType.class)); });
-            this.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
-            this.put("securityRequireVerifyApps", (n) -> { currentObject.setSecurityRequireVerifyApps(n.getBooleanValue()); });
-            this.put("vpnAlwaysOnPackageIdentifier", (n) -> { currentObject.setVpnAlwaysOnPackageIdentifier(n.getStringValue()); });
-            this.put("vpnEnableAlwaysOnLockdownMode", (n) -> { currentObject.setVpnEnableAlwaysOnLockdownMode(n.getBooleanValue()); });
-            this.put("workProfileAllowWidgets", (n) -> { currentObject.setWorkProfileAllowWidgets(n.getBooleanValue()); });
-            this.put("workProfileBlockAddingAccounts", (n) -> { currentObject.setWorkProfileBlockAddingAccounts(n.getBooleanValue()); });
-            this.put("workProfileBlockCamera", (n) -> { currentObject.setWorkProfileBlockCamera(n.getBooleanValue()); });
-            this.put("workProfileBlockCrossProfileCallerId", (n) -> { currentObject.setWorkProfileBlockCrossProfileCallerId(n.getBooleanValue()); });
-            this.put("workProfileBlockCrossProfileContactsSearch", (n) -> { currentObject.setWorkProfileBlockCrossProfileContactsSearch(n.getBooleanValue()); });
-            this.put("workProfileBlockCrossProfileCopyPaste", (n) -> { currentObject.setWorkProfileBlockCrossProfileCopyPaste(n.getBooleanValue()); });
-            this.put("workProfileBlockNotificationsWhileDeviceLocked", (n) -> { currentObject.setWorkProfileBlockNotificationsWhileDeviceLocked(n.getBooleanValue()); });
-            this.put("workProfileBlockPersonalAppInstallsFromUnknownSources", (n) -> { currentObject.setWorkProfileBlockPersonalAppInstallsFromUnknownSources(n.getBooleanValue()); });
-            this.put("workProfileBlockScreenCapture", (n) -> { currentObject.setWorkProfileBlockScreenCapture(n.getBooleanValue()); });
-            this.put("workProfileBluetoothEnableContactSharing", (n) -> { currentObject.setWorkProfileBluetoothEnableContactSharing(n.getBooleanValue()); });
-            this.put("workProfileDataSharingType", (n) -> { currentObject.setWorkProfileDataSharingType(n.getEnumValue(AndroidForWorkCrossProfileDataSharingType.class)); });
-            this.put("workProfileDefaultAppPermissionPolicy", (n) -> { currentObject.setWorkProfileDefaultAppPermissionPolicy(n.getEnumValue(AndroidForWorkDefaultAppPermissionPolicyType.class)); });
-            this.put("workProfilePasswordBlockFaceUnlock", (n) -> { currentObject.setWorkProfilePasswordBlockFaceUnlock(n.getBooleanValue()); });
-            this.put("workProfilePasswordBlockFingerprintUnlock", (n) -> { currentObject.setWorkProfilePasswordBlockFingerprintUnlock(n.getBooleanValue()); });
-            this.put("workProfilePasswordBlockIrisUnlock", (n) -> { currentObject.setWorkProfilePasswordBlockIrisUnlock(n.getBooleanValue()); });
-            this.put("workProfilePasswordBlockTrustAgents", (n) -> { currentObject.setWorkProfilePasswordBlockTrustAgents(n.getBooleanValue()); });
-            this.put("workProfilePasswordExpirationDays", (n) -> { currentObject.setWorkProfilePasswordExpirationDays(n.getIntegerValue()); });
-            this.put("workProfilePasswordMinimumLength", (n) -> { currentObject.setWorkProfilePasswordMinimumLength(n.getIntegerValue()); });
-            this.put("workProfilePasswordMinLetterCharacters", (n) -> { currentObject.setWorkProfilePasswordMinLetterCharacters(n.getIntegerValue()); });
-            this.put("workProfilePasswordMinLowerCaseCharacters", (n) -> { currentObject.setWorkProfilePasswordMinLowerCaseCharacters(n.getIntegerValue()); });
-            this.put("workProfilePasswordMinNonLetterCharacters", (n) -> { currentObject.setWorkProfilePasswordMinNonLetterCharacters(n.getIntegerValue()); });
-            this.put("workProfilePasswordMinNumericCharacters", (n) -> { currentObject.setWorkProfilePasswordMinNumericCharacters(n.getIntegerValue()); });
-            this.put("workProfilePasswordMinSymbolCharacters", (n) -> { currentObject.setWorkProfilePasswordMinSymbolCharacters(n.getIntegerValue()); });
-            this.put("workProfilePasswordMinUpperCaseCharacters", (n) -> { currentObject.setWorkProfilePasswordMinUpperCaseCharacters(n.getIntegerValue()); });
-            this.put("workProfilePasswordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setWorkProfilePasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-            this.put("workProfilePasswordPreviousPasswordBlockCount", (n) -> { currentObject.setWorkProfilePasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("workProfilePasswordRequiredType", (n) -> { currentObject.setWorkProfilePasswordRequiredType(n.getEnumValue(AndroidForWorkRequiredPasswordType.class)); });
-            this.put("workProfilePasswordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setWorkProfilePasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
-            this.put("workProfileRequirePassword", (n) -> { currentObject.setWorkProfileRequirePassword(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("passwordBlockFaceUnlock", (n) -> { currentObject.setPasswordBlockFaceUnlock(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockFingerprintUnlock", (n) -> { currentObject.setPasswordBlockFingerprintUnlock(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockIrisUnlock", (n) -> { currentObject.setPasswordBlockIrisUnlock(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockTrustAgents", (n) -> { currentObject.setPasswordBlockTrustAgents(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(AndroidForWorkRequiredPasswordType.class)); });
+        deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
+        deserializerMap.put("requiredPasswordComplexity", (n) -> { currentObject.setRequiredPasswordComplexity(n.getEnumValue(AndroidRequiredPasswordComplexity.class)); });
+        deserializerMap.put("securityRequireVerifyApps", (n) -> { currentObject.setSecurityRequireVerifyApps(n.getBooleanValue()); });
+        deserializerMap.put("vpnAlwaysOnPackageIdentifier", (n) -> { currentObject.setVpnAlwaysOnPackageIdentifier(n.getStringValue()); });
+        deserializerMap.put("vpnEnableAlwaysOnLockdownMode", (n) -> { currentObject.setVpnEnableAlwaysOnLockdownMode(n.getBooleanValue()); });
+        deserializerMap.put("workProfileAllowWidgets", (n) -> { currentObject.setWorkProfileAllowWidgets(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBlockAddingAccounts", (n) -> { currentObject.setWorkProfileBlockAddingAccounts(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBlockCamera", (n) -> { currentObject.setWorkProfileBlockCamera(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBlockCrossProfileCallerId", (n) -> { currentObject.setWorkProfileBlockCrossProfileCallerId(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBlockCrossProfileContactsSearch", (n) -> { currentObject.setWorkProfileBlockCrossProfileContactsSearch(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBlockCrossProfileCopyPaste", (n) -> { currentObject.setWorkProfileBlockCrossProfileCopyPaste(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBlockNotificationsWhileDeviceLocked", (n) -> { currentObject.setWorkProfileBlockNotificationsWhileDeviceLocked(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBlockPersonalAppInstallsFromUnknownSources", (n) -> { currentObject.setWorkProfileBlockPersonalAppInstallsFromUnknownSources(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBlockScreenCapture", (n) -> { currentObject.setWorkProfileBlockScreenCapture(n.getBooleanValue()); });
+        deserializerMap.put("workProfileBluetoothEnableContactSharing", (n) -> { currentObject.setWorkProfileBluetoothEnableContactSharing(n.getBooleanValue()); });
+        deserializerMap.put("workProfileDataSharingType", (n) -> { currentObject.setWorkProfileDataSharingType(n.getEnumValue(AndroidForWorkCrossProfileDataSharingType.class)); });
+        deserializerMap.put("workProfileDefaultAppPermissionPolicy", (n) -> { currentObject.setWorkProfileDefaultAppPermissionPolicy(n.getEnumValue(AndroidForWorkDefaultAppPermissionPolicyType.class)); });
+        deserializerMap.put("workProfilePasswordBlockFaceUnlock", (n) -> { currentObject.setWorkProfilePasswordBlockFaceUnlock(n.getBooleanValue()); });
+        deserializerMap.put("workProfilePasswordBlockFingerprintUnlock", (n) -> { currentObject.setWorkProfilePasswordBlockFingerprintUnlock(n.getBooleanValue()); });
+        deserializerMap.put("workProfilePasswordBlockIrisUnlock", (n) -> { currentObject.setWorkProfilePasswordBlockIrisUnlock(n.getBooleanValue()); });
+        deserializerMap.put("workProfilePasswordBlockTrustAgents", (n) -> { currentObject.setWorkProfilePasswordBlockTrustAgents(n.getBooleanValue()); });
+        deserializerMap.put("workProfilePasswordExpirationDays", (n) -> { currentObject.setWorkProfilePasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinimumLength", (n) -> { currentObject.setWorkProfilePasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinLetterCharacters", (n) -> { currentObject.setWorkProfilePasswordMinLetterCharacters(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinLowerCaseCharacters", (n) -> { currentObject.setWorkProfilePasswordMinLowerCaseCharacters(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinNonLetterCharacters", (n) -> { currentObject.setWorkProfilePasswordMinNonLetterCharacters(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinNumericCharacters", (n) -> { currentObject.setWorkProfilePasswordMinNumericCharacters(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinSymbolCharacters", (n) -> { currentObject.setWorkProfilePasswordMinSymbolCharacters(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinUpperCaseCharacters", (n) -> { currentObject.setWorkProfilePasswordMinUpperCaseCharacters(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setWorkProfilePasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordPreviousPasswordBlockCount", (n) -> { currentObject.setWorkProfilePasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("workProfilePasswordRequiredType", (n) -> { currentObject.setWorkProfilePasswordRequiredType(n.getEnumValue(AndroidForWorkRequiredPasswordType.class)); });
+        deserializerMap.put("workProfilePasswordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setWorkProfilePasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
+        deserializerMap.put("workProfileRequiredPasswordComplexity", (n) -> { currentObject.setWorkProfileRequiredPasswordComplexity(n.getEnumValue(AndroidRequiredPasswordComplexity.class)); });
+        deserializerMap.put("workProfileRequirePassword", (n) -> { currentObject.setWorkProfileRequirePassword(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the passwordBlockFaceUnlock property value. Indicates whether or not to block face unlock.
@@ -241,6 +248,14 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
     @javax.annotation.Nullable
     public Integer getPasswordSignInFailureCountBeforeFactoryReset() {
         return this._passwordSignInFailureCountBeforeFactoryReset;
+    }
+    /**
+     * Gets the requiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
+     * @return a androidRequiredPasswordComplexity
+     */
+    @javax.annotation.Nullable
+    public AndroidRequiredPasswordComplexity getRequiredPasswordComplexity() {
+        return this._requiredPasswordComplexity;
     }
     /**
      * Gets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
@@ -491,6 +506,14 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
         return this._workProfilePasswordSignInFailureCountBeforeFactoryReset;
     }
     /**
+     * Gets the workProfileRequiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
+     * @return a androidRequiredPasswordComplexity
+     */
+    @javax.annotation.Nullable
+    public AndroidRequiredPasswordComplexity getWorkProfileRequiredPasswordComplexity() {
+        return this._workProfileRequiredPasswordComplexity;
+    }
+    /**
      * Gets the workProfileRequirePassword property value. Password is required or not for work profile
      * @return a boolean
      */
@@ -503,6 +526,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -516,6 +540,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
         writer.writeIntegerValue("passwordPreviousPasswordBlockCount", this.getPasswordPreviousPasswordBlockCount());
         writer.writeEnumValue("passwordRequiredType", this.getPasswordRequiredType());
         writer.writeIntegerValue("passwordSignInFailureCountBeforeFactoryReset", this.getPasswordSignInFailureCountBeforeFactoryReset());
+        writer.writeEnumValue("requiredPasswordComplexity", this.getRequiredPasswordComplexity());
         writer.writeBooleanValue("securityRequireVerifyApps", this.getSecurityRequireVerifyApps());
         writer.writeStringValue("vpnAlwaysOnPackageIdentifier", this.getVpnAlwaysOnPackageIdentifier());
         writer.writeBooleanValue("vpnEnableAlwaysOnLockdownMode", this.getVpnEnableAlwaysOnLockdownMode());
@@ -547,6 +572,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
         writer.writeIntegerValue("workProfilePasswordPreviousPasswordBlockCount", this.getWorkProfilePasswordPreviousPasswordBlockCount());
         writer.writeEnumValue("workProfilePasswordRequiredType", this.getWorkProfilePasswordRequiredType());
         writer.writeIntegerValue("workProfilePasswordSignInFailureCountBeforeFactoryReset", this.getWorkProfilePasswordSignInFailureCountBeforeFactoryReset());
+        writer.writeEnumValue("workProfileRequiredPasswordComplexity", this.getWorkProfileRequiredPasswordComplexity());
         writer.writeBooleanValue("workProfileRequirePassword", this.getWorkProfileRequirePassword());
     }
     /**
@@ -554,6 +580,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the passwordBlockFaceUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockFaceUnlock(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockFaceUnlock = value;
     }
@@ -562,6 +589,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the passwordBlockFingerprintUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockFingerprintUnlock(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockFingerprintUnlock = value;
     }
@@ -570,6 +598,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the passwordBlockIrisUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockIrisUnlock(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockIrisUnlock = value;
     }
@@ -578,6 +607,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the passwordBlockTrustAgents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockTrustAgents(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockTrustAgents = value;
     }
@@ -586,6 +616,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -594,6 +625,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -602,6 +634,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
@@ -610,6 +643,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordBlockCount = value;
     }
@@ -618,6 +652,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final AndroidForWorkRequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -626,14 +661,25 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
         this._passwordSignInFailureCountBeforeFactoryReset = value;
+    }
+    /**
+     * Sets the requiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
+     * @param value Value to set for the requiredPasswordComplexity property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRequiredPasswordComplexity(@javax.annotation.Nullable final AndroidRequiredPasswordComplexity value) {
+        this._requiredPasswordComplexity = value;
     }
     /**
      * Sets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
      * @param value Value to set for the securityRequireVerifyApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireVerifyApps(@javax.annotation.Nullable final Boolean value) {
         this._securityRequireVerifyApps = value;
     }
@@ -642,6 +688,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the vpnAlwaysOnPackageIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVpnAlwaysOnPackageIdentifier(@javax.annotation.Nullable final String value) {
         this._vpnAlwaysOnPackageIdentifier = value;
     }
@@ -650,6 +697,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the vpnEnableAlwaysOnLockdownMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVpnEnableAlwaysOnLockdownMode(@javax.annotation.Nullable final Boolean value) {
         this._vpnEnableAlwaysOnLockdownMode = value;
     }
@@ -658,6 +706,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfileAllowWidgets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileAllowWidgets(@javax.annotation.Nullable final Boolean value) {
         this._workProfileAllowWidgets = value;
     }
@@ -666,6 +715,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfileBlockAddingAccounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBlockAddingAccounts(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBlockAddingAccounts = value;
     }
@@ -674,6 +724,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfileBlockCamera property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBlockCamera(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBlockCamera = value;
     }
@@ -682,6 +733,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfileBlockCrossProfileCallerId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBlockCrossProfileCallerId(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBlockCrossProfileCallerId = value;
     }
@@ -690,6 +742,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfileBlockCrossProfileContactsSearch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBlockCrossProfileContactsSearch(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBlockCrossProfileContactsSearch = value;
     }
@@ -698,6 +751,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfileBlockCrossProfileCopyPaste property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBlockCrossProfileCopyPaste(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBlockCrossProfileCopyPaste = value;
     }
@@ -706,6 +760,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfileBlockNotificationsWhileDeviceLocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBlockNotificationsWhileDeviceLocked(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBlockNotificationsWhileDeviceLocked = value;
     }
@@ -714,6 +769,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfileBlockPersonalAppInstallsFromUnknownSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBlockPersonalAppInstallsFromUnknownSources(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBlockPersonalAppInstallsFromUnknownSources = value;
     }
@@ -722,6 +778,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfileBlockScreenCapture property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBlockScreenCapture(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBlockScreenCapture = value;
     }
@@ -730,6 +787,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfileBluetoothEnableContactSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileBluetoothEnableContactSharing(@javax.annotation.Nullable final Boolean value) {
         this._workProfileBluetoothEnableContactSharing = value;
     }
@@ -738,6 +796,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfileDataSharingType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileDataSharingType(@javax.annotation.Nullable final AndroidForWorkCrossProfileDataSharingType value) {
         this._workProfileDataSharingType = value;
     }
@@ -746,6 +805,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfileDefaultAppPermissionPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileDefaultAppPermissionPolicy(@javax.annotation.Nullable final AndroidForWorkDefaultAppPermissionPolicyType value) {
         this._workProfileDefaultAppPermissionPolicy = value;
     }
@@ -754,6 +814,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfilePasswordBlockFaceUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordBlockFaceUnlock(@javax.annotation.Nullable final Boolean value) {
         this._workProfilePasswordBlockFaceUnlock = value;
     }
@@ -762,6 +823,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfilePasswordBlockFingerprintUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordBlockFingerprintUnlock(@javax.annotation.Nullable final Boolean value) {
         this._workProfilePasswordBlockFingerprintUnlock = value;
     }
@@ -770,6 +832,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfilePasswordBlockIrisUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordBlockIrisUnlock(@javax.annotation.Nullable final Boolean value) {
         this._workProfilePasswordBlockIrisUnlock = value;
     }
@@ -778,6 +841,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfilePasswordBlockTrustAgents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordBlockTrustAgents(@javax.annotation.Nullable final Boolean value) {
         this._workProfilePasswordBlockTrustAgents = value;
     }
@@ -786,6 +850,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfilePasswordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordExpirationDays = value;
     }
@@ -794,6 +859,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfilePasswordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinimumLength = value;
     }
@@ -802,6 +868,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfilePasswordMinLetterCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinLetterCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinLetterCharacters = value;
     }
@@ -810,6 +877,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfilePasswordMinLowerCaseCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinLowerCaseCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinLowerCaseCharacters = value;
     }
@@ -818,6 +886,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfilePasswordMinNonLetterCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinNonLetterCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinNonLetterCharacters = value;
     }
@@ -826,6 +895,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfilePasswordMinNumericCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinNumericCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinNumericCharacters = value;
     }
@@ -834,6 +904,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfilePasswordMinSymbolCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinSymbolCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinSymbolCharacters = value;
     }
@@ -842,6 +913,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfilePasswordMinUpperCaseCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinUpperCaseCharacters(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinUpperCaseCharacters = value;
     }
@@ -850,6 +922,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfilePasswordMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordMinutesOfInactivityBeforeScreenTimeout = value;
     }
@@ -858,6 +931,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfilePasswordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordPreviousPasswordBlockCount = value;
     }
@@ -866,6 +940,7 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfilePasswordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordRequiredType(@javax.annotation.Nullable final AndroidForWorkRequiredPasswordType value) {
         this._workProfilePasswordRequiredType = value;
     }
@@ -874,14 +949,25 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
      * @param value Value to set for the workProfilePasswordSignInFailureCountBeforeFactoryReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfilePasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
         this._workProfilePasswordSignInFailureCountBeforeFactoryReset = value;
+    }
+    /**
+     * Sets the workProfileRequiredPasswordComplexity property value. The password complexity types that can be set on Android. One of: NONE, LOW, MEDIUM, HIGH. This is an API targeted to Android 11+.
+     * @param value Value to set for the workProfileRequiredPasswordComplexity property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setWorkProfileRequiredPasswordComplexity(@javax.annotation.Nullable final AndroidRequiredPasswordComplexity value) {
+        this._workProfileRequiredPasswordComplexity = value;
     }
     /**
      * Sets the workProfileRequirePassword property value. Password is required or not for work profile
      * @param value Value to set for the workProfileRequirePassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkProfileRequirePassword(@javax.annotation.Nullable final Boolean value) {
         this._workProfileRequirePassword = value;
     }

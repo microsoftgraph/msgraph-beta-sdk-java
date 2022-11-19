@@ -14,6 +14,7 @@ public class DeviceManagementEnumConstraint extends DeviceManagementConstraint i
      * Instantiates a new DeviceManagementEnumConstraint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementEnumConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementEnumConstraint");
@@ -35,9 +36,9 @@ public class DeviceManagementEnumConstraint extends DeviceManagementConstraint i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementEnumConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("values", (n) -> { currentObject.setValues(n.getCollectionOfObjectValues(DeviceManagementEnumValue::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("values", (n) -> { currentObject.setValues(n.getCollectionOfObjectValues(DeviceManagementEnumValue::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the values property value. List of valid values for this string
@@ -52,6 +53,7 @@ public class DeviceManagementEnumConstraint extends DeviceManagementConstraint i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementEnumConstraint extends DeviceManagementConstraint i
      * @param value Value to set for the values property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final java.util.List<DeviceManagementEnumValue> value) {
         this._values = value;
     }

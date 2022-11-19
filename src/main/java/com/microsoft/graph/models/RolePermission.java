@@ -22,6 +22,7 @@ public class RolePermission implements AdditionalDataHolder, Parsable {
      * Instantiates a new rolePermission and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RolePermission() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.rolePermission");
@@ -59,11 +60,11 @@ public class RolePermission implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RolePermission currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("actions", (n) -> { currentObject.setActions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("resourceActions", (n) -> { currentObject.setResourceActions(n.getCollectionOfObjectValues(ResourceAction::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("actions", (n) -> { currentObject.setActions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("resourceActions", (n) -> { currentObject.setResourceActions(n.getCollectionOfObjectValues(ResourceAction::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -86,6 +87,7 @@ public class RolePermission implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("actions", this.getActions());
@@ -98,6 +100,7 @@ public class RolePermission implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the actions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._actions = value;
     }
@@ -106,6 +109,7 @@ public class RolePermission implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -114,6 +118,7 @@ public class RolePermission implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -122,6 +127,7 @@ public class RolePermission implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the resourceActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceActions(@javax.annotation.Nullable final java.util.List<ResourceAction> value) {
         this._resourceActions = value;
     }

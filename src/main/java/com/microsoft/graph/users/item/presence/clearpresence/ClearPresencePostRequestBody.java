@@ -18,6 +18,7 @@ public class ClearPresencePostRequestBody implements AdditionalDataHolder, Parsa
      * Instantiates a new clearPresencePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ClearPresencePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,9 +47,9 @@ public class ClearPresencePostRequestBody implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClearPresencePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("sessionId", (n) -> { currentObject.setSessionId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("sessionId", (n) -> { currentObject.setSessionId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the sessionId property value. The sessionId property
@@ -63,6 +64,7 @@ public class ClearPresencePostRequestBody implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("sessionId", this.getSessionId());
@@ -73,6 +75,7 @@ public class ClearPresencePostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class ClearPresencePostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the sessionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessionId(@javax.annotation.Nullable final String value) {
         this._sessionId = value;
     }

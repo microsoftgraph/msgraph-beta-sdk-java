@@ -11,7 +11,7 @@ import java.util.Objects;
 public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** Indicates whether caption is enabled for this Teams live event. */
+    /** Indicates whether captions are enabled for this Teams live event. */
     private Boolean _isCaptionEnabled;
     /** The OdataType property */
     private String _odataType;
@@ -23,6 +23,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
      * Instantiates a new broadcastMeetingCaptionSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BroadcastMeetingCaptionSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.broadcastMeetingCaptionSettings");
@@ -52,15 +53,15 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BroadcastMeetingCaptionSettings currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("isCaptionEnabled", (n) -> { currentObject.setIsCaptionEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("spokenLanguage", (n) -> { currentObject.setSpokenLanguage(n.getStringValue()); });
-            this.put("translationLanguages", (n) -> { currentObject.setTranslationLanguages(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("isCaptionEnabled", (n) -> { currentObject.setIsCaptionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("spokenLanguage", (n) -> { currentObject.setSpokenLanguage(n.getStringValue()); });
+        deserializerMap.put("translationLanguages", (n) -> { currentObject.setTranslationLanguages(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
-     * Gets the isCaptionEnabled property value. Indicates whether caption is enabled for this Teams live event.
+     * Gets the isCaptionEnabled property value. Indicates whether captions are enabled for this Teams live event.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -96,6 +97,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isCaptionEnabled", this.getIsCaptionEnabled());
@@ -109,14 +111,16 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
     /**
-     * Sets the isCaptionEnabled property value. Indicates whether caption is enabled for this Teams live event.
+     * Sets the isCaptionEnabled property value. Indicates whether captions are enabled for this Teams live event.
      * @param value Value to set for the isCaptionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCaptionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isCaptionEnabled = value;
     }
@@ -125,6 +129,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -133,6 +138,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
      * @param value Value to set for the spokenLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpokenLanguage(@javax.annotation.Nullable final String value) {
         this._spokenLanguage = value;
     }
@@ -141,6 +147,7 @@ public class BroadcastMeetingCaptionSettings implements AdditionalDataHolder, Pa
      * @param value Value to set for the translationLanguages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTranslationLanguages(@javax.annotation.Nullable final java.util.List<String> value) {
         this._translationLanguages = value;
     }

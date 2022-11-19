@@ -26,6 +26,7 @@ public class UpdateAudienceByIdPostRequestBody implements AdditionalDataHolder, 
      * Instantiates a new updateAudienceByIdPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateAudienceByIdPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -70,13 +71,13 @@ public class UpdateAudienceByIdPostRequestBody implements AdditionalDataHolder, 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateAudienceByIdPostRequestBody currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("addExclusions", (n) -> { currentObject.setAddExclusions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("addMembers", (n) -> { currentObject.setAddMembers(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("memberEntityType", (n) -> { currentObject.setMemberEntityType(n.getStringValue()); });
-            this.put("removeExclusions", (n) -> { currentObject.setRemoveExclusions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("removeMembers", (n) -> { currentObject.setRemoveMembers(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("addExclusions", (n) -> { currentObject.setAddExclusions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("addMembers", (n) -> { currentObject.setAddMembers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("memberEntityType", (n) -> { currentObject.setMemberEntityType(n.getStringValue()); });
+        deserializerMap.put("removeExclusions", (n) -> { currentObject.setRemoveExclusions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("removeMembers", (n) -> { currentObject.setRemoveMembers(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the memberEntityType property value. The memberEntityType property
@@ -107,6 +108,7 @@ public class UpdateAudienceByIdPostRequestBody implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("addExclusions", this.getAddExclusions());
@@ -121,6 +123,7 @@ public class UpdateAudienceByIdPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the addExclusions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddExclusions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._addExclusions = value;
     }
@@ -129,6 +132,7 @@ public class UpdateAudienceByIdPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -137,6 +141,7 @@ public class UpdateAudienceByIdPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the addMembers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddMembers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._addMembers = value;
     }
@@ -145,6 +150,7 @@ public class UpdateAudienceByIdPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the memberEntityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberEntityType(@javax.annotation.Nullable final String value) {
         this._memberEntityType = value;
     }
@@ -153,6 +159,7 @@ public class UpdateAudienceByIdPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the removeExclusions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoveExclusions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._removeExclusions = value;
     }
@@ -161,6 +168,7 @@ public class UpdateAudienceByIdPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the removeMembers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoveMembers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._removeMembers = value;
     }

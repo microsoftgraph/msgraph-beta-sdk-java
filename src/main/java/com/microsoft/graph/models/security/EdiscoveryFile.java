@@ -16,6 +16,7 @@ public class EdiscoveryFile extends File implements Parsable {
      * Instantiates a new EdiscoveryFile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EdiscoveryFile() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoveryFile");
@@ -45,10 +46,10 @@ public class EdiscoveryFile extends File implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryFile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("custodian", (n) -> { currentObject.setCustodian(n.getObjectValue(EdiscoveryCustodian::createFromDiscriminatorValue)); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfObjectValues(EdiscoveryReviewTag::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("custodian", (n) -> { currentObject.setCustodian(n.getObjectValue(EdiscoveryCustodian::createFromDiscriminatorValue)); });
+        deserializerMap.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfObjectValues(EdiscoveryReviewTag::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the tags property value. Tags associated with the file.
@@ -63,6 +64,7 @@ public class EdiscoveryFile extends File implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class EdiscoveryFile extends File implements Parsable {
      * @param value Value to set for the custodian property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustodian(@javax.annotation.Nullable final EdiscoveryCustodian value) {
         this._custodian = value;
     }
@@ -82,6 +85,7 @@ public class EdiscoveryFile extends File implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<EdiscoveryReviewTag> value) {
         this._tags = value;
     }

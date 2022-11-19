@@ -51,7 +51,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     private LocalDate _teamsLastActivityDate;
     /** The last date when the user was assigned a Teams license. */
     private LocalDate _teamsLicenseAssignDate;
-    /** The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created. */
+    /** The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenants collection of verified domains. This property is required when a user is created. */
     private String _userPrincipalName;
     /** The date when user last posted, read, or liked message. */
     private LocalDate _yammerLastActivityDate;
@@ -61,6 +61,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * Instantiates a new Office365ActiveUserDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Office365ActiveUserDetail() {
         super();
         this.setOdataType("#microsoft.graph.office365ActiveUserDetail");
@@ -122,32 +123,32 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Office365ActiveUserDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignedProducts", (n) -> { currentObject.setAssignedProducts(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("deletedDate", (n) -> { currentObject.setDeletedDate(n.getLocalDateValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("exchangeLastActivityDate", (n) -> { currentObject.setExchangeLastActivityDate(n.getLocalDateValue()); });
-            this.put("exchangeLicenseAssignDate", (n) -> { currentObject.setExchangeLicenseAssignDate(n.getLocalDateValue()); });
-            this.put("hasExchangeLicense", (n) -> { currentObject.setHasExchangeLicense(n.getBooleanValue()); });
-            this.put("hasOneDriveLicense", (n) -> { currentObject.setHasOneDriveLicense(n.getBooleanValue()); });
-            this.put("hasSharePointLicense", (n) -> { currentObject.setHasSharePointLicense(n.getBooleanValue()); });
-            this.put("hasSkypeForBusinessLicense", (n) -> { currentObject.setHasSkypeForBusinessLicense(n.getBooleanValue()); });
-            this.put("hasTeamsLicense", (n) -> { currentObject.setHasTeamsLicense(n.getBooleanValue()); });
-            this.put("hasYammerLicense", (n) -> { currentObject.setHasYammerLicense(n.getBooleanValue()); });
-            this.put("isDeleted", (n) -> { currentObject.setIsDeleted(n.getBooleanValue()); });
-            this.put("oneDriveLastActivityDate", (n) -> { currentObject.setOneDriveLastActivityDate(n.getLocalDateValue()); });
-            this.put("oneDriveLicenseAssignDate", (n) -> { currentObject.setOneDriveLicenseAssignDate(n.getLocalDateValue()); });
-            this.put("reportRefreshDate", (n) -> { currentObject.setReportRefreshDate(n.getLocalDateValue()); });
-            this.put("sharePointLastActivityDate", (n) -> { currentObject.setSharePointLastActivityDate(n.getLocalDateValue()); });
-            this.put("sharePointLicenseAssignDate", (n) -> { currentObject.setSharePointLicenseAssignDate(n.getLocalDateValue()); });
-            this.put("skypeForBusinessLastActivityDate", (n) -> { currentObject.setSkypeForBusinessLastActivityDate(n.getLocalDateValue()); });
-            this.put("skypeForBusinessLicenseAssignDate", (n) -> { currentObject.setSkypeForBusinessLicenseAssignDate(n.getLocalDateValue()); });
-            this.put("teamsLastActivityDate", (n) -> { currentObject.setTeamsLastActivityDate(n.getLocalDateValue()); });
-            this.put("teamsLicenseAssignDate", (n) -> { currentObject.setTeamsLicenseAssignDate(n.getLocalDateValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("yammerLastActivityDate", (n) -> { currentObject.setYammerLastActivityDate(n.getLocalDateValue()); });
-            this.put("yammerLicenseAssignDate", (n) -> { currentObject.setYammerLicenseAssignDate(n.getLocalDateValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignedProducts", (n) -> { currentObject.setAssignedProducts(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("deletedDate", (n) -> { currentObject.setDeletedDate(n.getLocalDateValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("exchangeLastActivityDate", (n) -> { currentObject.setExchangeLastActivityDate(n.getLocalDateValue()); });
+        deserializerMap.put("exchangeLicenseAssignDate", (n) -> { currentObject.setExchangeLicenseAssignDate(n.getLocalDateValue()); });
+        deserializerMap.put("hasExchangeLicense", (n) -> { currentObject.setHasExchangeLicense(n.getBooleanValue()); });
+        deserializerMap.put("hasOneDriveLicense", (n) -> { currentObject.setHasOneDriveLicense(n.getBooleanValue()); });
+        deserializerMap.put("hasSharePointLicense", (n) -> { currentObject.setHasSharePointLicense(n.getBooleanValue()); });
+        deserializerMap.put("hasSkypeForBusinessLicense", (n) -> { currentObject.setHasSkypeForBusinessLicense(n.getBooleanValue()); });
+        deserializerMap.put("hasTeamsLicense", (n) -> { currentObject.setHasTeamsLicense(n.getBooleanValue()); });
+        deserializerMap.put("hasYammerLicense", (n) -> { currentObject.setHasYammerLicense(n.getBooleanValue()); });
+        deserializerMap.put("isDeleted", (n) -> { currentObject.setIsDeleted(n.getBooleanValue()); });
+        deserializerMap.put("oneDriveLastActivityDate", (n) -> { currentObject.setOneDriveLastActivityDate(n.getLocalDateValue()); });
+        deserializerMap.put("oneDriveLicenseAssignDate", (n) -> { currentObject.setOneDriveLicenseAssignDate(n.getLocalDateValue()); });
+        deserializerMap.put("reportRefreshDate", (n) -> { currentObject.setReportRefreshDate(n.getLocalDateValue()); });
+        deserializerMap.put("sharePointLastActivityDate", (n) -> { currentObject.setSharePointLastActivityDate(n.getLocalDateValue()); });
+        deserializerMap.put("sharePointLicenseAssignDate", (n) -> { currentObject.setSharePointLicenseAssignDate(n.getLocalDateValue()); });
+        deserializerMap.put("skypeForBusinessLastActivityDate", (n) -> { currentObject.setSkypeForBusinessLastActivityDate(n.getLocalDateValue()); });
+        deserializerMap.put("skypeForBusinessLicenseAssignDate", (n) -> { currentObject.setSkypeForBusinessLicenseAssignDate(n.getLocalDateValue()); });
+        deserializerMap.put("teamsLastActivityDate", (n) -> { currentObject.setTeamsLastActivityDate(n.getLocalDateValue()); });
+        deserializerMap.put("teamsLicenseAssignDate", (n) -> { currentObject.setTeamsLicenseAssignDate(n.getLocalDateValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("yammerLastActivityDate", (n) -> { currentObject.setYammerLastActivityDate(n.getLocalDateValue()); });
+        deserializerMap.put("yammerLicenseAssignDate", (n) -> { currentObject.setYammerLicenseAssignDate(n.getLocalDateValue()); });
+        return deserializerMap
     }
     /**
      * Gets the hasExchangeLicense property value. Whether the user has been assigned an Exchange license.
@@ -278,7 +279,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
         return this._teamsLicenseAssignDate;
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
+     * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenants collection of verified domains. This property is required when a user is created.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -306,6 +307,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -339,6 +341,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the assignedProducts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedProducts(@javax.annotation.Nullable final java.util.List<String> value) {
         this._assignedProducts = value;
     }
@@ -347,6 +350,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the deletedDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeletedDate(@javax.annotation.Nullable final LocalDate value) {
         this._deletedDate = value;
     }
@@ -355,6 +359,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -363,6 +368,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the exchangeLastActivityDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchangeLastActivityDate(@javax.annotation.Nullable final LocalDate value) {
         this._exchangeLastActivityDate = value;
     }
@@ -371,6 +377,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the exchangeLicenseAssignDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchangeLicenseAssignDate(@javax.annotation.Nullable final LocalDate value) {
         this._exchangeLicenseAssignDate = value;
     }
@@ -379,6 +386,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the hasExchangeLicense property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasExchangeLicense(@javax.annotation.Nullable final Boolean value) {
         this._hasExchangeLicense = value;
     }
@@ -387,6 +395,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the hasOneDriveLicense property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasOneDriveLicense(@javax.annotation.Nullable final Boolean value) {
         this._hasOneDriveLicense = value;
     }
@@ -395,6 +404,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the hasSharePointLicense property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasSharePointLicense(@javax.annotation.Nullable final Boolean value) {
         this._hasSharePointLicense = value;
     }
@@ -403,6 +413,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the hasSkypeForBusinessLicense property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasSkypeForBusinessLicense(@javax.annotation.Nullable final Boolean value) {
         this._hasSkypeForBusinessLicense = value;
     }
@@ -411,6 +422,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the hasTeamsLicense property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasTeamsLicense(@javax.annotation.Nullable final Boolean value) {
         this._hasTeamsLicense = value;
     }
@@ -419,6 +431,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the hasYammerLicense property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasYammerLicense(@javax.annotation.Nullable final Boolean value) {
         this._hasYammerLicense = value;
     }
@@ -427,6 +440,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the isDeleted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDeleted(@javax.annotation.Nullable final Boolean value) {
         this._isDeleted = value;
     }
@@ -435,6 +449,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the oneDriveLastActivityDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOneDriveLastActivityDate(@javax.annotation.Nullable final LocalDate value) {
         this._oneDriveLastActivityDate = value;
     }
@@ -443,6 +458,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the oneDriveLicenseAssignDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOneDriveLicenseAssignDate(@javax.annotation.Nullable final LocalDate value) {
         this._oneDriveLicenseAssignDate = value;
     }
@@ -451,6 +467,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the reportRefreshDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportRefreshDate(@javax.annotation.Nullable final LocalDate value) {
         this._reportRefreshDate = value;
     }
@@ -459,6 +476,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the sharePointLastActivityDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharePointLastActivityDate(@javax.annotation.Nullable final LocalDate value) {
         this._sharePointLastActivityDate = value;
     }
@@ -467,6 +485,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the sharePointLicenseAssignDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharePointLicenseAssignDate(@javax.annotation.Nullable final LocalDate value) {
         this._sharePointLicenseAssignDate = value;
     }
@@ -475,6 +494,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the skypeForBusinessLastActivityDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkypeForBusinessLastActivityDate(@javax.annotation.Nullable final LocalDate value) {
         this._skypeForBusinessLastActivityDate = value;
     }
@@ -483,6 +503,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the skypeForBusinessLicenseAssignDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkypeForBusinessLicenseAssignDate(@javax.annotation.Nullable final LocalDate value) {
         this._skypeForBusinessLicenseAssignDate = value;
     }
@@ -491,6 +512,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the teamsLastActivityDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsLastActivityDate(@javax.annotation.Nullable final LocalDate value) {
         this._teamsLastActivityDate = value;
     }
@@ -499,14 +521,16 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the teamsLicenseAssignDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsLicenseAssignDate(@javax.annotation.Nullable final LocalDate value) {
         this._teamsLicenseAssignDate = value;
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant’s collection of verified domains. This property is required when a user is created.
+     * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenants collection of verified domains. This property is required when a user is created.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }
@@ -515,6 +539,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the yammerLastActivityDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setYammerLastActivityDate(@javax.annotation.Nullable final LocalDate value) {
         this._yammerLastActivityDate = value;
     }
@@ -523,6 +548,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
      * @param value Value to set for the yammerLicenseAssignDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setYammerLicenseAssignDate(@javax.annotation.Nullable final LocalDate value) {
         this._yammerLicenseAssignDate = value;
     }

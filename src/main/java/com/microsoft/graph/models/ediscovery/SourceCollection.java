@@ -41,6 +41,7 @@ public class SourceCollection extends Entity implements Parsable {
      * Instantiates a new sourceCollection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SourceCollection() {
         super();
         this.setOdataType("#microsoft.graph.ediscovery.sourceCollection");
@@ -134,21 +135,21 @@ public class SourceCollection extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SourceCollection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("additionalSources", (n) -> { currentObject.setAdditionalSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
-            this.put("addToReviewSetOperation", (n) -> { currentObject.setAddToReviewSetOperation(n.getObjectValue(AddToReviewSetOperation::createFromDiscriminatorValue)); });
-            this.put("contentQuery", (n) -> { currentObject.setContentQuery(n.getStringValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("custodianSources", (n) -> { currentObject.setCustodianSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
-            this.put("dataSourceScopes", (n) -> { currentObject.setDataSourceScopes(n.getEnumValue(DataSourceScopes.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastEstimateStatisticsOperation", (n) -> { currentObject.setLastEstimateStatisticsOperation(n.getObjectValue(EstimateStatisticsOperation::createFromDiscriminatorValue)); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("noncustodialSources", (n) -> { currentObject.setNoncustodialSources(n.getCollectionOfObjectValues(NoncustodialDataSource::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("additionalSources", (n) -> { currentObject.setAdditionalSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("addToReviewSetOperation", (n) -> { currentObject.setAddToReviewSetOperation(n.getObjectValue(AddToReviewSetOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentQuery", (n) -> { currentObject.setContentQuery(n.getStringValue()); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("custodianSources", (n) -> { currentObject.setCustodianSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("dataSourceScopes", (n) -> { currentObject.setDataSourceScopes(n.getEnumValue(DataSourceScopes.class)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastEstimateStatisticsOperation", (n) -> { currentObject.setLastEstimateStatisticsOperation(n.getObjectValue(EstimateStatisticsOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("noncustodialSources", (n) -> { currentObject.setNoncustodialSources(n.getCollectionOfObjectValues(NoncustodialDataSource::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the lastEstimateStatisticsOperation property value. The last estimate operation associated with the sourceCollection.
@@ -187,6 +188,7 @@ public class SourceCollection extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -209,6 +211,7 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the additionalSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalSources(@javax.annotation.Nullable final java.util.List<DataSource> value) {
         this._additionalSources = value;
     }
@@ -217,6 +220,7 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the addToReviewSetOperation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddToReviewSetOperation(@javax.annotation.Nullable final AddToReviewSetOperation value) {
         this._addToReviewSetOperation = value;
     }
@@ -225,6 +229,7 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the contentQuery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentQuery(@javax.annotation.Nullable final String value) {
         this._contentQuery = value;
     }
@@ -233,6 +238,7 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -241,6 +247,7 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -249,6 +256,7 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the custodianSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustodianSources(@javax.annotation.Nullable final java.util.List<DataSource> value) {
         this._custodianSources = value;
     }
@@ -257,6 +265,7 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the dataSourceScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataSourceScopes(@javax.annotation.Nullable final DataSourceScopes value) {
         this._dataSourceScopes = value;
     }
@@ -265,6 +274,7 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -273,6 +283,7 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -281,6 +292,7 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the lastEstimateStatisticsOperation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastEstimateStatisticsOperation(@javax.annotation.Nullable final EstimateStatisticsOperation value) {
         this._lastEstimateStatisticsOperation = value;
     }
@@ -289,6 +301,7 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -297,6 +310,7 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -305,6 +319,7 @@ public class SourceCollection extends Entity implements Parsable {
      * @param value Value to set for the noncustodialSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNoncustodialSources(@javax.annotation.Nullable final java.util.List<NoncustodialDataSource> value) {
         this._noncustodialSources = value;
     }

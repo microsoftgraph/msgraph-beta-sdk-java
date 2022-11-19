@@ -17,6 +17,7 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
      * Instantiates a new Windows81CertificateProfileBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows81CertificateProfileBase() {
         super();
         this.setOdataType("#microsoft.graph.windows81CertificateProfileBase");
@@ -61,16 +62,17 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows81CertificateProfileBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("customSubjectAlternativeNames", (n) -> { currentObject.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
-            this.put("extendedKeyUsages", (n) -> { currentObject.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("customSubjectAlternativeNames", (n) -> { currentObject.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
+        deserializerMap.put("extendedKeyUsages", (n) -> { currentObject.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -82,6 +84,7 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
      * @param value Value to set for the customSubjectAlternativeNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSubjectAlternativeNames(@javax.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
         this._customSubjectAlternativeNames = value;
     }
@@ -90,6 +93,7 @@ public class Windows81CertificateProfileBase extends WindowsCertificateProfileBa
      * @param value Value to set for the extendedKeyUsages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtendedKeyUsages(@javax.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
         this._extendedKeyUsages = value;
     }

@@ -23,6 +23,7 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, Parsable 
      * Instantiates a new sensitiveContentEvidence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SensitiveContentEvidence() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.sensitiveContentEvidence");
@@ -52,12 +53,12 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SensitiveContentEvidence currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("length", (n) -> { currentObject.setLength(n.getIntegerValue()); });
-            this.put("match", (n) -> { currentObject.setMatch(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("offset", (n) -> { currentObject.setOffset(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("length", (n) -> { currentObject.setLength(n.getIntegerValue()); });
+        deserializerMap.put("match", (n) -> { currentObject.setMatch(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("offset", (n) -> { currentObject.setOffset(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the length property value. The length property
@@ -96,6 +97,7 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("length", this.getLength());
@@ -109,6 +111,7 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the length property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLength(@javax.annotation.Nullable final Integer value) {
         this._length = value;
     }
@@ -125,6 +129,7 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the match property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMatch(@javax.annotation.Nullable final String value) {
         this._match = value;
     }
@@ -133,6 +138,7 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +147,7 @@ public class SensitiveContentEvidence implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the offset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOffset(@javax.annotation.Nullable final Integer value) {
         this._offset = value;
     }

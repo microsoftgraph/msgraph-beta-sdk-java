@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class CustomExtensionHandler extends Entity implements Parsable {
     /** Indicates which custom workflow extension will be executed at this stage. Nullable. Supports $expand. */
     private CustomAccessPackageWorkflowExtension _customExtension;
@@ -17,6 +17,7 @@ public class CustomExtensionHandler extends Entity implements Parsable {
      * Instantiates a new customExtensionHandler and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CustomExtensionHandler() {
         super();
         this.setOdataType("#microsoft.graph.customExtensionHandler");
@@ -46,10 +47,10 @@ public class CustomExtensionHandler extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomExtensionHandler currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("customExtension", (n) -> { currentObject.setCustomExtension(n.getObjectValue(CustomAccessPackageWorkflowExtension::createFromDiscriminatorValue)); });
-            this.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(AccessPackageCustomExtensionStage.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("customExtension", (n) -> { currentObject.setCustomExtension(n.getObjectValue(CustomAccessPackageWorkflowExtension::createFromDiscriminatorValue)); });
+        deserializerMap.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(AccessPackageCustomExtensionStage.class)); });
+        return deserializerMap
     }
     /**
      * Gets the stage property value. Indicates the stage of the access package assignment request workflow when the access package custom extension runs. The possible values are: assignmentRequestCreated, assignmentRequestApproved, assignmentRequestGranted, assignmentRequestRemoved, assignmentFourteenDaysBeforeExpiration, assignmentOneDayBeforeExpiration, unknownFutureValue.
@@ -64,6 +65,7 @@ public class CustomExtensionHandler extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class CustomExtensionHandler extends Entity implements Parsable {
      * @param value Value to set for the customExtension property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomExtension(@javax.annotation.Nullable final CustomAccessPackageWorkflowExtension value) {
         this._customExtension = value;
     }
@@ -83,6 +86,7 @@ public class CustomExtensionHandler extends Entity implements Parsable {
      * @param value Value to set for the stage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStage(@javax.annotation.Nullable final AccessPackageCustomExtensionStage value) {
         this._stage = value;
     }

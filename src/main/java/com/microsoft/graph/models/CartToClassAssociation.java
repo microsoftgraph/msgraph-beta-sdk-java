@@ -28,6 +28,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
      * Instantiates a new cartToClassAssociation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CartToClassAssociation() {
         super();
         this.setOdataType("#microsoft.graph.cartToClassAssociation");
@@ -89,15 +90,15 @@ public class CartToClassAssociation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CartToClassAssociation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("classroomIds", (n) -> { currentObject.setClassroomIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("deviceCartIds", (n) -> { currentObject.setDeviceCartIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("classroomIds", (n) -> { currentObject.setClassroomIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("deviceCartIds", (n) -> { currentObject.setDeviceCartIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
@@ -120,6 +121,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -136,6 +138,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
      * @param value Value to set for the classroomIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassroomIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._classroomIds = value;
     }
@@ -144,6 +147,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -152,6 +156,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -160,6 +165,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
      * @param value Value to set for the deviceCartIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCartIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._deviceCartIds = value;
     }
@@ -168,6 +174,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -176,6 +183,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -184,6 +192,7 @@ public class CartToClassAssociation extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
         this._version = value;
     }

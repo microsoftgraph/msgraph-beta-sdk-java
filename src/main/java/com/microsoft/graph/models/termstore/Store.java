@@ -21,6 +21,7 @@ public class Store extends Entity implements Parsable {
      * Instantiates a new store and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Store() {
         super();
         this.setOdataType("#microsoft.graph.termStore.store");
@@ -50,12 +51,12 @@ public class Store extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Store currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultLanguageTag", (n) -> { currentObject.setDefaultLanguageTag(n.getStringValue()); });
-            this.put("groups", (n) -> { currentObject.setGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
-            this.put("languageTags", (n) -> { currentObject.setLanguageTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("sets", (n) -> { currentObject.setSets(n.getCollectionOfObjectValues(Set::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultLanguageTag", (n) -> { currentObject.setDefaultLanguageTag(n.getStringValue()); });
+        deserializerMap.put("groups", (n) -> { currentObject.setGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
+        deserializerMap.put("languageTags", (n) -> { currentObject.setLanguageTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("sets", (n) -> { currentObject.setSets(n.getCollectionOfObjectValues(Set::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the groups property value. Collection of all groups available in the term store.
@@ -86,6 +87,7 @@ public class Store extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class Store extends Entity implements Parsable {
      * @param value Value to set for the defaultLanguageTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultLanguageTag(@javax.annotation.Nullable final String value) {
         this._defaultLanguageTag = value;
     }
@@ -107,6 +110,7 @@ public class Store extends Entity implements Parsable {
      * @param value Value to set for the groups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroups(@javax.annotation.Nullable final java.util.List<Group> value) {
         this._groups = value;
     }
@@ -115,6 +119,7 @@ public class Store extends Entity implements Parsable {
      * @param value Value to set for the languageTags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguageTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._languageTags = value;
     }
@@ -123,6 +128,7 @@ public class Store extends Entity implements Parsable {
      * @param value Value to set for the sets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSets(@javax.annotation.Nullable final java.util.List<Set> value) {
         this._sets = value;
     }

@@ -288,9 +288,9 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     private Boolean _nfcBlocked;
     /** Indicates whether or not to allow notifications settings modification (iOS 9.3 and later). */
     private Boolean _notificationsBlockSettingsModification;
-    /** Disables connections to Siri servers so that users can’t use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later. */
+    /** Disables connections to Siri servers so that users cant use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later. */
     private Boolean _onDeviceOnlyDictationForced;
-    /** When set to TRUE, the setting disables connections to Siri servers so that users can’t use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later. */
+    /** When set to TRUE, the setting disables connections to Siri servers so that users cant use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later. */
     private Boolean _onDeviceOnlyTranslationForced;
     /** Block modification of registered Touch ID fingerprints when in supervised mode. */
     private Boolean _passcodeBlockFingerprintModification;
@@ -386,6 +386,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * Instantiates a new IosGeneralDeviceConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosGeneralDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosGeneralDeviceConfiguration");
@@ -911,195 +912,195 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosGeneralDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accountBlockModification", (n) -> { currentObject.setAccountBlockModification(n.getBooleanValue()); });
-            this.put("activationLockAllowWhenSupervised", (n) -> { currentObject.setActivationLockAllowWhenSupervised(n.getBooleanValue()); });
-            this.put("airDropBlocked", (n) -> { currentObject.setAirDropBlocked(n.getBooleanValue()); });
-            this.put("airDropForceUnmanagedDropTarget", (n) -> { currentObject.setAirDropForceUnmanagedDropTarget(n.getBooleanValue()); });
-            this.put("airPlayForcePairingPasswordForOutgoingRequests", (n) -> { currentObject.setAirPlayForcePairingPasswordForOutgoingRequests(n.getBooleanValue()); });
-            this.put("airPrintBlockCredentialsStorage", (n) -> { currentObject.setAirPrintBlockCredentialsStorage(n.getBooleanValue()); });
-            this.put("airPrintBlocked", (n) -> { currentObject.setAirPrintBlocked(n.getBooleanValue()); });
-            this.put("airPrintBlockiBeaconDiscovery", (n) -> { currentObject.setAirPrintBlockiBeaconDiscovery(n.getBooleanValue()); });
-            this.put("airPrintForceTrustedTLS", (n) -> { currentObject.setAirPrintForceTrustedTLS(n.getBooleanValue()); });
-            this.put("appClipsBlocked", (n) -> { currentObject.setAppClipsBlocked(n.getBooleanValue()); });
-            this.put("appleNewsBlocked", (n) -> { currentObject.setAppleNewsBlocked(n.getBooleanValue()); });
-            this.put("applePersonalizedAdsBlocked", (n) -> { currentObject.setApplePersonalizedAdsBlocked(n.getBooleanValue()); });
-            this.put("appleWatchBlockPairing", (n) -> { currentObject.setAppleWatchBlockPairing(n.getBooleanValue()); });
-            this.put("appleWatchForceWristDetection", (n) -> { currentObject.setAppleWatchForceWristDetection(n.getBooleanValue()); });
-            this.put("appRemovalBlocked", (n) -> { currentObject.setAppRemovalBlocked(n.getBooleanValue()); });
-            this.put("appsSingleAppModeList", (n) -> { currentObject.setAppsSingleAppModeList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("appStoreBlockAutomaticDownloads", (n) -> { currentObject.setAppStoreBlockAutomaticDownloads(n.getBooleanValue()); });
-            this.put("appStoreBlocked", (n) -> { currentObject.setAppStoreBlocked(n.getBooleanValue()); });
-            this.put("appStoreBlockInAppPurchases", (n) -> { currentObject.setAppStoreBlockInAppPurchases(n.getBooleanValue()); });
-            this.put("appStoreBlockUIAppInstallation", (n) -> { currentObject.setAppStoreBlockUIAppInstallation(n.getBooleanValue()); });
-            this.put("appStoreRequirePassword", (n) -> { currentObject.setAppStoreRequirePassword(n.getBooleanValue()); });
-            this.put("appsVisibilityList", (n) -> { currentObject.setAppsVisibilityList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("appsVisibilityListType", (n) -> { currentObject.setAppsVisibilityListType(n.getEnumValue(AppListType.class)); });
-            this.put("autoFillForceAuthentication", (n) -> { currentObject.setAutoFillForceAuthentication(n.getBooleanValue()); });
-            this.put("autoUnlockBlocked", (n) -> { currentObject.setAutoUnlockBlocked(n.getBooleanValue()); });
-            this.put("blockSystemAppRemoval", (n) -> { currentObject.setBlockSystemAppRemoval(n.getBooleanValue()); });
-            this.put("bluetoothBlockModification", (n) -> { currentObject.setBluetoothBlockModification(n.getBooleanValue()); });
-            this.put("cameraBlocked", (n) -> { currentObject.setCameraBlocked(n.getBooleanValue()); });
-            this.put("cellularBlockDataRoaming", (n) -> { currentObject.setCellularBlockDataRoaming(n.getBooleanValue()); });
-            this.put("cellularBlockGlobalBackgroundFetchWhileRoaming", (n) -> { currentObject.setCellularBlockGlobalBackgroundFetchWhileRoaming(n.getBooleanValue()); });
-            this.put("cellularBlockPerAppDataModification", (n) -> { currentObject.setCellularBlockPerAppDataModification(n.getBooleanValue()); });
-            this.put("cellularBlockPersonalHotspot", (n) -> { currentObject.setCellularBlockPersonalHotspot(n.getBooleanValue()); });
-            this.put("cellularBlockPersonalHotspotModification", (n) -> { currentObject.setCellularBlockPersonalHotspotModification(n.getBooleanValue()); });
-            this.put("cellularBlockPlanModification", (n) -> { currentObject.setCellularBlockPlanModification(n.getBooleanValue()); });
-            this.put("cellularBlockVoiceRoaming", (n) -> { currentObject.setCellularBlockVoiceRoaming(n.getBooleanValue()); });
-            this.put("certificatesBlockUntrustedTlsCertificates", (n) -> { currentObject.setCertificatesBlockUntrustedTlsCertificates(n.getBooleanValue()); });
-            this.put("classroomAppBlockRemoteScreenObservation", (n) -> { currentObject.setClassroomAppBlockRemoteScreenObservation(n.getBooleanValue()); });
-            this.put("classroomAppForceUnpromptedScreenObservation", (n) -> { currentObject.setClassroomAppForceUnpromptedScreenObservation(n.getBooleanValue()); });
-            this.put("classroomForceAutomaticallyJoinClasses", (n) -> { currentObject.setClassroomForceAutomaticallyJoinClasses(n.getBooleanValue()); });
-            this.put("classroomForceRequestPermissionToLeaveClasses", (n) -> { currentObject.setClassroomForceRequestPermissionToLeaveClasses(n.getBooleanValue()); });
-            this.put("classroomForceUnpromptedAppAndDeviceLock", (n) -> { currentObject.setClassroomForceUnpromptedAppAndDeviceLock(n.getBooleanValue()); });
-            this.put("compliantAppListType", (n) -> { currentObject.setCompliantAppListType(n.getEnumValue(AppListType.class)); });
-            this.put("compliantAppsList", (n) -> { currentObject.setCompliantAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("configurationProfileBlockChanges", (n) -> { currentObject.setConfigurationProfileBlockChanges(n.getBooleanValue()); });
-            this.put("contactsAllowManagedToUnmanagedWrite", (n) -> { currentObject.setContactsAllowManagedToUnmanagedWrite(n.getBooleanValue()); });
-            this.put("contactsAllowUnmanagedToManagedRead", (n) -> { currentObject.setContactsAllowUnmanagedToManagedRead(n.getBooleanValue()); });
-            this.put("continuousPathKeyboardBlocked", (n) -> { currentObject.setContinuousPathKeyboardBlocked(n.getBooleanValue()); });
-            this.put("dateAndTimeForceSetAutomatically", (n) -> { currentObject.setDateAndTimeForceSetAutomatically(n.getBooleanValue()); });
-            this.put("definitionLookupBlocked", (n) -> { currentObject.setDefinitionLookupBlocked(n.getBooleanValue()); });
-            this.put("deviceBlockEnableRestrictions", (n) -> { currentObject.setDeviceBlockEnableRestrictions(n.getBooleanValue()); });
-            this.put("deviceBlockEraseContentAndSettings", (n) -> { currentObject.setDeviceBlockEraseContentAndSettings(n.getBooleanValue()); });
-            this.put("deviceBlockNameModification", (n) -> { currentObject.setDeviceBlockNameModification(n.getBooleanValue()); });
-            this.put("diagnosticDataBlockSubmission", (n) -> { currentObject.setDiagnosticDataBlockSubmission(n.getBooleanValue()); });
-            this.put("diagnosticDataBlockSubmissionModification", (n) -> { currentObject.setDiagnosticDataBlockSubmissionModification(n.getBooleanValue()); });
-            this.put("documentsBlockManagedDocumentsInUnmanagedApps", (n) -> { currentObject.setDocumentsBlockManagedDocumentsInUnmanagedApps(n.getBooleanValue()); });
-            this.put("documentsBlockUnmanagedDocumentsInManagedApps", (n) -> { currentObject.setDocumentsBlockUnmanagedDocumentsInManagedApps(n.getBooleanValue()); });
-            this.put("emailInDomainSuffixes", (n) -> { currentObject.setEmailInDomainSuffixes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("enterpriseAppBlockTrust", (n) -> { currentObject.setEnterpriseAppBlockTrust(n.getBooleanValue()); });
-            this.put("enterpriseAppBlockTrustModification", (n) -> { currentObject.setEnterpriseAppBlockTrustModification(n.getBooleanValue()); });
-            this.put("enterpriseBookBlockBackup", (n) -> { currentObject.setEnterpriseBookBlockBackup(n.getBooleanValue()); });
-            this.put("enterpriseBookBlockMetadataSync", (n) -> { currentObject.setEnterpriseBookBlockMetadataSync(n.getBooleanValue()); });
-            this.put("esimBlockModification", (n) -> { currentObject.setEsimBlockModification(n.getBooleanValue()); });
-            this.put("faceTimeBlocked", (n) -> { currentObject.setFaceTimeBlocked(n.getBooleanValue()); });
-            this.put("filesNetworkDriveAccessBlocked", (n) -> { currentObject.setFilesNetworkDriveAccessBlocked(n.getBooleanValue()); });
-            this.put("filesUsbDriveAccessBlocked", (n) -> { currentObject.setFilesUsbDriveAccessBlocked(n.getBooleanValue()); });
-            this.put("findMyDeviceInFindMyAppBlocked", (n) -> { currentObject.setFindMyDeviceInFindMyAppBlocked(n.getBooleanValue()); });
-            this.put("findMyFriendsBlocked", (n) -> { currentObject.setFindMyFriendsBlocked(n.getBooleanValue()); });
-            this.put("findMyFriendsInFindMyAppBlocked", (n) -> { currentObject.setFindMyFriendsInFindMyAppBlocked(n.getBooleanValue()); });
-            this.put("gameCenterBlocked", (n) -> { currentObject.setGameCenterBlocked(n.getBooleanValue()); });
-            this.put("gamingBlockGameCenterFriends", (n) -> { currentObject.setGamingBlockGameCenterFriends(n.getBooleanValue()); });
-            this.put("gamingBlockMultiplayer", (n) -> { currentObject.setGamingBlockMultiplayer(n.getBooleanValue()); });
-            this.put("hostPairingBlocked", (n) -> { currentObject.setHostPairingBlocked(n.getBooleanValue()); });
-            this.put("iBooksStoreBlocked", (n) -> { currentObject.setIBooksStoreBlocked(n.getBooleanValue()); });
-            this.put("iBooksStoreBlockErotica", (n) -> { currentObject.setIBooksStoreBlockErotica(n.getBooleanValue()); });
-            this.put("iCloudBlockActivityContinuation", (n) -> { currentObject.setICloudBlockActivityContinuation(n.getBooleanValue()); });
-            this.put("iCloudBlockBackup", (n) -> { currentObject.setICloudBlockBackup(n.getBooleanValue()); });
-            this.put("iCloudBlockDocumentSync", (n) -> { currentObject.setICloudBlockDocumentSync(n.getBooleanValue()); });
-            this.put("iCloudBlockManagedAppsSync", (n) -> { currentObject.setICloudBlockManagedAppsSync(n.getBooleanValue()); });
-            this.put("iCloudBlockPhotoLibrary", (n) -> { currentObject.setICloudBlockPhotoLibrary(n.getBooleanValue()); });
-            this.put("iCloudBlockPhotoStreamSync", (n) -> { currentObject.setICloudBlockPhotoStreamSync(n.getBooleanValue()); });
-            this.put("iCloudBlockSharedPhotoStream", (n) -> { currentObject.setICloudBlockSharedPhotoStream(n.getBooleanValue()); });
-            this.put("iCloudPrivateRelayBlocked", (n) -> { currentObject.setICloudPrivateRelayBlocked(n.getBooleanValue()); });
-            this.put("iCloudRequireEncryptedBackup", (n) -> { currentObject.setICloudRequireEncryptedBackup(n.getBooleanValue()); });
-            this.put("iTunesBlocked", (n) -> { currentObject.setITunesBlocked(n.getBooleanValue()); });
-            this.put("iTunesBlockExplicitContent", (n) -> { currentObject.setITunesBlockExplicitContent(n.getBooleanValue()); });
-            this.put("iTunesBlockMusicService", (n) -> { currentObject.setITunesBlockMusicService(n.getBooleanValue()); });
-            this.put("iTunesBlockRadio", (n) -> { currentObject.setITunesBlockRadio(n.getBooleanValue()); });
-            this.put("keyboardBlockAutoCorrect", (n) -> { currentObject.setKeyboardBlockAutoCorrect(n.getBooleanValue()); });
-            this.put("keyboardBlockDictation", (n) -> { currentObject.setKeyboardBlockDictation(n.getBooleanValue()); });
-            this.put("keyboardBlockPredictive", (n) -> { currentObject.setKeyboardBlockPredictive(n.getBooleanValue()); });
-            this.put("keyboardBlockShortcuts", (n) -> { currentObject.setKeyboardBlockShortcuts(n.getBooleanValue()); });
-            this.put("keyboardBlockSpellCheck", (n) -> { currentObject.setKeyboardBlockSpellCheck(n.getBooleanValue()); });
-            this.put("keychainBlockCloudSync", (n) -> { currentObject.setKeychainBlockCloudSync(n.getBooleanValue()); });
-            this.put("kioskModeAllowAssistiveSpeak", (n) -> { currentObject.setKioskModeAllowAssistiveSpeak(n.getBooleanValue()); });
-            this.put("kioskModeAllowAssistiveTouchSettings", (n) -> { currentObject.setKioskModeAllowAssistiveTouchSettings(n.getBooleanValue()); });
-            this.put("kioskModeAllowAutoLock", (n) -> { currentObject.setKioskModeAllowAutoLock(n.getBooleanValue()); });
-            this.put("kioskModeAllowColorInversionSettings", (n) -> { currentObject.setKioskModeAllowColorInversionSettings(n.getBooleanValue()); });
-            this.put("kioskModeAllowRingerSwitch", (n) -> { currentObject.setKioskModeAllowRingerSwitch(n.getBooleanValue()); });
-            this.put("kioskModeAllowScreenRotation", (n) -> { currentObject.setKioskModeAllowScreenRotation(n.getBooleanValue()); });
-            this.put("kioskModeAllowSleepButton", (n) -> { currentObject.setKioskModeAllowSleepButton(n.getBooleanValue()); });
-            this.put("kioskModeAllowTouchscreen", (n) -> { currentObject.setKioskModeAllowTouchscreen(n.getBooleanValue()); });
-            this.put("kioskModeAllowVoiceControlModification", (n) -> { currentObject.setKioskModeAllowVoiceControlModification(n.getBooleanValue()); });
-            this.put("kioskModeAllowVoiceOverSettings", (n) -> { currentObject.setKioskModeAllowVoiceOverSettings(n.getBooleanValue()); });
-            this.put("kioskModeAllowVolumeButtons", (n) -> { currentObject.setKioskModeAllowVolumeButtons(n.getBooleanValue()); });
-            this.put("kioskModeAllowZoomSettings", (n) -> { currentObject.setKioskModeAllowZoomSettings(n.getBooleanValue()); });
-            this.put("kioskModeAppStoreUrl", (n) -> { currentObject.setKioskModeAppStoreUrl(n.getStringValue()); });
-            this.put("kioskModeAppType", (n) -> { currentObject.setKioskModeAppType(n.getEnumValue(IosKioskModeAppType.class)); });
-            this.put("kioskModeBlockAutoLock", (n) -> { currentObject.setKioskModeBlockAutoLock(n.getBooleanValue()); });
-            this.put("kioskModeBlockRingerSwitch", (n) -> { currentObject.setKioskModeBlockRingerSwitch(n.getBooleanValue()); });
-            this.put("kioskModeBlockScreenRotation", (n) -> { currentObject.setKioskModeBlockScreenRotation(n.getBooleanValue()); });
-            this.put("kioskModeBlockSleepButton", (n) -> { currentObject.setKioskModeBlockSleepButton(n.getBooleanValue()); });
-            this.put("kioskModeBlockTouchscreen", (n) -> { currentObject.setKioskModeBlockTouchscreen(n.getBooleanValue()); });
-            this.put("kioskModeBlockVolumeButtons", (n) -> { currentObject.setKioskModeBlockVolumeButtons(n.getBooleanValue()); });
-            this.put("kioskModeBuiltInAppId", (n) -> { currentObject.setKioskModeBuiltInAppId(n.getStringValue()); });
-            this.put("kioskModeEnableVoiceControl", (n) -> { currentObject.setKioskModeEnableVoiceControl(n.getBooleanValue()); });
-            this.put("kioskModeManagedAppId", (n) -> { currentObject.setKioskModeManagedAppId(n.getStringValue()); });
-            this.put("kioskModeRequireAssistiveTouch", (n) -> { currentObject.setKioskModeRequireAssistiveTouch(n.getBooleanValue()); });
-            this.put("kioskModeRequireColorInversion", (n) -> { currentObject.setKioskModeRequireColorInversion(n.getBooleanValue()); });
-            this.put("kioskModeRequireMonoAudio", (n) -> { currentObject.setKioskModeRequireMonoAudio(n.getBooleanValue()); });
-            this.put("kioskModeRequireVoiceOver", (n) -> { currentObject.setKioskModeRequireVoiceOver(n.getBooleanValue()); });
-            this.put("kioskModeRequireZoom", (n) -> { currentObject.setKioskModeRequireZoom(n.getBooleanValue()); });
-            this.put("lockScreenBlockControlCenter", (n) -> { currentObject.setLockScreenBlockControlCenter(n.getBooleanValue()); });
-            this.put("lockScreenBlockNotificationView", (n) -> { currentObject.setLockScreenBlockNotificationView(n.getBooleanValue()); });
-            this.put("lockScreenBlockPassbook", (n) -> { currentObject.setLockScreenBlockPassbook(n.getBooleanValue()); });
-            this.put("lockScreenBlockTodayView", (n) -> { currentObject.setLockScreenBlockTodayView(n.getBooleanValue()); });
-            this.put("managedPasteboardRequired", (n) -> { currentObject.setManagedPasteboardRequired(n.getBooleanValue()); });
-            this.put("mediaContentRatingApps", (n) -> { currentObject.setMediaContentRatingApps(n.getEnumValue(RatingAppsType.class)); });
-            this.put("mediaContentRatingAustralia", (n) -> { currentObject.setMediaContentRatingAustralia(n.getObjectValue(MediaContentRatingAustralia::createFromDiscriminatorValue)); });
-            this.put("mediaContentRatingCanada", (n) -> { currentObject.setMediaContentRatingCanada(n.getObjectValue(MediaContentRatingCanada::createFromDiscriminatorValue)); });
-            this.put("mediaContentRatingFrance", (n) -> { currentObject.setMediaContentRatingFrance(n.getObjectValue(MediaContentRatingFrance::createFromDiscriminatorValue)); });
-            this.put("mediaContentRatingGermany", (n) -> { currentObject.setMediaContentRatingGermany(n.getObjectValue(MediaContentRatingGermany::createFromDiscriminatorValue)); });
-            this.put("mediaContentRatingIreland", (n) -> { currentObject.setMediaContentRatingIreland(n.getObjectValue(MediaContentRatingIreland::createFromDiscriminatorValue)); });
-            this.put("mediaContentRatingJapan", (n) -> { currentObject.setMediaContentRatingJapan(n.getObjectValue(MediaContentRatingJapan::createFromDiscriminatorValue)); });
-            this.put("mediaContentRatingNewZealand", (n) -> { currentObject.setMediaContentRatingNewZealand(n.getObjectValue(MediaContentRatingNewZealand::createFromDiscriminatorValue)); });
-            this.put("mediaContentRatingUnitedKingdom", (n) -> { currentObject.setMediaContentRatingUnitedKingdom(n.getObjectValue(MediaContentRatingUnitedKingdom::createFromDiscriminatorValue)); });
-            this.put("mediaContentRatingUnitedStates", (n) -> { currentObject.setMediaContentRatingUnitedStates(n.getObjectValue(MediaContentRatingUnitedStates::createFromDiscriminatorValue)); });
-            this.put("messagesBlocked", (n) -> { currentObject.setMessagesBlocked(n.getBooleanValue()); });
-            this.put("networkUsageRules", (n) -> { currentObject.setNetworkUsageRules(n.getCollectionOfObjectValues(IosNetworkUsageRule::createFromDiscriminatorValue)); });
-            this.put("nfcBlocked", (n) -> { currentObject.setNfcBlocked(n.getBooleanValue()); });
-            this.put("notificationsBlockSettingsModification", (n) -> { currentObject.setNotificationsBlockSettingsModification(n.getBooleanValue()); });
-            this.put("onDeviceOnlyDictationForced", (n) -> { currentObject.setOnDeviceOnlyDictationForced(n.getBooleanValue()); });
-            this.put("onDeviceOnlyTranslationForced", (n) -> { currentObject.setOnDeviceOnlyTranslationForced(n.getBooleanValue()); });
-            this.put("passcodeBlockFingerprintModification", (n) -> { currentObject.setPasscodeBlockFingerprintModification(n.getBooleanValue()); });
-            this.put("passcodeBlockFingerprintUnlock", (n) -> { currentObject.setPasscodeBlockFingerprintUnlock(n.getBooleanValue()); });
-            this.put("passcodeBlockModification", (n) -> { currentObject.setPasscodeBlockModification(n.getBooleanValue()); });
-            this.put("passcodeBlockSimple", (n) -> { currentObject.setPasscodeBlockSimple(n.getBooleanValue()); });
-            this.put("passcodeExpirationDays", (n) -> { currentObject.setPasscodeExpirationDays(n.getIntegerValue()); });
-            this.put("passcodeMinimumCharacterSetCount", (n) -> { currentObject.setPasscodeMinimumCharacterSetCount(n.getIntegerValue()); });
-            this.put("passcodeMinimumLength", (n) -> { currentObject.setPasscodeMinimumLength(n.getIntegerValue()); });
-            this.put("passcodeMinutesOfInactivityBeforeLock", (n) -> { currentObject.setPasscodeMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
-            this.put("passcodeMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasscodeMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-            this.put("passcodePreviousPasscodeBlockCount", (n) -> { currentObject.setPasscodePreviousPasscodeBlockCount(n.getIntegerValue()); });
-            this.put("passcodeRequired", (n) -> { currentObject.setPasscodeRequired(n.getBooleanValue()); });
-            this.put("passcodeRequiredType", (n) -> { currentObject.setPasscodeRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
-            this.put("passcodeSignInFailureCountBeforeWipe", (n) -> { currentObject.setPasscodeSignInFailureCountBeforeWipe(n.getIntegerValue()); });
-            this.put("passwordBlockAirDropSharing", (n) -> { currentObject.setPasswordBlockAirDropSharing(n.getBooleanValue()); });
-            this.put("passwordBlockAutoFill", (n) -> { currentObject.setPasswordBlockAutoFill(n.getBooleanValue()); });
-            this.put("passwordBlockProximityRequests", (n) -> { currentObject.setPasswordBlockProximityRequests(n.getBooleanValue()); });
-            this.put("pkiBlockOTAUpdates", (n) -> { currentObject.setPkiBlockOTAUpdates(n.getBooleanValue()); });
-            this.put("podcastsBlocked", (n) -> { currentObject.setPodcastsBlocked(n.getBooleanValue()); });
-            this.put("privacyForceLimitAdTracking", (n) -> { currentObject.setPrivacyForceLimitAdTracking(n.getBooleanValue()); });
-            this.put("proximityBlockSetupToNewDevice", (n) -> { currentObject.setProximityBlockSetupToNewDevice(n.getBooleanValue()); });
-            this.put("safariBlockAutofill", (n) -> { currentObject.setSafariBlockAutofill(n.getBooleanValue()); });
-            this.put("safariBlocked", (n) -> { currentObject.setSafariBlocked(n.getBooleanValue()); });
-            this.put("safariBlockJavaScript", (n) -> { currentObject.setSafariBlockJavaScript(n.getBooleanValue()); });
-            this.put("safariBlockPopups", (n) -> { currentObject.setSafariBlockPopups(n.getBooleanValue()); });
-            this.put("safariCookieSettings", (n) -> { currentObject.setSafariCookieSettings(n.getEnumValue(WebBrowserCookieSettings.class)); });
-            this.put("safariManagedDomains", (n) -> { currentObject.setSafariManagedDomains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("safariPasswordAutoFillDomains", (n) -> { currentObject.setSafariPasswordAutoFillDomains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("safariRequireFraudWarning", (n) -> { currentObject.setSafariRequireFraudWarning(n.getBooleanValue()); });
-            this.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
-            this.put("sharedDeviceBlockTemporarySessions", (n) -> { currentObject.setSharedDeviceBlockTemporarySessions(n.getBooleanValue()); });
-            this.put("siriBlocked", (n) -> { currentObject.setSiriBlocked(n.getBooleanValue()); });
-            this.put("siriBlockedWhenLocked", (n) -> { currentObject.setSiriBlockedWhenLocked(n.getBooleanValue()); });
-            this.put("siriBlockUserGeneratedContent", (n) -> { currentObject.setSiriBlockUserGeneratedContent(n.getBooleanValue()); });
-            this.put("siriRequireProfanityFilter", (n) -> { currentObject.setSiriRequireProfanityFilter(n.getBooleanValue()); });
-            this.put("softwareUpdatesEnforcedDelayInDays", (n) -> { currentObject.setSoftwareUpdatesEnforcedDelayInDays(n.getIntegerValue()); });
-            this.put("softwareUpdatesForceDelayed", (n) -> { currentObject.setSoftwareUpdatesForceDelayed(n.getBooleanValue()); });
-            this.put("spotlightBlockInternetResults", (n) -> { currentObject.setSpotlightBlockInternetResults(n.getBooleanValue()); });
-            this.put("unpairedExternalBootToRecoveryAllowed", (n) -> { currentObject.setUnpairedExternalBootToRecoveryAllowed(n.getBooleanValue()); });
-            this.put("usbRestrictedModeBlocked", (n) -> { currentObject.setUsbRestrictedModeBlocked(n.getBooleanValue()); });
-            this.put("voiceDialingBlocked", (n) -> { currentObject.setVoiceDialingBlocked(n.getBooleanValue()); });
-            this.put("vpnBlockCreation", (n) -> { currentObject.setVpnBlockCreation(n.getBooleanValue()); });
-            this.put("wallpaperBlockModification", (n) -> { currentObject.setWallpaperBlockModification(n.getBooleanValue()); });
-            this.put("wiFiConnectOnlyToConfiguredNetworks", (n) -> { currentObject.setWiFiConnectOnlyToConfiguredNetworks(n.getBooleanValue()); });
-            this.put("wiFiConnectToAllowedNetworksOnlyForced", (n) -> { currentObject.setWiFiConnectToAllowedNetworksOnlyForced(n.getBooleanValue()); });
-            this.put("wifiPowerOnForced", (n) -> { currentObject.setWifiPowerOnForced(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountBlockModification", (n) -> { currentObject.setAccountBlockModification(n.getBooleanValue()); });
+        deserializerMap.put("activationLockAllowWhenSupervised", (n) -> { currentObject.setActivationLockAllowWhenSupervised(n.getBooleanValue()); });
+        deserializerMap.put("airDropBlocked", (n) -> { currentObject.setAirDropBlocked(n.getBooleanValue()); });
+        deserializerMap.put("airDropForceUnmanagedDropTarget", (n) -> { currentObject.setAirDropForceUnmanagedDropTarget(n.getBooleanValue()); });
+        deserializerMap.put("airPlayForcePairingPasswordForOutgoingRequests", (n) -> { currentObject.setAirPlayForcePairingPasswordForOutgoingRequests(n.getBooleanValue()); });
+        deserializerMap.put("airPrintBlockCredentialsStorage", (n) -> { currentObject.setAirPrintBlockCredentialsStorage(n.getBooleanValue()); });
+        deserializerMap.put("airPrintBlocked", (n) -> { currentObject.setAirPrintBlocked(n.getBooleanValue()); });
+        deserializerMap.put("airPrintBlockiBeaconDiscovery", (n) -> { currentObject.setAirPrintBlockiBeaconDiscovery(n.getBooleanValue()); });
+        deserializerMap.put("airPrintForceTrustedTLS", (n) -> { currentObject.setAirPrintForceTrustedTLS(n.getBooleanValue()); });
+        deserializerMap.put("appClipsBlocked", (n) -> { currentObject.setAppClipsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("appleNewsBlocked", (n) -> { currentObject.setAppleNewsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("applePersonalizedAdsBlocked", (n) -> { currentObject.setApplePersonalizedAdsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("appleWatchBlockPairing", (n) -> { currentObject.setAppleWatchBlockPairing(n.getBooleanValue()); });
+        deserializerMap.put("appleWatchForceWristDetection", (n) -> { currentObject.setAppleWatchForceWristDetection(n.getBooleanValue()); });
+        deserializerMap.put("appRemovalBlocked", (n) -> { currentObject.setAppRemovalBlocked(n.getBooleanValue()); });
+        deserializerMap.put("appsSingleAppModeList", (n) -> { currentObject.setAppsSingleAppModeList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("appStoreBlockAutomaticDownloads", (n) -> { currentObject.setAppStoreBlockAutomaticDownloads(n.getBooleanValue()); });
+        deserializerMap.put("appStoreBlocked", (n) -> { currentObject.setAppStoreBlocked(n.getBooleanValue()); });
+        deserializerMap.put("appStoreBlockInAppPurchases", (n) -> { currentObject.setAppStoreBlockInAppPurchases(n.getBooleanValue()); });
+        deserializerMap.put("appStoreBlockUIAppInstallation", (n) -> { currentObject.setAppStoreBlockUIAppInstallation(n.getBooleanValue()); });
+        deserializerMap.put("appStoreRequirePassword", (n) -> { currentObject.setAppStoreRequirePassword(n.getBooleanValue()); });
+        deserializerMap.put("appsVisibilityList", (n) -> { currentObject.setAppsVisibilityList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("appsVisibilityListType", (n) -> { currentObject.setAppsVisibilityListType(n.getEnumValue(AppListType.class)); });
+        deserializerMap.put("autoFillForceAuthentication", (n) -> { currentObject.setAutoFillForceAuthentication(n.getBooleanValue()); });
+        deserializerMap.put("autoUnlockBlocked", (n) -> { currentObject.setAutoUnlockBlocked(n.getBooleanValue()); });
+        deserializerMap.put("blockSystemAppRemoval", (n) -> { currentObject.setBlockSystemAppRemoval(n.getBooleanValue()); });
+        deserializerMap.put("bluetoothBlockModification", (n) -> { currentObject.setBluetoothBlockModification(n.getBooleanValue()); });
+        deserializerMap.put("cameraBlocked", (n) -> { currentObject.setCameraBlocked(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockDataRoaming", (n) -> { currentObject.setCellularBlockDataRoaming(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockGlobalBackgroundFetchWhileRoaming", (n) -> { currentObject.setCellularBlockGlobalBackgroundFetchWhileRoaming(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockPerAppDataModification", (n) -> { currentObject.setCellularBlockPerAppDataModification(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockPersonalHotspot", (n) -> { currentObject.setCellularBlockPersonalHotspot(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockPersonalHotspotModification", (n) -> { currentObject.setCellularBlockPersonalHotspotModification(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockPlanModification", (n) -> { currentObject.setCellularBlockPlanModification(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockVoiceRoaming", (n) -> { currentObject.setCellularBlockVoiceRoaming(n.getBooleanValue()); });
+        deserializerMap.put("certificatesBlockUntrustedTlsCertificates", (n) -> { currentObject.setCertificatesBlockUntrustedTlsCertificates(n.getBooleanValue()); });
+        deserializerMap.put("classroomAppBlockRemoteScreenObservation", (n) -> { currentObject.setClassroomAppBlockRemoteScreenObservation(n.getBooleanValue()); });
+        deserializerMap.put("classroomAppForceUnpromptedScreenObservation", (n) -> { currentObject.setClassroomAppForceUnpromptedScreenObservation(n.getBooleanValue()); });
+        deserializerMap.put("classroomForceAutomaticallyJoinClasses", (n) -> { currentObject.setClassroomForceAutomaticallyJoinClasses(n.getBooleanValue()); });
+        deserializerMap.put("classroomForceRequestPermissionToLeaveClasses", (n) -> { currentObject.setClassroomForceRequestPermissionToLeaveClasses(n.getBooleanValue()); });
+        deserializerMap.put("classroomForceUnpromptedAppAndDeviceLock", (n) -> { currentObject.setClassroomForceUnpromptedAppAndDeviceLock(n.getBooleanValue()); });
+        deserializerMap.put("compliantAppListType", (n) -> { currentObject.setCompliantAppListType(n.getEnumValue(AppListType.class)); });
+        deserializerMap.put("compliantAppsList", (n) -> { currentObject.setCompliantAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("configurationProfileBlockChanges", (n) -> { currentObject.setConfigurationProfileBlockChanges(n.getBooleanValue()); });
+        deserializerMap.put("contactsAllowManagedToUnmanagedWrite", (n) -> { currentObject.setContactsAllowManagedToUnmanagedWrite(n.getBooleanValue()); });
+        deserializerMap.put("contactsAllowUnmanagedToManagedRead", (n) -> { currentObject.setContactsAllowUnmanagedToManagedRead(n.getBooleanValue()); });
+        deserializerMap.put("continuousPathKeyboardBlocked", (n) -> { currentObject.setContinuousPathKeyboardBlocked(n.getBooleanValue()); });
+        deserializerMap.put("dateAndTimeForceSetAutomatically", (n) -> { currentObject.setDateAndTimeForceSetAutomatically(n.getBooleanValue()); });
+        deserializerMap.put("definitionLookupBlocked", (n) -> { currentObject.setDefinitionLookupBlocked(n.getBooleanValue()); });
+        deserializerMap.put("deviceBlockEnableRestrictions", (n) -> { currentObject.setDeviceBlockEnableRestrictions(n.getBooleanValue()); });
+        deserializerMap.put("deviceBlockEraseContentAndSettings", (n) -> { currentObject.setDeviceBlockEraseContentAndSettings(n.getBooleanValue()); });
+        deserializerMap.put("deviceBlockNameModification", (n) -> { currentObject.setDeviceBlockNameModification(n.getBooleanValue()); });
+        deserializerMap.put("diagnosticDataBlockSubmission", (n) -> { currentObject.setDiagnosticDataBlockSubmission(n.getBooleanValue()); });
+        deserializerMap.put("diagnosticDataBlockSubmissionModification", (n) -> { currentObject.setDiagnosticDataBlockSubmissionModification(n.getBooleanValue()); });
+        deserializerMap.put("documentsBlockManagedDocumentsInUnmanagedApps", (n) -> { currentObject.setDocumentsBlockManagedDocumentsInUnmanagedApps(n.getBooleanValue()); });
+        deserializerMap.put("documentsBlockUnmanagedDocumentsInManagedApps", (n) -> { currentObject.setDocumentsBlockUnmanagedDocumentsInManagedApps(n.getBooleanValue()); });
+        deserializerMap.put("emailInDomainSuffixes", (n) -> { currentObject.setEmailInDomainSuffixes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("enterpriseAppBlockTrust", (n) -> { currentObject.setEnterpriseAppBlockTrust(n.getBooleanValue()); });
+        deserializerMap.put("enterpriseAppBlockTrustModification", (n) -> { currentObject.setEnterpriseAppBlockTrustModification(n.getBooleanValue()); });
+        deserializerMap.put("enterpriseBookBlockBackup", (n) -> { currentObject.setEnterpriseBookBlockBackup(n.getBooleanValue()); });
+        deserializerMap.put("enterpriseBookBlockMetadataSync", (n) -> { currentObject.setEnterpriseBookBlockMetadataSync(n.getBooleanValue()); });
+        deserializerMap.put("esimBlockModification", (n) -> { currentObject.setEsimBlockModification(n.getBooleanValue()); });
+        deserializerMap.put("faceTimeBlocked", (n) -> { currentObject.setFaceTimeBlocked(n.getBooleanValue()); });
+        deserializerMap.put("filesNetworkDriveAccessBlocked", (n) -> { currentObject.setFilesNetworkDriveAccessBlocked(n.getBooleanValue()); });
+        deserializerMap.put("filesUsbDriveAccessBlocked", (n) -> { currentObject.setFilesUsbDriveAccessBlocked(n.getBooleanValue()); });
+        deserializerMap.put("findMyDeviceInFindMyAppBlocked", (n) -> { currentObject.setFindMyDeviceInFindMyAppBlocked(n.getBooleanValue()); });
+        deserializerMap.put("findMyFriendsBlocked", (n) -> { currentObject.setFindMyFriendsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("findMyFriendsInFindMyAppBlocked", (n) -> { currentObject.setFindMyFriendsInFindMyAppBlocked(n.getBooleanValue()); });
+        deserializerMap.put("gameCenterBlocked", (n) -> { currentObject.setGameCenterBlocked(n.getBooleanValue()); });
+        deserializerMap.put("gamingBlockGameCenterFriends", (n) -> { currentObject.setGamingBlockGameCenterFriends(n.getBooleanValue()); });
+        deserializerMap.put("gamingBlockMultiplayer", (n) -> { currentObject.setGamingBlockMultiplayer(n.getBooleanValue()); });
+        deserializerMap.put("hostPairingBlocked", (n) -> { currentObject.setHostPairingBlocked(n.getBooleanValue()); });
+        deserializerMap.put("iBooksStoreBlocked", (n) -> { currentObject.setIBooksStoreBlocked(n.getBooleanValue()); });
+        deserializerMap.put("iBooksStoreBlockErotica", (n) -> { currentObject.setIBooksStoreBlockErotica(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockActivityContinuation", (n) -> { currentObject.setICloudBlockActivityContinuation(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockBackup", (n) -> { currentObject.setICloudBlockBackup(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockDocumentSync", (n) -> { currentObject.setICloudBlockDocumentSync(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockManagedAppsSync", (n) -> { currentObject.setICloudBlockManagedAppsSync(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockPhotoLibrary", (n) -> { currentObject.setICloudBlockPhotoLibrary(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockPhotoStreamSync", (n) -> { currentObject.setICloudBlockPhotoStreamSync(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockSharedPhotoStream", (n) -> { currentObject.setICloudBlockSharedPhotoStream(n.getBooleanValue()); });
+        deserializerMap.put("iCloudPrivateRelayBlocked", (n) -> { currentObject.setICloudPrivateRelayBlocked(n.getBooleanValue()); });
+        deserializerMap.put("iCloudRequireEncryptedBackup", (n) -> { currentObject.setICloudRequireEncryptedBackup(n.getBooleanValue()); });
+        deserializerMap.put("iTunesBlocked", (n) -> { currentObject.setITunesBlocked(n.getBooleanValue()); });
+        deserializerMap.put("iTunesBlockExplicitContent", (n) -> { currentObject.setITunesBlockExplicitContent(n.getBooleanValue()); });
+        deserializerMap.put("iTunesBlockMusicService", (n) -> { currentObject.setITunesBlockMusicService(n.getBooleanValue()); });
+        deserializerMap.put("iTunesBlockRadio", (n) -> { currentObject.setITunesBlockRadio(n.getBooleanValue()); });
+        deserializerMap.put("keyboardBlockAutoCorrect", (n) -> { currentObject.setKeyboardBlockAutoCorrect(n.getBooleanValue()); });
+        deserializerMap.put("keyboardBlockDictation", (n) -> { currentObject.setKeyboardBlockDictation(n.getBooleanValue()); });
+        deserializerMap.put("keyboardBlockPredictive", (n) -> { currentObject.setKeyboardBlockPredictive(n.getBooleanValue()); });
+        deserializerMap.put("keyboardBlockShortcuts", (n) -> { currentObject.setKeyboardBlockShortcuts(n.getBooleanValue()); });
+        deserializerMap.put("keyboardBlockSpellCheck", (n) -> { currentObject.setKeyboardBlockSpellCheck(n.getBooleanValue()); });
+        deserializerMap.put("keychainBlockCloudSync", (n) -> { currentObject.setKeychainBlockCloudSync(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeAllowAssistiveSpeak", (n) -> { currentObject.setKioskModeAllowAssistiveSpeak(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeAllowAssistiveTouchSettings", (n) -> { currentObject.setKioskModeAllowAssistiveTouchSettings(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeAllowAutoLock", (n) -> { currentObject.setKioskModeAllowAutoLock(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeAllowColorInversionSettings", (n) -> { currentObject.setKioskModeAllowColorInversionSettings(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeAllowRingerSwitch", (n) -> { currentObject.setKioskModeAllowRingerSwitch(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeAllowScreenRotation", (n) -> { currentObject.setKioskModeAllowScreenRotation(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeAllowSleepButton", (n) -> { currentObject.setKioskModeAllowSleepButton(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeAllowTouchscreen", (n) -> { currentObject.setKioskModeAllowTouchscreen(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeAllowVoiceControlModification", (n) -> { currentObject.setKioskModeAllowVoiceControlModification(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeAllowVoiceOverSettings", (n) -> { currentObject.setKioskModeAllowVoiceOverSettings(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeAllowVolumeButtons", (n) -> { currentObject.setKioskModeAllowVolumeButtons(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeAllowZoomSettings", (n) -> { currentObject.setKioskModeAllowZoomSettings(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeAppStoreUrl", (n) -> { currentObject.setKioskModeAppStoreUrl(n.getStringValue()); });
+        deserializerMap.put("kioskModeAppType", (n) -> { currentObject.setKioskModeAppType(n.getEnumValue(IosKioskModeAppType.class)); });
+        deserializerMap.put("kioskModeBlockAutoLock", (n) -> { currentObject.setKioskModeBlockAutoLock(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeBlockRingerSwitch", (n) -> { currentObject.setKioskModeBlockRingerSwitch(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeBlockScreenRotation", (n) -> { currentObject.setKioskModeBlockScreenRotation(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeBlockSleepButton", (n) -> { currentObject.setKioskModeBlockSleepButton(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeBlockTouchscreen", (n) -> { currentObject.setKioskModeBlockTouchscreen(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeBlockVolumeButtons", (n) -> { currentObject.setKioskModeBlockVolumeButtons(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeBuiltInAppId", (n) -> { currentObject.setKioskModeBuiltInAppId(n.getStringValue()); });
+        deserializerMap.put("kioskModeEnableVoiceControl", (n) -> { currentObject.setKioskModeEnableVoiceControl(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeManagedAppId", (n) -> { currentObject.setKioskModeManagedAppId(n.getStringValue()); });
+        deserializerMap.put("kioskModeRequireAssistiveTouch", (n) -> { currentObject.setKioskModeRequireAssistiveTouch(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeRequireColorInversion", (n) -> { currentObject.setKioskModeRequireColorInversion(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeRequireMonoAudio", (n) -> { currentObject.setKioskModeRequireMonoAudio(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeRequireVoiceOver", (n) -> { currentObject.setKioskModeRequireVoiceOver(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeRequireZoom", (n) -> { currentObject.setKioskModeRequireZoom(n.getBooleanValue()); });
+        deserializerMap.put("lockScreenBlockControlCenter", (n) -> { currentObject.setLockScreenBlockControlCenter(n.getBooleanValue()); });
+        deserializerMap.put("lockScreenBlockNotificationView", (n) -> { currentObject.setLockScreenBlockNotificationView(n.getBooleanValue()); });
+        deserializerMap.put("lockScreenBlockPassbook", (n) -> { currentObject.setLockScreenBlockPassbook(n.getBooleanValue()); });
+        deserializerMap.put("lockScreenBlockTodayView", (n) -> { currentObject.setLockScreenBlockTodayView(n.getBooleanValue()); });
+        deserializerMap.put("managedPasteboardRequired", (n) -> { currentObject.setManagedPasteboardRequired(n.getBooleanValue()); });
+        deserializerMap.put("mediaContentRatingApps", (n) -> { currentObject.setMediaContentRatingApps(n.getEnumValue(RatingAppsType.class)); });
+        deserializerMap.put("mediaContentRatingAustralia", (n) -> { currentObject.setMediaContentRatingAustralia(n.getObjectValue(MediaContentRatingAustralia::createFromDiscriminatorValue)); });
+        deserializerMap.put("mediaContentRatingCanada", (n) -> { currentObject.setMediaContentRatingCanada(n.getObjectValue(MediaContentRatingCanada::createFromDiscriminatorValue)); });
+        deserializerMap.put("mediaContentRatingFrance", (n) -> { currentObject.setMediaContentRatingFrance(n.getObjectValue(MediaContentRatingFrance::createFromDiscriminatorValue)); });
+        deserializerMap.put("mediaContentRatingGermany", (n) -> { currentObject.setMediaContentRatingGermany(n.getObjectValue(MediaContentRatingGermany::createFromDiscriminatorValue)); });
+        deserializerMap.put("mediaContentRatingIreland", (n) -> { currentObject.setMediaContentRatingIreland(n.getObjectValue(MediaContentRatingIreland::createFromDiscriminatorValue)); });
+        deserializerMap.put("mediaContentRatingJapan", (n) -> { currentObject.setMediaContentRatingJapan(n.getObjectValue(MediaContentRatingJapan::createFromDiscriminatorValue)); });
+        deserializerMap.put("mediaContentRatingNewZealand", (n) -> { currentObject.setMediaContentRatingNewZealand(n.getObjectValue(MediaContentRatingNewZealand::createFromDiscriminatorValue)); });
+        deserializerMap.put("mediaContentRatingUnitedKingdom", (n) -> { currentObject.setMediaContentRatingUnitedKingdom(n.getObjectValue(MediaContentRatingUnitedKingdom::createFromDiscriminatorValue)); });
+        deserializerMap.put("mediaContentRatingUnitedStates", (n) -> { currentObject.setMediaContentRatingUnitedStates(n.getObjectValue(MediaContentRatingUnitedStates::createFromDiscriminatorValue)); });
+        deserializerMap.put("messagesBlocked", (n) -> { currentObject.setMessagesBlocked(n.getBooleanValue()); });
+        deserializerMap.put("networkUsageRules", (n) -> { currentObject.setNetworkUsageRules(n.getCollectionOfObjectValues(IosNetworkUsageRule::createFromDiscriminatorValue)); });
+        deserializerMap.put("nfcBlocked", (n) -> { currentObject.setNfcBlocked(n.getBooleanValue()); });
+        deserializerMap.put("notificationsBlockSettingsModification", (n) -> { currentObject.setNotificationsBlockSettingsModification(n.getBooleanValue()); });
+        deserializerMap.put("onDeviceOnlyDictationForced", (n) -> { currentObject.setOnDeviceOnlyDictationForced(n.getBooleanValue()); });
+        deserializerMap.put("onDeviceOnlyTranslationForced", (n) -> { currentObject.setOnDeviceOnlyTranslationForced(n.getBooleanValue()); });
+        deserializerMap.put("passcodeBlockFingerprintModification", (n) -> { currentObject.setPasscodeBlockFingerprintModification(n.getBooleanValue()); });
+        deserializerMap.put("passcodeBlockFingerprintUnlock", (n) -> { currentObject.setPasscodeBlockFingerprintUnlock(n.getBooleanValue()); });
+        deserializerMap.put("passcodeBlockModification", (n) -> { currentObject.setPasscodeBlockModification(n.getBooleanValue()); });
+        deserializerMap.put("passcodeBlockSimple", (n) -> { currentObject.setPasscodeBlockSimple(n.getBooleanValue()); });
+        deserializerMap.put("passcodeExpirationDays", (n) -> { currentObject.setPasscodeExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passcodeMinimumCharacterSetCount", (n) -> { currentObject.setPasscodeMinimumCharacterSetCount(n.getIntegerValue()); });
+        deserializerMap.put("passcodeMinimumLength", (n) -> { currentObject.setPasscodeMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passcodeMinutesOfInactivityBeforeLock", (n) -> { currentObject.setPasscodeMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
+        deserializerMap.put("passcodeMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasscodeMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
+        deserializerMap.put("passcodePreviousPasscodeBlockCount", (n) -> { currentObject.setPasscodePreviousPasscodeBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passcodeRequired", (n) -> { currentObject.setPasscodeRequired(n.getBooleanValue()); });
+        deserializerMap.put("passcodeRequiredType", (n) -> { currentObject.setPasscodeRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
+        deserializerMap.put("passcodeSignInFailureCountBeforeWipe", (n) -> { currentObject.setPasscodeSignInFailureCountBeforeWipe(n.getIntegerValue()); });
+        deserializerMap.put("passwordBlockAirDropSharing", (n) -> { currentObject.setPasswordBlockAirDropSharing(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockAutoFill", (n) -> { currentObject.setPasswordBlockAutoFill(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockProximityRequests", (n) -> { currentObject.setPasswordBlockProximityRequests(n.getBooleanValue()); });
+        deserializerMap.put("pkiBlockOTAUpdates", (n) -> { currentObject.setPkiBlockOTAUpdates(n.getBooleanValue()); });
+        deserializerMap.put("podcastsBlocked", (n) -> { currentObject.setPodcastsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("privacyForceLimitAdTracking", (n) -> { currentObject.setPrivacyForceLimitAdTracking(n.getBooleanValue()); });
+        deserializerMap.put("proximityBlockSetupToNewDevice", (n) -> { currentObject.setProximityBlockSetupToNewDevice(n.getBooleanValue()); });
+        deserializerMap.put("safariBlockAutofill", (n) -> { currentObject.setSafariBlockAutofill(n.getBooleanValue()); });
+        deserializerMap.put("safariBlocked", (n) -> { currentObject.setSafariBlocked(n.getBooleanValue()); });
+        deserializerMap.put("safariBlockJavaScript", (n) -> { currentObject.setSafariBlockJavaScript(n.getBooleanValue()); });
+        deserializerMap.put("safariBlockPopups", (n) -> { currentObject.setSafariBlockPopups(n.getBooleanValue()); });
+        deserializerMap.put("safariCookieSettings", (n) -> { currentObject.setSafariCookieSettings(n.getEnumValue(WebBrowserCookieSettings.class)); });
+        deserializerMap.put("safariManagedDomains", (n) -> { currentObject.setSafariManagedDomains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("safariPasswordAutoFillDomains", (n) -> { currentObject.setSafariPasswordAutoFillDomains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("safariRequireFraudWarning", (n) -> { currentObject.setSafariRequireFraudWarning(n.getBooleanValue()); });
+        deserializerMap.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
+        deserializerMap.put("sharedDeviceBlockTemporarySessions", (n) -> { currentObject.setSharedDeviceBlockTemporarySessions(n.getBooleanValue()); });
+        deserializerMap.put("siriBlocked", (n) -> { currentObject.setSiriBlocked(n.getBooleanValue()); });
+        deserializerMap.put("siriBlockedWhenLocked", (n) -> { currentObject.setSiriBlockedWhenLocked(n.getBooleanValue()); });
+        deserializerMap.put("siriBlockUserGeneratedContent", (n) -> { currentObject.setSiriBlockUserGeneratedContent(n.getBooleanValue()); });
+        deserializerMap.put("siriRequireProfanityFilter", (n) -> { currentObject.setSiriRequireProfanityFilter(n.getBooleanValue()); });
+        deserializerMap.put("softwareUpdatesEnforcedDelayInDays", (n) -> { currentObject.setSoftwareUpdatesEnforcedDelayInDays(n.getIntegerValue()); });
+        deserializerMap.put("softwareUpdatesForceDelayed", (n) -> { currentObject.setSoftwareUpdatesForceDelayed(n.getBooleanValue()); });
+        deserializerMap.put("spotlightBlockInternetResults", (n) -> { currentObject.setSpotlightBlockInternetResults(n.getBooleanValue()); });
+        deserializerMap.put("unpairedExternalBootToRecoveryAllowed", (n) -> { currentObject.setUnpairedExternalBootToRecoveryAllowed(n.getBooleanValue()); });
+        deserializerMap.put("usbRestrictedModeBlocked", (n) -> { currentObject.setUsbRestrictedModeBlocked(n.getBooleanValue()); });
+        deserializerMap.put("voiceDialingBlocked", (n) -> { currentObject.setVoiceDialingBlocked(n.getBooleanValue()); });
+        deserializerMap.put("vpnBlockCreation", (n) -> { currentObject.setVpnBlockCreation(n.getBooleanValue()); });
+        deserializerMap.put("wallpaperBlockModification", (n) -> { currentObject.setWallpaperBlockModification(n.getBooleanValue()); });
+        deserializerMap.put("wiFiConnectOnlyToConfiguredNetworks", (n) -> { currentObject.setWiFiConnectOnlyToConfiguredNetworks(n.getBooleanValue()); });
+        deserializerMap.put("wiFiConnectToAllowedNetworksOnlyForced", (n) -> { currentObject.setWiFiConnectToAllowedNetworksOnlyForced(n.getBooleanValue()); });
+        deserializerMap.put("wifiPowerOnForced", (n) -> { currentObject.setWifiPowerOnForced(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the filesNetworkDriveAccessBlocked property value. Indicates if devices can access files or other resources on a network server using the Server Message Block (SMB) protocol. Available for devices running iOS and iPadOS, versions 13.0 and later.
@@ -1718,7 +1719,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this._notificationsBlockSettingsModification;
     }
     /**
-     * Gets the onDeviceOnlyDictationForced property value. Disables connections to Siri servers so that users can’t use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later.
+     * Gets the onDeviceOnlyDictationForced property value. Disables connections to Siri servers so that users cant use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -1726,7 +1727,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
         return this._onDeviceOnlyDictationForced;
     }
     /**
-     * Gets the onDeviceOnlyTranslationForced property value. When set to TRUE, the setting disables connections to Siri servers so that users can’t use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later.
+     * Gets the onDeviceOnlyTranslationForced property value. When set to TRUE, the setting disables connections to Siri servers so that users cant use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -2098,6 +2099,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -2294,6 +2296,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the accountBlockModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountBlockModification(@javax.annotation.Nullable final Boolean value) {
         this._accountBlockModification = value;
     }
@@ -2302,6 +2305,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the activationLockAllowWhenSupervised property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivationLockAllowWhenSupervised(@javax.annotation.Nullable final Boolean value) {
         this._activationLockAllowWhenSupervised = value;
     }
@@ -2310,6 +2314,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the airDropBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAirDropBlocked(@javax.annotation.Nullable final Boolean value) {
         this._airDropBlocked = value;
     }
@@ -2318,6 +2323,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the airDropForceUnmanagedDropTarget property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAirDropForceUnmanagedDropTarget(@javax.annotation.Nullable final Boolean value) {
         this._airDropForceUnmanagedDropTarget = value;
     }
@@ -2326,6 +2332,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the airPlayForcePairingPasswordForOutgoingRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAirPlayForcePairingPasswordForOutgoingRequests(@javax.annotation.Nullable final Boolean value) {
         this._airPlayForcePairingPasswordForOutgoingRequests = value;
     }
@@ -2334,6 +2341,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the airPrintBlockCredentialsStorage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAirPrintBlockCredentialsStorage(@javax.annotation.Nullable final Boolean value) {
         this._airPrintBlockCredentialsStorage = value;
     }
@@ -2342,6 +2350,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the airPrintBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAirPrintBlocked(@javax.annotation.Nullable final Boolean value) {
         this._airPrintBlocked = value;
     }
@@ -2350,6 +2359,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the airPrintBlockiBeaconDiscovery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAirPrintBlockiBeaconDiscovery(@javax.annotation.Nullable final Boolean value) {
         this._airPrintBlockiBeaconDiscovery = value;
     }
@@ -2358,6 +2368,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the airPrintForceTrustedTLS property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAirPrintForceTrustedTLS(@javax.annotation.Nullable final Boolean value) {
         this._airPrintForceTrustedTLS = value;
     }
@@ -2366,6 +2377,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appClipsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppClipsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._appClipsBlocked = value;
     }
@@ -2374,6 +2386,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appleNewsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppleNewsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._appleNewsBlocked = value;
     }
@@ -2382,6 +2395,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the applePersonalizedAdsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplePersonalizedAdsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._applePersonalizedAdsBlocked = value;
     }
@@ -2390,6 +2404,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appleWatchBlockPairing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppleWatchBlockPairing(@javax.annotation.Nullable final Boolean value) {
         this._appleWatchBlockPairing = value;
     }
@@ -2398,6 +2413,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appleWatchForceWristDetection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppleWatchForceWristDetection(@javax.annotation.Nullable final Boolean value) {
         this._appleWatchForceWristDetection = value;
     }
@@ -2406,6 +2422,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appRemovalBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRemovalBlocked(@javax.annotation.Nullable final Boolean value) {
         this._appRemovalBlocked = value;
     }
@@ -2414,6 +2431,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appsSingleAppModeList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsSingleAppModeList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._appsSingleAppModeList = value;
     }
@@ -2422,6 +2440,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appStoreBlockAutomaticDownloads property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppStoreBlockAutomaticDownloads(@javax.annotation.Nullable final Boolean value) {
         this._appStoreBlockAutomaticDownloads = value;
     }
@@ -2430,6 +2449,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appStoreBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppStoreBlocked(@javax.annotation.Nullable final Boolean value) {
         this._appStoreBlocked = value;
     }
@@ -2438,6 +2458,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appStoreBlockInAppPurchases property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppStoreBlockInAppPurchases(@javax.annotation.Nullable final Boolean value) {
         this._appStoreBlockInAppPurchases = value;
     }
@@ -2446,6 +2467,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appStoreBlockUIAppInstallation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppStoreBlockUIAppInstallation(@javax.annotation.Nullable final Boolean value) {
         this._appStoreBlockUIAppInstallation = value;
     }
@@ -2454,6 +2476,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appStoreRequirePassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppStoreRequirePassword(@javax.annotation.Nullable final Boolean value) {
         this._appStoreRequirePassword = value;
     }
@@ -2462,6 +2485,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appsVisibilityList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsVisibilityList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._appsVisibilityList = value;
     }
@@ -2470,6 +2494,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appsVisibilityListType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsVisibilityListType(@javax.annotation.Nullable final AppListType value) {
         this._appsVisibilityListType = value;
     }
@@ -2478,6 +2503,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the autoFillForceAuthentication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoFillForceAuthentication(@javax.annotation.Nullable final Boolean value) {
         this._autoFillForceAuthentication = value;
     }
@@ -2486,6 +2512,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the autoUnlockBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoUnlockBlocked(@javax.annotation.Nullable final Boolean value) {
         this._autoUnlockBlocked = value;
     }
@@ -2494,6 +2521,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the blockSystemAppRemoval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockSystemAppRemoval(@javax.annotation.Nullable final Boolean value) {
         this._blockSystemAppRemoval = value;
     }
@@ -2502,6 +2530,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the bluetoothBlockModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBluetoothBlockModification(@javax.annotation.Nullable final Boolean value) {
         this._bluetoothBlockModification = value;
     }
@@ -2510,6 +2539,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cameraBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCameraBlocked(@javax.annotation.Nullable final Boolean value) {
         this._cameraBlocked = value;
     }
@@ -2518,6 +2548,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockDataRoaming property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockDataRoaming(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockDataRoaming = value;
     }
@@ -2526,6 +2557,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockGlobalBackgroundFetchWhileRoaming property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockGlobalBackgroundFetchWhileRoaming(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockGlobalBackgroundFetchWhileRoaming = value;
     }
@@ -2534,6 +2566,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockPerAppDataModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockPerAppDataModification(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockPerAppDataModification = value;
     }
@@ -2542,6 +2575,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockPersonalHotspot property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockPersonalHotspot(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockPersonalHotspot = value;
     }
@@ -2550,6 +2584,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockPersonalHotspotModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockPersonalHotspotModification(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockPersonalHotspotModification = value;
     }
@@ -2558,6 +2593,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockPlanModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockPlanModification(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockPlanModification = value;
     }
@@ -2566,6 +2602,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockVoiceRoaming property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockVoiceRoaming(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockVoiceRoaming = value;
     }
@@ -2574,6 +2611,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the certificatesBlockUntrustedTlsCertificates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificatesBlockUntrustedTlsCertificates(@javax.annotation.Nullable final Boolean value) {
         this._certificatesBlockUntrustedTlsCertificates = value;
     }
@@ -2582,6 +2620,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the classroomAppBlockRemoteScreenObservation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassroomAppBlockRemoteScreenObservation(@javax.annotation.Nullable final Boolean value) {
         this._classroomAppBlockRemoteScreenObservation = value;
     }
@@ -2590,6 +2629,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the classroomAppForceUnpromptedScreenObservation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassroomAppForceUnpromptedScreenObservation(@javax.annotation.Nullable final Boolean value) {
         this._classroomAppForceUnpromptedScreenObservation = value;
     }
@@ -2598,6 +2638,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the classroomForceAutomaticallyJoinClasses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassroomForceAutomaticallyJoinClasses(@javax.annotation.Nullable final Boolean value) {
         this._classroomForceAutomaticallyJoinClasses = value;
     }
@@ -2606,6 +2647,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the classroomForceRequestPermissionToLeaveClasses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassroomForceRequestPermissionToLeaveClasses(@javax.annotation.Nullable final Boolean value) {
         this._classroomForceRequestPermissionToLeaveClasses = value;
     }
@@ -2614,6 +2656,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the classroomForceUnpromptedAppAndDeviceLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassroomForceUnpromptedAppAndDeviceLock(@javax.annotation.Nullable final Boolean value) {
         this._classroomForceUnpromptedAppAndDeviceLock = value;
     }
@@ -2622,6 +2665,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the compliantAppListType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantAppListType(@javax.annotation.Nullable final AppListType value) {
         this._compliantAppListType = value;
     }
@@ -2630,6 +2674,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the compliantAppsList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantAppsList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._compliantAppsList = value;
     }
@@ -2638,6 +2683,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the configurationProfileBlockChanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationProfileBlockChanges(@javax.annotation.Nullable final Boolean value) {
         this._configurationProfileBlockChanges = value;
     }
@@ -2646,6 +2692,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the contactsAllowManagedToUnmanagedWrite property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactsAllowManagedToUnmanagedWrite(@javax.annotation.Nullable final Boolean value) {
         this._contactsAllowManagedToUnmanagedWrite = value;
     }
@@ -2654,6 +2701,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the contactsAllowUnmanagedToManagedRead property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactsAllowUnmanagedToManagedRead(@javax.annotation.Nullable final Boolean value) {
         this._contactsAllowUnmanagedToManagedRead = value;
     }
@@ -2662,6 +2710,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the continuousPathKeyboardBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContinuousPathKeyboardBlocked(@javax.annotation.Nullable final Boolean value) {
         this._continuousPathKeyboardBlocked = value;
     }
@@ -2670,6 +2719,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the dateAndTimeForceSetAutomatically property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDateAndTimeForceSetAutomatically(@javax.annotation.Nullable final Boolean value) {
         this._dateAndTimeForceSetAutomatically = value;
     }
@@ -2678,6 +2728,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the definitionLookupBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitionLookupBlocked(@javax.annotation.Nullable final Boolean value) {
         this._definitionLookupBlocked = value;
     }
@@ -2686,6 +2737,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the deviceBlockEnableRestrictions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceBlockEnableRestrictions(@javax.annotation.Nullable final Boolean value) {
         this._deviceBlockEnableRestrictions = value;
     }
@@ -2694,6 +2746,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the deviceBlockEraseContentAndSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceBlockEraseContentAndSettings(@javax.annotation.Nullable final Boolean value) {
         this._deviceBlockEraseContentAndSettings = value;
     }
@@ -2702,6 +2755,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the deviceBlockNameModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceBlockNameModification(@javax.annotation.Nullable final Boolean value) {
         this._deviceBlockNameModification = value;
     }
@@ -2710,6 +2764,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the diagnosticDataBlockSubmission property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiagnosticDataBlockSubmission(@javax.annotation.Nullable final Boolean value) {
         this._diagnosticDataBlockSubmission = value;
     }
@@ -2718,6 +2773,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the diagnosticDataBlockSubmissionModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiagnosticDataBlockSubmissionModification(@javax.annotation.Nullable final Boolean value) {
         this._diagnosticDataBlockSubmissionModification = value;
     }
@@ -2726,6 +2782,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the documentsBlockManagedDocumentsInUnmanagedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDocumentsBlockManagedDocumentsInUnmanagedApps(@javax.annotation.Nullable final Boolean value) {
         this._documentsBlockManagedDocumentsInUnmanagedApps = value;
     }
@@ -2734,6 +2791,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the documentsBlockUnmanagedDocumentsInManagedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDocumentsBlockUnmanagedDocumentsInManagedApps(@javax.annotation.Nullable final Boolean value) {
         this._documentsBlockUnmanagedDocumentsInManagedApps = value;
     }
@@ -2742,6 +2800,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the emailInDomainSuffixes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailInDomainSuffixes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._emailInDomainSuffixes = value;
     }
@@ -2750,6 +2809,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the enterpriseAppBlockTrust property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseAppBlockTrust(@javax.annotation.Nullable final Boolean value) {
         this._enterpriseAppBlockTrust = value;
     }
@@ -2758,6 +2818,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the enterpriseAppBlockTrustModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseAppBlockTrustModification(@javax.annotation.Nullable final Boolean value) {
         this._enterpriseAppBlockTrustModification = value;
     }
@@ -2766,6 +2827,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the enterpriseBookBlockBackup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseBookBlockBackup(@javax.annotation.Nullable final Boolean value) {
         this._enterpriseBookBlockBackup = value;
     }
@@ -2774,6 +2836,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the enterpriseBookBlockMetadataSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseBookBlockMetadataSync(@javax.annotation.Nullable final Boolean value) {
         this._enterpriseBookBlockMetadataSync = value;
     }
@@ -2782,6 +2845,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the esimBlockModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEsimBlockModification(@javax.annotation.Nullable final Boolean value) {
         this._esimBlockModification = value;
     }
@@ -2790,6 +2854,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the faceTimeBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFaceTimeBlocked(@javax.annotation.Nullable final Boolean value) {
         this._faceTimeBlocked = value;
     }
@@ -2798,6 +2863,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the filesNetworkDriveAccessBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilesNetworkDriveAccessBlocked(@javax.annotation.Nullable final Boolean value) {
         this._filesNetworkDriveAccessBlocked = value;
     }
@@ -2806,6 +2872,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the filesUsbDriveAccessBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilesUsbDriveAccessBlocked(@javax.annotation.Nullable final Boolean value) {
         this._filesUsbDriveAccessBlocked = value;
     }
@@ -2814,6 +2881,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the findMyDeviceInFindMyAppBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFindMyDeviceInFindMyAppBlocked(@javax.annotation.Nullable final Boolean value) {
         this._findMyDeviceInFindMyAppBlocked = value;
     }
@@ -2822,6 +2890,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the findMyFriendsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFindMyFriendsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._findMyFriendsBlocked = value;
     }
@@ -2830,6 +2899,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the findMyFriendsInFindMyAppBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFindMyFriendsInFindMyAppBlocked(@javax.annotation.Nullable final Boolean value) {
         this._findMyFriendsInFindMyAppBlocked = value;
     }
@@ -2838,6 +2908,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the gameCenterBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGameCenterBlocked(@javax.annotation.Nullable final Boolean value) {
         this._gameCenterBlocked = value;
     }
@@ -2846,6 +2917,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the gamingBlockGameCenterFriends property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGamingBlockGameCenterFriends(@javax.annotation.Nullable final Boolean value) {
         this._gamingBlockGameCenterFriends = value;
     }
@@ -2854,6 +2926,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the gamingBlockMultiplayer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGamingBlockMultiplayer(@javax.annotation.Nullable final Boolean value) {
         this._gamingBlockMultiplayer = value;
     }
@@ -2862,6 +2935,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the hostPairingBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHostPairingBlocked(@javax.annotation.Nullable final Boolean value) {
         this._hostPairingBlocked = value;
     }
@@ -2870,6 +2944,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iBooksStoreBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIBooksStoreBlocked(@javax.annotation.Nullable final Boolean value) {
         this._iBooksStoreBlocked = value;
     }
@@ -2878,6 +2953,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iBooksStoreBlockErotica property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIBooksStoreBlockErotica(@javax.annotation.Nullable final Boolean value) {
         this._iBooksStoreBlockErotica = value;
     }
@@ -2886,6 +2962,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudBlockActivityContinuation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockActivityContinuation(@javax.annotation.Nullable final Boolean value) {
         this._iCloudBlockActivityContinuation = value;
     }
@@ -2894,6 +2971,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudBlockBackup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockBackup(@javax.annotation.Nullable final Boolean value) {
         this._iCloudBlockBackup = value;
     }
@@ -2902,6 +2980,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudBlockDocumentSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockDocumentSync(@javax.annotation.Nullable final Boolean value) {
         this._iCloudBlockDocumentSync = value;
     }
@@ -2910,6 +2989,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudBlockManagedAppsSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockManagedAppsSync(@javax.annotation.Nullable final Boolean value) {
         this._iCloudBlockManagedAppsSync = value;
     }
@@ -2918,6 +2998,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudBlockPhotoLibrary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockPhotoLibrary(@javax.annotation.Nullable final Boolean value) {
         this._iCloudBlockPhotoLibrary = value;
     }
@@ -2926,6 +3007,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudBlockPhotoStreamSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockPhotoStreamSync(@javax.annotation.Nullable final Boolean value) {
         this._iCloudBlockPhotoStreamSync = value;
     }
@@ -2934,6 +3016,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudBlockSharedPhotoStream property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockSharedPhotoStream(@javax.annotation.Nullable final Boolean value) {
         this._iCloudBlockSharedPhotoStream = value;
     }
@@ -2942,6 +3025,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudPrivateRelayBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudPrivateRelayBlocked(@javax.annotation.Nullable final Boolean value) {
         this._iCloudPrivateRelayBlocked = value;
     }
@@ -2950,6 +3034,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iCloudRequireEncryptedBackup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudRequireEncryptedBackup(@javax.annotation.Nullable final Boolean value) {
         this._iCloudRequireEncryptedBackup = value;
     }
@@ -2958,6 +3043,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iTunesBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setITunesBlocked(@javax.annotation.Nullable final Boolean value) {
         this._iTunesBlocked = value;
     }
@@ -2966,6 +3052,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iTunesBlockExplicitContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setITunesBlockExplicitContent(@javax.annotation.Nullable final Boolean value) {
         this._iTunesBlockExplicitContent = value;
     }
@@ -2974,6 +3061,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iTunesBlockMusicService property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setITunesBlockMusicService(@javax.annotation.Nullable final Boolean value) {
         this._iTunesBlockMusicService = value;
     }
@@ -2982,6 +3070,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the iTunesBlockRadio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setITunesBlockRadio(@javax.annotation.Nullable final Boolean value) {
         this._iTunesBlockRadio = value;
     }
@@ -2990,6 +3079,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the keyboardBlockAutoCorrect property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyboardBlockAutoCorrect(@javax.annotation.Nullable final Boolean value) {
         this._keyboardBlockAutoCorrect = value;
     }
@@ -2998,6 +3088,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the keyboardBlockDictation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyboardBlockDictation(@javax.annotation.Nullable final Boolean value) {
         this._keyboardBlockDictation = value;
     }
@@ -3006,6 +3097,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the keyboardBlockPredictive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyboardBlockPredictive(@javax.annotation.Nullable final Boolean value) {
         this._keyboardBlockPredictive = value;
     }
@@ -3014,6 +3106,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the keyboardBlockShortcuts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyboardBlockShortcuts(@javax.annotation.Nullable final Boolean value) {
         this._keyboardBlockShortcuts = value;
     }
@@ -3022,6 +3115,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the keyboardBlockSpellCheck property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyboardBlockSpellCheck(@javax.annotation.Nullable final Boolean value) {
         this._keyboardBlockSpellCheck = value;
     }
@@ -3030,6 +3124,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the keychainBlockCloudSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeychainBlockCloudSync(@javax.annotation.Nullable final Boolean value) {
         this._keychainBlockCloudSync = value;
     }
@@ -3038,6 +3133,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowAssistiveSpeak property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAllowAssistiveSpeak(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeAllowAssistiveSpeak = value;
     }
@@ -3046,6 +3142,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowAssistiveTouchSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAllowAssistiveTouchSettings(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeAllowAssistiveTouchSettings = value;
     }
@@ -3054,6 +3151,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowAutoLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAllowAutoLock(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeAllowAutoLock = value;
     }
@@ -3062,6 +3160,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowColorInversionSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAllowColorInversionSettings(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeAllowColorInversionSettings = value;
     }
@@ -3070,6 +3169,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowRingerSwitch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAllowRingerSwitch(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeAllowRingerSwitch = value;
     }
@@ -3078,6 +3178,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowScreenRotation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAllowScreenRotation(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeAllowScreenRotation = value;
     }
@@ -3086,6 +3187,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowSleepButton property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAllowSleepButton(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeAllowSleepButton = value;
     }
@@ -3094,6 +3196,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowTouchscreen property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAllowTouchscreen(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeAllowTouchscreen = value;
     }
@@ -3102,6 +3205,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowVoiceControlModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAllowVoiceControlModification(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeAllowVoiceControlModification = value;
     }
@@ -3110,6 +3214,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowVoiceOverSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAllowVoiceOverSettings(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeAllowVoiceOverSettings = value;
     }
@@ -3118,6 +3223,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowVolumeButtons property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAllowVolumeButtons(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeAllowVolumeButtons = value;
     }
@@ -3126,6 +3232,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAllowZoomSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAllowZoomSettings(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeAllowZoomSettings = value;
     }
@@ -3134,6 +3241,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAppStoreUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAppStoreUrl(@javax.annotation.Nullable final String value) {
         this._kioskModeAppStoreUrl = value;
     }
@@ -3142,6 +3250,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeAppType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeAppType(@javax.annotation.Nullable final IosKioskModeAppType value) {
         this._kioskModeAppType = value;
     }
@@ -3150,6 +3259,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeBlockAutoLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeBlockAutoLock(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeBlockAutoLock = value;
     }
@@ -3158,6 +3268,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeBlockRingerSwitch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeBlockRingerSwitch(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeBlockRingerSwitch = value;
     }
@@ -3166,6 +3277,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeBlockScreenRotation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeBlockScreenRotation(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeBlockScreenRotation = value;
     }
@@ -3174,6 +3286,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeBlockSleepButton property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeBlockSleepButton(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeBlockSleepButton = value;
     }
@@ -3182,6 +3295,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeBlockTouchscreen property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeBlockTouchscreen(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeBlockTouchscreen = value;
     }
@@ -3190,6 +3304,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeBlockVolumeButtons property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeBlockVolumeButtons(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeBlockVolumeButtons = value;
     }
@@ -3198,6 +3313,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeBuiltInAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeBuiltInAppId(@javax.annotation.Nullable final String value) {
         this._kioskModeBuiltInAppId = value;
     }
@@ -3206,6 +3322,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeEnableVoiceControl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeEnableVoiceControl(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeEnableVoiceControl = value;
     }
@@ -3214,6 +3331,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeManagedAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeManagedAppId(@javax.annotation.Nullable final String value) {
         this._kioskModeManagedAppId = value;
     }
@@ -3222,6 +3340,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeRequireAssistiveTouch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeRequireAssistiveTouch(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeRequireAssistiveTouch = value;
     }
@@ -3230,6 +3349,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeRequireColorInversion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeRequireColorInversion(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeRequireColorInversion = value;
     }
@@ -3238,6 +3358,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeRequireMonoAudio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeRequireMonoAudio(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeRequireMonoAudio = value;
     }
@@ -3246,6 +3367,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeRequireVoiceOver property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeRequireVoiceOver(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeRequireVoiceOver = value;
     }
@@ -3254,6 +3376,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the kioskModeRequireZoom property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeRequireZoom(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeRequireZoom = value;
     }
@@ -3262,6 +3385,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the lockScreenBlockControlCenter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLockScreenBlockControlCenter(@javax.annotation.Nullable final Boolean value) {
         this._lockScreenBlockControlCenter = value;
     }
@@ -3270,6 +3394,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the lockScreenBlockNotificationView property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLockScreenBlockNotificationView(@javax.annotation.Nullable final Boolean value) {
         this._lockScreenBlockNotificationView = value;
     }
@@ -3278,6 +3403,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the lockScreenBlockPassbook property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLockScreenBlockPassbook(@javax.annotation.Nullable final Boolean value) {
         this._lockScreenBlockPassbook = value;
     }
@@ -3286,6 +3412,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the lockScreenBlockTodayView property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLockScreenBlockTodayView(@javax.annotation.Nullable final Boolean value) {
         this._lockScreenBlockTodayView = value;
     }
@@ -3294,6 +3421,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the managedPasteboardRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedPasteboardRequired(@javax.annotation.Nullable final Boolean value) {
         this._managedPasteboardRequired = value;
     }
@@ -3302,6 +3430,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaContentRatingApps(@javax.annotation.Nullable final RatingAppsType value) {
         this._mediaContentRatingApps = value;
     }
@@ -3310,6 +3439,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingAustralia property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaContentRatingAustralia(@javax.annotation.Nullable final MediaContentRatingAustralia value) {
         this._mediaContentRatingAustralia = value;
     }
@@ -3318,6 +3448,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingCanada property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaContentRatingCanada(@javax.annotation.Nullable final MediaContentRatingCanada value) {
         this._mediaContentRatingCanada = value;
     }
@@ -3326,6 +3457,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingFrance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaContentRatingFrance(@javax.annotation.Nullable final MediaContentRatingFrance value) {
         this._mediaContentRatingFrance = value;
     }
@@ -3334,6 +3466,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingGermany property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaContentRatingGermany(@javax.annotation.Nullable final MediaContentRatingGermany value) {
         this._mediaContentRatingGermany = value;
     }
@@ -3342,6 +3475,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingIreland property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaContentRatingIreland(@javax.annotation.Nullable final MediaContentRatingIreland value) {
         this._mediaContentRatingIreland = value;
     }
@@ -3350,6 +3484,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingJapan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaContentRatingJapan(@javax.annotation.Nullable final MediaContentRatingJapan value) {
         this._mediaContentRatingJapan = value;
     }
@@ -3358,6 +3493,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingNewZealand property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaContentRatingNewZealand(@javax.annotation.Nullable final MediaContentRatingNewZealand value) {
         this._mediaContentRatingNewZealand = value;
     }
@@ -3366,6 +3502,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingUnitedKingdom property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaContentRatingUnitedKingdom(@javax.annotation.Nullable final MediaContentRatingUnitedKingdom value) {
         this._mediaContentRatingUnitedKingdom = value;
     }
@@ -3374,6 +3511,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the mediaContentRatingUnitedStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaContentRatingUnitedStates(@javax.annotation.Nullable final MediaContentRatingUnitedStates value) {
         this._mediaContentRatingUnitedStates = value;
     }
@@ -3382,6 +3520,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the messagesBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessagesBlocked(@javax.annotation.Nullable final Boolean value) {
         this._messagesBlocked = value;
     }
@@ -3390,6 +3529,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the networkUsageRules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkUsageRules(@javax.annotation.Nullable final java.util.List<IosNetworkUsageRule> value) {
         this._networkUsageRules = value;
     }
@@ -3398,6 +3538,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the nfcBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNfcBlocked(@javax.annotation.Nullable final Boolean value) {
         this._nfcBlocked = value;
     }
@@ -3406,22 +3547,25 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the notificationsBlockSettingsModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationsBlockSettingsModification(@javax.annotation.Nullable final Boolean value) {
         this._notificationsBlockSettingsModification = value;
     }
     /**
-     * Sets the onDeviceOnlyDictationForced property value. Disables connections to Siri servers so that users can’t use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later.
+     * Sets the onDeviceOnlyDictationForced property value. Disables connections to Siri servers so that users cant use Siri to dictate text. Available for devices running iOS and iPadOS versions 14.5 and later.
      * @param value Value to set for the onDeviceOnlyDictationForced property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnDeviceOnlyDictationForced(@javax.annotation.Nullable final Boolean value) {
         this._onDeviceOnlyDictationForced = value;
     }
     /**
-     * Sets the onDeviceOnlyTranslationForced property value. When set to TRUE, the setting disables connections to Siri servers so that users can’t use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later.
+     * Sets the onDeviceOnlyTranslationForced property value. When set to TRUE, the setting disables connections to Siri servers so that users cant use Siri to translate text. When set to FALSE, the setting allows connections to to Siri servers to users can use Siri to translate text. Available for devices running iOS and iPadOS versions 15.0 and later.
      * @param value Value to set for the onDeviceOnlyTranslationForced property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnDeviceOnlyTranslationForced(@javax.annotation.Nullable final Boolean value) {
         this._onDeviceOnlyTranslationForced = value;
     }
@@ -3430,6 +3574,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeBlockFingerprintModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeBlockFingerprintModification(@javax.annotation.Nullable final Boolean value) {
         this._passcodeBlockFingerprintModification = value;
     }
@@ -3438,6 +3583,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeBlockFingerprintUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeBlockFingerprintUnlock(@javax.annotation.Nullable final Boolean value) {
         this._passcodeBlockFingerprintUnlock = value;
     }
@@ -3446,6 +3592,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeBlockModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeBlockModification(@javax.annotation.Nullable final Boolean value) {
         this._passcodeBlockModification = value;
     }
@@ -3454,6 +3601,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeBlockSimple property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeBlockSimple(@javax.annotation.Nullable final Boolean value) {
         this._passcodeBlockSimple = value;
     }
@@ -3462,6 +3610,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passcodeExpirationDays = value;
     }
@@ -3470,6 +3619,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeMinimumCharacterSetCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
         this._passcodeMinimumCharacterSetCount = value;
     }
@@ -3478,6 +3628,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passcodeMinimumLength = value;
     }
@@ -3486,6 +3637,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeMinutesOfInactivityBeforeLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
         this._passcodeMinutesOfInactivityBeforeLock = value;
     }
@@ -3494,6 +3646,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
         this._passcodeMinutesOfInactivityBeforeScreenTimeout = value;
     }
@@ -3502,6 +3655,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodePreviousPasscodeBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodePreviousPasscodeBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passcodePreviousPasscodeBlockCount = value;
     }
@@ -3510,6 +3664,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeRequired(@javax.annotation.Nullable final Boolean value) {
         this._passcodeRequired = value;
     }
@@ -3518,6 +3673,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
         this._passcodeRequiredType = value;
     }
@@ -3526,6 +3682,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passcodeSignInFailureCountBeforeWipe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeSignInFailureCountBeforeWipe(@javax.annotation.Nullable final Integer value) {
         this._passcodeSignInFailureCountBeforeWipe = value;
     }
@@ -3534,6 +3691,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordBlockAirDropSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockAirDropSharing(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockAirDropSharing = value;
     }
@@ -3542,6 +3700,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordBlockAutoFill property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockAutoFill(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockAutoFill = value;
     }
@@ -3550,6 +3709,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordBlockProximityRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockProximityRequests(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockProximityRequests = value;
     }
@@ -3558,6 +3718,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the pkiBlockOTAUpdates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPkiBlockOTAUpdates(@javax.annotation.Nullable final Boolean value) {
         this._pkiBlockOTAUpdates = value;
     }
@@ -3566,6 +3727,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the podcastsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPodcastsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._podcastsBlocked = value;
     }
@@ -3574,6 +3736,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the privacyForceLimitAdTracking property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyForceLimitAdTracking(@javax.annotation.Nullable final Boolean value) {
         this._privacyForceLimitAdTracking = value;
     }
@@ -3582,6 +3745,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the proximityBlockSetupToNewDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProximityBlockSetupToNewDevice(@javax.annotation.Nullable final Boolean value) {
         this._proximityBlockSetupToNewDevice = value;
     }
@@ -3590,6 +3754,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safariBlockAutofill property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSafariBlockAutofill(@javax.annotation.Nullable final Boolean value) {
         this._safariBlockAutofill = value;
     }
@@ -3598,6 +3763,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safariBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSafariBlocked(@javax.annotation.Nullable final Boolean value) {
         this._safariBlocked = value;
     }
@@ -3606,6 +3772,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safariBlockJavaScript property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSafariBlockJavaScript(@javax.annotation.Nullable final Boolean value) {
         this._safariBlockJavaScript = value;
     }
@@ -3614,6 +3781,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safariBlockPopups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSafariBlockPopups(@javax.annotation.Nullable final Boolean value) {
         this._safariBlockPopups = value;
     }
@@ -3622,6 +3790,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safariCookieSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSafariCookieSettings(@javax.annotation.Nullable final WebBrowserCookieSettings value) {
         this._safariCookieSettings = value;
     }
@@ -3630,6 +3799,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safariManagedDomains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSafariManagedDomains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._safariManagedDomains = value;
     }
@@ -3638,6 +3808,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safariPasswordAutoFillDomains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSafariPasswordAutoFillDomains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._safariPasswordAutoFillDomains = value;
     }
@@ -3646,6 +3817,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safariRequireFraudWarning property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSafariRequireFraudWarning(@javax.annotation.Nullable final Boolean value) {
         this._safariRequireFraudWarning = value;
     }
@@ -3654,6 +3826,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the screenCaptureBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
         this._screenCaptureBlocked = value;
     }
@@ -3662,6 +3835,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the sharedDeviceBlockTemporarySessions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedDeviceBlockTemporarySessions(@javax.annotation.Nullable final Boolean value) {
         this._sharedDeviceBlockTemporarySessions = value;
     }
@@ -3670,6 +3844,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the siriBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiriBlocked(@javax.annotation.Nullable final Boolean value) {
         this._siriBlocked = value;
     }
@@ -3678,6 +3853,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the siriBlockedWhenLocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiriBlockedWhenLocked(@javax.annotation.Nullable final Boolean value) {
         this._siriBlockedWhenLocked = value;
     }
@@ -3686,6 +3862,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the siriBlockUserGeneratedContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiriBlockUserGeneratedContent(@javax.annotation.Nullable final Boolean value) {
         this._siriBlockUserGeneratedContent = value;
     }
@@ -3694,6 +3871,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the siriRequireProfanityFilter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiriRequireProfanityFilter(@javax.annotation.Nullable final Boolean value) {
         this._siriRequireProfanityFilter = value;
     }
@@ -3702,6 +3880,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the softwareUpdatesEnforcedDelayInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareUpdatesEnforcedDelayInDays(@javax.annotation.Nullable final Integer value) {
         this._softwareUpdatesEnforcedDelayInDays = value;
     }
@@ -3710,6 +3889,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the softwareUpdatesForceDelayed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareUpdatesForceDelayed(@javax.annotation.Nullable final Boolean value) {
         this._softwareUpdatesForceDelayed = value;
     }
@@ -3718,6 +3898,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the spotlightBlockInternetResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpotlightBlockInternetResults(@javax.annotation.Nullable final Boolean value) {
         this._spotlightBlockInternetResults = value;
     }
@@ -3726,6 +3907,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the unpairedExternalBootToRecoveryAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnpairedExternalBootToRecoveryAllowed(@javax.annotation.Nullable final Boolean value) {
         this._unpairedExternalBootToRecoveryAllowed = value;
     }
@@ -3734,6 +3916,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the usbRestrictedModeBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsbRestrictedModeBlocked(@javax.annotation.Nullable final Boolean value) {
         this._usbRestrictedModeBlocked = value;
     }
@@ -3742,6 +3925,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the voiceDialingBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVoiceDialingBlocked(@javax.annotation.Nullable final Boolean value) {
         this._voiceDialingBlocked = value;
     }
@@ -3750,6 +3934,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the vpnBlockCreation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVpnBlockCreation(@javax.annotation.Nullable final Boolean value) {
         this._vpnBlockCreation = value;
     }
@@ -3758,6 +3943,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the wallpaperBlockModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWallpaperBlockModification(@javax.annotation.Nullable final Boolean value) {
         this._wallpaperBlockModification = value;
     }
@@ -3766,6 +3952,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the wiFiConnectOnlyToConfiguredNetworks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWiFiConnectOnlyToConfiguredNetworks(@javax.annotation.Nullable final Boolean value) {
         this._wiFiConnectOnlyToConfiguredNetworks = value;
     }
@@ -3774,6 +3961,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the wiFiConnectToAllowedNetworksOnlyForced property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWiFiConnectToAllowedNetworksOnlyForced(@javax.annotation.Nullable final Boolean value) {
         this._wiFiConnectToAllowedNetworksOnlyForced = value;
     }
@@ -3782,6 +3970,7 @@ public class IosGeneralDeviceConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the wifiPowerOnForced property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiPowerOnForced(@javax.annotation.Nullable final Boolean value) {
         this._wifiPowerOnForced = value;
     }

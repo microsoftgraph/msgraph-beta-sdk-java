@@ -22,6 +22,7 @@ public class Relation extends Entity implements Parsable {
      * Instantiates a new relation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Relation() {
         super();
         this.setOdataType("#microsoft.graph.termStore.relation");
@@ -43,12 +44,12 @@ public class Relation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Relation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("fromTerm", (n) -> { currentObject.setFromTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
-            this.put("relationship", (n) -> { currentObject.setRelationship(n.getEnumValue(RelationType.class)); });
-            this.put("set", (n) -> { currentObject.setSet(n.getObjectValue(Set::createFromDiscriminatorValue)); });
-            this.put("toTerm", (n) -> { currentObject.setToTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fromTerm", (n) -> { currentObject.setFromTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
+        deserializerMap.put("relationship", (n) -> { currentObject.setRelationship(n.getEnumValue(RelationType.class)); });
+        deserializerMap.put("set", (n) -> { currentObject.setSet(n.getObjectValue(Set::createFromDiscriminatorValue)); });
+        deserializerMap.put("toTerm", (n) -> { currentObject.setToTerm(n.getObjectValue(Term::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the fromTerm property value. The from [term] of the relation. The term from which the relationship is defined. A null value would indicate the relation is directly with the [set].
@@ -87,6 +88,7 @@ public class Relation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -100,6 +102,7 @@ public class Relation extends Entity implements Parsable {
      * @param value Value to set for the fromTerm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFromTerm(@javax.annotation.Nullable final Term value) {
         this._fromTerm = value;
     }
@@ -108,6 +111,7 @@ public class Relation extends Entity implements Parsable {
      * @param value Value to set for the relationship property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelationship(@javax.annotation.Nullable final RelationType value) {
         this._relationship = value;
     }
@@ -116,6 +120,7 @@ public class Relation extends Entity implements Parsable {
      * @param value Value to set for the set property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSet(@javax.annotation.Nullable final Set value) {
         this._set = value;
     }
@@ -124,6 +129,7 @@ public class Relation extends Entity implements Parsable {
      * @param value Value to set for the toTerm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setToTerm(@javax.annotation.Nullable final Term value) {
         this._toTerm = value;
     }

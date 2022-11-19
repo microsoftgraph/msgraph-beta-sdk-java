@@ -17,6 +17,7 @@ public class UserIdentity extends Identity implements Parsable {
      * Instantiates a new UserIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserIdentity() {
         super();
         this.setOdataType("#microsoft.graph.userIdentity");
@@ -45,10 +46,10 @@ public class UserIdentity extends Identity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the ipAddress property value. Indicates the client IP address used by user performing the activity (audit log only).
@@ -71,6 +72,7 @@ public class UserIdentity extends Identity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -82,6 +84,7 @@ public class UserIdentity extends Identity implements Parsable {
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
     }
@@ -90,6 +93,7 @@ public class UserIdentity extends Identity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

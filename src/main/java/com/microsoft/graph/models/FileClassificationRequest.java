@@ -16,6 +16,7 @@ public class FileClassificationRequest extends Entity implements Parsable {
      * Instantiates a new FileClassificationRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FileClassificationRequest() {
         super();
         this.setOdataType("#microsoft.graph.fileClassificationRequest");
@@ -37,10 +38,10 @@ public class FileClassificationRequest extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FileClassificationRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("file", (n) -> { currentObject.setFile(n.getByteArrayValue()); });
-            this.put("sensitiveTypeIds", (n) -> { currentObject.setSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("file", (n) -> { currentObject.setFile(n.getByteArrayValue()); });
+        deserializerMap.put("sensitiveTypeIds", (n) -> { currentObject.setSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the file property value. The file property
@@ -63,6 +64,7 @@ public class FileClassificationRequest extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class FileClassificationRequest extends Entity implements Parsable {
      * @param value Value to set for the file property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFile(@javax.annotation.Nullable final byte[] value) {
         this._file = value;
     }
@@ -82,6 +85,7 @@ public class FileClassificationRequest extends Entity implements Parsable {
      * @param value Value to set for the sensitiveTypeIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitiveTypeIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._sensitiveTypeIds = value;
     }

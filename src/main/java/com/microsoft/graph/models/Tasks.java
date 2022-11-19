@@ -13,9 +13,10 @@ public class Tasks extends Entity implements Parsable {
     /** The task lists in the users mailbox. */
     private java.util.List<BaseTaskList> _lists;
     /**
-     * Instantiates a new Tasks and sets the default values.
+     * Instantiates a new tasks and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Tasks() {
         super();
         this.setOdataType("#microsoft.graph.tasks");
@@ -23,7 +24,7 @@ public class Tasks extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Tasks
+     * @return a tasks
      */
     @javax.annotation.Nonnull
     public static Tasks createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -45,10 +46,10 @@ public class Tasks extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Tasks currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("alltasks", (n) -> { currentObject.setAlltasks(n.getCollectionOfObjectValues(BaseTask::createFromDiscriminatorValue)); });
-            this.put("lists", (n) -> { currentObject.setLists(n.getCollectionOfObjectValues(BaseTaskList::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("alltasks", (n) -> { currentObject.setAlltasks(n.getCollectionOfObjectValues(BaseTask::createFromDiscriminatorValue)); });
+        deserializerMap.put("lists", (n) -> { currentObject.setLists(n.getCollectionOfObjectValues(BaseTaskList::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the lists property value. The task lists in the users mailbox.
@@ -63,6 +64,7 @@ public class Tasks extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class Tasks extends Entity implements Parsable {
      * @param value Value to set for the alltasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlltasks(@javax.annotation.Nullable final java.util.List<BaseTask> value) {
         this._alltasks = value;
     }
@@ -82,6 +85,7 @@ public class Tasks extends Entity implements Parsable {
      * @param value Value to set for the lists property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLists(@javax.annotation.Nullable final java.util.List<BaseTaskList> value) {
         this._lists = value;
     }

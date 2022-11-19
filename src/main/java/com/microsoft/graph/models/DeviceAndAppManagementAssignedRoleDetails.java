@@ -22,6 +22,7 @@ public class DeviceAndAppManagementAssignedRoleDetails implements AdditionalData
      * Instantiates a new deviceAndAppManagementAssignedRoleDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceAndAppManagementAssignedRoleDetails() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceAndAppManagementAssignedRoleDetails");
@@ -51,11 +52,11 @@ public class DeviceAndAppManagementAssignedRoleDetails implements AdditionalData
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceAndAppManagementAssignedRoleDetails currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("roleAssignmentIds", (n) -> { currentObject.setRoleAssignmentIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("roleDefinitionIds", (n) -> { currentObject.setRoleDefinitionIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("roleAssignmentIds", (n) -> { currentObject.setRoleAssignmentIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("roleDefinitionIds", (n) -> { currentObject.setRoleDefinitionIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -86,11 +87,10 @@ public class DeviceAndAppManagementAssignedRoleDetails implements AdditionalData
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeCollectionOfPrimitiveValues("roleAssignmentIds", this.getRoleAssignmentIds());
-        writer.writeCollectionOfPrimitiveValues("roleDefinitionIds", this.getRoleDefinitionIds());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -98,6 +98,7 @@ public class DeviceAndAppManagementAssignedRoleDetails implements AdditionalData
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +107,7 @@ public class DeviceAndAppManagementAssignedRoleDetails implements AdditionalData
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -114,6 +116,7 @@ public class DeviceAndAppManagementAssignedRoleDetails implements AdditionalData
      * @param value Value to set for the roleAssignmentIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignmentIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleAssignmentIds = value;
     }
@@ -122,6 +125,7 @@ public class DeviceAndAppManagementAssignedRoleDetails implements AdditionalData
      * @param value Value to set for the roleDefinitionIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitionIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleDefinitionIds = value;
     }

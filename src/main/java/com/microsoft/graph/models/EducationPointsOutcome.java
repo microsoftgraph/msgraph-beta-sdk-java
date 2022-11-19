@@ -16,6 +16,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      * Instantiates a new EducationPointsOutcome and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationPointsOutcome() {
         super();
         this.setOdataType("#microsoft.graph.educationPointsOutcome");
@@ -37,10 +38,10 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationPointsOutcome currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("points", (n) -> { currentObject.setPoints(n.getObjectValue(EducationAssignmentPointsGrade::createFromDiscriminatorValue)); });
-            this.put("publishedPoints", (n) -> { currentObject.setPublishedPoints(n.getObjectValue(EducationAssignmentPointsGrade::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("points", (n) -> { currentObject.setPoints(n.getObjectValue(EducationAssignmentPointsGrade::createFromDiscriminatorValue)); });
+        deserializerMap.put("publishedPoints", (n) -> { currentObject.setPublishedPoints(n.getObjectValue(EducationAssignmentPointsGrade::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the points property value. The numeric grade the teacher has given the student for this assignment.
@@ -63,6 +64,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      * @param value Value to set for the points property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPoints(@javax.annotation.Nullable final EducationAssignmentPointsGrade value) {
         this._points = value;
     }
@@ -82,6 +85,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
      * @param value Value to set for the publishedPoints property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishedPoints(@javax.annotation.Nullable final EducationAssignmentPointsGrade value) {
         this._publishedPoints = value;
     }

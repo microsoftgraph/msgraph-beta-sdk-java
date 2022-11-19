@@ -22,6 +22,7 @@ public class AssignResourceAccountToDevicePostRequestBody implements AdditionalD
      * Instantiates a new assignResourceAccountToDevicePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignResourceAccountToDevicePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -58,11 +59,11 @@ public class AssignResourceAccountToDevicePostRequestBody implements AdditionalD
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignResourceAccountToDevicePostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("addressableUserName", (n) -> { currentObject.setAddressableUserName(n.getStringValue()); });
-            this.put("resourceAccountName", (n) -> { currentObject.setResourceAccountName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("addressableUserName", (n) -> { currentObject.setAddressableUserName(n.getStringValue()); });
+        deserializerMap.put("resourceAccountName", (n) -> { currentObject.setResourceAccountName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the resourceAccountName property value. The resourceAccountName property
@@ -85,6 +86,7 @@ public class AssignResourceAccountToDevicePostRequestBody implements AdditionalD
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("addressableUserName", this.getAddressableUserName());
@@ -97,6 +99,7 @@ public class AssignResourceAccountToDevicePostRequestBody implements AdditionalD
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class AssignResourceAccountToDevicePostRequestBody implements AdditionalD
      * @param value Value to set for the addressableUserName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddressableUserName(@javax.annotation.Nullable final String value) {
         this._addressableUserName = value;
     }
@@ -113,6 +117,7 @@ public class AssignResourceAccountToDevicePostRequestBody implements AdditionalD
      * @param value Value to set for the resourceAccountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceAccountName(@javax.annotation.Nullable final String value) {
         this._resourceAccountName = value;
     }
@@ -121,6 +126,7 @@ public class AssignResourceAccountToDevicePostRequestBody implements AdditionalD
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

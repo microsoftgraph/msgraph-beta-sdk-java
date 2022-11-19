@@ -23,6 +23,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
      * Instantiates a new appLogCollectionDownloadDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppLogCollectionDownloadDetails() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.appLogCollectionDownloadDetails");
@@ -76,12 +77,12 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppLogCollectionDownloadDetails currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("appLogDecryptionAlgorithm", (n) -> { currentObject.setAppLogDecryptionAlgorithm(n.getEnumValue(AppLogDecryptionAlgorithm.class)); });
-            this.put("decryptionKey", (n) -> { currentObject.setDecryptionKey(n.getStringValue()); });
-            this.put("downloadUrl", (n) -> { currentObject.setDownloadUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("appLogDecryptionAlgorithm", (n) -> { currentObject.setAppLogDecryptionAlgorithm(n.getEnumValue(AppLogDecryptionAlgorithm.class)); });
+        deserializerMap.put("decryptionKey", (n) -> { currentObject.setDecryptionKey(n.getStringValue()); });
+        deserializerMap.put("downloadUrl", (n) -> { currentObject.setDownloadUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -96,6 +97,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("appLogDecryptionAlgorithm", this.getAppLogDecryptionAlgorithm());
@@ -109,6 +111,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
      * @param value Value to set for the appLogDecryptionAlgorithm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppLogDecryptionAlgorithm(@javax.annotation.Nullable final AppLogDecryptionAlgorithm value) {
         this._appLogDecryptionAlgorithm = value;
     }
@@ -125,6 +129,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
      * @param value Value to set for the decryptionKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecryptionKey(@javax.annotation.Nullable final String value) {
         this._decryptionKey = value;
     }
@@ -133,6 +138,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
      * @param value Value to set for the downloadUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDownloadUrl(@javax.annotation.Nullable final String value) {
         this._downloadUrl = value;
     }
@@ -141,6 +147,7 @@ public class AppLogCollectionDownloadDetails implements AdditionalDataHolder, Pa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

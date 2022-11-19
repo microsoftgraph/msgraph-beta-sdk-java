@@ -16,6 +16,7 @@ public class AndroidTrustedRootCertificate extends DeviceConfiguration implement
      * Instantiates a new androidTrustedRootCertificate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidTrustedRootCertificate() {
         super();
         this.setOdataType("#microsoft.graph.androidTrustedRootCertificate");
@@ -45,10 +46,10 @@ public class AndroidTrustedRootCertificate extends DeviceConfiguration implement
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidTrustedRootCertificate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certFileName", (n) -> { currentObject.setCertFileName(n.getStringValue()); });
-            this.put("trustedRootCertificate", (n) -> { currentObject.setTrustedRootCertificate(n.getByteArrayValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certFileName", (n) -> { currentObject.setCertFileName(n.getStringValue()); });
+        deserializerMap.put("trustedRootCertificate", (n) -> { currentObject.setTrustedRootCertificate(n.getByteArrayValue()); });
+        return deserializerMap
     }
     /**
      * Gets the trustedRootCertificate property value. Trusted Root Certificate
@@ -63,6 +64,7 @@ public class AndroidTrustedRootCertificate extends DeviceConfiguration implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class AndroidTrustedRootCertificate extends DeviceConfiguration implement
      * @param value Value to set for the certFileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertFileName(@javax.annotation.Nullable final String value) {
         this._certFileName = value;
     }
@@ -82,6 +85,7 @@ public class AndroidTrustedRootCertificate extends DeviceConfiguration implement
      * @param value Value to set for the trustedRootCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrustedRootCertificate(@javax.annotation.Nullable final byte[] value) {
         this._trustedRootCertificate = value;
     }

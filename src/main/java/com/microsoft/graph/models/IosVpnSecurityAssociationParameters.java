@@ -26,6 +26,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * Instantiates a new iosVpnSecurityAssociationParameters and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosVpnSecurityAssociationParameters() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.iosVpnSecurityAssociationParameters");
@@ -55,13 +56,13 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosVpnSecurityAssociationParameters currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("lifetimeInMinutes", (n) -> { currentObject.setLifetimeInMinutes(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("securityDiffieHellmanGroup", (n) -> { currentObject.setSecurityDiffieHellmanGroup(n.getIntegerValue()); });
-            this.put("securityEncryptionAlgorithm", (n) -> { currentObject.setSecurityEncryptionAlgorithm(n.getEnumValue(VpnEncryptionAlgorithmType.class)); });
-            this.put("securityIntegrityAlgorithm", (n) -> { currentObject.setSecurityIntegrityAlgorithm(n.getEnumValue(VpnIntegrityAlgorithmType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("lifetimeInMinutes", (n) -> { currentObject.setLifetimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("securityDiffieHellmanGroup", (n) -> { currentObject.setSecurityDiffieHellmanGroup(n.getIntegerValue()); });
+        deserializerMap.put("securityEncryptionAlgorithm", (n) -> { currentObject.setSecurityEncryptionAlgorithm(n.getEnumValue(VpnEncryptionAlgorithmType.class)); });
+        deserializerMap.put("securityIntegrityAlgorithm", (n) -> { currentObject.setSecurityIntegrityAlgorithm(n.getEnumValue(VpnIntegrityAlgorithmType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the lifetimeInMinutes property value. Lifetime (minutes)
@@ -108,6 +109,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("lifetimeInMinutes", this.getLifetimeInMinutes());
@@ -122,6 +124,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +133,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * @param value Value to set for the lifetimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLifetimeInMinutes(@javax.annotation.Nullable final Integer value) {
         this._lifetimeInMinutes = value;
     }
@@ -138,6 +142,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -146,6 +151,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * @param value Value to set for the securityDiffieHellmanGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityDiffieHellmanGroup(@javax.annotation.Nullable final Integer value) {
         this._securityDiffieHellmanGroup = value;
     }
@@ -154,6 +160,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * @param value Value to set for the securityEncryptionAlgorithm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityEncryptionAlgorithm(@javax.annotation.Nullable final VpnEncryptionAlgorithmType value) {
         this._securityEncryptionAlgorithm = value;
     }
@@ -162,6 +169,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
      * @param value Value to set for the securityIntegrityAlgorithm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityIntegrityAlgorithm(@javax.annotation.Nullable final VpnIntegrityAlgorithmType value) {
         this._securityIntegrityAlgorithm = value;
     }

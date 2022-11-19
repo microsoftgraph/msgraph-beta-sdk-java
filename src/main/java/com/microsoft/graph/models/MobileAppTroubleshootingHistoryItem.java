@@ -28,6 +28,7 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
      * Instantiates a new mobileAppTroubleshootingHistoryItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppTroubleshootingHistoryItem() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.mobileAppTroubleshootingHistoryItem");
@@ -68,11 +69,11 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppTroubleshootingHistoryItem currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("occurrenceDateTime", (n) -> { currentObject.setOccurrenceDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("troubleshootingErrorDetails", (n) -> { currentObject.setTroubleshootingErrorDetails(n.getObjectValue(DeviceManagementTroubleshootingErrorDetails::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("occurrenceDateTime", (n) -> { currentObject.setOccurrenceDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("troubleshootingErrorDetails", (n) -> { currentObject.setTroubleshootingErrorDetails(n.getObjectValue(DeviceManagementTroubleshootingErrorDetails::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the occurrenceDateTime property value. Time when the history item occurred.
@@ -103,6 +104,7 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("occurrenceDateTime", this.getOccurrenceDateTime());
@@ -115,6 +117,7 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -123,6 +126,7 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
      * @param value Value to set for the occurrenceDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOccurrenceDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._occurrenceDateTime = value;
     }
@@ -131,6 +135,7 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -139,6 +144,7 @@ public class MobileAppTroubleshootingHistoryItem implements AdditionalDataHolder
      * @param value Value to set for the troubleshootingErrorDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTroubleshootingErrorDetails(@javax.annotation.Nullable final DeviceManagementTroubleshootingErrorDetails value) {
         this._troubleshootingErrorDetails = value;
     }

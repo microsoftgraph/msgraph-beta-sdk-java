@@ -25,6 +25,7 @@ public class TimeCardBreak implements AdditionalDataHolder, Parsable {
      * Instantiates a new timeCardBreak and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TimeCardBreak() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.timeCardBreak");
@@ -70,13 +71,13 @@ public class TimeCardBreak implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeCardBreak currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("breakId", (n) -> { currentObject.setBreakId(n.getStringValue()); });
-            this.put("end", (n) -> { currentObject.setEnd(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("start", (n) -> { currentObject.setStart(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("breakId", (n) -> { currentObject.setBreakId(n.getStringValue()); });
+        deserializerMap.put("end", (n) -> { currentObject.setEnd(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });
+        deserializerMap.put("notes", (n) -> { currentObject.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("start", (n) -> { currentObject.setStart(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the notes property value. Notes about the timeCardBreak.
@@ -107,6 +108,7 @@ public class TimeCardBreak implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("breakId", this.getBreakId());
@@ -121,6 +123,7 @@ public class TimeCardBreak implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class TimeCardBreak implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the breakId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBreakId(@javax.annotation.Nullable final String value) {
         this._breakId = value;
     }
@@ -137,6 +141,7 @@ public class TimeCardBreak implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the end property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnd(@javax.annotation.Nullable final TimeCardEvent value) {
         this._end = value;
     }
@@ -145,6 +150,7 @@ public class TimeCardBreak implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final ItemBody value) {
         this._notes = value;
     }
@@ -153,6 +159,7 @@ public class TimeCardBreak implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -161,6 +168,7 @@ public class TimeCardBreak implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the start property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStart(@javax.annotation.Nullable final TimeCardEvent value) {
         this._start = value;
     }

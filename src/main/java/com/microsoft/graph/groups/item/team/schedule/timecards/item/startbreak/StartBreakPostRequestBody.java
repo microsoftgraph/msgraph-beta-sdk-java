@@ -21,6 +21,7 @@ public class StartBreakPostRequestBody implements AdditionalDataHolder, Parsable
      * Instantiates a new startBreakPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public StartBreakPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -57,10 +58,10 @@ public class StartBreakPostRequestBody implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final StartBreakPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("atApprovedLocation", (n) -> { currentObject.setAtApprovedLocation(n.getBooleanValue()); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("atApprovedLocation", (n) -> { currentObject.setAtApprovedLocation(n.getBooleanValue()); });
+        deserializerMap.put("notes", (n) -> { currentObject.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the notes property value. The notes property
@@ -75,6 +76,7 @@ public class StartBreakPostRequestBody implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("atApprovedLocation", this.getAtApprovedLocation());
@@ -86,6 +88,7 @@ public class StartBreakPostRequestBody implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -94,6 +97,7 @@ public class StartBreakPostRequestBody implements AdditionalDataHolder, Parsable
      * @param value Value to set for the atApprovedLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAtApprovedLocation(@javax.annotation.Nullable final Boolean value) {
         this._atApprovedLocation = value;
     }
@@ -102,6 +106,7 @@ public class StartBreakPostRequestBody implements AdditionalDataHolder, Parsable
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final ItemBody value) {
         this._notes = value;
     }

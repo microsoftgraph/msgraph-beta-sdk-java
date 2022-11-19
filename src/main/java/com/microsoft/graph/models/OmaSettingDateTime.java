@@ -15,6 +15,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
      * Instantiates a new OmaSettingDateTime and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OmaSettingDateTime() {
         super();
         this.setOdataType("#microsoft.graph.omaSettingDateTime");
@@ -36,9 +37,9 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OmaSettingDateTime currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getOffsetDateTimeValue()); });
+        return deserializerMap
     }
     /**
      * Gets the value property value. Value.
@@ -53,6 +54,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class OmaSettingDateTime extends OmaSetting implements Parsable {
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final OffsetDateTime value) {
         this._value = value;
     }

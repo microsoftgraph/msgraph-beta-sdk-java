@@ -19,6 +19,7 @@ public class DownloadAppDiagnosticsPostRequestBody implements AdditionalDataHold
      * Instantiates a new downloadAppDiagnosticsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DownloadAppDiagnosticsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -47,9 +48,9 @@ public class DownloadAppDiagnosticsPostRequestBody implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DownloadAppDiagnosticsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("request", (n) -> { currentObject.setRequest(n.getObjectValue(PowerliftDownloadRequest::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("request", (n) -> { currentObject.setRequest(n.getObjectValue(PowerliftDownloadRequest::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the request property value. The request property
@@ -64,6 +65,7 @@ public class DownloadAppDiagnosticsPostRequestBody implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("request", this.getRequest());
@@ -74,6 +76,7 @@ public class DownloadAppDiagnosticsPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +85,7 @@ public class DownloadAppDiagnosticsPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the request property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequest(@javax.annotation.Nullable final PowerliftDownloadRequest value) {
         this._request = value;
     }

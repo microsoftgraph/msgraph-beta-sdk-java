@@ -21,6 +21,7 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
      * Instantiates a new profileCardAnnotation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProfileCardAnnotation() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.profileCardAnnotation");
@@ -58,11 +59,11 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProfileCardAnnotation currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("localizations", (n) -> { currentObject.setLocalizations(n.getCollectionOfObjectValues(DisplayNameLocalization::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("localizations", (n) -> { currentObject.setLocalizations(n.getCollectionOfObjectValues(DisplayNameLocalization::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the localizations property value. Each resource in this collection represents the localized value of the attribute name for a given language, used as the default label for that locale. For example, a user with a no-NB client gets 'Kostnads Senter' as the attribute label, rather than 'Cost Center.'
@@ -85,6 +86,7 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -97,6 +99,7 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -113,6 +117,7 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the localizations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalizations(@javax.annotation.Nullable final java.util.List<DisplayNameLocalization> value) {
         this._localizations = value;
     }
@@ -121,6 +126,7 @@ public class ProfileCardAnnotation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

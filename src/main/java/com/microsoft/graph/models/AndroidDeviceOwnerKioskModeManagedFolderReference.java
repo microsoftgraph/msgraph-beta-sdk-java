@@ -16,6 +16,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolderReference extends AndroidDe
      * Instantiates a new AndroidDeviceOwnerKioskModeManagedFolderReference and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerKioskModeManagedFolderReference() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerKioskModeManagedFolderReference");
@@ -37,10 +38,10 @@ public class AndroidDeviceOwnerKioskModeManagedFolderReference extends AndroidDe
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerKioskModeManagedFolderReference currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("folderIdentifier", (n) -> { currentObject.setFolderIdentifier(n.getStringValue()); });
-            this.put("folderName", (n) -> { currentObject.setFolderName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("folderIdentifier", (n) -> { currentObject.setFolderIdentifier(n.getStringValue()); });
+        deserializerMap.put("folderName", (n) -> { currentObject.setFolderName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the folderIdentifier property value. Unique identifier for the folder
@@ -63,6 +64,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolderReference extends AndroidDe
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolderReference extends AndroidDe
      * @param value Value to set for the folderIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFolderIdentifier(@javax.annotation.Nullable final String value) {
         this._folderIdentifier = value;
     }
@@ -82,6 +85,7 @@ public class AndroidDeviceOwnerKioskModeManagedFolderReference extends AndroidDe
      * @param value Value to set for the folderName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFolderName(@javax.annotation.Nullable final String value) {
         this._folderName = value;
     }

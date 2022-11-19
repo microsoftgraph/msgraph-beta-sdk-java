@@ -18,6 +18,7 @@ public class GetRoleScopeTagsByIdPostRequestBody implements AdditionalDataHolder
      * Instantiates a new getRoleScopeTagsByIdPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetRoleScopeTagsByIdPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,9 +47,9 @@ public class GetRoleScopeTagsByIdPostRequestBody implements AdditionalDataHolder
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GetRoleScopeTagsByIdPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the roleScopeTagIds property value. The roleScopeTagIds property
@@ -63,6 +64,7 @@ public class GetRoleScopeTagsByIdPostRequestBody implements AdditionalDataHolder
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
@@ -73,6 +75,7 @@ public class GetRoleScopeTagsByIdPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class GetRoleScopeTagsByIdPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }

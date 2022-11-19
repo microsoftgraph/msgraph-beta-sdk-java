@@ -28,6 +28,7 @@ public class ClassifyTextPostRequestBody implements AdditionalDataHolder, Parsab
      * Instantiates a new classifyTextPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ClassifyTextPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -56,13 +57,13 @@ public class ClassifyTextPostRequestBody implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClassifyTextPostRequestBody currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("fileExtension", (n) -> { currentObject.setFileExtension(n.getStringValue()); });
-            this.put("matchTolerancesToInclude", (n) -> { currentObject.setMatchTolerancesToInclude(n.getEnumValue(MlClassificationMatchTolerance.class)); });
-            this.put("scopesToRun", (n) -> { currentObject.setScopesToRun(n.getEnumValue(SensitiveTypeScope.class)); });
-            this.put("sensitiveTypeIds", (n) -> { currentObject.setSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("fileExtension", (n) -> { currentObject.setFileExtension(n.getStringValue()); });
+        deserializerMap.put("matchTolerancesToInclude", (n) -> { currentObject.setMatchTolerancesToInclude(n.getEnumValue(MlClassificationMatchTolerance.class)); });
+        deserializerMap.put("scopesToRun", (n) -> { currentObject.setScopesToRun(n.getEnumValue(SensitiveTypeScope.class)); });
+        deserializerMap.put("sensitiveTypeIds", (n) -> { currentObject.setSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the fileExtension property value. The fileExtension property
@@ -109,6 +110,7 @@ public class ClassifyTextPostRequestBody implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("fileExtension", this.getFileExtension());
@@ -123,6 +125,7 @@ public class ClassifyTextPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -131,6 +134,7 @@ public class ClassifyTextPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the fileExtension property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileExtension(@javax.annotation.Nullable final String value) {
         this._fileExtension = value;
     }
@@ -139,6 +143,7 @@ public class ClassifyTextPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the matchTolerancesToInclude property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMatchTolerancesToInclude(@javax.annotation.Nullable final MlClassificationMatchTolerance value) {
         this._matchTolerancesToInclude = value;
     }
@@ -147,6 +152,7 @@ public class ClassifyTextPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the scopesToRun property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScopesToRun(@javax.annotation.Nullable final SensitiveTypeScope value) {
         this._scopesToRun = value;
     }
@@ -155,6 +161,7 @@ public class ClassifyTextPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the sensitiveTypeIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitiveTypeIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._sensitiveTypeIds = value;
     }
@@ -163,6 +170,7 @@ public class ClassifyTextPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final String value) {
         this._text = value;
     }

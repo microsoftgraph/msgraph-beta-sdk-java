@@ -7,18 +7,19 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     /** The activity related to user risk level change. */
     private RiskUserActivity _activity;
-    /** The id of actor that does the operation. */
+    /** The ID of actor that does the operation. */
     private String _initiatedBy;
-    /** The id of the user. */
+    /** The ID of the user. */
     private String _userId;
     /**
      * Instantiates a new riskyUserHistoryItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RiskyUserHistoryItem() {
         super();
         this.setOdataType("#microsoft.graph.riskyUserHistoryItem");
@@ -48,14 +49,14 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RiskyUserHistoryItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getObjectValue(RiskUserActivity::createFromDiscriminatorValue)); });
-            this.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activity", (n) -> { currentObject.setActivity(n.getObjectValue(RiskUserActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
-     * Gets the initiatedBy property value. The id of actor that does the operation.
+     * Gets the initiatedBy property value. The ID of actor that does the operation.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -63,7 +64,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
         return this._initiatedBy;
     }
     /**
-     * Gets the userId property value. The id of the user.
+     * Gets the userId property value. The ID of the user.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -75,6 +76,7 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,22 +89,25 @@ public class RiskyUserHistoryItem extends RiskyUser implements Parsable {
      * @param value Value to set for the activity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final RiskUserActivity value) {
         this._activity = value;
     }
     /**
-     * Sets the initiatedBy property value. The id of actor that does the operation.
+     * Sets the initiatedBy property value. The ID of actor that does the operation.
      * @param value Value to set for the initiatedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatedBy(@javax.annotation.Nullable final String value) {
         this._initiatedBy = value;
     }
     /**
-     * Sets the userId property value. The id of the user.
+     * Sets the userId property value. The ID of the user.
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

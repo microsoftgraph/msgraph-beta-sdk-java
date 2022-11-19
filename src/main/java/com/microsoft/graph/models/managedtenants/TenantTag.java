@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class TenantTag extends Entity implements Parsable {
     /** The identifier for the account that created the tenant tag. Required. Read-only. */
     private String _createdByUserId;
@@ -31,6 +31,7 @@ public class TenantTag extends Entity implements Parsable {
      * Instantiates a new tenantTag and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TenantTag() {
         super();
         this.setOdataType("#microsoft.graph.managedTenants.tenantTag");
@@ -92,16 +93,16 @@ public class TenantTag extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantTag currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdByUserId", (n) -> { currentObject.setCreatedByUserId(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deletedDateTime", (n) -> { currentObject.setDeletedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastActionByUserId", (n) -> { currentObject.setLastActionByUserId(n.getStringValue()); });
-            this.put("lastActionDateTime", (n) -> { currentObject.setLastActionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("tenants", (n) -> { currentObject.setTenants(n.getCollectionOfObjectValues(TenantInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdByUserId", (n) -> { currentObject.setCreatedByUserId(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deletedDateTime", (n) -> { currentObject.setDeletedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastActionByUserId", (n) -> { currentObject.setLastActionByUserId(n.getStringValue()); });
+        deserializerMap.put("lastActionDateTime", (n) -> { currentObject.setLastActionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("tenants", (n) -> { currentObject.setTenants(n.getCollectionOfObjectValues(TenantInfo::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the lastActionByUserId property value. The identifier for the account that lasted on the tenant tag. Optional. Read-only.
@@ -132,6 +133,7 @@ public class TenantTag extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -149,6 +151,7 @@ public class TenantTag extends Entity implements Parsable {
      * @param value Value to set for the createdByUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedByUserId(@javax.annotation.Nullable final String value) {
         this._createdByUserId = value;
     }
@@ -157,6 +160,7 @@ public class TenantTag extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -165,6 +169,7 @@ public class TenantTag extends Entity implements Parsable {
      * @param value Value to set for the deletedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._deletedDateTime = value;
     }
@@ -173,6 +178,7 @@ public class TenantTag extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -181,6 +187,7 @@ public class TenantTag extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -189,6 +196,7 @@ public class TenantTag extends Entity implements Parsable {
      * @param value Value to set for the lastActionByUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActionByUserId(@javax.annotation.Nullable final String value) {
         this._lastActionByUserId = value;
     }
@@ -197,6 +205,7 @@ public class TenantTag extends Entity implements Parsable {
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastActionDateTime = value;
     }
@@ -205,6 +214,7 @@ public class TenantTag extends Entity implements Parsable {
      * @param value Value to set for the tenants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenants(@javax.annotation.Nullable final java.util.List<TenantInfo> value) {
         this._tenants = value;
     }

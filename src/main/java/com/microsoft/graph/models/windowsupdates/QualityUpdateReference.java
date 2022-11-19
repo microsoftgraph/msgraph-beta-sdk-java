@@ -18,6 +18,7 @@ public class QualityUpdateReference extends WindowsUpdateReference implements Pa
      * Instantiates a new QualityUpdateReference and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public QualityUpdateReference() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.qualityUpdateReference");
@@ -54,10 +55,10 @@ public class QualityUpdateReference extends WindowsUpdateReference implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final QualityUpdateReference currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("classification", (n) -> { currentObject.setClassification(n.getEnumValue(QualityUpdateClassification.class)); });
-            this.put("releaseDateTime", (n) -> { currentObject.setReleaseDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("classification", (n) -> { currentObject.setClassification(n.getEnumValue(QualityUpdateClassification.class)); });
+        deserializerMap.put("releaseDateTime", (n) -> { currentObject.setReleaseDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap
     }
     /**
      * Gets the releaseDateTime property value. Specifies a quality update in the given servicingChannel with the given classification by date (i.e. the last update published on the specified date). Default value is security.
@@ -72,6 +73,7 @@ public class QualityUpdateReference extends WindowsUpdateReference implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -83,6 +85,7 @@ public class QualityUpdateReference extends WindowsUpdateReference implements Pa
      * @param value Value to set for the classification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassification(@javax.annotation.Nullable final QualityUpdateClassification value) {
         this._classification = value;
     }
@@ -91,6 +94,7 @@ public class QualityUpdateReference extends WindowsUpdateReference implements Pa
      * @param value Value to set for the releaseDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReleaseDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._releaseDateTime = value;
     }

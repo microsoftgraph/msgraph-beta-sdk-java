@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics battery health app impact entity contains battery usage related information at an app level for the tenant. */
 public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implements Parsable {
     /** Number of active devices for using that app over a 14-day period. Valid values -2147483648 to 2147483647 */
     private Integer _activeDevices;
@@ -21,9 +22,10 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
     /** true if the user had active interaction with the app. */
     private Boolean _isForegroundApp;
     /**
-     * Instantiates a new UserExperienceAnalyticsBatteryHealthAppImpact and sets the default values.
+     * Instantiates a new userExperienceAnalyticsBatteryHealthAppImpact and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsBatteryHealthAppImpact() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsBatteryHealthAppImpact");
@@ -31,7 +33,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBatteryHealthAppImpact
+     * @return a userExperienceAnalyticsBatteryHealthAppImpact
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthAppImpact createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -85,14 +87,14 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsBatteryHealthAppImpact currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeDevices", (n) -> { currentObject.setActiveDevices(n.getIntegerValue()); });
-            this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
-            this.put("appName", (n) -> { currentObject.setAppName(n.getStringValue()); });
-            this.put("appPublisher", (n) -> { currentObject.setAppPublisher(n.getStringValue()); });
-            this.put("batteryUsagePercentage", (n) -> { currentObject.setBatteryUsagePercentage(n.getDoubleValue()); });
-            this.put("isForegroundApp", (n) -> { currentObject.setIsForegroundApp(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeDevices", (n) -> { currentObject.setActiveDevices(n.getIntegerValue()); });
+        deserializerMap.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("appName", (n) -> { currentObject.setAppName(n.getStringValue()); });
+        deserializerMap.put("appPublisher", (n) -> { currentObject.setAppPublisher(n.getStringValue()); });
+        deserializerMap.put("batteryUsagePercentage", (n) -> { currentObject.setBatteryUsagePercentage(n.getDoubleValue()); });
+        deserializerMap.put("isForegroundApp", (n) -> { currentObject.setIsForegroundApp(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isForegroundApp property value. true if the user had active interaction with the app.
@@ -107,6 +109,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +125,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * @param value Value to set for the activeDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveDevices(@javax.annotation.Nullable final Integer value) {
         this._activeDevices = value;
     }
@@ -130,6 +134,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
         this._appDisplayName = value;
     }
@@ -138,6 +143,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * @param value Value to set for the appName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppName(@javax.annotation.Nullable final String value) {
         this._appName = value;
     }
@@ -146,6 +152,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * @param value Value to set for the appPublisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppPublisher(@javax.annotation.Nullable final String value) {
         this._appPublisher = value;
     }
@@ -154,6 +161,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * @param value Value to set for the batteryUsagePercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBatteryUsagePercentage(@javax.annotation.Nullable final Double value) {
         this._batteryUsagePercentage = value;
     }
@@ -162,6 +170,7 @@ public class UserExperienceAnalyticsBatteryHealthAppImpact extends Entity implem
      * @param value Value to set for the isForegroundApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsForegroundApp(@javax.annotation.Nullable final Boolean value) {
         this._isForegroundApp = value;
     }

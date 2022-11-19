@@ -10,7 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ManagementTemplate extends Entity implements Parsable {
     /** The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only. */
     private ManagementCategory _category;
@@ -48,6 +47,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * Instantiates a new managementTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagementTemplate() {
         super();
         this.setOdataType("#microsoft.graph.managedTenants.managementTemplate");
@@ -109,24 +109,24 @@ public class ManagementTemplate extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagementTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(ManagementCategory.class)); });
-            this.put("createdByUserId", (n) -> { currentObject.setCreatedByUserId(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("informationLinks", (n) -> { currentObject.setInformationLinks(n.getCollectionOfObjectValues(ActionUrl::createFromDiscriminatorValue)); });
-            this.put("lastActionByUserId", (n) -> { currentObject.setLastActionByUserId(n.getStringValue()); });
-            this.put("lastActionDateTime", (n) -> { currentObject.setLastActionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("managementTemplateCollections", (n) -> { currentObject.setManagementTemplateCollections(n.getCollectionOfObjectValues(ManagementTemplateCollection::createFromDiscriminatorValue)); });
-            this.put("managementTemplateSteps", (n) -> { currentObject.setManagementTemplateSteps(n.getCollectionOfObjectValues(ManagementTemplateStep::createFromDiscriminatorValue)); });
-            this.put("parameters", (n) -> { currentObject.setParameters(n.getCollectionOfObjectValues(TemplateParameter::createFromDiscriminatorValue)); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("provider", (n) -> { currentObject.setProvider(n.getEnumValue(ManagementProvider.class)); });
-            this.put("userImpact", (n) -> { currentObject.setUserImpact(n.getStringValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
-            this.put("workloadActions", (n) -> { currentObject.setWorkloadActions(n.getCollectionOfObjectValues(WorkloadAction::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(ManagementCategory.class)); });
+        deserializerMap.put("createdByUserId", (n) -> { currentObject.setCreatedByUserId(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("informationLinks", (n) -> { currentObject.setInformationLinks(n.getCollectionOfObjectValues(ActionUrl::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastActionByUserId", (n) -> { currentObject.setLastActionByUserId(n.getStringValue()); });
+        deserializerMap.put("lastActionDateTime", (n) -> { currentObject.setLastActionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managementTemplateCollections", (n) -> { currentObject.setManagementTemplateCollections(n.getCollectionOfObjectValues(ManagementTemplateCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("managementTemplateSteps", (n) -> { currentObject.setManagementTemplateSteps(n.getCollectionOfObjectValues(ManagementTemplateStep::createFromDiscriminatorValue)); });
+        deserializerMap.put("parameters", (n) -> { currentObject.setParameters(n.getCollectionOfObjectValues(TemplateParameter::createFromDiscriminatorValue)); });
+        deserializerMap.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("provider", (n) -> { currentObject.setProvider(n.getEnumValue(ManagementProvider.class)); });
+        deserializerMap.put("userImpact", (n) -> { currentObject.setUserImpact(n.getStringValue()); });
+        deserializerMap.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
+        deserializerMap.put("workloadActions", (n) -> { currentObject.setWorkloadActions(n.getCollectionOfObjectValues(WorkloadAction::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the informationLinks property value. The informationLinks property
@@ -221,6 +221,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -246,6 +247,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final ManagementCategory value) {
         this._category = value;
     }
@@ -254,6 +256,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the createdByUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedByUserId(@javax.annotation.Nullable final String value) {
         this._createdByUserId = value;
     }
@@ -262,6 +265,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -270,6 +274,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -278,6 +283,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -286,6 +292,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the informationLinks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInformationLinks(@javax.annotation.Nullable final java.util.List<ActionUrl> value) {
         this._informationLinks = value;
     }
@@ -294,6 +301,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the lastActionByUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActionByUserId(@javax.annotation.Nullable final String value) {
         this._lastActionByUserId = value;
     }
@@ -302,6 +310,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastActionDateTime = value;
     }
@@ -310,6 +319,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the managementTemplateCollections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementTemplateCollections(@javax.annotation.Nullable final java.util.List<ManagementTemplateCollection> value) {
         this._managementTemplateCollections = value;
     }
@@ -318,6 +328,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the managementTemplateSteps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementTemplateSteps(@javax.annotation.Nullable final java.util.List<ManagementTemplateStep> value) {
         this._managementTemplateSteps = value;
     }
@@ -326,6 +337,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the parameters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParameters(@javax.annotation.Nullable final java.util.List<TemplateParameter> value) {
         this._parameters = value;
     }
@@ -334,6 +346,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }
@@ -342,6 +355,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the provider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvider(@javax.annotation.Nullable final ManagementProvider value) {
         this._provider = value;
     }
@@ -350,6 +364,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the userImpact property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserImpact(@javax.annotation.Nullable final String value) {
         this._userImpact = value;
     }
@@ -358,6 +373,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
         this._version = value;
     }
@@ -366,6 +382,7 @@ public class ManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the workloadActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkloadActions(@javax.annotation.Nullable final java.util.List<WorkloadAction> value) {
         this._workloadActions = value;
     }

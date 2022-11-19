@@ -40,6 +40,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * Instantiates a new WindowsIdentityProtectionConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsIdentityProtectionConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsIdentityProtectionConfiguration");
@@ -69,22 +70,22 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsIdentityProtectionConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("enhancedAntiSpoofingForFacialFeaturesEnabled", (n) -> { currentObject.setEnhancedAntiSpoofingForFacialFeaturesEnabled(n.getBooleanValue()); });
-            this.put("pinExpirationInDays", (n) -> { currentObject.setPinExpirationInDays(n.getIntegerValue()); });
-            this.put("pinLowercaseCharactersUsage", (n) -> { currentObject.setPinLowercaseCharactersUsage(n.getEnumValue(ConfigurationUsage.class)); });
-            this.put("pinMaximumLength", (n) -> { currentObject.setPinMaximumLength(n.getIntegerValue()); });
-            this.put("pinMinimumLength", (n) -> { currentObject.setPinMinimumLength(n.getIntegerValue()); });
-            this.put("pinPreviousBlockCount", (n) -> { currentObject.setPinPreviousBlockCount(n.getIntegerValue()); });
-            this.put("pinRecoveryEnabled", (n) -> { currentObject.setPinRecoveryEnabled(n.getBooleanValue()); });
-            this.put("pinSpecialCharactersUsage", (n) -> { currentObject.setPinSpecialCharactersUsage(n.getEnumValue(ConfigurationUsage.class)); });
-            this.put("pinUppercaseCharactersUsage", (n) -> { currentObject.setPinUppercaseCharactersUsage(n.getEnumValue(ConfigurationUsage.class)); });
-            this.put("securityDeviceRequired", (n) -> { currentObject.setSecurityDeviceRequired(n.getBooleanValue()); });
-            this.put("unlockWithBiometricsEnabled", (n) -> { currentObject.setUnlockWithBiometricsEnabled(n.getBooleanValue()); });
-            this.put("useCertificatesForOnPremisesAuthEnabled", (n) -> { currentObject.setUseCertificatesForOnPremisesAuthEnabled(n.getBooleanValue()); });
-            this.put("useSecurityKeyForSignin", (n) -> { currentObject.setUseSecurityKeyForSignin(n.getBooleanValue()); });
-            this.put("windowsHelloForBusinessBlocked", (n) -> { currentObject.setWindowsHelloForBusinessBlocked(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("enhancedAntiSpoofingForFacialFeaturesEnabled", (n) -> { currentObject.setEnhancedAntiSpoofingForFacialFeaturesEnabled(n.getBooleanValue()); });
+        deserializerMap.put("pinExpirationInDays", (n) -> { currentObject.setPinExpirationInDays(n.getIntegerValue()); });
+        deserializerMap.put("pinLowercaseCharactersUsage", (n) -> { currentObject.setPinLowercaseCharactersUsage(n.getEnumValue(ConfigurationUsage.class)); });
+        deserializerMap.put("pinMaximumLength", (n) -> { currentObject.setPinMaximumLength(n.getIntegerValue()); });
+        deserializerMap.put("pinMinimumLength", (n) -> { currentObject.setPinMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("pinPreviousBlockCount", (n) -> { currentObject.setPinPreviousBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("pinRecoveryEnabled", (n) -> { currentObject.setPinRecoveryEnabled(n.getBooleanValue()); });
+        deserializerMap.put("pinSpecialCharactersUsage", (n) -> { currentObject.setPinSpecialCharactersUsage(n.getEnumValue(ConfigurationUsage.class)); });
+        deserializerMap.put("pinUppercaseCharactersUsage", (n) -> { currentObject.setPinUppercaseCharactersUsage(n.getEnumValue(ConfigurationUsage.class)); });
+        deserializerMap.put("securityDeviceRequired", (n) -> { currentObject.setSecurityDeviceRequired(n.getBooleanValue()); });
+        deserializerMap.put("unlockWithBiometricsEnabled", (n) -> { currentObject.setUnlockWithBiometricsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("useCertificatesForOnPremisesAuthEnabled", (n) -> { currentObject.setUseCertificatesForOnPremisesAuthEnabled(n.getBooleanValue()); });
+        deserializerMap.put("useSecurityKeyForSignin", (n) -> { currentObject.setUseSecurityKeyForSignin(n.getBooleanValue()); });
+        deserializerMap.put("windowsHelloForBusinessBlocked", (n) -> { currentObject.setWindowsHelloForBusinessBlocked(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the pinExpirationInDays property value. Integer value specifies the period (in days) that a PIN can be used before the system requires the user to change it. Valid values are 0 to 730 inclusive. Valid values 0 to 730
@@ -195,6 +196,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -218,6 +220,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * @param value Value to set for the enhancedAntiSpoofingForFacialFeaturesEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnhancedAntiSpoofingForFacialFeaturesEnabled(@javax.annotation.Nullable final Boolean value) {
         this._enhancedAntiSpoofingForFacialFeaturesEnabled = value;
     }
@@ -226,6 +229,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * @param value Value to set for the pinExpirationInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinExpirationInDays(@javax.annotation.Nullable final Integer value) {
         this._pinExpirationInDays = value;
     }
@@ -234,6 +238,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * @param value Value to set for the pinLowercaseCharactersUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinLowercaseCharactersUsage(@javax.annotation.Nullable final ConfigurationUsage value) {
         this._pinLowercaseCharactersUsage = value;
     }
@@ -242,6 +247,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * @param value Value to set for the pinMaximumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinMaximumLength(@javax.annotation.Nullable final Integer value) {
         this._pinMaximumLength = value;
     }
@@ -250,6 +256,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * @param value Value to set for the pinMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._pinMinimumLength = value;
     }
@@ -258,6 +265,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * @param value Value to set for the pinPreviousBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinPreviousBlockCount(@javax.annotation.Nullable final Integer value) {
         this._pinPreviousBlockCount = value;
     }
@@ -266,6 +274,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * @param value Value to set for the pinRecoveryEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinRecoveryEnabled(@javax.annotation.Nullable final Boolean value) {
         this._pinRecoveryEnabled = value;
     }
@@ -274,6 +283,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * @param value Value to set for the pinSpecialCharactersUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinSpecialCharactersUsage(@javax.annotation.Nullable final ConfigurationUsage value) {
         this._pinSpecialCharactersUsage = value;
     }
@@ -282,6 +292,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * @param value Value to set for the pinUppercaseCharactersUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinUppercaseCharactersUsage(@javax.annotation.Nullable final ConfigurationUsage value) {
         this._pinUppercaseCharactersUsage = value;
     }
@@ -290,6 +301,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * @param value Value to set for the securityDeviceRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityDeviceRequired(@javax.annotation.Nullable final Boolean value) {
         this._securityDeviceRequired = value;
     }
@@ -298,6 +310,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * @param value Value to set for the unlockWithBiometricsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnlockWithBiometricsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._unlockWithBiometricsEnabled = value;
     }
@@ -306,6 +319,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * @param value Value to set for the useCertificatesForOnPremisesAuthEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseCertificatesForOnPremisesAuthEnabled(@javax.annotation.Nullable final Boolean value) {
         this._useCertificatesForOnPremisesAuthEnabled = value;
     }
@@ -314,6 +328,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * @param value Value to set for the useSecurityKeyForSignin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseSecurityKeyForSignin(@javax.annotation.Nullable final Boolean value) {
         this._useSecurityKeyForSignin = value;
     }
@@ -322,6 +337,7 @@ public class WindowsIdentityProtectionConfiguration extends DeviceConfiguration 
      * @param value Value to set for the windowsHelloForBusinessBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsHelloForBusinessBlocked(@javax.annotation.Nullable final Boolean value) {
         this._windowsHelloForBusinessBlocked = value;
     }

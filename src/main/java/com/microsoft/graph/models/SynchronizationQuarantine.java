@@ -30,6 +30,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
      * Instantiates a new synchronizationQuarantine and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SynchronizationQuarantine() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.synchronizationQuarantine");
@@ -75,15 +76,15 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SynchronizationQuarantine currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("currentBegan", (n) -> { currentObject.setCurrentBegan(n.getOffsetDateTimeValue()); });
-            this.put("error", (n) -> { currentObject.setError(n.getObjectValue(SynchronizationError::createFromDiscriminatorValue)); });
-            this.put("nextAttempt", (n) -> { currentObject.setNextAttempt(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("reason", (n) -> { currentObject.setReason(n.getEnumValue(QuarantineReason.class)); });
-            this.put("seriesBegan", (n) -> { currentObject.setSeriesBegan(n.getOffsetDateTimeValue()); });
-            this.put("seriesCount", (n) -> { currentObject.setSeriesCount(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("currentBegan", (n) -> { currentObject.setCurrentBegan(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("error", (n) -> { currentObject.setError(n.getObjectValue(SynchronizationError::createFromDiscriminatorValue)); });
+        deserializerMap.put("nextAttempt", (n) -> { currentObject.setNextAttempt(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("reason", (n) -> { currentObject.setReason(n.getEnumValue(QuarantineReason.class)); });
+        deserializerMap.put("seriesBegan", (n) -> { currentObject.setSeriesBegan(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("seriesCount", (n) -> { currentObject.setSeriesCount(n.getLongValue()); });
+        return deserializerMap
     }
     /**
      * Gets the nextAttempt property value. Date and time when the next attempt to re-evaluate the quarantine will be made. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -130,6 +131,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("currentBegan", this.getCurrentBegan());
@@ -146,6 +148,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -154,6 +157,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
      * @param value Value to set for the currentBegan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrentBegan(@javax.annotation.Nullable final OffsetDateTime value) {
         this._currentBegan = value;
     }
@@ -162,6 +166,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final SynchronizationError value) {
         this._error = value;
     }
@@ -170,6 +175,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
      * @param value Value to set for the nextAttempt property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNextAttempt(@javax.annotation.Nullable final OffsetDateTime value) {
         this._nextAttempt = value;
     }
@@ -178,6 +184,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -186,6 +193,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
      * @param value Value to set for the reason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReason(@javax.annotation.Nullable final QuarantineReason value) {
         this._reason = value;
     }
@@ -194,6 +202,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
      * @param value Value to set for the seriesBegan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSeriesBegan(@javax.annotation.Nullable final OffsetDateTime value) {
         this._seriesBegan = value;
     }
@@ -202,6 +211,7 @@ public class SynchronizationQuarantine implements AdditionalDataHolder, Parsable
      * @param value Value to set for the seriesCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSeriesCount(@javax.annotation.Nullable final Long value) {
         this._seriesCount = value;
     }

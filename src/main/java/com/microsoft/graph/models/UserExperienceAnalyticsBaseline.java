@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics baseline entity contains baseline values against which to compare the user experience analytics scores. */
 public class UserExperienceAnalyticsBaseline extends Entity implements Parsable {
     /** The user experience analytics app health metrics. */
     private UserExperienceAnalyticsCategory _appHealthMetrics;
@@ -30,9 +31,10 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     /** The user experience analytics work from anywhere metrics. */
     private UserExperienceAnalyticsCategory _workFromAnywhereMetrics;
     /**
-     * Instantiates a new UserExperienceAnalyticsBaseline and sets the default values.
+     * Instantiates a new userExperienceAnalyticsBaseline and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsBaseline() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsBaseline");
@@ -40,7 +42,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBaseline
+     * @return a userExperienceAnalyticsBaseline
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBaseline createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -102,18 +104,18 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsBaseline currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appHealthMetrics", (n) -> { currentObject.setAppHealthMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
-            this.put("batteryHealthMetrics", (n) -> { currentObject.setBatteryHealthMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
-            this.put("bestPracticesMetrics", (n) -> { currentObject.setBestPracticesMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deviceBootPerformanceMetrics", (n) -> { currentObject.setDeviceBootPerformanceMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isBuiltIn", (n) -> { currentObject.setIsBuiltIn(n.getBooleanValue()); });
-            this.put("rebootAnalyticsMetrics", (n) -> { currentObject.setRebootAnalyticsMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
-            this.put("resourcePerformanceMetrics", (n) -> { currentObject.setResourcePerformanceMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
-            this.put("workFromAnywhereMetrics", (n) -> { currentObject.setWorkFromAnywhereMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appHealthMetrics", (n) -> { currentObject.setAppHealthMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("batteryHealthMetrics", (n) -> { currentObject.setBatteryHealthMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("bestPracticesMetrics", (n) -> { currentObject.setBestPracticesMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceBootPerformanceMetrics", (n) -> { currentObject.setDeviceBootPerformanceMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isBuiltIn", (n) -> { currentObject.setIsBuiltIn(n.getBooleanValue()); });
+        deserializerMap.put("rebootAnalyticsMetrics", (n) -> { currentObject.setRebootAnalyticsMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourcePerformanceMetrics", (n) -> { currentObject.setResourcePerformanceMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("workFromAnywhereMetrics", (n) -> { currentObject.setWorkFromAnywhereMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the isBuiltIn property value. Signifies if the current baseline is the commercial median baseline or a custom baseline.
@@ -152,6 +154,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -171,6 +174,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the appHealthMetrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppHealthMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
         this._appHealthMetrics = value;
     }
@@ -179,6 +183,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the batteryHealthMetrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBatteryHealthMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
         this._batteryHealthMetrics = value;
     }
@@ -187,6 +192,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the bestPracticesMetrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBestPracticesMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
         this._bestPracticesMetrics = value;
     }
@@ -195,6 +201,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -203,6 +210,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the deviceBootPerformanceMetrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceBootPerformanceMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
         this._deviceBootPerformanceMetrics = value;
     }
@@ -211,6 +219,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -219,6 +228,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the isBuiltIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsBuiltIn(@javax.annotation.Nullable final Boolean value) {
         this._isBuiltIn = value;
     }
@@ -227,6 +237,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the rebootAnalyticsMetrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRebootAnalyticsMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
         this._rebootAnalyticsMetrics = value;
     }
@@ -235,6 +246,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the resourcePerformanceMetrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourcePerformanceMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
         this._resourcePerformanceMetrics = value;
     }
@@ -243,6 +255,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the workFromAnywhereMetrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkFromAnywhereMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
         this._workFromAnywhereMetrics = value;
     }

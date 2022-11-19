@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that represents an intent to apply settings to a device */
 public class DeviceManagementIntent extends Entity implements Parsable {
     /** Collection of assignments */
     private java.util.List<DeviceManagementIntentAssignment> _assignments;
@@ -38,9 +39,10 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     /** A summary of user states and counts of users that belong to corresponding state for all users that the intent is applied to */
     private DeviceManagementIntentUserStateSummary _userStateSummary;
     /**
-     * Instantiates a new DeviceManagementIntent and sets the default values.
+     * Instantiates a new deviceManagementIntent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementIntent() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementIntent");
@@ -48,7 +50,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementIntent
+     * @return a deviceManagementIntent
      */
     @javax.annotation.Nonnull
     public static DeviceManagementIntent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -118,22 +120,22 @@ public class DeviceManagementIntent extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementIntent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceManagementIntentAssignment::createFromDiscriminatorValue)); });
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfObjectValues(DeviceManagementIntentSettingCategory::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("deviceSettingStateSummaries", (n) -> { currentObject.setDeviceSettingStateSummaries(n.getCollectionOfObjectValues(DeviceManagementIntentDeviceSettingStateSummary::createFromDiscriminatorValue)); });
-            this.put("deviceStates", (n) -> { currentObject.setDeviceStates(n.getCollectionOfObjectValues(DeviceManagementIntentDeviceState::createFromDiscriminatorValue)); });
-            this.put("deviceStateSummary", (n) -> { currentObject.setDeviceStateSummary(n.getObjectValue(DeviceManagementIntentDeviceStateSummary::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isAssigned", (n) -> { currentObject.setIsAssigned(n.getBooleanValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getCollectionOfObjectValues(DeviceManagementSettingInstance::createFromDiscriminatorValue)); });
-            this.put("templateId", (n) -> { currentObject.setTemplateId(n.getStringValue()); });
-            this.put("userStates", (n) -> { currentObject.setUserStates(n.getCollectionOfObjectValues(DeviceManagementIntentUserState::createFromDiscriminatorValue)); });
-            this.put("userStateSummary", (n) -> { currentObject.setUserStateSummary(n.getObjectValue(DeviceManagementIntentUserStateSummary::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceManagementIntentAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfObjectValues(DeviceManagementIntentSettingCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("deviceSettingStateSummaries", (n) -> { currentObject.setDeviceSettingStateSummaries(n.getCollectionOfObjectValues(DeviceManagementIntentDeviceSettingStateSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceStates", (n) -> { currentObject.setDeviceStates(n.getCollectionOfObjectValues(DeviceManagementIntentDeviceState::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceStateSummary", (n) -> { currentObject.setDeviceStateSummary(n.getObjectValue(DeviceManagementIntentDeviceStateSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isAssigned", (n) -> { currentObject.setIsAssigned(n.getBooleanValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("settings", (n) -> { currentObject.setSettings(n.getCollectionOfObjectValues(DeviceManagementSettingInstance::createFromDiscriminatorValue)); });
+        deserializerMap.put("templateId", (n) -> { currentObject.setTemplateId(n.getStringValue()); });
+        deserializerMap.put("userStates", (n) -> { currentObject.setUserStates(n.getCollectionOfObjectValues(DeviceManagementIntentUserState::createFromDiscriminatorValue)); });
+        deserializerMap.put("userStateSummary", (n) -> { currentObject.setUserStateSummary(n.getObjectValue(DeviceManagementIntentUserStateSummary::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the isAssigned property value. Signifies whether or not the intent is assigned to users
@@ -196,6 +198,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -219,6 +222,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<DeviceManagementIntentAssignment> value) {
         this._assignments = value;
     }
@@ -227,6 +231,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<DeviceManagementIntentSettingCategory> value) {
         this._categories = value;
     }
@@ -235,6 +240,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -243,6 +249,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the deviceSettingStateSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceSettingStateSummaries(@javax.annotation.Nullable final java.util.List<DeviceManagementIntentDeviceSettingStateSummary> value) {
         this._deviceSettingStateSummaries = value;
     }
@@ -251,6 +258,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the deviceStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStates(@javax.annotation.Nullable final java.util.List<DeviceManagementIntentDeviceState> value) {
         this._deviceStates = value;
     }
@@ -259,6 +267,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the deviceStateSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStateSummary(@javax.annotation.Nullable final DeviceManagementIntentDeviceStateSummary value) {
         this._deviceStateSummary = value;
     }
@@ -267,6 +276,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -275,6 +285,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the isAssigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAssigned(@javax.annotation.Nullable final Boolean value) {
         this._isAssigned = value;
     }
@@ -283,6 +294,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -291,6 +303,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -299,6 +312,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementSettingInstance> value) {
         this._settings = value;
     }
@@ -307,6 +321,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the templateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateId(@javax.annotation.Nullable final String value) {
         this._templateId = value;
     }
@@ -315,6 +330,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the userStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserStates(@javax.annotation.Nullable final java.util.List<DeviceManagementIntentUserState> value) {
         this._userStates = value;
     }
@@ -323,6 +339,7 @@ public class DeviceManagementIntent extends Entity implements Parsable {
      * @param value Value to set for the userStateSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserStateSummary(@javax.annotation.Nullable final DeviceManagementIntentUserStateSummary value) {
         this._userStateSummary = value;
     }

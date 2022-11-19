@@ -73,6 +73,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * Instantiates a new mediaStream and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MediaStream() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.callRecords.mediaStream");
@@ -206,36 +207,36 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MediaStream currentObject = this;
-        return new HashMap<>(28) {{
-            this.put("audioCodec", (n) -> { currentObject.setAudioCodec(n.getEnumValue(AudioCodec.class)); });
-            this.put("averageAudioDegradation", (n) -> { currentObject.setAverageAudioDegradation(n.getFloatValue()); });
-            this.put("averageAudioNetworkJitter", (n) -> { currentObject.setAverageAudioNetworkJitter(n.getPeriodValue()); });
-            this.put("averageBandwidthEstimate", (n) -> { currentObject.setAverageBandwidthEstimate(n.getLongValue()); });
-            this.put("averageJitter", (n) -> { currentObject.setAverageJitter(n.getPeriodValue()); });
-            this.put("averagePacketLossRate", (n) -> { currentObject.setAveragePacketLossRate(n.getFloatValue()); });
-            this.put("averageRatioOfConcealedSamples", (n) -> { currentObject.setAverageRatioOfConcealedSamples(n.getFloatValue()); });
-            this.put("averageReceivedFrameRate", (n) -> { currentObject.setAverageReceivedFrameRate(n.getFloatValue()); });
-            this.put("averageRoundTripTime", (n) -> { currentObject.setAverageRoundTripTime(n.getPeriodValue()); });
-            this.put("averageVideoFrameLossPercentage", (n) -> { currentObject.setAverageVideoFrameLossPercentage(n.getFloatValue()); });
-            this.put("averageVideoFrameRate", (n) -> { currentObject.setAverageVideoFrameRate(n.getFloatValue()); });
-            this.put("averageVideoPacketLossRate", (n) -> { currentObject.setAverageVideoPacketLossRate(n.getFloatValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lowFrameRateRatio", (n) -> { currentObject.setLowFrameRateRatio(n.getFloatValue()); });
-            this.put("lowVideoProcessingCapabilityRatio", (n) -> { currentObject.setLowVideoProcessingCapabilityRatio(n.getFloatValue()); });
-            this.put("maxAudioNetworkJitter", (n) -> { currentObject.setMaxAudioNetworkJitter(n.getPeriodValue()); });
-            this.put("maxJitter", (n) -> { currentObject.setMaxJitter(n.getPeriodValue()); });
-            this.put("maxPacketLossRate", (n) -> { currentObject.setMaxPacketLossRate(n.getFloatValue()); });
-            this.put("maxRatioOfConcealedSamples", (n) -> { currentObject.setMaxRatioOfConcealedSamples(n.getFloatValue()); });
-            this.put("maxRoundTripTime", (n) -> { currentObject.setMaxRoundTripTime(n.getPeriodValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("packetUtilization", (n) -> { currentObject.setPacketUtilization(n.getLongValue()); });
-            this.put("postForwardErrorCorrectionPacketLossRate", (n) -> { currentObject.setPostForwardErrorCorrectionPacketLossRate(n.getFloatValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("streamDirection", (n) -> { currentObject.setStreamDirection(n.getEnumValue(MediaStreamDirection.class)); });
-            this.put("streamId", (n) -> { currentObject.setStreamId(n.getStringValue()); });
-            this.put("videoCodec", (n) -> { currentObject.setVideoCodec(n.getEnumValue(VideoCodec.class)); });
-            this.put("wasMediaBypassed", (n) -> { currentObject.setWasMediaBypassed(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(28);
+        deserializerMap.put("audioCodec", (n) -> { currentObject.setAudioCodec(n.getEnumValue(AudioCodec.class)); });
+        deserializerMap.put("averageAudioDegradation", (n) -> { currentObject.setAverageAudioDegradation(n.getFloatValue()); });
+        deserializerMap.put("averageAudioNetworkJitter", (n) -> { currentObject.setAverageAudioNetworkJitter(n.getPeriodValue()); });
+        deserializerMap.put("averageBandwidthEstimate", (n) -> { currentObject.setAverageBandwidthEstimate(n.getLongValue()); });
+        deserializerMap.put("averageJitter", (n) -> { currentObject.setAverageJitter(n.getPeriodValue()); });
+        deserializerMap.put("averagePacketLossRate", (n) -> { currentObject.setAveragePacketLossRate(n.getFloatValue()); });
+        deserializerMap.put("averageRatioOfConcealedSamples", (n) -> { currentObject.setAverageRatioOfConcealedSamples(n.getFloatValue()); });
+        deserializerMap.put("averageReceivedFrameRate", (n) -> { currentObject.setAverageReceivedFrameRate(n.getFloatValue()); });
+        deserializerMap.put("averageRoundTripTime", (n) -> { currentObject.setAverageRoundTripTime(n.getPeriodValue()); });
+        deserializerMap.put("averageVideoFrameLossPercentage", (n) -> { currentObject.setAverageVideoFrameLossPercentage(n.getFloatValue()); });
+        deserializerMap.put("averageVideoFrameRate", (n) -> { currentObject.setAverageVideoFrameRate(n.getFloatValue()); });
+        deserializerMap.put("averageVideoPacketLossRate", (n) -> { currentObject.setAverageVideoPacketLossRate(n.getFloatValue()); });
+        deserializerMap.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lowFrameRateRatio", (n) -> { currentObject.setLowFrameRateRatio(n.getFloatValue()); });
+        deserializerMap.put("lowVideoProcessingCapabilityRatio", (n) -> { currentObject.setLowVideoProcessingCapabilityRatio(n.getFloatValue()); });
+        deserializerMap.put("maxAudioNetworkJitter", (n) -> { currentObject.setMaxAudioNetworkJitter(n.getPeriodValue()); });
+        deserializerMap.put("maxJitter", (n) -> { currentObject.setMaxJitter(n.getPeriodValue()); });
+        deserializerMap.put("maxPacketLossRate", (n) -> { currentObject.setMaxPacketLossRate(n.getFloatValue()); });
+        deserializerMap.put("maxRatioOfConcealedSamples", (n) -> { currentObject.setMaxRatioOfConcealedSamples(n.getFloatValue()); });
+        deserializerMap.put("maxRoundTripTime", (n) -> { currentObject.setMaxRoundTripTime(n.getPeriodValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("packetUtilization", (n) -> { currentObject.setPacketUtilization(n.getLongValue()); });
+        deserializerMap.put("postForwardErrorCorrectionPacketLossRate", (n) -> { currentObject.setPostForwardErrorCorrectionPacketLossRate(n.getFloatValue()); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("streamDirection", (n) -> { currentObject.setStreamDirection(n.getEnumValue(MediaStreamDirection.class)); });
+        deserializerMap.put("streamId", (n) -> { currentObject.setStreamId(n.getStringValue()); });
+        deserializerMap.put("videoCodec", (n) -> { currentObject.setVideoCodec(n.getEnumValue(VideoCodec.class)); });
+        deserializerMap.put("wasMediaBypassed", (n) -> { currentObject.setWasMediaBypassed(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the lowFrameRateRatio property value. Fraction of the call where frame rate is less than 7.5 frames per second.
@@ -362,6 +363,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("audioCodec", this.getAudioCodec());
@@ -399,6 +401,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -407,6 +410,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the audioCodec property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAudioCodec(@javax.annotation.Nullable final AudioCodec value) {
         this._audioCodec = value;
     }
@@ -415,6 +419,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the averageAudioDegradation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageAudioDegradation(@javax.annotation.Nullable final Float value) {
         this._averageAudioDegradation = value;
     }
@@ -423,6 +428,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the averageAudioNetworkJitter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageAudioNetworkJitter(@javax.annotation.Nullable final Period value) {
         this._averageAudioNetworkJitter = value;
     }
@@ -431,6 +437,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the averageBandwidthEstimate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageBandwidthEstimate(@javax.annotation.Nullable final Long value) {
         this._averageBandwidthEstimate = value;
     }
@@ -439,6 +446,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the averageJitter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageJitter(@javax.annotation.Nullable final Period value) {
         this._averageJitter = value;
     }
@@ -447,6 +455,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the averagePacketLossRate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAveragePacketLossRate(@javax.annotation.Nullable final Float value) {
         this._averagePacketLossRate = value;
     }
@@ -455,6 +464,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the averageRatioOfConcealedSamples property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageRatioOfConcealedSamples(@javax.annotation.Nullable final Float value) {
         this._averageRatioOfConcealedSamples = value;
     }
@@ -463,6 +473,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the averageReceivedFrameRate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageReceivedFrameRate(@javax.annotation.Nullable final Float value) {
         this._averageReceivedFrameRate = value;
     }
@@ -471,6 +482,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the averageRoundTripTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageRoundTripTime(@javax.annotation.Nullable final Period value) {
         this._averageRoundTripTime = value;
     }
@@ -479,6 +491,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the averageVideoFrameLossPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageVideoFrameLossPercentage(@javax.annotation.Nullable final Float value) {
         this._averageVideoFrameLossPercentage = value;
     }
@@ -487,6 +500,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the averageVideoFrameRate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageVideoFrameRate(@javax.annotation.Nullable final Float value) {
         this._averageVideoFrameRate = value;
     }
@@ -495,6 +509,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the averageVideoPacketLossRate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageVideoPacketLossRate(@javax.annotation.Nullable final Float value) {
         this._averageVideoPacketLossRate = value;
     }
@@ -503,6 +518,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -511,6 +527,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lowFrameRateRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLowFrameRateRatio(@javax.annotation.Nullable final Float value) {
         this._lowFrameRateRatio = value;
     }
@@ -519,6 +536,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lowVideoProcessingCapabilityRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLowVideoProcessingCapabilityRatio(@javax.annotation.Nullable final Float value) {
         this._lowVideoProcessingCapabilityRatio = value;
     }
@@ -527,6 +545,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the maxAudioNetworkJitter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxAudioNetworkJitter(@javax.annotation.Nullable final Period value) {
         this._maxAudioNetworkJitter = value;
     }
@@ -535,6 +554,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the maxJitter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxJitter(@javax.annotation.Nullable final Period value) {
         this._maxJitter = value;
     }
@@ -543,6 +563,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the maxPacketLossRate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxPacketLossRate(@javax.annotation.Nullable final Float value) {
         this._maxPacketLossRate = value;
     }
@@ -551,6 +572,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the maxRatioOfConcealedSamples property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxRatioOfConcealedSamples(@javax.annotation.Nullable final Float value) {
         this._maxRatioOfConcealedSamples = value;
     }
@@ -559,6 +581,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the maxRoundTripTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxRoundTripTime(@javax.annotation.Nullable final Period value) {
         this._maxRoundTripTime = value;
     }
@@ -567,6 +590,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -575,6 +599,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the packetUtilization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPacketUtilization(@javax.annotation.Nullable final Long value) {
         this._packetUtilization = value;
     }
@@ -583,6 +608,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the postForwardErrorCorrectionPacketLossRate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostForwardErrorCorrectionPacketLossRate(@javax.annotation.Nullable final Float value) {
         this._postForwardErrorCorrectionPacketLossRate = value;
     }
@@ -591,6 +617,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -599,6 +626,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the streamDirection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStreamDirection(@javax.annotation.Nullable final MediaStreamDirection value) {
         this._streamDirection = value;
     }
@@ -607,6 +635,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the streamId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStreamId(@javax.annotation.Nullable final String value) {
         this._streamId = value;
     }
@@ -615,6 +644,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the videoCodec property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVideoCodec(@javax.annotation.Nullable final VideoCodec value) {
         this._videoCodec = value;
     }
@@ -623,6 +653,7 @@ public class MediaStream implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the wasMediaBypassed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWasMediaBypassed(@javax.annotation.Nullable final Boolean value) {
         this._wasMediaBypassed = value;
     }

@@ -29,6 +29,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new onlineMeetingInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnlineMeetingInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.onlineMeetingInfo");
@@ -66,15 +67,15 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OnlineMeetingInfo currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("conferenceId", (n) -> { currentObject.setConferenceId(n.getStringValue()); });
-            this.put("joinUrl", (n) -> { currentObject.setJoinUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("phones", (n) -> { currentObject.setPhones(n.getCollectionOfObjectValues(Phone::createFromDiscriminatorValue)); });
-            this.put("quickDial", (n) -> { currentObject.setQuickDial(n.getStringValue()); });
-            this.put("tollFreeNumbers", (n) -> { currentObject.setTollFreeNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("tollNumber", (n) -> { currentObject.setTollNumber(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("conferenceId", (n) -> { currentObject.setConferenceId(n.getStringValue()); });
+        deserializerMap.put("joinUrl", (n) -> { currentObject.setJoinUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("phones", (n) -> { currentObject.setPhones(n.getCollectionOfObjectValues(Phone::createFromDiscriminatorValue)); });
+        deserializerMap.put("quickDial", (n) -> { currentObject.setQuickDial(n.getStringValue()); });
+        deserializerMap.put("tollFreeNumbers", (n) -> { currentObject.setTollFreeNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("tollNumber", (n) -> { currentObject.setTollNumber(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
@@ -129,6 +130,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("conferenceId", this.getConferenceId());
@@ -145,6 +147,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the conferenceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConferenceId(@javax.annotation.Nullable final String value) {
         this._conferenceId = value;
     }
@@ -161,6 +165,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the joinUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinUrl(@javax.annotation.Nullable final String value) {
         this._joinUrl = value;
     }
@@ -169,6 +174,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -177,6 +183,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the phones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhones(@javax.annotation.Nullable final java.util.List<Phone> value) {
         this._phones = value;
     }
@@ -185,6 +192,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the quickDial property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuickDial(@javax.annotation.Nullable final String value) {
         this._quickDial = value;
     }
@@ -193,6 +201,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tollFreeNumbers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTollFreeNumbers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tollFreeNumbers = value;
     }
@@ -201,6 +210,7 @@ public class OnlineMeetingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tollNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTollNumber(@javax.annotation.Nullable final String value) {
         this._tollNumber = value;
     }

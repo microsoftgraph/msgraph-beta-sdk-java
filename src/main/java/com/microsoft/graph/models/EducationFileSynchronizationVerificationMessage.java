@@ -23,6 +23,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
      * Instantiates a new educationFileSynchronizationVerificationMessage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationFileSynchronizationVerificationMessage() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.educationFileSynchronizationVerificationMessage");
@@ -60,12 +61,12 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationFileSynchronizationVerificationMessage currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the fileName property value. The fileName property
@@ -96,6 +97,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -109,6 +111,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -125,6 +129,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
      * @param value Value to set for the fileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileName(@javax.annotation.Nullable final String value) {
         this._fileName = value;
     }
@@ -133,6 +138,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +147,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }

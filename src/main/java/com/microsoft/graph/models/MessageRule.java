@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class MessageRule extends Entity implements Parsable {
     /** Actions to be taken on a message when the corresponding conditions are fulfilled. */
     private MessageRuleActions _actions;
@@ -29,6 +29,7 @@ public class MessageRule extends Entity implements Parsable {
      * Instantiates a new messageRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MessageRule() {
         super();
         this.setOdataType("#microsoft.graph.messageRule");
@@ -82,16 +83,16 @@ public class MessageRule extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MessageRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("actions", (n) -> { currentObject.setActions(n.getObjectValue(MessageRuleActions::createFromDiscriminatorValue)); });
-            this.put("conditions", (n) -> { currentObject.setConditions(n.getObjectValue(MessageRulePredicates::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("exceptions", (n) -> { currentObject.setExceptions(n.getObjectValue(MessageRulePredicates::createFromDiscriminatorValue)); });
-            this.put("hasError", (n) -> { currentObject.setHasError(n.getBooleanValue()); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("isReadOnly", (n) -> { currentObject.setIsReadOnly(n.getBooleanValue()); });
-            this.put("sequence", (n) -> { currentObject.setSequence(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actions", (n) -> { currentObject.setActions(n.getObjectValue(MessageRuleActions::createFromDiscriminatorValue)); });
+        deserializerMap.put("conditions", (n) -> { currentObject.setConditions(n.getObjectValue(MessageRulePredicates::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("exceptions", (n) -> { currentObject.setExceptions(n.getObjectValue(MessageRulePredicates::createFromDiscriminatorValue)); });
+        deserializerMap.put("hasError", (n) -> { currentObject.setHasError(n.getBooleanValue()); });
+        deserializerMap.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isReadOnly", (n) -> { currentObject.setIsReadOnly(n.getBooleanValue()); });
+        deserializerMap.put("sequence", (n) -> { currentObject.setSequence(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the hasError property value. Indicates whether the rule is in an error condition. Read-only.
@@ -130,6 +131,7 @@ public class MessageRule extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -147,6 +149,7 @@ public class MessageRule extends Entity implements Parsable {
      * @param value Value to set for the actions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActions(@javax.annotation.Nullable final MessageRuleActions value) {
         this._actions = value;
     }
@@ -155,6 +158,7 @@ public class MessageRule extends Entity implements Parsable {
      * @param value Value to set for the conditions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditions(@javax.annotation.Nullable final MessageRulePredicates value) {
         this._conditions = value;
     }
@@ -163,6 +167,7 @@ public class MessageRule extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -171,6 +176,7 @@ public class MessageRule extends Entity implements Parsable {
      * @param value Value to set for the exceptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExceptions(@javax.annotation.Nullable final MessageRulePredicates value) {
         this._exceptions = value;
     }
@@ -179,6 +185,7 @@ public class MessageRule extends Entity implements Parsable {
      * @param value Value to set for the hasError property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasError(@javax.annotation.Nullable final Boolean value) {
         this._hasError = value;
     }
@@ -187,6 +194,7 @@ public class MessageRule extends Entity implements Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }
@@ -195,6 +203,7 @@ public class MessageRule extends Entity implements Parsable {
      * @param value Value to set for the isReadOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsReadOnly(@javax.annotation.Nullable final Boolean value) {
         this._isReadOnly = value;
     }
@@ -203,6 +212,7 @@ public class MessageRule extends Entity implements Parsable {
      * @param value Value to set for the sequence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSequence(@javax.annotation.Nullable final Integer value) {
         this._sequence = value;
     }

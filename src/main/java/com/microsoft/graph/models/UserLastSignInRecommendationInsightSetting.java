@@ -17,6 +17,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
      * Instantiates a new UserLastSignInRecommendationInsightSetting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserLastSignInRecommendationInsightSetting() {
         super();
         this.setOdataType("#microsoft.graph.userLastSignInRecommendationInsightSetting");
@@ -38,10 +39,10 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserLastSignInRecommendationInsightSetting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("recommendationLookBackDuration", (n) -> { currentObject.setRecommendationLookBackDuration(n.getPeriodValue()); });
-            this.put("signInScope", (n) -> { currentObject.setSignInScope(n.getEnumValue(UserSignInRecommendationScope.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("recommendationLookBackDuration", (n) -> { currentObject.setRecommendationLookBackDuration(n.getPeriodValue()); });
+        deserializerMap.put("signInScope", (n) -> { currentObject.setSignInScope(n.getEnumValue(UserSignInRecommendationScope.class)); });
+        return deserializerMap
     }
     /**
      * Gets the recommendationLookBackDuration property value. Optional. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look-back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days.
@@ -64,6 +65,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
      * @param value Value to set for the recommendationLookBackDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendationLookBackDuration(@javax.annotation.Nullable final Period value) {
         this._recommendationLookBackDuration = value;
     }
@@ -83,6 +86,7 @@ public class UserLastSignInRecommendationInsightSetting extends AccessReviewReco
      * @param value Value to set for the signInScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInScope(@javax.annotation.Nullable final UserSignInRecommendationScope value) {
         this._signInScope = value;
     }

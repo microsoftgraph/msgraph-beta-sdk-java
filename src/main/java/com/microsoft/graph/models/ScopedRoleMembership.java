@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ScopedRoleMembership extends Entity implements Parsable {
     /** Unique identifier for the administrative unit that the directory role is scoped to */
     private String _administrativeUnitId;
@@ -19,6 +19,7 @@ public class ScopedRoleMembership extends Entity implements Parsable {
      * Instantiates a new scopedRoleMembership and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ScopedRoleMembership() {
         super();
         this.setOdataType("#microsoft.graph.scopedRoleMembership");
@@ -48,11 +49,11 @@ public class ScopedRoleMembership extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ScopedRoleMembership currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("administrativeUnitId", (n) -> { currentObject.setAdministrativeUnitId(n.getStringValue()); });
-            this.put("roleId", (n) -> { currentObject.setRoleId(n.getStringValue()); });
-            this.put("roleMemberInfo", (n) -> { currentObject.setRoleMemberInfo(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("administrativeUnitId", (n) -> { currentObject.setAdministrativeUnitId(n.getStringValue()); });
+        deserializerMap.put("roleId", (n) -> { currentObject.setRoleId(n.getStringValue()); });
+        deserializerMap.put("roleMemberInfo", (n) -> { currentObject.setRoleMemberInfo(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the roleId property value. Unique identifier for the directory role that the member is in.
@@ -75,6 +76,7 @@ public class ScopedRoleMembership extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +89,7 @@ public class ScopedRoleMembership extends Entity implements Parsable {
      * @param value Value to set for the administrativeUnitId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdministrativeUnitId(@javax.annotation.Nullable final String value) {
         this._administrativeUnitId = value;
     }
@@ -95,6 +98,7 @@ public class ScopedRoleMembership extends Entity implements Parsable {
      * @param value Value to set for the roleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleId(@javax.annotation.Nullable final String value) {
         this._roleId = value;
     }
@@ -103,6 +107,7 @@ public class ScopedRoleMembership extends Entity implements Parsable {
      * @param value Value to set for the roleMemberInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleMemberInfo(@javax.annotation.Nullable final Identity value) {
         this._roleMemberInfo = value;
     }

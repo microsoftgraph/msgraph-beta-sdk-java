@@ -30,6 +30,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * Instantiates a new embeddedSIMDeviceState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EmbeddedSIMDeviceState() {
         super();
         this.setOdataType("#microsoft.graph.embeddedSIMDeviceState");
@@ -67,16 +68,16 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmbeddedSIMDeviceState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(EmbeddedSIMDeviceStateValue.class)); });
-            this.put("stateDetails", (n) -> { currentObject.setStateDetails(n.getStringValue()); });
-            this.put("universalIntegratedCircuitCardIdentifier", (n) -> { currentObject.setUniversalIntegratedCircuitCardIdentifier(n.getStringValue()); });
-            this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(EmbeddedSIMDeviceStateValue.class)); });
+        deserializerMap.put("stateDetails", (n) -> { currentObject.setStateDetails(n.getStringValue()); });
+        deserializerMap.put("universalIntegratedCircuitCardIdentifier", (n) -> { currentObject.setUniversalIntegratedCircuitCardIdentifier(n.getStringValue()); });
+        deserializerMap.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the lastSyncDateTime property value. The time the embedded SIM device last checked in. Updated service side.
@@ -131,6 +132,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -148,6 +150,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -156,6 +159,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -164,6 +168,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSyncDateTime = value;
     }
@@ -172,6 +177,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._modifiedDateTime = value;
     }
@@ -180,6 +186,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final EmbeddedSIMDeviceStateValue value) {
         this._state = value;
     }
@@ -188,6 +195,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the stateDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStateDetails(@javax.annotation.Nullable final String value) {
         this._stateDetails = value;
     }
@@ -196,6 +204,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the universalIntegratedCircuitCardIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUniversalIntegratedCircuitCardIdentifier(@javax.annotation.Nullable final String value) {
         this._universalIntegratedCircuitCardIdentifier = value;
     }
@@ -204,6 +213,7 @@ public class EmbeddedSIMDeviceState extends Entity implements Parsable {
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
         this._userName = value;
     }

@@ -1,0 +1,28 @@
+{
+  "descriptionHash": "70B45F5C72DC54DAFAA6718256EF23EF081125FC14221700FA57C2C4A8A5CF0BA49BBB49F9D496B018641E8ED390F29F06FE7C875387EFBA177C3E72EC8F75CC",
+  "descriptionLocation": "/home/vsts/work/1/s/msgraph-metadata/clean_beta_openapi/openapi.yaml",
+  "lockFileVersion": "1.0.0",
+  "kiotaVersion": "0.7.1.0",
+  "clientClassName": "BaseGraphServiceClient",
+  "clientNamespaceName": "com.Microsoft.Graph",
+  "language": "Java",
+  "usesBackingStore": false,
+  "includeAdditionalData": true,
+  "serializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Text.TextSerializationWriterFactory"
+  ],
+  "deserializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Text.TextParseNodeFactory"
+  ],
+  "structuredMimeTypes": [
+    "application/json",
+    "application/xml",
+    "text/plain",
+    "text/xml",
+    "text/yaml"
+  ],
+  "includePatterns": [],
+  "excludePatterns": []
+}

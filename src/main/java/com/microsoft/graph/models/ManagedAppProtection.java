@@ -14,9 +14,9 @@ import java.util.Map;
 import java.util.Objects;
 public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     /** Data storage locations where a user may store managed data. */
-    private java.util.List<String> _allowedDataIngestionLocations;
+    private java.util.List<ManagedAppDataIngestionLocation> _allowedDataIngestionLocations;
     /** Data storage locations where a user may store managed data. */
-    private java.util.List<String> _allowedDataStorageLocations;
+    private java.util.List<ManagedAppDataStorageLocation> _allowedDataStorageLocations;
     /** Data can be transferred from/to these classes of apps */
     private ManagedAppDataTransferLevel _allowedInboundDataTransferSources;
     /** Specify the number of characters that may be cut or copied from Org data and accounts to any application. This setting overrides the AllowedOutboundClipboardSharingLevel restriction. Default value of '0' means no exception is allowed. */
@@ -75,6 +75,8 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     private String _minimumWipeAppVersion;
     /** Versions less than or equal to the specified version will wipe the managed app and the associated company data. */
     private String _minimumWipeOsVersion;
+    /** Indicates how to prioritize which Mobile Threat Defense (MTD) partner is enabled for a given platform, when more than one is enabled. An app can only be actively using a single Mobile Threat Defense partner. When NULL, Microsoft Defender will be given preference. Otherwise setting the value to defenderOverThirdPartyPartner or thirdPartyPartnerOverDefender will make explicit which partner to prioritize. Possible values are: null, defenderOverThirdPartyPartner, thirdPartyPartnerOverDefender and unknownFutureValue. Default value is null. Possible values are: defenderOverThirdPartyPartner, thirdPartyPartnerOverDefender, unknownFutureValue. */
+    private MobileThreatDefensePartnerPriority _mobileThreatDefensePartnerPriority;
     /** An admin initiated action to be applied on a managed app. */
     private ManagedAppRemediationAction _mobileThreatDefenseRemediationAction;
     /** Restrict managed app notification */
@@ -107,6 +109,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * Instantiates a new ManagedAppProtection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedAppProtection() {
         super();
         this.setOdataType("#microsoft.graph.managedAppProtection");
@@ -133,18 +136,18 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     }
     /**
      * Gets the allowedDataIngestionLocations property value. Data storage locations where a user may store managed data.
-     * @return a string
+     * @return a managedAppDataIngestionLocation
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getAllowedDataIngestionLocations() {
+    public java.util.List<ManagedAppDataIngestionLocation> getAllowedDataIngestionLocations() {
         return this._allowedDataIngestionLocations;
     }
     /**
      * Gets the allowedDataStorageLocations property value. Data storage locations where a user may store managed data.
-     * @return a string
+     * @return a managedAppDataStorageLocation
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getAllowedDataStorageLocations() {
+    public java.util.List<ManagedAppDataStorageLocation> getAllowedDataStorageLocations() {
         return this._allowedDataStorageLocations;
     }
     /**
@@ -258,53 +261,54 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAppProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedDataIngestionLocations", (n) -> { currentObject.setAllowedDataIngestionLocations(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("allowedDataStorageLocations", (n) -> { currentObject.setAllowedDataStorageLocations(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("allowedInboundDataTransferSources", (n) -> { currentObject.setAllowedInboundDataTransferSources(n.getEnumValue(ManagedAppDataTransferLevel.class)); });
-            this.put("allowedOutboundClipboardSharingExceptionLength", (n) -> { currentObject.setAllowedOutboundClipboardSharingExceptionLength(n.getIntegerValue()); });
-            this.put("allowedOutboundClipboardSharingLevel", (n) -> { currentObject.setAllowedOutboundClipboardSharingLevel(n.getEnumValue(ManagedAppClipboardSharingLevel.class)); });
-            this.put("allowedOutboundDataTransferDestinations", (n) -> { currentObject.setAllowedOutboundDataTransferDestinations(n.getEnumValue(ManagedAppDataTransferLevel.class)); });
-            this.put("appActionIfDeviceComplianceRequired", (n) -> { currentObject.setAppActionIfDeviceComplianceRequired(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfMaximumPinRetriesExceeded", (n) -> { currentObject.setAppActionIfMaximumPinRetriesExceeded(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("appActionIfUnableToAuthenticateUser", (n) -> { currentObject.setAppActionIfUnableToAuthenticateUser(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("blockDataIngestionIntoOrganizationDocuments", (n) -> { currentObject.setBlockDataIngestionIntoOrganizationDocuments(n.getBooleanValue()); });
-            this.put("contactSyncBlocked", (n) -> { currentObject.setContactSyncBlocked(n.getBooleanValue()); });
-            this.put("dataBackupBlocked", (n) -> { currentObject.setDataBackupBlocked(n.getBooleanValue()); });
-            this.put("deviceComplianceRequired", (n) -> { currentObject.setDeviceComplianceRequired(n.getBooleanValue()); });
-            this.put("dialerRestrictionLevel", (n) -> { currentObject.setDialerRestrictionLevel(n.getEnumValue(ManagedAppPhoneNumberRedirectLevel.class)); });
-            this.put("disableAppPinIfDevicePinIsSet", (n) -> { currentObject.setDisableAppPinIfDevicePinIsSet(n.getBooleanValue()); });
-            this.put("fingerprintBlocked", (n) -> { currentObject.setFingerprintBlocked(n.getBooleanValue()); });
-            this.put("gracePeriodToBlockAppsDuringOffClockHours", (n) -> { currentObject.setGracePeriodToBlockAppsDuringOffClockHours(n.getPeriodValue()); });
-            this.put("managedBrowser", (n) -> { currentObject.setManagedBrowser(n.getEnumValue(ManagedBrowserType.class)); });
-            this.put("managedBrowserToOpenLinksRequired", (n) -> { currentObject.setManagedBrowserToOpenLinksRequired(n.getBooleanValue()); });
-            this.put("maximumAllowedDeviceThreatLevel", (n) -> { currentObject.setMaximumAllowedDeviceThreatLevel(n.getEnumValue(ManagedAppDeviceThreatLevel.class)); });
-            this.put("maximumPinRetries", (n) -> { currentObject.setMaximumPinRetries(n.getIntegerValue()); });
-            this.put("maximumRequiredOsVersion", (n) -> { currentObject.setMaximumRequiredOsVersion(n.getStringValue()); });
-            this.put("maximumWarningOsVersion", (n) -> { currentObject.setMaximumWarningOsVersion(n.getStringValue()); });
-            this.put("maximumWipeOsVersion", (n) -> { currentObject.setMaximumWipeOsVersion(n.getStringValue()); });
-            this.put("minimumPinLength", (n) -> { currentObject.setMinimumPinLength(n.getIntegerValue()); });
-            this.put("minimumRequiredAppVersion", (n) -> { currentObject.setMinimumRequiredAppVersion(n.getStringValue()); });
-            this.put("minimumRequiredOsVersion", (n) -> { currentObject.setMinimumRequiredOsVersion(n.getStringValue()); });
-            this.put("minimumWarningAppVersion", (n) -> { currentObject.setMinimumWarningAppVersion(n.getStringValue()); });
-            this.put("minimumWarningOsVersion", (n) -> { currentObject.setMinimumWarningOsVersion(n.getStringValue()); });
-            this.put("minimumWipeAppVersion", (n) -> { currentObject.setMinimumWipeAppVersion(n.getStringValue()); });
-            this.put("minimumWipeOsVersion", (n) -> { currentObject.setMinimumWipeOsVersion(n.getStringValue()); });
-            this.put("mobileThreatDefenseRemediationAction", (n) -> { currentObject.setMobileThreatDefenseRemediationAction(n.getEnumValue(ManagedAppRemediationAction.class)); });
-            this.put("notificationRestriction", (n) -> { currentObject.setNotificationRestriction(n.getEnumValue(ManagedAppNotificationRestriction.class)); });
-            this.put("organizationalCredentialsRequired", (n) -> { currentObject.setOrganizationalCredentialsRequired(n.getBooleanValue()); });
-            this.put("periodBeforePinReset", (n) -> { currentObject.setPeriodBeforePinReset(n.getPeriodValue()); });
-            this.put("periodOfflineBeforeAccessCheck", (n) -> { currentObject.setPeriodOfflineBeforeAccessCheck(n.getPeriodValue()); });
-            this.put("periodOfflineBeforeWipeIsEnforced", (n) -> { currentObject.setPeriodOfflineBeforeWipeIsEnforced(n.getPeriodValue()); });
-            this.put("periodOnlineBeforeAccessCheck", (n) -> { currentObject.setPeriodOnlineBeforeAccessCheck(n.getPeriodValue()); });
-            this.put("pinCharacterSet", (n) -> { currentObject.setPinCharacterSet(n.getEnumValue(ManagedAppPinCharacterSet.class)); });
-            this.put("pinRequired", (n) -> { currentObject.setPinRequired(n.getBooleanValue()); });
-            this.put("pinRequiredInsteadOfBiometricTimeout", (n) -> { currentObject.setPinRequiredInsteadOfBiometricTimeout(n.getPeriodValue()); });
-            this.put("previousPinBlockCount", (n) -> { currentObject.setPreviousPinBlockCount(n.getIntegerValue()); });
-            this.put("printBlocked", (n) -> { currentObject.setPrintBlocked(n.getBooleanValue()); });
-            this.put("saveAsBlocked", (n) -> { currentObject.setSaveAsBlocked(n.getBooleanValue()); });
-            this.put("simplePinBlocked", (n) -> { currentObject.setSimplePinBlocked(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedDataIngestionLocations", (n) -> { currentObject.setAllowedDataIngestionLocations(n.getCollectionOfEnumValues(ManagedAppDataIngestionLocation.class)); });
+        deserializerMap.put("allowedDataStorageLocations", (n) -> { currentObject.setAllowedDataStorageLocations(n.getCollectionOfEnumValues(ManagedAppDataStorageLocation.class)); });
+        deserializerMap.put("allowedInboundDataTransferSources", (n) -> { currentObject.setAllowedInboundDataTransferSources(n.getEnumValue(ManagedAppDataTransferLevel.class)); });
+        deserializerMap.put("allowedOutboundClipboardSharingExceptionLength", (n) -> { currentObject.setAllowedOutboundClipboardSharingExceptionLength(n.getIntegerValue()); });
+        deserializerMap.put("allowedOutboundClipboardSharingLevel", (n) -> { currentObject.setAllowedOutboundClipboardSharingLevel(n.getEnumValue(ManagedAppClipboardSharingLevel.class)); });
+        deserializerMap.put("allowedOutboundDataTransferDestinations", (n) -> { currentObject.setAllowedOutboundDataTransferDestinations(n.getEnumValue(ManagedAppDataTransferLevel.class)); });
+        deserializerMap.put("appActionIfDeviceComplianceRequired", (n) -> { currentObject.setAppActionIfDeviceComplianceRequired(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfMaximumPinRetriesExceeded", (n) -> { currentObject.setAppActionIfMaximumPinRetriesExceeded(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("appActionIfUnableToAuthenticateUser", (n) -> { currentObject.setAppActionIfUnableToAuthenticateUser(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("blockDataIngestionIntoOrganizationDocuments", (n) -> { currentObject.setBlockDataIngestionIntoOrganizationDocuments(n.getBooleanValue()); });
+        deserializerMap.put("contactSyncBlocked", (n) -> { currentObject.setContactSyncBlocked(n.getBooleanValue()); });
+        deserializerMap.put("dataBackupBlocked", (n) -> { currentObject.setDataBackupBlocked(n.getBooleanValue()); });
+        deserializerMap.put("deviceComplianceRequired", (n) -> { currentObject.setDeviceComplianceRequired(n.getBooleanValue()); });
+        deserializerMap.put("dialerRestrictionLevel", (n) -> { currentObject.setDialerRestrictionLevel(n.getEnumValue(ManagedAppPhoneNumberRedirectLevel.class)); });
+        deserializerMap.put("disableAppPinIfDevicePinIsSet", (n) -> { currentObject.setDisableAppPinIfDevicePinIsSet(n.getBooleanValue()); });
+        deserializerMap.put("fingerprintBlocked", (n) -> { currentObject.setFingerprintBlocked(n.getBooleanValue()); });
+        deserializerMap.put("gracePeriodToBlockAppsDuringOffClockHours", (n) -> { currentObject.setGracePeriodToBlockAppsDuringOffClockHours(n.getPeriodValue()); });
+        deserializerMap.put("managedBrowser", (n) -> { currentObject.setManagedBrowser(n.getEnumValue(ManagedBrowserType.class)); });
+        deserializerMap.put("managedBrowserToOpenLinksRequired", (n) -> { currentObject.setManagedBrowserToOpenLinksRequired(n.getBooleanValue()); });
+        deserializerMap.put("maximumAllowedDeviceThreatLevel", (n) -> { currentObject.setMaximumAllowedDeviceThreatLevel(n.getEnumValue(ManagedAppDeviceThreatLevel.class)); });
+        deserializerMap.put("maximumPinRetries", (n) -> { currentObject.setMaximumPinRetries(n.getIntegerValue()); });
+        deserializerMap.put("maximumRequiredOsVersion", (n) -> { currentObject.setMaximumRequiredOsVersion(n.getStringValue()); });
+        deserializerMap.put("maximumWarningOsVersion", (n) -> { currentObject.setMaximumWarningOsVersion(n.getStringValue()); });
+        deserializerMap.put("maximumWipeOsVersion", (n) -> { currentObject.setMaximumWipeOsVersion(n.getStringValue()); });
+        deserializerMap.put("minimumPinLength", (n) -> { currentObject.setMinimumPinLength(n.getIntegerValue()); });
+        deserializerMap.put("minimumRequiredAppVersion", (n) -> { currentObject.setMinimumRequiredAppVersion(n.getStringValue()); });
+        deserializerMap.put("minimumRequiredOsVersion", (n) -> { currentObject.setMinimumRequiredOsVersion(n.getStringValue()); });
+        deserializerMap.put("minimumWarningAppVersion", (n) -> { currentObject.setMinimumWarningAppVersion(n.getStringValue()); });
+        deserializerMap.put("minimumWarningOsVersion", (n) -> { currentObject.setMinimumWarningOsVersion(n.getStringValue()); });
+        deserializerMap.put("minimumWipeAppVersion", (n) -> { currentObject.setMinimumWipeAppVersion(n.getStringValue()); });
+        deserializerMap.put("minimumWipeOsVersion", (n) -> { currentObject.setMinimumWipeOsVersion(n.getStringValue()); });
+        deserializerMap.put("mobileThreatDefensePartnerPriority", (n) -> { currentObject.setMobileThreatDefensePartnerPriority(n.getEnumValue(MobileThreatDefensePartnerPriority.class)); });
+        deserializerMap.put("mobileThreatDefenseRemediationAction", (n) -> { currentObject.setMobileThreatDefenseRemediationAction(n.getEnumValue(ManagedAppRemediationAction.class)); });
+        deserializerMap.put("notificationRestriction", (n) -> { currentObject.setNotificationRestriction(n.getEnumValue(ManagedAppNotificationRestriction.class)); });
+        deserializerMap.put("organizationalCredentialsRequired", (n) -> { currentObject.setOrganizationalCredentialsRequired(n.getBooleanValue()); });
+        deserializerMap.put("periodBeforePinReset", (n) -> { currentObject.setPeriodBeforePinReset(n.getPeriodValue()); });
+        deserializerMap.put("periodOfflineBeforeAccessCheck", (n) -> { currentObject.setPeriodOfflineBeforeAccessCheck(n.getPeriodValue()); });
+        deserializerMap.put("periodOfflineBeforeWipeIsEnforced", (n) -> { currentObject.setPeriodOfflineBeforeWipeIsEnforced(n.getPeriodValue()); });
+        deserializerMap.put("periodOnlineBeforeAccessCheck", (n) -> { currentObject.setPeriodOnlineBeforeAccessCheck(n.getPeriodValue()); });
+        deserializerMap.put("pinCharacterSet", (n) -> { currentObject.setPinCharacterSet(n.getEnumValue(ManagedAppPinCharacterSet.class)); });
+        deserializerMap.put("pinRequired", (n) -> { currentObject.setPinRequired(n.getBooleanValue()); });
+        deserializerMap.put("pinRequiredInsteadOfBiometricTimeout", (n) -> { currentObject.setPinRequiredInsteadOfBiometricTimeout(n.getPeriodValue()); });
+        deserializerMap.put("previousPinBlockCount", (n) -> { currentObject.setPreviousPinBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("printBlocked", (n) -> { currentObject.setPrintBlocked(n.getBooleanValue()); });
+        deserializerMap.put("saveAsBlocked", (n) -> { currentObject.setSaveAsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("simplePinBlocked", (n) -> { currentObject.setSimplePinBlocked(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the fingerprintBlocked property value. Indicates whether use of the fingerprint reader is allowed in place of a pin if PinRequired is set to True.
@@ -435,6 +439,14 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this._minimumWipeOsVersion;
     }
     /**
+     * Gets the mobileThreatDefensePartnerPriority property value. Indicates how to prioritize which Mobile Threat Defense (MTD) partner is enabled for a given platform, when more than one is enabled. An app can only be actively using a single Mobile Threat Defense partner. When NULL, Microsoft Defender will be given preference. Otherwise setting the value to defenderOverThirdPartyPartner or thirdPartyPartnerOverDefender will make explicit which partner to prioritize. Possible values are: null, defenderOverThirdPartyPartner, thirdPartyPartnerOverDefender and unknownFutureValue. Default value is null. Possible values are: defenderOverThirdPartyPartner, thirdPartyPartnerOverDefender, unknownFutureValue.
+     * @return a mobileThreatDefensePartnerPriority
+     */
+    @javax.annotation.Nullable
+    public MobileThreatDefensePartnerPriority getMobileThreatDefensePartnerPriority() {
+        return this._mobileThreatDefensePartnerPriority;
+    }
+    /**
      * Gets the mobileThreatDefenseRemediationAction property value. An admin initiated action to be applied on a managed app.
      * @return a managedAppRemediationAction
      */
@@ -551,11 +563,12 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfPrimitiveValues("allowedDataIngestionLocations", this.getAllowedDataIngestionLocations());
-        writer.writeCollectionOfPrimitiveValues("allowedDataStorageLocations", this.getAllowedDataStorageLocations());
+        writer.writeCollectionOfEnumValues("allowedDataIngestionLocations", this.getAllowedDataIngestionLocations());
+        writer.writeCollectionOfEnumValues("allowedDataStorageLocations", this.getAllowedDataStorageLocations());
         writer.writeEnumValue("allowedInboundDataTransferSources", this.getAllowedInboundDataTransferSources());
         writer.writeIntegerValue("allowedOutboundClipboardSharingExceptionLength", this.getAllowedOutboundClipboardSharingExceptionLength());
         writer.writeEnumValue("allowedOutboundClipboardSharingLevel", this.getAllowedOutboundClipboardSharingLevel());
@@ -585,6 +598,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         writer.writeStringValue("minimumWarningOsVersion", this.getMinimumWarningOsVersion());
         writer.writeStringValue("minimumWipeAppVersion", this.getMinimumWipeAppVersion());
         writer.writeStringValue("minimumWipeOsVersion", this.getMinimumWipeOsVersion());
+        writer.writeEnumValue("mobileThreatDefensePartnerPriority", this.getMobileThreatDefensePartnerPriority());
         writer.writeEnumValue("mobileThreatDefenseRemediationAction", this.getMobileThreatDefenseRemediationAction());
         writer.writeEnumValue("notificationRestriction", this.getNotificationRestriction());
         writer.writeBooleanValue("organizationalCredentialsRequired", this.getOrganizationalCredentialsRequired());
@@ -605,7 +619,8 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the allowedDataIngestionLocations property.
      * @return a void
      */
-    public void setAllowedDataIngestionLocations(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setAllowedDataIngestionLocations(@javax.annotation.Nullable final java.util.List<ManagedAppDataIngestionLocation> value) {
         this._allowedDataIngestionLocations = value;
     }
     /**
@@ -613,7 +628,8 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the allowedDataStorageLocations property.
      * @return a void
      */
-    public void setAllowedDataStorageLocations(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setAllowedDataStorageLocations(@javax.annotation.Nullable final java.util.List<ManagedAppDataStorageLocation> value) {
         this._allowedDataStorageLocations = value;
     }
     /**
@@ -621,6 +637,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the allowedInboundDataTransferSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedInboundDataTransferSources(@javax.annotation.Nullable final ManagedAppDataTransferLevel value) {
         this._allowedInboundDataTransferSources = value;
     }
@@ -629,6 +646,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the allowedOutboundClipboardSharingExceptionLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedOutboundClipboardSharingExceptionLength(@javax.annotation.Nullable final Integer value) {
         this._allowedOutboundClipboardSharingExceptionLength = value;
     }
@@ -637,6 +655,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the allowedOutboundClipboardSharingLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedOutboundClipboardSharingLevel(@javax.annotation.Nullable final ManagedAppClipboardSharingLevel value) {
         this._allowedOutboundClipboardSharingLevel = value;
     }
@@ -645,6 +664,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the allowedOutboundDataTransferDestinations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedOutboundDataTransferDestinations(@javax.annotation.Nullable final ManagedAppDataTransferLevel value) {
         this._allowedOutboundDataTransferDestinations = value;
     }
@@ -653,6 +673,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the appActionIfDeviceComplianceRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfDeviceComplianceRequired(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfDeviceComplianceRequired = value;
     }
@@ -661,6 +682,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the appActionIfMaximumPinRetriesExceeded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfMaximumPinRetriesExceeded(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfMaximumPinRetriesExceeded = value;
     }
@@ -669,6 +691,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the appActionIfUnableToAuthenticateUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActionIfUnableToAuthenticateUser(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._appActionIfUnableToAuthenticateUser = value;
     }
@@ -677,6 +700,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the blockDataIngestionIntoOrganizationDocuments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockDataIngestionIntoOrganizationDocuments(@javax.annotation.Nullable final Boolean value) {
         this._blockDataIngestionIntoOrganizationDocuments = value;
     }
@@ -685,6 +709,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the contactSyncBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactSyncBlocked(@javax.annotation.Nullable final Boolean value) {
         this._contactSyncBlocked = value;
     }
@@ -693,6 +718,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the dataBackupBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataBackupBlocked(@javax.annotation.Nullable final Boolean value) {
         this._dataBackupBlocked = value;
     }
@@ -701,6 +727,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the deviceComplianceRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceComplianceRequired(@javax.annotation.Nullable final Boolean value) {
         this._deviceComplianceRequired = value;
     }
@@ -709,6 +736,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the dialerRestrictionLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDialerRestrictionLevel(@javax.annotation.Nullable final ManagedAppPhoneNumberRedirectLevel value) {
         this._dialerRestrictionLevel = value;
     }
@@ -717,6 +745,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the disableAppPinIfDevicePinIsSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableAppPinIfDevicePinIsSet(@javax.annotation.Nullable final Boolean value) {
         this._disableAppPinIfDevicePinIsSet = value;
     }
@@ -725,6 +754,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the fingerprintBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFingerprintBlocked(@javax.annotation.Nullable final Boolean value) {
         this._fingerprintBlocked = value;
     }
@@ -733,6 +763,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the gracePeriodToBlockAppsDuringOffClockHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGracePeriodToBlockAppsDuringOffClockHours(@javax.annotation.Nullable final Period value) {
         this._gracePeriodToBlockAppsDuringOffClockHours = value;
     }
@@ -741,6 +772,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the managedBrowser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedBrowser(@javax.annotation.Nullable final ManagedBrowserType value) {
         this._managedBrowser = value;
     }
@@ -749,6 +781,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the managedBrowserToOpenLinksRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedBrowserToOpenLinksRequired(@javax.annotation.Nullable final Boolean value) {
         this._managedBrowserToOpenLinksRequired = value;
     }
@@ -757,6 +790,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the maximumAllowedDeviceThreatLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumAllowedDeviceThreatLevel(@javax.annotation.Nullable final ManagedAppDeviceThreatLevel value) {
         this._maximumAllowedDeviceThreatLevel = value;
     }
@@ -765,6 +799,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the maximumPinRetries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumPinRetries(@javax.annotation.Nullable final Integer value) {
         this._maximumPinRetries = value;
     }
@@ -773,6 +808,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the maximumRequiredOsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumRequiredOsVersion(@javax.annotation.Nullable final String value) {
         this._maximumRequiredOsVersion = value;
     }
@@ -781,6 +817,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the maximumWarningOsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumWarningOsVersion(@javax.annotation.Nullable final String value) {
         this._maximumWarningOsVersion = value;
     }
@@ -789,6 +826,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the maximumWipeOsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumWipeOsVersion(@javax.annotation.Nullable final String value) {
         this._maximumWipeOsVersion = value;
     }
@@ -797,6 +835,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the minimumPinLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumPinLength(@javax.annotation.Nullable final Integer value) {
         this._minimumPinLength = value;
     }
@@ -805,6 +844,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the minimumRequiredAppVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredAppVersion(@javax.annotation.Nullable final String value) {
         this._minimumRequiredAppVersion = value;
     }
@@ -813,6 +853,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the minimumRequiredOsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumRequiredOsVersion(@javax.annotation.Nullable final String value) {
         this._minimumRequiredOsVersion = value;
     }
@@ -821,6 +862,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the minimumWarningAppVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWarningAppVersion(@javax.annotation.Nullable final String value) {
         this._minimumWarningAppVersion = value;
     }
@@ -829,6 +871,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the minimumWarningOsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWarningOsVersion(@javax.annotation.Nullable final String value) {
         this._minimumWarningOsVersion = value;
     }
@@ -837,6 +880,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the minimumWipeAppVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWipeAppVersion(@javax.annotation.Nullable final String value) {
         this._minimumWipeAppVersion = value;
     }
@@ -845,14 +889,25 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the minimumWipeOsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumWipeOsVersion(@javax.annotation.Nullable final String value) {
         this._minimumWipeOsVersion = value;
+    }
+    /**
+     * Sets the mobileThreatDefensePartnerPriority property value. Indicates how to prioritize which Mobile Threat Defense (MTD) partner is enabled for a given platform, when more than one is enabled. An app can only be actively using a single Mobile Threat Defense partner. When NULL, Microsoft Defender will be given preference. Otherwise setting the value to defenderOverThirdPartyPartner or thirdPartyPartnerOverDefender will make explicit which partner to prioritize. Possible values are: null, defenderOverThirdPartyPartner, thirdPartyPartnerOverDefender and unknownFutureValue. Default value is null. Possible values are: defenderOverThirdPartyPartner, thirdPartyPartnerOverDefender, unknownFutureValue.
+     * @param value Value to set for the mobileThreatDefensePartnerPriority property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMobileThreatDefensePartnerPriority(@javax.annotation.Nullable final MobileThreatDefensePartnerPriority value) {
+        this._mobileThreatDefensePartnerPriority = value;
     }
     /**
      * Sets the mobileThreatDefenseRemediationAction property value. An admin initiated action to be applied on a managed app.
      * @param value Value to set for the mobileThreatDefenseRemediationAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileThreatDefenseRemediationAction(@javax.annotation.Nullable final ManagedAppRemediationAction value) {
         this._mobileThreatDefenseRemediationAction = value;
     }
@@ -861,6 +916,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the notificationRestriction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationRestriction(@javax.annotation.Nullable final ManagedAppNotificationRestriction value) {
         this._notificationRestriction = value;
     }
@@ -869,6 +925,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the organizationalCredentialsRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizationalCredentialsRequired(@javax.annotation.Nullable final Boolean value) {
         this._organizationalCredentialsRequired = value;
     }
@@ -877,6 +934,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the periodBeforePinReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeriodBeforePinReset(@javax.annotation.Nullable final Period value) {
         this._periodBeforePinReset = value;
     }
@@ -885,6 +943,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the periodOfflineBeforeAccessCheck property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeriodOfflineBeforeAccessCheck(@javax.annotation.Nullable final Period value) {
         this._periodOfflineBeforeAccessCheck = value;
     }
@@ -893,6 +952,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the periodOfflineBeforeWipeIsEnforced property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeriodOfflineBeforeWipeIsEnforced(@javax.annotation.Nullable final Period value) {
         this._periodOfflineBeforeWipeIsEnforced = value;
     }
@@ -901,6 +961,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the periodOnlineBeforeAccessCheck property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeriodOnlineBeforeAccessCheck(@javax.annotation.Nullable final Period value) {
         this._periodOnlineBeforeAccessCheck = value;
     }
@@ -909,6 +970,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the pinCharacterSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinCharacterSet(@javax.annotation.Nullable final ManagedAppPinCharacterSet value) {
         this._pinCharacterSet = value;
     }
@@ -917,6 +979,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the pinRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinRequired(@javax.annotation.Nullable final Boolean value) {
         this._pinRequired = value;
     }
@@ -925,6 +988,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the pinRequiredInsteadOfBiometricTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinRequiredInsteadOfBiometricTimeout(@javax.annotation.Nullable final Period value) {
         this._pinRequiredInsteadOfBiometricTimeout = value;
     }
@@ -933,6 +997,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the previousPinBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreviousPinBlockCount(@javax.annotation.Nullable final Integer value) {
         this._previousPinBlockCount = value;
     }
@@ -941,6 +1006,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the printBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrintBlocked(@javax.annotation.Nullable final Boolean value) {
         this._printBlocked = value;
     }
@@ -949,6 +1015,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the saveAsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSaveAsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._saveAsBlocked = value;
     }
@@ -957,6 +1024,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      * @param value Value to set for the simplePinBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSimplePinBlocked(@javax.annotation.Nullable final Boolean value) {
         this._simplePinBlocked = value;
     }

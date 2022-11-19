@@ -81,6 +81,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * Instantiates a new userExperienceAnalyticsWorkFromAnywhereDevice and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereDevice() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsWorkFromAnywhereDevice");
@@ -190,42 +191,42 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsWorkFromAnywhereDevice currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("autoPilotProfileAssigned", (n) -> { currentObject.setAutoPilotProfileAssigned(n.getBooleanValue()); });
-            this.put("autoPilotRegistered", (n) -> { currentObject.setAutoPilotRegistered(n.getBooleanValue()); });
-            this.put("azureAdDeviceId", (n) -> { currentObject.setAzureAdDeviceId(n.getStringValue()); });
-            this.put("azureAdJoinType", (n) -> { currentObject.setAzureAdJoinType(n.getStringValue()); });
-            this.put("azureAdRegistered", (n) -> { currentObject.setAzureAdRegistered(n.getBooleanValue()); });
-            this.put("cloudIdentityScore", (n) -> { currentObject.setCloudIdentityScore(n.getDoubleValue()); });
-            this.put("cloudManagementScore", (n) -> { currentObject.setCloudManagementScore(n.getDoubleValue()); });
-            this.put("cloudProvisioningScore", (n) -> { currentObject.setCloudProvisioningScore(n.getDoubleValue()); });
-            this.put("compliancePolicySetToIntune", (n) -> { currentObject.setCompliancePolicySetToIntune(n.getBooleanValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("healthStatus", (n) -> { currentObject.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
-            this.put("isCloudManagedGatewayEnabled", (n) -> { currentObject.setIsCloudManagedGatewayEnabled(n.getBooleanValue()); });
-            this.put("managedBy", (n) -> { currentObject.setManagedBy(n.getStringValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("osCheckFailed", (n) -> { currentObject.setOsCheckFailed(n.getBooleanValue()); });
-            this.put("osDescription", (n) -> { currentObject.setOsDescription(n.getStringValue()); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
-            this.put("otherWorkloadsSetToIntune", (n) -> { currentObject.setOtherWorkloadsSetToIntune(n.getBooleanValue()); });
-            this.put("ownership", (n) -> { currentObject.setOwnership(n.getStringValue()); });
-            this.put("processor64BitCheckFailed", (n) -> { currentObject.setProcessor64BitCheckFailed(n.getBooleanValue()); });
-            this.put("processorCoreCountCheckFailed", (n) -> { currentObject.setProcessorCoreCountCheckFailed(n.getBooleanValue()); });
-            this.put("processorFamilyCheckFailed", (n) -> { currentObject.setProcessorFamilyCheckFailed(n.getBooleanValue()); });
-            this.put("processorSpeedCheckFailed", (n) -> { currentObject.setProcessorSpeedCheckFailed(n.getBooleanValue()); });
-            this.put("ramCheckFailed", (n) -> { currentObject.setRamCheckFailed(n.getBooleanValue()); });
-            this.put("secureBootCheckFailed", (n) -> { currentObject.setSecureBootCheckFailed(n.getBooleanValue()); });
-            this.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
-            this.put("storageCheckFailed", (n) -> { currentObject.setStorageCheckFailed(n.getBooleanValue()); });
-            this.put("tenantAttached", (n) -> { currentObject.setTenantAttached(n.getBooleanValue()); });
-            this.put("tpmCheckFailed", (n) -> { currentObject.setTpmCheckFailed(n.getBooleanValue()); });
-            this.put("upgradeEligibility", (n) -> { currentObject.setUpgradeEligibility(n.getEnumValue(OperatingSystemUpgradeEligibility.class)); });
-            this.put("windowsScore", (n) -> { currentObject.setWindowsScore(n.getDoubleValue()); });
-            this.put("workFromAnywhereScore", (n) -> { currentObject.setWorkFromAnywhereScore(n.getDoubleValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("autoPilotProfileAssigned", (n) -> { currentObject.setAutoPilotProfileAssigned(n.getBooleanValue()); });
+        deserializerMap.put("autoPilotRegistered", (n) -> { currentObject.setAutoPilotRegistered(n.getBooleanValue()); });
+        deserializerMap.put("azureAdDeviceId", (n) -> { currentObject.setAzureAdDeviceId(n.getStringValue()); });
+        deserializerMap.put("azureAdJoinType", (n) -> { currentObject.setAzureAdJoinType(n.getStringValue()); });
+        deserializerMap.put("azureAdRegistered", (n) -> { currentObject.setAzureAdRegistered(n.getBooleanValue()); });
+        deserializerMap.put("cloudIdentityScore", (n) -> { currentObject.setCloudIdentityScore(n.getDoubleValue()); });
+        deserializerMap.put("cloudManagementScore", (n) -> { currentObject.setCloudManagementScore(n.getDoubleValue()); });
+        deserializerMap.put("cloudProvisioningScore", (n) -> { currentObject.setCloudProvisioningScore(n.getDoubleValue()); });
+        deserializerMap.put("compliancePolicySetToIntune", (n) -> { currentObject.setCompliancePolicySetToIntune(n.getBooleanValue()); });
+        deserializerMap.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("healthStatus", (n) -> { currentObject.setHealthStatus(n.getEnumValue(UserExperienceAnalyticsHealthState.class)); });
+        deserializerMap.put("isCloudManagedGatewayEnabled", (n) -> { currentObject.setIsCloudManagedGatewayEnabled(n.getBooleanValue()); });
+        deserializerMap.put("managedBy", (n) -> { currentObject.setManagedBy(n.getStringValue()); });
+        deserializerMap.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
+        deserializerMap.put("osCheckFailed", (n) -> { currentObject.setOsCheckFailed(n.getBooleanValue()); });
+        deserializerMap.put("osDescription", (n) -> { currentObject.setOsDescription(n.getStringValue()); });
+        deserializerMap.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
+        deserializerMap.put("otherWorkloadsSetToIntune", (n) -> { currentObject.setOtherWorkloadsSetToIntune(n.getBooleanValue()); });
+        deserializerMap.put("ownership", (n) -> { currentObject.setOwnership(n.getStringValue()); });
+        deserializerMap.put("processor64BitCheckFailed", (n) -> { currentObject.setProcessor64BitCheckFailed(n.getBooleanValue()); });
+        deserializerMap.put("processorCoreCountCheckFailed", (n) -> { currentObject.setProcessorCoreCountCheckFailed(n.getBooleanValue()); });
+        deserializerMap.put("processorFamilyCheckFailed", (n) -> { currentObject.setProcessorFamilyCheckFailed(n.getBooleanValue()); });
+        deserializerMap.put("processorSpeedCheckFailed", (n) -> { currentObject.setProcessorSpeedCheckFailed(n.getBooleanValue()); });
+        deserializerMap.put("ramCheckFailed", (n) -> { currentObject.setRamCheckFailed(n.getBooleanValue()); });
+        deserializerMap.put("secureBootCheckFailed", (n) -> { currentObject.setSecureBootCheckFailed(n.getBooleanValue()); });
+        deserializerMap.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
+        deserializerMap.put("storageCheckFailed", (n) -> { currentObject.setStorageCheckFailed(n.getBooleanValue()); });
+        deserializerMap.put("tenantAttached", (n) -> { currentObject.setTenantAttached(n.getBooleanValue()); });
+        deserializerMap.put("tpmCheckFailed", (n) -> { currentObject.setTpmCheckFailed(n.getBooleanValue()); });
+        deserializerMap.put("upgradeEligibility", (n) -> { currentObject.setUpgradeEligibility(n.getEnumValue(OperatingSystemUpgradeEligibility.class)); });
+        deserializerMap.put("windowsScore", (n) -> { currentObject.setWindowsScore(n.getDoubleValue()); });
+        deserializerMap.put("workFromAnywhereScore", (n) -> { currentObject.setWorkFromAnywhereScore(n.getDoubleValue()); });
+        return deserializerMap
     }
     /**
      * Gets the healthStatus property value. The healthStatus property
@@ -416,6 +417,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -459,6 +461,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the autoPilotProfileAssigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoPilotProfileAssigned(@javax.annotation.Nullable final Boolean value) {
         this._autoPilotProfileAssigned = value;
     }
@@ -467,6 +470,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the autoPilotRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoPilotRegistered(@javax.annotation.Nullable final Boolean value) {
         this._autoPilotRegistered = value;
     }
@@ -475,6 +479,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the azureAdDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureAdDeviceId(@javax.annotation.Nullable final String value) {
         this._azureAdDeviceId = value;
     }
@@ -483,6 +488,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the azureAdJoinType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureAdJoinType(@javax.annotation.Nullable final String value) {
         this._azureAdJoinType = value;
     }
@@ -491,6 +497,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the azureAdRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureAdRegistered(@javax.annotation.Nullable final Boolean value) {
         this._azureAdRegistered = value;
     }
@@ -499,6 +506,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the cloudIdentityScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudIdentityScore(@javax.annotation.Nullable final Double value) {
         this._cloudIdentityScore = value;
     }
@@ -507,6 +515,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the cloudManagementScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudManagementScore(@javax.annotation.Nullable final Double value) {
         this._cloudManagementScore = value;
     }
@@ -515,6 +524,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the cloudProvisioningScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudProvisioningScore(@javax.annotation.Nullable final Double value) {
         this._cloudProvisioningScore = value;
     }
@@ -523,6 +533,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the compliancePolicySetToIntune property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliancePolicySetToIntune(@javax.annotation.Nullable final Boolean value) {
         this._compliancePolicySetToIntune = value;
     }
@@ -531,6 +542,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -539,6 +551,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -547,6 +560,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the healthStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthStatus(@javax.annotation.Nullable final UserExperienceAnalyticsHealthState value) {
         this._healthStatus = value;
     }
@@ -555,6 +569,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the isCloudManagedGatewayEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCloudManagedGatewayEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isCloudManagedGatewayEnabled = value;
     }
@@ -563,6 +578,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the managedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedBy(@javax.annotation.Nullable final String value) {
         this._managedBy = value;
     }
@@ -571,6 +587,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -579,6 +596,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
@@ -587,6 +605,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the osCheckFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsCheckFailed(@javax.annotation.Nullable final Boolean value) {
         this._osCheckFailed = value;
     }
@@ -595,6 +614,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the osDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsDescription(@javax.annotation.Nullable final String value) {
         this._osDescription = value;
     }
@@ -603,6 +623,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
         this._osVersion = value;
     }
@@ -611,6 +632,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the otherWorkloadsSetToIntune property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOtherWorkloadsSetToIntune(@javax.annotation.Nullable final Boolean value) {
         this._otherWorkloadsSetToIntune = value;
     }
@@ -619,6 +641,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the ownership property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnership(@javax.annotation.Nullable final String value) {
         this._ownership = value;
     }
@@ -627,6 +650,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the processor64BitCheckFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessor64BitCheckFailed(@javax.annotation.Nullable final Boolean value) {
         this._processor64BitCheckFailed = value;
     }
@@ -635,6 +659,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the processorCoreCountCheckFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessorCoreCountCheckFailed(@javax.annotation.Nullable final Boolean value) {
         this._processorCoreCountCheckFailed = value;
     }
@@ -643,6 +668,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the processorFamilyCheckFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessorFamilyCheckFailed(@javax.annotation.Nullable final Boolean value) {
         this._processorFamilyCheckFailed = value;
     }
@@ -651,6 +677,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the processorSpeedCheckFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessorSpeedCheckFailed(@javax.annotation.Nullable final Boolean value) {
         this._processorSpeedCheckFailed = value;
     }
@@ -659,6 +686,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the ramCheckFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRamCheckFailed(@javax.annotation.Nullable final Boolean value) {
         this._ramCheckFailed = value;
     }
@@ -667,6 +695,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the secureBootCheckFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecureBootCheckFailed(@javax.annotation.Nullable final Boolean value) {
         this._secureBootCheckFailed = value;
     }
@@ -675,6 +704,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the serialNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSerialNumber(@javax.annotation.Nullable final String value) {
         this._serialNumber = value;
     }
@@ -683,6 +713,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the storageCheckFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageCheckFailed(@javax.annotation.Nullable final Boolean value) {
         this._storageCheckFailed = value;
     }
@@ -691,6 +722,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the tenantAttached property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantAttached(@javax.annotation.Nullable final Boolean value) {
         this._tenantAttached = value;
     }
@@ -699,6 +731,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the tpmCheckFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTpmCheckFailed(@javax.annotation.Nullable final Boolean value) {
         this._tpmCheckFailed = value;
     }
@@ -707,6 +740,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the upgradeEligibility property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpgradeEligibility(@javax.annotation.Nullable final OperatingSystemUpgradeEligibility value) {
         this._upgradeEligibility = value;
     }
@@ -715,6 +749,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the windowsScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsScore(@javax.annotation.Nullable final Double value) {
         this._windowsScore = value;
     }
@@ -723,6 +758,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevice extends Entity implem
      * @param value Value to set for the workFromAnywhereScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkFromAnywhereScore(@javax.annotation.Nullable final Double value) {
         this._workFromAnywhereScore = value;
     }

@@ -18,6 +18,7 @@ public class IosEduDeviceConfiguration extends DeviceConfiguration implements Pa
      * Instantiates a new IosEduDeviceConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosEduDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosEduDeviceConfiguration");
@@ -47,11 +48,11 @@ public class IosEduDeviceConfiguration extends DeviceConfiguration implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosEduDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceCertificateSettings", (n) -> { currentObject.setDeviceCertificateSettings(n.getObjectValue(IosEduCertificateSettings::createFromDiscriminatorValue)); });
-            this.put("studentCertificateSettings", (n) -> { currentObject.setStudentCertificateSettings(n.getObjectValue(IosEduCertificateSettings::createFromDiscriminatorValue)); });
-            this.put("teacherCertificateSettings", (n) -> { currentObject.setTeacherCertificateSettings(n.getObjectValue(IosEduCertificateSettings::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceCertificateSettings", (n) -> { currentObject.setDeviceCertificateSettings(n.getObjectValue(IosEduCertificateSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("studentCertificateSettings", (n) -> { currentObject.setStudentCertificateSettings(n.getObjectValue(IosEduCertificateSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("teacherCertificateSettings", (n) -> { currentObject.setTeacherCertificateSettings(n.getObjectValue(IosEduCertificateSettings::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the studentCertificateSettings property value. The Trusted Root and PFX certificates for Student
@@ -74,6 +75,7 @@ public class IosEduDeviceConfiguration extends DeviceConfiguration implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class IosEduDeviceConfiguration extends DeviceConfiguration implements Pa
      * @param value Value to set for the deviceCertificateSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCertificateSettings(@javax.annotation.Nullable final IosEduCertificateSettings value) {
         this._deviceCertificateSettings = value;
     }
@@ -94,6 +97,7 @@ public class IosEduDeviceConfiguration extends DeviceConfiguration implements Pa
      * @param value Value to set for the studentCertificateSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStudentCertificateSettings(@javax.annotation.Nullable final IosEduCertificateSettings value) {
         this._studentCertificateSettings = value;
     }
@@ -102,6 +106,7 @@ public class IosEduDeviceConfiguration extends DeviceConfiguration implements Pa
      * @param value Value to set for the teacherCertificateSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeacherCertificateSettings(@javax.annotation.Nullable final IosEduCertificateSettings value) {
         this._teacherCertificateSettings = value;
     }

@@ -28,6 +28,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
      * Instantiates a new TimeCard and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TimeCard() {
         super();
         this.setOdataType("#microsoft.graph.timeCard");
@@ -81,16 +82,16 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeCard currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("breaks", (n) -> { currentObject.setBreaks(n.getCollectionOfObjectValues(TimeCardBreak::createFromDiscriminatorValue)); });
-            this.put("clockInEvent", (n) -> { currentObject.setClockInEvent(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });
-            this.put("clockOutEvent", (n) -> { currentObject.setClockOutEvent(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });
-            this.put("confirmedBy", (n) -> { currentObject.setConfirmedBy(n.getEnumValue(ConfirmedBy.class)); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("originalEntry", (n) -> { currentObject.setOriginalEntry(n.getObjectValue(TimeCardEntry::createFromDiscriminatorValue)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(TimeCardState.class)); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("breaks", (n) -> { currentObject.setBreaks(n.getCollectionOfObjectValues(TimeCardBreak::createFromDiscriminatorValue)); });
+        deserializerMap.put("clockInEvent", (n) -> { currentObject.setClockInEvent(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });
+        deserializerMap.put("clockOutEvent", (n) -> { currentObject.setClockOutEvent(n.getObjectValue(TimeCardEvent::createFromDiscriminatorValue)); });
+        deserializerMap.put("confirmedBy", (n) -> { currentObject.setConfirmedBy(n.getEnumValue(ConfirmedBy.class)); });
+        deserializerMap.put("notes", (n) -> { currentObject.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("originalEntry", (n) -> { currentObject.setOriginalEntry(n.getObjectValue(TimeCardEntry::createFromDiscriminatorValue)); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(TimeCardState.class)); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the notes property value. Notes about the timeCard.
@@ -129,6 +130,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the breaks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBreaks(@javax.annotation.Nullable final java.util.List<TimeCardBreak> value) {
         this._breaks = value;
     }
@@ -154,6 +157,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the clockInEvent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClockInEvent(@javax.annotation.Nullable final TimeCardEvent value) {
         this._clockInEvent = value;
     }
@@ -162,6 +166,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the clockOutEvent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClockOutEvent(@javax.annotation.Nullable final TimeCardEvent value) {
         this._clockOutEvent = value;
     }
@@ -170,6 +175,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the confirmedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfirmedBy(@javax.annotation.Nullable final ConfirmedBy value) {
         this._confirmedBy = value;
     }
@@ -178,6 +184,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final ItemBody value) {
         this._notes = value;
     }
@@ -186,6 +193,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the originalEntry property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginalEntry(@javax.annotation.Nullable final TimeCardEntry value) {
         this._originalEntry = value;
     }
@@ -194,6 +202,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final TimeCardState value) {
         this._state = value;
     }
@@ -202,6 +211,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

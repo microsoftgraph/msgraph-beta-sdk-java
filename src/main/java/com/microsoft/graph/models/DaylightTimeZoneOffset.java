@@ -14,6 +14,7 @@ public class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements Pa
      * Instantiates a new DaylightTimeZoneOffset and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DaylightTimeZoneOffset() {
         super();
         this.setOdataType("#microsoft.graph.daylightTimeZoneOffset");
@@ -43,15 +44,16 @@ public class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DaylightTimeZoneOffset currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("daylightBias", (n) -> { currentObject.setDaylightBias(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("daylightBias", (n) -> { currentObject.setDaylightBias(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DaylightTimeZoneOffset extends StandardTimeZoneOffset implements Pa
      * @param value Value to set for the daylightBias property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDaylightBias(@javax.annotation.Nullable final Integer value) {
         this._daylightBias = value;
     }

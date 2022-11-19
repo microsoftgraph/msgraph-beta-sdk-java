@@ -66,6 +66,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * Instantiates a new AndroidCompliancePolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidCompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.androidCompliancePolicy");
@@ -119,35 +120,35 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidCompliancePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("advancedThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setAdvancedThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
-            this.put("conditionStatementId", (n) -> { currentObject.setConditionStatementId(n.getStringValue()); });
-            this.put("deviceThreatProtectionEnabled", (n) -> { currentObject.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
-            this.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
-            this.put("minAndroidSecurityPatchLevel", (n) -> { currentObject.setMinAndroidSecurityPatchLevel(n.getStringValue()); });
-            this.put("osMaximumVersion", (n) -> { currentObject.setOsMaximumVersion(n.getStringValue()); });
-            this.put("osMinimumVersion", (n) -> { currentObject.setOsMinimumVersion(n.getStringValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeLock", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(AndroidRequiredPasswordType.class)); });
-            this.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
-            this.put("requiredPasswordComplexity", (n) -> { currentObject.setRequiredPasswordComplexity(n.getEnumValue(AndroidRequiredPasswordComplexity.class)); });
-            this.put("restrictedApps", (n) -> { currentObject.setRestrictedApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("securityBlockDeviceAdministratorManagedDevices", (n) -> { currentObject.setSecurityBlockDeviceAdministratorManagedDevices(n.getBooleanValue()); });
-            this.put("securityBlockJailbrokenDevices", (n) -> { currentObject.setSecurityBlockJailbrokenDevices(n.getBooleanValue()); });
-            this.put("securityDisableUsbDebugging", (n) -> { currentObject.setSecurityDisableUsbDebugging(n.getBooleanValue()); });
-            this.put("securityPreventInstallAppsFromUnknownSources", (n) -> { currentObject.setSecurityPreventInstallAppsFromUnknownSources(n.getBooleanValue()); });
-            this.put("securityRequireCompanyPortalAppIntegrity", (n) -> { currentObject.setSecurityRequireCompanyPortalAppIntegrity(n.getBooleanValue()); });
-            this.put("securityRequireGooglePlayServices", (n) -> { currentObject.setSecurityRequireGooglePlayServices(n.getBooleanValue()); });
-            this.put("securityRequireSafetyNetAttestationBasicIntegrity", (n) -> { currentObject.setSecurityRequireSafetyNetAttestationBasicIntegrity(n.getBooleanValue()); });
-            this.put("securityRequireSafetyNetAttestationCertifiedDevice", (n) -> { currentObject.setSecurityRequireSafetyNetAttestationCertifiedDevice(n.getBooleanValue()); });
-            this.put("securityRequireUpToDateSecurityProviders", (n) -> { currentObject.setSecurityRequireUpToDateSecurityProviders(n.getBooleanValue()); });
-            this.put("securityRequireVerifyApps", (n) -> { currentObject.setSecurityRequireVerifyApps(n.getBooleanValue()); });
-            this.put("storageRequireEncryption", (n) -> { currentObject.setStorageRequireEncryption(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("advancedThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setAdvancedThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
+        deserializerMap.put("conditionStatementId", (n) -> { currentObject.setConditionStatementId(n.getStringValue()); });
+        deserializerMap.put("deviceThreatProtectionEnabled", (n) -> { currentObject.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
+        deserializerMap.put("minAndroidSecurityPatchLevel", (n) -> { currentObject.setMinAndroidSecurityPatchLevel(n.getStringValue()); });
+        deserializerMap.put("osMaximumVersion", (n) -> { currentObject.setOsMaximumVersion(n.getStringValue()); });
+        deserializerMap.put("osMinimumVersion", (n) -> { currentObject.setOsMinimumVersion(n.getStringValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeLock", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(AndroidRequiredPasswordType.class)); });
+        deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
+        deserializerMap.put("requiredPasswordComplexity", (n) -> { currentObject.setRequiredPasswordComplexity(n.getEnumValue(AndroidRequiredPasswordComplexity.class)); });
+        deserializerMap.put("restrictedApps", (n) -> { currentObject.setRestrictedApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("securityBlockDeviceAdministratorManagedDevices", (n) -> { currentObject.setSecurityBlockDeviceAdministratorManagedDevices(n.getBooleanValue()); });
+        deserializerMap.put("securityBlockJailbrokenDevices", (n) -> { currentObject.setSecurityBlockJailbrokenDevices(n.getBooleanValue()); });
+        deserializerMap.put("securityDisableUsbDebugging", (n) -> { currentObject.setSecurityDisableUsbDebugging(n.getBooleanValue()); });
+        deserializerMap.put("securityPreventInstallAppsFromUnknownSources", (n) -> { currentObject.setSecurityPreventInstallAppsFromUnknownSources(n.getBooleanValue()); });
+        deserializerMap.put("securityRequireCompanyPortalAppIntegrity", (n) -> { currentObject.setSecurityRequireCompanyPortalAppIntegrity(n.getBooleanValue()); });
+        deserializerMap.put("securityRequireGooglePlayServices", (n) -> { currentObject.setSecurityRequireGooglePlayServices(n.getBooleanValue()); });
+        deserializerMap.put("securityRequireSafetyNetAttestationBasicIntegrity", (n) -> { currentObject.setSecurityRequireSafetyNetAttestationBasicIntegrity(n.getBooleanValue()); });
+        deserializerMap.put("securityRequireSafetyNetAttestationCertifiedDevice", (n) -> { currentObject.setSecurityRequireSafetyNetAttestationCertifiedDevice(n.getBooleanValue()); });
+        deserializerMap.put("securityRequireUpToDateSecurityProviders", (n) -> { currentObject.setSecurityRequireUpToDateSecurityProviders(n.getBooleanValue()); });
+        deserializerMap.put("securityRequireVerifyApps", (n) -> { currentObject.setSecurityRequireVerifyApps(n.getBooleanValue()); });
+        deserializerMap.put("storageRequireEncryption", (n) -> { currentObject.setStorageRequireEncryption(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the minAndroidSecurityPatchLevel property value. Minimum Android security patch level.
@@ -338,6 +339,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -374,6 +376,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the advancedThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
         this._advancedThreatProtectionRequiredSecurityLevel = value;
     }
@@ -382,6 +385,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the conditionStatementId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionStatementId(@javax.annotation.Nullable final String value) {
         this._conditionStatementId = value;
     }
@@ -390,6 +394,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the deviceThreatProtectionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceThreatProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._deviceThreatProtectionEnabled = value;
     }
@@ -398,6 +403,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
         this._deviceThreatProtectionRequiredSecurityLevel = value;
     }
@@ -406,6 +412,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the minAndroidSecurityPatchLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinAndroidSecurityPatchLevel(@javax.annotation.Nullable final String value) {
         this._minAndroidSecurityPatchLevel = value;
     }
@@ -414,6 +421,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the osMaximumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
         this._osMaximumVersion = value;
     }
@@ -422,6 +430,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the osMinimumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
         this._osMinimumVersion = value;
     }
@@ -430,6 +439,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -438,6 +448,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -446,6 +457,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeLock = value;
     }
@@ -454,6 +466,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordBlockCount = value;
     }
@@ -462,6 +475,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequired = value;
     }
@@ -470,6 +484,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final AndroidRequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -478,6 +493,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
         this._passwordSignInFailureCountBeforeFactoryReset = value;
     }
@@ -486,6 +502,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the requiredPasswordComplexity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredPasswordComplexity(@javax.annotation.Nullable final AndroidRequiredPasswordComplexity value) {
         this._requiredPasswordComplexity = value;
     }
@@ -494,6 +511,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the restrictedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestrictedApps(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._restrictedApps = value;
     }
@@ -502,6 +520,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityBlockDeviceAdministratorManagedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityBlockDeviceAdministratorManagedDevices(@javax.annotation.Nullable final Boolean value) {
         this._securityBlockDeviceAdministratorManagedDevices = value;
     }
@@ -510,6 +529,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityBlockJailbrokenDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityBlockJailbrokenDevices(@javax.annotation.Nullable final Boolean value) {
         this._securityBlockJailbrokenDevices = value;
     }
@@ -518,6 +538,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityDisableUsbDebugging property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityDisableUsbDebugging(@javax.annotation.Nullable final Boolean value) {
         this._securityDisableUsbDebugging = value;
     }
@@ -526,6 +547,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityPreventInstallAppsFromUnknownSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityPreventInstallAppsFromUnknownSources(@javax.annotation.Nullable final Boolean value) {
         this._securityPreventInstallAppsFromUnknownSources = value;
     }
@@ -534,6 +556,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityRequireCompanyPortalAppIntegrity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireCompanyPortalAppIntegrity(@javax.annotation.Nullable final Boolean value) {
         this._securityRequireCompanyPortalAppIntegrity = value;
     }
@@ -542,6 +565,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityRequireGooglePlayServices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireGooglePlayServices(@javax.annotation.Nullable final Boolean value) {
         this._securityRequireGooglePlayServices = value;
     }
@@ -550,6 +574,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityRequireSafetyNetAttestationBasicIntegrity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireSafetyNetAttestationBasicIntegrity(@javax.annotation.Nullable final Boolean value) {
         this._securityRequireSafetyNetAttestationBasicIntegrity = value;
     }
@@ -558,6 +583,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityRequireSafetyNetAttestationCertifiedDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireSafetyNetAttestationCertifiedDevice(@javax.annotation.Nullable final Boolean value) {
         this._securityRequireSafetyNetAttestationCertifiedDevice = value;
     }
@@ -566,6 +592,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityRequireUpToDateSecurityProviders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireUpToDateSecurityProviders(@javax.annotation.Nullable final Boolean value) {
         this._securityRequireUpToDateSecurityProviders = value;
     }
@@ -574,6 +601,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the securityRequireVerifyApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireVerifyApps(@javax.annotation.Nullable final Boolean value) {
         this._securityRequireVerifyApps = value;
     }
@@ -582,6 +610,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
      * @param value Value to set for the storageRequireEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRequireEncryption(@javax.annotation.Nullable final Boolean value) {
         this._storageRequireEncryption = value;
     }

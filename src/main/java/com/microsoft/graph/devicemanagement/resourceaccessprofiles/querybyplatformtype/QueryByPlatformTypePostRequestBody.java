@@ -19,6 +19,7 @@ public class QueryByPlatformTypePostRequestBody implements AdditionalDataHolder,
      * Instantiates a new queryByPlatformTypePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public QueryByPlatformTypePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -47,9 +48,9 @@ public class QueryByPlatformTypePostRequestBody implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final QueryByPlatformTypePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("platformType", (n) -> { currentObject.setPlatformType(n.getEnumValue(PolicyPlatformType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("platformType", (n) -> { currentObject.setPlatformType(n.getEnumValue(PolicyPlatformType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the platformType property value. Supported platform types for policies.
@@ -64,6 +65,7 @@ public class QueryByPlatformTypePostRequestBody implements AdditionalDataHolder,
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("platformType", this.getPlatformType());
@@ -74,6 +76,7 @@ public class QueryByPlatformTypePostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +85,7 @@ public class QueryByPlatformTypePostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the platformType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatformType(@javax.annotation.Nullable final PolicyPlatformType value) {
         this._platformType = value;
     }

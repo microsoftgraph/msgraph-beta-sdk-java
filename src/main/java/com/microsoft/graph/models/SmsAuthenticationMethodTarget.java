@@ -14,6 +14,7 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
      * Instantiates a new SmsAuthenticationMethodTarget and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SmsAuthenticationMethodTarget() {
         super();
         this.setOdataType("#microsoft.graph.smsAuthenticationMethodTarget");
@@ -35,9 +36,9 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SmsAuthenticationMethodTarget currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("isUsableForSignIn", (n) -> { currentObject.setIsUsableForSignIn(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isUsableForSignIn", (n) -> { currentObject.setIsUsableForSignIn(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isUsableForSignIn property value. Determines if the users or groups can use this authentication method to sign in to Azure AD. The value is always true.
@@ -52,6 +53,7 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget im
      * @param value Value to set for the isUsableForSignIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsUsableForSignIn(@javax.annotation.Nullable final Boolean value) {
         this._isUsableForSignIn = value;
     }

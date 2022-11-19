@@ -30,6 +30,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
      * Instantiates a new groupPolicyPresentation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentation() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyPresentation");
@@ -75,11 +76,11 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyPresentation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("definition", (n) -> { currentObject.setDefinition(n.getObjectValue(GroupPolicyDefinition::createFromDiscriminatorValue)); });
-            this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("definition", (n) -> { currentObject.setDefinition(n.getObjectValue(GroupPolicyDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap
     }
     /**
      * Gets the label property value. Localized text label for any presentation entity. The default value is empty.
@@ -102,6 +103,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -114,6 +116,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
      * @param value Value to set for the definition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinition(@javax.annotation.Nullable final GroupPolicyDefinition value) {
         this._definition = value;
     }
@@ -122,6 +125,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
      * @param value Value to set for the label property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabel(@javax.annotation.Nullable final String value) {
         this._label = value;
     }
@@ -130,6 +134,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }

@@ -20,6 +20,7 @@ public class AssignmentFilterValidationResult implements AdditionalDataHolder, P
      * Instantiates a new assignmentFilterValidationResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignmentFilterValidationResult() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.assignmentFilterValidationResult");
@@ -49,10 +50,10 @@ public class AssignmentFilterValidationResult implements AdditionalDataHolder, P
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentFilterValidationResult currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("isValidRule", (n) -> { currentObject.setIsValidRule(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("isValidRule", (n) -> { currentObject.setIsValidRule(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isValidRule property value. Indicator to valid or invalid rule.
@@ -75,6 +76,7 @@ public class AssignmentFilterValidationResult implements AdditionalDataHolder, P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isValidRule", this.getIsValidRule());
@@ -86,6 +88,7 @@ public class AssignmentFilterValidationResult implements AdditionalDataHolder, P
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -94,6 +97,7 @@ public class AssignmentFilterValidationResult implements AdditionalDataHolder, P
      * @param value Value to set for the isValidRule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsValidRule(@javax.annotation.Nullable final Boolean value) {
         this._isValidRule = value;
     }
@@ -102,6 +106,7 @@ public class AssignmentFilterValidationResult implements AdditionalDataHolder, P
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

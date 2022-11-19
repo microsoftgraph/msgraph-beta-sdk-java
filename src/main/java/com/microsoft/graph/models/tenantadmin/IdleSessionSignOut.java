@@ -23,6 +23,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
      * Instantiates a new idleSessionSignOut and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IdleSessionSignOut() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.tenantAdmin.idleSessionSignOut");
@@ -52,12 +53,12 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdleSessionSignOut currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("signOutAfterInSeconds", (n) -> { currentObject.setSignOutAfterInSeconds(n.getLongValue()); });
-            this.put("warnAfterInSeconds", (n) -> { currentObject.setWarnAfterInSeconds(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("signOutAfterInSeconds", (n) -> { currentObject.setSignOutAfterInSeconds(n.getLongValue()); });
+        deserializerMap.put("warnAfterInSeconds", (n) -> { currentObject.setWarnAfterInSeconds(n.getLongValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isEnabled property value. Indicates whether the idle session sign-out policy is enabled.
@@ -96,6 +97,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
@@ -109,6 +111,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }
@@ -125,6 +129,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -133,6 +138,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the signOutAfterInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignOutAfterInSeconds(@javax.annotation.Nullable final Long value) {
         this._signOutAfterInSeconds = value;
     }
@@ -141,6 +147,7 @@ public class IdleSessionSignOut implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the warnAfterInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWarnAfterInSeconds(@javax.annotation.Nullable final Long value) {
         this._warnAfterInSeconds = value;
     }

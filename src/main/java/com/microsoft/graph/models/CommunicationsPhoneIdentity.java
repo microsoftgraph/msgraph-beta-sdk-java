@@ -12,6 +12,7 @@ public class CommunicationsPhoneIdentity extends Identity implements Parsable {
      * Instantiates a new CommunicationsPhoneIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CommunicationsPhoneIdentity() {
         super();
         this.setOdataType("#microsoft.graph.communicationsPhoneIdentity");
@@ -33,14 +34,15 @@ public class CommunicationsPhoneIdentity extends Identity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CommunicationsPhoneIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class AgreementAcceptance extends Entity implements Parsable {
     /** ID of the agreement file accepted by the user. */
     private String _agreementFileId;
@@ -16,15 +16,15 @@ public class AgreementAcceptance extends Entity implements Parsable {
     private String _agreementId;
     /** The display name of the device used for accepting the agreement. */
     private String _deviceDisplayName;
-    /** The unique identifier of the device used for accepting the agreement. */
+    /** The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values. */
     private String _deviceId;
     /** The operating system used for accepting the agreement. */
     private String _deviceOSType;
     /** The operating system version of the device used for accepting the agreement. */
     private String _deviceOSVersion;
-    /** The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /** The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values. */
     private OffsetDateTime _expirationDateTime;
-    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
+    /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq) and eq for null values. */
     private OffsetDateTime _recordedDateTime;
     /** Possible values are: accepted, declined. Supports $filter (eq). */
     private AgreementAcceptanceState _state;
@@ -32,7 +32,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
     private String _userDisplayName;
     /** Email of the user when the acceptance was recorded. */
     private String _userEmail;
-    /** ID of the user who accepted the agreement. */
+    /** ID of the user who accepted the agreement. Supports $filter (eq). */
     private String _userId;
     /** UPN of the user when the acceptance was recorded. */
     private String _userPrincipalName;
@@ -40,6 +40,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * Instantiates a new agreementAcceptance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AgreementAcceptance() {
         super();
         this.setOdataType("#microsoft.graph.agreementAcceptance");
@@ -79,7 +80,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         return this._deviceDisplayName;
     }
     /**
-     * Gets the deviceId property value. The unique identifier of the device used for accepting the agreement.
+     * Gets the deviceId property value. The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -103,7 +104,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         return this._deviceOSVersion;
     }
     /**
-     * Gets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -117,24 +118,24 @@ public class AgreementAcceptance extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AgreementAcceptance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("agreementFileId", (n) -> { currentObject.setAgreementFileId(n.getStringValue()); });
-            this.put("agreementId", (n) -> { currentObject.setAgreementId(n.getStringValue()); });
-            this.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("deviceOSType", (n) -> { currentObject.setDeviceOSType(n.getStringValue()); });
-            this.put("deviceOSVersion", (n) -> { currentObject.setDeviceOSVersion(n.getStringValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("recordedDateTime", (n) -> { currentObject.setRecordedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(AgreementAcceptanceState.class)); });
-            this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
-            this.put("userEmail", (n) -> { currentObject.setUserEmail(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("agreementFileId", (n) -> { currentObject.setAgreementFileId(n.getStringValue()); });
+        deserializerMap.put("agreementId", (n) -> { currentObject.setAgreementId(n.getStringValue()); });
+        deserializerMap.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });
+        deserializerMap.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("deviceOSType", (n) -> { currentObject.setDeviceOSType(n.getStringValue()); });
+        deserializerMap.put("deviceOSVersion", (n) -> { currentObject.setDeviceOSVersion(n.getStringValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("recordedDateTime", (n) -> { currentObject.setRecordedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(AgreementAcceptanceState.class)); });
+        deserializerMap.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("userEmail", (n) -> { currentObject.setUserEmail(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
-     * Gets the recordedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the recordedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq) and eq for null values.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -166,7 +167,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         return this._userEmail;
     }
     /**
-     * Gets the userId property value. ID of the user who accepted the agreement.
+     * Gets the userId property value. ID of the user who accepted the agreement. Supports $filter (eq).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -186,6 +187,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -208,6 +210,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the agreementFileId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgreementFileId(@javax.annotation.Nullable final String value) {
         this._agreementFileId = value;
     }
@@ -216,6 +219,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the agreementId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgreementId(@javax.annotation.Nullable final String value) {
         this._agreementId = value;
     }
@@ -224,14 +228,16 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the deviceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
         this._deviceDisplayName = value;
     }
     /**
-     * Sets the deviceId property value. The unique identifier of the device used for accepting the agreement.
+     * Sets the deviceId property value. The unique identifier of the device used for accepting the agreement. Supports $filter (eq) and eq for null values.
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -240,6 +246,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the deviceOSType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceOSType(@javax.annotation.Nullable final String value) {
         this._deviceOSType = value;
     }
@@ -248,22 +255,25 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the deviceOSVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceOSVersion(@javax.annotation.Nullable final String value) {
         this._deviceOSVersion = value;
     }
     /**
-     * Sets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the expirationDateTime property value. The expiration date time of the acceptance. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ge, le) and eq for null values.
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
     /**
-     * Sets the recordedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the recordedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq) and eq for null values.
      * @param value Value to set for the recordedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecordedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._recordedDateTime = value;
     }
@@ -272,6 +282,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final AgreementAcceptanceState value) {
         this._state = value;
     }
@@ -280,6 +291,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
         this._userDisplayName = value;
     }
@@ -288,14 +300,16 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the userEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserEmail(@javax.annotation.Nullable final String value) {
         this._userEmail = value;
     }
     /**
-     * Sets the userId property value. ID of the user who accepted the agreement.
+     * Sets the userId property value. ID of the user who accepted the agreement. Supports $filter (eq).
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -304,6 +318,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

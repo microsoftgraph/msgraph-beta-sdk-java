@@ -32,6 +32,7 @@ public class Invitation extends Entity implements Parsable {
      * Instantiates a new Invitation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Invitation() {
         super();
         this.setOdataType("#microsoft.graph.invitation");
@@ -53,18 +54,18 @@ public class Invitation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Invitation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("invitedUser", (n) -> { currentObject.setInvitedUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("invitedUserDisplayName", (n) -> { currentObject.setInvitedUserDisplayName(n.getStringValue()); });
-            this.put("invitedUserEmailAddress", (n) -> { currentObject.setInvitedUserEmailAddress(n.getStringValue()); });
-            this.put("invitedUserMessageInfo", (n) -> { currentObject.setInvitedUserMessageInfo(n.getObjectValue(InvitedUserMessageInfo::createFromDiscriminatorValue)); });
-            this.put("invitedUserType", (n) -> { currentObject.setInvitedUserType(n.getStringValue()); });
-            this.put("inviteRedeemUrl", (n) -> { currentObject.setInviteRedeemUrl(n.getStringValue()); });
-            this.put("inviteRedirectUrl", (n) -> { currentObject.setInviteRedirectUrl(n.getStringValue()); });
-            this.put("resetRedemption", (n) -> { currentObject.setResetRedemption(n.getBooleanValue()); });
-            this.put("sendInvitationMessage", (n) -> { currentObject.setSendInvitationMessage(n.getBooleanValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("invitedUser", (n) -> { currentObject.setInvitedUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("invitedUserDisplayName", (n) -> { currentObject.setInvitedUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("invitedUserEmailAddress", (n) -> { currentObject.setInvitedUserEmailAddress(n.getStringValue()); });
+        deserializerMap.put("invitedUserMessageInfo", (n) -> { currentObject.setInvitedUserMessageInfo(n.getObjectValue(InvitedUserMessageInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("invitedUserType", (n) -> { currentObject.setInvitedUserType(n.getStringValue()); });
+        deserializerMap.put("inviteRedeemUrl", (n) -> { currentObject.setInviteRedeemUrl(n.getStringValue()); });
+        deserializerMap.put("inviteRedirectUrl", (n) -> { currentObject.setInviteRedirectUrl(n.getStringValue()); });
+        deserializerMap.put("resetRedemption", (n) -> { currentObject.setResetRedemption(n.getBooleanValue()); });
+        deserializerMap.put("sendInvitationMessage", (n) -> { currentObject.setSendInvitationMessage(n.getBooleanValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the invitedUser property value. The user created as part of the invitation creation. Read-Only
@@ -151,6 +152,7 @@ public class Invitation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -170,6 +172,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the invitedUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitedUser(@javax.annotation.Nullable final User value) {
         this._invitedUser = value;
     }
@@ -178,6 +181,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the invitedUserDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitedUserDisplayName(@javax.annotation.Nullable final String value) {
         this._invitedUserDisplayName = value;
     }
@@ -186,6 +190,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the invitedUserEmailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitedUserEmailAddress(@javax.annotation.Nullable final String value) {
         this._invitedUserEmailAddress = value;
     }
@@ -194,6 +199,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the invitedUserMessageInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitedUserMessageInfo(@javax.annotation.Nullable final InvitedUserMessageInfo value) {
         this._invitedUserMessageInfo = value;
     }
@@ -202,6 +208,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the invitedUserType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitedUserType(@javax.annotation.Nullable final String value) {
         this._invitedUserType = value;
     }
@@ -210,6 +217,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the inviteRedeemUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInviteRedeemUrl(@javax.annotation.Nullable final String value) {
         this._inviteRedeemUrl = value;
     }
@@ -218,6 +226,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the inviteRedirectUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInviteRedirectUrl(@javax.annotation.Nullable final String value) {
         this._inviteRedirectUrl = value;
     }
@@ -226,6 +235,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the resetRedemption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResetRedemption(@javax.annotation.Nullable final Boolean value) {
         this._resetRedemption = value;
     }
@@ -234,6 +244,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the sendInvitationMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSendInvitationMessage(@javax.annotation.Nullable final Boolean value) {
         this._sendInvitationMessage = value;
     }
@@ -242,6 +253,7 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }

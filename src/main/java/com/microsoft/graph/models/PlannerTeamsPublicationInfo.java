@@ -28,6 +28,7 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
      * Instantiates a new plannerTeamsPublicationInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerTeamsPublicationInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.plannerTeamsPublicationInfo");
@@ -57,14 +58,14 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerTeamsPublicationInfo currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("publicationId", (n) -> { currentObject.setPublicationId(n.getStringValue()); });
-            this.put("publishedToPlanId", (n) -> { currentObject.setPublishedToPlanId(n.getStringValue()); });
-            this.put("publishingTeamId", (n) -> { currentObject.setPublishingTeamId(n.getStringValue()); });
-            this.put("publishingTeamName", (n) -> { currentObject.setPublishingTeamName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("publicationId", (n) -> { currentObject.setPublicationId(n.getStringValue()); });
+        deserializerMap.put("publishedToPlanId", (n) -> { currentObject.setPublishedToPlanId(n.getStringValue()); });
+        deserializerMap.put("publishingTeamId", (n) -> { currentObject.setPublishingTeamId(n.getStringValue()); });
+        deserializerMap.put("publishingTeamName", (n) -> { currentObject.setPublishingTeamName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when this task was last modified by the publication process. Read-only.
@@ -119,6 +120,7 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
@@ -134,6 +136,7 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +145,7 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -150,6 +154,7 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -158,6 +163,7 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
      * @param value Value to set for the publicationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublicationId(@javax.annotation.Nullable final String value) {
         this._publicationId = value;
     }
@@ -166,6 +172,7 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
      * @param value Value to set for the publishedToPlanId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishedToPlanId(@javax.annotation.Nullable final String value) {
         this._publishedToPlanId = value;
     }
@@ -174,6 +181,7 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
      * @param value Value to set for the publishingTeamId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishingTeamId(@javax.annotation.Nullable final String value) {
         this._publishingTeamId = value;
     }
@@ -182,6 +190,7 @@ public class PlannerTeamsPublicationInfo implements AdditionalDataHolder, Parsab
      * @param value Value to set for the publishingTeamName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishingTeamName(@javax.annotation.Nullable final String value) {
         this._publishingTeamName = value;
     }

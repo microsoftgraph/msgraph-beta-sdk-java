@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The enrollmentProfile resource represents a collection of configurations which must be provided pre-enrollment to enable enrolling certain devices whose identities have been pre-staged. Pre-staged device identities are assigned to this type of profile to apply the profile's configurations at enrollment of the corresponding device. */
 public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsable {
     /** The list of assignments for this profile. */
     private java.util.List<AppleEnrollmentProfileAssignment> _assignments;
@@ -28,9 +29,10 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     /** Priority, 0 is highest */
     private Integer _priority;
     /**
-     * Instantiates a new AppleUserInitiatedEnrollmentProfile and sets the default values.
+     * Instantiates a new appleUserInitiatedEnrollmentProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppleUserInitiatedEnrollmentProfile() {
         super();
         this.setOdataType("#microsoft.graph.appleUserInitiatedEnrollmentProfile");
@@ -38,7 +40,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AppleUserInitiatedEnrollmentProfile
+     * @return a appleUserInitiatedEnrollmentProfile
      */
     @javax.annotation.Nonnull
     public static AppleUserInitiatedEnrollmentProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -100,17 +102,17 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppleUserInitiatedEnrollmentProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(AppleEnrollmentProfileAssignment::createFromDiscriminatorValue)); });
-            this.put("availableEnrollmentTypeOptions", (n) -> { currentObject.setAvailableEnrollmentTypeOptions(n.getCollectionOfObjectValues(AppleOwnerTypeEnrollmentType::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("defaultEnrollmentType", (n) -> { currentObject.setDefaultEnrollmentType(n.getEnumValue(AppleUserInitiatedEnrollmentType.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(DevicePlatformType.class)); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(AppleEnrollmentProfileAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("availableEnrollmentTypeOptions", (n) -> { currentObject.setAvailableEnrollmentTypeOptions(n.getCollectionOfObjectValues(AppleOwnerTypeEnrollmentType::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("defaultEnrollmentType", (n) -> { currentObject.setDefaultEnrollmentType(n.getEnumValue(AppleUserInitiatedEnrollmentType.class)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(DevicePlatformType.class)); });
+        deserializerMap.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the lastModifiedDateTime property value. Profile last modified time
@@ -141,6 +143,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +162,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<AppleEnrollmentProfileAssignment> value) {
         this._assignments = value;
     }
@@ -167,6 +171,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the availableEnrollmentTypeOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailableEnrollmentTypeOptions(@javax.annotation.Nullable final java.util.List<AppleOwnerTypeEnrollmentType> value) {
         this._availableEnrollmentTypeOptions = value;
     }
@@ -175,6 +180,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -183,6 +189,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the defaultEnrollmentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultEnrollmentType(@javax.annotation.Nullable final AppleUserInitiatedEnrollmentType value) {
         this._defaultEnrollmentType = value;
     }
@@ -191,6 +198,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -199,6 +207,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -207,6 +216,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -215,6 +225,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the platform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final DevicePlatformType value) {
         this._platform = value;
     }
@@ -223,6 +234,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements Parsa
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }

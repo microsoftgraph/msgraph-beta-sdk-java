@@ -16,6 +16,7 @@ public class ProfilePhoto extends Entity implements Parsable {
      * Instantiates a new profilePhoto and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProfilePhoto() {
         super();
         this.setOdataType("#microsoft.graph.profilePhoto");
@@ -37,10 +38,10 @@ public class ProfilePhoto extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProfilePhoto currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("height", (n) -> { currentObject.setHeight(n.getIntegerValue()); });
-            this.put("width", (n) -> { currentObject.setWidth(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("height", (n) -> { currentObject.setHeight(n.getIntegerValue()); });
+        deserializerMap.put("width", (n) -> { currentObject.setWidth(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the height property value. The height of the photo. Read-only.
@@ -63,6 +64,7 @@ public class ProfilePhoto extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class ProfilePhoto extends Entity implements Parsable {
      * @param value Value to set for the height property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHeight(@javax.annotation.Nullable final Integer value) {
         this._height = value;
     }
@@ -82,6 +85,7 @@ public class ProfilePhoto extends Entity implements Parsable {
      * @param value Value to set for the width property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWidth(@javax.annotation.Nullable final Integer value) {
         this._width = value;
     }

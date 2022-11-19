@@ -16,6 +16,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      * Instantiates a new SkypeForBusinessUserConversationMember and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SkypeForBusinessUserConversationMember() {
         super();
         this.setOdataType("#microsoft.graph.skypeForBusinessUserConversationMember");
@@ -37,10 +38,10 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SkypeForBusinessUserConversationMember currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the tenantId property value. ID of the tenant that the user belongs to.
@@ -63,6 +64,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
@@ -82,6 +85,7 @@ public class SkypeForBusinessUserConversationMember extends ConversationMember i
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

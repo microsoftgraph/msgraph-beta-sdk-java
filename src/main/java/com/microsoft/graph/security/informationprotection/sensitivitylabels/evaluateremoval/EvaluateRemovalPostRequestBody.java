@@ -22,6 +22,7 @@ public class EvaluateRemovalPostRequestBody implements AdditionalDataHolder, Par
      * Instantiates a new evaluateRemovalPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EvaluateRemovalPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -66,16 +67,17 @@ public class EvaluateRemovalPostRequestBody implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EvaluateRemovalPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("contentInfo", (n) -> { currentObject.setContentInfo(n.getObjectValue(ContentInfo::createFromDiscriminatorValue)); });
-            this.put("downgradeJustification", (n) -> { currentObject.setDowngradeJustification(n.getObjectValue(DowngradeJustification::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("contentInfo", (n) -> { currentObject.setContentInfo(n.getObjectValue(ContentInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("downgradeJustification", (n) -> { currentObject.setDowngradeJustification(n.getObjectValue(DowngradeJustification::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("contentInfo", this.getContentInfo());
@@ -87,6 +89,7 @@ public class EvaluateRemovalPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -95,6 +98,7 @@ public class EvaluateRemovalPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the contentInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentInfo(@javax.annotation.Nullable final ContentInfo value) {
         this._contentInfo = value;
     }
@@ -103,6 +107,7 @@ public class EvaluateRemovalPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the downgradeJustification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDowngradeJustification(@javax.annotation.Nullable final DowngradeJustification value) {
         this._downgradeJustification = value;
     }

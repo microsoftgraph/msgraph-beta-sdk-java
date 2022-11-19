@@ -25,6 +25,7 @@ public class TodoTaskList extends Entity implements Parsable {
      * Instantiates a new todoTaskList and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TodoTaskList() {
         super();
         this.setOdataType("#microsoft.graph.todoTaskList");
@@ -62,14 +63,14 @@ public class TodoTaskList extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TodoTaskList currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("isOwner", (n) -> { currentObject.setIsOwner(n.getBooleanValue()); });
-            this.put("isShared", (n) -> { currentObject.setIsShared(n.getBooleanValue()); });
-            this.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(TodoTask::createFromDiscriminatorValue)); });
-            this.put("wellknownListName", (n) -> { currentObject.setWellknownListName(n.getEnumValue(WellknownListName.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("isOwner", (n) -> { currentObject.setIsOwner(n.getBooleanValue()); });
+        deserializerMap.put("isShared", (n) -> { currentObject.setIsShared(n.getBooleanValue()); });
+        deserializerMap.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(TodoTask::createFromDiscriminatorValue)); });
+        deserializerMap.put("wellknownListName", (n) -> { currentObject.setWellknownListName(n.getEnumValue(WellknownListName.class)); });
+        return deserializerMap
     }
     /**
      * Gets the isOwner property value. True if the user is owner of the given task list.
@@ -108,6 +109,7 @@ public class TodoTaskList extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +125,7 @@ public class TodoTaskList extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -131,6 +134,7 @@ public class TodoTaskList extends Entity implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -139,6 +143,7 @@ public class TodoTaskList extends Entity implements Parsable {
      * @param value Value to set for the isOwner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsOwner(@javax.annotation.Nullable final Boolean value) {
         this._isOwner = value;
     }
@@ -147,6 +152,7 @@ public class TodoTaskList extends Entity implements Parsable {
      * @param value Value to set for the isShared property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsShared(@javax.annotation.Nullable final Boolean value) {
         this._isShared = value;
     }
@@ -155,6 +161,7 @@ public class TodoTaskList extends Entity implements Parsable {
      * @param value Value to set for the tasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTasks(@javax.annotation.Nullable final java.util.List<TodoTask> value) {
         this._tasks = value;
     }
@@ -163,6 +170,7 @@ public class TodoTaskList extends Entity implements Parsable {
      * @param value Value to set for the wellknownListName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWellknownListName(@javax.annotation.Nullable final WellknownListName value) {
         this._wellknownListName = value;
     }

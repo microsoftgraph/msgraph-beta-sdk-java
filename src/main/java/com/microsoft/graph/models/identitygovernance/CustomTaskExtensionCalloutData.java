@@ -22,6 +22,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      * Instantiates a new CustomTaskExtensionCalloutData and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CustomTaskExtensionCalloutData() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.customTaskExtensionCalloutData");
@@ -43,12 +44,12 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomTaskExtensionCalloutData currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("subject", (n) -> { currentObject.setSubject(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("task", (n) -> { currentObject.setTask(n.getObjectValue(Task::createFromDiscriminatorValue)); });
-            this.put("taskProcessingresult", (n) -> { currentObject.setTaskProcessingresult(n.getObjectValue(TaskProcessingResult::createFromDiscriminatorValue)); });
-            this.put("workflow", (n) -> { currentObject.setWorkflow(n.getObjectValue(Workflow::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("subject", (n) -> { currentObject.setSubject(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("task", (n) -> { currentObject.setTask(n.getObjectValue(Task::createFromDiscriminatorValue)); });
+        deserializerMap.put("taskProcessingresult", (n) -> { currentObject.setTaskProcessingresult(n.getObjectValue(TaskProcessingResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("workflow", (n) -> { currentObject.setWorkflow(n.getObjectValue(Workflow::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the subject property value. The subject property
@@ -87,6 +88,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -100,6 +102,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final User value) {
         this._subject = value;
     }
@@ -108,6 +111,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      * @param value Value to set for the task property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTask(@javax.annotation.Nullable final Task value) {
         this._task = value;
     }
@@ -116,6 +120,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      * @param value Value to set for the taskProcessingresult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaskProcessingresult(@javax.annotation.Nullable final TaskProcessingResult value) {
         this._taskProcessingresult = value;
     }
@@ -124,6 +129,7 @@ public class CustomTaskExtensionCalloutData extends CustomExtensionData implemen
      * @param value Value to set for the workflow property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkflow(@javax.annotation.Nullable final Workflow value) {
         this._workflow = value;
     }

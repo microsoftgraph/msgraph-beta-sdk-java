@@ -24,6 +24,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
      * Instantiates a new deviceHealthScriptRunSchedule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceHealthScriptRunSchedule() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceHealthScriptRunSchedule");
@@ -63,10 +64,10 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptRunSchedule currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("interval", (n) -> { currentObject.setInterval(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("interval", (n) -> { currentObject.setInterval(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the interval property value. The x value of every x hours for hourly schedule, every x days for Daily Schedule, every x weeks for weekly schedule, every x months for Monthly Schedule. Valid values 1 to 23
@@ -89,6 +90,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("interval", this.getInterval());
@@ -100,6 +102,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -108,6 +111,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
      * @param value Value to set for the interval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInterval(@javax.annotation.Nullable final Integer value) {
         this._interval = value;
     }
@@ -116,6 +120,7 @@ public class DeviceHealthScriptRunSchedule implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

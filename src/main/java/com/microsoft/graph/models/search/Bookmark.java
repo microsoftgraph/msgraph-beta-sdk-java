@@ -1,5 +1,6 @@
 package com.microsoft.graph.models.search;
 
+import com.microsoft.graph.models.DevicePlatformType;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -24,7 +25,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
     /** A list of language names that are geographically specific and that this bookmark can be viewed in. Each language tag value follows the pattern {language}-{region}. As an example, en-us is English as used in the United States. See supported language tags for the list of possible values. */
     private java.util.List<String> _languageTags;
     /** List of devices and operating systems able to view this bookmark. Possible values are: unknown, android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, androidASOP. */
-    private java.util.List<String> _platforms;
+    private java.util.List<DevicePlatformType> _platforms;
     /** List of Power Apps associated with this bookmark. If users add existing Power Apps to a bookmark, they can complete tasks, such as to enter vacation time or to report expenses on the search results page. */
     private java.util.List<String> _powerAppIds;
     /** The state property */
@@ -35,6 +36,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      * Instantiates a new Bookmark and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Bookmark() {
         super();
         this.setOdataType("#microsoft.graph.search.bookmark");
@@ -80,19 +82,19 @@ public class Bookmark extends SearchAnswer implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Bookmark currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("availabilityEndDateTime", (n) -> { currentObject.setAvailabilityEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("availabilityStartDateTime", (n) -> { currentObject.setAvailabilityStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("groupIds", (n) -> { currentObject.setGroupIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isSuggested", (n) -> { currentObject.setIsSuggested(n.getBooleanValue()); });
-            this.put("keywords", (n) -> { currentObject.setKeywords(n.getObjectValue(AnswerKeyword::createFromDiscriminatorValue)); });
-            this.put("languageTags", (n) -> { currentObject.setLanguageTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("platforms", (n) -> { currentObject.setPlatforms(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("powerAppIds", (n) -> { currentObject.setPowerAppIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(AnswerState.class)); });
-            this.put("targetedVariations", (n) -> { currentObject.setTargetedVariations(n.getCollectionOfObjectValues(AnswerVariant::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("availabilityEndDateTime", (n) -> { currentObject.setAvailabilityEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("availabilityStartDateTime", (n) -> { currentObject.setAvailabilityStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("groupIds", (n) -> { currentObject.setGroupIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isSuggested", (n) -> { currentObject.setIsSuggested(n.getBooleanValue()); });
+        deserializerMap.put("keywords", (n) -> { currentObject.setKeywords(n.getObjectValue(AnswerKeyword::createFromDiscriminatorValue)); });
+        deserializerMap.put("languageTags", (n) -> { currentObject.setLanguageTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("platforms", (n) -> { currentObject.setPlatforms(n.getCollectionOfEnumValues(DevicePlatformType.class)); });
+        deserializerMap.put("powerAppIds", (n) -> { currentObject.setPowerAppIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(AnswerState.class)); });
+        deserializerMap.put("targetedVariations", (n) -> { currentObject.setTargetedVariations(n.getCollectionOfObjectValues(AnswerVariant::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the groupIds property value. List of security groups able to view this bookmark.
@@ -128,10 +130,10 @@ public class Bookmark extends SearchAnswer implements Parsable {
     }
     /**
      * Gets the platforms property value. List of devices and operating systems able to view this bookmark. Possible values are: unknown, android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, androidASOP.
-     * @return a string
+     * @return a devicePlatformType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getPlatforms() {
+    public java.util.List<DevicePlatformType> getPlatforms() {
         return this._platforms;
     }
     /**
@@ -163,6 +165,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -173,7 +176,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
         writer.writeBooleanValue("isSuggested", this.getIsSuggested());
         writer.writeObjectValue("keywords", this.getKeywords());
         writer.writeCollectionOfPrimitiveValues("languageTags", this.getLanguageTags());
-        writer.writeCollectionOfPrimitiveValues("platforms", this.getPlatforms());
+        writer.writeCollectionOfEnumValues("platforms", this.getPlatforms());
         writer.writeCollectionOfPrimitiveValues("powerAppIds", this.getPowerAppIds());
         writer.writeEnumValue("state", this.getState());
         writer.writeCollectionOfObjectValues("targetedVariations", this.getTargetedVariations());
@@ -183,6 +186,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      * @param value Value to set for the availabilityEndDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailabilityEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._availabilityEndDateTime = value;
     }
@@ -191,6 +195,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      * @param value Value to set for the availabilityStartDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailabilityStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._availabilityStartDateTime = value;
     }
@@ -199,6 +204,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
         this._categories = value;
     }
@@ -207,6 +213,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      * @param value Value to set for the groupIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._groupIds = value;
     }
@@ -215,6 +222,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      * @param value Value to set for the isSuggested property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSuggested(@javax.annotation.Nullable final Boolean value) {
         this._isSuggested = value;
     }
@@ -223,6 +231,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      * @param value Value to set for the keywords property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeywords(@javax.annotation.Nullable final AnswerKeyword value) {
         this._keywords = value;
     }
@@ -231,6 +240,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      * @param value Value to set for the languageTags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguageTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._languageTags = value;
     }
@@ -239,7 +249,8 @@ public class Bookmark extends SearchAnswer implements Parsable {
      * @param value Value to set for the platforms property.
      * @return a void
      */
-    public void setPlatforms(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setPlatforms(@javax.annotation.Nullable final java.util.List<DevicePlatformType> value) {
         this._platforms = value;
     }
     /**
@@ -247,6 +258,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      * @param value Value to set for the powerAppIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPowerAppIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._powerAppIds = value;
     }
@@ -255,6 +267,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final AnswerState value) {
         this._state = value;
     }
@@ -263,6 +276,7 @@ public class Bookmark extends SearchAnswer implements Parsable {
      * @param value Value to set for the targetedVariations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedVariations(@javax.annotation.Nullable final java.util.List<AnswerVariant> value) {
         this._targetedVariations = value;
     }

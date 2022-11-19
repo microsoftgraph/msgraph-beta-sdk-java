@@ -38,6 +38,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * Instantiates a new DeviceEnrollmentWindowsHelloForBusinessConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceEnrollmentWindowsHelloForBusinessConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.deviceEnrollmentWindowsHelloForBusinessConfiguration");
@@ -67,21 +68,21 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceEnrollmentWindowsHelloForBusinessConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("enhancedBiometricsState", (n) -> { currentObject.setEnhancedBiometricsState(n.getEnumValue(Enablement.class)); });
-            this.put("pinExpirationInDays", (n) -> { currentObject.setPinExpirationInDays(n.getIntegerValue()); });
-            this.put("pinLowercaseCharactersUsage", (n) -> { currentObject.setPinLowercaseCharactersUsage(n.getEnumValue(WindowsHelloForBusinessPinUsage.class)); });
-            this.put("pinMaximumLength", (n) -> { currentObject.setPinMaximumLength(n.getIntegerValue()); });
-            this.put("pinMinimumLength", (n) -> { currentObject.setPinMinimumLength(n.getIntegerValue()); });
-            this.put("pinPreviousBlockCount", (n) -> { currentObject.setPinPreviousBlockCount(n.getIntegerValue()); });
-            this.put("pinSpecialCharactersUsage", (n) -> { currentObject.setPinSpecialCharactersUsage(n.getEnumValue(WindowsHelloForBusinessPinUsage.class)); });
-            this.put("pinUppercaseCharactersUsage", (n) -> { currentObject.setPinUppercaseCharactersUsage(n.getEnumValue(WindowsHelloForBusinessPinUsage.class)); });
-            this.put("remotePassportEnabled", (n) -> { currentObject.setRemotePassportEnabled(n.getBooleanValue()); });
-            this.put("securityDeviceRequired", (n) -> { currentObject.setSecurityDeviceRequired(n.getBooleanValue()); });
-            this.put("securityKeyForSignIn", (n) -> { currentObject.setSecurityKeyForSignIn(n.getEnumValue(Enablement.class)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(Enablement.class)); });
-            this.put("unlockWithBiometricsEnabled", (n) -> { currentObject.setUnlockWithBiometricsEnabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("enhancedBiometricsState", (n) -> { currentObject.setEnhancedBiometricsState(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("pinExpirationInDays", (n) -> { currentObject.setPinExpirationInDays(n.getIntegerValue()); });
+        deserializerMap.put("pinLowercaseCharactersUsage", (n) -> { currentObject.setPinLowercaseCharactersUsage(n.getEnumValue(WindowsHelloForBusinessPinUsage.class)); });
+        deserializerMap.put("pinMaximumLength", (n) -> { currentObject.setPinMaximumLength(n.getIntegerValue()); });
+        deserializerMap.put("pinMinimumLength", (n) -> { currentObject.setPinMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("pinPreviousBlockCount", (n) -> { currentObject.setPinPreviousBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("pinSpecialCharactersUsage", (n) -> { currentObject.setPinSpecialCharactersUsage(n.getEnumValue(WindowsHelloForBusinessPinUsage.class)); });
+        deserializerMap.put("pinUppercaseCharactersUsage", (n) -> { currentObject.setPinUppercaseCharactersUsage(n.getEnumValue(WindowsHelloForBusinessPinUsage.class)); });
+        deserializerMap.put("remotePassportEnabled", (n) -> { currentObject.setRemotePassportEnabled(n.getBooleanValue()); });
+        deserializerMap.put("securityDeviceRequired", (n) -> { currentObject.setSecurityDeviceRequired(n.getBooleanValue()); });
+        deserializerMap.put("securityKeyForSignIn", (n) -> { currentObject.setSecurityKeyForSignIn(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("unlockWithBiometricsEnabled", (n) -> { currentObject.setUnlockWithBiometricsEnabled(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the pinExpirationInDays property value. Controls the period of time (in days) that a PIN can be used before the system requires the user to change it. This must be set between 0 and 730, inclusive. If set to 0, the user's PIN will never expire
@@ -184,6 +185,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -206,6 +208,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the enhancedBiometricsState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnhancedBiometricsState(@javax.annotation.Nullable final Enablement value) {
         this._enhancedBiometricsState = value;
     }
@@ -214,6 +217,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinExpirationInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinExpirationInDays(@javax.annotation.Nullable final Integer value) {
         this._pinExpirationInDays = value;
     }
@@ -222,6 +226,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinLowercaseCharactersUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinLowercaseCharactersUsage(@javax.annotation.Nullable final WindowsHelloForBusinessPinUsage value) {
         this._pinLowercaseCharactersUsage = value;
     }
@@ -230,6 +235,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinMaximumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinMaximumLength(@javax.annotation.Nullable final Integer value) {
         this._pinMaximumLength = value;
     }
@@ -238,6 +244,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._pinMinimumLength = value;
     }
@@ -246,6 +253,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinPreviousBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinPreviousBlockCount(@javax.annotation.Nullable final Integer value) {
         this._pinPreviousBlockCount = value;
     }
@@ -254,6 +262,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinSpecialCharactersUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinSpecialCharactersUsage(@javax.annotation.Nullable final WindowsHelloForBusinessPinUsage value) {
         this._pinSpecialCharactersUsage = value;
     }
@@ -262,6 +271,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the pinUppercaseCharactersUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinUppercaseCharactersUsage(@javax.annotation.Nullable final WindowsHelloForBusinessPinUsage value) {
         this._pinUppercaseCharactersUsage = value;
     }
@@ -270,6 +280,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the remotePassportEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemotePassportEnabled(@javax.annotation.Nullable final Boolean value) {
         this._remotePassportEnabled = value;
     }
@@ -278,6 +289,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the securityDeviceRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityDeviceRequired(@javax.annotation.Nullable final Boolean value) {
         this._securityDeviceRequired = value;
     }
@@ -286,6 +298,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the securityKeyForSignIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityKeyForSignIn(@javax.annotation.Nullable final Enablement value) {
         this._securityKeyForSignIn = value;
     }
@@ -294,6 +307,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final Enablement value) {
         this._state = value;
     }
@@ -302,6 +316,7 @@ public class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends Device
      * @param value Value to set for the unlockWithBiometricsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnlockWithBiometricsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._unlockWithBiometricsEnabled = value;
     }

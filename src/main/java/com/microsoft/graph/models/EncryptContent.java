@@ -16,6 +16,7 @@ public class EncryptContent extends LabelActionBase implements Parsable {
      * Instantiates a new EncryptContent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EncryptContent() {
         super();
         this.setOdataType("#microsoft.graph.encryptContent");
@@ -53,15 +54,16 @@ public class EncryptContent extends LabelActionBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EncryptContent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("encryptWith", (n) -> { currentObject.setEncryptWith(n.getEnumValue(EncryptWith.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("encryptWith", (n) -> { currentObject.setEncryptWith(n.getEnumValue(EncryptWith.class)); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -72,6 +74,7 @@ public class EncryptContent extends LabelActionBase implements Parsable {
      * @param value Value to set for the encryptWith property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptWith(@javax.annotation.Nullable final EncryptWith value) {
         this._encryptWith = value;
     }

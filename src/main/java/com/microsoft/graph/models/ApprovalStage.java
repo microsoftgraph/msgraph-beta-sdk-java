@@ -29,6 +29,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
      * Instantiates a new approvalStage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ApprovalStage() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.approvalStage");
@@ -82,15 +83,15 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ApprovalStage currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("approvalStageTimeOutInDays", (n) -> { currentObject.setApprovalStageTimeOutInDays(n.getIntegerValue()); });
-            this.put("escalationApprovers", (n) -> { currentObject.setEscalationApprovers(n.getCollectionOfObjectValues(UserSet::createFromDiscriminatorValue)); });
-            this.put("escalationTimeInMinutes", (n) -> { currentObject.setEscalationTimeInMinutes(n.getIntegerValue()); });
-            this.put("isApproverJustificationRequired", (n) -> { currentObject.setIsApproverJustificationRequired(n.getBooleanValue()); });
-            this.put("isEscalationEnabled", (n) -> { currentObject.setIsEscalationEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("primaryApprovers", (n) -> { currentObject.setPrimaryApprovers(n.getCollectionOfObjectValues(UserSet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("approvalStageTimeOutInDays", (n) -> { currentObject.setApprovalStageTimeOutInDays(n.getIntegerValue()); });
+        deserializerMap.put("escalationApprovers", (n) -> { currentObject.setEscalationApprovers(n.getCollectionOfObjectValues(UserSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("escalationTimeInMinutes", (n) -> { currentObject.setEscalationTimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("isApproverJustificationRequired", (n) -> { currentObject.setIsApproverJustificationRequired(n.getBooleanValue()); });
+        deserializerMap.put("isEscalationEnabled", (n) -> { currentObject.setIsEscalationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("primaryApprovers", (n) -> { currentObject.setPrimaryApprovers(n.getCollectionOfObjectValues(UserSet::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the isApproverJustificationRequired property value. Indicates whether the approver is required to provide a justification for approving a request.
@@ -129,6 +130,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("approvalStageTimeOutInDays", this.getApprovalStageTimeOutInDays());
@@ -145,6 +147,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the approvalStageTimeOutInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApprovalStageTimeOutInDays(@javax.annotation.Nullable final Integer value) {
         this._approvalStageTimeOutInDays = value;
     }
@@ -161,6 +165,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the escalationApprovers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEscalationApprovers(@javax.annotation.Nullable final java.util.List<UserSet> value) {
         this._escalationApprovers = value;
     }
@@ -169,6 +174,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the escalationTimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEscalationTimeInMinutes(@javax.annotation.Nullable final Integer value) {
         this._escalationTimeInMinutes = value;
     }
@@ -177,6 +183,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isApproverJustificationRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsApproverJustificationRequired(@javax.annotation.Nullable final Boolean value) {
         this._isApproverJustificationRequired = value;
     }
@@ -185,6 +192,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isEscalationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEscalationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEscalationEnabled = value;
     }
@@ -193,6 +201,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -201,6 +210,7 @@ public class ApprovalStage implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the primaryApprovers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrimaryApprovers(@javax.annotation.Nullable final java.util.List<UserSet> value) {
         this._primaryApprovers = value;
     }

@@ -22,7 +22,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     private CloudPcDomainJoinConfiguration _domainJoinConfiguration;
     /** The number of hours to wait before reprovisioning/deprovisioning happens. Read-only. */
     private Integer _gracePeriodInHours;
-    /** The display name for the OS image you’re provisioning. */
+    /** The display name for the OS image youre provisioning. */
     private String _imageDisplayName;
     /** The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisher_offer_sku}. Supported values for each of the parameters are as follows:publisher: Microsoftwindowsdesktop. offer: windows-ent-cpc. sku: 21h1-ent-cpc-m365, 21h1-ent-cpc-os, 20h2-ent-cpc-m365, 20h2-ent-cpc-os, 20h1-ent-cpc-m365, 20h1-ent-cpc-os, 19h2-ent-cpc-m365 and 19h2-ent-cpc-os. */
     private String _imageId;
@@ -34,14 +34,17 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     private CloudPcManagementService _managedBy;
     /** The specific settings for the Microsoft Managed Desktop, which enables customers to get a managed device experience for the Cloud PC. Before you can enable Microsoft Managed Desktop, an admin must configure it. */
     private MicrosoftManagedDesktop _microsoftManagedDesktop;
-    /** The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the Cloud PC service. */
+    /** The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network thats validated by the Cloud PC service. */
     private String _onPremisesConnectionId;
+    /** The provisioningType property */
+    private CloudPcProvisioningType _provisioningType;
     /** Specific Windows settings to configure while creating Cloud PCs for this provisioning policy. */
     private CloudPcWindowsSettings _windowsSettings;
     /**
      * Instantiates a new CloudPcProvisioningPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcProvisioningPolicy() {
         super();
         this.setOdataType("#microsoft.graph.cloudPcProvisioningPolicy");
@@ -111,23 +114,24 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcProvisioningPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("alternateResourceUrl", (n) -> { currentObject.setAlternateResourceUrl(n.getStringValue()); });
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(CloudPcProvisioningPolicyAssignment::createFromDiscriminatorValue)); });
-            this.put("cloudPcGroupDisplayName", (n) -> { currentObject.setCloudPcGroupDisplayName(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("domainJoinConfiguration", (n) -> { currentObject.setDomainJoinConfiguration(n.getObjectValue(CloudPcDomainJoinConfiguration::createFromDiscriminatorValue)); });
-            this.put("gracePeriodInHours", (n) -> { currentObject.setGracePeriodInHours(n.getIntegerValue()); });
-            this.put("imageDisplayName", (n) -> { currentObject.setImageDisplayName(n.getStringValue()); });
-            this.put("imageId", (n) -> { currentObject.setImageId(n.getStringValue()); });
-            this.put("imageType", (n) -> { currentObject.setImageType(n.getEnumValue(CloudPcProvisioningPolicyImageType.class)); });
-            this.put("localAdminEnabled", (n) -> { currentObject.setLocalAdminEnabled(n.getBooleanValue()); });
-            this.put("managedBy", (n) -> { currentObject.setManagedBy(n.getEnumValue(CloudPcManagementService.class)); });
-            this.put("microsoftManagedDesktop", (n) -> { currentObject.setMicrosoftManagedDesktop(n.getObjectValue(MicrosoftManagedDesktop::createFromDiscriminatorValue)); });
-            this.put("onPremisesConnectionId", (n) -> { currentObject.setOnPremisesConnectionId(n.getStringValue()); });
-            this.put("windowsSettings", (n) -> { currentObject.setWindowsSettings(n.getObjectValue(CloudPcWindowsSettings::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("alternateResourceUrl", (n) -> { currentObject.setAlternateResourceUrl(n.getStringValue()); });
+        deserializerMap.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(CloudPcProvisioningPolicyAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudPcGroupDisplayName", (n) -> { currentObject.setCloudPcGroupDisplayName(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("domainJoinConfiguration", (n) -> { currentObject.setDomainJoinConfiguration(n.getObjectValue(CloudPcDomainJoinConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("gracePeriodInHours", (n) -> { currentObject.setGracePeriodInHours(n.getIntegerValue()); });
+        deserializerMap.put("imageDisplayName", (n) -> { currentObject.setImageDisplayName(n.getStringValue()); });
+        deserializerMap.put("imageId", (n) -> { currentObject.setImageId(n.getStringValue()); });
+        deserializerMap.put("imageType", (n) -> { currentObject.setImageType(n.getEnumValue(CloudPcProvisioningPolicyImageType.class)); });
+        deserializerMap.put("localAdminEnabled", (n) -> { currentObject.setLocalAdminEnabled(n.getBooleanValue()); });
+        deserializerMap.put("managedBy", (n) -> { currentObject.setManagedBy(n.getEnumValue(CloudPcManagementService.class)); });
+        deserializerMap.put("microsoftManagedDesktop", (n) -> { currentObject.setMicrosoftManagedDesktop(n.getObjectValue(MicrosoftManagedDesktop::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesConnectionId", (n) -> { currentObject.setOnPremisesConnectionId(n.getStringValue()); });
+        deserializerMap.put("provisioningType", (n) -> { currentObject.setProvisioningType(n.getEnumValue(CloudPcProvisioningType.class)); });
+        deserializerMap.put("windowsSettings", (n) -> { currentObject.setWindowsSettings(n.getObjectValue(CloudPcWindowsSettings::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the gracePeriodInHours property value. The number of hours to wait before reprovisioning/deprovisioning happens. Read-only.
@@ -138,7 +142,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this._gracePeriodInHours;
     }
     /**
-     * Gets the imageDisplayName property value. The display name for the OS image you’re provisioning.
+     * Gets the imageDisplayName property value. The display name for the OS image youre provisioning.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -186,12 +190,20 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this._microsoftManagedDesktop;
     }
     /**
-     * Gets the onPremisesConnectionId property value. The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the Cloud PC service.
+     * Gets the onPremisesConnectionId property value. The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network thats validated by the Cloud PC service.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getOnPremisesConnectionId() {
         return this._onPremisesConnectionId;
+    }
+    /**
+     * Gets the provisioningType property value. The provisioningType property
+     * @return a cloudPcProvisioningType
+     */
+    @javax.annotation.Nullable
+    public CloudPcProvisioningType getProvisioningType() {
+        return this._provisioningType;
     }
     /**
      * Gets the windowsSettings property value. Specific Windows settings to configure while creating Cloud PCs for this provisioning policy.
@@ -206,6 +218,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -223,6 +236,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         writer.writeEnumValue("managedBy", this.getManagedBy());
         writer.writeObjectValue("microsoftManagedDesktop", this.getMicrosoftManagedDesktop());
         writer.writeStringValue("onPremisesConnectionId", this.getOnPremisesConnectionId());
+        writer.writeEnumValue("provisioningType", this.getProvisioningType());
         writer.writeObjectValue("windowsSettings", this.getWindowsSettings());
     }
     /**
@@ -230,6 +244,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      * @param value Value to set for the alternateResourceUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlternateResourceUrl(@javax.annotation.Nullable final String value) {
         this._alternateResourceUrl = value;
     }
@@ -238,6 +253,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<CloudPcProvisioningPolicyAssignment> value) {
         this._assignments = value;
     }
@@ -246,6 +262,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      * @param value Value to set for the cloudPcGroupDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPcGroupDisplayName(@javax.annotation.Nullable final String value) {
         this._cloudPcGroupDisplayName = value;
     }
@@ -254,6 +271,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -262,6 +280,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -270,6 +289,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      * @param value Value to set for the domainJoinConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainJoinConfiguration(@javax.annotation.Nullable final CloudPcDomainJoinConfiguration value) {
         this._domainJoinConfiguration = value;
     }
@@ -278,14 +298,16 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      * @param value Value to set for the gracePeriodInHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGracePeriodInHours(@javax.annotation.Nullable final Integer value) {
         this._gracePeriodInHours = value;
     }
     /**
-     * Sets the imageDisplayName property value. The display name for the OS image you’re provisioning.
+     * Sets the imageDisplayName property value. The display name for the OS image youre provisioning.
      * @param value Value to set for the imageDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImageDisplayName(@javax.annotation.Nullable final String value) {
         this._imageDisplayName = value;
     }
@@ -294,6 +316,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      * @param value Value to set for the imageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImageId(@javax.annotation.Nullable final String value) {
         this._imageId = value;
     }
@@ -302,6 +325,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      * @param value Value to set for the imageType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImageType(@javax.annotation.Nullable final CloudPcProvisioningPolicyImageType value) {
         this._imageType = value;
     }
@@ -310,6 +334,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      * @param value Value to set for the localAdminEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalAdminEnabled(@javax.annotation.Nullable final Boolean value) {
         this._localAdminEnabled = value;
     }
@@ -318,6 +343,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      * @param value Value to set for the managedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedBy(@javax.annotation.Nullable final CloudPcManagementService value) {
         this._managedBy = value;
     }
@@ -326,22 +352,34 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      * @param value Value to set for the microsoftManagedDesktop property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftManagedDesktop(@javax.annotation.Nullable final MicrosoftManagedDesktop value) {
         this._microsoftManagedDesktop = value;
     }
     /**
-     * Sets the onPremisesConnectionId property value. The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the Cloud PC service.
+     * Sets the onPremisesConnectionId property value. The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network thats validated by the Cloud PC service.
      * @param value Value to set for the onPremisesConnectionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesConnectionId(@javax.annotation.Nullable final String value) {
         this._onPremisesConnectionId = value;
+    }
+    /**
+     * Sets the provisioningType property value. The provisioningType property
+     * @param value Value to set for the provisioningType property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setProvisioningType(@javax.annotation.Nullable final CloudPcProvisioningType value) {
+        this._provisioningType = value;
     }
     /**
      * Sets the windowsSettings property value. Specific Windows settings to configure while creating Cloud PCs for this provisioning policy.
      * @param value Value to set for the windowsSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsSettings(@javax.annotation.Nullable final CloudPcWindowsSettings value) {
         this._windowsSettings = value;
     }

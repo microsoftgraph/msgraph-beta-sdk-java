@@ -24,6 +24,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      * Instantiates a new Win32LobAppPowerShellScriptRequirement and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Win32LobAppPowerShellScriptRequirement() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppPowerShellScriptRequirement");
@@ -69,14 +70,14 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Win32LobAppPowerShellScriptRequirement currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("detectionType", (n) -> { currentObject.setDetectionType(n.getEnumValue(Win32LobAppPowerShellScriptDetectionType.class)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("enforceSignatureCheck", (n) -> { currentObject.setEnforceSignatureCheck(n.getBooleanValue()); });
-            this.put("runAs32Bit", (n) -> { currentObject.setRunAs32Bit(n.getBooleanValue()); });
-            this.put("runAsAccount", (n) -> { currentObject.setRunAsAccount(n.getEnumValue(RunAsAccountType.class)); });
-            this.put("scriptContent", (n) -> { currentObject.setScriptContent(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("detectionType", (n) -> { currentObject.setDetectionType(n.getEnumValue(Win32LobAppPowerShellScriptDetectionType.class)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enforceSignatureCheck", (n) -> { currentObject.setEnforceSignatureCheck(n.getBooleanValue()); });
+        deserializerMap.put("runAs32Bit", (n) -> { currentObject.setRunAs32Bit(n.getBooleanValue()); });
+        deserializerMap.put("runAsAccount", (n) -> { currentObject.setRunAsAccount(n.getEnumValue(RunAsAccountType.class)); });
+        deserializerMap.put("scriptContent", (n) -> { currentObject.setScriptContent(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the runAs32Bit property value. A value indicating whether this script should run as 32-bit
@@ -107,6 +108,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      * @param value Value to set for the detectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionType(@javax.annotation.Nullable final Win32LobAppPowerShellScriptDetectionType value) {
         this._detectionType = value;
     }
@@ -130,6 +133,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -138,6 +142,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      * @param value Value to set for the enforceSignatureCheck property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnforceSignatureCheck(@javax.annotation.Nullable final Boolean value) {
         this._enforceSignatureCheck = value;
     }
@@ -146,6 +151,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      * @param value Value to set for the runAs32Bit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunAs32Bit(@javax.annotation.Nullable final Boolean value) {
         this._runAs32Bit = value;
     }
@@ -154,6 +160,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      * @param value Value to set for the runAsAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunAsAccount(@javax.annotation.Nullable final RunAsAccountType value) {
         this._runAsAccount = value;
     }
@@ -162,6 +169,7 @@ public class Win32LobAppPowerShellScriptRequirement extends Win32LobAppRequireme
      * @param value Value to set for the scriptContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScriptContent(@javax.annotation.Nullable final String value) {
         this._scriptContent = value;
     }

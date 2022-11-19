@@ -16,6 +16,7 @@ public class AppScope extends Entity implements Parsable {
      * Instantiates a new appScope and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppScope() {
         super();
         this.setOdataType("#microsoft.graph.appScope");
@@ -45,10 +46,10 @@ public class AppScope extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppScope currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the type property value. Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. This property is read only.
@@ -63,6 +64,7 @@ public class AppScope extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class AppScope extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -82,6 +85,7 @@ public class AppScope extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }

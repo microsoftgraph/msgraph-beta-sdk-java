@@ -30,6 +30,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      * Instantiates a new groupPolicyConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyConfiguration");
@@ -91,16 +92,16 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPolicyConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(GroupPolicyConfigurationAssignment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("definitionValues", (n) -> { currentObject.setDefinitionValues(n.getCollectionOfObjectValues(GroupPolicyDefinitionValue::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("policyConfigurationIngestionType", (n) -> { currentObject.setPolicyConfigurationIngestionType(n.getEnumValue(GroupPolicyConfigurationIngestionType.class)); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(GroupPolicyConfigurationAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("definitionValues", (n) -> { currentObject.setDefinitionValues(n.getCollectionOfObjectValues(GroupPolicyDefinitionValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("policyConfigurationIngestionType", (n) -> { currentObject.setPolicyConfigurationIngestionType(n.getEnumValue(GroupPolicyConfigurationIngestionType.class)); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
@@ -131,6 +132,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -148,6 +150,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<GroupPolicyConfigurationAssignment> value) {
         this._assignments = value;
     }
@@ -156,6 +159,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -164,6 +168,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      * @param value Value to set for the definitionValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitionValues(@javax.annotation.Nullable final java.util.List<GroupPolicyDefinitionValue> value) {
         this._definitionValues = value;
     }
@@ -172,6 +177,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -180,6 +186,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -188,6 +195,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -196,6 +204,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      * @param value Value to set for the policyConfigurationIngestionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyConfigurationIngestionType(@javax.annotation.Nullable final GroupPolicyConfigurationIngestionType value) {
         this._policyConfigurationIngestionType = value;
     }
@@ -204,6 +213,7 @@ public class GroupPolicyConfiguration extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }

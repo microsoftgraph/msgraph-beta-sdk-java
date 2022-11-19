@@ -20,6 +20,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      * Instantiates a new MacOSCustomConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSCustomConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSCustomConfiguration");
@@ -49,12 +50,12 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSCustomConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deploymentChannel", (n) -> { currentObject.setDeploymentChannel(n.getEnumValue(AppleDeploymentChannel.class)); });
-            this.put("payload", (n) -> { currentObject.setPayload(n.getByteArrayValue()); });
-            this.put("payloadFileName", (n) -> { currentObject.setPayloadFileName(n.getStringValue()); });
-            this.put("payloadName", (n) -> { currentObject.setPayloadName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deploymentChannel", (n) -> { currentObject.setDeploymentChannel(n.getEnumValue(AppleDeploymentChannel.class)); });
+        deserializerMap.put("payload", (n) -> { currentObject.setPayload(n.getByteArrayValue()); });
+        deserializerMap.put("payloadFileName", (n) -> { currentObject.setPayloadFileName(n.getStringValue()); });
+        deserializerMap.put("payloadName", (n) -> { currentObject.setPayloadName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the payload property value. Payload. (UTF8 encoded byte array)
@@ -85,6 +86,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the deploymentChannel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentChannel(@javax.annotation.Nullable final AppleDeploymentChannel value) {
         this._deploymentChannel = value;
     }
@@ -106,6 +109,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the payload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayload(@javax.annotation.Nullable final byte[] value) {
         this._payload = value;
     }
@@ -114,6 +118,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the payloadFileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadFileName(@javax.annotation.Nullable final String value) {
         this._payloadFileName = value;
     }
@@ -122,6 +127,7 @@ public class MacOSCustomConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the payloadName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadName(@javax.annotation.Nullable final String value) {
         this._payloadName = value;
     }

@@ -35,6 +35,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * Instantiates a new ServiceUpdateMessage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServiceUpdateMessage() {
         super();
         this.setOdataType("#microsoft.graph.serviceUpdateMessage");
@@ -96,19 +97,19 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ServiceUpdateMessage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("actionRequiredByDateTime", (n) -> { currentObject.setActionRequiredByDateTime(n.getOffsetDateTimeValue()); });
-            this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(ServiceAnnouncementAttachment::createFromDiscriminatorValue)); });
-            this.put("attachmentsArchive", (n) -> { currentObject.setAttachmentsArchive(n.getByteArrayValue()); });
-            this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(ServiceUpdateCategory.class)); });
-            this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
-            this.put("isMajorChange", (n) -> { currentObject.setIsMajorChange(n.getBooleanValue()); });
-            this.put("services", (n) -> { currentObject.setServices(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("severity", (n) -> { currentObject.setSeverity(n.getEnumValue(ServiceUpdateSeverity.class)); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("viewPoint", (n) -> { currentObject.setViewPoint(n.getObjectValue(ServiceUpdateMessageViewpoint::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actionRequiredByDateTime", (n) -> { currentObject.setActionRequiredByDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(ServiceAnnouncementAttachment::createFromDiscriminatorValue)); });
+        deserializerMap.put("attachmentsArchive", (n) -> { currentObject.setAttachmentsArchive(n.getByteArrayValue()); });
+        deserializerMap.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(ServiceUpdateCategory.class)); });
+        deserializerMap.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
+        deserializerMap.put("isMajorChange", (n) -> { currentObject.setIsMajorChange(n.getBooleanValue()); });
+        deserializerMap.put("services", (n) -> { currentObject.setServices(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("severity", (n) -> { currentObject.setSeverity(n.getEnumValue(ServiceUpdateSeverity.class)); });
+        deserializerMap.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("viewPoint", (n) -> { currentObject.setViewPoint(n.getObjectValue(ServiceUpdateMessageViewpoint::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the hasAttachments property value. Indicates whether the message has any attachment.
@@ -163,6 +164,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -183,6 +185,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the actionRequiredByDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionRequiredByDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._actionRequiredByDateTime = value;
     }
@@ -191,6 +194,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the attachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttachments(@javax.annotation.Nullable final java.util.List<ServiceAnnouncementAttachment> value) {
         this._attachments = value;
     }
@@ -199,6 +203,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the attachmentsArchive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttachmentsArchive(@javax.annotation.Nullable final byte[] value) {
         this._attachmentsArchive = value;
     }
@@ -207,6 +212,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the body property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBody(@javax.annotation.Nullable final ItemBody value) {
         this._body = value;
     }
@@ -215,6 +221,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final ServiceUpdateCategory value) {
         this._category = value;
     }
@@ -223,6 +230,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
         this._hasAttachments = value;
     }
@@ -231,6 +239,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the isMajorChange property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMajorChange(@javax.annotation.Nullable final Boolean value) {
         this._isMajorChange = value;
     }
@@ -239,6 +248,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the services property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServices(@javax.annotation.Nullable final java.util.List<String> value) {
         this._services = value;
     }
@@ -247,6 +257,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the severity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSeverity(@javax.annotation.Nullable final ServiceUpdateSeverity value) {
         this._severity = value;
     }
@@ -255,6 +266,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
     }
@@ -263,6 +275,7 @@ public class ServiceUpdateMessage extends ServiceAnnouncementBase implements Par
      * @param value Value to set for the viewPoint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setViewPoint(@javax.annotation.Nullable final ServiceUpdateMessageViewpoint value) {
         this._viewPoint = value;
     }

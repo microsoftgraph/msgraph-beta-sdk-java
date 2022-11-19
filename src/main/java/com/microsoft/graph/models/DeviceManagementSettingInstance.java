@@ -23,6 +23,7 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
      * Instantiates a new deviceManagementSettingInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingInstance() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingInstance");
@@ -64,10 +65,10 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("definitionId", (n) -> { currentObject.setDefinitionId(n.getStringValue()); });
-            this.put("valueJson", (n) -> { currentObject.setValueJson(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("definitionId", (n) -> { currentObject.setDefinitionId(n.getStringValue()); });
+        deserializerMap.put("valueJson", (n) -> { currentObject.setValueJson(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the valueJson property value. JSON representation of the value
@@ -82,6 +83,7 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -93,6 +95,7 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
      * @param value Value to set for the definitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitionId(@javax.annotation.Nullable final String value) {
         this._definitionId = value;
     }
@@ -101,6 +104,7 @@ public class DeviceManagementSettingInstance extends Entity implements Parsable 
      * @param value Value to set for the valueJson property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValueJson(@javax.annotation.Nullable final String value) {
         this._valueJson = value;
     }

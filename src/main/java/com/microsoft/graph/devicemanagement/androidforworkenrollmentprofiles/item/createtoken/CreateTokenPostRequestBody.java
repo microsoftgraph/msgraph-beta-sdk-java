@@ -18,6 +18,7 @@ public class CreateTokenPostRequestBody implements AdditionalDataHolder, Parsabl
      * Instantiates a new createTokenPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CreateTokenPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,9 +47,9 @@ public class CreateTokenPostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CreateTokenPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("tokenValidityInSeconds", (n) -> { currentObject.setTokenValidityInSeconds(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("tokenValidityInSeconds", (n) -> { currentObject.setTokenValidityInSeconds(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the tokenValidityInSeconds property value. The tokenValidityInSeconds property
@@ -63,6 +64,7 @@ public class CreateTokenPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("tokenValidityInSeconds", this.getTokenValidityInSeconds());
@@ -73,6 +75,7 @@ public class CreateTokenPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class CreateTokenPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the tokenValidityInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenValidityInSeconds(@javax.annotation.Nullable final Integer value) {
         this._tokenValidityInSeconds = value;
     }

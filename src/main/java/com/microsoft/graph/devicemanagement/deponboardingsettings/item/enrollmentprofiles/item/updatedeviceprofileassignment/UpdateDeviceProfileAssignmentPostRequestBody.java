@@ -18,6 +18,7 @@ public class UpdateDeviceProfileAssignmentPostRequestBody implements AdditionalD
      * Instantiates a new updateDeviceProfileAssignmentPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateDeviceProfileAssignmentPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -54,15 +55,16 @@ public class UpdateDeviceProfileAssignmentPostRequestBody implements AdditionalD
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UpdateDeviceProfileAssignmentPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("deviceIds", (n) -> { currentObject.setDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("deviceIds", (n) -> { currentObject.setDeviceIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("deviceIds", this.getDeviceIds());
@@ -73,6 +75,7 @@ public class UpdateDeviceProfileAssignmentPostRequestBody implements AdditionalD
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class UpdateDeviceProfileAssignmentPostRequestBody implements AdditionalD
      * @param value Value to set for the deviceIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._deviceIds = value;
     }

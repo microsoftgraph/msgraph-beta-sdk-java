@@ -25,6 +25,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
      * Instantiates a new channelModerationSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChannelModerationSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.channelModerationSettings");
@@ -70,13 +71,13 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChannelModerationSettings currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("allowNewMessageFromBots", (n) -> { currentObject.setAllowNewMessageFromBots(n.getBooleanValue()); });
-            this.put("allowNewMessageFromConnectors", (n) -> { currentObject.setAllowNewMessageFromConnectors(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("replyRestriction", (n) -> { currentObject.setReplyRestriction(n.getEnumValue(ReplyRestriction.class)); });
-            this.put("userNewMessageRestriction", (n) -> { currentObject.setUserNewMessageRestriction(n.getEnumValue(UserNewMessageRestriction.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("allowNewMessageFromBots", (n) -> { currentObject.setAllowNewMessageFromBots(n.getBooleanValue()); });
+        deserializerMap.put("allowNewMessageFromConnectors", (n) -> { currentObject.setAllowNewMessageFromConnectors(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("replyRestriction", (n) -> { currentObject.setReplyRestriction(n.getEnumValue(ReplyRestriction.class)); });
+        deserializerMap.put("userNewMessageRestriction", (n) -> { currentObject.setUserNewMessageRestriction(n.getEnumValue(UserNewMessageRestriction.class)); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,6 +108,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowNewMessageFromBots", this.getAllowNewMessageFromBots());
@@ -121,6 +123,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the allowNewMessageFromBots property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowNewMessageFromBots(@javax.annotation.Nullable final Boolean value) {
         this._allowNewMessageFromBots = value;
     }
@@ -137,6 +141,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the allowNewMessageFromConnectors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowNewMessageFromConnectors(@javax.annotation.Nullable final Boolean value) {
         this._allowNewMessageFromConnectors = value;
     }
@@ -145,6 +150,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -153,6 +159,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the replyRestriction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReplyRestriction(@javax.annotation.Nullable final ReplyRestriction value) {
         this._replyRestriction = value;
     }
@@ -161,6 +168,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the userNewMessageRestriction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserNewMessageRestriction(@javax.annotation.Nullable final UserNewMessageRestriction value) {
         this._userNewMessageRestriction = value;
     }

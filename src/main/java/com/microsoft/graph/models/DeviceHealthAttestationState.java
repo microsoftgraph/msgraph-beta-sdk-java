@@ -82,6 +82,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * Instantiates a new deviceHealthAttestationState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceHealthAttestationState() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceHealthAttestationState");
@@ -231,41 +232,41 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthAttestationState currentObject = this;
-        return new HashMap<>(33) {{
-            this.put("attestationIdentityKey", (n) -> { currentObject.setAttestationIdentityKey(n.getStringValue()); });
-            this.put("bitLockerStatus", (n) -> { currentObject.setBitLockerStatus(n.getStringValue()); });
-            this.put("bootAppSecurityVersion", (n) -> { currentObject.setBootAppSecurityVersion(n.getStringValue()); });
-            this.put("bootDebugging", (n) -> { currentObject.setBootDebugging(n.getStringValue()); });
-            this.put("bootManagerSecurityVersion", (n) -> { currentObject.setBootManagerSecurityVersion(n.getStringValue()); });
-            this.put("bootManagerVersion", (n) -> { currentObject.setBootManagerVersion(n.getStringValue()); });
-            this.put("bootRevisionListInfo", (n) -> { currentObject.setBootRevisionListInfo(n.getStringValue()); });
-            this.put("codeIntegrity", (n) -> { currentObject.setCodeIntegrity(n.getStringValue()); });
-            this.put("codeIntegrityCheckVersion", (n) -> { currentObject.setCodeIntegrityCheckVersion(n.getStringValue()); });
-            this.put("codeIntegrityPolicy", (n) -> { currentObject.setCodeIntegrityPolicy(n.getStringValue()); });
-            this.put("contentNamespaceUrl", (n) -> { currentObject.setContentNamespaceUrl(n.getStringValue()); });
-            this.put("contentVersion", (n) -> { currentObject.setContentVersion(n.getStringValue()); });
-            this.put("dataExcutionPolicy", (n) -> { currentObject.setDataExcutionPolicy(n.getStringValue()); });
-            this.put("deviceHealthAttestationStatus", (n) -> { currentObject.setDeviceHealthAttestationStatus(n.getStringValue()); });
-            this.put("earlyLaunchAntiMalwareDriverProtection", (n) -> { currentObject.setEarlyLaunchAntiMalwareDriverProtection(n.getStringValue()); });
-            this.put("healthAttestationSupportedStatus", (n) -> { currentObject.setHealthAttestationSupportedStatus(n.getStringValue()); });
-            this.put("healthStatusMismatchInfo", (n) -> { currentObject.setHealthStatusMismatchInfo(n.getStringValue()); });
-            this.put("issuedDateTime", (n) -> { currentObject.setIssuedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastUpdateDateTime", (n) -> { currentObject.setLastUpdateDateTime(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operatingSystemKernelDebugging", (n) -> { currentObject.setOperatingSystemKernelDebugging(n.getStringValue()); });
-            this.put("operatingSystemRevListInfo", (n) -> { currentObject.setOperatingSystemRevListInfo(n.getStringValue()); });
-            this.put("pcr0", (n) -> { currentObject.setPcr0(n.getStringValue()); });
-            this.put("pcrHashAlgorithm", (n) -> { currentObject.setPcrHashAlgorithm(n.getStringValue()); });
-            this.put("resetCount", (n) -> { currentObject.setResetCount(n.getLongValue()); });
-            this.put("restartCount", (n) -> { currentObject.setRestartCount(n.getLongValue()); });
-            this.put("safeMode", (n) -> { currentObject.setSafeMode(n.getStringValue()); });
-            this.put("secureBoot", (n) -> { currentObject.setSecureBoot(n.getStringValue()); });
-            this.put("secureBootConfigurationPolicyFingerPrint", (n) -> { currentObject.setSecureBootConfigurationPolicyFingerPrint(n.getStringValue()); });
-            this.put("testSigning", (n) -> { currentObject.setTestSigning(n.getStringValue()); });
-            this.put("tpmVersion", (n) -> { currentObject.setTpmVersion(n.getStringValue()); });
-            this.put("virtualSecureMode", (n) -> { currentObject.setVirtualSecureMode(n.getStringValue()); });
-            this.put("windowsPE", (n) -> { currentObject.setWindowsPE(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(33);
+        deserializerMap.put("attestationIdentityKey", (n) -> { currentObject.setAttestationIdentityKey(n.getStringValue()); });
+        deserializerMap.put("bitLockerStatus", (n) -> { currentObject.setBitLockerStatus(n.getStringValue()); });
+        deserializerMap.put("bootAppSecurityVersion", (n) -> { currentObject.setBootAppSecurityVersion(n.getStringValue()); });
+        deserializerMap.put("bootDebugging", (n) -> { currentObject.setBootDebugging(n.getStringValue()); });
+        deserializerMap.put("bootManagerSecurityVersion", (n) -> { currentObject.setBootManagerSecurityVersion(n.getStringValue()); });
+        deserializerMap.put("bootManagerVersion", (n) -> { currentObject.setBootManagerVersion(n.getStringValue()); });
+        deserializerMap.put("bootRevisionListInfo", (n) -> { currentObject.setBootRevisionListInfo(n.getStringValue()); });
+        deserializerMap.put("codeIntegrity", (n) -> { currentObject.setCodeIntegrity(n.getStringValue()); });
+        deserializerMap.put("codeIntegrityCheckVersion", (n) -> { currentObject.setCodeIntegrityCheckVersion(n.getStringValue()); });
+        deserializerMap.put("codeIntegrityPolicy", (n) -> { currentObject.setCodeIntegrityPolicy(n.getStringValue()); });
+        deserializerMap.put("contentNamespaceUrl", (n) -> { currentObject.setContentNamespaceUrl(n.getStringValue()); });
+        deserializerMap.put("contentVersion", (n) -> { currentObject.setContentVersion(n.getStringValue()); });
+        deserializerMap.put("dataExcutionPolicy", (n) -> { currentObject.setDataExcutionPolicy(n.getStringValue()); });
+        deserializerMap.put("deviceHealthAttestationStatus", (n) -> { currentObject.setDeviceHealthAttestationStatus(n.getStringValue()); });
+        deserializerMap.put("earlyLaunchAntiMalwareDriverProtection", (n) -> { currentObject.setEarlyLaunchAntiMalwareDriverProtection(n.getStringValue()); });
+        deserializerMap.put("healthAttestationSupportedStatus", (n) -> { currentObject.setHealthAttestationSupportedStatus(n.getStringValue()); });
+        deserializerMap.put("healthStatusMismatchInfo", (n) -> { currentObject.setHealthStatusMismatchInfo(n.getStringValue()); });
+        deserializerMap.put("issuedDateTime", (n) -> { currentObject.setIssuedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastUpdateDateTime", (n) -> { currentObject.setLastUpdateDateTime(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operatingSystemKernelDebugging", (n) -> { currentObject.setOperatingSystemKernelDebugging(n.getStringValue()); });
+        deserializerMap.put("operatingSystemRevListInfo", (n) -> { currentObject.setOperatingSystemRevListInfo(n.getStringValue()); });
+        deserializerMap.put("pcr0", (n) -> { currentObject.setPcr0(n.getStringValue()); });
+        deserializerMap.put("pcrHashAlgorithm", (n) -> { currentObject.setPcrHashAlgorithm(n.getStringValue()); });
+        deserializerMap.put("resetCount", (n) -> { currentObject.setResetCount(n.getLongValue()); });
+        deserializerMap.put("restartCount", (n) -> { currentObject.setRestartCount(n.getLongValue()); });
+        deserializerMap.put("safeMode", (n) -> { currentObject.setSafeMode(n.getStringValue()); });
+        deserializerMap.put("secureBoot", (n) -> { currentObject.setSecureBoot(n.getStringValue()); });
+        deserializerMap.put("secureBootConfigurationPolicyFingerPrint", (n) -> { currentObject.setSecureBootConfigurationPolicyFingerPrint(n.getStringValue()); });
+        deserializerMap.put("testSigning", (n) -> { currentObject.setTestSigning(n.getStringValue()); });
+        deserializerMap.put("tpmVersion", (n) -> { currentObject.setTpmVersion(n.getStringValue()); });
+        deserializerMap.put("virtualSecureMode", (n) -> { currentObject.setVirtualSecureMode(n.getStringValue()); });
+        deserializerMap.put("windowsPE", (n) -> { currentObject.setWindowsPE(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the healthAttestationSupportedStatus property value. This attribute indicates if DHA is supported for the device
@@ -416,6 +417,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("attestationIdentityKey", this.getAttestationIdentityKey());
@@ -458,6 +460,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -466,6 +469,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the attestationIdentityKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttestationIdentityKey(@javax.annotation.Nullable final String value) {
         this._attestationIdentityKey = value;
     }
@@ -474,6 +478,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the bitLockerStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerStatus(@javax.annotation.Nullable final String value) {
         this._bitLockerStatus = value;
     }
@@ -482,6 +487,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the bootAppSecurityVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBootAppSecurityVersion(@javax.annotation.Nullable final String value) {
         this._bootAppSecurityVersion = value;
     }
@@ -490,6 +496,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the bootDebugging property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBootDebugging(@javax.annotation.Nullable final String value) {
         this._bootDebugging = value;
     }
@@ -498,6 +505,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the bootManagerSecurityVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBootManagerSecurityVersion(@javax.annotation.Nullable final String value) {
         this._bootManagerSecurityVersion = value;
     }
@@ -506,6 +514,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the bootManagerVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBootManagerVersion(@javax.annotation.Nullable final String value) {
         this._bootManagerVersion = value;
     }
@@ -514,6 +523,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the bootRevisionListInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBootRevisionListInfo(@javax.annotation.Nullable final String value) {
         this._bootRevisionListInfo = value;
     }
@@ -522,6 +532,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the codeIntegrity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCodeIntegrity(@javax.annotation.Nullable final String value) {
         this._codeIntegrity = value;
     }
@@ -530,6 +541,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the codeIntegrityCheckVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCodeIntegrityCheckVersion(@javax.annotation.Nullable final String value) {
         this._codeIntegrityCheckVersion = value;
     }
@@ -538,6 +550,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the codeIntegrityPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCodeIntegrityPolicy(@javax.annotation.Nullable final String value) {
         this._codeIntegrityPolicy = value;
     }
@@ -546,6 +559,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the contentNamespaceUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentNamespaceUrl(@javax.annotation.Nullable final String value) {
         this._contentNamespaceUrl = value;
     }
@@ -554,6 +568,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the contentVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentVersion(@javax.annotation.Nullable final String value) {
         this._contentVersion = value;
     }
@@ -562,6 +577,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the dataExcutionPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataExcutionPolicy(@javax.annotation.Nullable final String value) {
         this._dataExcutionPolicy = value;
     }
@@ -570,6 +586,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the deviceHealthAttestationStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceHealthAttestationStatus(@javax.annotation.Nullable final String value) {
         this._deviceHealthAttestationStatus = value;
     }
@@ -578,6 +595,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the earlyLaunchAntiMalwareDriverProtection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEarlyLaunchAntiMalwareDriverProtection(@javax.annotation.Nullable final String value) {
         this._earlyLaunchAntiMalwareDriverProtection = value;
     }
@@ -586,6 +604,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the healthAttestationSupportedStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthAttestationSupportedStatus(@javax.annotation.Nullable final String value) {
         this._healthAttestationSupportedStatus = value;
     }
@@ -594,6 +613,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the healthStatusMismatchInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthStatusMismatchInfo(@javax.annotation.Nullable final String value) {
         this._healthStatusMismatchInfo = value;
     }
@@ -602,6 +622,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the issuedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._issuedDateTime = value;
     }
@@ -610,6 +631,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the lastUpdateDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdateDateTime(@javax.annotation.Nullable final String value) {
         this._lastUpdateDateTime = value;
     }
@@ -618,6 +640,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -626,6 +649,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the operatingSystemKernelDebugging property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatingSystemKernelDebugging(@javax.annotation.Nullable final String value) {
         this._operatingSystemKernelDebugging = value;
     }
@@ -634,6 +658,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the operatingSystemRevListInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatingSystemRevListInfo(@javax.annotation.Nullable final String value) {
         this._operatingSystemRevListInfo = value;
     }
@@ -642,6 +667,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the pcr0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPcr0(@javax.annotation.Nullable final String value) {
         this._pcr0 = value;
     }
@@ -650,6 +676,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the pcrHashAlgorithm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPcrHashAlgorithm(@javax.annotation.Nullable final String value) {
         this._pcrHashAlgorithm = value;
     }
@@ -658,6 +685,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the resetCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResetCount(@javax.annotation.Nullable final Long value) {
         this._resetCount = value;
     }
@@ -666,6 +694,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the restartCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestartCount(@javax.annotation.Nullable final Long value) {
         this._restartCount = value;
     }
@@ -674,6 +703,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the safeMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSafeMode(@javax.annotation.Nullable final String value) {
         this._safeMode = value;
     }
@@ -682,6 +712,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the secureBoot property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecureBoot(@javax.annotation.Nullable final String value) {
         this._secureBoot = value;
     }
@@ -690,6 +721,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the secureBootConfigurationPolicyFingerPrint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecureBootConfigurationPolicyFingerPrint(@javax.annotation.Nullable final String value) {
         this._secureBootConfigurationPolicyFingerPrint = value;
     }
@@ -698,6 +730,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the testSigning property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTestSigning(@javax.annotation.Nullable final String value) {
         this._testSigning = value;
     }
@@ -706,6 +739,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the tpmVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTpmVersion(@javax.annotation.Nullable final String value) {
         this._tpmVersion = value;
     }
@@ -714,6 +748,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the virtualSecureMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVirtualSecureMode(@javax.annotation.Nullable final String value) {
         this._virtualSecureMode = value;
     }
@@ -722,6 +757,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Parsa
      * @param value Value to set for the windowsPE property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsPE(@javax.annotation.Nullable final String value) {
         this._windowsPE = value;
     }

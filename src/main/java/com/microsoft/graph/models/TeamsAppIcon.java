@@ -16,6 +16,7 @@ public class TeamsAppIcon extends Entity implements Parsable {
      * Instantiates a new teamsAppIcon and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamsAppIcon() {
         super();
         this.setOdataType("#microsoft.graph.teamsAppIcon");
@@ -37,10 +38,10 @@ public class TeamsAppIcon extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamsAppIcon currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("hostedContent", (n) -> { currentObject.setHostedContent(n.getObjectValue(TeamworkHostedContent::createFromDiscriminatorValue)); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("hostedContent", (n) -> { currentObject.setHostedContent(n.getObjectValue(TeamworkHostedContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the hostedContent property value. The contents of the app icon if the icon is hosted within the Teams infrastructure.
@@ -63,6 +64,7 @@ public class TeamsAppIcon extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class TeamsAppIcon extends Entity implements Parsable {
      * @param value Value to set for the hostedContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHostedContent(@javax.annotation.Nullable final TeamworkHostedContent value) {
         this._hostedContent = value;
     }
@@ -82,6 +85,7 @@ public class TeamsAppIcon extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

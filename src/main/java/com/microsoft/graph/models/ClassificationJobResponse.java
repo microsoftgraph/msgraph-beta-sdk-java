@@ -14,6 +14,7 @@ public class ClassificationJobResponse extends JobResponseBase implements Parsab
      * Instantiates a new ClassificationJobResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ClassificationJobResponse() {
         super();
         this.setOdataType("#microsoft.graph.classificationJobResponse");
@@ -35,9 +36,9 @@ public class ClassificationJobResponse extends JobResponseBase implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ClassificationJobResponse currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("result", (n) -> { currentObject.setResult(n.getObjectValue(DetectedSensitiveContentWrapper::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("result", (n) -> { currentObject.setResult(n.getObjectValue(DetectedSensitiveContentWrapper::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the result property value. The result property
@@ -52,6 +53,7 @@ public class ClassificationJobResponse extends JobResponseBase implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class ClassificationJobResponse extends JobResponseBase implements Parsab
      * @param value Value to set for the result property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResult(@javax.annotation.Nullable final DetectedSensitiveContentWrapper value) {
         this._result = value;
     }

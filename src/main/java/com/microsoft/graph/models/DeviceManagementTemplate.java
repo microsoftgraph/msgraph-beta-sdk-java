@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that represents a defined collection of device settings */
 public class DeviceManagementTemplate extends Entity implements Parsable {
     /** Collection of setting categories within the template */
     private java.util.List<DeviceManagementTemplateSettingCategory> _categories;
@@ -35,9 +36,10 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     /** The template's version information */
     private String _versionInfo;
     /**
-     * Instantiates a new DeviceManagementTemplate and sets the default values.
+     * Instantiates a new deviceManagementTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementTemplate");
@@ -45,7 +47,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementTemplate
+     * @return a deviceManagementTemplate
      */
     @javax.annotation.Nonnull
     public static DeviceManagementTemplate createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -90,20 +92,20 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfObjectValues(DeviceManagementTemplateSettingCategory::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("intentCount", (n) -> { currentObject.setIntentCount(n.getIntegerValue()); });
-            this.put("isDeprecated", (n) -> { currentObject.setIsDeprecated(n.getBooleanValue()); });
-            this.put("migratableTo", (n) -> { currentObject.setMigratableTo(n.getCollectionOfObjectValues(DeviceManagementTemplate::createFromDiscriminatorValue)); });
-            this.put("platformType", (n) -> { currentObject.setPlatformType(n.getEnumValue(PolicyPlatformType.class)); });
-            this.put("publishedDateTime", (n) -> { currentObject.setPublishedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getCollectionOfObjectValues(DeviceManagementSettingInstance::createFromDiscriminatorValue)); });
-            this.put("templateSubtype", (n) -> { currentObject.setTemplateSubtype(n.getEnumValue(DeviceManagementTemplateSubtype.class)); });
-            this.put("templateType", (n) -> { currentObject.setTemplateType(n.getEnumValue(DeviceManagementTemplateType.class)); });
-            this.put("versionInfo", (n) -> { currentObject.setVersionInfo(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfObjectValues(DeviceManagementTemplateSettingCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("intentCount", (n) -> { currentObject.setIntentCount(n.getIntegerValue()); });
+        deserializerMap.put("isDeprecated", (n) -> { currentObject.setIsDeprecated(n.getBooleanValue()); });
+        deserializerMap.put("migratableTo", (n) -> { currentObject.setMigratableTo(n.getCollectionOfObjectValues(DeviceManagementTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("platformType", (n) -> { currentObject.setPlatformType(n.getEnumValue(PolicyPlatformType.class)); });
+        deserializerMap.put("publishedDateTime", (n) -> { currentObject.setPublishedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("settings", (n) -> { currentObject.setSettings(n.getCollectionOfObjectValues(DeviceManagementSettingInstance::createFromDiscriminatorValue)); });
+        deserializerMap.put("templateSubtype", (n) -> { currentObject.setTemplateSubtype(n.getEnumValue(DeviceManagementTemplateSubtype.class)); });
+        deserializerMap.put("templateType", (n) -> { currentObject.setTemplateType(n.getEnumValue(DeviceManagementTemplateType.class)); });
+        deserializerMap.put("versionInfo", (n) -> { currentObject.setVersionInfo(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the intentCount property value. Number of Intents created from this template.
@@ -182,6 +184,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -203,6 +206,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<DeviceManagementTemplateSettingCategory> value) {
         this._categories = value;
     }
@@ -211,6 +215,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -219,6 +224,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -227,6 +233,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the intentCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntentCount(@javax.annotation.Nullable final Integer value) {
         this._intentCount = value;
     }
@@ -235,6 +242,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the isDeprecated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDeprecated(@javax.annotation.Nullable final Boolean value) {
         this._isDeprecated = value;
     }
@@ -243,6 +251,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the migratableTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMigratableTo(@javax.annotation.Nullable final java.util.List<DeviceManagementTemplate> value) {
         this._migratableTo = value;
     }
@@ -251,6 +260,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the platformType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatformType(@javax.annotation.Nullable final PolicyPlatformType value) {
         this._platformType = value;
     }
@@ -259,6 +269,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the publishedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._publishedDateTime = value;
     }
@@ -267,6 +278,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementSettingInstance> value) {
         this._settings = value;
     }
@@ -275,6 +287,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the templateSubtype property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateSubtype(@javax.annotation.Nullable final DeviceManagementTemplateSubtype value) {
         this._templateSubtype = value;
     }
@@ -283,6 +296,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the templateType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateType(@javax.annotation.Nullable final DeviceManagementTemplateType value) {
         this._templateType = value;
     }
@@ -291,6 +305,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
      * @param value Value to set for the versionInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersionInfo(@javax.annotation.Nullable final String value) {
         this._versionInfo = value;
     }

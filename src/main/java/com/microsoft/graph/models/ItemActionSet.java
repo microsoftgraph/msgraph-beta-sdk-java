@@ -37,6 +37,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      * Instantiates a new itemActionSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemActionSet() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.itemActionSet");
@@ -98,19 +99,19 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemActionSet currentObject = this;
-        return new HashMap<>(11) {{
-            this.put("comment", (n) -> { currentObject.setComment(n.getObjectValue(CommentAction::createFromDiscriminatorValue)); });
-            this.put("create", (n) -> { currentObject.setCreate(n.getObjectValue(CreateAction::createFromDiscriminatorValue)); });
-            this.put("delete", (n) -> { currentObject.setDelete(n.getObjectValue(DeleteAction::createFromDiscriminatorValue)); });
-            this.put("edit", (n) -> { currentObject.setEdit(n.getObjectValue(EditAction::createFromDiscriminatorValue)); });
-            this.put("mention", (n) -> { currentObject.setMention(n.getObjectValue(MentionAction::createFromDiscriminatorValue)); });
-            this.put("move", (n) -> { currentObject.setMove(n.getObjectValue(MoveAction::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("rename", (n) -> { currentObject.setRename(n.getObjectValue(RenameAction::createFromDiscriminatorValue)); });
-            this.put("restore", (n) -> { currentObject.setRestore(n.getObjectValue(RestoreAction::createFromDiscriminatorValue)); });
-            this.put("share", (n) -> { currentObject.setShare(n.getObjectValue(ShareAction::createFromDiscriminatorValue)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getObjectValue(VersionAction::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(11);
+        deserializerMap.put("comment", (n) -> { currentObject.setComment(n.getObjectValue(CommentAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("create", (n) -> { currentObject.setCreate(n.getObjectValue(CreateAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("delete", (n) -> { currentObject.setDelete(n.getObjectValue(DeleteAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("edit", (n) -> { currentObject.setEdit(n.getObjectValue(EditAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("mention", (n) -> { currentObject.setMention(n.getObjectValue(MentionAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("move", (n) -> { currentObject.setMove(n.getObjectValue(MoveAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("rename", (n) -> { currentObject.setRename(n.getObjectValue(RenameAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("restore", (n) -> { currentObject.setRestore(n.getObjectValue(RestoreAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("share", (n) -> { currentObject.setShare(n.getObjectValue(ShareAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("version", (n) -> { currentObject.setVersion(n.getObjectValue(VersionAction::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the mention property value. A user was mentioned in the item.
@@ -173,6 +174,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("comment", this.getComment());
@@ -193,6 +195,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -201,6 +204,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the comment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComment(@javax.annotation.Nullable final CommentAction value) {
         this._comment = value;
     }
@@ -209,6 +213,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the create property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreate(@javax.annotation.Nullable final CreateAction value) {
         this._create = value;
     }
@@ -217,6 +222,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the delete property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDelete(@javax.annotation.Nullable final DeleteAction value) {
         this._delete = value;
     }
@@ -225,6 +231,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the edit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdit(@javax.annotation.Nullable final EditAction value) {
         this._edit = value;
     }
@@ -233,6 +240,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mention property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMention(@javax.annotation.Nullable final MentionAction value) {
         this._mention = value;
     }
@@ -241,6 +249,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the move property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMove(@javax.annotation.Nullable final MoveAction value) {
         this._move = value;
     }
@@ -249,6 +258,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -257,6 +267,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the rename property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRename(@javax.annotation.Nullable final RenameAction value) {
         this._rename = value;
     }
@@ -265,6 +276,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the restore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestore(@javax.annotation.Nullable final RestoreAction value) {
         this._restore = value;
     }
@@ -273,6 +285,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the share property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShare(@javax.annotation.Nullable final ShareAction value) {
         this._share = value;
     }
@@ -281,6 +294,7 @@ public class ItemActionSet implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final VersionAction value) {
         this._version = value;
     }

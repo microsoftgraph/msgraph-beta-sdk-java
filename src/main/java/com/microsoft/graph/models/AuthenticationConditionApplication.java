@@ -19,6 +19,7 @@ public class AuthenticationConditionApplication implements AdditionalDataHolder,
      * Instantiates a new authenticationConditionApplication and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthenticationConditionApplication() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.authenticationConditionApplication");
@@ -56,10 +57,10 @@ public class AuthenticationConditionApplication implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationConditionApplication currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -74,6 +75,7 @@ public class AuthenticationConditionApplication implements AdditionalDataHolder,
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appId", this.getAppId());
@@ -85,6 +87,7 @@ public class AuthenticationConditionApplication implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +96,7 @@ public class AuthenticationConditionApplication implements AdditionalDataHolder,
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }
@@ -101,6 +105,7 @@ public class AuthenticationConditionApplication implements AdditionalDataHolder,
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

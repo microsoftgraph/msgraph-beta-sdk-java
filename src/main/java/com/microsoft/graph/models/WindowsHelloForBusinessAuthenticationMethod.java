@@ -21,6 +21,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * Instantiates a new WindowsHelloForBusinessAuthenticationMethod and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsHelloForBusinessAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.windowsHelloForBusinessAuthenticationMethod");
@@ -66,12 +67,12 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsHelloForBusinessAuthenticationMethod currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("device", (n) -> { currentObject.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("keyStrength", (n) -> { currentObject.setKeyStrength(n.getEnumValue(AuthenticationMethodKeyStrength.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("device", (n) -> { currentObject.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("keyStrength", (n) -> { currentObject.setKeyStrength(n.getEnumValue(AuthenticationMethodKeyStrength.class)); });
+        return deserializerMap
     }
     /**
      * Gets the keyStrength property value. Key strength of this Windows Hello for Business key. Possible values are: normal, weak, unknown.
@@ -86,6 +87,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +101,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -107,6 +110,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * @param value Value to set for the device property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevice(@javax.annotation.Nullable final Device value) {
         this._device = value;
     }
@@ -115,6 +119,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -123,6 +128,7 @@ public class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationM
      * @param value Value to set for the keyStrength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyStrength(@javax.annotation.Nullable final AuthenticationMethodKeyStrength value) {
         this._keyStrength = value;
     }

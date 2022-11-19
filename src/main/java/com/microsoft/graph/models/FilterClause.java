@@ -23,6 +23,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
      * Instantiates a new filterClause and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FilterClause() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.filterClause");
@@ -52,12 +53,12 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final FilterClause currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operatorName", (n) -> { currentObject.setOperatorName(n.getStringValue()); });
-            this.put("sourceOperandName", (n) -> { currentObject.setSourceOperandName(n.getStringValue()); });
-            this.put("targetOperand", (n) -> { currentObject.setTargetOperand(n.getObjectValue(FilterOperand::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operatorName", (n) -> { currentObject.setOperatorName(n.getStringValue()); });
+        deserializerMap.put("sourceOperandName", (n) -> { currentObject.setSourceOperandName(n.getStringValue()); });
+        deserializerMap.put("targetOperand", (n) -> { currentObject.setTargetOperand(n.getObjectValue(FilterOperand::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -96,6 +97,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -109,6 +111,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -125,6 +129,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the operatorName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatorName(@javax.annotation.Nullable final String value) {
         this._operatorName = value;
     }
@@ -133,6 +138,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sourceOperandName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceOperandName(@javax.annotation.Nullable final String value) {
         this._sourceOperandName = value;
     }
@@ -141,6 +147,7 @@ public class FilterClause implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the targetOperand property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetOperand(@javax.annotation.Nullable final FilterOperand value) {
         this._targetOperand = value;
     }

@@ -26,6 +26,7 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
      * Instantiates a new signInActivity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SignInActivity() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.signInActivity");
@@ -55,13 +56,13 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SignInActivity currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("lastNonInteractiveSignInDateTime", (n) -> { currentObject.setLastNonInteractiveSignInDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastNonInteractiveSignInRequestId", (n) -> { currentObject.setLastNonInteractiveSignInRequestId(n.getStringValue()); });
-            this.put("lastSignInDateTime", (n) -> { currentObject.setLastSignInDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastSignInRequestId", (n) -> { currentObject.setLastSignInRequestId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("lastNonInteractiveSignInDateTime", (n) -> { currentObject.setLastNonInteractiveSignInDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastNonInteractiveSignInRequestId", (n) -> { currentObject.setLastNonInteractiveSignInRequestId(n.getStringValue()); });
+        deserializerMap.put("lastSignInDateTime", (n) -> { currentObject.setLastSignInDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSignInRequestId", (n) -> { currentObject.setLastSignInRequestId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the lastNonInteractiveSignInDateTime property value. The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client signed in to the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: '2014-01-01T00:00:00Z'. Azure AD maintains non-interactive sign-ins going back to May 2020. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.
@@ -108,6 +109,7 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastNonInteractiveSignInDateTime", this.getLastNonInteractiveSignInDateTime());
@@ -122,6 +124,7 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +133,7 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastNonInteractiveSignInDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastNonInteractiveSignInDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastNonInteractiveSignInDateTime = value;
     }
@@ -138,6 +142,7 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastNonInteractiveSignInRequestId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastNonInteractiveSignInRequestId(@javax.annotation.Nullable final String value) {
         this._lastNonInteractiveSignInRequestId = value;
     }
@@ -146,6 +151,7 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastSignInDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSignInDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSignInDateTime = value;
     }
@@ -154,6 +160,7 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastSignInRequestId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSignInRequestId(@javax.annotation.Nullable final String value) {
         this._lastSignInRequestId = value;
     }
@@ -162,6 +169,7 @@ public class SignInActivity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

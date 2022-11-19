@@ -19,6 +19,7 @@ public class RevokeGrantsPostRequestBody implements AdditionalDataHolder, Parsab
      * Instantiates a new revokeGrantsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RevokeGrantsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -47,9 +48,9 @@ public class RevokeGrantsPostRequestBody implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RevokeGrantsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("grantees", (n) -> { currentObject.setGrantees(n.getCollectionOfObjectValues(DriveRecipient::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("grantees", (n) -> { currentObject.setGrantees(n.getCollectionOfObjectValues(DriveRecipient::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the grantees property value. The grantees property
@@ -64,6 +65,7 @@ public class RevokeGrantsPostRequestBody implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("grantees", this.getGrantees());
@@ -74,6 +76,7 @@ public class RevokeGrantsPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +85,7 @@ public class RevokeGrantsPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the grantees property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGrantees(@javax.annotation.Nullable final java.util.List<DriveRecipient> value) {
         this._grantees = value;
     }

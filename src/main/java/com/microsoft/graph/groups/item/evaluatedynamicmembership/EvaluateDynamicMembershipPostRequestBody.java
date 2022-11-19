@@ -18,6 +18,7 @@ public class EvaluateDynamicMembershipPostRequestBody implements AdditionalDataH
      * Instantiates a new evaluateDynamicMembershipPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EvaluateDynamicMembershipPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,9 +47,9 @@ public class EvaluateDynamicMembershipPostRequestBody implements AdditionalDataH
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EvaluateDynamicMembershipPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("memberId", (n) -> { currentObject.setMemberId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("memberId", (n) -> { currentObject.setMemberId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the memberId property value. The memberId property
@@ -63,6 +64,7 @@ public class EvaluateDynamicMembershipPostRequestBody implements AdditionalDataH
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("memberId", this.getMemberId());
@@ -73,6 +75,7 @@ public class EvaluateDynamicMembershipPostRequestBody implements AdditionalDataH
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class EvaluateDynamicMembershipPostRequestBody implements AdditionalDataH
      * @param value Value to set for the memberId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberId(@javax.annotation.Nullable final String value) {
         this._memberId = value;
     }

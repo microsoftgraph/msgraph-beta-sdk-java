@@ -22,6 +22,7 @@ public class DeviceLogCollectionRequest implements AdditionalDataHolder, Parsabl
      * Instantiates a new deviceLogCollectionRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceLogCollectionRequest() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceLogCollectionRequest");
@@ -51,11 +52,11 @@ public class DeviceLogCollectionRequest implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceLogCollectionRequest currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("templateType", (n) -> { currentObject.setTemplateType(n.getEnumValue(DeviceLogCollectionTemplateType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("templateType", (n) -> { currentObject.setTemplateType(n.getEnumValue(DeviceLogCollectionTemplateType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the id property value. The unique identifier
@@ -86,6 +87,7 @@ public class DeviceLogCollectionRequest implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
@@ -98,6 +100,7 @@ public class DeviceLogCollectionRequest implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +109,7 @@ public class DeviceLogCollectionRequest implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -114,6 +118,7 @@ public class DeviceLogCollectionRequest implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -122,6 +127,7 @@ public class DeviceLogCollectionRequest implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the templateType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateType(@javax.annotation.Nullable final DeviceLogCollectionTemplateType value) {
         this._templateType = value;
     }

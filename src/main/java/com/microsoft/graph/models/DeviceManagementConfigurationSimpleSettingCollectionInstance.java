@@ -14,6 +14,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionInstance extend
      * Instantiates a new DeviceManagementConfigurationSimpleSettingCollectionInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSimpleSettingCollectionInstance() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstance");
@@ -35,9 +36,9 @@ public class DeviceManagementConfigurationSimpleSettingCollectionInstance extend
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSimpleSettingCollectionInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("simpleSettingCollectionValue", (n) -> { currentObject.setSimpleSettingCollectionValue(n.getCollectionOfObjectValues(DeviceManagementConfigurationSimpleSettingValue::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("simpleSettingCollectionValue", (n) -> { currentObject.setSimpleSettingCollectionValue(n.getCollectionOfObjectValues(DeviceManagementConfigurationSimpleSettingValue::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the simpleSettingCollectionValue property value. Simple setting collection instance value
@@ -52,6 +53,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionInstance extend
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionInstance extend
      * @param value Value to set for the simpleSettingCollectionValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSimpleSettingCollectionValue(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSimpleSettingValue> value) {
         this._simpleSettingCollectionValue = value;
     }

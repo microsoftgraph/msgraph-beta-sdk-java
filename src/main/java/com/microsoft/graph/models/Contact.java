@@ -88,6 +88,7 @@ public class Contact extends OutlookItem implements Parsable {
      * Instantiates a new Contact and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Contact() {
         super();
         this.setOdataType("#microsoft.graph.contact");
@@ -173,45 +174,45 @@ public class Contact extends OutlookItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Contact currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assistantName", (n) -> { currentObject.setAssistantName(n.getStringValue()); });
-            this.put("birthday", (n) -> { currentObject.setBirthday(n.getOffsetDateTimeValue()); });
-            this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("companyName", (n) -> { currentObject.setCompanyName(n.getStringValue()); });
-            this.put("department", (n) -> { currentObject.setDepartment(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("emailAddresses", (n) -> { currentObject.setEmailAddresses(n.getCollectionOfObjectValues(TypedEmailAddress::createFromDiscriminatorValue)); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("fileAs", (n) -> { currentObject.setFileAs(n.getStringValue()); });
-            this.put("flag", (n) -> { currentObject.setFlag(n.getObjectValue(FollowupFlag::createFromDiscriminatorValue)); });
-            this.put("gender", (n) -> { currentObject.setGender(n.getStringValue()); });
-            this.put("generation", (n) -> { currentObject.setGeneration(n.getStringValue()); });
-            this.put("givenName", (n) -> { currentObject.setGivenName(n.getStringValue()); });
-            this.put("imAddresses", (n) -> { currentObject.setImAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("initials", (n) -> { currentObject.setInitials(n.getStringValue()); });
-            this.put("isFavorite", (n) -> { currentObject.setIsFavorite(n.getBooleanValue()); });
-            this.put("jobTitle", (n) -> { currentObject.setJobTitle(n.getStringValue()); });
-            this.put("manager", (n) -> { currentObject.setManager(n.getStringValue()); });
-            this.put("middleName", (n) -> { currentObject.setMiddleName(n.getStringValue()); });
-            this.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("nickName", (n) -> { currentObject.setNickName(n.getStringValue()); });
-            this.put("officeLocation", (n) -> { currentObject.setOfficeLocation(n.getStringValue()); });
-            this.put("parentFolderId", (n) -> { currentObject.setParentFolderId(n.getStringValue()); });
-            this.put("personalNotes", (n) -> { currentObject.setPersonalNotes(n.getStringValue()); });
-            this.put("phones", (n) -> { currentObject.setPhones(n.getCollectionOfObjectValues(Phone::createFromDiscriminatorValue)); });
-            this.put("photo", (n) -> { currentObject.setPhoto(n.getObjectValue(ProfilePhoto::createFromDiscriminatorValue)); });
-            this.put("postalAddresses", (n) -> { currentObject.setPostalAddresses(n.getCollectionOfObjectValues(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("profession", (n) -> { currentObject.setProfession(n.getStringValue()); });
-            this.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("spouseName", (n) -> { currentObject.setSpouseName(n.getStringValue()); });
-            this.put("surname", (n) -> { currentObject.setSurname(n.getStringValue()); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-            this.put("websites", (n) -> { currentObject.setWebsites(n.getCollectionOfObjectValues(Website::createFromDiscriminatorValue)); });
-            this.put("weddingAnniversary", (n) -> { currentObject.setWeddingAnniversary(n.getLocalDateValue()); });
-            this.put("yomiCompanyName", (n) -> { currentObject.setYomiCompanyName(n.getStringValue()); });
-            this.put("yomiGivenName", (n) -> { currentObject.setYomiGivenName(n.getStringValue()); });
-            this.put("yomiSurname", (n) -> { currentObject.setYomiSurname(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assistantName", (n) -> { currentObject.setAssistantName(n.getStringValue()); });
+        deserializerMap.put("birthday", (n) -> { currentObject.setBirthday(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("companyName", (n) -> { currentObject.setCompanyName(n.getStringValue()); });
+        deserializerMap.put("department", (n) -> { currentObject.setDepartment(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("emailAddresses", (n) -> { currentObject.setEmailAddresses(n.getCollectionOfObjectValues(TypedEmailAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("fileAs", (n) -> { currentObject.setFileAs(n.getStringValue()); });
+        deserializerMap.put("flag", (n) -> { currentObject.setFlag(n.getObjectValue(FollowupFlag::createFromDiscriminatorValue)); });
+        deserializerMap.put("gender", (n) -> { currentObject.setGender(n.getStringValue()); });
+        deserializerMap.put("generation", (n) -> { currentObject.setGeneration(n.getStringValue()); });
+        deserializerMap.put("givenName", (n) -> { currentObject.setGivenName(n.getStringValue()); });
+        deserializerMap.put("imAddresses", (n) -> { currentObject.setImAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("initials", (n) -> { currentObject.setInitials(n.getStringValue()); });
+        deserializerMap.put("isFavorite", (n) -> { currentObject.setIsFavorite(n.getBooleanValue()); });
+        deserializerMap.put("jobTitle", (n) -> { currentObject.setJobTitle(n.getStringValue()); });
+        deserializerMap.put("manager", (n) -> { currentObject.setManager(n.getStringValue()); });
+        deserializerMap.put("middleName", (n) -> { currentObject.setMiddleName(n.getStringValue()); });
+        deserializerMap.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("nickName", (n) -> { currentObject.setNickName(n.getStringValue()); });
+        deserializerMap.put("officeLocation", (n) -> { currentObject.setOfficeLocation(n.getStringValue()); });
+        deserializerMap.put("parentFolderId", (n) -> { currentObject.setParentFolderId(n.getStringValue()); });
+        deserializerMap.put("personalNotes", (n) -> { currentObject.setPersonalNotes(n.getStringValue()); });
+        deserializerMap.put("phones", (n) -> { currentObject.setPhones(n.getCollectionOfObjectValues(Phone::createFromDiscriminatorValue)); });
+        deserializerMap.put("photo", (n) -> { currentObject.setPhoto(n.getObjectValue(ProfilePhoto::createFromDiscriminatorValue)); });
+        deserializerMap.put("postalAddresses", (n) -> { currentObject.setPostalAddresses(n.getCollectionOfObjectValues(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("profession", (n) -> { currentObject.setProfession(n.getStringValue()); });
+        deserializerMap.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("spouseName", (n) -> { currentObject.setSpouseName(n.getStringValue()); });
+        deserializerMap.put("surname", (n) -> { currentObject.setSurname(n.getStringValue()); });
+        deserializerMap.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
+        deserializerMap.put("websites", (n) -> { currentObject.setWebsites(n.getCollectionOfObjectValues(Website::createFromDiscriminatorValue)); });
+        deserializerMap.put("weddingAnniversary", (n) -> { currentObject.setWeddingAnniversary(n.getLocalDateValue()); });
+        deserializerMap.put("yomiCompanyName", (n) -> { currentObject.setYomiCompanyName(n.getStringValue()); });
+        deserializerMap.put("yomiGivenName", (n) -> { currentObject.setYomiGivenName(n.getStringValue()); });
+        deserializerMap.put("yomiSurname", (n) -> { currentObject.setYomiSurname(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the fileAs property value. The name the contact is filed under.
@@ -450,6 +451,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -496,6 +498,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the assistantName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssistantName(@javax.annotation.Nullable final String value) {
         this._assistantName = value;
     }
@@ -504,6 +507,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the birthday property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBirthday(@javax.annotation.Nullable final OffsetDateTime value) {
         this._birthday = value;
     }
@@ -512,6 +516,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the children property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildren(@javax.annotation.Nullable final java.util.List<String> value) {
         this._children = value;
     }
@@ -520,6 +525,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the companyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompanyName(@javax.annotation.Nullable final String value) {
         this._companyName = value;
     }
@@ -528,6 +534,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the department property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDepartment(@javax.annotation.Nullable final String value) {
         this._department = value;
     }
@@ -536,6 +543,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -544,6 +552,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the emailAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddresses(@javax.annotation.Nullable final java.util.List<TypedEmailAddress> value) {
         this._emailAddresses = value;
     }
@@ -552,6 +561,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -560,6 +570,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the fileAs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileAs(@javax.annotation.Nullable final String value) {
         this._fileAs = value;
     }
@@ -568,6 +579,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the flag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFlag(@javax.annotation.Nullable final FollowupFlag value) {
         this._flag = value;
     }
@@ -576,6 +588,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the gender property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGender(@javax.annotation.Nullable final String value) {
         this._gender = value;
     }
@@ -584,6 +597,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the generation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGeneration(@javax.annotation.Nullable final String value) {
         this._generation = value;
     }
@@ -592,6 +606,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the givenName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGivenName(@javax.annotation.Nullable final String value) {
         this._givenName = value;
     }
@@ -600,6 +615,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the imAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
         this._imAddresses = value;
     }
@@ -608,6 +624,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the initials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitials(@javax.annotation.Nullable final String value) {
         this._initials = value;
     }
@@ -616,6 +633,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the isFavorite property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsFavorite(@javax.annotation.Nullable final Boolean value) {
         this._isFavorite = value;
     }
@@ -624,6 +642,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the jobTitle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJobTitle(@javax.annotation.Nullable final String value) {
         this._jobTitle = value;
     }
@@ -632,6 +651,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the manager property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManager(@javax.annotation.Nullable final String value) {
         this._manager = value;
     }
@@ -640,6 +660,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the middleName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMiddleName(@javax.annotation.Nullable final String value) {
         this._middleName = value;
     }
@@ -648,6 +669,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the multiValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this._multiValueExtendedProperties = value;
     }
@@ -656,6 +678,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the nickName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNickName(@javax.annotation.Nullable final String value) {
         this._nickName = value;
     }
@@ -664,6 +687,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the officeLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOfficeLocation(@javax.annotation.Nullable final String value) {
         this._officeLocation = value;
     }
@@ -672,6 +696,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the parentFolderId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentFolderId(@javax.annotation.Nullable final String value) {
         this._parentFolderId = value;
     }
@@ -680,6 +705,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the personalNotes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersonalNotes(@javax.annotation.Nullable final String value) {
         this._personalNotes = value;
     }
@@ -688,6 +714,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the phones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhones(@javax.annotation.Nullable final java.util.List<Phone> value) {
         this._phones = value;
     }
@@ -696,6 +723,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the photo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoto(@javax.annotation.Nullable final ProfilePhoto value) {
         this._photo = value;
     }
@@ -704,6 +732,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the postalAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostalAddresses(@javax.annotation.Nullable final java.util.List<PhysicalAddress> value) {
         this._postalAddresses = value;
     }
@@ -712,6 +741,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the profession property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProfession(@javax.annotation.Nullable final String value) {
         this._profession = value;
     }
@@ -720,6 +750,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the singleValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this._singleValueExtendedProperties = value;
     }
@@ -728,6 +759,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the spouseName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpouseName(@javax.annotation.Nullable final String value) {
         this._spouseName = value;
     }
@@ -736,6 +768,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the surname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSurname(@javax.annotation.Nullable final String value) {
         this._surname = value;
     }
@@ -744,6 +777,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }
@@ -752,6 +786,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the websites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebsites(@javax.annotation.Nullable final java.util.List<Website> value) {
         this._websites = value;
     }
@@ -760,6 +795,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the weddingAnniversary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWeddingAnniversary(@javax.annotation.Nullable final LocalDate value) {
         this._weddingAnniversary = value;
     }
@@ -768,6 +804,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the yomiCompanyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setYomiCompanyName(@javax.annotation.Nullable final String value) {
         this._yomiCompanyName = value;
     }
@@ -776,6 +813,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the yomiGivenName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setYomiGivenName(@javax.annotation.Nullable final String value) {
         this._yomiGivenName = value;
     }
@@ -784,6 +822,7 @@ public class Contact extends OutlookItem implements Parsable {
      * @param value Value to set for the yomiSurname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setYomiSurname(@javax.annotation.Nullable final String value) {
         this._yomiSurname = value;
     }

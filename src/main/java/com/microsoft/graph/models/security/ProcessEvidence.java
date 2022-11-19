@@ -33,6 +33,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
      * Instantiates a new ProcessEvidence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProcessEvidence() {
         super();
         this.setOdataType("#microsoft.graph.security.processEvidence");
@@ -62,18 +63,18 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProcessEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("detectionStatus", (n) -> { currentObject.setDetectionStatus(n.getEnumValue(DetectionStatus.class)); });
-            this.put("imageFile", (n) -> { currentObject.setImageFile(n.getObjectValue(FileDetails::createFromDiscriminatorValue)); });
-            this.put("mdeDeviceId", (n) -> { currentObject.setMdeDeviceId(n.getStringValue()); });
-            this.put("parentProcessCreationDateTime", (n) -> { currentObject.setParentProcessCreationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("parentProcessId", (n) -> { currentObject.setParentProcessId(n.getLongValue()); });
-            this.put("parentProcessImageFile", (n) -> { currentObject.setParentProcessImageFile(n.getObjectValue(FileDetails::createFromDiscriminatorValue)); });
-            this.put("processCommandLine", (n) -> { currentObject.setProcessCommandLine(n.getStringValue()); });
-            this.put("processCreationDateTime", (n) -> { currentObject.setProcessCreationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("processId", (n) -> { currentObject.setProcessId(n.getLongValue()); });
-            this.put("userAccount", (n) -> { currentObject.setUserAccount(n.getObjectValue(UserAccount::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("detectionStatus", (n) -> { currentObject.setDetectionStatus(n.getEnumValue(DetectionStatus.class)); });
+        deserializerMap.put("imageFile", (n) -> { currentObject.setImageFile(n.getObjectValue(FileDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("mdeDeviceId", (n) -> { currentObject.setMdeDeviceId(n.getStringValue()); });
+        deserializerMap.put("parentProcessCreationDateTime", (n) -> { currentObject.setParentProcessCreationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("parentProcessId", (n) -> { currentObject.setParentProcessId(n.getLongValue()); });
+        deserializerMap.put("parentProcessImageFile", (n) -> { currentObject.setParentProcessImageFile(n.getObjectValue(FileDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("processCommandLine", (n) -> { currentObject.setProcessCommandLine(n.getStringValue()); });
+        deserializerMap.put("processCreationDateTime", (n) -> { currentObject.setProcessCreationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("processId", (n) -> { currentObject.setProcessId(n.getLongValue()); });
+        deserializerMap.put("userAccount", (n) -> { currentObject.setUserAccount(n.getObjectValue(UserAccount::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the imageFile property value. Image file details.
@@ -152,6 +153,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -171,6 +173,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the detectionStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionStatus(@javax.annotation.Nullable final DetectionStatus value) {
         this._detectionStatus = value;
     }
@@ -179,6 +182,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the imageFile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImageFile(@javax.annotation.Nullable final FileDetails value) {
         this._imageFile = value;
     }
@@ -187,6 +191,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the mdeDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMdeDeviceId(@javax.annotation.Nullable final String value) {
         this._mdeDeviceId = value;
     }
@@ -195,6 +200,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the parentProcessCreationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentProcessCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._parentProcessCreationDateTime = value;
     }
@@ -203,6 +209,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the parentProcessId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentProcessId(@javax.annotation.Nullable final Long value) {
         this._parentProcessId = value;
     }
@@ -211,6 +218,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the parentProcessImageFile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentProcessImageFile(@javax.annotation.Nullable final FileDetails value) {
         this._parentProcessImageFile = value;
     }
@@ -219,6 +227,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the processCommandLine property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessCommandLine(@javax.annotation.Nullable final String value) {
         this._processCommandLine = value;
     }
@@ -227,6 +236,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the processCreationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._processCreationDateTime = value;
     }
@@ -235,6 +245,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the processId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessId(@javax.annotation.Nullable final Long value) {
         this._processId = value;
     }
@@ -243,6 +254,7 @@ public class ProcessEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the userAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAccount(@javax.annotation.Nullable final UserAccount value) {
         this._userAccount = value;
     }

@@ -21,6 +21,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
      * Instantiates a new accessPackageLocalizedText and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageLocalizedText() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.accessPackageLocalizedText");
@@ -50,11 +51,11 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageLocalizedText currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("languageCode", (n) -> { currentObject.setLanguageCode(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("languageCode", (n) -> { currentObject.setLanguageCode(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the languageCode property value. The ISO code for the intended language. Required.
@@ -85,6 +86,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("languageCode", this.getLanguageCode());
@@ -97,6 +99,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the languageCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguageCode(@javax.annotation.Nullable final String value) {
         this._languageCode = value;
     }
@@ -113,6 +117,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +126,7 @@ public class AccessPackageLocalizedText implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final String value) {
         this._text = value;
     }

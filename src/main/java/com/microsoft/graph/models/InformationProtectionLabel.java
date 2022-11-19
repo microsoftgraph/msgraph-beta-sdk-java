@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class InformationProtectionLabel extends Entity implements Parsable {
     /** The color that the UI should display for the label, if configured. */
     private String _color;
@@ -27,6 +27,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * Instantiates a new informationProtectionLabel and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InformationProtectionLabel() {
         super();
         this.setOdataType("#microsoft.graph.informationProtectionLabel");
@@ -64,15 +65,15 @@ public class InformationProtectionLabel extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final InformationProtectionLabel currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("parent", (n) -> { currentObject.setParent(n.getObjectValue(ParentLabelDetails::createFromDiscriminatorValue)); });
-            this.put("sensitivity", (n) -> { currentObject.setSensitivity(n.getIntegerValue()); });
-            this.put("tooltip", (n) -> { currentObject.setTooltip(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("parent", (n) -> { currentObject.setParent(n.getObjectValue(ParentLabelDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("sensitivity", (n) -> { currentObject.setSensitivity(n.getIntegerValue()); });
+        deserializerMap.put("tooltip", (n) -> { currentObject.setTooltip(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isActive property value. Indicates whether the label is active or not. Active labels should be hidden or disabled in UI.
@@ -119,6 +120,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +137,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * @param value Value to set for the color property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColor(@javax.annotation.Nullable final String value) {
         this._color = value;
     }
@@ -143,6 +146,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -151,6 +155,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * @param value Value to set for the isActive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsActive(@javax.annotation.Nullable final Boolean value) {
         this._isActive = value;
     }
@@ -159,6 +164,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -167,6 +173,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * @param value Value to set for the parent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParent(@javax.annotation.Nullable final ParentLabelDetails value) {
         this._parent = value;
     }
@@ -175,6 +182,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * @param value Value to set for the sensitivity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitivity(@javax.annotation.Nullable final Integer value) {
         this._sensitivity = value;
     }
@@ -183,6 +191,7 @@ public class InformationProtectionLabel extends Entity implements Parsable {
      * @param value Value to set for the tooltip property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTooltip(@javax.annotation.Nullable final String value) {
         this._tooltip = value;
     }

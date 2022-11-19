@@ -16,6 +16,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
      * Instantiates a new ActiveDirectoryWindowsAutopilotDeploymentProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ActiveDirectoryWindowsAutopilotDeploymentProfile() {
         super();
         this.setOdataType("#microsoft.graph.activeDirectoryWindowsAutopilotDeploymentProfile");
@@ -45,10 +46,10 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ActiveDirectoryWindowsAutopilotDeploymentProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("domainJoinConfiguration", (n) -> { currentObject.setDomainJoinConfiguration(n.getObjectValue(WindowsDomainJoinConfiguration::createFromDiscriminatorValue)); });
-            this.put("hybridAzureADJoinSkipConnectivityCheck", (n) -> { currentObject.setHybridAzureADJoinSkipConnectivityCheck(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("domainJoinConfiguration", (n) -> { currentObject.setDomainJoinConfiguration(n.getObjectValue(WindowsDomainJoinConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("hybridAzureADJoinSkipConnectivityCheck", (n) -> { currentObject.setHybridAzureADJoinSkipConnectivityCheck(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the hybridAzureADJoinSkipConnectivityCheck property value. The Autopilot Hybrid Azure AD join flow will continue even if it does not establish domain controller connectivity during OOBE.
@@ -63,6 +64,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
      * @param value Value to set for the domainJoinConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainJoinConfiguration(@javax.annotation.Nullable final WindowsDomainJoinConfiguration value) {
         this._domainJoinConfiguration = value;
     }
@@ -82,6 +85,7 @@ public class ActiveDirectoryWindowsAutopilotDeploymentProfile extends WindowsAut
      * @param value Value to set for the hybridAzureADJoinSkipConnectivityCheck property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHybridAzureADJoinSkipConnectivityCheck(@javax.annotation.Nullable final Boolean value) {
         this._hybridAzureADJoinSkipConnectivityCheck = value;
     }

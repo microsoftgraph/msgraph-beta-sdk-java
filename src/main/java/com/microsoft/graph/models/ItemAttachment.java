@@ -14,6 +14,7 @@ public class ItemAttachment extends Attachment implements Parsable {
      * Instantiates a new ItemAttachment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemAttachment() {
         super();
         this.setOdataType("#microsoft.graph.itemAttachment");
@@ -35,9 +36,9 @@ public class ItemAttachment extends Attachment implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemAttachment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("item", (n) -> { currentObject.setItem(n.getObjectValue(OutlookItem::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("item", (n) -> { currentObject.setItem(n.getObjectValue(OutlookItem::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the item property value. The attached contact, message or event. Navigation property.
@@ -52,6 +53,7 @@ public class ItemAttachment extends Attachment implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class ItemAttachment extends Attachment implements Parsable {
      * @param value Value to set for the item property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItem(@javax.annotation.Nullable final OutlookItem value) {
         this._item = value;
     }

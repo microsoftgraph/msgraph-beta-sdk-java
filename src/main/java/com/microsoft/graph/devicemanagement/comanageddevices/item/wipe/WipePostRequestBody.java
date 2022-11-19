@@ -26,6 +26,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new wipePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WipePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -54,13 +55,13 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WipePostRequestBody currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("keepEnrollmentData", (n) -> { currentObject.setKeepEnrollmentData(n.getBooleanValue()); });
-            this.put("keepUserData", (n) -> { currentObject.setKeepUserData(n.getBooleanValue()); });
-            this.put("macOsUnlockCode", (n) -> { currentObject.setMacOsUnlockCode(n.getStringValue()); });
-            this.put("persistEsimDataPlan", (n) -> { currentObject.setPersistEsimDataPlan(n.getBooleanValue()); });
-            this.put("useProtectedWipe", (n) -> { currentObject.setUseProtectedWipe(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("keepEnrollmentData", (n) -> { currentObject.setKeepEnrollmentData(n.getBooleanValue()); });
+        deserializerMap.put("keepUserData", (n) -> { currentObject.setKeepUserData(n.getBooleanValue()); });
+        deserializerMap.put("macOsUnlockCode", (n) -> { currentObject.setMacOsUnlockCode(n.getStringValue()); });
+        deserializerMap.put("persistEsimDataPlan", (n) -> { currentObject.setPersistEsimDataPlan(n.getBooleanValue()); });
+        deserializerMap.put("useProtectedWipe", (n) -> { currentObject.setUseProtectedWipe(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the keepEnrollmentData property value. The keepEnrollmentData property
@@ -107,6 +108,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("keepEnrollmentData", this.getKeepEnrollmentData());
@@ -121,6 +123,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the keepEnrollmentData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeepEnrollmentData(@javax.annotation.Nullable final Boolean value) {
         this._keepEnrollmentData = value;
     }
@@ -137,6 +141,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the keepUserData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeepUserData(@javax.annotation.Nullable final Boolean value) {
         this._keepUserData = value;
     }
@@ -145,6 +150,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the macOsUnlockCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacOsUnlockCode(@javax.annotation.Nullable final String value) {
         this._macOsUnlockCode = value;
     }
@@ -153,6 +159,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the persistEsimDataPlan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersistEsimDataPlan(@javax.annotation.Nullable final Boolean value) {
         this._persistEsimDataPlan = value;
     }
@@ -161,6 +168,7 @@ public class WipePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the useProtectedWipe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseProtectedWipe(@javax.annotation.Nullable final Boolean value) {
         this._useProtectedWipe = value;
     }

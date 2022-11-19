@@ -18,6 +18,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * Instantiates a new ItemAddress and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemAddress() {
         super();
         this.setOdataType("#microsoft.graph.itemAddress");
@@ -55,11 +56,11 @@ public class ItemAddress extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemAddress currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("detail", (n) -> { currentObject.setDetail(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("geoCoordinates", (n) -> { currentObject.setGeoCoordinates(n.getObjectValue(GeoCoordinates::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("detail", (n) -> { currentObject.setDetail(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("geoCoordinates", (n) -> { currentObject.setGeoCoordinates(n.getObjectValue(GeoCoordinates::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the geoCoordinates property value. The geocoordinates of the address.
@@ -74,6 +75,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * @param value Value to set for the detail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetail(@javax.annotation.Nullable final PhysicalAddress value) {
         this._detail = value;
     }
@@ -94,6 +97,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -102,6 +106,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
      * @param value Value to set for the geoCoordinates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGeoCoordinates(@javax.annotation.Nullable final GeoCoordinates value) {
         this._geoCoordinates = value;
     }

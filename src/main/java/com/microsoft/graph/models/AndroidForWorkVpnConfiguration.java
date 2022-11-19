@@ -32,6 +32,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * Instantiates a new AndroidForWorkVpnConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidForWorkVpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidForWorkVpnConfiguration");
@@ -93,18 +94,18 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidForWorkVpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(VpnAuthenticationMethod.class)); });
-            this.put("connectionName", (n) -> { currentObject.setConnectionName(n.getStringValue()); });
-            this.put("connectionType", (n) -> { currentObject.setConnectionType(n.getEnumValue(AndroidForWorkVpnConnectionType.class)); });
-            this.put("customData", (n) -> { currentObject.setCustomData(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
-            this.put("customKeyValueData", (n) -> { currentObject.setCustomKeyValueData(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("fingerprint", (n) -> { currentObject.setFingerprint(n.getStringValue()); });
-            this.put("identityCertificate", (n) -> { currentObject.setIdentityCertificate(n.getObjectValue(AndroidForWorkCertificateProfileBase::createFromDiscriminatorValue)); });
-            this.put("realm", (n) -> { currentObject.setRealm(n.getStringValue()); });
-            this.put("role", (n) -> { currentObject.setRole(n.getStringValue()); });
-            this.put("servers", (n) -> { currentObject.setServers(n.getCollectionOfObjectValues(VpnServer::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(VpnAuthenticationMethod.class)); });
+        deserializerMap.put("connectionName", (n) -> { currentObject.setConnectionName(n.getStringValue()); });
+        deserializerMap.put("connectionType", (n) -> { currentObject.setConnectionType(n.getEnumValue(AndroidForWorkVpnConnectionType.class)); });
+        deserializerMap.put("customData", (n) -> { currentObject.setCustomData(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("customKeyValueData", (n) -> { currentObject.setCustomKeyValueData(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("fingerprint", (n) -> { currentObject.setFingerprint(n.getStringValue()); });
+        deserializerMap.put("identityCertificate", (n) -> { currentObject.setIdentityCertificate(n.getObjectValue(AndroidForWorkCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("realm", (n) -> { currentObject.setRealm(n.getStringValue()); });
+        deserializerMap.put("role", (n) -> { currentObject.setRole(n.getStringValue()); });
+        deserializerMap.put("servers", (n) -> { currentObject.setServers(n.getCollectionOfObjectValues(VpnServer::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the fingerprint property value. Fingerprint is a string that will be used to verify the VPN server can be trusted, which is only applicable when connection type is Check Point Capsule VPN.
@@ -151,6 +152,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -170,6 +172,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final VpnAuthenticationMethod value) {
         this._authenticationMethod = value;
     }
@@ -178,6 +181,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the connectionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionName(@javax.annotation.Nullable final String value) {
         this._connectionName = value;
     }
@@ -186,6 +190,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the connectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionType(@javax.annotation.Nullable final AndroidForWorkVpnConnectionType value) {
         this._connectionType = value;
     }
@@ -194,6 +199,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the customData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomData(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
         this._customData = value;
     }
@@ -202,6 +208,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the customKeyValueData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomKeyValueData(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._customKeyValueData = value;
     }
@@ -210,6 +217,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the fingerprint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFingerprint(@javax.annotation.Nullable final String value) {
         this._fingerprint = value;
     }
@@ -218,6 +226,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the identityCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificate(@javax.annotation.Nullable final AndroidForWorkCertificateProfileBase value) {
         this._identityCertificate = value;
     }
@@ -226,6 +235,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the realm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRealm(@javax.annotation.Nullable final String value) {
         this._realm = value;
     }
@@ -234,6 +244,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the role property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRole(@javax.annotation.Nullable final String value) {
         this._role = value;
     }
@@ -242,6 +253,7 @@ public class AndroidForWorkVpnConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the servers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServers(@javax.annotation.Nullable final java.util.List<VpnServer> value) {
         this._servers = value;
     }

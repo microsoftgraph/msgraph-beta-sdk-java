@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ManagedAllDeviceCertificateState extends Entity implements Parsable {
     /** Certificate expiry date */
     private OffsetDateTime _certificateExpirationDateTime;
@@ -38,6 +38,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * Instantiates a new managedAllDeviceCertificateState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedAllDeviceCertificateState() {
         super();
         this.setOdataType("#microsoft.graph.managedAllDeviceCertificateState");
@@ -139,20 +140,20 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedAllDeviceCertificateState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certificateExpirationDateTime", (n) -> { currentObject.setCertificateExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("certificateExtendedKeyUsages", (n) -> { currentObject.setCertificateExtendedKeyUsages(n.getStringValue()); });
-            this.put("certificateIssuanceDateTime", (n) -> { currentObject.setCertificateIssuanceDateTime(n.getOffsetDateTimeValue()); });
-            this.put("certificateIssuerName", (n) -> { currentObject.setCertificateIssuerName(n.getStringValue()); });
-            this.put("certificateKeyUsages", (n) -> { currentObject.setCertificateKeyUsages(n.getIntegerValue()); });
-            this.put("certificateRevokeStatus", (n) -> { currentObject.setCertificateRevokeStatus(n.getEnumValue(CertificateRevocationStatus.class)); });
-            this.put("certificateRevokeStatusLastChangeDateTime", (n) -> { currentObject.setCertificateRevokeStatusLastChangeDateTime(n.getOffsetDateTimeValue()); });
-            this.put("certificateSerialNumber", (n) -> { currentObject.setCertificateSerialNumber(n.getStringValue()); });
-            this.put("certificateSubjectName", (n) -> { currentObject.setCertificateSubjectName(n.getStringValue()); });
-            this.put("certificateThumbprint", (n) -> { currentObject.setCertificateThumbprint(n.getStringValue()); });
-            this.put("managedDeviceDisplayName", (n) -> { currentObject.setManagedDeviceDisplayName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certificateExpirationDateTime", (n) -> { currentObject.setCertificateExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("certificateExtendedKeyUsages", (n) -> { currentObject.setCertificateExtendedKeyUsages(n.getStringValue()); });
+        deserializerMap.put("certificateIssuanceDateTime", (n) -> { currentObject.setCertificateIssuanceDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("certificateIssuerName", (n) -> { currentObject.setCertificateIssuerName(n.getStringValue()); });
+        deserializerMap.put("certificateKeyUsages", (n) -> { currentObject.setCertificateKeyUsages(n.getIntegerValue()); });
+        deserializerMap.put("certificateRevokeStatus", (n) -> { currentObject.setCertificateRevokeStatus(n.getEnumValue(CertificateRevocationStatus.class)); });
+        deserializerMap.put("certificateRevokeStatusLastChangeDateTime", (n) -> { currentObject.setCertificateRevokeStatusLastChangeDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("certificateSerialNumber", (n) -> { currentObject.setCertificateSerialNumber(n.getStringValue()); });
+        deserializerMap.put("certificateSubjectName", (n) -> { currentObject.setCertificateSubjectName(n.getStringValue()); });
+        deserializerMap.put("certificateThumbprint", (n) -> { currentObject.setCertificateThumbprint(n.getStringValue()); });
+        deserializerMap.put("managedDeviceDisplayName", (n) -> { currentObject.setManagedDeviceDisplayName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the managedDeviceDisplayName property value. Device display name
@@ -175,6 +176,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -196,6 +198,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * @param value Value to set for the certificateExpirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._certificateExpirationDateTime = value;
     }
@@ -204,6 +207,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * @param value Value to set for the certificateExtendedKeyUsages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateExtendedKeyUsages(@javax.annotation.Nullable final String value) {
         this._certificateExtendedKeyUsages = value;
     }
@@ -212,6 +216,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * @param value Value to set for the certificateIssuanceDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateIssuanceDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._certificateIssuanceDateTime = value;
     }
@@ -220,6 +225,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * @param value Value to set for the certificateIssuerName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateIssuerName(@javax.annotation.Nullable final String value) {
         this._certificateIssuerName = value;
     }
@@ -228,6 +234,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * @param value Value to set for the certificateKeyUsages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateKeyUsages(@javax.annotation.Nullable final Integer value) {
         this._certificateKeyUsages = value;
     }
@@ -236,6 +243,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * @param value Value to set for the certificateRevokeStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateRevokeStatus(@javax.annotation.Nullable final CertificateRevocationStatus value) {
         this._certificateRevokeStatus = value;
     }
@@ -244,6 +252,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * @param value Value to set for the certificateRevokeStatusLastChangeDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateRevokeStatusLastChangeDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._certificateRevokeStatusLastChangeDateTime = value;
     }
@@ -252,6 +261,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * @param value Value to set for the certificateSerialNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateSerialNumber(@javax.annotation.Nullable final String value) {
         this._certificateSerialNumber = value;
     }
@@ -260,6 +270,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * @param value Value to set for the certificateSubjectName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateSubjectName(@javax.annotation.Nullable final String value) {
         this._certificateSubjectName = value;
     }
@@ -268,6 +279,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * @param value Value to set for the certificateThumbprint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateThumbprint(@javax.annotation.Nullable final String value) {
         this._certificateThumbprint = value;
     }
@@ -276,6 +288,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * @param value Value to set for the managedDeviceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceDisplayName(@javax.annotation.Nullable final String value) {
         this._managedDeviceDisplayName = value;
     }
@@ -284,6 +297,7 @@ public class ManagedAllDeviceCertificateState extends Entity implements Parsable
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

@@ -20,6 +20,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * Instantiates a new TimeOff and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TimeOff() {
         super();
         this.setOdataType("#microsoft.graph.timeOff");
@@ -49,12 +50,12 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TimeOff currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("draftTimeOff", (n) -> { currentObject.setDraftTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
-            this.put("isStagedForDeletion", (n) -> { currentObject.setIsStagedForDeletion(n.getBooleanValue()); });
-            this.put("sharedTimeOff", (n) -> { currentObject.setSharedTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("draftTimeOff", (n) -> { currentObject.setDraftTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("isStagedForDeletion", (n) -> { currentObject.setIsStagedForDeletion(n.getBooleanValue()); });
+        deserializerMap.put("sharedTimeOff", (n) -> { currentObject.setSharedTimeOff(n.getObjectValue(TimeOffItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isStagedForDeletion property value. The isStagedForDeletion property
@@ -85,6 +86,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the draftTimeOff property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDraftTimeOff(@javax.annotation.Nullable final TimeOffItem value) {
         this._draftTimeOff = value;
     }
@@ -106,6 +109,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the isStagedForDeletion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsStagedForDeletion(@javax.annotation.Nullable final Boolean value) {
         this._isStagedForDeletion = value;
     }
@@ -114,6 +118,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the sharedTimeOff property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedTimeOff(@javax.annotation.Nullable final TimeOffItem value) {
         this._sharedTimeOff = value;
     }
@@ -122,6 +127,7 @@ public class TimeOff extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

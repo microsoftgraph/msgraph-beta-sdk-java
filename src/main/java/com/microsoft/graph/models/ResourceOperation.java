@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Describes the resourceOperation resource (entity) of the Microsoft Graph API (REST), which supports Intune workflows related to role-based access control (RBAC). */
 public class ResourceOperation extends Entity implements Parsable {
     /** Type of action this operation is going to perform. The actionName should be concise and limited to as few words as possible. */
     private String _actionName;
@@ -19,9 +20,10 @@ public class ResourceOperation extends Entity implements Parsable {
     /** Name of the Resource this operation is performed on. */
     private String _resourceName;
     /**
-     * Instantiates a new ResourceOperation and sets the default values.
+     * Instantiates a new resourceOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ResourceOperation() {
         super();
         this.setOdataType("#microsoft.graph.resourceOperation");
@@ -29,7 +31,7 @@ public class ResourceOperation extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ResourceOperation
+     * @return a resourceOperation
      */
     @javax.annotation.Nonnull
     public static ResourceOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -67,13 +69,13 @@ public class ResourceOperation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ResourceOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("enabledForScopeValidation", (n) -> { currentObject.setEnabledForScopeValidation(n.getBooleanValue()); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getStringValue()); });
-            this.put("resourceName", (n) -> { currentObject.setResourceName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actionName", (n) -> { currentObject.setActionName(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("enabledForScopeValidation", (n) -> { currentObject.setEnabledForScopeValidation(n.getBooleanValue()); });
+        deserializerMap.put("resource", (n) -> { currentObject.setResource(n.getStringValue()); });
+        deserializerMap.put("resourceName", (n) -> { currentObject.setResourceName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the resource property value. Resource category to which this Operation belongs. This property is read-only.
@@ -96,13 +98,12 @@ public class ResourceOperation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("actionName", this.getActionName());
         writer.writeStringValue("description", this.getDescription());
-        writer.writeBooleanValue("enabledForScopeValidation", this.getEnabledForScopeValidation());
-        writer.writeStringValue("resource", this.getResource());
         writer.writeStringValue("resourceName", this.getResourceName());
     }
     /**
@@ -110,6 +111,7 @@ public class ResourceOperation extends Entity implements Parsable {
      * @param value Value to set for the actionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionName(@javax.annotation.Nullable final String value) {
         this._actionName = value;
     }
@@ -118,6 +120,7 @@ public class ResourceOperation extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -126,6 +129,7 @@ public class ResourceOperation extends Entity implements Parsable {
      * @param value Value to set for the enabledForScopeValidation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabledForScopeValidation(@javax.annotation.Nullable final Boolean value) {
         this._enabledForScopeValidation = value;
     }
@@ -134,6 +138,7 @@ public class ResourceOperation extends Entity implements Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final String value) {
         this._resource = value;
     }
@@ -142,6 +147,7 @@ public class ResourceOperation extends Entity implements Parsable {
      * @param value Value to set for the resourceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceName(@javax.annotation.Nullable final String value) {
         this._resourceName = value;
     }

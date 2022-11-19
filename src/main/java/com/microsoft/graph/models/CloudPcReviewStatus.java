@@ -36,6 +36,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * Instantiates a new cloudPcReviewStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcReviewStatus() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.cloudPcReviewStatus");
@@ -89,18 +90,18 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CloudPcReviewStatus currentObject = this;
-        return new HashMap<>(10) {{
-            this.put("azureStorageAccountId", (n) -> { currentObject.setAzureStorageAccountId(n.getStringValue()); });
-            this.put("azureStorageAccountName", (n) -> { currentObject.setAzureStorageAccountName(n.getStringValue()); });
-            this.put("azureStorageContainerName", (n) -> { currentObject.setAzureStorageContainerName(n.getStringValue()); });
-            this.put("inReview", (n) -> { currentObject.setInReview(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("restorePointDateTime", (n) -> { currentObject.setRestorePointDateTime(n.getOffsetDateTimeValue()); });
-            this.put("reviewStartDateTime", (n) -> { currentObject.setReviewStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("subscriptionId", (n) -> { currentObject.setSubscriptionId(n.getStringValue()); });
-            this.put("subscriptionName", (n) -> { currentObject.setSubscriptionName(n.getStringValue()); });
-            this.put("userAccessLevel", (n) -> { currentObject.setUserAccessLevel(n.getEnumValue(CloudPcUserAccessLevel.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("azureStorageAccountId", (n) -> { currentObject.setAzureStorageAccountId(n.getStringValue()); });
+        deserializerMap.put("azureStorageAccountName", (n) -> { currentObject.setAzureStorageAccountName(n.getStringValue()); });
+        deserializerMap.put("azureStorageContainerName", (n) -> { currentObject.setAzureStorageContainerName(n.getStringValue()); });
+        deserializerMap.put("inReview", (n) -> { currentObject.setInReview(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("restorePointDateTime", (n) -> { currentObject.setRestorePointDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("reviewStartDateTime", (n) -> { currentObject.setReviewStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("subscriptionId", (n) -> { currentObject.setSubscriptionId(n.getStringValue()); });
+        deserializerMap.put("subscriptionName", (n) -> { currentObject.setSubscriptionName(n.getStringValue()); });
+        deserializerMap.put("userAccessLevel", (n) -> { currentObject.setUserAccessLevel(n.getEnumValue(CloudPcUserAccessLevel.class)); });
+        return deserializerMap
     }
     /**
      * Gets the inReview property value. True if the Cloud PC is set to in review by the administrator.
@@ -163,6 +164,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("azureStorageAccountId", this.getAzureStorageAccountId());
@@ -182,6 +184,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -190,6 +193,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the azureStorageAccountId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureStorageAccountId(@javax.annotation.Nullable final String value) {
         this._azureStorageAccountId = value;
     }
@@ -198,6 +202,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the azureStorageAccountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureStorageAccountName(@javax.annotation.Nullable final String value) {
         this._azureStorageAccountName = value;
     }
@@ -206,6 +211,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the azureStorageContainerName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureStorageContainerName(@javax.annotation.Nullable final String value) {
         this._azureStorageContainerName = value;
     }
@@ -214,6 +220,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the inReview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInReview(@javax.annotation.Nullable final Boolean value) {
         this._inReview = value;
     }
@@ -222,6 +229,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -230,6 +238,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the restorePointDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestorePointDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._restorePointDateTime = value;
     }
@@ -238,6 +247,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the reviewStartDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._reviewStartDateTime = value;
     }
@@ -246,6 +256,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the subscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptionId(@javax.annotation.Nullable final String value) {
         this._subscriptionId = value;
     }
@@ -254,6 +265,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the subscriptionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptionName(@javax.annotation.Nullable final String value) {
         this._subscriptionName = value;
     }
@@ -262,6 +274,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userAccessLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAccessLevel(@javax.annotation.Nullable final CloudPcUserAccessLevel value) {
         this._userAccessLevel = value;
     }

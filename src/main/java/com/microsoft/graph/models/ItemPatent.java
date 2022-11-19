@@ -27,6 +27,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
      * Instantiates a new ItemPatent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemPatent() {
         super();
         this.setOdataType("#microsoft.graph.itemPatent");
@@ -64,15 +65,15 @@ public class ItemPatent extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ItemPatent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isPending", (n) -> { currentObject.setIsPending(n.getBooleanValue()); });
-            this.put("issuedDate", (n) -> { currentObject.setIssuedDate(n.getLocalDateValue()); });
-            this.put("issuingAuthority", (n) -> { currentObject.setIssuingAuthority(n.getStringValue()); });
-            this.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isPending", (n) -> { currentObject.setIsPending(n.getBooleanValue()); });
+        deserializerMap.put("issuedDate", (n) -> { currentObject.setIssuedDate(n.getLocalDateValue()); });
+        deserializerMap.put("issuingAuthority", (n) -> { currentObject.setIssuingAuthority(n.getStringValue()); });
+        deserializerMap.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
+        deserializerMap.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isPending property value. Indicates the patent is pending.
@@ -119,6 +120,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +137,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -143,6 +146,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -151,6 +155,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
      * @param value Value to set for the isPending property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPending(@javax.annotation.Nullable final Boolean value) {
         this._isPending = value;
     }
@@ -159,6 +164,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
      * @param value Value to set for the issuedDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuedDate(@javax.annotation.Nullable final LocalDate value) {
         this._issuedDate = value;
     }
@@ -167,6 +173,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
      * @param value Value to set for the issuingAuthority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuingAuthority(@javax.annotation.Nullable final String value) {
         this._issuingAuthority = value;
     }
@@ -175,6 +182,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
      * @param value Value to set for the number property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumber(@javax.annotation.Nullable final String value) {
         this._number = value;
     }
@@ -183,6 +191,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

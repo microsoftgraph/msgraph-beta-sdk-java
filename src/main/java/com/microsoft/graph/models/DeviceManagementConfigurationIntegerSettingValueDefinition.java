@@ -16,6 +16,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinition extends 
      * Instantiates a new DeviceManagementConfigurationIntegerSettingValueDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationIntegerSettingValueDefinition() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationIntegerSettingValueDefinition");
@@ -37,10 +38,10 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinition extends 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationIntegerSettingValueDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("maximumValue", (n) -> { currentObject.setMaximumValue(n.getLongValue()); });
-            this.put("minimumValue", (n) -> { currentObject.setMinimumValue(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("maximumValue", (n) -> { currentObject.setMaximumValue(n.getLongValue()); });
+        deserializerMap.put("minimumValue", (n) -> { currentObject.setMinimumValue(n.getLongValue()); });
+        return deserializerMap
     }
     /**
      * Gets the maximumValue property value. Maximum allowed value of the integer
@@ -63,6 +64,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinition extends 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinition extends 
      * @param value Value to set for the maximumValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumValue(@javax.annotation.Nullable final Long value) {
         this._maximumValue = value;
     }
@@ -82,6 +85,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefinition extends 
      * @param value Value to set for the minimumValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumValue(@javax.annotation.Nullable final Long value) {
         this._minimumValue = value;
     }

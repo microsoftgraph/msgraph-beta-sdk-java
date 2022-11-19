@@ -22,6 +22,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
      * Instantiates a new changeDeploymentStatusPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChangeDeploymentStatusPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -50,11 +51,11 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ChangeDeploymentStatusPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("managementTemplateStepId", (n) -> { currentObject.setManagementTemplateStepId(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("managementTemplateStepId", (n) -> { currentObject.setManagementTemplateStepId(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the managementTemplateStepId property value. The managementTemplateStepId property
@@ -85,6 +86,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("managementTemplateStepId", this.getManagementTemplateStepId());
@@ -97,6 +99,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the managementTemplateStepId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementTemplateStepId(@javax.annotation.Nullable final String value) {
         this._managementTemplateStepId = value;
     }
@@ -113,6 +117,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }
@@ -121,6 +126,7 @@ public class ChangeDeploymentStatusPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }

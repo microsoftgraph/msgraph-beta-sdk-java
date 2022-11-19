@@ -16,12 +16,13 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
     private Boolean _disallowDesktopApps;
     /** This setting allows the admin to specify whether the Task Bar is shown or not. */
     private Boolean _showTaskBar;
-    /** Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format. */
+    /** Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format. */
     private byte[] _startMenuLayoutXml;
     /**
      * Instantiates a new WindowsKioskMultipleApps and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsKioskMultipleApps() {
         super();
         this.setOdataType("#microsoft.graph.windowsKioskMultipleApps");
@@ -67,13 +68,13 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsKioskMultipleApps currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowAccessToDownloadsFolder", (n) -> { currentObject.setAllowAccessToDownloadsFolder(n.getBooleanValue()); });
-            this.put("apps", (n) -> { currentObject.setApps(n.getCollectionOfObjectValues(WindowsKioskAppBase::createFromDiscriminatorValue)); });
-            this.put("disallowDesktopApps", (n) -> { currentObject.setDisallowDesktopApps(n.getBooleanValue()); });
-            this.put("showTaskBar", (n) -> { currentObject.setShowTaskBar(n.getBooleanValue()); });
-            this.put("startMenuLayoutXml", (n) -> { currentObject.setStartMenuLayoutXml(n.getByteArrayValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowAccessToDownloadsFolder", (n) -> { currentObject.setAllowAccessToDownloadsFolder(n.getBooleanValue()); });
+        deserializerMap.put("apps", (n) -> { currentObject.setApps(n.getCollectionOfObjectValues(WindowsKioskAppBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("disallowDesktopApps", (n) -> { currentObject.setDisallowDesktopApps(n.getBooleanValue()); });
+        deserializerMap.put("showTaskBar", (n) -> { currentObject.setShowTaskBar(n.getBooleanValue()); });
+        deserializerMap.put("startMenuLayoutXml", (n) -> { currentObject.setStartMenuLayoutXml(n.getByteArrayValue()); });
+        return deserializerMap
     }
     /**
      * Gets the showTaskBar property value. This setting allows the admin to specify whether the Task Bar is shown or not.
@@ -84,7 +85,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
         return this._showTaskBar;
     }
     /**
-     * Gets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
+     * Gets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -96,6 +97,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
      * @param value Value to set for the allowAccessToDownloadsFolder property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowAccessToDownloadsFolder(@javax.annotation.Nullable final Boolean value) {
         this._allowAccessToDownloadsFolder = value;
     }
@@ -118,6 +121,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
      * @param value Value to set for the apps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApps(@javax.annotation.Nullable final java.util.List<WindowsKioskAppBase> value) {
         this._apps = value;
     }
@@ -126,6 +130,7 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
      * @param value Value to set for the disallowDesktopApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisallowDesktopApps(@javax.annotation.Nullable final Boolean value) {
         this._disallowDesktopApps = value;
     }
@@ -134,14 +139,16 @@ public class WindowsKioskMultipleApps extends WindowsKioskAppConfiguration imple
      * @param value Value to set for the showTaskBar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowTaskBar(@javax.annotation.Nullable final Boolean value) {
         this._showTaskBar = value;
     }
     /**
-     * Sets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it. The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
+     * Sets the startMenuLayoutXml property value. Allows admins to override the default Start layout and prevents the user from changing it.The layout is modified by specifying an XML file based on a layout modification schema. XML needs to be in Binary format.
      * @param value Value to set for the startMenuLayoutXml property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuLayoutXml(@javax.annotation.Nullable final byte[] value) {
         this._startMenuLayoutXml = value;
     }

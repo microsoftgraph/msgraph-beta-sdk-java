@@ -26,6 +26,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * Instantiates a new EducationPowerSchoolDataProvider and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationPowerSchoolDataProvider() {
         super();
         this.setOdataType("#microsoft.graph.educationPowerSchoolDataProvider");
@@ -87,15 +88,15 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationPowerSchoolDataProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowTeachersInMultipleSchools", (n) -> { currentObject.setAllowTeachersInMultipleSchools(n.getBooleanValue()); });
-            this.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
-            this.put("clientSecret", (n) -> { currentObject.setClientSecret(n.getStringValue()); });
-            this.put("connectionUrl", (n) -> { currentObject.setConnectionUrl(n.getStringValue()); });
-            this.put("customizations", (n) -> { currentObject.setCustomizations(n.getObjectValue(EducationSynchronizationCustomizations::createFromDiscriminatorValue)); });
-            this.put("schoolsIds", (n) -> { currentObject.setSchoolsIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("schoolYear", (n) -> { currentObject.setSchoolYear(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowTeachersInMultipleSchools", (n) -> { currentObject.setAllowTeachersInMultipleSchools(n.getBooleanValue()); });
+        deserializerMap.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
+        deserializerMap.put("clientSecret", (n) -> { currentObject.setClientSecret(n.getStringValue()); });
+        deserializerMap.put("connectionUrl", (n) -> { currentObject.setConnectionUrl(n.getStringValue()); });
+        deserializerMap.put("customizations", (n) -> { currentObject.setCustomizations(n.getObjectValue(EducationSynchronizationCustomizations::createFromDiscriminatorValue)); });
+        deserializerMap.put("schoolsIds", (n) -> { currentObject.setSchoolsIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("schoolYear", (n) -> { currentObject.setSchoolYear(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the schoolsIds property value. The list of schools to sync.
@@ -118,6 +119,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +136,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * @param value Value to set for the allowTeachersInMultipleSchools property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowTeachersInMultipleSchools(@javax.annotation.Nullable final Boolean value) {
         this._allowTeachersInMultipleSchools = value;
     }
@@ -142,6 +145,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * @param value Value to set for the clientId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientId(@javax.annotation.Nullable final String value) {
         this._clientId = value;
     }
@@ -150,6 +154,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * @param value Value to set for the clientSecret property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientSecret(@javax.annotation.Nullable final String value) {
         this._clientSecret = value;
     }
@@ -158,6 +163,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * @param value Value to set for the connectionUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionUrl(@javax.annotation.Nullable final String value) {
         this._connectionUrl = value;
     }
@@ -166,6 +172,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * @param value Value to set for the customizations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomizations(@javax.annotation.Nullable final EducationSynchronizationCustomizations value) {
         this._customizations = value;
     }
@@ -174,6 +181,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * @param value Value to set for the schoolsIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchoolsIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._schoolsIds = value;
     }
@@ -182,6 +190,7 @@ public class EducationPowerSchoolDataProvider extends EducationSynchronizationDa
      * @param value Value to set for the schoolYear property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchoolYear(@javax.annotation.Nullable final String value) {
         this._schoolYear = value;
     }

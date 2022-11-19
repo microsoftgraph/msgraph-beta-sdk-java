@@ -32,6 +32,7 @@ public class OutlookItem extends Entity implements Parsable {
      * Instantiates a new outlookItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OutlookItem() {
         super();
         this.setOdataType("#microsoft.graph.outlookItem");
@@ -93,12 +94,12 @@ public class OutlookItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OutlookItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("changeKey", (n) -> { currentObject.setChangeKey(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("changeKey", (n) -> { currentObject.setChangeKey(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap
     }
     /**
      * Gets the lastModifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -113,6 +114,7 @@ public class OutlookItem extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -126,6 +128,7 @@ public class OutlookItem extends Entity implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
         this._categories = value;
     }
@@ -134,6 +137,7 @@ public class OutlookItem extends Entity implements Parsable {
      * @param value Value to set for the changeKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChangeKey(@javax.annotation.Nullable final String value) {
         this._changeKey = value;
     }
@@ -142,6 +146,7 @@ public class OutlookItem extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -150,6 +155,7 @@ public class OutlookItem extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }

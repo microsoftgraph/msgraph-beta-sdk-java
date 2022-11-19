@@ -41,6 +41,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * Instantiates a new mailTips and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MailTips() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.mailTips");
@@ -118,21 +119,21 @@ public class MailTips implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MailTips currentObject = this;
-        return new HashMap<>(13) {{
-            this.put("automaticReplies", (n) -> { currentObject.setAutomaticReplies(n.getObjectValue(AutomaticRepliesMailTips::createFromDiscriminatorValue)); });
-            this.put("customMailTip", (n) -> { currentObject.setCustomMailTip(n.getStringValue()); });
-            this.put("deliveryRestricted", (n) -> { currentObject.setDeliveryRestricted(n.getBooleanValue()); });
-            this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
-            this.put("error", (n) -> { currentObject.setError(n.getObjectValue(MailTipsError::createFromDiscriminatorValue)); });
-            this.put("externalMemberCount", (n) -> { currentObject.setExternalMemberCount(n.getIntegerValue()); });
-            this.put("isModerated", (n) -> { currentObject.setIsModerated(n.getBooleanValue()); });
-            this.put("mailboxFull", (n) -> { currentObject.setMailboxFull(n.getBooleanValue()); });
-            this.put("maxMessageSize", (n) -> { currentObject.setMaxMessageSize(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recipientScope", (n) -> { currentObject.setRecipientScope(n.getEnumValue(RecipientScopeType.class)); });
-            this.put("recipientSuggestions", (n) -> { currentObject.setRecipientSuggestions(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("totalMemberCount", (n) -> { currentObject.setTotalMemberCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(13);
+        deserializerMap.put("automaticReplies", (n) -> { currentObject.setAutomaticReplies(n.getObjectValue(AutomaticRepliesMailTips::createFromDiscriminatorValue)); });
+        deserializerMap.put("customMailTip", (n) -> { currentObject.setCustomMailTip(n.getStringValue()); });
+        deserializerMap.put("deliveryRestricted", (n) -> { currentObject.setDeliveryRestricted(n.getBooleanValue()); });
+        deserializerMap.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("error", (n) -> { currentObject.setError(n.getObjectValue(MailTipsError::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalMemberCount", (n) -> { currentObject.setExternalMemberCount(n.getIntegerValue()); });
+        deserializerMap.put("isModerated", (n) -> { currentObject.setIsModerated(n.getBooleanValue()); });
+        deserializerMap.put("mailboxFull", (n) -> { currentObject.setMailboxFull(n.getBooleanValue()); });
+        deserializerMap.put("maxMessageSize", (n) -> { currentObject.setMaxMessageSize(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recipientScope", (n) -> { currentObject.setRecipientScope(n.getEnumValue(RecipientScopeType.class)); });
+        deserializerMap.put("recipientSuggestions", (n) -> { currentObject.setRecipientSuggestions(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("totalMemberCount", (n) -> { currentObject.setTotalMemberCount(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isModerated property value. Whether sending messages to the recipient requires approval. For example, if the recipient is a large distribution list and a moderator has been set up to approve messages sent to that distribution list, or if sending messages to a recipient requires approval of the recipient's manager.
@@ -195,6 +196,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("automaticReplies", this.getAutomaticReplies());
@@ -217,6 +219,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -225,6 +228,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the automaticReplies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutomaticReplies(@javax.annotation.Nullable final AutomaticRepliesMailTips value) {
         this._automaticReplies = value;
     }
@@ -233,6 +237,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the customMailTip property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomMailTip(@javax.annotation.Nullable final String value) {
         this._customMailTip = value;
     }
@@ -241,6 +246,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deliveryRestricted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeliveryRestricted(@javax.annotation.Nullable final Boolean value) {
         this._deliveryRestricted = value;
     }
@@ -249,6 +255,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final EmailAddress value) {
         this._emailAddress = value;
     }
@@ -257,6 +264,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final MailTipsError value) {
         this._error = value;
     }
@@ -265,6 +273,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the externalMemberCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalMemberCount(@javax.annotation.Nullable final Integer value) {
         this._externalMemberCount = value;
     }
@@ -273,6 +282,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isModerated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsModerated(@javax.annotation.Nullable final Boolean value) {
         this._isModerated = value;
     }
@@ -281,6 +291,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mailboxFull property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailboxFull(@javax.annotation.Nullable final Boolean value) {
         this._mailboxFull = value;
     }
@@ -289,6 +300,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the maxMessageSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxMessageSize(@javax.annotation.Nullable final Integer value) {
         this._maxMessageSize = value;
     }
@@ -297,6 +309,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -305,6 +318,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the recipientScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipientScope(@javax.annotation.Nullable final RecipientScopeType value) {
         this._recipientScope = value;
     }
@@ -313,6 +327,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the recipientSuggestions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipientSuggestions(@javax.annotation.Nullable final java.util.List<Recipient> value) {
         this._recipientSuggestions = value;
     }
@@ -321,6 +336,7 @@ public class MailTips implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the totalMemberCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalMemberCount(@javax.annotation.Nullable final Integer value) {
         this._totalMemberCount = value;
     }

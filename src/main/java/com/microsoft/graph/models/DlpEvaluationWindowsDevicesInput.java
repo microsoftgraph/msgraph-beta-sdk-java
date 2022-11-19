@@ -16,6 +16,7 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
      * Instantiates a new DlpEvaluationWindowsDevicesInput and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DlpEvaluationWindowsDevicesInput() {
         super();
         this.setOdataType("#microsoft.graph.dlpEvaluationWindowsDevicesInput");
@@ -45,10 +46,10 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DlpEvaluationWindowsDevicesInput currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contentProperties", (n) -> { currentObject.setContentProperties(n.getObjectValue(ContentProperties::createFromDiscriminatorValue)); });
-            this.put("sharedBy", (n) -> { currentObject.setSharedBy(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contentProperties", (n) -> { currentObject.setContentProperties(n.getObjectValue(ContentProperties::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharedBy", (n) -> { currentObject.setSharedBy(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the sharedBy property value. The sharedBy property
@@ -63,6 +64,7 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
      * @param value Value to set for the contentProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentProperties(@javax.annotation.Nullable final ContentProperties value) {
         this._contentProperties = value;
     }
@@ -82,6 +85,7 @@ public class DlpEvaluationWindowsDevicesInput extends DlpEvaluationInput impleme
      * @param value Value to set for the sharedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedBy(@javax.annotation.Nullable final String value) {
         this._sharedBy = value;
     }

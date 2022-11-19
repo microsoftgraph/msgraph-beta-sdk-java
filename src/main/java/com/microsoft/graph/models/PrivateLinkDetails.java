@@ -25,6 +25,7 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
      * Instantiates a new privateLinkDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrivateLinkDetails() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.privateLinkDetails");
@@ -54,13 +55,13 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrivateLinkDetails currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("policyId", (n) -> { currentObject.setPolicyId(n.getStringValue()); });
-            this.put("policyName", (n) -> { currentObject.setPolicyName(n.getStringValue()); });
-            this.put("policyTenantId", (n) -> { currentObject.setPolicyTenantId(n.getStringValue()); });
-            this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("policyId", (n) -> { currentObject.setPolicyId(n.getStringValue()); });
+        deserializerMap.put("policyName", (n) -> { currentObject.setPolicyName(n.getStringValue()); });
+        deserializerMap.put("policyTenantId", (n) -> { currentObject.setPolicyTenantId(n.getStringValue()); });
+        deserializerMap.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,6 +108,7 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -121,6 +123,7 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -137,6 +141,7 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the policyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyId(@javax.annotation.Nullable final String value) {
         this._policyId = value;
     }
@@ -145,6 +150,7 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the policyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyName(@javax.annotation.Nullable final String value) {
         this._policyName = value;
     }
@@ -153,6 +159,7 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the policyTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyTenantId(@javax.annotation.Nullable final String value) {
         this._policyTenantId = value;
     }
@@ -161,6 +168,7 @@ public class PrivateLinkDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the resourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceId(@javax.annotation.Nullable final String value) {
         this._resourceId = value;
     }

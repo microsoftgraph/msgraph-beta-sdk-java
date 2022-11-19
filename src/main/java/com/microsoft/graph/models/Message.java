@@ -85,6 +85,7 @@ public class Message extends OutlookItem implements Parsable {
      * Instantiates a new Message and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Message() {
         super();
         this.setOdataType("#microsoft.graph.message");
@@ -180,42 +181,42 @@ public class Message extends OutlookItem implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Message currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
-            this.put("bccRecipients", (n) -> { currentObject.setBccRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("bodyPreview", (n) -> { currentObject.setBodyPreview(n.getStringValue()); });
-            this.put("ccRecipients", (n) -> { currentObject.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("conversationId", (n) -> { currentObject.setConversationId(n.getStringValue()); });
-            this.put("conversationIndex", (n) -> { currentObject.setConversationIndex(n.getByteArrayValue()); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("flag", (n) -> { currentObject.setFlag(n.getObjectValue(FollowupFlag::createFromDiscriminatorValue)); });
-            this.put("from", (n) -> { currentObject.setFrom(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
-            this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
-            this.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
-            this.put("inferenceClassification", (n) -> { currentObject.setInferenceClassification(n.getEnumValue(InferenceClassificationType.class)); });
-            this.put("internetMessageHeaders", (n) -> { currentObject.setInternetMessageHeaders(n.getCollectionOfObjectValues(InternetMessageHeader::createFromDiscriminatorValue)); });
-            this.put("internetMessageId", (n) -> { currentObject.setInternetMessageId(n.getStringValue()); });
-            this.put("isDeliveryReceiptRequested", (n) -> { currentObject.setIsDeliveryReceiptRequested(n.getBooleanValue()); });
-            this.put("isDraft", (n) -> { currentObject.setIsDraft(n.getBooleanValue()); });
-            this.put("isRead", (n) -> { currentObject.setIsRead(n.getBooleanValue()); });
-            this.put("isReadReceiptRequested", (n) -> { currentObject.setIsReadReceiptRequested(n.getBooleanValue()); });
-            this.put("mentions", (n) -> { currentObject.setMentions(n.getCollectionOfObjectValues(Mention::createFromDiscriminatorValue)); });
-            this.put("mentionsPreview", (n) -> { currentObject.setMentionsPreview(n.getObjectValue(MentionsPreview::createFromDiscriminatorValue)); });
-            this.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("parentFolderId", (n) -> { currentObject.setParentFolderId(n.getStringValue()); });
-            this.put("receivedDateTime", (n) -> { currentObject.setReceivedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("replyTo", (n) -> { currentObject.setReplyTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("sender", (n) -> { currentObject.setSender(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
-            this.put("sentDateTime", (n) -> { currentObject.setSentDateTime(n.getOffsetDateTimeValue()); });
-            this.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
-            this.put("toRecipients", (n) -> { currentObject.setToRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("uniqueBody", (n) -> { currentObject.setUniqueBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("unsubscribeData", (n) -> { currentObject.setUnsubscribeData(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("unsubscribeEnabled", (n) -> { currentObject.setUnsubscribeEnabled(n.getBooleanValue()); });
-            this.put("webLink", (n) -> { currentObject.setWebLink(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
+        deserializerMap.put("bccRecipients", (n) -> { currentObject.setBccRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("bodyPreview", (n) -> { currentObject.setBodyPreview(n.getStringValue()); });
+        deserializerMap.put("ccRecipients", (n) -> { currentObject.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("conversationId", (n) -> { currentObject.setConversationId(n.getStringValue()); });
+        deserializerMap.put("conversationIndex", (n) -> { currentObject.setConversationIndex(n.getByteArrayValue()); });
+        deserializerMap.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("flag", (n) -> { currentObject.setFlag(n.getObjectValue(FollowupFlag::createFromDiscriminatorValue)); });
+        deserializerMap.put("from", (n) -> { currentObject.setFrom(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
+        deserializerMap.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
+        deserializerMap.put("inferenceClassification", (n) -> { currentObject.setInferenceClassification(n.getEnumValue(InferenceClassificationType.class)); });
+        deserializerMap.put("internetMessageHeaders", (n) -> { currentObject.setInternetMessageHeaders(n.getCollectionOfObjectValues(InternetMessageHeader::createFromDiscriminatorValue)); });
+        deserializerMap.put("internetMessageId", (n) -> { currentObject.setInternetMessageId(n.getStringValue()); });
+        deserializerMap.put("isDeliveryReceiptRequested", (n) -> { currentObject.setIsDeliveryReceiptRequested(n.getBooleanValue()); });
+        deserializerMap.put("isDraft", (n) -> { currentObject.setIsDraft(n.getBooleanValue()); });
+        deserializerMap.put("isRead", (n) -> { currentObject.setIsRead(n.getBooleanValue()); });
+        deserializerMap.put("isReadReceiptRequested", (n) -> { currentObject.setIsReadReceiptRequested(n.getBooleanValue()); });
+        deserializerMap.put("mentions", (n) -> { currentObject.setMentions(n.getCollectionOfObjectValues(Mention::createFromDiscriminatorValue)); });
+        deserializerMap.put("mentionsPreview", (n) -> { currentObject.setMentionsPreview(n.getObjectValue(MentionsPreview::createFromDiscriminatorValue)); });
+        deserializerMap.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentFolderId", (n) -> { currentObject.setParentFolderId(n.getStringValue()); });
+        deserializerMap.put("receivedDateTime", (n) -> { currentObject.setReceivedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("replyTo", (n) -> { currentObject.setReplyTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("sender", (n) -> { currentObject.setSender(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("sentDateTime", (n) -> { currentObject.setSentDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
+        deserializerMap.put("toRecipients", (n) -> { currentObject.setToRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("uniqueBody", (n) -> { currentObject.setUniqueBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("unsubscribeData", (n) -> { currentObject.setUnsubscribeData(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("unsubscribeEnabled", (n) -> { currentObject.setUnsubscribeEnabled(n.getBooleanValue()); });
+        deserializerMap.put("webLink", (n) -> { currentObject.setWebLink(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the flag property value. The flag value that indicates the status, start date, due date, or completion date for the message.
@@ -430,6 +431,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -473,6 +475,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the attachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttachments(@javax.annotation.Nullable final java.util.List<Attachment> value) {
         this._attachments = value;
     }
@@ -481,6 +484,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the bccRecipients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBccRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
         this._bccRecipients = value;
     }
@@ -489,6 +493,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the body property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBody(@javax.annotation.Nullable final ItemBody value) {
         this._body = value;
     }
@@ -497,6 +502,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the bodyPreview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBodyPreview(@javax.annotation.Nullable final String value) {
         this._bodyPreview = value;
     }
@@ -505,6 +511,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the ccRecipients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCcRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
         this._ccRecipients = value;
     }
@@ -513,6 +520,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the conversationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConversationId(@javax.annotation.Nullable final String value) {
         this._conversationId = value;
     }
@@ -521,6 +529,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the conversationIndex property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConversationIndex(@javax.annotation.Nullable final byte[] value) {
         this._conversationIndex = value;
     }
@@ -529,6 +538,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -537,6 +547,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the flag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFlag(@javax.annotation.Nullable final FollowupFlag value) {
         this._flag = value;
     }
@@ -545,6 +556,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the from property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFrom(@javax.annotation.Nullable final Recipient value) {
         this._from = value;
     }
@@ -553,6 +565,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
         this._hasAttachments = value;
     }
@@ -561,6 +574,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the importance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportance(@javax.annotation.Nullable final Importance value) {
         this._importance = value;
     }
@@ -569,6 +583,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the inferenceClassification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInferenceClassification(@javax.annotation.Nullable final InferenceClassificationType value) {
         this._inferenceClassification = value;
     }
@@ -577,6 +592,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the internetMessageHeaders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInternetMessageHeaders(@javax.annotation.Nullable final java.util.List<InternetMessageHeader> value) {
         this._internetMessageHeaders = value;
     }
@@ -585,6 +601,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the internetMessageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInternetMessageId(@javax.annotation.Nullable final String value) {
         this._internetMessageId = value;
     }
@@ -593,6 +610,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the isDeliveryReceiptRequested property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDeliveryReceiptRequested(@javax.annotation.Nullable final Boolean value) {
         this._isDeliveryReceiptRequested = value;
     }
@@ -601,6 +619,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the isDraft property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDraft(@javax.annotation.Nullable final Boolean value) {
         this._isDraft = value;
     }
@@ -609,6 +628,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the isRead property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRead(@javax.annotation.Nullable final Boolean value) {
         this._isRead = value;
     }
@@ -617,6 +637,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the isReadReceiptRequested property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsReadReceiptRequested(@javax.annotation.Nullable final Boolean value) {
         this._isReadReceiptRequested = value;
     }
@@ -625,6 +646,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the mentions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMentions(@javax.annotation.Nullable final java.util.List<Mention> value) {
         this._mentions = value;
     }
@@ -633,6 +655,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the mentionsPreview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMentionsPreview(@javax.annotation.Nullable final MentionsPreview value) {
         this._mentionsPreview = value;
     }
@@ -641,6 +664,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the multiValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this._multiValueExtendedProperties = value;
     }
@@ -649,6 +673,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the parentFolderId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentFolderId(@javax.annotation.Nullable final String value) {
         this._parentFolderId = value;
     }
@@ -657,6 +682,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the receivedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReceivedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._receivedDateTime = value;
     }
@@ -665,6 +691,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the replyTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReplyTo(@javax.annotation.Nullable final java.util.List<Recipient> value) {
         this._replyTo = value;
     }
@@ -673,6 +700,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the sender property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSender(@javax.annotation.Nullable final Recipient value) {
         this._sender = value;
     }
@@ -681,6 +709,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the sentDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._sentDateTime = value;
     }
@@ -689,6 +718,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the singleValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this._singleValueExtendedProperties = value;
     }
@@ -697,6 +727,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
         this._subject = value;
     }
@@ -705,6 +736,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the toRecipients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setToRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
         this._toRecipients = value;
     }
@@ -713,6 +745,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the uniqueBody property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUniqueBody(@javax.annotation.Nullable final ItemBody value) {
         this._uniqueBody = value;
     }
@@ -721,6 +754,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the unsubscribeData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnsubscribeData(@javax.annotation.Nullable final java.util.List<String> value) {
         this._unsubscribeData = value;
     }
@@ -729,6 +763,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the unsubscribeEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnsubscribeEnabled(@javax.annotation.Nullable final Boolean value) {
         this._unsubscribeEnabled = value;
     }
@@ -737,6 +772,7 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the webLink property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebLink(@javax.annotation.Nullable final String value) {
         this._webLink = value;
     }

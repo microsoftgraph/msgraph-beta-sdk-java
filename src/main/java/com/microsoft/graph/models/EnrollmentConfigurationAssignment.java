@@ -19,6 +19,7 @@ public class EnrollmentConfigurationAssignment extends Entity implements Parsabl
      * Instantiates a new enrollmentConfigurationAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EnrollmentConfigurationAssignment() {
         super();
         this.setOdataType("#microsoft.graph.enrollmentConfigurationAssignment");
@@ -40,11 +41,11 @@ public class EnrollmentConfigurationAssignment extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EnrollmentConfigurationAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("source", (n) -> { currentObject.setSource(n.getEnumValue(DeviceAndAppManagementAssignmentSource.class)); });
-            this.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("source", (n) -> { currentObject.setSource(n.getEnumValue(DeviceAndAppManagementAssignmentSource.class)); });
+        deserializerMap.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
+        deserializerMap.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the source property value. Represents source of assignment.
@@ -75,6 +76,7 @@ public class EnrollmentConfigurationAssignment extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +89,7 @@ public class EnrollmentConfigurationAssignment extends Entity implements Parsabl
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentSource value) {
         this._source = value;
     }
@@ -95,6 +98,7 @@ public class EnrollmentConfigurationAssignment extends Entity implements Parsabl
      * @param value Value to set for the sourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceId(@javax.annotation.Nullable final String value) {
         this._sourceId = value;
     }
@@ -103,6 +107,7 @@ public class EnrollmentConfigurationAssignment extends Entity implements Parsabl
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this._target = value;
     }

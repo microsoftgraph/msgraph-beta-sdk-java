@@ -34,6 +34,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      * Instantiates a new tenantDetailedInformation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TenantDetailedInformation() {
         super();
         this.setOdataType("#microsoft.graph.managedTenants.tenantDetailedInformation");
@@ -95,18 +96,18 @@ public class TenantDetailedInformation extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantDetailedInformation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
-            this.put("countryCode", (n) -> { currentObject.setCountryCode(n.getStringValue()); });
-            this.put("countryName", (n) -> { currentObject.setCountryName(n.getStringValue()); });
-            this.put("defaultDomainName", (n) -> { currentObject.setDefaultDomainName(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("industryName", (n) -> { currentObject.setIndustryName(n.getStringValue()); });
-            this.put("region", (n) -> { currentObject.setRegion(n.getStringValue()); });
-            this.put("segmentName", (n) -> { currentObject.setSegmentName(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("verticalName", (n) -> { currentObject.setVerticalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
+        deserializerMap.put("countryCode", (n) -> { currentObject.setCountryCode(n.getStringValue()); });
+        deserializerMap.put("countryName", (n) -> { currentObject.setCountryName(n.getStringValue()); });
+        deserializerMap.put("defaultDomainName", (n) -> { currentObject.setDefaultDomainName(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("industryName", (n) -> { currentObject.setIndustryName(n.getStringValue()); });
+        deserializerMap.put("region", (n) -> { currentObject.setRegion(n.getStringValue()); });
+        deserializerMap.put("segmentName", (n) -> { currentObject.setSegmentName(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
+        deserializerMap.put("verticalName", (n) -> { currentObject.setVerticalName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the industryName property value. The business industry associated with the managed tenant. Optional. Read-only.
@@ -153,6 +154,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -172,6 +174,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      * @param value Value to set for the city property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCity(@javax.annotation.Nullable final String value) {
         this._city = value;
     }
@@ -180,6 +183,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      * @param value Value to set for the countryCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountryCode(@javax.annotation.Nullable final String value) {
         this._countryCode = value;
     }
@@ -188,6 +192,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      * @param value Value to set for the countryName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountryName(@javax.annotation.Nullable final String value) {
         this._countryName = value;
     }
@@ -196,6 +201,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      * @param value Value to set for the defaultDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultDomainName(@javax.annotation.Nullable final String value) {
         this._defaultDomainName = value;
     }
@@ -204,6 +210,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -212,6 +219,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      * @param value Value to set for the industryName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIndustryName(@javax.annotation.Nullable final String value) {
         this._industryName = value;
     }
@@ -220,6 +228,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      * @param value Value to set for the region property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegion(@javax.annotation.Nullable final String value) {
         this._region = value;
     }
@@ -228,6 +237,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      * @param value Value to set for the segmentName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSegmentName(@javax.annotation.Nullable final String value) {
         this._segmentName = value;
     }
@@ -236,6 +246,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
@@ -244,6 +255,7 @@ public class TenantDetailedInformation extends Entity implements Parsable {
      * @param value Value to set for the verticalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVerticalName(@javax.annotation.Nullable final String value) {
         this._verticalName = value;
     }

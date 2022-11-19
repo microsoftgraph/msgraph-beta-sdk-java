@@ -16,6 +16,7 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
      * Instantiates a new UnsupportedDeviceConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnsupportedDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.unsupportedDeviceConfiguration");
@@ -45,10 +46,10 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnsupportedDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfObjectValues(UnsupportedDeviceConfigurationDetail::createFromDiscriminatorValue)); });
-            this.put("originalEntityTypeName", (n) -> { currentObject.setOriginalEntityTypeName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfObjectValues(UnsupportedDeviceConfigurationDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("originalEntityTypeName", (n) -> { currentObject.setOriginalEntityTypeName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the originalEntityTypeName property value. The type of entity that would be returned otherwise.
@@ -63,6 +64,7 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the details property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final java.util.List<UnsupportedDeviceConfigurationDetail> value) {
         this._details = value;
     }
@@ -82,6 +85,7 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the originalEntityTypeName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginalEntityTypeName(@javax.annotation.Nullable final String value) {
         this._originalEntityTypeName = value;
     }

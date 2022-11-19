@@ -21,6 +21,7 @@ public class TaskViewpoint implements AdditionalDataHolder, Parsable {
      * Instantiates a new taskViewpoint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TaskViewpoint() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.taskViewpoint");
@@ -58,11 +59,11 @@ public class TaskViewpoint implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TaskViewpoint currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("reminderDateTime", (n) -> { currentObject.setReminderDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("reminderDateTime", (n) -> { currentObject.setReminderDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -85,6 +86,7 @@ public class TaskViewpoint implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("categories", this.getCategories());
@@ -97,6 +99,7 @@ public class TaskViewpoint implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class TaskViewpoint implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
         this._categories = value;
     }
@@ -113,6 +117,7 @@ public class TaskViewpoint implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +126,7 @@ public class TaskViewpoint implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the reminderDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReminderDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._reminderDateTime = value;
     }

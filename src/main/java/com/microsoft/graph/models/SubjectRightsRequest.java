@@ -65,6 +65,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * Instantiates a new SubjectRightsRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SubjectRightsRequest() {
         super();
         this.setOdataType("#microsoft.graph.subjectRightsRequest");
@@ -166,34 +167,34 @@ public class SubjectRightsRequest extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SubjectRightsRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("closedDateTime", (n) -> { currentObject.setClosedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("contentQuery", (n) -> { currentObject.setContentQuery(n.getStringValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("dataSubject", (n) -> { currentObject.setDataSubject(n.getObjectValue(DataSubject::createFromDiscriminatorValue)); });
-            this.put("dataSubjectType", (n) -> { currentObject.setDataSubjectType(n.getEnumValue(DataSubjectType.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
-            this.put("history", (n) -> { currentObject.setHistory(n.getCollectionOfObjectValues(SubjectRightsRequestHistory::createFromDiscriminatorValue)); });
-            this.put("includeAllVersions", (n) -> { currentObject.setIncludeAllVersions(n.getBooleanValue()); });
-            this.put("includeAuthoredContent", (n) -> { currentObject.setIncludeAuthoredContent(n.getBooleanValue()); });
-            this.put("insight", (n) -> { currentObject.setInsight(n.getObjectValue(SubjectRightsRequestDetail::createFromDiscriminatorValue)); });
-            this.put("internalDueDateTime", (n) -> { currentObject.setInternalDueDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("mailboxlocations", (n) -> { currentObject.setMailboxlocations(n.getObjectValue(SubjectRightsRequestMailboxLocation::createFromDiscriminatorValue)); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getCollectionOfObjectValues(AuthoredNote::createFromDiscriminatorValue)); });
-            this.put("pauseAfterEstimate", (n) -> { currentObject.setPauseAfterEstimate(n.getBooleanValue()); });
-            this.put("regulations", (n) -> { currentObject.setRegulations(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("sitelocations", (n) -> { currentObject.setSitelocations(n.getObjectValue(SubjectRightsRequestSiteLocation::createFromDiscriminatorValue)); });
-            this.put("stages", (n) -> { currentObject.setStages(n.getCollectionOfObjectValues(SubjectRightsRequestStageDetail::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(SubjectRightsRequestStatus.class)); });
-            this.put("team", (n) -> { currentObject.setTeam(n.getObjectValue(Team::createFromDiscriminatorValue)); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(SubjectRightsRequestType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("closedDateTime", (n) -> { currentObject.setClosedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("contentQuery", (n) -> { currentObject.setContentQuery(n.getStringValue()); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("dataSubject", (n) -> { currentObject.setDataSubject(n.getObjectValue(DataSubject::createFromDiscriminatorValue)); });
+        deserializerMap.put("dataSubjectType", (n) -> { currentObject.setDataSubjectType(n.getEnumValue(DataSubjectType.class)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
+        deserializerMap.put("history", (n) -> { currentObject.setHistory(n.getCollectionOfObjectValues(SubjectRightsRequestHistory::createFromDiscriminatorValue)); });
+        deserializerMap.put("includeAllVersions", (n) -> { currentObject.setIncludeAllVersions(n.getBooleanValue()); });
+        deserializerMap.put("includeAuthoredContent", (n) -> { currentObject.setIncludeAuthoredContent(n.getBooleanValue()); });
+        deserializerMap.put("insight", (n) -> { currentObject.setInsight(n.getObjectValue(SubjectRightsRequestDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("internalDueDateTime", (n) -> { currentObject.setInternalDueDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("mailboxlocations", (n) -> { currentObject.setMailboxlocations(n.getObjectValue(SubjectRightsRequestMailboxLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("notes", (n) -> { currentObject.setNotes(n.getCollectionOfObjectValues(AuthoredNote::createFromDiscriminatorValue)); });
+        deserializerMap.put("pauseAfterEstimate", (n) -> { currentObject.setPauseAfterEstimate(n.getBooleanValue()); });
+        deserializerMap.put("regulations", (n) -> { currentObject.setRegulations(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("sitelocations", (n) -> { currentObject.setSitelocations(n.getObjectValue(SubjectRightsRequestSiteLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("stages", (n) -> { currentObject.setStages(n.getCollectionOfObjectValues(SubjectRightsRequestStageDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(SubjectRightsRequestStatus.class)); });
+        deserializerMap.put("team", (n) -> { currentObject.setTeam(n.getObjectValue(Team::createFromDiscriminatorValue)); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getEnumValue(SubjectRightsRequestType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the history property value. Collection of history change events.
@@ -328,6 +329,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -363,6 +365,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the assignedTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedTo(@javax.annotation.Nullable final Identity value) {
         this._assignedTo = value;
     }
@@ -371,6 +374,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the closedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClosedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._closedDateTime = value;
     }
@@ -379,6 +383,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the contentQuery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentQuery(@javax.annotation.Nullable final String value) {
         this._contentQuery = value;
     }
@@ -387,6 +392,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -395,6 +401,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -403,6 +410,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the dataSubject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataSubject(@javax.annotation.Nullable final DataSubject value) {
         this._dataSubject = value;
     }
@@ -411,6 +419,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the dataSubjectType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataSubjectType(@javax.annotation.Nullable final DataSubjectType value) {
         this._dataSubjectType = value;
     }
@@ -419,6 +428,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -427,6 +437,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -435,6 +446,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the externalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
         this._externalId = value;
     }
@@ -443,6 +455,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the history property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHistory(@javax.annotation.Nullable final java.util.List<SubjectRightsRequestHistory> value) {
         this._history = value;
     }
@@ -451,6 +464,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the includeAllVersions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeAllVersions(@javax.annotation.Nullable final Boolean value) {
         this._includeAllVersions = value;
     }
@@ -459,6 +473,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the includeAuthoredContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeAuthoredContent(@javax.annotation.Nullable final Boolean value) {
         this._includeAuthoredContent = value;
     }
@@ -467,6 +482,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the insight property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInsight(@javax.annotation.Nullable final SubjectRightsRequestDetail value) {
         this._insight = value;
     }
@@ -475,6 +491,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the internalDueDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInternalDueDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._internalDueDateTime = value;
     }
@@ -483,6 +500,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -491,6 +509,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -499,6 +518,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the mailboxlocations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailboxlocations(@javax.annotation.Nullable final SubjectRightsRequestMailboxLocation value) {
         this._mailboxlocations = value;
     }
@@ -507,6 +527,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final java.util.List<AuthoredNote> value) {
         this._notes = value;
     }
@@ -515,6 +536,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the pauseAfterEstimate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPauseAfterEstimate(@javax.annotation.Nullable final Boolean value) {
         this._pauseAfterEstimate = value;
     }
@@ -523,6 +545,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the regulations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegulations(@javax.annotation.Nullable final java.util.List<String> value) {
         this._regulations = value;
     }
@@ -531,6 +554,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the sitelocations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSitelocations(@javax.annotation.Nullable final SubjectRightsRequestSiteLocation value) {
         this._sitelocations = value;
     }
@@ -539,6 +563,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the stages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStages(@javax.annotation.Nullable final java.util.List<SubjectRightsRequestStageDetail> value) {
         this._stages = value;
     }
@@ -547,6 +572,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final SubjectRightsRequestStatus value) {
         this._status = value;
     }
@@ -555,6 +581,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the team property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeam(@javax.annotation.Nullable final Team value) {
         this._team = value;
     }
@@ -563,6 +590,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final SubjectRightsRequestType value) {
         this._type = value;
     }

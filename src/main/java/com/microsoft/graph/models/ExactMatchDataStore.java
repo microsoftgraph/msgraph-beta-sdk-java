@@ -14,6 +14,7 @@ public class ExactMatchDataStore extends ExactMatchDataStoreBase implements Pars
      * Instantiates a new ExactMatchDataStore and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExactMatchDataStore() {
         super();
         this.setOdataType("#microsoft.graph.exactMatchDataStore");
@@ -35,9 +36,9 @@ public class ExactMatchDataStore extends ExactMatchDataStoreBase implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExactMatchDataStore currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("sessions", (n) -> { currentObject.setSessions(n.getCollectionOfObjectValues(ExactMatchSession::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("sessions", (n) -> { currentObject.setSessions(n.getCollectionOfObjectValues(ExactMatchSession::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the sessions property value. The sessions property
@@ -52,6 +53,7 @@ public class ExactMatchDataStore extends ExactMatchDataStoreBase implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class ExactMatchDataStore extends ExactMatchDataStoreBase implements Pars
      * @param value Value to set for the sessions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessions(@javax.annotation.Nullable final java.util.List<ExactMatchSession> value) {
         this._sessions = value;
     }

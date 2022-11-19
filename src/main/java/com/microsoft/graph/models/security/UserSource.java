@@ -18,6 +18,7 @@ public class UserSource extends DataSource implements Parsable {
      * Instantiates a new UserSource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserSource() {
         super();
         this.setOdataType("#microsoft.graph.security.userSource");
@@ -47,11 +48,11 @@ public class UserSource extends DataSource implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserSource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("includedSources", (n) -> { currentObject.setIncludedSources(n.getEnumValue(SourceType.class)); });
-            this.put("siteWebUrl", (n) -> { currentObject.setSiteWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
+        deserializerMap.put("includedSources", (n) -> { currentObject.setIncludedSources(n.getEnumValue(SourceType.class)); });
+        deserializerMap.put("siteWebUrl", (n) -> { currentObject.setSiteWebUrl(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
@@ -74,6 +75,7 @@ public class UserSource extends DataSource implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class UserSource extends DataSource implements Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
         this._email = value;
     }
@@ -94,6 +97,7 @@ public class UserSource extends DataSource implements Parsable {
      * @param value Value to set for the includedSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludedSources(@javax.annotation.Nullable final SourceType value) {
         this._includedSources = value;
     }
@@ -102,6 +106,7 @@ public class UserSource extends DataSource implements Parsable {
      * @param value Value to set for the siteWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteWebUrl(@javax.annotation.Nullable final String value) {
         this._siteWebUrl = value;
     }

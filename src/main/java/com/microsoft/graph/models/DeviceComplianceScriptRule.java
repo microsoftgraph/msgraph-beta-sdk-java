@@ -29,6 +29,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
      * Instantiates a new deviceComplianceScriptRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceComplianceScriptRule() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceComplianceScriptRule");
@@ -82,15 +83,15 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceScriptRule currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("dataType", (n) -> { currentObject.setDataType(n.getEnumValue(DataType.class)); });
-            this.put("deviceComplianceScriptRuleDataType", (n) -> { currentObject.setDeviceComplianceScriptRuleDataType(n.getEnumValue(DeviceComplianceScriptRuleDataType.class)); });
-            this.put("deviceComplianceScriptRulOperator", (n) -> { currentObject.setDeviceComplianceScriptRulOperator(n.getEnumValue(DeviceComplianceScriptRulOperator.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operand", (n) -> { currentObject.setOperand(n.getStringValue()); });
-            this.put("operator", (n) -> { currentObject.setOperator(n.getEnumValue(Operator.class)); });
-            this.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("dataType", (n) -> { currentObject.setDataType(n.getEnumValue(DataType.class)); });
+        deserializerMap.put("deviceComplianceScriptRuleDataType", (n) -> { currentObject.setDeviceComplianceScriptRuleDataType(n.getEnumValue(DeviceComplianceScriptRuleDataType.class)); });
+        deserializerMap.put("deviceComplianceScriptRulOperator", (n) -> { currentObject.setDeviceComplianceScriptRulOperator(n.getEnumValue(DeviceComplianceScriptRulOperator.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operand", (n) -> { currentObject.setOperand(n.getStringValue()); });
+        deserializerMap.put("operator", (n) -> { currentObject.setOperator(n.getEnumValue(Operator.class)); });
+        deserializerMap.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -129,6 +130,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("dataType", this.getDataType());
@@ -145,6 +147,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the dataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataType(@javax.annotation.Nullable final DataType value) {
         this._dataType = value;
     }
@@ -161,6 +165,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the deviceComplianceScriptRuleDataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceComplianceScriptRuleDataType(@javax.annotation.Nullable final DeviceComplianceScriptRuleDataType value) {
         this._deviceComplianceScriptRuleDataType = value;
     }
@@ -169,6 +174,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the deviceComplianceScriptRulOperator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceComplianceScriptRulOperator(@javax.annotation.Nullable final DeviceComplianceScriptRulOperator value) {
         this._deviceComplianceScriptRulOperator = value;
     }
@@ -177,6 +183,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -185,6 +192,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the operand property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperand(@javax.annotation.Nullable final String value) {
         this._operand = value;
     }
@@ -193,6 +201,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the operator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperator(@javax.annotation.Nullable final Operator value) {
         this._operator = value;
     }
@@ -201,6 +210,7 @@ public class DeviceComplianceScriptRule implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the settingName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingName(@javax.annotation.Nullable final String value) {
         this._settingName = value;
     }

@@ -49,6 +49,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * Instantiates a new trustFrameworkKey and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TrustFrameworkKey() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.trustFrameworkKey");
@@ -118,25 +119,25 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TrustFrameworkKey currentObject = this;
-        return new HashMap<>(17) {{
-            this.put("d", (n) -> { currentObject.setD(n.getStringValue()); });
-            this.put("dp", (n) -> { currentObject.setDp(n.getStringValue()); });
-            this.put("dq", (n) -> { currentObject.setDq(n.getStringValue()); });
-            this.put("e", (n) -> { currentObject.setE(n.getStringValue()); });
-            this.put("exp", (n) -> { currentObject.setExp(n.getLongValue()); });
-            this.put("k", (n) -> { currentObject.setK(n.getStringValue()); });
-            this.put("kid", (n) -> { currentObject.setKid(n.getStringValue()); });
-            this.put("kty", (n) -> { currentObject.setKty(n.getStringValue()); });
-            this.put("n", (n) -> { currentObject.setN(n.getStringValue()); });
-            this.put("nbf", (n) -> { currentObject.setNbf(n.getLongValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("p", (n) -> { currentObject.setP(n.getStringValue()); });
-            this.put("q", (n) -> { currentObject.setQ(n.getStringValue()); });
-            this.put("qi", (n) -> { currentObject.setQi(n.getStringValue()); });
-            this.put("use", (n) -> { currentObject.setUse(n.getStringValue()); });
-            this.put("x5c", (n) -> { currentObject.setX5c(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("x5t", (n) -> { currentObject.setX5t(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(17);
+        deserializerMap.put("d", (n) -> { currentObject.setD(n.getStringValue()); });
+        deserializerMap.put("dp", (n) -> { currentObject.setDp(n.getStringValue()); });
+        deserializerMap.put("dq", (n) -> { currentObject.setDq(n.getStringValue()); });
+        deserializerMap.put("e", (n) -> { currentObject.setE(n.getStringValue()); });
+        deserializerMap.put("exp", (n) -> { currentObject.setExp(n.getLongValue()); });
+        deserializerMap.put("k", (n) -> { currentObject.setK(n.getStringValue()); });
+        deserializerMap.put("kid", (n) -> { currentObject.setKid(n.getStringValue()); });
+        deserializerMap.put("kty", (n) -> { currentObject.setKty(n.getStringValue()); });
+        deserializerMap.put("n", (n) -> { currentObject.setN(n.getStringValue()); });
+        deserializerMap.put("nbf", (n) -> { currentObject.setNbf(n.getLongValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("p", (n) -> { currentObject.setP(n.getStringValue()); });
+        deserializerMap.put("q", (n) -> { currentObject.setQ(n.getStringValue()); });
+        deserializerMap.put("qi", (n) -> { currentObject.setQi(n.getStringValue()); });
+        deserializerMap.put("use", (n) -> { currentObject.setUse(n.getStringValue()); });
+        deserializerMap.put("x5c", (n) -> { currentObject.setX5c(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("x5t", (n) -> { currentObject.setX5t(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the k property value. Symmetric Key for oct key type. Field cannot be read back.
@@ -239,6 +240,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("d", this.getD());
@@ -265,6 +267,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -273,6 +276,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the d property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setD(@javax.annotation.Nullable final String value) {
         this._d = value;
     }
@@ -281,6 +285,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the dp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDp(@javax.annotation.Nullable final String value) {
         this._dp = value;
     }
@@ -289,6 +294,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the dq property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDq(@javax.annotation.Nullable final String value) {
         this._dq = value;
     }
@@ -297,6 +303,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the e property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setE(@javax.annotation.Nullable final String value) {
         this._e = value;
     }
@@ -305,6 +312,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the exp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExp(@javax.annotation.Nullable final Long value) {
         this._exp = value;
     }
@@ -313,6 +321,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the k property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setK(@javax.annotation.Nullable final String value) {
         this._k = value;
     }
@@ -321,6 +330,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the kid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKid(@javax.annotation.Nullable final String value) {
         this._kid = value;
     }
@@ -329,6 +339,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the kty property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKty(@javax.annotation.Nullable final String value) {
         this._kty = value;
     }
@@ -337,6 +348,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the n property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setN(@javax.annotation.Nullable final String value) {
         this._n = value;
     }
@@ -345,6 +357,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the nbf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNbf(@javax.annotation.Nullable final Long value) {
         this._nbf = value;
     }
@@ -353,6 +366,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -361,6 +375,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the p property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setP(@javax.annotation.Nullable final String value) {
         this._p = value;
     }
@@ -369,6 +384,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the q property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQ(@javax.annotation.Nullable final String value) {
         this._q = value;
     }
@@ -377,6 +393,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the qi property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQi(@javax.annotation.Nullable final String value) {
         this._qi = value;
     }
@@ -385,6 +402,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the use property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUse(@javax.annotation.Nullable final String value) {
         this._use = value;
     }
@@ -393,6 +411,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the x5c property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setX5c(@javax.annotation.Nullable final java.util.List<String> value) {
         this._x5c = value;
     }
@@ -401,6 +420,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the x5t property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setX5t(@javax.annotation.Nullable final String value) {
         this._x5t = value;
     }

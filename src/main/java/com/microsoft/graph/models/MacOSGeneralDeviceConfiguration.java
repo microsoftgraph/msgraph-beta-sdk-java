@@ -130,6 +130,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * Instantiates a new MacOSGeneralDeviceConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSGeneralDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSGeneralDeviceConfiguration");
@@ -271,67 +272,67 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MacOSGeneralDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("addingGameCenterFriendsBlocked", (n) -> { currentObject.setAddingGameCenterFriendsBlocked(n.getBooleanValue()); });
-            this.put("airDropBlocked", (n) -> { currentObject.setAirDropBlocked(n.getBooleanValue()); });
-            this.put("appleWatchBlockAutoUnlock", (n) -> { currentObject.setAppleWatchBlockAutoUnlock(n.getBooleanValue()); });
-            this.put("cameraBlocked", (n) -> { currentObject.setCameraBlocked(n.getBooleanValue()); });
-            this.put("classroomAppBlockRemoteScreenObservation", (n) -> { currentObject.setClassroomAppBlockRemoteScreenObservation(n.getBooleanValue()); });
-            this.put("classroomAppForceUnpromptedScreenObservation", (n) -> { currentObject.setClassroomAppForceUnpromptedScreenObservation(n.getBooleanValue()); });
-            this.put("classroomForceAutomaticallyJoinClasses", (n) -> { currentObject.setClassroomForceAutomaticallyJoinClasses(n.getBooleanValue()); });
-            this.put("classroomForceRequestPermissionToLeaveClasses", (n) -> { currentObject.setClassroomForceRequestPermissionToLeaveClasses(n.getBooleanValue()); });
-            this.put("classroomForceUnpromptedAppAndDeviceLock", (n) -> { currentObject.setClassroomForceUnpromptedAppAndDeviceLock(n.getBooleanValue()); });
-            this.put("compliantAppListType", (n) -> { currentObject.setCompliantAppListType(n.getEnumValue(AppListType.class)); });
-            this.put("compliantAppsList", (n) -> { currentObject.setCompliantAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("contentCachingBlocked", (n) -> { currentObject.setContentCachingBlocked(n.getBooleanValue()); });
-            this.put("definitionLookupBlocked", (n) -> { currentObject.setDefinitionLookupBlocked(n.getBooleanValue()); });
-            this.put("emailInDomainSuffixes", (n) -> { currentObject.setEmailInDomainSuffixes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("eraseContentAndSettingsBlocked", (n) -> { currentObject.setEraseContentAndSettingsBlocked(n.getBooleanValue()); });
-            this.put("gameCenterBlocked", (n) -> { currentObject.setGameCenterBlocked(n.getBooleanValue()); });
-            this.put("iCloudBlockActivityContinuation", (n) -> { currentObject.setICloudBlockActivityContinuation(n.getBooleanValue()); });
-            this.put("iCloudBlockAddressBook", (n) -> { currentObject.setICloudBlockAddressBook(n.getBooleanValue()); });
-            this.put("iCloudBlockBookmarks", (n) -> { currentObject.setICloudBlockBookmarks(n.getBooleanValue()); });
-            this.put("iCloudBlockCalendar", (n) -> { currentObject.setICloudBlockCalendar(n.getBooleanValue()); });
-            this.put("iCloudBlockDocumentSync", (n) -> { currentObject.setICloudBlockDocumentSync(n.getBooleanValue()); });
-            this.put("iCloudBlockMail", (n) -> { currentObject.setICloudBlockMail(n.getBooleanValue()); });
-            this.put("iCloudBlockNotes", (n) -> { currentObject.setICloudBlockNotes(n.getBooleanValue()); });
-            this.put("iCloudBlockPhotoLibrary", (n) -> { currentObject.setICloudBlockPhotoLibrary(n.getBooleanValue()); });
-            this.put("iCloudBlockReminders", (n) -> { currentObject.setICloudBlockReminders(n.getBooleanValue()); });
-            this.put("iCloudDesktopAndDocumentsBlocked", (n) -> { currentObject.setICloudDesktopAndDocumentsBlocked(n.getBooleanValue()); });
-            this.put("iCloudPrivateRelayBlocked", (n) -> { currentObject.setICloudPrivateRelayBlocked(n.getBooleanValue()); });
-            this.put("iTunesBlockFileSharing", (n) -> { currentObject.setITunesBlockFileSharing(n.getBooleanValue()); });
-            this.put("iTunesBlockMusicService", (n) -> { currentObject.setITunesBlockMusicService(n.getBooleanValue()); });
-            this.put("keyboardBlockDictation", (n) -> { currentObject.setKeyboardBlockDictation(n.getBooleanValue()); });
-            this.put("keychainBlockCloudSync", (n) -> { currentObject.setKeychainBlockCloudSync(n.getBooleanValue()); });
-            this.put("multiplayerGamingBlocked", (n) -> { currentObject.setMultiplayerGamingBlocked(n.getBooleanValue()); });
-            this.put("passwordBlockAirDropSharing", (n) -> { currentObject.setPasswordBlockAirDropSharing(n.getBooleanValue()); });
-            this.put("passwordBlockAutoFill", (n) -> { currentObject.setPasswordBlockAutoFill(n.getBooleanValue()); });
-            this.put("passwordBlockFingerprintUnlock", (n) -> { currentObject.setPasswordBlockFingerprintUnlock(n.getBooleanValue()); });
-            this.put("passwordBlockModification", (n) -> { currentObject.setPasswordBlockModification(n.getBooleanValue()); });
-            this.put("passwordBlockProximityRequests", (n) -> { currentObject.setPasswordBlockProximityRequests(n.getBooleanValue()); });
-            this.put("passwordBlockSimple", (n) -> { currentObject.setPasswordBlockSimple(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMaximumAttemptCount", (n) -> { currentObject.setPasswordMaximumAttemptCount(n.getIntegerValue()); });
-            this.put("passwordMinimumCharacterSetCount", (n) -> { currentObject.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeLock", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-            this.put("passwordMinutesUntilFailedLoginReset", (n) -> { currentObject.setPasswordMinutesUntilFailedLoginReset(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
-            this.put("privacyAccessControls", (n) -> { currentObject.setPrivacyAccessControls(n.getCollectionOfObjectValues(MacOSPrivacyAccessControlItem::createFromDiscriminatorValue)); });
-            this.put("safariBlockAutofill", (n) -> { currentObject.setSafariBlockAutofill(n.getBooleanValue()); });
-            this.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
-            this.put("softwareUpdateMajorOSDeferredInstallDelayInDays", (n) -> { currentObject.setSoftwareUpdateMajorOSDeferredInstallDelayInDays(n.getIntegerValue()); });
-            this.put("softwareUpdateMinorOSDeferredInstallDelayInDays", (n) -> { currentObject.setSoftwareUpdateMinorOSDeferredInstallDelayInDays(n.getIntegerValue()); });
-            this.put("softwareUpdateNonOSDeferredInstallDelayInDays", (n) -> { currentObject.setSoftwareUpdateNonOSDeferredInstallDelayInDays(n.getIntegerValue()); });
-            this.put("softwareUpdatesEnforcedDelayInDays", (n) -> { currentObject.setSoftwareUpdatesEnforcedDelayInDays(n.getIntegerValue()); });
-            this.put("spotlightBlockInternetResults", (n) -> { currentObject.setSpotlightBlockInternetResults(n.getBooleanValue()); });
-            this.put("touchIdTimeoutInHours", (n) -> { currentObject.setTouchIdTimeoutInHours(n.getIntegerValue()); });
-            this.put("updateDelayPolicy", (n) -> { currentObject.setUpdateDelayPolicy(n.getEnumValue(MacOSSoftwareUpdateDelayPolicy.class)); });
-            this.put("wallpaperModificationBlocked", (n) -> { currentObject.setWallpaperModificationBlocked(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("addingGameCenterFriendsBlocked", (n) -> { currentObject.setAddingGameCenterFriendsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("airDropBlocked", (n) -> { currentObject.setAirDropBlocked(n.getBooleanValue()); });
+        deserializerMap.put("appleWatchBlockAutoUnlock", (n) -> { currentObject.setAppleWatchBlockAutoUnlock(n.getBooleanValue()); });
+        deserializerMap.put("cameraBlocked", (n) -> { currentObject.setCameraBlocked(n.getBooleanValue()); });
+        deserializerMap.put("classroomAppBlockRemoteScreenObservation", (n) -> { currentObject.setClassroomAppBlockRemoteScreenObservation(n.getBooleanValue()); });
+        deserializerMap.put("classroomAppForceUnpromptedScreenObservation", (n) -> { currentObject.setClassroomAppForceUnpromptedScreenObservation(n.getBooleanValue()); });
+        deserializerMap.put("classroomForceAutomaticallyJoinClasses", (n) -> { currentObject.setClassroomForceAutomaticallyJoinClasses(n.getBooleanValue()); });
+        deserializerMap.put("classroomForceRequestPermissionToLeaveClasses", (n) -> { currentObject.setClassroomForceRequestPermissionToLeaveClasses(n.getBooleanValue()); });
+        deserializerMap.put("classroomForceUnpromptedAppAndDeviceLock", (n) -> { currentObject.setClassroomForceUnpromptedAppAndDeviceLock(n.getBooleanValue()); });
+        deserializerMap.put("compliantAppListType", (n) -> { currentObject.setCompliantAppListType(n.getEnumValue(AppListType.class)); });
+        deserializerMap.put("compliantAppsList", (n) -> { currentObject.setCompliantAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentCachingBlocked", (n) -> { currentObject.setContentCachingBlocked(n.getBooleanValue()); });
+        deserializerMap.put("definitionLookupBlocked", (n) -> { currentObject.setDefinitionLookupBlocked(n.getBooleanValue()); });
+        deserializerMap.put("emailInDomainSuffixes", (n) -> { currentObject.setEmailInDomainSuffixes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("eraseContentAndSettingsBlocked", (n) -> { currentObject.setEraseContentAndSettingsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("gameCenterBlocked", (n) -> { currentObject.setGameCenterBlocked(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockActivityContinuation", (n) -> { currentObject.setICloudBlockActivityContinuation(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockAddressBook", (n) -> { currentObject.setICloudBlockAddressBook(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockBookmarks", (n) -> { currentObject.setICloudBlockBookmarks(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockCalendar", (n) -> { currentObject.setICloudBlockCalendar(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockDocumentSync", (n) -> { currentObject.setICloudBlockDocumentSync(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockMail", (n) -> { currentObject.setICloudBlockMail(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockNotes", (n) -> { currentObject.setICloudBlockNotes(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockPhotoLibrary", (n) -> { currentObject.setICloudBlockPhotoLibrary(n.getBooleanValue()); });
+        deserializerMap.put("iCloudBlockReminders", (n) -> { currentObject.setICloudBlockReminders(n.getBooleanValue()); });
+        deserializerMap.put("iCloudDesktopAndDocumentsBlocked", (n) -> { currentObject.setICloudDesktopAndDocumentsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("iCloudPrivateRelayBlocked", (n) -> { currentObject.setICloudPrivateRelayBlocked(n.getBooleanValue()); });
+        deserializerMap.put("iTunesBlockFileSharing", (n) -> { currentObject.setITunesBlockFileSharing(n.getBooleanValue()); });
+        deserializerMap.put("iTunesBlockMusicService", (n) -> { currentObject.setITunesBlockMusicService(n.getBooleanValue()); });
+        deserializerMap.put("keyboardBlockDictation", (n) -> { currentObject.setKeyboardBlockDictation(n.getBooleanValue()); });
+        deserializerMap.put("keychainBlockCloudSync", (n) -> { currentObject.setKeychainBlockCloudSync(n.getBooleanValue()); });
+        deserializerMap.put("multiplayerGamingBlocked", (n) -> { currentObject.setMultiplayerGamingBlocked(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockAirDropSharing", (n) -> { currentObject.setPasswordBlockAirDropSharing(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockAutoFill", (n) -> { currentObject.setPasswordBlockAutoFill(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockFingerprintUnlock", (n) -> { currentObject.setPasswordBlockFingerprintUnlock(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockModification", (n) -> { currentObject.setPasswordBlockModification(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockProximityRequests", (n) -> { currentObject.setPasswordBlockProximityRequests(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockSimple", (n) -> { currentObject.setPasswordBlockSimple(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMaximumAttemptCount", (n) -> { currentObject.setPasswordMaximumAttemptCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumCharacterSetCount", (n) -> { currentObject.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeLock", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesUntilFailedLoginReset", (n) -> { currentObject.setPasswordMinutesUntilFailedLoginReset(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
+        deserializerMap.put("privacyAccessControls", (n) -> { currentObject.setPrivacyAccessControls(n.getCollectionOfObjectValues(MacOSPrivacyAccessControlItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("safariBlockAutofill", (n) -> { currentObject.setSafariBlockAutofill(n.getBooleanValue()); });
+        deserializerMap.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
+        deserializerMap.put("softwareUpdateMajorOSDeferredInstallDelayInDays", (n) -> { currentObject.setSoftwareUpdateMajorOSDeferredInstallDelayInDays(n.getIntegerValue()); });
+        deserializerMap.put("softwareUpdateMinorOSDeferredInstallDelayInDays", (n) -> { currentObject.setSoftwareUpdateMinorOSDeferredInstallDelayInDays(n.getIntegerValue()); });
+        deserializerMap.put("softwareUpdateNonOSDeferredInstallDelayInDays", (n) -> { currentObject.setSoftwareUpdateNonOSDeferredInstallDelayInDays(n.getIntegerValue()); });
+        deserializerMap.put("softwareUpdatesEnforcedDelayInDays", (n) -> { currentObject.setSoftwareUpdatesEnforcedDelayInDays(n.getIntegerValue()); });
+        deserializerMap.put("spotlightBlockInternetResults", (n) -> { currentObject.setSpotlightBlockInternetResults(n.getBooleanValue()); });
+        deserializerMap.put("touchIdTimeoutInHours", (n) -> { currentObject.setTouchIdTimeoutInHours(n.getIntegerValue()); });
+        deserializerMap.put("updateDelayPolicy", (n) -> { currentObject.setUpdateDelayPolicy(n.getEnumValue(MacOSSoftwareUpdateDelayPolicy.class)); });
+        deserializerMap.put("wallpaperModificationBlocked", (n) -> { currentObject.setWallpaperModificationBlocked(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the gameCenterBlocked property value. Yes disables Game Center, and the Game Center icon is removed from the Home screen. Available for devices running macOS versions 10.13 and later.
@@ -690,6 +691,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -758,6 +760,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the addingGameCenterFriendsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddingGameCenterFriendsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._addingGameCenterFriendsBlocked = value;
     }
@@ -766,6 +769,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the airDropBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAirDropBlocked(@javax.annotation.Nullable final Boolean value) {
         this._airDropBlocked = value;
     }
@@ -774,6 +778,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the appleWatchBlockAutoUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppleWatchBlockAutoUnlock(@javax.annotation.Nullable final Boolean value) {
         this._appleWatchBlockAutoUnlock = value;
     }
@@ -782,6 +787,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the cameraBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCameraBlocked(@javax.annotation.Nullable final Boolean value) {
         this._cameraBlocked = value;
     }
@@ -790,6 +796,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the classroomAppBlockRemoteScreenObservation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassroomAppBlockRemoteScreenObservation(@javax.annotation.Nullable final Boolean value) {
         this._classroomAppBlockRemoteScreenObservation = value;
     }
@@ -798,6 +805,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the classroomAppForceUnpromptedScreenObservation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassroomAppForceUnpromptedScreenObservation(@javax.annotation.Nullable final Boolean value) {
         this._classroomAppForceUnpromptedScreenObservation = value;
     }
@@ -806,6 +814,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the classroomForceAutomaticallyJoinClasses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassroomForceAutomaticallyJoinClasses(@javax.annotation.Nullable final Boolean value) {
         this._classroomForceAutomaticallyJoinClasses = value;
     }
@@ -814,6 +823,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the classroomForceRequestPermissionToLeaveClasses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassroomForceRequestPermissionToLeaveClasses(@javax.annotation.Nullable final Boolean value) {
         this._classroomForceRequestPermissionToLeaveClasses = value;
     }
@@ -822,6 +832,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the classroomForceUnpromptedAppAndDeviceLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassroomForceUnpromptedAppAndDeviceLock(@javax.annotation.Nullable final Boolean value) {
         this._classroomForceUnpromptedAppAndDeviceLock = value;
     }
@@ -830,6 +841,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the compliantAppListType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantAppListType(@javax.annotation.Nullable final AppListType value) {
         this._compliantAppListType = value;
     }
@@ -838,6 +850,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the compliantAppsList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantAppsList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._compliantAppsList = value;
     }
@@ -846,6 +859,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the contentCachingBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingBlocked(@javax.annotation.Nullable final Boolean value) {
         this._contentCachingBlocked = value;
     }
@@ -854,6 +868,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the definitionLookupBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitionLookupBlocked(@javax.annotation.Nullable final Boolean value) {
         this._definitionLookupBlocked = value;
     }
@@ -862,6 +877,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the emailInDomainSuffixes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailInDomainSuffixes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._emailInDomainSuffixes = value;
     }
@@ -870,6 +886,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the eraseContentAndSettingsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEraseContentAndSettingsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._eraseContentAndSettingsBlocked = value;
     }
@@ -878,6 +895,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the gameCenterBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGameCenterBlocked(@javax.annotation.Nullable final Boolean value) {
         this._gameCenterBlocked = value;
     }
@@ -886,6 +904,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the iCloudBlockActivityContinuation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockActivityContinuation(@javax.annotation.Nullable final Boolean value) {
         this._iCloudBlockActivityContinuation = value;
     }
@@ -894,6 +913,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the iCloudBlockAddressBook property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockAddressBook(@javax.annotation.Nullable final Boolean value) {
         this._iCloudBlockAddressBook = value;
     }
@@ -902,6 +922,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the iCloudBlockBookmarks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockBookmarks(@javax.annotation.Nullable final Boolean value) {
         this._iCloudBlockBookmarks = value;
     }
@@ -910,6 +931,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the iCloudBlockCalendar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockCalendar(@javax.annotation.Nullable final Boolean value) {
         this._iCloudBlockCalendar = value;
     }
@@ -918,6 +940,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the iCloudBlockDocumentSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockDocumentSync(@javax.annotation.Nullable final Boolean value) {
         this._iCloudBlockDocumentSync = value;
     }
@@ -926,6 +949,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the iCloudBlockMail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockMail(@javax.annotation.Nullable final Boolean value) {
         this._iCloudBlockMail = value;
     }
@@ -934,6 +958,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the iCloudBlockNotes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockNotes(@javax.annotation.Nullable final Boolean value) {
         this._iCloudBlockNotes = value;
     }
@@ -942,6 +967,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the iCloudBlockPhotoLibrary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockPhotoLibrary(@javax.annotation.Nullable final Boolean value) {
         this._iCloudBlockPhotoLibrary = value;
     }
@@ -950,6 +976,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the iCloudBlockReminders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudBlockReminders(@javax.annotation.Nullable final Boolean value) {
         this._iCloudBlockReminders = value;
     }
@@ -958,6 +985,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the iCloudDesktopAndDocumentsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudDesktopAndDocumentsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._iCloudDesktopAndDocumentsBlocked = value;
     }
@@ -966,6 +994,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the iCloudPrivateRelayBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setICloudPrivateRelayBlocked(@javax.annotation.Nullable final Boolean value) {
         this._iCloudPrivateRelayBlocked = value;
     }
@@ -974,6 +1003,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the iTunesBlockFileSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setITunesBlockFileSharing(@javax.annotation.Nullable final Boolean value) {
         this._iTunesBlockFileSharing = value;
     }
@@ -982,6 +1012,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the iTunesBlockMusicService property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setITunesBlockMusicService(@javax.annotation.Nullable final Boolean value) {
         this._iTunesBlockMusicService = value;
     }
@@ -990,6 +1021,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the keyboardBlockDictation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyboardBlockDictation(@javax.annotation.Nullable final Boolean value) {
         this._keyboardBlockDictation = value;
     }
@@ -998,6 +1030,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the keychainBlockCloudSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeychainBlockCloudSync(@javax.annotation.Nullable final Boolean value) {
         this._keychainBlockCloudSync = value;
     }
@@ -1006,6 +1039,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the multiplayerGamingBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultiplayerGamingBlocked(@javax.annotation.Nullable final Boolean value) {
         this._multiplayerGamingBlocked = value;
     }
@@ -1014,6 +1048,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordBlockAirDropSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockAirDropSharing(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockAirDropSharing = value;
     }
@@ -1022,6 +1057,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordBlockAutoFill property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockAutoFill(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockAutoFill = value;
     }
@@ -1030,6 +1066,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordBlockFingerprintUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockFingerprintUnlock(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockFingerprintUnlock = value;
     }
@@ -1038,6 +1075,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordBlockModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockModification(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockModification = value;
     }
@@ -1046,6 +1084,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordBlockProximityRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockProximityRequests(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockProximityRequests = value;
     }
@@ -1054,6 +1093,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordBlockSimple property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockSimple(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockSimple = value;
     }
@@ -1062,6 +1102,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -1070,6 +1111,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordMaximumAttemptCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMaximumAttemptCount(@javax.annotation.Nullable final Integer value) {
         this._passwordMaximumAttemptCount = value;
     }
@@ -1078,6 +1120,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumCharacterSetCount = value;
     }
@@ -1086,6 +1129,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -1094,6 +1138,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeLock = value;
     }
@@ -1102,6 +1147,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
@@ -1110,6 +1156,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordMinutesUntilFailedLoginReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesUntilFailedLoginReset(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesUntilFailedLoginReset = value;
     }
@@ -1118,6 +1165,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordBlockCount = value;
     }
@@ -1126,6 +1174,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequired = value;
     }
@@ -1134,6 +1183,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -1142,6 +1192,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the privacyAccessControls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyAccessControls(@javax.annotation.Nullable final java.util.List<MacOSPrivacyAccessControlItem> value) {
         this._privacyAccessControls = value;
     }
@@ -1150,6 +1201,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the safariBlockAutofill property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSafariBlockAutofill(@javax.annotation.Nullable final Boolean value) {
         this._safariBlockAutofill = value;
     }
@@ -1158,6 +1210,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the screenCaptureBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
         this._screenCaptureBlocked = value;
     }
@@ -1166,6 +1219,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the softwareUpdateMajorOSDeferredInstallDelayInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareUpdateMajorOSDeferredInstallDelayInDays(@javax.annotation.Nullable final Integer value) {
         this._softwareUpdateMajorOSDeferredInstallDelayInDays = value;
     }
@@ -1174,6 +1228,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the softwareUpdateMinorOSDeferredInstallDelayInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareUpdateMinorOSDeferredInstallDelayInDays(@javax.annotation.Nullable final Integer value) {
         this._softwareUpdateMinorOSDeferredInstallDelayInDays = value;
     }
@@ -1182,6 +1237,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the softwareUpdateNonOSDeferredInstallDelayInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareUpdateNonOSDeferredInstallDelayInDays(@javax.annotation.Nullable final Integer value) {
         this._softwareUpdateNonOSDeferredInstallDelayInDays = value;
     }
@@ -1190,6 +1246,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the softwareUpdatesEnforcedDelayInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareUpdatesEnforcedDelayInDays(@javax.annotation.Nullable final Integer value) {
         this._softwareUpdatesEnforcedDelayInDays = value;
     }
@@ -1198,6 +1255,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the spotlightBlockInternetResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpotlightBlockInternetResults(@javax.annotation.Nullable final Boolean value) {
         this._spotlightBlockInternetResults = value;
     }
@@ -1206,6 +1264,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the touchIdTimeoutInHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTouchIdTimeoutInHours(@javax.annotation.Nullable final Integer value) {
         this._touchIdTimeoutInHours = value;
     }
@@ -1214,6 +1273,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the updateDelayPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateDelayPolicy(@javax.annotation.Nullable final MacOSSoftwareUpdateDelayPolicy value) {
         this._updateDelayPolicy = value;
     }
@@ -1222,6 +1282,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
      * @param value Value to set for the wallpaperModificationBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWallpaperModificationBlocked(@javax.annotation.Nullable final Boolean value) {
         this._wallpaperModificationBlocked = value;
     }

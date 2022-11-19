@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class DelegatedAdminRelationshipRequest extends Entity implements Parsable {
     /** The action property */
     private DelegatedAdminRelationshipRequestAction _action;
@@ -22,6 +22,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
      * Instantiates a new delegatedAdminRelationshipRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DelegatedAdminRelationshipRequest() {
         super();
         this.setOdataType("#microsoft.graph.delegatedAdminRelationshipRequest");
@@ -59,12 +60,12 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DelegatedAdminRelationshipRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(DelegatedAdminRelationshipRequestAction.class)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DelegatedAdminRelationshipRequestStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("action", (n) -> { currentObject.setAction(n.getEnumValue(DelegatedAdminRelationshipRequestAction.class)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DelegatedAdminRelationshipRequestStatus.class)); });
+        return deserializerMap
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time in ISO 8601 format and UTC time when this relationship request was last modified. Read-only.
@@ -87,6 +88,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -100,6 +102,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
      * @param value Value to set for the action property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAction(@javax.annotation.Nullable final DelegatedAdminRelationshipRequestAction value) {
         this._action = value;
     }
@@ -108,6 +111,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -116,6 +120,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -124,6 +129,7 @@ public class DelegatedAdminRelationshipRequest extends Entity implements Parsabl
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final DelegatedAdminRelationshipRequestStatus value) {
         this._status = value;
     }

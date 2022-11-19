@@ -42,6 +42,7 @@ public class BaseItem extends Entity implements Parsable {
      * Instantiates a new baseItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BaseItem() {
         super();
         this.setOdataType("#microsoft.graph.baseItem");
@@ -116,19 +117,19 @@ public class BaseItem extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BaseItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdByUser", (n) -> { currentObject.setCreatedByUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("eTag", (n) -> { currentObject.setETag(n.getStringValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedByUser", (n) -> { currentObject.setLastModifiedByUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("parentReference", (n) -> { currentObject.setParentReference(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdByUser", (n) -> { currentObject.setCreatedByUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("eTag", (n) -> { currentObject.setETag(n.getStringValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedByUser", (n) -> { currentObject.setLastModifiedByUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("parentReference", (n) -> { currentObject.setParentReference(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
+        deserializerMap.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the lastModifiedBy property value. Identity of the user, device, and application which last modified the item. Read-only.
@@ -183,6 +184,7 @@ public class BaseItem extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -203,6 +205,7 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -211,6 +214,7 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the createdByUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedByUser(@javax.annotation.Nullable final User value) {
         this._createdByUser = value;
     }
@@ -219,6 +223,7 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -227,6 +232,7 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -235,6 +241,7 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the eTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setETag(@javax.annotation.Nullable final String value) {
         this._eTag = value;
     }
@@ -243,6 +250,7 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -251,6 +259,7 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedByUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedByUser(@javax.annotation.Nullable final User value) {
         this._lastModifiedByUser = value;
     }
@@ -259,6 +268,7 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -267,6 +277,7 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -275,6 +286,7 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the parentReference property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentReference(@javax.annotation.Nullable final ItemReference value) {
         this._parentReference = value;
     }
@@ -283,6 +295,7 @@ public class BaseItem extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

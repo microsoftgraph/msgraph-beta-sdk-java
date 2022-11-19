@@ -27,6 +27,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new userTrainingEventInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserTrainingEventInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.userTrainingEventInfo");
@@ -64,14 +65,14 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserTrainingEventInfo currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("latestTrainingStatus", (n) -> { currentObject.setLatestTrainingStatus(n.getEnumValue(TrainingStatus.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("trainingAssignedProperties", (n) -> { currentObject.setTrainingAssignedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
-            this.put("trainingCompletedProperties", (n) -> { currentObject.setTrainingCompletedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
-            this.put("trainingUpdatedProperties", (n) -> { currentObject.setTrainingUpdatedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("latestTrainingStatus", (n) -> { currentObject.setLatestTrainingStatus(n.getEnumValue(TrainingStatus.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("trainingAssignedProperties", (n) -> { currentObject.setTrainingAssignedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("trainingCompletedProperties", (n) -> { currentObject.setTrainingCompletedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("trainingUpdatedProperties", (n) -> { currentObject.setTrainingUpdatedProperties(n.getObjectValue(UserTrainingContentEventInfo::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the latestTrainingStatus property value. Latest status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
@@ -118,6 +119,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -133,6 +135,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +144,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -149,6 +153,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the latestTrainingStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLatestTrainingStatus(@javax.annotation.Nullable final TrainingStatus value) {
         this._latestTrainingStatus = value;
     }
@@ -157,6 +162,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -165,6 +171,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the trainingAssignedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrainingAssignedProperties(@javax.annotation.Nullable final UserTrainingContentEventInfo value) {
         this._trainingAssignedProperties = value;
     }
@@ -173,6 +180,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the trainingCompletedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrainingCompletedProperties(@javax.annotation.Nullable final UserTrainingContentEventInfo value) {
         this._trainingCompletedProperties = value;
     }
@@ -181,6 +189,7 @@ public class UserTrainingEventInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the trainingUpdatedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrainingUpdatedProperties(@javax.annotation.Nullable final UserTrainingContentEventInfo value) {
         this._trainingUpdatedProperties = value;
     }

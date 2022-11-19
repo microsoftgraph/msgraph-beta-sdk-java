@@ -12,9 +12,10 @@ public class Windows extends Entity implements Parsable {
     /** Entity that acts as a container for the functionality of the Windows Update for Business deployment service. Read-only. */
     private Updates _updates;
     /**
-     * Instantiates a new windows and sets the default values.
+     * Instantiates a new Windows and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.windows");
@@ -22,7 +23,7 @@ public class Windows extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a windows
+     * @return a Windows
      */
     @javax.annotation.Nonnull
     public static Windows createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -36,9 +37,9 @@ public class Windows extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Windows currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("updates", (n) -> { currentObject.setUpdates(n.getObjectValue(Updates::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("updates", (n) -> { currentObject.setUpdates(n.getObjectValue(Updates::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the updates property value. Entity that acts as a container for the functionality of the Windows Update for Business deployment service. Read-only.
@@ -53,6 +54,7 @@ public class Windows extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class Windows extends Entity implements Parsable {
      * @param value Value to set for the updates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdates(@javax.annotation.Nullable final Updates value) {
         this._updates = value;
     }

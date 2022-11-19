@@ -25,6 +25,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * Instantiates a new exactDataMatchStoreColumn and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExactDataMatchStoreColumn() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.exactDataMatchStoreColumn");
@@ -54,13 +55,13 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ExactDataMatchStoreColumn currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("ignoredDelimiters", (n) -> { currentObject.setIgnoredDelimiters(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isCaseInsensitive", (n) -> { currentObject.setIsCaseInsensitive(n.getBooleanValue()); });
-            this.put("isSearchable", (n) -> { currentObject.setIsSearchable(n.getBooleanValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("ignoredDelimiters", (n) -> { currentObject.setIgnoredDelimiters(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isCaseInsensitive", (n) -> { currentObject.setIsCaseInsensitive(n.getBooleanValue()); });
+        deserializerMap.put("isSearchable", (n) -> { currentObject.setIsSearchable(n.getBooleanValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the ignoredDelimiters property value. The ignoredDelimiters property
@@ -107,6 +108,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("ignoredDelimiters", this.getIgnoredDelimiters());
@@ -121,6 +123,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * @param value Value to set for the ignoredDelimiters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIgnoredDelimiters(@javax.annotation.Nullable final java.util.List<String> value) {
         this._ignoredDelimiters = value;
     }
@@ -137,6 +141,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * @param value Value to set for the isCaseInsensitive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCaseInsensitive(@javax.annotation.Nullable final Boolean value) {
         this._isCaseInsensitive = value;
     }
@@ -145,6 +150,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * @param value Value to set for the isSearchable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSearchable(@javax.annotation.Nullable final Boolean value) {
         this._isSearchable = value;
     }
@@ -153,6 +159,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -161,6 +168,7 @@ public class ExactDataMatchStoreColumn implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

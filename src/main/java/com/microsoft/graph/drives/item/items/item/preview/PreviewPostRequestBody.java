@@ -26,6 +26,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new previewPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PreviewPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -70,13 +71,13 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PreviewPostRequestBody currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("allowEdit", (n) -> { currentObject.setAllowEdit(n.getBooleanValue()); });
-            this.put("chromeless", (n) -> { currentObject.setChromeless(n.getBooleanValue()); });
-            this.put("page", (n) -> { currentObject.setPage(n.getStringValue()); });
-            this.put("viewer", (n) -> { currentObject.setViewer(n.getStringValue()); });
-            this.put("zoom", (n) -> { currentObject.setZoom(n.getDoubleValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("allowEdit", (n) -> { currentObject.setAllowEdit(n.getBooleanValue()); });
+        deserializerMap.put("chromeless", (n) -> { currentObject.setChromeless(n.getBooleanValue()); });
+        deserializerMap.put("page", (n) -> { currentObject.setPage(n.getStringValue()); });
+        deserializerMap.put("viewer", (n) -> { currentObject.setViewer(n.getStringValue()); });
+        deserializerMap.put("zoom", (n) -> { currentObject.setZoom(n.getDoubleValue()); });
+        return deserializerMap
     }
     /**
      * Gets the page property value. The page property
@@ -107,6 +108,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowEdit", this.getAllowEdit());
@@ -121,6 +123,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowEdit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowEdit(@javax.annotation.Nullable final Boolean value) {
         this._allowEdit = value;
     }
@@ -137,6 +141,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the chromeless property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChromeless(@javax.annotation.Nullable final Boolean value) {
         this._chromeless = value;
     }
@@ -145,6 +150,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the page property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPage(@javax.annotation.Nullable final String value) {
         this._page = value;
     }
@@ -153,6 +159,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the viewer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setViewer(@javax.annotation.Nullable final String value) {
         this._viewer = value;
     }
@@ -161,6 +168,7 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the zoom property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setZoom(@javax.annotation.Nullable final Double value) {
         this._zoom = value;
     }

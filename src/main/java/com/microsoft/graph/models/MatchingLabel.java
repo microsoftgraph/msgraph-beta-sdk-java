@@ -37,6 +37,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * Instantiates a new matchingLabel and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MatchingLabel() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.matchingLabel");
@@ -90,19 +91,19 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MatchingLabel currentObject = this;
-        return new HashMap<>(11) {{
-            this.put("applicationMode", (n) -> { currentObject.setApplicationMode(n.getEnumValue(ApplicationMode.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("isEndpointProtectionEnabled", (n) -> { currentObject.setIsEndpointProtectionEnabled(n.getBooleanValue()); });
-            this.put("labelActions", (n) -> { currentObject.setLabelActions(n.getCollectionOfObjectValues(LabelActionBase::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("policyTip", (n) -> { currentObject.setPolicyTip(n.getStringValue()); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("toolTip", (n) -> { currentObject.setToolTip(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(11);
+        deserializerMap.put("applicationMode", (n) -> { currentObject.setApplicationMode(n.getEnumValue(ApplicationMode.class)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        deserializerMap.put("isEndpointProtectionEnabled", (n) -> { currentObject.setIsEndpointProtectionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("labelActions", (n) -> { currentObject.setLabelActions(n.getCollectionOfObjectValues(LabelActionBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("policyTip", (n) -> { currentObject.setPolicyTip(n.getStringValue()); });
+        deserializerMap.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("toolTip", (n) -> { currentObject.setToolTip(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the id property value. The id property
@@ -173,6 +174,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("applicationMode", this.getApplicationMode());
@@ -193,6 +195,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -201,6 +204,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the applicationMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationMode(@javax.annotation.Nullable final ApplicationMode value) {
         this._applicationMode = value;
     }
@@ -209,6 +213,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -217,6 +222,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -225,6 +231,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -233,6 +240,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isEndpointProtectionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEndpointProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEndpointProtectionEnabled = value;
     }
@@ -241,6 +249,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the labelActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabelActions(@javax.annotation.Nullable final java.util.List<LabelActionBase> value) {
         this._labelActions = value;
     }
@@ -249,6 +258,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -257,6 +267,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -265,6 +276,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the policyTip property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyTip(@javax.annotation.Nullable final String value) {
         this._policyTip = value;
     }
@@ -273,6 +285,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }
@@ -281,6 +294,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the toolTip property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setToolTip(@javax.annotation.Nullable final String value) {
         this._toolTip = value;
     }

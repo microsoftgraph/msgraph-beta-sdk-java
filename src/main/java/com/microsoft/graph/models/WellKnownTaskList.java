@@ -14,6 +14,7 @@ public class WellKnownTaskList extends BaseTaskList implements Parsable {
      * Instantiates a new WellKnownTaskList and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WellKnownTaskList() {
         super();
         this.setOdataType("#microsoft.graph.wellKnownTaskList");
@@ -35,9 +36,9 @@ public class WellKnownTaskList extends BaseTaskList implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WellKnownTaskList currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("wellKnownListName", (n) -> { currentObject.setWellKnownListName(n.getEnumValue(WellKnownListName_v2.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("wellKnownListName", (n) -> { currentObject.setWellKnownListName(n.getEnumValue(WellKnownListName_v2.class)); });
+        return deserializerMap
     }
     /**
      * Gets the wellKnownListName property value. The wellKnownListName property
@@ -52,6 +53,7 @@ public class WellKnownTaskList extends BaseTaskList implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class WellKnownTaskList extends BaseTaskList implements Parsable {
      * @param value Value to set for the wellKnownListName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWellKnownListName(@javax.annotation.Nullable final WellKnownListName_v2 value) {
         this._wellKnownListName = value;
     }

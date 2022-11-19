@@ -32,6 +32,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * Instantiates a new managedDeviceComplianceTrend and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedDeviceComplianceTrend() {
         super();
         this.setOdataType("#microsoft.graph.managedTenants.managedDeviceComplianceTrend");
@@ -85,17 +86,17 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedDeviceComplianceTrend currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
-            this.put("configManagerDeviceCount", (n) -> { currentObject.setConfigManagerDeviceCount(n.getIntegerValue()); });
-            this.put("countDateTime", (n) -> { currentObject.setCountDateTime(n.getStringValue()); });
-            this.put("errorDeviceCount", (n) -> { currentObject.setErrorDeviceCount(n.getIntegerValue()); });
-            this.put("inGracePeriodDeviceCount", (n) -> { currentObject.setInGracePeriodDeviceCount(n.getIntegerValue()); });
-            this.put("noncompliantDeviceCount", (n) -> { currentObject.setNoncompliantDeviceCount(n.getIntegerValue()); });
-            this.put("tenantDisplayName", (n) -> { currentObject.setTenantDisplayName(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("unknownDeviceCount", (n) -> { currentObject.setUnknownDeviceCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("configManagerDeviceCount", (n) -> { currentObject.setConfigManagerDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("countDateTime", (n) -> { currentObject.setCountDateTime(n.getStringValue()); });
+        deserializerMap.put("errorDeviceCount", (n) -> { currentObject.setErrorDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("inGracePeriodDeviceCount", (n) -> { currentObject.setInGracePeriodDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("noncompliantDeviceCount", (n) -> { currentObject.setNoncompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("tenantDisplayName", (n) -> { currentObject.setTenantDisplayName(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
+        deserializerMap.put("unknownDeviceCount", (n) -> { currentObject.setUnknownDeviceCount(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the inGracePeriodDeviceCount property value. The number of devices that are in a grace period status. Required. Read-only.
@@ -142,6 +143,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,6 +162,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the compliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._compliantDeviceCount = value;
     }
@@ -168,6 +171,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the configManagerDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigManagerDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._configManagerDeviceCount = value;
     }
@@ -176,6 +180,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the countDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountDateTime(@javax.annotation.Nullable final String value) {
         this._countDateTime = value;
     }
@@ -184,6 +189,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the errorDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._errorDeviceCount = value;
     }
@@ -192,6 +198,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the inGracePeriodDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInGracePeriodDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._inGracePeriodDeviceCount = value;
     }
@@ -200,6 +207,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the noncompliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNoncompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._noncompliantDeviceCount = value;
     }
@@ -208,6 +216,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
         this._tenantDisplayName = value;
     }
@@ -216,6 +225,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
@@ -224,6 +234,7 @@ public class ManagedDeviceComplianceTrend extends Entity implements Parsable {
      * @param value Value to set for the unknownDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnknownDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._unknownDeviceCount = value;
     }

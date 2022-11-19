@@ -36,6 +36,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      * Instantiates a new mobileAppContentFile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppContentFile() {
         super();
         this.setOdataType("#microsoft.graph.mobileAppContentFile");
@@ -81,19 +82,19 @@ public class MobileAppContentFile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppContentFile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("azureStorageUri", (n) -> { currentObject.setAzureStorageUri(n.getStringValue()); });
-            this.put("azureStorageUriExpirationDateTime", (n) -> { currentObject.setAzureStorageUriExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("isCommitted", (n) -> { currentObject.setIsCommitted(n.getBooleanValue()); });
-            this.put("isDependency", (n) -> { currentObject.setIsDependency(n.getBooleanValue()); });
-            this.put("isFrameworkFile", (n) -> { currentObject.setIsFrameworkFile(n.getBooleanValue()); });
-            this.put("manifest", (n) -> { currentObject.setManifest(n.getByteArrayValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
-            this.put("sizeEncrypted", (n) -> { currentObject.setSizeEncrypted(n.getLongValue()); });
-            this.put("uploadState", (n) -> { currentObject.setUploadState(n.getEnumValue(MobileAppContentFileUploadState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("azureStorageUri", (n) -> { currentObject.setAzureStorageUri(n.getStringValue()); });
+        deserializerMap.put("azureStorageUriExpirationDateTime", (n) -> { currentObject.setAzureStorageUriExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("isCommitted", (n) -> { currentObject.setIsCommitted(n.getBooleanValue()); });
+        deserializerMap.put("isDependency", (n) -> { currentObject.setIsDependency(n.getBooleanValue()); });
+        deserializerMap.put("isFrameworkFile", (n) -> { currentObject.setIsFrameworkFile(n.getBooleanValue()); });
+        deserializerMap.put("manifest", (n) -> { currentObject.setManifest(n.getByteArrayValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
+        deserializerMap.put("sizeEncrypted", (n) -> { currentObject.setSizeEncrypted(n.getLongValue()); });
+        deserializerMap.put("uploadState", (n) -> { currentObject.setUploadState(n.getEnumValue(MobileAppContentFileUploadState.class)); });
+        return deserializerMap
     }
     /**
      * Gets the isCommitted property value. A value indicating whether the file is committed.
@@ -164,6 +165,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -184,6 +186,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      * @param value Value to set for the azureStorageUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureStorageUri(@javax.annotation.Nullable final String value) {
         this._azureStorageUri = value;
     }
@@ -192,6 +195,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      * @param value Value to set for the azureStorageUriExpirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureStorageUriExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._azureStorageUriExpirationDateTime = value;
     }
@@ -200,6 +204,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -208,6 +213,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      * @param value Value to set for the isCommitted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCommitted(@javax.annotation.Nullable final Boolean value) {
         this._isCommitted = value;
     }
@@ -216,6 +222,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      * @param value Value to set for the isDependency property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDependency(@javax.annotation.Nullable final Boolean value) {
         this._isDependency = value;
     }
@@ -224,6 +231,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      * @param value Value to set for the isFrameworkFile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsFrameworkFile(@javax.annotation.Nullable final Boolean value) {
         this._isFrameworkFile = value;
     }
@@ -232,6 +240,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      * @param value Value to set for the manifest property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManifest(@javax.annotation.Nullable final byte[] value) {
         this._manifest = value;
     }
@@ -240,6 +249,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -248,6 +258,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Long value) {
         this._size = value;
     }
@@ -256,6 +267,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      * @param value Value to set for the sizeEncrypted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSizeEncrypted(@javax.annotation.Nullable final Long value) {
         this._sizeEncrypted = value;
     }
@@ -264,6 +276,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
      * @param value Value to set for the uploadState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUploadState(@javax.annotation.Nullable final MobileAppContentFileUploadState value) {
         this._uploadState = value;
     }

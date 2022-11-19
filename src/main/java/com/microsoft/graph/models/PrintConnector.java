@@ -30,6 +30,7 @@ public class PrintConnector extends Entity implements Parsable {
      * Instantiates a new printConnector and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrintConnector() {
         super();
         this.setOdataType("#microsoft.graph.printConnector");
@@ -75,16 +76,16 @@ public class PrintConnector extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrintConnector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appVersion", (n) -> { currentObject.setAppVersion(n.getStringValue()); });
-            this.put("deviceHealth", (n) -> { currentObject.setDeviceHealth(n.getObjectValue(DeviceHealth::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("fullyQualifiedDomainName", (n) -> { currentObject.setFullyQualifiedDomainName(n.getStringValue()); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(PrinterLocation::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("operatingSystem", (n) -> { currentObject.setOperatingSystem(n.getStringValue()); });
-            this.put("registeredDateTime", (n) -> { currentObject.setRegisteredDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appVersion", (n) -> { currentObject.setAppVersion(n.getStringValue()); });
+        deserializerMap.put("deviceHealth", (n) -> { currentObject.setDeviceHealth(n.getObjectValue(DeviceHealth::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("fullyQualifiedDomainName", (n) -> { currentObject.setFullyQualifiedDomainName(n.getStringValue()); });
+        deserializerMap.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(PrinterLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("operatingSystem", (n) -> { currentObject.setOperatingSystem(n.getStringValue()); });
+        deserializerMap.put("registeredDateTime", (n) -> { currentObject.setRegisteredDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap
     }
     /**
      * Gets the fullyQualifiedDomainName property value. The connector machine's hostname.
@@ -131,6 +132,7 @@ public class PrintConnector extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -148,6 +150,7 @@ public class PrintConnector extends Entity implements Parsable {
      * @param value Value to set for the appVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppVersion(@javax.annotation.Nullable final String value) {
         this._appVersion = value;
     }
@@ -156,6 +159,7 @@ public class PrintConnector extends Entity implements Parsable {
      * @param value Value to set for the deviceHealth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceHealth(@javax.annotation.Nullable final DeviceHealth value) {
         this._deviceHealth = value;
     }
@@ -164,6 +168,7 @@ public class PrintConnector extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -172,6 +177,7 @@ public class PrintConnector extends Entity implements Parsable {
      * @param value Value to set for the fullyQualifiedDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFullyQualifiedDomainName(@javax.annotation.Nullable final String value) {
         this._fullyQualifiedDomainName = value;
     }
@@ -180,6 +186,7 @@ public class PrintConnector extends Entity implements Parsable {
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final PrinterLocation value) {
         this._location = value;
     }
@@ -188,6 +195,7 @@ public class PrintConnector extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -196,6 +204,7 @@ public class PrintConnector extends Entity implements Parsable {
      * @param value Value to set for the operatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatingSystem(@javax.annotation.Nullable final String value) {
         this._operatingSystem = value;
     }
@@ -204,6 +213,7 @@ public class PrintConnector extends Entity implements Parsable {
      * @param value Value to set for the registeredDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegisteredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._registeredDateTime = value;
     }

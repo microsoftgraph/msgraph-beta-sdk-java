@@ -20,15 +20,15 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     private OffsetDateTime _compromisedDateTime;
     /** Number of trainings in progress by a user in an attack simulation and training campaign. */
     private Integer _inProgressTrainingsCount;
-    /** Flag representing if user was compromised in an attack simulation and training campaign. */
+    /** Indicates whether a user was compromised in an attack simulation and training campaign. */
     private Boolean _isCompromised;
     /** The OdataType property */
     private String _odataType;
-    /** Date and time when user reported delivered payload as phish in the attack simulation and training campaign. */
+    /** Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign. */
     private OffsetDateTime _reportedPhishDateTime;
     /** List of simulation events of a user in the attack simulation and training campaign. */
     private java.util.List<UserSimulationEventInfo> _simulationEvents;
-    /** User in an attack simulation and training campaign. */
+    /** The user in an attack simulation and training campaign. */
     private AttackSimulationUser _simulationUser;
     /** List of training events of a user in the attack simulation and training campaign. */
     private java.util.List<UserTrainingEventInfo> _trainingEvents;
@@ -36,6 +36,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * Instantiates a new userSimulationDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserSimulationDetails() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.userSimulationDetails");
@@ -89,18 +90,18 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserSimulationDetails currentObject = this;
-        return new HashMap<>(10) {{
-            this.put("assignedTrainingsCount", (n) -> { currentObject.setAssignedTrainingsCount(n.getIntegerValue()); });
-            this.put("completedTrainingsCount", (n) -> { currentObject.setCompletedTrainingsCount(n.getIntegerValue()); });
-            this.put("compromisedDateTime", (n) -> { currentObject.setCompromisedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("inProgressTrainingsCount", (n) -> { currentObject.setInProgressTrainingsCount(n.getIntegerValue()); });
-            this.put("isCompromised", (n) -> { currentObject.setIsCompromised(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("reportedPhishDateTime", (n) -> { currentObject.setReportedPhishDateTime(n.getOffsetDateTimeValue()); });
-            this.put("simulationEvents", (n) -> { currentObject.setSimulationEvents(n.getCollectionOfObjectValues(UserSimulationEventInfo::createFromDiscriminatorValue)); });
-            this.put("simulationUser", (n) -> { currentObject.setSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
-            this.put("trainingEvents", (n) -> { currentObject.setTrainingEvents(n.getCollectionOfObjectValues(UserTrainingEventInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("assignedTrainingsCount", (n) -> { currentObject.setAssignedTrainingsCount(n.getIntegerValue()); });
+        deserializerMap.put("completedTrainingsCount", (n) -> { currentObject.setCompletedTrainingsCount(n.getIntegerValue()); });
+        deserializerMap.put("compromisedDateTime", (n) -> { currentObject.setCompromisedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("inProgressTrainingsCount", (n) -> { currentObject.setInProgressTrainingsCount(n.getIntegerValue()); });
+        deserializerMap.put("isCompromised", (n) -> { currentObject.setIsCompromised(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("reportedPhishDateTime", (n) -> { currentObject.setReportedPhishDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("simulationEvents", (n) -> { currentObject.setSimulationEvents(n.getCollectionOfObjectValues(UserSimulationEventInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("simulationUser", (n) -> { currentObject.setSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("trainingEvents", (n) -> { currentObject.setTrainingEvents(n.getCollectionOfObjectValues(UserTrainingEventInfo::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the inProgressTrainingsCount property value. Number of trainings in progress by a user in an attack simulation and training campaign.
@@ -111,7 +112,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
         return this._inProgressTrainingsCount;
     }
     /**
-     * Gets the isCompromised property value. Flag representing if user was compromised in an attack simulation and training campaign.
+     * Gets the isCompromised property value. Indicates whether a user was compromised in an attack simulation and training campaign.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -127,7 +128,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the reportedPhishDateTime property value. Date and time when user reported delivered payload as phish in the attack simulation and training campaign.
+     * Gets the reportedPhishDateTime property value. Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -143,7 +144,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
         return this._simulationEvents;
     }
     /**
-     * Gets the simulationUser property value. User in an attack simulation and training campaign.
+     * Gets the simulationUser property value. The user in an attack simulation and training campaign.
      * @return a attackSimulationUser
      */
     @javax.annotation.Nullable
@@ -163,6 +164,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("assignedTrainingsCount", this.getAssignedTrainingsCount());
@@ -182,6 +184,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -190,6 +193,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the assignedTrainingsCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedTrainingsCount(@javax.annotation.Nullable final Integer value) {
         this._assignedTrainingsCount = value;
     }
@@ -198,6 +202,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the completedTrainingsCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedTrainingsCount(@javax.annotation.Nullable final Integer value) {
         this._completedTrainingsCount = value;
     }
@@ -206,6 +211,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the compromisedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompromisedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._compromisedDateTime = value;
     }
@@ -214,14 +220,16 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the inProgressTrainingsCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInProgressTrainingsCount(@javax.annotation.Nullable final Integer value) {
         this._inProgressTrainingsCount = value;
     }
     /**
-     * Sets the isCompromised property value. Flag representing if user was compromised in an attack simulation and training campaign.
+     * Sets the isCompromised property value. Indicates whether a user was compromised in an attack simulation and training campaign.
      * @param value Value to set for the isCompromised property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCompromised(@javax.annotation.Nullable final Boolean value) {
         this._isCompromised = value;
     }
@@ -230,14 +238,16 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
     /**
-     * Sets the reportedPhishDateTime property value. Date and time when user reported delivered payload as phish in the attack simulation and training campaign.
+     * Sets the reportedPhishDateTime property value. Date and time when a user reported the delivered payload as phishing in the attack simulation and training campaign.
      * @param value Value to set for the reportedPhishDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportedPhishDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._reportedPhishDateTime = value;
     }
@@ -246,14 +256,16 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the simulationEvents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSimulationEvents(@javax.annotation.Nullable final java.util.List<UserSimulationEventInfo> value) {
         this._simulationEvents = value;
     }
     /**
-     * Sets the simulationUser property value. User in an attack simulation and training campaign.
+     * Sets the simulationUser property value. The user in an attack simulation and training campaign.
      * @param value Value to set for the simulationUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSimulationUser(@javax.annotation.Nullable final AttackSimulationUser value) {
         this._simulationUser = value;
     }
@@ -262,6 +274,7 @@ public class UserSimulationDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the trainingEvents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrainingEvents(@javax.annotation.Nullable final java.util.List<UserTrainingEventInfo> value) {
         this._trainingEvents = value;
     }

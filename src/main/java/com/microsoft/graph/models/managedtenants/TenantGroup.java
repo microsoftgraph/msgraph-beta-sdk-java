@@ -24,6 +24,7 @@ public class TenantGroup extends Entity implements Parsable {
      * Instantiates a new tenantGroup and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TenantGroup() {
         super();
         this.setOdataType("#microsoft.graph.managedTenants.tenantGroup");
@@ -61,13 +62,13 @@ public class TenantGroup extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TenantGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allTenantsIncluded", (n) -> { currentObject.setAllTenantsIncluded(n.getBooleanValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("managementActions", (n) -> { currentObject.setManagementActions(n.getCollectionOfObjectValues(ManagementActionInfo::createFromDiscriminatorValue)); });
-            this.put("managementIntents", (n) -> { currentObject.setManagementIntents(n.getCollectionOfObjectValues(ManagementIntentInfo::createFromDiscriminatorValue)); });
-            this.put("tenantIds", (n) -> { currentObject.setTenantIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allTenantsIncluded", (n) -> { currentObject.setAllTenantsIncluded(n.getBooleanValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("managementActions", (n) -> { currentObject.setManagementActions(n.getCollectionOfObjectValues(ManagementActionInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("managementIntents", (n) -> { currentObject.setManagementIntents(n.getCollectionOfObjectValues(ManagementIntentInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantIds", (n) -> { currentObject.setTenantIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the managementActions property value. The collection of management action associated with the tenant group. Optional. Read-only.
@@ -98,6 +99,7 @@ public class TenantGroup extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -112,6 +114,7 @@ public class TenantGroup extends Entity implements Parsable {
      * @param value Value to set for the allTenantsIncluded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllTenantsIncluded(@javax.annotation.Nullable final Boolean value) {
         this._allTenantsIncluded = value;
     }
@@ -120,6 +123,7 @@ public class TenantGroup extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -128,6 +132,7 @@ public class TenantGroup extends Entity implements Parsable {
      * @param value Value to set for the managementActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementActions(@javax.annotation.Nullable final java.util.List<ManagementActionInfo> value) {
         this._managementActions = value;
     }
@@ -136,6 +141,7 @@ public class TenantGroup extends Entity implements Parsable {
      * @param value Value to set for the managementIntents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementIntents(@javax.annotation.Nullable final java.util.List<ManagementIntentInfo> value) {
         this._managementIntents = value;
     }
@@ -144,6 +150,7 @@ public class TenantGroup extends Entity implements Parsable {
      * @param value Value to set for the tenantIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tenantIds = value;
     }

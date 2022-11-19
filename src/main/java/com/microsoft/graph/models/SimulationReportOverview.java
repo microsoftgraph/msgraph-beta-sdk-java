@@ -25,6 +25,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      * Instantiates a new simulationReportOverview and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SimulationReportOverview() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.simulationReportOverview");
@@ -54,13 +55,13 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SimulationReportOverview currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recommendedActions", (n) -> { currentObject.setRecommendedActions(n.getCollectionOfObjectValues(RecommendedAction::createFromDiscriminatorValue)); });
-            this.put("resolvedTargetsCount", (n) -> { currentObject.setResolvedTargetsCount(n.getIntegerValue()); });
-            this.put("simulationEventsContent", (n) -> { currentObject.setSimulationEventsContent(n.getObjectValue(SimulationEventsContent::createFromDiscriminatorValue)); });
-            this.put("trainingEventsContent", (n) -> { currentObject.setTrainingEventsContent(n.getObjectValue(TrainingEventsContent::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recommendedActions", (n) -> { currentObject.setRecommendedActions(n.getCollectionOfObjectValues(RecommendedAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("resolvedTargetsCount", (n) -> { currentObject.setResolvedTargetsCount(n.getIntegerValue()); });
+        deserializerMap.put("simulationEventsContent", (n) -> { currentObject.setSimulationEventsContent(n.getObjectValue(SimulationEventsContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("trainingEventsContent", (n) -> { currentObject.setTrainingEventsContent(n.getObjectValue(TrainingEventsContent::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,6 +108,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -121,6 +123,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -137,6 +141,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the recommendedActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendedActions(@javax.annotation.Nullable final java.util.List<RecommendedAction> value) {
         this._recommendedActions = value;
     }
@@ -145,6 +150,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the resolvedTargetsCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResolvedTargetsCount(@javax.annotation.Nullable final Integer value) {
         this._resolvedTargetsCount = value;
     }
@@ -153,6 +159,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the simulationEventsContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSimulationEventsContent(@javax.annotation.Nullable final SimulationEventsContent value) {
         this._simulationEventsContent = value;
     }
@@ -161,6 +168,7 @@ public class SimulationReportOverview implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the trainingEventsContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrainingEventsContent(@javax.annotation.Nullable final TrainingEventsContent value) {
         this._trainingEventsContent = value;
     }

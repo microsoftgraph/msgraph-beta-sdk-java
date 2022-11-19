@@ -25,6 +25,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new contentInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ContentInfo() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.contentInfo");
@@ -54,13 +55,13 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ContentInfo currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("format", (n) -> { currentObject.setFormat(n.getEnumValue(ContentFormat.class)); });
-            this.put("identifier", (n) -> { currentObject.setIdentifier(n.getStringValue()); });
-            this.put("metadata", (n) -> { currentObject.setMetadata(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ContentState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("format", (n) -> { currentObject.setFormat(n.getEnumValue(ContentFormat.class)); });
+        deserializerMap.put("identifier", (n) -> { currentObject.setIdentifier(n.getStringValue()); });
+        deserializerMap.put("metadata", (n) -> { currentObject.setMetadata(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(ContentState.class)); });
+        return deserializerMap
     }
     /**
      * Gets the format property value. The format property
@@ -107,6 +108,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("format", this.getFormat());
@@ -121,6 +123,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the format property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final ContentFormat value) {
         this._format = value;
     }
@@ -137,6 +141,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the identifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentifier(@javax.annotation.Nullable final String value) {
         this._identifier = value;
     }
@@ -145,6 +150,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the metadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetadata(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._metadata = value;
     }
@@ -153,6 +159,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -161,6 +168,7 @@ public class ContentInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ContentState value) {
         this._state = value;
     }

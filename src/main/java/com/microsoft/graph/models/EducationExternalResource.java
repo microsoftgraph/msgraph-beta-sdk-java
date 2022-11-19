@@ -14,6 +14,7 @@ public class EducationExternalResource extends EducationResource implements Pars
      * Instantiates a new EducationExternalResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationExternalResource() {
         super();
         this.setOdataType("#microsoft.graph.educationExternalResource");
@@ -35,9 +36,9 @@ public class EducationExternalResource extends EducationResource implements Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationExternalResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the webUrl property value. Location of the resource. Required.
@@ -52,6 +53,7 @@ public class EducationExternalResource extends EducationResource implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class EducationExternalResource extends EducationResource implements Pars
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

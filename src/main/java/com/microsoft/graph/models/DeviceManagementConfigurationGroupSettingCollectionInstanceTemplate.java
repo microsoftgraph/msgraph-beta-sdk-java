@@ -16,6 +16,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
      * Instantiates a new DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstanceTemplate");
@@ -45,10 +46,10 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowUnmanagedValues", (n) -> { currentObject.setAllowUnmanagedValues(n.getBooleanValue()); });
-            this.put("groupSettingCollectionValueTemplate", (n) -> { currentObject.setGroupSettingCollectionValueTemplate(n.getCollectionOfObjectValues(DeviceManagementConfigurationGroupSettingValueTemplate::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowUnmanagedValues", (n) -> { currentObject.setAllowUnmanagedValues(n.getBooleanValue()); });
+        deserializerMap.put("groupSettingCollectionValueTemplate", (n) -> { currentObject.setGroupSettingCollectionValueTemplate(n.getCollectionOfObjectValues(DeviceManagementConfigurationGroupSettingValueTemplate::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the groupSettingCollectionValueTemplate property value. Group Setting Collection Value Template
@@ -63,6 +64,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
      * @param value Value to set for the allowUnmanagedValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowUnmanagedValues(@javax.annotation.Nullable final Boolean value) {
         this._allowUnmanagedValues = value;
     }
@@ -82,6 +85,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate
      * @param value Value to set for the groupSettingCollectionValueTemplate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupSettingCollectionValueTemplate(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationGroupSettingValueTemplate> value) {
         this._groupSettingCollectionValueTemplate = value;
     }

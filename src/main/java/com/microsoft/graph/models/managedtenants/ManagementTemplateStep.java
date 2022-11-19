@@ -10,7 +10,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ManagementTemplateStep extends Entity implements Parsable {
     /** The acceptedVersion property */
     private ManagementTemplateStepVersion _acceptedVersion;
@@ -40,6 +39,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * Instantiates a new managementTemplateStep and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagementTemplateStep() {
         super();
         this.setOdataType("#microsoft.graph.managedTenants.managementTemplateStep");
@@ -109,20 +109,20 @@ public class ManagementTemplateStep extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagementTemplateStep currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("acceptedVersion", (n) -> { currentObject.setAcceptedVersion(n.getObjectValue(ManagementTemplateStepVersion::createFromDiscriminatorValue)); });
-            this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(ManagementCategory.class)); });
-            this.put("createdByUserId", (n) -> { currentObject.setCreatedByUserId(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastActionByUserId", (n) -> { currentObject.setLastActionByUserId(n.getStringValue()); });
-            this.put("lastActionDateTime", (n) -> { currentObject.setLastActionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("managementTemplate", (n) -> { currentObject.setManagementTemplate(n.getObjectValue(ManagementTemplate::createFromDiscriminatorValue)); });
-            this.put("portalLink", (n) -> { currentObject.setPortalLink(n.getObjectValue(ActionUrl::createFromDiscriminatorValue)); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("versions", (n) -> { currentObject.setVersions(n.getCollectionOfObjectValues(ManagementTemplateStepVersion::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("acceptedVersion", (n) -> { currentObject.setAcceptedVersion(n.getObjectValue(ManagementTemplateStepVersion::createFromDiscriminatorValue)); });
+        deserializerMap.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(ManagementCategory.class)); });
+        deserializerMap.put("createdByUserId", (n) -> { currentObject.setCreatedByUserId(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastActionByUserId", (n) -> { currentObject.setLastActionByUserId(n.getStringValue()); });
+        deserializerMap.put("lastActionDateTime", (n) -> { currentObject.setLastActionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managementTemplate", (n) -> { currentObject.setManagementTemplate(n.getObjectValue(ManagementTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("portalLink", (n) -> { currentObject.setPortalLink(n.getObjectValue(ActionUrl::createFromDiscriminatorValue)); });
+        deserializerMap.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("versions", (n) -> { currentObject.setVersions(n.getCollectionOfObjectValues(ManagementTemplateStepVersion::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
@@ -177,6 +177,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -198,6 +199,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the acceptedVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcceptedVersion(@javax.annotation.Nullable final ManagementTemplateStepVersion value) {
         this._acceptedVersion = value;
     }
@@ -206,6 +208,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final ManagementCategory value) {
         this._category = value;
     }
@@ -214,6 +217,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the createdByUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedByUserId(@javax.annotation.Nullable final String value) {
         this._createdByUserId = value;
     }
@@ -222,6 +226,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -230,6 +235,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -238,6 +244,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -246,6 +253,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the lastActionByUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActionByUserId(@javax.annotation.Nullable final String value) {
         this._lastActionByUserId = value;
     }
@@ -254,6 +262,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastActionDateTime = value;
     }
@@ -262,6 +271,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the managementTemplate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementTemplate(@javax.annotation.Nullable final ManagementTemplate value) {
         this._managementTemplate = value;
     }
@@ -270,6 +280,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the portalLink property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPortalLink(@javax.annotation.Nullable final ActionUrl value) {
         this._portalLink = value;
     }
@@ -278,6 +289,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }
@@ -286,6 +298,7 @@ public class ManagementTemplateStep extends Entity implements Parsable {
      * @param value Value to set for the versions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersions(@javax.annotation.Nullable final java.util.List<ManagementTemplateStepVersion> value) {
         this._versions = value;
     }

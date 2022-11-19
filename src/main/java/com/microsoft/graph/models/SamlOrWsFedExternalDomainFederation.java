@@ -14,6 +14,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
      * Instantiates a new SamlOrWsFedExternalDomainFederation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SamlOrWsFedExternalDomainFederation() {
         super();
         this.setOdataType("#microsoft.graph.samlOrWsFedExternalDomainFederation");
@@ -43,15 +44,16 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SamlOrWsFedExternalDomainFederation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("domains", (n) -> { currentObject.setDomains(n.getCollectionOfObjectValues(ExternalDomainName::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("domains", (n) -> { currentObject.setDomains(n.getCollectionOfObjectValues(ExternalDomainName::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider imp
      * @param value Value to set for the domains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomains(@javax.annotation.Nullable final java.util.List<ExternalDomainName> value) {
         this._domains = value;
     }

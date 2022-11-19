@@ -14,6 +14,7 @@ public class AndroidForWorkCustomConfiguration extends DeviceConfiguration imple
      * Instantiates a new AndroidForWorkCustomConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidForWorkCustomConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidForWorkCustomConfiguration");
@@ -35,9 +36,9 @@ public class AndroidForWorkCustomConfiguration extends DeviceConfiguration imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidForWorkCustomConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("omaSettings", (n) -> { currentObject.setOmaSettings(n.getCollectionOfObjectValues(OmaSetting::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("omaSettings", (n) -> { currentObject.setOmaSettings(n.getCollectionOfObjectValues(OmaSetting::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the omaSettings property value. OMA settings. This collection can contain a maximum of 500 elements.
@@ -52,6 +53,7 @@ public class AndroidForWorkCustomConfiguration extends DeviceConfiguration imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class AndroidForWorkCustomConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the omaSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOmaSettings(@javax.annotation.Nullable final java.util.List<OmaSetting> value) {
         this._omaSettings = value;
     }

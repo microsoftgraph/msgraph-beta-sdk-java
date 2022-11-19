@@ -41,6 +41,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * Instantiates a new accessPackageCatalog and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageCatalog() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageCatalog");
@@ -150,22 +151,22 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageCatalog currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessPackageResourceRoles", (n) -> { currentObject.setAccessPackageResourceRoles(n.getCollectionOfObjectValues(AccessPackageResourceRole::createFromDiscriminatorValue)); });
-            this.put("accessPackageResources", (n) -> { currentObject.setAccessPackageResources(n.getCollectionOfObjectValues(AccessPackageResource::createFromDiscriminatorValue)); });
-            this.put("accessPackageResourceScopes", (n) -> { currentObject.setAccessPackageResourceScopes(n.getCollectionOfObjectValues(AccessPackageResourceScope::createFromDiscriminatorValue)); });
-            this.put("accessPackages", (n) -> { currentObject.setAccessPackages(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
-            this.put("catalogStatus", (n) -> { currentObject.setCatalogStatus(n.getStringValue()); });
-            this.put("catalogType", (n) -> { currentObject.setCatalogType(n.getStringValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("customAccessPackageWorkflowExtensions", (n) -> { currentObject.setCustomAccessPackageWorkflowExtensions(n.getCollectionOfObjectValues(CustomAccessPackageWorkflowExtension::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isExternallyVisible", (n) -> { currentObject.setIsExternallyVisible(n.getBooleanValue()); });
-            this.put("modifiedBy", (n) -> { currentObject.setModifiedBy(n.getStringValue()); });
-            this.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackageResourceRoles", (n) -> { currentObject.setAccessPackageResourceRoles(n.getCollectionOfObjectValues(AccessPackageResourceRole::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageResources", (n) -> { currentObject.setAccessPackageResources(n.getCollectionOfObjectValues(AccessPackageResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageResourceScopes", (n) -> { currentObject.setAccessPackageResourceScopes(n.getCollectionOfObjectValues(AccessPackageResourceScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackages", (n) -> { currentObject.setAccessPackages(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
+        deserializerMap.put("catalogStatus", (n) -> { currentObject.setCatalogStatus(n.getStringValue()); });
+        deserializerMap.put("catalogType", (n) -> { currentObject.setCatalogType(n.getStringValue()); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("customAccessPackageWorkflowExtensions", (n) -> { currentObject.setCustomAccessPackageWorkflowExtensions(n.getCollectionOfObjectValues(CustomAccessPackageWorkflowExtension::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isExternallyVisible", (n) -> { currentObject.setIsExternallyVisible(n.getBooleanValue()); });
+        deserializerMap.put("modifiedBy", (n) -> { currentObject.setModifiedBy(n.getStringValue()); });
+        deserializerMap.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isExternallyVisible property value. Whether the access packages in this catalog can be requested by users outside of the tenant.
@@ -196,6 +197,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -219,6 +221,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResourceRoles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResourceRoles(@javax.annotation.Nullable final java.util.List<AccessPackageResourceRole> value) {
         this._accessPackageResourceRoles = value;
     }
@@ -227,6 +230,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResources(@javax.annotation.Nullable final java.util.List<AccessPackageResource> value) {
         this._accessPackageResources = value;
     }
@@ -235,6 +239,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResourceScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResourceScopes(@javax.annotation.Nullable final java.util.List<AccessPackageResourceScope> value) {
         this._accessPackageResourceScopes = value;
     }
@@ -243,6 +248,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the accessPackages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackages(@javax.annotation.Nullable final java.util.List<AccessPackage> value) {
         this._accessPackages = value;
     }
@@ -251,6 +257,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the catalogStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCatalogStatus(@javax.annotation.Nullable final String value) {
         this._catalogStatus = value;
     }
@@ -259,6 +266,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the catalogType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCatalogType(@javax.annotation.Nullable final String value) {
         this._catalogType = value;
     }
@@ -267,6 +275,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final String value) {
         this._createdBy = value;
     }
@@ -275,6 +284,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -283,6 +293,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the customAccessPackageWorkflowExtensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomAccessPackageWorkflowExtensions(@javax.annotation.Nullable final java.util.List<CustomAccessPackageWorkflowExtension> value) {
         this._customAccessPackageWorkflowExtensions = value;
     }
@@ -291,6 +302,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -299,6 +311,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -307,6 +320,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the isExternallyVisible property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsExternallyVisible(@javax.annotation.Nullable final Boolean value) {
         this._isExternallyVisible = value;
     }
@@ -315,6 +329,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the modifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedBy(@javax.annotation.Nullable final String value) {
         this._modifiedBy = value;
     }
@@ -323,6 +338,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._modifiedDateTime = value;
     }

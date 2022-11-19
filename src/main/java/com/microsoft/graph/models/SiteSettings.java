@@ -21,6 +21,7 @@ public class SiteSettings implements AdditionalDataHolder, Parsable {
      * Instantiates a new siteSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SiteSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.siteSettings");
@@ -50,11 +51,11 @@ public class SiteSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SiteSettings currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the languageTag property value. The language tag for the language used on this site.
@@ -85,6 +86,7 @@ public class SiteSettings implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("languageTag", this.getLanguageTag());
@@ -97,6 +99,7 @@ public class SiteSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class SiteSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the languageTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguageTag(@javax.annotation.Nullable final String value) {
         this._languageTag = value;
     }
@@ -113,6 +117,7 @@ public class SiteSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +126,7 @@ public class SiteSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the timeZone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeZone(@javax.annotation.Nullable final String value) {
         this._timeZone = value;
     }

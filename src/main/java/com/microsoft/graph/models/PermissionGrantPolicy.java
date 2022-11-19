@@ -16,6 +16,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
      * Instantiates a new PermissionGrantPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PermissionGrantPolicy() {
         super();
         this.setOdataType("#microsoft.graph.permissionGrantPolicy");
@@ -45,10 +46,10 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PermissionGrantPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("excludes", (n) -> { currentObject.setExcludes(n.getCollectionOfObjectValues(PermissionGrantConditionSet::createFromDiscriminatorValue)); });
-            this.put("includes", (n) -> { currentObject.setIncludes(n.getCollectionOfObjectValues(PermissionGrantConditionSet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("excludes", (n) -> { currentObject.setExcludes(n.getCollectionOfObjectValues(PermissionGrantConditionSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("includes", (n) -> { currentObject.setIncludes(n.getCollectionOfObjectValues(PermissionGrantConditionSet::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the includes property value. Condition sets which are included in this permission grant policy. Automatically expanded on GET.
@@ -63,6 +64,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the excludes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludes(@javax.annotation.Nullable final java.util.List<PermissionGrantConditionSet> value) {
         this._excludes = value;
     }
@@ -82,6 +85,7 @@ public class PermissionGrantPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the includes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludes(@javax.annotation.Nullable final java.util.List<PermissionGrantConditionSet> value) {
         this._includes = value;
     }

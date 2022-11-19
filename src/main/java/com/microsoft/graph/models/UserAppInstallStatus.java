@@ -27,6 +27,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * Instantiates a new userAppInstallStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserAppInstallStatus() {
         super();
         this.setOdataType("#microsoft.graph.userAppInstallStatus");
@@ -72,15 +73,15 @@ public class UserAppInstallStatus extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserAppInstallStatus currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("app", (n) -> { currentObject.setApp(n.getObjectValue(MobileApp::createFromDiscriminatorValue)); });
-            this.put("deviceStatuses", (n) -> { currentObject.setDeviceStatuses(n.getCollectionOfObjectValues(MobileAppInstallStatus::createFromDiscriminatorValue)); });
-            this.put("failedDeviceCount", (n) -> { currentObject.setFailedDeviceCount(n.getIntegerValue()); });
-            this.put("installedDeviceCount", (n) -> { currentObject.setInstalledDeviceCount(n.getIntegerValue()); });
-            this.put("notInstalledDeviceCount", (n) -> { currentObject.setNotInstalledDeviceCount(n.getIntegerValue()); });
-            this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("app", (n) -> { currentObject.setApp(n.getObjectValue(MobileApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceStatuses", (n) -> { currentObject.setDeviceStatuses(n.getCollectionOfObjectValues(MobileAppInstallStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("failedDeviceCount", (n) -> { currentObject.setFailedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("installedDeviceCount", (n) -> { currentObject.setInstalledDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("notInstalledDeviceCount", (n) -> { currentObject.setNotInstalledDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the installedDeviceCount property value. Installed Device Count.
@@ -119,6 +120,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +137,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the app property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApp(@javax.annotation.Nullable final MobileApp value) {
         this._app = value;
     }
@@ -143,6 +146,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the deviceStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStatuses(@javax.annotation.Nullable final java.util.List<MobileAppInstallStatus> value) {
         this._deviceStatuses = value;
     }
@@ -151,6 +155,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the failedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._failedDeviceCount = value;
     }
@@ -159,6 +164,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the installedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstalledDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._installedDeviceCount = value;
     }
@@ -167,6 +173,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the notInstalledDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotInstalledDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._notInstalledDeviceCount = value;
     }
@@ -175,6 +182,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
         this._userName = value;
     }
@@ -183,6 +191,7 @@ public class UserAppInstallStatus extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

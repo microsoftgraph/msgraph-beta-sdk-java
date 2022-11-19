@@ -21,6 +21,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, Parsable {
      * Instantiates a new kerberosSignOnSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public KerberosSignOnSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.kerberosSignOnSettings");
@@ -50,11 +51,11 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final KerberosSignOnSettings currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("kerberosServicePrincipalName", (n) -> { currentObject.setKerberosServicePrincipalName(n.getStringValue()); });
-            this.put("kerberosSignOnMappingAttributeType", (n) -> { currentObject.setKerberosSignOnMappingAttributeType(n.getEnumValue(KerberosSignOnMappingAttributeType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("kerberosServicePrincipalName", (n) -> { currentObject.setKerberosServicePrincipalName(n.getStringValue()); });
+        deserializerMap.put("kerberosSignOnMappingAttributeType", (n) -> { currentObject.setKerberosSignOnMappingAttributeType(n.getEnumValue(KerberosSignOnMappingAttributeType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the kerberosServicePrincipalName property value. The Internal Application SPN of the application server. This SPN needs to be in the list of services to which the connector can present delegated credentials.
@@ -85,6 +86,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("kerberosServicePrincipalName", this.getKerberosServicePrincipalName());
@@ -97,6 +99,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the kerberosServicePrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKerberosServicePrincipalName(@javax.annotation.Nullable final String value) {
         this._kerberosServicePrincipalName = value;
     }
@@ -113,6 +117,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the kerberosSignOnMappingAttributeType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKerberosSignOnMappingAttributeType(@javax.annotation.Nullable final KerberosSignOnMappingAttributeType value) {
         this._kerberosSignOnMappingAttributeType = value;
     }
@@ -121,6 +126,7 @@ public class KerberosSignOnSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

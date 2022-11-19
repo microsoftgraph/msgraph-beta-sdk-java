@@ -14,6 +14,8 @@ public class ReportRoot extends Entity implements Parsable {
     private AuthenticationMethodsRoot _authenticationMethods;
     /** Details of the usage of self-service password reset and multi-factor authentication (MFA) for all registered users. */
     private java.util.List<CredentialUserRegistrationDetails> _credentialUserRegistrationDetails;
+    /** The dailyPrintUsage property */
+    private java.util.List<PrintUsage> _dailyPrintUsage;
     /** The dailyPrintUsageByPrinter property */
     private java.util.List<PrintUsageByPrinter> _dailyPrintUsageByPrinter;
     /** The dailyPrintUsageByUser property */
@@ -38,6 +40,7 @@ public class ReportRoot extends Entity implements Parsable {
      * Instantiates a new ReportRoot and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ReportRoot() {
         super();
         this.setOdataType("#microsoft.graph.reportRoot");
@@ -75,6 +78,14 @@ public class ReportRoot extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<CredentialUserRegistrationDetails> getCredentialUserRegistrationDetails() {
         return this._credentialUserRegistrationDetails;
+    }
+    /**
+     * Gets the dailyPrintUsage property value. The dailyPrintUsage property
+     * @return a printUsage
+     */
+    @javax.annotation.Nullable
+    public java.util.List<PrintUsage> getDailyPrintUsage() {
+        return this._dailyPrintUsage;
     }
     /**
      * Gets the dailyPrintUsageByPrinter property value. The dailyPrintUsageByPrinter property
@@ -115,21 +126,22 @@ public class ReportRoot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ReportRoot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicationSignInDetailedSummary", (n) -> { currentObject.setApplicationSignInDetailedSummary(n.getCollectionOfObjectValues(ApplicationSignInDetailedSummary::createFromDiscriminatorValue)); });
-            this.put("authenticationMethods", (n) -> { currentObject.setAuthenticationMethods(n.getObjectValue(AuthenticationMethodsRoot::createFromDiscriminatorValue)); });
-            this.put("credentialUserRegistrationDetails", (n) -> { currentObject.setCredentialUserRegistrationDetails(n.getCollectionOfObjectValues(CredentialUserRegistrationDetails::createFromDiscriminatorValue)); });
-            this.put("dailyPrintUsageByPrinter", (n) -> { currentObject.setDailyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
-            this.put("dailyPrintUsageByUser", (n) -> { currentObject.setDailyPrintUsageByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
-            this.put("dailyPrintUsageSummariesByPrinter", (n) -> { currentObject.setDailyPrintUsageSummariesByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
-            this.put("dailyPrintUsageSummariesByUser", (n) -> { currentObject.setDailyPrintUsageSummariesByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
-            this.put("monthlyPrintUsageByPrinter", (n) -> { currentObject.setMonthlyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
-            this.put("monthlyPrintUsageByUser", (n) -> { currentObject.setMonthlyPrintUsageByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
-            this.put("monthlyPrintUsageSummariesByPrinter", (n) -> { currentObject.setMonthlyPrintUsageSummariesByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
-            this.put("monthlyPrintUsageSummariesByUser", (n) -> { currentObject.setMonthlyPrintUsageSummariesByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
-            this.put("security", (n) -> { currentObject.setSecurity(n.getObjectValue(SecurityReportsRoot::createFromDiscriminatorValue)); });
-            this.put("userCredentialUsageDetails", (n) -> { currentObject.setUserCredentialUsageDetails(n.getCollectionOfObjectValues(UserCredentialUsageDetails::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationSignInDetailedSummary", (n) -> { currentObject.setApplicationSignInDetailedSummary(n.getCollectionOfObjectValues(ApplicationSignInDetailedSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationMethods", (n) -> { currentObject.setAuthenticationMethods(n.getObjectValue(AuthenticationMethodsRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("credentialUserRegistrationDetails", (n) -> { currentObject.setCredentialUserRegistrationDetails(n.getCollectionOfObjectValues(CredentialUserRegistrationDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("dailyPrintUsage", (n) -> { currentObject.setDailyPrintUsage(n.getCollectionOfObjectValues(PrintUsage::createFromDiscriminatorValue)); });
+        deserializerMap.put("dailyPrintUsageByPrinter", (n) -> { currentObject.setDailyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
+        deserializerMap.put("dailyPrintUsageByUser", (n) -> { currentObject.setDailyPrintUsageByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("dailyPrintUsageSummariesByPrinter", (n) -> { currentObject.setDailyPrintUsageSummariesByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
+        deserializerMap.put("dailyPrintUsageSummariesByUser", (n) -> { currentObject.setDailyPrintUsageSummariesByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("monthlyPrintUsageByPrinter", (n) -> { currentObject.setMonthlyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
+        deserializerMap.put("monthlyPrintUsageByUser", (n) -> { currentObject.setMonthlyPrintUsageByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("monthlyPrintUsageSummariesByPrinter", (n) -> { currentObject.setMonthlyPrintUsageSummariesByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
+        deserializerMap.put("monthlyPrintUsageSummariesByUser", (n) -> { currentObject.setMonthlyPrintUsageSummariesByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("security", (n) -> { currentObject.setSecurity(n.getObjectValue(SecurityReportsRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("userCredentialUsageDetails", (n) -> { currentObject.setUserCredentialUsageDetails(n.getCollectionOfObjectValues(UserCredentialUsageDetails::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the monthlyPrintUsageByPrinter property value. The monthlyPrintUsageByPrinter property
@@ -184,12 +196,14 @@ public class ReportRoot extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("applicationSignInDetailedSummary", this.getApplicationSignInDetailedSummary());
         writer.writeObjectValue("authenticationMethods", this.getAuthenticationMethods());
         writer.writeCollectionOfObjectValues("credentialUserRegistrationDetails", this.getCredentialUserRegistrationDetails());
+        writer.writeCollectionOfObjectValues("dailyPrintUsage", this.getDailyPrintUsage());
         writer.writeCollectionOfObjectValues("dailyPrintUsageByPrinter", this.getDailyPrintUsageByPrinter());
         writer.writeCollectionOfObjectValues("dailyPrintUsageByUser", this.getDailyPrintUsageByUser());
         writer.writeCollectionOfObjectValues("dailyPrintUsageSummariesByPrinter", this.getDailyPrintUsageSummariesByPrinter());
@@ -206,6 +220,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the applicationSignInDetailedSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationSignInDetailedSummary(@javax.annotation.Nullable final java.util.List<ApplicationSignInDetailedSummary> value) {
         this._applicationSignInDetailedSummary = value;
     }
@@ -214,6 +229,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the authenticationMethods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethods(@javax.annotation.Nullable final AuthenticationMethodsRoot value) {
         this._authenticationMethods = value;
     }
@@ -222,14 +238,25 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the credentialUserRegistrationDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCredentialUserRegistrationDetails(@javax.annotation.Nullable final java.util.List<CredentialUserRegistrationDetails> value) {
         this._credentialUserRegistrationDetails = value;
+    }
+    /**
+     * Sets the dailyPrintUsage property value. The dailyPrintUsage property
+     * @param value Value to set for the dailyPrintUsage property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDailyPrintUsage(@javax.annotation.Nullable final java.util.List<PrintUsage> value) {
+        this._dailyPrintUsage = value;
     }
     /**
      * Sets the dailyPrintUsageByPrinter property value. The dailyPrintUsageByPrinter property
      * @param value Value to set for the dailyPrintUsageByPrinter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDailyPrintUsageByPrinter(@javax.annotation.Nullable final java.util.List<PrintUsageByPrinter> value) {
         this._dailyPrintUsageByPrinter = value;
     }
@@ -238,6 +265,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the dailyPrintUsageByUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDailyPrintUsageByUser(@javax.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
         this._dailyPrintUsageByUser = value;
     }
@@ -246,6 +274,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the dailyPrintUsageSummariesByPrinter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDailyPrintUsageSummariesByPrinter(@javax.annotation.Nullable final java.util.List<PrintUsageByPrinter> value) {
         this._dailyPrintUsageSummariesByPrinter = value;
     }
@@ -254,6 +283,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the dailyPrintUsageSummariesByUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDailyPrintUsageSummariesByUser(@javax.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
         this._dailyPrintUsageSummariesByUser = value;
     }
@@ -262,6 +292,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the monthlyPrintUsageByPrinter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMonthlyPrintUsageByPrinter(@javax.annotation.Nullable final java.util.List<PrintUsageByPrinter> value) {
         this._monthlyPrintUsageByPrinter = value;
     }
@@ -270,6 +301,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the monthlyPrintUsageByUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMonthlyPrintUsageByUser(@javax.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
         this._monthlyPrintUsageByUser = value;
     }
@@ -278,6 +310,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the monthlyPrintUsageSummariesByPrinter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMonthlyPrintUsageSummariesByPrinter(@javax.annotation.Nullable final java.util.List<PrintUsageByPrinter> value) {
         this._monthlyPrintUsageSummariesByPrinter = value;
     }
@@ -286,6 +319,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the monthlyPrintUsageSummariesByUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMonthlyPrintUsageSummariesByUser(@javax.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
         this._monthlyPrintUsageSummariesByUser = value;
     }
@@ -294,6 +328,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the security property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurity(@javax.annotation.Nullable final SecurityReportsRoot value) {
         this._security = value;
     }
@@ -302,6 +337,7 @@ public class ReportRoot extends Entity implements Parsable {
      * @param value Value to set for the userCredentialUsageDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserCredentialUsageDetails(@javax.annotation.Nullable final java.util.List<UserCredentialUsageDetails> value) {
         this._userCredentialUsageDetails = value;
     }

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A pool represents a group of embedded SIM activation codes. */
 public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
     /** The total count of activation codes which belong to this pool. */
     private Integer _activationCodeCount;
@@ -24,9 +25,10 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
     /** The time the embedded SIM activation code pool was last modified. Updated service side. */
     private OffsetDateTime _modifiedDateTime;
     /**
-     * Instantiates a new EmbeddedSIMActivationCodePool and sets the default values.
+     * Instantiates a new embeddedSIMActivationCodePool and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EmbeddedSIMActivationCodePool() {
         super();
         this.setOdataType("#microsoft.graph.embeddedSIMActivationCodePool");
@@ -34,7 +36,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EmbeddedSIMActivationCodePool
+     * @return a embeddedSIMActivationCodePool
      */
     @javax.annotation.Nonnull
     public static EmbeddedSIMActivationCodePool createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -96,15 +98,15 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EmbeddedSIMActivationCodePool currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activationCodeCount", (n) -> { currentObject.setActivationCodeCount(n.getIntegerValue()); });
-            this.put("activationCodes", (n) -> { currentObject.setActivationCodes(n.getCollectionOfObjectValues(EmbeddedSIMActivationCode::createFromDiscriminatorValue)); });
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(EmbeddedSIMActivationCodePoolAssignment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deviceStates", (n) -> { currentObject.setDeviceStates(n.getCollectionOfObjectValues(EmbeddedSIMDeviceState::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activationCodeCount", (n) -> { currentObject.setActivationCodeCount(n.getIntegerValue()); });
+        deserializerMap.put("activationCodes", (n) -> { currentObject.setActivationCodes(n.getCollectionOfObjectValues(EmbeddedSIMActivationCode::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(EmbeddedSIMActivationCodePoolAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceStates", (n) -> { currentObject.setDeviceStates(n.getCollectionOfObjectValues(EmbeddedSIMDeviceState::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap
     }
     /**
      * Gets the modifiedDateTime property value. The time the embedded SIM activation code pool was last modified. Updated service side.
@@ -119,6 +121,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +138,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param value Value to set for the activationCodeCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivationCodeCount(@javax.annotation.Nullable final Integer value) {
         this._activationCodeCount = value;
     }
@@ -143,6 +147,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param value Value to set for the activationCodes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivationCodes(@javax.annotation.Nullable final java.util.List<EmbeddedSIMActivationCode> value) {
         this._activationCodes = value;
     }
@@ -151,6 +156,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<EmbeddedSIMActivationCodePoolAssignment> value) {
         this._assignments = value;
     }
@@ -159,6 +165,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -167,6 +174,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param value Value to set for the deviceStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStates(@javax.annotation.Nullable final java.util.List<EmbeddedSIMDeviceState> value) {
         this._deviceStates = value;
     }
@@ -175,6 +183,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -183,6 +192,7 @@ public class EmbeddedSIMActivationCodePool extends Entity implements Parsable {
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._modifiedDateTime = value;
     }

@@ -16,6 +16,7 @@ public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppT
      * Instantiates a new MobileAppTroubleshootingAppPolicyCreationHistory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppTroubleshootingAppPolicyCreationHistory() {
         super();
         this.setOdataType("#microsoft.graph.mobileAppTroubleshootingAppPolicyCreationHistory");
@@ -45,10 +46,10 @@ public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppT
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppTroubleshootingAppPolicyCreationHistory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
-            this.put("runState", (n) -> { currentObject.setRunState(n.getEnumValue(RunState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
+        deserializerMap.put("runState", (n) -> { currentObject.setRunState(n.getEnumValue(RunState.class)); });
+        return deserializerMap
     }
     /**
      * Gets the runState property value. Indicates the type of execution status of the device management script.
@@ -63,6 +64,7 @@ public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppT
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppT
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final String value) {
         this._errorCode = value;
     }
@@ -82,6 +85,7 @@ public class MobileAppTroubleshootingAppPolicyCreationHistory extends MobileAppT
      * @param value Value to set for the runState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunState(@javax.annotation.Nullable final RunState value) {
         this._runState = value;
     }

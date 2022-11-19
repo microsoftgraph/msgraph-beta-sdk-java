@@ -23,6 +23,7 @@ public class TeamworkHardwareConfiguration implements AdditionalDataHolder, Pars
      * Instantiates a new teamworkHardwareConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkHardwareConfiguration() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.teamworkHardwareConfiguration");
@@ -60,12 +61,12 @@ public class TeamworkHardwareConfiguration implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamworkHardwareConfiguration currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("compute", (n) -> { currentObject.setCompute(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
-            this.put("hdmiIngest", (n) -> { currentObject.setHdmiIngest(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("processorModel", (n) -> { currentObject.setProcessorModel(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("compute", (n) -> { currentObject.setCompute(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
+        deserializerMap.put("hdmiIngest", (n) -> { currentObject.setHdmiIngest(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("processorModel", (n) -> { currentObject.setProcessorModel(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the hdmiIngest property value. The hdmiIngest property
@@ -96,6 +97,7 @@ public class TeamworkHardwareConfiguration implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("compute", this.getCompute());
@@ -109,6 +111,7 @@ public class TeamworkHardwareConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +120,7 @@ public class TeamworkHardwareConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the compute property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompute(@javax.annotation.Nullable final TeamworkPeripheral value) {
         this._compute = value;
     }
@@ -125,6 +129,7 @@ public class TeamworkHardwareConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the hdmiIngest property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHdmiIngest(@javax.annotation.Nullable final TeamworkPeripheral value) {
         this._hdmiIngest = value;
     }
@@ -133,6 +138,7 @@ public class TeamworkHardwareConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +147,7 @@ public class TeamworkHardwareConfiguration implements AdditionalDataHolder, Pars
      * @param value Value to set for the processorModel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessorModel(@javax.annotation.Nullable final String value) {
         this._processorModel = value;
     }

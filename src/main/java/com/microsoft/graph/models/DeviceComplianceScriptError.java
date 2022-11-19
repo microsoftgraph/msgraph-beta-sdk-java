@@ -24,6 +24,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
      * Instantiates a new deviceComplianceScriptError and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceComplianceScriptError() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.deviceComplianceScriptError");
@@ -76,12 +77,12 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceScriptError currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("code", (n) -> { currentObject.setCode(n.getEnumValue(Code.class)); });
-            this.put("deviceComplianceScriptRulesValidationError", (n) -> { currentObject.setDeviceComplianceScriptRulesValidationError(n.getEnumValue(DeviceComplianceScriptRulesValidationError.class)); });
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("code", (n) -> { currentObject.setCode(n.getEnumValue(Code.class)); });
+        deserializerMap.put("deviceComplianceScriptRulesValidationError", (n) -> { currentObject.setDeviceComplianceScriptRulesValidationError(n.getEnumValue(DeviceComplianceScriptRulesValidationError.class)); });
+        deserializerMap.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the message property value. Error message.
@@ -104,6 +105,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("code", this.getCode());
@@ -117,6 +119,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -125,6 +128,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final Code value) {
         this._code = value;
     }
@@ -133,6 +137,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
      * @param value Value to set for the deviceComplianceScriptRulesValidationError property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceComplianceScriptRulesValidationError(@javax.annotation.Nullable final DeviceComplianceScriptRulesValidationError value) {
         this._deviceComplianceScriptRulesValidationError = value;
     }
@@ -141,6 +146,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
      * @param value Value to set for the message property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final String value) {
         this._message = value;
     }
@@ -149,6 +155,7 @@ public class DeviceComplianceScriptError implements AdditionalDataHolder, Parsab
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

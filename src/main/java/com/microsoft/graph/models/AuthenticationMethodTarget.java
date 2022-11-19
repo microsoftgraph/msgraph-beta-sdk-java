@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AuthenticationMethodTarget extends Entity implements Parsable {
     /** Determines if the user is enforced to register the authentication method. */
     private Boolean _isRegistrationRequired;
@@ -19,6 +19,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
      * Instantiates a new authenticationMethodTarget and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthenticationMethodTarget() {
         super();
         this.setOdataType("#microsoft.graph.authenticationMethodTarget");
@@ -48,10 +49,10 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuthenticationMethodTarget currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("isRegistrationRequired", (n) -> { currentObject.setIsRegistrationRequired(n.getBooleanValue()); });
-            this.put("targetType", (n) -> { currentObject.setTargetType(n.getEnumValue(AuthenticationMethodTargetType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isRegistrationRequired", (n) -> { currentObject.setIsRegistrationRequired(n.getBooleanValue()); });
+        deserializerMap.put("targetType", (n) -> { currentObject.setTargetType(n.getEnumValue(AuthenticationMethodTargetType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the isRegistrationRequired property value. Determines if the user is enforced to register the authentication method.
@@ -74,6 +75,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -85,6 +87,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
      * @param value Value to set for the isRegistrationRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRegistrationRequired(@javax.annotation.Nullable final Boolean value) {
         this._isRegistrationRequired = value;
     }
@@ -93,6 +96,7 @@ public class AuthenticationMethodTarget extends Entity implements Parsable {
      * @param value Value to set for the targetType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetType(@javax.annotation.Nullable final AuthenticationMethodTargetType value) {
         this._targetType = value;
     }

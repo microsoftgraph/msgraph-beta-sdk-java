@@ -42,6 +42,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * Instantiates a new process and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Process() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.process");
@@ -95,21 +96,21 @@ public class Process implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Process currentObject = this;
-        return new HashMap<>(13) {{
-            this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
-            this.put("commandLine", (n) -> { currentObject.setCommandLine(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("fileHash", (n) -> { currentObject.setFileHash(n.getObjectValue(FileHash::createFromDiscriminatorValue)); });
-            this.put("integrityLevel", (n) -> { currentObject.setIntegrityLevel(n.getEnumValue(ProcessIntegrityLevel.class)); });
-            this.put("isElevated", (n) -> { currentObject.setIsElevated(n.getBooleanValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("parentProcessCreatedDateTime", (n) -> { currentObject.setParentProcessCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("parentProcessId", (n) -> { currentObject.setParentProcessId(n.getIntegerValue()); });
-            this.put("parentProcessName", (n) -> { currentObject.setParentProcessName(n.getStringValue()); });
-            this.put("path", (n) -> { currentObject.setPath(n.getStringValue()); });
-            this.put("processId", (n) -> { currentObject.setProcessId(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(13);
+        deserializerMap.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
+        deserializerMap.put("commandLine", (n) -> { currentObject.setCommandLine(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("fileHash", (n) -> { currentObject.setFileHash(n.getObjectValue(FileHash::createFromDiscriminatorValue)); });
+        deserializerMap.put("integrityLevel", (n) -> { currentObject.setIntegrityLevel(n.getEnumValue(ProcessIntegrityLevel.class)); });
+        deserializerMap.put("isElevated", (n) -> { currentObject.setIsElevated(n.getBooleanValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("parentProcessCreatedDateTime", (n) -> { currentObject.setParentProcessCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("parentProcessId", (n) -> { currentObject.setParentProcessId(n.getIntegerValue()); });
+        deserializerMap.put("parentProcessName", (n) -> { currentObject.setParentProcessName(n.getStringValue()); });
+        deserializerMap.put("path", (n) -> { currentObject.setPath(n.getStringValue()); });
+        deserializerMap.put("processId", (n) -> { currentObject.setProcessId(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the fileHash property value. Complex type containing file hashes (cryptographic and location-sensitive).
@@ -196,6 +197,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("accountName", this.getAccountName());
@@ -218,6 +220,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountName(@javax.annotation.Nullable final String value) {
         this._accountName = value;
     }
@@ -226,6 +229,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -234,6 +238,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the commandLine property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCommandLine(@javax.annotation.Nullable final String value) {
         this._commandLine = value;
     }
@@ -242,6 +247,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -250,6 +256,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the fileHash property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileHash(@javax.annotation.Nullable final FileHash value) {
         this._fileHash = value;
     }
@@ -258,6 +265,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the integrityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntegrityLevel(@javax.annotation.Nullable final ProcessIntegrityLevel value) {
         this._integrityLevel = value;
     }
@@ -266,6 +274,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isElevated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsElevated(@javax.annotation.Nullable final Boolean value) {
         this._isElevated = value;
     }
@@ -274,6 +283,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -282,6 +292,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -290,6 +301,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the parentProcessCreatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentProcessCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._parentProcessCreatedDateTime = value;
     }
@@ -298,6 +310,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the parentProcessId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentProcessId(@javax.annotation.Nullable final Integer value) {
         this._parentProcessId = value;
     }
@@ -306,6 +319,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the parentProcessName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentProcessName(@javax.annotation.Nullable final String value) {
         this._parentProcessName = value;
     }
@@ -314,6 +328,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the path property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPath(@javax.annotation.Nullable final String value) {
         this._path = value;
     }
@@ -322,6 +337,7 @@ public class Process implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the processId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessId(@javax.annotation.Nullable final Integer value) {
         this._processId = value;
     }

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Intune will provide customer the ability to run their Powershell scripts on the enrolled windows 10 Azure Active Directory joined devices. The script can be run once or periodically. */
 public class DeviceManagementScript extends Entity implements Parsable {
     /** The list of group assignments for the device management script. */
     private java.util.List<DeviceManagementScriptAssignment> _assignments;
@@ -40,9 +41,10 @@ public class DeviceManagementScript extends Entity implements Parsable {
     /** List of run states for this script across all users. */
     private java.util.List<DeviceManagementScriptUserState> _userRunStates;
     /**
-     * Instantiates a new DeviceManagementScript and sets the default values.
+     * Instantiates a new deviceManagementScript and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementScript() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementScript");
@@ -50,7 +52,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementScript
+     * @return a deviceManagementScript
      */
     @javax.annotation.Nonnull
     public static DeviceManagementScript createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -112,23 +114,23 @@ public class DeviceManagementScript extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementScript currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceManagementScriptAssignment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("deviceRunStates", (n) -> { currentObject.setDeviceRunStates(n.getCollectionOfObjectValues(DeviceManagementScriptDeviceState::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("enforceSignatureCheck", (n) -> { currentObject.setEnforceSignatureCheck(n.getBooleanValue()); });
-            this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
-            this.put("groupAssignments", (n) -> { currentObject.setGroupAssignments(n.getCollectionOfObjectValues(DeviceManagementScriptGroupAssignment::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("runAs32Bit", (n) -> { currentObject.setRunAs32Bit(n.getBooleanValue()); });
-            this.put("runAsAccount", (n) -> { currentObject.setRunAsAccount(n.getEnumValue(RunAsAccountType.class)); });
-            this.put("runSummary", (n) -> { currentObject.setRunSummary(n.getObjectValue(DeviceManagementScriptRunSummary::createFromDiscriminatorValue)); });
-            this.put("scriptContent", (n) -> { currentObject.setScriptContent(n.getByteArrayValue()); });
-            this.put("userRunStates", (n) -> { currentObject.setUserRunStates(n.getCollectionOfObjectValues(DeviceManagementScriptUserState::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceManagementScriptAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("deviceRunStates", (n) -> { currentObject.setDeviceRunStates(n.getCollectionOfObjectValues(DeviceManagementScriptDeviceState::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enforceSignatureCheck", (n) -> { currentObject.setEnforceSignatureCheck(n.getBooleanValue()); });
+        deserializerMap.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
+        deserializerMap.put("groupAssignments", (n) -> { currentObject.setGroupAssignments(n.getCollectionOfObjectValues(DeviceManagementScriptGroupAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("runAs32Bit", (n) -> { currentObject.setRunAs32Bit(n.getBooleanValue()); });
+        deserializerMap.put("runAsAccount", (n) -> { currentObject.setRunAsAccount(n.getEnumValue(RunAsAccountType.class)); });
+        deserializerMap.put("runSummary", (n) -> { currentObject.setRunSummary(n.getObjectValue(DeviceManagementScriptRunSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("scriptContent", (n) -> { currentObject.setScriptContent(n.getByteArrayValue()); });
+        deserializerMap.put("userRunStates", (n) -> { currentObject.setUserRunStates(n.getCollectionOfObjectValues(DeviceManagementScriptUserState::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the fileName property value. Script file name.
@@ -207,18 +209,17 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeCollectionOfObjectValues("deviceRunStates", this.getDeviceRunStates());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeBooleanValue("enforceSignatureCheck", this.getEnforceSignatureCheck());
         writer.writeStringValue("fileName", this.getFileName());
         writer.writeCollectionOfObjectValues("groupAssignments", this.getGroupAssignments());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
         writer.writeBooleanValue("runAs32Bit", this.getRunAs32Bit());
         writer.writeEnumValue("runAsAccount", this.getRunAsAccount());
@@ -231,6 +232,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<DeviceManagementScriptAssignment> value) {
         this._assignments = value;
     }
@@ -239,6 +241,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -247,6 +250,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -255,6 +259,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param value Value to set for the deviceRunStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceRunStates(@javax.annotation.Nullable final java.util.List<DeviceManagementScriptDeviceState> value) {
         this._deviceRunStates = value;
     }
@@ -263,6 +268,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -271,6 +277,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param value Value to set for the enforceSignatureCheck property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnforceSignatureCheck(@javax.annotation.Nullable final Boolean value) {
         this._enforceSignatureCheck = value;
     }
@@ -279,6 +286,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param value Value to set for the fileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileName(@javax.annotation.Nullable final String value) {
         this._fileName = value;
     }
@@ -287,6 +295,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param value Value to set for the groupAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupAssignments(@javax.annotation.Nullable final java.util.List<DeviceManagementScriptGroupAssignment> value) {
         this._groupAssignments = value;
     }
@@ -295,6 +304,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -303,6 +313,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -311,6 +322,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param value Value to set for the runAs32Bit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunAs32Bit(@javax.annotation.Nullable final Boolean value) {
         this._runAs32Bit = value;
     }
@@ -319,6 +331,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param value Value to set for the runAsAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunAsAccount(@javax.annotation.Nullable final RunAsAccountType value) {
         this._runAsAccount = value;
     }
@@ -327,6 +340,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param value Value to set for the runSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunSummary(@javax.annotation.Nullable final DeviceManagementScriptRunSummary value) {
         this._runSummary = value;
     }
@@ -335,6 +349,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param value Value to set for the scriptContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScriptContent(@javax.annotation.Nullable final byte[] value) {
         this._scriptContent = value;
     }
@@ -343,6 +358,7 @@ public class DeviceManagementScript extends Entity implements Parsable {
      * @param value Value to set for the userRunStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRunStates(@javax.annotation.Nullable final java.util.List<DeviceManagementScriptUserState> value) {
         this._userRunStates = value;
     }

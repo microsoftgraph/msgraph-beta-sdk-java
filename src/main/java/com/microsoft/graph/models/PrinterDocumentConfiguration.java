@@ -26,7 +26,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     /** The feedOrientation property */
     private PrinterFeedOrientation _feedOrientation;
     /** The finishings property */
-    private java.util.List<String> _finishings;
+    private java.util.List<PrintFinishing> _finishings;
     /** The fitPdfToPage property */
     private Boolean _fitPdfToPage;
     /** The inputBin property */
@@ -57,6 +57,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * Instantiates a new printerDocumentConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrinterDocumentConfiguration() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.printerDocumentConfiguration");
@@ -142,36 +143,36 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterDocumentConfiguration currentObject = this;
-        return new HashMap<>(21) {{
-            this.put("collate", (n) -> { currentObject.setCollate(n.getBooleanValue()); });
-            this.put("colorMode", (n) -> { currentObject.setColorMode(n.getEnumValue(PrintColorMode.class)); });
-            this.put("copies", (n) -> { currentObject.setCopies(n.getIntegerValue()); });
-            this.put("dpi", (n) -> { currentObject.setDpi(n.getIntegerValue()); });
-            this.put("duplexMode", (n) -> { currentObject.setDuplexMode(n.getEnumValue(PrintDuplexMode.class)); });
-            this.put("feedDirection", (n) -> { currentObject.setFeedDirection(n.getEnumValue(PrinterFeedDirection.class)); });
-            this.put("feedOrientation", (n) -> { currentObject.setFeedOrientation(n.getEnumValue(PrinterFeedOrientation.class)); });
-            this.put("finishings", (n) -> { currentObject.setFinishings(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("fitPdfToPage", (n) -> { currentObject.setFitPdfToPage(n.getBooleanValue()); });
-            this.put("inputBin", (n) -> { currentObject.setInputBin(n.getStringValue()); });
-            this.put("margin", (n) -> { currentObject.setMargin(n.getObjectValue(PrintMargin::createFromDiscriminatorValue)); });
-            this.put("mediaSize", (n) -> { currentObject.setMediaSize(n.getStringValue()); });
-            this.put("mediaType", (n) -> { currentObject.setMediaType(n.getStringValue()); });
-            this.put("multipageLayout", (n) -> { currentObject.setMultipageLayout(n.getEnumValue(PrintMultipageLayout.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("orientation", (n) -> { currentObject.setOrientation(n.getEnumValue(PrintOrientation.class)); });
-            this.put("outputBin", (n) -> { currentObject.setOutputBin(n.getStringValue()); });
-            this.put("pageRanges", (n) -> { currentObject.setPageRanges(n.getCollectionOfObjectValues(IntegerRange::createFromDiscriminatorValue)); });
-            this.put("pagesPerSheet", (n) -> { currentObject.setPagesPerSheet(n.getIntegerValue()); });
-            this.put("quality", (n) -> { currentObject.setQuality(n.getEnumValue(PrintQuality.class)); });
-            this.put("scaling", (n) -> { currentObject.setScaling(n.getEnumValue(PrintScaling.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(21);
+        deserializerMap.put("collate", (n) -> { currentObject.setCollate(n.getBooleanValue()); });
+        deserializerMap.put("colorMode", (n) -> { currentObject.setColorMode(n.getEnumValue(PrintColorMode.class)); });
+        deserializerMap.put("copies", (n) -> { currentObject.setCopies(n.getIntegerValue()); });
+        deserializerMap.put("dpi", (n) -> { currentObject.setDpi(n.getIntegerValue()); });
+        deserializerMap.put("duplexMode", (n) -> { currentObject.setDuplexMode(n.getEnumValue(PrintDuplexMode.class)); });
+        deserializerMap.put("feedDirection", (n) -> { currentObject.setFeedDirection(n.getEnumValue(PrinterFeedDirection.class)); });
+        deserializerMap.put("feedOrientation", (n) -> { currentObject.setFeedOrientation(n.getEnumValue(PrinterFeedOrientation.class)); });
+        deserializerMap.put("finishings", (n) -> { currentObject.setFinishings(n.getCollectionOfEnumValues(PrintFinishing.class)); });
+        deserializerMap.put("fitPdfToPage", (n) -> { currentObject.setFitPdfToPage(n.getBooleanValue()); });
+        deserializerMap.put("inputBin", (n) -> { currentObject.setInputBin(n.getStringValue()); });
+        deserializerMap.put("margin", (n) -> { currentObject.setMargin(n.getObjectValue(PrintMargin::createFromDiscriminatorValue)); });
+        deserializerMap.put("mediaSize", (n) -> { currentObject.setMediaSize(n.getStringValue()); });
+        deserializerMap.put("mediaType", (n) -> { currentObject.setMediaType(n.getStringValue()); });
+        deserializerMap.put("multipageLayout", (n) -> { currentObject.setMultipageLayout(n.getEnumValue(PrintMultipageLayout.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("orientation", (n) -> { currentObject.setOrientation(n.getEnumValue(PrintOrientation.class)); });
+        deserializerMap.put("outputBin", (n) -> { currentObject.setOutputBin(n.getStringValue()); });
+        deserializerMap.put("pageRanges", (n) -> { currentObject.setPageRanges(n.getCollectionOfObjectValues(IntegerRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("pagesPerSheet", (n) -> { currentObject.setPagesPerSheet(n.getIntegerValue()); });
+        deserializerMap.put("quality", (n) -> { currentObject.setQuality(n.getEnumValue(PrintQuality.class)); });
+        deserializerMap.put("scaling", (n) -> { currentObject.setScaling(n.getEnumValue(PrintScaling.class)); });
+        return deserializerMap
     }
     /**
      * Gets the finishings property value. The finishings property
-     * @return a string
+     * @return a printFinishing
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getFinishings() {
+    public java.util.List<PrintFinishing> getFinishings() {
         return this._finishings;
     }
     /**
@@ -283,6 +284,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("collate", this.getCollate());
@@ -292,7 +294,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
         writer.writeEnumValue("duplexMode", this.getDuplexMode());
         writer.writeEnumValue("feedDirection", this.getFeedDirection());
         writer.writeEnumValue("feedOrientation", this.getFeedOrientation());
-        writer.writeCollectionOfPrimitiveValues("finishings", this.getFinishings());
+        writer.writeCollectionOfEnumValues("finishings", this.getFinishings());
         writer.writeBooleanValue("fitPdfToPage", this.getFitPdfToPage());
         writer.writeStringValue("inputBin", this.getInputBin());
         writer.writeObjectValue("margin", this.getMargin());
@@ -313,6 +315,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -321,6 +324,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the collate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCollate(@javax.annotation.Nullable final Boolean value) {
         this._collate = value;
     }
@@ -329,6 +333,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the colorMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColorMode(@javax.annotation.Nullable final PrintColorMode value) {
         this._colorMode = value;
     }
@@ -337,6 +342,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the copies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCopies(@javax.annotation.Nullable final Integer value) {
         this._copies = value;
     }
@@ -345,6 +351,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the dpi property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDpi(@javax.annotation.Nullable final Integer value) {
         this._dpi = value;
     }
@@ -353,6 +360,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the duplexMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDuplexMode(@javax.annotation.Nullable final PrintDuplexMode value) {
         this._duplexMode = value;
     }
@@ -361,6 +369,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the feedDirection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeedDirection(@javax.annotation.Nullable final PrinterFeedDirection value) {
         this._feedDirection = value;
     }
@@ -369,6 +378,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the feedOrientation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeedOrientation(@javax.annotation.Nullable final PrinterFeedOrientation value) {
         this._feedOrientation = value;
     }
@@ -377,7 +387,8 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the finishings property.
      * @return a void
      */
-    public void setFinishings(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setFinishings(@javax.annotation.Nullable final java.util.List<PrintFinishing> value) {
         this._finishings = value;
     }
     /**
@@ -385,6 +396,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the fitPdfToPage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFitPdfToPage(@javax.annotation.Nullable final Boolean value) {
         this._fitPdfToPage = value;
     }
@@ -393,6 +405,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the inputBin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInputBin(@javax.annotation.Nullable final String value) {
         this._inputBin = value;
     }
@@ -401,6 +414,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the margin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMargin(@javax.annotation.Nullable final PrintMargin value) {
         this._margin = value;
     }
@@ -409,6 +423,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the mediaSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaSize(@javax.annotation.Nullable final String value) {
         this._mediaSize = value;
     }
@@ -417,6 +432,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the mediaType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaType(@javax.annotation.Nullable final String value) {
         this._mediaType = value;
     }
@@ -425,6 +441,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the multipageLayout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultipageLayout(@javax.annotation.Nullable final PrintMultipageLayout value) {
         this._multipageLayout = value;
     }
@@ -433,6 +450,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -441,6 +459,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the orientation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrientation(@javax.annotation.Nullable final PrintOrientation value) {
         this._orientation = value;
     }
@@ -449,6 +468,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the outputBin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutputBin(@javax.annotation.Nullable final String value) {
         this._outputBin = value;
     }
@@ -457,6 +477,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the pageRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPageRanges(@javax.annotation.Nullable final java.util.List<IntegerRange> value) {
         this._pageRanges = value;
     }
@@ -465,6 +486,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the pagesPerSheet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPagesPerSheet(@javax.annotation.Nullable final Integer value) {
         this._pagesPerSheet = value;
     }
@@ -473,6 +495,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the quality property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuality(@javax.annotation.Nullable final PrintQuality value) {
         this._quality = value;
     }
@@ -481,6 +504,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the scaling property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScaling(@javax.annotation.Nullable final PrintScaling value) {
         this._scaling = value;
     }

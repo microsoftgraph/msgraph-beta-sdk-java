@@ -16,6 +16,7 @@ public class ProvisionedIdentity extends Identity implements Parsable {
      * Instantiates a new ProvisionedIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProvisionedIdentity() {
         super();
         this.setOdataType("#microsoft.graph.provisionedIdentity");
@@ -45,10 +46,10 @@ public class ProvisionedIdentity extends Identity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ProvisionedIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("details", (n) -> { currentObject.setDetails(n.getObjectValue(DetailsInfo::createFromDiscriminatorValue)); });
-            this.put("identityType", (n) -> { currentObject.setIdentityType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("details", (n) -> { currentObject.setDetails(n.getObjectValue(DetailsInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("identityType", (n) -> { currentObject.setIdentityType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the identityType property value. Type of identity that has been provisioned, such as 'user' or 'group'.
@@ -63,6 +64,7 @@ public class ProvisionedIdentity extends Identity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class ProvisionedIdentity extends Identity implements Parsable {
      * @param value Value to set for the details property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final DetailsInfo value) {
         this._details = value;
     }
@@ -82,6 +85,7 @@ public class ProvisionedIdentity extends Identity implements Parsable {
      * @param value Value to set for the identityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityType(@javax.annotation.Nullable final String value) {
         this._identityType = value;
     }

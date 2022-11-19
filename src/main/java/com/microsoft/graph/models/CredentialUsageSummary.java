@@ -20,6 +20,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
      * Instantiates a new CredentialUsageSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CredentialUsageSummary() {
         super();
         this.setOdataType("#microsoft.graph.credentialUsageSummary");
@@ -65,12 +66,12 @@ public class CredentialUsageSummary extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CredentialUsageSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authMethod", (n) -> { currentObject.setAuthMethod(n.getEnumValue(UsageAuthMethod.class)); });
-            this.put("failureActivityCount", (n) -> { currentObject.setFailureActivityCount(n.getLongValue()); });
-            this.put("feature", (n) -> { currentObject.setFeature(n.getEnumValue(FeatureType.class)); });
-            this.put("successfulActivityCount", (n) -> { currentObject.setSuccessfulActivityCount(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authMethod", (n) -> { currentObject.setAuthMethod(n.getEnumValue(UsageAuthMethod.class)); });
+        deserializerMap.put("failureActivityCount", (n) -> { currentObject.setFailureActivityCount(n.getLongValue()); });
+        deserializerMap.put("feature", (n) -> { currentObject.setFeature(n.getEnumValue(FeatureType.class)); });
+        deserializerMap.put("successfulActivityCount", (n) -> { currentObject.setSuccessfulActivityCount(n.getLongValue()); });
+        return deserializerMap
     }
     /**
      * Gets the successfulActivityCount property value. Provides the count of successful registrations or resets.
@@ -85,6 +86,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +100,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
      * @param value Value to set for the authMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthMethod(@javax.annotation.Nullable final UsageAuthMethod value) {
         this._authMethod = value;
     }
@@ -106,6 +109,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
      * @param value Value to set for the failureActivityCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailureActivityCount(@javax.annotation.Nullable final Long value) {
         this._failureActivityCount = value;
     }
@@ -114,6 +118,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
      * @param value Value to set for the feature property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeature(@javax.annotation.Nullable final FeatureType value) {
         this._feature = value;
     }
@@ -122,6 +127,7 @@ public class CredentialUsageSummary extends Entity implements Parsable {
      * @param value Value to set for the successfulActivityCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessfulActivityCount(@javax.annotation.Nullable final Long value) {
         this._successfulActivityCount = value;
     }

@@ -14,6 +14,7 @@ public class DeviceManagementComplexSettingDefinition extends DeviceManagementSe
      * Instantiates a new DeviceManagementComplexSettingDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementComplexSettingDefinition() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementComplexSettingDefinition");
@@ -35,9 +36,9 @@ public class DeviceManagementComplexSettingDefinition extends DeviceManagementSe
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementComplexSettingDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("propertyDefinitionIds", (n) -> { currentObject.setPropertyDefinitionIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("propertyDefinitionIds", (n) -> { currentObject.setPropertyDefinitionIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the propertyDefinitionIds property value. The definitions of each property of the complex setting
@@ -52,6 +53,7 @@ public class DeviceManagementComplexSettingDefinition extends DeviceManagementSe
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementComplexSettingDefinition extends DeviceManagementSe
      * @param value Value to set for the propertyDefinitionIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPropertyDefinitionIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._propertyDefinitionIds = value;
     }

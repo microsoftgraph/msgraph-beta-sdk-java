@@ -14,6 +14,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
      * Instantiates a new EducationAssignmentIndividualRecipient and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationAssignmentIndividualRecipient() {
         super();
         this.setOdataType("#microsoft.graph.educationAssignmentIndividualRecipient");
@@ -35,9 +36,9 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignmentIndividualRecipient currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("recipients", (n) -> { currentObject.setRecipients(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("recipients", (n) -> { currentObject.setRecipients(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the recipients property value. A collection of ids of the recipients.
@@ -52,6 +53,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class EducationAssignmentIndividualRecipient extends EducationAssignmentR
      * @param value Value to set for the recipients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipients(@javax.annotation.Nullable final java.util.List<String> value) {
         this._recipients = value;
     }

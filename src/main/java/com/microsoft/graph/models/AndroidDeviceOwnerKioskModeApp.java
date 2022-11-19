@@ -16,6 +16,7 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
      * Instantiates a new AndroidDeviceOwnerKioskModeApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerKioskModeApp() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerKioskModeApp");
@@ -45,10 +46,10 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidDeviceOwnerKioskModeApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("className", (n) -> { currentObject.setClassName(n.getStringValue()); });
-            this.put("package", (n) -> { currentObject.setPackage(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("className", (n) -> { currentObject.setClassName(n.getStringValue()); });
+        deserializerMap.put("package", (n) -> { currentObject.setPackage(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the package property value. Package name of application
@@ -63,6 +64,7 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
      * @param value Value to set for the className property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassName(@javax.annotation.Nullable final String value) {
         this._className = value;
     }
@@ -82,6 +85,7 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
      * @param value Value to set for the package property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackage(@javax.annotation.Nullable final String value) {
         this._package_escaped = value;
     }

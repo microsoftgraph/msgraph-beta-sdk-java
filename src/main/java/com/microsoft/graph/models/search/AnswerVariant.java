@@ -28,6 +28,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * Instantiates a new answerVariant and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AnswerVariant() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.search.answerVariant");
@@ -73,14 +74,14 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AnswerVariant currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(DevicePlatformType.class)); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(DevicePlatformType.class)); });
+        deserializerMap.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the languageTag property value. The languageTag property
@@ -119,6 +120,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -134,6 +136,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +145,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -150,6 +154,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -158,6 +163,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the languageTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguageTag(@javax.annotation.Nullable final String value) {
         this._languageTag = value;
     }
@@ -166,6 +172,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -174,6 +181,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the platform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final DevicePlatformType value) {
         this._platform = value;
     }
@@ -182,6 +190,7 @@ public class AnswerVariant implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

@@ -65,6 +65,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * Instantiates a new EducationAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationAssignment() {
         super();
         this.setOdataType("#microsoft.graph.educationAssignment");
@@ -206,34 +207,34 @@ public class EducationAssignment extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("addedStudentAction", (n) -> { currentObject.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction.class)); });
-            this.put("addToCalendarAction", (n) -> { currentObject.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions.class)); });
-            this.put("allowLateSubmissions", (n) -> { currentObject.setAllowLateSubmissions(n.getBooleanValue()); });
-            this.put("allowStudentsToAddResourcesToSubmission", (n) -> { currentObject.setAllowStudentsToAddResourcesToSubmission(n.getBooleanValue()); });
-            this.put("assignDateTime", (n) -> { currentObject.setAssignDateTime(n.getOffsetDateTimeValue()); });
-            this.put("assignedDateTime", (n) -> { currentObject.setAssignedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("assignTo", (n) -> { currentObject.setAssignTo(n.getObjectValue(EducationAssignmentRecipient::createFromDiscriminatorValue)); });
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfObjectValues(EducationCategory::createFromDiscriminatorValue)); });
-            this.put("classId", (n) -> { currentObject.setClassId(n.getStringValue()); });
-            this.put("closeDateTime", (n) -> { currentObject.setCloseDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getOffsetDateTimeValue()); });
-            this.put("feedbackResourcesFolderUrl", (n) -> { currentObject.setFeedbackResourcesFolderUrl(n.getStringValue()); });
-            this.put("grading", (n) -> { currentObject.setGrading(n.getObjectValue(EducationAssignmentGradeType::createFromDiscriminatorValue)); });
-            this.put("instructions", (n) -> { currentObject.setInstructions(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("notificationChannelUrl", (n) -> { currentObject.setNotificationChannelUrl(n.getStringValue()); });
-            this.put("resources", (n) -> { currentObject.setResources(n.getCollectionOfObjectValues(EducationAssignmentResource::createFromDiscriminatorValue)); });
-            this.put("resourcesFolderUrl", (n) -> { currentObject.setResourcesFolderUrl(n.getStringValue()); });
-            this.put("rubric", (n) -> { currentObject.setRubric(n.getObjectValue(EducationRubric::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(EducationAssignmentStatus.class)); });
-            this.put("submissions", (n) -> { currentObject.setSubmissions(n.getCollectionOfObjectValues(EducationSubmission::createFromDiscriminatorValue)); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("addedStudentAction", (n) -> { currentObject.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction.class)); });
+        deserializerMap.put("addToCalendarAction", (n) -> { currentObject.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions.class)); });
+        deserializerMap.put("allowLateSubmissions", (n) -> { currentObject.setAllowLateSubmissions(n.getBooleanValue()); });
+        deserializerMap.put("allowStudentsToAddResourcesToSubmission", (n) -> { currentObject.setAllowStudentsToAddResourcesToSubmission(n.getBooleanValue()); });
+        deserializerMap.put("assignDateTime", (n) -> { currentObject.setAssignDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("assignedDateTime", (n) -> { currentObject.setAssignedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("assignTo", (n) -> { currentObject.setAssignTo(n.getObjectValue(EducationAssignmentRecipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfObjectValues(EducationCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("classId", (n) -> { currentObject.setClassId(n.getStringValue()); });
+        deserializerMap.put("closeDateTime", (n) -> { currentObject.setCloseDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("feedbackResourcesFolderUrl", (n) -> { currentObject.setFeedbackResourcesFolderUrl(n.getStringValue()); });
+        deserializerMap.put("grading", (n) -> { currentObject.setGrading(n.getObjectValue(EducationAssignmentGradeType::createFromDiscriminatorValue)); });
+        deserializerMap.put("instructions", (n) -> { currentObject.setInstructions(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("notificationChannelUrl", (n) -> { currentObject.setNotificationChannelUrl(n.getStringValue()); });
+        deserializerMap.put("resources", (n) -> { currentObject.setResources(n.getCollectionOfObjectValues(EducationAssignmentResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourcesFolderUrl", (n) -> { currentObject.setResourcesFolderUrl(n.getStringValue()); });
+        deserializerMap.put("rubric", (n) -> { currentObject.setRubric(n.getObjectValue(EducationRubric::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(EducationAssignmentStatus.class)); });
+        deserializerMap.put("submissions", (n) -> { currentObject.setSubmissions(n.getCollectionOfObjectValues(EducationSubmission::createFromDiscriminatorValue)); });
+        deserializerMap.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the grading property value. How the assignment will be graded.
@@ -328,6 +329,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -335,34 +337,25 @@ public class EducationAssignment extends Entity implements Parsable {
         writer.writeEnumValue("addToCalendarAction", this.getAddToCalendarAction());
         writer.writeBooleanValue("allowLateSubmissions", this.getAllowLateSubmissions());
         writer.writeBooleanValue("allowStudentsToAddResourcesToSubmission", this.getAllowStudentsToAddResourcesToSubmission());
-        writer.writeOffsetDateTimeValue("assignDateTime", this.getAssignDateTime());
-        writer.writeOffsetDateTimeValue("assignedDateTime", this.getAssignedDateTime());
         writer.writeObjectValue("assignTo", this.getAssignTo());
         writer.writeCollectionOfObjectValues("categories", this.getCategories());
         writer.writeStringValue("classId", this.getClassId());
         writer.writeOffsetDateTimeValue("closeDateTime", this.getCloseDateTime());
-        writer.writeObjectValue("createdBy", this.getCreatedBy());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("dueDateTime", this.getDueDateTime());
-        writer.writeStringValue("feedbackResourcesFolderUrl", this.getFeedbackResourcesFolderUrl());
         writer.writeObjectValue("grading", this.getGrading());
         writer.writeObjectValue("instructions", this.getInstructions());
-        writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("notificationChannelUrl", this.getNotificationChannelUrl());
         writer.writeCollectionOfObjectValues("resources", this.getResources());
-        writer.writeStringValue("resourcesFolderUrl", this.getResourcesFolderUrl());
         writer.writeObjectValue("rubric", this.getRubric());
-        writer.writeEnumValue("status", this.getStatus());
         writer.writeCollectionOfObjectValues("submissions", this.getSubmissions());
-        writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
      * Sets the addedStudentAction property value. Optional field to control the assignment behavior for students who are added after the assignment is published. If not specified, defaults to none value. Currently supports only two values: none or assignIfOpen.
      * @param value Value to set for the addedStudentAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddedStudentAction(@javax.annotation.Nullable final EducationAddedStudentAction value) {
         this._addedStudentAction = value;
     }
@@ -371,6 +364,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the addToCalendarAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddToCalendarAction(@javax.annotation.Nullable final EducationAddToCalendarOptions value) {
         this._addToCalendarAction = value;
     }
@@ -379,6 +373,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the allowLateSubmissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowLateSubmissions(@javax.annotation.Nullable final Boolean value) {
         this._allowLateSubmissions = value;
     }
@@ -387,6 +382,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the allowStudentsToAddResourcesToSubmission property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowStudentsToAddResourcesToSubmission(@javax.annotation.Nullable final Boolean value) {
         this._allowStudentsToAddResourcesToSubmission = value;
     }
@@ -395,6 +391,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the assignDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._assignDateTime = value;
     }
@@ -403,6 +400,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the assignedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._assignedDateTime = value;
     }
@@ -411,6 +409,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the assignTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignTo(@javax.annotation.Nullable final EducationAssignmentRecipient value) {
         this._assignTo = value;
     }
@@ -419,6 +418,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<EducationCategory> value) {
         this._categories = value;
     }
@@ -427,6 +427,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the classId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassId(@javax.annotation.Nullable final String value) {
         this._classId = value;
     }
@@ -435,6 +436,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the closeDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloseDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._closeDateTime = value;
     }
@@ -443,6 +445,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -451,6 +454,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -459,6 +463,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -467,6 +472,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the dueDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDueDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._dueDateTime = value;
     }
@@ -475,6 +481,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the feedbackResourcesFolderUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeedbackResourcesFolderUrl(@javax.annotation.Nullable final String value) {
         this._feedbackResourcesFolderUrl = value;
     }
@@ -483,6 +490,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the grading property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGrading(@javax.annotation.Nullable final EducationAssignmentGradeType value) {
         this._grading = value;
     }
@@ -491,6 +499,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the instructions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstructions(@javax.annotation.Nullable final EducationItemBody value) {
         this._instructions = value;
     }
@@ -499,6 +508,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -507,6 +517,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -515,6 +526,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the notificationChannelUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationChannelUrl(@javax.annotation.Nullable final String value) {
         this._notificationChannelUrl = value;
     }
@@ -523,6 +535,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the resources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResources(@javax.annotation.Nullable final java.util.List<EducationAssignmentResource> value) {
         this._resources = value;
     }
@@ -531,6 +544,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the resourcesFolderUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourcesFolderUrl(@javax.annotation.Nullable final String value) {
         this._resourcesFolderUrl = value;
     }
@@ -539,6 +553,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the rubric property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRubric(@javax.annotation.Nullable final EducationRubric value) {
         this._rubric = value;
     }
@@ -547,6 +562,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final EducationAssignmentStatus value) {
         this._status = value;
     }
@@ -555,6 +571,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the submissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubmissions(@javax.annotation.Nullable final java.util.List<EducationSubmission> value) {
         this._submissions = value;
     }
@@ -563,6 +580,7 @@ public class EducationAssignment extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

@@ -10,8 +10,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
-    /** The accessScope property */
-    private AccessScope _accessScope;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
     /** The currentLabel property */
@@ -24,6 +22,7 @@ public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
      * Instantiates a new dlpEvaluationInput and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DlpEvaluationInput() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.dlpEvaluationInput");
@@ -44,14 +43,6 @@ public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
             }
         }
         return new DlpEvaluationInput();
-    }
-    /**
-     * Gets the accessScope property value. The accessScope property
-     * @return a accessScope
-     */
-    @javax.annotation.Nullable
-    public AccessScope getAccessScope() {
-        return this._accessScope;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -84,12 +75,11 @@ public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DlpEvaluationInput currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("accessScope", (n) -> { currentObject.setAccessScope(n.getEnumValue(AccessScope.class)); });
-            this.put("currentLabel", (n) -> { currentObject.setCurrentLabel(n.getObjectValue(CurrentLabel::createFromDiscriminatorValue)); });
-            this.put("discoveredSensitiveTypes", (n) -> { currentObject.setDiscoveredSensitiveTypes(n.getCollectionOfObjectValues(DiscoveredSensitiveType::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("currentLabel", (n) -> { currentObject.setCurrentLabel(n.getObjectValue(CurrentLabel::createFromDiscriminatorValue)); });
+        deserializerMap.put("discoveredSensitiveTypes", (n) -> { currentObject.setDiscoveredSensitiveTypes(n.getCollectionOfObjectValues(DiscoveredSensitiveType::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -104,27 +94,20 @@ public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeEnumValue("accessScope", this.getAccessScope());
         writer.writeObjectValue("currentLabel", this.getCurrentLabel());
         writer.writeCollectionOfObjectValues("discoveredSensitiveTypes", this.getDiscoveredSensitiveTypes());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the accessScope property value. The accessScope property
-     * @param value Value to set for the accessScope property.
-     * @return a void
-     */
-    public void setAccessScope(@javax.annotation.Nullable final AccessScope value) {
-        this._accessScope = value;
-    }
-    /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -133,6 +116,7 @@ public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the currentLabel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrentLabel(@javax.annotation.Nullable final CurrentLabel value) {
         this._currentLabel = value;
     }
@@ -141,6 +125,7 @@ public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the discoveredSensitiveTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscoveredSensitiveTypes(@javax.annotation.Nullable final java.util.List<DiscoveredSensitiveType> value) {
         this._discoveredSensitiveTypes = value;
     }
@@ -149,6 +134,7 @@ public class DlpEvaluationInput implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

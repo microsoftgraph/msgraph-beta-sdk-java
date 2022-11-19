@@ -22,6 +22,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * Instantiates a new StatusDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public StatusDetails() {
         super();
         this.setOdataType("#microsoft.graph.statusDetails");
@@ -67,13 +68,13 @@ public class StatusDetails extends StatusBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final StatusDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getStringValue()); });
-            this.put("errorCategory", (n) -> { currentObject.setErrorCategory(n.getEnumValue(ProvisioningStatusErrorCategory.class)); });
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
-            this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
-            this.put("recommendedAction", (n) -> { currentObject.setRecommendedAction(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getStringValue()); });
+        deserializerMap.put("errorCategory", (n) -> { currentObject.setErrorCategory(n.getEnumValue(ProvisioningStatusErrorCategory.class)); });
+        deserializerMap.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
+        deserializerMap.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
+        deserializerMap.put("recommendedAction", (n) -> { currentObject.setRecommendedAction(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the reason property value. Summarizes the status and describes why the status happened.
@@ -96,6 +97,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * @param value Value to set for the additionalDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalDetails(@javax.annotation.Nullable final String value) {
         this._additionalDetails = value;
     }
@@ -118,6 +121,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * @param value Value to set for the errorCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCategory(@javax.annotation.Nullable final ProvisioningStatusErrorCategory value) {
         this._errorCategory = value;
     }
@@ -126,6 +130,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final String value) {
         this._errorCode = value;
     }
@@ -134,6 +139,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * @param value Value to set for the reason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReason(@javax.annotation.Nullable final String value) {
         this._reason = value;
     }
@@ -142,6 +148,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      * @param value Value to set for the recommendedAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendedAction(@javax.annotation.Nullable final String value) {
         this._recommendedAction = value;
     }

@@ -16,6 +16,7 @@ public class Acronym extends SearchAnswer implements Parsable {
      * Instantiates a new Acronym and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Acronym() {
         super();
         this.setOdataType("#microsoft.graph.search.acronym");
@@ -37,10 +38,10 @@ public class Acronym extends SearchAnswer implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Acronym currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("standsFor", (n) -> { currentObject.setStandsFor(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(AnswerState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("standsFor", (n) -> { currentObject.setStandsFor(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(AnswerState.class)); });
+        return deserializerMap
     }
     /**
      * Gets the standsFor property value. What the acronym stands for.
@@ -63,6 +64,7 @@ public class Acronym extends SearchAnswer implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class Acronym extends SearchAnswer implements Parsable {
      * @param value Value to set for the standsFor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStandsFor(@javax.annotation.Nullable final String value) {
         this._standsFor = value;
     }
@@ -82,6 +85,7 @@ public class Acronym extends SearchAnswer implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final AnswerState value) {
         this._state = value;
     }

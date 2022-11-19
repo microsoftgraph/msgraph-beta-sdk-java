@@ -26,6 +26,7 @@ public class OemWarranty implements AdditionalDataHolder, Parsable {
      * Instantiates a new oemWarranty and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OemWarranty() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.oemWarranty");
@@ -87,13 +88,13 @@ public class OemWarranty implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OemWarranty currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("additionalWarranties", (n) -> { currentObject.setAdditionalWarranties(n.getCollectionOfObjectValues(WarrantyOffer::createFromDiscriminatorValue)); });
-            this.put("baseWarranties", (n) -> { currentObject.setBaseWarranties(n.getCollectionOfObjectValues(WarrantyOffer::createFromDiscriminatorValue)); });
-            this.put("deviceConfigurationUrl", (n) -> { currentObject.setDeviceConfigurationUrl(n.getStringValue()); });
-            this.put("deviceWarrantyUrl", (n) -> { currentObject.setDeviceWarrantyUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("additionalWarranties", (n) -> { currentObject.setAdditionalWarranties(n.getCollectionOfObjectValues(WarrantyOffer::createFromDiscriminatorValue)); });
+        deserializerMap.put("baseWarranties", (n) -> { currentObject.setBaseWarranties(n.getCollectionOfObjectValues(WarrantyOffer::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceConfigurationUrl", (n) -> { currentObject.setDeviceConfigurationUrl(n.getStringValue()); });
+        deserializerMap.put("deviceWarrantyUrl", (n) -> { currentObject.setDeviceWarrantyUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -108,6 +109,7 @@ public class OemWarranty implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("additionalWarranties", this.getAdditionalWarranties());
@@ -122,6 +124,7 @@ public class OemWarranty implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +133,7 @@ public class OemWarranty implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the additionalWarranties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalWarranties(@javax.annotation.Nullable final java.util.List<WarrantyOffer> value) {
         this._additionalWarranties = value;
     }
@@ -138,6 +142,7 @@ public class OemWarranty implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the baseWarranties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBaseWarranties(@javax.annotation.Nullable final java.util.List<WarrantyOffer> value) {
         this._baseWarranties = value;
     }
@@ -146,6 +151,7 @@ public class OemWarranty implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceConfigurationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceConfigurationUrl(@javax.annotation.Nullable final String value) {
         this._deviceConfigurationUrl = value;
     }
@@ -154,6 +160,7 @@ public class OemWarranty implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceWarrantyUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceWarrantyUrl(@javax.annotation.Nullable final String value) {
         this._deviceWarrantyUrl = value;
     }
@@ -162,6 +169,7 @@ public class OemWarranty implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

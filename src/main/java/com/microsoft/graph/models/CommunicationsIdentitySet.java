@@ -28,6 +28,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * Instantiates a new CommunicationsIdentitySet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CommunicationsIdentitySet() {
         super();
         this.setOdataType("#microsoft.graph.communicationsIdentitySet");
@@ -89,16 +90,16 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CommunicationsIdentitySet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicationInstance", (n) -> { currentObject.setApplicationInstance(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("assertedIdentity", (n) -> { currentObject.setAssertedIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("azureCommunicationServicesUser", (n) -> { currentObject.setAzureCommunicationServicesUser(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("encrypted", (n) -> { currentObject.setEncrypted(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("endpointType", (n) -> { currentObject.setEndpointType(n.getEnumValue(EndpointType.class)); });
-            this.put("guest", (n) -> { currentObject.setGuest(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("onPremises", (n) -> { currentObject.setOnPremises(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("phone", (n) -> { currentObject.setPhone(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationInstance", (n) -> { currentObject.setApplicationInstance(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("assertedIdentity", (n) -> { currentObject.setAssertedIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("azureCommunicationServicesUser", (n) -> { currentObject.setAzureCommunicationServicesUser(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("encrypted", (n) -> { currentObject.setEncrypted(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("endpointType", (n) -> { currentObject.setEndpointType(n.getEnumValue(EndpointType.class)); });
+        deserializerMap.put("guest", (n) -> { currentObject.setGuest(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremises", (n) -> { currentObject.setOnPremises(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("phone", (n) -> { currentObject.setPhone(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the guest property value. The guest user associated with this action.
@@ -129,6 +130,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +148,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the applicationInstance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationInstance(@javax.annotation.Nullable final Identity value) {
         this._applicationInstance = value;
     }
@@ -154,6 +157,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the assertedIdentity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssertedIdentity(@javax.annotation.Nullable final Identity value) {
         this._assertedIdentity = value;
     }
@@ -162,6 +166,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the azureCommunicationServicesUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureCommunicationServicesUser(@javax.annotation.Nullable final Identity value) {
         this._azureCommunicationServicesUser = value;
     }
@@ -170,6 +175,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the encrypted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncrypted(@javax.annotation.Nullable final Identity value) {
         this._encrypted = value;
     }
@@ -178,6 +184,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the endpointType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpointType(@javax.annotation.Nullable final EndpointType value) {
         this._endpointType = value;
     }
@@ -186,6 +193,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the guest property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGuest(@javax.annotation.Nullable final Identity value) {
         this._guest = value;
     }
@@ -194,6 +202,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the onPremises property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremises(@javax.annotation.Nullable final Identity value) {
         this._onPremises = value;
     }
@@ -202,6 +211,7 @@ public class CommunicationsIdentitySet extends IdentitySet implements Parsable {
      * @param value Value to set for the phone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhone(@javax.annotation.Nullable final Identity value) {
         this._phone = value;
     }

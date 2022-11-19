@@ -30,13 +30,13 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<AppRoleAssignment> _appRoleAssignments;
     /** The approvals property */
     private java.util.List<Approval> _approvals;
-    /** The licenses that are assigned to the user, including inherited (group-based) licenses. Not nullable. Supports $filter (eq, not, and counting empty collections). */
+    /** The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses. Not nullable. Supports $filter (eq, not, and counting empty collections). */
     private java.util.List<AssignedLicense> _assignedLicenses;
     /** The plans that are assigned to the user. Read-only. Not nullable.Supports $filter (eq and not). */
     private java.util.List<AssignedPlan> _assignedPlans;
     /** The authentication property */
     private Authentication _authentication;
-    /** The authorizationInfo property */
+    /** Identifiers that can be used to identify and authenticate a user in non-Azure AD environments. This property can be used to store identifiers for smartcard-based certificates that a user uses for access to on-premises Active Directory deployments or for federated access. It can also be used to store the Subject Alternate Name (SAN) that's associated with a Common Access Card (CAC). Nullable.Supports $filter (eq and startsWith). */
     private AuthorizationInfo _authorizationInfo;
     /** The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select. */
     private OffsetDateTime _birthday;
@@ -66,7 +66,7 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<Contact> _contacts;
     /** The country/region in which the user is located; for example, US or UK. Maximum length is 128 characters. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values). */
     private String _country;
-    /** The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Read-only. Supports $filter (eq, ne, not , ge, le, in). */
+    /** The date and time the user was created, in ISO 8601 format and in UTC time. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Azure AD. Property is null for some users created before June 2018 and on-premises users that were synced to Azure AD before June 2018. Read-only. Supports $filter (eq, ne, not , ge, le, in). */
     private OffsetDateTime _createdDateTime;
     /** Directory objects that were created by the user. Read-only. Nullable. */
     private java.util.List<DirectoryObject> _createdObjects;
@@ -98,7 +98,7 @@ public class User extends DirectoryObject implements Parsable {
     private OffsetDateTime _employeeHireDate;
     /** The employee identifier assigned to the user by the organization. The maximum length is 16 characters.Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values). */
     private String _employeeId;
-    /** The employeeLeaveDateTime property */
+    /** The date and time when the user left or will leave the organization. To read or write this property, the calling app must be assigned the User-LifeCycleInfo.Read.All or User-LifeCycleInfo.ReadWrite.All permissions respectively. To read this property in delegated scenarios, the admin needs one of the following Azure AD roles: Lifecycle Workflows Administrator, Global Reader, or Global Admin. To write this property in delegated scenarios, the admin needs the Global Administrator Azure AD role. Supports $filter (eq, ne, not , ge, le, in). For more information, see Configure the employeeLeaveDateTime property for a user. */
     private OffsetDateTime _employeeLeaveDateTime;
     /** Represents organization data (e.g. division and costCenter) associated with a user. Supports $filter (eq, ne, not , ge, le, in). */
     private EmployeeOrgData _employeeOrgData;
@@ -136,7 +136,7 @@ public class User extends DirectoryObject implements Parsable {
     private java.util.List<String> _interests;
     /** The isManagementRestricted property */
     private Boolean _isManagementRestricted;
-    /** Do not use – reserved for future use. */
+    /** Do not use  reserved for future use. */
     private Boolean _isResourceAccount;
     /** The user's job title. Maximum length is 128 characters. Supports $filter (eq, ne, not , ge, le, in, startsWith, and eq on null values). */
     private String _jobTitle;
@@ -148,7 +148,7 @@ public class User extends DirectoryObject implements Parsable {
     private OffsetDateTime _lastPasswordChangeDateTime;
     /** Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, MinorWithOutParentalConsent, MinorWithParentalConsent, MinorNoParentalConsentRequired, NotAdult and Adult. Refer to the legal age group property definitions for further information. Returned only on $select. */
     private String _legalAgeGroupClassification;
-    /** State of license assignments for this user. Read-only. Returned only on $select. */
+    /** State of license assignments for this user. Also indicates licenses that are directly-assigned and those that the user has inherited through group memberships. Read-only. Returned only on $select. */
     private java.util.List<LicenseAssignmentState> _licenseAssignmentStates;
     /** The licenseDetails property */
     private java.util.List<LicenseDetails> _licenseDetails;
@@ -304,6 +304,7 @@ public class User extends DirectoryObject implements Parsable {
      * Instantiates a new User and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public User() {
         super();
         this.setOdataType("#microsoft.graph.user");
@@ -399,7 +400,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._approvals;
     }
     /**
-     * Gets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. Not nullable. Supports $filter (eq, not, and counting empty collections).
+     * Gets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses. Not nullable. Supports $filter (eq, not, and counting empty collections).
      * @return a assignedLicense
      */
     @javax.annotation.Nullable
@@ -423,7 +424,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._authentication;
     }
     /**
-     * Gets the authorizationInfo property value. The authorizationInfo property
+     * Gets the authorizationInfo property value. Identifiers that can be used to identify and authenticate a user in non-Azure AD environments. This property can be used to store identifiers for smartcard-based certificates that a user uses for access to on-premises Active Directory deployments or for federated access. It can also be used to store the Subject Alternate Name (SAN) that's associated with a Common Access Card (CAC). Nullable.Supports $filter (eq and startsWith).
      * @return a authorizationInfo
      */
     @javax.annotation.Nullable
@@ -543,7 +544,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._country;
     }
     /**
-     * Gets the createdDateTime property value. The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Read-only. Supports $filter (eq, ne, not , ge, le, in).
+     * Gets the createdDateTime property value. The date and time the user was created, in ISO 8601 format and in UTC time. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Azure AD. Property is null for some users created before June 2018 and on-premises users that were synced to Azure AD before June 2018. Read-only. Supports $filter (eq, ne, not , ge, le, in).
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -671,7 +672,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._employeeId;
     }
     /**
-     * Gets the employeeLeaveDateTime property value. The employeeLeaveDateTime property
+     * Gets the employeeLeaveDateTime property value. The date and time when the user left or will leave the organization. To read or write this property, the calling app must be assigned the User-LifeCycleInfo.Read.All or User-LifeCycleInfo.ReadWrite.All permissions respectively. To read this property in delegated scenarios, the admin needs one of the following Azure AD roles: Lifecycle Workflows Administrator, Global Reader, or Global Admin. To write this property in delegated scenarios, the admin needs the Global Administrator Azure AD role. Supports $filter (eq, ne, not , ge, le, in). For more information, see Configure the employeeLeaveDateTime property for a user.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -741,153 +742,153 @@ public class User extends DirectoryObject implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final User currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("aboutMe", (n) -> { currentObject.setAboutMe(n.getStringValue()); });
-            this.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
-            this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(UserActivity::createFromDiscriminatorValue)); });
-            this.put("ageGroup", (n) -> { currentObject.setAgeGroup(n.getStringValue()); });
-            this.put("agreementAcceptances", (n) -> { currentObject.setAgreementAcceptances(n.getCollectionOfObjectValues(AgreementAcceptance::createFromDiscriminatorValue)); });
-            this.put("analytics", (n) -> { currentObject.setAnalytics(n.getObjectValue(UserAnalytics::createFromDiscriminatorValue)); });
-            this.put("appConsentRequestsForApproval", (n) -> { currentObject.setAppConsentRequestsForApproval(n.getCollectionOfObjectValues(AppConsentRequest::createFromDiscriminatorValue)); });
-            this.put("appRoleAssignedResources", (n) -> { currentObject.setAppRoleAssignedResources(n.getCollectionOfObjectValues(ServicePrincipal::createFromDiscriminatorValue)); });
-            this.put("appRoleAssignments", (n) -> { currentObject.setAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
-            this.put("approvals", (n) -> { currentObject.setApprovals(n.getCollectionOfObjectValues(Approval::createFromDiscriminatorValue)); });
-            this.put("assignedLicenses", (n) -> { currentObject.setAssignedLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
-            this.put("assignedPlans", (n) -> { currentObject.setAssignedPlans(n.getCollectionOfObjectValues(AssignedPlan::createFromDiscriminatorValue)); });
-            this.put("authentication", (n) -> { currentObject.setAuthentication(n.getObjectValue(Authentication::createFromDiscriminatorValue)); });
-            this.put("authorizationInfo", (n) -> { currentObject.setAuthorizationInfo(n.getObjectValue(AuthorizationInfo::createFromDiscriminatorValue)); });
-            this.put("birthday", (n) -> { currentObject.setBirthday(n.getOffsetDateTimeValue()); });
-            this.put("businessPhones", (n) -> { currentObject.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("calendar", (n) -> { currentObject.setCalendar(n.getObjectValue(Calendar::createFromDiscriminatorValue)); });
-            this.put("calendarGroups", (n) -> { currentObject.setCalendarGroups(n.getCollectionOfObjectValues(CalendarGroup::createFromDiscriminatorValue)); });
-            this.put("calendars", (n) -> { currentObject.setCalendars(n.getCollectionOfObjectValues(Calendar::createFromDiscriminatorValue)); });
-            this.put("calendarView", (n) -> { currentObject.setCalendarView(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
-            this.put("chats", (n) -> { currentObject.setChats(n.getCollectionOfObjectValues(Chat::createFromDiscriminatorValue)); });
-            this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
-            this.put("cloudPCs", (n) -> { currentObject.setCloudPCs(n.getCollectionOfObjectValues(CloudPC::createFromDiscriminatorValue)); });
-            this.put("companyName", (n) -> { currentObject.setCompanyName(n.getStringValue()); });
-            this.put("consentProvidedForMinor", (n) -> { currentObject.setConsentProvidedForMinor(n.getStringValue()); });
-            this.put("contactFolders", (n) -> { currentObject.setContactFolders(n.getCollectionOfObjectValues(ContactFolder::createFromDiscriminatorValue)); });
-            this.put("contacts", (n) -> { currentObject.setContacts(n.getCollectionOfObjectValues(Contact::createFromDiscriminatorValue)); });
-            this.put("country", (n) -> { currentObject.setCountry(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdObjects", (n) -> { currentObject.setCreatedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("creationType", (n) -> { currentObject.setCreationType(n.getStringValue()); });
-            this.put("customSecurityAttributes", (n) -> { currentObject.setCustomSecurityAttributes(n.getObjectValue(CustomSecurityAttributeValue::createFromDiscriminatorValue)); });
-            this.put("department", (n) -> { currentObject.setDepartment(n.getStringValue()); });
-            this.put("deviceEnrollmentConfigurations", (n) -> { currentObject.setDeviceEnrollmentConfigurations(n.getCollectionOfObjectValues(DeviceEnrollmentConfiguration::createFromDiscriminatorValue)); });
-            this.put("deviceEnrollmentLimit", (n) -> { currentObject.setDeviceEnrollmentLimit(n.getIntegerValue()); });
-            this.put("deviceKeys", (n) -> { currentObject.setDeviceKeys(n.getCollectionOfObjectValues(DeviceKey::createFromDiscriminatorValue)); });
-            this.put("deviceManagementTroubleshootingEvents", (n) -> { currentObject.setDeviceManagementTroubleshootingEvents(n.getCollectionOfObjectValues(DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue)); });
-            this.put("devices", (n) -> { currentObject.setDevices(n.getCollectionOfObjectValues(Device::createFromDiscriminatorValue)); });
-            this.put("directReports", (n) -> { currentObject.setDirectReports(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("drive", (n) -> { currentObject.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
-            this.put("drives", (n) -> { currentObject.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
-            this.put("employeeHireDate", (n) -> { currentObject.setEmployeeHireDate(n.getOffsetDateTimeValue()); });
-            this.put("employeeId", (n) -> { currentObject.setEmployeeId(n.getStringValue()); });
-            this.put("employeeLeaveDateTime", (n) -> { currentObject.setEmployeeLeaveDateTime(n.getOffsetDateTimeValue()); });
-            this.put("employeeOrgData", (n) -> { currentObject.setEmployeeOrgData(n.getObjectValue(EmployeeOrgData::createFromDiscriminatorValue)); });
-            this.put("employeeType", (n) -> { currentObject.setEmployeeType(n.getStringValue()); });
-            this.put("events", (n) -> { currentObject.setEvents(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("externalUserState", (n) -> { currentObject.setExternalUserState(n.getStringValue()); });
-            this.put("externalUserStateChangeDateTime", (n) -> { currentObject.setExternalUserStateChangeDateTime(n.getStringValue()); });
-            this.put("faxNumber", (n) -> { currentObject.setFaxNumber(n.getStringValue()); });
-            this.put("followedSites", (n) -> { currentObject.setFollowedSites(n.getCollectionOfObjectValues(Site::createFromDiscriminatorValue)); });
-            this.put("givenName", (n) -> { currentObject.setGivenName(n.getStringValue()); });
-            this.put("hireDate", (n) -> { currentObject.setHireDate(n.getOffsetDateTimeValue()); });
-            this.put("identities", (n) -> { currentObject.setIdentities(n.getCollectionOfObjectValues(ObjectIdentity::createFromDiscriminatorValue)); });
-            this.put("imAddresses", (n) -> { currentObject.setImAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("inferenceClassification", (n) -> { currentObject.setInferenceClassification(n.getObjectValue(InferenceClassification::createFromDiscriminatorValue)); });
-            this.put("infoCatalogs", (n) -> { currentObject.setInfoCatalogs(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("informationProtection", (n) -> { currentObject.setInformationProtection(n.getObjectValue(InformationProtection::createFromDiscriminatorValue)); });
-            this.put("insights", (n) -> { currentObject.setInsights(n.getObjectValue(ItemInsights::createFromDiscriminatorValue)); });
-            this.put("interests", (n) -> { currentObject.setInterests(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isManagementRestricted", (n) -> { currentObject.setIsManagementRestricted(n.getBooleanValue()); });
-            this.put("isResourceAccount", (n) -> { currentObject.setIsResourceAccount(n.getBooleanValue()); });
-            this.put("jobTitle", (n) -> { currentObject.setJobTitle(n.getStringValue()); });
-            this.put("joinedGroups", (n) -> { currentObject.setJoinedGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
-            this.put("joinedTeams", (n) -> { currentObject.setJoinedTeams(n.getCollectionOfObjectValues(Team::createFromDiscriminatorValue)); });
-            this.put("lastPasswordChangeDateTime", (n) -> { currentObject.setLastPasswordChangeDateTime(n.getOffsetDateTimeValue()); });
-            this.put("legalAgeGroupClassification", (n) -> { currentObject.setLegalAgeGroupClassification(n.getStringValue()); });
-            this.put("licenseAssignmentStates", (n) -> { currentObject.setLicenseAssignmentStates(n.getCollectionOfObjectValues(LicenseAssignmentState::createFromDiscriminatorValue)); });
-            this.put("licenseDetails", (n) -> { currentObject.setLicenseDetails(n.getCollectionOfObjectValues(LicenseDetails::createFromDiscriminatorValue)); });
-            this.put("mail", (n) -> { currentObject.setMail(n.getStringValue()); });
-            this.put("mailboxSettings", (n) -> { currentObject.setMailboxSettings(n.getObjectValue(MailboxSettings::createFromDiscriminatorValue)); });
-            this.put("mailFolders", (n) -> { currentObject.setMailFolders(n.getCollectionOfObjectValues(MailFolder::createFromDiscriminatorValue)); });
-            this.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
-            this.put("managedAppRegistrations", (n) -> { currentObject.setManagedAppRegistrations(n.getCollectionOfObjectValues(ManagedAppRegistration::createFromDiscriminatorValue)); });
-            this.put("managedDevices", (n) -> { currentObject.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
-            this.put("manager", (n) -> { currentObject.setManager(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("memberOf", (n) -> { currentObject.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("messages", (n) -> { currentObject.setMessages(n.getCollectionOfObjectValues(Message::createFromDiscriminatorValue)); });
-            this.put("mobileAppIntentAndStates", (n) -> { currentObject.setMobileAppIntentAndStates(n.getCollectionOfObjectValues(MobileAppIntentAndState::createFromDiscriminatorValue)); });
-            this.put("mobileAppTroubleshootingEvents", (n) -> { currentObject.setMobileAppTroubleshootingEvents(n.getCollectionOfObjectValues(MobileAppTroubleshootingEvent::createFromDiscriminatorValue)); });
-            this.put("mobilePhone", (n) -> { currentObject.setMobilePhone(n.getStringValue()); });
-            this.put("mySite", (n) -> { currentObject.setMySite(n.getStringValue()); });
-            this.put("notifications", (n) -> { currentObject.setNotifications(n.getCollectionOfObjectValues(Notification::createFromDiscriminatorValue)); });
-            this.put("oauth2PermissionGrants", (n) -> { currentObject.setOauth2PermissionGrants(n.getCollectionOfObjectValues(OAuth2PermissionGrant::createFromDiscriminatorValue)); });
-            this.put("officeLocation", (n) -> { currentObject.setOfficeLocation(n.getStringValue()); });
-            this.put("onenote", (n) -> { currentObject.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
-            this.put("onlineMeetings", (n) -> { currentObject.setOnlineMeetings(n.getCollectionOfObjectValues(OnlineMeeting::createFromDiscriminatorValue)); });
-            this.put("onPremisesDistinguishedName", (n) -> { currentObject.setOnPremisesDistinguishedName(n.getStringValue()); });
-            this.put("onPremisesDomainName", (n) -> { currentObject.setOnPremisesDomainName(n.getStringValue()); });
-            this.put("onPremisesExtensionAttributes", (n) -> { currentObject.setOnPremisesExtensionAttributes(n.getObjectValue(OnPremisesExtensionAttributes::createFromDiscriminatorValue)); });
-            this.put("onPremisesImmutableId", (n) -> { currentObject.setOnPremisesImmutableId(n.getStringValue()); });
-            this.put("onPremisesLastSyncDateTime", (n) -> { currentObject.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("onPremisesProvisioningErrors", (n) -> { currentObject.setOnPremisesProvisioningErrors(n.getCollectionOfObjectValues(OnPremisesProvisioningError::createFromDiscriminatorValue)); });
-            this.put("onPremisesSamAccountName", (n) -> { currentObject.setOnPremisesSamAccountName(n.getStringValue()); });
-            this.put("onPremisesSecurityIdentifier", (n) -> { currentObject.setOnPremisesSecurityIdentifier(n.getStringValue()); });
-            this.put("onPremisesSyncEnabled", (n) -> { currentObject.setOnPremisesSyncEnabled(n.getBooleanValue()); });
-            this.put("onPremisesUserPrincipalName", (n) -> { currentObject.setOnPremisesUserPrincipalName(n.getStringValue()); });
-            this.put("otherMails", (n) -> { currentObject.setOtherMails(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("outlook", (n) -> { currentObject.setOutlook(n.getObjectValue(OutlookUser::createFromDiscriminatorValue)); });
-            this.put("ownedDevices", (n) -> { currentObject.setOwnedDevices(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("ownedObjects", (n) -> { currentObject.setOwnedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("passwordPolicies", (n) -> { currentObject.setPasswordPolicies(n.getStringValue()); });
-            this.put("passwordProfile", (n) -> { currentObject.setPasswordProfile(n.getObjectValue(PasswordProfile::createFromDiscriminatorValue)); });
-            this.put("pastProjects", (n) -> { currentObject.setPastProjects(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("pendingAccessReviewInstances", (n) -> { currentObject.setPendingAccessReviewInstances(n.getCollectionOfObjectValues(AccessReviewInstance::createFromDiscriminatorValue)); });
-            this.put("people", (n) -> { currentObject.setPeople(n.getCollectionOfObjectValues(Person::createFromDiscriminatorValue)); });
-            this.put("photo", (n) -> { currentObject.setPhoto(n.getObjectValue(ProfilePhoto::createFromDiscriminatorValue)); });
-            this.put("photos", (n) -> { currentObject.setPhotos(n.getCollectionOfObjectValues(ProfilePhoto::createFromDiscriminatorValue)); });
-            this.put("planner", (n) -> { currentObject.setPlanner(n.getObjectValue(PlannerUser::createFromDiscriminatorValue)); });
-            this.put("postalCode", (n) -> { currentObject.setPostalCode(n.getStringValue()); });
-            this.put("preferredDataLocation", (n) -> { currentObject.setPreferredDataLocation(n.getStringValue()); });
-            this.put("preferredLanguage", (n) -> { currentObject.setPreferredLanguage(n.getStringValue()); });
-            this.put("preferredName", (n) -> { currentObject.setPreferredName(n.getStringValue()); });
-            this.put("presence", (n) -> { currentObject.setPresence(n.getObjectValue(Presence::createFromDiscriminatorValue)); });
-            this.put("print", (n) -> { currentObject.setPrint(n.getObjectValue(UserPrint::createFromDiscriminatorValue)); });
-            this.put("profile", (n) -> { currentObject.setProfile(n.getObjectValue(Profile::createFromDiscriminatorValue)); });
-            this.put("provisionedPlans", (n) -> { currentObject.setProvisionedPlans(n.getCollectionOfObjectValues(ProvisionedPlan::createFromDiscriminatorValue)); });
-            this.put("proxyAddresses", (n) -> { currentObject.setProxyAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("refreshTokensValidFromDateTime", (n) -> { currentObject.setRefreshTokensValidFromDateTime(n.getOffsetDateTimeValue()); });
-            this.put("registeredDevices", (n) -> { currentObject.setRegisteredDevices(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("responsibilities", (n) -> { currentObject.setResponsibilities(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("schools", (n) -> { currentObject.setSchools(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("scopedRoleMemberOf", (n) -> { currentObject.setScopedRoleMemberOf(n.getCollectionOfObjectValues(ScopedRoleMembership::createFromDiscriminatorValue)); });
-            this.put("security", (n) -> { currentObject.setSecurity(n.getObjectValue(Security::createFromDiscriminatorValue)); });
-            this.put("securityIdentifier", (n) -> { currentObject.setSecurityIdentifier(n.getStringValue()); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(UserSettings::createFromDiscriminatorValue)); });
-            this.put("showInAddressList", (n) -> { currentObject.setShowInAddressList(n.getBooleanValue()); });
-            this.put("signInActivity", (n) -> { currentObject.setSignInActivity(n.getObjectValue(SignInActivity::createFromDiscriminatorValue)); });
-            this.put("signInSessionsValidFromDateTime", (n) -> { currentObject.setSignInSessionsValidFromDateTime(n.getOffsetDateTimeValue()); });
-            this.put("skills", (n) -> { currentObject.setSkills(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
-            this.put("streetAddress", (n) -> { currentObject.setStreetAddress(n.getStringValue()); });
-            this.put("surname", (n) -> { currentObject.setSurname(n.getStringValue()); });
-            this.put("tasks", (n) -> { currentObject.setTasks(n.getObjectValue(Tasks::createFromDiscriminatorValue)); });
-            this.put("teamwork", (n) -> { currentObject.setTeamwork(n.getObjectValue(UserTeamwork::createFromDiscriminatorValue)); });
-            this.put("todo", (n) -> { currentObject.setTodo(n.getObjectValue(Todo::createFromDiscriminatorValue)); });
-            this.put("transitiveMemberOf", (n) -> { currentObject.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("transitiveReports", (n) -> { currentObject.setTransitiveReports(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("usageLocation", (n) -> { currentObject.setUsageLocation(n.getStringValue()); });
-            this.put("usageRights", (n) -> { currentObject.setUsageRights(n.getCollectionOfObjectValues(UsageRight::createFromDiscriminatorValue)); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("userType", (n) -> { currentObject.setUserType(n.getStringValue()); });
-            this.put("windowsInformationProtectionDeviceRegistrations", (n) -> { currentObject.setWindowsInformationProtectionDeviceRegistrations(n.getCollectionOfObjectValues(WindowsInformationProtectionDeviceRegistration::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("aboutMe", (n) -> { currentObject.setAboutMe(n.getStringValue()); });
+        deserializerMap.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
+        deserializerMap.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(UserActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("ageGroup", (n) -> { currentObject.setAgeGroup(n.getStringValue()); });
+        deserializerMap.put("agreementAcceptances", (n) -> { currentObject.setAgreementAcceptances(n.getCollectionOfObjectValues(AgreementAcceptance::createFromDiscriminatorValue)); });
+        deserializerMap.put("analytics", (n) -> { currentObject.setAnalytics(n.getObjectValue(UserAnalytics::createFromDiscriminatorValue)); });
+        deserializerMap.put("appConsentRequestsForApproval", (n) -> { currentObject.setAppConsentRequestsForApproval(n.getCollectionOfObjectValues(AppConsentRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("appRoleAssignedResources", (n) -> { currentObject.setAppRoleAssignedResources(n.getCollectionOfObjectValues(ServicePrincipal::createFromDiscriminatorValue)); });
+        deserializerMap.put("appRoleAssignments", (n) -> { currentObject.setAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("approvals", (n) -> { currentObject.setApprovals(n.getCollectionOfObjectValues(Approval::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignedLicenses", (n) -> { currentObject.setAssignedLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignedPlans", (n) -> { currentObject.setAssignedPlans(n.getCollectionOfObjectValues(AssignedPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("authentication", (n) -> { currentObject.setAuthentication(n.getObjectValue(Authentication::createFromDiscriminatorValue)); });
+        deserializerMap.put("authorizationInfo", (n) -> { currentObject.setAuthorizationInfo(n.getObjectValue(AuthorizationInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("birthday", (n) -> { currentObject.setBirthday(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("businessPhones", (n) -> { currentObject.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("calendar", (n) -> { currentObject.setCalendar(n.getObjectValue(Calendar::createFromDiscriminatorValue)); });
+        deserializerMap.put("calendarGroups", (n) -> { currentObject.setCalendarGroups(n.getCollectionOfObjectValues(CalendarGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("calendars", (n) -> { currentObject.setCalendars(n.getCollectionOfObjectValues(Calendar::createFromDiscriminatorValue)); });
+        deserializerMap.put("calendarView", (n) -> { currentObject.setCalendarView(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
+        deserializerMap.put("chats", (n) -> { currentObject.setChats(n.getCollectionOfObjectValues(Chat::createFromDiscriminatorValue)); });
+        deserializerMap.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
+        deserializerMap.put("cloudPCs", (n) -> { currentObject.setCloudPCs(n.getCollectionOfObjectValues(CloudPC::createFromDiscriminatorValue)); });
+        deserializerMap.put("companyName", (n) -> { currentObject.setCompanyName(n.getStringValue()); });
+        deserializerMap.put("consentProvidedForMinor", (n) -> { currentObject.setConsentProvidedForMinor(n.getStringValue()); });
+        deserializerMap.put("contactFolders", (n) -> { currentObject.setContactFolders(n.getCollectionOfObjectValues(ContactFolder::createFromDiscriminatorValue)); });
+        deserializerMap.put("contacts", (n) -> { currentObject.setContacts(n.getCollectionOfObjectValues(Contact::createFromDiscriminatorValue)); });
+        deserializerMap.put("country", (n) -> { currentObject.setCountry(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdObjects", (n) -> { currentObject.setCreatedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("creationType", (n) -> { currentObject.setCreationType(n.getStringValue()); });
+        deserializerMap.put("customSecurityAttributes", (n) -> { currentObject.setCustomSecurityAttributes(n.getObjectValue(CustomSecurityAttributeValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("department", (n) -> { currentObject.setDepartment(n.getStringValue()); });
+        deserializerMap.put("deviceEnrollmentConfigurations", (n) -> { currentObject.setDeviceEnrollmentConfigurations(n.getCollectionOfObjectValues(DeviceEnrollmentConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceEnrollmentLimit", (n) -> { currentObject.setDeviceEnrollmentLimit(n.getIntegerValue()); });
+        deserializerMap.put("deviceKeys", (n) -> { currentObject.setDeviceKeys(n.getCollectionOfObjectValues(DeviceKey::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceManagementTroubleshootingEvents", (n) -> { currentObject.setDeviceManagementTroubleshootingEvents(n.getCollectionOfObjectValues(DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue)); });
+        deserializerMap.put("devices", (n) -> { currentObject.setDevices(n.getCollectionOfObjectValues(Device::createFromDiscriminatorValue)); });
+        deserializerMap.put("directReports", (n) -> { currentObject.setDirectReports(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("drive", (n) -> { currentObject.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
+        deserializerMap.put("drives", (n) -> { currentObject.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
+        deserializerMap.put("employeeHireDate", (n) -> { currentObject.setEmployeeHireDate(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("employeeId", (n) -> { currentObject.setEmployeeId(n.getStringValue()); });
+        deserializerMap.put("employeeLeaveDateTime", (n) -> { currentObject.setEmployeeLeaveDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("employeeOrgData", (n) -> { currentObject.setEmployeeOrgData(n.getObjectValue(EmployeeOrgData::createFromDiscriminatorValue)); });
+        deserializerMap.put("employeeType", (n) -> { currentObject.setEmployeeType(n.getStringValue()); });
+        deserializerMap.put("events", (n) -> { currentObject.setEvents(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
+        deserializerMap.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalUserState", (n) -> { currentObject.setExternalUserState(n.getStringValue()); });
+        deserializerMap.put("externalUserStateChangeDateTime", (n) -> { currentObject.setExternalUserStateChangeDateTime(n.getStringValue()); });
+        deserializerMap.put("faxNumber", (n) -> { currentObject.setFaxNumber(n.getStringValue()); });
+        deserializerMap.put("followedSites", (n) -> { currentObject.setFollowedSites(n.getCollectionOfObjectValues(Site::createFromDiscriminatorValue)); });
+        deserializerMap.put("givenName", (n) -> { currentObject.setGivenName(n.getStringValue()); });
+        deserializerMap.put("hireDate", (n) -> { currentObject.setHireDate(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("identities", (n) -> { currentObject.setIdentities(n.getCollectionOfObjectValues(ObjectIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("imAddresses", (n) -> { currentObject.setImAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("inferenceClassification", (n) -> { currentObject.setInferenceClassification(n.getObjectValue(InferenceClassification::createFromDiscriminatorValue)); });
+        deserializerMap.put("infoCatalogs", (n) -> { currentObject.setInfoCatalogs(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("informationProtection", (n) -> { currentObject.setInformationProtection(n.getObjectValue(InformationProtection::createFromDiscriminatorValue)); });
+        deserializerMap.put("insights", (n) -> { currentObject.setInsights(n.getObjectValue(ItemInsights::createFromDiscriminatorValue)); });
+        deserializerMap.put("interests", (n) -> { currentObject.setInterests(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isManagementRestricted", (n) -> { currentObject.setIsManagementRestricted(n.getBooleanValue()); });
+        deserializerMap.put("isResourceAccount", (n) -> { currentObject.setIsResourceAccount(n.getBooleanValue()); });
+        deserializerMap.put("jobTitle", (n) -> { currentObject.setJobTitle(n.getStringValue()); });
+        deserializerMap.put("joinedGroups", (n) -> { currentObject.setJoinedGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
+        deserializerMap.put("joinedTeams", (n) -> { currentObject.setJoinedTeams(n.getCollectionOfObjectValues(Team::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastPasswordChangeDateTime", (n) -> { currentObject.setLastPasswordChangeDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("legalAgeGroupClassification", (n) -> { currentObject.setLegalAgeGroupClassification(n.getStringValue()); });
+        deserializerMap.put("licenseAssignmentStates", (n) -> { currentObject.setLicenseAssignmentStates(n.getCollectionOfObjectValues(LicenseAssignmentState::createFromDiscriminatorValue)); });
+        deserializerMap.put("licenseDetails", (n) -> { currentObject.setLicenseDetails(n.getCollectionOfObjectValues(LicenseDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("mail", (n) -> { currentObject.setMail(n.getStringValue()); });
+        deserializerMap.put("mailboxSettings", (n) -> { currentObject.setMailboxSettings(n.getObjectValue(MailboxSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("mailFolders", (n) -> { currentObject.setMailFolders(n.getCollectionOfObjectValues(MailFolder::createFromDiscriminatorValue)); });
+        deserializerMap.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
+        deserializerMap.put("managedAppRegistrations", (n) -> { currentObject.setManagedAppRegistrations(n.getCollectionOfObjectValues(ManagedAppRegistration::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedDevices", (n) -> { currentObject.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
+        deserializerMap.put("manager", (n) -> { currentObject.setManager(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("memberOf", (n) -> { currentObject.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("messages", (n) -> { currentObject.setMessages(n.getCollectionOfObjectValues(Message::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobileAppIntentAndStates", (n) -> { currentObject.setMobileAppIntentAndStates(n.getCollectionOfObjectValues(MobileAppIntentAndState::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobileAppTroubleshootingEvents", (n) -> { currentObject.setMobileAppTroubleshootingEvents(n.getCollectionOfObjectValues(MobileAppTroubleshootingEvent::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobilePhone", (n) -> { currentObject.setMobilePhone(n.getStringValue()); });
+        deserializerMap.put("mySite", (n) -> { currentObject.setMySite(n.getStringValue()); });
+        deserializerMap.put("notifications", (n) -> { currentObject.setNotifications(n.getCollectionOfObjectValues(Notification::createFromDiscriminatorValue)); });
+        deserializerMap.put("oauth2PermissionGrants", (n) -> { currentObject.setOauth2PermissionGrants(n.getCollectionOfObjectValues(OAuth2PermissionGrant::createFromDiscriminatorValue)); });
+        deserializerMap.put("officeLocation", (n) -> { currentObject.setOfficeLocation(n.getStringValue()); });
+        deserializerMap.put("onenote", (n) -> { currentObject.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
+        deserializerMap.put("onlineMeetings", (n) -> { currentObject.setOnlineMeetings(n.getCollectionOfObjectValues(OnlineMeeting::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesDistinguishedName", (n) -> { currentObject.setOnPremisesDistinguishedName(n.getStringValue()); });
+        deserializerMap.put("onPremisesDomainName", (n) -> { currentObject.setOnPremisesDomainName(n.getStringValue()); });
+        deserializerMap.put("onPremisesExtensionAttributes", (n) -> { currentObject.setOnPremisesExtensionAttributes(n.getObjectValue(OnPremisesExtensionAttributes::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesImmutableId", (n) -> { currentObject.setOnPremisesImmutableId(n.getStringValue()); });
+        deserializerMap.put("onPremisesLastSyncDateTime", (n) -> { currentObject.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("onPremisesProvisioningErrors", (n) -> { currentObject.setOnPremisesProvisioningErrors(n.getCollectionOfObjectValues(OnPremisesProvisioningError::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesSamAccountName", (n) -> { currentObject.setOnPremisesSamAccountName(n.getStringValue()); });
+        deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { currentObject.setOnPremisesSecurityIdentifier(n.getStringValue()); });
+        deserializerMap.put("onPremisesSyncEnabled", (n) -> { currentObject.setOnPremisesSyncEnabled(n.getBooleanValue()); });
+        deserializerMap.put("onPremisesUserPrincipalName", (n) -> { currentObject.setOnPremisesUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("otherMails", (n) -> { currentObject.setOtherMails(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("outlook", (n) -> { currentObject.setOutlook(n.getObjectValue(OutlookUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("ownedDevices", (n) -> { currentObject.setOwnedDevices(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("ownedObjects", (n) -> { currentObject.setOwnedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("passwordPolicies", (n) -> { currentObject.setPasswordPolicies(n.getStringValue()); });
+        deserializerMap.put("passwordProfile", (n) -> { currentObject.setPasswordProfile(n.getObjectValue(PasswordProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("pastProjects", (n) -> { currentObject.setPastProjects(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("pendingAccessReviewInstances", (n) -> { currentObject.setPendingAccessReviewInstances(n.getCollectionOfObjectValues(AccessReviewInstance::createFromDiscriminatorValue)); });
+        deserializerMap.put("people", (n) -> { currentObject.setPeople(n.getCollectionOfObjectValues(Person::createFromDiscriminatorValue)); });
+        deserializerMap.put("photo", (n) -> { currentObject.setPhoto(n.getObjectValue(ProfilePhoto::createFromDiscriminatorValue)); });
+        deserializerMap.put("photos", (n) -> { currentObject.setPhotos(n.getCollectionOfObjectValues(ProfilePhoto::createFromDiscriminatorValue)); });
+        deserializerMap.put("planner", (n) -> { currentObject.setPlanner(n.getObjectValue(PlannerUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("postalCode", (n) -> { currentObject.setPostalCode(n.getStringValue()); });
+        deserializerMap.put("preferredDataLocation", (n) -> { currentObject.setPreferredDataLocation(n.getStringValue()); });
+        deserializerMap.put("preferredLanguage", (n) -> { currentObject.setPreferredLanguage(n.getStringValue()); });
+        deserializerMap.put("preferredName", (n) -> { currentObject.setPreferredName(n.getStringValue()); });
+        deserializerMap.put("presence", (n) -> { currentObject.setPresence(n.getObjectValue(Presence::createFromDiscriminatorValue)); });
+        deserializerMap.put("print", (n) -> { currentObject.setPrint(n.getObjectValue(UserPrint::createFromDiscriminatorValue)); });
+        deserializerMap.put("profile", (n) -> { currentObject.setProfile(n.getObjectValue(Profile::createFromDiscriminatorValue)); });
+        deserializerMap.put("provisionedPlans", (n) -> { currentObject.setProvisionedPlans(n.getCollectionOfObjectValues(ProvisionedPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("proxyAddresses", (n) -> { currentObject.setProxyAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("refreshTokensValidFromDateTime", (n) -> { currentObject.setRefreshTokensValidFromDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("registeredDevices", (n) -> { currentObject.setRegisteredDevices(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("responsibilities", (n) -> { currentObject.setResponsibilities(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("schools", (n) -> { currentObject.setSchools(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("scopedRoleMemberOf", (n) -> { currentObject.setScopedRoleMemberOf(n.getCollectionOfObjectValues(ScopedRoleMembership::createFromDiscriminatorValue)); });
+        deserializerMap.put("security", (n) -> { currentObject.setSecurity(n.getObjectValue(Security::createFromDiscriminatorValue)); });
+        deserializerMap.put("securityIdentifier", (n) -> { currentObject.setSecurityIdentifier(n.getStringValue()); });
+        deserializerMap.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(UserSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("showInAddressList", (n) -> { currentObject.setShowInAddressList(n.getBooleanValue()); });
+        deserializerMap.put("signInActivity", (n) -> { currentObject.setSignInActivity(n.getObjectValue(SignInActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("signInSessionsValidFromDateTime", (n) -> { currentObject.setSignInSessionsValidFromDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("skills", (n) -> { currentObject.setSkills(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
+        deserializerMap.put("streetAddress", (n) -> { currentObject.setStreetAddress(n.getStringValue()); });
+        deserializerMap.put("surname", (n) -> { currentObject.setSurname(n.getStringValue()); });
+        deserializerMap.put("tasks", (n) -> { currentObject.setTasks(n.getObjectValue(Tasks::createFromDiscriminatorValue)); });
+        deserializerMap.put("teamwork", (n) -> { currentObject.setTeamwork(n.getObjectValue(UserTeamwork::createFromDiscriminatorValue)); });
+        deserializerMap.put("todo", (n) -> { currentObject.setTodo(n.getObjectValue(Todo::createFromDiscriminatorValue)); });
+        deserializerMap.put("transitiveMemberOf", (n) -> { currentObject.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("transitiveReports", (n) -> { currentObject.setTransitiveReports(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("usageLocation", (n) -> { currentObject.setUsageLocation(n.getStringValue()); });
+        deserializerMap.put("usageRights", (n) -> { currentObject.setUsageRights(n.getCollectionOfObjectValues(UsageRight::createFromDiscriminatorValue)); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("userType", (n) -> { currentObject.setUserType(n.getStringValue()); });
+        deserializerMap.put("windowsInformationProtectionDeviceRegistrations", (n) -> { currentObject.setWindowsInformationProtectionDeviceRegistrations(n.getCollectionOfObjectValues(WindowsInformationProtectionDeviceRegistration::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the followedSites property value. The followedSites property
@@ -978,7 +979,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._isManagementRestricted;
     }
     /**
-     * Gets the isResourceAccount property value. Do not use – reserved for future use.
+     * Gets the isResourceAccount property value. Do not use  reserved for future use.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -1026,7 +1027,7 @@ public class User extends DirectoryObject implements Parsable {
         return this._legalAgeGroupClassification;
     }
     /**
-     * Gets the licenseAssignmentStates property value. State of license assignments for this user. Read-only. Returned only on $select.
+     * Gets the licenseAssignmentStates property value. State of license assignments for this user. Also indicates licenses that are directly-assigned and those that the user has inherited through group memberships. Read-only. Returned only on $select.
      * @return a licenseAssignmentState
      */
     @javax.annotation.Nullable
@@ -1638,6 +1639,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -1792,6 +1794,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the aboutMe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAboutMe(@javax.annotation.Nullable final String value) {
         this._aboutMe = value;
     }
@@ -1800,6 +1803,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the accountEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountEnabled(@javax.annotation.Nullable final Boolean value) {
         this._accountEnabled = value;
     }
@@ -1808,6 +1812,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the activities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivities(@javax.annotation.Nullable final java.util.List<UserActivity> value) {
         this._activities = value;
     }
@@ -1816,6 +1821,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the ageGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgeGroup(@javax.annotation.Nullable final String value) {
         this._ageGroup = value;
     }
@@ -1824,6 +1830,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the agreementAcceptances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgreementAcceptances(@javax.annotation.Nullable final java.util.List<AgreementAcceptance> value) {
         this._agreementAcceptances = value;
     }
@@ -1832,6 +1839,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the analytics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnalytics(@javax.annotation.Nullable final UserAnalytics value) {
         this._analytics = value;
     }
@@ -1840,6 +1848,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the appConsentRequestsForApproval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppConsentRequestsForApproval(@javax.annotation.Nullable final java.util.List<AppConsentRequest> value) {
         this._appConsentRequestsForApproval = value;
     }
@@ -1848,6 +1857,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the appRoleAssignedResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRoleAssignedResources(@javax.annotation.Nullable final java.util.List<ServicePrincipal> value) {
         this._appRoleAssignedResources = value;
     }
@@ -1856,6 +1866,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the appRoleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppRoleAssignments(@javax.annotation.Nullable final java.util.List<AppRoleAssignment> value) {
         this._appRoleAssignments = value;
     }
@@ -1864,14 +1875,16 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the approvals property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApprovals(@javax.annotation.Nullable final java.util.List<Approval> value) {
         this._approvals = value;
     }
     /**
-     * Sets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. Not nullable. Supports $filter (eq, not, and counting empty collections).
+     * Sets the assignedLicenses property value. The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses. Not nullable. Supports $filter (eq, not, and counting empty collections).
      * @param value Value to set for the assignedLicenses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedLicenses(@javax.annotation.Nullable final java.util.List<AssignedLicense> value) {
         this._assignedLicenses = value;
     }
@@ -1880,6 +1893,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the assignedPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedPlans(@javax.annotation.Nullable final java.util.List<AssignedPlan> value) {
         this._assignedPlans = value;
     }
@@ -1888,14 +1902,16 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the authentication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthentication(@javax.annotation.Nullable final Authentication value) {
         this._authentication = value;
     }
     /**
-     * Sets the authorizationInfo property value. The authorizationInfo property
+     * Sets the authorizationInfo property value. Identifiers that can be used to identify and authenticate a user in non-Azure AD environments. This property can be used to store identifiers for smartcard-based certificates that a user uses for access to on-premises Active Directory deployments or for federated access. It can also be used to store the Subject Alternate Name (SAN) that's associated with a Common Access Card (CAC). Nullable.Supports $filter (eq and startsWith).
      * @param value Value to set for the authorizationInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthorizationInfo(@javax.annotation.Nullable final AuthorizationInfo value) {
         this._authorizationInfo = value;
     }
@@ -1904,6 +1920,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the birthday property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBirthday(@javax.annotation.Nullable final OffsetDateTime value) {
         this._birthday = value;
     }
@@ -1912,6 +1929,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the businessPhones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBusinessPhones(@javax.annotation.Nullable final java.util.List<String> value) {
         this._businessPhones = value;
     }
@@ -1920,6 +1938,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the calendar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendar(@javax.annotation.Nullable final Calendar value) {
         this._calendar = value;
     }
@@ -1928,6 +1947,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the calendarGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendarGroups(@javax.annotation.Nullable final java.util.List<CalendarGroup> value) {
         this._calendarGroups = value;
     }
@@ -1936,6 +1956,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the calendars property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendars(@javax.annotation.Nullable final java.util.List<Calendar> value) {
         this._calendars = value;
     }
@@ -1944,6 +1965,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the calendarView property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendarView(@javax.annotation.Nullable final java.util.List<Event> value) {
         this._calendarView = value;
     }
@@ -1952,6 +1974,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the chats property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChats(@javax.annotation.Nullable final java.util.List<Chat> value) {
         this._chats = value;
     }
@@ -1960,6 +1983,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the city property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCity(@javax.annotation.Nullable final String value) {
         this._city = value;
     }
@@ -1968,6 +1992,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the cloudPCs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPCs(@javax.annotation.Nullable final java.util.List<CloudPC> value) {
         this._cloudPCs = value;
     }
@@ -1976,6 +2001,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the companyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompanyName(@javax.annotation.Nullable final String value) {
         this._companyName = value;
     }
@@ -1984,6 +2010,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the consentProvidedForMinor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConsentProvidedForMinor(@javax.annotation.Nullable final String value) {
         this._consentProvidedForMinor = value;
     }
@@ -1992,6 +2019,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the contactFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactFolders(@javax.annotation.Nullable final java.util.List<ContactFolder> value) {
         this._contactFolders = value;
     }
@@ -2000,6 +2028,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the contacts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContacts(@javax.annotation.Nullable final java.util.List<Contact> value) {
         this._contacts = value;
     }
@@ -2008,14 +2037,16 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the country property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountry(@javax.annotation.Nullable final String value) {
         this._country = value;
     }
     /**
-     * Sets the createdDateTime property value. The date and time the user was created. The value cannot be modified and is automatically populated when the entity is created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. Property is nullable. A null value indicates that an accurate creation time couldn't be determined for the user. Read-only. Supports $filter (eq, ne, not , ge, le, in).
+     * Sets the createdDateTime property value. The date and time the user was created, in ISO 8601 format and in UTC time. The value cannot be modified and is automatically populated when the entity is created. Nullable. For on-premises users, the value represents when they were first created in Azure AD. Property is null for some users created before June 2018 and on-premises users that were synced to Azure AD before June 2018. Read-only. Supports $filter (eq, ne, not , ge, le, in).
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -2024,6 +2055,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the createdObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedObjects(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._createdObjects = value;
     }
@@ -2032,6 +2064,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the creationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreationType(@javax.annotation.Nullable final String value) {
         this._creationType = value;
     }
@@ -2040,6 +2073,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the customSecurityAttributes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSecurityAttributes(@javax.annotation.Nullable final CustomSecurityAttributeValue value) {
         this._customSecurityAttributes = value;
     }
@@ -2048,6 +2082,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the department property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDepartment(@javax.annotation.Nullable final String value) {
         this._department = value;
     }
@@ -2056,6 +2091,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceEnrollmentConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceEnrollmentConfigurations(@javax.annotation.Nullable final java.util.List<DeviceEnrollmentConfiguration> value) {
         this._deviceEnrollmentConfigurations = value;
     }
@@ -2064,6 +2100,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceEnrollmentLimit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceEnrollmentLimit(@javax.annotation.Nullable final Integer value) {
         this._deviceEnrollmentLimit = value;
     }
@@ -2072,6 +2109,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceKeys property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceKeys(@javax.annotation.Nullable final java.util.List<DeviceKey> value) {
         this._deviceKeys = value;
     }
@@ -2080,6 +2118,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceManagementTroubleshootingEvents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceManagementTroubleshootingEvents(@javax.annotation.Nullable final java.util.List<DeviceManagementTroubleshootingEvent> value) {
         this._deviceManagementTroubleshootingEvents = value;
     }
@@ -2088,6 +2127,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the devices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevices(@javax.annotation.Nullable final java.util.List<Device> value) {
         this._devices = value;
     }
@@ -2096,6 +2136,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the directReports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectReports(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._directReports = value;
     }
@@ -2104,6 +2145,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -2112,6 +2154,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the drive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDrive(@javax.annotation.Nullable final Drive value) {
         this._drive = value;
     }
@@ -2120,6 +2163,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the drives property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDrives(@javax.annotation.Nullable final java.util.List<Drive> value) {
         this._drives = value;
     }
@@ -2128,6 +2172,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the employeeHireDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmployeeHireDate(@javax.annotation.Nullable final OffsetDateTime value) {
         this._employeeHireDate = value;
     }
@@ -2136,14 +2181,16 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the employeeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmployeeId(@javax.annotation.Nullable final String value) {
         this._employeeId = value;
     }
     /**
-     * Sets the employeeLeaveDateTime property value. The employeeLeaveDateTime property
+     * Sets the employeeLeaveDateTime property value. The date and time when the user left or will leave the organization. To read or write this property, the calling app must be assigned the User-LifeCycleInfo.Read.All or User-LifeCycleInfo.ReadWrite.All permissions respectively. To read this property in delegated scenarios, the admin needs one of the following Azure AD roles: Lifecycle Workflows Administrator, Global Reader, or Global Admin. To write this property in delegated scenarios, the admin needs the Global Administrator Azure AD role. Supports $filter (eq, ne, not , ge, le, in). For more information, see Configure the employeeLeaveDateTime property for a user.
      * @param value Value to set for the employeeLeaveDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmployeeLeaveDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._employeeLeaveDateTime = value;
     }
@@ -2152,6 +2199,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the employeeOrgData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmployeeOrgData(@javax.annotation.Nullable final EmployeeOrgData value) {
         this._employeeOrgData = value;
     }
@@ -2160,6 +2208,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the employeeType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmployeeType(@javax.annotation.Nullable final String value) {
         this._employeeType = value;
     }
@@ -2168,6 +2217,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the events property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvents(@javax.annotation.Nullable final java.util.List<Event> value) {
         this._events = value;
     }
@@ -2176,6 +2226,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -2184,6 +2235,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the externalUserState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalUserState(@javax.annotation.Nullable final String value) {
         this._externalUserState = value;
     }
@@ -2192,6 +2244,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the externalUserStateChangeDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalUserStateChangeDateTime(@javax.annotation.Nullable final String value) {
         this._externalUserStateChangeDateTime = value;
     }
@@ -2200,6 +2253,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the faxNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFaxNumber(@javax.annotation.Nullable final String value) {
         this._faxNumber = value;
     }
@@ -2208,6 +2262,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the followedSites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFollowedSites(@javax.annotation.Nullable final java.util.List<Site> value) {
         this._followedSites = value;
     }
@@ -2216,6 +2271,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the givenName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGivenName(@javax.annotation.Nullable final String value) {
         this._givenName = value;
     }
@@ -2224,6 +2280,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the hireDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHireDate(@javax.annotation.Nullable final OffsetDateTime value) {
         this._hireDate = value;
     }
@@ -2232,6 +2289,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the identities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentities(@javax.annotation.Nullable final java.util.List<ObjectIdentity> value) {
         this._identities = value;
     }
@@ -2240,6 +2298,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the imAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
         this._imAddresses = value;
     }
@@ -2248,6 +2307,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the inferenceClassification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInferenceClassification(@javax.annotation.Nullable final InferenceClassification value) {
         this._inferenceClassification = value;
     }
@@ -2256,6 +2316,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the infoCatalogs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInfoCatalogs(@javax.annotation.Nullable final java.util.List<String> value) {
         this._infoCatalogs = value;
     }
@@ -2264,6 +2325,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the informationProtection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInformationProtection(@javax.annotation.Nullable final InformationProtection value) {
         this._informationProtection = value;
     }
@@ -2272,6 +2334,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the insights property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInsights(@javax.annotation.Nullable final ItemInsights value) {
         this._insights = value;
     }
@@ -2280,6 +2343,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the interests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInterests(@javax.annotation.Nullable final java.util.List<String> value) {
         this._interests = value;
     }
@@ -2288,14 +2352,16 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the isManagementRestricted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsManagementRestricted(@javax.annotation.Nullable final Boolean value) {
         this._isManagementRestricted = value;
     }
     /**
-     * Sets the isResourceAccount property value. Do not use – reserved for future use.
+     * Sets the isResourceAccount property value. Do not use  reserved for future use.
      * @param value Value to set for the isResourceAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsResourceAccount(@javax.annotation.Nullable final Boolean value) {
         this._isResourceAccount = value;
     }
@@ -2304,6 +2370,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the jobTitle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJobTitle(@javax.annotation.Nullable final String value) {
         this._jobTitle = value;
     }
@@ -2312,6 +2379,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the joinedGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinedGroups(@javax.annotation.Nullable final java.util.List<Group> value) {
         this._joinedGroups = value;
     }
@@ -2320,6 +2388,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the joinedTeams property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinedTeams(@javax.annotation.Nullable final java.util.List<Team> value) {
         this._joinedTeams = value;
     }
@@ -2328,6 +2397,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the lastPasswordChangeDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastPasswordChangeDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastPasswordChangeDateTime = value;
     }
@@ -2336,14 +2406,16 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the legalAgeGroupClassification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLegalAgeGroupClassification(@javax.annotation.Nullable final String value) {
         this._legalAgeGroupClassification = value;
     }
     /**
-     * Sets the licenseAssignmentStates property value. State of license assignments for this user. Read-only. Returned only on $select.
+     * Sets the licenseAssignmentStates property value. State of license assignments for this user. Also indicates licenses that are directly-assigned and those that the user has inherited through group memberships. Read-only. Returned only on $select.
      * @param value Value to set for the licenseAssignmentStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicenseAssignmentStates(@javax.annotation.Nullable final java.util.List<LicenseAssignmentState> value) {
         this._licenseAssignmentStates = value;
     }
@@ -2352,6 +2424,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the licenseDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicenseDetails(@javax.annotation.Nullable final java.util.List<LicenseDetails> value) {
         this._licenseDetails = value;
     }
@@ -2360,6 +2433,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the mail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMail(@javax.annotation.Nullable final String value) {
         this._mail = value;
     }
@@ -2368,6 +2442,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the mailboxSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailboxSettings(@javax.annotation.Nullable final MailboxSettings value) {
         this._mailboxSettings = value;
     }
@@ -2376,6 +2451,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the mailFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailFolders(@javax.annotation.Nullable final java.util.List<MailFolder> value) {
         this._mailFolders = value;
     }
@@ -2384,6 +2460,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the mailNickname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailNickname(@javax.annotation.Nullable final String value) {
         this._mailNickname = value;
     }
@@ -2392,6 +2469,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the managedAppRegistrations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedAppRegistrations(@javax.annotation.Nullable final java.util.List<ManagedAppRegistration> value) {
         this._managedAppRegistrations = value;
     }
@@ -2400,6 +2478,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the managedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDevices(@javax.annotation.Nullable final java.util.List<ManagedDevice> value) {
         this._managedDevices = value;
     }
@@ -2408,6 +2487,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the manager property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManager(@javax.annotation.Nullable final DirectoryObject value) {
         this._manager = value;
     }
@@ -2416,6 +2496,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the memberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._memberOf = value;
     }
@@ -2424,6 +2505,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the messages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessages(@javax.annotation.Nullable final java.util.List<Message> value) {
         this._messages = value;
     }
@@ -2432,6 +2514,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the mobileAppIntentAndStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileAppIntentAndStates(@javax.annotation.Nullable final java.util.List<MobileAppIntentAndState> value) {
         this._mobileAppIntentAndStates = value;
     }
@@ -2440,6 +2523,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the mobileAppTroubleshootingEvents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileAppTroubleshootingEvents(@javax.annotation.Nullable final java.util.List<MobileAppTroubleshootingEvent> value) {
         this._mobileAppTroubleshootingEvents = value;
     }
@@ -2448,6 +2532,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the mobilePhone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobilePhone(@javax.annotation.Nullable final String value) {
         this._mobilePhone = value;
     }
@@ -2456,6 +2541,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the mySite property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMySite(@javax.annotation.Nullable final String value) {
         this._mySite = value;
     }
@@ -2464,6 +2550,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the notifications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotifications(@javax.annotation.Nullable final java.util.List<Notification> value) {
         this._notifications = value;
     }
@@ -2472,6 +2559,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the oauth2PermissionGrants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOauth2PermissionGrants(@javax.annotation.Nullable final java.util.List<OAuth2PermissionGrant> value) {
         this._oauth2PermissionGrants = value;
     }
@@ -2480,6 +2568,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the officeLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOfficeLocation(@javax.annotation.Nullable final String value) {
         this._officeLocation = value;
     }
@@ -2488,6 +2577,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onenote property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnenote(@javax.annotation.Nullable final Onenote value) {
         this._onenote = value;
     }
@@ -2496,6 +2586,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onlineMeetings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnlineMeetings(@javax.annotation.Nullable final java.util.List<OnlineMeeting> value) {
         this._onlineMeetings = value;
     }
@@ -2504,6 +2595,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesDistinguishedName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesDistinguishedName(@javax.annotation.Nullable final String value) {
         this._onPremisesDistinguishedName = value;
     }
@@ -2512,6 +2604,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesDomainName(@javax.annotation.Nullable final String value) {
         this._onPremisesDomainName = value;
     }
@@ -2520,6 +2613,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesExtensionAttributes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesExtensionAttributes(@javax.annotation.Nullable final OnPremisesExtensionAttributes value) {
         this._onPremisesExtensionAttributes = value;
     }
@@ -2528,6 +2622,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesImmutableId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesImmutableId(@javax.annotation.Nullable final String value) {
         this._onPremisesImmutableId = value;
     }
@@ -2536,6 +2631,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesLastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._onPremisesLastSyncDateTime = value;
     }
@@ -2544,6 +2640,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesProvisioningErrors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesProvisioningErrors(@javax.annotation.Nullable final java.util.List<OnPremisesProvisioningError> value) {
         this._onPremisesProvisioningErrors = value;
     }
@@ -2552,6 +2649,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesSamAccountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSamAccountName(@javax.annotation.Nullable final String value) {
         this._onPremisesSamAccountName = value;
     }
@@ -2560,6 +2658,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSecurityIdentifier(@javax.annotation.Nullable final String value) {
         this._onPremisesSecurityIdentifier = value;
     }
@@ -2568,6 +2667,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesSyncEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSyncEnabled(@javax.annotation.Nullable final Boolean value) {
         this._onPremisesSyncEnabled = value;
     }
@@ -2576,6 +2676,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesUserPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._onPremisesUserPrincipalName = value;
     }
@@ -2584,6 +2685,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the otherMails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOtherMails(@javax.annotation.Nullable final java.util.List<String> value) {
         this._otherMails = value;
     }
@@ -2592,6 +2694,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the outlook property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutlook(@javax.annotation.Nullable final OutlookUser value) {
         this._outlook = value;
     }
@@ -2600,6 +2703,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the ownedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnedDevices(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._ownedDevices = value;
     }
@@ -2608,6 +2712,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the ownedObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnedObjects(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._ownedObjects = value;
     }
@@ -2616,6 +2721,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the passwordPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPolicies(@javax.annotation.Nullable final String value) {
         this._passwordPolicies = value;
     }
@@ -2624,6 +2730,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the passwordProfile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordProfile(@javax.annotation.Nullable final PasswordProfile value) {
         this._passwordProfile = value;
     }
@@ -2632,6 +2739,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the pastProjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPastProjects(@javax.annotation.Nullable final java.util.List<String> value) {
         this._pastProjects = value;
     }
@@ -2640,6 +2748,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the pendingAccessReviewInstances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingAccessReviewInstances(@javax.annotation.Nullable final java.util.List<AccessReviewInstance> value) {
         this._pendingAccessReviewInstances = value;
     }
@@ -2648,6 +2757,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the people property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPeople(@javax.annotation.Nullable final java.util.List<Person> value) {
         this._people = value;
     }
@@ -2656,6 +2766,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the photo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoto(@javax.annotation.Nullable final ProfilePhoto value) {
         this._photo = value;
     }
@@ -2664,6 +2775,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the photos property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhotos(@javax.annotation.Nullable final java.util.List<ProfilePhoto> value) {
         this._photos = value;
     }
@@ -2672,6 +2784,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the planner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlanner(@javax.annotation.Nullable final PlannerUser value) {
         this._planner = value;
     }
@@ -2680,6 +2793,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the postalCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostalCode(@javax.annotation.Nullable final String value) {
         this._postalCode = value;
     }
@@ -2688,6 +2802,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the preferredDataLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredDataLocation(@javax.annotation.Nullable final String value) {
         this._preferredDataLocation = value;
     }
@@ -2696,6 +2811,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the preferredLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredLanguage(@javax.annotation.Nullable final String value) {
         this._preferredLanguage = value;
     }
@@ -2704,6 +2820,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the preferredName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredName(@javax.annotation.Nullable final String value) {
         this._preferredName = value;
     }
@@ -2712,6 +2829,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the presence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPresence(@javax.annotation.Nullable final Presence value) {
         this._presence = value;
     }
@@ -2720,6 +2838,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the print property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrint(@javax.annotation.Nullable final UserPrint value) {
         this._print = value;
     }
@@ -2728,6 +2847,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the profile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProfile(@javax.annotation.Nullable final Profile value) {
         this._profile = value;
     }
@@ -2736,6 +2856,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the provisionedPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisionedPlans(@javax.annotation.Nullable final java.util.List<ProvisionedPlan> value) {
         this._provisionedPlans = value;
     }
@@ -2744,6 +2865,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the proxyAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
         this._proxyAddresses = value;
     }
@@ -2752,6 +2874,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the refreshTokensValidFromDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRefreshTokensValidFromDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._refreshTokensValidFromDateTime = value;
     }
@@ -2760,6 +2883,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the registeredDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegisteredDevices(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._registeredDevices = value;
     }
@@ -2768,6 +2892,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the responsibilities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResponsibilities(@javax.annotation.Nullable final java.util.List<String> value) {
         this._responsibilities = value;
     }
@@ -2776,6 +2901,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the schools property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchools(@javax.annotation.Nullable final java.util.List<String> value) {
         this._schools = value;
     }
@@ -2784,6 +2910,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the scopedRoleMemberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScopedRoleMemberOf(@javax.annotation.Nullable final java.util.List<ScopedRoleMembership> value) {
         this._scopedRoleMemberOf = value;
     }
@@ -2792,6 +2919,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the security property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurity(@javax.annotation.Nullable final Security value) {
         this._security = value;
     }
@@ -2800,6 +2928,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the securityIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityIdentifier(@javax.annotation.Nullable final String value) {
         this._securityIdentifier = value;
     }
@@ -2808,6 +2937,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final UserSettings value) {
         this._settings = value;
     }
@@ -2816,6 +2946,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the showInAddressList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowInAddressList(@javax.annotation.Nullable final Boolean value) {
         this._showInAddressList = value;
     }
@@ -2824,6 +2955,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the signInActivity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInActivity(@javax.annotation.Nullable final SignInActivity value) {
         this._signInActivity = value;
     }
@@ -2832,6 +2964,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the signInSessionsValidFromDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInSessionsValidFromDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._signInSessionsValidFromDateTime = value;
     }
@@ -2840,6 +2973,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the skills property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkills(@javax.annotation.Nullable final java.util.List<String> value) {
         this._skills = value;
     }
@@ -2848,6 +2982,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final String value) {
         this._state = value;
     }
@@ -2856,6 +2991,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the streetAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStreetAddress(@javax.annotation.Nullable final String value) {
         this._streetAddress = value;
     }
@@ -2864,6 +3000,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the surname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSurname(@javax.annotation.Nullable final String value) {
         this._surname = value;
     }
@@ -2872,6 +3009,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the tasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTasks(@javax.annotation.Nullable final Tasks value) {
         this._tasks = value;
     }
@@ -2880,6 +3018,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the teamwork property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamwork(@javax.annotation.Nullable final UserTeamwork value) {
         this._teamwork = value;
     }
@@ -2888,6 +3027,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the todo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTodo(@javax.annotation.Nullable final Todo value) {
         this._todo = value;
     }
@@ -2896,6 +3036,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the transitiveMemberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransitiveMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._transitiveMemberOf = value;
     }
@@ -2904,6 +3045,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the transitiveReports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransitiveReports(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._transitiveReports = value;
     }
@@ -2912,6 +3054,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the usageLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsageLocation(@javax.annotation.Nullable final String value) {
         this._usageLocation = value;
     }
@@ -2920,6 +3063,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the usageRights property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsageRights(@javax.annotation.Nullable final java.util.List<UsageRight> value) {
         this._usageRights = value;
     }
@@ -2928,6 +3072,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }
@@ -2936,6 +3081,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the userType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserType(@javax.annotation.Nullable final String value) {
         this._userType = value;
     }
@@ -2944,6 +3090,7 @@ public class User extends DirectoryObject implements Parsable {
      * @param value Value to set for the windowsInformationProtectionDeviceRegistrations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsInformationProtectionDeviceRegistrations(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionDeviceRegistration> value) {
         this._windowsInformationProtectionDeviceRegistrations = value;
     }

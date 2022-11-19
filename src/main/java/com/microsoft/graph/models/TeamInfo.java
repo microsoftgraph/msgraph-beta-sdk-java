@@ -21,6 +21,7 @@ public class TeamInfo extends Entity implements Parsable {
      * Instantiates a new teamInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamInfo() {
         super();
         this.setOdataType("#microsoft.graph.teamInfo");
@@ -58,11 +59,11 @@ public class TeamInfo extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TeamInfo currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("team", (n) -> { currentObject.setTeam(n.getObjectValue(Team::createFromDiscriminatorValue)); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("team", (n) -> { currentObject.setTeam(n.getObjectValue(Team::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the team property value. The team property
@@ -85,6 +86,7 @@ public class TeamInfo extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -97,6 +99,7 @@ public class TeamInfo extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -105,6 +108,7 @@ public class TeamInfo extends Entity implements Parsable {
      * @param value Value to set for the team property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeam(@javax.annotation.Nullable final Team value) {
         this._team = value;
     }
@@ -113,6 +117,7 @@ public class TeamInfo extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }

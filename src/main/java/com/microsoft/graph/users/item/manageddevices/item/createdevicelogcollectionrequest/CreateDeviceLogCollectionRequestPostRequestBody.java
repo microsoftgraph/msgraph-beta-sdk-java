@@ -19,6 +19,7 @@ public class CreateDeviceLogCollectionRequestPostRequestBody implements Addition
      * Instantiates a new createDeviceLogCollectionRequestPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CreateDeviceLogCollectionRequestPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -47,9 +48,9 @@ public class CreateDeviceLogCollectionRequestPostRequestBody implements Addition
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CreateDeviceLogCollectionRequestPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("templateType", (n) -> { currentObject.setTemplateType(n.getObjectValue(DeviceLogCollectionRequest::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("templateType", (n) -> { currentObject.setTemplateType(n.getObjectValue(DeviceLogCollectionRequest::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the templateType property value. The templateType property
@@ -64,6 +65,7 @@ public class CreateDeviceLogCollectionRequestPostRequestBody implements Addition
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("templateType", this.getTemplateType());
@@ -74,6 +76,7 @@ public class CreateDeviceLogCollectionRequestPostRequestBody implements Addition
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +85,7 @@ public class CreateDeviceLogCollectionRequestPostRequestBody implements Addition
      * @param value Value to set for the templateType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateType(@javax.annotation.Nullable final DeviceLogCollectionRequest value) {
         this._templateType = value;
     }

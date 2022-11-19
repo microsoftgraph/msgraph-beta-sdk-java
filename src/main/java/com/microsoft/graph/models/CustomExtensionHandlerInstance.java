@@ -25,6 +25,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      * Instantiates a new customExtensionHandlerInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CustomExtensionHandlerInstance() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.customExtensionHandlerInstance");
@@ -70,13 +71,13 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CustomExtensionHandlerInstance currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("customExtensionId", (n) -> { currentObject.setCustomExtensionId(n.getStringValue()); });
-            this.put("externalCorrelationId", (n) -> { currentObject.setExternalCorrelationId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(AccessPackageCustomExtensionStage.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AccessPackageCustomExtensionHandlerStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("customExtensionId", (n) -> { currentObject.setCustomExtensionId(n.getStringValue()); });
+        deserializerMap.put("externalCorrelationId", (n) -> { currentObject.setExternalCorrelationId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("stage", (n) -> { currentObject.setStage(n.getEnumValue(AccessPackageCustomExtensionStage.class)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AccessPackageCustomExtensionHandlerStatus.class)); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,6 +108,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("customExtensionId", this.getCustomExtensionId());
@@ -121,6 +123,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      * @param value Value to set for the customExtensionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomExtensionId(@javax.annotation.Nullable final String value) {
         this._customExtensionId = value;
     }
@@ -137,6 +141,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      * @param value Value to set for the externalCorrelationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalCorrelationId(@javax.annotation.Nullable final String value) {
         this._externalCorrelationId = value;
     }
@@ -145,6 +150,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -153,6 +159,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      * @param value Value to set for the stage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStage(@javax.annotation.Nullable final AccessPackageCustomExtensionStage value) {
         this._stage = value;
     }
@@ -161,6 +168,7 @@ public class CustomExtensionHandlerInstance implements AdditionalDataHolder, Par
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final AccessPackageCustomExtensionHandlerStatus value) {
         this._status = value;
     }

@@ -15,6 +15,7 @@ public class DeviceManagementScriptAssignment extends Entity implements Parsable
      * Instantiates a new deviceManagementScriptAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementScriptAssignment() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementScriptAssignment");
@@ -36,9 +37,9 @@ public class DeviceManagementScriptAssignment extends Entity implements Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementScriptAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the target property value. The Id of the Azure Active Directory group we are targeting the script to.
@@ -53,6 +54,7 @@ public class DeviceManagementScriptAssignment extends Entity implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class DeviceManagementScriptAssignment extends Entity implements Parsable
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this._target = value;
     }

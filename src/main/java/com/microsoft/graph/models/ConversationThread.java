@@ -32,6 +32,7 @@ public class ConversationThread extends Entity implements Parsable {
      * Instantiates a new conversationThread and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConversationThread() {
         super();
         this.setOdataType("#microsoft.graph.conversationThread");
@@ -61,17 +62,17 @@ public class ConversationThread extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ConversationThread currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("ccRecipients", (n) -> { currentObject.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
-            this.put("isLocked", (n) -> { currentObject.setIsLocked(n.getBooleanValue()); });
-            this.put("lastDeliveredDateTime", (n) -> { currentObject.setLastDeliveredDateTime(n.getOffsetDateTimeValue()); });
-            this.put("posts", (n) -> { currentObject.setPosts(n.getCollectionOfObjectValues(Post::createFromDiscriminatorValue)); });
-            this.put("preview", (n) -> { currentObject.setPreview(n.getStringValue()); });
-            this.put("topic", (n) -> { currentObject.setTopic(n.getStringValue()); });
-            this.put("toRecipients", (n) -> { currentObject.setToRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("uniqueSenders", (n) -> { currentObject.setUniqueSenders(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("ccRecipients", (n) -> { currentObject.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
+        deserializerMap.put("isLocked", (n) -> { currentObject.setIsLocked(n.getBooleanValue()); });
+        deserializerMap.put("lastDeliveredDateTime", (n) -> { currentObject.setLastDeliveredDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("posts", (n) -> { currentObject.setPosts(n.getCollectionOfObjectValues(Post::createFromDiscriminatorValue)); });
+        deserializerMap.put("preview", (n) -> { currentObject.setPreview(n.getStringValue()); });
+        deserializerMap.put("topic", (n) -> { currentObject.setTopic(n.getStringValue()); });
+        deserializerMap.put("toRecipients", (n) -> { currentObject.setToRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("uniqueSenders", (n) -> { currentObject.setUniqueSenders(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the hasAttachments property value. Indicates whether any of the posts within this thread has at least one attachment. Returned by default.
@@ -142,6 +143,7 @@ public class ConversationThread extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,6 +162,7 @@ public class ConversationThread extends Entity implements Parsable {
      * @param value Value to set for the ccRecipients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCcRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
         this._ccRecipients = value;
     }
@@ -168,6 +171,7 @@ public class ConversationThread extends Entity implements Parsable {
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
         this._hasAttachments = value;
     }
@@ -176,6 +180,7 @@ public class ConversationThread extends Entity implements Parsable {
      * @param value Value to set for the isLocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsLocked(@javax.annotation.Nullable final Boolean value) {
         this._isLocked = value;
     }
@@ -184,6 +189,7 @@ public class ConversationThread extends Entity implements Parsable {
      * @param value Value to set for the lastDeliveredDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastDeliveredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastDeliveredDateTime = value;
     }
@@ -192,6 +198,7 @@ public class ConversationThread extends Entity implements Parsable {
      * @param value Value to set for the posts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPosts(@javax.annotation.Nullable final java.util.List<Post> value) {
         this._posts = value;
     }
@@ -200,6 +207,7 @@ public class ConversationThread extends Entity implements Parsable {
      * @param value Value to set for the preview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreview(@javax.annotation.Nullable final String value) {
         this._preview = value;
     }
@@ -208,6 +216,7 @@ public class ConversationThread extends Entity implements Parsable {
      * @param value Value to set for the topic property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTopic(@javax.annotation.Nullable final String value) {
         this._topic = value;
     }
@@ -216,6 +225,7 @@ public class ConversationThread extends Entity implements Parsable {
      * @param value Value to set for the toRecipients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setToRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
         this._toRecipients = value;
     }
@@ -224,6 +234,7 @@ public class ConversationThread extends Entity implements Parsable {
      * @param value Value to set for the uniqueSenders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUniqueSenders(@javax.annotation.Nullable final java.util.List<String> value) {
         this._uniqueSenders = value;
     }

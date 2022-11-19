@@ -16,6 +16,7 @@ public class MediaPrompt extends Prompt implements Parsable {
      * Instantiates a new MediaPrompt and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MediaPrompt() {
         super();
         this.setOdataType("#microsoft.graph.mediaPrompt");
@@ -37,10 +38,10 @@ public class MediaPrompt extends Prompt implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MediaPrompt currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("loop", (n) -> { currentObject.setLoop(n.getIntegerValue()); });
-            this.put("mediaInfo", (n) -> { currentObject.setMediaInfo(n.getObjectValue(MediaInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("loop", (n) -> { currentObject.setLoop(n.getIntegerValue()); });
+        deserializerMap.put("mediaInfo", (n) -> { currentObject.setMediaInfo(n.getObjectValue(MediaInfo::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the loop property value. The loop property
@@ -63,6 +64,7 @@ public class MediaPrompt extends Prompt implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class MediaPrompt extends Prompt implements Parsable {
      * @param value Value to set for the loop property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoop(@javax.annotation.Nullable final Integer value) {
         this._loop = value;
     }
@@ -82,6 +85,7 @@ public class MediaPrompt extends Prompt implements Parsable {
      * @param value Value to set for the mediaInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaInfo(@javax.annotation.Nullable final MediaInfo value) {
         this._mediaInfo = value;
     }

@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The importedDeviceIdentity resource represents a unique hardware identity of a device that has been pre-staged for pre-enrollment configuration. */
 public class ImportedDeviceIdentity extends Entity implements Parsable {
     /** Created Date Time of the device */
     private OffsetDateTime _createdDateTime;
@@ -27,9 +28,10 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     /** The platform property */
     private Platform _platform;
     /**
-     * Instantiates a new ImportedDeviceIdentity and sets the default values.
+     * Instantiates a new importedDeviceIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ImportedDeviceIdentity() {
         super();
         this.setOdataType("#microsoft.graph.importedDeviceIdentity");
@@ -37,7 +39,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ImportedDeviceIdentity
+     * @return a importedDeviceIdentity
      */
     @javax.annotation.Nonnull
     public static ImportedDeviceIdentity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -82,16 +84,16 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ImportedDeviceIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("enrollmentState", (n) -> { currentObject.setEnrollmentState(n.getEnumValue(EnrollmentState.class)); });
-            this.put("importedDeviceIdentifier", (n) -> { currentObject.setImportedDeviceIdentifier(n.getStringValue()); });
-            this.put("importedDeviceIdentityType", (n) -> { currentObject.setImportedDeviceIdentityType(n.getEnumValue(ImportedDeviceIdentityType.class)); });
-            this.put("lastContactedDateTime", (n) -> { currentObject.setLastContactedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(Platform.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("enrollmentState", (n) -> { currentObject.setEnrollmentState(n.getEnumValue(EnrollmentState.class)); });
+        deserializerMap.put("importedDeviceIdentifier", (n) -> { currentObject.setImportedDeviceIdentifier(n.getStringValue()); });
+        deserializerMap.put("importedDeviceIdentityType", (n) -> { currentObject.setImportedDeviceIdentityType(n.getEnumValue(ImportedDeviceIdentityType.class)); });
+        deserializerMap.put("lastContactedDateTime", (n) -> { currentObject.setLastContactedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(Platform.class)); });
+        return deserializerMap
     }
     /**
      * Gets the importedDeviceIdentifier property value. Imported Device Identifier
@@ -138,6 +140,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -155,6 +158,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -163,6 +167,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -171,6 +176,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the enrollmentState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentState(@javax.annotation.Nullable final EnrollmentState value) {
         this._enrollmentState = value;
     }
@@ -179,6 +185,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the importedDeviceIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportedDeviceIdentifier(@javax.annotation.Nullable final String value) {
         this._importedDeviceIdentifier = value;
     }
@@ -187,6 +194,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the importedDeviceIdentityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportedDeviceIdentityType(@javax.annotation.Nullable final ImportedDeviceIdentityType value) {
         this._importedDeviceIdentityType = value;
     }
@@ -195,6 +203,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the lastContactedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastContactedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastContactedDateTime = value;
     }
@@ -203,6 +212,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -211,6 +221,7 @@ public class ImportedDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the platform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final Platform value) {
         this._platform = value;
     }

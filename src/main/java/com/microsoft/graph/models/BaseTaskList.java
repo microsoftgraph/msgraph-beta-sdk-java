@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class BaseTaskList extends Entity implements Parsable {
     /** The name of the task list. */
     private String _displayName;
@@ -20,6 +21,7 @@ public class BaseTaskList extends Entity implements Parsable {
      * Instantiates a new baseTaskList and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BaseTaskList() {
         super();
         this.setOdataType("#microsoft.graph.baseTaskList");
@@ -65,11 +67,11 @@ public class BaseTaskList extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final BaseTaskList currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(BaseTask::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(BaseTask::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the tasks property value. The tasks in this task list. Read-only. Nullable.
@@ -84,6 +86,7 @@ public class BaseTaskList extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -96,6 +99,7 @@ public class BaseTaskList extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -104,6 +108,7 @@ public class BaseTaskList extends Entity implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -112,6 +117,7 @@ public class BaseTaskList extends Entity implements Parsable {
      * @param value Value to set for the tasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTasks(@javax.annotation.Nullable final java.util.List<BaseTask> value) {
         this._tasks = value;
     }

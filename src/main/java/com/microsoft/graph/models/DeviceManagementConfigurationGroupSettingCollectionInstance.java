@@ -14,6 +14,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstance extends
      * Instantiates a new DeviceManagementConfigurationGroupSettingCollectionInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationGroupSettingCollectionInstance() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance");
@@ -35,9 +36,9 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstance extends
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationGroupSettingCollectionInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("groupSettingCollectionValue", (n) -> { currentObject.setGroupSettingCollectionValue(n.getCollectionOfObjectValues(DeviceManagementConfigurationGroupSettingValue::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("groupSettingCollectionValue", (n) -> { currentObject.setGroupSettingCollectionValue(n.getCollectionOfObjectValues(DeviceManagementConfigurationGroupSettingValue::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the groupSettingCollectionValue property value. A collection of GroupSetting values
@@ -52,6 +53,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstance extends
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceManagementConfigurationGroupSettingCollectionInstance extends
      * @param value Value to set for the groupSettingCollectionValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupSettingCollectionValue(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationGroupSettingValue> value) {
         this._groupSettingCollectionValue = value;
     }

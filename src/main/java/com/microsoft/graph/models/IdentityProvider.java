@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class IdentityProvider extends Entity implements Parsable {
     /** The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable. */
     private String _clientId;
@@ -22,6 +22,7 @@ public class IdentityProvider extends Entity implements Parsable {
      * Instantiates a new identityProvider and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IdentityProvider() {
         super();
         this.setOdataType("#microsoft.graph.identityProvider");
@@ -66,12 +67,12 @@ public class IdentityProvider extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IdentityProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
-            this.put("clientSecret", (n) -> { currentObject.setClientSecret(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("clientId", (n) -> { currentObject.setClientId(n.getStringValue()); });
+        deserializerMap.put("clientSecret", (n) -> { currentObject.setClientSecret(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the name property value. The display name of the identity provider. Not nullable.
@@ -94,6 +95,7 @@ public class IdentityProvider extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -107,6 +109,7 @@ public class IdentityProvider extends Entity implements Parsable {
      * @param value Value to set for the clientId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientId(@javax.annotation.Nullable final String value) {
         this._clientId = value;
     }
@@ -115,6 +118,7 @@ public class IdentityProvider extends Entity implements Parsable {
      * @param value Value to set for the clientSecret property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientSecret(@javax.annotation.Nullable final String value) {
         this._clientSecret = value;
     }
@@ -123,6 +127,7 @@ public class IdentityProvider extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -131,6 +136,7 @@ public class IdentityProvider extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }

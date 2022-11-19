@@ -15,6 +15,7 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
      * Instantiates a new GroupAssignmentTarget and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupAssignmentTarget() {
         super();
         this.setOdataType("#microsoft.graph.groupAssignmentTarget");
@@ -43,9 +44,9 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupAssignmentTarget currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the groupId property value. The group Id that is the target of the assignment.
@@ -60,6 +61,7 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -70,6 +72,7 @@ public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarge
      * @param value Value to set for the groupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupId(@javax.annotation.Nullable final String value) {
         this._groupId = value;
     }

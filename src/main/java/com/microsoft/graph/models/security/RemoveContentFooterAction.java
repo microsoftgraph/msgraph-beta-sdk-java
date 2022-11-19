@@ -14,6 +14,7 @@ public class RemoveContentFooterAction extends InformationProtectionAction imple
      * Instantiates a new RemoveContentFooterAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RemoveContentFooterAction() {
         super();
         this.setOdataType("#microsoft.graph.security.removeContentFooterAction");
@@ -35,9 +36,9 @@ public class RemoveContentFooterAction extends InformationProtectionAction imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemoveContentFooterAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("uiElementNames", (n) -> { currentObject.setUiElementNames(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("uiElementNames", (n) -> { currentObject.setUiElementNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the uiElementNames property value. The name of the UI element of the footer to be removed.
@@ -52,6 +53,7 @@ public class RemoveContentFooterAction extends InformationProtectionAction imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class RemoveContentFooterAction extends InformationProtectionAction imple
      * @param value Value to set for the uiElementNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUiElementNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._uiElementNames = value;
     }

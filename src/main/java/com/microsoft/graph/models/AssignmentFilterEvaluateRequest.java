@@ -30,6 +30,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
      * Instantiates a new assignmentFilterEvaluateRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignmentFilterEvaluateRequest() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.assignmentFilterEvaluateRequest");
@@ -59,15 +60,15 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentFilterEvaluateRequest currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("orderBy", (n) -> { currentObject.setOrderBy(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(DevicePlatformType.class)); });
-            this.put("rule", (n) -> { currentObject.setRule(n.getStringValue()); });
-            this.put("search", (n) -> { currentObject.setSearch(n.getStringValue()); });
-            this.put("skip", (n) -> { currentObject.setSkip(n.getIntegerValue()); });
-            this.put("top", (n) -> { currentObject.setTop(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("orderBy", (n) -> { currentObject.setOrderBy(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(DevicePlatformType.class)); });
+        deserializerMap.put("rule", (n) -> { currentObject.setRule(n.getStringValue()); });
+        deserializerMap.put("search", (n) -> { currentObject.setSearch(n.getStringValue()); });
+        deserializerMap.put("skip", (n) -> { currentObject.setSkip(n.getIntegerValue()); });
+        deserializerMap.put("top", (n) -> { currentObject.setTop(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -130,6 +131,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -146,6 +148,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -154,6 +157,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -162,6 +166,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
      * @param value Value to set for the orderBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrderBy(@javax.annotation.Nullable final java.util.List<String> value) {
         this._orderBy = value;
     }
@@ -170,6 +175,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
      * @param value Value to set for the platform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final DevicePlatformType value) {
         this._platform = value;
     }
@@ -178,6 +184,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
      * @param value Value to set for the rule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRule(@javax.annotation.Nullable final String value) {
         this._rule = value;
     }
@@ -186,6 +193,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
      * @param value Value to set for the search property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearch(@javax.annotation.Nullable final String value) {
         this._search = value;
     }
@@ -194,6 +202,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
      * @param value Value to set for the skip property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkip(@javax.annotation.Nullable final Integer value) {
         this._skip = value;
     }
@@ -202,6 +211,7 @@ public class AssignmentFilterEvaluateRequest implements AdditionalDataHolder, Pa
      * @param value Value to set for the top property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTop(@javax.annotation.Nullable final Integer value) {
         this._top = value;
     }

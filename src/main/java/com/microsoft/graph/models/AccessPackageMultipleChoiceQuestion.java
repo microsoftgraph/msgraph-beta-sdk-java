@@ -16,6 +16,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      * Instantiates a new AccessPackageMultipleChoiceQuestion and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageMultipleChoiceQuestion() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageMultipleChoiceQuestion");
@@ -53,16 +54,17 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageMultipleChoiceQuestion currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowsMultipleSelection", (n) -> { currentObject.setAllowsMultipleSelection(n.getBooleanValue()); });
-            this.put("choices", (n) -> { currentObject.setChoices(n.getCollectionOfObjectValues(AccessPackageAnswerChoice::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowsMultipleSelection", (n) -> { currentObject.setAllowsMultipleSelection(n.getBooleanValue()); });
+        deserializerMap.put("choices", (n) -> { currentObject.setChoices(n.getCollectionOfObjectValues(AccessPackageAnswerChoice::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      * @param value Value to set for the allowsMultipleSelection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowsMultipleSelection(@javax.annotation.Nullable final Boolean value) {
         this._allowsMultipleSelection = value;
     }
@@ -82,6 +85,7 @@ public class AccessPackageMultipleChoiceQuestion extends AccessPackageQuestion i
      * @param value Value to set for the choices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChoices(@javax.annotation.Nullable final java.util.List<AccessPackageAnswerChoice> value) {
         this._choices = value;
     }

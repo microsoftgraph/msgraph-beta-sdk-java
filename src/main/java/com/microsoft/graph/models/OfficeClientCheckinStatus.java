@@ -36,6 +36,7 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
      * Instantiates a new officeClientCheckinStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OfficeClientCheckinStatus() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.officeClientCheckinStatus");
@@ -113,18 +114,18 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final OfficeClientCheckinStatus currentObject = this;
-        return new HashMap<>(10) {{
-            this.put("appliedPolicies", (n) -> { currentObject.setAppliedPolicies(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("checkinDateTime", (n) -> { currentObject.setCheckinDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("devicePlatform", (n) -> { currentObject.setDevicePlatform(n.getStringValue()); });
-            this.put("devicePlatformVersion", (n) -> { currentObject.setDevicePlatformVersion(n.getStringValue()); });
-            this.put("errorMessage", (n) -> { currentObject.setErrorMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("wasSuccessful", (n) -> { currentObject.setWasSuccessful(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("appliedPolicies", (n) -> { currentObject.setAppliedPolicies(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("checkinDateTime", (n) -> { currentObject.setCheckinDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("devicePlatform", (n) -> { currentObject.setDevicePlatform(n.getStringValue()); });
+        deserializerMap.put("devicePlatformVersion", (n) -> { currentObject.setDevicePlatformVersion(n.getStringValue()); });
+        deserializerMap.put("errorMessage", (n) -> { currentObject.setErrorMessage(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("wasSuccessful", (n) -> { currentObject.setWasSuccessful(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -163,6 +164,7 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("appliedPolicies", this.getAppliedPolicies());
@@ -182,6 +184,7 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -190,6 +193,7 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the appliedPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliedPolicies(@javax.annotation.Nullable final java.util.List<String> value) {
         this._appliedPolicies = value;
     }
@@ -198,6 +202,7 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the checkinDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCheckinDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._checkinDateTime = value;
     }
@@ -206,6 +211,7 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -214,6 +220,7 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the devicePlatform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevicePlatform(@javax.annotation.Nullable final String value) {
         this._devicePlatform = value;
     }
@@ -222,6 +229,7 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the devicePlatformVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevicePlatformVersion(@javax.annotation.Nullable final String value) {
         this._devicePlatformVersion = value;
     }
@@ -230,6 +238,7 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the errorMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorMessage(@javax.annotation.Nullable final String value) {
         this._errorMessage = value;
     }
@@ -238,6 +247,7 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -246,6 +256,7 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -254,6 +265,7 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }
@@ -262,6 +274,7 @@ public class OfficeClientCheckinStatus implements AdditionalDataHolder, Parsable
      * @param value Value to set for the wasSuccessful property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWasSuccessful(@javax.annotation.Nullable final Boolean value) {
         this._wasSuccessful = value;
     }

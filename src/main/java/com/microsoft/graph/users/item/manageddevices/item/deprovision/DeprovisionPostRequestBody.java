@@ -18,6 +18,7 @@ public class DeprovisionPostRequestBody implements AdditionalDataHolder, Parsabl
      * Instantiates a new deprovisionPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeprovisionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -54,15 +55,16 @@ public class DeprovisionPostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeprovisionPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("deprovisionReason", (n) -> { currentObject.setDeprovisionReason(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("deprovisionReason", (n) -> { currentObject.setDeprovisionReason(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("deprovisionReason", this.getDeprovisionReason());
@@ -73,6 +75,7 @@ public class DeprovisionPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class DeprovisionPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the deprovisionReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeprovisionReason(@javax.annotation.Nullable final String value) {
         this._deprovisionReason = value;
     }

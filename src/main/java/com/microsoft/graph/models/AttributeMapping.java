@@ -31,6 +31,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      * Instantiates a new attributeMapping and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AttributeMapping() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.attributeMapping");
@@ -76,16 +77,16 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AttributeMapping currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getStringValue()); });
-            this.put("exportMissingReferences", (n) -> { currentObject.setExportMissingReferences(n.getBooleanValue()); });
-            this.put("flowBehavior", (n) -> { currentObject.setFlowBehavior(n.getEnumValue(AttributeFlowBehavior.class)); });
-            this.put("flowType", (n) -> { currentObject.setFlowType(n.getEnumValue(AttributeFlowType.class)); });
-            this.put("matchingPriority", (n) -> { currentObject.setMatchingPriority(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("source", (n) -> { currentObject.setSource(n.getObjectValue(AttributeMappingSource::createFromDiscriminatorValue)); });
-            this.put("targetAttributeName", (n) -> { currentObject.setTargetAttributeName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getStringValue()); });
+        deserializerMap.put("exportMissingReferences", (n) -> { currentObject.setExportMissingReferences(n.getBooleanValue()); });
+        deserializerMap.put("flowBehavior", (n) -> { currentObject.setFlowBehavior(n.getEnumValue(AttributeFlowBehavior.class)); });
+        deserializerMap.put("flowType", (n) -> { currentObject.setFlowType(n.getEnumValue(AttributeFlowType.class)); });
+        deserializerMap.put("matchingPriority", (n) -> { currentObject.setMatchingPriority(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("source", (n) -> { currentObject.setSource(n.getObjectValue(AttributeMappingSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("targetAttributeName", (n) -> { currentObject.setTargetAttributeName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the flowBehavior property value. The flowBehavior property
@@ -140,6 +141,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("defaultValue", this.getDefaultValue());
@@ -157,6 +159,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -165,6 +168,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final String value) {
         this._defaultValue = value;
     }
@@ -173,6 +177,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the exportMissingReferences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExportMissingReferences(@javax.annotation.Nullable final Boolean value) {
         this._exportMissingReferences = value;
     }
@@ -181,6 +186,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the flowBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFlowBehavior(@javax.annotation.Nullable final AttributeFlowBehavior value) {
         this._flowBehavior = value;
     }
@@ -189,6 +195,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the flowType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFlowType(@javax.annotation.Nullable final AttributeFlowType value) {
         this._flowType = value;
     }
@@ -197,6 +204,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the matchingPriority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMatchingPriority(@javax.annotation.Nullable final Integer value) {
         this._matchingPriority = value;
     }
@@ -205,6 +213,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -213,6 +222,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final AttributeMappingSource value) {
         this._source = value;
     }
@@ -221,6 +231,7 @@ public class AttributeMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the targetAttributeName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetAttributeName(@javax.annotation.Nullable final String value) {
         this._targetAttributeName = value;
     }

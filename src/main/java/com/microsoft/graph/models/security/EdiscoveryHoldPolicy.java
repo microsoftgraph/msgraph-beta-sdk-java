@@ -22,6 +22,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
      * Instantiates a new EdiscoveryHoldPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EdiscoveryHoldPolicy() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoveryHoldPolicy");
@@ -59,13 +60,13 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoveryHoldPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contentQuery", (n) -> { currentObject.setContentQuery(n.getStringValue()); });
-            this.put("errors", (n) -> { currentObject.setErrors(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("siteSources", (n) -> { currentObject.setSiteSources(n.getCollectionOfObjectValues(SiteSource::createFromDiscriminatorValue)); });
-            this.put("userSources", (n) -> { currentObject.setUserSources(n.getCollectionOfObjectValues(UserSource::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contentQuery", (n) -> { currentObject.setContentQuery(n.getStringValue()); });
+        deserializerMap.put("errors", (n) -> { currentObject.setErrors(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("siteSources", (n) -> { currentObject.setSiteSources(n.getCollectionOfObjectValues(SiteSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("userSources", (n) -> { currentObject.setUserSources(n.getCollectionOfObjectValues(UserSource::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the isEnabled property value. Indicates whether the hold is enabled and actively holding content.
@@ -96,6 +97,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the contentQuery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentQuery(@javax.annotation.Nullable final String value) {
         this._contentQuery = value;
     }
@@ -118,6 +121,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the errors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrors(@javax.annotation.Nullable final java.util.List<String> value) {
         this._errors = value;
     }
@@ -126,6 +130,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }
@@ -134,6 +139,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the siteSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteSources(@javax.annotation.Nullable final java.util.List<SiteSource> value) {
         this._siteSources = value;
     }
@@ -142,6 +148,7 @@ public class EdiscoveryHoldPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the userSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserSources(@javax.annotation.Nullable final java.util.List<UserSource> value) {
         this._userSources = value;
     }

@@ -29,6 +29,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
      * Instantiates a new accessPackageResourceAttribute and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageResourceAttribute() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.accessPackageResourceAttribute");
@@ -82,15 +83,15 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AccessPackageResourceAttribute currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("attributeDestination", (n) -> { currentObject.setAttributeDestination(n.getObjectValue(AccessPackageResourceAttributeDestination::createFromDiscriminatorValue)); });
-            this.put("attributeName", (n) -> { currentObject.setAttributeName(n.getStringValue()); });
-            this.put("attributeSource", (n) -> { currentObject.setAttributeSource(n.getObjectValue(AccessPackageResourceAttributeSource::createFromDiscriminatorValue)); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("isEditable", (n) -> { currentObject.setIsEditable(n.getBooleanValue()); });
-            this.put("isPersistedOnAssignmentRemoval", (n) -> { currentObject.setIsPersistedOnAssignmentRemoval(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("attributeDestination", (n) -> { currentObject.setAttributeDestination(n.getObjectValue(AccessPackageResourceAttributeDestination::createFromDiscriminatorValue)); });
+        deserializerMap.put("attributeName", (n) -> { currentObject.setAttributeName(n.getStringValue()); });
+        deserializerMap.put("attributeSource", (n) -> { currentObject.setAttributeSource(n.getObjectValue(AccessPackageResourceAttributeSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        deserializerMap.put("isEditable", (n) -> { currentObject.setIsEditable(n.getBooleanValue()); });
+        deserializerMap.put("isPersistedOnAssignmentRemoval", (n) -> { currentObject.setIsPersistedOnAssignmentRemoval(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the id property value. Unique identifier for the attribute on the access package resource. Read-only.
@@ -129,6 +130,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("attributeDestination", this.getAttributeDestination());
@@ -145,6 +147,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
      * @param value Value to set for the attributeDestination property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttributeDestination(@javax.annotation.Nullable final AccessPackageResourceAttributeDestination value) {
         this._attributeDestination = value;
     }
@@ -161,6 +165,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
      * @param value Value to set for the attributeName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttributeName(@javax.annotation.Nullable final String value) {
         this._attributeName = value;
     }
@@ -169,6 +174,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
      * @param value Value to set for the attributeSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttributeSource(@javax.annotation.Nullable final AccessPackageResourceAttributeSource value) {
         this._attributeSource = value;
     }
@@ -177,6 +183,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -185,6 +192,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
      * @param value Value to set for the isEditable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEditable(@javax.annotation.Nullable final Boolean value) {
         this._isEditable = value;
     }
@@ -193,6 +201,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
      * @param value Value to set for the isPersistedOnAssignmentRemoval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPersistedOnAssignmentRemoval(@javax.annotation.Nullable final Boolean value) {
         this._isPersistedOnAssignmentRemoval = value;
     }
@@ -201,6 +210,7 @@ public class AccessPackageResourceAttribute implements AdditionalDataHolder, Par
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

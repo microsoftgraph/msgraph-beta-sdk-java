@@ -112,6 +112,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * Instantiates a new AndroidGeneralDeviceConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidGeneralDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidGeneralDeviceConfiguration");
@@ -277,58 +278,58 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidGeneralDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appsBlockClipboardSharing", (n) -> { currentObject.setAppsBlockClipboardSharing(n.getBooleanValue()); });
-            this.put("appsBlockCopyPaste", (n) -> { currentObject.setAppsBlockCopyPaste(n.getBooleanValue()); });
-            this.put("appsBlockYouTube", (n) -> { currentObject.setAppsBlockYouTube(n.getBooleanValue()); });
-            this.put("appsHideList", (n) -> { currentObject.setAppsHideList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("appsInstallAllowList", (n) -> { currentObject.setAppsInstallAllowList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("appsLaunchBlockList", (n) -> { currentObject.setAppsLaunchBlockList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("bluetoothBlocked", (n) -> { currentObject.setBluetoothBlocked(n.getBooleanValue()); });
-            this.put("cameraBlocked", (n) -> { currentObject.setCameraBlocked(n.getBooleanValue()); });
-            this.put("cellularBlockDataRoaming", (n) -> { currentObject.setCellularBlockDataRoaming(n.getBooleanValue()); });
-            this.put("cellularBlockMessaging", (n) -> { currentObject.setCellularBlockMessaging(n.getBooleanValue()); });
-            this.put("cellularBlockVoiceRoaming", (n) -> { currentObject.setCellularBlockVoiceRoaming(n.getBooleanValue()); });
-            this.put("cellularBlockWiFiTethering", (n) -> { currentObject.setCellularBlockWiFiTethering(n.getBooleanValue()); });
-            this.put("compliantAppListType", (n) -> { currentObject.setCompliantAppListType(n.getEnumValue(AppListType.class)); });
-            this.put("compliantAppsList", (n) -> { currentObject.setCompliantAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("dateAndTimeBlockChanges", (n) -> { currentObject.setDateAndTimeBlockChanges(n.getBooleanValue()); });
-            this.put("deviceSharingAllowed", (n) -> { currentObject.setDeviceSharingAllowed(n.getBooleanValue()); });
-            this.put("diagnosticDataBlockSubmission", (n) -> { currentObject.setDiagnosticDataBlockSubmission(n.getBooleanValue()); });
-            this.put("factoryResetBlocked", (n) -> { currentObject.setFactoryResetBlocked(n.getBooleanValue()); });
-            this.put("googleAccountBlockAutoSync", (n) -> { currentObject.setGoogleAccountBlockAutoSync(n.getBooleanValue()); });
-            this.put("googlePlayStoreBlocked", (n) -> { currentObject.setGooglePlayStoreBlocked(n.getBooleanValue()); });
-            this.put("kioskModeApps", (n) -> { currentObject.setKioskModeApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("kioskModeBlockSleepButton", (n) -> { currentObject.setKioskModeBlockSleepButton(n.getBooleanValue()); });
-            this.put("kioskModeBlockVolumeButtons", (n) -> { currentObject.setKioskModeBlockVolumeButtons(n.getBooleanValue()); });
-            this.put("locationServicesBlocked", (n) -> { currentObject.setLocationServicesBlocked(n.getBooleanValue()); });
-            this.put("nfcBlocked", (n) -> { currentObject.setNfcBlocked(n.getBooleanValue()); });
-            this.put("passwordBlockFingerprintUnlock", (n) -> { currentObject.setPasswordBlockFingerprintUnlock(n.getBooleanValue()); });
-            this.put("passwordBlockTrustAgents", (n) -> { currentObject.setPasswordBlockTrustAgents(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(AndroidRequiredPasswordType.class)); });
-            this.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
-            this.put("powerOffBlocked", (n) -> { currentObject.setPowerOffBlocked(n.getBooleanValue()); });
-            this.put("requiredPasswordComplexity", (n) -> { currentObject.setRequiredPasswordComplexity(n.getEnumValue(AndroidRequiredPasswordComplexity.class)); });
-            this.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
-            this.put("securityRequireVerifyApps", (n) -> { currentObject.setSecurityRequireVerifyApps(n.getBooleanValue()); });
-            this.put("storageBlockGoogleBackup", (n) -> { currentObject.setStorageBlockGoogleBackup(n.getBooleanValue()); });
-            this.put("storageBlockRemovableStorage", (n) -> { currentObject.setStorageBlockRemovableStorage(n.getBooleanValue()); });
-            this.put("storageRequireDeviceEncryption", (n) -> { currentObject.setStorageRequireDeviceEncryption(n.getBooleanValue()); });
-            this.put("storageRequireRemovableStorageEncryption", (n) -> { currentObject.setStorageRequireRemovableStorageEncryption(n.getBooleanValue()); });
-            this.put("voiceAssistantBlocked", (n) -> { currentObject.setVoiceAssistantBlocked(n.getBooleanValue()); });
-            this.put("voiceDialingBlocked", (n) -> { currentObject.setVoiceDialingBlocked(n.getBooleanValue()); });
-            this.put("webBrowserBlockAutofill", (n) -> { currentObject.setWebBrowserBlockAutofill(n.getBooleanValue()); });
-            this.put("webBrowserBlocked", (n) -> { currentObject.setWebBrowserBlocked(n.getBooleanValue()); });
-            this.put("webBrowserBlockJavaScript", (n) -> { currentObject.setWebBrowserBlockJavaScript(n.getBooleanValue()); });
-            this.put("webBrowserBlockPopups", (n) -> { currentObject.setWebBrowserBlockPopups(n.getBooleanValue()); });
-            this.put("webBrowserCookieSettings", (n) -> { currentObject.setWebBrowserCookieSettings(n.getEnumValue(WebBrowserCookieSettings.class)); });
-            this.put("wiFiBlocked", (n) -> { currentObject.setWiFiBlocked(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appsBlockClipboardSharing", (n) -> { currentObject.setAppsBlockClipboardSharing(n.getBooleanValue()); });
+        deserializerMap.put("appsBlockCopyPaste", (n) -> { currentObject.setAppsBlockCopyPaste(n.getBooleanValue()); });
+        deserializerMap.put("appsBlockYouTube", (n) -> { currentObject.setAppsBlockYouTube(n.getBooleanValue()); });
+        deserializerMap.put("appsHideList", (n) -> { currentObject.setAppsHideList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("appsInstallAllowList", (n) -> { currentObject.setAppsInstallAllowList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("appsLaunchBlockList", (n) -> { currentObject.setAppsLaunchBlockList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("bluetoothBlocked", (n) -> { currentObject.setBluetoothBlocked(n.getBooleanValue()); });
+        deserializerMap.put("cameraBlocked", (n) -> { currentObject.setCameraBlocked(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockDataRoaming", (n) -> { currentObject.setCellularBlockDataRoaming(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockMessaging", (n) -> { currentObject.setCellularBlockMessaging(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockVoiceRoaming", (n) -> { currentObject.setCellularBlockVoiceRoaming(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockWiFiTethering", (n) -> { currentObject.setCellularBlockWiFiTethering(n.getBooleanValue()); });
+        deserializerMap.put("compliantAppListType", (n) -> { currentObject.setCompliantAppListType(n.getEnumValue(AppListType.class)); });
+        deserializerMap.put("compliantAppsList", (n) -> { currentObject.setCompliantAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("dateAndTimeBlockChanges", (n) -> { currentObject.setDateAndTimeBlockChanges(n.getBooleanValue()); });
+        deserializerMap.put("deviceSharingAllowed", (n) -> { currentObject.setDeviceSharingAllowed(n.getBooleanValue()); });
+        deserializerMap.put("diagnosticDataBlockSubmission", (n) -> { currentObject.setDiagnosticDataBlockSubmission(n.getBooleanValue()); });
+        deserializerMap.put("factoryResetBlocked", (n) -> { currentObject.setFactoryResetBlocked(n.getBooleanValue()); });
+        deserializerMap.put("googleAccountBlockAutoSync", (n) -> { currentObject.setGoogleAccountBlockAutoSync(n.getBooleanValue()); });
+        deserializerMap.put("googlePlayStoreBlocked", (n) -> { currentObject.setGooglePlayStoreBlocked(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeApps", (n) -> { currentObject.setKioskModeApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("kioskModeBlockSleepButton", (n) -> { currentObject.setKioskModeBlockSleepButton(n.getBooleanValue()); });
+        deserializerMap.put("kioskModeBlockVolumeButtons", (n) -> { currentObject.setKioskModeBlockVolumeButtons(n.getBooleanValue()); });
+        deserializerMap.put("locationServicesBlocked", (n) -> { currentObject.setLocationServicesBlocked(n.getBooleanValue()); });
+        deserializerMap.put("nfcBlocked", (n) -> { currentObject.setNfcBlocked(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockFingerprintUnlock", (n) -> { currentObject.setPasswordBlockFingerprintUnlock(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockTrustAgents", (n) -> { currentObject.setPasswordBlockTrustAgents(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(AndroidRequiredPasswordType.class)); });
+        deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
+        deserializerMap.put("powerOffBlocked", (n) -> { currentObject.setPowerOffBlocked(n.getBooleanValue()); });
+        deserializerMap.put("requiredPasswordComplexity", (n) -> { currentObject.setRequiredPasswordComplexity(n.getEnumValue(AndroidRequiredPasswordComplexity.class)); });
+        deserializerMap.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
+        deserializerMap.put("securityRequireVerifyApps", (n) -> { currentObject.setSecurityRequireVerifyApps(n.getBooleanValue()); });
+        deserializerMap.put("storageBlockGoogleBackup", (n) -> { currentObject.setStorageBlockGoogleBackup(n.getBooleanValue()); });
+        deserializerMap.put("storageBlockRemovableStorage", (n) -> { currentObject.setStorageBlockRemovableStorage(n.getBooleanValue()); });
+        deserializerMap.put("storageRequireDeviceEncryption", (n) -> { currentObject.setStorageRequireDeviceEncryption(n.getBooleanValue()); });
+        deserializerMap.put("storageRequireRemovableStorageEncryption", (n) -> { currentObject.setStorageRequireRemovableStorageEncryption(n.getBooleanValue()); });
+        deserializerMap.put("voiceAssistantBlocked", (n) -> { currentObject.setVoiceAssistantBlocked(n.getBooleanValue()); });
+        deserializerMap.put("voiceDialingBlocked", (n) -> { currentObject.setVoiceDialingBlocked(n.getBooleanValue()); });
+        deserializerMap.put("webBrowserBlockAutofill", (n) -> { currentObject.setWebBrowserBlockAutofill(n.getBooleanValue()); });
+        deserializerMap.put("webBrowserBlocked", (n) -> { currentObject.setWebBrowserBlocked(n.getBooleanValue()); });
+        deserializerMap.put("webBrowserBlockJavaScript", (n) -> { currentObject.setWebBrowserBlockJavaScript(n.getBooleanValue()); });
+        deserializerMap.put("webBrowserBlockPopups", (n) -> { currentObject.setWebBrowserBlockPopups(n.getBooleanValue()); });
+        deserializerMap.put("webBrowserCookieSettings", (n) -> { currentObject.setWebBrowserCookieSettings(n.getEnumValue(WebBrowserCookieSettings.class)); });
+        deserializerMap.put("wiFiBlocked", (n) -> { currentObject.setWiFiBlocked(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the googleAccountBlockAutoSync property value. Indicates whether or not to block Google account auto sync.
@@ -591,6 +592,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -650,6 +652,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the appsBlockClipboardSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsBlockClipboardSharing(@javax.annotation.Nullable final Boolean value) {
         this._appsBlockClipboardSharing = value;
     }
@@ -658,6 +661,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the appsBlockCopyPaste property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsBlockCopyPaste(@javax.annotation.Nullable final Boolean value) {
         this._appsBlockCopyPaste = value;
     }
@@ -666,6 +670,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the appsBlockYouTube property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsBlockYouTube(@javax.annotation.Nullable final Boolean value) {
         this._appsBlockYouTube = value;
     }
@@ -674,6 +679,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the appsHideList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsHideList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._appsHideList = value;
     }
@@ -682,6 +688,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the appsInstallAllowList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsInstallAllowList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._appsInstallAllowList = value;
     }
@@ -690,6 +697,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the appsLaunchBlockList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsLaunchBlockList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._appsLaunchBlockList = value;
     }
@@ -698,6 +706,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the bluetoothBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBluetoothBlocked(@javax.annotation.Nullable final Boolean value) {
         this._bluetoothBlocked = value;
     }
@@ -706,6 +715,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the cameraBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCameraBlocked(@javax.annotation.Nullable final Boolean value) {
         this._cameraBlocked = value;
     }
@@ -714,6 +724,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the cellularBlockDataRoaming property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockDataRoaming(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockDataRoaming = value;
     }
@@ -722,6 +733,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the cellularBlockMessaging property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockMessaging(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockMessaging = value;
     }
@@ -730,6 +742,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the cellularBlockVoiceRoaming property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockVoiceRoaming(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockVoiceRoaming = value;
     }
@@ -738,6 +751,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the cellularBlockWiFiTethering property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockWiFiTethering(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockWiFiTethering = value;
     }
@@ -746,6 +760,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the compliantAppListType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantAppListType(@javax.annotation.Nullable final AppListType value) {
         this._compliantAppListType = value;
     }
@@ -754,6 +769,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the compliantAppsList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantAppsList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._compliantAppsList = value;
     }
@@ -762,6 +778,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the dateAndTimeBlockChanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDateAndTimeBlockChanges(@javax.annotation.Nullable final Boolean value) {
         this._dateAndTimeBlockChanges = value;
     }
@@ -770,6 +787,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the deviceSharingAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceSharingAllowed(@javax.annotation.Nullable final Boolean value) {
         this._deviceSharingAllowed = value;
     }
@@ -778,6 +796,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the diagnosticDataBlockSubmission property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiagnosticDataBlockSubmission(@javax.annotation.Nullable final Boolean value) {
         this._diagnosticDataBlockSubmission = value;
     }
@@ -786,6 +805,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the factoryResetBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFactoryResetBlocked(@javax.annotation.Nullable final Boolean value) {
         this._factoryResetBlocked = value;
     }
@@ -794,6 +814,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the googleAccountBlockAutoSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGoogleAccountBlockAutoSync(@javax.annotation.Nullable final Boolean value) {
         this._googleAccountBlockAutoSync = value;
     }
@@ -802,6 +823,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the googlePlayStoreBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGooglePlayStoreBlocked(@javax.annotation.Nullable final Boolean value) {
         this._googlePlayStoreBlocked = value;
     }
@@ -810,6 +832,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the kioskModeApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeApps(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._kioskModeApps = value;
     }
@@ -818,6 +841,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the kioskModeBlockSleepButton property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeBlockSleepButton(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeBlockSleepButton = value;
     }
@@ -826,6 +850,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the kioskModeBlockVolumeButtons property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskModeBlockVolumeButtons(@javax.annotation.Nullable final Boolean value) {
         this._kioskModeBlockVolumeButtons = value;
     }
@@ -834,6 +859,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the locationServicesBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocationServicesBlocked(@javax.annotation.Nullable final Boolean value) {
         this._locationServicesBlocked = value;
     }
@@ -842,6 +868,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the nfcBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNfcBlocked(@javax.annotation.Nullable final Boolean value) {
         this._nfcBlocked = value;
     }
@@ -850,6 +877,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the passwordBlockFingerprintUnlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockFingerprintUnlock(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockFingerprintUnlock = value;
     }
@@ -858,6 +886,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the passwordBlockTrustAgents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockTrustAgents(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockTrustAgents = value;
     }
@@ -866,6 +895,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -874,6 +904,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -882,6 +913,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
@@ -890,6 +922,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordBlockCount = value;
     }
@@ -898,6 +931,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequired = value;
     }
@@ -906,6 +940,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final AndroidRequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -914,6 +949,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
         this._passwordSignInFailureCountBeforeFactoryReset = value;
     }
@@ -922,6 +958,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the powerOffBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPowerOffBlocked(@javax.annotation.Nullable final Boolean value) {
         this._powerOffBlocked = value;
     }
@@ -930,6 +967,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the requiredPasswordComplexity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredPasswordComplexity(@javax.annotation.Nullable final AndroidRequiredPasswordComplexity value) {
         this._requiredPasswordComplexity = value;
     }
@@ -938,6 +976,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the screenCaptureBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
         this._screenCaptureBlocked = value;
     }
@@ -946,6 +985,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the securityRequireVerifyApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireVerifyApps(@javax.annotation.Nullable final Boolean value) {
         this._securityRequireVerifyApps = value;
     }
@@ -954,6 +994,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the storageBlockGoogleBackup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageBlockGoogleBackup(@javax.annotation.Nullable final Boolean value) {
         this._storageBlockGoogleBackup = value;
     }
@@ -962,6 +1003,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the storageBlockRemovableStorage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageBlockRemovableStorage(@javax.annotation.Nullable final Boolean value) {
         this._storageBlockRemovableStorage = value;
     }
@@ -970,6 +1012,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the storageRequireDeviceEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRequireDeviceEncryption(@javax.annotation.Nullable final Boolean value) {
         this._storageRequireDeviceEncryption = value;
     }
@@ -978,6 +1021,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the storageRequireRemovableStorageEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRequireRemovableStorageEncryption(@javax.annotation.Nullable final Boolean value) {
         this._storageRequireRemovableStorageEncryption = value;
     }
@@ -986,6 +1030,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the voiceAssistantBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVoiceAssistantBlocked(@javax.annotation.Nullable final Boolean value) {
         this._voiceAssistantBlocked = value;
     }
@@ -994,6 +1039,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the voiceDialingBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVoiceDialingBlocked(@javax.annotation.Nullable final Boolean value) {
         this._voiceDialingBlocked = value;
     }
@@ -1002,6 +1048,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the webBrowserBlockAutofill property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebBrowserBlockAutofill(@javax.annotation.Nullable final Boolean value) {
         this._webBrowserBlockAutofill = value;
     }
@@ -1010,6 +1057,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the webBrowserBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebBrowserBlocked(@javax.annotation.Nullable final Boolean value) {
         this._webBrowserBlocked = value;
     }
@@ -1018,6 +1066,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the webBrowserBlockJavaScript property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebBrowserBlockJavaScript(@javax.annotation.Nullable final Boolean value) {
         this._webBrowserBlockJavaScript = value;
     }
@@ -1026,6 +1075,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the webBrowserBlockPopups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebBrowserBlockPopups(@javax.annotation.Nullable final Boolean value) {
         this._webBrowserBlockPopups = value;
     }
@@ -1034,6 +1084,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the webBrowserCookieSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebBrowserCookieSettings(@javax.annotation.Nullable final WebBrowserCookieSettings value) {
         this._webBrowserCookieSettings = value;
     }
@@ -1042,6 +1093,7 @@ public class AndroidGeneralDeviceConfiguration extends DeviceConfiguration imple
      * @param value Value to set for the wiFiBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWiFiBlocked(@javax.annotation.Nullable final Boolean value) {
         this._wiFiBlocked = value;
     }

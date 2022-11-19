@@ -18,6 +18,7 @@ public class DeletePasswordSingleSignOnCredentialsPostRequestBody implements Add
      * Instantiates a new deletePasswordSingleSignOnCredentialsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeletePasswordSingleSignOnCredentialsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,9 +47,9 @@ public class DeletePasswordSingleSignOnCredentialsPostRequestBody implements Add
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeletePasswordSingleSignOnCredentialsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the id property value. The id property
@@ -63,6 +64,7 @@ public class DeletePasswordSingleSignOnCredentialsPostRequestBody implements Add
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
@@ -73,6 +75,7 @@ public class DeletePasswordSingleSignOnCredentialsPostRequestBody implements Add
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class DeletePasswordSingleSignOnCredentialsPostRequestBody implements Add
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }

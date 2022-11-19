@@ -25,6 +25,7 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      * Instantiates a new domainRegistrant and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DomainRegistrant() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.domainRegistrant");
@@ -62,13 +63,13 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DomainRegistrant currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("countryOrRegionCode", (n) -> { currentObject.setCountryOrRegionCode(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("organization", (n) -> { currentObject.setOrganization(n.getStringValue()); });
-            this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
-            this.put("vendor", (n) -> { currentObject.setVendor(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("countryOrRegionCode", (n) -> { currentObject.setCountryOrRegionCode(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("organization", (n) -> { currentObject.setOrganization(n.getStringValue()); });
+        deserializerMap.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
+        deserializerMap.put("vendor", (n) -> { currentObject.setVendor(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,6 +108,7 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("countryOrRegionCode", this.getCountryOrRegionCode());
@@ -121,6 +123,7 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +132,7 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the countryOrRegionCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountryOrRegionCode(@javax.annotation.Nullable final String value) {
         this._countryOrRegionCode = value;
     }
@@ -137,6 +141,7 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -145,6 +150,7 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the organization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganization(@javax.annotation.Nullable final String value) {
         this._organization = value;
     }
@@ -153,6 +159,7 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the url property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrl(@javax.annotation.Nullable final String value) {
         this._url = value;
     }
@@ -161,6 +168,7 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the vendor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendor(@javax.annotation.Nullable final String value) {
         this._vendor = value;
     }

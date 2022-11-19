@@ -21,6 +21,7 @@ public class UserRegistrationMethodCount implements AdditionalDataHolder, Parsab
      * Instantiates a new userRegistrationMethodCount and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserRegistrationMethodCount() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.userRegistrationMethodCount");
@@ -58,11 +59,11 @@ public class UserRegistrationMethodCount implements AdditionalDataHolder, Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserRegistrationMethodCount currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("userCount", (n) -> { currentObject.setUserCount(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("userCount", (n) -> { currentObject.setUserCount(n.getLongValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -85,6 +86,7 @@ public class UserRegistrationMethodCount implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("authenticationMethod", this.getAuthenticationMethod());
@@ -97,6 +99,7 @@ public class UserRegistrationMethodCount implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +108,7 @@ public class UserRegistrationMethodCount implements AdditionalDataHolder, Parsab
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final String value) {
         this._authenticationMethod = value;
     }
@@ -113,6 +117,7 @@ public class UserRegistrationMethodCount implements AdditionalDataHolder, Parsab
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +126,7 @@ public class UserRegistrationMethodCount implements AdditionalDataHolder, Parsab
      * @param value Value to set for the userCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserCount(@javax.annotation.Nullable final Long value) {
         this._userCount = value;
     }

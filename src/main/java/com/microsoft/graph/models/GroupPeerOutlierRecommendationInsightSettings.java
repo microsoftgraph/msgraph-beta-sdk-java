@@ -12,6 +12,7 @@ public class GroupPeerOutlierRecommendationInsightSettings extends AccessReviewR
      * Instantiates a new GroupPeerOutlierRecommendationInsightSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPeerOutlierRecommendationInsightSettings() {
         super();
         this.setOdataType("#microsoft.graph.groupPeerOutlierRecommendationInsightSettings");
@@ -33,14 +34,15 @@ public class GroupPeerOutlierRecommendationInsightSettings extends AccessReviewR
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupPeerOutlierRecommendationInsightSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

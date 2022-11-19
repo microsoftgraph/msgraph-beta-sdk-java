@@ -16,6 +16,7 @@ public class RevokeAppleVppLicensesActionResult extends DeviceActionResult imple
      * Instantiates a new RevokeAppleVppLicensesActionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RevokeAppleVppLicensesActionResult() {
         super();
         this.setOdataType("#microsoft.graph.revokeAppleVppLicensesActionResult");
@@ -45,10 +46,10 @@ public class RevokeAppleVppLicensesActionResult extends DeviceActionResult imple
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RevokeAppleVppLicensesActionResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("failedLicensesCount", (n) -> { currentObject.setFailedLicensesCount(n.getIntegerValue()); });
-            this.put("totalLicensesCount", (n) -> { currentObject.setTotalLicensesCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("failedLicensesCount", (n) -> { currentObject.setFailedLicensesCount(n.getIntegerValue()); });
+        deserializerMap.put("totalLicensesCount", (n) -> { currentObject.setTotalLicensesCount(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the totalLicensesCount property value. Total number of Apple Vpp licenses associated
@@ -63,6 +64,7 @@ public class RevokeAppleVppLicensesActionResult extends DeviceActionResult imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class RevokeAppleVppLicensesActionResult extends DeviceActionResult imple
      * @param value Value to set for the failedLicensesCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedLicensesCount(@javax.annotation.Nullable final Integer value) {
         this._failedLicensesCount = value;
     }
@@ -82,6 +85,7 @@ public class RevokeAppleVppLicensesActionResult extends DeviceActionResult imple
      * @param value Value to set for the totalLicensesCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalLicensesCount(@javax.annotation.Nullable final Integer value) {
         this._totalLicensesCount = value;
     }

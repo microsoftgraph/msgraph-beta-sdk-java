@@ -28,6 +28,7 @@ public class NdesConnector extends Entity implements Parsable {
      * Instantiates a new ndesConnector and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public NdesConnector() {
         super();
         this.setOdataType("#microsoft.graph.ndesConnector");
@@ -73,15 +74,15 @@ public class NdesConnector extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final NdesConnector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("connectorVersion", (n) -> { currentObject.setConnectorVersion(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("enrolledDateTime", (n) -> { currentObject.setEnrolledDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastConnectionDateTime", (n) -> { currentObject.setLastConnectionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("machineName", (n) -> { currentObject.setMachineName(n.getStringValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(NdesConnectorState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("connectorVersion", (n) -> { currentObject.setConnectorVersion(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enrolledDateTime", (n) -> { currentObject.setEnrolledDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastConnectionDateTime", (n) -> { currentObject.setLastConnectionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("machineName", (n) -> { currentObject.setMachineName(n.getStringValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(NdesConnectorState.class)); });
+        return deserializerMap
     }
     /**
      * Gets the lastConnectionDateTime property value. Last connection time for the Ndes Connector
@@ -120,6 +121,7 @@ public class NdesConnector extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -136,6 +138,7 @@ public class NdesConnector extends Entity implements Parsable {
      * @param value Value to set for the connectorVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectorVersion(@javax.annotation.Nullable final String value) {
         this._connectorVersion = value;
     }
@@ -144,6 +147,7 @@ public class NdesConnector extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -152,6 +156,7 @@ public class NdesConnector extends Entity implements Parsable {
      * @param value Value to set for the enrolledDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrolledDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._enrolledDateTime = value;
     }
@@ -160,6 +165,7 @@ public class NdesConnector extends Entity implements Parsable {
      * @param value Value to set for the lastConnectionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastConnectionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastConnectionDateTime = value;
     }
@@ -168,6 +174,7 @@ public class NdesConnector extends Entity implements Parsable {
      * @param value Value to set for the machineName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMachineName(@javax.annotation.Nullable final String value) {
         this._machineName = value;
     }
@@ -176,6 +183,7 @@ public class NdesConnector extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -184,6 +192,7 @@ public class NdesConnector extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final NdesConnectorState value) {
         this._state = value;
     }

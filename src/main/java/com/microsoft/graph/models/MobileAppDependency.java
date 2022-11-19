@@ -18,6 +18,7 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
      * Instantiates a new MobileAppDependency and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppDependency() {
         super();
         this.setOdataType("#microsoft.graph.mobileAppDependency");
@@ -63,17 +64,18 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MobileAppDependency currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("dependencyType", (n) -> { currentObject.setDependencyType(n.getEnumValue(MobileAppDependencyType.class)); });
-            this.put("dependentAppCount", (n) -> { currentObject.setDependentAppCount(n.getIntegerValue()); });
-            this.put("dependsOnAppCount", (n) -> { currentObject.setDependsOnAppCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("dependencyType", (n) -> { currentObject.setDependencyType(n.getEnumValue(MobileAppDependencyType.class)); });
+        deserializerMap.put("dependentAppCount", (n) -> { currentObject.setDependentAppCount(n.getIntegerValue()); });
+        deserializerMap.put("dependsOnAppCount", (n) -> { currentObject.setDependsOnAppCount(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
      * @param value Value to set for the dependencyType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDependencyType(@javax.annotation.Nullable final MobileAppDependencyType value) {
         this._dependencyType = value;
     }
@@ -94,6 +97,7 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
      * @param value Value to set for the dependentAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDependentAppCount(@javax.annotation.Nullable final Integer value) {
         this._dependentAppCount = value;
     }
@@ -102,6 +106,7 @@ public class MobileAppDependency extends MobileAppRelationship implements Parsab
      * @param value Value to set for the dependsOnAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDependsOnAppCount(@javax.annotation.Nullable final Integer value) {
         this._dependsOnAppCount = value;
     }

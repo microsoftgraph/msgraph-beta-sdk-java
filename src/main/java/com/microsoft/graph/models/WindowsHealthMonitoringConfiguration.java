@@ -18,6 +18,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      * Instantiates a new WindowsHealthMonitoringConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsHealthMonitoringConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsHealthMonitoringConfiguration");
@@ -63,17 +64,18 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsHealthMonitoringConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowDeviceHealthMonitoring", (n) -> { currentObject.setAllowDeviceHealthMonitoring(n.getEnumValue(Enablement.class)); });
-            this.put("configDeviceHealthMonitoringCustomScope", (n) -> { currentObject.setConfigDeviceHealthMonitoringCustomScope(n.getStringValue()); });
-            this.put("configDeviceHealthMonitoringScope", (n) -> { currentObject.setConfigDeviceHealthMonitoringScope(n.getEnumValue(WindowsHealthMonitoringScope.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowDeviceHealthMonitoring", (n) -> { currentObject.setAllowDeviceHealthMonitoring(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("configDeviceHealthMonitoringCustomScope", (n) -> { currentObject.setConfigDeviceHealthMonitoringCustomScope(n.getStringValue()); });
+        deserializerMap.put("configDeviceHealthMonitoringScope", (n) -> { currentObject.setConfigDeviceHealthMonitoringScope(n.getEnumValue(WindowsHealthMonitoringScope.class)); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      * @param value Value to set for the allowDeviceHealthMonitoring property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowDeviceHealthMonitoring(@javax.annotation.Nullable final Enablement value) {
         this._allowDeviceHealthMonitoring = value;
     }
@@ -94,6 +97,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      * @param value Value to set for the configDeviceHealthMonitoringCustomScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigDeviceHealthMonitoringCustomScope(@javax.annotation.Nullable final String value) {
         this._configDeviceHealthMonitoringCustomScope = value;
     }
@@ -102,6 +106,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
      * @param value Value to set for the configDeviceHealthMonitoringScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigDeviceHealthMonitoringScope(@javax.annotation.Nullable final WindowsHealthMonitoringScope value) {
         this._configDeviceHealthMonitoringScope = value;
     }

@@ -15,6 +15,7 @@ public class Catalog extends Entity implements Parsable {
      * Instantiates a new catalog and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Catalog() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.catalog");
@@ -44,15 +45,16 @@ public class Catalog extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Catalog currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("entries", (n) -> { currentObject.setEntries(n.getCollectionOfObjectValues(CatalogEntry::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("entries", (n) -> { currentObject.setEntries(n.getCollectionOfObjectValues(CatalogEntry::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class Catalog extends Entity implements Parsable {
      * @param value Value to set for the entries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEntries(@javax.annotation.Nullable final java.util.List<CatalogEntry> value) {
         this._entries = value;
     }

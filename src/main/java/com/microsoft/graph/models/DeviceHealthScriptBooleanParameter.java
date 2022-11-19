@@ -14,6 +14,7 @@ public class DeviceHealthScriptBooleanParameter extends DeviceHealthScriptParame
      * Instantiates a new DeviceHealthScriptBooleanParameter and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceHealthScriptBooleanParameter() {
         super();
         this.setOdataType("#microsoft.graph.deviceHealthScriptBooleanParameter");
@@ -43,15 +44,16 @@ public class DeviceHealthScriptBooleanParameter extends DeviceHealthScriptParame
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceHealthScriptBooleanParameter currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceHealthScriptBooleanParameter extends DeviceHealthScriptParame
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final Boolean value) {
         this._defaultValue = value;
     }

@@ -26,6 +26,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * Instantiates a new educationSynchronizationCustomization and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationSynchronizationCustomization() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.educationSynchronizationCustomization");
@@ -63,13 +64,13 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EducationSynchronizationCustomization currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("allowDisplayNameUpdate", (n) -> { currentObject.setAllowDisplayNameUpdate(n.getBooleanValue()); });
-            this.put("isSyncDeferred", (n) -> { currentObject.setIsSyncDeferred(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("optionalPropertiesToSync", (n) -> { currentObject.setOptionalPropertiesToSync(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("synchronizationStartDate", (n) -> { currentObject.setSynchronizationStartDate(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("allowDisplayNameUpdate", (n) -> { currentObject.setAllowDisplayNameUpdate(n.getBooleanValue()); });
+        deserializerMap.put("isSyncDeferred", (n) -> { currentObject.setIsSyncDeferred(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("optionalPropertiesToSync", (n) -> { currentObject.setOptionalPropertiesToSync(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("synchronizationStartDate", (n) -> { currentObject.setSynchronizationStartDate(n.getOffsetDateTimeValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isSyncDeferred property value. Indicates whether synchronization of the parent entity is deferred to a later date.
@@ -108,6 +109,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowDisplayNameUpdate", this.getAllowDisplayNameUpdate());
@@ -122,6 +124,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +133,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * @param value Value to set for the allowDisplayNameUpdate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowDisplayNameUpdate(@javax.annotation.Nullable final Boolean value) {
         this._allowDisplayNameUpdate = value;
     }
@@ -138,6 +142,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * @param value Value to set for the isSyncDeferred property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSyncDeferred(@javax.annotation.Nullable final Boolean value) {
         this._isSyncDeferred = value;
     }
@@ -146,6 +151,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -154,6 +160,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * @param value Value to set for the optionalPropertiesToSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOptionalPropertiesToSync(@javax.annotation.Nullable final java.util.List<String> value) {
         this._optionalPropertiesToSync = value;
     }
@@ -162,6 +169,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
      * @param value Value to set for the synchronizationStartDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSynchronizationStartDate(@javax.annotation.Nullable final OffsetDateTime value) {
         this._synchronizationStartDate = value;
     }

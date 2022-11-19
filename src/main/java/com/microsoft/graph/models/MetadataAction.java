@@ -16,6 +16,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
      * Instantiates a new MetadataAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MetadataAction() {
         super();
         this.setOdataType("#microsoft.graph.metadataAction");
@@ -37,10 +38,10 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MetadataAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("metadataToAdd", (n) -> { currentObject.setMetadataToAdd(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("metadataToRemove", (n) -> { currentObject.setMetadataToRemove(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("metadataToAdd", (n) -> { currentObject.setMetadataToAdd(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("metadataToRemove", (n) -> { currentObject.setMetadataToRemove(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the metadataToAdd property value. A collection of key value pairs that should be added to the file.
@@ -63,6 +64,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
      * @param value Value to set for the metadataToAdd property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetadataToAdd(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._metadataToAdd = value;
     }
@@ -82,6 +85,7 @@ public class MetadataAction extends InformationProtectionAction implements Parsa
      * @param value Value to set for the metadataToRemove property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetadataToRemove(@javax.annotation.Nullable final java.util.List<String> value) {
         this._metadataToRemove = value;
     }

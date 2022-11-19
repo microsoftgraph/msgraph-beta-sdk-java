@@ -5,7 +5,8 @@ import java.util.Objects;
 
 /** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum TeamworkTagType implements ValuedEnum {
-    Standard("standard");
+    Standard("standard"),
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     TeamworkTagType(final String value) {
         this.value = value;
@@ -17,6 +18,7 @@ public enum TeamworkTagType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "standard": return Standard;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

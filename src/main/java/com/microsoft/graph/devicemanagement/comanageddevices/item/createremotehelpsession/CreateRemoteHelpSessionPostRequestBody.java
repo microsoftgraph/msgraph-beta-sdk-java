@@ -18,6 +18,7 @@ public class CreateRemoteHelpSessionPostRequestBody implements AdditionalDataHol
      * Instantiates a new createRemoteHelpSessionPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CreateRemoteHelpSessionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,9 +47,9 @@ public class CreateRemoteHelpSessionPostRequestBody implements AdditionalDataHol
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CreateRemoteHelpSessionPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("sessionType", (n) -> { currentObject.setSessionType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("sessionType", (n) -> { currentObject.setSessionType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the sessionType property value. The sessionType property
@@ -63,6 +64,7 @@ public class CreateRemoteHelpSessionPostRequestBody implements AdditionalDataHol
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("sessionType", this.getSessionType());
@@ -73,6 +75,7 @@ public class CreateRemoteHelpSessionPostRequestBody implements AdditionalDataHol
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class CreateRemoteHelpSessionPostRequestBody implements AdditionalDataHol
      * @param value Value to set for the sessionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessionType(@javax.annotation.Nullable final String value) {
         this._sessionType = value;
     }

@@ -1,6 +1,5 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.RestrictedSignIn;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -16,6 +15,12 @@ public class SignIn extends Entity implements Parsable {
     private String _appId;
     /** A list of conditional access policies that are triggered by the corresponding sign-in activity. */
     private java.util.List<AppliedConditionalAccessPolicy> _appliedConditionalAccessPolicies;
+    /** The appliedEventListeners property */
+    private java.util.List<AppliedAuthenticationEventListener> _appliedEventListeners;
+    /** The authenticationAppDeviceDetails property */
+    private AuthenticationAppDeviceDetails _authenticationAppDeviceDetails;
+    /** The authenticationAppPolicyEvaluationDetails property */
+    private java.util.List<AuthenticationAppPolicyDetails> _authenticationAppPolicyEvaluationDetails;
     /** Contains a collection of values that represent the conditional access authentication contexts applied to the sign-in. */
     private java.util.List<AuthenticationContext> _authenticationContextClassReferences;
     /** The result of the authentication attempt and additional details on the authentication method. */
@@ -134,6 +139,7 @@ public class SignIn extends Entity implements Parsable {
      * Instantiates a new SignIn and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SignIn() {
         super();
         this.setOdataType("#microsoft.graph.signIn");
@@ -146,13 +152,6 @@ public class SignIn extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static SignIn createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.restrictedSignIn": return new RestrictedSignIn();
-            }
-        }
         return new SignIn();
     }
     /**
@@ -178,6 +177,30 @@ public class SignIn extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<AppliedConditionalAccessPolicy> getAppliedConditionalAccessPolicies() {
         return this._appliedConditionalAccessPolicies;
+    }
+    /**
+     * Gets the appliedEventListeners property value. The appliedEventListeners property
+     * @return a appliedAuthenticationEventListener
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AppliedAuthenticationEventListener> getAppliedEventListeners() {
+        return this._appliedEventListeners;
+    }
+    /**
+     * Gets the authenticationAppDeviceDetails property value. The authenticationAppDeviceDetails property
+     * @return a authenticationAppDeviceDetails
+     */
+    @javax.annotation.Nullable
+    public AuthenticationAppDeviceDetails getAuthenticationAppDeviceDetails() {
+        return this._authenticationAppDeviceDetails;
+    }
+    /**
+     * Gets the authenticationAppPolicyEvaluationDetails property value. The authenticationAppPolicyEvaluationDetails property
+     * @return a authenticationAppPolicyDetails
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AuthenticationAppPolicyDetails> getAuthenticationAppPolicyEvaluationDetails() {
+        return this._authenticationAppPolicyEvaluationDetails;
     }
     /**
      * Gets the authenticationContextClassReferences property value. Contains a collection of values that represent the conditional access authentication contexts applied to the sign-in.
@@ -322,68 +345,71 @@ public class SignIn extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SignIn currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("appliedConditionalAccessPolicies", (n) -> { currentObject.setAppliedConditionalAccessPolicies(n.getCollectionOfObjectValues(AppliedConditionalAccessPolicy::createFromDiscriminatorValue)); });
-            this.put("authenticationContextClassReferences", (n) -> { currentObject.setAuthenticationContextClassReferences(n.getCollectionOfObjectValues(AuthenticationContext::createFromDiscriminatorValue)); });
-            this.put("authenticationDetails", (n) -> { currentObject.setAuthenticationDetails(n.getCollectionOfObjectValues(AuthenticationDetail::createFromDiscriminatorValue)); });
-            this.put("authenticationMethodsUsed", (n) -> { currentObject.setAuthenticationMethodsUsed(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("authenticationProcessingDetails", (n) -> { currentObject.setAuthenticationProcessingDetails(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
-            this.put("authenticationProtocol", (n) -> { currentObject.setAuthenticationProtocol(n.getEnumValue(ProtocolType.class)); });
-            this.put("authenticationRequirement", (n) -> { currentObject.setAuthenticationRequirement(n.getStringValue()); });
-            this.put("authenticationRequirementPolicies", (n) -> { currentObject.setAuthenticationRequirementPolicies(n.getCollectionOfObjectValues(AuthenticationRequirementPolicy::createFromDiscriminatorValue)); });
-            this.put("autonomousSystemNumber", (n) -> { currentObject.setAutonomousSystemNumber(n.getIntegerValue()); });
-            this.put("azureResourceId", (n) -> { currentObject.setAzureResourceId(n.getStringValue()); });
-            this.put("clientAppUsed", (n) -> { currentObject.setClientAppUsed(n.getStringValue()); });
-            this.put("clientCredentialType", (n) -> { currentObject.setClientCredentialType(n.getEnumValue(ClientCredentialType.class)); });
-            this.put("conditionalAccessStatus", (n) -> { currentObject.setConditionalAccessStatus(n.getEnumValue(ConditionalAccessStatus.class)); });
-            this.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("crossTenantAccessType", (n) -> { currentObject.setCrossTenantAccessType(n.getEnumValue(SignInAccessType.class)); });
-            this.put("deviceDetail", (n) -> { currentObject.setDeviceDetail(n.getObjectValue(DeviceDetail::createFromDiscriminatorValue)); });
-            this.put("federatedCredentialId", (n) -> { currentObject.setFederatedCredentialId(n.getStringValue()); });
-            this.put("flaggedForReview", (n) -> { currentObject.setFlaggedForReview(n.getBooleanValue()); });
-            this.put("homeTenantId", (n) -> { currentObject.setHomeTenantId(n.getStringValue()); });
-            this.put("homeTenantName", (n) -> { currentObject.setHomeTenantName(n.getStringValue()); });
-            this.put("incomingTokenType", (n) -> { currentObject.setIncomingTokenType(n.getEnumValue(IncomingTokenType.class)); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("ipAddressFromResourceProvider", (n) -> { currentObject.setIpAddressFromResourceProvider(n.getStringValue()); });
-            this.put("isInteractive", (n) -> { currentObject.setIsInteractive(n.getBooleanValue()); });
-            this.put("isTenantRestricted", (n) -> { currentObject.setIsTenantRestricted(n.getBooleanValue()); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
-            this.put("mfaDetail", (n) -> { currentObject.setMfaDetail(n.getObjectValue(MfaDetail::createFromDiscriminatorValue)); });
-            this.put("networkLocationDetails", (n) -> { currentObject.setNetworkLocationDetails(n.getCollectionOfObjectValues(NetworkLocationDetail::createFromDiscriminatorValue)); });
-            this.put("originalRequestId", (n) -> { currentObject.setOriginalRequestId(n.getStringValue()); });
-            this.put("privateLinkDetails", (n) -> { currentObject.setPrivateLinkDetails(n.getObjectValue(PrivateLinkDetails::createFromDiscriminatorValue)); });
-            this.put("processingTimeInMilliseconds", (n) -> { currentObject.setProcessingTimeInMilliseconds(n.getIntegerValue()); });
-            this.put("resourceDisplayName", (n) -> { currentObject.setResourceDisplayName(n.getStringValue()); });
-            this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
-            this.put("resourceServicePrincipalId", (n) -> { currentObject.setResourceServicePrincipalId(n.getStringValue()); });
-            this.put("resourceTenantId", (n) -> { currentObject.setResourceTenantId(n.getStringValue()); });
-            this.put("riskDetail", (n) -> { currentObject.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
-            this.put("riskEventTypes_v2", (n) -> { currentObject.setRiskEventTypes_v2(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("riskLevelAggregated", (n) -> { currentObject.setRiskLevelAggregated(n.getEnumValue(RiskLevel.class)); });
-            this.put("riskLevelDuringSignIn", (n) -> { currentObject.setRiskLevelDuringSignIn(n.getEnumValue(RiskLevel.class)); });
-            this.put("riskState", (n) -> { currentObject.setRiskState(n.getEnumValue(RiskState.class)); });
-            this.put("servicePrincipalCredentialKeyId", (n) -> { currentObject.setServicePrincipalCredentialKeyId(n.getStringValue()); });
-            this.put("servicePrincipalCredentialThumbprint", (n) -> { currentObject.setServicePrincipalCredentialThumbprint(n.getStringValue()); });
-            this.put("servicePrincipalId", (n) -> { currentObject.setServicePrincipalId(n.getStringValue()); });
-            this.put("servicePrincipalName", (n) -> { currentObject.setServicePrincipalName(n.getStringValue()); });
-            this.put("sessionLifetimePolicies", (n) -> { currentObject.setSessionLifetimePolicies(n.getCollectionOfObjectValues(SessionLifetimePolicy::createFromDiscriminatorValue)); });
-            this.put("signInEventTypes", (n) -> { currentObject.setSignInEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("signInIdentifier", (n) -> { currentObject.setSignInIdentifier(n.getStringValue()); });
-            this.put("signInIdentifierType", (n) -> { currentObject.setSignInIdentifierType(n.getEnumValue(SignInIdentifierType.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(SignInStatus::createFromDiscriminatorValue)); });
-            this.put("tokenIssuerName", (n) -> { currentObject.setTokenIssuerName(n.getStringValue()); });
-            this.put("tokenIssuerType", (n) -> { currentObject.setTokenIssuerType(n.getEnumValue(TokenIssuerType.class)); });
-            this.put("uniqueTokenIdentifier", (n) -> { currentObject.setUniqueTokenIdentifier(n.getStringValue()); });
-            this.put("userAgent", (n) -> { currentObject.setUserAgent(n.getStringValue()); });
-            this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("userType", (n) -> { currentObject.setUserType(n.getEnumValue(SignInUserType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
+        deserializerMap.put("appliedConditionalAccessPolicies", (n) -> { currentObject.setAppliedConditionalAccessPolicies(n.getCollectionOfObjectValues(AppliedConditionalAccessPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("appliedEventListeners", (n) -> { currentObject.setAppliedEventListeners(n.getCollectionOfObjectValues(AppliedAuthenticationEventListener::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationAppDeviceDetails", (n) -> { currentObject.setAuthenticationAppDeviceDetails(n.getObjectValue(AuthenticationAppDeviceDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationAppPolicyEvaluationDetails", (n) -> { currentObject.setAuthenticationAppPolicyEvaluationDetails(n.getCollectionOfObjectValues(AuthenticationAppPolicyDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationContextClassReferences", (n) -> { currentObject.setAuthenticationContextClassReferences(n.getCollectionOfObjectValues(AuthenticationContext::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationDetails", (n) -> { currentObject.setAuthenticationDetails(n.getCollectionOfObjectValues(AuthenticationDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationMethodsUsed", (n) -> { currentObject.setAuthenticationMethodsUsed(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("authenticationProcessingDetails", (n) -> { currentObject.setAuthenticationProcessingDetails(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationProtocol", (n) -> { currentObject.setAuthenticationProtocol(n.getEnumValue(ProtocolType.class)); });
+        deserializerMap.put("authenticationRequirement", (n) -> { currentObject.setAuthenticationRequirement(n.getStringValue()); });
+        deserializerMap.put("authenticationRequirementPolicies", (n) -> { currentObject.setAuthenticationRequirementPolicies(n.getCollectionOfObjectValues(AuthenticationRequirementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("autonomousSystemNumber", (n) -> { currentObject.setAutonomousSystemNumber(n.getIntegerValue()); });
+        deserializerMap.put("azureResourceId", (n) -> { currentObject.setAzureResourceId(n.getStringValue()); });
+        deserializerMap.put("clientAppUsed", (n) -> { currentObject.setClientAppUsed(n.getStringValue()); });
+        deserializerMap.put("clientCredentialType", (n) -> { currentObject.setClientCredentialType(n.getEnumValue(ClientCredentialType.class)); });
+        deserializerMap.put("conditionalAccessStatus", (n) -> { currentObject.setConditionalAccessStatus(n.getEnumValue(ConditionalAccessStatus.class)); });
+        deserializerMap.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("crossTenantAccessType", (n) -> { currentObject.setCrossTenantAccessType(n.getEnumValue(SignInAccessType.class)); });
+        deserializerMap.put("deviceDetail", (n) -> { currentObject.setDeviceDetail(n.getObjectValue(DeviceDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("federatedCredentialId", (n) -> { currentObject.setFederatedCredentialId(n.getStringValue()); });
+        deserializerMap.put("flaggedForReview", (n) -> { currentObject.setFlaggedForReview(n.getBooleanValue()); });
+        deserializerMap.put("homeTenantId", (n) -> { currentObject.setHomeTenantId(n.getStringValue()); });
+        deserializerMap.put("homeTenantName", (n) -> { currentObject.setHomeTenantName(n.getStringValue()); });
+        deserializerMap.put("incomingTokenType", (n) -> { currentObject.setIncomingTokenType(n.getEnumValue(IncomingTokenType.class)); });
+        deserializerMap.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("ipAddressFromResourceProvider", (n) -> { currentObject.setIpAddressFromResourceProvider(n.getStringValue()); });
+        deserializerMap.put("isInteractive", (n) -> { currentObject.setIsInteractive(n.getBooleanValue()); });
+        deserializerMap.put("isTenantRestricted", (n) -> { currentObject.setIsTenantRestricted(n.getBooleanValue()); });
+        deserializerMap.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("mfaDetail", (n) -> { currentObject.setMfaDetail(n.getObjectValue(MfaDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("networkLocationDetails", (n) -> { currentObject.setNetworkLocationDetails(n.getCollectionOfObjectValues(NetworkLocationDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("originalRequestId", (n) -> { currentObject.setOriginalRequestId(n.getStringValue()); });
+        deserializerMap.put("privateLinkDetails", (n) -> { currentObject.setPrivateLinkDetails(n.getObjectValue(PrivateLinkDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("processingTimeInMilliseconds", (n) -> { currentObject.setProcessingTimeInMilliseconds(n.getIntegerValue()); });
+        deserializerMap.put("resourceDisplayName", (n) -> { currentObject.setResourceDisplayName(n.getStringValue()); });
+        deserializerMap.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
+        deserializerMap.put("resourceServicePrincipalId", (n) -> { currentObject.setResourceServicePrincipalId(n.getStringValue()); });
+        deserializerMap.put("resourceTenantId", (n) -> { currentObject.setResourceTenantId(n.getStringValue()); });
+        deserializerMap.put("riskDetail", (n) -> { currentObject.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
+        deserializerMap.put("riskEventTypes_v2", (n) -> { currentObject.setRiskEventTypes_v2(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("riskLevelAggregated", (n) -> { currentObject.setRiskLevelAggregated(n.getEnumValue(RiskLevel.class)); });
+        deserializerMap.put("riskLevelDuringSignIn", (n) -> { currentObject.setRiskLevelDuringSignIn(n.getEnumValue(RiskLevel.class)); });
+        deserializerMap.put("riskState", (n) -> { currentObject.setRiskState(n.getEnumValue(RiskState.class)); });
+        deserializerMap.put("servicePrincipalCredentialKeyId", (n) -> { currentObject.setServicePrincipalCredentialKeyId(n.getStringValue()); });
+        deserializerMap.put("servicePrincipalCredentialThumbprint", (n) -> { currentObject.setServicePrincipalCredentialThumbprint(n.getStringValue()); });
+        deserializerMap.put("servicePrincipalId", (n) -> { currentObject.setServicePrincipalId(n.getStringValue()); });
+        deserializerMap.put("servicePrincipalName", (n) -> { currentObject.setServicePrincipalName(n.getStringValue()); });
+        deserializerMap.put("sessionLifetimePolicies", (n) -> { currentObject.setSessionLifetimePolicies(n.getCollectionOfObjectValues(SessionLifetimePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("signInEventTypes", (n) -> { currentObject.setSignInEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("signInIdentifier", (n) -> { currentObject.setSignInIdentifier(n.getStringValue()); });
+        deserializerMap.put("signInIdentifierType", (n) -> { currentObject.setSignInIdentifierType(n.getEnumValue(SignInIdentifierType.class)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(SignInStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("tokenIssuerName", (n) -> { currentObject.setTokenIssuerName(n.getStringValue()); });
+        deserializerMap.put("tokenIssuerType", (n) -> { currentObject.setTokenIssuerType(n.getEnumValue(TokenIssuerType.class)); });
+        deserializerMap.put("uniqueTokenIdentifier", (n) -> { currentObject.setUniqueTokenIdentifier(n.getStringValue()); });
+        deserializerMap.put("userAgent", (n) -> { currentObject.setUserAgent(n.getStringValue()); });
+        deserializerMap.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("userType", (n) -> { currentObject.setUserType(n.getEnumValue(SignInUserType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the flaggedForReview property value. During a failed sign in, a user may click a button in the Azure portal to mark the failed event for tenant admins. If a user clicked the button to flag the failed sign in, this value is true.
@@ -710,12 +736,16 @@ public class SignIn extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appDisplayName", this.getAppDisplayName());
         writer.writeStringValue("appId", this.getAppId());
         writer.writeCollectionOfObjectValues("appliedConditionalAccessPolicies", this.getAppliedConditionalAccessPolicies());
+        writer.writeCollectionOfObjectValues("appliedEventListeners", this.getAppliedEventListeners());
+        writer.writeObjectValue("authenticationAppDeviceDetails", this.getAuthenticationAppDeviceDetails());
+        writer.writeCollectionOfObjectValues("authenticationAppPolicyEvaluationDetails", this.getAuthenticationAppPolicyEvaluationDetails());
         writer.writeCollectionOfObjectValues("authenticationContextClassReferences", this.getAuthenticationContextClassReferences());
         writer.writeCollectionOfObjectValues("authenticationDetails", this.getAuthenticationDetails());
         writer.writeCollectionOfPrimitiveValues("authenticationMethodsUsed", this.getAuthenticationMethodsUsed());
@@ -779,6 +809,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
         this._appDisplayName = value;
     }
@@ -787,6 +818,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }
@@ -795,14 +827,43 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the appliedConditionalAccessPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliedConditionalAccessPolicies(@javax.annotation.Nullable final java.util.List<AppliedConditionalAccessPolicy> value) {
         this._appliedConditionalAccessPolicies = value;
+    }
+    /**
+     * Sets the appliedEventListeners property value. The appliedEventListeners property
+     * @param value Value to set for the appliedEventListeners property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAppliedEventListeners(@javax.annotation.Nullable final java.util.List<AppliedAuthenticationEventListener> value) {
+        this._appliedEventListeners = value;
+    }
+    /**
+     * Sets the authenticationAppDeviceDetails property value. The authenticationAppDeviceDetails property
+     * @param value Value to set for the authenticationAppDeviceDetails property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAuthenticationAppDeviceDetails(@javax.annotation.Nullable final AuthenticationAppDeviceDetails value) {
+        this._authenticationAppDeviceDetails = value;
+    }
+    /**
+     * Sets the authenticationAppPolicyEvaluationDetails property value. The authenticationAppPolicyEvaluationDetails property
+     * @param value Value to set for the authenticationAppPolicyEvaluationDetails property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAuthenticationAppPolicyEvaluationDetails(@javax.annotation.Nullable final java.util.List<AuthenticationAppPolicyDetails> value) {
+        this._authenticationAppPolicyEvaluationDetails = value;
     }
     /**
      * Sets the authenticationContextClassReferences property value. Contains a collection of values that represent the conditional access authentication contexts applied to the sign-in.
      * @param value Value to set for the authenticationContextClassReferences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationContextClassReferences(@javax.annotation.Nullable final java.util.List<AuthenticationContext> value) {
         this._authenticationContextClassReferences = value;
     }
@@ -811,6 +872,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the authenticationDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationDetails(@javax.annotation.Nullable final java.util.List<AuthenticationDetail> value) {
         this._authenticationDetails = value;
     }
@@ -819,6 +881,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the authenticationMethodsUsed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethodsUsed(@javax.annotation.Nullable final java.util.List<String> value) {
         this._authenticationMethodsUsed = value;
     }
@@ -827,6 +890,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the authenticationProcessingDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationProcessingDetails(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
         this._authenticationProcessingDetails = value;
     }
@@ -835,6 +899,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the authenticationProtocol property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationProtocol(@javax.annotation.Nullable final ProtocolType value) {
         this._authenticationProtocol = value;
     }
@@ -843,6 +908,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the authenticationRequirement property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationRequirement(@javax.annotation.Nullable final String value) {
         this._authenticationRequirement = value;
     }
@@ -851,6 +917,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the authenticationRequirementPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationRequirementPolicies(@javax.annotation.Nullable final java.util.List<AuthenticationRequirementPolicy> value) {
         this._authenticationRequirementPolicies = value;
     }
@@ -859,6 +926,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the autonomousSystemNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutonomousSystemNumber(@javax.annotation.Nullable final Integer value) {
         this._autonomousSystemNumber = value;
     }
@@ -867,6 +935,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the azureResourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureResourceId(@javax.annotation.Nullable final String value) {
         this._azureResourceId = value;
     }
@@ -875,6 +944,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the clientAppUsed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientAppUsed(@javax.annotation.Nullable final String value) {
         this._clientAppUsed = value;
     }
@@ -883,6 +953,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the clientCredentialType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientCredentialType(@javax.annotation.Nullable final ClientCredentialType value) {
         this._clientCredentialType = value;
     }
@@ -891,6 +962,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the conditionalAccessStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionalAccessStatus(@javax.annotation.Nullable final ConditionalAccessStatus value) {
         this._conditionalAccessStatus = value;
     }
@@ -899,6 +971,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the correlationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCorrelationId(@javax.annotation.Nullable final String value) {
         this._correlationId = value;
     }
@@ -907,6 +980,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -915,6 +989,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the crossTenantAccessType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCrossTenantAccessType(@javax.annotation.Nullable final SignInAccessType value) {
         this._crossTenantAccessType = value;
     }
@@ -923,6 +998,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the deviceDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDetail(@javax.annotation.Nullable final DeviceDetail value) {
         this._deviceDetail = value;
     }
@@ -931,6 +1007,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the federatedCredentialId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFederatedCredentialId(@javax.annotation.Nullable final String value) {
         this._federatedCredentialId = value;
     }
@@ -939,6 +1016,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the flaggedForReview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFlaggedForReview(@javax.annotation.Nullable final Boolean value) {
         this._flaggedForReview = value;
     }
@@ -947,6 +1025,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the homeTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeTenantId(@javax.annotation.Nullable final String value) {
         this._homeTenantId = value;
     }
@@ -955,6 +1034,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the homeTenantName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeTenantName(@javax.annotation.Nullable final String value) {
         this._homeTenantName = value;
     }
@@ -963,6 +1043,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the incomingTokenType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncomingTokenType(@javax.annotation.Nullable final IncomingTokenType value) {
         this._incomingTokenType = value;
     }
@@ -971,6 +1052,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
     }
@@ -979,6 +1061,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the ipAddressFromResourceProvider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddressFromResourceProvider(@javax.annotation.Nullable final String value) {
         this._ipAddressFromResourceProvider = value;
     }
@@ -987,6 +1070,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the isInteractive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsInteractive(@javax.annotation.Nullable final Boolean value) {
         this._isInteractive = value;
     }
@@ -995,6 +1079,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the isTenantRestricted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsTenantRestricted(@javax.annotation.Nullable final Boolean value) {
         this._isTenantRestricted = value;
     }
@@ -1003,6 +1088,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final SignInLocation value) {
         this._location = value;
     }
@@ -1011,6 +1097,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the mfaDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMfaDetail(@javax.annotation.Nullable final MfaDetail value) {
         this._mfaDetail = value;
     }
@@ -1019,6 +1106,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the networkLocationDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkLocationDetails(@javax.annotation.Nullable final java.util.List<NetworkLocationDetail> value) {
         this._networkLocationDetails = value;
     }
@@ -1027,6 +1115,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the originalRequestId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginalRequestId(@javax.annotation.Nullable final String value) {
         this._originalRequestId = value;
     }
@@ -1035,6 +1124,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the privateLinkDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivateLinkDetails(@javax.annotation.Nullable final PrivateLinkDetails value) {
         this._privateLinkDetails = value;
     }
@@ -1043,6 +1133,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the processingTimeInMilliseconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessingTimeInMilliseconds(@javax.annotation.Nullable final Integer value) {
         this._processingTimeInMilliseconds = value;
     }
@@ -1051,6 +1142,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the resourceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceDisplayName(@javax.annotation.Nullable final String value) {
         this._resourceDisplayName = value;
     }
@@ -1059,6 +1151,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the resourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceId(@javax.annotation.Nullable final String value) {
         this._resourceId = value;
     }
@@ -1067,6 +1160,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the resourceServicePrincipalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceServicePrincipalId(@javax.annotation.Nullable final String value) {
         this._resourceServicePrincipalId = value;
     }
@@ -1075,6 +1169,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the resourceTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceTenantId(@javax.annotation.Nullable final String value) {
         this._resourceTenantId = value;
     }
@@ -1083,6 +1178,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the riskDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskDetail(@javax.annotation.Nullable final RiskDetail value) {
         this._riskDetail = value;
     }
@@ -1091,6 +1187,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the riskEventTypes_v2 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskEventTypes_v2(@javax.annotation.Nullable final java.util.List<String> value) {
         this._riskEventTypes_v2 = value;
     }
@@ -1099,6 +1196,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the riskLevelAggregated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskLevelAggregated(@javax.annotation.Nullable final RiskLevel value) {
         this._riskLevelAggregated = value;
     }
@@ -1107,6 +1205,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the riskLevelDuringSignIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskLevelDuringSignIn(@javax.annotation.Nullable final RiskLevel value) {
         this._riskLevelDuringSignIn = value;
     }
@@ -1115,6 +1214,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the riskState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskState(@javax.annotation.Nullable final RiskState value) {
         this._riskState = value;
     }
@@ -1123,6 +1223,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the servicePrincipalCredentialKeyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalCredentialKeyId(@javax.annotation.Nullable final String value) {
         this._servicePrincipalCredentialKeyId = value;
     }
@@ -1131,6 +1232,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the servicePrincipalCredentialThumbprint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalCredentialThumbprint(@javax.annotation.Nullable final String value) {
         this._servicePrincipalCredentialThumbprint = value;
     }
@@ -1139,6 +1241,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the servicePrincipalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalId(@javax.annotation.Nullable final String value) {
         this._servicePrincipalId = value;
     }
@@ -1147,6 +1250,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the servicePrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalName(@javax.annotation.Nullable final String value) {
         this._servicePrincipalName = value;
     }
@@ -1155,6 +1259,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the sessionLifetimePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessionLifetimePolicies(@javax.annotation.Nullable final java.util.List<SessionLifetimePolicy> value) {
         this._sessionLifetimePolicies = value;
     }
@@ -1163,6 +1268,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the signInEventTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInEventTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._signInEventTypes = value;
     }
@@ -1171,6 +1277,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the signInIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInIdentifier(@javax.annotation.Nullable final String value) {
         this._signInIdentifier = value;
     }
@@ -1179,6 +1286,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the signInIdentifierType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInIdentifierType(@javax.annotation.Nullable final SignInIdentifierType value) {
         this._signInIdentifierType = value;
     }
@@ -1187,6 +1295,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final SignInStatus value) {
         this._status = value;
     }
@@ -1195,6 +1304,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the tokenIssuerName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenIssuerName(@javax.annotation.Nullable final String value) {
         this._tokenIssuerName = value;
     }
@@ -1203,6 +1313,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the tokenIssuerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenIssuerType(@javax.annotation.Nullable final TokenIssuerType value) {
         this._tokenIssuerType = value;
     }
@@ -1211,6 +1322,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the uniqueTokenIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUniqueTokenIdentifier(@javax.annotation.Nullable final String value) {
         this._uniqueTokenIdentifier = value;
     }
@@ -1219,6 +1331,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the userAgent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAgent(@javax.annotation.Nullable final String value) {
         this._userAgent = value;
     }
@@ -1227,6 +1340,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
         this._userDisplayName = value;
     }
@@ -1235,6 +1349,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -1243,6 +1358,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }
@@ -1251,6 +1367,7 @@ public class SignIn extends Entity implements Parsable {
      * @param value Value to set for the userType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserType(@javax.annotation.Nullable final SignInUserType value) {
         this._userType = value;
     }

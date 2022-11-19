@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Account extends Entity implements Parsable {
     /** The blocked property */
     private Boolean _blocked;
@@ -22,9 +23,10 @@ public class Account extends Entity implements Parsable {
     /** The subCategory property */
     private String _subCategory;
     /**
-     * Instantiates a new Account and sets the default values.
+     * Instantiates a new account and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Account() {
         super();
         this.setOdataType("#microsoft.graph.account");
@@ -32,7 +34,7 @@ public class Account extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Account
+     * @return a account
      */
     @javax.annotation.Nonnull
     public static Account createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -70,14 +72,14 @@ public class Account extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Account currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("blocked", (n) -> { currentObject.setBlocked(n.getBooleanValue()); });
-            this.put("category", (n) -> { currentObject.setCategory(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
-            this.put("subCategory", (n) -> { currentObject.setSubCategory(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("blocked", (n) -> { currentObject.setBlocked(n.getBooleanValue()); });
+        deserializerMap.put("category", (n) -> { currentObject.setCategory(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
+        deserializerMap.put("subCategory", (n) -> { currentObject.setSubCategory(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -108,6 +110,7 @@ public class Account extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +126,7 @@ public class Account extends Entity implements Parsable {
      * @param value Value to set for the blocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlocked(@javax.annotation.Nullable final Boolean value) {
         this._blocked = value;
     }
@@ -131,6 +135,7 @@ public class Account extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final String value) {
         this._category = value;
     }
@@ -139,6 +144,7 @@ public class Account extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -147,6 +153,7 @@ public class Account extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -155,6 +162,7 @@ public class Account extends Entity implements Parsable {
      * @param value Value to set for the number property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumber(@javax.annotation.Nullable final String value) {
         this._number = value;
     }
@@ -163,6 +171,7 @@ public class Account extends Entity implements Parsable {
      * @param value Value to set for the subCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubCategory(@javax.annotation.Nullable final String value) {
         this._subCategory = value;
     }

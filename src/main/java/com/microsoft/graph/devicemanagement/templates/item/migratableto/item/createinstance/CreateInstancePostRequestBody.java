@@ -25,6 +25,7 @@ public class CreateInstancePostRequestBody implements AdditionalDataHolder, Pars
      * Instantiates a new createInstancePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CreateInstancePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -69,12 +70,12 @@ public class CreateInstancePostRequestBody implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final CreateInstancePostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("settingsDelta", (n) -> { currentObject.setSettingsDelta(n.getCollectionOfObjectValues(DeviceManagementSettingInstance::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("settingsDelta", (n) -> { currentObject.setSettingsDelta(n.getCollectionOfObjectValues(DeviceManagementSettingInstance::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the roleScopeTagIds property value. The roleScopeTagIds property
@@ -97,6 +98,7 @@ public class CreateInstancePostRequestBody implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -110,6 +112,7 @@ public class CreateInstancePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +121,7 @@ public class CreateInstancePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -126,6 +130,7 @@ public class CreateInstancePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -134,6 +139,7 @@ public class CreateInstancePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -142,6 +148,7 @@ public class CreateInstancePostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the settingsDelta property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsDelta(@javax.annotation.Nullable final java.util.List<DeviceManagementSettingInstance> value) {
         this._settingsDelta = value;
     }

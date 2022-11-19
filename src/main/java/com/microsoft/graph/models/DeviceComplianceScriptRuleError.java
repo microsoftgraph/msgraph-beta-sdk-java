@@ -14,6 +14,7 @@ public class DeviceComplianceScriptRuleError extends DeviceComplianceScriptError
      * Instantiates a new DeviceComplianceScriptRuleError and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceComplianceScriptRuleError() {
         super();
         this.setOdataType("#microsoft.graph.deviceComplianceScriptRuleError");
@@ -35,9 +36,9 @@ public class DeviceComplianceScriptRuleError extends DeviceComplianceScriptError
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceComplianceScriptRuleError currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the settingName property value. Setting name for the rule with error.
@@ -52,6 +53,7 @@ public class DeviceComplianceScriptRuleError extends DeviceComplianceScriptError
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class DeviceComplianceScriptRuleError extends DeviceComplianceScriptError
      * @param value Value to set for the settingName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingName(@javax.annotation.Nullable final String value) {
         this._settingName = value;
     }

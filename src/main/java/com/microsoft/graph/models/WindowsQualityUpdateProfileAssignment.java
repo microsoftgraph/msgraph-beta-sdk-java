@@ -15,6 +15,7 @@ public class WindowsQualityUpdateProfileAssignment extends Entity implements Par
      * Instantiates a new windowsQualityUpdateProfileAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsQualityUpdateProfileAssignment() {
         super();
         this.setOdataType("#microsoft.graph.windowsQualityUpdateProfileAssignment");
@@ -36,9 +37,9 @@ public class WindowsQualityUpdateProfileAssignment extends Entity implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsQualityUpdateProfileAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the target property value. The assignment target that the quality update profile is assigned to.
@@ -53,6 +54,7 @@ public class WindowsQualityUpdateProfileAssignment extends Entity implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class WindowsQualityUpdateProfileAssignment extends Entity implements Par
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this._target = value;
     }

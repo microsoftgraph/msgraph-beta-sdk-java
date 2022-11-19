@@ -19,6 +19,7 @@ public class SearchExistingIdentitiesPostRequestBody implements AdditionalDataHo
      * Instantiates a new searchExistingIdentitiesPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SearchExistingIdentitiesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -47,9 +48,9 @@ public class SearchExistingIdentitiesPostRequestBody implements AdditionalDataHo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final SearchExistingIdentitiesPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("importedDeviceIdentities", (n) -> { currentObject.setImportedDeviceIdentities(n.getCollectionOfObjectValues(ImportedDeviceIdentity::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("importedDeviceIdentities", (n) -> { currentObject.setImportedDeviceIdentities(n.getCollectionOfObjectValues(ImportedDeviceIdentity::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the importedDeviceIdentities property value. The importedDeviceIdentities property
@@ -64,6 +65,7 @@ public class SearchExistingIdentitiesPostRequestBody implements AdditionalDataHo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("importedDeviceIdentities", this.getImportedDeviceIdentities());
@@ -74,6 +76,7 @@ public class SearchExistingIdentitiesPostRequestBody implements AdditionalDataHo
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +85,7 @@ public class SearchExistingIdentitiesPostRequestBody implements AdditionalDataHo
      * @param value Value to set for the importedDeviceIdentities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportedDeviceIdentities(@javax.annotation.Nullable final java.util.List<ImportedDeviceIdentity> value) {
         this._importedDeviceIdentities = value;
     }

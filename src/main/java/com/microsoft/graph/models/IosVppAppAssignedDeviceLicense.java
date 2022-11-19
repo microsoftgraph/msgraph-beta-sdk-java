@@ -16,6 +16,7 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
      * Instantiates a new IosVppAppAssignedDeviceLicense and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosVppAppAssignedDeviceLicense() {
         super();
         this.setOdataType("#microsoft.graph.iosVppAppAssignedDeviceLicense");
@@ -45,10 +46,10 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosVppAppAssignedDeviceLicense currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the managedDeviceId property value. The managed device ID.
@@ -63,6 +64,7 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -82,6 +85,7 @@ public class IosVppAppAssignedDeviceLicense extends IosVppAppAssignedLicense imp
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
     }

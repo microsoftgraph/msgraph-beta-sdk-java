@@ -46,6 +46,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * Instantiates a new userExperienceAnalyticsWorkFromAnywhereDevicesSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsWorkFromAnywhereDevicesSummary");
@@ -131,23 +132,23 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsWorkFromAnywhereDevicesSummary currentObject = this;
-        return new HashMap<>(15) {{
-            this.put("autopilotDevicesSummary", (n) -> { currentObject.setAutopilotDevicesSummary(n.getObjectValue(UserExperienceAnalyticsAutopilotDevicesSummary::createFromDiscriminatorValue)); });
-            this.put("cloudIdentityDevicesSummary", (n) -> { currentObject.setCloudIdentityDevicesSummary(n.getObjectValue(UserExperienceAnalyticsCloudIdentityDevicesSummary::createFromDiscriminatorValue)); });
-            this.put("cloudManagementDevicesSummary", (n) -> { currentObject.setCloudManagementDevicesSummary(n.getObjectValue(UserExperienceAnalyticsCloudManagementDevicesSummary::createFromDiscriminatorValue)); });
-            this.put("coManagedDevices", (n) -> { currentObject.setCoManagedDevices(n.getIntegerValue()); });
-            this.put("devicesNotAutopilotRegistered", (n) -> { currentObject.setDevicesNotAutopilotRegistered(n.getIntegerValue()); });
-            this.put("devicesWithoutAutopilotProfileAssigned", (n) -> { currentObject.setDevicesWithoutAutopilotProfileAssigned(n.getIntegerValue()); });
-            this.put("devicesWithoutCloudIdentity", (n) -> { currentObject.setDevicesWithoutCloudIdentity(n.getIntegerValue()); });
-            this.put("intuneDevices", (n) -> { currentObject.setIntuneDevices(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("tenantAttachDevices", (n) -> { currentObject.setTenantAttachDevices(n.getIntegerValue()); });
-            this.put("totalDevices", (n) -> { currentObject.setTotalDevices(n.getIntegerValue()); });
-            this.put("unsupportedOSversionDevices", (n) -> { currentObject.setUnsupportedOSversionDevices(n.getIntegerValue()); });
-            this.put("windows10Devices", (n) -> { currentObject.setWindows10Devices(n.getIntegerValue()); });
-            this.put("windows10DevicesSummary", (n) -> { currentObject.setWindows10DevicesSummary(n.getObjectValue(UserExperienceAnalyticsWindows10DevicesSummary::createFromDiscriminatorValue)); });
-            this.put("windows10DevicesWithoutTenantAttach", (n) -> { currentObject.setWindows10DevicesWithoutTenantAttach(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(15);
+        deserializerMap.put("autopilotDevicesSummary", (n) -> { currentObject.setAutopilotDevicesSummary(n.getObjectValue(UserExperienceAnalyticsAutopilotDevicesSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudIdentityDevicesSummary", (n) -> { currentObject.setCloudIdentityDevicesSummary(n.getObjectValue(UserExperienceAnalyticsCloudIdentityDevicesSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudManagementDevicesSummary", (n) -> { currentObject.setCloudManagementDevicesSummary(n.getObjectValue(UserExperienceAnalyticsCloudManagementDevicesSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("coManagedDevices", (n) -> { currentObject.setCoManagedDevices(n.getIntegerValue()); });
+        deserializerMap.put("devicesNotAutopilotRegistered", (n) -> { currentObject.setDevicesNotAutopilotRegistered(n.getIntegerValue()); });
+        deserializerMap.put("devicesWithoutAutopilotProfileAssigned", (n) -> { currentObject.setDevicesWithoutAutopilotProfileAssigned(n.getIntegerValue()); });
+        deserializerMap.put("devicesWithoutCloudIdentity", (n) -> { currentObject.setDevicesWithoutCloudIdentity(n.getIntegerValue()); });
+        deserializerMap.put("intuneDevices", (n) -> { currentObject.setIntuneDevices(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("tenantAttachDevices", (n) -> { currentObject.setTenantAttachDevices(n.getIntegerValue()); });
+        deserializerMap.put("totalDevices", (n) -> { currentObject.setTotalDevices(n.getIntegerValue()); });
+        deserializerMap.put("unsupportedOSversionDevices", (n) -> { currentObject.setUnsupportedOSversionDevices(n.getIntegerValue()); });
+        deserializerMap.put("windows10Devices", (n) -> { currentObject.setWindows10Devices(n.getIntegerValue()); });
+        deserializerMap.put("windows10DevicesSummary", (n) -> { currentObject.setWindows10DevicesSummary(n.getObjectValue(UserExperienceAnalyticsWindows10DevicesSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("windows10DevicesWithoutTenantAttach", (n) -> { currentObject.setWindows10DevicesWithoutTenantAttach(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the intuneDevices property value. The count of intune devices that are not autopilot registerd. Valid values -2147483648 to 2147483647
@@ -218,6 +219,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("autopilotDevicesSummary", this.getAutopilotDevicesSummary());
@@ -242,6 +244,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -250,6 +253,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the autopilotDevicesSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutopilotDevicesSummary(@javax.annotation.Nullable final UserExperienceAnalyticsAutopilotDevicesSummary value) {
         this._autopilotDevicesSummary = value;
     }
@@ -258,6 +262,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the cloudIdentityDevicesSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudIdentityDevicesSummary(@javax.annotation.Nullable final UserExperienceAnalyticsCloudIdentityDevicesSummary value) {
         this._cloudIdentityDevicesSummary = value;
     }
@@ -266,6 +271,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the cloudManagementDevicesSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudManagementDevicesSummary(@javax.annotation.Nullable final UserExperienceAnalyticsCloudManagementDevicesSummary value) {
         this._cloudManagementDevicesSummary = value;
     }
@@ -274,6 +280,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the coManagedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCoManagedDevices(@javax.annotation.Nullable final Integer value) {
         this._coManagedDevices = value;
     }
@@ -282,6 +289,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the devicesNotAutopilotRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevicesNotAutopilotRegistered(@javax.annotation.Nullable final Integer value) {
         this._devicesNotAutopilotRegistered = value;
     }
@@ -290,6 +298,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the devicesWithoutAutopilotProfileAssigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevicesWithoutAutopilotProfileAssigned(@javax.annotation.Nullable final Integer value) {
         this._devicesWithoutAutopilotProfileAssigned = value;
     }
@@ -298,6 +307,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the devicesWithoutCloudIdentity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevicesWithoutCloudIdentity(@javax.annotation.Nullable final Integer value) {
         this._devicesWithoutCloudIdentity = value;
     }
@@ -306,6 +316,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the intuneDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntuneDevices(@javax.annotation.Nullable final Integer value) {
         this._intuneDevices = value;
     }
@@ -314,6 +325,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -322,6 +334,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the tenantAttachDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantAttachDevices(@javax.annotation.Nullable final Integer value) {
         this._tenantAttachDevices = value;
     }
@@ -330,6 +343,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the totalDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalDevices(@javax.annotation.Nullable final Integer value) {
         this._totalDevices = value;
     }
@@ -338,6 +352,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the unsupportedOSversionDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnsupportedOSversionDevices(@javax.annotation.Nullable final Integer value) {
         this._unsupportedOSversionDevices = value;
     }
@@ -346,6 +361,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the windows10Devices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindows10Devices(@javax.annotation.Nullable final Integer value) {
         this._windows10Devices = value;
     }
@@ -354,6 +370,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the windows10DevicesSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindows10DevicesSummary(@javax.annotation.Nullable final UserExperienceAnalyticsWindows10DevicesSummary value) {
         this._windows10DevicesSummary = value;
     }
@@ -362,6 +379,7 @@ public class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary implements Ad
      * @param value Value to set for the windows10DevicesWithoutTenantAttach property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindows10DevicesWithoutTenantAttach(@javax.annotation.Nullable final Integer value) {
         this._windows10DevicesWithoutTenantAttach = value;
     }

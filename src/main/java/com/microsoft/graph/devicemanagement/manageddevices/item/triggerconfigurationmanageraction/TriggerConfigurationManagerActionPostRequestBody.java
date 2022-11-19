@@ -19,6 +19,7 @@ public class TriggerConfigurationManagerActionPostRequestBody implements Additio
      * Instantiates a new triggerConfigurationManagerActionPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TriggerConfigurationManagerActionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -55,15 +56,16 @@ public class TriggerConfigurationManagerActionPostRequestBody implements Additio
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final TriggerConfigurationManagerActionPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("configurationManagerAction", (n) -> { currentObject.setConfigurationManagerAction(n.getObjectValue(ConfigurationManagerAction::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("configurationManagerAction", (n) -> { currentObject.setConfigurationManagerAction(n.getObjectValue(ConfigurationManagerAction::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("configurationManagerAction", this.getConfigurationManagerAction());
@@ -74,6 +76,7 @@ public class TriggerConfigurationManagerActionPostRequestBody implements Additio
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +85,7 @@ public class TriggerConfigurationManagerActionPostRequestBody implements Additio
      * @param value Value to set for the configurationManagerAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationManagerAction(@javax.annotation.Nullable final ConfigurationManagerAction value) {
         this._configurationManagerAction = value;
     }

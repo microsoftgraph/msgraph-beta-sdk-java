@@ -16,6 +16,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
      * Instantiates a new DeviceManagementConfigurationSettingGroupCollectionDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingGroupCollectionDefinition() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition");
@@ -37,10 +38,10 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSettingGroupCollectionDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("maximumCount", (n) -> { currentObject.setMaximumCount(n.getIntegerValue()); });
-            this.put("minimumCount", (n) -> { currentObject.setMinimumCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("maximumCount", (n) -> { currentObject.setMaximumCount(n.getIntegerValue()); });
+        deserializerMap.put("minimumCount", (n) -> { currentObject.setMinimumCount(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the maximumCount property value. Maximum number of setting group count in the collection. Valid values 1 to 100
@@ -63,6 +64,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
      * @param value Value to set for the maximumCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumCount(@javax.annotation.Nullable final Integer value) {
         this._maximumCount = value;
     }
@@ -82,6 +85,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
      * @param value Value to set for the minimumCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumCount(@javax.annotation.Nullable final Integer value) {
         this._minimumCount = value;
     }

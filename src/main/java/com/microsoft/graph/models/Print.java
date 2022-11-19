@@ -35,6 +35,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      * Instantiates a new Print and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Print() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.print");
@@ -72,18 +73,18 @@ public class Print implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Print currentObject = this;
-        return new HashMap<>(10) {{
-            this.put("connectors", (n) -> { currentObject.setConnectors(n.getCollectionOfObjectValues(PrintConnector::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(PrintOperation::createFromDiscriminatorValue)); });
-            this.put("printers", (n) -> { currentObject.setPrinters(n.getCollectionOfObjectValues(Printer::createFromDiscriminatorValue)); });
-            this.put("printerShares", (n) -> { currentObject.setPrinterShares(n.getCollectionOfObjectValues(PrinterShare::createFromDiscriminatorValue)); });
-            this.put("reports", (n) -> { currentObject.setReports(n.getObjectValue(ReportRoot::createFromDiscriminatorValue)); });
-            this.put("services", (n) -> { currentObject.setServices(n.getCollectionOfObjectValues(PrintService::createFromDiscriminatorValue)); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(PrintSettings::createFromDiscriminatorValue)); });
-            this.put("shares", (n) -> { currentObject.setShares(n.getCollectionOfObjectValues(PrinterShare::createFromDiscriminatorValue)); });
-            this.put("taskDefinitions", (n) -> { currentObject.setTaskDefinitions(n.getCollectionOfObjectValues(PrintTaskDefinition::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("connectors", (n) -> { currentObject.setConnectors(n.getCollectionOfObjectValues(PrintConnector::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(PrintOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("printers", (n) -> { currentObject.setPrinters(n.getCollectionOfObjectValues(Printer::createFromDiscriminatorValue)); });
+        deserializerMap.put("printerShares", (n) -> { currentObject.setPrinterShares(n.getCollectionOfObjectValues(PrinterShare::createFromDiscriminatorValue)); });
+        deserializerMap.put("reports", (n) -> { currentObject.setReports(n.getObjectValue(ReportRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("services", (n) -> { currentObject.setServices(n.getCollectionOfObjectValues(PrintService::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(PrintSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("shares", (n) -> { currentObject.setShares(n.getCollectionOfObjectValues(PrinterShare::createFromDiscriminatorValue)); });
+        deserializerMap.put("taskDefinitions", (n) -> { currentObject.setTaskDefinitions(n.getCollectionOfObjectValues(PrintTaskDefinition::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -162,6 +163,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("connectors", this.getConnectors());
@@ -181,6 +183,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -189,6 +192,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the connectors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectors(@javax.annotation.Nullable final java.util.List<PrintConnector> value) {
         this._connectors = value;
     }
@@ -197,6 +201,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -205,6 +210,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<PrintOperation> value) {
         this._operations = value;
     }
@@ -213,6 +219,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the printers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrinters(@javax.annotation.Nullable final java.util.List<Printer> value) {
         this._printers = value;
     }
@@ -221,6 +228,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the printerShares property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrinterShares(@javax.annotation.Nullable final java.util.List<PrinterShare> value) {
         this._printerShares = value;
     }
@@ -229,6 +237,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the reports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReports(@javax.annotation.Nullable final ReportRoot value) {
         this._reports = value;
     }
@@ -237,6 +246,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the services property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServices(@javax.annotation.Nullable final java.util.List<PrintService> value) {
         this._services = value;
     }
@@ -245,6 +255,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final PrintSettings value) {
         this._settings = value;
     }
@@ -253,6 +264,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the shares property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShares(@javax.annotation.Nullable final java.util.List<PrinterShare> value) {
         this._shares = value;
     }
@@ -261,6 +273,7 @@ public class Print implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the taskDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaskDefinitions(@javax.annotation.Nullable final java.util.List<PrintTaskDefinition> value) {
         this._taskDefinitions = value;
     }

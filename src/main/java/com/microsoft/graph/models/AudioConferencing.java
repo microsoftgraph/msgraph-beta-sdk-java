@@ -29,6 +29,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      * Instantiates a new audioConferencing and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AudioConferencing() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.audioConferencing");
@@ -74,15 +75,15 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AudioConferencing currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("conferenceId", (n) -> { currentObject.setConferenceId(n.getStringValue()); });
-            this.put("dialinUrl", (n) -> { currentObject.setDialinUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("tollFreeNumber", (n) -> { currentObject.setTollFreeNumber(n.getStringValue()); });
-            this.put("tollFreeNumbers", (n) -> { currentObject.setTollFreeNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("tollNumber", (n) -> { currentObject.setTollNumber(n.getStringValue()); });
-            this.put("tollNumbers", (n) -> { currentObject.setTollNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("conferenceId", (n) -> { currentObject.setConferenceId(n.getStringValue()); });
+        deserializerMap.put("dialinUrl", (n) -> { currentObject.setDialinUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("tollFreeNumber", (n) -> { currentObject.setTollFreeNumber(n.getStringValue()); });
+        deserializerMap.put("tollFreeNumbers", (n) -> { currentObject.setTollFreeNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("tollNumber", (n) -> { currentObject.setTollNumber(n.getStringValue()); });
+        deserializerMap.put("tollNumbers", (n) -> { currentObject.setTollNumbers(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -129,6 +130,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("conferenceId", this.getConferenceId());
@@ -145,6 +147,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the conferenceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConferenceId(@javax.annotation.Nullable final String value) {
         this._conferenceId = value;
     }
@@ -161,6 +165,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the dialinUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDialinUrl(@javax.annotation.Nullable final String value) {
         this._dialinUrl = value;
     }
@@ -169,6 +174,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -177,6 +183,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tollFreeNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTollFreeNumber(@javax.annotation.Nullable final String value) {
         this._tollFreeNumber = value;
     }
@@ -185,6 +192,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tollFreeNumbers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTollFreeNumbers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tollFreeNumbers = value;
     }
@@ -193,6 +201,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tollNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTollNumber(@javax.annotation.Nullable final String value) {
         this._tollNumber = value;
     }
@@ -201,6 +210,7 @@ public class AudioConferencing implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tollNumbers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTollNumbers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tollNumbers = value;
     }

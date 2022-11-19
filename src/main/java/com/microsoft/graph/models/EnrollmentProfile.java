@@ -11,6 +11,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The enrollmentProfile resource represents a collection of configurations which must be provided pre-enrollment to enable enrolling certain devices whose identities have been pre-staged. Pre-staged device identities are assigned to this type of profile to apply the profile's configurations at enrollment of the corresponding device. */
 public class EnrollmentProfile extends Entity implements Parsable {
     /** Configuration endpoint url to use for Enrollment */
     private String _configurationEndpointUrl;
@@ -28,6 +29,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * Instantiates a new enrollmentProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EnrollmentProfile() {
         super();
         this.setOdataType("#microsoft.graph.enrollmentProfile");
@@ -91,14 +93,14 @@ public class EnrollmentProfile extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EnrollmentProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("configurationEndpointUrl", (n) -> { currentObject.setConfigurationEndpointUrl(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("enableAuthenticationViaCompanyPortal", (n) -> { currentObject.setEnableAuthenticationViaCompanyPortal(n.getBooleanValue()); });
-            this.put("requireCompanyPortalOnSetupAssistantEnrolledDevices", (n) -> { currentObject.setRequireCompanyPortalOnSetupAssistantEnrolledDevices(n.getBooleanValue()); });
-            this.put("requiresUserAuthentication", (n) -> { currentObject.setRequiresUserAuthentication(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("configurationEndpointUrl", (n) -> { currentObject.setConfigurationEndpointUrl(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enableAuthenticationViaCompanyPortal", (n) -> { currentObject.setEnableAuthenticationViaCompanyPortal(n.getBooleanValue()); });
+        deserializerMap.put("requireCompanyPortalOnSetupAssistantEnrolledDevices", (n) -> { currentObject.setRequireCompanyPortalOnSetupAssistantEnrolledDevices(n.getBooleanValue()); });
+        deserializerMap.put("requiresUserAuthentication", (n) -> { currentObject.setRequiresUserAuthentication(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the requireCompanyPortalOnSetupAssistantEnrolledDevices property value. Indicates that Company Portal is required on setup assistant enrolled devices
@@ -121,6 +123,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -136,6 +139,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * @param value Value to set for the configurationEndpointUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationEndpointUrl(@javax.annotation.Nullable final String value) {
         this._configurationEndpointUrl = value;
     }
@@ -144,6 +148,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -152,6 +157,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -160,6 +166,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * @param value Value to set for the enableAuthenticationViaCompanyPortal property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableAuthenticationViaCompanyPortal(@javax.annotation.Nullable final Boolean value) {
         this._enableAuthenticationViaCompanyPortal = value;
     }
@@ -168,6 +175,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * @param value Value to set for the requireCompanyPortalOnSetupAssistantEnrolledDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireCompanyPortalOnSetupAssistantEnrolledDevices(@javax.annotation.Nullable final Boolean value) {
         this._requireCompanyPortalOnSetupAssistantEnrolledDevices = value;
     }
@@ -176,6 +184,7 @@ public class EnrollmentProfile extends Entity implements Parsable {
      * @param value Value to set for the requiresUserAuthentication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiresUserAuthentication(@javax.annotation.Nullable final Boolean value) {
         this._requiresUserAuthentication = value;
     }

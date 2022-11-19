@@ -12,6 +12,8 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     private PlannerChecklistItems _checklist;
     /** Description of the task. */
     private String _description;
+    /** Rich text description of the task. To be used by HTML-aware clients. For backwards compatibility, a plain-text version of the HTML description will be synced to the 'description' field. If this field has not previously been set but 'description' has been, the existing description will be synchronized to 'notes' with minimal whitespace-preserving HTML markup. Setting both 'description' and 'notes' is an error and will result in an exception. */
+    private ItemBody _notes;
     /** This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task. */
     private PlannerPreviewType _previewType;
     /** The collection of references on the task. */
@@ -20,6 +22,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
      * Instantiates a new plannerTaskDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerTaskDetails() {
         super();
         this.setOdataType("#microsoft.graph.plannerTaskDetails");
@@ -57,12 +60,21 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PlannerTaskDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("checklist", (n) -> { currentObject.setChecklist(n.getObjectValue(PlannerChecklistItems::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("previewType", (n) -> { currentObject.setPreviewType(n.getEnumValue(PlannerPreviewType.class)); });
-            this.put("references", (n) -> { currentObject.setReferences(n.getObjectValue(PlannerExternalReferences::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("checklist", (n) -> { currentObject.setChecklist(n.getObjectValue(PlannerChecklistItems::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("notes", (n) -> { currentObject.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("previewType", (n) -> { currentObject.setPreviewType(n.getEnumValue(PlannerPreviewType.class)); });
+        deserializerMap.put("references", (n) -> { currentObject.setReferences(n.getObjectValue(PlannerExternalReferences::createFromDiscriminatorValue)); });
+        return deserializerMap
+    }
+    /**
+     * Gets the notes property value. Rich text description of the task. To be used by HTML-aware clients. For backwards compatibility, a plain-text version of the HTML description will be synced to the 'description' field. If this field has not previously been set but 'description' has been, the existing description will be synchronized to 'notes' with minimal whitespace-preserving HTML markup. Setting both 'description' and 'notes' is an error and will result in an exception.
+     * @return a itemBody
+     */
+    @javax.annotation.Nullable
+    public ItemBody getNotes() {
+        return this._notes;
     }
     /**
      * Gets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
@@ -85,11 +97,13 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("checklist", this.getChecklist());
         writer.writeStringValue("description", this.getDescription());
+        writer.writeObjectValue("notes", this.getNotes());
         writer.writeEnumValue("previewType", this.getPreviewType());
         writer.writeObjectValue("references", this.getReferences());
     }
@@ -98,6 +112,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
      * @param value Value to set for the checklist property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChecklist(@javax.annotation.Nullable final PlannerChecklistItems value) {
         this._checklist = value;
     }
@@ -106,14 +121,25 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
+    }
+    /**
+     * Sets the notes property value. Rich text description of the task. To be used by HTML-aware clients. For backwards compatibility, a plain-text version of the HTML description will be synced to the 'description' field. If this field has not previously been set but 'description' has been, the existing description will be synchronized to 'notes' with minimal whitespace-preserving HTML markup. Setting both 'description' and 'notes' is an error and will result in an exception.
+     * @param value Value to set for the notes property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setNotes(@javax.annotation.Nullable final ItemBody value) {
+        this._notes = value;
     }
     /**
      * Sets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
      * @param value Value to set for the previewType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreviewType(@javax.annotation.Nullable final PlannerPreviewType value) {
         this._previewType = value;
     }
@@ -122,6 +148,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
      * @param value Value to set for the references property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReferences(@javax.annotation.Nullable final PlannerExternalReferences value) {
         this._references = value;
     }

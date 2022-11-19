@@ -17,6 +17,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
      * Instantiates a new managedMobileApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedMobileApp() {
         super();
         this.setOdataType("#microsoft.graph.managedMobileApp");
@@ -38,10 +39,10 @@ public class ManagedMobileApp extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ManagedMobileApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("mobileAppIdentifier", (n) -> { currentObject.setMobileAppIdentifier(n.getObjectValue(MobileAppIdentifier::createFromDiscriminatorValue)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("mobileAppIdentifier", (n) -> { currentObject.setMobileAppIdentifier(n.getObjectValue(MobileAppIdentifier::createFromDiscriminatorValue)); });
+        deserializerMap.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the mobileAppIdentifier property value. The identifier for an app with it's operating system type.
@@ -64,6 +65,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +77,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
      * @param value Value to set for the mobileAppIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileAppIdentifier(@javax.annotation.Nullable final MobileAppIdentifier value) {
         this._mobileAppIdentifier = value;
     }
@@ -83,6 +86,7 @@ public class ManagedMobileApp extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

@@ -24,6 +24,7 @@ public class EdiscoverySearch extends Search implements Parsable {
      * Instantiates a new EdiscoverySearch and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EdiscoverySearch() {
         super();
         this.setOdataType("#microsoft.graph.security.ediscoverySearch");
@@ -77,14 +78,14 @@ public class EdiscoverySearch extends Search implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final EdiscoverySearch currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("additionalSources", (n) -> { currentObject.setAdditionalSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
-            this.put("addToReviewSetOperation", (n) -> { currentObject.setAddToReviewSetOperation(n.getObjectValue(EdiscoveryAddToReviewSetOperation::createFromDiscriminatorValue)); });
-            this.put("custodianSources", (n) -> { currentObject.setCustodianSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
-            this.put("dataSourceScopes", (n) -> { currentObject.setDataSourceScopes(n.getEnumValue(DataSourceScopes.class)); });
-            this.put("lastEstimateStatisticsOperation", (n) -> { currentObject.setLastEstimateStatisticsOperation(n.getObjectValue(EdiscoveryEstimateOperation::createFromDiscriminatorValue)); });
-            this.put("noncustodialSources", (n) -> { currentObject.setNoncustodialSources(n.getCollectionOfObjectValues(EdiscoveryNoncustodialDataSource::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("additionalSources", (n) -> { currentObject.setAdditionalSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("addToReviewSetOperation", (n) -> { currentObject.setAddToReviewSetOperation(n.getObjectValue(EdiscoveryAddToReviewSetOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("custodianSources", (n) -> { currentObject.setCustodianSources(n.getCollectionOfObjectValues(DataSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("dataSourceScopes", (n) -> { currentObject.setDataSourceScopes(n.getEnumValue(DataSourceScopes.class)); });
+        deserializerMap.put("lastEstimateStatisticsOperation", (n) -> { currentObject.setLastEstimateStatisticsOperation(n.getObjectValue(EdiscoveryEstimateOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("noncustodialSources", (n) -> { currentObject.setNoncustodialSources(n.getCollectionOfObjectValues(EdiscoveryNoncustodialDataSource::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the lastEstimateStatisticsOperation property value. The last estimate operation associated with the eDiscovery search.
@@ -107,6 +108,7 @@ public class EdiscoverySearch extends Search implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +124,7 @@ public class EdiscoverySearch extends Search implements Parsable {
      * @param value Value to set for the additionalSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalSources(@javax.annotation.Nullable final java.util.List<DataSource> value) {
         this._additionalSources = value;
     }
@@ -130,6 +133,7 @@ public class EdiscoverySearch extends Search implements Parsable {
      * @param value Value to set for the addToReviewSetOperation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddToReviewSetOperation(@javax.annotation.Nullable final EdiscoveryAddToReviewSetOperation value) {
         this._addToReviewSetOperation = value;
     }
@@ -138,6 +142,7 @@ public class EdiscoverySearch extends Search implements Parsable {
      * @param value Value to set for the custodianSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustodianSources(@javax.annotation.Nullable final java.util.List<DataSource> value) {
         this._custodianSources = value;
     }
@@ -146,6 +151,7 @@ public class EdiscoverySearch extends Search implements Parsable {
      * @param value Value to set for the dataSourceScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataSourceScopes(@javax.annotation.Nullable final DataSourceScopes value) {
         this._dataSourceScopes = value;
     }
@@ -154,6 +160,7 @@ public class EdiscoverySearch extends Search implements Parsable {
      * @param value Value to set for the lastEstimateStatisticsOperation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastEstimateStatisticsOperation(@javax.annotation.Nullable final EdiscoveryEstimateOperation value) {
         this._lastEstimateStatisticsOperation = value;
     }
@@ -162,6 +169,7 @@ public class EdiscoverySearch extends Search implements Parsable {
      * @param value Value to set for the noncustodialSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNoncustodialSources(@javax.annotation.Nullable final java.util.List<EdiscoveryNoncustodialDataSource> value) {
         this._noncustodialSources = value;
     }

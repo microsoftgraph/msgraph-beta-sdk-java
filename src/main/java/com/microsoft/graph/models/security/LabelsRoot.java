@@ -15,6 +15,7 @@ public class LabelsRoot extends Entity implements Parsable {
      * Instantiates a new labelsRoot and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LabelsRoot() {
         super();
         this.setOdataType("#microsoft.graph.security.labelsRoot");
@@ -36,9 +37,9 @@ public class LabelsRoot extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final LabelsRoot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("retentionLabels", (n) -> { currentObject.setRetentionLabels(n.getCollectionOfObjectValues(RetentionLabel::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("retentionLabels", (n) -> { currentObject.setRetentionLabels(n.getCollectionOfObjectValues(RetentionLabel::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the retentionLabels property value. The retentionLabels property
@@ -53,6 +54,7 @@ public class LabelsRoot extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +65,7 @@ public class LabelsRoot extends Entity implements Parsable {
      * @param value Value to set for the retentionLabels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRetentionLabels(@javax.annotation.Nullable final java.util.List<RetentionLabel> value) {
         this._retentionLabels = value;
     }

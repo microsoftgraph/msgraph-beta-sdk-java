@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class Command extends Entity implements Parsable {
     /** The appServiceName property */
     private String _appServiceName;
@@ -31,6 +31,7 @@ public class Command extends Entity implements Parsable {
      * Instantiates a new command and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Command() {
         super();
         this.setOdataType("#microsoft.graph.command");
@@ -68,17 +69,17 @@ public class Command extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final Command currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appServiceName", (n) -> { currentObject.setAppServiceName(n.getStringValue()); });
-            this.put("error", (n) -> { currentObject.setError(n.getStringValue()); });
-            this.put("packageFamilyName", (n) -> { currentObject.setPackageFamilyName(n.getStringValue()); });
-            this.put("payload", (n) -> { currentObject.setPayload(n.getObjectValue(PayloadRequest::createFromDiscriminatorValue)); });
-            this.put("permissionTicket", (n) -> { currentObject.setPermissionTicket(n.getStringValue()); });
-            this.put("postBackUri", (n) -> { currentObject.setPostBackUri(n.getStringValue()); });
-            this.put("responsepayload", (n) -> { currentObject.setResponsepayload(n.getObjectValue(PayloadResponse::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appServiceName", (n) -> { currentObject.setAppServiceName(n.getStringValue()); });
+        deserializerMap.put("error", (n) -> { currentObject.setError(n.getStringValue()); });
+        deserializerMap.put("packageFamilyName", (n) -> { currentObject.setPackageFamilyName(n.getStringValue()); });
+        deserializerMap.put("payload", (n) -> { currentObject.setPayload(n.getObjectValue(PayloadRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("permissionTicket", (n) -> { currentObject.setPermissionTicket(n.getStringValue()); });
+        deserializerMap.put("postBackUri", (n) -> { currentObject.setPostBackUri(n.getStringValue()); });
+        deserializerMap.put("responsepayload", (n) -> { currentObject.setResponsepayload(n.getObjectValue(PayloadResponse::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the packageFamilyName property value. The packageFamilyName property
@@ -141,6 +142,7 @@ public class Command extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +161,7 @@ public class Command extends Entity implements Parsable {
      * @param value Value to set for the appServiceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppServiceName(@javax.annotation.Nullable final String value) {
         this._appServiceName = value;
     }
@@ -167,6 +170,7 @@ public class Command extends Entity implements Parsable {
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final String value) {
         this._error = value;
     }
@@ -175,6 +179,7 @@ public class Command extends Entity implements Parsable {
      * @param value Value to set for the packageFamilyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackageFamilyName(@javax.annotation.Nullable final String value) {
         this._packageFamilyName = value;
     }
@@ -183,6 +188,7 @@ public class Command extends Entity implements Parsable {
      * @param value Value to set for the payload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayload(@javax.annotation.Nullable final PayloadRequest value) {
         this._payload = value;
     }
@@ -191,6 +197,7 @@ public class Command extends Entity implements Parsable {
      * @param value Value to set for the permissionTicket property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionTicket(@javax.annotation.Nullable final String value) {
         this._permissionTicket = value;
     }
@@ -199,6 +206,7 @@ public class Command extends Entity implements Parsable {
      * @param value Value to set for the postBackUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostBackUri(@javax.annotation.Nullable final String value) {
         this._postBackUri = value;
     }
@@ -207,6 +215,7 @@ public class Command extends Entity implements Parsable {
      * @param value Value to set for the responsepayload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResponsepayload(@javax.annotation.Nullable final PayloadResponse value) {
         this._responsepayload = value;
     }
@@ -215,6 +224,7 @@ public class Command extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }
@@ -223,6 +233,7 @@ public class Command extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }

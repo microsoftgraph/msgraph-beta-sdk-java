@@ -11,6 +11,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A device app management task. */
 public class DeviceAppManagementTask extends Entity implements Parsable {
     /** The name or email of the admin this task is assigned to. */
     private String _assignedTo;
@@ -33,9 +34,10 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     /** Device app management task status. */
     private DeviceAppManagementTaskStatus _status;
     /**
-     * Instantiates a new DeviceAppManagementTask and sets the default values.
+     * Instantiates a new deviceAppManagementTask and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceAppManagementTask() {
         super();
         this.setOdataType("#microsoft.graph.deviceAppManagementTask");
@@ -43,7 +45,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceAppManagementTask
+     * @return a deviceAppManagementTask
      */
     @javax.annotation.Nonnull
     public static DeviceAppManagementTask createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -130,18 +132,18 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceAppManagementTask currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
-            this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(DeviceAppManagementTaskCategory.class)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("creator", (n) -> { currentObject.setCreator(n.getStringValue()); });
-            this.put("creatorNotes", (n) -> { currentObject.setCreatorNotes(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getOffsetDateTimeValue()); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getEnumValue(DeviceAppManagementTaskPriority.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DeviceAppManagementTaskStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
+        deserializerMap.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(DeviceAppManagementTaskCategory.class)); });
+        deserializerMap.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("creator", (n) -> { currentObject.setCreator(n.getStringValue()); });
+        deserializerMap.put("creatorNotes", (n) -> { currentObject.setCreatorNotes(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("priority", (n) -> { currentObject.setPriority(n.getEnumValue(DeviceAppManagementTaskPriority.class)); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DeviceAppManagementTaskStatus.class)); });
+        return deserializerMap
     }
     /**
      * Gets the priority property value. Device app management task priority.
@@ -164,6 +166,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -183,6 +186,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the assignedTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedTo(@javax.annotation.Nullable final String value) {
         this._assignedTo = value;
     }
@@ -191,6 +195,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final DeviceAppManagementTaskCategory value) {
         this._category = value;
     }
@@ -199,6 +204,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -207,6 +213,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the creator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreator(@javax.annotation.Nullable final String value) {
         this._creator = value;
     }
@@ -215,6 +222,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the creatorNotes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatorNotes(@javax.annotation.Nullable final String value) {
         this._creatorNotes = value;
     }
@@ -223,6 +231,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -231,6 +240,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -239,6 +249,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the dueDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDueDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._dueDateTime = value;
     }
@@ -247,6 +258,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final DeviceAppManagementTaskPriority value) {
         this._priority = value;
     }
@@ -255,6 +267,7 @@ public class DeviceAppManagementTask extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final DeviceAppManagementTaskStatus value) {
         this._status = value;
     }

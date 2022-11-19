@@ -44,6 +44,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * Instantiates a new UnifiedRoleAssignmentScheduleRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleAssignmentScheduleRequest() {
         super();
         this.setOdataType("#microsoft.graph.unifiedRoleAssignmentScheduleRequest");
@@ -113,24 +114,24 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UnifiedRoleAssignmentScheduleRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("action", (n) -> { currentObject.setAction(n.getStringValue()); });
-            this.put("activatedUsing", (n) -> { currentObject.setActivatedUsing(n.getObjectValue(UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue)); });
-            this.put("appScope", (n) -> { currentObject.setAppScope(n.getObjectValue(AppScope::createFromDiscriminatorValue)); });
-            this.put("appScopeId", (n) -> { currentObject.setAppScopeId(n.getStringValue()); });
-            this.put("directoryScope", (n) -> { currentObject.setDirectoryScope(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("directoryScopeId", (n) -> { currentObject.setDirectoryScopeId(n.getStringValue()); });
-            this.put("isValidationOnly", (n) -> { currentObject.setIsValidationOnly(n.getBooleanValue()); });
-            this.put("justification", (n) -> { currentObject.setJustification(n.getStringValue()); });
-            this.put("principal", (n) -> { currentObject.setPrincipal(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("principalId", (n) -> { currentObject.setPrincipalId(n.getStringValue()); });
-            this.put("roleDefinition", (n) -> { currentObject.setRoleDefinition(n.getObjectValue(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
-            this.put("roleDefinitionId", (n) -> { currentObject.setRoleDefinitionId(n.getStringValue()); });
-            this.put("scheduleInfo", (n) -> { currentObject.setScheduleInfo(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
-            this.put("targetSchedule", (n) -> { currentObject.setTargetSchedule(n.getObjectValue(UnifiedRoleAssignmentSchedule::createFromDiscriminatorValue)); });
-            this.put("targetScheduleId", (n) -> { currentObject.setTargetScheduleId(n.getStringValue()); });
-            this.put("ticketInfo", (n) -> { currentObject.setTicketInfo(n.getObjectValue(TicketInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("action", (n) -> { currentObject.setAction(n.getStringValue()); });
+        deserializerMap.put("activatedUsing", (n) -> { currentObject.setActivatedUsing(n.getObjectValue(UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("appScope", (n) -> { currentObject.setAppScope(n.getObjectValue(AppScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("appScopeId", (n) -> { currentObject.setAppScopeId(n.getStringValue()); });
+        deserializerMap.put("directoryScope", (n) -> { currentObject.setDirectoryScope(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("directoryScopeId", (n) -> { currentObject.setDirectoryScopeId(n.getStringValue()); });
+        deserializerMap.put("isValidationOnly", (n) -> { currentObject.setIsValidationOnly(n.getBooleanValue()); });
+        deserializerMap.put("justification", (n) -> { currentObject.setJustification(n.getStringValue()); });
+        deserializerMap.put("principal", (n) -> { currentObject.setPrincipal(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("principalId", (n) -> { currentObject.setPrincipalId(n.getStringValue()); });
+        deserializerMap.put("roleDefinition", (n) -> { currentObject.setRoleDefinition(n.getObjectValue(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleDefinitionId", (n) -> { currentObject.setRoleDefinitionId(n.getStringValue()); });
+        deserializerMap.put("scheduleInfo", (n) -> { currentObject.setScheduleInfo(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("targetSchedule", (n) -> { currentObject.setTargetSchedule(n.getObjectValue(UnifiedRoleAssignmentSchedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("targetScheduleId", (n) -> { currentObject.setTargetScheduleId(n.getStringValue()); });
+        deserializerMap.put("ticketInfo", (n) -> { currentObject.setTicketInfo(n.getObjectValue(TicketInfo::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the isValidationOnly property value. Determines whether the call is a validation or an actual call. Only set this property if you want to check whether an activation is subject to additional rules like MFA before actually submitting the request.
@@ -217,6 +218,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -242,6 +244,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param value Value to set for the action property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAction(@javax.annotation.Nullable final String value) {
         this._action = value;
     }
@@ -250,6 +253,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param value Value to set for the activatedUsing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivatedUsing(@javax.annotation.Nullable final UnifiedRoleEligibilitySchedule value) {
         this._activatedUsing = value;
     }
@@ -258,6 +262,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param value Value to set for the appScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppScope(@javax.annotation.Nullable final AppScope value) {
         this._appScope = value;
     }
@@ -266,6 +271,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param value Value to set for the appScopeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppScopeId(@javax.annotation.Nullable final String value) {
         this._appScopeId = value;
     }
@@ -274,6 +280,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param value Value to set for the directoryScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectoryScope(@javax.annotation.Nullable final DirectoryObject value) {
         this._directoryScope = value;
     }
@@ -282,6 +289,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param value Value to set for the directoryScopeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectoryScopeId(@javax.annotation.Nullable final String value) {
         this._directoryScopeId = value;
     }
@@ -290,6 +298,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param value Value to set for the isValidationOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsValidationOnly(@javax.annotation.Nullable final Boolean value) {
         this._isValidationOnly = value;
     }
@@ -298,6 +307,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param value Value to set for the justification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJustification(@javax.annotation.Nullable final String value) {
         this._justification = value;
     }
@@ -306,6 +316,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param value Value to set for the principal property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipal(@javax.annotation.Nullable final DirectoryObject value) {
         this._principal = value;
     }
@@ -314,6 +325,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param value Value to set for the principalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipalId(@javax.annotation.Nullable final String value) {
         this._principalId = value;
     }
@@ -322,6 +334,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param value Value to set for the roleDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinition(@javax.annotation.Nullable final UnifiedRoleDefinition value) {
         this._roleDefinition = value;
     }
@@ -330,6 +343,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
         this._roleDefinitionId = value;
     }
@@ -338,6 +352,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param value Value to set for the scheduleInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduleInfo(@javax.annotation.Nullable final RequestSchedule value) {
         this._scheduleInfo = value;
     }
@@ -346,6 +361,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param value Value to set for the targetSchedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetSchedule(@javax.annotation.Nullable final UnifiedRoleAssignmentSchedule value) {
         this._targetSchedule = value;
     }
@@ -354,6 +370,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param value Value to set for the targetScheduleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetScheduleId(@javax.annotation.Nullable final String value) {
         this._targetScheduleId = value;
     }
@@ -362,6 +379,7 @@ public class UnifiedRoleAssignmentScheduleRequest extends Request implements Par
      * @param value Value to set for the ticketInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTicketInfo(@javax.annotation.Nullable final TicketInfo value) {
         this._ticketInfo = value;
     }

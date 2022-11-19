@@ -19,6 +19,7 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
      * Instantiates a new DeviceManagementConfigurationSettingGroupDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingGroupDefinition() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationSettingGroupDefinition");
@@ -71,17 +72,18 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementConfigurationSettingGroupDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("childIds", (n) -> { currentObject.setChildIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("dependedOnBy", (n) -> { currentObject.setDependedOnBy(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDependedOnBy::createFromDiscriminatorValue)); });
-            this.put("dependentOn", (n) -> { currentObject.setDependentOn(n.getCollectionOfObjectValues(DeviceManagementConfigurationDependentOn::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("childIds", (n) -> { currentObject.setChildIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("dependedOnBy", (n) -> { currentObject.setDependedOnBy(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDependedOnBy::createFromDiscriminatorValue)); });
+        deserializerMap.put("dependentOn", (n) -> { currentObject.setDependentOn(n.getCollectionOfObjectValues(DeviceManagementConfigurationDependentOn::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -94,6 +96,7 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
      * @param value Value to set for the childIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._childIds = value;
     }
@@ -102,6 +105,7 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
      * @param value Value to set for the dependedOnBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDependedOnBy(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDependedOnBy> value) {
         this._dependedOnBy = value;
     }
@@ -110,6 +114,7 @@ public class DeviceManagementConfigurationSettingGroupDefinition extends DeviceM
      * @param value Value to set for the dependentOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDependentOn(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationDependentOn> value) {
         this._dependentOn = value;
     }

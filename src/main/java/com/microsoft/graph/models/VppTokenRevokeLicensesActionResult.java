@@ -18,6 +18,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
      * Instantiates a new VppTokenRevokeLicensesActionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VppTokenRevokeLicensesActionResult() {
         super();
         this.setOdataType("#microsoft.graph.vppTokenRevokeLicensesActionResult");
@@ -55,11 +56,11 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VppTokenRevokeLicensesActionResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("actionFailureReason", (n) -> { currentObject.setActionFailureReason(n.getEnumValue(VppTokenActionFailureReason.class)); });
-            this.put("failedLicensesCount", (n) -> { currentObject.setFailedLicensesCount(n.getIntegerValue()); });
-            this.put("totalLicensesCount", (n) -> { currentObject.setTotalLicensesCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actionFailureReason", (n) -> { currentObject.setActionFailureReason(n.getEnumValue(VppTokenActionFailureReason.class)); });
+        deserializerMap.put("failedLicensesCount", (n) -> { currentObject.setFailedLicensesCount(n.getIntegerValue()); });
+        deserializerMap.put("totalLicensesCount", (n) -> { currentObject.setTotalLicensesCount(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the totalLicensesCount property value. A count of the number of licenses that were attempted to revoke.
@@ -74,6 +75,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +88,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
      * @param value Value to set for the actionFailureReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionFailureReason(@javax.annotation.Nullable final VppTokenActionFailureReason value) {
         this._actionFailureReason = value;
     }
@@ -94,6 +97,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
      * @param value Value to set for the failedLicensesCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedLicensesCount(@javax.annotation.Nullable final Integer value) {
         this._failedLicensesCount = value;
     }
@@ -102,6 +106,7 @@ public class VppTokenRevokeLicensesActionResult extends VppTokenActionResult imp
      * @param value Value to set for the totalLicensesCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalLicensesCount(@javax.annotation.Nullable final Integer value) {
         this._totalLicensesCount = value;
     }

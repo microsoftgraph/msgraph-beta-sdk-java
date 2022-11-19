@@ -14,6 +14,7 @@ public class GroupWritebackConfiguration extends WritebackConfiguration implemen
      * Instantiates a new GroupWritebackConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupWritebackConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.groupWritebackConfiguration");
@@ -35,9 +36,9 @@ public class GroupWritebackConfiguration extends WritebackConfiguration implemen
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final GroupWritebackConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("onPremisesGroupType", (n) -> { currentObject.setOnPremisesGroupType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("onPremisesGroupType", (n) -> { currentObject.setOnPremisesGroupType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the onPremisesGroupType property value. Indicates the target on-premise group type the cloud object will be written back as. Nullable. The possible values are: universalDistributionGroup, universalSecurityGroup, universalMailEnabledSecurityGroup.If the cloud group is a unified (Microsoft 365) group, this property can be one of the following: universalDistributionGroup, universalSecurityGroup, universalMailEnabledSecurityGroup. Azure AD security groups can be written back as universalSecurityGroup. If isEnabled or the NewUnifiedGroupWritebackDefault group setting is true but this property is not explicitly configured: Microsoft 365 groups will be written back as universalDistributionGroup by defaultSecurity groups will be written back as universalSecurityGroup by default
@@ -52,6 +53,7 @@ public class GroupWritebackConfiguration extends WritebackConfiguration implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +64,7 @@ public class GroupWritebackConfiguration extends WritebackConfiguration implemen
      * @param value Value to set for the onPremisesGroupType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesGroupType(@javax.annotation.Nullable final String value) {
         this._onPremisesGroupType = value;
     }

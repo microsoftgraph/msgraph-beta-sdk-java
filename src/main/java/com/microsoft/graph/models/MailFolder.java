@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class MailFolder extends Entity implements Parsable {
     /** The number of immediate child mailFolders in the current mailFolder. */
     private Integer _childFolderCount;
@@ -36,9 +37,10 @@ public class MailFolder extends Entity implements Parsable {
     /** The well-known folder name for the folder. The possible values are listed above. This property is only set for default folders created by Outlook. For other folders, this property is null. */
     private String _wellKnownName;
     /**
-     * Instantiates a new MailFolder and sets the default values.
+     * Instantiates a new mailFolder and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MailFolder() {
         super();
         this.setOdataType("#microsoft.graph.mailFolder");
@@ -46,7 +48,7 @@ public class MailFolder extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MailFolder
+     * @return a mailFolder
      */
     @javax.annotation.Nonnull
     public static MailFolder createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -91,21 +93,21 @@ public class MailFolder extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MailFolder currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("childFolderCount", (n) -> { currentObject.setChildFolderCount(n.getIntegerValue()); });
-            this.put("childFolders", (n) -> { currentObject.setChildFolders(n.getCollectionOfObjectValues(MailFolder::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isHidden", (n) -> { currentObject.setIsHidden(n.getBooleanValue()); });
-            this.put("messageRules", (n) -> { currentObject.setMessageRules(n.getCollectionOfObjectValues(MessageRule::createFromDiscriminatorValue)); });
-            this.put("messages", (n) -> { currentObject.setMessages(n.getCollectionOfObjectValues(Message::createFromDiscriminatorValue)); });
-            this.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("parentFolderId", (n) -> { currentObject.setParentFolderId(n.getStringValue()); });
-            this.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("totalItemCount", (n) -> { currentObject.setTotalItemCount(n.getIntegerValue()); });
-            this.put("unreadItemCount", (n) -> { currentObject.setUnreadItemCount(n.getIntegerValue()); });
-            this.put("userConfigurations", (n) -> { currentObject.setUserConfigurations(n.getCollectionOfObjectValues(UserConfiguration::createFromDiscriminatorValue)); });
-            this.put("wellKnownName", (n) -> { currentObject.setWellKnownName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("childFolderCount", (n) -> { currentObject.setChildFolderCount(n.getIntegerValue()); });
+        deserializerMap.put("childFolders", (n) -> { currentObject.setChildFolders(n.getCollectionOfObjectValues(MailFolder::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isHidden", (n) -> { currentObject.setIsHidden(n.getBooleanValue()); });
+        deserializerMap.put("messageRules", (n) -> { currentObject.setMessageRules(n.getCollectionOfObjectValues(MessageRule::createFromDiscriminatorValue)); });
+        deserializerMap.put("messages", (n) -> { currentObject.setMessages(n.getCollectionOfObjectValues(Message::createFromDiscriminatorValue)); });
+        deserializerMap.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentFolderId", (n) -> { currentObject.setParentFolderId(n.getStringValue()); });
+        deserializerMap.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("totalItemCount", (n) -> { currentObject.setTotalItemCount(n.getIntegerValue()); });
+        deserializerMap.put("unreadItemCount", (n) -> { currentObject.setUnreadItemCount(n.getIntegerValue()); });
+        deserializerMap.put("userConfigurations", (n) -> { currentObject.setUserConfigurations(n.getCollectionOfObjectValues(UserConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("wellKnownName", (n) -> { currentObject.setWellKnownName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isHidden property value. Indicates whether the mailFolder is hidden. This property can be set only when creating the folder. Find more information in Hidden mail folders.
@@ -192,6 +194,7 @@ public class MailFolder extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -214,6 +217,7 @@ public class MailFolder extends Entity implements Parsable {
      * @param value Value to set for the childFolderCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildFolderCount(@javax.annotation.Nullable final Integer value) {
         this._childFolderCount = value;
     }
@@ -222,6 +226,7 @@ public class MailFolder extends Entity implements Parsable {
      * @param value Value to set for the childFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildFolders(@javax.annotation.Nullable final java.util.List<MailFolder> value) {
         this._childFolders = value;
     }
@@ -230,6 +235,7 @@ public class MailFolder extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -238,6 +244,7 @@ public class MailFolder extends Entity implements Parsable {
      * @param value Value to set for the isHidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsHidden(@javax.annotation.Nullable final Boolean value) {
         this._isHidden = value;
     }
@@ -246,6 +253,7 @@ public class MailFolder extends Entity implements Parsable {
      * @param value Value to set for the messageRules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessageRules(@javax.annotation.Nullable final java.util.List<MessageRule> value) {
         this._messageRules = value;
     }
@@ -254,6 +262,7 @@ public class MailFolder extends Entity implements Parsable {
      * @param value Value to set for the messages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessages(@javax.annotation.Nullable final java.util.List<Message> value) {
         this._messages = value;
     }
@@ -262,6 +271,7 @@ public class MailFolder extends Entity implements Parsable {
      * @param value Value to set for the multiValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this._multiValueExtendedProperties = value;
     }
@@ -270,6 +280,7 @@ public class MailFolder extends Entity implements Parsable {
      * @param value Value to set for the parentFolderId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentFolderId(@javax.annotation.Nullable final String value) {
         this._parentFolderId = value;
     }
@@ -278,6 +289,7 @@ public class MailFolder extends Entity implements Parsable {
      * @param value Value to set for the singleValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this._singleValueExtendedProperties = value;
     }
@@ -286,6 +298,7 @@ public class MailFolder extends Entity implements Parsable {
      * @param value Value to set for the totalItemCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalItemCount(@javax.annotation.Nullable final Integer value) {
         this._totalItemCount = value;
     }
@@ -294,6 +307,7 @@ public class MailFolder extends Entity implements Parsable {
      * @param value Value to set for the unreadItemCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnreadItemCount(@javax.annotation.Nullable final Integer value) {
         this._unreadItemCount = value;
     }
@@ -302,6 +316,7 @@ public class MailFolder extends Entity implements Parsable {
      * @param value Value to set for the userConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserConfigurations(@javax.annotation.Nullable final java.util.List<UserConfiguration> value) {
         this._userConfigurations = value;
     }
@@ -310,6 +325,7 @@ public class MailFolder extends Entity implements Parsable {
      * @param value Value to set for the wellKnownName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWellKnownName(@javax.annotation.Nullable final String value) {
         this._wellKnownName = value;
     }

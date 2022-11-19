@@ -23,6 +23,7 @@ public class AndroidWiFiConfiguration extends DeviceConfiguration implements Par
      * Instantiates a new AndroidWiFiConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidWiFiConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidWiFiConfiguration");
@@ -67,13 +68,13 @@ public class AndroidWiFiConfiguration extends DeviceConfiguration implements Par
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidWiFiConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("connectAutomatically", (n) -> { currentObject.setConnectAutomatically(n.getBooleanValue()); });
-            this.put("connectWhenNetworkNameIsHidden", (n) -> { currentObject.setConnectWhenNetworkNameIsHidden(n.getBooleanValue()); });
-            this.put("networkName", (n) -> { currentObject.setNetworkName(n.getStringValue()); });
-            this.put("ssid", (n) -> { currentObject.setSsid(n.getStringValue()); });
-            this.put("wiFiSecurityType", (n) -> { currentObject.setWiFiSecurityType(n.getEnumValue(AndroidWiFiSecurityType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("connectAutomatically", (n) -> { currentObject.setConnectAutomatically(n.getBooleanValue()); });
+        deserializerMap.put("connectWhenNetworkNameIsHidden", (n) -> { currentObject.setConnectWhenNetworkNameIsHidden(n.getBooleanValue()); });
+        deserializerMap.put("networkName", (n) -> { currentObject.setNetworkName(n.getStringValue()); });
+        deserializerMap.put("ssid", (n) -> { currentObject.setSsid(n.getStringValue()); });
+        deserializerMap.put("wiFiSecurityType", (n) -> { currentObject.setWiFiSecurityType(n.getEnumValue(AndroidWiFiSecurityType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the networkName property value. Network Name
@@ -104,6 +105,7 @@ public class AndroidWiFiConfiguration extends DeviceConfiguration implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -118,6 +120,7 @@ public class AndroidWiFiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the connectAutomatically property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectAutomatically(@javax.annotation.Nullable final Boolean value) {
         this._connectAutomatically = value;
     }
@@ -126,6 +129,7 @@ public class AndroidWiFiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the connectWhenNetworkNameIsHidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectWhenNetworkNameIsHidden(@javax.annotation.Nullable final Boolean value) {
         this._connectWhenNetworkNameIsHidden = value;
     }
@@ -134,6 +138,7 @@ public class AndroidWiFiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the networkName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkName(@javax.annotation.Nullable final String value) {
         this._networkName = value;
     }
@@ -142,6 +147,7 @@ public class AndroidWiFiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the ssid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSsid(@javax.annotation.Nullable final String value) {
         this._ssid = value;
     }
@@ -150,6 +156,7 @@ public class AndroidWiFiConfiguration extends DeviceConfiguration implements Par
      * @param value Value to set for the wiFiSecurityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWiFiSecurityType(@javax.annotation.Nullable final AndroidWiFiSecurityType value) {
         this._wiFiSecurityType = value;
     }

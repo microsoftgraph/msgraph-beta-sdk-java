@@ -22,6 +22,7 @@ public class ReprovisionPostRequestBody implements AdditionalDataHolder, Parsabl
      * Instantiates a new reprovisionPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ReprovisionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -50,10 +51,10 @@ public class ReprovisionPostRequestBody implements AdditionalDataHolder, Parsabl
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ReprovisionPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getEnumValue(CloudPcOperatingSystem.class)); });
-            this.put("userAccountType", (n) -> { currentObject.setUserAccountType(n.getEnumValue(CloudPcUserAccountType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("osVersion", (n) -> { currentObject.setOsVersion(n.getEnumValue(CloudPcOperatingSystem.class)); });
+        deserializerMap.put("userAccountType", (n) -> { currentObject.setUserAccountType(n.getEnumValue(CloudPcUserAccountType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the osVersion property value. The osVersion property
@@ -76,6 +77,7 @@ public class ReprovisionPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("osVersion", this.getOsVersion());
@@ -87,6 +89,7 @@ public class ReprovisionPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -95,6 +98,7 @@ public class ReprovisionPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final CloudPcOperatingSystem value) {
         this._osVersion = value;
     }
@@ -103,6 +107,7 @@ public class ReprovisionPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the userAccountType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAccountType(@javax.annotation.Nullable final CloudPcUserAccountType value) {
         this._userAccountType = value;
     }

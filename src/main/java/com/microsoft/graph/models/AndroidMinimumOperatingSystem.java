@@ -50,6 +50,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * Instantiates a new androidMinimumOperatingSystem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.androidMinimumOperatingSystem");
@@ -79,25 +80,25 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidMinimumOperatingSystem currentObject = this;
-        return new HashMap<>(17) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("v10_0", (n) -> { currentObject.setV10_0(n.getBooleanValue()); });
-            this.put("v11_0", (n) -> { currentObject.setV11_0(n.getBooleanValue()); });
-            this.put("v4_0", (n) -> { currentObject.setV4_0(n.getBooleanValue()); });
-            this.put("v4_0_3", (n) -> { currentObject.setV4_0_3(n.getBooleanValue()); });
-            this.put("v4_1", (n) -> { currentObject.setV4_1(n.getBooleanValue()); });
-            this.put("v4_2", (n) -> { currentObject.setV4_2(n.getBooleanValue()); });
-            this.put("v4_3", (n) -> { currentObject.setV4_3(n.getBooleanValue()); });
-            this.put("v4_4", (n) -> { currentObject.setV4_4(n.getBooleanValue()); });
-            this.put("v5_0", (n) -> { currentObject.setV5_0(n.getBooleanValue()); });
-            this.put("v5_1", (n) -> { currentObject.setV5_1(n.getBooleanValue()); });
-            this.put("v6_0", (n) -> { currentObject.setV6_0(n.getBooleanValue()); });
-            this.put("v7_0", (n) -> { currentObject.setV7_0(n.getBooleanValue()); });
-            this.put("v7_1", (n) -> { currentObject.setV7_1(n.getBooleanValue()); });
-            this.put("v8_0", (n) -> { currentObject.setV8_0(n.getBooleanValue()); });
-            this.put("v8_1", (n) -> { currentObject.setV8_1(n.getBooleanValue()); });
-            this.put("v9_0", (n) -> { currentObject.setV9_0(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(17);
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("v10_0", (n) -> { currentObject.setV10_0(n.getBooleanValue()); });
+        deserializerMap.put("v11_0", (n) -> { currentObject.setV11_0(n.getBooleanValue()); });
+        deserializerMap.put("v4_0", (n) -> { currentObject.setV4_0(n.getBooleanValue()); });
+        deserializerMap.put("v4_0_3", (n) -> { currentObject.setV4_0_3(n.getBooleanValue()); });
+        deserializerMap.put("v4_1", (n) -> { currentObject.setV4_1(n.getBooleanValue()); });
+        deserializerMap.put("v4_2", (n) -> { currentObject.setV4_2(n.getBooleanValue()); });
+        deserializerMap.put("v4_3", (n) -> { currentObject.setV4_3(n.getBooleanValue()); });
+        deserializerMap.put("v4_4", (n) -> { currentObject.setV4_4(n.getBooleanValue()); });
+        deserializerMap.put("v5_0", (n) -> { currentObject.setV5_0(n.getBooleanValue()); });
+        deserializerMap.put("v5_1", (n) -> { currentObject.setV5_1(n.getBooleanValue()); });
+        deserializerMap.put("v6_0", (n) -> { currentObject.setV6_0(n.getBooleanValue()); });
+        deserializerMap.put("v7_0", (n) -> { currentObject.setV7_0(n.getBooleanValue()); });
+        deserializerMap.put("v7_1", (n) -> { currentObject.setV7_1(n.getBooleanValue()); });
+        deserializerMap.put("v8_0", (n) -> { currentObject.setV8_0(n.getBooleanValue()); });
+        deserializerMap.put("v8_1", (n) -> { currentObject.setV8_1(n.getBooleanValue()); });
+        deserializerMap.put("v9_0", (n) -> { currentObject.setV9_0(n.getBooleanValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -240,6 +241,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -266,6 +268,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -274,6 +277,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -282,6 +286,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v10_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_0(@javax.annotation.Nullable final Boolean value) {
         this._v10_0 = value;
     }
@@ -290,6 +295,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v11_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV11_0(@javax.annotation.Nullable final Boolean value) {
         this._v11_0 = value;
     }
@@ -298,6 +304,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v4_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV4_0(@javax.annotation.Nullable final Boolean value) {
         this._v4_0 = value;
     }
@@ -306,6 +313,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v4_0_3 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV4_0_3(@javax.annotation.Nullable final Boolean value) {
         this._v4_0_3 = value;
     }
@@ -314,6 +322,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v4_1 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV4_1(@javax.annotation.Nullable final Boolean value) {
         this._v4_1 = value;
     }
@@ -322,6 +331,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v4_2 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV4_2(@javax.annotation.Nullable final Boolean value) {
         this._v4_2 = value;
     }
@@ -330,6 +340,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v4_3 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV4_3(@javax.annotation.Nullable final Boolean value) {
         this._v4_3 = value;
     }
@@ -338,6 +349,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v4_4 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV4_4(@javax.annotation.Nullable final Boolean value) {
         this._v4_4 = value;
     }
@@ -346,6 +358,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v5_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV5_0(@javax.annotation.Nullable final Boolean value) {
         this._v5_0 = value;
     }
@@ -354,6 +367,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v5_1 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV5_1(@javax.annotation.Nullable final Boolean value) {
         this._v5_1 = value;
     }
@@ -362,6 +376,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v6_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV6_0(@javax.annotation.Nullable final Boolean value) {
         this._v6_0 = value;
     }
@@ -370,6 +385,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v7_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV7_0(@javax.annotation.Nullable final Boolean value) {
         this._v7_0 = value;
     }
@@ -378,6 +394,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v7_1 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV7_1(@javax.annotation.Nullable final Boolean value) {
         this._v7_1 = value;
     }
@@ -386,6 +403,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v8_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV8_0(@javax.annotation.Nullable final Boolean value) {
         this._v8_0 = value;
     }
@@ -394,6 +412,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v8_1 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV8_1(@javax.annotation.Nullable final Boolean value) {
         this._v8_1 = value;
     }
@@ -402,6 +421,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Pars
      * @param value Value to set for the v9_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV9_0(@javax.annotation.Nullable final Boolean value) {
         this._v9_0 = value;
     }

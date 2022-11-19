@@ -21,6 +21,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * Instantiates a new delegatedAdminAccessContainer and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DelegatedAdminAccessContainer() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.delegatedAdminAccessContainer");
@@ -66,11 +67,11 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DelegatedAdminAccessContainer currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("accessContainerId", (n) -> { currentObject.setAccessContainerId(n.getStringValue()); });
-            this.put("accessContainerType", (n) -> { currentObject.setAccessContainerType(n.getEnumValue(DelegatedAdminAccessContainerType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("accessContainerId", (n) -> { currentObject.setAccessContainerId(n.getStringValue()); });
+        deserializerMap.put("accessContainerType", (n) -> { currentObject.setAccessContainerType(n.getEnumValue(DelegatedAdminAccessContainerType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -85,6 +86,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("accessContainerId", this.getAccessContainerId());
@@ -97,6 +99,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * @param value Value to set for the accessContainerId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessContainerId(@javax.annotation.Nullable final String value) {
         this._accessContainerId = value;
     }
@@ -105,6 +108,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * @param value Value to set for the accessContainerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessContainerType(@javax.annotation.Nullable final DelegatedAdminAccessContainerType value) {
         this._accessContainerType = value;
     }
@@ -113,6 +117,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -121,6 +126,7 @@ public class DelegatedAdminAccessContainer implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

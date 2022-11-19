@@ -32,6 +32,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * Instantiates a new windowsPackageInformation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsPackageInformation() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.windowsPackageInformation");
@@ -77,16 +78,16 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WindowsPackageInformation currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("applicableArchitecture", (n) -> { currentObject.setApplicableArchitecture(n.getEnumValue(WindowsArchitecture.class)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("identityName", (n) -> { currentObject.setIdentityName(n.getStringValue()); });
-            this.put("identityPublisher", (n) -> { currentObject.setIdentityPublisher(n.getStringValue()); });
-            this.put("identityResourceIdentifier", (n) -> { currentObject.setIdentityResourceIdentifier(n.getStringValue()); });
-            this.put("identityVersion", (n) -> { currentObject.setIdentityVersion(n.getStringValue()); });
-            this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(WindowsMinimumOperatingSystem::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("applicableArchitecture", (n) -> { currentObject.setApplicableArchitecture(n.getEnumValue(WindowsArchitecture.class)); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("identityName", (n) -> { currentObject.setIdentityName(n.getStringValue()); });
+        deserializerMap.put("identityPublisher", (n) -> { currentObject.setIdentityPublisher(n.getStringValue()); });
+        deserializerMap.put("identityResourceIdentifier", (n) -> { currentObject.setIdentityResourceIdentifier(n.getStringValue()); });
+        deserializerMap.put("identityVersion", (n) -> { currentObject.setIdentityVersion(n.getStringValue()); });
+        deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(WindowsMinimumOperatingSystem::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the identityName property value. The Identity Name.
@@ -141,6 +142,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("applicableArchitecture", this.getApplicableArchitecture());
@@ -158,6 +160,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -166,6 +169,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the applicableArchitecture property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicableArchitecture(@javax.annotation.Nullable final WindowsArchitecture value) {
         this._applicableArchitecture = value;
     }
@@ -174,6 +178,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -182,6 +187,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the identityName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityName(@javax.annotation.Nullable final String value) {
         this._identityName = value;
     }
@@ -190,6 +196,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the identityPublisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityPublisher(@javax.annotation.Nullable final String value) {
         this._identityPublisher = value;
     }
@@ -198,6 +205,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the identityResourceIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityResourceIdentifier(@javax.annotation.Nullable final String value) {
         this._identityResourceIdentifier = value;
     }
@@ -206,6 +214,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the identityVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityVersion(@javax.annotation.Nullable final String value) {
         this._identityVersion = value;
     }
@@ -214,6 +223,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final WindowsMinimumOperatingSystem value) {
         this._minimumSupportedOperatingSystem = value;
     }
@@ -222,6 +232,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

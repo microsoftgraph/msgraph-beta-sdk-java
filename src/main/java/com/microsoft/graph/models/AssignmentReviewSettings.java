@@ -36,6 +36,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * Instantiates a new assignmentReviewSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignmentReviewSettings() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.assignmentReviewSettings");
@@ -81,18 +82,18 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignmentReviewSettings currentObject = this;
-        return new HashMap<>(10) {{
-            this.put("accessReviewTimeoutBehavior", (n) -> { currentObject.setAccessReviewTimeoutBehavior(n.getEnumValue(AccessReviewTimeoutBehavior.class)); });
-            this.put("durationInDays", (n) -> { currentObject.setDurationInDays(n.getIntegerValue()); });
-            this.put("isAccessRecommendationEnabled", (n) -> { currentObject.setIsAccessRecommendationEnabled(n.getBooleanValue()); });
-            this.put("isApprovalJustificationRequired", (n) -> { currentObject.setIsApprovalJustificationRequired(n.getBooleanValue()); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recurrenceType", (n) -> { currentObject.setRecurrenceType(n.getStringValue()); });
-            this.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(UserSet::createFromDiscriminatorValue)); });
-            this.put("reviewerType", (n) -> { currentObject.setReviewerType(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("accessReviewTimeoutBehavior", (n) -> { currentObject.setAccessReviewTimeoutBehavior(n.getEnumValue(AccessReviewTimeoutBehavior.class)); });
+        deserializerMap.put("durationInDays", (n) -> { currentObject.setDurationInDays(n.getIntegerValue()); });
+        deserializerMap.put("isAccessRecommendationEnabled", (n) -> { currentObject.setIsAccessRecommendationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isApprovalJustificationRequired", (n) -> { currentObject.setIsApprovalJustificationRequired(n.getBooleanValue()); });
+        deserializerMap.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recurrenceType", (n) -> { currentObject.setRecurrenceType(n.getStringValue()); });
+        deserializerMap.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(UserSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("reviewerType", (n) -> { currentObject.setReviewerType(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap
     }
     /**
      * Gets the isAccessRecommendationEnabled property value. Specifies whether to display recommendations to the reviewer. The default value is true
@@ -163,6 +164,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("accessReviewTimeoutBehavior", this.getAccessReviewTimeoutBehavior());
@@ -182,6 +184,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the accessReviewTimeoutBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessReviewTimeoutBehavior(@javax.annotation.Nullable final AccessReviewTimeoutBehavior value) {
         this._accessReviewTimeoutBehavior = value;
     }
@@ -190,6 +193,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -198,6 +202,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the durationInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationInDays(@javax.annotation.Nullable final Integer value) {
         this._durationInDays = value;
     }
@@ -206,6 +211,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the isAccessRecommendationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAccessRecommendationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isAccessRecommendationEnabled = value;
     }
@@ -214,6 +220,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the isApprovalJustificationRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsApprovalJustificationRequired(@javax.annotation.Nullable final Boolean value) {
         this._isApprovalJustificationRequired = value;
     }
@@ -222,6 +229,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }
@@ -230,6 +238,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -238,6 +247,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the recurrenceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrenceType(@javax.annotation.Nullable final String value) {
         this._recurrenceType = value;
     }
@@ -246,6 +256,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the reviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewers(@javax.annotation.Nullable final java.util.List<UserSet> value) {
         this._reviewers = value;
     }
@@ -254,6 +265,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the reviewerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewerType(@javax.annotation.Nullable final String value) {
         this._reviewerType = value;
     }
@@ -262,6 +274,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }

@@ -42,6 +42,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * Instantiates a new auditActor and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuditActor() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.auditActor");
@@ -95,21 +96,21 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AuditActor currentObject = this;
-        return new HashMap<>(13) {{
-            this.put("applicationDisplayName", (n) -> { currentObject.setApplicationDisplayName(n.getStringValue()); });
-            this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
-            this.put("auditActorType", (n) -> { currentObject.setAuditActorType(n.getStringValue()); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("remoteTenantId", (n) -> { currentObject.setRemoteTenantId(n.getStringValue()); });
-            this.put("remoteUserId", (n) -> { currentObject.setRemoteUserId(n.getStringValue()); });
-            this.put("servicePrincipalName", (n) -> { currentObject.setServicePrincipalName(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userPermissions", (n) -> { currentObject.setUserPermissions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("userRoleScopeTags", (n) -> { currentObject.setUserRoleScopeTags(n.getCollectionOfObjectValues(RoleScopeTagInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(13);
+        deserializerMap.put("applicationDisplayName", (n) -> { currentObject.setApplicationDisplayName(n.getStringValue()); });
+        deserializerMap.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
+        deserializerMap.put("auditActorType", (n) -> { currentObject.setAuditActorType(n.getStringValue()); });
+        deserializerMap.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("remoteTenantId", (n) -> { currentObject.setRemoteTenantId(n.getStringValue()); });
+        deserializerMap.put("remoteUserId", (n) -> { currentObject.setRemoteUserId(n.getStringValue()); });
+        deserializerMap.put("servicePrincipalName", (n) -> { currentObject.setServicePrincipalName(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
+        deserializerMap.put("userPermissions", (n) -> { currentObject.setUserPermissions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("userRoleScopeTags", (n) -> { currentObject.setUserRoleScopeTags(n.getCollectionOfObjectValues(RoleScopeTagInfo::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the ipAddress property value. IPAddress.
@@ -196,6 +197,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("applicationDisplayName", this.getApplicationDisplayName());
@@ -218,6 +220,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -226,6 +229,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the applicationDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationDisplayName(@javax.annotation.Nullable final String value) {
         this._applicationDisplayName = value;
     }
@@ -234,6 +238,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the applicationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationId(@javax.annotation.Nullable final String value) {
         this._applicationId = value;
     }
@@ -242,6 +247,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the auditActorType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuditActorType(@javax.annotation.Nullable final String value) {
         this._auditActorType = value;
     }
@@ -250,6 +256,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
     }
@@ -258,6 +265,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -266,6 +274,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the remoteTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteTenantId(@javax.annotation.Nullable final String value) {
         this._remoteTenantId = value;
     }
@@ -274,6 +283,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the remoteUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteUserId(@javax.annotation.Nullable final String value) {
         this._remoteUserId = value;
     }
@@ -282,6 +292,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the servicePrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalName(@javax.annotation.Nullable final String value) {
         this._servicePrincipalName = value;
     }
@@ -290,6 +301,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
@@ -298,6 +310,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -306,6 +319,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userPermissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPermissions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._userPermissions = value;
     }
@@ -314,6 +328,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }
@@ -322,6 +337,7 @@ public class AuditActor implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userRoleScopeTags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRoleScopeTags(@javax.annotation.Nullable final java.util.List<RoleScopeTagInfo> value) {
         this._userRoleScopeTags = value;
     }

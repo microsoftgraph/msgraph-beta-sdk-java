@@ -14,7 +14,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     /** A human-readable description of the printer's current processing state. Read-only. */
     private String _description;
     /** The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only. */
-    private java.util.List<String> _details;
+    private java.util.List<PrinterProcessingStateDetail> _details;
     /** The OdataType property */
     private String _odataType;
     /** The processingState property */
@@ -22,13 +22,14 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     /** The processingStateDescription property */
     private String _processingStateDescription;
     /** The processingStateReasons property */
-    private java.util.List<String> _processingStateReasons;
+    private java.util.List<PrinterProcessingStateReason> _processingStateReasons;
     /** The state property */
     private PrinterProcessingState _state;
     /**
      * Instantiates a new printerStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrinterStatus() {
         this.setAdditionalData(new HashMap<>());
         this.setOdataType("#microsoft.graph.printerStatus");
@@ -61,10 +62,10 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the details property value. The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
-     * @return a string
+     * @return a printerProcessingStateDetail
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getDetails() {
+    public java.util.List<PrinterProcessingStateDetail> getDetails() {
         return this._details;
     }
     /**
@@ -74,15 +75,15 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PrinterStatus currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("processingState", (n) -> { currentObject.setProcessingState(n.getEnumValue(PrinterProcessingState.class)); });
-            this.put("processingStateDescription", (n) -> { currentObject.setProcessingStateDescription(n.getStringValue()); });
-            this.put("processingStateReasons", (n) -> { currentObject.setProcessingStateReasons(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(PrinterProcessingState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfEnumValues(PrinterProcessingStateDetail.class)); });
+        deserializerMap.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
+        deserializerMap.put("processingState", (n) -> { currentObject.setProcessingState(n.getEnumValue(PrinterProcessingState.class)); });
+        deserializerMap.put("processingStateDescription", (n) -> { currentObject.setProcessingStateDescription(n.getStringValue()); });
+        deserializerMap.put("processingStateReasons", (n) -> { currentObject.setProcessingStateReasons(n.getCollectionOfEnumValues(PrinterProcessingStateReason.class)); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(PrinterProcessingState.class)); });
+        return deserializerMap
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -110,10 +111,10 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the processingStateReasons property value. The processingStateReasons property
-     * @return a string
+     * @return a printerProcessingStateReason
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getProcessingStateReasons() {
+    public java.util.List<PrinterProcessingStateReason> getProcessingStateReasons() {
         return this._processingStateReasons;
     }
     /**
@@ -129,14 +130,15 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
-        writer.writeCollectionOfPrimitiveValues("details", this.getDetails());
+        writer.writeCollectionOfEnumValues("details", this.getDetails());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("processingState", this.getProcessingState());
         writer.writeStringValue("processingStateDescription", this.getProcessingStateDescription());
-        writer.writeCollectionOfPrimitiveValues("processingStateReasons", this.getProcessingStateReasons());
+        writer.writeCollectionOfEnumValues("processingStateReasons", this.getProcessingStateReasons());
         writer.writeEnumValue("state", this.getState());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -145,6 +147,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +156,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -161,7 +165,8 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the details property.
      * @return a void
      */
-    public void setDetails(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setDetails(@javax.annotation.Nullable final java.util.List<PrinterProcessingStateDetail> value) {
         this._details = value;
     }
     /**
@@ -169,6 +174,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -177,6 +183,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the processingState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessingState(@javax.annotation.Nullable final PrinterProcessingState value) {
         this._processingState = value;
     }
@@ -185,6 +192,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the processingStateDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessingStateDescription(@javax.annotation.Nullable final String value) {
         this._processingStateDescription = value;
     }
@@ -193,7 +201,8 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the processingStateReasons property.
      * @return a void
      */
-    public void setProcessingStateReasons(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setProcessingStateReasons(@javax.annotation.Nullable final java.util.List<PrinterProcessingStateReason> value) {
         this._processingStateReasons = value;
     }
     /**
@@ -201,6 +210,7 @@ public class PrinterStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final PrinterProcessingState value) {
         this._state = value;
     }

@@ -20,6 +20,7 @@ public class ActivateServicePlanPostRequestBody implements AdditionalDataHolder,
      * Instantiates a new activateServicePlanPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ActivateServicePlanPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -48,10 +49,10 @@ public class ActivateServicePlanPostRequestBody implements AdditionalDataHolder,
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final ActivateServicePlanPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("servicePlanId", (n) -> { currentObject.setServicePlanId(n.getStringValue()); });
-            this.put("skuId", (n) -> { currentObject.setSkuId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("servicePlanId", (n) -> { currentObject.setServicePlanId(n.getStringValue()); });
+        deserializerMap.put("skuId", (n) -> { currentObject.setSkuId(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the servicePlanId property value. The servicePlanId property
@@ -74,6 +75,7 @@ public class ActivateServicePlanPostRequestBody implements AdditionalDataHolder,
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("servicePlanId", this.getServicePlanId());
@@ -85,6 +87,7 @@ public class ActivateServicePlanPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +96,7 @@ public class ActivateServicePlanPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the servicePlanId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePlanId(@javax.annotation.Nullable final String value) {
         this._servicePlanId = value;
     }
@@ -101,6 +105,7 @@ public class ActivateServicePlanPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the skuId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkuId(@javax.annotation.Nullable final String value) {
         this._skuId = value;
     }

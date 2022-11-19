@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** You purchase multiple licenses for iOS apps through the Apple Volume Purchase Program for Business or Education. This involves setting up an Apple VPP account from the Apple website and uploading the Apple VPP Business or Education token to Intune. You can then synchronize your volume purchase information with Intune and track your volume-purchased app use. You can upload multiple Apple VPP Business or Education tokens. */
 public class VppToken extends Entity implements Parsable {
     /** The apple Id associated with the given Apple Volume Purchase Program Token. */
     private String _appleId;
@@ -44,9 +45,10 @@ public class VppToken extends Entity implements Parsable {
     /** Possible types of an Apple Volume Purchase Program token. */
     private VppTokenAccountType _vppTokenAccountType;
     /**
-     * Instantiates a new VppToken and sets the default values.
+     * Instantiates a new vppToken and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VppToken() {
         super();
         this.setOdataType("#microsoft.graph.vppToken");
@@ -54,7 +56,7 @@ public class VppToken extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a VppToken
+     * @return a vppToken
      */
     @javax.annotation.Nonnull
     public static VppToken createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -124,25 +126,25 @@ public class VppToken extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final VppToken currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appleId", (n) -> { currentObject.setAppleId(n.getStringValue()); });
-            this.put("automaticallyUpdateApps", (n) -> { currentObject.setAutomaticallyUpdateApps(n.getBooleanValue()); });
-            this.put("claimTokenManagementFromExternalMdm", (n) -> { currentObject.setClaimTokenManagementFromExternalMdm(n.getBooleanValue()); });
-            this.put("countryOrRegion", (n) -> { currentObject.setCountryOrRegion(n.getStringValue()); });
-            this.put("dataSharingConsentGranted", (n) -> { currentObject.setDataSharingConsentGranted(n.getBooleanValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastSyncStatus", (n) -> { currentObject.setLastSyncStatus(n.getEnumValue(VppTokenSyncStatus.class)); });
-            this.put("locationName", (n) -> { currentObject.setLocationName(n.getStringValue()); });
-            this.put("organizationName", (n) -> { currentObject.setOrganizationName(n.getStringValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(VppTokenState.class)); });
-            this.put("token", (n) -> { currentObject.setToken(n.getStringValue()); });
-            this.put("tokenActionResults", (n) -> { currentObject.setTokenActionResults(n.getCollectionOfObjectValues(VppTokenActionResult::createFromDiscriminatorValue)); });
-            this.put("vppTokenAccountType", (n) -> { currentObject.setVppTokenAccountType(n.getEnumValue(VppTokenAccountType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appleId", (n) -> { currentObject.setAppleId(n.getStringValue()); });
+        deserializerMap.put("automaticallyUpdateApps", (n) -> { currentObject.setAutomaticallyUpdateApps(n.getBooleanValue()); });
+        deserializerMap.put("claimTokenManagementFromExternalMdm", (n) -> { currentObject.setClaimTokenManagementFromExternalMdm(n.getBooleanValue()); });
+        deserializerMap.put("countryOrRegion", (n) -> { currentObject.setCountryOrRegion(n.getStringValue()); });
+        deserializerMap.put("dataSharingConsentGranted", (n) -> { currentObject.setDataSharingConsentGranted(n.getBooleanValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSyncStatus", (n) -> { currentObject.setLastSyncStatus(n.getEnumValue(VppTokenSyncStatus.class)); });
+        deserializerMap.put("locationName", (n) -> { currentObject.setLocationName(n.getStringValue()); });
+        deserializerMap.put("organizationName", (n) -> { currentObject.setOrganizationName(n.getStringValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("state", (n) -> { currentObject.setState(n.getEnumValue(VppTokenState.class)); });
+        deserializerMap.put("token", (n) -> { currentObject.setToken(n.getStringValue()); });
+        deserializerMap.put("tokenActionResults", (n) -> { currentObject.setTokenActionResults(n.getCollectionOfObjectValues(VppTokenActionResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("vppTokenAccountType", (n) -> { currentObject.setVppTokenAccountType(n.getEnumValue(VppTokenAccountType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modification date time associated with the Apple Volume Purchase Program Token.
@@ -229,6 +231,7 @@ public class VppToken extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -255,6 +258,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the appleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppleId(@javax.annotation.Nullable final String value) {
         this._appleId = value;
     }
@@ -263,6 +267,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the automaticallyUpdateApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutomaticallyUpdateApps(@javax.annotation.Nullable final Boolean value) {
         this._automaticallyUpdateApps = value;
     }
@@ -271,6 +276,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the claimTokenManagementFromExternalMdm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClaimTokenManagementFromExternalMdm(@javax.annotation.Nullable final Boolean value) {
         this._claimTokenManagementFromExternalMdm = value;
     }
@@ -279,6 +285,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the countryOrRegion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountryOrRegion(@javax.annotation.Nullable final String value) {
         this._countryOrRegion = value;
     }
@@ -287,6 +294,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the dataSharingConsentGranted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataSharingConsentGranted(@javax.annotation.Nullable final Boolean value) {
         this._dataSharingConsentGranted = value;
     }
@@ -295,6 +303,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -303,6 +312,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -311,6 +321,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -319,6 +330,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSyncDateTime = value;
     }
@@ -327,6 +339,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the lastSyncStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncStatus(@javax.annotation.Nullable final VppTokenSyncStatus value) {
         this._lastSyncStatus = value;
     }
@@ -335,6 +348,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the locationName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocationName(@javax.annotation.Nullable final String value) {
         this._locationName = value;
     }
@@ -343,6 +357,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the organizationName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizationName(@javax.annotation.Nullable final String value) {
         this._organizationName = value;
     }
@@ -351,6 +366,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -359,6 +375,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final VppTokenState value) {
         this._state = value;
     }
@@ -367,6 +384,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the token property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setToken(@javax.annotation.Nullable final String value) {
         this._token = value;
     }
@@ -375,6 +393,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the tokenActionResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenActionResults(@javax.annotation.Nullable final java.util.List<VppTokenActionResult> value) {
         this._tokenActionResults = value;
     }
@@ -383,6 +402,7 @@ public class VppToken extends Entity implements Parsable {
      * @param value Value to set for the vppTokenAccountType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVppTokenAccountType(@javax.annotation.Nullable final VppTokenAccountType value) {
         this._vppTokenAccountType = value;
     }

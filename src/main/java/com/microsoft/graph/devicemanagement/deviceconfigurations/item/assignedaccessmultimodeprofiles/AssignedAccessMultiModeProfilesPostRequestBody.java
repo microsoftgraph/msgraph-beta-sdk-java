@@ -19,6 +19,7 @@ public class AssignedAccessMultiModeProfilesPostRequestBody implements Additiona
      * Instantiates a new assignedAccessMultiModeProfilesPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignedAccessMultiModeProfilesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -55,15 +56,16 @@ public class AssignedAccessMultiModeProfilesPostRequestBody implements Additiona
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AssignedAccessMultiModeProfilesPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("assignedAccessMultiModeProfiles", (n) -> { currentObject.setAssignedAccessMultiModeProfiles(n.getCollectionOfObjectValues(WindowsAssignedAccessProfile::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("assignedAccessMultiModeProfiles", (n) -> { currentObject.setAssignedAccessMultiModeProfiles(n.getCollectionOfObjectValues(WindowsAssignedAccessProfile::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("assignedAccessMultiModeProfiles", this.getAssignedAccessMultiModeProfiles());
@@ -74,6 +76,7 @@ public class AssignedAccessMultiModeProfilesPostRequestBody implements Additiona
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +85,7 @@ public class AssignedAccessMultiModeProfilesPostRequestBody implements Additiona
      * @param value Value to set for the assignedAccessMultiModeProfiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedAccessMultiModeProfiles(@javax.annotation.Nullable final java.util.List<WindowsAssignedAccessProfile> value) {
         this._assignedAccessMultiModeProfiles = value;
     }

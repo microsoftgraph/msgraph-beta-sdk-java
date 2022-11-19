@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Report of remote actions initiated on the devices belonging to a certain tenant. */
 public class RemoteActionAudit extends Entity implements Parsable {
     /** Remote actions Intune supports. */
     private RemoteAction _action;
@@ -28,9 +29,10 @@ public class RemoteActionAudit extends Entity implements Parsable {
     /** [deprecated] Please use InitiatedByUserPrincipalName instead. */
     private String _userName;
     /**
-     * Instantiates a new RemoteActionAudit and sets the default values.
+     * Instantiates a new remoteActionAudit and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RemoteActionAudit() {
         super();
         this.setOdataType("#microsoft.graph.remoteActionAudit");
@@ -38,7 +40,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RemoteActionAudit
+     * @return a remoteActionAudit
      */
     @javax.annotation.Nonnull
     public static RemoteActionAudit createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -92,17 +94,17 @@ public class RemoteActionAudit extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final RemoteActionAudit currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("action", (n) -> { currentObject.setAction(n.getEnumValue(RemoteAction.class)); });
-            this.put("actionState", (n) -> { currentObject.setActionState(n.getEnumValue(ActionState.class)); });
-            this.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });
-            this.put("deviceIMEI", (n) -> { currentObject.setDeviceIMEI(n.getStringValue()); });
-            this.put("deviceOwnerUserPrincipalName", (n) -> { currentObject.setDeviceOwnerUserPrincipalName(n.getStringValue()); });
-            this.put("initiatedByUserPrincipalName", (n) -> { currentObject.setInitiatedByUserPrincipalName(n.getStringValue()); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-            this.put("requestDateTime", (n) -> { currentObject.setRequestDateTime(n.getOffsetDateTimeValue()); });
-            this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("action", (n) -> { currentObject.setAction(n.getEnumValue(RemoteAction.class)); });
+        deserializerMap.put("actionState", (n) -> { currentObject.setActionState(n.getEnumValue(ActionState.class)); });
+        deserializerMap.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });
+        deserializerMap.put("deviceIMEI", (n) -> { currentObject.setDeviceIMEI(n.getStringValue()); });
+        deserializerMap.put("deviceOwnerUserPrincipalName", (n) -> { currentObject.setDeviceOwnerUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("initiatedByUserPrincipalName", (n) -> { currentObject.setInitiatedByUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
+        deserializerMap.put("requestDateTime", (n) -> { currentObject.setRequestDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the initiatedByUserPrincipalName property value. User who initiated the device action, format is UPN.
@@ -141,6 +143,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +162,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * @param value Value to set for the action property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAction(@javax.annotation.Nullable final RemoteAction value) {
         this._action = value;
     }
@@ -167,6 +171,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * @param value Value to set for the actionState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionState(@javax.annotation.Nullable final ActionState value) {
         this._actionState = value;
     }
@@ -175,6 +180,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * @param value Value to set for the deviceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
         this._deviceDisplayName = value;
     }
@@ -183,6 +189,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * @param value Value to set for the deviceIMEI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceIMEI(@javax.annotation.Nullable final String value) {
         this._deviceIMEI = value;
     }
@@ -191,6 +198,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * @param value Value to set for the deviceOwnerUserPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceOwnerUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._deviceOwnerUserPrincipalName = value;
     }
@@ -199,6 +207,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * @param value Value to set for the initiatedByUserPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatedByUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._initiatedByUserPrincipalName = value;
     }
@@ -207,6 +216,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
     }
@@ -215,6 +225,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * @param value Value to set for the requestDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._requestDateTime = value;
     }
@@ -223,6 +234,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
         this._userName = value;
     }

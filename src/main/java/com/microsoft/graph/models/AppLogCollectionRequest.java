@@ -22,6 +22,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
      * Instantiates a new appLogCollectionRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppLogCollectionRequest() {
         super();
         this.setOdataType("#microsoft.graph.appLogCollectionRequest");
@@ -67,12 +68,12 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AppLogCollectionRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("customLogFolders", (n) -> { currentObject.setCustomLogFolders(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("errorMessage", (n) -> { currentObject.setErrorMessage(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AppLogUploadState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("customLogFolders", (n) -> { currentObject.setCustomLogFolders(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("errorMessage", (n) -> { currentObject.setErrorMessage(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AppLogUploadState.class)); });
+        return deserializerMap
     }
     /**
      * Gets the status property value. AppLogUploadStatus
@@ -87,6 +88,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -100,6 +102,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._completedDateTime = value;
     }
@@ -108,6 +111,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
      * @param value Value to set for the customLogFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomLogFolders(@javax.annotation.Nullable final java.util.List<String> value) {
         this._customLogFolders = value;
     }
@@ -116,6 +120,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
      * @param value Value to set for the errorMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorMessage(@javax.annotation.Nullable final String value) {
         this._errorMessage = value;
     }
@@ -124,6 +129,7 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final AppLogUploadState value) {
         this._status = value;
     }

@@ -16,6 +16,7 @@ public class StrongAuthenticationDetail extends Entity implements Parsable {
      * Instantiates a new StrongAuthenticationDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public StrongAuthenticationDetail() {
         super();
         this.setOdataType("#microsoft.graph.strongAuthenticationDetail");
@@ -45,10 +46,10 @@ public class StrongAuthenticationDetail extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final StrongAuthenticationDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("encryptedPinHashHistory", (n) -> { currentObject.setEncryptedPinHashHistory(n.getByteArrayValue()); });
-            this.put("proofupTime", (n) -> { currentObject.setProofupTime(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("encryptedPinHashHistory", (n) -> { currentObject.setEncryptedPinHashHistory(n.getByteArrayValue()); });
+        deserializerMap.put("proofupTime", (n) -> { currentObject.setProofupTime(n.getLongValue()); });
+        return deserializerMap
     }
     /**
      * Gets the proofupTime property value. The proofupTime property
@@ -63,6 +64,7 @@ public class StrongAuthenticationDetail extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class StrongAuthenticationDetail extends Entity implements Parsable {
      * @param value Value to set for the encryptedPinHashHistory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptedPinHashHistory(@javax.annotation.Nullable final byte[] value) {
         this._encryptedPinHashHistory = value;
     }
@@ -82,6 +85,7 @@ public class StrongAuthenticationDetail extends Entity implements Parsable {
      * @param value Value to set for the proofupTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProofupTime(@javax.annotation.Nullable final Long value) {
         this._proofupTime = value;
     }

@@ -22,6 +22,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
      * Instantiates a new WorkPosition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkPosition() {
         super();
         this.setOdataType("#microsoft.graph.workPosition");
@@ -67,13 +68,13 @@ public class WorkPosition extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final WorkPosition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("colleagues", (n) -> { currentObject.setColleagues(n.getCollectionOfObjectValues(RelatedPerson::createFromDiscriminatorValue)); });
-            this.put("detail", (n) -> { currentObject.setDetail(n.getObjectValue(PositionDetail::createFromDiscriminatorValue)); });
-            this.put("isCurrent", (n) -> { currentObject.setIsCurrent(n.getBooleanValue()); });
-            this.put("manager", (n) -> { currentObject.setManager(n.getObjectValue(RelatedPerson::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("colleagues", (n) -> { currentObject.setColleagues(n.getCollectionOfObjectValues(RelatedPerson::createFromDiscriminatorValue)); });
+        deserializerMap.put("detail", (n) -> { currentObject.setDetail(n.getObjectValue(PositionDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("isCurrent", (n) -> { currentObject.setIsCurrent(n.getBooleanValue()); });
+        deserializerMap.put("manager", (n) -> { currentObject.setManager(n.getObjectValue(RelatedPerson::createFromDiscriminatorValue)); });
+        return deserializerMap
     }
     /**
      * Gets the isCurrent property value. Denotes whether or not the position is current.
@@ -96,6 +97,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
         this._categories = value;
     }
@@ -118,6 +121,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
      * @param value Value to set for the colleagues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColleagues(@javax.annotation.Nullable final java.util.List<RelatedPerson> value) {
         this._colleagues = value;
     }
@@ -126,6 +130,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
      * @param value Value to set for the detail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetail(@javax.annotation.Nullable final PositionDetail value) {
         this._detail = value;
     }
@@ -134,6 +139,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
      * @param value Value to set for the isCurrent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCurrent(@javax.annotation.Nullable final Boolean value) {
         this._isCurrent = value;
     }
@@ -142,6 +148,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
      * @param value Value to set for the manager property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManager(@javax.annotation.Nullable final RelatedPerson value) {
         this._manager = value;
     }

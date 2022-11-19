@@ -19,6 +19,7 @@ public class PersonAnnualEvent extends ItemFacet implements Parsable {
      * Instantiates a new PersonAnnualEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PersonAnnualEvent() {
         super();
         this.setOdataType("#microsoft.graph.personAnnualEvent");
@@ -56,11 +57,11 @@ public class PersonAnnualEvent extends ItemFacet implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final PersonAnnualEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("date", (n) -> { currentObject.setDate(n.getLocalDateValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(PersonAnnualEventType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("date", (n) -> { currentObject.setDate(n.getLocalDateValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { currentObject.setType(n.getEnumValue(PersonAnnualEventType.class)); });
+        return deserializerMap
     }
     /**
      * Gets the type property value. The type property
@@ -75,6 +76,7 @@ public class PersonAnnualEvent extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +89,7 @@ public class PersonAnnualEvent extends ItemFacet implements Parsable {
      * @param value Value to set for the date property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDate(@javax.annotation.Nullable final LocalDate value) {
         this._date = value;
     }
@@ -95,6 +98,7 @@ public class PersonAnnualEvent extends ItemFacet implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -103,6 +107,7 @@ public class PersonAnnualEvent extends ItemFacet implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final PersonAnnualEventType value) {
         this._type = value;
     }

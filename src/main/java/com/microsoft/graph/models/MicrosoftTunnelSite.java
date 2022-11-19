@@ -8,26 +8,27 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity that represents a Microsoft Tunnel site */
 public class MicrosoftTunnelSite extends Entity implements Parsable {
-    /** The MicrosoftTunnelSite's description */
+    /** The site's description (optional) */
     private String _description;
-    /** The MicrosoftTunnelSite's display name */
+    /** The display name for the site. This property is required when a site is created. */
     private String _displayName;
     /** When set to true, certificate pinning will be enforced on connections between the Microsoft Tunnel server and Microsoft Tunnel clients. When set to false, certificate pinning will be disabled. */
     private Boolean _enableCertificatePinning;
-    /** The MicrosoftTunnelSite's Internal Network Access Probe URL */
+    /** The site's Internal Network Access Probe URL */
     private String _internalNetworkProbeUrl;
     /** The MicrosoftTunnelConfiguration that has been applied to this MicrosoftTunnelSite */
     private MicrosoftTunnelConfiguration _microsoftTunnelConfiguration;
     /** A list of MicrosoftTunnelServers that are registered to this MicrosoftTunnelSite */
     private java.util.List<MicrosoftTunnelServer> _microsoftTunnelServers;
-    /** The MicrosoftTunnelSite's public domain name or IP address */
+    /** The site's public domain name or IP address */
     private String _publicAddress;
-    /** List of Scope Tags for this Entity instance. */
+    /** List of Scope Tags for this Entity instance */
     private java.util.List<String> _roleScopeTagIds;
     /** The site's automatic upgrade setting. True for automatic upgrades, false for manual control */
     private Boolean _upgradeAutomatically;
-    /** True if an upgrade is available */
+    /** The site provides the state of when an upgrade is available */
     private Boolean _upgradeAvailable;
     /** The site's upgrade window end time of day */
     private LocalTime _upgradeWindowEndTime;
@@ -36,9 +37,10 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     /** The site's timezone represented as a minute offset from UTC */
     private Integer _upgradeWindowUtcOffsetInMinutes;
     /**
-     * Instantiates a new MicrosoftTunnelSite and sets the default values.
+     * Instantiates a new microsoftTunnelSite and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MicrosoftTunnelSite() {
         super();
         this.setOdataType("#microsoft.graph.microsoftTunnelSite");
@@ -46,7 +48,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MicrosoftTunnelSite
+     * @return a microsoftTunnelSite
      */
     @javax.annotation.Nonnull
     public static MicrosoftTunnelSite createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -54,7 +56,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         return new MicrosoftTunnelSite();
     }
     /**
-     * Gets the description property value. The MicrosoftTunnelSite's description
+     * Gets the description property value. The site's description (optional)
      * @return a string
      */
     @javax.annotation.Nullable
@@ -62,7 +64,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         return this._description;
     }
     /**
-     * Gets the displayName property value. The MicrosoftTunnelSite's display name
+     * Gets the displayName property value. The display name for the site. This property is required when a site is created.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -84,24 +86,24 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final MicrosoftTunnelSite currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("enableCertificatePinning", (n) -> { currentObject.setEnableCertificatePinning(n.getBooleanValue()); });
-            this.put("internalNetworkProbeUrl", (n) -> { currentObject.setInternalNetworkProbeUrl(n.getStringValue()); });
-            this.put("microsoftTunnelConfiguration", (n) -> { currentObject.setMicrosoftTunnelConfiguration(n.getObjectValue(MicrosoftTunnelConfiguration::createFromDiscriminatorValue)); });
-            this.put("microsoftTunnelServers", (n) -> { currentObject.setMicrosoftTunnelServers(n.getCollectionOfObjectValues(MicrosoftTunnelServer::createFromDiscriminatorValue)); });
-            this.put("publicAddress", (n) -> { currentObject.setPublicAddress(n.getStringValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("upgradeAutomatically", (n) -> { currentObject.setUpgradeAutomatically(n.getBooleanValue()); });
-            this.put("upgradeAvailable", (n) -> { currentObject.setUpgradeAvailable(n.getBooleanValue()); });
-            this.put("upgradeWindowEndTime", (n) -> { currentObject.setUpgradeWindowEndTime(n.getLocalTimeValue()); });
-            this.put("upgradeWindowStartTime", (n) -> { currentObject.setUpgradeWindowStartTime(n.getLocalTimeValue()); });
-            this.put("upgradeWindowUtcOffsetInMinutes", (n) -> { currentObject.setUpgradeWindowUtcOffsetInMinutes(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enableCertificatePinning", (n) -> { currentObject.setEnableCertificatePinning(n.getBooleanValue()); });
+        deserializerMap.put("internalNetworkProbeUrl", (n) -> { currentObject.setInternalNetworkProbeUrl(n.getStringValue()); });
+        deserializerMap.put("microsoftTunnelConfiguration", (n) -> { currentObject.setMicrosoftTunnelConfiguration(n.getObjectValue(MicrosoftTunnelConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("microsoftTunnelServers", (n) -> { currentObject.setMicrosoftTunnelServers(n.getCollectionOfObjectValues(MicrosoftTunnelServer::createFromDiscriminatorValue)); });
+        deserializerMap.put("publicAddress", (n) -> { currentObject.setPublicAddress(n.getStringValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("upgradeAutomatically", (n) -> { currentObject.setUpgradeAutomatically(n.getBooleanValue()); });
+        deserializerMap.put("upgradeAvailable", (n) -> { currentObject.setUpgradeAvailable(n.getBooleanValue()); });
+        deserializerMap.put("upgradeWindowEndTime", (n) -> { currentObject.setUpgradeWindowEndTime(n.getLocalTimeValue()); });
+        deserializerMap.put("upgradeWindowStartTime", (n) -> { currentObject.setUpgradeWindowStartTime(n.getLocalTimeValue()); });
+        deserializerMap.put("upgradeWindowUtcOffsetInMinutes", (n) -> { currentObject.setUpgradeWindowUtcOffsetInMinutes(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
-     * Gets the internalNetworkProbeUrl property value. The MicrosoftTunnelSite's Internal Network Access Probe URL
+     * Gets the internalNetworkProbeUrl property value. The site's Internal Network Access Probe URL
      * @return a string
      */
     @javax.annotation.Nullable
@@ -125,7 +127,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         return this._microsoftTunnelServers;
     }
     /**
-     * Gets the publicAddress property value. The MicrosoftTunnelSite's public domain name or IP address
+     * Gets the publicAddress property value. The site's public domain name or IP address
      * @return a string
      */
     @javax.annotation.Nullable
@@ -133,7 +135,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         return this._publicAddress;
     }
     /**
-     * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
+     * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance
      * @return a string
      */
     @javax.annotation.Nullable
@@ -149,7 +151,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         return this._upgradeAutomatically;
     }
     /**
-     * Gets the upgradeAvailable property value. True if an upgrade is available
+     * Gets the upgradeAvailable property value. The site provides the state of when an upgrade is available
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -185,6 +187,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -203,18 +206,20 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         writer.writeIntegerValue("upgradeWindowUtcOffsetInMinutes", this.getUpgradeWindowUtcOffsetInMinutes());
     }
     /**
-     * Sets the description property value. The MicrosoftTunnelSite's description
+     * Sets the description property value. The site's description (optional)
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
     /**
-     * Sets the displayName property value. The MicrosoftTunnelSite's display name
+     * Sets the displayName property value. The display name for the site. This property is required when a site is created.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -223,14 +228,16 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the enableCertificatePinning property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableCertificatePinning(@javax.annotation.Nullable final Boolean value) {
         this._enableCertificatePinning = value;
     }
     /**
-     * Sets the internalNetworkProbeUrl property value. The MicrosoftTunnelSite's Internal Network Access Probe URL
+     * Sets the internalNetworkProbeUrl property value. The site's Internal Network Access Probe URL
      * @param value Value to set for the internalNetworkProbeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInternalNetworkProbeUrl(@javax.annotation.Nullable final String value) {
         this._internalNetworkProbeUrl = value;
     }
@@ -239,6 +246,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the microsoftTunnelConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftTunnelConfiguration(@javax.annotation.Nullable final MicrosoftTunnelConfiguration value) {
         this._microsoftTunnelConfiguration = value;
     }
@@ -247,22 +255,25 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the microsoftTunnelServers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftTunnelServers(@javax.annotation.Nullable final java.util.List<MicrosoftTunnelServer> value) {
         this._microsoftTunnelServers = value;
     }
     /**
-     * Sets the publicAddress property value. The MicrosoftTunnelSite's public domain name or IP address
+     * Sets the publicAddress property value. The site's public domain name or IP address
      * @param value Value to set for the publicAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublicAddress(@javax.annotation.Nullable final String value) {
         this._publicAddress = value;
     }
     /**
-     * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
+     * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -271,14 +282,16 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the upgradeAutomatically property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpgradeAutomatically(@javax.annotation.Nullable final Boolean value) {
         this._upgradeAutomatically = value;
     }
     /**
-     * Sets the upgradeAvailable property value. True if an upgrade is available
+     * Sets the upgradeAvailable property value. The site provides the state of when an upgrade is available
      * @param value Value to set for the upgradeAvailable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpgradeAvailable(@javax.annotation.Nullable final Boolean value) {
         this._upgradeAvailable = value;
     }
@@ -287,6 +300,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the upgradeWindowEndTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpgradeWindowEndTime(@javax.annotation.Nullable final LocalTime value) {
         this._upgradeWindowEndTime = value;
     }
@@ -295,6 +309,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the upgradeWindowStartTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpgradeWindowStartTime(@javax.annotation.Nullable final LocalTime value) {
         this._upgradeWindowStartTime = value;
     }
@@ -303,6 +318,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
      * @param value Value to set for the upgradeWindowUtcOffsetInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpgradeWindowUtcOffsetInMinutes(@javax.annotation.Nullable final Integer value) {
         this._upgradeWindowUtcOffsetInMinutes = value;
     }

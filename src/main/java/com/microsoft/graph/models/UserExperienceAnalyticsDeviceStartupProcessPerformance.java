@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics device startup process performance. */
 public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Entity implements Parsable {
     /** User experience analytics device startup process summarized count. */
     private Long _deviceCount;
@@ -25,9 +26,10 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     /** User experience analytics device startup process total impact in milliseconds. */
     private Long _totalImpactInMs2;
     /**
-     * Instantiates a new UserExperienceAnalyticsDeviceStartupProcessPerformance and sets the default values.
+     * Instantiates a new userExperienceAnalyticsDeviceStartupProcessPerformance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsDeviceStartupProcessPerformance() {
         super();
         this.setOdataType("#microsoft.graph.userExperienceAnalyticsDeviceStartupProcessPerformance");
@@ -35,7 +37,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsDeviceStartupProcessPerformance
+     * @return a userExperienceAnalyticsDeviceStartupProcessPerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceStartupProcessPerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -57,16 +59,16 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final UserExperienceAnalyticsDeviceStartupProcessPerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getLongValue()); });
-            this.put("medianImpactInMs", (n) -> { currentObject.setMedianImpactInMs(n.getIntegerValue()); });
-            this.put("medianImpactInMs2", (n) -> { currentObject.setMedianImpactInMs2(n.getLongValue()); });
-            this.put("processName", (n) -> { currentObject.setProcessName(n.getStringValue()); });
-            this.put("productName", (n) -> { currentObject.setProductName(n.getStringValue()); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
-            this.put("totalImpactInMs", (n) -> { currentObject.setTotalImpactInMs(n.getIntegerValue()); });
-            this.put("totalImpactInMs2", (n) -> { currentObject.setTotalImpactInMs2(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getLongValue()); });
+        deserializerMap.put("medianImpactInMs", (n) -> { currentObject.setMedianImpactInMs(n.getIntegerValue()); });
+        deserializerMap.put("medianImpactInMs2", (n) -> { currentObject.setMedianImpactInMs2(n.getLongValue()); });
+        deserializerMap.put("processName", (n) -> { currentObject.setProcessName(n.getStringValue()); });
+        deserializerMap.put("productName", (n) -> { currentObject.setProductName(n.getStringValue()); });
+        deserializerMap.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
+        deserializerMap.put("totalImpactInMs", (n) -> { currentObject.setTotalImpactInMs(n.getIntegerValue()); });
+        deserializerMap.put("totalImpactInMs2", (n) -> { currentObject.setTotalImpactInMs2(n.getLongValue()); });
+        return deserializerMap
     }
     /**
      * Gets the medianImpactInMs property value. User experience analytics device startup process median impact in milliseconds.
@@ -129,6 +131,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +149,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      * @param value Value to set for the deviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCount(@javax.annotation.Nullable final Long value) {
         this._deviceCount = value;
     }
@@ -154,6 +158,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      * @param value Value to set for the medianImpactInMs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMedianImpactInMs(@javax.annotation.Nullable final Integer value) {
         this._medianImpactInMs = value;
     }
@@ -162,6 +167,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      * @param value Value to set for the medianImpactInMs2 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMedianImpactInMs2(@javax.annotation.Nullable final Long value) {
         this._medianImpactInMs2 = value;
     }
@@ -170,6 +176,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      * @param value Value to set for the processName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessName(@javax.annotation.Nullable final String value) {
         this._processName = value;
     }
@@ -178,6 +185,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      * @param value Value to set for the productName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductName(@javax.annotation.Nullable final String value) {
         this._productName = value;
     }
@@ -186,6 +194,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
         this._publisher = value;
     }
@@ -194,6 +203,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      * @param value Value to set for the totalImpactInMs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalImpactInMs(@javax.annotation.Nullable final Integer value) {
         this._totalImpactInMs = value;
     }
@@ -202,6 +212,7 @@ public class UserExperienceAnalyticsDeviceStartupProcessPerformance extends Enti
      * @param value Value to set for the totalImpactInMs2 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalImpactInMs2(@javax.annotation.Nullable final Long value) {
         this._totalImpactInMs2 = value;
     }

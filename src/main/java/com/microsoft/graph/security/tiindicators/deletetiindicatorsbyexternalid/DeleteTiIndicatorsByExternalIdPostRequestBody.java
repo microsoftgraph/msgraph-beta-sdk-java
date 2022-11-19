@@ -18,6 +18,7 @@ public class DeleteTiIndicatorsByExternalIdPostRequestBody implements Additional
      * Instantiates a new deleteTiIndicatorsByExternalIdPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeleteTiIndicatorsByExternalIdPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,9 +47,9 @@ public class DeleteTiIndicatorsByExternalIdPostRequestBody implements Additional
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeleteTiIndicatorsByExternalIdPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("value", (n) -> { currentObject.setValue(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the value property value. The value property
@@ -63,6 +64,7 @@ public class DeleteTiIndicatorsByExternalIdPostRequestBody implements Additional
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("value", this.getValue());
@@ -73,6 +75,7 @@ public class DeleteTiIndicatorsByExternalIdPostRequestBody implements Additional
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +84,7 @@ public class DeleteTiIndicatorsByExternalIdPostRequestBody implements Additional
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final java.util.List<String> value) {
         this._value = value;
     }

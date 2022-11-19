@@ -29,6 +29,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
      * Instantiates a new IosVpnConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosVpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosVpnConfiguration");
@@ -81,16 +82,16 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final IosVpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("cloudName", (n) -> { currentObject.setCloudName(n.getStringValue()); });
-            this.put("derivedCredentialSettings", (n) -> { currentObject.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
-            this.put("excludeList", (n) -> { currentObject.setExcludeList(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("identityCertificate", (n) -> { currentObject.setIdentityCertificate(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
-            this.put("microsoftTunnelSiteId", (n) -> { currentObject.setMicrosoftTunnelSiteId(n.getStringValue()); });
-            this.put("strictEnforcement", (n) -> { currentObject.setStrictEnforcement(n.getBooleanValue()); });
-            this.put("targetedMobileApps", (n) -> { currentObject.setTargetedMobileApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("userDomain", (n) -> { currentObject.setUserDomain(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("cloudName", (n) -> { currentObject.setCloudName(n.getStringValue()); });
+        deserializerMap.put("derivedCredentialSettings", (n) -> { currentObject.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("excludeList", (n) -> { currentObject.setExcludeList(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("identityCertificate", (n) -> { currentObject.setIdentityCertificate(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("microsoftTunnelSiteId", (n) -> { currentObject.setMicrosoftTunnelSiteId(n.getStringValue()); });
+        deserializerMap.put("strictEnforcement", (n) -> { currentObject.setStrictEnforcement(n.getBooleanValue()); });
+        deserializerMap.put("targetedMobileApps", (n) -> { currentObject.setTargetedMobileApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("userDomain", (n) -> { currentObject.setUserDomain(n.getStringValue()); });
+        return deserializerMap
     }
     /**
      * Gets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
@@ -137,6 +138,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -154,6 +156,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
      * @param value Value to set for the cloudName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudName(@javax.annotation.Nullable final String value) {
         this._cloudName = value;
     }
@@ -162,6 +165,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
      * @param value Value to set for the derivedCredentialSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDerivedCredentialSettings(@javax.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
         this._derivedCredentialSettings = value;
     }
@@ -170,6 +174,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
      * @param value Value to set for the excludeList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludeList(@javax.annotation.Nullable final java.util.List<String> value) {
         this._excludeList = value;
     }
@@ -178,6 +183,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
      * @param value Value to set for the identityCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificate(@javax.annotation.Nullable final IosCertificateProfileBase value) {
         this._identityCertificate = value;
     }
@@ -186,6 +192,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
      * @param value Value to set for the microsoftTunnelSiteId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftTunnelSiteId(@javax.annotation.Nullable final String value) {
         this._microsoftTunnelSiteId = value;
     }
@@ -194,6 +201,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
      * @param value Value to set for the strictEnforcement property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStrictEnforcement(@javax.annotation.Nullable final Boolean value) {
         this._strictEnforcement = value;
     }
@@ -202,6 +210,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
      * @param value Value to set for the targetedMobileApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedMobileApps(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._targetedMobileApps = value;
     }
@@ -210,6 +219,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
      * @param value Value to set for the userDomain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDomain(@javax.annotation.Nullable final String value) {
         this._userDomain = value;
     }

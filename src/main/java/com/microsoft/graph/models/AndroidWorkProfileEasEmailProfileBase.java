@@ -28,6 +28,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * Instantiates a new AndroidWorkProfileEasEmailProfileBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidWorkProfileEasEmailProfileBase() {
         super();
         this.setOdataType("#microsoft.graph.androidWorkProfileEasEmailProfileBase");
@@ -81,15 +82,15 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final AndroidWorkProfileEasEmailProfileBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(EasAuthenticationMethod.class)); });
-            this.put("durationOfEmailToSync", (n) -> { currentObject.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration.class)); });
-            this.put("emailAddressSource", (n) -> { currentObject.setEmailAddressSource(n.getEnumValue(UserEmailSource.class)); });
-            this.put("hostName", (n) -> { currentObject.setHostName(n.getStringValue()); });
-            this.put("identityCertificate", (n) -> { currentObject.setIdentityCertificate(n.getObjectValue(AndroidWorkProfileCertificateProfileBase::createFromDiscriminatorValue)); });
-            this.put("requireSsl", (n) -> { currentObject.setRequireSsl(n.getBooleanValue()); });
-            this.put("usernameSource", (n) -> { currentObject.setUsernameSource(n.getEnumValue(AndroidUsernameSource.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(EasAuthenticationMethod.class)); });
+        deserializerMap.put("durationOfEmailToSync", (n) -> { currentObject.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration.class)); });
+        deserializerMap.put("emailAddressSource", (n) -> { currentObject.setEmailAddressSource(n.getEnumValue(UserEmailSource.class)); });
+        deserializerMap.put("hostName", (n) -> { currentObject.setHostName(n.getStringValue()); });
+        deserializerMap.put("identityCertificate", (n) -> { currentObject.setIdentityCertificate(n.getObjectValue(AndroidWorkProfileCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("requireSsl", (n) -> { currentObject.setRequireSsl(n.getBooleanValue()); });
+        deserializerMap.put("usernameSource", (n) -> { currentObject.setUsernameSource(n.getEnumValue(AndroidUsernameSource.class)); });
+        return deserializerMap
     }
     /**
      * Gets the hostName property value. Exchange location (URL) that the mail app connects to.
@@ -128,6 +129,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -144,6 +146,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final EasAuthenticationMethod value) {
         this._authenticationMethod = value;
     }
@@ -152,6 +155,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * @param value Value to set for the durationOfEmailToSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationOfEmailToSync(@javax.annotation.Nullable final EmailSyncDuration value) {
         this._durationOfEmailToSync = value;
     }
@@ -160,6 +164,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * @param value Value to set for the emailAddressSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddressSource(@javax.annotation.Nullable final UserEmailSource value) {
         this._emailAddressSource = value;
     }
@@ -168,6 +173,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * @param value Value to set for the hostName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHostName(@javax.annotation.Nullable final String value) {
         this._hostName = value;
     }
@@ -176,6 +182,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * @param value Value to set for the identityCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificate(@javax.annotation.Nullable final AndroidWorkProfileCertificateProfileBase value) {
         this._identityCertificate = value;
     }
@@ -184,6 +191,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * @param value Value to set for the requireSsl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireSsl(@javax.annotation.Nullable final Boolean value) {
         this._requireSsl = value;
     }
@@ -192,6 +200,7 @@ public class AndroidWorkProfileEasEmailProfileBase extends DeviceConfiguration i
      * @param value Value to set for the usernameSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsernameSource(@javax.annotation.Nullable final AndroidUsernameSource value) {
         this._usernameSource = value;
     }

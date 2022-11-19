@@ -22,6 +22,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * Instantiates a new deviceManagementIntentUserStateSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementIntentUserStateSummary() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementIntentUserStateSummary");
@@ -67,13 +68,13 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementIntentUserStateSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("conflictCount", (n) -> { currentObject.setConflictCount(n.getIntegerValue()); });
-            this.put("errorCount", (n) -> { currentObject.setErrorCount(n.getIntegerValue()); });
-            this.put("failedCount", (n) -> { currentObject.setFailedCount(n.getIntegerValue()); });
-            this.put("notApplicableCount", (n) -> { currentObject.setNotApplicableCount(n.getIntegerValue()); });
-            this.put("successCount", (n) -> { currentObject.setSuccessCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("conflictCount", (n) -> { currentObject.setConflictCount(n.getIntegerValue()); });
+        deserializerMap.put("errorCount", (n) -> { currentObject.setErrorCount(n.getIntegerValue()); });
+        deserializerMap.put("failedCount", (n) -> { currentObject.setFailedCount(n.getIntegerValue()); });
+        deserializerMap.put("notApplicableCount", (n) -> { currentObject.setNotApplicableCount(n.getIntegerValue()); });
+        deserializerMap.put("successCount", (n) -> { currentObject.setSuccessCount(n.getIntegerValue()); });
+        return deserializerMap
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable users
@@ -96,6 +97,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +112,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * @param value Value to set for the conflictCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConflictCount(@javax.annotation.Nullable final Integer value) {
         this._conflictCount = value;
     }
@@ -118,6 +121,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * @param value Value to set for the errorCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCount(@javax.annotation.Nullable final Integer value) {
         this._errorCount = value;
     }
@@ -126,6 +130,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * @param value Value to set for the failedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedCount(@javax.annotation.Nullable final Integer value) {
         this._failedCount = value;
     }
@@ -134,6 +139,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * @param value Value to set for the notApplicableCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotApplicableCount(@javax.annotation.Nullable final Integer value) {
         this._notApplicableCount = value;
     }
@@ -142,6 +148,7 @@ public class DeviceManagementIntentUserStateSummary extends Entity implements Pa
      * @param value Value to set for the successCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessCount(@javax.annotation.Nullable final Integer value) {
         this._successCount = value;
     }

@@ -16,6 +16,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      * Instantiates a new DeviceManagementSettingProfileConstraint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingProfileConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingProfileConstraint");
@@ -37,10 +38,10 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
         final DeviceManagementSettingProfileConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("source", (n) -> { currentObject.setSource(n.getStringValue()); });
-            this.put("types", (n) -> { currentObject.setTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("source", (n) -> { currentObject.setSource(n.getStringValue()); });
+        deserializerMap.put("types", (n) -> { currentObject.setTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap
     }
     /**
      * Gets the source property value. The source of the entity
@@ -63,6 +64,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +76,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final String value) {
         this._source = value;
     }
@@ -82,6 +85,7 @@ public class DeviceManagementSettingProfileConstraint extends DeviceManagementCo
      * @param value Value to set for the types property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._types = value;
     }
