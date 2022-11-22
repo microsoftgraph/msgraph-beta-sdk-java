@@ -16,7 +16,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
     /** A human-readable description of the print job's current processing state. Read-only. */
     private String _description;
     /** Additional details for print job state. Valid values are described in the following table. Read-only. */
-    private java.util.List<String> _details;
+    private java.util.List<PrintJobStateDetail> _details;
     /** True if the job was acknowledged by a printer; false otherwise. Read-only. */
     private Boolean _isAcquiredByPrinter;
     /** The OdataType property */
@@ -31,9 +31,9 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * Instantiates a new printJobStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrintJobStatus() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.printJobStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -71,10 +71,10 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the details property value. Additional details for print job state. Valid values are described in the following table. Read-only.
-     * @return a string
+     * @return a printJobStateDetail
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getDetails() {
+    public java.util.List<PrintJobStateDetail> getDetails() {
         return this._details;
     }
     /**
@@ -83,17 +83,16 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrintJobStatus currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("acquiredByPrinter", (n) -> { currentObject.setAcquiredByPrinter(n.getBooleanValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isAcquiredByPrinter", (n) -> { currentObject.setIsAcquiredByPrinter(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("processingState", (n) -> { currentObject.setProcessingState(n.getEnumValue(PrintJobProcessingState.class)); });
-            this.put("processingStateDescription", (n) -> { currentObject.setProcessingStateDescription(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(PrintJobProcessingState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("acquiredByPrinter", (n) -> { this.setAcquiredByPrinter(n.getBooleanValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("details", (n) -> { this.setDetails(n.getCollectionOfEnumValues(PrintJobStateDetail.class)); });
+        deserializerMap.put("isAcquiredByPrinter", (n) -> { this.setIsAcquiredByPrinter(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("processingState", (n) -> { this.setProcessingState(n.getEnumValue(PrintJobProcessingState.class)); });
+        deserializerMap.put("processingStateDescription", (n) -> { this.setProcessingStateDescription(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(PrintJobProcessingState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isAcquiredByPrinter property value. True if the job was acknowledged by a printer; false otherwise. Read-only.
@@ -140,11 +139,12 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("acquiredByPrinter", this.getAcquiredByPrinter());
         writer.writeStringValue("description", this.getDescription());
-        writer.writeCollectionOfPrimitiveValues("details", this.getDetails());
+        writer.writeCollectionOfEnumValues("details", this.getDetails());
         writer.writeBooleanValue("isAcquiredByPrinter", this.getIsAcquiredByPrinter());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("processingState", this.getProcessingState());
@@ -157,6 +157,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the acquiredByPrinter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcquiredByPrinter(@javax.annotation.Nullable final Boolean value) {
         this._acquiredByPrinter = value;
     }
@@ -165,6 +166,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -173,6 +175,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -181,7 +184,8 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the details property.
      * @return a void
      */
-    public void setDetails(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setDetails(@javax.annotation.Nullable final java.util.List<PrintJobStateDetail> value) {
         this._details = value;
     }
     /**
@@ -189,6 +193,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isAcquiredByPrinter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAcquiredByPrinter(@javax.annotation.Nullable final Boolean value) {
         this._isAcquiredByPrinter = value;
     }
@@ -197,6 +202,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -205,6 +211,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the processingState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessingState(@javax.annotation.Nullable final PrintJobProcessingState value) {
         this._processingState = value;
     }
@@ -213,6 +220,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the processingStateDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessingStateDescription(@javax.annotation.Nullable final String value) {
         this._processingStateDescription = value;
     }
@@ -221,6 +229,7 @@ public class PrintJobStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final PrintJobProcessingState value) {
         this._state = value;
     }

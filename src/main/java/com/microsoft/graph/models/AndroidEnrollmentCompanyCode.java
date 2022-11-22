@@ -24,9 +24,9 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * Instantiates a new androidEnrollmentCompanyCode and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidEnrollmentCompanyCode() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.androidEnrollmentCompanyCode");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,13 +60,12 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidEnrollmentCompanyCode currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("enrollmentToken", (n) -> { currentObject.setEnrollmentToken(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("qrCodeContent", (n) -> { currentObject.setQrCodeContent(n.getStringValue()); });
-            this.put("qrCodeImage", (n) -> { currentObject.setQrCodeImage(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("enrollmentToken", (n) -> { this.setEnrollmentToken(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("qrCodeContent", (n) -> { this.setQrCodeContent(n.getStringValue()); });
+        deserializerMap.put("qrCodeImage", (n) -> { this.setQrCodeImage(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -97,6 +96,7 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("enrollmentToken", this.getEnrollmentToken());
@@ -110,6 +110,7 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +119,7 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * @param value Value to set for the enrollmentToken property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentToken(@javax.annotation.Nullable final String value) {
         this._enrollmentToken = value;
     }
@@ -126,6 +128,7 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -134,6 +137,7 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * @param value Value to set for the qrCodeContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQrCodeContent(@javax.annotation.Nullable final String value) {
         this._qrCodeContent = value;
     }
@@ -142,6 +146,7 @@ public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, Parsa
      * @param value Value to set for the qrCodeImage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQrCodeImage(@javax.annotation.Nullable final MimeContent value) {
         this._qrCodeImage = value;
     }

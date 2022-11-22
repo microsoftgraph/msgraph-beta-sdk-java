@@ -14,6 +14,7 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
      * Instantiates a new EducationAssignmentPointsGrade and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationAssignmentPointsGrade() {
         super();
         this.setOdataType("#microsoft.graph.educationAssignmentPointsGrade");
@@ -34,10 +35,9 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationAssignmentPointsGrade currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("points", (n) -> { currentObject.setPoints(n.getFloatValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("points", (n) -> { this.setPoints(n.getFloatValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the points property value. Number of points a teacher is giving this submission object.
@@ -52,6 +52,7 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
      * @param value Value to set for the points property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPoints(@javax.annotation.Nullable final Float value) {
         this._points = value;
     }

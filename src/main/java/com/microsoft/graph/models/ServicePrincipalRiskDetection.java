@@ -53,9 +53,9 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * Instantiates a new ServicePrincipalRiskDetection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServicePrincipalRiskDetection() {
         super();
-        this.setOdataType("#microsoft.graph.servicePrincipalRiskDetection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -129,29 +129,28 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ServicePrincipalRiskDetection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getEnumValue(ActivityType.class)); });
-            this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
-            this.put("additionalInfo", (n) -> { currentObject.setAdditionalInfo(n.getStringValue()); });
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
-            this.put("detectedDateTime", (n) -> { currentObject.setDetectedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("detectionTimingType", (n) -> { currentObject.setDetectionTimingType(n.getEnumValue(RiskDetectionTimingType.class)); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("keyIds", (n) -> { currentObject.setKeyIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
-            this.put("requestId", (n) -> { currentObject.setRequestId(n.getStringValue()); });
-            this.put("riskDetail", (n) -> { currentObject.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
-            this.put("riskEventType", (n) -> { currentObject.setRiskEventType(n.getStringValue()); });
-            this.put("riskLevel", (n) -> { currentObject.setRiskLevel(n.getEnumValue(RiskLevel.class)); });
-            this.put("riskState", (n) -> { currentObject.setRiskState(n.getEnumValue(RiskState.class)); });
-            this.put("servicePrincipalDisplayName", (n) -> { currentObject.setServicePrincipalDisplayName(n.getStringValue()); });
-            this.put("servicePrincipalId", (n) -> { currentObject.setServicePrincipalId(n.getStringValue()); });
-            this.put("source", (n) -> { currentObject.setSource(n.getStringValue()); });
-            this.put("tokenIssuerType", (n) -> { currentObject.setTokenIssuerType(n.getEnumValue(TokenIssuerType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getEnumValue(ActivityType.class)); });
+        deserializerMap.put("activityDateTime", (n) -> { this.setActivityDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("additionalInfo", (n) -> { this.setAdditionalInfo(n.getStringValue()); });
+        deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
+        deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
+        deserializerMap.put("detectedDateTime", (n) -> { this.setDetectedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("detectionTimingType", (n) -> { this.setDetectionTimingType(n.getEnumValue(RiskDetectionTimingType.class)); });
+        deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("keyIds", (n) -> { this.setKeyIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(SignInLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("requestId", (n) -> { this.setRequestId(n.getStringValue()); });
+        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
+        deserializerMap.put("riskEventType", (n) -> { this.setRiskEventType(n.getStringValue()); });
+        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskLevel.class)); });
+        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState.class)); });
+        deserializerMap.put("servicePrincipalDisplayName", (n) -> { this.setServicePrincipalDisplayName(n.getStringValue()); });
+        deserializerMap.put("servicePrincipalId", (n) -> { this.setServicePrincipalId(n.getStringValue()); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getStringValue()); });
+        deserializerMap.put("tokenIssuerType", (n) -> { this.setTokenIssuerType(n.getEnumValue(TokenIssuerType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the ipAddress property value. Provides the IP address of the client from where the risk occurred.
@@ -262,6 +261,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -291,6 +291,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the activity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final ActivityType value) {
         this._activity = value;
     }
@@ -299,6 +300,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the activityDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._activityDateTime = value;
     }
@@ -307,6 +309,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the additionalInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalInfo(@javax.annotation.Nullable final String value) {
         this._additionalInfo = value;
     }
@@ -315,6 +318,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }
@@ -323,6 +327,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the correlationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCorrelationId(@javax.annotation.Nullable final String value) {
         this._correlationId = value;
     }
@@ -331,6 +336,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the detectedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._detectedDateTime = value;
     }
@@ -339,6 +345,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the detectionTimingType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionTimingType(@javax.annotation.Nullable final RiskDetectionTimingType value) {
         this._detectionTimingType = value;
     }
@@ -347,6 +354,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
     }
@@ -355,6 +363,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the keyIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._keyIds = value;
     }
@@ -363,6 +372,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastUpdatedDateTime = value;
     }
@@ -371,6 +381,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final SignInLocation value) {
         this._location = value;
     }
@@ -379,6 +390,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the requestId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestId(@javax.annotation.Nullable final String value) {
         this._requestId = value;
     }
@@ -387,6 +399,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the riskDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskDetail(@javax.annotation.Nullable final RiskDetail value) {
         this._riskDetail = value;
     }
@@ -395,6 +408,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the riskEventType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskEventType(@javax.annotation.Nullable final String value) {
         this._riskEventType = value;
     }
@@ -403,6 +417,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the riskLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskLevel(@javax.annotation.Nullable final RiskLevel value) {
         this._riskLevel = value;
     }
@@ -411,6 +426,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the riskState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskState(@javax.annotation.Nullable final RiskState value) {
         this._riskState = value;
     }
@@ -419,6 +435,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the servicePrincipalDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalDisplayName(@javax.annotation.Nullable final String value) {
         this._servicePrincipalDisplayName = value;
     }
@@ -427,6 +444,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the servicePrincipalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalId(@javax.annotation.Nullable final String value) {
         this._servicePrincipalId = value;
     }
@@ -435,6 +453,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final String value) {
         this._source = value;
     }
@@ -443,6 +462,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
      * @param value Value to set for the tokenIssuerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenIssuerType(@javax.annotation.Nullable final TokenIssuerType value) {
         this._tokenIssuerType = value;
     }

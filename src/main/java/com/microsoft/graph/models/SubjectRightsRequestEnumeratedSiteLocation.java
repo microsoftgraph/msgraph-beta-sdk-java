@@ -14,6 +14,7 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
      * Instantiates a new SubjectRightsRequestEnumeratedSiteLocation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SubjectRightsRequestEnumeratedSiteLocation() {
         super();
         this.setOdataType("#microsoft.graph.subjectRightsRequestEnumeratedSiteLocation");
@@ -34,10 +35,9 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SubjectRightsRequestEnumeratedSiteLocation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("urls", (n) -> { currentObject.setUrls(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("urls", (n) -> { this.setUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the urls property value. Collection of site URLs that should be included. Includes the URL of each site, for example, https://www.contoso.com/site1.
@@ -52,6 +52,7 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class SubjectRightsRequestEnumeratedSiteLocation extends SubjectRightsReq
      * @param value Value to set for the urls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._urls = value;
     }

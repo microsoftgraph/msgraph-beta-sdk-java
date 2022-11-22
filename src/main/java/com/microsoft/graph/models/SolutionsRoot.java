@@ -11,15 +11,17 @@ import java.util.Objects;
 public class SolutionsRoot implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The businessScenarios property */
+    private java.util.List<BusinessScenario> _businessScenarios;
     /** The OdataType property */
     private String _odataType;
     /**
      * Instantiates a new SolutionsRoot and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SolutionsRoot() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.solutionsRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -40,15 +42,23 @@ public class SolutionsRoot implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
+     * Gets the businessScenarios property value. The businessScenarios property
+     * @return a businessScenario
+     */
+    @javax.annotation.Nullable
+    public java.util.List<BusinessScenario> getBusinessScenarios() {
+        return this._businessScenarios;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SolutionsRoot currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("businessScenarios", (n) -> { this.setBusinessScenarios(n.getCollectionOfObjectValues(BusinessScenario::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -63,8 +73,10 @@ public class SolutionsRoot implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeCollectionOfObjectValues("businessScenarios", this.getBusinessScenarios());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -73,14 +85,25 @@ public class SolutionsRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the businessScenarios property value. The businessScenarios property
+     * @param value Value to set for the businessScenarios property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setBusinessScenarios(@javax.annotation.Nullable final java.util.List<BusinessScenario> value) {
+        this._businessScenarios = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

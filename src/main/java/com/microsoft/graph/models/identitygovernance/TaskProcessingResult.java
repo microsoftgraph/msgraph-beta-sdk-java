@@ -10,17 +10,17 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class TaskProcessingResult extends Entity implements Parsable {
-    /** The completedDateTime property */
+    /** The date time when taskProcessingResult execution ended. Value is null if task execution is still in progress.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby. */
     private OffsetDateTime _completedDateTime;
-    /** The createdDateTime property */
+    /** The date time when the taskProcessingResult was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby. */
     private OffsetDateTime _createdDateTime;
-    /** The failureReason property */
+    /** Describes why the taskProcessingResult has failed. */
     private String _failureReason;
     /** The processingStatus property */
     private LifecycleWorkflowProcessingStatus _processingStatus;
-    /** The startedDateTime property */
+    /** The date time when taskProcessingResult execution started. Value is null if task execution has not yet started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby. */
     private OffsetDateTime _startedDateTime;
     /** The subject property */
     private User _subject;
@@ -30,9 +30,9 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * Instantiates a new taskProcessingResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TaskProcessingResult() {
         super();
-        this.setOdataType("#microsoft.graph.identityGovernance.taskProcessingResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +45,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
         return new TaskProcessingResult();
     }
     /**
-     * Gets the completedDateTime property value. The completedDateTime property
+     * Gets the completedDateTime property value. The date time when taskProcessingResult execution ended. Value is null if task execution is still in progress.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -53,7 +53,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
         return this._completedDateTime;
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date time when the taskProcessingResult was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -61,7 +61,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
         return this._createdDateTime;
     }
     /**
-     * Gets the failureReason property value. The failureReason property
+     * Gets the failureReason property value. Describes why the taskProcessingResult has failed.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -74,16 +74,15 @@ public class TaskProcessingResult extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TaskProcessingResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("failureReason", (n) -> { currentObject.setFailureReason(n.getStringValue()); });
-            this.put("processingStatus", (n) -> { currentObject.setProcessingStatus(n.getEnumValue(LifecycleWorkflowProcessingStatus.class)); });
-            this.put("startedDateTime", (n) -> { currentObject.setStartedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("task", (n) -> { currentObject.setTask(n.getObjectValue(Task::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("failureReason", (n) -> { this.setFailureReason(n.getStringValue()); });
+        deserializerMap.put("processingStatus", (n) -> { this.setProcessingStatus(n.getEnumValue(LifecycleWorkflowProcessingStatus.class)); });
+        deserializerMap.put("startedDateTime", (n) -> { this.setStartedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("subject", (n) -> { this.setSubject(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("task", (n) -> { this.setTask(n.getObjectValue(Task::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the processingStatus property value. The processingStatus property
@@ -94,7 +93,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
         return this._processingStatus;
     }
     /**
-     * Gets the startedDateTime property value. The startedDateTime property
+     * Gets the startedDateTime property value. The date time when taskProcessingResult execution started. Value is null if task execution has not yet started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -122,6 +121,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,26 +134,29 @@ public class TaskProcessingResult extends Entity implements Parsable {
         writer.writeObjectValue("task", this.getTask());
     }
     /**
-     * Sets the completedDateTime property value. The completedDateTime property
+     * Sets the completedDateTime property value. The date time when taskProcessingResult execution ended. Value is null if task execution is still in progress.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._completedDateTime = value;
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date time when the taskProcessingResult was created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
     /**
-     * Sets the failureReason property value. The failureReason property
+     * Sets the failureReason property value. Describes why the taskProcessingResult has failed.
      * @param value Value to set for the failureReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailureReason(@javax.annotation.Nullable final String value) {
         this._failureReason = value;
     }
@@ -162,14 +165,16 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the processingStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessingStatus(@javax.annotation.Nullable final LifecycleWorkflowProcessingStatus value) {
         this._processingStatus = value;
     }
     /**
-     * Sets the startedDateTime property value. The startedDateTime property
+     * Sets the startedDateTime property value. The date time when taskProcessingResult execution started. Value is null if task execution has not yet started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the startedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startedDateTime = value;
     }
@@ -178,6 +183,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final User value) {
         this._subject = value;
     }
@@ -186,6 +192,7 @@ public class TaskProcessingResult extends Entity implements Parsable {
      * @param value Value to set for the task property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTask(@javax.annotation.Nullable final Task value) {
         this._task = value;
     }

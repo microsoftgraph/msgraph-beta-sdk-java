@@ -18,6 +18,7 @@ public class UpdateGlobalScriptPostRequestBody implements AdditionalDataHolder, 
      * Instantiates a new updateGlobalScriptPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateGlobalScriptPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,10 +46,9 @@ public class UpdateGlobalScriptPostRequestBody implements AdditionalDataHolder, 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UpdateGlobalScriptPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the version property value. The version property
@@ -63,6 +63,7 @@ public class UpdateGlobalScriptPostRequestBody implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("version", this.getVersion());
@@ -73,6 +74,7 @@ public class UpdateGlobalScriptPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +83,7 @@ public class UpdateGlobalScriptPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class OutlookTaskGroup extends Entity implements Parsable {
     /** The version of the task group. */
     private String _changeKey;
@@ -23,9 +23,9 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * Instantiates a new outlookTaskGroup and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OutlookTaskGroup() {
         super();
-        this.setOdataType("#microsoft.graph.outlookTaskGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,14 +51,13 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OutlookTaskGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("changeKey", (n) -> { currentObject.setChangeKey(n.getStringValue()); });
-            this.put("groupKey", (n) -> { currentObject.setGroupKey(n.getStringValue()); });
-            this.put("isDefaultGroup", (n) -> { currentObject.setIsDefaultGroup(n.getBooleanValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("taskFolders", (n) -> { currentObject.setTaskFolders(n.getCollectionOfObjectValues(OutlookTaskFolder::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("changeKey", (n) -> { this.setChangeKey(n.getStringValue()); });
+        deserializerMap.put("groupKey", (n) -> { this.setGroupKey(n.getStringValue()); });
+        deserializerMap.put("isDefaultGroup", (n) -> { this.setIsDefaultGroup(n.getBooleanValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("taskFolders", (n) -> { this.setTaskFolders(n.getCollectionOfObjectValues(OutlookTaskFolder::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the groupKey property value. The unique GUID identifier for the task group.
@@ -97,6 +96,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +111,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * @param value Value to set for the changeKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChangeKey(@javax.annotation.Nullable final String value) {
         this._changeKey = value;
     }
@@ -119,6 +120,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * @param value Value to set for the groupKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupKey(@javax.annotation.Nullable final String value) {
         this._groupKey = value;
     }
@@ -127,6 +129,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * @param value Value to set for the isDefaultGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefaultGroup(@javax.annotation.Nullable final Boolean value) {
         this._isDefaultGroup = value;
     }
@@ -135,6 +138,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -143,6 +147,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * @param value Value to set for the taskFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaskFolders(@javax.annotation.Nullable final java.util.List<OutlookTaskFolder> value) {
         this._taskFolders = value;
     }

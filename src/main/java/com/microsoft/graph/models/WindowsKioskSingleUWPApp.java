@@ -14,6 +14,7 @@ public class WindowsKioskSingleUWPApp extends WindowsKioskAppConfiguration imple
      * Instantiates a new WindowsKioskSingleUWPApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsKioskSingleUWPApp() {
         super();
         this.setOdataType("#microsoft.graph.windowsKioskSingleUWPApp");
@@ -34,10 +35,9 @@ public class WindowsKioskSingleUWPApp extends WindowsKioskAppConfiguration imple
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsKioskSingleUWPApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("uwpApp", (n) -> { currentObject.setUwpApp(n.getObjectValue(WindowsKioskUWPApp::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("uwpApp", (n) -> { this.setUwpApp(n.getObjectValue(WindowsKioskUWPApp::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the uwpApp property value. The uwpApp property
@@ -52,6 +52,7 @@ public class WindowsKioskSingleUWPApp extends WindowsKioskAppConfiguration imple
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class WindowsKioskSingleUWPApp extends WindowsKioskAppConfiguration imple
      * @param value Value to set for the uwpApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUwpApp(@javax.annotation.Nullable final WindowsKioskUWPApp value) {
         this._uwpApp = value;
     }

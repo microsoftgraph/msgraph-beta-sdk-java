@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class OutlookTaskFolder extends Entity implements Parsable {
     /** The version of the task folder. */
     private String _changeKey;
@@ -27,9 +27,9 @@ public class OutlookTaskFolder extends Entity implements Parsable {
      * Instantiates a new outlookTaskFolder and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OutlookTaskFolder() {
         super();
-        this.setOdataType("#microsoft.graph.outlookTaskFolder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,16 +55,15 @@ public class OutlookTaskFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OutlookTaskFolder currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("changeKey", (n) -> { currentObject.setChangeKey(n.getStringValue()); });
-            this.put("isDefaultFolder", (n) -> { currentObject.setIsDefaultFolder(n.getBooleanValue()); });
-            this.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("parentGroupKey", (n) -> { currentObject.setParentGroupKey(n.getStringValue()); });
-            this.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(OutlookTask::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("changeKey", (n) -> { this.setChangeKey(n.getStringValue()); });
+        deserializerMap.put("isDefaultFolder", (n) -> { this.setIsDefaultFolder(n.getBooleanValue()); });
+        deserializerMap.put("multiValueExtendedProperties", (n) -> { this.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("parentGroupKey", (n) -> { this.setParentGroupKey(n.getStringValue()); });
+        deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(OutlookTask::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefaultFolder property value. True if the folder is the default task folder.
@@ -119,6 +118,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +135,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
      * @param value Value to set for the changeKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChangeKey(@javax.annotation.Nullable final String value) {
         this._changeKey = value;
     }
@@ -143,6 +144,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
      * @param value Value to set for the isDefaultFolder property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefaultFolder(@javax.annotation.Nullable final Boolean value) {
         this._isDefaultFolder = value;
     }
@@ -151,6 +153,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
      * @param value Value to set for the multiValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this._multiValueExtendedProperties = value;
     }
@@ -159,6 +162,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -167,6 +171,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
      * @param value Value to set for the parentGroupKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentGroupKey(@javax.annotation.Nullable final String value) {
         this._parentGroupKey = value;
     }
@@ -175,6 +180,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
      * @param value Value to set for the singleValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this._singleValueExtendedProperties = value;
     }
@@ -183,6 +189,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
      * @param value Value to set for the tasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTasks(@javax.annotation.Nullable final java.util.List<OutlookTask> value) {
         this._tasks = value;
     }

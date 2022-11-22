@@ -30,6 +30,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new exportPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExportPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -97,15 +98,14 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExportPostRequestBody currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("azureBlobContainer", (n) -> { currentObject.setAzureBlobContainer(n.getStringValue()); });
-            this.put("azureBlobToken", (n) -> { currentObject.setAzureBlobToken(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("exportOptions", (n) -> { currentObject.setExportOptions(n.getEnumValue(ExportOptions.class)); });
-            this.put("exportStructure", (n) -> { currentObject.setExportStructure(n.getEnumValue(ExportFileStructure.class)); });
-            this.put("outputName", (n) -> { currentObject.setOutputName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("azureBlobContainer", (n) -> { this.setAzureBlobContainer(n.getStringValue()); });
+        deserializerMap.put("azureBlobToken", (n) -> { this.setAzureBlobToken(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("exportOptions", (n) -> { this.setExportOptions(n.getEnumValue(ExportOptions.class)); });
+        deserializerMap.put("exportStructure", (n) -> { this.setExportStructure(n.getEnumValue(ExportFileStructure.class)); });
+        deserializerMap.put("outputName", (n) -> { this.setOutputName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the outputName property value. The outputName property
@@ -120,6 +120,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("azureBlobContainer", this.getAzureBlobContainer());
@@ -135,6 +136,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -143,6 +145,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the azureBlobContainer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureBlobContainer(@javax.annotation.Nullable final String value) {
         this._azureBlobContainer = value;
     }
@@ -151,6 +154,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the azureBlobToken property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureBlobToken(@javax.annotation.Nullable final String value) {
         this._azureBlobToken = value;
     }
@@ -159,6 +163,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -167,6 +172,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the exportOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExportOptions(@javax.annotation.Nullable final ExportOptions value) {
         this._exportOptions = value;
     }
@@ -175,6 +181,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the exportStructure property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExportStructure(@javax.annotation.Nullable final ExportFileStructure value) {
         this._exportStructure = value;
     }
@@ -183,6 +190,7 @@ public class ExportPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the outputName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutputName(@javax.annotation.Nullable final String value) {
         this._outputName = value;
     }

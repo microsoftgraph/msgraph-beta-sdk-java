@@ -21,9 +21,9 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
      * Instantiates a new deviceManagementConfigurationSettingOccurrence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingOccurrence() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSettingOccurrence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,12 +49,11 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationSettingOccurrence currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("maxDeviceOccurrence", (n) -> { currentObject.setMaxDeviceOccurrence(n.getIntegerValue()); });
-            this.put("minDeviceOccurrence", (n) -> { currentObject.setMinDeviceOccurrence(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("maxDeviceOccurrence", (n) -> { this.setMaxDeviceOccurrence(n.getIntegerValue()); });
+        deserializerMap.put("minDeviceOccurrence", (n) -> { this.setMinDeviceOccurrence(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the maxDeviceOccurrence property value. Maximum times setting can be set on device.
@@ -85,6 +84,7 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("maxDeviceOccurrence", this.getMaxDeviceOccurrence());
@@ -97,6 +97,7 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
      * @param value Value to set for the maxDeviceOccurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxDeviceOccurrence(@javax.annotation.Nullable final Integer value) {
         this._maxDeviceOccurrence = value;
     }
@@ -113,6 +115,7 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
      * @param value Value to set for the minDeviceOccurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinDeviceOccurrence(@javax.annotation.Nullable final Integer value) {
         this._minDeviceOccurrence = value;
     }
@@ -121,6 +124,7 @@ public class DeviceManagementConfigurationSettingOccurrence implements Additiona
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

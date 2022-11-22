@@ -25,9 +25,9 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      * Instantiates a new IdentityProtectionRoot and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IdentityProtectionRoot() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.identityProtectionRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,14 +53,13 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IdentityProtectionRoot currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("riskDetections", (n) -> { currentObject.setRiskDetections(n.getCollectionOfObjectValues(RiskDetection::createFromDiscriminatorValue)); });
-            this.put("riskyServicePrincipals", (n) -> { currentObject.setRiskyServicePrincipals(n.getCollectionOfObjectValues(RiskyServicePrincipal::createFromDiscriminatorValue)); });
-            this.put("riskyUsers", (n) -> { currentObject.setRiskyUsers(n.getCollectionOfObjectValues(RiskyUser::createFromDiscriminatorValue)); });
-            this.put("servicePrincipalRiskDetections", (n) -> { currentObject.setServicePrincipalRiskDetections(n.getCollectionOfObjectValues(ServicePrincipalRiskDetection::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("riskDetections", (n) -> { this.setRiskDetections(n.getCollectionOfObjectValues(RiskDetection::createFromDiscriminatorValue)); });
+        deserializerMap.put("riskyServicePrincipals", (n) -> { this.setRiskyServicePrincipals(n.getCollectionOfObjectValues(RiskyServicePrincipal::createFromDiscriminatorValue)); });
+        deserializerMap.put("riskyUsers", (n) -> { this.setRiskyUsers(n.getCollectionOfObjectValues(RiskyUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("servicePrincipalRiskDetections", (n) -> { this.setServicePrincipalRiskDetections(n.getCollectionOfObjectValues(ServicePrincipalRiskDetection::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,6 +106,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -121,6 +121,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +130,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -137,6 +139,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the riskDetections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskDetections(@javax.annotation.Nullable final java.util.List<RiskDetection> value) {
         this._riskDetections = value;
     }
@@ -145,6 +148,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the riskyServicePrincipals property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskyServicePrincipals(@javax.annotation.Nullable final java.util.List<RiskyServicePrincipal> value) {
         this._riskyServicePrincipals = value;
     }
@@ -153,6 +157,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the riskyUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskyUsers(@javax.annotation.Nullable final java.util.List<RiskyUser> value) {
         this._riskyUsers = value;
     }
@@ -161,6 +166,7 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the servicePrincipalRiskDetections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalRiskDetections(@javax.annotation.Nullable final java.util.List<ServicePrincipalRiskDetection> value) {
         this._servicePrincipalRiskDetections = value;
     }

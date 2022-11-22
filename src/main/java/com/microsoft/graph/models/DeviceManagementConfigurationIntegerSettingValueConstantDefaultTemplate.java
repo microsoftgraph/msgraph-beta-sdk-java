@@ -14,6 +14,7 @@ public class DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemp
      * Instantiates a new DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate");
@@ -42,16 +43,16 @@ public class DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemp
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("constantValue", (n) -> { currentObject.setConstantValue(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("constantValue", (n) -> { this.setConstantValue(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemp
      * @param value Value to set for the constantValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConstantValue(@javax.annotation.Nullable final Integer value) {
         this._constantValue = value;
     }

@@ -53,9 +53,9 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * Instantiates a new groupPolicySettingMapping and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicySettingMapping() {
         super();
-        this.setOdataType("#microsoft.graph.groupPolicySettingMapping");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -89,29 +89,28 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicySettingMapping currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("admxSettingDefinitionId", (n) -> { currentObject.setAdmxSettingDefinitionId(n.getStringValue()); });
-            this.put("childIdList", (n) -> { currentObject.setChildIdList(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("intuneSettingDefinitionId", (n) -> { currentObject.setIntuneSettingDefinitionId(n.getStringValue()); });
-            this.put("intuneSettingUriList", (n) -> { currentObject.setIntuneSettingUriList(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isMdmSupported", (n) -> { currentObject.setIsMdmSupported(n.getBooleanValue()); });
-            this.put("mdmCspName", (n) -> { currentObject.setMdmCspName(n.getStringValue()); });
-            this.put("mdmMinimumOSVersion", (n) -> { currentObject.setMdmMinimumOSVersion(n.getIntegerValue()); });
-            this.put("mdmSettingUri", (n) -> { currentObject.setMdmSettingUri(n.getStringValue()); });
-            this.put("mdmSupportedState", (n) -> { currentObject.setMdmSupportedState(n.getEnumValue(MdmSupportedState.class)); });
-            this.put("parentId", (n) -> { currentObject.setParentId(n.getStringValue()); });
-            this.put("settingCategory", (n) -> { currentObject.setSettingCategory(n.getStringValue()); });
-            this.put("settingDisplayName", (n) -> { currentObject.setSettingDisplayName(n.getStringValue()); });
-            this.put("settingDisplayValue", (n) -> { currentObject.setSettingDisplayValue(n.getStringValue()); });
-            this.put("settingDisplayValueType", (n) -> { currentObject.setSettingDisplayValueType(n.getStringValue()); });
-            this.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
-            this.put("settingScope", (n) -> { currentObject.setSettingScope(n.getEnumValue(GroupPolicySettingScope.class)); });
-            this.put("settingType", (n) -> { currentObject.setSettingType(n.getEnumValue(GroupPolicySettingType.class)); });
-            this.put("settingValue", (n) -> { currentObject.setSettingValue(n.getStringValue()); });
-            this.put("settingValueDisplayUnits", (n) -> { currentObject.setSettingValueDisplayUnits(n.getStringValue()); });
-            this.put("settingValueType", (n) -> { currentObject.setSettingValueType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("admxSettingDefinitionId", (n) -> { this.setAdmxSettingDefinitionId(n.getStringValue()); });
+        deserializerMap.put("childIdList", (n) -> { this.setChildIdList(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("intuneSettingDefinitionId", (n) -> { this.setIntuneSettingDefinitionId(n.getStringValue()); });
+        deserializerMap.put("intuneSettingUriList", (n) -> { this.setIntuneSettingUriList(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isMdmSupported", (n) -> { this.setIsMdmSupported(n.getBooleanValue()); });
+        deserializerMap.put("mdmCspName", (n) -> { this.setMdmCspName(n.getStringValue()); });
+        deserializerMap.put("mdmMinimumOSVersion", (n) -> { this.setMdmMinimumOSVersion(n.getIntegerValue()); });
+        deserializerMap.put("mdmSettingUri", (n) -> { this.setMdmSettingUri(n.getStringValue()); });
+        deserializerMap.put("mdmSupportedState", (n) -> { this.setMdmSupportedState(n.getEnumValue(MdmSupportedState.class)); });
+        deserializerMap.put("parentId", (n) -> { this.setParentId(n.getStringValue()); });
+        deserializerMap.put("settingCategory", (n) -> { this.setSettingCategory(n.getStringValue()); });
+        deserializerMap.put("settingDisplayName", (n) -> { this.setSettingDisplayName(n.getStringValue()); });
+        deserializerMap.put("settingDisplayValue", (n) -> { this.setSettingDisplayValue(n.getStringValue()); });
+        deserializerMap.put("settingDisplayValueType", (n) -> { this.setSettingDisplayValueType(n.getStringValue()); });
+        deserializerMap.put("settingName", (n) -> { this.setSettingName(n.getStringValue()); });
+        deserializerMap.put("settingScope", (n) -> { this.setSettingScope(n.getEnumValue(GroupPolicySettingScope.class)); });
+        deserializerMap.put("settingType", (n) -> { this.setSettingType(n.getEnumValue(GroupPolicySettingType.class)); });
+        deserializerMap.put("settingValue", (n) -> { this.setSettingValue(n.getStringValue()); });
+        deserializerMap.put("settingValueDisplayUnits", (n) -> { this.setSettingValueDisplayUnits(n.getStringValue()); });
+        deserializerMap.put("settingValueType", (n) -> { this.setSettingValueType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the intuneSettingDefinitionId property value. The Intune Setting Definition Id
@@ -262,6 +261,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -291,6 +291,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the admxSettingDefinitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdmxSettingDefinitionId(@javax.annotation.Nullable final String value) {
         this._admxSettingDefinitionId = value;
     }
@@ -299,6 +300,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the childIdList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildIdList(@javax.annotation.Nullable final java.util.List<String> value) {
         this._childIdList = value;
     }
@@ -307,6 +309,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the intuneSettingDefinitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntuneSettingDefinitionId(@javax.annotation.Nullable final String value) {
         this._intuneSettingDefinitionId = value;
     }
@@ -315,6 +318,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the intuneSettingUriList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntuneSettingUriList(@javax.annotation.Nullable final java.util.List<String> value) {
         this._intuneSettingUriList = value;
     }
@@ -323,6 +327,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the isMdmSupported property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMdmSupported(@javax.annotation.Nullable final Boolean value) {
         this._isMdmSupported = value;
     }
@@ -331,6 +336,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the mdmCspName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMdmCspName(@javax.annotation.Nullable final String value) {
         this._mdmCspName = value;
     }
@@ -339,6 +345,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the mdmMinimumOSVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMdmMinimumOSVersion(@javax.annotation.Nullable final Integer value) {
         this._mdmMinimumOSVersion = value;
     }
@@ -347,6 +354,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the mdmSettingUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMdmSettingUri(@javax.annotation.Nullable final String value) {
         this._mdmSettingUri = value;
     }
@@ -355,6 +363,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the mdmSupportedState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMdmSupportedState(@javax.annotation.Nullable final MdmSupportedState value) {
         this._mdmSupportedState = value;
     }
@@ -363,6 +372,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the parentId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentId(@javax.annotation.Nullable final String value) {
         this._parentId = value;
     }
@@ -371,6 +381,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the settingCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingCategory(@javax.annotation.Nullable final String value) {
         this._settingCategory = value;
     }
@@ -379,6 +390,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the settingDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingDisplayName(@javax.annotation.Nullable final String value) {
         this._settingDisplayName = value;
     }
@@ -387,6 +399,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the settingDisplayValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingDisplayValue(@javax.annotation.Nullable final String value) {
         this._settingDisplayValue = value;
     }
@@ -395,6 +408,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the settingDisplayValueType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingDisplayValueType(@javax.annotation.Nullable final String value) {
         this._settingDisplayValueType = value;
     }
@@ -403,6 +417,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the settingName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingName(@javax.annotation.Nullable final String value) {
         this._settingName = value;
     }
@@ -411,6 +426,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the settingScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingScope(@javax.annotation.Nullable final GroupPolicySettingScope value) {
         this._settingScope = value;
     }
@@ -419,6 +435,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the settingType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingType(@javax.annotation.Nullable final GroupPolicySettingType value) {
         this._settingType = value;
     }
@@ -427,6 +444,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the settingValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingValue(@javax.annotation.Nullable final String value) {
         this._settingValue = value;
     }
@@ -435,6 +453,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the settingValueDisplayUnits property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingValueDisplayUnits(@javax.annotation.Nullable final String value) {
         this._settingValueDisplayUnits = value;
     }
@@ -443,6 +462,7 @@ public class GroupPolicySettingMapping extends Entity implements Parsable {
      * @param value Value to set for the settingValueType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingValueType(@javax.annotation.Nullable final String value) {
         this._settingValueType = value;
     }

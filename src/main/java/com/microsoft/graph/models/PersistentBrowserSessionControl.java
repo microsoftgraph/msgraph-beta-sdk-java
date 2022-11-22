@@ -14,6 +14,7 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
      * Instantiates a new PersistentBrowserSessionControl and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PersistentBrowserSessionControl() {
         super();
         this.setOdataType("#microsoft.graph.persistentBrowserSessionControl");
@@ -34,10 +35,9 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PersistentBrowserSessionControl currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("mode", (n) -> { currentObject.setMode(n.getEnumValue(PersistentBrowserSessionMode.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("mode", (n) -> { this.setMode(n.getEnumValue(PersistentBrowserSessionMode.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the mode property value. Possible values are: always, never.
@@ -52,6 +52,7 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class PersistentBrowserSessionControl extends ConditionalAccessSessionCon
      * @param value Value to set for the mode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMode(@javax.annotation.Nullable final PersistentBrowserSessionMode value) {
         this._mode = value;
     }

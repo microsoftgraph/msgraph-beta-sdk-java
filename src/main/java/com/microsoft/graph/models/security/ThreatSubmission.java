@@ -42,9 +42,9 @@ public class ThreatSubmission extends Entity implements Parsable {
      * Instantiates a new threatSubmission and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ThreatSubmission() {
         super();
-        this.setOdataType("#microsoft.graph.security.threatSubmission");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -123,19 +123,18 @@ public class ThreatSubmission extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ThreatSubmission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("adminReview", (n) -> { currentObject.setAdminReview(n.getObjectValue(SubmissionAdminReview::createFromDiscriminatorValue)); });
-            this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(SubmissionCategory.class)); });
-            this.put("clientSource", (n) -> { currentObject.setClientSource(n.getEnumValue(SubmissionClientSource.class)); });
-            this.put("contentType", (n) -> { currentObject.setContentType(n.getEnumValue(SubmissionContentType.class)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(SubmissionUserIdentity::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("result", (n) -> { currentObject.setResult(n.getObjectValue(SubmissionResult::createFromDiscriminatorValue)); });
-            this.put("source", (n) -> { currentObject.setSource(n.getEnumValue(SubmissionSource.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(LongRunningOperationStatus.class)); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("adminReview", (n) -> { this.setAdminReview(n.getObjectValue(SubmissionAdminReview::createFromDiscriminatorValue)); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(SubmissionCategory.class)); });
+        deserializerMap.put("clientSource", (n) -> { this.setClientSource(n.getEnumValue(SubmissionClientSource.class)); });
+        deserializerMap.put("contentType", (n) -> { this.setContentType(n.getEnumValue(SubmissionContentType.class)); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(SubmissionUserIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("result", (n) -> { this.setResult(n.getObjectValue(SubmissionResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(SubmissionSource.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(LongRunningOperationStatus.class)); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the result property value. Specifies the result of the analysis performed by Microsoft.
@@ -174,6 +173,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -193,6 +193,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the adminReview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdminReview(@javax.annotation.Nullable final SubmissionAdminReview value) {
         this._adminReview = value;
     }
@@ -201,6 +202,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final SubmissionCategory value) {
         this._category = value;
     }
@@ -209,6 +211,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the clientSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientSource(@javax.annotation.Nullable final SubmissionClientSource value) {
         this._clientSource = value;
     }
@@ -217,6 +220,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the contentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentType(@javax.annotation.Nullable final SubmissionContentType value) {
         this._contentType = value;
     }
@@ -225,6 +229,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final SubmissionUserIdentity value) {
         this._createdBy = value;
     }
@@ -233,6 +238,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -241,6 +247,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the result property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResult(@javax.annotation.Nullable final SubmissionResult value) {
         this._result = value;
     }
@@ -249,6 +256,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final SubmissionSource value) {
         this._source = value;
     }
@@ -257,6 +265,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final LongRunningOperationStatus value) {
         this._status = value;
     }
@@ -265,6 +274,7 @@ public class ThreatSubmission extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }

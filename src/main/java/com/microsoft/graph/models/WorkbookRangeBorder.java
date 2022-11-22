@@ -21,9 +21,9 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      * Instantiates a new workbookRangeBorder and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookRangeBorder() {
         super();
-        this.setOdataType("#microsoft.graph.workbookRangeBorder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,13 +49,12 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookRangeBorder currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
-            this.put("sideIndex", (n) -> { currentObject.setSideIndex(n.getStringValue()); });
-            this.put("style", (n) -> { currentObject.setStyle(n.getStringValue()); });
-            this.put("weight", (n) -> { currentObject.setWeight(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
+        deserializerMap.put("sideIndex", (n) -> { this.setSideIndex(n.getStringValue()); });
+        deserializerMap.put("style", (n) -> { this.setStyle(n.getStringValue()); });
+        deserializerMap.put("weight", (n) -> { this.setWeight(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the sideIndex property value. Constant value that indicates the specific side of the border. Possible values are: EdgeTop, EdgeBottom, EdgeLeft, EdgeRight, InsideVertical, InsideHorizontal, DiagonalDown, DiagonalUp. Read-only.
@@ -86,6 +85,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +99,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      * @param value Value to set for the color property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColor(@javax.annotation.Nullable final String value) {
         this._color = value;
     }
@@ -107,6 +108,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      * @param value Value to set for the sideIndex property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSideIndex(@javax.annotation.Nullable final String value) {
         this._sideIndex = value;
     }
@@ -115,6 +117,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      * @param value Value to set for the style property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStyle(@javax.annotation.Nullable final String value) {
         this._style = value;
     }
@@ -123,6 +126,7 @@ public class WorkbookRangeBorder extends Entity implements Parsable {
      * @param value Value to set for the weight property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWeight(@javax.annotation.Nullable final String value) {
         this._weight = value;
     }

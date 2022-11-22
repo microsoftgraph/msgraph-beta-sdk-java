@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class SalesCreditMemo extends Entity implements Parsable {
     /** The billingPostalAddress property */
     private PostalAddressType _billingPostalAddress;
@@ -80,9 +80,9 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * Instantiates a new salesCreditMemo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SalesCreditMemo() {
         super();
-        this.setOdataType("#microsoft.graph.salesCreditMemo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -236,41 +236,40 @@ public class SalesCreditMemo extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SalesCreditMemo currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("billingPostalAddress", (n) -> { currentObject.setBillingPostalAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
-            this.put("billToCustomerId", (n) -> { currentObject.setBillToCustomerId(n.getStringValue()); });
-            this.put("billToCustomerNumber", (n) -> { currentObject.setBillToCustomerNumber(n.getStringValue()); });
-            this.put("billToName", (n) -> { currentObject.setBillToName(n.getStringValue()); });
-            this.put("creditMemoDate", (n) -> { currentObject.setCreditMemoDate(n.getLocalDateValue()); });
-            this.put("currency", (n) -> { currentObject.setCurrency(n.getObjectValue(Currency::createFromDiscriminatorValue)); });
-            this.put("currencyCode", (n) -> { currentObject.setCurrencyCode(n.getStringValue()); });
-            this.put("currencyId", (n) -> { currentObject.setCurrencyId(n.getStringValue()); });
-            this.put("customer", (n) -> { currentObject.setCustomer(n.getObjectValue(Customer::createFromDiscriminatorValue)); });
-            this.put("customerId", (n) -> { currentObject.setCustomerId(n.getStringValue()); });
-            this.put("customerName", (n) -> { currentObject.setCustomerName(n.getStringValue()); });
-            this.put("customerNumber", (n) -> { currentObject.setCustomerNumber(n.getStringValue()); });
-            this.put("discountAmount", (n) -> { currentObject.setDiscountAmount(n.getBigDecimalValue()); });
-            this.put("discountAppliedBeforeTax", (n) -> { currentObject.setDiscountAppliedBeforeTax(n.getBooleanValue()); });
-            this.put("dueDate", (n) -> { currentObject.setDueDate(n.getLocalDateValue()); });
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("externalDocumentNumber", (n) -> { currentObject.setExternalDocumentNumber(n.getStringValue()); });
-            this.put("invoiceId", (n) -> { currentObject.setInvoiceId(n.getStringValue()); });
-            this.put("invoiceNumber", (n) -> { currentObject.setInvoiceNumber(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
-            this.put("paymentTerm", (n) -> { currentObject.setPaymentTerm(n.getObjectValue(PaymentTerm::createFromDiscriminatorValue)); });
-            this.put("paymentTermsId", (n) -> { currentObject.setPaymentTermsId(n.getStringValue()); });
-            this.put("phoneNumber", (n) -> { currentObject.setPhoneNumber(n.getStringValue()); });
-            this.put("pricesIncludeTax", (n) -> { currentObject.setPricesIncludeTax(n.getBooleanValue()); });
-            this.put("salesCreditMemoLines", (n) -> { currentObject.setSalesCreditMemoLines(n.getCollectionOfObjectValues(SalesCreditMemoLine::createFromDiscriminatorValue)); });
-            this.put("salesperson", (n) -> { currentObject.setSalesperson(n.getStringValue()); });
-            this.put("sellingPostalAddress", (n) -> { currentObject.setSellingPostalAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-            this.put("totalAmountExcludingTax", (n) -> { currentObject.setTotalAmountExcludingTax(n.getBigDecimalValue()); });
-            this.put("totalAmountIncludingTax", (n) -> { currentObject.setTotalAmountIncludingTax(n.getBigDecimalValue()); });
-            this.put("totalTaxAmount", (n) -> { currentObject.setTotalTaxAmount(n.getBigDecimalValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("billingPostalAddress", (n) -> { this.setBillingPostalAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
+        deserializerMap.put("billToCustomerId", (n) -> { this.setBillToCustomerId(n.getStringValue()); });
+        deserializerMap.put("billToCustomerNumber", (n) -> { this.setBillToCustomerNumber(n.getStringValue()); });
+        deserializerMap.put("billToName", (n) -> { this.setBillToName(n.getStringValue()); });
+        deserializerMap.put("creditMemoDate", (n) -> { this.setCreditMemoDate(n.getLocalDateValue()); });
+        deserializerMap.put("currency", (n) -> { this.setCurrency(n.getObjectValue(Currency::createFromDiscriminatorValue)); });
+        deserializerMap.put("currencyCode", (n) -> { this.setCurrencyCode(n.getStringValue()); });
+        deserializerMap.put("currencyId", (n) -> { this.setCurrencyId(n.getStringValue()); });
+        deserializerMap.put("customer", (n) -> { this.setCustomer(n.getObjectValue(Customer::createFromDiscriminatorValue)); });
+        deserializerMap.put("customerId", (n) -> { this.setCustomerId(n.getStringValue()); });
+        deserializerMap.put("customerName", (n) -> { this.setCustomerName(n.getStringValue()); });
+        deserializerMap.put("customerNumber", (n) -> { this.setCustomerNumber(n.getStringValue()); });
+        deserializerMap.put("discountAmount", (n) -> { this.setDiscountAmount(n.getBigDecimalValue()); });
+        deserializerMap.put("discountAppliedBeforeTax", (n) -> { this.setDiscountAppliedBeforeTax(n.getBooleanValue()); });
+        deserializerMap.put("dueDate", (n) -> { this.setDueDate(n.getLocalDateValue()); });
+        deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("externalDocumentNumber", (n) -> { this.setExternalDocumentNumber(n.getStringValue()); });
+        deserializerMap.put("invoiceId", (n) -> { this.setInvoiceId(n.getStringValue()); });
+        deserializerMap.put("invoiceNumber", (n) -> { this.setInvoiceNumber(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("number", (n) -> { this.setNumber(n.getStringValue()); });
+        deserializerMap.put("paymentTerm", (n) -> { this.setPaymentTerm(n.getObjectValue(PaymentTerm::createFromDiscriminatorValue)); });
+        deserializerMap.put("paymentTermsId", (n) -> { this.setPaymentTermsId(n.getStringValue()); });
+        deserializerMap.put("phoneNumber", (n) -> { this.setPhoneNumber(n.getStringValue()); });
+        deserializerMap.put("pricesIncludeTax", (n) -> { this.setPricesIncludeTax(n.getBooleanValue()); });
+        deserializerMap.put("salesCreditMemoLines", (n) -> { this.setSalesCreditMemoLines(n.getCollectionOfObjectValues(SalesCreditMemoLine::createFromDiscriminatorValue)); });
+        deserializerMap.put("salesperson", (n) -> { this.setSalesperson(n.getStringValue()); });
+        deserializerMap.put("sellingPostalAddress", (n) -> { this.setSellingPostalAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        deserializerMap.put("totalAmountExcludingTax", (n) -> { this.setTotalAmountExcludingTax(n.getBigDecimalValue()); });
+        deserializerMap.put("totalAmountIncludingTax", (n) -> { this.setTotalAmountIncludingTax(n.getBigDecimalValue()); });
+        deserializerMap.put("totalTaxAmount", (n) -> { this.setTotalTaxAmount(n.getBigDecimalValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the invoiceId property value. The invoiceId property
@@ -397,6 +396,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -438,6 +438,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the billingPostalAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBillingPostalAddress(@javax.annotation.Nullable final PostalAddressType value) {
         this._billingPostalAddress = value;
     }
@@ -446,6 +447,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the billToCustomerId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBillToCustomerId(@javax.annotation.Nullable final String value) {
         this._billToCustomerId = value;
     }
@@ -454,6 +456,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the billToCustomerNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBillToCustomerNumber(@javax.annotation.Nullable final String value) {
         this._billToCustomerNumber = value;
     }
@@ -462,6 +465,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the billToName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBillToName(@javax.annotation.Nullable final String value) {
         this._billToName = value;
     }
@@ -470,6 +474,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the creditMemoDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreditMemoDate(@javax.annotation.Nullable final LocalDate value) {
         this._creditMemoDate = value;
     }
@@ -478,6 +483,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the currency property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrency(@javax.annotation.Nullable final Currency value) {
         this._currency = value;
     }
@@ -486,6 +492,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the currencyCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrencyCode(@javax.annotation.Nullable final String value) {
         this._currencyCode = value;
     }
@@ -494,6 +501,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the currencyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrencyId(@javax.annotation.Nullable final String value) {
         this._currencyId = value;
     }
@@ -502,6 +510,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the customer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomer(@javax.annotation.Nullable final Customer value) {
         this._customer = value;
     }
@@ -510,6 +519,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the customerId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerId(@javax.annotation.Nullable final String value) {
         this._customerId = value;
     }
@@ -518,6 +528,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the customerName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerName(@javax.annotation.Nullable final String value) {
         this._customerName = value;
     }
@@ -526,6 +537,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the customerNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerNumber(@javax.annotation.Nullable final String value) {
         this._customerNumber = value;
     }
@@ -534,6 +546,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the discountAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscountAmount(@javax.annotation.Nullable final BigDecimal value) {
         this._discountAmount = value;
     }
@@ -542,6 +555,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the discountAppliedBeforeTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscountAppliedBeforeTax(@javax.annotation.Nullable final Boolean value) {
         this._discountAppliedBeforeTax = value;
     }
@@ -550,6 +564,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the dueDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDueDate(@javax.annotation.Nullable final LocalDate value) {
         this._dueDate = value;
     }
@@ -558,6 +573,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
         this._email = value;
     }
@@ -566,6 +582,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the externalDocumentNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalDocumentNumber(@javax.annotation.Nullable final String value) {
         this._externalDocumentNumber = value;
     }
@@ -574,6 +591,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the invoiceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvoiceId(@javax.annotation.Nullable final String value) {
         this._invoiceId = value;
     }
@@ -582,6 +600,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the invoiceNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvoiceNumber(@javax.annotation.Nullable final String value) {
         this._invoiceNumber = value;
     }
@@ -590,6 +609,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -598,6 +618,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the number property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumber(@javax.annotation.Nullable final String value) {
         this._number = value;
     }
@@ -606,6 +627,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the paymentTerm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPaymentTerm(@javax.annotation.Nullable final PaymentTerm value) {
         this._paymentTerm = value;
     }
@@ -614,6 +636,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the paymentTermsId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPaymentTermsId(@javax.annotation.Nullable final String value) {
         this._paymentTermsId = value;
     }
@@ -622,6 +645,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the phoneNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoneNumber(@javax.annotation.Nullable final String value) {
         this._phoneNumber = value;
     }
@@ -630,6 +654,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the pricesIncludeTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPricesIncludeTax(@javax.annotation.Nullable final Boolean value) {
         this._pricesIncludeTax = value;
     }
@@ -638,6 +663,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the salesCreditMemoLines property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSalesCreditMemoLines(@javax.annotation.Nullable final java.util.List<SalesCreditMemoLine> value) {
         this._salesCreditMemoLines = value;
     }
@@ -646,6 +672,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the salesperson property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSalesperson(@javax.annotation.Nullable final String value) {
         this._salesperson = value;
     }
@@ -654,6 +681,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the sellingPostalAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSellingPostalAddress(@javax.annotation.Nullable final PostalAddressType value) {
         this._sellingPostalAddress = value;
     }
@@ -662,6 +690,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }
@@ -670,6 +699,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the totalAmountExcludingTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalAmountExcludingTax(@javax.annotation.Nullable final BigDecimal value) {
         this._totalAmountExcludingTax = value;
     }
@@ -678,6 +708,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the totalAmountIncludingTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalAmountIncludingTax(@javax.annotation.Nullable final BigDecimal value) {
         this._totalAmountIncludingTax = value;
     }
@@ -686,6 +717,7 @@ public class SalesCreditMemo extends Entity implements Parsable {
      * @param value Value to set for the totalTaxAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalTaxAmount(@javax.annotation.Nullable final BigDecimal value) {
         this._totalTaxAmount = value;
     }

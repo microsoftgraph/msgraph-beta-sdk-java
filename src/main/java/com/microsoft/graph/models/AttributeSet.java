@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AttributeSet extends Entity implements Parsable {
     /** Description of the attribute set. Can be up to 128 characters long and include Unicode characters. Can be changed later. */
     private String _description;
@@ -17,9 +17,9 @@ public class AttributeSet extends Entity implements Parsable {
      * Instantiates a new attributeSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AttributeSet() {
         super();
-        this.setOdataType("#microsoft.graph.attributeSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,11 +45,10 @@ public class AttributeSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AttributeSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("maxAttributesPerSet", (n) -> { currentObject.setMaxAttributesPerSet(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("maxAttributesPerSet", (n) -> { this.setMaxAttributesPerSet(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the maxAttributesPerSet property value. Maximum number of custom security attributes that can be defined in this attribute set. Default value is null. If not specified, the administrator can add up to the maximum of 500 active attributes per tenant. Can be changed later.
@@ -64,6 +63,7 @@ public class AttributeSet extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +75,7 @@ public class AttributeSet extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -83,6 +84,7 @@ public class AttributeSet extends Entity implements Parsable {
      * @param value Value to set for the maxAttributesPerSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxAttributesPerSet(@javax.annotation.Nullable final Integer value) {
         this._maxAttributesPerSet = value;
     }

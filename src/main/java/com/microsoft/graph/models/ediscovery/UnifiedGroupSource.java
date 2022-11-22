@@ -17,6 +17,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
      * Instantiates a new UnifiedGroupSource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedGroupSource() {
         super();
         this.setOdataType("#microsoft.graph.ediscovery.unifiedGroupSource");
@@ -37,11 +38,10 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UnifiedGroupSource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("group", (n) -> { currentObject.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
-            this.put("includedSources", (n) -> { currentObject.setIncludedSources(n.getEnumValue(SourceType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("group", (n) -> { this.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
+        deserializerMap.put("includedSources", (n) -> { this.setIncludedSources(n.getEnumValue(SourceType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the group property value. The group property
@@ -64,6 +64,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +76,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
      * @param value Value to set for the group property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroup(@javax.annotation.Nullable final Group value) {
         this._group = value;
     }
@@ -83,6 +85,7 @@ public class UnifiedGroupSource extends DataSource implements Parsable {
      * @param value Value to set for the includedSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludedSources(@javax.annotation.Nullable final SourceType value) {
         this._includedSources = value;
     }

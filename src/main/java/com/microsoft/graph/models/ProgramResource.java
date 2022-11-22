@@ -14,6 +14,7 @@ public class ProgramResource extends Identity implements Parsable {
      * Instantiates a new ProgramResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProgramResource() {
         super();
         this.setOdataType("#microsoft.graph.programResource");
@@ -34,10 +35,9 @@ public class ProgramResource extends Identity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ProgramResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the type property value. Type of the resource, indicating whether it is a group or an app.
@@ -52,6 +52,7 @@ public class ProgramResource extends Identity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class ProgramResource extends Identity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }

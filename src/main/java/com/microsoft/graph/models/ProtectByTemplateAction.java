@@ -14,6 +14,7 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
      * Instantiates a new ProtectByTemplateAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProtectByTemplateAction() {
         super();
         this.setOdataType("#microsoft.graph.protectByTemplateAction");
@@ -34,10 +35,9 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ProtectByTemplateAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("templateId", (n) -> { currentObject.setTemplateId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("templateId", (n) -> { this.setTemplateId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the templateId property value. The GUID of the Azure Information Protection template to apply to the information.
@@ -52,6 +52,7 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class ProtectByTemplateAction extends InformationProtectionAction impleme
      * @param value Value to set for the templateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateId(@javax.annotation.Nullable final String value) {
         this._templateId = value;
     }

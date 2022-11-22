@@ -64,9 +64,9 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * Instantiates a new windowsFirewallNetworkProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsFirewallNetworkProfile() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsFirewallNetworkProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -124,33 +124,32 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsFirewallNetworkProfile currentObject = this;
-        return new HashMap<>(24) {{
-            this.put("authorizedApplicationRulesFromGroupPolicyMerged", (n) -> { currentObject.setAuthorizedApplicationRulesFromGroupPolicyMerged(n.getBooleanValue()); });
-            this.put("authorizedApplicationRulesFromGroupPolicyNotMerged", (n) -> { currentObject.setAuthorizedApplicationRulesFromGroupPolicyNotMerged(n.getBooleanValue()); });
-            this.put("connectionSecurityRulesFromGroupPolicyMerged", (n) -> { currentObject.setConnectionSecurityRulesFromGroupPolicyMerged(n.getBooleanValue()); });
-            this.put("connectionSecurityRulesFromGroupPolicyNotMerged", (n) -> { currentObject.setConnectionSecurityRulesFromGroupPolicyNotMerged(n.getBooleanValue()); });
-            this.put("firewallEnabled", (n) -> { currentObject.setFirewallEnabled(n.getEnumValue(StateManagementSetting.class)); });
-            this.put("globalPortRulesFromGroupPolicyMerged", (n) -> { currentObject.setGlobalPortRulesFromGroupPolicyMerged(n.getBooleanValue()); });
-            this.put("globalPortRulesFromGroupPolicyNotMerged", (n) -> { currentObject.setGlobalPortRulesFromGroupPolicyNotMerged(n.getBooleanValue()); });
-            this.put("inboundConnectionsBlocked", (n) -> { currentObject.setInboundConnectionsBlocked(n.getBooleanValue()); });
-            this.put("inboundConnectionsRequired", (n) -> { currentObject.setInboundConnectionsRequired(n.getBooleanValue()); });
-            this.put("inboundNotificationsBlocked", (n) -> { currentObject.setInboundNotificationsBlocked(n.getBooleanValue()); });
-            this.put("inboundNotificationsRequired", (n) -> { currentObject.setInboundNotificationsRequired(n.getBooleanValue()); });
-            this.put("incomingTrafficBlocked", (n) -> { currentObject.setIncomingTrafficBlocked(n.getBooleanValue()); });
-            this.put("incomingTrafficRequired", (n) -> { currentObject.setIncomingTrafficRequired(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("outboundConnectionsBlocked", (n) -> { currentObject.setOutboundConnectionsBlocked(n.getBooleanValue()); });
-            this.put("outboundConnectionsRequired", (n) -> { currentObject.setOutboundConnectionsRequired(n.getBooleanValue()); });
-            this.put("policyRulesFromGroupPolicyMerged", (n) -> { currentObject.setPolicyRulesFromGroupPolicyMerged(n.getBooleanValue()); });
-            this.put("policyRulesFromGroupPolicyNotMerged", (n) -> { currentObject.setPolicyRulesFromGroupPolicyNotMerged(n.getBooleanValue()); });
-            this.put("securedPacketExemptionAllowed", (n) -> { currentObject.setSecuredPacketExemptionAllowed(n.getBooleanValue()); });
-            this.put("securedPacketExemptionBlocked", (n) -> { currentObject.setSecuredPacketExemptionBlocked(n.getBooleanValue()); });
-            this.put("stealthModeBlocked", (n) -> { currentObject.setStealthModeBlocked(n.getBooleanValue()); });
-            this.put("stealthModeRequired", (n) -> { currentObject.setStealthModeRequired(n.getBooleanValue()); });
-            this.put("unicastResponsesToMulticastBroadcastsBlocked", (n) -> { currentObject.setUnicastResponsesToMulticastBroadcastsBlocked(n.getBooleanValue()); });
-            this.put("unicastResponsesToMulticastBroadcastsRequired", (n) -> { currentObject.setUnicastResponsesToMulticastBroadcastsRequired(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(24);
+        deserializerMap.put("authorizedApplicationRulesFromGroupPolicyMerged", (n) -> { this.setAuthorizedApplicationRulesFromGroupPolicyMerged(n.getBooleanValue()); });
+        deserializerMap.put("authorizedApplicationRulesFromGroupPolicyNotMerged", (n) -> { this.setAuthorizedApplicationRulesFromGroupPolicyNotMerged(n.getBooleanValue()); });
+        deserializerMap.put("connectionSecurityRulesFromGroupPolicyMerged", (n) -> { this.setConnectionSecurityRulesFromGroupPolicyMerged(n.getBooleanValue()); });
+        deserializerMap.put("connectionSecurityRulesFromGroupPolicyNotMerged", (n) -> { this.setConnectionSecurityRulesFromGroupPolicyNotMerged(n.getBooleanValue()); });
+        deserializerMap.put("firewallEnabled", (n) -> { this.setFirewallEnabled(n.getEnumValue(StateManagementSetting.class)); });
+        deserializerMap.put("globalPortRulesFromGroupPolicyMerged", (n) -> { this.setGlobalPortRulesFromGroupPolicyMerged(n.getBooleanValue()); });
+        deserializerMap.put("globalPortRulesFromGroupPolicyNotMerged", (n) -> { this.setGlobalPortRulesFromGroupPolicyNotMerged(n.getBooleanValue()); });
+        deserializerMap.put("inboundConnectionsBlocked", (n) -> { this.setInboundConnectionsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("inboundConnectionsRequired", (n) -> { this.setInboundConnectionsRequired(n.getBooleanValue()); });
+        deserializerMap.put("inboundNotificationsBlocked", (n) -> { this.setInboundNotificationsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("inboundNotificationsRequired", (n) -> { this.setInboundNotificationsRequired(n.getBooleanValue()); });
+        deserializerMap.put("incomingTrafficBlocked", (n) -> { this.setIncomingTrafficBlocked(n.getBooleanValue()); });
+        deserializerMap.put("incomingTrafficRequired", (n) -> { this.setIncomingTrafficRequired(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("outboundConnectionsBlocked", (n) -> { this.setOutboundConnectionsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("outboundConnectionsRequired", (n) -> { this.setOutboundConnectionsRequired(n.getBooleanValue()); });
+        deserializerMap.put("policyRulesFromGroupPolicyMerged", (n) -> { this.setPolicyRulesFromGroupPolicyMerged(n.getBooleanValue()); });
+        deserializerMap.put("policyRulesFromGroupPolicyNotMerged", (n) -> { this.setPolicyRulesFromGroupPolicyNotMerged(n.getBooleanValue()); });
+        deserializerMap.put("securedPacketExemptionAllowed", (n) -> { this.setSecuredPacketExemptionAllowed(n.getBooleanValue()); });
+        deserializerMap.put("securedPacketExemptionBlocked", (n) -> { this.setSecuredPacketExemptionBlocked(n.getBooleanValue()); });
+        deserializerMap.put("stealthModeBlocked", (n) -> { this.setStealthModeBlocked(n.getBooleanValue()); });
+        deserializerMap.put("stealthModeRequired", (n) -> { this.setStealthModeRequired(n.getBooleanValue()); });
+        deserializerMap.put("unicastResponsesToMulticastBroadcastsBlocked", (n) -> { this.setUnicastResponsesToMulticastBroadcastsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("unicastResponsesToMulticastBroadcastsRequired", (n) -> { this.setUnicastResponsesToMulticastBroadcastsRequired(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the firewallEnabled property value. State Management Setting.
@@ -317,6 +316,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("authorizedApplicationRulesFromGroupPolicyMerged", this.getAuthorizedApplicationRulesFromGroupPolicyMerged());
@@ -350,6 +350,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -358,6 +359,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the authorizedApplicationRulesFromGroupPolicyMerged property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthorizedApplicationRulesFromGroupPolicyMerged(@javax.annotation.Nullable final Boolean value) {
         this._authorizedApplicationRulesFromGroupPolicyMerged = value;
     }
@@ -366,6 +368,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the authorizedApplicationRulesFromGroupPolicyNotMerged property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthorizedApplicationRulesFromGroupPolicyNotMerged(@javax.annotation.Nullable final Boolean value) {
         this._authorizedApplicationRulesFromGroupPolicyNotMerged = value;
     }
@@ -374,6 +377,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the connectionSecurityRulesFromGroupPolicyMerged property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionSecurityRulesFromGroupPolicyMerged(@javax.annotation.Nullable final Boolean value) {
         this._connectionSecurityRulesFromGroupPolicyMerged = value;
     }
@@ -382,6 +386,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the connectionSecurityRulesFromGroupPolicyNotMerged property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionSecurityRulesFromGroupPolicyNotMerged(@javax.annotation.Nullable final Boolean value) {
         this._connectionSecurityRulesFromGroupPolicyNotMerged = value;
     }
@@ -390,6 +395,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the firewallEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallEnabled(@javax.annotation.Nullable final StateManagementSetting value) {
         this._firewallEnabled = value;
     }
@@ -398,6 +404,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the globalPortRulesFromGroupPolicyMerged property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGlobalPortRulesFromGroupPolicyMerged(@javax.annotation.Nullable final Boolean value) {
         this._globalPortRulesFromGroupPolicyMerged = value;
     }
@@ -406,6 +413,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the globalPortRulesFromGroupPolicyNotMerged property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGlobalPortRulesFromGroupPolicyNotMerged(@javax.annotation.Nullable final Boolean value) {
         this._globalPortRulesFromGroupPolicyNotMerged = value;
     }
@@ -414,6 +422,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the inboundConnectionsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInboundConnectionsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._inboundConnectionsBlocked = value;
     }
@@ -422,6 +431,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the inboundConnectionsRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInboundConnectionsRequired(@javax.annotation.Nullable final Boolean value) {
         this._inboundConnectionsRequired = value;
     }
@@ -430,6 +440,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the inboundNotificationsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInboundNotificationsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._inboundNotificationsBlocked = value;
     }
@@ -438,6 +449,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the inboundNotificationsRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInboundNotificationsRequired(@javax.annotation.Nullable final Boolean value) {
         this._inboundNotificationsRequired = value;
     }
@@ -446,6 +458,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the incomingTrafficBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncomingTrafficBlocked(@javax.annotation.Nullable final Boolean value) {
         this._incomingTrafficBlocked = value;
     }
@@ -454,6 +467,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the incomingTrafficRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncomingTrafficRequired(@javax.annotation.Nullable final Boolean value) {
         this._incomingTrafficRequired = value;
     }
@@ -462,6 +476,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -470,6 +485,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the outboundConnectionsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutboundConnectionsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._outboundConnectionsBlocked = value;
     }
@@ -478,6 +494,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the outboundConnectionsRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutboundConnectionsRequired(@javax.annotation.Nullable final Boolean value) {
         this._outboundConnectionsRequired = value;
     }
@@ -486,6 +503,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the policyRulesFromGroupPolicyMerged property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyRulesFromGroupPolicyMerged(@javax.annotation.Nullable final Boolean value) {
         this._policyRulesFromGroupPolicyMerged = value;
     }
@@ -494,6 +512,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the policyRulesFromGroupPolicyNotMerged property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyRulesFromGroupPolicyNotMerged(@javax.annotation.Nullable final Boolean value) {
         this._policyRulesFromGroupPolicyNotMerged = value;
     }
@@ -502,6 +521,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the securedPacketExemptionAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecuredPacketExemptionAllowed(@javax.annotation.Nullable final Boolean value) {
         this._securedPacketExemptionAllowed = value;
     }
@@ -510,6 +530,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the securedPacketExemptionBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecuredPacketExemptionBlocked(@javax.annotation.Nullable final Boolean value) {
         this._securedPacketExemptionBlocked = value;
     }
@@ -518,6 +539,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the stealthModeBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStealthModeBlocked(@javax.annotation.Nullable final Boolean value) {
         this._stealthModeBlocked = value;
     }
@@ -526,6 +548,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the stealthModeRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStealthModeRequired(@javax.annotation.Nullable final Boolean value) {
         this._stealthModeRequired = value;
     }
@@ -534,6 +557,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the unicastResponsesToMulticastBroadcastsBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnicastResponsesToMulticastBroadcastsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._unicastResponsesToMulticastBroadcastsBlocked = value;
     }
@@ -542,6 +566,7 @@ public class WindowsFirewallNetworkProfile implements AdditionalDataHolder, Pars
      * @param value Value to set for the unicastResponsesToMulticastBroadcastsRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnicastResponsesToMulticastBroadcastsRequired(@javax.annotation.Nullable final Boolean value) {
         this._unicastResponsesToMulticastBroadcastsRequired = value;
     }

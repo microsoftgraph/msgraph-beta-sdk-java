@@ -22,6 +22,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      * Instantiates a new WindowsKioskWin32App and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsKioskWin32App() {
         super();
         this.setOdataType("#microsoft.graph.windowsKioskWin32App");
@@ -82,20 +83,20 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsKioskWin32App currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("classicAppPath", (n) -> { currentObject.setClassicAppPath(n.getStringValue()); });
-            this.put("edgeKiosk", (n) -> { currentObject.setEdgeKiosk(n.getStringValue()); });
-            this.put("edgeKioskIdleTimeoutMinutes", (n) -> { currentObject.setEdgeKioskIdleTimeoutMinutes(n.getIntegerValue()); });
-            this.put("edgeKioskType", (n) -> { currentObject.setEdgeKioskType(n.getEnumValue(WindowsEdgeKioskType.class)); });
-            this.put("edgeNoFirstRun", (n) -> { currentObject.setEdgeNoFirstRun(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("classicAppPath", (n) -> { this.setClassicAppPath(n.getStringValue()); });
+        deserializerMap.put("edgeKiosk", (n) -> { this.setEdgeKiosk(n.getStringValue()); });
+        deserializerMap.put("edgeKioskIdleTimeoutMinutes", (n) -> { this.setEdgeKioskIdleTimeoutMinutes(n.getIntegerValue()); });
+        deserializerMap.put("edgeKioskType", (n) -> { this.setEdgeKioskType(n.getEnumValue(WindowsEdgeKioskType.class)); });
+        deserializerMap.put("edgeNoFirstRun", (n) -> { this.setEdgeNoFirstRun(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +111,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      * @param value Value to set for the classicAppPath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassicAppPath(@javax.annotation.Nullable final String value) {
         this._classicAppPath = value;
     }
@@ -118,6 +120,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      * @param value Value to set for the edgeKiosk property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeKiosk(@javax.annotation.Nullable final String value) {
         this._edgeKiosk = value;
     }
@@ -126,6 +129,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      * @param value Value to set for the edgeKioskIdleTimeoutMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeKioskIdleTimeoutMinutes(@javax.annotation.Nullable final Integer value) {
         this._edgeKioskIdleTimeoutMinutes = value;
     }
@@ -134,6 +138,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      * @param value Value to set for the edgeKioskType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeKioskType(@javax.annotation.Nullable final WindowsEdgeKioskType value) {
         this._edgeKioskType = value;
     }
@@ -142,6 +147,7 @@ public class WindowsKioskWin32App extends WindowsKioskAppBase implements Parsabl
      * @param value Value to set for the edgeNoFirstRun property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeNoFirstRun(@javax.annotation.Nullable final Boolean value) {
         this._edgeNoFirstRun = value;
     }

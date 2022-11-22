@@ -21,9 +21,9 @@ public class DirectorySizeQuota implements AdditionalDataHolder, Parsable {
      * Instantiates a new directorySizeQuota and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectorySizeQuota() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.directorySizeQuota");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,12 +49,11 @@ public class DirectorySizeQuota implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DirectorySizeQuota currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("total", (n) -> { currentObject.setTotal(n.getIntegerValue()); });
-            this.put("used", (n) -> { currentObject.setUsed(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("total", (n) -> { this.setTotal(n.getIntegerValue()); });
+        deserializerMap.put("used", (n) -> { this.setUsed(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -85,6 +84,7 @@ public class DirectorySizeQuota implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -97,6 +97,7 @@ public class DirectorySizeQuota implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class DirectorySizeQuota implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -113,6 +115,7 @@ public class DirectorySizeQuota implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the total property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotal(@javax.annotation.Nullable final Integer value) {
         this._total = value;
     }
@@ -121,6 +124,7 @@ public class DirectorySizeQuota implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the used property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsed(@javax.annotation.Nullable final Integer value) {
         this._used = value;
     }

@@ -36,9 +36,9 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      * Instantiates a new accessReviewSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessReviewSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -111,19 +111,18 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewSettings currentObject = this;
-        return new HashMap<>(10) {{
-            this.put("accessRecommendationsEnabled", (n) -> { currentObject.setAccessRecommendationsEnabled(n.getBooleanValue()); });
-            this.put("activityDurationInDays", (n) -> { currentObject.setActivityDurationInDays(n.getIntegerValue()); });
-            this.put("autoApplyReviewResultsEnabled", (n) -> { currentObject.setAutoApplyReviewResultsEnabled(n.getBooleanValue()); });
-            this.put("autoReviewEnabled", (n) -> { currentObject.setAutoReviewEnabled(n.getBooleanValue()); });
-            this.put("autoReviewSettings", (n) -> { currentObject.setAutoReviewSettings(n.getObjectValue(AutoReviewSettings::createFromDiscriminatorValue)); });
-            this.put("justificationRequiredOnApproval", (n) -> { currentObject.setJustificationRequiredOnApproval(n.getBooleanValue()); });
-            this.put("mailNotificationsEnabled", (n) -> { currentObject.setMailNotificationsEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recurrenceSettings", (n) -> { currentObject.setRecurrenceSettings(n.getObjectValue(AccessReviewRecurrenceSettings::createFromDiscriminatorValue)); });
-            this.put("remindersEnabled", (n) -> { currentObject.setRemindersEnabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("accessRecommendationsEnabled", (n) -> { this.setAccessRecommendationsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("activityDurationInDays", (n) -> { this.setActivityDurationInDays(n.getIntegerValue()); });
+        deserializerMap.put("autoApplyReviewResultsEnabled", (n) -> { this.setAutoApplyReviewResultsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("autoReviewEnabled", (n) -> { this.setAutoReviewEnabled(n.getBooleanValue()); });
+        deserializerMap.put("autoReviewSettings", (n) -> { this.setAutoReviewSettings(n.getObjectValue(AutoReviewSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("justificationRequiredOnApproval", (n) -> { this.setJustificationRequiredOnApproval(n.getBooleanValue()); });
+        deserializerMap.put("mailNotificationsEnabled", (n) -> { this.setMailNotificationsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recurrenceSettings", (n) -> { this.setRecurrenceSettings(n.getObjectValue(AccessReviewRecurrenceSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("remindersEnabled", (n) -> { this.setRemindersEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the justificationRequiredOnApproval property value. Indicates whether reviewers are required to provide a justification when reviewing access.
@@ -170,6 +169,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("accessRecommendationsEnabled", this.getAccessRecommendationsEnabled());
@@ -189,6 +189,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accessRecommendationsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessRecommendationsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._accessRecommendationsEnabled = value;
     }
@@ -197,6 +198,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the activityDurationInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityDurationInDays(@javax.annotation.Nullable final Integer value) {
         this._activityDurationInDays = value;
     }
@@ -205,6 +207,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -213,6 +216,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the autoApplyReviewResultsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoApplyReviewResultsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._autoApplyReviewResultsEnabled = value;
     }
@@ -221,6 +225,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the autoReviewEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoReviewEnabled(@javax.annotation.Nullable final Boolean value) {
         this._autoReviewEnabled = value;
     }
@@ -229,6 +234,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the autoReviewSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoReviewSettings(@javax.annotation.Nullable final AutoReviewSettings value) {
         this._autoReviewSettings = value;
     }
@@ -237,6 +243,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the justificationRequiredOnApproval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJustificationRequiredOnApproval(@javax.annotation.Nullable final Boolean value) {
         this._justificationRequiredOnApproval = value;
     }
@@ -245,6 +252,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mailNotificationsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailNotificationsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._mailNotificationsEnabled = value;
     }
@@ -253,6 +261,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -261,6 +270,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the recurrenceSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrenceSettings(@javax.annotation.Nullable final AccessReviewRecurrenceSettings value) {
         this._recurrenceSettings = value;
     }
@@ -269,6 +279,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the remindersEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemindersEnabled(@javax.annotation.Nullable final Boolean value) {
         this._remindersEnabled = value;
     }

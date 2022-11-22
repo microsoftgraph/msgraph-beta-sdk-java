@@ -33,9 +33,9 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      * Instantiates a new matchingDlpRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MatchingDlpRule() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.matchingDlpRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,18 +69,17 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MatchingDlpRule currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("actions", (n) -> { currentObject.setActions(n.getCollectionOfObjectValues(DlpActionInfo::createFromDiscriminatorValue)); });
-            this.put("isMostRestrictive", (n) -> { currentObject.setIsMostRestrictive(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("policyId", (n) -> { currentObject.setPolicyId(n.getStringValue()); });
-            this.put("policyName", (n) -> { currentObject.setPolicyName(n.getStringValue()); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("ruleId", (n) -> { currentObject.setRuleId(n.getStringValue()); });
-            this.put("ruleMode", (n) -> { currentObject.setRuleMode(n.getEnumValue(RuleMode.class)); });
-            this.put("ruleName", (n) -> { currentObject.setRuleName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("actions", (n) -> { this.setActions(n.getCollectionOfObjectValues(DlpActionInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("isMostRestrictive", (n) -> { this.setIsMostRestrictive(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("policyId", (n) -> { this.setPolicyId(n.getStringValue()); });
+        deserializerMap.put("policyName", (n) -> { this.setPolicyName(n.getStringValue()); });
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("ruleId", (n) -> { this.setRuleId(n.getStringValue()); });
+        deserializerMap.put("ruleMode", (n) -> { this.setRuleMode(n.getEnumValue(RuleMode.class)); });
+        deserializerMap.put("ruleName", (n) -> { this.setRuleName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isMostRestrictive property value. The isMostRestrictive property
@@ -151,6 +150,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("actions", this.getActions());
@@ -169,6 +169,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the actions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActions(@javax.annotation.Nullable final java.util.List<DlpActionInfo> value) {
         this._actions = value;
     }
@@ -177,6 +178,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -185,6 +187,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isMostRestrictive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMostRestrictive(@javax.annotation.Nullable final Boolean value) {
         this._isMostRestrictive = value;
     }
@@ -193,6 +196,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -201,6 +205,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the policyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyId(@javax.annotation.Nullable final String value) {
         this._policyId = value;
     }
@@ -209,6 +214,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the policyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyName(@javax.annotation.Nullable final String value) {
         this._policyName = value;
     }
@@ -217,6 +223,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }
@@ -225,6 +232,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ruleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRuleId(@javax.annotation.Nullable final String value) {
         this._ruleId = value;
     }
@@ -233,6 +241,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ruleMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRuleMode(@javax.annotation.Nullable final RuleMode value) {
         this._ruleMode = value;
     }
@@ -241,6 +250,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ruleName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRuleName(@javax.annotation.Nullable final String value) {
         this._ruleName = value;
     }

@@ -18,6 +18,7 @@ public class GetNotebookFromWebUrlPostRequestBody implements AdditionalDataHolde
      * Instantiates a new getNotebookFromWebUrlPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetNotebookFromWebUrlPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,10 +46,9 @@ public class GetNotebookFromWebUrlPostRequestBody implements AdditionalDataHolde
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GetNotebookFromWebUrlPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the webUrl property value. The webUrl property
@@ -63,6 +63,7 @@ public class GetNotebookFromWebUrlPostRequestBody implements AdditionalDataHolde
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("webUrl", this.getWebUrl());
@@ -73,6 +74,7 @@ public class GetNotebookFromWebUrlPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +83,7 @@ public class GetNotebookFromWebUrlPostRequestBody implements AdditionalDataHolde
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

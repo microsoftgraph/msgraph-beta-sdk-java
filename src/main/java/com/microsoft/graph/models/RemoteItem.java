@@ -56,9 +56,9 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * Instantiates a new remoteItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RemoteItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.remoteItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -100,29 +100,28 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RemoteItem currentObject = this;
-        return new HashMap<>(20) {{
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("file", (n) -> { currentObject.setFile(n.getObjectValue(File::createFromDiscriminatorValue)); });
-            this.put("fileSystemInfo", (n) -> { currentObject.setFileSystemInfo(n.getObjectValue(FileSystemInfo::createFromDiscriminatorValue)); });
-            this.put("folder", (n) -> { currentObject.setFolder(n.getObjectValue(Folder::createFromDiscriminatorValue)); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("image", (n) -> { currentObject.setImage(n.getObjectValue(Image::createFromDiscriminatorValue)); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("package", (n) -> { currentObject.setPackage(n.getObjectValue(Package_escaped::createFromDiscriminatorValue)); });
-            this.put("parentReference", (n) -> { currentObject.setParentReference(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
-            this.put("shared", (n) -> { currentObject.setShared(n.getObjectValue(Shared::createFromDiscriminatorValue)); });
-            this.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
-            this.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
-            this.put("specialFolder", (n) -> { currentObject.setSpecialFolder(n.getObjectValue(SpecialFolder::createFromDiscriminatorValue)); });
-            this.put("video", (n) -> { currentObject.setVideo(n.getObjectValue(Video::createFromDiscriminatorValue)); });
-            this.put("webDavUrl", (n) -> { currentObject.setWebDavUrl(n.getStringValue()); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(20);
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("file", (n) -> { this.setFile(n.getObjectValue(File::createFromDiscriminatorValue)); });
+        deserializerMap.put("fileSystemInfo", (n) -> { this.setFileSystemInfo(n.getObjectValue(FileSystemInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("folder", (n) -> { this.setFolder(n.getObjectValue(Folder::createFromDiscriminatorValue)); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("image", (n) -> { this.setImage(n.getObjectValue(Image::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("package", (n) -> { this.setPackage(n.getObjectValue(Package_escaped::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentReference", (n) -> { this.setParentReference(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
+        deserializerMap.put("shared", (n) -> { this.setShared(n.getObjectValue(Shared::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharepointIds", (n) -> { this.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
+        deserializerMap.put("size", (n) -> { this.setSize(n.getLongValue()); });
+        deserializerMap.put("specialFolder", (n) -> { this.setSpecialFolder(n.getObjectValue(SpecialFolder::createFromDiscriminatorValue)); });
+        deserializerMap.put("video", (n) -> { this.setVideo(n.getObjectValue(Video::createFromDiscriminatorValue)); });
+        deserializerMap.put("webDavUrl", (n) -> { this.setWebDavUrl(n.getStringValue()); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the file property value. Indicates that the remote item is a file. Read-only.
@@ -273,6 +272,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("createdBy", this.getCreatedBy());
@@ -302,6 +302,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -310,6 +311,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -318,6 +320,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -326,6 +329,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the file property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFile(@javax.annotation.Nullable final File value) {
         this._file = value;
     }
@@ -334,6 +338,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the fileSystemInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileSystemInfo(@javax.annotation.Nullable final FileSystemInfo value) {
         this._fileSystemInfo = value;
     }
@@ -342,6 +347,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the folder property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFolder(@javax.annotation.Nullable final Folder value) {
         this._folder = value;
     }
@@ -350,6 +356,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -358,6 +365,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the image property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImage(@javax.annotation.Nullable final Image value) {
         this._image = value;
     }
@@ -366,6 +374,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -374,6 +383,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -382,6 +392,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -390,6 +401,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -398,6 +410,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the package property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackage(@javax.annotation.Nullable final Package_escaped value) {
         this._package_escaped = value;
     }
@@ -406,6 +419,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the parentReference property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentReference(@javax.annotation.Nullable final ItemReference value) {
         this._parentReference = value;
     }
@@ -414,6 +428,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the shared property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShared(@javax.annotation.Nullable final Shared value) {
         this._shared = value;
     }
@@ -422,6 +437,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sharepointIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharepointIds(@javax.annotation.Nullable final SharepointIds value) {
         this._sharepointIds = value;
     }
@@ -430,6 +446,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Long value) {
         this._size = value;
     }
@@ -438,6 +455,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the specialFolder property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpecialFolder(@javax.annotation.Nullable final SpecialFolder value) {
         this._specialFolder = value;
     }
@@ -446,6 +464,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the video property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVideo(@javax.annotation.Nullable final Video value) {
         this._video = value;
     }
@@ -454,6 +473,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the webDavUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebDavUrl(@javax.annotation.Nullable final String value) {
         this._webDavUrl = value;
     }
@@ -462,6 +482,7 @@ public class RemoteItem implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

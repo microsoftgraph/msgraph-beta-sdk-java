@@ -28,7 +28,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ItemFacet extends Entity implements Parsable {
     /** The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue. */
     private AllowedAudiences _allowedAudiences;
@@ -50,9 +50,9 @@ public class ItemFacet extends Entity implements Parsable {
      * Instantiates a new itemFacet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemFacet() {
         super();
-        this.setOdataType("#microsoft.graph.itemFacet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -120,17 +120,16 @@ public class ItemFacet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ItemFacet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedAudiences", (n) -> { currentObject.setAllowedAudiences(n.getEnumValue(AllowedAudiences.class)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("inference", (n) -> { currentObject.setInference(n.getObjectValue(InferenceData::createFromDiscriminatorValue)); });
-            this.put("isSearchable", (n) -> { currentObject.setIsSearchable(n.getBooleanValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("source", (n) -> { currentObject.setSource(n.getObjectValue(PersonDataSources::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedAudiences", (n) -> { this.setAllowedAudiences(n.getEnumValue(AllowedAudiences.class)); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("inference", (n) -> { this.setInference(n.getObjectValue(InferenceData::createFromDiscriminatorValue)); });
+        deserializerMap.put("isSearchable", (n) -> { this.setIsSearchable(n.getBooleanValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getObjectValue(PersonDataSources::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the inference property value. Contains inference detail if the entity is inferred by the creating or modifying application.
@@ -177,6 +176,7 @@ public class ItemFacet extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -194,6 +194,7 @@ public class ItemFacet extends Entity implements Parsable {
      * @param value Value to set for the allowedAudiences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedAudiences(@javax.annotation.Nullable final AllowedAudiences value) {
         this._allowedAudiences = value;
     }
@@ -202,6 +203,7 @@ public class ItemFacet extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -210,6 +212,7 @@ public class ItemFacet extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -218,6 +221,7 @@ public class ItemFacet extends Entity implements Parsable {
      * @param value Value to set for the inference property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInference(@javax.annotation.Nullable final InferenceData value) {
         this._inference = value;
     }
@@ -226,6 +230,7 @@ public class ItemFacet extends Entity implements Parsable {
      * @param value Value to set for the isSearchable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSearchable(@javax.annotation.Nullable final Boolean value) {
         this._isSearchable = value;
     }
@@ -234,6 +239,7 @@ public class ItemFacet extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -242,6 +248,7 @@ public class ItemFacet extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -250,6 +257,7 @@ public class ItemFacet extends Entity implements Parsable {
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final PersonDataSources value) {
         this._source = value;
     }

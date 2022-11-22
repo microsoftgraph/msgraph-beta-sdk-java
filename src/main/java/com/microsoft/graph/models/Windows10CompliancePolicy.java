@@ -76,6 +76,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * Instantiates a new Windows10CompliancePolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10CompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.windows10CompliancePolicy");
@@ -192,41 +193,40 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10CompliancePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeFirewallRequired", (n) -> { currentObject.setActiveFirewallRequired(n.getBooleanValue()); });
-            this.put("antiSpywareRequired", (n) -> { currentObject.setAntiSpywareRequired(n.getBooleanValue()); });
-            this.put("antivirusRequired", (n) -> { currentObject.setAntivirusRequired(n.getBooleanValue()); });
-            this.put("bitLockerEnabled", (n) -> { currentObject.setBitLockerEnabled(n.getBooleanValue()); });
-            this.put("codeIntegrityEnabled", (n) -> { currentObject.setCodeIntegrityEnabled(n.getBooleanValue()); });
-            this.put("configurationManagerComplianceRequired", (n) -> { currentObject.setConfigurationManagerComplianceRequired(n.getBooleanValue()); });
-            this.put("defenderEnabled", (n) -> { currentObject.setDefenderEnabled(n.getBooleanValue()); });
-            this.put("defenderVersion", (n) -> { currentObject.setDefenderVersion(n.getStringValue()); });
-            this.put("deviceCompliancePolicyScript", (n) -> { currentObject.setDeviceCompliancePolicyScript(n.getObjectValue(DeviceCompliancePolicyScript::createFromDiscriminatorValue)); });
-            this.put("deviceThreatProtectionEnabled", (n) -> { currentObject.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
-            this.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
-            this.put("earlyLaunchAntiMalwareDriverEnabled", (n) -> { currentObject.setEarlyLaunchAntiMalwareDriverEnabled(n.getBooleanValue()); });
-            this.put("mobileOsMaximumVersion", (n) -> { currentObject.setMobileOsMaximumVersion(n.getStringValue()); });
-            this.put("mobileOsMinimumVersion", (n) -> { currentObject.setMobileOsMinimumVersion(n.getStringValue()); });
-            this.put("osMaximumVersion", (n) -> { currentObject.setOsMaximumVersion(n.getStringValue()); });
-            this.put("osMinimumVersion", (n) -> { currentObject.setOsMinimumVersion(n.getStringValue()); });
-            this.put("passwordBlockSimple", (n) -> { currentObject.setPasswordBlockSimple(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumCharacterSetCount", (n) -> { currentObject.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeLock", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
-            this.put("passwordRequiredToUnlockFromIdle", (n) -> { currentObject.setPasswordRequiredToUnlockFromIdle(n.getBooleanValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
-            this.put("requireHealthyDeviceReport", (n) -> { currentObject.setRequireHealthyDeviceReport(n.getBooleanValue()); });
-            this.put("rtpEnabled", (n) -> { currentObject.setRtpEnabled(n.getBooleanValue()); });
-            this.put("secureBootEnabled", (n) -> { currentObject.setSecureBootEnabled(n.getBooleanValue()); });
-            this.put("signatureOutOfDate", (n) -> { currentObject.setSignatureOutOfDate(n.getBooleanValue()); });
-            this.put("storageRequireEncryption", (n) -> { currentObject.setStorageRequireEncryption(n.getBooleanValue()); });
-            this.put("tpmRequired", (n) -> { currentObject.setTpmRequired(n.getBooleanValue()); });
-            this.put("validOperatingSystemBuildRanges", (n) -> { currentObject.setValidOperatingSystemBuildRanges(n.getCollectionOfObjectValues(OperatingSystemVersionRange::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeFirewallRequired", (n) -> { this.setActiveFirewallRequired(n.getBooleanValue()); });
+        deserializerMap.put("antiSpywareRequired", (n) -> { this.setAntiSpywareRequired(n.getBooleanValue()); });
+        deserializerMap.put("antivirusRequired", (n) -> { this.setAntivirusRequired(n.getBooleanValue()); });
+        deserializerMap.put("bitLockerEnabled", (n) -> { this.setBitLockerEnabled(n.getBooleanValue()); });
+        deserializerMap.put("codeIntegrityEnabled", (n) -> { this.setCodeIntegrityEnabled(n.getBooleanValue()); });
+        deserializerMap.put("configurationManagerComplianceRequired", (n) -> { this.setConfigurationManagerComplianceRequired(n.getBooleanValue()); });
+        deserializerMap.put("defenderEnabled", (n) -> { this.setDefenderEnabled(n.getBooleanValue()); });
+        deserializerMap.put("defenderVersion", (n) -> { this.setDefenderVersion(n.getStringValue()); });
+        deserializerMap.put("deviceCompliancePolicyScript", (n) -> { this.setDeviceCompliancePolicyScript(n.getObjectValue(DeviceCompliancePolicyScript::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceThreatProtectionEnabled", (n) -> { this.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { this.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
+        deserializerMap.put("earlyLaunchAntiMalwareDriverEnabled", (n) -> { this.setEarlyLaunchAntiMalwareDriverEnabled(n.getBooleanValue()); });
+        deserializerMap.put("mobileOsMaximumVersion", (n) -> { this.setMobileOsMaximumVersion(n.getStringValue()); });
+        deserializerMap.put("mobileOsMinimumVersion", (n) -> { this.setMobileOsMinimumVersion(n.getStringValue()); });
+        deserializerMap.put("osMaximumVersion", (n) -> { this.setOsMaximumVersion(n.getStringValue()); });
+        deserializerMap.put("osMinimumVersion", (n) -> { this.setOsMinimumVersion(n.getStringValue()); });
+        deserializerMap.put("passwordBlockSimple", (n) -> { this.setPasswordBlockSimple(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { this.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumCharacterSetCount", (n) -> { this.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { this.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeLock", (n) -> { this.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { this.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequired", (n) -> { this.setPasswordRequired(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequiredToUnlockFromIdle", (n) -> { this.setPasswordRequiredToUnlockFromIdle(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
+        deserializerMap.put("requireHealthyDeviceReport", (n) -> { this.setRequireHealthyDeviceReport(n.getBooleanValue()); });
+        deserializerMap.put("rtpEnabled", (n) -> { this.setRtpEnabled(n.getBooleanValue()); });
+        deserializerMap.put("secureBootEnabled", (n) -> { this.setSecureBootEnabled(n.getBooleanValue()); });
+        deserializerMap.put("signatureOutOfDate", (n) -> { this.setSignatureOutOfDate(n.getBooleanValue()); });
+        deserializerMap.put("storageRequireEncryption", (n) -> { this.setStorageRequireEncryption(n.getBooleanValue()); });
+        deserializerMap.put("tpmRequired", (n) -> { this.setTpmRequired(n.getBooleanValue()); });
+        deserializerMap.put("validOperatingSystemBuildRanges", (n) -> { this.setValidOperatingSystemBuildRanges(n.getCollectionOfObjectValues(OperatingSystemVersionRange::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the mobileOsMaximumVersion property value. Maximum Windows Phone version.
@@ -393,6 +393,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -434,6 +435,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the activeFirewallRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveFirewallRequired(@javax.annotation.Nullable final Boolean value) {
         this._activeFirewallRequired = value;
     }
@@ -442,6 +444,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the antiSpywareRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAntiSpywareRequired(@javax.annotation.Nullable final Boolean value) {
         this._antiSpywareRequired = value;
     }
@@ -450,6 +453,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the antivirusRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAntivirusRequired(@javax.annotation.Nullable final Boolean value) {
         this._antivirusRequired = value;
     }
@@ -458,6 +462,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the bitLockerEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerEnabled(@javax.annotation.Nullable final Boolean value) {
         this._bitLockerEnabled = value;
     }
@@ -466,6 +471,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the codeIntegrityEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCodeIntegrityEnabled(@javax.annotation.Nullable final Boolean value) {
         this._codeIntegrityEnabled = value;
     }
@@ -474,6 +480,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the configurationManagerComplianceRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationManagerComplianceRequired(@javax.annotation.Nullable final Boolean value) {
         this._configurationManagerComplianceRequired = value;
     }
@@ -482,6 +489,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the defenderEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderEnabled(@javax.annotation.Nullable final Boolean value) {
         this._defenderEnabled = value;
     }
@@ -490,6 +498,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the defenderVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderVersion(@javax.annotation.Nullable final String value) {
         this._defenderVersion = value;
     }
@@ -498,6 +507,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the deviceCompliancePolicyScript property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCompliancePolicyScript(@javax.annotation.Nullable final DeviceCompliancePolicyScript value) {
         this._deviceCompliancePolicyScript = value;
     }
@@ -506,6 +516,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the deviceThreatProtectionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceThreatProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._deviceThreatProtectionEnabled = value;
     }
@@ -514,6 +525,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
         this._deviceThreatProtectionRequiredSecurityLevel = value;
     }
@@ -522,6 +534,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the earlyLaunchAntiMalwareDriverEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEarlyLaunchAntiMalwareDriverEnabled(@javax.annotation.Nullable final Boolean value) {
         this._earlyLaunchAntiMalwareDriverEnabled = value;
     }
@@ -530,6 +543,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the mobileOsMaximumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileOsMaximumVersion(@javax.annotation.Nullable final String value) {
         this._mobileOsMaximumVersion = value;
     }
@@ -538,6 +552,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the mobileOsMinimumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileOsMinimumVersion(@javax.annotation.Nullable final String value) {
         this._mobileOsMinimumVersion = value;
     }
@@ -546,6 +561,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the osMaximumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
         this._osMaximumVersion = value;
     }
@@ -554,6 +570,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the osMinimumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
         this._osMinimumVersion = value;
     }
@@ -562,6 +579,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the passwordBlockSimple property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockSimple(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockSimple = value;
     }
@@ -570,6 +588,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -578,6 +597,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumCharacterSetCount = value;
     }
@@ -586,6 +606,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -594,6 +615,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeLock = value;
     }
@@ -602,6 +624,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordBlockCount = value;
     }
@@ -610,6 +633,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequired = value;
     }
@@ -618,6 +642,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the passwordRequiredToUnlockFromIdle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredToUnlockFromIdle(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequiredToUnlockFromIdle = value;
     }
@@ -626,6 +651,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -634,6 +660,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the requireHealthyDeviceReport property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireHealthyDeviceReport(@javax.annotation.Nullable final Boolean value) {
         this._requireHealthyDeviceReport = value;
     }
@@ -642,6 +669,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the rtpEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRtpEnabled(@javax.annotation.Nullable final Boolean value) {
         this._rtpEnabled = value;
     }
@@ -650,6 +678,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the secureBootEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecureBootEnabled(@javax.annotation.Nullable final Boolean value) {
         this._secureBootEnabled = value;
     }
@@ -658,6 +687,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the signatureOutOfDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignatureOutOfDate(@javax.annotation.Nullable final Boolean value) {
         this._signatureOutOfDate = value;
     }
@@ -666,6 +696,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the storageRequireEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRequireEncryption(@javax.annotation.Nullable final Boolean value) {
         this._storageRequireEncryption = value;
     }
@@ -674,6 +705,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the tpmRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTpmRequired(@javax.annotation.Nullable final Boolean value) {
         this._tpmRequired = value;
     }
@@ -682,6 +714,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      * @param value Value to set for the validOperatingSystemBuildRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValidOperatingSystemBuildRanges(@javax.annotation.Nullable final java.util.List<OperatingSystemVersionRange> value) {
         this._validOperatingSystemBuildRanges = value;
     }

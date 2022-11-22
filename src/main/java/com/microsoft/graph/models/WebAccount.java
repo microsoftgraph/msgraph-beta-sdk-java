@@ -24,6 +24,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      * Instantiates a new WebAccount and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WebAccount() {
         super();
         this.setOdataType("#microsoft.graph.webAccount");
@@ -52,15 +53,14 @@ public class WebAccount extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WebAccount currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("service", (n) -> { currentObject.setService(n.getObjectValue(ServiceInformation::createFromDiscriminatorValue)); });
-            this.put("statusMessage", (n) -> { currentObject.setStatusMessage(n.getStringValue()); });
-            this.put("thumbnailUrl", (n) -> { currentObject.setThumbnailUrl(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("service", (n) -> { this.setService(n.getObjectValue(ServiceInformation::createFromDiscriminatorValue)); });
+        deserializerMap.put("statusMessage", (n) -> { this.setStatusMessage(n.getStringValue()); });
+        deserializerMap.put("thumbnailUrl", (n) -> { this.setThumbnailUrl(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the service property value. The service property
@@ -107,6 +107,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +123,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -130,6 +132,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      * @param value Value to set for the service property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setService(@javax.annotation.Nullable final ServiceInformation value) {
         this._service = value;
     }
@@ -138,6 +141,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      * @param value Value to set for the statusMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatusMessage(@javax.annotation.Nullable final String value) {
         this._statusMessage = value;
     }
@@ -146,6 +150,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      * @param value Value to set for the thumbnailUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
         this._thumbnailUrl = value;
     }
@@ -154,6 +159,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -162,6 +168,7 @@ public class WebAccount extends ItemFacet implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

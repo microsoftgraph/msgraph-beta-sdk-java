@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class AuthoredNote extends Entity implements Parsable {
     /** Identity information about the note's author. */
     private Identity _author;
@@ -16,17 +17,17 @@ public class AuthoredNote extends Entity implements Parsable {
     /** The date and time when the entity was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
     private OffsetDateTime _createdDateTime;
     /**
-     * Instantiates a new AuthoredNote and sets the default values.
+     * Instantiates a new authoredNote and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthoredNote() {
         super();
-        this.setOdataType("#microsoft.graph.authoredNote");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthoredNote
+     * @return a authoredNote
      */
     @javax.annotation.Nonnull
     public static AuthoredNote createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -63,18 +64,18 @@ public class AuthoredNote extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthoredNote currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("author", (n) -> { currentObject.setAuthor(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("content", (n) -> { currentObject.setContent(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("author", (n) -> { this.setAuthor(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +88,7 @@ public class AuthoredNote extends Entity implements Parsable {
      * @param value Value to set for the author property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthor(@javax.annotation.Nullable final Identity value) {
         this._author = value;
     }
@@ -95,6 +97,7 @@ public class AuthoredNote extends Entity implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final ItemBody value) {
         this._content = value;
     }
@@ -103,6 +106,7 @@ public class AuthoredNote extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }

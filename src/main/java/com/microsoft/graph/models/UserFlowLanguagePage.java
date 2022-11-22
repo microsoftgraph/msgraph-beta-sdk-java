@@ -7,15 +7,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class UserFlowLanguagePage extends Entity implements Parsable {
     /**
      * Instantiates a new userFlowLanguagePage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserFlowLanguagePage() {
         super();
-        this.setOdataType("#microsoft.graph.userFlowLanguagePage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,15 +33,15 @@ public class UserFlowLanguagePage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserFlowLanguagePage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

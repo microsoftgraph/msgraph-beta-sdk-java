@@ -23,9 +23,9 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
      * Instantiates a new joinMeetingIdSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public JoinMeetingIdSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.joinMeetingIdSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,13 +51,12 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final JoinMeetingIdSettings currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("isPasscodeRequired", (n) -> { currentObject.setIsPasscodeRequired(n.getBooleanValue()); });
-            this.put("joinMeetingId", (n) -> { currentObject.setJoinMeetingId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("passcode", (n) -> { currentObject.setPasscode(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("isPasscodeRequired", (n) -> { this.setIsPasscodeRequired(n.getBooleanValue()); });
+        deserializerMap.put("joinMeetingId", (n) -> { this.setJoinMeetingId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("passcode", (n) -> { this.setPasscode(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isPasscodeRequired property value. Indicates whether a passcode is required to join a meeting when using joinMeetingId. Optional.
@@ -96,6 +95,7 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isPasscodeRequired", this.getIsPasscodeRequired());
@@ -109,6 +109,7 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +118,7 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isPasscodeRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPasscodeRequired(@javax.annotation.Nullable final Boolean value) {
         this._isPasscodeRequired = value;
     }
@@ -125,6 +127,7 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the joinMeetingId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinMeetingId(@javax.annotation.Nullable final String value) {
         this._joinMeetingId = value;
     }
@@ -133,6 +136,7 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +145,7 @@ public class JoinMeetingIdSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the passcode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscode(@javax.annotation.Nullable final String value) {
         this._passcode = value;
     }

@@ -22,9 +22,9 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      * Instantiates a new deviceManagementSettingDependency and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingDependency() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceManagementSettingDependency");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,12 +66,11 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementSettingDependency currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("constraints", (n) -> { currentObject.setConstraints(n.getCollectionOfObjectValues(DeviceManagementConstraint::createFromDiscriminatorValue)); });
-            this.put("definitionId", (n) -> { currentObject.setDefinitionId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("constraints", (n) -> { this.setConstraints(n.getCollectionOfObjectValues(DeviceManagementConstraint::createFromDiscriminatorValue)); });
+        deserializerMap.put("definitionId", (n) -> { this.setDefinitionId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -86,6 +85,7 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("constraints", this.getConstraints());
@@ -98,6 +98,7 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +107,7 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      * @param value Value to set for the constraints property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConstraints(@javax.annotation.Nullable final java.util.List<DeviceManagementConstraint> value) {
         this._constraints = value;
     }
@@ -114,6 +116,7 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      * @param value Value to set for the definitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitionId(@javax.annotation.Nullable final String value) {
         this._definitionId = value;
     }
@@ -122,6 +125,7 @@ public class DeviceManagementSettingDependency implements AdditionalDataHolder, 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

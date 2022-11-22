@@ -16,9 +16,9 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
      * Instantiates a new ConfigurationManagerActionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConfigurationManagerActionResult() {
         super();
-        this.setOdataType("#microsoft.graph.configurationManagerActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,17 +52,17 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConfigurationManagerActionResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("actionDeliveryStatus", (n) -> { currentObject.setActionDeliveryStatus(n.getEnumValue(ConfigurationManagerActionDeliveryStatus.class)); });
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actionDeliveryStatus", (n) -> { this.setActionDeliveryStatus(n.getEnumValue(ConfigurationManagerActionDeliveryStatus.class)); });
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +74,7 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
      * @param value Value to set for the actionDeliveryStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionDeliveryStatus(@javax.annotation.Nullable final ConfigurationManagerActionDeliveryStatus value) {
         this._actionDeliveryStatus = value;
     }
@@ -82,6 +83,7 @@ public class ConfigurationManagerActionResult extends DeviceActionResult impleme
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final Integer value) {
         this._errorCode = value;
     }

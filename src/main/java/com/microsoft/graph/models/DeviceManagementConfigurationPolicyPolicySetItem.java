@@ -12,6 +12,7 @@ public class DeviceManagementConfigurationPolicyPolicySetItem extends PolicySetI
      * Instantiates a new DeviceManagementConfigurationPolicyPolicySetItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationPolicyPolicySetItem() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationPolicyPolicySetItem");
@@ -32,15 +33,15 @@ public class DeviceManagementConfigurationPolicyPolicySetItem extends PolicySetI
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationPolicyPolicySetItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

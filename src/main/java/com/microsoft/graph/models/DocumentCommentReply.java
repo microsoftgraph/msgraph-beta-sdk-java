@@ -17,9 +17,9 @@ public class DocumentCommentReply extends Entity implements Parsable {
      * Instantiates a new documentCommentReply and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DocumentCommentReply() {
         super();
-        this.setOdataType("#microsoft.graph.documentCommentReply");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,11 +45,10 @@ public class DocumentCommentReply extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DocumentCommentReply currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getStringValue()); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
+        deserializerMap.put("location", (n) -> { this.setLocation(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the location property value. The location property
@@ -64,6 +63,7 @@ public class DocumentCommentReply extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +75,7 @@ public class DocumentCommentReply extends Entity implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final String value) {
         this._content = value;
     }
@@ -83,6 +84,7 @@ public class DocumentCommentReply extends Entity implements Parsable {
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final String value) {
         this._location = value;
     }

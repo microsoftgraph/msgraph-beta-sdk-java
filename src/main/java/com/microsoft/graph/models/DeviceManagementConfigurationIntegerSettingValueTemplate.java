@@ -18,6 +18,7 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * Instantiates a new DeviceManagementConfigurationIntegerSettingValueTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationIntegerSettingValueTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationIntegerSettingValueTemplate");
@@ -46,12 +47,11 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationIntegerSettingValueTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getObjectValue(DeviceManagementConfigurationIntegerSettingValueDefaultTemplate::createFromDiscriminatorValue)); });
-            this.put("recommendedValueDefinition", (n) -> { currentObject.setRecommendedValueDefinition(n.getObjectValue(DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate::createFromDiscriminatorValue)); });
-            this.put("requiredValueDefinition", (n) -> { currentObject.setRequiredValueDefinition(n.getObjectValue(DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getObjectValue(DeviceManagementConfigurationIntegerSettingValueDefaultTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("recommendedValueDefinition", (n) -> { this.setRecommendedValueDefinition(n.getObjectValue(DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("requiredValueDefinition", (n) -> { this.setRequiredValueDefinition(n.getObjectValue(DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the recommendedValueDefinition property value. Recommended value definition.
@@ -74,6 +74,7 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +87,7 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final DeviceManagementConfigurationIntegerSettingValueDefaultTemplate value) {
         this._defaultValue = value;
     }
@@ -94,6 +96,7 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * @param value Value to set for the recommendedValueDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendedValueDefinition(@javax.annotation.Nullable final DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate value) {
         this._recommendedValueDefinition = value;
     }
@@ -102,6 +105,7 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * @param value Value to set for the requiredValueDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredValueDefinition(@javax.annotation.Nullable final DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate value) {
         this._requiredValueDefinition = value;
     }

@@ -19,6 +19,8 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     private String _displayName;
     /** Last modified time of the Assignment Filter. */
     private OffsetDateTime _lastModifiedDateTime;
+    /** Associated assignments for a specific filter */
+    private java.util.List<PayloadByFilter> _payloads;
     /** Supported platform types. */
     private DevicePlatformType _platform;
     /** RoleScopeTags of the Assignment Filter. */
@@ -29,9 +31,9 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
      * Instantiates a new deviceAndAppManagementAssignmentFilter and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceAndAppManagementAssignmentFilter() {
         super();
-        this.setOdataType("#microsoft.graph.deviceAndAppManagementAssignmentFilter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -80,16 +82,16 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceAndAppManagementAssignmentFilter currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(DevicePlatformType.class)); });
-            this.put("roleScopeTags", (n) -> { currentObject.setRoleScopeTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("rule", (n) -> { currentObject.setRule(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("payloads", (n) -> { this.setPayloads(n.getCollectionOfObjectValues(PayloadByFilter::createFromDiscriminatorValue)); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(DevicePlatformType.class)); });
+        deserializerMap.put("roleScopeTags", (n) -> { this.setRoleScopeTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("rule", (n) -> { this.setRule(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modified time of the Assignment Filter.
@@ -98,6 +100,14 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this._lastModifiedDateTime;
+    }
+    /**
+     * Gets the payloads property value. Associated assignments for a specific filter
+     * @return a payloadByFilter
+     */
+    @javax.annotation.Nullable
+    public java.util.List<PayloadByFilter> getPayloads() {
+        return this._payloads;
     }
     /**
      * Gets the platform property value. Supported platform types.
@@ -128,6 +138,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +146,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeCollectionOfObjectValues("payloads", this.getPayloads());
         writer.writeEnumValue("platform", this.getPlatform());
         writer.writeCollectionOfPrimitiveValues("roleScopeTags", this.getRoleScopeTags());
         writer.writeStringValue("rule", this.getRule());
@@ -144,6 +156,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -152,6 +165,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -160,6 +174,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -168,14 +183,25 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
+    }
+    /**
+     * Sets the payloads property value. Associated assignments for a specific filter
+     * @param value Value to set for the payloads property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPayloads(@javax.annotation.Nullable final java.util.List<PayloadByFilter> value) {
+        this._payloads = value;
     }
     /**
      * Sets the platform property value. Supported platform types.
      * @param value Value to set for the platform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final DevicePlatformType value) {
         this._platform = value;
     }
@@ -184,6 +210,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
      * @param value Value to set for the roleScopeTags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTags = value;
     }
@@ -192,6 +219,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements Pa
      * @param value Value to set for the rule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRule(@javax.annotation.Nullable final String value) {
         this._rule = value;
     }

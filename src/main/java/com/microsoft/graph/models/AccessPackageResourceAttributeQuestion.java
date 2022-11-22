@@ -14,6 +14,7 @@ public class AccessPackageResourceAttributeQuestion extends AccessPackageResourc
      * Instantiates a new AccessPackageResourceAttributeQuestion and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageResourceAttributeQuestion() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageResourceAttributeQuestion");
@@ -34,10 +35,9 @@ public class AccessPackageResourceAttributeQuestion extends AccessPackageResourc
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessPackageResourceAttributeQuestion currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("question", (n) -> { currentObject.setQuestion(n.getObjectValue(AccessPackageQuestion::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("question", (n) -> { this.setQuestion(n.getObjectValue(AccessPackageQuestion::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the question property value. The question asked in order to get the value of the attribute
@@ -52,6 +52,7 @@ public class AccessPackageResourceAttributeQuestion extends AccessPackageResourc
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class AccessPackageResourceAttributeQuestion extends AccessPackageResourc
      * @param value Value to set for the question property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuestion(@javax.annotation.Nullable final AccessPackageQuestion value) {
         this._question = value;
     }

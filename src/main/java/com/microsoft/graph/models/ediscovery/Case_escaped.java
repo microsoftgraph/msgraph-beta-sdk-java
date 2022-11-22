@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Case_escaped extends Entity implements Parsable {
     /** The user who closed the case. */
     private IdentitySet _closedBy;
@@ -50,9 +50,9 @@ public class Case_escaped extends Entity implements Parsable {
      * Instantiates a new case_escaped and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Case_escaped() {
         super();
-        this.setOdataType("#microsoft.graph.ediscovery.case");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -126,26 +126,25 @@ public class Case_escaped extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Case_escaped currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("closedBy", (n) -> { currentObject.setClosedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("closedDateTime", (n) -> { currentObject.setClosedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("custodians", (n) -> { currentObject.setCustodians(n.getCollectionOfObjectValues(Custodian::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("legalHolds", (n) -> { currentObject.setLegalHolds(n.getCollectionOfObjectValues(LegalHold::createFromDiscriminatorValue)); });
-            this.put("noncustodialDataSources", (n) -> { currentObject.setNoncustodialDataSources(n.getCollectionOfObjectValues(NoncustodialDataSource::createFromDiscriminatorValue)); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(CaseOperation::createFromDiscriminatorValue)); });
-            this.put("reviewSets", (n) -> { currentObject.setReviewSets(n.getCollectionOfObjectValues(ReviewSet::createFromDiscriminatorValue)); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(CaseSettings::createFromDiscriminatorValue)); });
-            this.put("sourceCollections", (n) -> { currentObject.setSourceCollections(n.getCollectionOfObjectValues(SourceCollection::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CaseStatus.class)); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfObjectValues(Tag::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("closedBy", (n) -> { this.setClosedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("closedDateTime", (n) -> { this.setClosedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("custodians", (n) -> { this.setCustodians(n.getCollectionOfObjectValues(Custodian::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("legalHolds", (n) -> { this.setLegalHolds(n.getCollectionOfObjectValues(LegalHold::createFromDiscriminatorValue)); });
+        deserializerMap.put("noncustodialDataSources", (n) -> { this.setNoncustodialDataSources(n.getCollectionOfObjectValues(NoncustodialDataSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(CaseOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("reviewSets", (n) -> { this.setReviewSets(n.getCollectionOfObjectValues(ReviewSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(CaseSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("sourceCollections", (n) -> { this.setSourceCollections(n.getCollectionOfObjectValues(SourceCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CaseStatus.class)); });
+        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfObjectValues(Tag::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedBy property value. The last user who modified the entity.
@@ -232,6 +231,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -258,6 +258,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the closedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClosedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._closedBy = value;
     }
@@ -266,6 +267,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the closedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClosedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._closedDateTime = value;
     }
@@ -274,6 +276,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -282,6 +285,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the custodians property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustodians(@javax.annotation.Nullable final java.util.List<Custodian> value) {
         this._custodians = value;
     }
@@ -290,6 +294,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -298,6 +303,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -306,6 +312,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the externalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
         this._externalId = value;
     }
@@ -314,6 +321,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -322,6 +330,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -330,6 +339,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the legalHolds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLegalHolds(@javax.annotation.Nullable final java.util.List<LegalHold> value) {
         this._legalHolds = value;
     }
@@ -338,6 +348,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the noncustodialDataSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNoncustodialDataSources(@javax.annotation.Nullable final java.util.List<NoncustodialDataSource> value) {
         this._noncustodialDataSources = value;
     }
@@ -346,6 +357,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<CaseOperation> value) {
         this._operations = value;
     }
@@ -354,6 +366,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the reviewSets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewSets(@javax.annotation.Nullable final java.util.List<ReviewSet> value) {
         this._reviewSets = value;
     }
@@ -362,6 +375,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final CaseSettings value) {
         this._settings = value;
     }
@@ -370,6 +384,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the sourceCollections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceCollections(@javax.annotation.Nullable final java.util.List<SourceCollection> value) {
         this._sourceCollections = value;
     }
@@ -378,6 +393,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final CaseStatus value) {
         this._status = value;
     }
@@ -386,6 +402,7 @@ public class Case_escaped extends Entity implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<Tag> value) {
         this._tags = value;
     }

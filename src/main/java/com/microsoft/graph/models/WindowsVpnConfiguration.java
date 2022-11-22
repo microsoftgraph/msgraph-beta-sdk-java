@@ -21,6 +21,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
      * Instantiates a new WindowsVpnConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsVpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsVpnConfiguration");
@@ -66,12 +67,11 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsVpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("connectionName", (n) -> { currentObject.setConnectionName(n.getStringValue()); });
-            this.put("customXml", (n) -> { currentObject.setCustomXml(n.getByteArrayValue()); });
-            this.put("servers", (n) -> { currentObject.setServers(n.getCollectionOfObjectValues(VpnServer::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("connectionName", (n) -> { this.setConnectionName(n.getStringValue()); });
+        deserializerMap.put("customXml", (n) -> { this.setCustomXml(n.getByteArrayValue()); });
+        deserializerMap.put("servers", (n) -> { this.setServers(n.getCollectionOfObjectValues(VpnServer::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the servers property value. List of VPN Servers on the network. Make sure end users can access these network locations. This collection can contain a maximum of 500 elements.
@@ -86,6 +86,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +99,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
      * @param value Value to set for the connectionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionName(@javax.annotation.Nullable final String value) {
         this._connectionName = value;
     }
@@ -106,6 +108,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
      * @param value Value to set for the customXml property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomXml(@javax.annotation.Nullable final byte[] value) {
         this._customXml = value;
     }
@@ -114,6 +117,7 @@ public class WindowsVpnConfiguration extends DeviceConfiguration implements Pars
      * @param value Value to set for the servers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServers(@javax.annotation.Nullable final java.util.List<VpnServer> value) {
         this._servers = value;
     }

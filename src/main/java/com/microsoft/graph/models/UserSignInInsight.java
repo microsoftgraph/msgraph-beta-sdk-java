@@ -15,6 +15,7 @@ public class UserSignInInsight extends GovernanceInsight implements Parsable {
      * Instantiates a new UserSignInInsight and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserSignInInsight() {
         super();
         this.setOdataType("#microsoft.graph.userSignInInsight");
@@ -35,10 +36,9 @@ public class UserSignInInsight extends GovernanceInsight implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserSignInInsight currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("lastSignInDateTime", (n) -> { currentObject.setLastSignInDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("lastSignInDateTime", (n) -> { this.setLastSignInDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastSignInDateTime property value. Indicates when the user last signed in
@@ -53,6 +53,7 @@ public class UserSignInInsight extends GovernanceInsight implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +64,7 @@ public class UserSignInInsight extends GovernanceInsight implements Parsable {
      * @param value Value to set for the lastSignInDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSignInDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSignInDateTime = value;
     }

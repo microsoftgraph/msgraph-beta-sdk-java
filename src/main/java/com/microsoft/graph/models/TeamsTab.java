@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class TeamsTab extends Entity implements Parsable {
     /** Container for custom settings applied to a tab. The tab is considered configured only once this property is set. */
     private TeamsTabConfiguration _configuration;
@@ -27,9 +27,9 @@ public class TeamsTab extends Entity implements Parsable {
      * Instantiates a new teamsTab and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamsTab() {
         super();
-        this.setOdataType("#microsoft.graph.teamsTab");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,16 +63,15 @@ public class TeamsTab extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamsTab currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("configuration", (n) -> { currentObject.setConfiguration(n.getObjectValue(TeamsTabConfiguration::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("messageId", (n) -> { currentObject.setMessageId(n.getStringValue()); });
-            this.put("sortOrderIndex", (n) -> { currentObject.setSortOrderIndex(n.getStringValue()); });
-            this.put("teamsApp", (n) -> { currentObject.setTeamsApp(n.getObjectValue(TeamsApp::createFromDiscriminatorValue)); });
-            this.put("teamsAppId", (n) -> { currentObject.setTeamsAppId(n.getStringValue()); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("configuration", (n) -> { this.setConfiguration(n.getObjectValue(TeamsTabConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("messageId", (n) -> { this.setMessageId(n.getStringValue()); });
+        deserializerMap.put("sortOrderIndex", (n) -> { this.setSortOrderIndex(n.getStringValue()); });
+        deserializerMap.put("teamsApp", (n) -> { this.setTeamsApp(n.getObjectValue(TeamsApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("teamsAppId", (n) -> { this.setTeamsAppId(n.getStringValue()); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the messageId property value. The messageId property
@@ -119,6 +118,7 @@ public class TeamsTab extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +135,7 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the configuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfiguration(@javax.annotation.Nullable final TeamsTabConfiguration value) {
         this._configuration = value;
     }
@@ -143,6 +144,7 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -151,6 +153,7 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the messageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessageId(@javax.annotation.Nullable final String value) {
         this._messageId = value;
     }
@@ -159,6 +162,7 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the sortOrderIndex property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSortOrderIndex(@javax.annotation.Nullable final String value) {
         this._sortOrderIndex = value;
     }
@@ -167,6 +171,7 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the teamsApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsApp(@javax.annotation.Nullable final TeamsApp value) {
         this._teamsApp = value;
     }
@@ -175,6 +180,7 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the teamsAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsAppId(@javax.annotation.Nullable final String value) {
         this._teamsAppId = value;
     }
@@ -183,6 +189,7 @@ public class TeamsTab extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

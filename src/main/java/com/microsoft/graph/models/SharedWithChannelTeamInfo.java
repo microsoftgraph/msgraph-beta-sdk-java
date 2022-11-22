@@ -16,9 +16,9 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      * Instantiates a new SharedWithChannelTeamInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SharedWithChannelTeamInfo() {
         super();
-        this.setOdataType("#microsoft.graph.sharedWithChannelTeamInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,11 +44,10 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SharedWithChannelTeamInfo currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedMembers", (n) -> { currentObject.setAllowedMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
-            this.put("isHostTeam", (n) -> { currentObject.setIsHostTeam(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedMembers", (n) -> { this.setAllowedMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
+        deserializerMap.put("isHostTeam", (n) -> { this.setIsHostTeam(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isHostTeam property value. Indicates whether the team is the host of the channel.
@@ -63,6 +62,7 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +74,7 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      * @param value Value to set for the allowedMembers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedMembers(@javax.annotation.Nullable final java.util.List<ConversationMember> value) {
         this._allowedMembers = value;
     }
@@ -82,6 +83,7 @@ public class SharedWithChannelTeamInfo extends TeamInfo implements Parsable {
      * @param value Value to set for the isHostTeam property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsHostTeam(@javax.annotation.Nullable final Boolean value) {
         this._isHostTeam = value;
     }

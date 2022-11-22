@@ -30,6 +30,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new redirectPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RedirectPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -65,15 +66,14 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RedirectPostRequestBody currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("callbackUri", (n) -> { currentObject.setCallbackUri(n.getStringValue()); });
-            this.put("maskCallee", (n) -> { currentObject.setMaskCallee(n.getBooleanValue()); });
-            this.put("maskCaller", (n) -> { currentObject.setMaskCaller(n.getBooleanValue()); });
-            this.put("targetDisposition", (n) -> { currentObject.setTargetDisposition(n.getEnumValue(CallDisposition.class)); });
-            this.put("targets", (n) -> { currentObject.setTargets(n.getCollectionOfObjectValues(InvitationParticipantInfo::createFromDiscriminatorValue)); });
-            this.put("timeout", (n) -> { currentObject.setTimeout(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("callbackUri", (n) -> { this.setCallbackUri(n.getStringValue()); });
+        deserializerMap.put("maskCallee", (n) -> { this.setMaskCallee(n.getBooleanValue()); });
+        deserializerMap.put("maskCaller", (n) -> { this.setMaskCaller(n.getBooleanValue()); });
+        deserializerMap.put("targetDisposition", (n) -> { this.setTargetDisposition(n.getEnumValue(CallDisposition.class)); });
+        deserializerMap.put("targets", (n) -> { this.setTargets(n.getCollectionOfObjectValues(InvitationParticipantInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("timeout", (n) -> { this.setTimeout(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the maskCallee property value. The maskCallee property
@@ -120,6 +120,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("callbackUri", this.getCallbackUri());
@@ -135,6 +136,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -143,6 +145,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the callbackUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallbackUri(@javax.annotation.Nullable final String value) {
         this._callbackUri = value;
     }
@@ -151,6 +154,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the maskCallee property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaskCallee(@javax.annotation.Nullable final Boolean value) {
         this._maskCallee = value;
     }
@@ -159,6 +163,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the maskCaller property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaskCaller(@javax.annotation.Nullable final Boolean value) {
         this._maskCaller = value;
     }
@@ -167,6 +172,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the targetDisposition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetDisposition(@javax.annotation.Nullable final CallDisposition value) {
         this._targetDisposition = value;
     }
@@ -175,6 +181,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the targets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargets(@javax.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
         this._targets = value;
     }
@@ -183,6 +190,7 @@ public class RedirectPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the timeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeout(@javax.annotation.Nullable final Integer value) {
         this._timeout = value;
     }

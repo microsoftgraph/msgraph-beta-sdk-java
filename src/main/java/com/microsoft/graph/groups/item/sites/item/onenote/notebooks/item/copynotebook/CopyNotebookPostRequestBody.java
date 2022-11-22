@@ -26,6 +26,7 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
      * Instantiates a new copyNotebookPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CopyNotebookPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,14 +54,13 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CopyNotebookPostRequestBody currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
-            this.put("notebookFolder", (n) -> { currentObject.setNotebookFolder(n.getStringValue()); });
-            this.put("renameAs", (n) -> { currentObject.setRenameAs(n.getStringValue()); });
-            this.put("siteCollectionId", (n) -> { currentObject.setSiteCollectionId(n.getStringValue()); });
-            this.put("siteId", (n) -> { currentObject.setSiteId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("groupId", (n) -> { this.setGroupId(n.getStringValue()); });
+        deserializerMap.put("notebookFolder", (n) -> { this.setNotebookFolder(n.getStringValue()); });
+        deserializerMap.put("renameAs", (n) -> { this.setRenameAs(n.getStringValue()); });
+        deserializerMap.put("siteCollectionId", (n) -> { this.setSiteCollectionId(n.getStringValue()); });
+        deserializerMap.put("siteId", (n) -> { this.setSiteId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupId property value. The groupId property
@@ -107,6 +107,7 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("groupId", this.getGroupId());
@@ -121,6 +122,7 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +131,7 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the groupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupId(@javax.annotation.Nullable final String value) {
         this._groupId = value;
     }
@@ -137,6 +140,7 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the notebookFolder property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotebookFolder(@javax.annotation.Nullable final String value) {
         this._notebookFolder = value;
     }
@@ -145,6 +149,7 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the renameAs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRenameAs(@javax.annotation.Nullable final String value) {
         this._renameAs = value;
     }
@@ -153,6 +158,7 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the siteCollectionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteCollectionId(@javax.annotation.Nullable final String value) {
         this._siteCollectionId = value;
     }
@@ -161,6 +167,7 @@ public class CopyNotebookPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the siteId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteId(@javax.annotation.Nullable final String value) {
         this._siteId = value;
     }

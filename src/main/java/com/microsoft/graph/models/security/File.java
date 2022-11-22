@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class File extends Entity implements Parsable {
     /** The content property */
     private byte[] _content;
@@ -40,9 +40,9 @@ public class File extends Entity implements Parsable {
      * Instantiates a new file and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public File() {
         super();
-        this.setOdataType("#microsoft.graph.security.file");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -99,21 +99,20 @@ public class File extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final File currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("dateTime", (n) -> { currentObject.setDateTime(n.getOffsetDateTimeValue()); });
-            this.put("extension", (n) -> { currentObject.setExtension(n.getStringValue()); });
-            this.put("extractedTextContent", (n) -> { currentObject.setExtractedTextContent(n.getByteArrayValue()); });
-            this.put("mediaType", (n) -> { currentObject.setMediaType(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("otherProperties", (n) -> { currentObject.setOtherProperties(n.getObjectValue(StringValueDictionary::createFromDiscriminatorValue)); });
-            this.put("processingStatus", (n) -> { currentObject.setProcessingStatus(n.getEnumValue(FileProcessingStatus.class)); });
-            this.put("senderOrAuthors", (n) -> { currentObject.setSenderOrAuthors(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
-            this.put("sourceType", (n) -> { currentObject.setSourceType(n.getEnumValue(SourceType.class)); });
-            this.put("subjectTitle", (n) -> { currentObject.setSubjectTitle(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("dateTime", (n) -> { this.setDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("extension", (n) -> { this.setExtension(n.getStringValue()); });
+        deserializerMap.put("extractedTextContent", (n) -> { this.setExtractedTextContent(n.getByteArrayValue()); });
+        deserializerMap.put("mediaType", (n) -> { this.setMediaType(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("otherProperties", (n) -> { this.setOtherProperties(n.getObjectValue(StringValueDictionary::createFromDiscriminatorValue)); });
+        deserializerMap.put("processingStatus", (n) -> { this.setProcessingStatus(n.getEnumValue(FileProcessingStatus.class)); });
+        deserializerMap.put("senderOrAuthors", (n) -> { this.setSenderOrAuthors(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("size", (n) -> { this.setSize(n.getLongValue()); });
+        deserializerMap.put("sourceType", (n) -> { this.setSourceType(n.getEnumValue(SourceType.class)); });
+        deserializerMap.put("subjectTitle", (n) -> { this.setSubjectTitle(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mediaType property value. The mediaType property
@@ -184,6 +183,7 @@ public class File extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -205,6 +205,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
         this._content = value;
     }
@@ -213,6 +214,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the dateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._dateTime = value;
     }
@@ -221,6 +223,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the extension property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtension(@javax.annotation.Nullable final String value) {
         this._extension = value;
     }
@@ -229,6 +232,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the extractedTextContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtractedTextContent(@javax.annotation.Nullable final byte[] value) {
         this._extractedTextContent = value;
     }
@@ -237,6 +241,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the mediaType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaType(@javax.annotation.Nullable final String value) {
         this._mediaType = value;
     }
@@ -245,6 +250,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -253,6 +259,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the otherProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOtherProperties(@javax.annotation.Nullable final StringValueDictionary value) {
         this._otherProperties = value;
     }
@@ -261,6 +268,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the processingStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessingStatus(@javax.annotation.Nullable final FileProcessingStatus value) {
         this._processingStatus = value;
     }
@@ -269,6 +277,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the senderOrAuthors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSenderOrAuthors(@javax.annotation.Nullable final java.util.List<String> value) {
         this._senderOrAuthors = value;
     }
@@ -277,6 +286,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Long value) {
         this._size = value;
     }
@@ -285,6 +295,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the sourceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceType(@javax.annotation.Nullable final SourceType value) {
         this._sourceType = value;
     }
@@ -293,6 +304,7 @@ public class File extends Entity implements Parsable {
      * @param value Value to set for the subjectTitle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectTitle(@javax.annotation.Nullable final String value) {
         this._subjectTitle = value;
     }

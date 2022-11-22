@@ -42,6 +42,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * Instantiates a new IosDeviceFeaturesConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosDeviceFeaturesConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosDeviceFeaturesConfiguration");
@@ -78,24 +79,23 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosDeviceFeaturesConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assetTagTemplate", (n) -> { currentObject.setAssetTagTemplate(n.getStringValue()); });
-            this.put("contentFilterSettings", (n) -> { currentObject.setContentFilterSettings(n.getObjectValue(IosWebContentFilterBase::createFromDiscriminatorValue)); });
-            this.put("homeScreenDockIcons", (n) -> { currentObject.setHomeScreenDockIcons(n.getCollectionOfObjectValues(IosHomeScreenItem::createFromDiscriminatorValue)); });
-            this.put("homeScreenGridHeight", (n) -> { currentObject.setHomeScreenGridHeight(n.getIntegerValue()); });
-            this.put("homeScreenGridWidth", (n) -> { currentObject.setHomeScreenGridWidth(n.getIntegerValue()); });
-            this.put("homeScreenPages", (n) -> { currentObject.setHomeScreenPages(n.getCollectionOfObjectValues(IosHomeScreenPage::createFromDiscriminatorValue)); });
-            this.put("identityCertificateForClientAuthentication", (n) -> { currentObject.setIdentityCertificateForClientAuthentication(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
-            this.put("iosSingleSignOnExtension", (n) -> { currentObject.setIosSingleSignOnExtension(n.getObjectValue(IosSingleSignOnExtension::createFromDiscriminatorValue)); });
-            this.put("lockScreenFootnote", (n) -> { currentObject.setLockScreenFootnote(n.getStringValue()); });
-            this.put("notificationSettings", (n) -> { currentObject.setNotificationSettings(n.getCollectionOfObjectValues(IosNotificationSettings::createFromDiscriminatorValue)); });
-            this.put("singleSignOnExtension", (n) -> { currentObject.setSingleSignOnExtension(n.getObjectValue(SingleSignOnExtension::createFromDiscriminatorValue)); });
-            this.put("singleSignOnExtensionPkinitCertificate", (n) -> { currentObject.setSingleSignOnExtensionPkinitCertificate(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
-            this.put("singleSignOnSettings", (n) -> { currentObject.setSingleSignOnSettings(n.getObjectValue(IosSingleSignOnSettings::createFromDiscriminatorValue)); });
-            this.put("wallpaperDisplayLocation", (n) -> { currentObject.setWallpaperDisplayLocation(n.getEnumValue(IosWallpaperDisplayLocation.class)); });
-            this.put("wallpaperImage", (n) -> { currentObject.setWallpaperImage(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assetTagTemplate", (n) -> { this.setAssetTagTemplate(n.getStringValue()); });
+        deserializerMap.put("contentFilterSettings", (n) -> { this.setContentFilterSettings(n.getObjectValue(IosWebContentFilterBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("homeScreenDockIcons", (n) -> { this.setHomeScreenDockIcons(n.getCollectionOfObjectValues(IosHomeScreenItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("homeScreenGridHeight", (n) -> { this.setHomeScreenGridHeight(n.getIntegerValue()); });
+        deserializerMap.put("homeScreenGridWidth", (n) -> { this.setHomeScreenGridWidth(n.getIntegerValue()); });
+        deserializerMap.put("homeScreenPages", (n) -> { this.setHomeScreenPages(n.getCollectionOfObjectValues(IosHomeScreenPage::createFromDiscriminatorValue)); });
+        deserializerMap.put("identityCertificateForClientAuthentication", (n) -> { this.setIdentityCertificateForClientAuthentication(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("iosSingleSignOnExtension", (n) -> { this.setIosSingleSignOnExtension(n.getObjectValue(IosSingleSignOnExtension::createFromDiscriminatorValue)); });
+        deserializerMap.put("lockScreenFootnote", (n) -> { this.setLockScreenFootnote(n.getStringValue()); });
+        deserializerMap.put("notificationSettings", (n) -> { this.setNotificationSettings(n.getCollectionOfObjectValues(IosNotificationSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("singleSignOnExtension", (n) -> { this.setSingleSignOnExtension(n.getObjectValue(SingleSignOnExtension::createFromDiscriminatorValue)); });
+        deserializerMap.put("singleSignOnExtensionPkinitCertificate", (n) -> { this.setSingleSignOnExtensionPkinitCertificate(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("singleSignOnSettings", (n) -> { this.setSingleSignOnSettings(n.getObjectValue(IosSingleSignOnSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("wallpaperDisplayLocation", (n) -> { this.setWallpaperDisplayLocation(n.getEnumValue(IosWallpaperDisplayLocation.class)); });
+        deserializerMap.put("wallpaperImage", (n) -> { this.setWallpaperImage(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the homeScreenDockIcons property value. A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
@@ -206,6 +206,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -230,6 +231,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the assetTagTemplate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssetTagTemplate(@javax.annotation.Nullable final String value) {
         this._assetTagTemplate = value;
     }
@@ -238,6 +240,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the contentFilterSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentFilterSettings(@javax.annotation.Nullable final IosWebContentFilterBase value) {
         this._contentFilterSettings = value;
     }
@@ -246,6 +249,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the homeScreenDockIcons property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeScreenDockIcons(@javax.annotation.Nullable final java.util.List<IosHomeScreenItem> value) {
         this._homeScreenDockIcons = value;
     }
@@ -254,6 +258,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the homeScreenGridHeight property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeScreenGridHeight(@javax.annotation.Nullable final Integer value) {
         this._homeScreenGridHeight = value;
     }
@@ -262,6 +267,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the homeScreenGridWidth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeScreenGridWidth(@javax.annotation.Nullable final Integer value) {
         this._homeScreenGridWidth = value;
     }
@@ -270,6 +276,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the homeScreenPages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeScreenPages(@javax.annotation.Nullable final java.util.List<IosHomeScreenPage> value) {
         this._homeScreenPages = value;
     }
@@ -278,6 +285,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the identityCertificateForClientAuthentication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final IosCertificateProfileBase value) {
         this._identityCertificateForClientAuthentication = value;
     }
@@ -286,6 +294,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the iosSingleSignOnExtension property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosSingleSignOnExtension(@javax.annotation.Nullable final IosSingleSignOnExtension value) {
         this._iosSingleSignOnExtension = value;
     }
@@ -294,6 +303,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the lockScreenFootnote property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLockScreenFootnote(@javax.annotation.Nullable final String value) {
         this._lockScreenFootnote = value;
     }
@@ -302,6 +312,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the notificationSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationSettings(@javax.annotation.Nullable final java.util.List<IosNotificationSettings> value) {
         this._notificationSettings = value;
     }
@@ -310,6 +321,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the singleSignOnExtension property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleSignOnExtension(@javax.annotation.Nullable final SingleSignOnExtension value) {
         this._singleSignOnExtension = value;
     }
@@ -318,6 +330,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the singleSignOnExtensionPkinitCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleSignOnExtensionPkinitCertificate(@javax.annotation.Nullable final IosCertificateProfileBase value) {
         this._singleSignOnExtensionPkinitCertificate = value;
     }
@@ -326,6 +339,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the singleSignOnSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleSignOnSettings(@javax.annotation.Nullable final IosSingleSignOnSettings value) {
         this._singleSignOnSettings = value;
     }
@@ -334,6 +348,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the wallpaperDisplayLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWallpaperDisplayLocation(@javax.annotation.Nullable final IosWallpaperDisplayLocation value) {
         this._wallpaperDisplayLocation = value;
     }
@@ -342,6 +357,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the wallpaperImage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWallpaperImage(@javax.annotation.Nullable final MimeContent value) {
         this._wallpaperImage = value;
     }

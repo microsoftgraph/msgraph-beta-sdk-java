@@ -16,6 +16,7 @@ public class MacOSTrustedRootCertificate extends DeviceConfiguration implements 
      * Instantiates a new macOSTrustedRootCertificate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSTrustedRootCertificate() {
         super();
         this.setOdataType("#microsoft.graph.macOSTrustedRootCertificate");
@@ -44,11 +45,10 @@ public class MacOSTrustedRootCertificate extends DeviceConfiguration implements 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSTrustedRootCertificate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certFileName", (n) -> { currentObject.setCertFileName(n.getStringValue()); });
-            this.put("trustedRootCertificate", (n) -> { currentObject.setTrustedRootCertificate(n.getByteArrayValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certFileName", (n) -> { this.setCertFileName(n.getStringValue()); });
+        deserializerMap.put("trustedRootCertificate", (n) -> { this.setTrustedRootCertificate(n.getByteArrayValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the trustedRootCertificate property value. Trusted Root Certificate.
@@ -63,6 +63,7 @@ public class MacOSTrustedRootCertificate extends DeviceConfiguration implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +75,7 @@ public class MacOSTrustedRootCertificate extends DeviceConfiguration implements 
      * @param value Value to set for the certFileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertFileName(@javax.annotation.Nullable final String value) {
         this._certFileName = value;
     }
@@ -82,6 +84,7 @@ public class MacOSTrustedRootCertificate extends DeviceConfiguration implements 
      * @param value Value to set for the trustedRootCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrustedRootCertificate(@javax.annotation.Nullable final byte[] value) {
         this._trustedRootCertificate = value;
     }

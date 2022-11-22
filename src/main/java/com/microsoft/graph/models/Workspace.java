@@ -31,6 +31,7 @@ public class Workspace extends Place implements Parsable {
      * Instantiates a new workspace and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Workspace() {
         super();
         this.setOdataType("#microsoft.graph.workspace");
@@ -75,18 +76,17 @@ public class Workspace extends Place implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Workspace currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("building", (n) -> { currentObject.setBuilding(n.getStringValue()); });
-            this.put("capacity", (n) -> { currentObject.setCapacity(n.getIntegerValue()); });
-            this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
-            this.put("floorLabel", (n) -> { currentObject.setFloorLabel(n.getStringValue()); });
-            this.put("floorNumber", (n) -> { currentObject.setFloorNumber(n.getIntegerValue()); });
-            this.put("isWheelChairAccessible", (n) -> { currentObject.setIsWheelChairAccessible(n.getBooleanValue()); });
-            this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
-            this.put("nickname", (n) -> { currentObject.setNickname(n.getStringValue()); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("building", (n) -> { this.setBuilding(n.getStringValue()); });
+        deserializerMap.put("capacity", (n) -> { this.setCapacity(n.getIntegerValue()); });
+        deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
+        deserializerMap.put("floorLabel", (n) -> { this.setFloorLabel(n.getStringValue()); });
+        deserializerMap.put("floorNumber", (n) -> { this.setFloorNumber(n.getIntegerValue()); });
+        deserializerMap.put("isWheelChairAccessible", (n) -> { this.setIsWheelChairAccessible(n.getBooleanValue()); });
+        deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
+        deserializerMap.put("nickname", (n) -> { this.setNickname(n.getStringValue()); });
+        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the floorLabel property value. Specifies a descriptive label for the floor, for example, P.
@@ -141,6 +141,7 @@ public class Workspace extends Place implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +160,7 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the building property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBuilding(@javax.annotation.Nullable final String value) {
         this._building = value;
     }
@@ -167,6 +169,7 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the capacity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCapacity(@javax.annotation.Nullable final Integer value) {
         this._capacity = value;
     }
@@ -175,6 +178,7 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final String value) {
         this._emailAddress = value;
     }
@@ -183,6 +187,7 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the floorLabel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFloorLabel(@javax.annotation.Nullable final String value) {
         this._floorLabel = value;
     }
@@ -191,6 +196,7 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the floorNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFloorNumber(@javax.annotation.Nullable final Integer value) {
         this._floorNumber = value;
     }
@@ -199,6 +205,7 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the isWheelChairAccessible property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsWheelChairAccessible(@javax.annotation.Nullable final Boolean value) {
         this._isWheelChairAccessible = value;
     }
@@ -207,6 +214,7 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the label property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabel(@javax.annotation.Nullable final String value) {
         this._label = value;
     }
@@ -215,6 +223,7 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the nickname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNickname(@javax.annotation.Nullable final String value) {
         this._nickname = value;
     }
@@ -223,6 +232,7 @@ public class Workspace extends Place implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
     }

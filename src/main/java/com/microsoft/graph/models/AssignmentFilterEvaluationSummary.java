@@ -35,9 +35,9 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * Instantiates a new assignmentFilterEvaluationSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignmentFilterEvaluationSummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.assignmentFilterEvaluationSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -127,18 +127,17 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AssignmentFilterEvaluationSummary currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("assignmentFilterDisplayName", (n) -> { currentObject.setAssignmentFilterDisplayName(n.getStringValue()); });
-            this.put("assignmentFilterId", (n) -> { currentObject.setAssignmentFilterId(n.getStringValue()); });
-            this.put("assignmentFilterLastModifiedDateTime", (n) -> { currentObject.setAssignmentFilterLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("assignmentFilterPlatform", (n) -> { currentObject.setAssignmentFilterPlatform(n.getEnumValue(DevicePlatformType.class)); });
-            this.put("assignmentFilterType", (n) -> { currentObject.setAssignmentFilterType(n.getEnumValue(DeviceAndAppManagementAssignmentFilterType.class)); });
-            this.put("assignmentFilterTypeAndEvaluationResults", (n) -> { currentObject.setAssignmentFilterTypeAndEvaluationResults(n.getCollectionOfObjectValues(AssignmentFilterTypeAndEvaluationResult::createFromDiscriminatorValue)); });
-            this.put("evaluationDateTime", (n) -> { currentObject.setEvaluationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("evaluationResult", (n) -> { currentObject.setEvaluationResult(n.getEnumValue(AssignmentFilterEvaluationResult.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("assignmentFilterDisplayName", (n) -> { this.setAssignmentFilterDisplayName(n.getStringValue()); });
+        deserializerMap.put("assignmentFilterId", (n) -> { this.setAssignmentFilterId(n.getStringValue()); });
+        deserializerMap.put("assignmentFilterLastModifiedDateTime", (n) -> { this.setAssignmentFilterLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("assignmentFilterPlatform", (n) -> { this.setAssignmentFilterPlatform(n.getEnumValue(DevicePlatformType.class)); });
+        deserializerMap.put("assignmentFilterType", (n) -> { this.setAssignmentFilterType(n.getEnumValue(DeviceAndAppManagementAssignmentFilterType.class)); });
+        deserializerMap.put("assignmentFilterTypeAndEvaluationResults", (n) -> { this.setAssignmentFilterTypeAndEvaluationResults(n.getCollectionOfObjectValues(AssignmentFilterTypeAndEvaluationResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("evaluationDateTime", (n) -> { this.setEvaluationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("evaluationResult", (n) -> { this.setEvaluationResult(n.getEnumValue(AssignmentFilterEvaluationResult.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -153,6 +152,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("assignmentFilterDisplayName", this.getAssignmentFilterDisplayName());
@@ -171,6 +171,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -179,6 +180,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the assignmentFilterDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilterDisplayName(@javax.annotation.Nullable final String value) {
         this._assignmentFilterDisplayName = value;
     }
@@ -187,6 +189,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the assignmentFilterId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilterId(@javax.annotation.Nullable final String value) {
         this._assignmentFilterId = value;
     }
@@ -195,6 +198,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the assignmentFilterLastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilterLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._assignmentFilterLastModifiedDateTime = value;
     }
@@ -203,6 +207,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the assignmentFilterPlatform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilterPlatform(@javax.annotation.Nullable final DevicePlatformType value) {
         this._assignmentFilterPlatform = value;
     }
@@ -211,6 +216,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the assignmentFilterType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilterType(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentFilterType value) {
         this._assignmentFilterType = value;
     }
@@ -219,6 +225,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the assignmentFilterTypeAndEvaluationResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilterTypeAndEvaluationResults(@javax.annotation.Nullable final java.util.List<AssignmentFilterTypeAndEvaluationResult> value) {
         this._assignmentFilterTypeAndEvaluationResults = value;
     }
@@ -227,6 +234,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the evaluationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvaluationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._evaluationDateTime = value;
     }
@@ -235,6 +243,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the evaluationResult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvaluationResult(@javax.annotation.Nullable final AssignmentFilterEvaluationResult value) {
         this._evaluationResult = value;
     }
@@ -243,6 +252,7 @@ public class AssignmentFilterEvaluationSummary implements AdditionalDataHolder, 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

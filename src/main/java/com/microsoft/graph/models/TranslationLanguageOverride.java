@@ -21,9 +21,9 @@ public class TranslationLanguageOverride implements AdditionalDataHolder, Parsab
      * Instantiates a new translationLanguageOverride and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TranslationLanguageOverride() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.translationLanguageOverride");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,12 +49,11 @@ public class TranslationLanguageOverride implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TranslationLanguageOverride currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("translationBehavior", (n) -> { currentObject.setTranslationBehavior(n.getEnumValue(TranslationBehavior.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("translationBehavior", (n) -> { this.setTranslationBehavior(n.getEnumValue(TranslationBehavior.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the languageTag property value. The language to apply the override.Returned by default. Not nullable.
@@ -85,6 +84,7 @@ public class TranslationLanguageOverride implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("languageTag", this.getLanguageTag());
@@ -97,6 +97,7 @@ public class TranslationLanguageOverride implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class TranslationLanguageOverride implements AdditionalDataHolder, Parsab
      * @param value Value to set for the languageTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguageTag(@javax.annotation.Nullable final String value) {
         this._languageTag = value;
     }
@@ -113,6 +115,7 @@ public class TranslationLanguageOverride implements AdditionalDataHolder, Parsab
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +124,7 @@ public class TranslationLanguageOverride implements AdditionalDataHolder, Parsab
      * @param value Value to set for the translationBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTranslationBehavior(@javax.annotation.Nullable final TranslationBehavior value) {
         this._translationBehavior = value;
     }

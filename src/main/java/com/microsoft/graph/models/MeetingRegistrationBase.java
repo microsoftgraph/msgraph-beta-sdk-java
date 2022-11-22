@@ -18,9 +18,9 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
      * Instantiates a new meetingRegistrationBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MeetingRegistrationBase() {
         super();
-        this.setOdataType("#microsoft.graph.meetingRegistrationBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,11 +54,10 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MeetingRegistrationBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedRegistrant", (n) -> { currentObject.setAllowedRegistrant(n.getEnumValue(MeetingAudience.class)); });
-            this.put("registrants", (n) -> { currentObject.setRegistrants(n.getCollectionOfObjectValues(MeetingRegistrantBase::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedRegistrant", (n) -> { this.setAllowedRegistrant(n.getEnumValue(MeetingAudience.class)); });
+        deserializerMap.put("registrants", (n) -> { this.setRegistrants(n.getCollectionOfObjectValues(MeetingRegistrantBase::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the registrants property value. Registrants of the online meeting.
@@ -73,6 +72,7 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -84,6 +84,7 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
      * @param value Value to set for the allowedRegistrant property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedRegistrant(@javax.annotation.Nullable final MeetingAudience value) {
         this._allowedRegistrant = value;
     }
@@ -92,6 +93,7 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
      * @param value Value to set for the registrants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistrants(@javax.annotation.Nullable final java.util.List<MeetingRegistrantBase> value) {
         this._registrants = value;
     }

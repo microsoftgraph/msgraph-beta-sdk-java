@@ -23,9 +23,9 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
      * Instantiates a new synchronizationJobSubject and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SynchronizationJobSubject() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.synchronizationJobSubject");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,13 +51,12 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SynchronizationJobSubject currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(SynchronizationLinkedObjects::createFromDiscriminatorValue)); });
-            this.put("objectId", (n) -> { currentObject.setObjectId(n.getStringValue()); });
-            this.put("objectTypeName", (n) -> { currentObject.setObjectTypeName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("links", (n) -> { this.setLinks(n.getObjectValue(SynchronizationLinkedObjects::createFromDiscriminatorValue)); });
+        deserializerMap.put("objectId", (n) -> { this.setObjectId(n.getStringValue()); });
+        deserializerMap.put("objectTypeName", (n) -> { this.setObjectTypeName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the links property value. Principals that you would like to provision.
@@ -96,6 +95,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("links", this.getLinks());
@@ -109,6 +109,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +118,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
      * @param value Value to set for the links property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLinks(@javax.annotation.Nullable final SynchronizationLinkedObjects value) {
         this._links = value;
     }
@@ -125,6 +127,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
      * @param value Value to set for the objectId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setObjectId(@javax.annotation.Nullable final String value) {
         this._objectId = value;
     }
@@ -133,6 +136,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
      * @param value Value to set for the objectTypeName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setObjectTypeName(@javax.annotation.Nullable final String value) {
         this._objectTypeName = value;
     }
@@ -141,6 +145,7 @@ public class SynchronizationJobSubject implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

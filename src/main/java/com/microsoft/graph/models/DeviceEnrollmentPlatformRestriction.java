@@ -30,9 +30,9 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * Instantiates a new deviceEnrollmentPlatformRestriction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceEnrollmentPlatformRestriction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -74,16 +74,15 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceEnrollmentPlatformRestriction currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("blockedManufacturers", (n) -> { currentObject.setBlockedManufacturers(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("blockedSkus", (n) -> { currentObject.setBlockedSkus(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("osMaximumVersion", (n) -> { currentObject.setOsMaximumVersion(n.getStringValue()); });
-            this.put("osMinimumVersion", (n) -> { currentObject.setOsMinimumVersion(n.getStringValue()); });
-            this.put("personalDeviceEnrollmentBlocked", (n) -> { currentObject.setPersonalDeviceEnrollmentBlocked(n.getBooleanValue()); });
-            this.put("platformBlocked", (n) -> { currentObject.setPlatformBlocked(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("blockedManufacturers", (n) -> { this.setBlockedManufacturers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("blockedSkus", (n) -> { this.setBlockedSkus(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("osMaximumVersion", (n) -> { this.setOsMaximumVersion(n.getStringValue()); });
+        deserializerMap.put("osMinimumVersion", (n) -> { this.setOsMinimumVersion(n.getStringValue()); });
+        deserializerMap.put("personalDeviceEnrollmentBlocked", (n) -> { this.setPersonalDeviceEnrollmentBlocked(n.getBooleanValue()); });
+        deserializerMap.put("platformBlocked", (n) -> { this.setPlatformBlocked(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -130,6 +129,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("blockedManufacturers", this.getBlockedManufacturers());
@@ -146,6 +146,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -154,6 +155,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the blockedManufacturers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockedManufacturers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._blockedManufacturers = value;
     }
@@ -162,6 +164,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the blockedSkus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockedSkus(@javax.annotation.Nullable final java.util.List<String> value) {
         this._blockedSkus = value;
     }
@@ -170,6 +173,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -178,6 +182,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the osMaximumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
         this._osMaximumVersion = value;
     }
@@ -186,6 +191,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the osMinimumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
         this._osMinimumVersion = value;
     }
@@ -194,6 +200,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the personalDeviceEnrollmentBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersonalDeviceEnrollmentBlocked(@javax.annotation.Nullable final Boolean value) {
         this._personalDeviceEnrollmentBlocked = value;
     }
@@ -202,6 +209,7 @@ public class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder
      * @param value Value to set for the platformBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatformBlocked(@javax.annotation.Nullable final Boolean value) {
         this._platformBlocked = value;
     }

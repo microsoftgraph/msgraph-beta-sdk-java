@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ThumbnailSet extends Entity implements Parsable {
     /** A 1920x1920 scaled thumbnail. */
     private Thumbnail _large;
@@ -21,9 +21,9 @@ public class ThumbnailSet extends Entity implements Parsable {
      * Instantiates a new thumbnailSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ThumbnailSet() {
         super();
-        this.setOdataType("#microsoft.graph.thumbnailSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,13 +41,12 @@ public class ThumbnailSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ThumbnailSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("large", (n) -> { currentObject.setLarge(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
-            this.put("medium", (n) -> { currentObject.setMedium(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
-            this.put("small", (n) -> { currentObject.setSmall(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
-            this.put("source", (n) -> { currentObject.setSource(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("large", (n) -> { this.setLarge(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
+        deserializerMap.put("medium", (n) -> { this.setMedium(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
+        deserializerMap.put("small", (n) -> { this.setSmall(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getObjectValue(Thumbnail::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the large property value. A 1920x1920 scaled thumbnail.
@@ -86,6 +85,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +99,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      * @param value Value to set for the large property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLarge(@javax.annotation.Nullable final Thumbnail value) {
         this._large = value;
     }
@@ -107,6 +108,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      * @param value Value to set for the medium property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMedium(@javax.annotation.Nullable final Thumbnail value) {
         this._medium = value;
     }
@@ -115,6 +117,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      * @param value Value to set for the small property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmall(@javax.annotation.Nullable final Thumbnail value) {
         this._small = value;
     }
@@ -123,6 +126,7 @@ public class ThumbnailSet extends Entity implements Parsable {
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final Thumbnail value) {
         this._source = value;
     }

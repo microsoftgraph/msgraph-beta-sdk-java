@@ -70,6 +70,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * Instantiates a new WindowsPhone81GeneralConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsPhone81GeneralConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsPhone81GeneralConfiguration");
@@ -162,38 +163,37 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsPhone81GeneralConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applyOnlyToWindowsPhone81", (n) -> { currentObject.setApplyOnlyToWindowsPhone81(n.getBooleanValue()); });
-            this.put("appsBlockCopyPaste", (n) -> { currentObject.setAppsBlockCopyPaste(n.getBooleanValue()); });
-            this.put("bluetoothBlocked", (n) -> { currentObject.setBluetoothBlocked(n.getBooleanValue()); });
-            this.put("cameraBlocked", (n) -> { currentObject.setCameraBlocked(n.getBooleanValue()); });
-            this.put("cellularBlockWifiTethering", (n) -> { currentObject.setCellularBlockWifiTethering(n.getBooleanValue()); });
-            this.put("compliantAppListType", (n) -> { currentObject.setCompliantAppListType(n.getEnumValue(AppListType.class)); });
-            this.put("compliantAppsList", (n) -> { currentObject.setCompliantAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("diagnosticDataBlockSubmission", (n) -> { currentObject.setDiagnosticDataBlockSubmission(n.getBooleanValue()); });
-            this.put("emailBlockAddingAccounts", (n) -> { currentObject.setEmailBlockAddingAccounts(n.getBooleanValue()); });
-            this.put("locationServicesBlocked", (n) -> { currentObject.setLocationServicesBlocked(n.getBooleanValue()); });
-            this.put("microsoftAccountBlocked", (n) -> { currentObject.setMicrosoftAccountBlocked(n.getBooleanValue()); });
-            this.put("nfcBlocked", (n) -> { currentObject.setNfcBlocked(n.getBooleanValue()); });
-            this.put("passwordBlockSimple", (n) -> { currentObject.setPasswordBlockSimple(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumCharacterSetCount", (n) -> { currentObject.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
-            this.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
-            this.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
-            this.put("storageBlockRemovableStorage", (n) -> { currentObject.setStorageBlockRemovableStorage(n.getBooleanValue()); });
-            this.put("storageRequireEncryption", (n) -> { currentObject.setStorageRequireEncryption(n.getBooleanValue()); });
-            this.put("webBrowserBlocked", (n) -> { currentObject.setWebBrowserBlocked(n.getBooleanValue()); });
-            this.put("wifiBlockAutomaticConnectHotspots", (n) -> { currentObject.setWifiBlockAutomaticConnectHotspots(n.getBooleanValue()); });
-            this.put("wifiBlocked", (n) -> { currentObject.setWifiBlocked(n.getBooleanValue()); });
-            this.put("wifiBlockHotspotReporting", (n) -> { currentObject.setWifiBlockHotspotReporting(n.getBooleanValue()); });
-            this.put("windowsStoreBlocked", (n) -> { currentObject.setWindowsStoreBlocked(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applyOnlyToWindowsPhone81", (n) -> { this.setApplyOnlyToWindowsPhone81(n.getBooleanValue()); });
+        deserializerMap.put("appsBlockCopyPaste", (n) -> { this.setAppsBlockCopyPaste(n.getBooleanValue()); });
+        deserializerMap.put("bluetoothBlocked", (n) -> { this.setBluetoothBlocked(n.getBooleanValue()); });
+        deserializerMap.put("cameraBlocked", (n) -> { this.setCameraBlocked(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockWifiTethering", (n) -> { this.setCellularBlockWifiTethering(n.getBooleanValue()); });
+        deserializerMap.put("compliantAppListType", (n) -> { this.setCompliantAppListType(n.getEnumValue(AppListType.class)); });
+        deserializerMap.put("compliantAppsList", (n) -> { this.setCompliantAppsList(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("diagnosticDataBlockSubmission", (n) -> { this.setDiagnosticDataBlockSubmission(n.getBooleanValue()); });
+        deserializerMap.put("emailBlockAddingAccounts", (n) -> { this.setEmailBlockAddingAccounts(n.getBooleanValue()); });
+        deserializerMap.put("locationServicesBlocked", (n) -> { this.setLocationServicesBlocked(n.getBooleanValue()); });
+        deserializerMap.put("microsoftAccountBlocked", (n) -> { this.setMicrosoftAccountBlocked(n.getBooleanValue()); });
+        deserializerMap.put("nfcBlocked", (n) -> { this.setNfcBlocked(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockSimple", (n) -> { this.setPasswordBlockSimple(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { this.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumCharacterSetCount", (n) -> { this.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { this.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { this.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { this.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequired", (n) -> { this.setPasswordRequired(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
+        deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { this.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
+        deserializerMap.put("screenCaptureBlocked", (n) -> { this.setScreenCaptureBlocked(n.getBooleanValue()); });
+        deserializerMap.put("storageBlockRemovableStorage", (n) -> { this.setStorageBlockRemovableStorage(n.getBooleanValue()); });
+        deserializerMap.put("storageRequireEncryption", (n) -> { this.setStorageRequireEncryption(n.getBooleanValue()); });
+        deserializerMap.put("webBrowserBlocked", (n) -> { this.setWebBrowserBlocked(n.getBooleanValue()); });
+        deserializerMap.put("wifiBlockAutomaticConnectHotspots", (n) -> { this.setWifiBlockAutomaticConnectHotspots(n.getBooleanValue()); });
+        deserializerMap.put("wifiBlocked", (n) -> { this.setWifiBlocked(n.getBooleanValue()); });
+        deserializerMap.put("wifiBlockHotspotReporting", (n) -> { this.setWifiBlockHotspotReporting(n.getBooleanValue()); });
+        deserializerMap.put("windowsStoreBlocked", (n) -> { this.setWindowsStoreBlocked(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the locationServicesBlocked property value. Indicates whether or not to block location services.
@@ -360,10 +360,10 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeBooleanValue("applyOnlyToWindowsPhone81", this.getApplyOnlyToWindowsPhone81());
         writer.writeBooleanValue("appsBlockCopyPaste", this.getAppsBlockCopyPaste());
         writer.writeBooleanValue("bluetoothBlocked", this.getBluetoothBlocked());
         writer.writeBooleanValue("cameraBlocked", this.getCameraBlocked());
@@ -398,6 +398,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the applyOnlyToWindowsPhone81 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplyOnlyToWindowsPhone81(@javax.annotation.Nullable final Boolean value) {
         this._applyOnlyToWindowsPhone81 = value;
     }
@@ -406,6 +407,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the appsBlockCopyPaste property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsBlockCopyPaste(@javax.annotation.Nullable final Boolean value) {
         this._appsBlockCopyPaste = value;
     }
@@ -414,6 +416,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the bluetoothBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBluetoothBlocked(@javax.annotation.Nullable final Boolean value) {
         this._bluetoothBlocked = value;
     }
@@ -422,6 +425,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the cameraBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCameraBlocked(@javax.annotation.Nullable final Boolean value) {
         this._cameraBlocked = value;
     }
@@ -430,6 +434,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the cellularBlockWifiTethering property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockWifiTethering(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockWifiTethering = value;
     }
@@ -438,6 +443,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the compliantAppListType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantAppListType(@javax.annotation.Nullable final AppListType value) {
         this._compliantAppListType = value;
     }
@@ -446,6 +452,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the compliantAppsList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantAppsList(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
         this._compliantAppsList = value;
     }
@@ -454,6 +461,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the diagnosticDataBlockSubmission property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiagnosticDataBlockSubmission(@javax.annotation.Nullable final Boolean value) {
         this._diagnosticDataBlockSubmission = value;
     }
@@ -462,6 +470,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the emailBlockAddingAccounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailBlockAddingAccounts(@javax.annotation.Nullable final Boolean value) {
         this._emailBlockAddingAccounts = value;
     }
@@ -470,6 +479,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the locationServicesBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocationServicesBlocked(@javax.annotation.Nullable final Boolean value) {
         this._locationServicesBlocked = value;
     }
@@ -478,6 +488,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the microsoftAccountBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftAccountBlocked(@javax.annotation.Nullable final Boolean value) {
         this._microsoftAccountBlocked = value;
     }
@@ -486,6 +497,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the nfcBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNfcBlocked(@javax.annotation.Nullable final Boolean value) {
         this._nfcBlocked = value;
     }
@@ -494,6 +506,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordBlockSimple property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockSimple(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockSimple = value;
     }
@@ -502,6 +515,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -510,6 +524,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumCharacterSetCount = value;
     }
@@ -518,6 +533,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -526,6 +542,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
@@ -534,6 +551,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordBlockCount = value;
     }
@@ -542,6 +560,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequired = value;
     }
@@ -550,6 +569,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -558,6 +578,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
         this._passwordSignInFailureCountBeforeFactoryReset = value;
     }
@@ -566,6 +587,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the screenCaptureBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
         this._screenCaptureBlocked = value;
     }
@@ -574,6 +596,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the storageBlockRemovableStorage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageBlockRemovableStorage(@javax.annotation.Nullable final Boolean value) {
         this._storageBlockRemovableStorage = value;
     }
@@ -582,6 +605,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the storageRequireEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRequireEncryption(@javax.annotation.Nullable final Boolean value) {
         this._storageRequireEncryption = value;
     }
@@ -590,6 +614,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the webBrowserBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebBrowserBlocked(@javax.annotation.Nullable final Boolean value) {
         this._webBrowserBlocked = value;
     }
@@ -598,6 +623,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the wifiBlockAutomaticConnectHotspots property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiBlockAutomaticConnectHotspots(@javax.annotation.Nullable final Boolean value) {
         this._wifiBlockAutomaticConnectHotspots = value;
     }
@@ -606,6 +632,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the wifiBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiBlocked(@javax.annotation.Nullable final Boolean value) {
         this._wifiBlocked = value;
     }
@@ -614,6 +641,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the wifiBlockHotspotReporting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiBlockHotspotReporting(@javax.annotation.Nullable final Boolean value) {
         this._wifiBlockHotspotReporting = value;
     }
@@ -622,6 +650,7 @@ public class WindowsPhone81GeneralConfiguration extends DeviceConfiguration impl
      * @param value Value to set for the windowsStoreBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsStoreBlocked(@javax.annotation.Nullable final Boolean value) {
         this._windowsStoreBlocked = value;
     }

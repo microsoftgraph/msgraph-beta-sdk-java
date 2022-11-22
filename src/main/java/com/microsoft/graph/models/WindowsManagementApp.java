@@ -17,17 +17,17 @@ public class WindowsManagementApp extends Entity implements Parsable {
     /** Managed Installer Configured Date Time */
     private String _managedInstallerConfiguredDateTime;
     /**
-     * Instantiates a new WindowsManagementApp and sets the default values.
+     * Instantiates a new windowsManagementApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsManagementApp() {
         super();
-        this.setOdataType("#microsoft.graph.windowsManagementApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsManagementApp
+     * @return a windowsManagementApp
      */
     @javax.annotation.Nonnull
     public static WindowsManagementApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -48,13 +48,12 @@ public class WindowsManagementApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsManagementApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("availableVersion", (n) -> { currentObject.setAvailableVersion(n.getStringValue()); });
-            this.put("healthStates", (n) -> { currentObject.setHealthStates(n.getCollectionOfObjectValues(WindowsManagementAppHealthState::createFromDiscriminatorValue)); });
-            this.put("managedInstaller", (n) -> { currentObject.setManagedInstaller(n.getEnumValue(ManagedInstallerStatus.class)); });
-            this.put("managedInstallerConfiguredDateTime", (n) -> { currentObject.setManagedInstallerConfiguredDateTime(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("availableVersion", (n) -> { this.setAvailableVersion(n.getStringValue()); });
+        deserializerMap.put("healthStates", (n) -> { this.setHealthStates(n.getCollectionOfObjectValues(WindowsManagementAppHealthState::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedInstaller", (n) -> { this.setManagedInstaller(n.getEnumValue(ManagedInstallerStatus.class)); });
+        deserializerMap.put("managedInstallerConfiguredDateTime", (n) -> { this.setManagedInstallerConfiguredDateTime(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the healthStates property value. The list of health states for installed Windows management app.
@@ -85,6 +84,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +98,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * @param value Value to set for the availableVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailableVersion(@javax.annotation.Nullable final String value) {
         this._availableVersion = value;
     }
@@ -106,6 +107,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * @param value Value to set for the healthStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthStates(@javax.annotation.Nullable final java.util.List<WindowsManagementAppHealthState> value) {
         this._healthStates = value;
     }
@@ -114,6 +116,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * @param value Value to set for the managedInstaller property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedInstaller(@javax.annotation.Nullable final ManagedInstallerStatus value) {
         this._managedInstaller = value;
     }
@@ -122,6 +125,7 @@ public class WindowsManagementApp extends Entity implements Parsable {
      * @param value Value to set for the managedInstallerConfiguredDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedInstallerConfiguredDateTime(@javax.annotation.Nullable final String value) {
         this._managedInstallerConfiguredDateTime = value;
     }

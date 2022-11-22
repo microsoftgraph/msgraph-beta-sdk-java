@@ -24,6 +24,8 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
     private ZebraFotaNetworkType _downloadRuleNetworkType;
     /** Date and time in the device time zone when the download will start (e.g., 2018-07-25T10:20:32). The default value is UTC now and the maximum is 10 days from deployment creation. */
     private OffsetDateTime _downloadRuleStartDateTime;
+    /** A description provided by Zebra for the the firmware artifact to update the device to (e.g.: LifeGuard Update 120 (released 29-June-2022). */
+    private String _firmwareTargetArtifactDescription;
     /** Deployment's Board Support Package (BSP. E.g.: '01.18.02.00'). Required only for custom update type. */
     private String _firmwareTargetBoardSupportPackageVersion;
     /** Target OS Version (e.g.: '8.1.0'). Required only for custom update type. */
@@ -50,9 +52,9 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * Instantiates a new zebraFotaDeploymentSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ZebraFotaDeploymentSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.zebraFotaDeploymentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -118,25 +120,33 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ZebraFotaDeploymentSettings currentObject = this;
-        return new HashMap<>(16) {{
-            this.put("batteryRuleMinimumBatteryLevelPercentage", (n) -> { currentObject.setBatteryRuleMinimumBatteryLevelPercentage(n.getIntegerValue()); });
-            this.put("batteryRuleRequireCharger", (n) -> { currentObject.setBatteryRuleRequireCharger(n.getBooleanValue()); });
-            this.put("deviceModel", (n) -> { currentObject.setDeviceModel(n.getStringValue()); });
-            this.put("downloadRuleNetworkType", (n) -> { currentObject.setDownloadRuleNetworkType(n.getEnumValue(ZebraFotaNetworkType.class)); });
-            this.put("downloadRuleStartDateTime", (n) -> { currentObject.setDownloadRuleStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("firmwareTargetBoardSupportPackageVersion", (n) -> { currentObject.setFirmwareTargetBoardSupportPackageVersion(n.getStringValue()); });
-            this.put("firmwareTargetOsVersion", (n) -> { currentObject.setFirmwareTargetOsVersion(n.getStringValue()); });
-            this.put("firmwareTargetPatch", (n) -> { currentObject.setFirmwareTargetPatch(n.getStringValue()); });
-            this.put("installRuleStartDateTime", (n) -> { currentObject.setInstallRuleStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("installRuleWindowEndTime", (n) -> { currentObject.setInstallRuleWindowEndTime(n.getLocalTimeValue()); });
-            this.put("installRuleWindowStartTime", (n) -> { currentObject.setInstallRuleWindowStartTime(n.getLocalTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("scheduleDurationInDays", (n) -> { currentObject.setScheduleDurationInDays(n.getIntegerValue()); });
-            this.put("scheduleMode", (n) -> { currentObject.setScheduleMode(n.getEnumValue(ZebraFotaScheduleMode.class)); });
-            this.put("timeZoneOffsetInMinutes", (n) -> { currentObject.setTimeZoneOffsetInMinutes(n.getIntegerValue()); });
-            this.put("updateType", (n) -> { currentObject.setUpdateType(n.getEnumValue(ZebraFotaUpdateType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(17);
+        deserializerMap.put("batteryRuleMinimumBatteryLevelPercentage", (n) -> { this.setBatteryRuleMinimumBatteryLevelPercentage(n.getIntegerValue()); });
+        deserializerMap.put("batteryRuleRequireCharger", (n) -> { this.setBatteryRuleRequireCharger(n.getBooleanValue()); });
+        deserializerMap.put("deviceModel", (n) -> { this.setDeviceModel(n.getStringValue()); });
+        deserializerMap.put("downloadRuleNetworkType", (n) -> { this.setDownloadRuleNetworkType(n.getEnumValue(ZebraFotaNetworkType.class)); });
+        deserializerMap.put("downloadRuleStartDateTime", (n) -> { this.setDownloadRuleStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("firmwareTargetArtifactDescription", (n) -> { this.setFirmwareTargetArtifactDescription(n.getStringValue()); });
+        deserializerMap.put("firmwareTargetBoardSupportPackageVersion", (n) -> { this.setFirmwareTargetBoardSupportPackageVersion(n.getStringValue()); });
+        deserializerMap.put("firmwareTargetOsVersion", (n) -> { this.setFirmwareTargetOsVersion(n.getStringValue()); });
+        deserializerMap.put("firmwareTargetPatch", (n) -> { this.setFirmwareTargetPatch(n.getStringValue()); });
+        deserializerMap.put("installRuleStartDateTime", (n) -> { this.setInstallRuleStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("installRuleWindowEndTime", (n) -> { this.setInstallRuleWindowEndTime(n.getLocalTimeValue()); });
+        deserializerMap.put("installRuleWindowStartTime", (n) -> { this.setInstallRuleWindowStartTime(n.getLocalTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("scheduleDurationInDays", (n) -> { this.setScheduleDurationInDays(n.getIntegerValue()); });
+        deserializerMap.put("scheduleMode", (n) -> { this.setScheduleMode(n.getEnumValue(ZebraFotaScheduleMode.class)); });
+        deserializerMap.put("timeZoneOffsetInMinutes", (n) -> { this.setTimeZoneOffsetInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("updateType", (n) -> { this.setUpdateType(n.getEnumValue(ZebraFotaUpdateType.class)); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the firmwareTargetArtifactDescription property value. A description provided by Zebra for the the firmware artifact to update the device to (e.g.: LifeGuard Update 120 (released 29-June-2022).
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getFirmwareTargetArtifactDescription() {
+        return this._firmwareTargetArtifactDescription;
     }
     /**
      * Gets the firmwareTargetBoardSupportPackageVersion property value. Deployment's Board Support Package (BSP. E.g.: '01.18.02.00'). Required only for custom update type.
@@ -231,6 +241,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("batteryRuleMinimumBatteryLevelPercentage", this.getBatteryRuleMinimumBatteryLevelPercentage());
@@ -238,6 +249,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
         writer.writeStringValue("deviceModel", this.getDeviceModel());
         writer.writeEnumValue("downloadRuleNetworkType", this.getDownloadRuleNetworkType());
         writer.writeOffsetDateTimeValue("downloadRuleStartDateTime", this.getDownloadRuleStartDateTime());
+        writer.writeStringValue("firmwareTargetArtifactDescription", this.getFirmwareTargetArtifactDescription());
         writer.writeStringValue("firmwareTargetBoardSupportPackageVersion", this.getFirmwareTargetBoardSupportPackageVersion());
         writer.writeStringValue("firmwareTargetOsVersion", this.getFirmwareTargetOsVersion());
         writer.writeStringValue("firmwareTargetPatch", this.getFirmwareTargetPatch());
@@ -256,6 +268,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -264,6 +277,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the batteryRuleMinimumBatteryLevelPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBatteryRuleMinimumBatteryLevelPercentage(@javax.annotation.Nullable final Integer value) {
         this._batteryRuleMinimumBatteryLevelPercentage = value;
     }
@@ -272,6 +286,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the batteryRuleRequireCharger property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBatteryRuleRequireCharger(@javax.annotation.Nullable final Boolean value) {
         this._batteryRuleRequireCharger = value;
     }
@@ -280,6 +295,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the deviceModel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceModel(@javax.annotation.Nullable final String value) {
         this._deviceModel = value;
     }
@@ -288,6 +304,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the downloadRuleNetworkType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDownloadRuleNetworkType(@javax.annotation.Nullable final ZebraFotaNetworkType value) {
         this._downloadRuleNetworkType = value;
     }
@@ -296,14 +313,25 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the downloadRuleStartDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDownloadRuleStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._downloadRuleStartDateTime = value;
+    }
+    /**
+     * Sets the firmwareTargetArtifactDescription property value. A description provided by Zebra for the the firmware artifact to update the device to (e.g.: LifeGuard Update 120 (released 29-June-2022).
+     * @param value Value to set for the firmwareTargetArtifactDescription property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setFirmwareTargetArtifactDescription(@javax.annotation.Nullable final String value) {
+        this._firmwareTargetArtifactDescription = value;
     }
     /**
      * Sets the firmwareTargetBoardSupportPackageVersion property value. Deployment's Board Support Package (BSP. E.g.: '01.18.02.00'). Required only for custom update type.
      * @param value Value to set for the firmwareTargetBoardSupportPackageVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirmwareTargetBoardSupportPackageVersion(@javax.annotation.Nullable final String value) {
         this._firmwareTargetBoardSupportPackageVersion = value;
     }
@@ -312,6 +340,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the firmwareTargetOsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirmwareTargetOsVersion(@javax.annotation.Nullable final String value) {
         this._firmwareTargetOsVersion = value;
     }
@@ -320,6 +349,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the firmwareTargetPatch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirmwareTargetPatch(@javax.annotation.Nullable final String value) {
         this._firmwareTargetPatch = value;
     }
@@ -328,6 +358,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the installRuleStartDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallRuleStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._installRuleStartDateTime = value;
     }
@@ -336,6 +367,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the installRuleWindowEndTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallRuleWindowEndTime(@javax.annotation.Nullable final LocalTime value) {
         this._installRuleWindowEndTime = value;
     }
@@ -344,6 +376,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the installRuleWindowStartTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallRuleWindowStartTime(@javax.annotation.Nullable final LocalTime value) {
         this._installRuleWindowStartTime = value;
     }
@@ -352,6 +385,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -360,6 +394,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the scheduleDurationInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduleDurationInDays(@javax.annotation.Nullable final Integer value) {
         this._scheduleDurationInDays = value;
     }
@@ -368,6 +403,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the scheduleMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduleMode(@javax.annotation.Nullable final ZebraFotaScheduleMode value) {
         this._scheduleMode = value;
     }
@@ -376,6 +412,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the timeZoneOffsetInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeZoneOffsetInMinutes(@javax.annotation.Nullable final Integer value) {
         this._timeZoneOffsetInMinutes = value;
     }
@@ -384,6 +421,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Parsab
      * @param value Value to set for the updateType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateType(@javax.annotation.Nullable final ZebraFotaUpdateType value) {
         this._updateType = value;
     }

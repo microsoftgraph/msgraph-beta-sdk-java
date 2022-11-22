@@ -12,13 +12,13 @@ import java.util.Objects;
 public class HardwareInformation implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The number of charge cycles the device’s current battery has gone through. Valid values 0 to 2147483647 */
+    /** The number of charge cycles the devices current battery has gone through. Valid values 0 to 2147483647 */
     private Integer _batteryChargeCycles;
-    /** The device’s current battery’s health percentage. Valid values 0 to 100 */
+    /** The devices current batterys health percentage. Valid values 0 to 100 */
     private Integer _batteryHealthPercentage;
     /** The battery level, between 0.0 and 100, or null if the battery level cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 5.0 and later, and is available only when Device Information access right is obtained. Valid values 0 to 100 */
     private Double _batteryLevelPercentage;
-    /** The serial number of the device’s current battery */
+    /** The serial number of the devices current battery */
     private String _batterySerialNumber;
     /** Cellular technology of the device */
     private String _cellularTechnology;
@@ -98,9 +98,9 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * Instantiates a new hardwareInformation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public HardwareInformation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.hardwareInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -121,7 +121,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the batteryChargeCycles property value. The number of charge cycles the device’s current battery has gone through. Valid values 0 to 2147483647
+     * Gets the batteryChargeCycles property value. The number of charge cycles the devices current battery has gone through. Valid values 0 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -129,7 +129,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         return this._batteryChargeCycles;
     }
     /**
-     * Gets the batteryHealthPercentage property value. The device’s current battery’s health percentage. Valid values 0 to 100
+     * Gets the batteryHealthPercentage property value. The devices current batterys health percentage. Valid values 0 to 100
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -145,7 +145,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
         return this._batteryLevelPercentage;
     }
     /**
-     * Gets the batterySerialNumber property value. The serial number of the device’s current battery
+     * Gets the batterySerialNumber property value. The serial number of the devices current battery
      * @return a string
      */
     @javax.annotation.Nullable
@@ -230,50 +230,49 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HardwareInformation currentObject = this;
-        return new HashMap<>(41) {{
-            this.put("batteryChargeCycles", (n) -> { currentObject.setBatteryChargeCycles(n.getIntegerValue()); });
-            this.put("batteryHealthPercentage", (n) -> { currentObject.setBatteryHealthPercentage(n.getIntegerValue()); });
-            this.put("batteryLevelPercentage", (n) -> { currentObject.setBatteryLevelPercentage(n.getDoubleValue()); });
-            this.put("batterySerialNumber", (n) -> { currentObject.setBatterySerialNumber(n.getStringValue()); });
-            this.put("cellularTechnology", (n) -> { currentObject.setCellularTechnology(n.getStringValue()); });
-            this.put("deviceFullQualifiedDomainName", (n) -> { currentObject.setDeviceFullQualifiedDomainName(n.getStringValue()); });
-            this.put("deviceGuardLocalSystemAuthorityCredentialGuardState", (n) -> { currentObject.setDeviceGuardLocalSystemAuthorityCredentialGuardState(n.getEnumValue(DeviceGuardLocalSystemAuthorityCredentialGuardState.class)); });
-            this.put("deviceGuardVirtualizationBasedSecurityHardwareRequirementState", (n) -> { currentObject.setDeviceGuardVirtualizationBasedSecurityHardwareRequirementState(n.getEnumValue(DeviceGuardVirtualizationBasedSecurityHardwareRequirementState.class)); });
-            this.put("deviceGuardVirtualizationBasedSecurityState", (n) -> { currentObject.setDeviceGuardVirtualizationBasedSecurityState(n.getEnumValue(DeviceGuardVirtualizationBasedSecurityState.class)); });
-            this.put("deviceLicensingLastErrorCode", (n) -> { currentObject.setDeviceLicensingLastErrorCode(n.getIntegerValue()); });
-            this.put("deviceLicensingLastErrorDescription", (n) -> { currentObject.setDeviceLicensingLastErrorDescription(n.getStringValue()); });
-            this.put("deviceLicensingStatus", (n) -> { currentObject.setDeviceLicensingStatus(n.getEnumValue(DeviceLicensingStatus.class)); });
-            this.put("esimIdentifier", (n) -> { currentObject.setEsimIdentifier(n.getStringValue()); });
-            this.put("freeStorageSpace", (n) -> { currentObject.setFreeStorageSpace(n.getLongValue()); });
-            this.put("imei", (n) -> { currentObject.setImei(n.getStringValue()); });
-            this.put("ipAddressV4", (n) -> { currentObject.setIpAddressV4(n.getStringValue()); });
-            this.put("isEncrypted", (n) -> { currentObject.setIsEncrypted(n.getBooleanValue()); });
-            this.put("isSharedDevice", (n) -> { currentObject.setIsSharedDevice(n.getBooleanValue()); });
-            this.put("isSupervised", (n) -> { currentObject.setIsSupervised(n.getBooleanValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("meid", (n) -> { currentObject.setMeid(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operatingSystemEdition", (n) -> { currentObject.setOperatingSystemEdition(n.getStringValue()); });
-            this.put("operatingSystemLanguage", (n) -> { currentObject.setOperatingSystemLanguage(n.getStringValue()); });
-            this.put("operatingSystemProductType", (n) -> { currentObject.setOperatingSystemProductType(n.getIntegerValue()); });
-            this.put("osBuildNumber", (n) -> { currentObject.setOsBuildNumber(n.getStringValue()); });
-            this.put("phoneNumber", (n) -> { currentObject.setPhoneNumber(n.getStringValue()); });
-            this.put("productName", (n) -> { currentObject.setProductName(n.getStringValue()); });
-            this.put("residentUsersCount", (n) -> { currentObject.setResidentUsersCount(n.getIntegerValue()); });
-            this.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
-            this.put("sharedDeviceCachedUsers", (n) -> { currentObject.setSharedDeviceCachedUsers(n.getCollectionOfObjectValues(SharedAppleDeviceUser::createFromDiscriminatorValue)); });
-            this.put("subnetAddress", (n) -> { currentObject.setSubnetAddress(n.getStringValue()); });
-            this.put("subscriberCarrier", (n) -> { currentObject.setSubscriberCarrier(n.getStringValue()); });
-            this.put("systemManagementBIOSVersion", (n) -> { currentObject.setSystemManagementBIOSVersion(n.getStringValue()); });
-            this.put("totalStorageSpace", (n) -> { currentObject.setTotalStorageSpace(n.getLongValue()); });
-            this.put("tpmManufacturer", (n) -> { currentObject.setTpmManufacturer(n.getStringValue()); });
-            this.put("tpmSpecificationVersion", (n) -> { currentObject.setTpmSpecificationVersion(n.getStringValue()); });
-            this.put("tpmVersion", (n) -> { currentObject.setTpmVersion(n.getStringValue()); });
-            this.put("wifiMac", (n) -> { currentObject.setWifiMac(n.getStringValue()); });
-            this.put("wiredIPv4Addresses", (n) -> { currentObject.setWiredIPv4Addresses(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(41);
+        deserializerMap.put("batteryChargeCycles", (n) -> { this.setBatteryChargeCycles(n.getIntegerValue()); });
+        deserializerMap.put("batteryHealthPercentage", (n) -> { this.setBatteryHealthPercentage(n.getIntegerValue()); });
+        deserializerMap.put("batteryLevelPercentage", (n) -> { this.setBatteryLevelPercentage(n.getDoubleValue()); });
+        deserializerMap.put("batterySerialNumber", (n) -> { this.setBatterySerialNumber(n.getStringValue()); });
+        deserializerMap.put("cellularTechnology", (n) -> { this.setCellularTechnology(n.getStringValue()); });
+        deserializerMap.put("deviceFullQualifiedDomainName", (n) -> { this.setDeviceFullQualifiedDomainName(n.getStringValue()); });
+        deserializerMap.put("deviceGuardLocalSystemAuthorityCredentialGuardState", (n) -> { this.setDeviceGuardLocalSystemAuthorityCredentialGuardState(n.getEnumValue(DeviceGuardLocalSystemAuthorityCredentialGuardState.class)); });
+        deserializerMap.put("deviceGuardVirtualizationBasedSecurityHardwareRequirementState", (n) -> { this.setDeviceGuardVirtualizationBasedSecurityHardwareRequirementState(n.getEnumValue(DeviceGuardVirtualizationBasedSecurityHardwareRequirementState.class)); });
+        deserializerMap.put("deviceGuardVirtualizationBasedSecurityState", (n) -> { this.setDeviceGuardVirtualizationBasedSecurityState(n.getEnumValue(DeviceGuardVirtualizationBasedSecurityState.class)); });
+        deserializerMap.put("deviceLicensingLastErrorCode", (n) -> { this.setDeviceLicensingLastErrorCode(n.getIntegerValue()); });
+        deserializerMap.put("deviceLicensingLastErrorDescription", (n) -> { this.setDeviceLicensingLastErrorDescription(n.getStringValue()); });
+        deserializerMap.put("deviceLicensingStatus", (n) -> { this.setDeviceLicensingStatus(n.getEnumValue(DeviceLicensingStatus.class)); });
+        deserializerMap.put("esimIdentifier", (n) -> { this.setEsimIdentifier(n.getStringValue()); });
+        deserializerMap.put("freeStorageSpace", (n) -> { this.setFreeStorageSpace(n.getLongValue()); });
+        deserializerMap.put("imei", (n) -> { this.setImei(n.getStringValue()); });
+        deserializerMap.put("ipAddressV4", (n) -> { this.setIpAddressV4(n.getStringValue()); });
+        deserializerMap.put("isEncrypted", (n) -> { this.setIsEncrypted(n.getBooleanValue()); });
+        deserializerMap.put("isSharedDevice", (n) -> { this.setIsSharedDevice(n.getBooleanValue()); });
+        deserializerMap.put("isSupervised", (n) -> { this.setIsSupervised(n.getBooleanValue()); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("meid", (n) -> { this.setMeid(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operatingSystemEdition", (n) -> { this.setOperatingSystemEdition(n.getStringValue()); });
+        deserializerMap.put("operatingSystemLanguage", (n) -> { this.setOperatingSystemLanguage(n.getStringValue()); });
+        deserializerMap.put("operatingSystemProductType", (n) -> { this.setOperatingSystemProductType(n.getIntegerValue()); });
+        deserializerMap.put("osBuildNumber", (n) -> { this.setOsBuildNumber(n.getStringValue()); });
+        deserializerMap.put("phoneNumber", (n) -> { this.setPhoneNumber(n.getStringValue()); });
+        deserializerMap.put("productName", (n) -> { this.setProductName(n.getStringValue()); });
+        deserializerMap.put("residentUsersCount", (n) -> { this.setResidentUsersCount(n.getIntegerValue()); });
+        deserializerMap.put("serialNumber", (n) -> { this.setSerialNumber(n.getStringValue()); });
+        deserializerMap.put("sharedDeviceCachedUsers", (n) -> { this.setSharedDeviceCachedUsers(n.getCollectionOfObjectValues(SharedAppleDeviceUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("subnetAddress", (n) -> { this.setSubnetAddress(n.getStringValue()); });
+        deserializerMap.put("subscriberCarrier", (n) -> { this.setSubscriberCarrier(n.getStringValue()); });
+        deserializerMap.put("systemManagementBIOSVersion", (n) -> { this.setSystemManagementBIOSVersion(n.getStringValue()); });
+        deserializerMap.put("totalStorageSpace", (n) -> { this.setTotalStorageSpace(n.getLongValue()); });
+        deserializerMap.put("tpmManufacturer", (n) -> { this.setTpmManufacturer(n.getStringValue()); });
+        deserializerMap.put("tpmSpecificationVersion", (n) -> { this.setTpmSpecificationVersion(n.getStringValue()); });
+        deserializerMap.put("tpmVersion", (n) -> { this.setTpmVersion(n.getStringValue()); });
+        deserializerMap.put("wifiMac", (n) -> { this.setWifiMac(n.getStringValue()); });
+        deserializerMap.put("wiredIPv4Addresses", (n) -> { this.setWiredIPv4Addresses(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the freeStorageSpace property value. Free storage space of the device.
@@ -504,6 +503,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("batteryChargeCycles", this.getBatteryChargeCycles());
@@ -554,22 +554,25 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
     /**
-     * Sets the batteryChargeCycles property value. The number of charge cycles the device’s current battery has gone through. Valid values 0 to 2147483647
+     * Sets the batteryChargeCycles property value. The number of charge cycles the devices current battery has gone through. Valid values 0 to 2147483647
      * @param value Value to set for the batteryChargeCycles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBatteryChargeCycles(@javax.annotation.Nullable final Integer value) {
         this._batteryChargeCycles = value;
     }
     /**
-     * Sets the batteryHealthPercentage property value. The device’s current battery’s health percentage. Valid values 0 to 100
+     * Sets the batteryHealthPercentage property value. The devices current batterys health percentage. Valid values 0 to 100
      * @param value Value to set for the batteryHealthPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBatteryHealthPercentage(@javax.annotation.Nullable final Integer value) {
         this._batteryHealthPercentage = value;
     }
@@ -578,14 +581,16 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the batteryLevelPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBatteryLevelPercentage(@javax.annotation.Nullable final Double value) {
         this._batteryLevelPercentage = value;
     }
     /**
-     * Sets the batterySerialNumber property value. The serial number of the device’s current battery
+     * Sets the batterySerialNumber property value. The serial number of the devices current battery
      * @param value Value to set for the batterySerialNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBatterySerialNumber(@javax.annotation.Nullable final String value) {
         this._batterySerialNumber = value;
     }
@@ -594,6 +599,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the cellularTechnology property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularTechnology(@javax.annotation.Nullable final String value) {
         this._cellularTechnology = value;
     }
@@ -602,6 +608,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceFullQualifiedDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceFullQualifiedDomainName(@javax.annotation.Nullable final String value) {
         this._deviceFullQualifiedDomainName = value;
     }
@@ -610,6 +617,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceGuardLocalSystemAuthorityCredentialGuardState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceGuardLocalSystemAuthorityCredentialGuardState(@javax.annotation.Nullable final DeviceGuardLocalSystemAuthorityCredentialGuardState value) {
         this._deviceGuardLocalSystemAuthorityCredentialGuardState = value;
     }
@@ -618,6 +626,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceGuardVirtualizationBasedSecurityHardwareRequirementState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceGuardVirtualizationBasedSecurityHardwareRequirementState(@javax.annotation.Nullable final DeviceGuardVirtualizationBasedSecurityHardwareRequirementState value) {
         this._deviceGuardVirtualizationBasedSecurityHardwareRequirementState = value;
     }
@@ -626,6 +635,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceGuardVirtualizationBasedSecurityState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceGuardVirtualizationBasedSecurityState(@javax.annotation.Nullable final DeviceGuardVirtualizationBasedSecurityState value) {
         this._deviceGuardVirtualizationBasedSecurityState = value;
     }
@@ -634,6 +644,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceLicensingLastErrorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceLicensingLastErrorCode(@javax.annotation.Nullable final Integer value) {
         this._deviceLicensingLastErrorCode = value;
     }
@@ -642,6 +653,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceLicensingLastErrorDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceLicensingLastErrorDescription(@javax.annotation.Nullable final String value) {
         this._deviceLicensingLastErrorDescription = value;
     }
@@ -650,6 +662,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceLicensingStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceLicensingStatus(@javax.annotation.Nullable final DeviceLicensingStatus value) {
         this._deviceLicensingStatus = value;
     }
@@ -658,6 +671,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the esimIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEsimIdentifier(@javax.annotation.Nullable final String value) {
         this._esimIdentifier = value;
     }
@@ -666,6 +680,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the freeStorageSpace property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFreeStorageSpace(@javax.annotation.Nullable final Long value) {
         this._freeStorageSpace = value;
     }
@@ -674,6 +689,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the imei property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImei(@javax.annotation.Nullable final String value) {
         this._imei = value;
     }
@@ -682,6 +698,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ipAddressV4 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddressV4(@javax.annotation.Nullable final String value) {
         this._ipAddressV4 = value;
     }
@@ -690,6 +707,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isEncrypted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEncrypted(@javax.annotation.Nullable final Boolean value) {
         this._isEncrypted = value;
     }
@@ -698,6 +716,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isSharedDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSharedDevice(@javax.annotation.Nullable final Boolean value) {
         this._isSharedDevice = value;
     }
@@ -706,6 +725,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isSupervised property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSupervised(@javax.annotation.Nullable final Boolean value) {
         this._isSupervised = value;
     }
@@ -714,6 +734,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -722,6 +743,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the meid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeid(@javax.annotation.Nullable final String value) {
         this._meid = value;
     }
@@ -730,6 +752,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
@@ -738,6 +761,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -746,6 +770,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the operatingSystemEdition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatingSystemEdition(@javax.annotation.Nullable final String value) {
         this._operatingSystemEdition = value;
     }
@@ -754,6 +779,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the operatingSystemLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatingSystemLanguage(@javax.annotation.Nullable final String value) {
         this._operatingSystemLanguage = value;
     }
@@ -762,6 +788,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the operatingSystemProductType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatingSystemProductType(@javax.annotation.Nullable final Integer value) {
         this._operatingSystemProductType = value;
     }
@@ -770,6 +797,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the osBuildNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsBuildNumber(@javax.annotation.Nullable final String value) {
         this._osBuildNumber = value;
     }
@@ -778,6 +806,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the phoneNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoneNumber(@javax.annotation.Nullable final String value) {
         this._phoneNumber = value;
     }
@@ -786,6 +815,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the productName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductName(@javax.annotation.Nullable final String value) {
         this._productName = value;
     }
@@ -794,6 +824,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the residentUsersCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResidentUsersCount(@javax.annotation.Nullable final Integer value) {
         this._residentUsersCount = value;
     }
@@ -802,6 +833,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the serialNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSerialNumber(@javax.annotation.Nullable final String value) {
         this._serialNumber = value;
     }
@@ -810,6 +842,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sharedDeviceCachedUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedDeviceCachedUsers(@javax.annotation.Nullable final java.util.List<SharedAppleDeviceUser> value) {
         this._sharedDeviceCachedUsers = value;
     }
@@ -818,6 +851,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the subnetAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubnetAddress(@javax.annotation.Nullable final String value) {
         this._subnetAddress = value;
     }
@@ -826,6 +860,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the subscriberCarrier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriberCarrier(@javax.annotation.Nullable final String value) {
         this._subscriberCarrier = value;
     }
@@ -834,6 +869,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the systemManagementBIOSVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemManagementBIOSVersion(@javax.annotation.Nullable final String value) {
         this._systemManagementBIOSVersion = value;
     }
@@ -842,6 +878,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the totalStorageSpace property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalStorageSpace(@javax.annotation.Nullable final Long value) {
         this._totalStorageSpace = value;
     }
@@ -850,6 +887,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tpmManufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTpmManufacturer(@javax.annotation.Nullable final String value) {
         this._tpmManufacturer = value;
     }
@@ -858,6 +896,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tpmSpecificationVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTpmSpecificationVersion(@javax.annotation.Nullable final String value) {
         this._tpmSpecificationVersion = value;
     }
@@ -866,6 +905,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tpmVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTpmVersion(@javax.annotation.Nullable final String value) {
         this._tpmVersion = value;
     }
@@ -874,6 +914,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the wifiMac property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWifiMac(@javax.annotation.Nullable final String value) {
         this._wifiMac = value;
     }
@@ -882,6 +923,7 @@ public class HardwareInformation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the wiredIPv4Addresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWiredIPv4Addresses(@javax.annotation.Nullable final java.util.List<String> value) {
         this._wiredIPv4Addresses = value;
     }

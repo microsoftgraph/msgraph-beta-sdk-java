@@ -66,6 +66,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * Instantiates a new IosEasEmailProfileConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosEasEmailProfileConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosEasEmailProfileConfiguration");
@@ -174,36 +175,35 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosEasEmailProfileConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
-            this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(EasAuthenticationMethod.class)); });
-            this.put("blockMovingMessagesToOtherEmailAccounts", (n) -> { currentObject.setBlockMovingMessagesToOtherEmailAccounts(n.getBooleanValue()); });
-            this.put("blockSendingEmailFromThirdPartyApps", (n) -> { currentObject.setBlockSendingEmailFromThirdPartyApps(n.getBooleanValue()); });
-            this.put("blockSyncingRecentlyUsedEmailAddresses", (n) -> { currentObject.setBlockSyncingRecentlyUsedEmailAddresses(n.getBooleanValue()); });
-            this.put("derivedCredentialSettings", (n) -> { currentObject.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
-            this.put("durationOfEmailToSync", (n) -> { currentObject.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration.class)); });
-            this.put("easServices", (n) -> { currentObject.setEasServices(n.getEnumValue(EasServices.class)); });
-            this.put("easServicesUserOverrideEnabled", (n) -> { currentObject.setEasServicesUserOverrideEnabled(n.getBooleanValue()); });
-            this.put("emailAddressSource", (n) -> { currentObject.setEmailAddressSource(n.getEnumValue(UserEmailSource.class)); });
-            this.put("encryptionCertificateType", (n) -> { currentObject.setEncryptionCertificateType(n.getEnumValue(EmailCertificateType.class)); });
-            this.put("hostName", (n) -> { currentObject.setHostName(n.getStringValue()); });
-            this.put("identityCertificate", (n) -> { currentObject.setIdentityCertificate(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
-            this.put("perAppVPNProfileId", (n) -> { currentObject.setPerAppVPNProfileId(n.getStringValue()); });
-            this.put("requireSmime", (n) -> { currentObject.setRequireSmime(n.getBooleanValue()); });
-            this.put("requireSsl", (n) -> { currentObject.setRequireSsl(n.getBooleanValue()); });
-            this.put("signingCertificateType", (n) -> { currentObject.setSigningCertificateType(n.getEnumValue(EmailCertificateType.class)); });
-            this.put("smimeEnablePerMessageSwitch", (n) -> { currentObject.setSmimeEnablePerMessageSwitch(n.getBooleanValue()); });
-            this.put("smimeEncryptByDefaultEnabled", (n) -> { currentObject.setSmimeEncryptByDefaultEnabled(n.getBooleanValue()); });
-            this.put("smimeEncryptByDefaultUserOverrideEnabled", (n) -> { currentObject.setSmimeEncryptByDefaultUserOverrideEnabled(n.getBooleanValue()); });
-            this.put("smimeEncryptionCertificate", (n) -> { currentObject.setSmimeEncryptionCertificate(n.getObjectValue(IosCertificateProfile::createFromDiscriminatorValue)); });
-            this.put("smimeEncryptionCertificateUserOverrideEnabled", (n) -> { currentObject.setSmimeEncryptionCertificateUserOverrideEnabled(n.getBooleanValue()); });
-            this.put("smimeSigningCertificate", (n) -> { currentObject.setSmimeSigningCertificate(n.getObjectValue(IosCertificateProfile::createFromDiscriminatorValue)); });
-            this.put("smimeSigningCertificateUserOverrideEnabled", (n) -> { currentObject.setSmimeSigningCertificateUserOverrideEnabled(n.getBooleanValue()); });
-            this.put("smimeSigningEnabled", (n) -> { currentObject.setSmimeSigningEnabled(n.getBooleanValue()); });
-            this.put("smimeSigningUserOverrideEnabled", (n) -> { currentObject.setSmimeSigningUserOverrideEnabled(n.getBooleanValue()); });
-            this.put("useOAuth", (n) -> { currentObject.setUseOAuth(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
+        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(EasAuthenticationMethod.class)); });
+        deserializerMap.put("blockMovingMessagesToOtherEmailAccounts", (n) -> { this.setBlockMovingMessagesToOtherEmailAccounts(n.getBooleanValue()); });
+        deserializerMap.put("blockSendingEmailFromThirdPartyApps", (n) -> { this.setBlockSendingEmailFromThirdPartyApps(n.getBooleanValue()); });
+        deserializerMap.put("blockSyncingRecentlyUsedEmailAddresses", (n) -> { this.setBlockSyncingRecentlyUsedEmailAddresses(n.getBooleanValue()); });
+        deserializerMap.put("derivedCredentialSettings", (n) -> { this.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("durationOfEmailToSync", (n) -> { this.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration.class)); });
+        deserializerMap.put("easServices", (n) -> { this.setEasServices(n.getEnumValue(EasServices.class)); });
+        deserializerMap.put("easServicesUserOverrideEnabled", (n) -> { this.setEasServicesUserOverrideEnabled(n.getBooleanValue()); });
+        deserializerMap.put("emailAddressSource", (n) -> { this.setEmailAddressSource(n.getEnumValue(UserEmailSource.class)); });
+        deserializerMap.put("encryptionCertificateType", (n) -> { this.setEncryptionCertificateType(n.getEnumValue(EmailCertificateType.class)); });
+        deserializerMap.put("hostName", (n) -> { this.setHostName(n.getStringValue()); });
+        deserializerMap.put("identityCertificate", (n) -> { this.setIdentityCertificate(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("perAppVPNProfileId", (n) -> { this.setPerAppVPNProfileId(n.getStringValue()); });
+        deserializerMap.put("requireSmime", (n) -> { this.setRequireSmime(n.getBooleanValue()); });
+        deserializerMap.put("requireSsl", (n) -> { this.setRequireSsl(n.getBooleanValue()); });
+        deserializerMap.put("signingCertificateType", (n) -> { this.setSigningCertificateType(n.getEnumValue(EmailCertificateType.class)); });
+        deserializerMap.put("smimeEnablePerMessageSwitch", (n) -> { this.setSmimeEnablePerMessageSwitch(n.getBooleanValue()); });
+        deserializerMap.put("smimeEncryptByDefaultEnabled", (n) -> { this.setSmimeEncryptByDefaultEnabled(n.getBooleanValue()); });
+        deserializerMap.put("smimeEncryptByDefaultUserOverrideEnabled", (n) -> { this.setSmimeEncryptByDefaultUserOverrideEnabled(n.getBooleanValue()); });
+        deserializerMap.put("smimeEncryptionCertificate", (n) -> { this.setSmimeEncryptionCertificate(n.getObjectValue(IosCertificateProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("smimeEncryptionCertificateUserOverrideEnabled", (n) -> { this.setSmimeEncryptionCertificateUserOverrideEnabled(n.getBooleanValue()); });
+        deserializerMap.put("smimeSigningCertificate", (n) -> { this.setSmimeSigningCertificate(n.getObjectValue(IosCertificateProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("smimeSigningCertificateUserOverrideEnabled", (n) -> { this.setSmimeSigningCertificateUserOverrideEnabled(n.getBooleanValue()); });
+        deserializerMap.put("smimeSigningEnabled", (n) -> { this.setSmimeSigningEnabled(n.getBooleanValue()); });
+        deserializerMap.put("smimeSigningUserOverrideEnabled", (n) -> { this.setSmimeSigningUserOverrideEnabled(n.getBooleanValue()); });
+        deserializerMap.put("useOAuth", (n) -> { this.setUseOAuth(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hostName property value. Exchange location that (URL) that the native mail app connects to.
@@ -338,6 +338,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -374,6 +375,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the accountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountName(@javax.annotation.Nullable final String value) {
         this._accountName = value;
     }
@@ -382,6 +384,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final EasAuthenticationMethod value) {
         this._authenticationMethod = value;
     }
@@ -390,6 +393,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the blockMovingMessagesToOtherEmailAccounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockMovingMessagesToOtherEmailAccounts(@javax.annotation.Nullable final Boolean value) {
         this._blockMovingMessagesToOtherEmailAccounts = value;
     }
@@ -398,6 +402,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the blockSendingEmailFromThirdPartyApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockSendingEmailFromThirdPartyApps(@javax.annotation.Nullable final Boolean value) {
         this._blockSendingEmailFromThirdPartyApps = value;
     }
@@ -406,6 +411,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the blockSyncingRecentlyUsedEmailAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockSyncingRecentlyUsedEmailAddresses(@javax.annotation.Nullable final Boolean value) {
         this._blockSyncingRecentlyUsedEmailAddresses = value;
     }
@@ -414,6 +420,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the derivedCredentialSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDerivedCredentialSettings(@javax.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
         this._derivedCredentialSettings = value;
     }
@@ -422,6 +429,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the durationOfEmailToSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationOfEmailToSync(@javax.annotation.Nullable final EmailSyncDuration value) {
         this._durationOfEmailToSync = value;
     }
@@ -430,6 +438,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the easServices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEasServices(@javax.annotation.Nullable final EasServices value) {
         this._easServices = value;
     }
@@ -438,6 +447,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the easServicesUserOverrideEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEasServicesUserOverrideEnabled(@javax.annotation.Nullable final Boolean value) {
         this._easServicesUserOverrideEnabled = value;
     }
@@ -446,6 +456,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the emailAddressSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddressSource(@javax.annotation.Nullable final UserEmailSource value) {
         this._emailAddressSource = value;
     }
@@ -454,6 +465,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the encryptionCertificateType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptionCertificateType(@javax.annotation.Nullable final EmailCertificateType value) {
         this._encryptionCertificateType = value;
     }
@@ -462,6 +474,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the hostName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHostName(@javax.annotation.Nullable final String value) {
         this._hostName = value;
     }
@@ -470,6 +483,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the identityCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificate(@javax.annotation.Nullable final IosCertificateProfileBase value) {
         this._identityCertificate = value;
     }
@@ -478,6 +492,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the perAppVPNProfileId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPerAppVPNProfileId(@javax.annotation.Nullable final String value) {
         this._perAppVPNProfileId = value;
     }
@@ -486,6 +501,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the requireSmime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireSmime(@javax.annotation.Nullable final Boolean value) {
         this._requireSmime = value;
     }
@@ -494,6 +510,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the requireSsl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireSsl(@javax.annotation.Nullable final Boolean value) {
         this._requireSsl = value;
     }
@@ -502,6 +519,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the signingCertificateType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSigningCertificateType(@javax.annotation.Nullable final EmailCertificateType value) {
         this._signingCertificateType = value;
     }
@@ -510,6 +528,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeEnablePerMessageSwitch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeEnablePerMessageSwitch(@javax.annotation.Nullable final Boolean value) {
         this._smimeEnablePerMessageSwitch = value;
     }
@@ -518,6 +537,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeEncryptByDefaultEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeEncryptByDefaultEnabled(@javax.annotation.Nullable final Boolean value) {
         this._smimeEncryptByDefaultEnabled = value;
     }
@@ -526,6 +546,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeEncryptByDefaultUserOverrideEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeEncryptByDefaultUserOverrideEnabled(@javax.annotation.Nullable final Boolean value) {
         this._smimeEncryptByDefaultUserOverrideEnabled = value;
     }
@@ -534,6 +555,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeEncryptionCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeEncryptionCertificate(@javax.annotation.Nullable final IosCertificateProfile value) {
         this._smimeEncryptionCertificate = value;
     }
@@ -542,6 +564,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeEncryptionCertificateUserOverrideEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeEncryptionCertificateUserOverrideEnabled(@javax.annotation.Nullable final Boolean value) {
         this._smimeEncryptionCertificateUserOverrideEnabled = value;
     }
@@ -550,6 +573,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeSigningCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeSigningCertificate(@javax.annotation.Nullable final IosCertificateProfile value) {
         this._smimeSigningCertificate = value;
     }
@@ -558,6 +582,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeSigningCertificateUserOverrideEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeSigningCertificateUserOverrideEnabled(@javax.annotation.Nullable final Boolean value) {
         this._smimeSigningCertificateUserOverrideEnabled = value;
     }
@@ -566,6 +591,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeSigningEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeSigningEnabled(@javax.annotation.Nullable final Boolean value) {
         this._smimeSigningEnabled = value;
     }
@@ -574,6 +600,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the smimeSigningUserOverrideEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmimeSigningUserOverrideEnabled(@javax.annotation.Nullable final Boolean value) {
         this._smimeSigningUserOverrideEnabled = value;
     }
@@ -582,6 +609,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
      * @param value Value to set for the useOAuth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseOAuth(@javax.annotation.Nullable final Boolean value) {
         this._useOAuth = value;
     }

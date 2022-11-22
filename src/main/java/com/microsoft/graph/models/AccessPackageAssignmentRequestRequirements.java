@@ -37,9 +37,9 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * Instantiates a new accessPackageAssignmentRequestRequirements and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageAssignmentRequestRequirements() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessPackageAssignmentRequestRequirements");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,20 +73,19 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessPackageAssignmentRequestRequirements currentObject = this;
-        return new HashMap<>(11) {{
-            this.put("existingAnswers", (n) -> { currentObject.setExistingAnswers(n.getCollectionOfObjectValues(AccessPackageAnswer::createFromDiscriminatorValue)); });
-            this.put("isApprovalRequired", (n) -> { currentObject.setIsApprovalRequired(n.getBooleanValue()); });
-            this.put("isApprovalRequiredForExtension", (n) -> { currentObject.setIsApprovalRequiredForExtension(n.getBooleanValue()); });
-            this.put("isCustomAssignmentScheduleAllowed", (n) -> { currentObject.setIsCustomAssignmentScheduleAllowed(n.getBooleanValue()); });
-            this.put("isRequestorJustificationRequired", (n) -> { currentObject.setIsRequestorJustificationRequired(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("policyDescription", (n) -> { currentObject.setPolicyDescription(n.getStringValue()); });
-            this.put("policyDisplayName", (n) -> { currentObject.setPolicyDisplayName(n.getStringValue()); });
-            this.put("policyId", (n) -> { currentObject.setPolicyId(n.getStringValue()); });
-            this.put("questions", (n) -> { currentObject.setQuestions(n.getCollectionOfObjectValues(AccessPackageQuestion::createFromDiscriminatorValue)); });
-            this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(11);
+        deserializerMap.put("existingAnswers", (n) -> { this.setExistingAnswers(n.getCollectionOfObjectValues(AccessPackageAnswer::createFromDiscriminatorValue)); });
+        deserializerMap.put("isApprovalRequired", (n) -> { this.setIsApprovalRequired(n.getBooleanValue()); });
+        deserializerMap.put("isApprovalRequiredForExtension", (n) -> { this.setIsApprovalRequiredForExtension(n.getBooleanValue()); });
+        deserializerMap.put("isCustomAssignmentScheduleAllowed", (n) -> { this.setIsCustomAssignmentScheduleAllowed(n.getBooleanValue()); });
+        deserializerMap.put("isRequestorJustificationRequired", (n) -> { this.setIsRequestorJustificationRequired(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("policyDescription", (n) -> { this.setPolicyDescription(n.getStringValue()); });
+        deserializerMap.put("policyDisplayName", (n) -> { this.setPolicyDisplayName(n.getStringValue()); });
+        deserializerMap.put("policyId", (n) -> { this.setPolicyId(n.getStringValue()); });
+        deserializerMap.put("questions", (n) -> { this.setQuestions(n.getCollectionOfObjectValues(AccessPackageQuestion::createFromDiscriminatorValue)); });
+        deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isApprovalRequired property value. Indicates whether a request must be approved by an approver.
@@ -173,6 +172,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("existingAnswers", this.getExistingAnswers());
@@ -193,6 +193,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -201,6 +202,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the existingAnswers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExistingAnswers(@javax.annotation.Nullable final java.util.List<AccessPackageAnswer> value) {
         this._existingAnswers = value;
     }
@@ -209,6 +211,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the isApprovalRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsApprovalRequired(@javax.annotation.Nullable final Boolean value) {
         this._isApprovalRequired = value;
     }
@@ -217,6 +220,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the isApprovalRequiredForExtension property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsApprovalRequiredForExtension(@javax.annotation.Nullable final Boolean value) {
         this._isApprovalRequiredForExtension = value;
     }
@@ -225,6 +229,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the isCustomAssignmentScheduleAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCustomAssignmentScheduleAllowed(@javax.annotation.Nullable final Boolean value) {
         this._isCustomAssignmentScheduleAllowed = value;
     }
@@ -233,6 +238,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the isRequestorJustificationRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRequestorJustificationRequired(@javax.annotation.Nullable final Boolean value) {
         this._isRequestorJustificationRequired = value;
     }
@@ -241,6 +247,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -249,6 +256,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the policyDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyDescription(@javax.annotation.Nullable final String value) {
         this._policyDescription = value;
     }
@@ -257,6 +265,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the policyDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyDisplayName(@javax.annotation.Nullable final String value) {
         this._policyDisplayName = value;
     }
@@ -265,6 +274,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the policyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyId(@javax.annotation.Nullable final String value) {
         this._policyId = value;
     }
@@ -273,6 +283,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the questions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuestions(@javax.annotation.Nullable final java.util.List<AccessPackageQuestion> value) {
         this._questions = value;
     }
@@ -281,6 +292,7 @@ public class AccessPackageAssignmentRequestRequirements implements AdditionalDat
      * @param value Value to set for the schedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedule(@javax.annotation.Nullable final RequestSchedule value) {
         this._schedule = value;
     }

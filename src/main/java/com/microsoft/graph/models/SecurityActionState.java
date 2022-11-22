@@ -26,9 +26,9 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
      * Instantiates a new securityActionState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecurityActionState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.securityActionState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,14 +62,13 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SecurityActionState currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(OperationStatus.class)); });
-            this.put("updatedDateTime", (n) -> { currentObject.setUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("user", (n) -> { currentObject.setUser(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(OperationStatus.class)); });
+        deserializerMap.put("updatedDateTime", (n) -> { this.setUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("user", (n) -> { this.setUser(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -108,6 +107,7 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appId", this.getAppId());
@@ -122,6 +122,7 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +131,7 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }
@@ -138,6 +140,7 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -146,6 +149,7 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final OperationStatus value) {
         this._status = value;
     }
@@ -154,6 +158,7 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the updatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._updatedDateTime = value;
     }
@@ -162,6 +167,7 @@ public class SecurityActionState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the user property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUser(@javax.annotation.Nullable final String value) {
         this._user = value;
     }

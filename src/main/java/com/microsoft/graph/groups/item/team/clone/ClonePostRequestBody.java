@@ -30,6 +30,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new clonePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ClonePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -81,15 +82,14 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ClonePostRequestBody currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("classification", (n) -> { currentObject.setClassification(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
-            this.put("partsToClone", (n) -> { currentObject.setPartsToClone(n.getEnumValue(ClonableTeamParts.class)); });
-            this.put("visibility", (n) -> { currentObject.setVisibility(n.getEnumValue(TeamVisibilityType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("classification", (n) -> { this.setClassification(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("mailNickname", (n) -> { this.setMailNickname(n.getStringValue()); });
+        deserializerMap.put("partsToClone", (n) -> { this.setPartsToClone(n.getEnumValue(ClonableTeamParts.class)); });
+        deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getEnumValue(TeamVisibilityType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the mailNickname property value. The mailNickname property
@@ -120,6 +120,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("classification", this.getClassification());
@@ -135,6 +136,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -143,6 +145,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the classification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassification(@javax.annotation.Nullable final String value) {
         this._classification = value;
     }
@@ -151,6 +154,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -159,6 +163,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -167,6 +172,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mailNickname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailNickname(@javax.annotation.Nullable final String value) {
         this._mailNickname = value;
     }
@@ -175,6 +181,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the partsToClone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPartsToClone(@javax.annotation.Nullable final ClonableTeamParts value) {
         this._partsToClone = value;
     }
@@ -183,6 +190,7 @@ public class ClonePostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the visibility property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVisibility(@javax.annotation.Nullable final TeamVisibilityType value) {
         this._visibility = value;
     }

@@ -24,9 +24,9 @@ public class TenantSetupInfo extends Entity implements Parsable {
      * Instantiates a new TenantSetupInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TenantSetupInfo() {
         super();
-        this.setOdataType("#microsoft.graph.tenantSetupInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,15 +52,14 @@ public class TenantSetupInfo extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TenantSetupInfo currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultRolesSettings", (n) -> { currentObject.setDefaultRolesSettings(n.getObjectValue(PrivilegedRoleSettings::createFromDiscriminatorValue)); });
-            this.put("firstTimeSetup", (n) -> { currentObject.setFirstTimeSetup(n.getBooleanValue()); });
-            this.put("relevantRolesSettings", (n) -> { currentObject.setRelevantRolesSettings(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("setupStatus", (n) -> { currentObject.setSetupStatus(n.getEnumValue(SetupStatus.class)); });
-            this.put("skipSetup", (n) -> { currentObject.setSkipSetup(n.getBooleanValue()); });
-            this.put("userRolesActions", (n) -> { currentObject.setUserRolesActions(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultRolesSettings", (n) -> { this.setDefaultRolesSettings(n.getObjectValue(PrivilegedRoleSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("firstTimeSetup", (n) -> { this.setFirstTimeSetup(n.getBooleanValue()); });
+        deserializerMap.put("relevantRolesSettings", (n) -> { this.setRelevantRolesSettings(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("setupStatus", (n) -> { this.setSetupStatus(n.getEnumValue(SetupStatus.class)); });
+        deserializerMap.put("skipSetup", (n) -> { this.setSkipSetup(n.getBooleanValue()); });
+        deserializerMap.put("userRolesActions", (n) -> { this.setUserRolesActions(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the firstTimeSetup property value. The firstTimeSetup property
@@ -107,6 +106,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +122,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
      * @param value Value to set for the defaultRolesSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultRolesSettings(@javax.annotation.Nullable final PrivilegedRoleSettings value) {
         this._defaultRolesSettings = value;
     }
@@ -130,6 +131,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
      * @param value Value to set for the firstTimeSetup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirstTimeSetup(@javax.annotation.Nullable final Boolean value) {
         this._firstTimeSetup = value;
     }
@@ -138,6 +140,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
      * @param value Value to set for the relevantRolesSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelevantRolesSettings(@javax.annotation.Nullable final java.util.List<String> value) {
         this._relevantRolesSettings = value;
     }
@@ -146,6 +149,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
      * @param value Value to set for the setupStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSetupStatus(@javax.annotation.Nullable final SetupStatus value) {
         this._setupStatus = value;
     }
@@ -154,6 +158,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
      * @param value Value to set for the skipSetup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkipSetup(@javax.annotation.Nullable final Boolean value) {
         this._skipSetup = value;
     }
@@ -162,6 +167,7 @@ public class TenantSetupInfo extends Entity implements Parsable {
      * @param value Value to set for the userRolesActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRolesActions(@javax.annotation.Nullable final String value) {
         this._userRolesActions = value;
     }

@@ -21,6 +21,7 @@ public class CopyPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new copyPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CopyPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -48,11 +49,10 @@ public class CopyPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CopyPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("parentReference", (n) -> { currentObject.setParentReference(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("parentReference", (n) -> { this.setParentReference(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. The name property
@@ -75,6 +75,7 @@ public class CopyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("name", this.getName());
@@ -86,6 +87,7 @@ public class CopyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -94,6 +96,7 @@ public class CopyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -102,6 +105,7 @@ public class CopyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the parentReference property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentReference(@javax.annotation.Nullable final ItemReference value) {
         this._parentReference = value;
     }

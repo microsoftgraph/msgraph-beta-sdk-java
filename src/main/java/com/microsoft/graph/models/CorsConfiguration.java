@@ -27,9 +27,9 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      * Instantiates a new corsConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CorsConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.corsConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,15 +79,14 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CorsConfiguration currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("allowedHeaders", (n) -> { currentObject.setAllowedHeaders(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("allowedMethods", (n) -> { currentObject.setAllowedMethods(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("allowedOrigins", (n) -> { currentObject.setAllowedOrigins(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("maxAgeInSeconds", (n) -> { currentObject.setMaxAgeInSeconds(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("allowedHeaders", (n) -> { this.setAllowedHeaders(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("allowedMethods", (n) -> { this.setAllowedMethods(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("allowedOrigins", (n) -> { this.setAllowedOrigins(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("maxAgeInSeconds", (n) -> { this.setMaxAgeInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("resource", (n) -> { this.setResource(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the maxAgeInSeconds property value. The maximum amount of time that a browser should cache the response to the preflight OPTIONS request.
@@ -118,6 +117,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("allowedHeaders", this.getAllowedHeaders());
@@ -133,6 +133,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +142,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowedHeaders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedHeaders(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedHeaders = value;
     }
@@ -149,6 +151,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowedMethods property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedMethods(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedMethods = value;
     }
@@ -157,6 +160,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowedOrigins property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedOrigins(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedOrigins = value;
     }
@@ -165,6 +169,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the maxAgeInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxAgeInSeconds(@javax.annotation.Nullable final Integer value) {
         this._maxAgeInSeconds = value;
     }
@@ -173,6 +178,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -181,6 +187,7 @@ public class CorsConfiguration implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final String value) {
         this._resource = value;
     }

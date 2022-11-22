@@ -18,6 +18,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      * Instantiates a new PhoneAuthenticationMethod and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PhoneAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.phoneAuthenticationMethod");
@@ -38,12 +39,11 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PhoneAuthenticationMethod currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("phoneNumber", (n) -> { currentObject.setPhoneNumber(n.getStringValue()); });
-            this.put("phoneType", (n) -> { currentObject.setPhoneType(n.getEnumValue(AuthenticationPhoneType.class)); });
-            this.put("smsSignInState", (n) -> { currentObject.setSmsSignInState(n.getEnumValue(AuthenticationMethodSignInState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("phoneNumber", (n) -> { this.setPhoneNumber(n.getStringValue()); });
+        deserializerMap.put("phoneType", (n) -> { this.setPhoneType(n.getEnumValue(AuthenticationPhoneType.class)); });
+        deserializerMap.put("smsSignInState", (n) -> { this.setSmsSignInState(n.getEnumValue(AuthenticationMethodSignInState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the phoneNumber property value. The phone number to text or call for authentication. Phone numbers use the format '+<country code> <number>x<extension>', with extension optional. For example, +1 5555551234 or +1 5555551234x123 are valid. Numbers are rejected when creating/updating if they do not match the required format.
@@ -74,6 +74,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +87,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      * @param value Value to set for the phoneNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoneNumber(@javax.annotation.Nullable final String value) {
         this._phoneNumber = value;
     }
@@ -94,6 +96,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      * @param value Value to set for the phoneType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoneType(@javax.annotation.Nullable final AuthenticationPhoneType value) {
         this._phoneType = value;
     }
@@ -102,6 +105,7 @@ public class PhoneAuthenticationMethod extends AuthenticationMethod implements P
      * @param value Value to set for the smsSignInState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmsSignInState(@javax.annotation.Nullable final AuthenticationMethodSignInState value) {
         this._smsSignInState = value;
     }

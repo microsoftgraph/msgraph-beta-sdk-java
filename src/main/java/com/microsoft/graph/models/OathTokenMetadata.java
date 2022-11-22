@@ -27,9 +27,9 @@ public class OathTokenMetadata implements AdditionalDataHolder, Parsable {
      * Instantiates a new oathTokenMetadata and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OathTokenMetadata() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.oathTokenMetadata");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,15 +63,14 @@ public class OathTokenMetadata implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OathTokenMetadata currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("manufacturerProperties", (n) -> { currentObject.setManufacturerProperties(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
-            this.put("tokenType", (n) -> { currentObject.setTokenType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("manufacturerProperties", (n) -> { this.setManufacturerProperties(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("serialNumber", (n) -> { this.setSerialNumber(n.getStringValue()); });
+        deserializerMap.put("tokenType", (n) -> { this.setTokenType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the manufacturer property value. The manufacturer property
@@ -118,6 +117,7 @@ public class OathTokenMetadata implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("enabled", this.getEnabled());
@@ -133,6 +133,7 @@ public class OathTokenMetadata implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +142,7 @@ public class OathTokenMetadata implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the enabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
         this._enabled = value;
     }
@@ -149,6 +151,7 @@ public class OathTokenMetadata implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -157,6 +160,7 @@ public class OathTokenMetadata implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the manufacturerProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturerProperties(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
         this._manufacturerProperties = value;
     }
@@ -165,6 +169,7 @@ public class OathTokenMetadata implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -173,6 +178,7 @@ public class OathTokenMetadata implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the serialNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSerialNumber(@javax.annotation.Nullable final String value) {
         this._serialNumber = value;
     }
@@ -181,6 +187,7 @@ public class OathTokenMetadata implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tokenType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenType(@javax.annotation.Nullable final String value) {
         this._tokenType = value;
     }

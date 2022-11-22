@@ -21,9 +21,9 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
      * Instantiates a new deviceConfigurationAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceConfigurationAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.deviceConfigurationAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,13 +41,12 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceConfigurationAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("intent", (n) -> { currentObject.setIntent(n.getEnumValue(DeviceConfigAssignmentIntent.class)); });
-            this.put("source", (n) -> { currentObject.setSource(n.getEnumValue(DeviceAndAppManagementAssignmentSource.class)); });
-            this.put("sourceId", (n) -> { currentObject.setSourceId(n.getStringValue()); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("intent", (n) -> { this.setIntent(n.getEnumValue(DeviceConfigAssignmentIntent.class)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getEnumValue(DeviceAndAppManagementAssignmentSource.class)); });
+        deserializerMap.put("sourceId", (n) -> { this.setSourceId(n.getStringValue()); });
+        deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the intent property value. The admin intent to apply or remove the profile. Possible values are: apply, remove.
@@ -86,12 +85,12 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("intent", this.getIntent());
         writer.writeEnumValue("source", this.getSource());
-        writer.writeStringValue("sourceId", this.getSourceId());
         writer.writeObjectValue("target", this.getTarget());
     }
     /**
@@ -99,6 +98,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
      * @param value Value to set for the intent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntent(@javax.annotation.Nullable final DeviceConfigAssignmentIntent value) {
         this._intent = value;
     }
@@ -107,6 +107,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentSource value) {
         this._source = value;
     }
@@ -115,6 +116,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
      * @param value Value to set for the sourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceId(@javax.annotation.Nullable final String value) {
         this._sourceId = value;
     }
@@ -123,6 +125,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this._target = value;
     }

@@ -15,6 +15,7 @@ public class AttendeeBase extends Recipient implements Parsable {
      * Instantiates a new AttendeeBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AttendeeBase() {
         super();
         this.setOdataType("#microsoft.graph.attendeeBase");
@@ -42,10 +43,9 @@ public class AttendeeBase extends Recipient implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AttendeeBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(AttendeeType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AttendeeType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the type property value. The type of attendee. Possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
@@ -60,6 +60,7 @@ public class AttendeeBase extends Recipient implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -70,6 +71,7 @@ public class AttendeeBase extends Recipient implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final AttendeeType value) {
         this._type = value;
     }

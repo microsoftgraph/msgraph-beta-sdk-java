@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the commsApplication singleton. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Participant extends Entity implements Parsable {
     /** The info property */
     private ParticipantInfo _info;
@@ -27,9 +27,9 @@ public class Participant extends Entity implements Parsable {
      * Instantiates a new participant and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Participant() {
         super();
-        this.setOdataType("#microsoft.graph.participant");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,16 +47,15 @@ public class Participant extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Participant currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("info", (n) -> { currentObject.setInfo(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
-            this.put("isIdentityAnonymized", (n) -> { currentObject.setIsIdentityAnonymized(n.getBooleanValue()); });
-            this.put("isInLobby", (n) -> { currentObject.setIsInLobby(n.getBooleanValue()); });
-            this.put("isMuted", (n) -> { currentObject.setIsMuted(n.getBooleanValue()); });
-            this.put("mediaStreams", (n) -> { currentObject.setMediaStreams(n.getCollectionOfObjectValues(MediaStream::createFromDiscriminatorValue)); });
-            this.put("metadata", (n) -> { currentObject.setMetadata(n.getStringValue()); });
-            this.put("recordingInfo", (n) -> { currentObject.setRecordingInfo(n.getObjectValue(RecordingInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("info", (n) -> { this.setInfo(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("isIdentityAnonymized", (n) -> { this.setIsIdentityAnonymized(n.getBooleanValue()); });
+        deserializerMap.put("isInLobby", (n) -> { this.setIsInLobby(n.getBooleanValue()); });
+        deserializerMap.put("isMuted", (n) -> { this.setIsMuted(n.getBooleanValue()); });
+        deserializerMap.put("mediaStreams", (n) -> { this.setMediaStreams(n.getCollectionOfObjectValues(MediaStream::createFromDiscriminatorValue)); });
+        deserializerMap.put("metadata", (n) -> { this.setMetadata(n.getStringValue()); });
+        deserializerMap.put("recordingInfo", (n) -> { this.setRecordingInfo(n.getObjectValue(RecordingInfo::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the info property value. The info property
@@ -119,6 +118,7 @@ public class Participant extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +135,7 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the info property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInfo(@javax.annotation.Nullable final ParticipantInfo value) {
         this._info = value;
     }
@@ -143,6 +144,7 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the isIdentityAnonymized property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsIdentityAnonymized(@javax.annotation.Nullable final Boolean value) {
         this._isIdentityAnonymized = value;
     }
@@ -151,6 +153,7 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the isInLobby property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsInLobby(@javax.annotation.Nullable final Boolean value) {
         this._isInLobby = value;
     }
@@ -159,6 +162,7 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the isMuted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMuted(@javax.annotation.Nullable final Boolean value) {
         this._isMuted = value;
     }
@@ -167,6 +171,7 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the mediaStreams property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMediaStreams(@javax.annotation.Nullable final java.util.List<MediaStream> value) {
         this._mediaStreams = value;
     }
@@ -175,6 +180,7 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the metadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetadata(@javax.annotation.Nullable final String value) {
         this._metadata = value;
     }
@@ -183,6 +189,7 @@ public class Participant extends Entity implements Parsable {
      * @param value Value to set for the recordingInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecordingInfo(@javax.annotation.Nullable final RecordingInfo value) {
         this._recordingInfo = value;
     }

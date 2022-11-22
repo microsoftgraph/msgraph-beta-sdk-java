@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Windows10EndpointProtectionConfiguration extends DeviceConfiguration implements Parsable {
-    /** Gets or sets whether applications inside Microsoft Defender Application Guard can access the device’s camera and microphone. */
+    /** Gets or sets whether applications inside Microsoft Defender Application Guard can access the devices camera and microphone. */
     private Boolean _applicationGuardAllowCameraMicrophoneRedirection;
     /** Allow users to download files from Edge in the application guard container and save them on the host file system */
     private Boolean _applicationGuardAllowFileSaveOnHost;
@@ -345,7 +345,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     private Boolean _localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts;
     /** Require CTRL+ALT+DEL to be pressed before a user can log on. */
     private Boolean _localSecurityOptionsDoNotRequireCtrlAltDel;
-    /** This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It’s not stored by default. */
+    /** This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. Its not stored by default. */
     private Boolean _localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange;
     /** Possible values for LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser */
     private LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType _localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser;
@@ -353,7 +353,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     private String _localSecurityOptionsGuestAccountName;
     /** Do not display the username of the last person who signed in on this device. */
     private Boolean _localSecurityOptionsHideLastSignedInUser;
-    /** Do not display the username of the person signing in to this device after credentials are entered and before the device’s desktop is shown. */
+    /** Do not display the username of the person signing in to this device after credentials are entered and before the devices desktop is shown. */
     private Boolean _localSecurityOptionsHideUsernameAtSignIn;
     /** Possible values for LocalSecurityOptionsInformationDisplayedOnLockScreen */
     private LocalSecurityOptionsInformationDisplayedOnLockScreenType _localSecurityOptionsInformationDisplayedOnLockScreen;
@@ -363,9 +363,9 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     private String _localSecurityOptionsLogOnMessageText;
     /** Set message title for users attempting to log in. */
     private String _localSecurityOptionsLogOnMessageTitle;
-    /** Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999 */
+    /** Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999 */
     private Integer _localSecurityOptionsMachineInactivityLimit;
-    /** Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999 */
+    /** Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999 */
     private Integer _localSecurityOptionsMachineInactivityLimitInMinutes;
     /** Possible values for LocalSecurityOptionsMinimumSessionSecurity */
     private LocalSecurityOptionsMinimumSessionSecurity _localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients;
@@ -465,6 +465,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * Instantiates a new Windows10EndpointProtectionConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10EndpointProtectionConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10EndpointProtectionConfiguration");
@@ -480,7 +481,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return new Windows10EndpointProtectionConfiguration();
     }
     /**
-     * Gets the applicationGuardAllowCameraMicrophoneRedirection property value. Gets or sets whether applications inside Microsoft Defender Application Guard can access the device’s camera and microphone.
+     * Gets the applicationGuardAllowCameraMicrophoneRedirection property value. Gets or sets whether applications inside Microsoft Defender Application Guard can access the devices camera and microphone.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -1493,235 +1494,234 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10EndpointProtectionConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicationGuardAllowCameraMicrophoneRedirection", (n) -> { currentObject.setApplicationGuardAllowCameraMicrophoneRedirection(n.getBooleanValue()); });
-            this.put("applicationGuardAllowFileSaveOnHost", (n) -> { currentObject.setApplicationGuardAllowFileSaveOnHost(n.getBooleanValue()); });
-            this.put("applicationGuardAllowPersistence", (n) -> { currentObject.setApplicationGuardAllowPersistence(n.getBooleanValue()); });
-            this.put("applicationGuardAllowPrintToLocalPrinters", (n) -> { currentObject.setApplicationGuardAllowPrintToLocalPrinters(n.getBooleanValue()); });
-            this.put("applicationGuardAllowPrintToNetworkPrinters", (n) -> { currentObject.setApplicationGuardAllowPrintToNetworkPrinters(n.getBooleanValue()); });
-            this.put("applicationGuardAllowPrintToPDF", (n) -> { currentObject.setApplicationGuardAllowPrintToPDF(n.getBooleanValue()); });
-            this.put("applicationGuardAllowPrintToXPS", (n) -> { currentObject.setApplicationGuardAllowPrintToXPS(n.getBooleanValue()); });
-            this.put("applicationGuardAllowVirtualGPU", (n) -> { currentObject.setApplicationGuardAllowVirtualGPU(n.getBooleanValue()); });
-            this.put("applicationGuardBlockClipboardSharing", (n) -> { currentObject.setApplicationGuardBlockClipboardSharing(n.getEnumValue(ApplicationGuardBlockClipboardSharingType.class)); });
-            this.put("applicationGuardBlockFileTransfer", (n) -> { currentObject.setApplicationGuardBlockFileTransfer(n.getEnumValue(ApplicationGuardBlockFileTransferType.class)); });
-            this.put("applicationGuardBlockNonEnterpriseContent", (n) -> { currentObject.setApplicationGuardBlockNonEnterpriseContent(n.getBooleanValue()); });
-            this.put("applicationGuardCertificateThumbprints", (n) -> { currentObject.setApplicationGuardCertificateThumbprints(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("applicationGuardEnabled", (n) -> { currentObject.setApplicationGuardEnabled(n.getBooleanValue()); });
-            this.put("applicationGuardEnabledOptions", (n) -> { currentObject.setApplicationGuardEnabledOptions(n.getEnumValue(ApplicationGuardEnabledOptions.class)); });
-            this.put("applicationGuardForceAuditing", (n) -> { currentObject.setApplicationGuardForceAuditing(n.getBooleanValue()); });
-            this.put("appLockerApplicationControl", (n) -> { currentObject.setAppLockerApplicationControl(n.getEnumValue(AppLockerApplicationControlType.class)); });
-            this.put("bitLockerAllowStandardUserEncryption", (n) -> { currentObject.setBitLockerAllowStandardUserEncryption(n.getBooleanValue()); });
-            this.put("bitLockerDisableWarningForOtherDiskEncryption", (n) -> { currentObject.setBitLockerDisableWarningForOtherDiskEncryption(n.getBooleanValue()); });
-            this.put("bitLockerEnableStorageCardEncryptionOnMobile", (n) -> { currentObject.setBitLockerEnableStorageCardEncryptionOnMobile(n.getBooleanValue()); });
-            this.put("bitLockerEncryptDevice", (n) -> { currentObject.setBitLockerEncryptDevice(n.getBooleanValue()); });
-            this.put("bitLockerFixedDrivePolicy", (n) -> { currentObject.setBitLockerFixedDrivePolicy(n.getObjectValue(BitLockerFixedDrivePolicy::createFromDiscriminatorValue)); });
-            this.put("bitLockerRecoveryPasswordRotation", (n) -> { currentObject.setBitLockerRecoveryPasswordRotation(n.getEnumValue(BitLockerRecoveryPasswordRotationType.class)); });
-            this.put("bitLockerRemovableDrivePolicy", (n) -> { currentObject.setBitLockerRemovableDrivePolicy(n.getObjectValue(BitLockerRemovableDrivePolicy::createFromDiscriminatorValue)); });
-            this.put("bitLockerSystemDrivePolicy", (n) -> { currentObject.setBitLockerSystemDrivePolicy(n.getObjectValue(BitLockerSystemDrivePolicy::createFromDiscriminatorValue)); });
-            this.put("defenderAdditionalGuardedFolders", (n) -> { currentObject.setDefenderAdditionalGuardedFolders(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderAdobeReaderLaunchChildProcess", (n) -> { currentObject.setDefenderAdobeReaderLaunchChildProcess(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderAdvancedRansomewareProtectionType", (n) -> { currentObject.setDefenderAdvancedRansomewareProtectionType(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderAllowBehaviorMonitoring", (n) -> { currentObject.setDefenderAllowBehaviorMonitoring(n.getBooleanValue()); });
-            this.put("defenderAllowCloudProtection", (n) -> { currentObject.setDefenderAllowCloudProtection(n.getBooleanValue()); });
-            this.put("defenderAllowEndUserAccess", (n) -> { currentObject.setDefenderAllowEndUserAccess(n.getBooleanValue()); });
-            this.put("defenderAllowIntrusionPreventionSystem", (n) -> { currentObject.setDefenderAllowIntrusionPreventionSystem(n.getBooleanValue()); });
-            this.put("defenderAllowOnAccessProtection", (n) -> { currentObject.setDefenderAllowOnAccessProtection(n.getBooleanValue()); });
-            this.put("defenderAllowRealTimeMonitoring", (n) -> { currentObject.setDefenderAllowRealTimeMonitoring(n.getBooleanValue()); });
-            this.put("defenderAllowScanArchiveFiles", (n) -> { currentObject.setDefenderAllowScanArchiveFiles(n.getBooleanValue()); });
-            this.put("defenderAllowScanDownloads", (n) -> { currentObject.setDefenderAllowScanDownloads(n.getBooleanValue()); });
-            this.put("defenderAllowScanNetworkFiles", (n) -> { currentObject.setDefenderAllowScanNetworkFiles(n.getBooleanValue()); });
-            this.put("defenderAllowScanRemovableDrivesDuringFullScan", (n) -> { currentObject.setDefenderAllowScanRemovableDrivesDuringFullScan(n.getBooleanValue()); });
-            this.put("defenderAllowScanScriptsLoadedInInternetExplorer", (n) -> { currentObject.setDefenderAllowScanScriptsLoadedInInternetExplorer(n.getBooleanValue()); });
-            this.put("defenderAttackSurfaceReductionExcludedPaths", (n) -> { currentObject.setDefenderAttackSurfaceReductionExcludedPaths(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderBlockEndUserAccess", (n) -> { currentObject.setDefenderBlockEndUserAccess(n.getBooleanValue()); });
-            this.put("defenderBlockPersistenceThroughWmiType", (n) -> { currentObject.setDefenderBlockPersistenceThroughWmiType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderCheckForSignaturesBeforeRunningScan", (n) -> { currentObject.setDefenderCheckForSignaturesBeforeRunningScan(n.getBooleanValue()); });
-            this.put("defenderCloudBlockLevel", (n) -> { currentObject.setDefenderCloudBlockLevel(n.getEnumValue(DefenderCloudBlockLevelType.class)); });
-            this.put("defenderCloudExtendedTimeoutInSeconds", (n) -> { currentObject.setDefenderCloudExtendedTimeoutInSeconds(n.getIntegerValue()); });
-            this.put("defenderDaysBeforeDeletingQuarantinedMalware", (n) -> { currentObject.setDefenderDaysBeforeDeletingQuarantinedMalware(n.getIntegerValue()); });
-            this.put("defenderDetectedMalwareActions", (n) -> { currentObject.setDefenderDetectedMalwareActions(n.getObjectValue(DefenderDetectedMalwareActions::createFromDiscriminatorValue)); });
-            this.put("defenderDisableBehaviorMonitoring", (n) -> { currentObject.setDefenderDisableBehaviorMonitoring(n.getBooleanValue()); });
-            this.put("defenderDisableCatchupFullScan", (n) -> { currentObject.setDefenderDisableCatchupFullScan(n.getBooleanValue()); });
-            this.put("defenderDisableCatchupQuickScan", (n) -> { currentObject.setDefenderDisableCatchupQuickScan(n.getBooleanValue()); });
-            this.put("defenderDisableCloudProtection", (n) -> { currentObject.setDefenderDisableCloudProtection(n.getBooleanValue()); });
-            this.put("defenderDisableIntrusionPreventionSystem", (n) -> { currentObject.setDefenderDisableIntrusionPreventionSystem(n.getBooleanValue()); });
-            this.put("defenderDisableOnAccessProtection", (n) -> { currentObject.setDefenderDisableOnAccessProtection(n.getBooleanValue()); });
-            this.put("defenderDisableRealTimeMonitoring", (n) -> { currentObject.setDefenderDisableRealTimeMonitoring(n.getBooleanValue()); });
-            this.put("defenderDisableScanArchiveFiles", (n) -> { currentObject.setDefenderDisableScanArchiveFiles(n.getBooleanValue()); });
-            this.put("defenderDisableScanDownloads", (n) -> { currentObject.setDefenderDisableScanDownloads(n.getBooleanValue()); });
-            this.put("defenderDisableScanNetworkFiles", (n) -> { currentObject.setDefenderDisableScanNetworkFiles(n.getBooleanValue()); });
-            this.put("defenderDisableScanRemovableDrivesDuringFullScan", (n) -> { currentObject.setDefenderDisableScanRemovableDrivesDuringFullScan(n.getBooleanValue()); });
-            this.put("defenderDisableScanScriptsLoadedInInternetExplorer", (n) -> { currentObject.setDefenderDisableScanScriptsLoadedInInternetExplorer(n.getBooleanValue()); });
-            this.put("defenderEmailContentExecution", (n) -> { currentObject.setDefenderEmailContentExecution(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderEmailContentExecutionType", (n) -> { currentObject.setDefenderEmailContentExecutionType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderEnableLowCpuPriority", (n) -> { currentObject.setDefenderEnableLowCpuPriority(n.getBooleanValue()); });
-            this.put("defenderEnableScanIncomingMail", (n) -> { currentObject.setDefenderEnableScanIncomingMail(n.getBooleanValue()); });
-            this.put("defenderEnableScanMappedNetworkDrivesDuringFullScan", (n) -> { currentObject.setDefenderEnableScanMappedNetworkDrivesDuringFullScan(n.getBooleanValue()); });
-            this.put("defenderExploitProtectionXml", (n) -> { currentObject.setDefenderExploitProtectionXml(n.getByteArrayValue()); });
-            this.put("defenderExploitProtectionXmlFileName", (n) -> { currentObject.setDefenderExploitProtectionXmlFileName(n.getStringValue()); });
-            this.put("defenderFileExtensionsToExclude", (n) -> { currentObject.setDefenderFileExtensionsToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderFilesAndFoldersToExclude", (n) -> { currentObject.setDefenderFilesAndFoldersToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderGuardedFoldersAllowedAppPaths", (n) -> { currentObject.setDefenderGuardedFoldersAllowedAppPaths(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderGuardMyFoldersType", (n) -> { currentObject.setDefenderGuardMyFoldersType(n.getEnumValue(FolderProtectionType.class)); });
-            this.put("defenderNetworkProtectionType", (n) -> { currentObject.setDefenderNetworkProtectionType(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderOfficeAppsExecutableContentCreationOrLaunch", (n) -> { currentObject.setDefenderOfficeAppsExecutableContentCreationOrLaunch(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderOfficeAppsExecutableContentCreationOrLaunchType", (n) -> { currentObject.setDefenderOfficeAppsExecutableContentCreationOrLaunchType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderOfficeAppsLaunchChildProcess", (n) -> { currentObject.setDefenderOfficeAppsLaunchChildProcess(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderOfficeAppsLaunchChildProcessType", (n) -> { currentObject.setDefenderOfficeAppsLaunchChildProcessType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderOfficeAppsOtherProcessInjection", (n) -> { currentObject.setDefenderOfficeAppsOtherProcessInjection(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderOfficeAppsOtherProcessInjectionType", (n) -> { currentObject.setDefenderOfficeAppsOtherProcessInjectionType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderOfficeCommunicationAppsLaunchChildProcess", (n) -> { currentObject.setDefenderOfficeCommunicationAppsLaunchChildProcess(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderOfficeMacroCodeAllowWin32Imports", (n) -> { currentObject.setDefenderOfficeMacroCodeAllowWin32Imports(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderOfficeMacroCodeAllowWin32ImportsType", (n) -> { currentObject.setDefenderOfficeMacroCodeAllowWin32ImportsType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderPotentiallyUnwantedAppAction", (n) -> { currentObject.setDefenderPotentiallyUnwantedAppAction(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderPreventCredentialStealingType", (n) -> { currentObject.setDefenderPreventCredentialStealingType(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderProcessCreation", (n) -> { currentObject.setDefenderProcessCreation(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderProcessCreationType", (n) -> { currentObject.setDefenderProcessCreationType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderProcessesToExclude", (n) -> { currentObject.setDefenderProcessesToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderScanDirection", (n) -> { currentObject.setDefenderScanDirection(n.getEnumValue(DefenderRealtimeScanDirection.class)); });
-            this.put("defenderScanMaxCpuPercentage", (n) -> { currentObject.setDefenderScanMaxCpuPercentage(n.getIntegerValue()); });
-            this.put("defenderScanType", (n) -> { currentObject.setDefenderScanType(n.getEnumValue(DefenderScanType.class)); });
-            this.put("defenderScheduledQuickScanTime", (n) -> { currentObject.setDefenderScheduledQuickScanTime(n.getLocalTimeValue()); });
-            this.put("defenderScheduledScanDay", (n) -> { currentObject.setDefenderScheduledScanDay(n.getEnumValue(WeeklySchedule.class)); });
-            this.put("defenderScheduledScanTime", (n) -> { currentObject.setDefenderScheduledScanTime(n.getLocalTimeValue()); });
-            this.put("defenderScriptDownloadedPayloadExecution", (n) -> { currentObject.setDefenderScriptDownloadedPayloadExecution(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderScriptDownloadedPayloadExecutionType", (n) -> { currentObject.setDefenderScriptDownloadedPayloadExecutionType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderScriptObfuscatedMacroCode", (n) -> { currentObject.setDefenderScriptObfuscatedMacroCode(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderScriptObfuscatedMacroCodeType", (n) -> { currentObject.setDefenderScriptObfuscatedMacroCodeType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderSecurityCenterBlockExploitProtectionOverride", (n) -> { currentObject.setDefenderSecurityCenterBlockExploitProtectionOverride(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableAccountUI", (n) -> { currentObject.setDefenderSecurityCenterDisableAccountUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableAppBrowserUI", (n) -> { currentObject.setDefenderSecurityCenterDisableAppBrowserUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableClearTpmUI", (n) -> { currentObject.setDefenderSecurityCenterDisableClearTpmUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableFamilyUI", (n) -> { currentObject.setDefenderSecurityCenterDisableFamilyUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableHardwareUI", (n) -> { currentObject.setDefenderSecurityCenterDisableHardwareUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableHealthUI", (n) -> { currentObject.setDefenderSecurityCenterDisableHealthUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableNetworkUI", (n) -> { currentObject.setDefenderSecurityCenterDisableNetworkUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableNotificationAreaUI", (n) -> { currentObject.setDefenderSecurityCenterDisableNotificationAreaUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableRansomwareUI", (n) -> { currentObject.setDefenderSecurityCenterDisableRansomwareUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableSecureBootUI", (n) -> { currentObject.setDefenderSecurityCenterDisableSecureBootUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableTroubleshootingUI", (n) -> { currentObject.setDefenderSecurityCenterDisableTroubleshootingUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableVirusUI", (n) -> { currentObject.setDefenderSecurityCenterDisableVirusUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI", (n) -> { currentObject.setDefenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI(n.getBooleanValue()); });
-            this.put("defenderSecurityCenterHelpEmail", (n) -> { currentObject.setDefenderSecurityCenterHelpEmail(n.getStringValue()); });
-            this.put("defenderSecurityCenterHelpPhone", (n) -> { currentObject.setDefenderSecurityCenterHelpPhone(n.getStringValue()); });
-            this.put("defenderSecurityCenterHelpURL", (n) -> { currentObject.setDefenderSecurityCenterHelpURL(n.getStringValue()); });
-            this.put("defenderSecurityCenterITContactDisplay", (n) -> { currentObject.setDefenderSecurityCenterITContactDisplay(n.getEnumValue(DefenderSecurityCenterITContactDisplayType.class)); });
-            this.put("defenderSecurityCenterNotificationsFromApp", (n) -> { currentObject.setDefenderSecurityCenterNotificationsFromApp(n.getEnumValue(DefenderSecurityCenterNotificationsFromAppType.class)); });
-            this.put("defenderSecurityCenterOrganizationDisplayName", (n) -> { currentObject.setDefenderSecurityCenterOrganizationDisplayName(n.getStringValue()); });
-            this.put("defenderSignatureUpdateIntervalInHours", (n) -> { currentObject.setDefenderSignatureUpdateIntervalInHours(n.getIntegerValue()); });
-            this.put("defenderSubmitSamplesConsentType", (n) -> { currentObject.setDefenderSubmitSamplesConsentType(n.getEnumValue(DefenderSubmitSamplesConsentType.class)); });
-            this.put("defenderUntrustedExecutable", (n) -> { currentObject.setDefenderUntrustedExecutable(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderUntrustedExecutableType", (n) -> { currentObject.setDefenderUntrustedExecutableType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("defenderUntrustedUSBProcess", (n) -> { currentObject.setDefenderUntrustedUSBProcess(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderUntrustedUSBProcessType", (n) -> { currentObject.setDefenderUntrustedUSBProcessType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
-            this.put("deviceGuardEnableSecureBootWithDMA", (n) -> { currentObject.setDeviceGuardEnableSecureBootWithDMA(n.getBooleanValue()); });
-            this.put("deviceGuardEnableVirtualizationBasedSecurity", (n) -> { currentObject.setDeviceGuardEnableVirtualizationBasedSecurity(n.getBooleanValue()); });
-            this.put("deviceGuardLaunchSystemGuard", (n) -> { currentObject.setDeviceGuardLaunchSystemGuard(n.getEnumValue(Enablement.class)); });
-            this.put("deviceGuardLocalSystemAuthorityCredentialGuardSettings", (n) -> { currentObject.setDeviceGuardLocalSystemAuthorityCredentialGuardSettings(n.getEnumValue(DeviceGuardLocalSystemAuthorityCredentialGuardType.class)); });
-            this.put("deviceGuardSecureBootWithDMA", (n) -> { currentObject.setDeviceGuardSecureBootWithDMA(n.getEnumValue(SecureBootWithDMAType.class)); });
-            this.put("dmaGuardDeviceEnumerationPolicy", (n) -> { currentObject.setDmaGuardDeviceEnumerationPolicy(n.getEnumValue(DmaGuardDeviceEnumerationPolicyType.class)); });
-            this.put("firewallBlockStatefulFTP", (n) -> { currentObject.setFirewallBlockStatefulFTP(n.getBooleanValue()); });
-            this.put("firewallCertificateRevocationListCheckMethod", (n) -> { currentObject.setFirewallCertificateRevocationListCheckMethod(n.getEnumValue(FirewallCertificateRevocationListCheckMethodType.class)); });
-            this.put("firewallIdleTimeoutForSecurityAssociationInSeconds", (n) -> { currentObject.setFirewallIdleTimeoutForSecurityAssociationInSeconds(n.getIntegerValue()); });
-            this.put("firewallIPSecExemptionsAllowDHCP", (n) -> { currentObject.setFirewallIPSecExemptionsAllowDHCP(n.getBooleanValue()); });
-            this.put("firewallIPSecExemptionsAllowICMP", (n) -> { currentObject.setFirewallIPSecExemptionsAllowICMP(n.getBooleanValue()); });
-            this.put("firewallIPSecExemptionsAllowNeighborDiscovery", (n) -> { currentObject.setFirewallIPSecExemptionsAllowNeighborDiscovery(n.getBooleanValue()); });
-            this.put("firewallIPSecExemptionsAllowRouterDiscovery", (n) -> { currentObject.setFirewallIPSecExemptionsAllowRouterDiscovery(n.getBooleanValue()); });
-            this.put("firewallIPSecExemptionsNone", (n) -> { currentObject.setFirewallIPSecExemptionsNone(n.getBooleanValue()); });
-            this.put("firewallMergeKeyingModuleSettings", (n) -> { currentObject.setFirewallMergeKeyingModuleSettings(n.getBooleanValue()); });
-            this.put("firewallPacketQueueingMethod", (n) -> { currentObject.setFirewallPacketQueueingMethod(n.getEnumValue(FirewallPacketQueueingMethodType.class)); });
-            this.put("firewallPreSharedKeyEncodingMethod", (n) -> { currentObject.setFirewallPreSharedKeyEncodingMethod(n.getEnumValue(FirewallPreSharedKeyEncodingMethodType.class)); });
-            this.put("firewallProfileDomain", (n) -> { currentObject.setFirewallProfileDomain(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
-            this.put("firewallProfilePrivate", (n) -> { currentObject.setFirewallProfilePrivate(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
-            this.put("firewallProfilePublic", (n) -> { currentObject.setFirewallProfilePublic(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
-            this.put("firewallRules", (n) -> { currentObject.setFirewallRules(n.getCollectionOfObjectValues(WindowsFirewallRule::createFromDiscriminatorValue)); });
-            this.put("lanManagerAuthenticationLevel", (n) -> { currentObject.setLanManagerAuthenticationLevel(n.getEnumValue(LanManagerAuthenticationLevel.class)); });
-            this.put("lanManagerWorkstationDisableInsecureGuestLogons", (n) -> { currentObject.setLanManagerWorkstationDisableInsecureGuestLogons(n.getBooleanValue()); });
-            this.put("localSecurityOptionsAdministratorAccountName", (n) -> { currentObject.setLocalSecurityOptionsAdministratorAccountName(n.getStringValue()); });
-            this.put("localSecurityOptionsAdministratorElevationPromptBehavior", (n) -> { currentObject.setLocalSecurityOptionsAdministratorElevationPromptBehavior(n.getEnumValue(LocalSecurityOptionsAdministratorElevationPromptBehaviorType.class)); });
-            this.put("localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares", (n) -> { currentObject.setLocalSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares(n.getBooleanValue()); });
-            this.put("localSecurityOptionsAllowPKU2UAuthenticationRequests", (n) -> { currentObject.setLocalSecurityOptionsAllowPKU2UAuthenticationRequests(n.getBooleanValue()); });
-            this.put("localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager", (n) -> { currentObject.setLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager(n.getStringValue()); });
-            this.put("localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool", (n) -> { currentObject.setLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool(n.getBooleanValue()); });
-            this.put("localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn", (n) -> { currentObject.setLocalSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn(n.getBooleanValue()); });
-            this.put("localSecurityOptionsAllowUIAccessApplicationElevation", (n) -> { currentObject.setLocalSecurityOptionsAllowUIAccessApplicationElevation(n.getBooleanValue()); });
-            this.put("localSecurityOptionsAllowUIAccessApplicationsForSecureLocations", (n) -> { currentObject.setLocalSecurityOptionsAllowUIAccessApplicationsForSecureLocations(n.getBooleanValue()); });
-            this.put("localSecurityOptionsAllowUndockWithoutHavingToLogon", (n) -> { currentObject.setLocalSecurityOptionsAllowUndockWithoutHavingToLogon(n.getBooleanValue()); });
-            this.put("localSecurityOptionsBlockMicrosoftAccounts", (n) -> { currentObject.setLocalSecurityOptionsBlockMicrosoftAccounts(n.getBooleanValue()); });
-            this.put("localSecurityOptionsBlockRemoteLogonWithBlankPassword", (n) -> { currentObject.setLocalSecurityOptionsBlockRemoteLogonWithBlankPassword(n.getBooleanValue()); });
-            this.put("localSecurityOptionsBlockRemoteOpticalDriveAccess", (n) -> { currentObject.setLocalSecurityOptionsBlockRemoteOpticalDriveAccess(n.getBooleanValue()); });
-            this.put("localSecurityOptionsBlockUsersInstallingPrinterDrivers", (n) -> { currentObject.setLocalSecurityOptionsBlockUsersInstallingPrinterDrivers(n.getBooleanValue()); });
-            this.put("localSecurityOptionsClearVirtualMemoryPageFile", (n) -> { currentObject.setLocalSecurityOptionsClearVirtualMemoryPageFile(n.getBooleanValue()); });
-            this.put("localSecurityOptionsClientDigitallySignCommunicationsAlways", (n) -> { currentObject.setLocalSecurityOptionsClientDigitallySignCommunicationsAlways(n.getBooleanValue()); });
-            this.put("localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers", (n) -> { currentObject.setLocalSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation", (n) -> { currentObject.setLocalSecurityOptionsDetectApplicationInstallationsAndPromptForElevation(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDisableAdministratorAccount", (n) -> { currentObject.setLocalSecurityOptionsDisableAdministratorAccount(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees", (n) -> { currentObject.setLocalSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDisableGuestAccount", (n) -> { currentObject.setLocalSecurityOptionsDisableGuestAccount(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDisableServerDigitallySignCommunicationsAlways", (n) -> { currentObject.setLocalSecurityOptionsDisableServerDigitallySignCommunicationsAlways(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees", (n) -> { currentObject.setLocalSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts", (n) -> { currentObject.setLocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDoNotRequireCtrlAltDel", (n) -> { currentObject.setLocalSecurityOptionsDoNotRequireCtrlAltDel(n.getBooleanValue()); });
-            this.put("localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange", (n) -> { currentObject.setLocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange(n.getBooleanValue()); });
-            this.put("localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser", (n) -> { currentObject.setLocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser(n.getEnumValue(LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType.class)); });
-            this.put("localSecurityOptionsGuestAccountName", (n) -> { currentObject.setLocalSecurityOptionsGuestAccountName(n.getStringValue()); });
-            this.put("localSecurityOptionsHideLastSignedInUser", (n) -> { currentObject.setLocalSecurityOptionsHideLastSignedInUser(n.getBooleanValue()); });
-            this.put("localSecurityOptionsHideUsernameAtSignIn", (n) -> { currentObject.setLocalSecurityOptionsHideUsernameAtSignIn(n.getBooleanValue()); });
-            this.put("localSecurityOptionsInformationDisplayedOnLockScreen", (n) -> { currentObject.setLocalSecurityOptionsInformationDisplayedOnLockScreen(n.getEnumValue(LocalSecurityOptionsInformationDisplayedOnLockScreenType.class)); });
-            this.put("localSecurityOptionsInformationShownOnLockScreen", (n) -> { currentObject.setLocalSecurityOptionsInformationShownOnLockScreen(n.getEnumValue(LocalSecurityOptionsInformationShownOnLockScreenType.class)); });
-            this.put("localSecurityOptionsLogOnMessageText", (n) -> { currentObject.setLocalSecurityOptionsLogOnMessageText(n.getStringValue()); });
-            this.put("localSecurityOptionsLogOnMessageTitle", (n) -> { currentObject.setLocalSecurityOptionsLogOnMessageTitle(n.getStringValue()); });
-            this.put("localSecurityOptionsMachineInactivityLimit", (n) -> { currentObject.setLocalSecurityOptionsMachineInactivityLimit(n.getIntegerValue()); });
-            this.put("localSecurityOptionsMachineInactivityLimitInMinutes", (n) -> { currentObject.setLocalSecurityOptionsMachineInactivityLimitInMinutes(n.getIntegerValue()); });
-            this.put("localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients", (n) -> { currentObject.setLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients(n.getEnumValue(LocalSecurityOptionsMinimumSessionSecurity.class)); });
-            this.put("localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers", (n) -> { currentObject.setLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers(n.getEnumValue(LocalSecurityOptionsMinimumSessionSecurity.class)); });
-            this.put("localSecurityOptionsOnlyElevateSignedExecutables", (n) -> { currentObject.setLocalSecurityOptionsOnlyElevateSignedExecutables(n.getBooleanValue()); });
-            this.put("localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares", (n) -> { currentObject.setLocalSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares(n.getBooleanValue()); });
-            this.put("localSecurityOptionsSmartCardRemovalBehavior", (n) -> { currentObject.setLocalSecurityOptionsSmartCardRemovalBehavior(n.getEnumValue(LocalSecurityOptionsSmartCardRemovalBehaviorType.class)); });
-            this.put("localSecurityOptionsStandardUserElevationPromptBehavior", (n) -> { currentObject.setLocalSecurityOptionsStandardUserElevationPromptBehavior(n.getEnumValue(LocalSecurityOptionsStandardUserElevationPromptBehaviorType.class)); });
-            this.put("localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation", (n) -> { currentObject.setLocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation(n.getBooleanValue()); });
-            this.put("localSecurityOptionsUseAdminApprovalMode", (n) -> { currentObject.setLocalSecurityOptionsUseAdminApprovalMode(n.getBooleanValue()); });
-            this.put("localSecurityOptionsUseAdminApprovalModeForAdministrators", (n) -> { currentObject.setLocalSecurityOptionsUseAdminApprovalModeForAdministrators(n.getBooleanValue()); });
-            this.put("localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations", (n) -> { currentObject.setLocalSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations(n.getBooleanValue()); });
-            this.put("smartScreenBlockOverrideForFiles", (n) -> { currentObject.setSmartScreenBlockOverrideForFiles(n.getBooleanValue()); });
-            this.put("smartScreenEnableInShell", (n) -> { currentObject.setSmartScreenEnableInShell(n.getBooleanValue()); });
-            this.put("userRightsAccessCredentialManagerAsTrustedCaller", (n) -> { currentObject.setUserRightsAccessCredentialManagerAsTrustedCaller(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsActAsPartOfTheOperatingSystem", (n) -> { currentObject.setUserRightsActAsPartOfTheOperatingSystem(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsAllowAccessFromNetwork", (n) -> { currentObject.setUserRightsAllowAccessFromNetwork(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsBackupData", (n) -> { currentObject.setUserRightsBackupData(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsBlockAccessFromNetwork", (n) -> { currentObject.setUserRightsBlockAccessFromNetwork(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsChangeSystemTime", (n) -> { currentObject.setUserRightsChangeSystemTime(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsCreateGlobalObjects", (n) -> { currentObject.setUserRightsCreateGlobalObjects(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsCreatePageFile", (n) -> { currentObject.setUserRightsCreatePageFile(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsCreatePermanentSharedObjects", (n) -> { currentObject.setUserRightsCreatePermanentSharedObjects(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsCreateSymbolicLinks", (n) -> { currentObject.setUserRightsCreateSymbolicLinks(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsCreateToken", (n) -> { currentObject.setUserRightsCreateToken(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsDebugPrograms", (n) -> { currentObject.setUserRightsDebugPrograms(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsDelegation", (n) -> { currentObject.setUserRightsDelegation(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsDenyLocalLogOn", (n) -> { currentObject.setUserRightsDenyLocalLogOn(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsGenerateSecurityAudits", (n) -> { currentObject.setUserRightsGenerateSecurityAudits(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsImpersonateClient", (n) -> { currentObject.setUserRightsImpersonateClient(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsIncreaseSchedulingPriority", (n) -> { currentObject.setUserRightsIncreaseSchedulingPriority(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsLoadUnloadDrivers", (n) -> { currentObject.setUserRightsLoadUnloadDrivers(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsLocalLogOn", (n) -> { currentObject.setUserRightsLocalLogOn(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsLockMemory", (n) -> { currentObject.setUserRightsLockMemory(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsManageAuditingAndSecurityLogs", (n) -> { currentObject.setUserRightsManageAuditingAndSecurityLogs(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsManageVolumes", (n) -> { currentObject.setUserRightsManageVolumes(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsModifyFirmwareEnvironment", (n) -> { currentObject.setUserRightsModifyFirmwareEnvironment(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsModifyObjectLabels", (n) -> { currentObject.setUserRightsModifyObjectLabels(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsProfileSingleProcess", (n) -> { currentObject.setUserRightsProfileSingleProcess(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsRemoteDesktopServicesLogOn", (n) -> { currentObject.setUserRightsRemoteDesktopServicesLogOn(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsRemoteShutdown", (n) -> { currentObject.setUserRightsRemoteShutdown(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsRestoreData", (n) -> { currentObject.setUserRightsRestoreData(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("userRightsTakeOwnership", (n) -> { currentObject.setUserRightsTakeOwnership(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
-            this.put("windowsDefenderTamperProtection", (n) -> { currentObject.setWindowsDefenderTamperProtection(n.getEnumValue(WindowsDefenderTamperProtectionOptions.class)); });
-            this.put("xboxServicesAccessoryManagementServiceStartupMode", (n) -> { currentObject.setXboxServicesAccessoryManagementServiceStartupMode(n.getEnumValue(ServiceStartType.class)); });
-            this.put("xboxServicesEnableXboxGameSaveTask", (n) -> { currentObject.setXboxServicesEnableXboxGameSaveTask(n.getBooleanValue()); });
-            this.put("xboxServicesLiveAuthManagerServiceStartupMode", (n) -> { currentObject.setXboxServicesLiveAuthManagerServiceStartupMode(n.getEnumValue(ServiceStartType.class)); });
-            this.put("xboxServicesLiveGameSaveServiceStartupMode", (n) -> { currentObject.setXboxServicesLiveGameSaveServiceStartupMode(n.getEnumValue(ServiceStartType.class)); });
-            this.put("xboxServicesLiveNetworkingServiceStartupMode", (n) -> { currentObject.setXboxServicesLiveNetworkingServiceStartupMode(n.getEnumValue(ServiceStartType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationGuardAllowCameraMicrophoneRedirection", (n) -> { this.setApplicationGuardAllowCameraMicrophoneRedirection(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowFileSaveOnHost", (n) -> { this.setApplicationGuardAllowFileSaveOnHost(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowPersistence", (n) -> { this.setApplicationGuardAllowPersistence(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowPrintToLocalPrinters", (n) -> { this.setApplicationGuardAllowPrintToLocalPrinters(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowPrintToNetworkPrinters", (n) -> { this.setApplicationGuardAllowPrintToNetworkPrinters(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowPrintToPDF", (n) -> { this.setApplicationGuardAllowPrintToPDF(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowPrintToXPS", (n) -> { this.setApplicationGuardAllowPrintToXPS(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardAllowVirtualGPU", (n) -> { this.setApplicationGuardAllowVirtualGPU(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardBlockClipboardSharing", (n) -> { this.setApplicationGuardBlockClipboardSharing(n.getEnumValue(ApplicationGuardBlockClipboardSharingType.class)); });
+        deserializerMap.put("applicationGuardBlockFileTransfer", (n) -> { this.setApplicationGuardBlockFileTransfer(n.getEnumValue(ApplicationGuardBlockFileTransferType.class)); });
+        deserializerMap.put("applicationGuardBlockNonEnterpriseContent", (n) -> { this.setApplicationGuardBlockNonEnterpriseContent(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardCertificateThumbprints", (n) -> { this.setApplicationGuardCertificateThumbprints(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("applicationGuardEnabled", (n) -> { this.setApplicationGuardEnabled(n.getBooleanValue()); });
+        deserializerMap.put("applicationGuardEnabledOptions", (n) -> { this.setApplicationGuardEnabledOptions(n.getEnumValue(ApplicationGuardEnabledOptions.class)); });
+        deserializerMap.put("applicationGuardForceAuditing", (n) -> { this.setApplicationGuardForceAuditing(n.getBooleanValue()); });
+        deserializerMap.put("appLockerApplicationControl", (n) -> { this.setAppLockerApplicationControl(n.getEnumValue(AppLockerApplicationControlType.class)); });
+        deserializerMap.put("bitLockerAllowStandardUserEncryption", (n) -> { this.setBitLockerAllowStandardUserEncryption(n.getBooleanValue()); });
+        deserializerMap.put("bitLockerDisableWarningForOtherDiskEncryption", (n) -> { this.setBitLockerDisableWarningForOtherDiskEncryption(n.getBooleanValue()); });
+        deserializerMap.put("bitLockerEnableStorageCardEncryptionOnMobile", (n) -> { this.setBitLockerEnableStorageCardEncryptionOnMobile(n.getBooleanValue()); });
+        deserializerMap.put("bitLockerEncryptDevice", (n) -> { this.setBitLockerEncryptDevice(n.getBooleanValue()); });
+        deserializerMap.put("bitLockerFixedDrivePolicy", (n) -> { this.setBitLockerFixedDrivePolicy(n.getObjectValue(BitLockerFixedDrivePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("bitLockerRecoveryPasswordRotation", (n) -> { this.setBitLockerRecoveryPasswordRotation(n.getEnumValue(BitLockerRecoveryPasswordRotationType.class)); });
+        deserializerMap.put("bitLockerRemovableDrivePolicy", (n) -> { this.setBitLockerRemovableDrivePolicy(n.getObjectValue(BitLockerRemovableDrivePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("bitLockerSystemDrivePolicy", (n) -> { this.setBitLockerSystemDrivePolicy(n.getObjectValue(BitLockerSystemDrivePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("defenderAdditionalGuardedFolders", (n) -> { this.setDefenderAdditionalGuardedFolders(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderAdobeReaderLaunchChildProcess", (n) -> { this.setDefenderAdobeReaderLaunchChildProcess(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderAdvancedRansomewareProtectionType", (n) -> { this.setDefenderAdvancedRansomewareProtectionType(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderAllowBehaviorMonitoring", (n) -> { this.setDefenderAllowBehaviorMonitoring(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowCloudProtection", (n) -> { this.setDefenderAllowCloudProtection(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowEndUserAccess", (n) -> { this.setDefenderAllowEndUserAccess(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowIntrusionPreventionSystem", (n) -> { this.setDefenderAllowIntrusionPreventionSystem(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowOnAccessProtection", (n) -> { this.setDefenderAllowOnAccessProtection(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowRealTimeMonitoring", (n) -> { this.setDefenderAllowRealTimeMonitoring(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowScanArchiveFiles", (n) -> { this.setDefenderAllowScanArchiveFiles(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowScanDownloads", (n) -> { this.setDefenderAllowScanDownloads(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowScanNetworkFiles", (n) -> { this.setDefenderAllowScanNetworkFiles(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowScanRemovableDrivesDuringFullScan", (n) -> { this.setDefenderAllowScanRemovableDrivesDuringFullScan(n.getBooleanValue()); });
+        deserializerMap.put("defenderAllowScanScriptsLoadedInInternetExplorer", (n) -> { this.setDefenderAllowScanScriptsLoadedInInternetExplorer(n.getBooleanValue()); });
+        deserializerMap.put("defenderAttackSurfaceReductionExcludedPaths", (n) -> { this.setDefenderAttackSurfaceReductionExcludedPaths(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderBlockEndUserAccess", (n) -> { this.setDefenderBlockEndUserAccess(n.getBooleanValue()); });
+        deserializerMap.put("defenderBlockPersistenceThroughWmiType", (n) -> { this.setDefenderBlockPersistenceThroughWmiType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderCheckForSignaturesBeforeRunningScan", (n) -> { this.setDefenderCheckForSignaturesBeforeRunningScan(n.getBooleanValue()); });
+        deserializerMap.put("defenderCloudBlockLevel", (n) -> { this.setDefenderCloudBlockLevel(n.getEnumValue(DefenderCloudBlockLevelType.class)); });
+        deserializerMap.put("defenderCloudExtendedTimeoutInSeconds", (n) -> { this.setDefenderCloudExtendedTimeoutInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("defenderDaysBeforeDeletingQuarantinedMalware", (n) -> { this.setDefenderDaysBeforeDeletingQuarantinedMalware(n.getIntegerValue()); });
+        deserializerMap.put("defenderDetectedMalwareActions", (n) -> { this.setDefenderDetectedMalwareActions(n.getObjectValue(DefenderDetectedMalwareActions::createFromDiscriminatorValue)); });
+        deserializerMap.put("defenderDisableBehaviorMonitoring", (n) -> { this.setDefenderDisableBehaviorMonitoring(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableCatchupFullScan", (n) -> { this.setDefenderDisableCatchupFullScan(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableCatchupQuickScan", (n) -> { this.setDefenderDisableCatchupQuickScan(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableCloudProtection", (n) -> { this.setDefenderDisableCloudProtection(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableIntrusionPreventionSystem", (n) -> { this.setDefenderDisableIntrusionPreventionSystem(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableOnAccessProtection", (n) -> { this.setDefenderDisableOnAccessProtection(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableRealTimeMonitoring", (n) -> { this.setDefenderDisableRealTimeMonitoring(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableScanArchiveFiles", (n) -> { this.setDefenderDisableScanArchiveFiles(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableScanDownloads", (n) -> { this.setDefenderDisableScanDownloads(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableScanNetworkFiles", (n) -> { this.setDefenderDisableScanNetworkFiles(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableScanRemovableDrivesDuringFullScan", (n) -> { this.setDefenderDisableScanRemovableDrivesDuringFullScan(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableScanScriptsLoadedInInternetExplorer", (n) -> { this.setDefenderDisableScanScriptsLoadedInInternetExplorer(n.getBooleanValue()); });
+        deserializerMap.put("defenderEmailContentExecution", (n) -> { this.setDefenderEmailContentExecution(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderEmailContentExecutionType", (n) -> { this.setDefenderEmailContentExecutionType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderEnableLowCpuPriority", (n) -> { this.setDefenderEnableLowCpuPriority(n.getBooleanValue()); });
+        deserializerMap.put("defenderEnableScanIncomingMail", (n) -> { this.setDefenderEnableScanIncomingMail(n.getBooleanValue()); });
+        deserializerMap.put("defenderEnableScanMappedNetworkDrivesDuringFullScan", (n) -> { this.setDefenderEnableScanMappedNetworkDrivesDuringFullScan(n.getBooleanValue()); });
+        deserializerMap.put("defenderExploitProtectionXml", (n) -> { this.setDefenderExploitProtectionXml(n.getByteArrayValue()); });
+        deserializerMap.put("defenderExploitProtectionXmlFileName", (n) -> { this.setDefenderExploitProtectionXmlFileName(n.getStringValue()); });
+        deserializerMap.put("defenderFileExtensionsToExclude", (n) -> { this.setDefenderFileExtensionsToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderFilesAndFoldersToExclude", (n) -> { this.setDefenderFilesAndFoldersToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderGuardedFoldersAllowedAppPaths", (n) -> { this.setDefenderGuardedFoldersAllowedAppPaths(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderGuardMyFoldersType", (n) -> { this.setDefenderGuardMyFoldersType(n.getEnumValue(FolderProtectionType.class)); });
+        deserializerMap.put("defenderNetworkProtectionType", (n) -> { this.setDefenderNetworkProtectionType(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderOfficeAppsExecutableContentCreationOrLaunch", (n) -> { this.setDefenderOfficeAppsExecutableContentCreationOrLaunch(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderOfficeAppsExecutableContentCreationOrLaunchType", (n) -> { this.setDefenderOfficeAppsExecutableContentCreationOrLaunchType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderOfficeAppsLaunchChildProcess", (n) -> { this.setDefenderOfficeAppsLaunchChildProcess(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderOfficeAppsLaunchChildProcessType", (n) -> { this.setDefenderOfficeAppsLaunchChildProcessType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderOfficeAppsOtherProcessInjection", (n) -> { this.setDefenderOfficeAppsOtherProcessInjection(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderOfficeAppsOtherProcessInjectionType", (n) -> { this.setDefenderOfficeAppsOtherProcessInjectionType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderOfficeCommunicationAppsLaunchChildProcess", (n) -> { this.setDefenderOfficeCommunicationAppsLaunchChildProcess(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderOfficeMacroCodeAllowWin32Imports", (n) -> { this.setDefenderOfficeMacroCodeAllowWin32Imports(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderOfficeMacroCodeAllowWin32ImportsType", (n) -> { this.setDefenderOfficeMacroCodeAllowWin32ImportsType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderPotentiallyUnwantedAppAction", (n) -> { this.setDefenderPotentiallyUnwantedAppAction(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderPreventCredentialStealingType", (n) -> { this.setDefenderPreventCredentialStealingType(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderProcessCreation", (n) -> { this.setDefenderProcessCreation(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderProcessCreationType", (n) -> { this.setDefenderProcessCreationType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderProcessesToExclude", (n) -> { this.setDefenderProcessesToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderScanDirection", (n) -> { this.setDefenderScanDirection(n.getEnumValue(DefenderRealtimeScanDirection.class)); });
+        deserializerMap.put("defenderScanMaxCpuPercentage", (n) -> { this.setDefenderScanMaxCpuPercentage(n.getIntegerValue()); });
+        deserializerMap.put("defenderScanType", (n) -> { this.setDefenderScanType(n.getEnumValue(DefenderScanType.class)); });
+        deserializerMap.put("defenderScheduledQuickScanTime", (n) -> { this.setDefenderScheduledQuickScanTime(n.getLocalTimeValue()); });
+        deserializerMap.put("defenderScheduledScanDay", (n) -> { this.setDefenderScheduledScanDay(n.getEnumValue(WeeklySchedule.class)); });
+        deserializerMap.put("defenderScheduledScanTime", (n) -> { this.setDefenderScheduledScanTime(n.getLocalTimeValue()); });
+        deserializerMap.put("defenderScriptDownloadedPayloadExecution", (n) -> { this.setDefenderScriptDownloadedPayloadExecution(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderScriptDownloadedPayloadExecutionType", (n) -> { this.setDefenderScriptDownloadedPayloadExecutionType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderScriptObfuscatedMacroCode", (n) -> { this.setDefenderScriptObfuscatedMacroCode(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderScriptObfuscatedMacroCodeType", (n) -> { this.setDefenderScriptObfuscatedMacroCodeType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderSecurityCenterBlockExploitProtectionOverride", (n) -> { this.setDefenderSecurityCenterBlockExploitProtectionOverride(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableAccountUI", (n) -> { this.setDefenderSecurityCenterDisableAccountUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableAppBrowserUI", (n) -> { this.setDefenderSecurityCenterDisableAppBrowserUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableClearTpmUI", (n) -> { this.setDefenderSecurityCenterDisableClearTpmUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableFamilyUI", (n) -> { this.setDefenderSecurityCenterDisableFamilyUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableHardwareUI", (n) -> { this.setDefenderSecurityCenterDisableHardwareUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableHealthUI", (n) -> { this.setDefenderSecurityCenterDisableHealthUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableNetworkUI", (n) -> { this.setDefenderSecurityCenterDisableNetworkUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableNotificationAreaUI", (n) -> { this.setDefenderSecurityCenterDisableNotificationAreaUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableRansomwareUI", (n) -> { this.setDefenderSecurityCenterDisableRansomwareUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableSecureBootUI", (n) -> { this.setDefenderSecurityCenterDisableSecureBootUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableTroubleshootingUI", (n) -> { this.setDefenderSecurityCenterDisableTroubleshootingUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableVirusUI", (n) -> { this.setDefenderSecurityCenterDisableVirusUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI", (n) -> { this.setDefenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI(n.getBooleanValue()); });
+        deserializerMap.put("defenderSecurityCenterHelpEmail", (n) -> { this.setDefenderSecurityCenterHelpEmail(n.getStringValue()); });
+        deserializerMap.put("defenderSecurityCenterHelpPhone", (n) -> { this.setDefenderSecurityCenterHelpPhone(n.getStringValue()); });
+        deserializerMap.put("defenderSecurityCenterHelpURL", (n) -> { this.setDefenderSecurityCenterHelpURL(n.getStringValue()); });
+        deserializerMap.put("defenderSecurityCenterITContactDisplay", (n) -> { this.setDefenderSecurityCenterITContactDisplay(n.getEnumValue(DefenderSecurityCenterITContactDisplayType.class)); });
+        deserializerMap.put("defenderSecurityCenterNotificationsFromApp", (n) -> { this.setDefenderSecurityCenterNotificationsFromApp(n.getEnumValue(DefenderSecurityCenterNotificationsFromAppType.class)); });
+        deserializerMap.put("defenderSecurityCenterOrganizationDisplayName", (n) -> { this.setDefenderSecurityCenterOrganizationDisplayName(n.getStringValue()); });
+        deserializerMap.put("defenderSignatureUpdateIntervalInHours", (n) -> { this.setDefenderSignatureUpdateIntervalInHours(n.getIntegerValue()); });
+        deserializerMap.put("defenderSubmitSamplesConsentType", (n) -> { this.setDefenderSubmitSamplesConsentType(n.getEnumValue(DefenderSubmitSamplesConsentType.class)); });
+        deserializerMap.put("defenderUntrustedExecutable", (n) -> { this.setDefenderUntrustedExecutable(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderUntrustedExecutableType", (n) -> { this.setDefenderUntrustedExecutableType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("defenderUntrustedUSBProcess", (n) -> { this.setDefenderUntrustedUSBProcess(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderUntrustedUSBProcessType", (n) -> { this.setDefenderUntrustedUSBProcessType(n.getEnumValue(DefenderAttackSurfaceType.class)); });
+        deserializerMap.put("deviceGuardEnableSecureBootWithDMA", (n) -> { this.setDeviceGuardEnableSecureBootWithDMA(n.getBooleanValue()); });
+        deserializerMap.put("deviceGuardEnableVirtualizationBasedSecurity", (n) -> { this.setDeviceGuardEnableVirtualizationBasedSecurity(n.getBooleanValue()); });
+        deserializerMap.put("deviceGuardLaunchSystemGuard", (n) -> { this.setDeviceGuardLaunchSystemGuard(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("deviceGuardLocalSystemAuthorityCredentialGuardSettings", (n) -> { this.setDeviceGuardLocalSystemAuthorityCredentialGuardSettings(n.getEnumValue(DeviceGuardLocalSystemAuthorityCredentialGuardType.class)); });
+        deserializerMap.put("deviceGuardSecureBootWithDMA", (n) -> { this.setDeviceGuardSecureBootWithDMA(n.getEnumValue(SecureBootWithDMAType.class)); });
+        deserializerMap.put("dmaGuardDeviceEnumerationPolicy", (n) -> { this.setDmaGuardDeviceEnumerationPolicy(n.getEnumValue(DmaGuardDeviceEnumerationPolicyType.class)); });
+        deserializerMap.put("firewallBlockStatefulFTP", (n) -> { this.setFirewallBlockStatefulFTP(n.getBooleanValue()); });
+        deserializerMap.put("firewallCertificateRevocationListCheckMethod", (n) -> { this.setFirewallCertificateRevocationListCheckMethod(n.getEnumValue(FirewallCertificateRevocationListCheckMethodType.class)); });
+        deserializerMap.put("firewallIdleTimeoutForSecurityAssociationInSeconds", (n) -> { this.setFirewallIdleTimeoutForSecurityAssociationInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("firewallIPSecExemptionsAllowDHCP", (n) -> { this.setFirewallIPSecExemptionsAllowDHCP(n.getBooleanValue()); });
+        deserializerMap.put("firewallIPSecExemptionsAllowICMP", (n) -> { this.setFirewallIPSecExemptionsAllowICMP(n.getBooleanValue()); });
+        deserializerMap.put("firewallIPSecExemptionsAllowNeighborDiscovery", (n) -> { this.setFirewallIPSecExemptionsAllowNeighborDiscovery(n.getBooleanValue()); });
+        deserializerMap.put("firewallIPSecExemptionsAllowRouterDiscovery", (n) -> { this.setFirewallIPSecExemptionsAllowRouterDiscovery(n.getBooleanValue()); });
+        deserializerMap.put("firewallIPSecExemptionsNone", (n) -> { this.setFirewallIPSecExemptionsNone(n.getBooleanValue()); });
+        deserializerMap.put("firewallMergeKeyingModuleSettings", (n) -> { this.setFirewallMergeKeyingModuleSettings(n.getBooleanValue()); });
+        deserializerMap.put("firewallPacketQueueingMethod", (n) -> { this.setFirewallPacketQueueingMethod(n.getEnumValue(FirewallPacketQueueingMethodType.class)); });
+        deserializerMap.put("firewallPreSharedKeyEncodingMethod", (n) -> { this.setFirewallPreSharedKeyEncodingMethod(n.getEnumValue(FirewallPreSharedKeyEncodingMethodType.class)); });
+        deserializerMap.put("firewallProfileDomain", (n) -> { this.setFirewallProfileDomain(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("firewallProfilePrivate", (n) -> { this.setFirewallProfilePrivate(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("firewallProfilePublic", (n) -> { this.setFirewallProfilePublic(n.getObjectValue(WindowsFirewallNetworkProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("firewallRules", (n) -> { this.setFirewallRules(n.getCollectionOfObjectValues(WindowsFirewallRule::createFromDiscriminatorValue)); });
+        deserializerMap.put("lanManagerAuthenticationLevel", (n) -> { this.setLanManagerAuthenticationLevel(n.getEnumValue(LanManagerAuthenticationLevel.class)); });
+        deserializerMap.put("lanManagerWorkstationDisableInsecureGuestLogons", (n) -> { this.setLanManagerWorkstationDisableInsecureGuestLogons(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsAdministratorAccountName", (n) -> { this.setLocalSecurityOptionsAdministratorAccountName(n.getStringValue()); });
+        deserializerMap.put("localSecurityOptionsAdministratorElevationPromptBehavior", (n) -> { this.setLocalSecurityOptionsAdministratorElevationPromptBehavior(n.getEnumValue(LocalSecurityOptionsAdministratorElevationPromptBehaviorType.class)); });
+        deserializerMap.put("localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares", (n) -> { this.setLocalSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsAllowPKU2UAuthenticationRequests", (n) -> { this.setLocalSecurityOptionsAllowPKU2UAuthenticationRequests(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager", (n) -> { this.setLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager(n.getStringValue()); });
+        deserializerMap.put("localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool", (n) -> { this.setLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn", (n) -> { this.setLocalSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsAllowUIAccessApplicationElevation", (n) -> { this.setLocalSecurityOptionsAllowUIAccessApplicationElevation(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsAllowUIAccessApplicationsForSecureLocations", (n) -> { this.setLocalSecurityOptionsAllowUIAccessApplicationsForSecureLocations(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsAllowUndockWithoutHavingToLogon", (n) -> { this.setLocalSecurityOptionsAllowUndockWithoutHavingToLogon(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsBlockMicrosoftAccounts", (n) -> { this.setLocalSecurityOptionsBlockMicrosoftAccounts(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsBlockRemoteLogonWithBlankPassword", (n) -> { this.setLocalSecurityOptionsBlockRemoteLogonWithBlankPassword(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsBlockRemoteOpticalDriveAccess", (n) -> { this.setLocalSecurityOptionsBlockRemoteOpticalDriveAccess(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsBlockUsersInstallingPrinterDrivers", (n) -> { this.setLocalSecurityOptionsBlockUsersInstallingPrinterDrivers(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsClearVirtualMemoryPageFile", (n) -> { this.setLocalSecurityOptionsClearVirtualMemoryPageFile(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsClientDigitallySignCommunicationsAlways", (n) -> { this.setLocalSecurityOptionsClientDigitallySignCommunicationsAlways(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers", (n) -> { this.setLocalSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation", (n) -> { this.setLocalSecurityOptionsDetectApplicationInstallationsAndPromptForElevation(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDisableAdministratorAccount", (n) -> { this.setLocalSecurityOptionsDisableAdministratorAccount(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees", (n) -> { this.setLocalSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDisableGuestAccount", (n) -> { this.setLocalSecurityOptionsDisableGuestAccount(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDisableServerDigitallySignCommunicationsAlways", (n) -> { this.setLocalSecurityOptionsDisableServerDigitallySignCommunicationsAlways(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees", (n) -> { this.setLocalSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts", (n) -> { this.setLocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDoNotRequireCtrlAltDel", (n) -> { this.setLocalSecurityOptionsDoNotRequireCtrlAltDel(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange", (n) -> { this.setLocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser", (n) -> { this.setLocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser(n.getEnumValue(LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType.class)); });
+        deserializerMap.put("localSecurityOptionsGuestAccountName", (n) -> { this.setLocalSecurityOptionsGuestAccountName(n.getStringValue()); });
+        deserializerMap.put("localSecurityOptionsHideLastSignedInUser", (n) -> { this.setLocalSecurityOptionsHideLastSignedInUser(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsHideUsernameAtSignIn", (n) -> { this.setLocalSecurityOptionsHideUsernameAtSignIn(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsInformationDisplayedOnLockScreen", (n) -> { this.setLocalSecurityOptionsInformationDisplayedOnLockScreen(n.getEnumValue(LocalSecurityOptionsInformationDisplayedOnLockScreenType.class)); });
+        deserializerMap.put("localSecurityOptionsInformationShownOnLockScreen", (n) -> { this.setLocalSecurityOptionsInformationShownOnLockScreen(n.getEnumValue(LocalSecurityOptionsInformationShownOnLockScreenType.class)); });
+        deserializerMap.put("localSecurityOptionsLogOnMessageText", (n) -> { this.setLocalSecurityOptionsLogOnMessageText(n.getStringValue()); });
+        deserializerMap.put("localSecurityOptionsLogOnMessageTitle", (n) -> { this.setLocalSecurityOptionsLogOnMessageTitle(n.getStringValue()); });
+        deserializerMap.put("localSecurityOptionsMachineInactivityLimit", (n) -> { this.setLocalSecurityOptionsMachineInactivityLimit(n.getIntegerValue()); });
+        deserializerMap.put("localSecurityOptionsMachineInactivityLimitInMinutes", (n) -> { this.setLocalSecurityOptionsMachineInactivityLimitInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients", (n) -> { this.setLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients(n.getEnumValue(LocalSecurityOptionsMinimumSessionSecurity.class)); });
+        deserializerMap.put("localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers", (n) -> { this.setLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers(n.getEnumValue(LocalSecurityOptionsMinimumSessionSecurity.class)); });
+        deserializerMap.put("localSecurityOptionsOnlyElevateSignedExecutables", (n) -> { this.setLocalSecurityOptionsOnlyElevateSignedExecutables(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares", (n) -> { this.setLocalSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsSmartCardRemovalBehavior", (n) -> { this.setLocalSecurityOptionsSmartCardRemovalBehavior(n.getEnumValue(LocalSecurityOptionsSmartCardRemovalBehaviorType.class)); });
+        deserializerMap.put("localSecurityOptionsStandardUserElevationPromptBehavior", (n) -> { this.setLocalSecurityOptionsStandardUserElevationPromptBehavior(n.getEnumValue(LocalSecurityOptionsStandardUserElevationPromptBehaviorType.class)); });
+        deserializerMap.put("localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation", (n) -> { this.setLocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsUseAdminApprovalMode", (n) -> { this.setLocalSecurityOptionsUseAdminApprovalMode(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsUseAdminApprovalModeForAdministrators", (n) -> { this.setLocalSecurityOptionsUseAdminApprovalModeForAdministrators(n.getBooleanValue()); });
+        deserializerMap.put("localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations", (n) -> { this.setLocalSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations(n.getBooleanValue()); });
+        deserializerMap.put("smartScreenBlockOverrideForFiles", (n) -> { this.setSmartScreenBlockOverrideForFiles(n.getBooleanValue()); });
+        deserializerMap.put("smartScreenEnableInShell", (n) -> { this.setSmartScreenEnableInShell(n.getBooleanValue()); });
+        deserializerMap.put("userRightsAccessCredentialManagerAsTrustedCaller", (n) -> { this.setUserRightsAccessCredentialManagerAsTrustedCaller(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsActAsPartOfTheOperatingSystem", (n) -> { this.setUserRightsActAsPartOfTheOperatingSystem(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsAllowAccessFromNetwork", (n) -> { this.setUserRightsAllowAccessFromNetwork(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsBackupData", (n) -> { this.setUserRightsBackupData(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsBlockAccessFromNetwork", (n) -> { this.setUserRightsBlockAccessFromNetwork(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsChangeSystemTime", (n) -> { this.setUserRightsChangeSystemTime(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsCreateGlobalObjects", (n) -> { this.setUserRightsCreateGlobalObjects(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsCreatePageFile", (n) -> { this.setUserRightsCreatePageFile(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsCreatePermanentSharedObjects", (n) -> { this.setUserRightsCreatePermanentSharedObjects(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsCreateSymbolicLinks", (n) -> { this.setUserRightsCreateSymbolicLinks(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsCreateToken", (n) -> { this.setUserRightsCreateToken(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsDebugPrograms", (n) -> { this.setUserRightsDebugPrograms(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsDelegation", (n) -> { this.setUserRightsDelegation(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsDenyLocalLogOn", (n) -> { this.setUserRightsDenyLocalLogOn(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsGenerateSecurityAudits", (n) -> { this.setUserRightsGenerateSecurityAudits(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsImpersonateClient", (n) -> { this.setUserRightsImpersonateClient(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsIncreaseSchedulingPriority", (n) -> { this.setUserRightsIncreaseSchedulingPriority(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsLoadUnloadDrivers", (n) -> { this.setUserRightsLoadUnloadDrivers(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsLocalLogOn", (n) -> { this.setUserRightsLocalLogOn(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsLockMemory", (n) -> { this.setUserRightsLockMemory(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsManageAuditingAndSecurityLogs", (n) -> { this.setUserRightsManageAuditingAndSecurityLogs(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsManageVolumes", (n) -> { this.setUserRightsManageVolumes(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsModifyFirmwareEnvironment", (n) -> { this.setUserRightsModifyFirmwareEnvironment(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsModifyObjectLabels", (n) -> { this.setUserRightsModifyObjectLabels(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsProfileSingleProcess", (n) -> { this.setUserRightsProfileSingleProcess(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsRemoteDesktopServicesLogOn", (n) -> { this.setUserRightsRemoteDesktopServicesLogOn(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsRemoteShutdown", (n) -> { this.setUserRightsRemoteShutdown(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsRestoreData", (n) -> { this.setUserRightsRestoreData(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRightsTakeOwnership", (n) -> { this.setUserRightsTakeOwnership(n.getObjectValue(DeviceManagementUserRightsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsDefenderTamperProtection", (n) -> { this.setWindowsDefenderTamperProtection(n.getEnumValue(WindowsDefenderTamperProtectionOptions.class)); });
+        deserializerMap.put("xboxServicesAccessoryManagementServiceStartupMode", (n) -> { this.setXboxServicesAccessoryManagementServiceStartupMode(n.getEnumValue(ServiceStartType.class)); });
+        deserializerMap.put("xboxServicesEnableXboxGameSaveTask", (n) -> { this.setXboxServicesEnableXboxGameSaveTask(n.getBooleanValue()); });
+        deserializerMap.put("xboxServicesLiveAuthManagerServiceStartupMode", (n) -> { this.setXboxServicesLiveAuthManagerServiceStartupMode(n.getEnumValue(ServiceStartType.class)); });
+        deserializerMap.put("xboxServicesLiveGameSaveServiceStartupMode", (n) -> { this.setXboxServicesLiveGameSaveServiceStartupMode(n.getEnumValue(ServiceStartType.class)); });
+        deserializerMap.put("xboxServicesLiveNetworkingServiceStartupMode", (n) -> { this.setXboxServicesLiveNetworkingServiceStartupMode(n.getEnumValue(ServiceStartType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the firewallBlockStatefulFTP property value. Blocks stateful FTP connections to the device
@@ -2060,7 +2060,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this._localSecurityOptionsDoNotRequireCtrlAltDel;
     }
     /**
-     * Gets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange property value. This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It’s not stored by default.
+     * Gets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange property value. This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. Its not stored by default.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -2092,7 +2092,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this._localSecurityOptionsHideLastSignedInUser;
     }
     /**
-     * Gets the localSecurityOptionsHideUsernameAtSignIn property value. Do not display the username of the person signing in to this device after credentials are entered and before the device’s desktop is shown.
+     * Gets the localSecurityOptionsHideUsernameAtSignIn property value. Do not display the username of the person signing in to this device after credentials are entered and before the devices desktop is shown.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -2132,7 +2132,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this._localSecurityOptionsLogOnMessageTitle;
     }
     /**
-     * Gets the localSecurityOptionsMachineInactivityLimit property value. Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
+     * Gets the localSecurityOptionsMachineInactivityLimit property value. Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -2140,7 +2140,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this._localSecurityOptionsMachineInactivityLimit;
     }
     /**
-     * Gets the localSecurityOptionsMachineInactivityLimitInMinutes property value. Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
+     * Gets the localSecurityOptionsMachineInactivityLimitInMinutes property value. Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -2528,6 +2528,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -2759,10 +2760,11 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         writer.writeEnumValue("xboxServicesLiveNetworkingServiceStartupMode", this.getXboxServicesLiveNetworkingServiceStartupMode());
     }
     /**
-     * Sets the applicationGuardAllowCameraMicrophoneRedirection property value. Gets or sets whether applications inside Microsoft Defender Application Guard can access the device’s camera and microphone.
+     * Sets the applicationGuardAllowCameraMicrophoneRedirection property value. Gets or sets whether applications inside Microsoft Defender Application Guard can access the devices camera and microphone.
      * @param value Value to set for the applicationGuardAllowCameraMicrophoneRedirection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardAllowCameraMicrophoneRedirection(@javax.annotation.Nullable final Boolean value) {
         this._applicationGuardAllowCameraMicrophoneRedirection = value;
     }
@@ -2771,6 +2773,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the applicationGuardAllowFileSaveOnHost property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardAllowFileSaveOnHost(@javax.annotation.Nullable final Boolean value) {
         this._applicationGuardAllowFileSaveOnHost = value;
     }
@@ -2779,6 +2782,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the applicationGuardAllowPersistence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardAllowPersistence(@javax.annotation.Nullable final Boolean value) {
         this._applicationGuardAllowPersistence = value;
     }
@@ -2787,6 +2791,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the applicationGuardAllowPrintToLocalPrinters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardAllowPrintToLocalPrinters(@javax.annotation.Nullable final Boolean value) {
         this._applicationGuardAllowPrintToLocalPrinters = value;
     }
@@ -2795,6 +2800,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the applicationGuardAllowPrintToNetworkPrinters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardAllowPrintToNetworkPrinters(@javax.annotation.Nullable final Boolean value) {
         this._applicationGuardAllowPrintToNetworkPrinters = value;
     }
@@ -2803,6 +2809,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the applicationGuardAllowPrintToPDF property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardAllowPrintToPDF(@javax.annotation.Nullable final Boolean value) {
         this._applicationGuardAllowPrintToPDF = value;
     }
@@ -2811,6 +2818,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the applicationGuardAllowPrintToXPS property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardAllowPrintToXPS(@javax.annotation.Nullable final Boolean value) {
         this._applicationGuardAllowPrintToXPS = value;
     }
@@ -2819,6 +2827,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the applicationGuardAllowVirtualGPU property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardAllowVirtualGPU(@javax.annotation.Nullable final Boolean value) {
         this._applicationGuardAllowVirtualGPU = value;
     }
@@ -2827,6 +2836,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the applicationGuardBlockClipboardSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardBlockClipboardSharing(@javax.annotation.Nullable final ApplicationGuardBlockClipboardSharingType value) {
         this._applicationGuardBlockClipboardSharing = value;
     }
@@ -2835,6 +2845,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the applicationGuardBlockFileTransfer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardBlockFileTransfer(@javax.annotation.Nullable final ApplicationGuardBlockFileTransferType value) {
         this._applicationGuardBlockFileTransfer = value;
     }
@@ -2843,6 +2854,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the applicationGuardBlockNonEnterpriseContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardBlockNonEnterpriseContent(@javax.annotation.Nullable final Boolean value) {
         this._applicationGuardBlockNonEnterpriseContent = value;
     }
@@ -2851,6 +2863,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the applicationGuardCertificateThumbprints property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardCertificateThumbprints(@javax.annotation.Nullable final java.util.List<String> value) {
         this._applicationGuardCertificateThumbprints = value;
     }
@@ -2859,6 +2872,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the applicationGuardEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardEnabled(@javax.annotation.Nullable final Boolean value) {
         this._applicationGuardEnabled = value;
     }
@@ -2867,6 +2881,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the applicationGuardEnabledOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardEnabledOptions(@javax.annotation.Nullable final ApplicationGuardEnabledOptions value) {
         this._applicationGuardEnabledOptions = value;
     }
@@ -2875,6 +2890,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the applicationGuardForceAuditing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationGuardForceAuditing(@javax.annotation.Nullable final Boolean value) {
         this._applicationGuardForceAuditing = value;
     }
@@ -2883,6 +2899,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the appLockerApplicationControl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppLockerApplicationControl(@javax.annotation.Nullable final AppLockerApplicationControlType value) {
         this._appLockerApplicationControl = value;
     }
@@ -2891,6 +2908,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the bitLockerAllowStandardUserEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerAllowStandardUserEncryption(@javax.annotation.Nullable final Boolean value) {
         this._bitLockerAllowStandardUserEncryption = value;
     }
@@ -2899,6 +2917,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the bitLockerDisableWarningForOtherDiskEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerDisableWarningForOtherDiskEncryption(@javax.annotation.Nullable final Boolean value) {
         this._bitLockerDisableWarningForOtherDiskEncryption = value;
     }
@@ -2907,6 +2926,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the bitLockerEnableStorageCardEncryptionOnMobile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerEnableStorageCardEncryptionOnMobile(@javax.annotation.Nullable final Boolean value) {
         this._bitLockerEnableStorageCardEncryptionOnMobile = value;
     }
@@ -2915,6 +2935,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the bitLockerEncryptDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerEncryptDevice(@javax.annotation.Nullable final Boolean value) {
         this._bitLockerEncryptDevice = value;
     }
@@ -2923,6 +2944,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the bitLockerFixedDrivePolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerFixedDrivePolicy(@javax.annotation.Nullable final BitLockerFixedDrivePolicy value) {
         this._bitLockerFixedDrivePolicy = value;
     }
@@ -2931,6 +2953,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the bitLockerRecoveryPasswordRotation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerRecoveryPasswordRotation(@javax.annotation.Nullable final BitLockerRecoveryPasswordRotationType value) {
         this._bitLockerRecoveryPasswordRotation = value;
     }
@@ -2939,6 +2962,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the bitLockerRemovableDrivePolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerRemovableDrivePolicy(@javax.annotation.Nullable final BitLockerRemovableDrivePolicy value) {
         this._bitLockerRemovableDrivePolicy = value;
     }
@@ -2947,6 +2971,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the bitLockerSystemDrivePolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerSystemDrivePolicy(@javax.annotation.Nullable final BitLockerSystemDrivePolicy value) {
         this._bitLockerSystemDrivePolicy = value;
     }
@@ -2955,6 +2980,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderAdditionalGuardedFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAdditionalGuardedFolders(@javax.annotation.Nullable final java.util.List<String> value) {
         this._defenderAdditionalGuardedFolders = value;
     }
@@ -2963,6 +2989,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderAdobeReaderLaunchChildProcess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAdobeReaderLaunchChildProcess(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderAdobeReaderLaunchChildProcess = value;
     }
@@ -2971,6 +2998,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderAdvancedRansomewareProtectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAdvancedRansomewareProtectionType(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderAdvancedRansomewareProtectionType = value;
     }
@@ -2979,6 +3007,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderAllowBehaviorMonitoring property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowBehaviorMonitoring(@javax.annotation.Nullable final Boolean value) {
         this._defenderAllowBehaviorMonitoring = value;
     }
@@ -2987,6 +3016,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderAllowCloudProtection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowCloudProtection(@javax.annotation.Nullable final Boolean value) {
         this._defenderAllowCloudProtection = value;
     }
@@ -2995,6 +3025,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderAllowEndUserAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowEndUserAccess(@javax.annotation.Nullable final Boolean value) {
         this._defenderAllowEndUserAccess = value;
     }
@@ -3003,6 +3034,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderAllowIntrusionPreventionSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowIntrusionPreventionSystem(@javax.annotation.Nullable final Boolean value) {
         this._defenderAllowIntrusionPreventionSystem = value;
     }
@@ -3011,6 +3043,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderAllowOnAccessProtection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowOnAccessProtection(@javax.annotation.Nullable final Boolean value) {
         this._defenderAllowOnAccessProtection = value;
     }
@@ -3019,6 +3052,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderAllowRealTimeMonitoring property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowRealTimeMonitoring(@javax.annotation.Nullable final Boolean value) {
         this._defenderAllowRealTimeMonitoring = value;
     }
@@ -3027,6 +3061,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderAllowScanArchiveFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowScanArchiveFiles(@javax.annotation.Nullable final Boolean value) {
         this._defenderAllowScanArchiveFiles = value;
     }
@@ -3035,6 +3070,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderAllowScanDownloads property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowScanDownloads(@javax.annotation.Nullable final Boolean value) {
         this._defenderAllowScanDownloads = value;
     }
@@ -3043,6 +3079,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderAllowScanNetworkFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowScanNetworkFiles(@javax.annotation.Nullable final Boolean value) {
         this._defenderAllowScanNetworkFiles = value;
     }
@@ -3051,6 +3088,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderAllowScanRemovableDrivesDuringFullScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowScanRemovableDrivesDuringFullScan(@javax.annotation.Nullable final Boolean value) {
         this._defenderAllowScanRemovableDrivesDuringFullScan = value;
     }
@@ -3059,6 +3097,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderAllowScanScriptsLoadedInInternetExplorer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAllowScanScriptsLoadedInInternetExplorer(@javax.annotation.Nullable final Boolean value) {
         this._defenderAllowScanScriptsLoadedInInternetExplorer = value;
     }
@@ -3067,6 +3106,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderAttackSurfaceReductionExcludedPaths property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderAttackSurfaceReductionExcludedPaths(@javax.annotation.Nullable final java.util.List<String> value) {
         this._defenderAttackSurfaceReductionExcludedPaths = value;
     }
@@ -3075,6 +3115,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderBlockEndUserAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderBlockEndUserAccess(@javax.annotation.Nullable final Boolean value) {
         this._defenderBlockEndUserAccess = value;
     }
@@ -3083,6 +3124,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderBlockPersistenceThroughWmiType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderBlockPersistenceThroughWmiType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
         this._defenderBlockPersistenceThroughWmiType = value;
     }
@@ -3091,6 +3133,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderCheckForSignaturesBeforeRunningScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderCheckForSignaturesBeforeRunningScan(@javax.annotation.Nullable final Boolean value) {
         this._defenderCheckForSignaturesBeforeRunningScan = value;
     }
@@ -3099,6 +3142,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderCloudBlockLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderCloudBlockLevel(@javax.annotation.Nullable final DefenderCloudBlockLevelType value) {
         this._defenderCloudBlockLevel = value;
     }
@@ -3107,6 +3151,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderCloudExtendedTimeoutInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderCloudExtendedTimeoutInSeconds(@javax.annotation.Nullable final Integer value) {
         this._defenderCloudExtendedTimeoutInSeconds = value;
     }
@@ -3115,6 +3160,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderDaysBeforeDeletingQuarantinedMalware property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDaysBeforeDeletingQuarantinedMalware(@javax.annotation.Nullable final Integer value) {
         this._defenderDaysBeforeDeletingQuarantinedMalware = value;
     }
@@ -3123,6 +3169,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderDetectedMalwareActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDetectedMalwareActions(@javax.annotation.Nullable final DefenderDetectedMalwareActions value) {
         this._defenderDetectedMalwareActions = value;
     }
@@ -3131,6 +3178,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderDisableBehaviorMonitoring property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableBehaviorMonitoring(@javax.annotation.Nullable final Boolean value) {
         this._defenderDisableBehaviorMonitoring = value;
     }
@@ -3139,6 +3187,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderDisableCatchupFullScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableCatchupFullScan(@javax.annotation.Nullable final Boolean value) {
         this._defenderDisableCatchupFullScan = value;
     }
@@ -3147,6 +3196,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderDisableCatchupQuickScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableCatchupQuickScan(@javax.annotation.Nullable final Boolean value) {
         this._defenderDisableCatchupQuickScan = value;
     }
@@ -3155,6 +3205,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderDisableCloudProtection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableCloudProtection(@javax.annotation.Nullable final Boolean value) {
         this._defenderDisableCloudProtection = value;
     }
@@ -3163,6 +3214,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderDisableIntrusionPreventionSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableIntrusionPreventionSystem(@javax.annotation.Nullable final Boolean value) {
         this._defenderDisableIntrusionPreventionSystem = value;
     }
@@ -3171,6 +3223,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderDisableOnAccessProtection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableOnAccessProtection(@javax.annotation.Nullable final Boolean value) {
         this._defenderDisableOnAccessProtection = value;
     }
@@ -3179,6 +3232,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderDisableRealTimeMonitoring property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableRealTimeMonitoring(@javax.annotation.Nullable final Boolean value) {
         this._defenderDisableRealTimeMonitoring = value;
     }
@@ -3187,6 +3241,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderDisableScanArchiveFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableScanArchiveFiles(@javax.annotation.Nullable final Boolean value) {
         this._defenderDisableScanArchiveFiles = value;
     }
@@ -3195,6 +3250,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderDisableScanDownloads property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableScanDownloads(@javax.annotation.Nullable final Boolean value) {
         this._defenderDisableScanDownloads = value;
     }
@@ -3203,6 +3259,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderDisableScanNetworkFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableScanNetworkFiles(@javax.annotation.Nullable final Boolean value) {
         this._defenderDisableScanNetworkFiles = value;
     }
@@ -3211,6 +3268,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderDisableScanRemovableDrivesDuringFullScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableScanRemovableDrivesDuringFullScan(@javax.annotation.Nullable final Boolean value) {
         this._defenderDisableScanRemovableDrivesDuringFullScan = value;
     }
@@ -3219,6 +3277,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderDisableScanScriptsLoadedInInternetExplorer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableScanScriptsLoadedInInternetExplorer(@javax.annotation.Nullable final Boolean value) {
         this._defenderDisableScanScriptsLoadedInInternetExplorer = value;
     }
@@ -3227,6 +3286,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderEmailContentExecution property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderEmailContentExecution(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderEmailContentExecution = value;
     }
@@ -3235,6 +3295,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderEmailContentExecutionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderEmailContentExecutionType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
         this._defenderEmailContentExecutionType = value;
     }
@@ -3243,6 +3304,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderEnableLowCpuPriority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderEnableLowCpuPriority(@javax.annotation.Nullable final Boolean value) {
         this._defenderEnableLowCpuPriority = value;
     }
@@ -3251,6 +3313,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderEnableScanIncomingMail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderEnableScanIncomingMail(@javax.annotation.Nullable final Boolean value) {
         this._defenderEnableScanIncomingMail = value;
     }
@@ -3259,6 +3322,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderEnableScanMappedNetworkDrivesDuringFullScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderEnableScanMappedNetworkDrivesDuringFullScan(@javax.annotation.Nullable final Boolean value) {
         this._defenderEnableScanMappedNetworkDrivesDuringFullScan = value;
     }
@@ -3267,6 +3331,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderExploitProtectionXml property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderExploitProtectionXml(@javax.annotation.Nullable final byte[] value) {
         this._defenderExploitProtectionXml = value;
     }
@@ -3275,6 +3340,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderExploitProtectionXmlFileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderExploitProtectionXmlFileName(@javax.annotation.Nullable final String value) {
         this._defenderExploitProtectionXmlFileName = value;
     }
@@ -3283,6 +3349,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderFileExtensionsToExclude property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderFileExtensionsToExclude(@javax.annotation.Nullable final java.util.List<String> value) {
         this._defenderFileExtensionsToExclude = value;
     }
@@ -3291,6 +3358,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderFilesAndFoldersToExclude property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderFilesAndFoldersToExclude(@javax.annotation.Nullable final java.util.List<String> value) {
         this._defenderFilesAndFoldersToExclude = value;
     }
@@ -3299,6 +3367,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderGuardedFoldersAllowedAppPaths property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderGuardedFoldersAllowedAppPaths(@javax.annotation.Nullable final java.util.List<String> value) {
         this._defenderGuardedFoldersAllowedAppPaths = value;
     }
@@ -3307,6 +3376,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderGuardMyFoldersType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderGuardMyFoldersType(@javax.annotation.Nullable final FolderProtectionType value) {
         this._defenderGuardMyFoldersType = value;
     }
@@ -3315,6 +3385,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderNetworkProtectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderNetworkProtectionType(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderNetworkProtectionType = value;
     }
@@ -3323,6 +3394,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderOfficeAppsExecutableContentCreationOrLaunch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeAppsExecutableContentCreationOrLaunch(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderOfficeAppsExecutableContentCreationOrLaunch = value;
     }
@@ -3331,6 +3403,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderOfficeAppsExecutableContentCreationOrLaunchType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeAppsExecutableContentCreationOrLaunchType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
         this._defenderOfficeAppsExecutableContentCreationOrLaunchType = value;
     }
@@ -3339,6 +3412,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderOfficeAppsLaunchChildProcess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeAppsLaunchChildProcess(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderOfficeAppsLaunchChildProcess = value;
     }
@@ -3347,6 +3421,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderOfficeAppsLaunchChildProcessType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeAppsLaunchChildProcessType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
         this._defenderOfficeAppsLaunchChildProcessType = value;
     }
@@ -3355,6 +3430,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderOfficeAppsOtherProcessInjection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeAppsOtherProcessInjection(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderOfficeAppsOtherProcessInjection = value;
     }
@@ -3363,6 +3439,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderOfficeAppsOtherProcessInjectionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeAppsOtherProcessInjectionType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
         this._defenderOfficeAppsOtherProcessInjectionType = value;
     }
@@ -3371,6 +3448,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderOfficeCommunicationAppsLaunchChildProcess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeCommunicationAppsLaunchChildProcess(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderOfficeCommunicationAppsLaunchChildProcess = value;
     }
@@ -3379,6 +3457,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderOfficeMacroCodeAllowWin32Imports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeMacroCodeAllowWin32Imports(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderOfficeMacroCodeAllowWin32Imports = value;
     }
@@ -3387,6 +3466,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderOfficeMacroCodeAllowWin32ImportsType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderOfficeMacroCodeAllowWin32ImportsType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
         this._defenderOfficeMacroCodeAllowWin32ImportsType = value;
     }
@@ -3395,6 +3475,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderPotentiallyUnwantedAppAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderPotentiallyUnwantedAppAction(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderPotentiallyUnwantedAppAction = value;
     }
@@ -3403,6 +3484,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderPreventCredentialStealingType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderPreventCredentialStealingType(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderPreventCredentialStealingType = value;
     }
@@ -3411,6 +3493,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderProcessCreation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderProcessCreation(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderProcessCreation = value;
     }
@@ -3419,6 +3502,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderProcessCreationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderProcessCreationType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
         this._defenderProcessCreationType = value;
     }
@@ -3427,6 +3511,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderProcessesToExclude property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderProcessesToExclude(@javax.annotation.Nullable final java.util.List<String> value) {
         this._defenderProcessesToExclude = value;
     }
@@ -3435,6 +3520,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderScanDirection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScanDirection(@javax.annotation.Nullable final DefenderRealtimeScanDirection value) {
         this._defenderScanDirection = value;
     }
@@ -3443,6 +3529,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderScanMaxCpuPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScanMaxCpuPercentage(@javax.annotation.Nullable final Integer value) {
         this._defenderScanMaxCpuPercentage = value;
     }
@@ -3451,6 +3538,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderScanType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScanType(@javax.annotation.Nullable final DefenderScanType value) {
         this._defenderScanType = value;
     }
@@ -3459,6 +3547,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderScheduledQuickScanTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScheduledQuickScanTime(@javax.annotation.Nullable final LocalTime value) {
         this._defenderScheduledQuickScanTime = value;
     }
@@ -3467,6 +3556,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderScheduledScanDay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScheduledScanDay(@javax.annotation.Nullable final WeeklySchedule value) {
         this._defenderScheduledScanDay = value;
     }
@@ -3475,6 +3565,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderScheduledScanTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScheduledScanTime(@javax.annotation.Nullable final LocalTime value) {
         this._defenderScheduledScanTime = value;
     }
@@ -3483,6 +3574,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderScriptDownloadedPayloadExecution property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScriptDownloadedPayloadExecution(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderScriptDownloadedPayloadExecution = value;
     }
@@ -3491,6 +3583,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderScriptDownloadedPayloadExecutionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScriptDownloadedPayloadExecutionType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
         this._defenderScriptDownloadedPayloadExecutionType = value;
     }
@@ -3499,6 +3592,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderScriptObfuscatedMacroCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScriptObfuscatedMacroCode(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderScriptObfuscatedMacroCode = value;
     }
@@ -3507,6 +3601,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderScriptObfuscatedMacroCodeType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScriptObfuscatedMacroCodeType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
         this._defenderScriptObfuscatedMacroCodeType = value;
     }
@@ -3515,6 +3610,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterBlockExploitProtectionOverride property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterBlockExploitProtectionOverride(@javax.annotation.Nullable final Boolean value) {
         this._defenderSecurityCenterBlockExploitProtectionOverride = value;
     }
@@ -3523,6 +3619,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterDisableAccountUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableAccountUI(@javax.annotation.Nullable final Boolean value) {
         this._defenderSecurityCenterDisableAccountUI = value;
     }
@@ -3531,6 +3628,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterDisableAppBrowserUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableAppBrowserUI(@javax.annotation.Nullable final Boolean value) {
         this._defenderSecurityCenterDisableAppBrowserUI = value;
     }
@@ -3539,6 +3637,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterDisableClearTpmUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableClearTpmUI(@javax.annotation.Nullable final Boolean value) {
         this._defenderSecurityCenterDisableClearTpmUI = value;
     }
@@ -3547,6 +3646,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterDisableFamilyUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableFamilyUI(@javax.annotation.Nullable final Boolean value) {
         this._defenderSecurityCenterDisableFamilyUI = value;
     }
@@ -3555,6 +3655,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterDisableHardwareUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableHardwareUI(@javax.annotation.Nullable final Boolean value) {
         this._defenderSecurityCenterDisableHardwareUI = value;
     }
@@ -3563,6 +3664,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterDisableHealthUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableHealthUI(@javax.annotation.Nullable final Boolean value) {
         this._defenderSecurityCenterDisableHealthUI = value;
     }
@@ -3571,6 +3673,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterDisableNetworkUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableNetworkUI(@javax.annotation.Nullable final Boolean value) {
         this._defenderSecurityCenterDisableNetworkUI = value;
     }
@@ -3579,6 +3682,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterDisableNotificationAreaUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableNotificationAreaUI(@javax.annotation.Nullable final Boolean value) {
         this._defenderSecurityCenterDisableNotificationAreaUI = value;
     }
@@ -3587,6 +3691,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterDisableRansomwareUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableRansomwareUI(@javax.annotation.Nullable final Boolean value) {
         this._defenderSecurityCenterDisableRansomwareUI = value;
     }
@@ -3595,6 +3700,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterDisableSecureBootUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableSecureBootUI(@javax.annotation.Nullable final Boolean value) {
         this._defenderSecurityCenterDisableSecureBootUI = value;
     }
@@ -3603,6 +3709,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterDisableTroubleshootingUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableTroubleshootingUI(@javax.annotation.Nullable final Boolean value) {
         this._defenderSecurityCenterDisableTroubleshootingUI = value;
     }
@@ -3611,6 +3718,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterDisableVirusUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableVirusUI(@javax.annotation.Nullable final Boolean value) {
         this._defenderSecurityCenterDisableVirusUI = value;
     }
@@ -3619,6 +3727,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI(@javax.annotation.Nullable final Boolean value) {
         this._defenderSecurityCenterDisableVulnerableTpmFirmwareUpdateUI = value;
     }
@@ -3627,6 +3736,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterHelpEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterHelpEmail(@javax.annotation.Nullable final String value) {
         this._defenderSecurityCenterHelpEmail = value;
     }
@@ -3635,6 +3745,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterHelpPhone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterHelpPhone(@javax.annotation.Nullable final String value) {
         this._defenderSecurityCenterHelpPhone = value;
     }
@@ -3643,6 +3754,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterHelpURL property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterHelpURL(@javax.annotation.Nullable final String value) {
         this._defenderSecurityCenterHelpURL = value;
     }
@@ -3651,6 +3763,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterITContactDisplay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterITContactDisplay(@javax.annotation.Nullable final DefenderSecurityCenterITContactDisplayType value) {
         this._defenderSecurityCenterITContactDisplay = value;
     }
@@ -3659,6 +3772,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterNotificationsFromApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterNotificationsFromApp(@javax.annotation.Nullable final DefenderSecurityCenterNotificationsFromAppType value) {
         this._defenderSecurityCenterNotificationsFromApp = value;
     }
@@ -3667,6 +3781,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSecurityCenterOrganizationDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSecurityCenterOrganizationDisplayName(@javax.annotation.Nullable final String value) {
         this._defenderSecurityCenterOrganizationDisplayName = value;
     }
@@ -3675,6 +3790,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSignatureUpdateIntervalInHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSignatureUpdateIntervalInHours(@javax.annotation.Nullable final Integer value) {
         this._defenderSignatureUpdateIntervalInHours = value;
     }
@@ -3683,6 +3799,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderSubmitSamplesConsentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSubmitSamplesConsentType(@javax.annotation.Nullable final DefenderSubmitSamplesConsentType value) {
         this._defenderSubmitSamplesConsentType = value;
     }
@@ -3691,6 +3808,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderUntrustedExecutable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderUntrustedExecutable(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderUntrustedExecutable = value;
     }
@@ -3699,6 +3817,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderUntrustedExecutableType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderUntrustedExecutableType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
         this._defenderUntrustedExecutableType = value;
     }
@@ -3707,6 +3826,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderUntrustedUSBProcess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderUntrustedUSBProcess(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderUntrustedUSBProcess = value;
     }
@@ -3715,6 +3835,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the defenderUntrustedUSBProcessType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderUntrustedUSBProcessType(@javax.annotation.Nullable final DefenderAttackSurfaceType value) {
         this._defenderUntrustedUSBProcessType = value;
     }
@@ -3723,6 +3844,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the deviceGuardEnableSecureBootWithDMA property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceGuardEnableSecureBootWithDMA(@javax.annotation.Nullable final Boolean value) {
         this._deviceGuardEnableSecureBootWithDMA = value;
     }
@@ -3731,6 +3853,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the deviceGuardEnableVirtualizationBasedSecurity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceGuardEnableVirtualizationBasedSecurity(@javax.annotation.Nullable final Boolean value) {
         this._deviceGuardEnableVirtualizationBasedSecurity = value;
     }
@@ -3739,6 +3862,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the deviceGuardLaunchSystemGuard property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceGuardLaunchSystemGuard(@javax.annotation.Nullable final Enablement value) {
         this._deviceGuardLaunchSystemGuard = value;
     }
@@ -3747,6 +3871,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the deviceGuardLocalSystemAuthorityCredentialGuardSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceGuardLocalSystemAuthorityCredentialGuardSettings(@javax.annotation.Nullable final DeviceGuardLocalSystemAuthorityCredentialGuardType value) {
         this._deviceGuardLocalSystemAuthorityCredentialGuardSettings = value;
     }
@@ -3755,6 +3880,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the deviceGuardSecureBootWithDMA property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceGuardSecureBootWithDMA(@javax.annotation.Nullable final SecureBootWithDMAType value) {
         this._deviceGuardSecureBootWithDMA = value;
     }
@@ -3763,6 +3889,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the dmaGuardDeviceEnumerationPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDmaGuardDeviceEnumerationPolicy(@javax.annotation.Nullable final DmaGuardDeviceEnumerationPolicyType value) {
         this._dmaGuardDeviceEnumerationPolicy = value;
     }
@@ -3771,6 +3898,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the firewallBlockStatefulFTP property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallBlockStatefulFTP(@javax.annotation.Nullable final Boolean value) {
         this._firewallBlockStatefulFTP = value;
     }
@@ -3779,6 +3907,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the firewallCertificateRevocationListCheckMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallCertificateRevocationListCheckMethod(@javax.annotation.Nullable final FirewallCertificateRevocationListCheckMethodType value) {
         this._firewallCertificateRevocationListCheckMethod = value;
     }
@@ -3787,6 +3916,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the firewallIdleTimeoutForSecurityAssociationInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallIdleTimeoutForSecurityAssociationInSeconds(@javax.annotation.Nullable final Integer value) {
         this._firewallIdleTimeoutForSecurityAssociationInSeconds = value;
     }
@@ -3795,6 +3925,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the firewallIPSecExemptionsAllowDHCP property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallIPSecExemptionsAllowDHCP(@javax.annotation.Nullable final Boolean value) {
         this._firewallIPSecExemptionsAllowDHCP = value;
     }
@@ -3803,6 +3934,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the firewallIPSecExemptionsAllowICMP property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallIPSecExemptionsAllowICMP(@javax.annotation.Nullable final Boolean value) {
         this._firewallIPSecExemptionsAllowICMP = value;
     }
@@ -3811,6 +3943,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the firewallIPSecExemptionsAllowNeighborDiscovery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallIPSecExemptionsAllowNeighborDiscovery(@javax.annotation.Nullable final Boolean value) {
         this._firewallIPSecExemptionsAllowNeighborDiscovery = value;
     }
@@ -3819,6 +3952,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the firewallIPSecExemptionsAllowRouterDiscovery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallIPSecExemptionsAllowRouterDiscovery(@javax.annotation.Nullable final Boolean value) {
         this._firewallIPSecExemptionsAllowRouterDiscovery = value;
     }
@@ -3827,6 +3961,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the firewallIPSecExemptionsNone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallIPSecExemptionsNone(@javax.annotation.Nullable final Boolean value) {
         this._firewallIPSecExemptionsNone = value;
     }
@@ -3835,6 +3970,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the firewallMergeKeyingModuleSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallMergeKeyingModuleSettings(@javax.annotation.Nullable final Boolean value) {
         this._firewallMergeKeyingModuleSettings = value;
     }
@@ -3843,6 +3979,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the firewallPacketQueueingMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallPacketQueueingMethod(@javax.annotation.Nullable final FirewallPacketQueueingMethodType value) {
         this._firewallPacketQueueingMethod = value;
     }
@@ -3851,6 +3988,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the firewallPreSharedKeyEncodingMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallPreSharedKeyEncodingMethod(@javax.annotation.Nullable final FirewallPreSharedKeyEncodingMethodType value) {
         this._firewallPreSharedKeyEncodingMethod = value;
     }
@@ -3859,6 +3997,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the firewallProfileDomain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallProfileDomain(@javax.annotation.Nullable final WindowsFirewallNetworkProfile value) {
         this._firewallProfileDomain = value;
     }
@@ -3867,6 +4006,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the firewallProfilePrivate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallProfilePrivate(@javax.annotation.Nullable final WindowsFirewallNetworkProfile value) {
         this._firewallProfilePrivate = value;
     }
@@ -3875,6 +4015,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the firewallProfilePublic property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallProfilePublic(@javax.annotation.Nullable final WindowsFirewallNetworkProfile value) {
         this._firewallProfilePublic = value;
     }
@@ -3883,6 +4024,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the firewallRules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallRules(@javax.annotation.Nullable final java.util.List<WindowsFirewallRule> value) {
         this._firewallRules = value;
     }
@@ -3891,6 +4033,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the lanManagerAuthenticationLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanManagerAuthenticationLevel(@javax.annotation.Nullable final LanManagerAuthenticationLevel value) {
         this._lanManagerAuthenticationLevel = value;
     }
@@ -3899,6 +4042,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the lanManagerWorkstationDisableInsecureGuestLogons property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanManagerWorkstationDisableInsecureGuestLogons(@javax.annotation.Nullable final Boolean value) {
         this._lanManagerWorkstationDisableInsecureGuestLogons = value;
     }
@@ -3907,6 +4051,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsAdministratorAccountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAdministratorAccountName(@javax.annotation.Nullable final String value) {
         this._localSecurityOptionsAdministratorAccountName = value;
     }
@@ -3915,6 +4060,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsAdministratorElevationPromptBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAdministratorElevationPromptBehavior(@javax.annotation.Nullable final LocalSecurityOptionsAdministratorElevationPromptBehaviorType value) {
         this._localSecurityOptionsAdministratorElevationPromptBehavior = value;
     }
@@ -3923,6 +4069,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares = value;
     }
@@ -3931,6 +4078,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsAllowPKU2UAuthenticationRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAllowPKU2UAuthenticationRequests(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsAllowPKU2UAuthenticationRequests = value;
     }
@@ -3939,6 +4087,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager(@javax.annotation.Nullable final String value) {
         this._localSecurityOptionsAllowRemoteCallsToSecurityAccountsManager = value;
     }
@@ -3947,6 +4096,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool = value;
     }
@@ -3955,6 +4105,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn = value;
     }
@@ -3963,6 +4114,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsAllowUIAccessApplicationElevation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAllowUIAccessApplicationElevation(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsAllowUIAccessApplicationElevation = value;
     }
@@ -3971,6 +4123,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsAllowUIAccessApplicationsForSecureLocations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAllowUIAccessApplicationsForSecureLocations(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsAllowUIAccessApplicationsForSecureLocations = value;
     }
@@ -3979,6 +4132,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsAllowUndockWithoutHavingToLogon property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsAllowUndockWithoutHavingToLogon(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsAllowUndockWithoutHavingToLogon = value;
     }
@@ -3987,6 +4141,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsBlockMicrosoftAccounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsBlockMicrosoftAccounts(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsBlockMicrosoftAccounts = value;
     }
@@ -3995,6 +4150,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsBlockRemoteLogonWithBlankPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsBlockRemoteLogonWithBlankPassword(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsBlockRemoteLogonWithBlankPassword = value;
     }
@@ -4003,6 +4159,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsBlockRemoteOpticalDriveAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsBlockRemoteOpticalDriveAccess(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsBlockRemoteOpticalDriveAccess = value;
     }
@@ -4011,6 +4168,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsBlockUsersInstallingPrinterDrivers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsBlockUsersInstallingPrinterDrivers(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsBlockUsersInstallingPrinterDrivers = value;
     }
@@ -4019,6 +4177,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsClearVirtualMemoryPageFile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsClearVirtualMemoryPageFile(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsClearVirtualMemoryPageFile = value;
     }
@@ -4027,6 +4186,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsClientDigitallySignCommunicationsAlways property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsClientDigitallySignCommunicationsAlways(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsClientDigitallySignCommunicationsAlways = value;
     }
@@ -4035,6 +4195,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers = value;
     }
@@ -4043,6 +4204,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDetectApplicationInstallationsAndPromptForElevation(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsDetectApplicationInstallationsAndPromptForElevation = value;
     }
@@ -4051,6 +4213,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsDisableAdministratorAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDisableAdministratorAccount(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsDisableAdministratorAccount = value;
     }
@@ -4059,6 +4222,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees = value;
     }
@@ -4067,6 +4231,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsDisableGuestAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDisableGuestAccount(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsDisableGuestAccount = value;
     }
@@ -4075,6 +4240,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsDisableServerDigitallySignCommunicationsAlways property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDisableServerDigitallySignCommunicationsAlways(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsDisableServerDigitallySignCommunicationsAlways = value;
     }
@@ -4083,6 +4249,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees = value;
     }
@@ -4091,6 +4258,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts = value;
     }
@@ -4099,14 +4267,16 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsDoNotRequireCtrlAltDel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDoNotRequireCtrlAltDel(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsDoNotRequireCtrlAltDel = value;
     }
     /**
-     * Sets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange property value. This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. It’s not stored by default.
+     * Sets the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange property value. This security setting determines if, at the next password change, the LAN Manager (LM) hash value for the new password is stored. Its not stored by default.
      * @param value Value to set for the localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange = value;
     }
@@ -4115,6 +4285,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser(@javax.annotation.Nullable final LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType value) {
         this._localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser = value;
     }
@@ -4123,6 +4294,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsGuestAccountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsGuestAccountName(@javax.annotation.Nullable final String value) {
         this._localSecurityOptionsGuestAccountName = value;
     }
@@ -4131,14 +4303,16 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsHideLastSignedInUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsHideLastSignedInUser(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsHideLastSignedInUser = value;
     }
     /**
-     * Sets the localSecurityOptionsHideUsernameAtSignIn property value. Do not display the username of the person signing in to this device after credentials are entered and before the device’s desktop is shown.
+     * Sets the localSecurityOptionsHideUsernameAtSignIn property value. Do not display the username of the person signing in to this device after credentials are entered and before the devices desktop is shown.
      * @param value Value to set for the localSecurityOptionsHideUsernameAtSignIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsHideUsernameAtSignIn(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsHideUsernameAtSignIn = value;
     }
@@ -4147,6 +4321,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsInformationDisplayedOnLockScreen property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsInformationDisplayedOnLockScreen(@javax.annotation.Nullable final LocalSecurityOptionsInformationDisplayedOnLockScreenType value) {
         this._localSecurityOptionsInformationDisplayedOnLockScreen = value;
     }
@@ -4155,6 +4330,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsInformationShownOnLockScreen property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsInformationShownOnLockScreen(@javax.annotation.Nullable final LocalSecurityOptionsInformationShownOnLockScreenType value) {
         this._localSecurityOptionsInformationShownOnLockScreen = value;
     }
@@ -4163,6 +4339,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsLogOnMessageText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsLogOnMessageText(@javax.annotation.Nullable final String value) {
         this._localSecurityOptionsLogOnMessageText = value;
     }
@@ -4171,22 +4348,25 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsLogOnMessageTitle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsLogOnMessageTitle(@javax.annotation.Nullable final String value) {
         this._localSecurityOptionsLogOnMessageTitle = value;
     }
     /**
-     * Sets the localSecurityOptionsMachineInactivityLimit property value. Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
+     * Sets the localSecurityOptionsMachineInactivityLimit property value. Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999
      * @param value Value to set for the localSecurityOptionsMachineInactivityLimit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsMachineInactivityLimit(@javax.annotation.Nullable final Integer value) {
         this._localSecurityOptionsMachineInactivityLimit = value;
     }
     /**
-     * Sets the localSecurityOptionsMachineInactivityLimitInMinutes property value. Define maximum minutes of inactivity on the interactive desktop’s login screen until the screen saver runs. Valid values 0 to 9999
+     * Sets the localSecurityOptionsMachineInactivityLimitInMinutes property value. Define maximum minutes of inactivity on the interactive desktops login screen until the screen saver runs. Valid values 0 to 9999
      * @param value Value to set for the localSecurityOptionsMachineInactivityLimitInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsMachineInactivityLimitInMinutes(@javax.annotation.Nullable final Integer value) {
         this._localSecurityOptionsMachineInactivityLimitInMinutes = value;
     }
@@ -4195,6 +4375,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients(@javax.annotation.Nullable final LocalSecurityOptionsMinimumSessionSecurity value) {
         this._localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients = value;
     }
@@ -4203,6 +4384,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers(@javax.annotation.Nullable final LocalSecurityOptionsMinimumSessionSecurity value) {
         this._localSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers = value;
     }
@@ -4211,6 +4393,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsOnlyElevateSignedExecutables property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsOnlyElevateSignedExecutables(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsOnlyElevateSignedExecutables = value;
     }
@@ -4219,6 +4402,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares = value;
     }
@@ -4227,6 +4411,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsSmartCardRemovalBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsSmartCardRemovalBehavior(@javax.annotation.Nullable final LocalSecurityOptionsSmartCardRemovalBehaviorType value) {
         this._localSecurityOptionsSmartCardRemovalBehavior = value;
     }
@@ -4235,6 +4420,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsStandardUserElevationPromptBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsStandardUserElevationPromptBehavior(@javax.annotation.Nullable final LocalSecurityOptionsStandardUserElevationPromptBehaviorType value) {
         this._localSecurityOptionsStandardUserElevationPromptBehavior = value;
     }
@@ -4243,6 +4429,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation = value;
     }
@@ -4251,6 +4438,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsUseAdminApprovalMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsUseAdminApprovalMode(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsUseAdminApprovalMode = value;
     }
@@ -4259,6 +4447,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsUseAdminApprovalModeForAdministrators property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsUseAdminApprovalModeForAdministrators(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsUseAdminApprovalModeForAdministrators = value;
     }
@@ -4267,6 +4456,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations(@javax.annotation.Nullable final Boolean value) {
         this._localSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations = value;
     }
@@ -4275,6 +4465,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the smartScreenBlockOverrideForFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmartScreenBlockOverrideForFiles(@javax.annotation.Nullable final Boolean value) {
         this._smartScreenBlockOverrideForFiles = value;
     }
@@ -4283,6 +4474,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the smartScreenEnableInShell property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmartScreenEnableInShell(@javax.annotation.Nullable final Boolean value) {
         this._smartScreenEnableInShell = value;
     }
@@ -4291,6 +4483,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsAccessCredentialManagerAsTrustedCaller property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsAccessCredentialManagerAsTrustedCaller(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsAccessCredentialManagerAsTrustedCaller = value;
     }
@@ -4299,6 +4492,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsActAsPartOfTheOperatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsActAsPartOfTheOperatingSystem(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsActAsPartOfTheOperatingSystem = value;
     }
@@ -4307,6 +4501,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsAllowAccessFromNetwork property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsAllowAccessFromNetwork(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsAllowAccessFromNetwork = value;
     }
@@ -4315,6 +4510,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsBackupData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsBackupData(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsBackupData = value;
     }
@@ -4323,6 +4519,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsBlockAccessFromNetwork property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsBlockAccessFromNetwork(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsBlockAccessFromNetwork = value;
     }
@@ -4331,6 +4528,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsChangeSystemTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsChangeSystemTime(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsChangeSystemTime = value;
     }
@@ -4339,6 +4537,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsCreateGlobalObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsCreateGlobalObjects(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsCreateGlobalObjects = value;
     }
@@ -4347,6 +4546,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsCreatePageFile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsCreatePageFile(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsCreatePageFile = value;
     }
@@ -4355,6 +4555,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsCreatePermanentSharedObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsCreatePermanentSharedObjects(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsCreatePermanentSharedObjects = value;
     }
@@ -4363,6 +4564,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsCreateSymbolicLinks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsCreateSymbolicLinks(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsCreateSymbolicLinks = value;
     }
@@ -4371,6 +4573,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsCreateToken property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsCreateToken(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsCreateToken = value;
     }
@@ -4379,6 +4582,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsDebugPrograms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsDebugPrograms(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsDebugPrograms = value;
     }
@@ -4387,6 +4591,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsDelegation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsDelegation(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsDelegation = value;
     }
@@ -4395,6 +4600,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsDenyLocalLogOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsDenyLocalLogOn(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsDenyLocalLogOn = value;
     }
@@ -4403,6 +4609,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsGenerateSecurityAudits property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsGenerateSecurityAudits(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsGenerateSecurityAudits = value;
     }
@@ -4411,6 +4618,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsImpersonateClient property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsImpersonateClient(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsImpersonateClient = value;
     }
@@ -4419,6 +4627,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsIncreaseSchedulingPriority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsIncreaseSchedulingPriority(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsIncreaseSchedulingPriority = value;
     }
@@ -4427,6 +4636,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsLoadUnloadDrivers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsLoadUnloadDrivers(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsLoadUnloadDrivers = value;
     }
@@ -4435,6 +4645,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsLocalLogOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsLocalLogOn(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsLocalLogOn = value;
     }
@@ -4443,6 +4654,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsLockMemory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsLockMemory(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsLockMemory = value;
     }
@@ -4451,6 +4663,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsManageAuditingAndSecurityLogs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsManageAuditingAndSecurityLogs(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsManageAuditingAndSecurityLogs = value;
     }
@@ -4459,6 +4672,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsManageVolumes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsManageVolumes(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsManageVolumes = value;
     }
@@ -4467,6 +4681,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsModifyFirmwareEnvironment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsModifyFirmwareEnvironment(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsModifyFirmwareEnvironment = value;
     }
@@ -4475,6 +4690,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsModifyObjectLabels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsModifyObjectLabels(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsModifyObjectLabels = value;
     }
@@ -4483,6 +4699,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsProfileSingleProcess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsProfileSingleProcess(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsProfileSingleProcess = value;
     }
@@ -4491,6 +4708,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsRemoteDesktopServicesLogOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsRemoteDesktopServicesLogOn(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsRemoteDesktopServicesLogOn = value;
     }
@@ -4499,6 +4717,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsRemoteShutdown property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsRemoteShutdown(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsRemoteShutdown = value;
     }
@@ -4507,6 +4726,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsRestoreData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsRestoreData(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsRestoreData = value;
     }
@@ -4515,6 +4735,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the userRightsTakeOwnership property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRightsTakeOwnership(@javax.annotation.Nullable final DeviceManagementUserRightsSetting value) {
         this._userRightsTakeOwnership = value;
     }
@@ -4523,6 +4744,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the windowsDefenderTamperProtection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsDefenderTamperProtection(@javax.annotation.Nullable final WindowsDefenderTamperProtectionOptions value) {
         this._windowsDefenderTamperProtection = value;
     }
@@ -4531,6 +4753,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the xboxServicesAccessoryManagementServiceStartupMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setXboxServicesAccessoryManagementServiceStartupMode(@javax.annotation.Nullable final ServiceStartType value) {
         this._xboxServicesAccessoryManagementServiceStartupMode = value;
     }
@@ -4539,6 +4762,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the xboxServicesEnableXboxGameSaveTask property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setXboxServicesEnableXboxGameSaveTask(@javax.annotation.Nullable final Boolean value) {
         this._xboxServicesEnableXboxGameSaveTask = value;
     }
@@ -4547,6 +4771,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the xboxServicesLiveAuthManagerServiceStartupMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setXboxServicesLiveAuthManagerServiceStartupMode(@javax.annotation.Nullable final ServiceStartType value) {
         this._xboxServicesLiveAuthManagerServiceStartupMode = value;
     }
@@ -4555,6 +4780,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the xboxServicesLiveGameSaveServiceStartupMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setXboxServicesLiveGameSaveServiceStartupMode(@javax.annotation.Nullable final ServiceStartType value) {
         this._xboxServicesLiveGameSaveServiceStartupMode = value;
     }
@@ -4563,6 +4789,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * @param value Value to set for the xboxServicesLiveNetworkingServiceStartupMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setXboxServicesLiveNetworkingServiceStartupMode(@javax.annotation.Nullable final ServiceStartType value) {
         this._xboxServicesLiveNetworkingServiceStartupMode = value;
     }

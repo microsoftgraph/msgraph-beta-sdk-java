@@ -22,17 +22,17 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
     private CloudPcOnPremisesConnectionStatus _healthCheckStatus;
     /** The details of the connection's health checks and the corresponding results. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only. */
     private CloudPcOnPremisesConnectionStatusDetails _healthCheckStatusDetails;
-    /** When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only. */
+    /** When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only. */
     private Boolean _inUse;
     /** The managedBy property */
     private CloudPcManagementService _managedBy;
-    /** The organizational unit (OU) in which the computer account is created. If left null, the OU that’s configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional. */
+    /** The organizational unit (OU) in which the computer account is created. If left null, the OU thats configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional. */
     private String _organizationalUnit;
     /** The ID of the target resource group. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}. */
     private String _resourceGroupId;
     /** The ID of the target subnet. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/virtualNetworks/{virtualNetworkId}/subnets/{subnetName}. */
     private String _subnetId;
-    /** The ID of the target Azure subscription that’s associated with your tenant. */
+    /** The ID of the target Azure subscription thats associated with your tenant. */
     private String _subscriptionId;
     /** The name of the target Azure subscription. Read-only. */
     private String _subscriptionName;
@@ -44,9 +44,9 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * Instantiates a new CloudPcOnPremisesConnection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcOnPremisesConnection() {
         super();
-        this.setOdataType("#microsoft.graph.cloudPcOnPremisesConnection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -104,25 +104,24 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcOnPremisesConnection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("adDomainName", (n) -> { currentObject.setAdDomainName(n.getStringValue()); });
-            this.put("adDomainPassword", (n) -> { currentObject.setAdDomainPassword(n.getStringValue()); });
-            this.put("adDomainUsername", (n) -> { currentObject.setAdDomainUsername(n.getStringValue()); });
-            this.put("alternateResourceUrl", (n) -> { currentObject.setAlternateResourceUrl(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("healthCheckStatus", (n) -> { currentObject.setHealthCheckStatus(n.getEnumValue(CloudPcOnPremisesConnectionStatus.class)); });
-            this.put("healthCheckStatusDetails", (n) -> { currentObject.setHealthCheckStatusDetails(n.getObjectValue(CloudPcOnPremisesConnectionStatusDetails::createFromDiscriminatorValue)); });
-            this.put("inUse", (n) -> { currentObject.setInUse(n.getBooleanValue()); });
-            this.put("managedBy", (n) -> { currentObject.setManagedBy(n.getEnumValue(CloudPcManagementService.class)); });
-            this.put("organizationalUnit", (n) -> { currentObject.setOrganizationalUnit(n.getStringValue()); });
-            this.put("resourceGroupId", (n) -> { currentObject.setResourceGroupId(n.getStringValue()); });
-            this.put("subnetId", (n) -> { currentObject.setSubnetId(n.getStringValue()); });
-            this.put("subscriptionId", (n) -> { currentObject.setSubscriptionId(n.getStringValue()); });
-            this.put("subscriptionName", (n) -> { currentObject.setSubscriptionName(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(CloudPcOnPremisesConnectionType.class)); });
-            this.put("virtualNetworkId", (n) -> { currentObject.setVirtualNetworkId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("adDomainName", (n) -> { this.setAdDomainName(n.getStringValue()); });
+        deserializerMap.put("adDomainPassword", (n) -> { this.setAdDomainPassword(n.getStringValue()); });
+        deserializerMap.put("adDomainUsername", (n) -> { this.setAdDomainUsername(n.getStringValue()); });
+        deserializerMap.put("alternateResourceUrl", (n) -> { this.setAlternateResourceUrl(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("healthCheckStatus", (n) -> { this.setHealthCheckStatus(n.getEnumValue(CloudPcOnPremisesConnectionStatus.class)); });
+        deserializerMap.put("healthCheckStatusDetails", (n) -> { this.setHealthCheckStatusDetails(n.getObjectValue(CloudPcOnPremisesConnectionStatusDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("inUse", (n) -> { this.setInUse(n.getBooleanValue()); });
+        deserializerMap.put("managedBy", (n) -> { this.setManagedBy(n.getEnumValue(CloudPcManagementService.class)); });
+        deserializerMap.put("organizationalUnit", (n) -> { this.setOrganizationalUnit(n.getStringValue()); });
+        deserializerMap.put("resourceGroupId", (n) -> { this.setResourceGroupId(n.getStringValue()); });
+        deserializerMap.put("subnetId", (n) -> { this.setSubnetId(n.getStringValue()); });
+        deserializerMap.put("subscriptionId", (n) -> { this.setSubscriptionId(n.getStringValue()); });
+        deserializerMap.put("subscriptionName", (n) -> { this.setSubscriptionName(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(CloudPcOnPremisesConnectionType.class)); });
+        deserializerMap.put("virtualNetworkId", (n) -> { this.setVirtualNetworkId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the healthCheckStatus property value. The healthCheckStatus property
@@ -141,7 +140,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this._healthCheckStatusDetails;
     }
     /**
-     * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+     * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -157,7 +156,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this._managedBy;
     }
     /**
-     * Gets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU that’s configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
+     * Gets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU thats configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -181,7 +180,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this._subnetId;
     }
     /**
-     * Gets the subscriptionId property value. The ID of the target Azure subscription that’s associated with your tenant.
+     * Gets the subscriptionId property value. The ID of the target Azure subscription thats associated with your tenant.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -217,6 +216,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -242,6 +242,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the adDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdDomainName(@javax.annotation.Nullable final String value) {
         this._adDomainName = value;
     }
@@ -250,6 +251,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the adDomainPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdDomainPassword(@javax.annotation.Nullable final String value) {
         this._adDomainPassword = value;
     }
@@ -258,6 +260,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the adDomainUsername property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdDomainUsername(@javax.annotation.Nullable final String value) {
         this._adDomainUsername = value;
     }
@@ -266,6 +269,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the alternateResourceUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlternateResourceUrl(@javax.annotation.Nullable final String value) {
         this._alternateResourceUrl = value;
     }
@@ -274,6 +278,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -282,6 +287,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the healthCheckStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthCheckStatus(@javax.annotation.Nullable final CloudPcOnPremisesConnectionStatus value) {
         this._healthCheckStatus = value;
     }
@@ -290,14 +296,16 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the healthCheckStatusDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthCheckStatusDetails(@javax.annotation.Nullable final CloudPcOnPremisesConnectionStatusDetails value) {
         this._healthCheckStatusDetails = value;
     }
     /**
-     * Sets the inUse property value. When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection that’s in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+     * Sets the inUse property value. When true, the Azure network connection is in use. When false, the connection is not in use. You cannot delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
      * @param value Value to set for the inUse property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInUse(@javax.annotation.Nullable final Boolean value) {
         this._inUse = value;
     }
@@ -306,14 +314,16 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the managedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedBy(@javax.annotation.Nullable final CloudPcManagementService value) {
         this._managedBy = value;
     }
     /**
-     * Sets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU that’s configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
+     * Sets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU thats configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
      * @param value Value to set for the organizationalUnit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizationalUnit(@javax.annotation.Nullable final String value) {
         this._organizationalUnit = value;
     }
@@ -322,6 +332,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the resourceGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceGroupId(@javax.annotation.Nullable final String value) {
         this._resourceGroupId = value;
     }
@@ -330,14 +341,16 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the subnetId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubnetId(@javax.annotation.Nullable final String value) {
         this._subnetId = value;
     }
     /**
-     * Sets the subscriptionId property value. The ID of the target Azure subscription that’s associated with your tenant.
+     * Sets the subscriptionId property value. The ID of the target Azure subscription thats associated with your tenant.
      * @param value Value to set for the subscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptionId(@javax.annotation.Nullable final String value) {
         this._subscriptionId = value;
     }
@@ -346,6 +359,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the subscriptionName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptionName(@javax.annotation.Nullable final String value) {
         this._subscriptionName = value;
     }
@@ -354,6 +368,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final CloudPcOnPremisesConnectionType value) {
         this._type = value;
     }
@@ -362,6 +377,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      * @param value Value to set for the virtualNetworkId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVirtualNetworkId(@javax.annotation.Nullable final String value) {
         this._virtualNetworkId = value;
     }

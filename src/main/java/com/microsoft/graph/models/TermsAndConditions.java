@@ -36,17 +36,17 @@ public class TermsAndConditions extends Entity implements Parsable {
     /** Integer indicating the current version of the terms. Incremented when an administrator makes a change to the terms and wishes to require users to re-accept the modified T&C policy. */
     private Integer _version;
     /**
-     * Instantiates a new TermsAndConditions and sets the default values.
+     * Instantiates a new termsAndConditions and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TermsAndConditions() {
         super();
-        this.setOdataType("#microsoft.graph.termsAndConditions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TermsAndConditions
+     * @return a termsAndConditions
      */
     @javax.annotation.Nonnull
     public static TermsAndConditions createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -115,22 +115,21 @@ public class TermsAndConditions extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TermsAndConditions currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("acceptanceStatement", (n) -> { currentObject.setAcceptanceStatement(n.getStringValue()); });
-            this.put("acceptanceStatuses", (n) -> { currentObject.setAcceptanceStatuses(n.getCollectionOfObjectValues(TermsAndConditionsAcceptanceStatus::createFromDiscriminatorValue)); });
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(TermsAndConditionsAssignment::createFromDiscriminatorValue)); });
-            this.put("bodyText", (n) -> { currentObject.setBodyText(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("groupAssignments", (n) -> { currentObject.setGroupAssignments(n.getCollectionOfObjectValues(TermsAndConditionsGroupAssignment::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("acceptanceStatement", (n) -> { this.setAcceptanceStatement(n.getStringValue()); });
+        deserializerMap.put("acceptanceStatuses", (n) -> { this.setAcceptanceStatuses(n.getCollectionOfObjectValues(TermsAndConditionsAcceptanceStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(TermsAndConditionsAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("bodyText", (n) -> { this.setBodyText(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("groupAssignments", (n) -> { this.setGroupAssignments(n.getCollectionOfObjectValues(TermsAndConditionsGroupAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupAssignments property value. The list of group assignments for this T&C policy.
@@ -185,6 +184,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -207,6 +207,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the acceptanceStatement property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcceptanceStatement(@javax.annotation.Nullable final String value) {
         this._acceptanceStatement = value;
     }
@@ -215,6 +216,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the acceptanceStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcceptanceStatuses(@javax.annotation.Nullable final java.util.List<TermsAndConditionsAcceptanceStatus> value) {
         this._acceptanceStatuses = value;
     }
@@ -223,6 +225,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<TermsAndConditionsAssignment> value) {
         this._assignments = value;
     }
@@ -231,6 +234,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the bodyText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBodyText(@javax.annotation.Nullable final String value) {
         this._bodyText = value;
     }
@@ -239,6 +243,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -247,6 +252,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -255,6 +261,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -263,6 +270,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the groupAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupAssignments(@javax.annotation.Nullable final java.util.List<TermsAndConditionsGroupAssignment> value) {
         this._groupAssignments = value;
     }
@@ -271,6 +279,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -279,6 +288,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._modifiedDateTime = value;
     }
@@ -287,6 +297,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -295,6 +306,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }
@@ -303,6 +315,7 @@ public class TermsAndConditions extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
         this._version = value;
     }

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class AuthenticationEventListener extends Entity implements Parsable {
     /** The authenticationEventsFlowId property */
     private String _authenticationEventsFlowId;
@@ -18,17 +19,17 @@ public class AuthenticationEventListener extends Entity implements Parsable {
     /** The tags property */
     private java.util.List<KeyValuePair> _tags;
     /**
-     * Instantiates a new AuthenticationEventListener and sets the default values.
+     * Instantiates a new authenticationEventListener and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthenticationEventListener() {
         super();
-        this.setOdataType("#microsoft.graph.authenticationEventListener");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuthenticationEventListener
+     * @return a authenticationEventListener
      */
     @javax.annotation.Nonnull
     public static AuthenticationEventListener createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -64,13 +65,12 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthenticationEventListener currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authenticationEventsFlowId", (n) -> { currentObject.setAuthenticationEventsFlowId(n.getStringValue()); });
-            this.put("conditions", (n) -> { currentObject.setConditions(n.getObjectValue(AuthenticationConditions::createFromDiscriminatorValue)); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationEventsFlowId", (n) -> { this.setAuthenticationEventsFlowId(n.getStringValue()); });
+        deserializerMap.put("conditions", (n) -> { this.setConditions(n.getObjectValue(AuthenticationConditions::createFromDiscriminatorValue)); });
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the priority property value. The priority property
@@ -93,6 +93,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -106,6 +107,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * @param value Value to set for the authenticationEventsFlowId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationEventsFlowId(@javax.annotation.Nullable final String value) {
         this._authenticationEventsFlowId = value;
     }
@@ -114,6 +116,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * @param value Value to set for the conditions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditions(@javax.annotation.Nullable final AuthenticationConditions value) {
         this._conditions = value;
     }
@@ -122,6 +125,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }
@@ -130,6 +134,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._tags = value;
     }

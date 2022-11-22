@@ -25,6 +25,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
      * Instantiates a new Custodian and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Custodian() {
         super();
         this.setOdataType("#microsoft.graph.ediscovery.custodian");
@@ -69,15 +70,14 @@ public class Custodian extends DataSourceContainer implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Custodian currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("acknowledgedDateTime", (n) -> { currentObject.setAcknowledgedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("applyHoldToSources", (n) -> { currentObject.setApplyHoldToSources(n.getBooleanValue()); });
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("siteSources", (n) -> { currentObject.setSiteSources(n.getCollectionOfObjectValues(SiteSource::createFromDiscriminatorValue)); });
-            this.put("unifiedGroupSources", (n) -> { currentObject.setUnifiedGroupSources(n.getCollectionOfObjectValues(UnifiedGroupSource::createFromDiscriminatorValue)); });
-            this.put("userSources", (n) -> { currentObject.setUserSources(n.getCollectionOfObjectValues(UserSource::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("acknowledgedDateTime", (n) -> { this.setAcknowledgedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("applyHoldToSources", (n) -> { this.setApplyHoldToSources(n.getBooleanValue()); });
+        deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("siteSources", (n) -> { this.setSiteSources(n.getCollectionOfObjectValues(SiteSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("unifiedGroupSources", (n) -> { this.setUnifiedGroupSources(n.getCollectionOfObjectValues(UnifiedGroupSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("userSources", (n) -> { this.setUserSources(n.getCollectionOfObjectValues(UserSource::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the siteSources property value. Data source entity for SharePoint sites associated with the custodian.
@@ -108,6 +108,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +124,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
      * @param value Value to set for the acknowledgedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcknowledgedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._acknowledgedDateTime = value;
     }
@@ -131,6 +133,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
      * @param value Value to set for the applyHoldToSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplyHoldToSources(@javax.annotation.Nullable final Boolean value) {
         this._applyHoldToSources = value;
     }
@@ -139,6 +142,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
         this._email = value;
     }
@@ -147,6 +151,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
      * @param value Value to set for the siteSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteSources(@javax.annotation.Nullable final java.util.List<SiteSource> value) {
         this._siteSources = value;
     }
@@ -155,6 +160,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
      * @param value Value to set for the unifiedGroupSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnifiedGroupSources(@javax.annotation.Nullable final java.util.List<UnifiedGroupSource> value) {
         this._unifiedGroupSources = value;
     }
@@ -163,6 +169,7 @@ public class Custodian extends DataSourceContainer implements Parsable {
      * @param value Value to set for the userSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserSources(@javax.annotation.Nullable final java.util.List<UserSource> value) {
         this._userSources = value;
     }

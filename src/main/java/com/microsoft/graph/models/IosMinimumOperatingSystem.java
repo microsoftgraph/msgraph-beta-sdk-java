@@ -34,9 +34,9 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * Instantiates a new iosMinimumOperatingSystem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosMinimumOperatingSystem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.iosMinimumOperatingSystem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,18 +62,17 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosMinimumOperatingSystem currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("v10_0", (n) -> { currentObject.setV10_0(n.getBooleanValue()); });
-            this.put("v11_0", (n) -> { currentObject.setV11_0(n.getBooleanValue()); });
-            this.put("v12_0", (n) -> { currentObject.setV12_0(n.getBooleanValue()); });
-            this.put("v13_0", (n) -> { currentObject.setV13_0(n.getBooleanValue()); });
-            this.put("v14_0", (n) -> { currentObject.setV14_0(n.getBooleanValue()); });
-            this.put("v15_0", (n) -> { currentObject.setV15_0(n.getBooleanValue()); });
-            this.put("v8_0", (n) -> { currentObject.setV8_0(n.getBooleanValue()); });
-            this.put("v9_0", (n) -> { currentObject.setV9_0(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("v10_0", (n) -> { this.setV10_0(n.getBooleanValue()); });
+        deserializerMap.put("v11_0", (n) -> { this.setV11_0(n.getBooleanValue()); });
+        deserializerMap.put("v12_0", (n) -> { this.setV12_0(n.getBooleanValue()); });
+        deserializerMap.put("v13_0", (n) -> { this.setV13_0(n.getBooleanValue()); });
+        deserializerMap.put("v14_0", (n) -> { this.setV14_0(n.getBooleanValue()); });
+        deserializerMap.put("v15_0", (n) -> { this.setV15_0(n.getBooleanValue()); });
+        deserializerMap.put("v8_0", (n) -> { this.setV8_0(n.getBooleanValue()); });
+        deserializerMap.put("v9_0", (n) -> { this.setV9_0(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -152,6 +151,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -170,6 +170,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -178,6 +179,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -186,6 +188,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @param value Value to set for the v10_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV10_0(@javax.annotation.Nullable final Boolean value) {
         this._v10_0 = value;
     }
@@ -194,6 +197,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @param value Value to set for the v11_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV11_0(@javax.annotation.Nullable final Boolean value) {
         this._v11_0 = value;
     }
@@ -202,6 +206,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @param value Value to set for the v12_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV12_0(@javax.annotation.Nullable final Boolean value) {
         this._v12_0 = value;
     }
@@ -210,6 +215,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @param value Value to set for the v13_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV13_0(@javax.annotation.Nullable final Boolean value) {
         this._v13_0 = value;
     }
@@ -218,6 +224,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @param value Value to set for the v14_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV14_0(@javax.annotation.Nullable final Boolean value) {
         this._v14_0 = value;
     }
@@ -226,6 +233,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @param value Value to set for the v15_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV15_0(@javax.annotation.Nullable final Boolean value) {
         this._v15_0 = value;
     }
@@ -234,6 +242,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @param value Value to set for the v8_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV8_0(@javax.annotation.Nullable final Boolean value) {
         this._v8_0 = value;
     }
@@ -242,6 +251,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, Parsable
      * @param value Value to set for the v9_0 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setV9_0(@javax.annotation.Nullable final Boolean value) {
         this._v9_0 = value;
     }

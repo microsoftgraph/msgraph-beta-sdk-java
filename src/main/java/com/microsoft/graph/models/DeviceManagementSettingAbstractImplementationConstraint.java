@@ -14,6 +14,7 @@ public class DeviceManagementSettingAbstractImplementationConstraint extends Dev
      * Instantiates a new DeviceManagementSettingAbstractImplementationConstraint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingAbstractImplementationConstraint() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementSettingAbstractImplementationConstraint");
@@ -42,16 +43,16 @@ public class DeviceManagementSettingAbstractImplementationConstraint extends Dev
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementSettingAbstractImplementationConstraint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedAbstractImplementationDefinitionIds", (n) -> { currentObject.setAllowedAbstractImplementationDefinitionIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedAbstractImplementationDefinitionIds", (n) -> { this.setAllowedAbstractImplementationDefinitionIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class DeviceManagementSettingAbstractImplementationConstraint extends Dev
      * @param value Value to set for the allowedAbstractImplementationDefinitionIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedAbstractImplementationDefinitionIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedAbstractImplementationDefinitionIds = value;
     }

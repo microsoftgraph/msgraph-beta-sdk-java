@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class SharedEmailDomainInvitation extends Entity implements Parsable {
     /** The expiryTime property */
     private OffsetDateTime _expiryTime;
@@ -20,9 +20,9 @@ public class SharedEmailDomainInvitation extends Entity implements Parsable {
      * Instantiates a new sharedEmailDomainInvitation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SharedEmailDomainInvitation() {
         super();
-        this.setOdataType("#microsoft.graph.sharedEmailDomainInvitation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,12 +48,11 @@ public class SharedEmailDomainInvitation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SharedEmailDomainInvitation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("expiryTime", (n) -> { currentObject.setExpiryTime(n.getOffsetDateTimeValue()); });
-            this.put("invitationDomain", (n) -> { currentObject.setInvitationDomain(n.getStringValue()); });
-            this.put("invitationStatus", (n) -> { currentObject.setInvitationStatus(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("expiryTime", (n) -> { this.setExpiryTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("invitationDomain", (n) -> { this.setInvitationDomain(n.getStringValue()); });
+        deserializerMap.put("invitationStatus", (n) -> { this.setInvitationStatus(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the invitationDomain property value. The invitationDomain property
@@ -76,6 +75,7 @@ public class SharedEmailDomainInvitation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -88,6 +88,7 @@ public class SharedEmailDomainInvitation extends Entity implements Parsable {
      * @param value Value to set for the expiryTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpiryTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expiryTime = value;
     }
@@ -96,6 +97,7 @@ public class SharedEmailDomainInvitation extends Entity implements Parsable {
      * @param value Value to set for the invitationDomain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitationDomain(@javax.annotation.Nullable final String value) {
         this._invitationDomain = value;
     }
@@ -104,6 +106,7 @@ public class SharedEmailDomainInvitation extends Entity implements Parsable {
      * @param value Value to set for the invitationStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitationStatus(@javax.annotation.Nullable final String value) {
         this._invitationStatus = value;
     }

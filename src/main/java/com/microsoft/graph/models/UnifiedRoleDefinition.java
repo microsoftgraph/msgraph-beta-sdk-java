@@ -30,9 +30,9 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      * Instantiates a new unifiedRoleDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.unifiedRoleDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,18 +66,17 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UnifiedRoleDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("inheritsPermissionsFrom", (n) -> { currentObject.setInheritsPermissionsFrom(n.getCollectionOfObjectValues(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
-            this.put("isBuiltIn", (n) -> { currentObject.setIsBuiltIn(n.getBooleanValue()); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("resourceScopes", (n) -> { currentObject.setResourceScopes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("rolePermissions", (n) -> { currentObject.setRolePermissions(n.getCollectionOfObjectValues(UnifiedRolePermission::createFromDiscriminatorValue)); });
-            this.put("templateId", (n) -> { currentObject.setTemplateId(n.getStringValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("inheritsPermissionsFrom", (n) -> { this.setInheritsPermissionsFrom(n.getCollectionOfObjectValues(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("isBuiltIn", (n) -> { this.setIsBuiltIn(n.getBooleanValue()); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("resourceScopes", (n) -> { this.setResourceScopes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("rolePermissions", (n) -> { this.setRolePermissions(n.getCollectionOfObjectValues(UnifiedRolePermission::createFromDiscriminatorValue)); });
+        deserializerMap.put("templateId", (n) -> { this.setTemplateId(n.getStringValue()); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the inheritsPermissionsFrom property value. Read-only collection of role definitions that the given role definition inherits from. Only Azure AD built-in roles support this attribute.
@@ -140,6 +139,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,6 +158,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -166,6 +167,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -174,6 +176,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the inheritsPermissionsFrom property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInheritsPermissionsFrom(@javax.annotation.Nullable final java.util.List<UnifiedRoleDefinition> value) {
         this._inheritsPermissionsFrom = value;
     }
@@ -182,6 +185,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the isBuiltIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsBuiltIn(@javax.annotation.Nullable final Boolean value) {
         this._isBuiltIn = value;
     }
@@ -190,6 +194,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }
@@ -198,6 +203,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the resourceScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceScopes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._resourceScopes = value;
     }
@@ -206,6 +212,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the rolePermissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRolePermissions(@javax.annotation.Nullable final java.util.List<UnifiedRolePermission> value) {
         this._rolePermissions = value;
     }
@@ -214,6 +221,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the templateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateId(@javax.annotation.Nullable final String value) {
         this._templateId = value;
     }
@@ -222,6 +230,7 @@ public class UnifiedRoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

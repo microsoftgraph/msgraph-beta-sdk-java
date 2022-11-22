@@ -24,9 +24,9 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
      * Instantiates a new traceRouteHop and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TraceRouteHop() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.traceRouteHop");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,13 +52,12 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TraceRouteHop currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("hopCount", (n) -> { currentObject.setHopCount(n.getIntegerValue()); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("roundTripTime", (n) -> { currentObject.setRoundTripTime(n.getPeriodValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("hopCount", (n) -> { this.setHopCount(n.getIntegerValue()); });
+        deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("roundTripTime", (n) -> { this.setRoundTripTime(n.getPeriodValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hopCount property value. The network path count of this hop that was used to compute the round-trip time.
@@ -97,6 +96,7 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("hopCount", this.getHopCount());
@@ -110,6 +110,7 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +119,7 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the hopCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHopCount(@javax.annotation.Nullable final Integer value) {
         this._hopCount = value;
     }
@@ -126,6 +128,7 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
     }
@@ -134,6 +137,7 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -142,6 +146,7 @@ public class TraceRouteHop implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the roundTripTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoundTripTime(@javax.annotation.Nullable final Period value) {
         this._roundTripTime = value;
     }

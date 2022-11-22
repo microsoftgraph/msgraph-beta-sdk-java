@@ -37,9 +37,9 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      * Instantiates a new mailboxSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MailboxSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mailboxSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -97,20 +97,19 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MailboxSettings currentObject = this;
-        return new HashMap<>(11) {{
-            this.put("archiveFolder", (n) -> { currentObject.setArchiveFolder(n.getStringValue()); });
-            this.put("automaticRepliesSetting", (n) -> { currentObject.setAutomaticRepliesSetting(n.getObjectValue(AutomaticRepliesSetting::createFromDiscriminatorValue)); });
-            this.put("dateFormat", (n) -> { currentObject.setDateFormat(n.getStringValue()); });
-            this.put("delegateMeetingMessageDeliveryOptions", (n) -> { currentObject.setDelegateMeetingMessageDeliveryOptions(n.getEnumValue(DelegateMeetingMessageDeliveryOptions.class)); });
-            this.put("language", (n) -> { currentObject.setLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("timeFormat", (n) -> { currentObject.setTimeFormat(n.getStringValue()); });
-            this.put("timeZone", (n) -> { currentObject.setTimeZone(n.getStringValue()); });
-            this.put("userPurpose", (n) -> { currentObject.setUserPurpose(n.getEnumValue(UserPurpose.class)); });
-            this.put("userPurposeV2", (n) -> { currentObject.setUserPurposeV2(n.getEnumValue(MailboxRecipientType.class)); });
-            this.put("workingHours", (n) -> { currentObject.setWorkingHours(n.getObjectValue(WorkingHours::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(11);
+        deserializerMap.put("archiveFolder", (n) -> { this.setArchiveFolder(n.getStringValue()); });
+        deserializerMap.put("automaticRepliesSetting", (n) -> { this.setAutomaticRepliesSetting(n.getObjectValue(AutomaticRepliesSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("dateFormat", (n) -> { this.setDateFormat(n.getStringValue()); });
+        deserializerMap.put("delegateMeetingMessageDeliveryOptions", (n) -> { this.setDelegateMeetingMessageDeliveryOptions(n.getEnumValue(DelegateMeetingMessageDeliveryOptions.class)); });
+        deserializerMap.put("language", (n) -> { this.setLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("timeFormat", (n) -> { this.setTimeFormat(n.getStringValue()); });
+        deserializerMap.put("timeZone", (n) -> { this.setTimeZone(n.getStringValue()); });
+        deserializerMap.put("userPurpose", (n) -> { this.setUserPurpose(n.getEnumValue(UserPurpose.class)); });
+        deserializerMap.put("userPurposeV2", (n) -> { this.setUserPurposeV2(n.getEnumValue(MailboxRecipientType.class)); });
+        deserializerMap.put("workingHours", (n) -> { this.setWorkingHours(n.getObjectValue(WorkingHours::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the language property value. The locale information for the user, including the preferred language and country/region.
@@ -173,6 +172,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("archiveFolder", this.getArchiveFolder());
@@ -193,6 +193,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -201,6 +202,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the archiveFolder property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setArchiveFolder(@javax.annotation.Nullable final String value) {
         this._archiveFolder = value;
     }
@@ -209,6 +211,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the automaticRepliesSetting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutomaticRepliesSetting(@javax.annotation.Nullable final AutomaticRepliesSetting value) {
         this._automaticRepliesSetting = value;
     }
@@ -217,6 +220,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the dateFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDateFormat(@javax.annotation.Nullable final String value) {
         this._dateFormat = value;
     }
@@ -225,6 +229,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the delegateMeetingMessageDeliveryOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDelegateMeetingMessageDeliveryOptions(@javax.annotation.Nullable final DelegateMeetingMessageDeliveryOptions value) {
         this._delegateMeetingMessageDeliveryOptions = value;
     }
@@ -233,6 +238,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the language property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguage(@javax.annotation.Nullable final LocaleInfo value) {
         this._language = value;
     }
@@ -241,6 +247,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -249,6 +256,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the timeFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeFormat(@javax.annotation.Nullable final String value) {
         this._timeFormat = value;
     }
@@ -257,6 +265,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the timeZone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeZone(@javax.annotation.Nullable final String value) {
         this._timeZone = value;
     }
@@ -265,6 +274,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userPurpose property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPurpose(@javax.annotation.Nullable final UserPurpose value) {
         this._userPurpose = value;
     }
@@ -273,6 +283,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userPurposeV2 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPurposeV2(@javax.annotation.Nullable final MailboxRecipientType value) {
         this._userPurposeV2 = value;
     }
@@ -281,6 +292,7 @@ public class MailboxSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the workingHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkingHours(@javax.annotation.Nullable final WorkingHours value) {
         this._workingHours = value;
     }

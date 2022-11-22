@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class SynchronizationTemplate extends Entity implements Parsable {
     /** Identifier of the application this template belongs to. */
     private String _applicationId;
@@ -27,9 +27,9 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * Instantiates a new synchronizationTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SynchronizationTemplate() {
         super();
-        this.setOdataType("#microsoft.graph.synchronizationTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -87,16 +87,15 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SynchronizationTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
-            this.put("default", (n) -> { currentObject.setDefault(n.getBooleanValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("discoverable", (n) -> { currentObject.setDiscoverable(n.getBooleanValue()); });
-            this.put("factoryTag", (n) -> { currentObject.setFactoryTag(n.getStringValue()); });
-            this.put("metadata", (n) -> { currentObject.setMetadata(n.getCollectionOfObjectValues(MetadataEntry::createFromDiscriminatorValue)); });
-            this.put("schema", (n) -> { currentObject.setSchema(n.getObjectValue(SynchronizationSchema::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationId", (n) -> { this.setApplicationId(n.getStringValue()); });
+        deserializerMap.put("default", (n) -> { this.setDefault(n.getBooleanValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("discoverable", (n) -> { this.setDiscoverable(n.getBooleanValue()); });
+        deserializerMap.put("factoryTag", (n) -> { this.setFactoryTag(n.getStringValue()); });
+        deserializerMap.put("metadata", (n) -> { this.setMetadata(n.getCollectionOfObjectValues(MetadataEntry::createFromDiscriminatorValue)); });
+        deserializerMap.put("schema", (n) -> { this.setSchema(n.getObjectValue(SynchronizationSchema::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
@@ -119,6 +118,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +135,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param value Value to set for the applicationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationId(@javax.annotation.Nullable final String value) {
         this._applicationId = value;
     }
@@ -143,6 +144,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param value Value to set for the default property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefault(@javax.annotation.Nullable final Boolean value) {
         this._default_escaped = value;
     }
@@ -151,6 +153,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -159,6 +162,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param value Value to set for the discoverable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscoverable(@javax.annotation.Nullable final Boolean value) {
         this._discoverable = value;
     }
@@ -167,6 +171,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param value Value to set for the factoryTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFactoryTag(@javax.annotation.Nullable final String value) {
         this._factoryTag = value;
     }
@@ -175,6 +180,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param value Value to set for the metadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetadata(@javax.annotation.Nullable final java.util.List<MetadataEntry> value) {
         this._metadata = value;
     }
@@ -183,6 +189,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
      * @param value Value to set for the schema property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchema(@javax.annotation.Nullable final SynchronizationSchema value) {
         this._schema = value;
     }

@@ -145,7 +145,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Device Configuration. */
 public class DeviceConfiguration extends Entity implements Parsable {
     /** The list of assignments for the device configuration profile. */
     private java.util.List<DeviceConfigurationAssignment> _assignments;
@@ -185,9 +184,9 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * Instantiates a new deviceConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceConfiguration() {
         super();
-        this.setOdataType("#microsoft.graph.deviceConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -428,26 +427,25 @@ public class DeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceConfigurationAssignment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("deviceManagementApplicabilityRuleDeviceMode", (n) -> { currentObject.setDeviceManagementApplicabilityRuleDeviceMode(n.getObjectValue(DeviceManagementApplicabilityRuleDeviceMode::createFromDiscriminatorValue)); });
-            this.put("deviceManagementApplicabilityRuleOsEdition", (n) -> { currentObject.setDeviceManagementApplicabilityRuleOsEdition(n.getObjectValue(DeviceManagementApplicabilityRuleOsEdition::createFromDiscriminatorValue)); });
-            this.put("deviceManagementApplicabilityRuleOsVersion", (n) -> { currentObject.setDeviceManagementApplicabilityRuleOsVersion(n.getObjectValue(DeviceManagementApplicabilityRuleOsVersion::createFromDiscriminatorValue)); });
-            this.put("deviceSettingStateSummaries", (n) -> { currentObject.setDeviceSettingStateSummaries(n.getCollectionOfObjectValues(SettingStateDeviceSummary::createFromDiscriminatorValue)); });
-            this.put("deviceStatuses", (n) -> { currentObject.setDeviceStatuses(n.getCollectionOfObjectValues(DeviceConfigurationDeviceStatus::createFromDiscriminatorValue)); });
-            this.put("deviceStatusOverview", (n) -> { currentObject.setDeviceStatusOverview(n.getObjectValue(DeviceConfigurationDeviceOverview::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("groupAssignments", (n) -> { currentObject.setGroupAssignments(n.getCollectionOfObjectValues(DeviceConfigurationGroupAssignment::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("supportsScopeTags", (n) -> { currentObject.setSupportsScopeTags(n.getBooleanValue()); });
-            this.put("userStatuses", (n) -> { currentObject.setUserStatuses(n.getCollectionOfObjectValues(DeviceConfigurationUserStatus::createFromDiscriminatorValue)); });
-            this.put("userStatusOverview", (n) -> { currentObject.setUserStatusOverview(n.getObjectValue(DeviceConfigurationUserOverview::createFromDiscriminatorValue)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(DeviceConfigurationAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("deviceManagementApplicabilityRuleDeviceMode", (n) -> { this.setDeviceManagementApplicabilityRuleDeviceMode(n.getObjectValue(DeviceManagementApplicabilityRuleDeviceMode::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceManagementApplicabilityRuleOsEdition", (n) -> { this.setDeviceManagementApplicabilityRuleOsEdition(n.getObjectValue(DeviceManagementApplicabilityRuleOsEdition::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceManagementApplicabilityRuleOsVersion", (n) -> { this.setDeviceManagementApplicabilityRuleOsVersion(n.getObjectValue(DeviceManagementApplicabilityRuleOsVersion::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceSettingStateSummaries", (n) -> { this.setDeviceSettingStateSummaries(n.getCollectionOfObjectValues(SettingStateDeviceSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceStatuses", (n) -> { this.setDeviceStatuses(n.getCollectionOfObjectValues(DeviceConfigurationDeviceStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceStatusOverview", (n) -> { this.setDeviceStatusOverview(n.getObjectValue(DeviceConfigurationDeviceOverview::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("groupAssignments", (n) -> { this.setGroupAssignments(n.getCollectionOfObjectValues(DeviceConfigurationGroupAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("supportsScopeTags", (n) -> { this.setSupportsScopeTags(n.getBooleanValue()); });
+        deserializerMap.put("userStatuses", (n) -> { this.setUserStatuses(n.getCollectionOfObjectValues(DeviceConfigurationUserStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("userStatusOverview", (n) -> { this.setUserStatusOverview(n.getObjectValue(DeviceConfigurationUserOverview::createFromDiscriminatorValue)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupAssignments property value. The list of group assignments for the device configuration profile.
@@ -510,6 +508,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -526,7 +525,6 @@ public class DeviceConfiguration extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("groupAssignments", this.getGroupAssignments());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
-        writer.writeBooleanValue("supportsScopeTags", this.getSupportsScopeTags());
         writer.writeCollectionOfObjectValues("userStatuses", this.getUserStatuses());
         writer.writeObjectValue("userStatusOverview", this.getUserStatusOverview());
         writer.writeIntegerValue("version", this.getVersion());
@@ -536,6 +534,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<DeviceConfigurationAssignment> value) {
         this._assignments = value;
     }
@@ -544,6 +543,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -552,6 +552,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -560,6 +561,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the deviceManagementApplicabilityRuleDeviceMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceManagementApplicabilityRuleDeviceMode(@javax.annotation.Nullable final DeviceManagementApplicabilityRuleDeviceMode value) {
         this._deviceManagementApplicabilityRuleDeviceMode = value;
     }
@@ -568,6 +570,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the deviceManagementApplicabilityRuleOsEdition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceManagementApplicabilityRuleOsEdition(@javax.annotation.Nullable final DeviceManagementApplicabilityRuleOsEdition value) {
         this._deviceManagementApplicabilityRuleOsEdition = value;
     }
@@ -576,6 +579,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the deviceManagementApplicabilityRuleOsVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceManagementApplicabilityRuleOsVersion(@javax.annotation.Nullable final DeviceManagementApplicabilityRuleOsVersion value) {
         this._deviceManagementApplicabilityRuleOsVersion = value;
     }
@@ -584,6 +588,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the deviceSettingStateSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceSettingStateSummaries(@javax.annotation.Nullable final java.util.List<SettingStateDeviceSummary> value) {
         this._deviceSettingStateSummaries = value;
     }
@@ -592,6 +597,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the deviceStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStatuses(@javax.annotation.Nullable final java.util.List<DeviceConfigurationDeviceStatus> value) {
         this._deviceStatuses = value;
     }
@@ -600,6 +606,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the deviceStatusOverview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStatusOverview(@javax.annotation.Nullable final DeviceConfigurationDeviceOverview value) {
         this._deviceStatusOverview = value;
     }
@@ -608,6 +615,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -616,6 +624,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the groupAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupAssignments(@javax.annotation.Nullable final java.util.List<DeviceConfigurationGroupAssignment> value) {
         this._groupAssignments = value;
     }
@@ -624,6 +633,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -632,6 +642,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -640,6 +651,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the supportsScopeTags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportsScopeTags(@javax.annotation.Nullable final Boolean value) {
         this._supportsScopeTags = value;
     }
@@ -648,6 +660,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the userStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserStatuses(@javax.annotation.Nullable final java.util.List<DeviceConfigurationUserStatus> value) {
         this._userStatuses = value;
     }
@@ -656,6 +669,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the userStatusOverview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserStatusOverview(@javax.annotation.Nullable final DeviceConfigurationUserOverview value) {
         this._userStatusOverview = value;
     }
@@ -664,6 +678,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
         this._version = value;
     }

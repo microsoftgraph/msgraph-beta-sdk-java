@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum EapFastConfiguration implements ValuedEnum {
     /** Use EAP-FAST without Protected Access Credential (PAC). */
     NoProtectedAccessCredential("noProtectedAccessCredential"),

@@ -16,6 +16,7 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
      * Instantiates a new DeviceEnrollmentPlatformRestrictionConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceEnrollmentPlatformRestrictionConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.deviceEnrollmentPlatformRestrictionConfiguration");
@@ -36,11 +37,10 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceEnrollmentPlatformRestrictionConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("platformRestriction", (n) -> { currentObject.setPlatformRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
-            this.put("platformType", (n) -> { currentObject.setPlatformType(n.getEnumValue(EnrollmentRestrictionPlatformType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("platformRestriction", (n) -> { this.setPlatformRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
+        deserializerMap.put("platformType", (n) -> { this.setPlatformType(n.getEnumValue(EnrollmentRestrictionPlatformType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the platformRestriction property value. Restrictions based on platform, platform operating system version, and device ownership
@@ -63,6 +63,7 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +75,7 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
      * @param value Value to set for the platformRestriction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatformRestriction(@javax.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
         this._platformRestriction = value;
     }
@@ -82,6 +84,7 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
      * @param value Value to set for the platformType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatformType(@javax.annotation.Nullable final EnrollmentRestrictionPlatformType value) {
         this._platformType = value;
     }

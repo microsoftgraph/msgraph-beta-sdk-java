@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Alert extends Entity implements Parsable {
     /** The adversary or activity group that is associated with this alert. */
     private String _actorDisplayName;
@@ -71,9 +71,9 @@ public class Alert extends Entity implements Parsable {
      * Instantiates a new alert and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Alert() {
         super();
-        this.setOdataType("#microsoft.graph.security.alert");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -187,37 +187,36 @@ public class Alert extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Alert currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("actorDisplayName", (n) -> { currentObject.setActorDisplayName(n.getStringValue()); });
-            this.put("alertWebUrl", (n) -> { currentObject.setAlertWebUrl(n.getStringValue()); });
-            this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getStringValue()); });
-            this.put("category", (n) -> { currentObject.setCategory(n.getStringValue()); });
-            this.put("classification", (n) -> { currentObject.setClassification(n.getEnumValue(AlertClassification.class)); });
-            this.put("comments", (n) -> { currentObject.setComments(n.getCollectionOfObjectValues(AlertComment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("detectionSource", (n) -> { currentObject.setDetectionSource(n.getEnumValue(DetectionSource.class)); });
-            this.put("detectorId", (n) -> { currentObject.setDetectorId(n.getStringValue()); });
-            this.put("determination", (n) -> { currentObject.setDetermination(n.getEnumValue(AlertDetermination.class)); });
-            this.put("evidence", (n) -> { currentObject.setEvidence(n.getCollectionOfObjectValues(AlertEvidence::createFromDiscriminatorValue)); });
-            this.put("firstActivityDateTime", (n) -> { currentObject.setFirstActivityDateTime(n.getOffsetDateTimeValue()); });
-            this.put("incidentId", (n) -> { currentObject.setIncidentId(n.getStringValue()); });
-            this.put("incidentWebUrl", (n) -> { currentObject.setIncidentWebUrl(n.getStringValue()); });
-            this.put("lastActivityDateTime", (n) -> { currentObject.setLastActivityDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastUpdateDateTime", (n) -> { currentObject.setLastUpdateDateTime(n.getOffsetDateTimeValue()); });
-            this.put("mitreTechniques", (n) -> { currentObject.setMitreTechniques(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("providerAlertId", (n) -> { currentObject.setProviderAlertId(n.getStringValue()); });
-            this.put("recommendedActions", (n) -> { currentObject.setRecommendedActions(n.getStringValue()); });
-            this.put("resolvedDateTime", (n) -> { currentObject.setResolvedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("serviceSource", (n) -> { currentObject.setServiceSource(n.getEnumValue(ServiceSource.class)); });
-            this.put("severity", (n) -> { currentObject.setSeverity(n.getEnumValue(AlertSeverity.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AlertStatus.class)); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("threatDisplayName", (n) -> { currentObject.setThreatDisplayName(n.getStringValue()); });
-            this.put("threatFamilyName", (n) -> { currentObject.setThreatFamilyName(n.getStringValue()); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actorDisplayName", (n) -> { this.setActorDisplayName(n.getStringValue()); });
+        deserializerMap.put("alertWebUrl", (n) -> { this.setAlertWebUrl(n.getStringValue()); });
+        deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getStringValue()); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getStringValue()); });
+        deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(AlertClassification.class)); });
+        deserializerMap.put("comments", (n) -> { this.setComments(n.getCollectionOfObjectValues(AlertComment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("detectionSource", (n) -> { this.setDetectionSource(n.getEnumValue(DetectionSource.class)); });
+        deserializerMap.put("detectorId", (n) -> { this.setDetectorId(n.getStringValue()); });
+        deserializerMap.put("determination", (n) -> { this.setDetermination(n.getEnumValue(AlertDetermination.class)); });
+        deserializerMap.put("evidence", (n) -> { this.setEvidence(n.getCollectionOfObjectValues(AlertEvidence::createFromDiscriminatorValue)); });
+        deserializerMap.put("firstActivityDateTime", (n) -> { this.setFirstActivityDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("incidentId", (n) -> { this.setIncidentId(n.getStringValue()); });
+        deserializerMap.put("incidentWebUrl", (n) -> { this.setIncidentWebUrl(n.getStringValue()); });
+        deserializerMap.put("lastActivityDateTime", (n) -> { this.setLastActivityDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastUpdateDateTime", (n) -> { this.setLastUpdateDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("mitreTechniques", (n) -> { this.setMitreTechniques(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("providerAlertId", (n) -> { this.setProviderAlertId(n.getStringValue()); });
+        deserializerMap.put("recommendedActions", (n) -> { this.setRecommendedActions(n.getStringValue()); });
+        deserializerMap.put("resolvedDateTime", (n) -> { this.setResolvedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("serviceSource", (n) -> { this.setServiceSource(n.getEnumValue(ServiceSource.class)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertSeverity.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AlertStatus.class)); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("threatDisplayName", (n) -> { this.setThreatDisplayName(n.getStringValue()); });
+        deserializerMap.put("threatFamilyName", (n) -> { this.setThreatFamilyName(n.getStringValue()); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the firstActivityDateTime property value. The earliest activity associated with the alert.
@@ -352,6 +351,7 @@ public class Alert extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -389,6 +389,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the actorDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActorDisplayName(@javax.annotation.Nullable final String value) {
         this._actorDisplayName = value;
     }
@@ -397,6 +398,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the alertWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlertWebUrl(@javax.annotation.Nullable final String value) {
         this._alertWebUrl = value;
     }
@@ -405,6 +407,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the assignedTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedTo(@javax.annotation.Nullable final String value) {
         this._assignedTo = value;
     }
@@ -413,6 +416,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final String value) {
         this._category = value;
     }
@@ -421,6 +425,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the classification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassification(@javax.annotation.Nullable final AlertClassification value) {
         this._classification = value;
     }
@@ -429,6 +434,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the comments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComments(@javax.annotation.Nullable final java.util.List<AlertComment> value) {
         this._comments = value;
     }
@@ -437,6 +443,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -445,6 +452,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -453,6 +461,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the detectionSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectionSource(@javax.annotation.Nullable final DetectionSource value) {
         this._detectionSource = value;
     }
@@ -461,6 +470,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the detectorId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectorId(@javax.annotation.Nullable final String value) {
         this._detectorId = value;
     }
@@ -469,6 +479,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the determination property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetermination(@javax.annotation.Nullable final AlertDetermination value) {
         this._determination = value;
     }
@@ -477,6 +488,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the evidence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvidence(@javax.annotation.Nullable final java.util.List<AlertEvidence> value) {
         this._evidence = value;
     }
@@ -485,6 +497,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the firstActivityDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirstActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._firstActivityDateTime = value;
     }
@@ -493,6 +506,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the incidentId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncidentId(@javax.annotation.Nullable final String value) {
         this._incidentId = value;
     }
@@ -501,6 +515,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the incidentWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncidentWebUrl(@javax.annotation.Nullable final String value) {
         this._incidentWebUrl = value;
     }
@@ -509,6 +524,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the lastActivityDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastActivityDateTime = value;
     }
@@ -517,6 +533,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the lastUpdateDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastUpdateDateTime = value;
     }
@@ -525,6 +542,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the mitreTechniques property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMitreTechniques(@javax.annotation.Nullable final java.util.List<String> value) {
         this._mitreTechniques = value;
     }
@@ -533,6 +551,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the providerAlertId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProviderAlertId(@javax.annotation.Nullable final String value) {
         this._providerAlertId = value;
     }
@@ -541,6 +560,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the recommendedActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendedActions(@javax.annotation.Nullable final String value) {
         this._recommendedActions = value;
     }
@@ -549,6 +569,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the resolvedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResolvedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._resolvedDateTime = value;
     }
@@ -557,6 +578,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the serviceSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceSource(@javax.annotation.Nullable final ServiceSource value) {
         this._serviceSource = value;
     }
@@ -565,6 +587,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the severity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSeverity(@javax.annotation.Nullable final AlertSeverity value) {
         this._severity = value;
     }
@@ -573,6 +596,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final AlertStatus value) {
         this._status = value;
     }
@@ -581,6 +605,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
@@ -589,6 +614,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the threatDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThreatDisplayName(@javax.annotation.Nullable final String value) {
         this._threatDisplayName = value;
     }
@@ -597,6 +623,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the threatFamilyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThreatFamilyName(@javax.annotation.Nullable final String value) {
         this._threatFamilyName = value;
     }
@@ -605,6 +632,7 @@ public class Alert extends Entity implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }

@@ -24,9 +24,9 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     private String _contactITPhoneNumber;
     /** The custom privacy message used to explain what the organization can see and do on managed devices. */
     private String _customCanSeePrivacyMessage;
-    /** The custom privacy message used to explain what the organization can’t see or do on managed devices. */
+    /** The custom privacy message used to explain what the organization cant see or do on managed devices. */
     private String _customCantSeePrivacyMessage;
-    /** The custom privacy message used to explain what the organization can’t see or do on managed devices. */
+    /** The custom privacy message used to explain what the organization cant see or do on managed devices. */
     private String _customPrivacyMessage;
     /** Logo image displayed in Company Portal apps which have a dark background behind the logo. */
     private MimeContent _darkBackgroundLogo;
@@ -46,11 +46,11 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     private MimeContent _lightBackgroundLogo;
     /** The OdataType property */
     private String _odataType;
-    /** Display name of the company/organization’s IT helpdesk site. */
+    /** Display name of the company/organizations IT helpdesk site. */
     private String _onlineSupportSiteName;
-    /** URL to the company/organization’s IT helpdesk site. */
+    /** URL to the company/organizations IT helpdesk site. */
     private String _onlineSupportSiteUrl;
-    /** URL to the company/organization’s privacy policy. */
+    /** URL to the company/organizations privacy policy. */
     private String _privacyUrl;
     /** List of scope tags assigned to the default branding profile */
     private java.util.List<String> _roleScopeTagIds;
@@ -58,6 +58,8 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     private Boolean _sendDeviceOwnershipChangePushNotification;
     /** Boolean that indicates if AzureAD Enterprise Apps will be shown in Company Portal */
     private Boolean _showAzureADEnterpriseApps;
+    /** Boolean that indicates if ConfigurationManagerApps will be shown in Company Portal */
+    private Boolean _showConfigurationManagerApps;
     /** Boolean that represents whether the administrator-supplied display name will be shown next to the logo image. */
     private Boolean _showDisplayNameNextToLogo;
     /** Boolean that represents whether the administrator-supplied logo images are shown or not shown. */
@@ -72,9 +74,9 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * Instantiates a new intuneBrand and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IntuneBrand() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.intuneBrand");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -143,7 +145,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         return this._customCanSeePrivacyMessage;
     }
     /**
-     * Gets the customCantSeePrivacyMessage property value. The custom privacy message used to explain what the organization can’t see or do on managed devices.
+     * Gets the customCantSeePrivacyMessage property value. The custom privacy message used to explain what the organization cant see or do on managed devices.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -151,7 +153,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         return this._customCantSeePrivacyMessage;
     }
     /**
-     * Gets the customPrivacyMessage property value. The custom privacy message used to explain what the organization can’t see or do on managed devices.
+     * Gets the customPrivacyMessage property value. The custom privacy message used to explain what the organization cant see or do on managed devices.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -196,37 +198,37 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IntuneBrand currentObject = this;
-        return new HashMap<>(28) {{
-            this.put("companyPortalBlockedActions", (n) -> { currentObject.setCompanyPortalBlockedActions(n.getCollectionOfObjectValues(CompanyPortalBlockedAction::createFromDiscriminatorValue)); });
-            this.put("contactITEmailAddress", (n) -> { currentObject.setContactITEmailAddress(n.getStringValue()); });
-            this.put("contactITName", (n) -> { currentObject.setContactITName(n.getStringValue()); });
-            this.put("contactITNotes", (n) -> { currentObject.setContactITNotes(n.getStringValue()); });
-            this.put("contactITPhoneNumber", (n) -> { currentObject.setContactITPhoneNumber(n.getStringValue()); });
-            this.put("customCanSeePrivacyMessage", (n) -> { currentObject.setCustomCanSeePrivacyMessage(n.getStringValue()); });
-            this.put("customCantSeePrivacyMessage", (n) -> { currentObject.setCustomCantSeePrivacyMessage(n.getStringValue()); });
-            this.put("customPrivacyMessage", (n) -> { currentObject.setCustomPrivacyMessage(n.getStringValue()); });
-            this.put("darkBackgroundLogo", (n) -> { currentObject.setDarkBackgroundLogo(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
-            this.put("disableClientTelemetry", (n) -> { currentObject.setDisableClientTelemetry(n.getBooleanValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("enrollmentAvailability", (n) -> { currentObject.setEnrollmentAvailability(n.getEnumValue(EnrollmentAvailabilityOptions.class)); });
-            this.put("isFactoryResetDisabled", (n) -> { currentObject.setIsFactoryResetDisabled(n.getBooleanValue()); });
-            this.put("isRemoveDeviceDisabled", (n) -> { currentObject.setIsRemoveDeviceDisabled(n.getBooleanValue()); });
-            this.put("landingPageCustomizedImage", (n) -> { currentObject.setLandingPageCustomizedImage(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
-            this.put("lightBackgroundLogo", (n) -> { currentObject.setLightBackgroundLogo(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("onlineSupportSiteName", (n) -> { currentObject.setOnlineSupportSiteName(n.getStringValue()); });
-            this.put("onlineSupportSiteUrl", (n) -> { currentObject.setOnlineSupportSiteUrl(n.getStringValue()); });
-            this.put("privacyUrl", (n) -> { currentObject.setPrivacyUrl(n.getStringValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("sendDeviceOwnershipChangePushNotification", (n) -> { currentObject.setSendDeviceOwnershipChangePushNotification(n.getBooleanValue()); });
-            this.put("showAzureADEnterpriseApps", (n) -> { currentObject.setShowAzureADEnterpriseApps(n.getBooleanValue()); });
-            this.put("showDisplayNameNextToLogo", (n) -> { currentObject.setShowDisplayNameNextToLogo(n.getBooleanValue()); });
-            this.put("showLogo", (n) -> { currentObject.setShowLogo(n.getBooleanValue()); });
-            this.put("showNameNextToLogo", (n) -> { currentObject.setShowNameNextToLogo(n.getBooleanValue()); });
-            this.put("showOfficeWebApps", (n) -> { currentObject.setShowOfficeWebApps(n.getBooleanValue()); });
-            this.put("themeColor", (n) -> { currentObject.setThemeColor(n.getObjectValue(RgbColor::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(29);
+        deserializerMap.put("companyPortalBlockedActions", (n) -> { this.setCompanyPortalBlockedActions(n.getCollectionOfObjectValues(CompanyPortalBlockedAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("contactITEmailAddress", (n) -> { this.setContactITEmailAddress(n.getStringValue()); });
+        deserializerMap.put("contactITName", (n) -> { this.setContactITName(n.getStringValue()); });
+        deserializerMap.put("contactITNotes", (n) -> { this.setContactITNotes(n.getStringValue()); });
+        deserializerMap.put("contactITPhoneNumber", (n) -> { this.setContactITPhoneNumber(n.getStringValue()); });
+        deserializerMap.put("customCanSeePrivacyMessage", (n) -> { this.setCustomCanSeePrivacyMessage(n.getStringValue()); });
+        deserializerMap.put("customCantSeePrivacyMessage", (n) -> { this.setCustomCantSeePrivacyMessage(n.getStringValue()); });
+        deserializerMap.put("customPrivacyMessage", (n) -> { this.setCustomPrivacyMessage(n.getStringValue()); });
+        deserializerMap.put("darkBackgroundLogo", (n) -> { this.setDarkBackgroundLogo(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("disableClientTelemetry", (n) -> { this.setDisableClientTelemetry(n.getBooleanValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enrollmentAvailability", (n) -> { this.setEnrollmentAvailability(n.getEnumValue(EnrollmentAvailabilityOptions.class)); });
+        deserializerMap.put("isFactoryResetDisabled", (n) -> { this.setIsFactoryResetDisabled(n.getBooleanValue()); });
+        deserializerMap.put("isRemoveDeviceDisabled", (n) -> { this.setIsRemoveDeviceDisabled(n.getBooleanValue()); });
+        deserializerMap.put("landingPageCustomizedImage", (n) -> { this.setLandingPageCustomizedImage(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("lightBackgroundLogo", (n) -> { this.setLightBackgroundLogo(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("onlineSupportSiteName", (n) -> { this.setOnlineSupportSiteName(n.getStringValue()); });
+        deserializerMap.put("onlineSupportSiteUrl", (n) -> { this.setOnlineSupportSiteUrl(n.getStringValue()); });
+        deserializerMap.put("privacyUrl", (n) -> { this.setPrivacyUrl(n.getStringValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("sendDeviceOwnershipChangePushNotification", (n) -> { this.setSendDeviceOwnershipChangePushNotification(n.getBooleanValue()); });
+        deserializerMap.put("showAzureADEnterpriseApps", (n) -> { this.setShowAzureADEnterpriseApps(n.getBooleanValue()); });
+        deserializerMap.put("showConfigurationManagerApps", (n) -> { this.setShowConfigurationManagerApps(n.getBooleanValue()); });
+        deserializerMap.put("showDisplayNameNextToLogo", (n) -> { this.setShowDisplayNameNextToLogo(n.getBooleanValue()); });
+        deserializerMap.put("showLogo", (n) -> { this.setShowLogo(n.getBooleanValue()); });
+        deserializerMap.put("showNameNextToLogo", (n) -> { this.setShowNameNextToLogo(n.getBooleanValue()); });
+        deserializerMap.put("showOfficeWebApps", (n) -> { this.setShowOfficeWebApps(n.getBooleanValue()); });
+        deserializerMap.put("themeColor", (n) -> { this.setThemeColor(n.getObjectValue(RgbColor::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isFactoryResetDisabled property value. Boolean that represents whether the adminsistrator has disabled the 'Factory Reset' action on corporate owned devices.
@@ -269,7 +271,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the onlineSupportSiteName property value. Display name of the company/organization’s IT helpdesk site.
+     * Gets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -277,7 +279,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         return this._onlineSupportSiteName;
     }
     /**
-     * Gets the onlineSupportSiteUrl property value. URL to the company/organization’s IT helpdesk site.
+     * Gets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -285,7 +287,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         return this._onlineSupportSiteUrl;
     }
     /**
-     * Gets the privacyUrl property value. URL to the company/organization’s privacy policy.
+     * Gets the privacyUrl property value. URL to the company/organizations privacy policy.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -315,6 +317,14 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public Boolean getShowAzureADEnterpriseApps() {
         return this._showAzureADEnterpriseApps;
+    }
+    /**
+     * Gets the showConfigurationManagerApps property value. Boolean that indicates if ConfigurationManagerApps will be shown in Company Portal
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getShowConfigurationManagerApps() {
+        return this._showConfigurationManagerApps;
     }
     /**
      * Gets the showDisplayNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
@@ -361,6 +371,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("companyPortalBlockedActions", this.getCompanyPortalBlockedActions());
@@ -386,6 +397,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
         writer.writeBooleanValue("sendDeviceOwnershipChangePushNotification", this.getSendDeviceOwnershipChangePushNotification());
         writer.writeBooleanValue("showAzureADEnterpriseApps", this.getShowAzureADEnterpriseApps());
+        writer.writeBooleanValue("showConfigurationManagerApps", this.getShowConfigurationManagerApps());
         writer.writeBooleanValue("showDisplayNameNextToLogo", this.getShowDisplayNameNextToLogo());
         writer.writeBooleanValue("showLogo", this.getShowLogo());
         writer.writeBooleanValue("showNameNextToLogo", this.getShowNameNextToLogo());
@@ -398,6 +410,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -406,6 +419,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the companyPortalBlockedActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompanyPortalBlockedActions(@javax.annotation.Nullable final java.util.List<CompanyPortalBlockedAction> value) {
         this._companyPortalBlockedActions = value;
     }
@@ -414,6 +428,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contactITEmailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactITEmailAddress(@javax.annotation.Nullable final String value) {
         this._contactITEmailAddress = value;
     }
@@ -422,6 +437,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contactITName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactITName(@javax.annotation.Nullable final String value) {
         this._contactITName = value;
     }
@@ -430,6 +446,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contactITNotes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactITNotes(@javax.annotation.Nullable final String value) {
         this._contactITNotes = value;
     }
@@ -438,6 +455,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contactITPhoneNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactITPhoneNumber(@javax.annotation.Nullable final String value) {
         this._contactITPhoneNumber = value;
     }
@@ -446,22 +464,25 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the customCanSeePrivacyMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomCanSeePrivacyMessage(@javax.annotation.Nullable final String value) {
         this._customCanSeePrivacyMessage = value;
     }
     /**
-     * Sets the customCantSeePrivacyMessage property value. The custom privacy message used to explain what the organization can’t see or do on managed devices.
+     * Sets the customCantSeePrivacyMessage property value. The custom privacy message used to explain what the organization cant see or do on managed devices.
      * @param value Value to set for the customCantSeePrivacyMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomCantSeePrivacyMessage(@javax.annotation.Nullable final String value) {
         this._customCantSeePrivacyMessage = value;
     }
     /**
-     * Sets the customPrivacyMessage property value. The custom privacy message used to explain what the organization can’t see or do on managed devices.
+     * Sets the customPrivacyMessage property value. The custom privacy message used to explain what the organization cant see or do on managed devices.
      * @param value Value to set for the customPrivacyMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomPrivacyMessage(@javax.annotation.Nullable final String value) {
         this._customPrivacyMessage = value;
     }
@@ -470,6 +491,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the darkBackgroundLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDarkBackgroundLogo(@javax.annotation.Nullable final MimeContent value) {
         this._darkBackgroundLogo = value;
     }
@@ -478,6 +500,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the disableClientTelemetry property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableClientTelemetry(@javax.annotation.Nullable final Boolean value) {
         this._disableClientTelemetry = value;
     }
@@ -486,6 +509,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -494,6 +518,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the enrollmentAvailability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentAvailability(@javax.annotation.Nullable final EnrollmentAvailabilityOptions value) {
         this._enrollmentAvailability = value;
     }
@@ -502,6 +527,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isFactoryResetDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsFactoryResetDisabled(@javax.annotation.Nullable final Boolean value) {
         this._isFactoryResetDisabled = value;
     }
@@ -510,6 +536,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isRemoveDeviceDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRemoveDeviceDisabled(@javax.annotation.Nullable final Boolean value) {
         this._isRemoveDeviceDisabled = value;
     }
@@ -518,6 +545,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the landingPageCustomizedImage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLandingPageCustomizedImage(@javax.annotation.Nullable final MimeContent value) {
         this._landingPageCustomizedImage = value;
     }
@@ -526,6 +554,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lightBackgroundLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLightBackgroundLogo(@javax.annotation.Nullable final MimeContent value) {
         this._lightBackgroundLogo = value;
     }
@@ -534,30 +563,34 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
     /**
-     * Sets the onlineSupportSiteName property value. Display name of the company/organization’s IT helpdesk site.
+     * Sets the onlineSupportSiteName property value. Display name of the company/organizations IT helpdesk site.
      * @param value Value to set for the onlineSupportSiteName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnlineSupportSiteName(@javax.annotation.Nullable final String value) {
         this._onlineSupportSiteName = value;
     }
     /**
-     * Sets the onlineSupportSiteUrl property value. URL to the company/organization’s IT helpdesk site.
+     * Sets the onlineSupportSiteUrl property value. URL to the company/organizations IT helpdesk site.
      * @param value Value to set for the onlineSupportSiteUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnlineSupportSiteUrl(@javax.annotation.Nullable final String value) {
         this._onlineSupportSiteUrl = value;
     }
     /**
-     * Sets the privacyUrl property value. URL to the company/organization’s privacy policy.
+     * Sets the privacyUrl property value. URL to the company/organizations privacy policy.
      * @param value Value to set for the privacyUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyUrl(@javax.annotation.Nullable final String value) {
         this._privacyUrl = value;
     }
@@ -566,6 +599,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -574,6 +608,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sendDeviceOwnershipChangePushNotification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSendDeviceOwnershipChangePushNotification(@javax.annotation.Nullable final Boolean value) {
         this._sendDeviceOwnershipChangePushNotification = value;
     }
@@ -582,14 +617,25 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the showAzureADEnterpriseApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowAzureADEnterpriseApps(@javax.annotation.Nullable final Boolean value) {
         this._showAzureADEnterpriseApps = value;
+    }
+    /**
+     * Sets the showConfigurationManagerApps property value. Boolean that indicates if ConfigurationManagerApps will be shown in Company Portal
+     * @param value Value to set for the showConfigurationManagerApps property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setShowConfigurationManagerApps(@javax.annotation.Nullable final Boolean value) {
+        this._showConfigurationManagerApps = value;
     }
     /**
      * Sets the showDisplayNameNextToLogo property value. Boolean that represents whether the administrator-supplied display name will be shown next to the logo image.
      * @param value Value to set for the showDisplayNameNextToLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowDisplayNameNextToLogo(@javax.annotation.Nullable final Boolean value) {
         this._showDisplayNameNextToLogo = value;
     }
@@ -598,6 +644,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the showLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowLogo(@javax.annotation.Nullable final Boolean value) {
         this._showLogo = value;
     }
@@ -606,6 +653,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the showNameNextToLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowNameNextToLogo(@javax.annotation.Nullable final Boolean value) {
         this._showNameNextToLogo = value;
     }
@@ -614,6 +662,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the showOfficeWebApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowOfficeWebApps(@javax.annotation.Nullable final Boolean value) {
         this._showOfficeWebApps = value;
     }
@@ -622,6 +671,7 @@ public class IntuneBrand implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the themeColor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThemeColor(@javax.annotation.Nullable final RgbColor value) {
         this._themeColor = value;
     }

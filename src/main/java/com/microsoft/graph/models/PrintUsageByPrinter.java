@@ -14,9 +14,9 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
      * Instantiates a new PrintUsageByPrinter and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrintUsageByPrinter() {
         super();
-        this.setOdataType("#microsoft.graph.printUsageByPrinter");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,10 +34,9 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrintUsageByPrinter currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("printerId", (n) -> { currentObject.setPrinterId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("printerId", (n) -> { this.setPrinterId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the printerId property value. The printerId property
@@ -52,6 +51,7 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +62,7 @@ public class PrintUsageByPrinter extends PrintUsage implements Parsable {
      * @param value Value to set for the printerId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrinterId(@javax.annotation.Nullable final String value) {
         this._printerId = value;
     }

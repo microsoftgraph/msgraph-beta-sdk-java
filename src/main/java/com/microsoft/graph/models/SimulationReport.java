@@ -15,15 +15,15 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
     private String _odataType;
     /** Overview of an attack simulation and training campaign. */
     private SimulationReportOverview _overview;
-    /** Represents users of a tenant and their online actions in an attack simulation and training campaign. */
+    /** The tenant users and their online actions in an attack simulation and training campaign. */
     private java.util.List<UserSimulationDetails> _simulationUsers;
     /**
      * Instantiates a new simulationReport and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SimulationReport() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.simulationReport");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,12 +49,11 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SimulationReport currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("overview", (n) -> { currentObject.setOverview(n.getObjectValue(SimulationReportOverview::createFromDiscriminatorValue)); });
-            this.put("simulationUsers", (n) -> { currentObject.setSimulationUsers(n.getCollectionOfObjectValues(UserSimulationDetails::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("overview", (n) -> { this.setOverview(n.getObjectValue(SimulationReportOverview::createFromDiscriminatorValue)); });
+        deserializerMap.put("simulationUsers", (n) -> { this.setSimulationUsers(n.getCollectionOfObjectValues(UserSimulationDetails::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -73,7 +72,7 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
         return this._overview;
     }
     /**
-     * Gets the simulationUsers property value. Represents users of a tenant and their online actions in an attack simulation and training campaign.
+     * Gets the simulationUsers property value. The tenant users and their online actions in an attack simulation and training campaign.
      * @return a userSimulationDetails
      */
     @javax.annotation.Nullable
@@ -85,6 +84,7 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -97,6 +97,7 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -113,14 +115,16 @@ public class SimulationReport implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the overview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOverview(@javax.annotation.Nullable final SimulationReportOverview value) {
         this._overview = value;
     }
     /**
-     * Sets the simulationUsers property value. Represents users of a tenant and their online actions in an attack simulation and training campaign.
+     * Sets the simulationUsers property value. The tenant users and their online actions in an attack simulation and training campaign.
      * @param value Value to set for the simulationUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSimulationUsers(@javax.annotation.Nullable final java.util.List<UserSimulationDetails> value) {
         this._simulationUsers = value;
     }

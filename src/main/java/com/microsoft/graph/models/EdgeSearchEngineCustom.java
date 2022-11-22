@@ -14,6 +14,7 @@ public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Pars
      * Instantiates a new EdgeSearchEngineCustom and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EdgeSearchEngineCustom() {
         super();
         this.setOdataType("#microsoft.graph.edgeSearchEngineCustom");
@@ -42,16 +43,16 @@ public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EdgeSearchEngineCustom currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("edgeSearchEngineOpenSearchXmlUrl", (n) -> { currentObject.setEdgeSearchEngineOpenSearchXmlUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("edgeSearchEngineOpenSearchXmlUrl", (n) -> { this.setEdgeSearchEngineOpenSearchXmlUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class EdgeSearchEngineCustom extends EdgeSearchEngineBase implements Pars
      * @param value Value to set for the edgeSearchEngineOpenSearchXmlUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeSearchEngineOpenSearchXmlUrl(@javax.annotation.Nullable final String value) {
         this._edgeSearchEngineOpenSearchXmlUrl = value;
     }

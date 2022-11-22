@@ -24,9 +24,9 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      * Instantiates a new bulkDriverActionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BulkDriverActionResult() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bulkDriverActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,13 +60,12 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BulkDriverActionResult currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("failedDriverIds", (n) -> { currentObject.setFailedDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("notFoundDriverIds", (n) -> { currentObject.setNotFoundDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("successfulDriverIds", (n) -> { currentObject.setSuccessfulDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("failedDriverIds", (n) -> { this.setFailedDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("notFoundDriverIds", (n) -> { this.setNotFoundDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("successfulDriverIds", (n) -> { this.setSuccessfulDriverIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the notFoundDriverIds property value. List of driver Ids that are not found.
@@ -97,6 +96,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("failedDriverIds", this.getFailedDriverIds());
@@ -110,6 +110,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +119,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the failedDriverIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedDriverIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._failedDriverIds = value;
     }
@@ -126,6 +128,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the notFoundDriverIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotFoundDriverIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._notFoundDriverIds = value;
     }
@@ -134,6 +137,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -142,6 +146,7 @@ public class BulkDriverActionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the successfulDriverIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessfulDriverIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._successfulDriverIds = value;
     }

@@ -14,6 +14,7 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
      * Instantiates a new DeviceManagementConfigurationSimpleSettingInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSimpleSettingInstance() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationSimpleSettingInstance");
@@ -34,10 +35,9 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationSimpleSettingInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("simpleSettingValue", (n) -> { currentObject.setSimpleSettingValue(n.getObjectValue(DeviceManagementConfigurationSimpleSettingValue::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("simpleSettingValue", (n) -> { this.setSimpleSettingValue(n.getObjectValue(DeviceManagementConfigurationSimpleSettingValue::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the simpleSettingValue property value. The simpleSettingValue property
@@ -52,6 +52,7 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class DeviceManagementConfigurationSimpleSettingInstance extends DeviceMa
      * @param value Value to set for the simpleSettingValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSimpleSettingValue(@javax.annotation.Nullable final DeviceManagementConfigurationSimpleSettingValue value) {
         this._simpleSettingValue = value;
     }

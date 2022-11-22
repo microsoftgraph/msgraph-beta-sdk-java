@@ -14,6 +14,7 @@ public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implemen
      * Instantiates a new UserScopeTeamsAppInstallation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserScopeTeamsAppInstallation() {
         super();
         this.setOdataType("#microsoft.graph.userScopeTeamsAppInstallation");
@@ -42,16 +43,16 @@ public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implemen
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserScopeTeamsAppInstallation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("chat", (n) -> { currentObject.setChat(n.getObjectValue(Chat::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("chat", (n) -> { this.setChat(n.getObjectValue(Chat::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class UserScopeTeamsAppInstallation extends TeamsAppInstallation implemen
      * @param value Value to set for the chat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChat(@javax.annotation.Nullable final Chat value) {
         this._chat = value;
     }

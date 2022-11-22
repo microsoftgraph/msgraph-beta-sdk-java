@@ -19,9 +19,9 @@ public class DeviceConfigurationConflictSummary extends Entity implements Parsab
      * Instantiates a new deviceConfigurationConflictSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceConfigurationConflictSummary() {
         super();
-        this.setOdataType("#microsoft.graph.deviceConfigurationConflictSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,18 +63,18 @@ public class DeviceConfigurationConflictSummary extends Entity implements Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceConfigurationConflictSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("conflictingDeviceConfigurations", (n) -> { currentObject.setConflictingDeviceConfigurations(n.getCollectionOfObjectValues(SettingSource::createFromDiscriminatorValue)); });
-            this.put("contributingSettings", (n) -> { currentObject.setContributingSettings(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("deviceCheckinsImpacted", (n) -> { currentObject.setDeviceCheckinsImpacted(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("conflictingDeviceConfigurations", (n) -> { this.setConflictingDeviceConfigurations(n.getCollectionOfObjectValues(SettingSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("contributingSettings", (n) -> { this.setContributingSettings(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("deviceCheckinsImpacted", (n) -> { this.setDeviceCheckinsImpacted(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +87,7 @@ public class DeviceConfigurationConflictSummary extends Entity implements Parsab
      * @param value Value to set for the conflictingDeviceConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConflictingDeviceConfigurations(@javax.annotation.Nullable final java.util.List<SettingSource> value) {
         this._conflictingDeviceConfigurations = value;
     }
@@ -95,6 +96,7 @@ public class DeviceConfigurationConflictSummary extends Entity implements Parsab
      * @param value Value to set for the contributingSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContributingSettings(@javax.annotation.Nullable final java.util.List<String> value) {
         this._contributingSettings = value;
     }
@@ -103,6 +105,7 @@ public class DeviceConfigurationConflictSummary extends Entity implements Parsab
      * @param value Value to set for the deviceCheckinsImpacted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCheckinsImpacted(@javax.annotation.Nullable final Integer value) {
         this._deviceCheckinsImpacted = value;
     }

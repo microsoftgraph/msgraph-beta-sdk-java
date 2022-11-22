@@ -34,6 +34,7 @@ public class List extends BaseItem implements Parsable {
      * Instantiates a new list and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public List() {
         super();
         this.setOdataType("#microsoft.graph.list");
@@ -94,20 +95,19 @@ public class List extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final List currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(ItemActivityOLD::createFromDiscriminatorValue)); });
-            this.put("columns", (n) -> { currentObject.setColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
-            this.put("contentTypes", (n) -> { currentObject.setContentTypes(n.getCollectionOfObjectValues(ContentType::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("drive", (n) -> { currentObject.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
-            this.put("items", (n) -> { currentObject.setItems(n.getCollectionOfObjectValues(ListItem::createFromDiscriminatorValue)); });
-            this.put("list", (n) -> { currentObject.setList(n.getObjectValue(ListInfo::createFromDiscriminatorValue)); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(RichLongRunningOperation::createFromDiscriminatorValue)); });
-            this.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
-            this.put("subscriptions", (n) -> { currentObject.setSubscriptions(n.getCollectionOfObjectValues(Subscription::createFromDiscriminatorValue)); });
-            this.put("system", (n) -> { currentObject.setSystem(n.getObjectValue(SystemFacet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activities", (n) -> { this.setActivities(n.getCollectionOfObjectValues(ItemActivityOLD::createFromDiscriminatorValue)); });
+        deserializerMap.put("columns", (n) -> { this.setColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentTypes", (n) -> { this.setContentTypes(n.getCollectionOfObjectValues(ContentType::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
+        deserializerMap.put("items", (n) -> { this.setItems(n.getCollectionOfObjectValues(ListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("list", (n) -> { this.setList(n.getObjectValue(ListInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(RichLongRunningOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharepointIds", (n) -> { this.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
+        deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getCollectionOfObjectValues(Subscription::createFromDiscriminatorValue)); });
+        deserializerMap.put("system", (n) -> { this.setSystem(n.getObjectValue(SystemFacet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the items property value. All items contained in the list.
@@ -162,6 +162,7 @@ public class List extends BaseItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -182,6 +183,7 @@ public class List extends BaseItem implements Parsable {
      * @param value Value to set for the activities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivities(@javax.annotation.Nullable final java.util.List<ItemActivityOLD> value) {
         this._activities = value;
     }
@@ -190,6 +192,7 @@ public class List extends BaseItem implements Parsable {
      * @param value Value to set for the columns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColumns(@javax.annotation.Nullable final java.util.List<ColumnDefinition> value) {
         this._columns = value;
     }
@@ -198,6 +201,7 @@ public class List extends BaseItem implements Parsable {
      * @param value Value to set for the contentTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentTypes(@javax.annotation.Nullable final java.util.List<ContentType> value) {
         this._contentTypes = value;
     }
@@ -206,6 +210,7 @@ public class List extends BaseItem implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -214,6 +219,7 @@ public class List extends BaseItem implements Parsable {
      * @param value Value to set for the drive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDrive(@javax.annotation.Nullable final Drive value) {
         this._drive = value;
     }
@@ -222,6 +228,7 @@ public class List extends BaseItem implements Parsable {
      * @param value Value to set for the items property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItems(@javax.annotation.Nullable final java.util.List<ListItem> value) {
         this._items = value;
     }
@@ -230,6 +237,7 @@ public class List extends BaseItem implements Parsable {
      * @param value Value to set for the list property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setList(@javax.annotation.Nullable final ListInfo value) {
         this._list = value;
     }
@@ -238,6 +246,7 @@ public class List extends BaseItem implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<RichLongRunningOperation> value) {
         this._operations = value;
     }
@@ -246,6 +255,7 @@ public class List extends BaseItem implements Parsable {
      * @param value Value to set for the sharepointIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharepointIds(@javax.annotation.Nullable final SharepointIds value) {
         this._sharepointIds = value;
     }
@@ -254,6 +264,7 @@ public class List extends BaseItem implements Parsable {
      * @param value Value to set for the subscriptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptions(@javax.annotation.Nullable final java.util.List<Subscription> value) {
         this._subscriptions = value;
     }
@@ -262,6 +273,7 @@ public class List extends BaseItem implements Parsable {
      * @param value Value to set for the system property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystem(@javax.annotation.Nullable final SystemFacet value) {
         this._system = value;
     }

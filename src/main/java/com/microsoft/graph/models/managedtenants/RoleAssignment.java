@@ -21,9 +21,9 @@ public class RoleAssignment implements AdditionalDataHolder, Parsable {
      * Instantiates a new roleAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RoleAssignment() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.managedTenants.roleAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,12 +57,11 @@ public class RoleAssignment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RoleAssignment currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("assignmentType", (n) -> { currentObject.setAssignmentType(n.getEnumValue(DelegatedPrivilegeStatus.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfObjectValues(RoleDefinition::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("assignmentType", (n) -> { this.setAssignmentType(n.getEnumValue(DelegatedPrivilegeStatus.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("roles", (n) -> { this.setRoles(n.getCollectionOfObjectValues(RoleDefinition::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -85,6 +84,7 @@ public class RoleAssignment implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("assignmentType", this.getAssignmentType());
@@ -97,6 +97,7 @@ public class RoleAssignment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class RoleAssignment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the assignmentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentType(@javax.annotation.Nullable final DelegatedPrivilegeStatus value) {
         this._assignmentType = value;
     }
@@ -113,6 +115,7 @@ public class RoleAssignment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +124,7 @@ public class RoleAssignment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the roles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoles(@javax.annotation.Nullable final java.util.List<RoleDefinition> value) {
         this._roles = value;
     }

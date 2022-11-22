@@ -26,9 +26,9 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      * Instantiates a new recentNotebook and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RecentNotebook() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.recentNotebook");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,14 +62,13 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RecentNotebook currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastAccessedTime", (n) -> { currentObject.setLastAccessedTime(n.getOffsetDateTimeValue()); });
-            this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(RecentNotebookLinks::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sourceService", (n) -> { currentObject.setSourceService(n.getEnumValue(OnenoteSourceService.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastAccessedTime", (n) -> { this.setLastAccessedTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("links", (n) -> { this.setLinks(n.getObjectValue(RecentNotebookLinks::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sourceService", (n) -> { this.setSourceService(n.getEnumValue(OnenoteSourceService.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastAccessedTime property value. The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -108,6 +107,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -122,6 +122,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +131,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -138,6 +140,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastAccessedTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastAccessedTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastAccessedTime = value;
     }
@@ -146,6 +149,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the links property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLinks(@javax.annotation.Nullable final RecentNotebookLinks value) {
         this._links = value;
     }
@@ -154,6 +158,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -162,6 +167,7 @@ public class RecentNotebook implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sourceService property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceService(@javax.annotation.Nullable final OnenoteSourceService value) {
         this._sourceService = value;
     }

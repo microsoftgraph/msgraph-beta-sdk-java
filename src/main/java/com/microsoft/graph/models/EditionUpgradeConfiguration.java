@@ -22,6 +22,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * Instantiates a new EditionUpgradeConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EditionUpgradeConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.editionUpgradeConfiguration");
@@ -42,14 +43,13 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EditionUpgradeConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("license", (n) -> { currentObject.setLicense(n.getStringValue()); });
-            this.put("licenseType", (n) -> { currentObject.setLicenseType(n.getEnumValue(EditionUpgradeLicenseType.class)); });
-            this.put("productKey", (n) -> { currentObject.setProductKey(n.getStringValue()); });
-            this.put("targetEdition", (n) -> { currentObject.setTargetEdition(n.getEnumValue(Windows10EditionType.class)); });
-            this.put("windowsSMode", (n) -> { currentObject.setWindowsSMode(n.getEnumValue(WindowsSModeConfiguration.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("license", (n) -> { this.setLicense(n.getStringValue()); });
+        deserializerMap.put("licenseType", (n) -> { this.setLicenseType(n.getEnumValue(EditionUpgradeLicenseType.class)); });
+        deserializerMap.put("productKey", (n) -> { this.setProductKey(n.getStringValue()); });
+        deserializerMap.put("targetEdition", (n) -> { this.setTargetEdition(n.getEnumValue(Windows10EditionType.class)); });
+        deserializerMap.put("windowsSMode", (n) -> { this.setWindowsSMode(n.getEnumValue(WindowsSModeConfiguration.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the license property value. Edition Upgrade License File Content.
@@ -96,6 +96,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +111,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the license property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicense(@javax.annotation.Nullable final String value) {
         this._license = value;
     }
@@ -118,6 +120,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the licenseType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicenseType(@javax.annotation.Nullable final EditionUpgradeLicenseType value) {
         this._licenseType = value;
     }
@@ -126,6 +129,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the productKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductKey(@javax.annotation.Nullable final String value) {
         this._productKey = value;
     }
@@ -134,6 +138,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the targetEdition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetEdition(@javax.annotation.Nullable final Windows10EditionType value) {
         this._targetEdition = value;
     }
@@ -142,6 +147,7 @@ public class EditionUpgradeConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the windowsSMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsSMode(@javax.annotation.Nullable final WindowsSModeConfiguration value) {
         this._windowsSMode = value;
     }

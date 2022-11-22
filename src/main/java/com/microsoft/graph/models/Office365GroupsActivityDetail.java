@@ -51,9 +51,9 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * Instantiates a new Office365GroupsActivityDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Office365GroupsActivityDetail() {
         super();
-        this.setOdataType("#microsoft.graph.office365GroupsActivityDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -103,28 +103,27 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Office365GroupsActivityDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("exchangeMailboxStorageUsedInBytes", (n) -> { currentObject.setExchangeMailboxStorageUsedInBytes(n.getLongValue()); });
-            this.put("exchangeMailboxTotalItemCount", (n) -> { currentObject.setExchangeMailboxTotalItemCount(n.getLongValue()); });
-            this.put("exchangeReceivedEmailCount", (n) -> { currentObject.setExchangeReceivedEmailCount(n.getLongValue()); });
-            this.put("externalMemberCount", (n) -> { currentObject.setExternalMemberCount(n.getLongValue()); });
-            this.put("groupDisplayName", (n) -> { currentObject.setGroupDisplayName(n.getStringValue()); });
-            this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
-            this.put("groupType", (n) -> { currentObject.setGroupType(n.getStringValue()); });
-            this.put("isDeleted", (n) -> { currentObject.setIsDeleted(n.getBooleanValue()); });
-            this.put("lastActivityDate", (n) -> { currentObject.setLastActivityDate(n.getLocalDateValue()); });
-            this.put("memberCount", (n) -> { currentObject.setMemberCount(n.getLongValue()); });
-            this.put("ownerPrincipalName", (n) -> { currentObject.setOwnerPrincipalName(n.getStringValue()); });
-            this.put("reportPeriod", (n) -> { currentObject.setReportPeriod(n.getStringValue()); });
-            this.put("reportRefreshDate", (n) -> { currentObject.setReportRefreshDate(n.getLocalDateValue()); });
-            this.put("sharePointActiveFileCount", (n) -> { currentObject.setSharePointActiveFileCount(n.getLongValue()); });
-            this.put("sharePointSiteStorageUsedInBytes", (n) -> { currentObject.setSharePointSiteStorageUsedInBytes(n.getLongValue()); });
-            this.put("sharePointTotalFileCount", (n) -> { currentObject.setSharePointTotalFileCount(n.getLongValue()); });
-            this.put("yammerLikedMessageCount", (n) -> { currentObject.setYammerLikedMessageCount(n.getLongValue()); });
-            this.put("yammerPostedMessageCount", (n) -> { currentObject.setYammerPostedMessageCount(n.getLongValue()); });
-            this.put("yammerReadMessageCount", (n) -> { currentObject.setYammerReadMessageCount(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("exchangeMailboxStorageUsedInBytes", (n) -> { this.setExchangeMailboxStorageUsedInBytes(n.getLongValue()); });
+        deserializerMap.put("exchangeMailboxTotalItemCount", (n) -> { this.setExchangeMailboxTotalItemCount(n.getLongValue()); });
+        deserializerMap.put("exchangeReceivedEmailCount", (n) -> { this.setExchangeReceivedEmailCount(n.getLongValue()); });
+        deserializerMap.put("externalMemberCount", (n) -> { this.setExternalMemberCount(n.getLongValue()); });
+        deserializerMap.put("groupDisplayName", (n) -> { this.setGroupDisplayName(n.getStringValue()); });
+        deserializerMap.put("groupId", (n) -> { this.setGroupId(n.getStringValue()); });
+        deserializerMap.put("groupType", (n) -> { this.setGroupType(n.getStringValue()); });
+        deserializerMap.put("isDeleted", (n) -> { this.setIsDeleted(n.getBooleanValue()); });
+        deserializerMap.put("lastActivityDate", (n) -> { this.setLastActivityDate(n.getLocalDateValue()); });
+        deserializerMap.put("memberCount", (n) -> { this.setMemberCount(n.getLongValue()); });
+        deserializerMap.put("ownerPrincipalName", (n) -> { this.setOwnerPrincipalName(n.getStringValue()); });
+        deserializerMap.put("reportPeriod", (n) -> { this.setReportPeriod(n.getStringValue()); });
+        deserializerMap.put("reportRefreshDate", (n) -> { this.setReportRefreshDate(n.getLocalDateValue()); });
+        deserializerMap.put("sharePointActiveFileCount", (n) -> { this.setSharePointActiveFileCount(n.getLongValue()); });
+        deserializerMap.put("sharePointSiteStorageUsedInBytes", (n) -> { this.setSharePointSiteStorageUsedInBytes(n.getLongValue()); });
+        deserializerMap.put("sharePointTotalFileCount", (n) -> { this.setSharePointTotalFileCount(n.getLongValue()); });
+        deserializerMap.put("yammerLikedMessageCount", (n) -> { this.setYammerLikedMessageCount(n.getLongValue()); });
+        deserializerMap.put("yammerPostedMessageCount", (n) -> { this.setYammerPostedMessageCount(n.getLongValue()); });
+        deserializerMap.put("yammerReadMessageCount", (n) -> { this.setYammerReadMessageCount(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupDisplayName property value. The display name of the group.
@@ -251,6 +250,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -279,6 +279,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the exchangeMailboxStorageUsedInBytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchangeMailboxStorageUsedInBytes(@javax.annotation.Nullable final Long value) {
         this._exchangeMailboxStorageUsedInBytes = value;
     }
@@ -287,6 +288,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the exchangeMailboxTotalItemCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchangeMailboxTotalItemCount(@javax.annotation.Nullable final Long value) {
         this._exchangeMailboxTotalItemCount = value;
     }
@@ -295,6 +297,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the exchangeReceivedEmailCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchangeReceivedEmailCount(@javax.annotation.Nullable final Long value) {
         this._exchangeReceivedEmailCount = value;
     }
@@ -303,6 +306,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the externalMemberCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalMemberCount(@javax.annotation.Nullable final Long value) {
         this._externalMemberCount = value;
     }
@@ -311,6 +315,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the groupDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupDisplayName(@javax.annotation.Nullable final String value) {
         this._groupDisplayName = value;
     }
@@ -319,6 +324,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the groupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupId(@javax.annotation.Nullable final String value) {
         this._groupId = value;
     }
@@ -327,6 +333,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the groupType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupType(@javax.annotation.Nullable final String value) {
         this._groupType = value;
     }
@@ -335,6 +342,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the isDeleted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDeleted(@javax.annotation.Nullable final Boolean value) {
         this._isDeleted = value;
     }
@@ -343,6 +351,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the lastActivityDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActivityDate(@javax.annotation.Nullable final LocalDate value) {
         this._lastActivityDate = value;
     }
@@ -351,6 +360,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the memberCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberCount(@javax.annotation.Nullable final Long value) {
         this._memberCount = value;
     }
@@ -359,6 +369,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the ownerPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnerPrincipalName(@javax.annotation.Nullable final String value) {
         this._ownerPrincipalName = value;
     }
@@ -367,6 +378,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the reportPeriod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportPeriod(@javax.annotation.Nullable final String value) {
         this._reportPeriod = value;
     }
@@ -375,6 +387,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the reportRefreshDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportRefreshDate(@javax.annotation.Nullable final LocalDate value) {
         this._reportRefreshDate = value;
     }
@@ -383,6 +396,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the sharePointActiveFileCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharePointActiveFileCount(@javax.annotation.Nullable final Long value) {
         this._sharePointActiveFileCount = value;
     }
@@ -391,6 +405,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the sharePointSiteStorageUsedInBytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharePointSiteStorageUsedInBytes(@javax.annotation.Nullable final Long value) {
         this._sharePointSiteStorageUsedInBytes = value;
     }
@@ -399,6 +414,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the sharePointTotalFileCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharePointTotalFileCount(@javax.annotation.Nullable final Long value) {
         this._sharePointTotalFileCount = value;
     }
@@ -407,6 +423,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the yammerLikedMessageCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setYammerLikedMessageCount(@javax.annotation.Nullable final Long value) {
         this._yammerLikedMessageCount = value;
     }
@@ -415,6 +432,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the yammerPostedMessageCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setYammerPostedMessageCount(@javax.annotation.Nullable final Long value) {
         this._yammerPostedMessageCount = value;
     }
@@ -423,6 +441,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
      * @param value Value to set for the yammerReadMessageCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setYammerReadMessageCount(@javax.annotation.Nullable final Long value) {
         this._yammerReadMessageCount = value;
     }

@@ -14,9 +14,9 @@ public class ImportedAppleDeviceIdentityResult extends ImportedAppleDeviceIdenti
      * Instantiates a new ImportedAppleDeviceIdentityResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ImportedAppleDeviceIdentityResult() {
         super();
-        this.setOdataType("#microsoft.graph.importedAppleDeviceIdentityResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,10 +34,9 @@ public class ImportedAppleDeviceIdentityResult extends ImportedAppleDeviceIdenti
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ImportedAppleDeviceIdentityResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("status", (n) -> { currentObject.setStatus(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the status property value. Status of imported device identity
@@ -52,6 +51,7 @@ public class ImportedAppleDeviceIdentityResult extends ImportedAppleDeviceIdenti
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +62,7 @@ public class ImportedAppleDeviceIdentityResult extends ImportedAppleDeviceIdenti
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final Boolean value) {
         this._status = value;
     }

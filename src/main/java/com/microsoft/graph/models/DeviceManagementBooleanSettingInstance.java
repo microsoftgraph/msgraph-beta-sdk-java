@@ -14,6 +14,7 @@ public class DeviceManagementBooleanSettingInstance extends DeviceManagementSett
      * Instantiates a new DeviceManagementBooleanSettingInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementBooleanSettingInstance() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementBooleanSettingInstance");
@@ -34,10 +35,9 @@ public class DeviceManagementBooleanSettingInstance extends DeviceManagementSett
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementBooleanSettingInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("value", (n) -> { this.setValue(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The boolean value
@@ -52,6 +52,7 @@ public class DeviceManagementBooleanSettingInstance extends DeviceManagementSett
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class DeviceManagementBooleanSettingInstance extends DeviceManagementSett
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final Boolean value) {
         this._value = value;
     }

@@ -25,16 +25,16 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
     /** User logon ID. */
     private String _logonId;
     /** Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service. */
-    private java.util.List<String> _logonTypes;
+    private java.util.List<LogonType> _logonTypes;
     /** The OdataType property */
     private String _odataType;
     /**
      * Instantiates a new logonUser and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LogonUser() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.logonUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -84,17 +84,16 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LogonUser currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("accountDomain", (n) -> { currentObject.setAccountDomain(n.getStringValue()); });
-            this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
-            this.put("accountType", (n) -> { currentObject.setAccountType(n.getEnumValue(UserAccountSecurityType.class)); });
-            this.put("firstSeenDateTime", (n) -> { currentObject.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastSeenDateTime", (n) -> { currentObject.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("logonId", (n) -> { currentObject.setLogonId(n.getStringValue()); });
-            this.put("logonTypes", (n) -> { currentObject.setLogonTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("accountDomain", (n) -> { this.setAccountDomain(n.getStringValue()); });
+        deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
+        deserializerMap.put("accountType", (n) -> { this.setAccountType(n.getEnumValue(UserAccountSecurityType.class)); });
+        deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSeenDateTime", (n) -> { this.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("logonId", (n) -> { this.setLogonId(n.getStringValue()); });
+        deserializerMap.put("logonTypes", (n) -> { this.setLogonTypes(n.getCollectionOfEnumValues(LogonType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the firstSeenDateTime property value. DateTime at which the earliest logon by this user account occurred (provider-determined period). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -122,10 +121,10 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-     * @return a string
+     * @return a logonType
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getLogonTypes() {
+    public java.util.List<LogonType> getLogonTypes() {
         return this._logonTypes;
     }
     /**
@@ -141,6 +140,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("accountDomain", this.getAccountDomain());
@@ -149,7 +149,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
         writer.writeOffsetDateTimeValue("firstSeenDateTime", this.getFirstSeenDateTime());
         writer.writeOffsetDateTimeValue("lastSeenDateTime", this.getLastSeenDateTime());
         writer.writeStringValue("logonId", this.getLogonId());
-        writer.writeCollectionOfPrimitiveValues("logonTypes", this.getLogonTypes());
+        writer.writeCollectionOfEnumValues("logonTypes", this.getLogonTypes());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -158,6 +158,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accountDomain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountDomain(@javax.annotation.Nullable final String value) {
         this._accountDomain = value;
     }
@@ -166,6 +167,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountName(@javax.annotation.Nullable final String value) {
         this._accountName = value;
     }
@@ -174,6 +176,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accountType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountType(@javax.annotation.Nullable final UserAccountSecurityType value) {
         this._accountType = value;
     }
@@ -182,6 +185,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -190,6 +194,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the firstSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._firstSeenDateTime = value;
     }
@@ -198,6 +203,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSeenDateTime = value;
     }
@@ -206,6 +212,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the logonId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogonId(@javax.annotation.Nullable final String value) {
         this._logonId = value;
     }
@@ -214,7 +221,8 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the logonTypes property.
      * @return a void
      */
-    public void setLogonTypes(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setLogonTypes(@javax.annotation.Nullable final java.util.List<LogonType> value) {
         this._logonTypes = value;
     }
     /**
@@ -222,6 +230,7 @@ public class LogonUser implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

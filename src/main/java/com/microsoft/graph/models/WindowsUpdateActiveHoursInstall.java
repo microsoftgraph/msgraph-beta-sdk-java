@@ -17,6 +17,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      * Instantiates a new WindowsUpdateActiveHoursInstall and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsUpdateActiveHoursInstall() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdateActiveHoursInstall");
@@ -53,17 +54,17 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsUpdateActiveHoursInstall currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeHoursEnd", (n) -> { currentObject.setActiveHoursEnd(n.getLocalTimeValue()); });
-            this.put("activeHoursStart", (n) -> { currentObject.setActiveHoursStart(n.getLocalTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeHoursEnd", (n) -> { this.setActiveHoursEnd(n.getLocalTimeValue()); });
+        deserializerMap.put("activeHoursStart", (n) -> { this.setActiveHoursStart(n.getLocalTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +76,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      * @param value Value to set for the activeHoursEnd property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveHoursEnd(@javax.annotation.Nullable final LocalTime value) {
         this._activeHoursEnd = value;
     }
@@ -83,6 +85,7 @@ public class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallSchedul
      * @param value Value to set for the activeHoursStart property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveHoursStart(@javax.annotation.Nullable final LocalTime value) {
         this._activeHoursStart = value;
     }

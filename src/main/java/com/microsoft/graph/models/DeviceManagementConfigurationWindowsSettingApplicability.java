@@ -19,11 +19,12 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
     /** AzureAD setting requirement */
     private Boolean _requiresAzureAd;
     /** List of Windows SKUs that the setting is applicable for */
-    private java.util.List<String> _windowsSkus;
+    private java.util.List<DeviceManagementConfigurationWindowsSkus> _windowsSkus;
     /**
      * Instantiates a new DeviceManagementConfigurationWindowsSettingApplicability and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationWindowsSettingApplicability() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability");
@@ -52,15 +53,14 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationWindowsSettingApplicability currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("configurationServiceProviderVersion", (n) -> { currentObject.setConfigurationServiceProviderVersion(n.getStringValue()); });
-            this.put("maximumSupportedVersion", (n) -> { currentObject.setMaximumSupportedVersion(n.getStringValue()); });
-            this.put("minimumSupportedVersion", (n) -> { currentObject.setMinimumSupportedVersion(n.getStringValue()); });
-            this.put("requiredAzureAdTrustType", (n) -> { currentObject.setRequiredAzureAdTrustType(n.getEnumValue(DeviceManagementConfigurationAzureAdTrustType.class)); });
-            this.put("requiresAzureAd", (n) -> { currentObject.setRequiresAzureAd(n.getBooleanValue()); });
-            this.put("windowsSkus", (n) -> { currentObject.setWindowsSkus(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("configurationServiceProviderVersion", (n) -> { this.setConfigurationServiceProviderVersion(n.getStringValue()); });
+        deserializerMap.put("maximumSupportedVersion", (n) -> { this.setMaximumSupportedVersion(n.getStringValue()); });
+        deserializerMap.put("minimumSupportedVersion", (n) -> { this.setMinimumSupportedVersion(n.getStringValue()); });
+        deserializerMap.put("requiredAzureAdTrustType", (n) -> { this.setRequiredAzureAdTrustType(n.getEnumValue(DeviceManagementConfigurationAzureAdTrustType.class)); });
+        deserializerMap.put("requiresAzureAd", (n) -> { this.setRequiresAzureAd(n.getBooleanValue()); });
+        deserializerMap.put("windowsSkus", (n) -> { this.setWindowsSkus(n.getCollectionOfEnumValues(DeviceManagementConfigurationWindowsSkus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the maximumSupportedVersion property value. Maximum supported version of Windows
@@ -96,10 +96,10 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
     }
     /**
      * Gets the windowsSkus property value. List of Windows SKUs that the setting is applicable for
-     * @return a string
+     * @return a deviceManagementConfigurationWindowsSkus
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getWindowsSkus() {
+    public java.util.List<DeviceManagementConfigurationWindowsSkus> getWindowsSkus() {
         return this._windowsSkus;
     }
     /**
@@ -107,6 +107,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -115,13 +116,14 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
         writer.writeStringValue("minimumSupportedVersion", this.getMinimumSupportedVersion());
         writer.writeEnumValue("requiredAzureAdTrustType", this.getRequiredAzureAdTrustType());
         writer.writeBooleanValue("requiresAzureAd", this.getRequiresAzureAd());
-        writer.writeCollectionOfPrimitiveValues("windowsSkus", this.getWindowsSkus());
+        writer.writeCollectionOfEnumValues("windowsSkus", this.getWindowsSkus());
     }
     /**
      * Sets the configurationServiceProviderVersion property value. Version of CSP setting is a part of
      * @param value Value to set for the configurationServiceProviderVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationServiceProviderVersion(@javax.annotation.Nullable final String value) {
         this._configurationServiceProviderVersion = value;
     }
@@ -130,6 +132,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * @param value Value to set for the maximumSupportedVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumSupportedVersion(@javax.annotation.Nullable final String value) {
         this._maximumSupportedVersion = value;
     }
@@ -138,6 +141,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * @param value Value to set for the minimumSupportedVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumSupportedVersion(@javax.annotation.Nullable final String value) {
         this._minimumSupportedVersion = value;
     }
@@ -146,6 +150,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * @param value Value to set for the requiredAzureAdTrustType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiredAzureAdTrustType(@javax.annotation.Nullable final DeviceManagementConfigurationAzureAdTrustType value) {
         this._requiredAzureAdTrustType = value;
     }
@@ -154,6 +159,7 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * @param value Value to set for the requiresAzureAd property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiresAzureAd(@javax.annotation.Nullable final Boolean value) {
         this._requiresAzureAd = value;
     }
@@ -162,7 +168,8 @@ public class DeviceManagementConfigurationWindowsSettingApplicability extends De
      * @param value Value to set for the windowsSkus property.
      * @return a void
      */
-    public void setWindowsSkus(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setWindowsSkus(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationWindowsSkus> value) {
         this._windowsSkus = value;
     }
 }

@@ -12,9 +12,9 @@ public class PurgeDataOperation extends CaseOperation implements Parsable {
      * Instantiates a new PurgeDataOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PurgeDataOperation() {
         super();
-        this.setOdataType("#microsoft.graph.ediscovery.purgeDataOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,15 +32,15 @@ public class PurgeDataOperation extends CaseOperation implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PurgeDataOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

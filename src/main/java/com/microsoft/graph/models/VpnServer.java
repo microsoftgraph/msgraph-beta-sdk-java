@@ -24,9 +24,9 @@ public class VpnServer implements AdditionalDataHolder, Parsable {
      * Instantiates a new vpnServer and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VpnServer() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.vpnServer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,13 +68,12 @@ public class VpnServer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final VpnServer currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("isDefaultServer", (n) -> { currentObject.setIsDefaultServer(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("address", (n) -> { this.setAddress(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("isDefaultServer", (n) -> { this.setIsDefaultServer(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefaultServer property value. Default server.
@@ -97,6 +96,7 @@ public class VpnServer implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("address", this.getAddress());
@@ -110,6 +110,7 @@ public class VpnServer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +119,7 @@ public class VpnServer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddress(@javax.annotation.Nullable final String value) {
         this._address = value;
     }
@@ -126,6 +128,7 @@ public class VpnServer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -134,6 +137,7 @@ public class VpnServer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isDefaultServer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefaultServer(@javax.annotation.Nullable final Boolean value) {
         this._isDefaultServer = value;
     }
@@ -142,6 +146,7 @@ public class VpnServer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

@@ -26,9 +26,9 @@ public class Shared implements AdditionalDataHolder, Parsable {
      * Instantiates a new shared and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Shared() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.shared");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,14 +54,13 @@ public class Shared implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Shared currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("owner", (n) -> { currentObject.setOwner(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("scope", (n) -> { currentObject.setScope(n.getStringValue()); });
-            this.put("sharedBy", (n) -> { currentObject.setSharedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("sharedDateTime", (n) -> { currentObject.setSharedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("owner", (n) -> { this.setOwner(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getStringValue()); });
+        deserializerMap.put("sharedBy", (n) -> { this.setSharedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharedDateTime", (n) -> { this.setSharedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -108,6 +107,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -122,6 +122,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +131,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -138,6 +140,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the owner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwner(@javax.annotation.Nullable final IdentitySet value) {
         this._owner = value;
     }
@@ -146,6 +149,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the scope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final String value) {
         this._scope = value;
     }
@@ -154,6 +158,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sharedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._sharedBy = value;
     }
@@ -162,6 +167,7 @@ public class Shared implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sharedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._sharedDateTime = value;
     }

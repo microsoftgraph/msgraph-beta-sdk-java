@@ -18,6 +18,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * Instantiates a new WindowsQualityUpdateCatalogItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsQualityUpdateCatalogItem() {
         super();
         this.setOdataType("#microsoft.graph.windowsQualityUpdateCatalogItem");
@@ -46,12 +47,11 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsQualityUpdateCatalogItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("classification", (n) -> { currentObject.setClassification(n.getEnumValue(WindowsQualityUpdateClassification.class)); });
-            this.put("isExpeditable", (n) -> { currentObject.setIsExpeditable(n.getBooleanValue()); });
-            this.put("kbArticleId", (n) -> { currentObject.setKbArticleId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(WindowsQualityUpdateClassification.class)); });
+        deserializerMap.put("isExpeditable", (n) -> { this.setIsExpeditable(n.getBooleanValue()); });
+        deserializerMap.put("kbArticleId", (n) -> { this.setKbArticleId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isExpeditable property value. Flag indicating if update qualifies for expedite
@@ -74,6 +74,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +87,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * @param value Value to set for the classification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassification(@javax.annotation.Nullable final WindowsQualityUpdateClassification value) {
         this._classification = value;
     }
@@ -94,6 +96,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * @param value Value to set for the isExpeditable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsExpeditable(@javax.annotation.Nullable final Boolean value) {
         this._isExpeditable = value;
     }
@@ -102,6 +105,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
      * @param value Value to set for the kbArticleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKbArticleId(@javax.annotation.Nullable final String value) {
         this._kbArticleId = value;
     }

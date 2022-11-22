@@ -16,6 +16,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      * Instantiates a new QualityUpdateCatalogEntry and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public QualityUpdateCatalogEntry() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.qualityUpdateCatalogEntry");
@@ -36,11 +37,10 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final QualityUpdateCatalogEntry currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("isExpeditable", (n) -> { currentObject.setIsExpeditable(n.getBooleanValue()); });
-            this.put("qualityUpdateClassification", (n) -> { currentObject.setQualityUpdateClassification(n.getEnumValue(QualityUpdateClassification.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isExpeditable", (n) -> { this.setIsExpeditable(n.getBooleanValue()); });
+        deserializerMap.put("qualityUpdateClassification", (n) -> { this.setQualityUpdateClassification(n.getEnumValue(QualityUpdateClassification.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isExpeditable property value. Indicates whether the content can be deployed as an expedited quality update. Read-only.
@@ -63,6 +63,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +75,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      * @param value Value to set for the isExpeditable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsExpeditable(@javax.annotation.Nullable final Boolean value) {
         this._isExpeditable = value;
     }
@@ -82,6 +84,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      * @param value Value to set for the qualityUpdateClassification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQualityUpdateClassification(@javax.annotation.Nullable final QualityUpdateClassification value) {
         this._qualityUpdateClassification = value;
     }

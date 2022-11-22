@@ -26,6 +26,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
      * Instantiates a new AddContentHeaderAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AddContentHeaderAction() {
         super();
         this.setOdataType("#microsoft.graph.addContentHeaderAction");
@@ -54,16 +55,15 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AddContentHeaderAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("alignment", (n) -> { currentObject.setAlignment(n.getEnumValue(ContentAlignment.class)); });
-            this.put("fontColor", (n) -> { currentObject.setFontColor(n.getStringValue()); });
-            this.put("fontName", (n) -> { currentObject.setFontName(n.getStringValue()); });
-            this.put("fontSize", (n) -> { currentObject.setFontSize(n.getIntegerValue()); });
-            this.put("margin", (n) -> { currentObject.setMargin(n.getIntegerValue()); });
-            this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
-            this.put("uiElementName", (n) -> { currentObject.setUiElementName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("alignment", (n) -> { this.setAlignment(n.getEnumValue(ContentAlignment.class)); });
+        deserializerMap.put("fontColor", (n) -> { this.setFontColor(n.getStringValue()); });
+        deserializerMap.put("fontName", (n) -> { this.setFontName(n.getStringValue()); });
+        deserializerMap.put("fontSize", (n) -> { this.setFontSize(n.getIntegerValue()); });
+        deserializerMap.put("margin", (n) -> { this.setMargin(n.getIntegerValue()); });
+        deserializerMap.put("text", (n) -> { this.setText(n.getStringValue()); });
+        deserializerMap.put("uiElementName", (n) -> { this.setUiElementName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fontColor property value. Color of the font to use for the header.
@@ -118,6 +118,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +135,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
      * @param value Value to set for the alignment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlignment(@javax.annotation.Nullable final ContentAlignment value) {
         this._alignment = value;
     }
@@ -142,6 +144,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
      * @param value Value to set for the fontColor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFontColor(@javax.annotation.Nullable final String value) {
         this._fontColor = value;
     }
@@ -150,6 +153,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
      * @param value Value to set for the fontName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFontName(@javax.annotation.Nullable final String value) {
         this._fontName = value;
     }
@@ -158,6 +162,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
      * @param value Value to set for the fontSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFontSize(@javax.annotation.Nullable final Integer value) {
         this._fontSize = value;
     }
@@ -166,6 +171,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
      * @param value Value to set for the margin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMargin(@javax.annotation.Nullable final Integer value) {
         this._margin = value;
     }
@@ -174,6 +180,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final String value) {
         this._text = value;
     }
@@ -182,6 +189,7 @@ public class AddContentHeaderAction extends InformationProtectionAction implemen
      * @param value Value to set for the uiElementName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUiElementName(@javax.annotation.Nullable final String value) {
         this._uiElementName = value;
     }

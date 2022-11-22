@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the commsApplication singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AudioRoutingGroup extends Entity implements Parsable {
     /** List of receiving participant ids. */
     private java.util.List<String> _receivers;
@@ -19,9 +19,9 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      * Instantiates a new audioRoutingGroup and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AudioRoutingGroup() {
         super();
-        this.setOdataType("#microsoft.graph.audioRoutingGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,12 +39,11 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AudioRoutingGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("receivers", (n) -> { currentObject.setReceivers(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("routingMode", (n) -> { currentObject.setRoutingMode(n.getEnumValue(RoutingMode.class)); });
-            this.put("sources", (n) -> { currentObject.setSources(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("receivers", (n) -> { this.setReceivers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("routingMode", (n) -> { this.setRoutingMode(n.getEnumValue(RoutingMode.class)); });
+        deserializerMap.put("sources", (n) -> { this.setSources(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the receivers property value. List of receiving participant ids.
@@ -75,6 +74,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +87,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      * @param value Value to set for the receivers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReceivers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._receivers = value;
     }
@@ -95,6 +96,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      * @param value Value to set for the routingMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoutingMode(@javax.annotation.Nullable final RoutingMode value) {
         this._routingMode = value;
     }
@@ -103,6 +105,7 @@ public class AudioRoutingGroup extends Entity implements Parsable {
      * @param value Value to set for the sources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSources(@javax.annotation.Nullable final java.util.List<String> value) {
         this._sources = value;
     }

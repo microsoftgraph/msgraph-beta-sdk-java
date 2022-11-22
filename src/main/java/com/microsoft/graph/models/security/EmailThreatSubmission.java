@@ -33,6 +33,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * Instantiates a new EmailThreatSubmission and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EmailThreatSubmission() {
         super();
         this.setOdataType("#microsoft.graph.security.emailThreatSubmission");
@@ -69,18 +70,17 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EmailThreatSubmission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("attackSimulationInfo", (n) -> { currentObject.setAttackSimulationInfo(n.getObjectValue(AttackSimulationInfo::createFromDiscriminatorValue)); });
-            this.put("internetMessageId", (n) -> { currentObject.setInternetMessageId(n.getStringValue()); });
-            this.put("originalCategory", (n) -> { currentObject.setOriginalCategory(n.getEnumValue(SubmissionCategory.class)); });
-            this.put("receivedDateTime", (n) -> { currentObject.setReceivedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("recipientEmailAddress", (n) -> { currentObject.setRecipientEmailAddress(n.getStringValue()); });
-            this.put("sender", (n) -> { currentObject.setSender(n.getStringValue()); });
-            this.put("senderIP", (n) -> { currentObject.setSenderIP(n.getStringValue()); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
-            this.put("tenantAllowOrBlockListAction", (n) -> { currentObject.setTenantAllowOrBlockListAction(n.getObjectValue(TenantAllowOrBlockListAction::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("attackSimulationInfo", (n) -> { this.setAttackSimulationInfo(n.getObjectValue(AttackSimulationInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("internetMessageId", (n) -> { this.setInternetMessageId(n.getStringValue()); });
+        deserializerMap.put("originalCategory", (n) -> { this.setOriginalCategory(n.getEnumValue(SubmissionCategory.class)); });
+        deserializerMap.put("receivedDateTime", (n) -> { this.setReceivedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("recipientEmailAddress", (n) -> { this.setRecipientEmailAddress(n.getStringValue()); });
+        deserializerMap.put("sender", (n) -> { this.setSender(n.getStringValue()); });
+        deserializerMap.put("senderIP", (n) -> { this.setSenderIP(n.getStringValue()); });
+        deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
+        deserializerMap.put("tenantAllowOrBlockListAction", (n) -> { this.setTenantAllowOrBlockListAction(n.getObjectValue(TenantAllowOrBlockListAction::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the internetMessageId property value. Specifies the internet message id of the email being submitted. This information is present in the email header.
@@ -151,6 +151,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -169,6 +170,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * @param value Value to set for the attackSimulationInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttackSimulationInfo(@javax.annotation.Nullable final AttackSimulationInfo value) {
         this._attackSimulationInfo = value;
     }
@@ -177,6 +179,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * @param value Value to set for the internetMessageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInternetMessageId(@javax.annotation.Nullable final String value) {
         this._internetMessageId = value;
     }
@@ -185,6 +188,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * @param value Value to set for the originalCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginalCategory(@javax.annotation.Nullable final SubmissionCategory value) {
         this._originalCategory = value;
     }
@@ -193,6 +197,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * @param value Value to set for the receivedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReceivedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._receivedDateTime = value;
     }
@@ -201,6 +206,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * @param value Value to set for the recipientEmailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipientEmailAddress(@javax.annotation.Nullable final String value) {
         this._recipientEmailAddress = value;
     }
@@ -209,6 +215,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * @param value Value to set for the sender property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSender(@javax.annotation.Nullable final String value) {
         this._sender = value;
     }
@@ -217,6 +224,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * @param value Value to set for the senderIP property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSenderIP(@javax.annotation.Nullable final String value) {
         this._senderIP = value;
     }
@@ -225,6 +233,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
         this._subject = value;
     }
@@ -233,6 +242,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * @param value Value to set for the tenantAllowOrBlockListAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantAllowOrBlockListAction(@javax.annotation.Nullable final TenantAllowOrBlockListAction value) {
         this._tenantAllowOrBlockListAction = value;
     }

@@ -56,6 +56,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * Instantiates a new AndroidDeviceOwnerCompliancePolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerCompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerCompliancePolicy");
@@ -100,31 +101,30 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidDeviceOwnerCompliancePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("advancedThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setAdvancedThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
-            this.put("deviceThreatProtectionEnabled", (n) -> { currentObject.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
-            this.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
-            this.put("minAndroidSecurityPatchLevel", (n) -> { currentObject.setMinAndroidSecurityPatchLevel(n.getStringValue()); });
-            this.put("osMaximumVersion", (n) -> { currentObject.setOsMaximumVersion(n.getStringValue()); });
-            this.put("osMinimumVersion", (n) -> { currentObject.setOsMinimumVersion(n.getStringValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinimumLetterCharacters", (n) -> { currentObject.setPasswordMinimumLetterCharacters(n.getIntegerValue()); });
-            this.put("passwordMinimumLowerCaseCharacters", (n) -> { currentObject.setPasswordMinimumLowerCaseCharacters(n.getIntegerValue()); });
-            this.put("passwordMinimumNonLetterCharacters", (n) -> { currentObject.setPasswordMinimumNonLetterCharacters(n.getIntegerValue()); });
-            this.put("passwordMinimumNumericCharacters", (n) -> { currentObject.setPasswordMinimumNumericCharacters(n.getIntegerValue()); });
-            this.put("passwordMinimumSymbolCharacters", (n) -> { currentObject.setPasswordMinimumSymbolCharacters(n.getIntegerValue()); });
-            this.put("passwordMinimumUpperCaseCharacters", (n) -> { currentObject.setPasswordMinimumUpperCaseCharacters(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeLock", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordCountToBlock", (n) -> { currentObject.setPasswordPreviousPasswordCountToBlock(n.getIntegerValue()); });
-            this.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(AndroidDeviceOwnerRequiredPasswordType.class)); });
-            this.put("securityRequireIntuneAppIntegrity", (n) -> { currentObject.setSecurityRequireIntuneAppIntegrity(n.getBooleanValue()); });
-            this.put("securityRequireSafetyNetAttestationBasicIntegrity", (n) -> { currentObject.setSecurityRequireSafetyNetAttestationBasicIntegrity(n.getBooleanValue()); });
-            this.put("securityRequireSafetyNetAttestationCertifiedDevice", (n) -> { currentObject.setSecurityRequireSafetyNetAttestationCertifiedDevice(n.getBooleanValue()); });
-            this.put("storageRequireEncryption", (n) -> { currentObject.setStorageRequireEncryption(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("advancedThreatProtectionRequiredSecurityLevel", (n) -> { this.setAdvancedThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
+        deserializerMap.put("deviceThreatProtectionEnabled", (n) -> { this.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { this.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
+        deserializerMap.put("minAndroidSecurityPatchLevel", (n) -> { this.setMinAndroidSecurityPatchLevel(n.getStringValue()); });
+        deserializerMap.put("osMaximumVersion", (n) -> { this.setOsMaximumVersion(n.getStringValue()); });
+        deserializerMap.put("osMinimumVersion", (n) -> { this.setOsMinimumVersion(n.getStringValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { this.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { this.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLetterCharacters", (n) -> { this.setPasswordMinimumLetterCharacters(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLowerCaseCharacters", (n) -> { this.setPasswordMinimumLowerCaseCharacters(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumNonLetterCharacters", (n) -> { this.setPasswordMinimumNonLetterCharacters(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumNumericCharacters", (n) -> { this.setPasswordMinimumNumericCharacters(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumSymbolCharacters", (n) -> { this.setPasswordMinimumSymbolCharacters(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumUpperCaseCharacters", (n) -> { this.setPasswordMinimumUpperCaseCharacters(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeLock", (n) -> { this.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordCountToBlock", (n) -> { this.setPasswordPreviousPasswordCountToBlock(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequired", (n) -> { this.setPasswordRequired(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(AndroidDeviceOwnerRequiredPasswordType.class)); });
+        deserializerMap.put("securityRequireIntuneAppIntegrity", (n) -> { this.setSecurityRequireIntuneAppIntegrity(n.getBooleanValue()); });
+        deserializerMap.put("securityRequireSafetyNetAttestationBasicIntegrity", (n) -> { this.setSecurityRequireSafetyNetAttestationBasicIntegrity(n.getBooleanValue()); });
+        deserializerMap.put("securityRequireSafetyNetAttestationCertifiedDevice", (n) -> { this.setSecurityRequireSafetyNetAttestationCertifiedDevice(n.getBooleanValue()); });
+        deserializerMap.put("storageRequireEncryption", (n) -> { this.setStorageRequireEncryption(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the minAndroidSecurityPatchLevel property value. Minimum Android security patch level.
@@ -283,6 +283,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -314,6 +315,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the advancedThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
         this._advancedThreatProtectionRequiredSecurityLevel = value;
     }
@@ -322,6 +324,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the deviceThreatProtectionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceThreatProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._deviceThreatProtectionEnabled = value;
     }
@@ -330,6 +333,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
         this._deviceThreatProtectionRequiredSecurityLevel = value;
     }
@@ -338,6 +342,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the minAndroidSecurityPatchLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinAndroidSecurityPatchLevel(@javax.annotation.Nullable final String value) {
         this._minAndroidSecurityPatchLevel = value;
     }
@@ -346,6 +351,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the osMaximumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
         this._osMaximumVersion = value;
     }
@@ -354,6 +360,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the osMinimumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
         this._osMinimumVersion = value;
     }
@@ -362,6 +369,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -370,6 +378,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -378,6 +387,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordMinimumLetterCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLetterCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLetterCharacters = value;
     }
@@ -386,6 +396,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordMinimumLowerCaseCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLowerCaseCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLowerCaseCharacters = value;
     }
@@ -394,6 +405,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordMinimumNonLetterCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumNonLetterCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumNonLetterCharacters = value;
     }
@@ -402,6 +414,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordMinimumNumericCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumNumericCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumNumericCharacters = value;
     }
@@ -410,6 +423,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordMinimumSymbolCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumSymbolCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumSymbolCharacters = value;
     }
@@ -418,6 +432,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordMinimumUpperCaseCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumUpperCaseCharacters(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumUpperCaseCharacters = value;
     }
@@ -426,6 +441,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeLock = value;
     }
@@ -434,6 +450,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordPreviousPasswordCountToBlock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordCountToBlock(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordCountToBlock = value;
     }
@@ -442,6 +459,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequired = value;
     }
@@ -450,6 +468,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -458,6 +477,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the securityRequireIntuneAppIntegrity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireIntuneAppIntegrity(@javax.annotation.Nullable final Boolean value) {
         this._securityRequireIntuneAppIntegrity = value;
     }
@@ -466,6 +486,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the securityRequireSafetyNetAttestationBasicIntegrity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireSafetyNetAttestationBasicIntegrity(@javax.annotation.Nullable final Boolean value) {
         this._securityRequireSafetyNetAttestationBasicIntegrity = value;
     }
@@ -474,6 +495,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the securityRequireSafetyNetAttestationCertifiedDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityRequireSafetyNetAttestationCertifiedDevice(@javax.annotation.Nullable final Boolean value) {
         this._securityRequireSafetyNetAttestationCertifiedDevice = value;
     }
@@ -482,6 +504,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
      * @param value Value to set for the storageRequireEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRequireEncryption(@javax.annotation.Nullable final Boolean value) {
         this._storageRequireEncryption = value;
     }

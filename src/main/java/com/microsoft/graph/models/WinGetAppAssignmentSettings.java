@@ -18,6 +18,7 @@ public class WinGetAppAssignmentSettings extends MobileAppAssignmentSettings imp
      * Instantiates a new WinGetAppAssignmentSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WinGetAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.winGetAppAssignmentSettings");
@@ -38,12 +39,11 @@ public class WinGetAppAssignmentSettings extends MobileAppAssignmentSettings imp
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WinGetAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("installTimeSettings", (n) -> { currentObject.setInstallTimeSettings(n.getObjectValue(WinGetAppInstallTimeSettings::createFromDiscriminatorValue)); });
-            this.put("notifications", (n) -> { currentObject.setNotifications(n.getEnumValue(WinGetAppNotification.class)); });
-            this.put("restartSettings", (n) -> { currentObject.setRestartSettings(n.getObjectValue(WinGetAppRestartSettings::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("installTimeSettings", (n) -> { this.setInstallTimeSettings(n.getObjectValue(WinGetAppInstallTimeSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("notifications", (n) -> { this.setNotifications(n.getEnumValue(WinGetAppNotification.class)); });
+        deserializerMap.put("restartSettings", (n) -> { this.setRestartSettings(n.getObjectValue(WinGetAppRestartSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the installTimeSettings property value. The install time settings to apply for this app assignment.
@@ -74,6 +74,7 @@ public class WinGetAppAssignmentSettings extends MobileAppAssignmentSettings imp
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +87,7 @@ public class WinGetAppAssignmentSettings extends MobileAppAssignmentSettings imp
      * @param value Value to set for the installTimeSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallTimeSettings(@javax.annotation.Nullable final WinGetAppInstallTimeSettings value) {
         this._installTimeSettings = value;
     }
@@ -94,6 +96,7 @@ public class WinGetAppAssignmentSettings extends MobileAppAssignmentSettings imp
      * @param value Value to set for the notifications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotifications(@javax.annotation.Nullable final WinGetAppNotification value) {
         this._notifications = value;
     }
@@ -102,6 +105,7 @@ public class WinGetAppAssignmentSettings extends MobileAppAssignmentSettings imp
      * @param value Value to set for the restartSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestartSettings(@javax.annotation.Nullable final WinGetAppRestartSettings value) {
         this._restartSettings = value;
     }

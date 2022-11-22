@@ -37,9 +37,9 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * Instantiates a new teamworkDeviceConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkDeviceConfiguration() {
         super();
-        this.setOdataType("#microsoft.graph.teamworkDeviceConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -89,21 +89,20 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamworkDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("cameraConfiguration", (n) -> { currentObject.setCameraConfiguration(n.getObjectValue(TeamworkCameraConfiguration::createFromDiscriminatorValue)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayConfiguration", (n) -> { currentObject.setDisplayConfiguration(n.getObjectValue(TeamworkDisplayConfiguration::createFromDiscriminatorValue)); });
-            this.put("hardwareConfiguration", (n) -> { currentObject.setHardwareConfiguration(n.getObjectValue(TeamworkHardwareConfiguration::createFromDiscriminatorValue)); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("microphoneConfiguration", (n) -> { currentObject.setMicrophoneConfiguration(n.getObjectValue(TeamworkMicrophoneConfiguration::createFromDiscriminatorValue)); });
-            this.put("softwareVersions", (n) -> { currentObject.setSoftwareVersions(n.getObjectValue(TeamworkDeviceSoftwareVersions::createFromDiscriminatorValue)); });
-            this.put("speakerConfiguration", (n) -> { currentObject.setSpeakerConfiguration(n.getObjectValue(TeamworkSpeakerConfiguration::createFromDiscriminatorValue)); });
-            this.put("systemConfiguration", (n) -> { currentObject.setSystemConfiguration(n.getObjectValue(TeamworkSystemConfiguration::createFromDiscriminatorValue)); });
-            this.put("teamsClientConfiguration", (n) -> { currentObject.setTeamsClientConfiguration(n.getObjectValue(TeamworkTeamsClientConfiguration::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("cameraConfiguration", (n) -> { this.setCameraConfiguration(n.getObjectValue(TeamworkCameraConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayConfiguration", (n) -> { this.setDisplayConfiguration(n.getObjectValue(TeamworkDisplayConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("hardwareConfiguration", (n) -> { this.setHardwareConfiguration(n.getObjectValue(TeamworkHardwareConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("microphoneConfiguration", (n) -> { this.setMicrophoneConfiguration(n.getObjectValue(TeamworkMicrophoneConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("softwareVersions", (n) -> { this.setSoftwareVersions(n.getObjectValue(TeamworkDeviceSoftwareVersions::createFromDiscriminatorValue)); });
+        deserializerMap.put("speakerConfiguration", (n) -> { this.setSpeakerConfiguration(n.getObjectValue(TeamworkSpeakerConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("systemConfiguration", (n) -> { this.setSystemConfiguration(n.getObjectValue(TeamworkSystemConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("teamsClientConfiguration", (n) -> { this.setTeamsClientConfiguration(n.getObjectValue(TeamworkTeamsClientConfiguration::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the hardwareConfiguration property value. The hardware configuration. Applicable only for Teams Rooms-enabled devices.
@@ -174,6 +173,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -195,6 +195,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the cameraConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCameraConfiguration(@javax.annotation.Nullable final TeamworkCameraConfiguration value) {
         this._cameraConfiguration = value;
     }
@@ -203,6 +204,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -211,6 +213,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -219,6 +222,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the displayConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayConfiguration(@javax.annotation.Nullable final TeamworkDisplayConfiguration value) {
         this._displayConfiguration = value;
     }
@@ -227,6 +231,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the hardwareConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHardwareConfiguration(@javax.annotation.Nullable final TeamworkHardwareConfiguration value) {
         this._hardwareConfiguration = value;
     }
@@ -235,6 +240,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -243,6 +249,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -251,6 +258,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the microphoneConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrophoneConfiguration(@javax.annotation.Nullable final TeamworkMicrophoneConfiguration value) {
         this._microphoneConfiguration = value;
     }
@@ -259,6 +267,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the softwareVersions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareVersions(@javax.annotation.Nullable final TeamworkDeviceSoftwareVersions value) {
         this._softwareVersions = value;
     }
@@ -267,6 +276,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the speakerConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpeakerConfiguration(@javax.annotation.Nullable final TeamworkSpeakerConfiguration value) {
         this._speakerConfiguration = value;
     }
@@ -275,6 +285,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the systemConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemConfiguration(@javax.annotation.Nullable final TeamworkSystemConfiguration value) {
         this._systemConfiguration = value;
     }
@@ -283,6 +294,7 @@ public class TeamworkDeviceConfiguration extends Entity implements Parsable {
      * @param value Value to set for the teamsClientConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsClientConfiguration(@javax.annotation.Nullable final TeamworkTeamsClientConfiguration value) {
         this._teamsClientConfiguration = value;
     }

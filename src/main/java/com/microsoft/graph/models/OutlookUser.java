@@ -17,17 +17,17 @@ public class OutlookUser extends Entity implements Parsable {
     /** The tasks property */
     private java.util.List<OutlookTask> _tasks;
     /**
-     * Instantiates a new OutlookUser and sets the default values.
+     * Instantiates a new outlookUser and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OutlookUser() {
         super();
-        this.setOdataType("#microsoft.graph.outlookUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OutlookUser
+     * @return a outlookUser
      */
     @javax.annotation.Nonnull
     public static OutlookUser createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -40,13 +40,12 @@ public class OutlookUser extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OutlookUser currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("masterCategories", (n) -> { currentObject.setMasterCategories(n.getCollectionOfObjectValues(OutlookCategory::createFromDiscriminatorValue)); });
-            this.put("taskFolders", (n) -> { currentObject.setTaskFolders(n.getCollectionOfObjectValues(OutlookTaskFolder::createFromDiscriminatorValue)); });
-            this.put("taskGroups", (n) -> { currentObject.setTaskGroups(n.getCollectionOfObjectValues(OutlookTaskGroup::createFromDiscriminatorValue)); });
-            this.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(OutlookTask::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("masterCategories", (n) -> { this.setMasterCategories(n.getCollectionOfObjectValues(OutlookCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("taskFolders", (n) -> { this.setTaskFolders(n.getCollectionOfObjectValues(OutlookTaskFolder::createFromDiscriminatorValue)); });
+        deserializerMap.put("taskGroups", (n) -> { this.setTaskGroups(n.getCollectionOfObjectValues(OutlookTaskGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(OutlookTask::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the masterCategories property value. A list of categories defined for the user.
@@ -85,6 +84,7 @@ public class OutlookUser extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +98,7 @@ public class OutlookUser extends Entity implements Parsable {
      * @param value Value to set for the masterCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMasterCategories(@javax.annotation.Nullable final java.util.List<OutlookCategory> value) {
         this._masterCategories = value;
     }
@@ -106,6 +107,7 @@ public class OutlookUser extends Entity implements Parsable {
      * @param value Value to set for the taskFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaskFolders(@javax.annotation.Nullable final java.util.List<OutlookTaskFolder> value) {
         this._taskFolders = value;
     }
@@ -114,6 +116,7 @@ public class OutlookUser extends Entity implements Parsable {
      * @param value Value to set for the taskGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaskGroups(@javax.annotation.Nullable final java.util.List<OutlookTaskGroup> value) {
         this._taskGroups = value;
     }
@@ -122,6 +125,7 @@ public class OutlookUser extends Entity implements Parsable {
      * @param value Value to set for the tasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTasks(@javax.annotation.Nullable final java.util.List<OutlookTask> value) {
         this._tasks = value;
     }

@@ -14,6 +14,7 @@ public class AzureADDeviceRegistrationError extends UpdatableAssetError implemen
      * Instantiates a new AzureADDeviceRegistrationError and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AzureADDeviceRegistrationError() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.azureADDeviceRegistrationError");
@@ -34,10 +35,9 @@ public class AzureADDeviceRegistrationError extends UpdatableAssetError implemen
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AzureADDeviceRegistrationError currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("reason", (n) -> { currentObject.setReason(n.getEnumValue(AzureADDeviceRegistrationErrorReason.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("reason", (n) -> { this.setReason(n.getEnumValue(AzureADDeviceRegistrationErrorReason.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the reason property value. The reason property
@@ -52,6 +52,7 @@ public class AzureADDeviceRegistrationError extends UpdatableAssetError implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class AzureADDeviceRegistrationError extends UpdatableAssetError implemen
      * @param value Value to set for the reason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReason(@javax.annotation.Nullable final AzureADDeviceRegistrationErrorReason value) {
         this._reason = value;
     }

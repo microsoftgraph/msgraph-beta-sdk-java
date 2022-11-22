@@ -21,9 +21,9 @@ public class PasswordSingleSignOnCredentialSet implements AdditionalDataHolder, 
      * Instantiates a new passwordSingleSignOnCredentialSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PasswordSingleSignOnCredentialSet() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.passwordSingleSignOnCredentialSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,12 +57,11 @@ public class PasswordSingleSignOnCredentialSet implements AdditionalDataHolder, 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PasswordSingleSignOnCredentialSet currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("credentials", (n) -> { currentObject.setCredentials(n.getCollectionOfObjectValues(Credential::createFromDiscriminatorValue)); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("credentials", (n) -> { this.setCredentials(n.getCollectionOfObjectValues(Credential::createFromDiscriminatorValue)); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The ID of the user or group this credential set belongs to.
@@ -85,6 +84,7 @@ public class PasswordSingleSignOnCredentialSet implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("credentials", this.getCredentials());
@@ -97,6 +97,7 @@ public class PasswordSingleSignOnCredentialSet implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class PasswordSingleSignOnCredentialSet implements AdditionalDataHolder, 
      * @param value Value to set for the credentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCredentials(@javax.annotation.Nullable final java.util.List<Credential> value) {
         this._credentials = value;
     }
@@ -113,6 +115,7 @@ public class PasswordSingleSignOnCredentialSet implements AdditionalDataHolder, 
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -121,6 +124,7 @@ public class PasswordSingleSignOnCredentialSet implements AdditionalDataHolder, 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

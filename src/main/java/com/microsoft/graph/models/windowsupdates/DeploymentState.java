@@ -23,9 +23,9 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
      * Instantiates a new deploymentState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeploymentState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsUpdates.deploymentState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,13 +51,12 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeploymentState currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("reasons", (n) -> { currentObject.setReasons(n.getCollectionOfObjectValues(DeploymentStateReason::createFromDiscriminatorValue)); });
-            this.put("requestedValue", (n) -> { currentObject.setRequestedValue(n.getEnumValue(RequestedDeploymentStateValue.class)); });
-            this.put("value", (n) -> { currentObject.setValue(n.getEnumValue(DeploymentStateValue.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("reasons", (n) -> { this.setReasons(n.getCollectionOfObjectValues(DeploymentStateReason::createFromDiscriminatorValue)); });
+        deserializerMap.put("requestedValue", (n) -> { this.setRequestedValue(n.getEnumValue(RequestedDeploymentStateValue.class)); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getEnumValue(DeploymentStateValue.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -96,6 +95,7 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -109,6 +109,7 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +118,7 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -125,6 +127,7 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the reasons property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReasons(@javax.annotation.Nullable final java.util.List<DeploymentStateReason> value) {
         this._reasons = value;
     }
@@ -133,6 +136,7 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the requestedValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestedValue(@javax.annotation.Nullable final RequestedDeploymentStateValue value) {
         this._requestedValue = value;
     }
@@ -141,6 +145,7 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final DeploymentStateValue value) {
         this._value = value;
     }

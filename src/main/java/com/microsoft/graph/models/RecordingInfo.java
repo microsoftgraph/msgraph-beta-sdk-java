@@ -23,9 +23,9 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new recordingInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RecordingInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.recordingInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,13 +51,12 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RecordingInfo currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
-            this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recordingStatus", (n) -> { currentObject.setRecordingStatus(n.getEnumValue(RecordingStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("initiatedBy", (n) -> { this.setInitiatedBy(n.getObjectValue(ParticipantInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recordingStatus", (n) -> { this.setRecordingStatus(n.getEnumValue(RecordingStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the initiatedBy property value. The participant who initiated the recording.
@@ -96,6 +95,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("initiatedBy", this.getInitiatedBy());
@@ -109,6 +109,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +118,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the initiatedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatedBy(@javax.annotation.Nullable final ParticipantInfo value) {
         this._initiatedBy = value;
     }
@@ -125,6 +127,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
         this._initiator = value;
     }
@@ -133,6 +136,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +145,7 @@ public class RecordingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the recordingStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecordingStatus(@javax.annotation.Nullable final RecordingStatus value) {
         this._recordingStatus = value;
     }

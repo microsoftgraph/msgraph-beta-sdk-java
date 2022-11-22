@@ -19,9 +19,9 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * Instantiates a new ImportedWindowsAutopilotDeviceIdentityUpload and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityUpload() {
         super();
-        this.setOdataType("#microsoft.graph.importedWindowsAutopilotDeviceIdentityUpload");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,12 +55,11 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ImportedWindowsAutopilotDeviceIdentityUpload currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTimeUtc", (n) -> { currentObject.setCreatedDateTimeUtc(n.getOffsetDateTimeValue()); });
-            this.put("deviceIdentities", (n) -> { currentObject.setDeviceIdentities(n.getCollectionOfObjectValues(ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ImportedWindowsAutopilotDeviceIdentityUploadStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTimeUtc", (n) -> { this.setCreatedDateTimeUtc(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceIdentities", (n) -> { this.setDeviceIdentities(n.getCollectionOfObjectValues(ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ImportedWindowsAutopilotDeviceIdentityUploadStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the status property value. The status property
@@ -75,6 +74,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +87,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * @param value Value to set for the createdDateTimeUtc property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTimeUtc(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTimeUtc = value;
     }
@@ -95,6 +96,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * @param value Value to set for the deviceIdentities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceIdentities(@javax.annotation.Nullable final java.util.List<ImportedWindowsAutopilotDeviceIdentity> value) {
         this._deviceIdentities = value;
     }
@@ -103,6 +105,7 @@ public class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity impleme
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ImportedWindowsAutopilotDeviceIdentityUploadStatus value) {
         this._status = value;
     }

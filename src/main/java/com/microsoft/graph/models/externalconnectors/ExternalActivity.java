@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ExternalActivity extends Entity implements Parsable {
     /** Represents an identity used to identify who is responsible for the activity. */
     private Identity _performedBy;
@@ -18,17 +19,17 @@ public class ExternalActivity extends Entity implements Parsable {
     /** The type property */
     private ExternalActivityType _type;
     /**
-     * Instantiates a new ExternalActivity and sets the default values.
+     * Instantiates a new externalActivity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExternalActivity() {
         super();
-        this.setOdataType("#microsoft.graph.externalConnectors.externalActivity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ExternalActivity
+     * @return a externalActivity
      */
     @javax.annotation.Nonnull
     public static ExternalActivity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -48,12 +49,11 @@ public class ExternalActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExternalActivity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("performedBy", (n) -> { currentObject.setPerformedBy(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(ExternalActivityType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("performedBy", (n) -> { this.setPerformedBy(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(ExternalActivityType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the performedBy property value. Represents an identity used to identify who is responsible for the activity.
@@ -84,6 +84,7 @@ public class ExternalActivity extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -96,6 +97,7 @@ public class ExternalActivity extends Entity implements Parsable {
      * @param value Value to set for the performedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPerformedBy(@javax.annotation.Nullable final Identity value) {
         this._performedBy = value;
     }
@@ -104,6 +106,7 @@ public class ExternalActivity extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -112,6 +115,7 @@ public class ExternalActivity extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final ExternalActivityType value) {
         this._type = value;
     }

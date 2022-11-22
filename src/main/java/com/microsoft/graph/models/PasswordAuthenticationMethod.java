@@ -19,6 +19,7 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
      * Instantiates a new PasswordAuthenticationMethod and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PasswordAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.passwordAuthenticationMethod");
@@ -55,12 +56,11 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PasswordAuthenticationMethod currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("creationDateTime", (n) -> { currentObject.setCreationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("password", (n) -> { currentObject.setPassword(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("creationDateTime", (n) -> { this.setCreationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("password", (n) -> { this.setPassword(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the password property value. For security, the password is always returned as null from a LIST or GET operation.
@@ -75,6 +75,7 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +88,7 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -95,6 +97,7 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
      * @param value Value to set for the creationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._creationDateTime = value;
     }
@@ -103,6 +106,7 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
      * @param value Value to set for the password property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPassword(@javax.annotation.Nullable final String value) {
         this._password = value;
     }

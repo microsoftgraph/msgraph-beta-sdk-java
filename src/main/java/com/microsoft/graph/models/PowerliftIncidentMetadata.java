@@ -35,9 +35,9 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * Instantiates a new powerliftIncidentMetadata and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PowerliftIncidentMetadata() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.powerliftIncidentMetadata");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -95,18 +95,17 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PowerliftIncidentMetadata currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("application", (n) -> { currentObject.setApplication(n.getStringValue()); });
-            this.put("clientVersion", (n) -> { currentObject.setClientVersion(n.getStringValue()); });
-            this.put("createdAtDateTime", (n) -> { currentObject.setCreatedAtDateTime(n.getOffsetDateTimeValue()); });
-            this.put("easyId", (n) -> { currentObject.setEasyId(n.getStringValue()); });
-            this.put("fileNames", (n) -> { currentObject.setFileNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("locale", (n) -> { currentObject.setLocale(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("platform", (n) -> { currentObject.setPlatform(n.getStringValue()); });
-            this.put("powerliftId", (n) -> { currentObject.setPowerliftId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("application", (n) -> { this.setApplication(n.getStringValue()); });
+        deserializerMap.put("clientVersion", (n) -> { this.setClientVersion(n.getStringValue()); });
+        deserializerMap.put("createdAtDateTime", (n) -> { this.setCreatedAtDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("easyId", (n) -> { this.setEasyId(n.getStringValue()); });
+        deserializerMap.put("fileNames", (n) -> { this.setFileNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("locale", (n) -> { this.setLocale(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getStringValue()); });
+        deserializerMap.put("powerliftId", (n) -> { this.setPowerliftId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileNames property value. A list of files that are associated with the diagnostic.
@@ -153,6 +152,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("application", this.getApplication());
@@ -171,6 +171,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -179,6 +180,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * @param value Value to set for the application property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplication(@javax.annotation.Nullable final String value) {
         this._application = value;
     }
@@ -187,6 +189,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * @param value Value to set for the clientVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientVersion(@javax.annotation.Nullable final String value) {
         this._clientVersion = value;
     }
@@ -195,6 +198,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * @param value Value to set for the createdAtDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedAtDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdAtDateTime = value;
     }
@@ -203,6 +207,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * @param value Value to set for the easyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEasyId(@javax.annotation.Nullable final String value) {
         this._easyId = value;
     }
@@ -211,6 +216,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * @param value Value to set for the fileNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._fileNames = value;
     }
@@ -219,6 +225,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * @param value Value to set for the locale property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocale(@javax.annotation.Nullable final String value) {
         this._locale = value;
     }
@@ -227,6 +234,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -235,6 +243,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * @param value Value to set for the platform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final String value) {
         this._platform = value;
     }
@@ -243,6 +252,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, Parsable
      * @param value Value to set for the powerliftId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPowerliftId(@javax.annotation.Nullable final String value) {
         this._powerliftId = value;
     }

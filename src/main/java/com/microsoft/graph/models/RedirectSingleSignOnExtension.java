@@ -20,6 +20,7 @@ public class RedirectSingleSignOnExtension extends SingleSignOnExtension impleme
      * Instantiates a new RedirectSingleSignOnExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RedirectSingleSignOnExtension() {
         super();
         this.setOdataType("#microsoft.graph.redirectSingleSignOnExtension");
@@ -56,13 +57,12 @@ public class RedirectSingleSignOnExtension extends SingleSignOnExtension impleme
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RedirectSingleSignOnExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("configurations", (n) -> { currentObject.setConfigurations(n.getCollectionOfObjectValues(KeyTypedValuePair::createFromDiscriminatorValue)); });
-            this.put("extensionIdentifier", (n) -> { currentObject.setExtensionIdentifier(n.getStringValue()); });
-            this.put("teamIdentifier", (n) -> { currentObject.setTeamIdentifier(n.getStringValue()); });
-            this.put("urlPrefixes", (n) -> { currentObject.setUrlPrefixes(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("configurations", (n) -> { this.setConfigurations(n.getCollectionOfObjectValues(KeyTypedValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("extensionIdentifier", (n) -> { this.setExtensionIdentifier(n.getStringValue()); });
+        deserializerMap.put("teamIdentifier", (n) -> { this.setTeamIdentifier(n.getStringValue()); });
+        deserializerMap.put("urlPrefixes", (n) -> { this.setUrlPrefixes(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the teamIdentifier property value. Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
@@ -85,6 +85,7 @@ public class RedirectSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +99,7 @@ public class RedirectSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the configurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurations(@javax.annotation.Nullable final java.util.List<KeyTypedValuePair> value) {
         this._configurations = value;
     }
@@ -106,6 +108,7 @@ public class RedirectSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the extensionIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionIdentifier(@javax.annotation.Nullable final String value) {
         this._extensionIdentifier = value;
     }
@@ -114,6 +117,7 @@ public class RedirectSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the teamIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamIdentifier(@javax.annotation.Nullable final String value) {
         this._teamIdentifier = value;
     }
@@ -122,6 +126,7 @@ public class RedirectSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the urlPrefixes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrlPrefixes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._urlPrefixes = value;
     }

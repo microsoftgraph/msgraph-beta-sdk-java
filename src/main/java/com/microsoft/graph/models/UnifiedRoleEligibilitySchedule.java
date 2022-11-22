@@ -16,9 +16,9 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      * Instantiates a new unifiedRoleEligibilitySchedule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleEligibilitySchedule() {
         super();
-        this.setOdataType("#microsoft.graph.unifiedRoleEligibilitySchedule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,11 +36,10 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UnifiedRoleEligibilitySchedule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("memberType", (n) -> { currentObject.setMemberType(n.getStringValue()); });
-            this.put("scheduleInfo", (n) -> { currentObject.setScheduleInfo(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("memberType", (n) -> { this.setMemberType(n.getStringValue()); });
+        deserializerMap.put("scheduleInfo", (n) -> { this.setScheduleInfo(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the memberType property value. Membership type of the eligible assignment. It can either be Inherited, Direct, or Group. Supports $filter (eq).
@@ -63,6 +62,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +74,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      * @param value Value to set for the memberType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberType(@javax.annotation.Nullable final String value) {
         this._memberType = value;
     }
@@ -82,6 +83,7 @@ public class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase impl
      * @param value Value to set for the scheduleInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduleInfo(@javax.annotation.Nullable final RequestSchedule value) {
         this._scheduleInfo = value;
     }

@@ -21,9 +21,9 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, Parsable {
      * Instantiates a new mediaContentRatingJapan and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MediaContentRatingJapan() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.mediaContentRatingJapan");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,12 +49,11 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MediaContentRatingJapan currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("movieRating", (n) -> { currentObject.setMovieRating(n.getEnumValue(RatingJapanMoviesType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("tvRating", (n) -> { currentObject.setTvRating(n.getEnumValue(RatingJapanTelevisionType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("movieRating", (n) -> { this.setMovieRating(n.getEnumValue(RatingJapanMoviesType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("tvRating", (n) -> { this.setTvRating(n.getEnumValue(RatingJapanTelevisionType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the movieRating property value. Movies rating labels in Japan
@@ -85,6 +84,7 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("movieRating", this.getMovieRating());
@@ -97,6 +97,7 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the movieRating property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMovieRating(@javax.annotation.Nullable final RatingJapanMoviesType value) {
         this._movieRating = value;
     }
@@ -113,6 +115,7 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +124,7 @@ public class MediaContentRatingJapan implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tvRating property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTvRating(@javax.annotation.Nullable final RatingJapanTelevisionType value) {
         this._tvRating = value;
     }

@@ -31,9 +31,9 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      * Instantiates a new bookingQuestionAnswer and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BookingQuestionAnswer() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bookingQuestionAnswer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -83,17 +83,16 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BookingQuestionAnswer currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("answer", (n) -> { currentObject.setAnswer(n.getStringValue()); });
-            this.put("answerInputType", (n) -> { currentObject.setAnswerInputType(n.getEnumValue(AnswerInputType.class)); });
-            this.put("answerOptions", (n) -> { currentObject.setAnswerOptions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isRequired", (n) -> { currentObject.setIsRequired(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("question", (n) -> { currentObject.setQuestion(n.getStringValue()); });
-            this.put("questionId", (n) -> { currentObject.setQuestionId(n.getStringValue()); });
-            this.put("selectedOptions", (n) -> { currentObject.setSelectedOptions(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("answer", (n) -> { this.setAnswer(n.getStringValue()); });
+        deserializerMap.put("answerInputType", (n) -> { this.setAnswerInputType(n.getEnumValue(AnswerInputType.class)); });
+        deserializerMap.put("answerOptions", (n) -> { this.setAnswerOptions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isRequired", (n) -> { this.setIsRequired(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("question", (n) -> { this.setQuestion(n.getStringValue()); });
+        deserializerMap.put("questionId", (n) -> { this.setQuestionId(n.getStringValue()); });
+        deserializerMap.put("selectedOptions", (n) -> { this.setSelectedOptions(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isRequired property value. Indicates whether it is mandatory to answer the custom question.
@@ -140,6 +139,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("answer", this.getAnswer());
@@ -157,6 +157,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -165,6 +166,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the answer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnswer(@javax.annotation.Nullable final String value) {
         this._answer = value;
     }
@@ -173,6 +175,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the answerInputType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnswerInputType(@javax.annotation.Nullable final AnswerInputType value) {
         this._answerInputType = value;
     }
@@ -181,6 +184,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the answerOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnswerOptions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._answerOptions = value;
     }
@@ -189,6 +193,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRequired(@javax.annotation.Nullable final Boolean value) {
         this._isRequired = value;
     }
@@ -197,6 +202,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -205,6 +211,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the question property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuestion(@javax.annotation.Nullable final String value) {
         this._question = value;
     }
@@ -213,6 +220,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the questionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuestionId(@javax.annotation.Nullable final String value) {
         this._questionId = value;
     }
@@ -221,6 +229,7 @@ public class BookingQuestionAnswer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the selectedOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSelectedOptions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._selectedOptions = value;
     }

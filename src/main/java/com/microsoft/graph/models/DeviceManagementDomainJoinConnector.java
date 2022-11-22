@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A Domain Join Connector is a connector that is responsible to allocate (and delete) machine account blobs */
 public class DeviceManagementDomainJoinConnector extends Entity implements Parsable {
     /** The connector display name. */
     private String _displayName;
@@ -18,17 +19,17 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
     /** The version of the connector. */
     private String _version;
     /**
-     * Instantiates a new DeviceManagementDomainJoinConnector and sets the default values.
+     * Instantiates a new deviceManagementDomainJoinConnector and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementDomainJoinConnector() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementDomainJoinConnector");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementDomainJoinConnector
+     * @return a deviceManagementDomainJoinConnector
      */
     @javax.annotation.Nonnull
     public static DeviceManagementDomainJoinConnector createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -49,13 +50,12 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementDomainJoinConnector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastConnectionDateTime", (n) -> { currentObject.setLastConnectionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(DeviceManagementDomainJoinConnectorState.class)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastConnectionDateTime", (n) -> { this.setLastConnectionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(DeviceManagementDomainJoinConnectorState.class)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastConnectionDateTime property value. Last time connector contacted Intune.
@@ -86,6 +86,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +100,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -107,6 +109,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * @param value Value to set for the lastConnectionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastConnectionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastConnectionDateTime = value;
     }
@@ -115,6 +118,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final DeviceManagementDomainJoinConnectorState value) {
         this._state = value;
     }
@@ -123,6 +127,7 @@ public class DeviceManagementDomainJoinConnector extends Entity implements Parsa
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

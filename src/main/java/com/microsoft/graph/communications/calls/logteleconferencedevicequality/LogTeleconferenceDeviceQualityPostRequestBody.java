@@ -19,6 +19,7 @@ public class LogTeleconferenceDeviceQualityPostRequestBody implements Additional
      * Instantiates a new logTeleconferenceDeviceQualityPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LogTeleconferenceDeviceQualityPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,10 +47,9 @@ public class LogTeleconferenceDeviceQualityPostRequestBody implements Additional
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LogTeleconferenceDeviceQualityPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("quality", (n) -> { currentObject.setQuality(n.getObjectValue(TeleconferenceDeviceQuality::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("quality", (n) -> { this.setQuality(n.getObjectValue(TeleconferenceDeviceQuality::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the quality property value. The quality property
@@ -64,6 +64,7 @@ public class LogTeleconferenceDeviceQualityPostRequestBody implements Additional
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("quality", this.getQuality());
@@ -74,6 +75,7 @@ public class LogTeleconferenceDeviceQualityPostRequestBody implements Additional
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +84,7 @@ public class LogTeleconferenceDeviceQualityPostRequestBody implements Additional
      * @param value Value to set for the quality property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuality(@javax.annotation.Nullable final TeleconferenceDeviceQuality value) {
         this._quality = value;
     }

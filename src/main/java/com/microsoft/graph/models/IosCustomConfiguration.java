@@ -18,6 +18,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
      * Instantiates a new IosCustomConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosCustomConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosCustomConfiguration");
@@ -38,12 +39,11 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosCustomConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("payload", (n) -> { currentObject.setPayload(n.getByteArrayValue()); });
-            this.put("payloadFileName", (n) -> { currentObject.setPayloadFileName(n.getStringValue()); });
-            this.put("payloadName", (n) -> { currentObject.setPayloadName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("payload", (n) -> { this.setPayload(n.getByteArrayValue()); });
+        deserializerMap.put("payloadFileName", (n) -> { this.setPayloadFileName(n.getStringValue()); });
+        deserializerMap.put("payloadName", (n) -> { this.setPayloadName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the payload property value. Payload. (UTF8 encoded byte array)
@@ -74,6 +74,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +87,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the payload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayload(@javax.annotation.Nullable final byte[] value) {
         this._payload = value;
     }
@@ -94,6 +96,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the payloadFileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadFileName(@javax.annotation.Nullable final String value) {
         this._payloadFileName = value;
     }
@@ -102,6 +105,7 @@ public class IosCustomConfiguration extends DeviceConfiguration implements Parsa
      * @param value Value to set for the payloadName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadName(@javax.annotation.Nullable final String value) {
         this._payloadName = value;
     }

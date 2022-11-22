@@ -22,9 +22,9 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
      * Instantiates a new RegistryValueEvidence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RegistryValueEvidence() {
         super();
-        this.setOdataType("#microsoft.graph.security.registryValueEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,14 +42,13 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RegistryValueEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("registryHive", (n) -> { currentObject.setRegistryHive(n.getStringValue()); });
-            this.put("registryKey", (n) -> { currentObject.setRegistryKey(n.getStringValue()); });
-            this.put("registryValue", (n) -> { currentObject.setRegistryValue(n.getStringValue()); });
-            this.put("registryValueName", (n) -> { currentObject.setRegistryValueName(n.getStringValue()); });
-            this.put("registryValueType", (n) -> { currentObject.setRegistryValueType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("registryHive", (n) -> { this.setRegistryHive(n.getStringValue()); });
+        deserializerMap.put("registryKey", (n) -> { this.setRegistryKey(n.getStringValue()); });
+        deserializerMap.put("registryValue", (n) -> { this.setRegistryValue(n.getStringValue()); });
+        deserializerMap.put("registryValueName", (n) -> { this.setRegistryValueName(n.getStringValue()); });
+        deserializerMap.put("registryValueType", (n) -> { this.setRegistryValueType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the registryHive property value. Registry hive of the key that the recorded action was applied to.
@@ -96,6 +95,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +110,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the registryHive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistryHive(@javax.annotation.Nullable final String value) {
         this._registryHive = value;
     }
@@ -118,6 +119,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the registryKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistryKey(@javax.annotation.Nullable final String value) {
         this._registryKey = value;
     }
@@ -126,6 +128,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the registryValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistryValue(@javax.annotation.Nullable final String value) {
         this._registryValue = value;
     }
@@ -134,6 +137,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the registryValueName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistryValueName(@javax.annotation.Nullable final String value) {
         this._registryValueName = value;
     }
@@ -142,6 +146,7 @@ public class RegistryValueEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the registryValueType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistryValueType(@javax.annotation.Nullable final String value) {
         this._registryValueType = value;
     }

@@ -28,9 +28,9 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * Instantiates a new MobilityManagementPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobilityManagementPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.mobilityManagementPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -88,17 +88,16 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MobilityManagementPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getEnumValue(PolicyScope.class)); });
-            this.put("complianceUrl", (n) -> { currentObject.setComplianceUrl(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("discoveryUrl", (n) -> { currentObject.setDiscoveryUrl(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("includedGroups", (n) -> { currentObject.setIncludedGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
-            this.put("isValid", (n) -> { currentObject.setIsValid(n.getBooleanValue()); });
-            this.put("termsOfUseUrl", (n) -> { currentObject.setTermsOfUseUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getEnumValue(PolicyScope.class)); });
+        deserializerMap.put("complianceUrl", (n) -> { this.setComplianceUrl(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("discoveryUrl", (n) -> { this.setDiscoveryUrl(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("includedGroups", (n) -> { this.setIncludedGroups(n.getCollectionOfObjectValues(Group::createFromDiscriminatorValue)); });
+        deserializerMap.put("isValid", (n) -> { this.setIsValid(n.getBooleanValue()); });
+        deserializerMap.put("termsOfUseUrl", (n) -> { this.setTermsOfUseUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the includedGroups property value. Azure AD groups under the scope of the mobility management application if appliesTo is selected
@@ -129,6 +128,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +146,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the appliesTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliesTo(@javax.annotation.Nullable final PolicyScope value) {
         this._appliesTo = value;
     }
@@ -154,6 +155,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the complianceUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceUrl(@javax.annotation.Nullable final String value) {
         this._complianceUrl = value;
     }
@@ -162,6 +164,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -170,6 +173,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the discoveryUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscoveryUrl(@javax.annotation.Nullable final String value) {
         this._discoveryUrl = value;
     }
@@ -178,6 +182,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -186,6 +191,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the includedGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludedGroups(@javax.annotation.Nullable final java.util.List<Group> value) {
         this._includedGroups = value;
     }
@@ -194,6 +200,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the isValid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsValid(@javax.annotation.Nullable final Boolean value) {
         this._isValid = value;
     }
@@ -202,6 +209,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the termsOfUseUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermsOfUseUrl(@javax.annotation.Nullable final String value) {
         this._termsOfUseUrl = value;
     }

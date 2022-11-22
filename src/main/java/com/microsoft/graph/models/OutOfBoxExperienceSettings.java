@@ -30,9 +30,9 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      * Instantiates a new outOfBoxExperienceSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OutOfBoxExperienceSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.outOfBoxExperienceSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,16 +66,15 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OutOfBoxExperienceSettings currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("deviceUsageType", (n) -> { currentObject.setDeviceUsageType(n.getEnumValue(WindowsDeviceUsageType.class)); });
-            this.put("hideEscapeLink", (n) -> { currentObject.setHideEscapeLink(n.getBooleanValue()); });
-            this.put("hideEULA", (n) -> { currentObject.setHideEULA(n.getBooleanValue()); });
-            this.put("hidePrivacySettings", (n) -> { currentObject.setHidePrivacySettings(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("skipKeyboardSelectionPage", (n) -> { currentObject.setSkipKeyboardSelectionPage(n.getBooleanValue()); });
-            this.put("userType", (n) -> { currentObject.setUserType(n.getEnumValue(WindowsUserType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("deviceUsageType", (n) -> { this.setDeviceUsageType(n.getEnumValue(WindowsDeviceUsageType.class)); });
+        deserializerMap.put("hideEscapeLink", (n) -> { this.setHideEscapeLink(n.getBooleanValue()); });
+        deserializerMap.put("hideEULA", (n) -> { this.setHideEULA(n.getBooleanValue()); });
+        deserializerMap.put("hidePrivacySettings", (n) -> { this.setHidePrivacySettings(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("skipKeyboardSelectionPage", (n) -> { this.setSkipKeyboardSelectionPage(n.getBooleanValue()); });
+        deserializerMap.put("userType", (n) -> { this.setUserType(n.getEnumValue(WindowsUserType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the hideEscapeLink property value. If set to true, then the user can't start over with different account, on company sign-in
@@ -130,6 +129,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("deviceUsageType", this.getDeviceUsageType());
@@ -146,6 +146,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -154,6 +155,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the deviceUsageType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceUsageType(@javax.annotation.Nullable final WindowsDeviceUsageType value) {
         this._deviceUsageType = value;
     }
@@ -162,6 +164,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the hideEscapeLink property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideEscapeLink(@javax.annotation.Nullable final Boolean value) {
         this._hideEscapeLink = value;
     }
@@ -170,6 +173,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the hideEULA property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideEULA(@javax.annotation.Nullable final Boolean value) {
         this._hideEULA = value;
     }
@@ -178,6 +182,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the hidePrivacySettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHidePrivacySettings(@javax.annotation.Nullable final Boolean value) {
         this._hidePrivacySettings = value;
     }
@@ -186,6 +191,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -194,6 +200,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the skipKeyboardSelectionPage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkipKeyboardSelectionPage(@javax.annotation.Nullable final Boolean value) {
         this._skipKeyboardSelectionPage = value;
     }
@@ -202,6 +209,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the userType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserType(@javax.annotation.Nullable final WindowsUserType value) {
         this._userType = value;
     }

@@ -22,9 +22,9 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      * Instantiates a new MobileAppTroubleshootingEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppTroubleshootingEvent() {
         super();
-        this.setOdataType("#microsoft.graph.mobileAppTroubleshootingEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,14 +58,13 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MobileAppTroubleshootingEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicationId", (n) -> { currentObject.setApplicationId(n.getStringValue()); });
-            this.put("appLogCollectionRequests", (n) -> { currentObject.setAppLogCollectionRequests(n.getCollectionOfObjectValues(AppLogCollectionRequest::createFromDiscriminatorValue)); });
-            this.put("history", (n) -> { currentObject.setHistory(n.getCollectionOfObjectValues(MobileAppTroubleshootingHistoryItem::createFromDiscriminatorValue)); });
-            this.put("managedDeviceIdentifier", (n) -> { currentObject.setManagedDeviceIdentifier(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationId", (n) -> { this.setApplicationId(n.getStringValue()); });
+        deserializerMap.put("appLogCollectionRequests", (n) -> { this.setAppLogCollectionRequests(n.getCollectionOfObjectValues(AppLogCollectionRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("history", (n) -> { this.setHistory(n.getCollectionOfObjectValues(MobileAppTroubleshootingHistoryItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedDeviceIdentifier", (n) -> { this.setManagedDeviceIdentifier(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the history property value. Intune Mobile Application Troubleshooting History Item
@@ -96,6 +95,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +110,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      * @param value Value to set for the applicationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationId(@javax.annotation.Nullable final String value) {
         this._applicationId = value;
     }
@@ -118,6 +119,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      * @param value Value to set for the appLogCollectionRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppLogCollectionRequests(@javax.annotation.Nullable final java.util.List<AppLogCollectionRequest> value) {
         this._appLogCollectionRequests = value;
     }
@@ -126,6 +128,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      * @param value Value to set for the history property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHistory(@javax.annotation.Nullable final java.util.List<MobileAppTroubleshootingHistoryItem> value) {
         this._history = value;
     }
@@ -134,6 +137,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      * @param value Value to set for the managedDeviceIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceIdentifier(@javax.annotation.Nullable final String value) {
         this._managedDeviceIdentifier = value;
     }
@@ -142,6 +146,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

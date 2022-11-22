@@ -25,9 +25,9 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * Instantiates a new expressionEvaluationDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExpressionEvaluationDetails() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.expressionEvaluationDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,14 +77,13 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExpressionEvaluationDetails currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("expression", (n) -> { currentObject.setExpression(n.getStringValue()); });
-            this.put("expressionEvaluationDetails", (n) -> { currentObject.setExpressionEvaluationDetails(n.getCollectionOfObjectValues(ExpressionEvaluationDetails::createFromDiscriminatorValue)); });
-            this.put("expressionResult", (n) -> { currentObject.setExpressionResult(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("propertyToEvaluate", (n) -> { currentObject.setPropertyToEvaluate(n.getObjectValue(PropertyToEvaluate::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("expression", (n) -> { this.setExpression(n.getStringValue()); });
+        deserializerMap.put("expressionEvaluationDetails", (n) -> { this.setExpressionEvaluationDetails(n.getCollectionOfObjectValues(ExpressionEvaluationDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("expressionResult", (n) -> { this.setExpressionResult(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("propertyToEvaluate", (n) -> { this.setPropertyToEvaluate(n.getObjectValue(PropertyToEvaluate::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,6 +106,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("expression", this.getExpression());
@@ -121,6 +121,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +130,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * @param value Value to set for the expression property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpression(@javax.annotation.Nullable final String value) {
         this._expression = value;
     }
@@ -137,6 +139,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * @param value Value to set for the expressionEvaluationDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpressionEvaluationDetails(@javax.annotation.Nullable final java.util.List<ExpressionEvaluationDetails> value) {
         this._expressionEvaluationDetails = value;
     }
@@ -145,6 +148,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * @param value Value to set for the expressionResult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpressionResult(@javax.annotation.Nullable final Boolean value) {
         this._expressionResult = value;
     }
@@ -153,6 +157,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -161,6 +166,7 @@ public class ExpressionEvaluationDetails implements AdditionalDataHolder, Parsab
      * @param value Value to set for the propertyToEvaluate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPropertyToEvaluate(@javax.annotation.Nullable final PropertyToEvaluate value) {
         this._propertyToEvaluate = value;
     }

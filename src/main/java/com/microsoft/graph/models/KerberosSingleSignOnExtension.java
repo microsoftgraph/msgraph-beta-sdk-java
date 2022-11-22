@@ -54,6 +54,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * Instantiates a new KerberosSingleSignOnExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public KerberosSingleSignOnExtension() {
         super();
         this.setOdataType("#microsoft.graph.kerberosSingleSignOnExtension");
@@ -130,30 +131,29 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final KerberosSingleSignOnExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeDirectorySiteCode", (n) -> { currentObject.setActiveDirectorySiteCode(n.getStringValue()); });
-            this.put("blockActiveDirectorySiteAutoDiscovery", (n) -> { currentObject.setBlockActiveDirectorySiteAutoDiscovery(n.getBooleanValue()); });
-            this.put("blockAutomaticLogin", (n) -> { currentObject.setBlockAutomaticLogin(n.getBooleanValue()); });
-            this.put("cacheName", (n) -> { currentObject.setCacheName(n.getStringValue()); });
-            this.put("credentialBundleIdAccessControlList", (n) -> { currentObject.setCredentialBundleIdAccessControlList(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("domainRealms", (n) -> { currentObject.setDomainRealms(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("domains", (n) -> { currentObject.setDomains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isDefaultRealm", (n) -> { currentObject.setIsDefaultRealm(n.getBooleanValue()); });
-            this.put("passwordBlockModification", (n) -> { currentObject.setPasswordBlockModification(n.getBooleanValue()); });
-            this.put("passwordChangeUrl", (n) -> { currentObject.setPasswordChangeUrl(n.getStringValue()); });
-            this.put("passwordEnableLocalSync", (n) -> { currentObject.setPasswordEnableLocalSync(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordExpirationNotificationDays", (n) -> { currentObject.setPasswordExpirationNotificationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumAgeDays", (n) -> { currentObject.setPasswordMinimumAgeDays(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequireActiveDirectoryComplexity", (n) -> { currentObject.setPasswordRequireActiveDirectoryComplexity(n.getBooleanValue()); });
-            this.put("passwordRequirementsDescription", (n) -> { currentObject.setPasswordRequirementsDescription(n.getStringValue()); });
-            this.put("realm", (n) -> { currentObject.setRealm(n.getStringValue()); });
-            this.put("requireUserPresence", (n) -> { currentObject.setRequireUserPresence(n.getBooleanValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeDirectorySiteCode", (n) -> { this.setActiveDirectorySiteCode(n.getStringValue()); });
+        deserializerMap.put("blockActiveDirectorySiteAutoDiscovery", (n) -> { this.setBlockActiveDirectorySiteAutoDiscovery(n.getBooleanValue()); });
+        deserializerMap.put("blockAutomaticLogin", (n) -> { this.setBlockAutomaticLogin(n.getBooleanValue()); });
+        deserializerMap.put("cacheName", (n) -> { this.setCacheName(n.getStringValue()); });
+        deserializerMap.put("credentialBundleIdAccessControlList", (n) -> { this.setCredentialBundleIdAccessControlList(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("domainRealms", (n) -> { this.setDomainRealms(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("domains", (n) -> { this.setDomains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isDefaultRealm", (n) -> { this.setIsDefaultRealm(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockModification", (n) -> { this.setPasswordBlockModification(n.getBooleanValue()); });
+        deserializerMap.put("passwordChangeUrl", (n) -> { this.setPasswordChangeUrl(n.getStringValue()); });
+        deserializerMap.put("passwordEnableLocalSync", (n) -> { this.setPasswordEnableLocalSync(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { this.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordExpirationNotificationDays", (n) -> { this.setPasswordExpirationNotificationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumAgeDays", (n) -> { this.setPasswordMinimumAgeDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { this.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { this.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequireActiveDirectoryComplexity", (n) -> { this.setPasswordRequireActiveDirectoryComplexity(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequirementsDescription", (n) -> { this.setPasswordRequirementsDescription(n.getStringValue()); });
+        deserializerMap.put("realm", (n) -> { this.setRealm(n.getStringValue()); });
+        deserializerMap.put("requireUserPresence", (n) -> { this.setRequireUserPresence(n.getBooleanValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefaultRealm property value. When true, this profile's realm will be selected as the default. Necessary if multiple Kerberos-type profiles are configured.
@@ -272,6 +272,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -302,6 +303,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the activeDirectorySiteCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveDirectorySiteCode(@javax.annotation.Nullable final String value) {
         this._activeDirectorySiteCode = value;
     }
@@ -310,6 +312,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the blockActiveDirectorySiteAutoDiscovery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockActiveDirectorySiteAutoDiscovery(@javax.annotation.Nullable final Boolean value) {
         this._blockActiveDirectorySiteAutoDiscovery = value;
     }
@@ -318,6 +321,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the blockAutomaticLogin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockAutomaticLogin(@javax.annotation.Nullable final Boolean value) {
         this._blockAutomaticLogin = value;
     }
@@ -326,6 +330,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the cacheName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCacheName(@javax.annotation.Nullable final String value) {
         this._cacheName = value;
     }
@@ -334,6 +339,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the credentialBundleIdAccessControlList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCredentialBundleIdAccessControlList(@javax.annotation.Nullable final java.util.List<String> value) {
         this._credentialBundleIdAccessControlList = value;
     }
@@ -342,6 +348,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the domainRealms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainRealms(@javax.annotation.Nullable final java.util.List<String> value) {
         this._domainRealms = value;
     }
@@ -350,6 +357,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the domains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._domains = value;
     }
@@ -358,6 +366,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the isDefaultRealm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefaultRealm(@javax.annotation.Nullable final Boolean value) {
         this._isDefaultRealm = value;
     }
@@ -366,6 +375,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the passwordBlockModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockModification(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockModification = value;
     }
@@ -374,6 +384,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the passwordChangeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordChangeUrl(@javax.annotation.Nullable final String value) {
         this._passwordChangeUrl = value;
     }
@@ -382,6 +393,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the passwordEnableLocalSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordEnableLocalSync(@javax.annotation.Nullable final Boolean value) {
         this._passwordEnableLocalSync = value;
     }
@@ -390,6 +402,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -398,6 +411,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the passwordExpirationNotificationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationNotificationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationNotificationDays = value;
     }
@@ -406,6 +420,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the passwordMinimumAgeDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumAgeDays(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumAgeDays = value;
     }
@@ -414,6 +429,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -422,6 +438,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordBlockCount = value;
     }
@@ -430,6 +447,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the passwordRequireActiveDirectoryComplexity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequireActiveDirectoryComplexity(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequireActiveDirectoryComplexity = value;
     }
@@ -438,6 +456,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the passwordRequirementsDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequirementsDescription(@javax.annotation.Nullable final String value) {
         this._passwordRequirementsDescription = value;
     }
@@ -446,6 +465,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the realm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRealm(@javax.annotation.Nullable final String value) {
         this._realm = value;
     }
@@ -454,6 +474,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the requireUserPresence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireUserPresence(@javax.annotation.Nullable final Boolean value) {
         this._requireUserPresence = value;
     }
@@ -462,6 +483,7 @@ public class KerberosSingleSignOnExtension extends SingleSignOnExtension impleme
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

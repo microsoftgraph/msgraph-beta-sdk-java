@@ -35,9 +35,9 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
      * Instantiates a new deviceManagementConfigurationCategory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationCategory() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementConfigurationCategory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -87,20 +87,19 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationCategory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("categoryDescription", (n) -> { currentObject.setCategoryDescription(n.getStringValue()); });
-            this.put("childCategoryIds", (n) -> { currentObject.setChildCategoryIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("helpText", (n) -> { currentObject.setHelpText(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("parentCategoryId", (n) -> { currentObject.setParentCategoryId(n.getStringValue()); });
-            this.put("platforms", (n) -> { currentObject.setPlatforms(n.getEnumValue(DeviceManagementConfigurationPlatforms.class)); });
-            this.put("rootCategoryId", (n) -> { currentObject.setRootCategoryId(n.getStringValue()); });
-            this.put("settingUsage", (n) -> { currentObject.setSettingUsage(n.getEnumValue(DeviceManagementConfigurationSettingUsage.class)); });
-            this.put("technologies", (n) -> { currentObject.setTechnologies(n.getEnumValue(DeviceManagementConfigurationTechnologies.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("categoryDescription", (n) -> { this.setCategoryDescription(n.getStringValue()); });
+        deserializerMap.put("childCategoryIds", (n) -> { this.setChildCategoryIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("helpText", (n) -> { this.setHelpText(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("parentCategoryId", (n) -> { this.setParentCategoryId(n.getStringValue()); });
+        deserializerMap.put("platforms", (n) -> { this.setPlatforms(n.getEnumValue(DeviceManagementConfigurationPlatforms.class)); });
+        deserializerMap.put("rootCategoryId", (n) -> { this.setRootCategoryId(n.getStringValue()); });
+        deserializerMap.put("settingUsage", (n) -> { this.setSettingUsage(n.getEnumValue(DeviceManagementConfigurationSettingUsage.class)); });
+        deserializerMap.put("technologies", (n) -> { this.setTechnologies(n.getEnumValue(DeviceManagementConfigurationTechnologies.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the helpText property value. Help text of the item
@@ -163,6 +162,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -183,6 +183,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
      * @param value Value to set for the categoryDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategoryDescription(@javax.annotation.Nullable final String value) {
         this._categoryDescription = value;
     }
@@ -191,6 +192,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
      * @param value Value to set for the childCategoryIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildCategoryIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._childCategoryIds = value;
     }
@@ -199,6 +201,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -207,6 +210,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -215,6 +219,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
      * @param value Value to set for the helpText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHelpText(@javax.annotation.Nullable final String value) {
         this._helpText = value;
     }
@@ -223,6 +228,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -231,6 +237,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
      * @param value Value to set for the parentCategoryId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentCategoryId(@javax.annotation.Nullable final String value) {
         this._parentCategoryId = value;
     }
@@ -239,6 +246,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
      * @param value Value to set for the platforms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatforms(@javax.annotation.Nullable final DeviceManagementConfigurationPlatforms value) {
         this._platforms = value;
     }
@@ -247,6 +255,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
      * @param value Value to set for the rootCategoryId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootCategoryId(@javax.annotation.Nullable final String value) {
         this._rootCategoryId = value;
     }
@@ -255,6 +264,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
      * @param value Value to set for the settingUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingUsage(@javax.annotation.Nullable final DeviceManagementConfigurationSettingUsage value) {
         this._settingUsage = value;
     }
@@ -263,6 +273,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements Par
      * @param value Value to set for the technologies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTechnologies(@javax.annotation.Nullable final DeviceManagementConfigurationTechnologies value) {
         this._technologies = value;
     }

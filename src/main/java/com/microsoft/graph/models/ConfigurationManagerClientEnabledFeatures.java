@@ -34,9 +34,9 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * Instantiates a new configurationManagerClientEnabledFeatures and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConfigurationManagerClientEnabledFeatures() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.configurationManagerClientEnabledFeatures");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -86,18 +86,17 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConfigurationManagerClientEnabledFeatures currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("compliancePolicy", (n) -> { currentObject.setCompliancePolicy(n.getBooleanValue()); });
-            this.put("deviceConfiguration", (n) -> { currentObject.setDeviceConfiguration(n.getBooleanValue()); });
-            this.put("endpointProtection", (n) -> { currentObject.setEndpointProtection(n.getBooleanValue()); });
-            this.put("inventory", (n) -> { currentObject.setInventory(n.getBooleanValue()); });
-            this.put("modernApps", (n) -> { currentObject.setModernApps(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("officeApps", (n) -> { currentObject.setOfficeApps(n.getBooleanValue()); });
-            this.put("resourceAccess", (n) -> { currentObject.setResourceAccess(n.getBooleanValue()); });
-            this.put("windowsUpdateForBusiness", (n) -> { currentObject.setWindowsUpdateForBusiness(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("compliancePolicy", (n) -> { this.setCompliancePolicy(n.getBooleanValue()); });
+        deserializerMap.put("deviceConfiguration", (n) -> { this.setDeviceConfiguration(n.getBooleanValue()); });
+        deserializerMap.put("endpointProtection", (n) -> { this.setEndpointProtection(n.getBooleanValue()); });
+        deserializerMap.put("inventory", (n) -> { this.setInventory(n.getBooleanValue()); });
+        deserializerMap.put("modernApps", (n) -> { this.setModernApps(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("officeApps", (n) -> { this.setOfficeApps(n.getBooleanValue()); });
+        deserializerMap.put("resourceAccess", (n) -> { this.setResourceAccess(n.getBooleanValue()); });
+        deserializerMap.put("windowsUpdateForBusiness", (n) -> { this.setWindowsUpdateForBusiness(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the inventory property value. Whether inventory is managed by Intune
@@ -152,6 +151,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("compliancePolicy", this.getCompliancePolicy());
@@ -170,6 +170,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -178,6 +179,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the compliancePolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliancePolicy(@javax.annotation.Nullable final Boolean value) {
         this._compliancePolicy = value;
     }
@@ -186,6 +188,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the deviceConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceConfiguration(@javax.annotation.Nullable final Boolean value) {
         this._deviceConfiguration = value;
     }
@@ -194,6 +197,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the endpointProtection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpointProtection(@javax.annotation.Nullable final Boolean value) {
         this._endpointProtection = value;
     }
@@ -202,6 +206,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the inventory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInventory(@javax.annotation.Nullable final Boolean value) {
         this._inventory = value;
     }
@@ -210,6 +215,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the modernApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModernApps(@javax.annotation.Nullable final Boolean value) {
         this._modernApps = value;
     }
@@ -218,6 +224,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -226,6 +233,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the officeApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOfficeApps(@javax.annotation.Nullable final Boolean value) {
         this._officeApps = value;
     }
@@ -234,6 +242,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the resourceAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceAccess(@javax.annotation.Nullable final Boolean value) {
         this._resourceAccess = value;
     }
@@ -242,6 +251,7 @@ public class ConfigurationManagerClientEnabledFeatures implements AdditionalData
      * @param value Value to set for the windowsUpdateForBusiness property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsUpdateForBusiness(@javax.annotation.Nullable final Boolean value) {
         this._windowsUpdateForBusiness = value;
     }

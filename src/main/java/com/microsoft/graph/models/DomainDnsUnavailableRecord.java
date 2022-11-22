@@ -14,9 +14,9 @@ public class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsa
      * Instantiates a new DomainDnsUnavailableRecord and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DomainDnsUnavailableRecord() {
         super();
-        this.setOdataType("#microsoft.graph.domainDnsUnavailableRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,16 +42,16 @@ public class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DomainDnsUnavailableRecord currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +62,7 @@ public class DomainDnsUnavailableRecord extends DomainDnsRecord implements Parsa
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }

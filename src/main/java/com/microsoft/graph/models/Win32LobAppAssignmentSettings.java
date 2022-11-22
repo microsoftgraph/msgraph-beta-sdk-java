@@ -20,6 +20,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * Instantiates a new Win32LobAppAssignmentSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Win32LobAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppAssignmentSettings");
@@ -48,13 +49,12 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Win32LobAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deliveryOptimizationPriority", (n) -> { currentObject.setDeliveryOptimizationPriority(n.getEnumValue(Win32LobAppDeliveryOptimizationPriority.class)); });
-            this.put("installTimeSettings", (n) -> { currentObject.setInstallTimeSettings(n.getObjectValue(MobileAppInstallTimeSettings::createFromDiscriminatorValue)); });
-            this.put("notifications", (n) -> { currentObject.setNotifications(n.getEnumValue(Win32LobAppNotification.class)); });
-            this.put("restartSettings", (n) -> { currentObject.setRestartSettings(n.getObjectValue(Win32LobAppRestartSettings::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deliveryOptimizationPriority", (n) -> { this.setDeliveryOptimizationPriority(n.getEnumValue(Win32LobAppDeliveryOptimizationPriority.class)); });
+        deserializerMap.put("installTimeSettings", (n) -> { this.setInstallTimeSettings(n.getObjectValue(MobileAppInstallTimeSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("notifications", (n) -> { this.setNotifications(n.getEnumValue(Win32LobAppNotification.class)); });
+        deserializerMap.put("restartSettings", (n) -> { this.setRestartSettings(n.getObjectValue(Win32LobAppRestartSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the installTimeSettings property value. The install time settings to apply for this app assignment.
@@ -85,6 +85,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +99,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param value Value to set for the deliveryOptimizationPriority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeliveryOptimizationPriority(@javax.annotation.Nullable final Win32LobAppDeliveryOptimizationPriority value) {
         this._deliveryOptimizationPriority = value;
     }
@@ -106,6 +108,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param value Value to set for the installTimeSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallTimeSettings(@javax.annotation.Nullable final MobileAppInstallTimeSettings value) {
         this._installTimeSettings = value;
     }
@@ -114,6 +117,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param value Value to set for the notifications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotifications(@javax.annotation.Nullable final Win32LobAppNotification value) {
         this._notifications = value;
     }
@@ -122,6 +126,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param value Value to set for the restartSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestartSettings(@javax.annotation.Nullable final Win32LobAppRestartSettings value) {
         this._restartSettings = value;
     }

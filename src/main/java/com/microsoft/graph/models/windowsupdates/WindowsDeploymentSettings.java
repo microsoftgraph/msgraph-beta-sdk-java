@@ -14,6 +14,7 @@ public class WindowsDeploymentSettings extends DeploymentSettings implements Par
      * Instantiates a new WindowsDeploymentSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDeploymentSettings() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.windowsDeploymentSettings");
@@ -34,10 +35,9 @@ public class WindowsDeploymentSettings extends DeploymentSettings implements Par
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsDeploymentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("userExperience", (n) -> { currentObject.setUserExperience(n.getObjectValue(UserExperienceSettings::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("userExperience", (n) -> { this.setUserExperience(n.getObjectValue(UserExperienceSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the userExperience property value. Settings governing the user's update experience on a device.
@@ -52,6 +52,7 @@ public class WindowsDeploymentSettings extends DeploymentSettings implements Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class WindowsDeploymentSettings extends DeploymentSettings implements Par
      * @param value Value to set for the userExperience property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperience(@javax.annotation.Nullable final UserExperienceSettings value) {
         this._userExperience = value;
     }

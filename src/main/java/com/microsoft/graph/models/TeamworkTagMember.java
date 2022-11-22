@@ -7,21 +7,21 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class TeamworkTagMember extends Entity implements Parsable {
     /** The member's display name. */
     private String _displayName;
-    /** The tenantId property */
+    /** The ID of the tenant that the tag member is a part of. */
     private String _tenantId;
-    /** The userId property */
+    /** The user ID of the member. */
     private String _userId;
     /**
      * Instantiates a new teamworkTagMember and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkTagMember() {
         super();
-        this.setOdataType("#microsoft.graph.teamworkTagMember");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,15 +47,14 @@ public class TeamworkTagMember extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamworkTagMember currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The ID of the tenant that the tag member is a part of.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -63,7 +62,7 @@ public class TeamworkTagMember extends Entity implements Parsable {
         return this._tenantId;
     }
     /**
-     * Gets the userId property value. The userId property
+     * Gets the userId property value. The user ID of the member.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -75,6 +74,7 @@ public class TeamworkTagMember extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,22 +87,25 @@ public class TeamworkTagMember extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The ID of the tenant that the tag member is a part of.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
     /**
-     * Sets the userId property value. The userId property
+     * Sets the userId property value. The user ID of the member.
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

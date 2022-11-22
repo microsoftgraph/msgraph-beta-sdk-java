@@ -32,17 +32,17 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
     /** The unique identifier for a user device scope tag Id used for the creation of device scope configuration. */
     private String _valueObjectId;
     /**
-     * Instantiates a new UserExperienceAnalyticsDeviceScope and sets the default values.
+     * Instantiates a new userExperienceAnalyticsDeviceScope and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsDeviceScope() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsDeviceScope");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsDeviceScope
+     * @return a userExperienceAnalyticsDeviceScope
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceScope createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -79,20 +79,19 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsDeviceScope currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deviceScopeName", (n) -> { currentObject.setDeviceScopeName(n.getStringValue()); });
-            this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
-            this.put("isBuiltIn", (n) -> { currentObject.setIsBuiltIn(n.getBooleanValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("operator", (n) -> { currentObject.setOperator(n.getEnumValue(DeviceScopeOperator.class)); });
-            this.put("ownerId", (n) -> { currentObject.setOwnerId(n.getStringValue()); });
-            this.put("parameter", (n) -> { currentObject.setParameter(n.getEnumValue(DeviceScopeParameter.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DeviceScopeStatus.class)); });
-            this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
-            this.put("valueObjectId", (n) -> { currentObject.setValueObjectId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceScopeName", (n) -> { this.setDeviceScopeName(n.getStringValue()); });
+        deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isBuiltIn", (n) -> { this.setIsBuiltIn(n.getBooleanValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumValue(DeviceScopeOperator.class)); });
+        deserializerMap.put("ownerId", (n) -> { this.setOwnerId(n.getStringValue()); });
+        deserializerMap.put("parameter", (n) -> { this.setParameter(n.getEnumValue(DeviceScopeParameter.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DeviceScopeStatus.class)); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
+        deserializerMap.put("valueObjectId", (n) -> { this.setValueObjectId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isBuiltIn property value. Indicates whether the device scope configuration is built-in or custom. When TRUE, the device scope configuration is built-in. When FALSE, the device scope configuration is custom. Default value is FALSE.
@@ -163,6 +162,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -183,6 +183,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -191,6 +192,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
      * @param value Value to set for the deviceScopeName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceScopeName(@javax.annotation.Nullable final String value) {
         this._deviceScopeName = value;
     }
@@ -199,6 +201,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
      * @param value Value to set for the enabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
         this._enabled = value;
     }
@@ -207,6 +210,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
      * @param value Value to set for the isBuiltIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsBuiltIn(@javax.annotation.Nullable final Boolean value) {
         this._isBuiltIn = value;
     }
@@ -215,6 +219,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -223,6 +228,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
      * @param value Value to set for the operator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperator(@javax.annotation.Nullable final DeviceScopeOperator value) {
         this._operator = value;
     }
@@ -231,6 +237,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
      * @param value Value to set for the ownerId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnerId(@javax.annotation.Nullable final String value) {
         this._ownerId = value;
     }
@@ -239,6 +246,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
      * @param value Value to set for the parameter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParameter(@javax.annotation.Nullable final DeviceScopeParameter value) {
         this._parameter = value;
     }
@@ -247,6 +255,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final DeviceScopeStatus value) {
         this._status = value;
     }
@@ -255,6 +264,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final String value) {
         this._value = value;
     }
@@ -263,6 +273,7 @@ public class UserExperienceAnalyticsDeviceScope extends Entity implements Parsab
      * @param value Value to set for the valueObjectId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValueObjectId(@javax.annotation.Nullable final String value) {
         this._valueObjectId = value;
     }

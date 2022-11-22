@@ -23,9 +23,9 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
      * Instantiates a new crossTenantAccessPolicyInboundTrust and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CrossTenantAccessPolicyInboundTrust() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.crossTenantAccessPolicyInboundTrust");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,13 +51,12 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CrossTenantAccessPolicyInboundTrust currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("isCompliantDeviceAccepted", (n) -> { currentObject.setIsCompliantDeviceAccepted(n.getBooleanValue()); });
-            this.put("isHybridAzureADJoinedDeviceAccepted", (n) -> { currentObject.setIsHybridAzureADJoinedDeviceAccepted(n.getBooleanValue()); });
-            this.put("isMfaAccepted", (n) -> { currentObject.setIsMfaAccepted(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("isCompliantDeviceAccepted", (n) -> { this.setIsCompliantDeviceAccepted(n.getBooleanValue()); });
+        deserializerMap.put("isHybridAzureADJoinedDeviceAccepted", (n) -> { this.setIsHybridAzureADJoinedDeviceAccepted(n.getBooleanValue()); });
+        deserializerMap.put("isMfaAccepted", (n) -> { this.setIsMfaAccepted(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isCompliantDeviceAccepted property value. Specifies whether compliant devices from external Azure AD organizations are trusted.
@@ -96,6 +95,7 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isCompliantDeviceAccepted", this.getIsCompliantDeviceAccepted());
@@ -109,6 +109,7 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +118,7 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
      * @param value Value to set for the isCompliantDeviceAccepted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCompliantDeviceAccepted(@javax.annotation.Nullable final Boolean value) {
         this._isCompliantDeviceAccepted = value;
     }
@@ -125,6 +127,7 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
      * @param value Value to set for the isHybridAzureADJoinedDeviceAccepted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsHybridAzureADJoinedDeviceAccepted(@javax.annotation.Nullable final Boolean value) {
         this._isHybridAzureADJoinedDeviceAccepted = value;
     }
@@ -133,6 +136,7 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
      * @param value Value to set for the isMfaAccepted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMfaAccepted(@javax.annotation.Nullable final Boolean value) {
         this._isMfaAccepted = value;
     }
@@ -141,6 +145,7 @@ public class CrossTenantAccessPolicyInboundTrust implements AdditionalDataHolder
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

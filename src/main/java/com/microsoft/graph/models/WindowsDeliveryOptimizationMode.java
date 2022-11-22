@@ -9,7 +9,7 @@ public enum WindowsDeliveryOptimizationMode implements ValuedEnum {
     UserDefined("userDefined"),
     /** HTTP only, no peering */
     HttpOnly("httpOnly"),
-    /** OS default – Http blended with peering behind the same network address translator */
+    /** OS default  Http blended with peering behind the same network address translator */
     HttpWithPeeringNat("httpWithPeeringNat"),
     /** HTTP blended with peering across a private group */
     HttpWithPeeringPrivateGroup("httpWithPeeringPrivateGroup"),

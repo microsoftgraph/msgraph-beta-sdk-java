@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the filterOperators method. */
+/** Provides operations to manage the collection of accessReview entities. */
 public enum ScopeOperatorType implements ValuedEnum {
     Binary("Binary"),
     Unary("Unary");

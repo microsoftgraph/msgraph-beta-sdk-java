@@ -21,9 +21,9 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, P
      * Instantiates a new onPremisesPublishingSingleSignOn and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnPremisesPublishingSingleSignOn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.onPremisesPublishingSingleSignOn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,12 +49,11 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnPremisesPublishingSingleSignOn currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("kerberosSignOnSettings", (n) -> { currentObject.setKerberosSignOnSettings(n.getObjectValue(KerberosSignOnSettings::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("singleSignOnMode", (n) -> { currentObject.setSingleSignOnMode(n.getEnumValue(SingleSignOnMode.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("kerberosSignOnSettings", (n) -> { this.setKerberosSignOnSettings(n.getObjectValue(KerberosSignOnSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("singleSignOnMode", (n) -> { this.setSingleSignOnMode(n.getEnumValue(SingleSignOnMode.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the kerberosSignOnSettings property value. The Kerberos Constrained Delegation settings for applications that use Integrated Window Authentication.
@@ -85,6 +84,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("kerberosSignOnSettings", this.getKerberosSignOnSettings());
@@ -97,6 +97,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, P
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, P
      * @param value Value to set for the kerberosSignOnSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKerberosSignOnSettings(@javax.annotation.Nullable final KerberosSignOnSettings value) {
         this._kerberosSignOnSettings = value;
     }
@@ -113,6 +115,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, P
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +124,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, P
      * @param value Value to set for the singleSignOnMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleSignOnMode(@javax.annotation.Nullable final SingleSignOnMode value) {
         this._singleSignOnMode = value;
     }

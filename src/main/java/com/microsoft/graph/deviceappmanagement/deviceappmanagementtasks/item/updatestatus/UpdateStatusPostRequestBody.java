@@ -21,6 +21,7 @@ public class UpdateStatusPostRequestBody implements AdditionalDataHolder, Parsab
      * Instantiates a new updateStatusPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateStatusPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -48,11 +49,10 @@ public class UpdateStatusPostRequestBody implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UpdateStatusPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("note", (n) -> { currentObject.setNote(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DeviceAppManagementTaskStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("note", (n) -> { this.setNote(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DeviceAppManagementTaskStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the note property value. The note property
@@ -75,6 +75,7 @@ public class UpdateStatusPostRequestBody implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("note", this.getNote());
@@ -86,6 +87,7 @@ public class UpdateStatusPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -94,6 +96,7 @@ public class UpdateStatusPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the note property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNote(@javax.annotation.Nullable final String value) {
         this._note = value;
     }
@@ -102,6 +105,7 @@ public class UpdateStatusPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final DeviceAppManagementTaskStatus value) {
         this._status = value;
     }

@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics battery health device app impact entity contains battery usage related information at an app level for a given device. */
 public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity implements Parsable {
     /** User friendly display name for the app. Eg: Outlook */
     private String _appDisplayName;
@@ -21,17 +22,17 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
     /** true if the user had active interaction with the app. */
     private Boolean _isForegroundApp;
     /**
-     * Instantiates a new UserExperienceAnalyticsBatteryHealthDeviceAppImpact and sets the default values.
+     * Instantiates a new userExperienceAnalyticsBatteryHealthDeviceAppImpact and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsBatteryHealthDeviceAppImpact() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsBatteryHealthDeviceAppImpact");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBatteryHealthDeviceAppImpact
+     * @return a userExperienceAnalyticsBatteryHealthDeviceAppImpact
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthDeviceAppImpact createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -84,15 +85,14 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsBatteryHealthDeviceAppImpact currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
-            this.put("appName", (n) -> { currentObject.setAppName(n.getStringValue()); });
-            this.put("appPublisher", (n) -> { currentObject.setAppPublisher(n.getStringValue()); });
-            this.put("batteryUsagePercentage", (n) -> { currentObject.setBatteryUsagePercentage(n.getDoubleValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("isForegroundApp", (n) -> { currentObject.setIsForegroundApp(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appDisplayName", (n) -> { this.setAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("appName", (n) -> { this.setAppName(n.getStringValue()); });
+        deserializerMap.put("appPublisher", (n) -> { this.setAppPublisher(n.getStringValue()); });
+        deserializerMap.put("batteryUsagePercentage", (n) -> { this.setBatteryUsagePercentage(n.getDoubleValue()); });
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("isForegroundApp", (n) -> { this.setIsForegroundApp(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isForegroundApp property value. true if the user had active interaction with the app.
@@ -107,6 +107,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +123,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
         this._appDisplayName = value;
     }
@@ -130,6 +132,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
      * @param value Value to set for the appName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppName(@javax.annotation.Nullable final String value) {
         this._appName = value;
     }
@@ -138,6 +141,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
      * @param value Value to set for the appPublisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppPublisher(@javax.annotation.Nullable final String value) {
         this._appPublisher = value;
     }
@@ -146,6 +150,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
      * @param value Value to set for the batteryUsagePercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBatteryUsagePercentage(@javax.annotation.Nullable final Double value) {
         this._batteryUsagePercentage = value;
     }
@@ -154,6 +159,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -162,6 +168,7 @@ public class UserExperienceAnalyticsBatteryHealthDeviceAppImpact extends Entity 
      * @param value Value to set for the isForegroundApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsForegroundApp(@javax.annotation.Nullable final Boolean value) {
         this._isForegroundApp = value;
     }

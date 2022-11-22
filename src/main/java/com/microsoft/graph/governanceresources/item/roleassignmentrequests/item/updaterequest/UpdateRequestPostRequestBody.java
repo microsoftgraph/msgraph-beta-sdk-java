@@ -25,6 +25,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      * Instantiates a new updateRequestPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateRequestPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -68,13 +69,12 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UpdateRequestPostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("assignmentState", (n) -> { currentObject.setAssignmentState(n.getStringValue()); });
-            this.put("decision", (n) -> { currentObject.setDecision(n.getStringValue()); });
-            this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
-            this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(GovernanceSchedule::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("assignmentState", (n) -> { this.setAssignmentState(n.getStringValue()); });
+        deserializerMap.put("decision", (n) -> { this.setDecision(n.getStringValue()); });
+        deserializerMap.put("reason", (n) -> { this.setReason(n.getStringValue()); });
+        deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(GovernanceSchedule::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the reason property value. The reason property
@@ -97,6 +97,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("assignmentState", this.getAssignmentState());
@@ -110,6 +111,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +120,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the assignmentState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentState(@javax.annotation.Nullable final String value) {
         this._assignmentState = value;
     }
@@ -126,6 +129,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the decision property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecision(@javax.annotation.Nullable final String value) {
         this._decision = value;
     }
@@ -134,6 +138,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the reason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReason(@javax.annotation.Nullable final String value) {
         this._reason = value;
     }
@@ -142,6 +147,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the schedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedule(@javax.annotation.Nullable final GovernanceSchedule value) {
         this._schedule = value;
     }

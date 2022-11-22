@@ -40,9 +40,9 @@ public class EntitlementManagement extends Entity implements Parsable {
      * Instantiates a new EntitlementManagement and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EntitlementManagement() {
         super();
-        this.setOdataType("#microsoft.graph.entitlementManagement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -156,23 +156,22 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EntitlementManagement currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessPackageAssignmentApprovals", (n) -> { currentObject.setAccessPackageAssignmentApprovals(n.getCollectionOfObjectValues(Approval::createFromDiscriminatorValue)); });
-            this.put("accessPackageAssignmentPolicies", (n) -> { currentObject.setAccessPackageAssignmentPolicies(n.getCollectionOfObjectValues(AccessPackageAssignmentPolicy::createFromDiscriminatorValue)); });
-            this.put("accessPackageAssignmentRequests", (n) -> { currentObject.setAccessPackageAssignmentRequests(n.getCollectionOfObjectValues(AccessPackageAssignmentRequest::createFromDiscriminatorValue)); });
-            this.put("accessPackageAssignmentResourceRoles", (n) -> { currentObject.setAccessPackageAssignmentResourceRoles(n.getCollectionOfObjectValues(AccessPackageAssignmentResourceRole::createFromDiscriminatorValue)); });
-            this.put("accessPackageAssignments", (n) -> { currentObject.setAccessPackageAssignments(n.getCollectionOfObjectValues(AccessPackageAssignment::createFromDiscriminatorValue)); });
-            this.put("accessPackageCatalogs", (n) -> { currentObject.setAccessPackageCatalogs(n.getCollectionOfObjectValues(AccessPackageCatalog::createFromDiscriminatorValue)); });
-            this.put("accessPackageResourceEnvironments", (n) -> { currentObject.setAccessPackageResourceEnvironments(n.getCollectionOfObjectValues(AccessPackageResourceEnvironment::createFromDiscriminatorValue)); });
-            this.put("accessPackageResourceRequests", (n) -> { currentObject.setAccessPackageResourceRequests(n.getCollectionOfObjectValues(AccessPackageResourceRequest::createFromDiscriminatorValue)); });
-            this.put("accessPackageResourceRoleScopes", (n) -> { currentObject.setAccessPackageResourceRoleScopes(n.getCollectionOfObjectValues(AccessPackageResourceRoleScope::createFromDiscriminatorValue)); });
-            this.put("accessPackageResources", (n) -> { currentObject.setAccessPackageResources(n.getCollectionOfObjectValues(AccessPackageResource::createFromDiscriminatorValue)); });
-            this.put("accessPackages", (n) -> { currentObject.setAccessPackages(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
-            this.put("connectedOrganizations", (n) -> { currentObject.setConnectedOrganizations(n.getCollectionOfObjectValues(ConnectedOrganization::createFromDiscriminatorValue)); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(EntitlementManagementSettings::createFromDiscriminatorValue)); });
-            this.put("subjects", (n) -> { currentObject.setSubjects(n.getCollectionOfObjectValues(AccessPackageSubject::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackageAssignmentApprovals", (n) -> { this.setAccessPackageAssignmentApprovals(n.getCollectionOfObjectValues(Approval::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageAssignmentPolicies", (n) -> { this.setAccessPackageAssignmentPolicies(n.getCollectionOfObjectValues(AccessPackageAssignmentPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageAssignmentRequests", (n) -> { this.setAccessPackageAssignmentRequests(n.getCollectionOfObjectValues(AccessPackageAssignmentRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageAssignmentResourceRoles", (n) -> { this.setAccessPackageAssignmentResourceRoles(n.getCollectionOfObjectValues(AccessPackageAssignmentResourceRole::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageAssignments", (n) -> { this.setAccessPackageAssignments(n.getCollectionOfObjectValues(AccessPackageAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageCatalogs", (n) -> { this.setAccessPackageCatalogs(n.getCollectionOfObjectValues(AccessPackageCatalog::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageResourceEnvironments", (n) -> { this.setAccessPackageResourceEnvironments(n.getCollectionOfObjectValues(AccessPackageResourceEnvironment::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageResourceRequests", (n) -> { this.setAccessPackageResourceRequests(n.getCollectionOfObjectValues(AccessPackageResourceRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageResourceRoleScopes", (n) -> { this.setAccessPackageResourceRoleScopes(n.getCollectionOfObjectValues(AccessPackageResourceRoleScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageResources", (n) -> { this.setAccessPackageResources(n.getCollectionOfObjectValues(AccessPackageResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackages", (n) -> { this.setAccessPackages(n.getCollectionOfObjectValues(AccessPackage::createFromDiscriminatorValue)); });
+        deserializerMap.put("connectedOrganizations", (n) -> { this.setConnectedOrganizations(n.getCollectionOfObjectValues(ConnectedOrganization::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(EntitlementManagementSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("subjects", (n) -> { this.setSubjects(n.getCollectionOfObjectValues(AccessPackageSubject::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the settings property value. Represents the settings that control the behavior of Azure AD entitlement management.
@@ -195,6 +194,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -218,6 +218,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignmentApprovals property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageAssignmentApprovals(@javax.annotation.Nullable final java.util.List<Approval> value) {
         this._accessPackageAssignmentApprovals = value;
     }
@@ -226,6 +227,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignmentPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageAssignmentPolicies(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentPolicy> value) {
         this._accessPackageAssignmentPolicies = value;
     }
@@ -234,6 +236,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignmentRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageAssignmentRequests(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentRequest> value) {
         this._accessPackageAssignmentRequests = value;
     }
@@ -242,6 +245,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignmentResourceRoles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageAssignmentResourceRoles(@javax.annotation.Nullable final java.util.List<AccessPackageAssignmentResourceRole> value) {
         this._accessPackageAssignmentResourceRoles = value;
     }
@@ -250,6 +254,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageAssignments(@javax.annotation.Nullable final java.util.List<AccessPackageAssignment> value) {
         this._accessPackageAssignments = value;
     }
@@ -258,6 +263,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageCatalogs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageCatalogs(@javax.annotation.Nullable final java.util.List<AccessPackageCatalog> value) {
         this._accessPackageCatalogs = value;
     }
@@ -266,6 +272,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResourceEnvironments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResourceEnvironments(@javax.annotation.Nullable final java.util.List<AccessPackageResourceEnvironment> value) {
         this._accessPackageResourceEnvironments = value;
     }
@@ -274,6 +281,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResourceRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResourceRequests(@javax.annotation.Nullable final java.util.List<AccessPackageResourceRequest> value) {
         this._accessPackageResourceRequests = value;
     }
@@ -282,6 +290,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResourceRoleScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResourceRoleScopes(@javax.annotation.Nullable final java.util.List<AccessPackageResourceRoleScope> value) {
         this._accessPackageResourceRoleScopes = value;
     }
@@ -290,6 +299,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResources(@javax.annotation.Nullable final java.util.List<AccessPackageResource> value) {
         this._accessPackageResources = value;
     }
@@ -298,6 +308,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the accessPackages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackages(@javax.annotation.Nullable final java.util.List<AccessPackage> value) {
         this._accessPackages = value;
     }
@@ -306,6 +317,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the connectedOrganizations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectedOrganizations(@javax.annotation.Nullable final java.util.List<ConnectedOrganization> value) {
         this._connectedOrganizations = value;
     }
@@ -314,6 +326,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final EntitlementManagementSettings value) {
         this._settings = value;
     }
@@ -322,6 +335,7 @@ public class EntitlementManagement extends Entity implements Parsable {
      * @param value Value to set for the subjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjects(@javax.annotation.Nullable final java.util.List<AccessPackageSubject> value) {
         this._subjects = value;
     }

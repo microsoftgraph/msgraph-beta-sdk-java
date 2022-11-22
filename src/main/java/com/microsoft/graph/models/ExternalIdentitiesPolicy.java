@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
-    /** Notifies Azure AD whether to clean up the user information about the external identity, from the guest tenant, when the user is deleted in their home tenant. */
+    /** Reserved for future use. */
     private Boolean _allowDeletedIdentitiesDataRemoval;
     /** Defines whether external users can leave the guest tenant. If set to false, self-service controls are disabled, and the admin of the guest tenant must manually remove the external user from the guest tenant. When the external user leaves the tenant, their data in the guest tenant is first soft-deleted then permanently deleted in 30 days. */
     private Boolean _allowExternalIdentitiesToLeave;
@@ -16,6 +16,7 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
      * Instantiates a new ExternalIdentitiesPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExternalIdentitiesPolicy() {
         super();
         this.setOdataType("#microsoft.graph.externalIdentitiesPolicy");
@@ -31,7 +32,7 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
         return new ExternalIdentitiesPolicy();
     }
     /**
-     * Gets the allowDeletedIdentitiesDataRemoval property value. Notifies Azure AD whether to clean up the user information about the external identity, from the guest tenant, when the user is deleted in their home tenant.
+     * Gets the allowDeletedIdentitiesDataRemoval property value. Reserved for future use.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -52,17 +53,17 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExternalIdentitiesPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowDeletedIdentitiesDataRemoval", (n) -> { currentObject.setAllowDeletedIdentitiesDataRemoval(n.getBooleanValue()); });
-            this.put("allowExternalIdentitiesToLeave", (n) -> { currentObject.setAllowExternalIdentitiesToLeave(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowDeletedIdentitiesDataRemoval", (n) -> { this.setAllowDeletedIdentitiesDataRemoval(n.getBooleanValue()); });
+        deserializerMap.put("allowExternalIdentitiesToLeave", (n) -> { this.setAllowExternalIdentitiesToLeave(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -70,10 +71,11 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
         writer.writeBooleanValue("allowExternalIdentitiesToLeave", this.getAllowExternalIdentitiesToLeave());
     }
     /**
-     * Sets the allowDeletedIdentitiesDataRemoval property value. Notifies Azure AD whether to clean up the user information about the external identity, from the guest tenant, when the user is deleted in their home tenant.
+     * Sets the allowDeletedIdentitiesDataRemoval property value. Reserved for future use.
      * @param value Value to set for the allowDeletedIdentitiesDataRemoval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowDeletedIdentitiesDataRemoval(@javax.annotation.Nullable final Boolean value) {
         this._allowDeletedIdentitiesDataRemoval = value;
     }
@@ -82,6 +84,7 @@ public class ExternalIdentitiesPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the allowExternalIdentitiesToLeave property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowExternalIdentitiesToLeave(@javax.annotation.Nullable final Boolean value) {
         this._allowExternalIdentitiesToLeave = value;
     }

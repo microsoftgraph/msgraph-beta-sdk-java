@@ -24,6 +24,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      * Instantiates a new MembershipOutlierInsight and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MembershipOutlierInsight() {
         super();
         this.setOdataType("#microsoft.graph.membershipOutlierInsight");
@@ -60,15 +61,14 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MembershipOutlierInsight currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("container", (n) -> { currentObject.setContainer(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("containerId", (n) -> { currentObject.setContainerId(n.getStringValue()); });
-            this.put("member", (n) -> { currentObject.setMember(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("memberId", (n) -> { currentObject.setMemberId(n.getStringValue()); });
-            this.put("outlierContainerType", (n) -> { currentObject.setOutlierContainerType(n.getEnumValue(OutlierContainerType.class)); });
-            this.put("outlierMemberType", (n) -> { currentObject.setOutlierMemberType(n.getEnumValue(OutlierMemberType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("container", (n) -> { this.setContainer(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("containerId", (n) -> { this.setContainerId(n.getStringValue()); });
+        deserializerMap.put("member", (n) -> { this.setMember(n.getObjectValue(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("memberId", (n) -> { this.setMemberId(n.getStringValue()); });
+        deserializerMap.put("outlierContainerType", (n) -> { this.setOutlierContainerType(n.getEnumValue(OutlierContainerType.class)); });
+        deserializerMap.put("outlierMemberType", (n) -> { this.setOutlierMemberType(n.getEnumValue(OutlierMemberType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the member property value. Navigation link to a member object. For example, to a user.
@@ -107,6 +107,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +123,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      * @param value Value to set for the container property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContainer(@javax.annotation.Nullable final DirectoryObject value) {
         this._container = value;
     }
@@ -130,6 +132,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      * @param value Value to set for the containerId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContainerId(@javax.annotation.Nullable final String value) {
         this._containerId = value;
     }
@@ -138,6 +141,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      * @param value Value to set for the member property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMember(@javax.annotation.Nullable final DirectoryObject value) {
         this._member = value;
     }
@@ -146,6 +150,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      * @param value Value to set for the memberId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberId(@javax.annotation.Nullable final String value) {
         this._memberId = value;
     }
@@ -154,6 +159,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      * @param value Value to set for the outlierContainerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutlierContainerType(@javax.annotation.Nullable final OutlierContainerType value) {
         this._outlierContainerType = value;
     }
@@ -162,6 +168,7 @@ public class MembershipOutlierInsight extends GovernanceInsight implements Parsa
      * @param value Value to set for the outlierMemberType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutlierMemberType(@javax.annotation.Nullable final OutlierMemberType value) {
         this._outlierMemberType = value;
     }

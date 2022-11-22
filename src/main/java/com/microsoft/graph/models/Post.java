@@ -43,6 +43,7 @@ public class Post extends OutlookItem implements Parsable {
      * Instantiates a new Post and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Post() {
         super();
         this.setOdataType("#microsoft.graph.post");
@@ -103,24 +104,23 @@ public class Post extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Post currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
-            this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("conversationId", (n) -> { currentObject.setConversationId(n.getStringValue()); });
-            this.put("conversationThreadId", (n) -> { currentObject.setConversationThreadId(n.getStringValue()); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("from", (n) -> { currentObject.setFrom(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
-            this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
-            this.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
-            this.put("inReplyTo", (n) -> { currentObject.setInReplyTo(n.getObjectValue(Post::createFromDiscriminatorValue)); });
-            this.put("mentions", (n) -> { currentObject.setMentions(n.getCollectionOfObjectValues(Mention::createFromDiscriminatorValue)); });
-            this.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("newParticipants", (n) -> { currentObject.setNewParticipants(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("receivedDateTime", (n) -> { currentObject.setReceivedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("sender", (n) -> { currentObject.setSender(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
-            this.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("attachments", (n) -> { this.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
+        deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("conversationId", (n) -> { this.setConversationId(n.getStringValue()); });
+        deserializerMap.put("conversationThreadId", (n) -> { this.setConversationThreadId(n.getStringValue()); });
+        deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("from", (n) -> { this.setFrom(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
+        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(Importance.class)); });
+        deserializerMap.put("inReplyTo", (n) -> { this.setInReplyTo(n.getObjectValue(Post::createFromDiscriminatorValue)); });
+        deserializerMap.put("mentions", (n) -> { this.setMentions(n.getCollectionOfObjectValues(Mention::createFromDiscriminatorValue)); });
+        deserializerMap.put("multiValueExtendedProperties", (n) -> { this.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("newParticipants", (n) -> { this.setNewParticipants(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("receivedDateTime", (n) -> { this.setReceivedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("sender", (n) -> { this.setSender(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the from property value. The from property
@@ -207,6 +207,7 @@ public class Post extends OutlookItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -231,6 +232,7 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the attachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttachments(@javax.annotation.Nullable final java.util.List<Attachment> value) {
         this._attachments = value;
     }
@@ -239,6 +241,7 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the body property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBody(@javax.annotation.Nullable final ItemBody value) {
         this._body = value;
     }
@@ -247,6 +250,7 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the conversationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConversationId(@javax.annotation.Nullable final String value) {
         this._conversationId = value;
     }
@@ -255,6 +259,7 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the conversationThreadId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConversationThreadId(@javax.annotation.Nullable final String value) {
         this._conversationThreadId = value;
     }
@@ -263,6 +268,7 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -271,6 +277,7 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the from property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFrom(@javax.annotation.Nullable final Recipient value) {
         this._from = value;
     }
@@ -279,6 +286,7 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
         this._hasAttachments = value;
     }
@@ -287,6 +295,7 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the importance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportance(@javax.annotation.Nullable final Importance value) {
         this._importance = value;
     }
@@ -295,6 +304,7 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the inReplyTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInReplyTo(@javax.annotation.Nullable final Post value) {
         this._inReplyTo = value;
     }
@@ -303,6 +313,7 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the mentions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMentions(@javax.annotation.Nullable final java.util.List<Mention> value) {
         this._mentions = value;
     }
@@ -311,6 +322,7 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the multiValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this._multiValueExtendedProperties = value;
     }
@@ -319,6 +331,7 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the newParticipants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNewParticipants(@javax.annotation.Nullable final java.util.List<Recipient> value) {
         this._newParticipants = value;
     }
@@ -327,6 +340,7 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the receivedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReceivedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._receivedDateTime = value;
     }
@@ -335,6 +349,7 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the sender property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSender(@javax.annotation.Nullable final Recipient value) {
         this._sender = value;
     }
@@ -343,6 +358,7 @@ public class Post extends OutlookItem implements Parsable {
      * @param value Value to set for the singleValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this._singleValueExtendedProperties = value;
     }

@@ -21,9 +21,9 @@ public class SearchEntity extends Entity implements Parsable {
      * Instantiates a new SearchEntity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SearchEntity() {
         super();
-        this.setOdataType("#microsoft.graph.searchEntity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,12 +57,11 @@ public class SearchEntity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SearchEntity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("acronyms", (n) -> { currentObject.setAcronyms(n.getCollectionOfObjectValues(Acronym::createFromDiscriminatorValue)); });
-            this.put("bookmarks", (n) -> { currentObject.setBookmarks(n.getCollectionOfObjectValues(Bookmark::createFromDiscriminatorValue)); });
-            this.put("qnas", (n) -> { currentObject.setQnas(n.getCollectionOfObjectValues(Qna::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("acronyms", (n) -> { this.setAcronyms(n.getCollectionOfObjectValues(Acronym::createFromDiscriminatorValue)); });
+        deserializerMap.put("bookmarks", (n) -> { this.setBookmarks(n.getCollectionOfObjectValues(Bookmark::createFromDiscriminatorValue)); });
+        deserializerMap.put("qnas", (n) -> { this.setQnas(n.getCollectionOfObjectValues(Qna::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the qnas property value. Administrative answer in Microsoft Search results which provide answers for specific search keywords in an organization.
@@ -77,6 +76,7 @@ public class SearchEntity extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -89,6 +89,7 @@ public class SearchEntity extends Entity implements Parsable {
      * @param value Value to set for the acronyms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcronyms(@javax.annotation.Nullable final java.util.List<Acronym> value) {
         this._acronyms = value;
     }
@@ -97,6 +98,7 @@ public class SearchEntity extends Entity implements Parsable {
      * @param value Value to set for the bookmarks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBookmarks(@javax.annotation.Nullable final java.util.List<Bookmark> value) {
         this._bookmarks = value;
     }
@@ -105,6 +107,7 @@ public class SearchEntity extends Entity implements Parsable {
      * @param value Value to set for the qnas property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQnas(@javax.annotation.Nullable final java.util.List<Qna> value) {
         this._qnas = value;
     }

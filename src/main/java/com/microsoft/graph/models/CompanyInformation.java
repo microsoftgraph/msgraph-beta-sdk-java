@@ -39,9 +39,9 @@ public class CompanyInformation extends Entity implements Parsable {
      * Instantiates a new companyInformation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CompanyInformation() {
         super();
-        this.setOdataType("#microsoft.graph.companyInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -107,21 +107,20 @@ public class CompanyInformation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CompanyInformation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
-            this.put("currencyCode", (n) -> { currentObject.setCurrencyCode(n.getStringValue()); });
-            this.put("currentFiscalYearStartDate", (n) -> { currentObject.setCurrentFiscalYearStartDate(n.getLocalDateValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("faxNumber", (n) -> { currentObject.setFaxNumber(n.getStringValue()); });
-            this.put("industry", (n) -> { currentObject.setIndustry(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("phoneNumber", (n) -> { currentObject.setPhoneNumber(n.getStringValue()); });
-            this.put("picture", (n) -> { currentObject.setPicture(n.getByteArrayValue()); });
-            this.put("taxRegistrationNumber", (n) -> { currentObject.setTaxRegistrationNumber(n.getStringValue()); });
-            this.put("website", (n) -> { currentObject.setWebsite(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
+        deserializerMap.put("currencyCode", (n) -> { this.setCurrencyCode(n.getStringValue()); });
+        deserializerMap.put("currentFiscalYearStartDate", (n) -> { this.setCurrentFiscalYearStartDate(n.getLocalDateValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("faxNumber", (n) -> { this.setFaxNumber(n.getStringValue()); });
+        deserializerMap.put("industry", (n) -> { this.setIndustry(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("phoneNumber", (n) -> { this.setPhoneNumber(n.getStringValue()); });
+        deserializerMap.put("picture", (n) -> { this.setPicture(n.getByteArrayValue()); });
+        deserializerMap.put("taxRegistrationNumber", (n) -> { this.setTaxRegistrationNumber(n.getStringValue()); });
+        deserializerMap.put("website", (n) -> { this.setWebsite(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the industry property value. The industry property
@@ -176,6 +175,7 @@ public class CompanyInformation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -197,6 +197,7 @@ public class CompanyInformation extends Entity implements Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddress(@javax.annotation.Nullable final PostalAddressType value) {
         this._address = value;
     }
@@ -205,6 +206,7 @@ public class CompanyInformation extends Entity implements Parsable {
      * @param value Value to set for the currencyCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrencyCode(@javax.annotation.Nullable final String value) {
         this._currencyCode = value;
     }
@@ -213,6 +215,7 @@ public class CompanyInformation extends Entity implements Parsable {
      * @param value Value to set for the currentFiscalYearStartDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrentFiscalYearStartDate(@javax.annotation.Nullable final LocalDate value) {
         this._currentFiscalYearStartDate = value;
     }
@@ -221,6 +224,7 @@ public class CompanyInformation extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -229,6 +233,7 @@ public class CompanyInformation extends Entity implements Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
         this._email = value;
     }
@@ -237,6 +242,7 @@ public class CompanyInformation extends Entity implements Parsable {
      * @param value Value to set for the faxNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFaxNumber(@javax.annotation.Nullable final String value) {
         this._faxNumber = value;
     }
@@ -245,6 +251,7 @@ public class CompanyInformation extends Entity implements Parsable {
      * @param value Value to set for the industry property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIndustry(@javax.annotation.Nullable final String value) {
         this._industry = value;
     }
@@ -253,6 +260,7 @@ public class CompanyInformation extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -261,6 +269,7 @@ public class CompanyInformation extends Entity implements Parsable {
      * @param value Value to set for the phoneNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoneNumber(@javax.annotation.Nullable final String value) {
         this._phoneNumber = value;
     }
@@ -269,6 +278,7 @@ public class CompanyInformation extends Entity implements Parsable {
      * @param value Value to set for the picture property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPicture(@javax.annotation.Nullable final byte[] value) {
         this._picture = value;
     }
@@ -277,6 +287,7 @@ public class CompanyInformation extends Entity implements Parsable {
      * @param value Value to set for the taxRegistrationNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaxRegistrationNumber(@javax.annotation.Nullable final String value) {
         this._taxRegistrationNumber = value;
     }
@@ -285,6 +296,7 @@ public class CompanyInformation extends Entity implements Parsable {
      * @param value Value to set for the website property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebsite(@javax.annotation.Nullable final String value) {
         this._website = value;
     }

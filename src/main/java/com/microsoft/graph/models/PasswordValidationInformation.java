@@ -21,9 +21,9 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
      * Instantiates a new passwordValidationInformation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PasswordValidationInformation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.passwordValidationInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,12 +49,11 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PasswordValidationInformation currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("isValid", (n) -> { currentObject.setIsValid(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("validationResults", (n) -> { currentObject.setValidationResults(n.getCollectionOfObjectValues(ValidationResult::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("isValid", (n) -> { this.setIsValid(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("validationResults", (n) -> { this.setValidationResults(n.getCollectionOfObjectValues(ValidationResult::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isValid property value. Specifies whether the password is valid based on the calculation of the results in the validationResults property. Not nullable. Read-only.
@@ -85,6 +84,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isValid", this.getIsValid());
@@ -97,6 +97,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
      * @param value Value to set for the isValid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsValid(@javax.annotation.Nullable final Boolean value) {
         this._isValid = value;
     }
@@ -113,6 +115,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +124,7 @@ public class PasswordValidationInformation implements AdditionalDataHolder, Pars
      * @param value Value to set for the validationResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValidationResults(@javax.annotation.Nullable final java.util.List<ValidationResult> value) {
         this._validationResults = value;
     }

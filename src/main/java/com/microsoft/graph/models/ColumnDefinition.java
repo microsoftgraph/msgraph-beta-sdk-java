@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ColumnDefinition extends Entity implements Parsable {
     /** This column stores boolean values. */
     private BooleanColumn _boolean_escaped;
@@ -77,9 +77,9 @@ public class ColumnDefinition extends Entity implements Parsable {
      * Instantiates a new columnDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ColumnDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.columnDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -185,41 +185,40 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ColumnDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("boolean", (n) -> { currentObject.setBoolean(n.getObjectValue(BooleanColumn::createFromDiscriminatorValue)); });
-            this.put("calculated", (n) -> { currentObject.setCalculated(n.getObjectValue(CalculatedColumn::createFromDiscriminatorValue)); });
-            this.put("choice", (n) -> { currentObject.setChoice(n.getObjectValue(ChoiceColumn::createFromDiscriminatorValue)); });
-            this.put("columnGroup", (n) -> { currentObject.setColumnGroup(n.getStringValue()); });
-            this.put("contentApprovalStatus", (n) -> { currentObject.setContentApprovalStatus(n.getObjectValue(ContentApprovalStatusColumn::createFromDiscriminatorValue)); });
-            this.put("currency", (n) -> { currentObject.setCurrency(n.getObjectValue(CurrencyColumn::createFromDiscriminatorValue)); });
-            this.put("dateTime", (n) -> { currentObject.setDateTime(n.getObjectValue(DateTimeColumn::createFromDiscriminatorValue)); });
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getObjectValue(DefaultColumnValue::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("enforceUniqueValues", (n) -> { currentObject.setEnforceUniqueValues(n.getBooleanValue()); });
-            this.put("geolocation", (n) -> { currentObject.setGeolocation(n.getObjectValue(GeolocationColumn::createFromDiscriminatorValue)); });
-            this.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
-            this.put("hyperlinkOrPicture", (n) -> { currentObject.setHyperlinkOrPicture(n.getObjectValue(HyperlinkOrPictureColumn::createFromDiscriminatorValue)); });
-            this.put("indexed", (n) -> { currentObject.setIndexed(n.getBooleanValue()); });
-            this.put("isDeletable", (n) -> { currentObject.setIsDeletable(n.getBooleanValue()); });
-            this.put("isReorderable", (n) -> { currentObject.setIsReorderable(n.getBooleanValue()); });
-            this.put("isSealed", (n) -> { currentObject.setIsSealed(n.getBooleanValue()); });
-            this.put("lookup", (n) -> { currentObject.setLookup(n.getObjectValue(LookupColumn::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("number", (n) -> { currentObject.setNumber(n.getObjectValue(NumberColumn::createFromDiscriminatorValue)); });
-            this.put("personOrGroup", (n) -> { currentObject.setPersonOrGroup(n.getObjectValue(PersonOrGroupColumn::createFromDiscriminatorValue)); });
-            this.put("propagateChanges", (n) -> { currentObject.setPropagateChanges(n.getBooleanValue()); });
-            this.put("readOnly", (n) -> { currentObject.setReadOnly(n.getBooleanValue()); });
-            this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
-            this.put("sourceColumn", (n) -> { currentObject.setSourceColumn(n.getObjectValue(ColumnDefinition::createFromDiscriminatorValue)); });
-            this.put("sourceContentType", (n) -> { currentObject.setSourceContentType(n.getObjectValue(ContentTypeInfo::createFromDiscriminatorValue)); });
-            this.put("term", (n) -> { currentObject.setTerm(n.getObjectValue(TermColumn::createFromDiscriminatorValue)); });
-            this.put("text", (n) -> { currentObject.setText(n.getObjectValue(TextColumn::createFromDiscriminatorValue)); });
-            this.put("thumbnail", (n) -> { currentObject.setThumbnail(n.getObjectValue(ThumbnailColumn::createFromDiscriminatorValue)); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(ColumnTypes.class)); });
-            this.put("validation", (n) -> { currentObject.setValidation(n.getObjectValue(ColumnValidation::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("boolean", (n) -> { this.setBoolean(n.getObjectValue(BooleanColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("calculated", (n) -> { this.setCalculated(n.getObjectValue(CalculatedColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("choice", (n) -> { this.setChoice(n.getObjectValue(ChoiceColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("columnGroup", (n) -> { this.setColumnGroup(n.getStringValue()); });
+        deserializerMap.put("contentApprovalStatus", (n) -> { this.setContentApprovalStatus(n.getObjectValue(ContentApprovalStatusColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("currency", (n) -> { this.setCurrency(n.getObjectValue(CurrencyColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("dateTime", (n) -> { this.setDateTime(n.getObjectValue(DateTimeColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getObjectValue(DefaultColumnValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enforceUniqueValues", (n) -> { this.setEnforceUniqueValues(n.getBooleanValue()); });
+        deserializerMap.put("geolocation", (n) -> { this.setGeolocation(n.getObjectValue(GeolocationColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("hidden", (n) -> { this.setHidden(n.getBooleanValue()); });
+        deserializerMap.put("hyperlinkOrPicture", (n) -> { this.setHyperlinkOrPicture(n.getObjectValue(HyperlinkOrPictureColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("indexed", (n) -> { this.setIndexed(n.getBooleanValue()); });
+        deserializerMap.put("isDeletable", (n) -> { this.setIsDeletable(n.getBooleanValue()); });
+        deserializerMap.put("isReorderable", (n) -> { this.setIsReorderable(n.getBooleanValue()); });
+        deserializerMap.put("isSealed", (n) -> { this.setIsSealed(n.getBooleanValue()); });
+        deserializerMap.put("lookup", (n) -> { this.setLookup(n.getObjectValue(LookupColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(NumberColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("personOrGroup", (n) -> { this.setPersonOrGroup(n.getObjectValue(PersonOrGroupColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("propagateChanges", (n) -> { this.setPropagateChanges(n.getBooleanValue()); });
+        deserializerMap.put("readOnly", (n) -> { this.setReadOnly(n.getBooleanValue()); });
+        deserializerMap.put("required", (n) -> { this.setRequired(n.getBooleanValue()); });
+        deserializerMap.put("sourceColumn", (n) -> { this.setSourceColumn(n.getObjectValue(ColumnDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("sourceContentType", (n) -> { this.setSourceContentType(n.getObjectValue(ContentTypeInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("term", (n) -> { this.setTerm(n.getObjectValue(TermColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("text", (n) -> { this.setText(n.getObjectValue(TextColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("thumbnail", (n) -> { this.setThumbnail(n.getObjectValue(ThumbnailColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(ColumnTypes.class)); });
+        deserializerMap.put("validation", (n) -> { this.setValidation(n.getObjectValue(ColumnValidation::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the geolocation property value. This column stores a geolocation.
@@ -394,6 +393,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -435,6 +435,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the boolean property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBoolean(@javax.annotation.Nullable final BooleanColumn value) {
         this._boolean_escaped = value;
     }
@@ -443,6 +444,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the calculated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalculated(@javax.annotation.Nullable final CalculatedColumn value) {
         this._calculated = value;
     }
@@ -451,6 +453,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the choice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChoice(@javax.annotation.Nullable final ChoiceColumn value) {
         this._choice = value;
     }
@@ -459,6 +462,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the columnGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColumnGroup(@javax.annotation.Nullable final String value) {
         this._columnGroup = value;
     }
@@ -467,6 +471,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the contentApprovalStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentApprovalStatus(@javax.annotation.Nullable final ContentApprovalStatusColumn value) {
         this._contentApprovalStatus = value;
     }
@@ -475,6 +480,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the currency property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrency(@javax.annotation.Nullable final CurrencyColumn value) {
         this._currency = value;
     }
@@ -483,6 +489,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the dateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDateTime(@javax.annotation.Nullable final DateTimeColumn value) {
         this._dateTime = value;
     }
@@ -491,6 +498,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final DefaultColumnValue value) {
         this._defaultValue = value;
     }
@@ -499,6 +507,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -507,6 +516,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -515,6 +525,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the enforceUniqueValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnforceUniqueValues(@javax.annotation.Nullable final Boolean value) {
         this._enforceUniqueValues = value;
     }
@@ -523,6 +534,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the geolocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGeolocation(@javax.annotation.Nullable final GeolocationColumn value) {
         this._geolocation = value;
     }
@@ -531,6 +543,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the hidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHidden(@javax.annotation.Nullable final Boolean value) {
         this._hidden = value;
     }
@@ -539,6 +552,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the hyperlinkOrPicture property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHyperlinkOrPicture(@javax.annotation.Nullable final HyperlinkOrPictureColumn value) {
         this._hyperlinkOrPicture = value;
     }
@@ -547,6 +561,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the indexed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIndexed(@javax.annotation.Nullable final Boolean value) {
         this._indexed = value;
     }
@@ -555,6 +570,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the isDeletable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDeletable(@javax.annotation.Nullable final Boolean value) {
         this._isDeletable = value;
     }
@@ -563,6 +579,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the isReorderable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsReorderable(@javax.annotation.Nullable final Boolean value) {
         this._isReorderable = value;
     }
@@ -571,6 +588,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the isSealed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSealed(@javax.annotation.Nullable final Boolean value) {
         this._isSealed = value;
     }
@@ -579,6 +597,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the lookup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLookup(@javax.annotation.Nullable final LookupColumn value) {
         this._lookup = value;
     }
@@ -587,6 +606,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -595,6 +615,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the number property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumber(@javax.annotation.Nullable final NumberColumn value) {
         this._number = value;
     }
@@ -603,6 +624,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the personOrGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersonOrGroup(@javax.annotation.Nullable final PersonOrGroupColumn value) {
         this._personOrGroup = value;
     }
@@ -611,6 +633,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the propagateChanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPropagateChanges(@javax.annotation.Nullable final Boolean value) {
         this._propagateChanges = value;
     }
@@ -619,6 +642,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the readOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReadOnly(@javax.annotation.Nullable final Boolean value) {
         this._readOnly = value;
     }
@@ -627,6 +651,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the required property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequired(@javax.annotation.Nullable final Boolean value) {
         this._required = value;
     }
@@ -635,6 +660,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the sourceColumn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceColumn(@javax.annotation.Nullable final ColumnDefinition value) {
         this._sourceColumn = value;
     }
@@ -643,6 +669,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the sourceContentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceContentType(@javax.annotation.Nullable final ContentTypeInfo value) {
         this._sourceContentType = value;
     }
@@ -651,6 +678,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the term property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTerm(@javax.annotation.Nullable final TermColumn value) {
         this._term = value;
     }
@@ -659,6 +687,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final TextColumn value) {
         this._text = value;
     }
@@ -667,6 +696,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the thumbnail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbnail(@javax.annotation.Nullable final ThumbnailColumn value) {
         this._thumbnail = value;
     }
@@ -675,6 +705,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final ColumnTypes value) {
         this._type = value;
     }
@@ -683,6 +714,7 @@ public class ColumnDefinition extends Entity implements Parsable {
      * @param value Value to set for the validation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValidation(@javax.annotation.Nullable final ColumnValidation value) {
         this._validation = value;
     }

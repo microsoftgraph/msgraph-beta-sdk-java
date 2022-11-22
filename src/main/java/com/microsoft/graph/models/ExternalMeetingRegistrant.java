@@ -16,6 +16,7 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
      * Instantiates a new ExternalMeetingRegistrant and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExternalMeetingRegistrant() {
         super();
         this.setOdataType("#microsoft.graph.externalMeetingRegistrant");
@@ -36,11 +37,10 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExternalMeetingRegistrant currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the tenantId property value. The tenant ID of this registrant if in Azure Active Directory.
@@ -63,6 +63,7 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +75,7 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
@@ -82,6 +84,7 @@ public class ExternalMeetingRegistrant extends MeetingRegistrantBase implements 
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

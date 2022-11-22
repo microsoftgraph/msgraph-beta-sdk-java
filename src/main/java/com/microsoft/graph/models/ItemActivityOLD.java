@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ItemActivityOLD extends Entity implements Parsable {
     /** The action property */
     private ItemActionSet _action;
@@ -23,9 +23,9 @@ public class ItemActivityOLD extends Entity implements Parsable {
      * Instantiates a new itemActivityOLD and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemActivityOLD() {
         super();
-        this.setOdataType("#microsoft.graph.itemActivityOLD");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,14 +67,13 @@ public class ItemActivityOLD extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ItemActivityOLD currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("action", (n) -> { currentObject.setAction(n.getObjectValue(ItemActionSet::createFromDiscriminatorValue)); });
-            this.put("actor", (n) -> { currentObject.setActor(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("driveItem", (n) -> { currentObject.setDriveItem(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
-            this.put("listItem", (n) -> { currentObject.setListItem(n.getObjectValue(ListItem::createFromDiscriminatorValue)); });
-            this.put("times", (n) -> { currentObject.setTimes(n.getObjectValue(ItemActivityTimeSet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("action", (n) -> { this.setAction(n.getObjectValue(ItemActionSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("actor", (n) -> { this.setActor(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("driveItem", (n) -> { this.setDriveItem(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("listItem", (n) -> { this.setListItem(n.getObjectValue(ListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("times", (n) -> { this.setTimes(n.getObjectValue(ItemActivityTimeSet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the listItem property value. The listItem property
@@ -97,6 +96,7 @@ public class ItemActivityOLD extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +111,7 @@ public class ItemActivityOLD extends Entity implements Parsable {
      * @param value Value to set for the action property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAction(@javax.annotation.Nullable final ItemActionSet value) {
         this._action = value;
     }
@@ -119,6 +120,7 @@ public class ItemActivityOLD extends Entity implements Parsable {
      * @param value Value to set for the actor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActor(@javax.annotation.Nullable final IdentitySet value) {
         this._actor = value;
     }
@@ -127,6 +129,7 @@ public class ItemActivityOLD extends Entity implements Parsable {
      * @param value Value to set for the driveItem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDriveItem(@javax.annotation.Nullable final DriveItem value) {
         this._driveItem = value;
     }
@@ -135,6 +138,7 @@ public class ItemActivityOLD extends Entity implements Parsable {
      * @param value Value to set for the listItem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setListItem(@javax.annotation.Nullable final ListItem value) {
         this._listItem = value;
     }
@@ -143,6 +147,7 @@ public class ItemActivityOLD extends Entity implements Parsable {
      * @param value Value to set for the times property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimes(@javax.annotation.Nullable final ItemActivityTimeSet value) {
         this._times = value;
     }

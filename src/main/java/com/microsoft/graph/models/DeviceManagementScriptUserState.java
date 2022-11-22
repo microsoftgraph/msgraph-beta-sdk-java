@@ -21,9 +21,9 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
      * Instantiates a new deviceManagementScriptUserState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementScriptUserState() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementScriptUserState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,13 +57,12 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementScriptUserState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceRunStates", (n) -> { currentObject.setDeviceRunStates(n.getCollectionOfObjectValues(DeviceManagementScriptDeviceState::createFromDiscriminatorValue)); });
-            this.put("errorDeviceCount", (n) -> { currentObject.setErrorDeviceCount(n.getIntegerValue()); });
-            this.put("successDeviceCount", (n) -> { currentObject.setSuccessDeviceCount(n.getIntegerValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceRunStates", (n) -> { this.setDeviceRunStates(n.getCollectionOfObjectValues(DeviceManagementScriptDeviceState::createFromDiscriminatorValue)); });
+        deserializerMap.put("errorDeviceCount", (n) -> { this.setErrorDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("successDeviceCount", (n) -> { this.setSuccessDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the successDeviceCount property value. Success device count for specific user.
@@ -86,6 +85,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +99,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
      * @param value Value to set for the deviceRunStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceRunStates(@javax.annotation.Nullable final java.util.List<DeviceManagementScriptDeviceState> value) {
         this._deviceRunStates = value;
     }
@@ -107,6 +108,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
      * @param value Value to set for the errorDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._errorDeviceCount = value;
     }
@@ -115,6 +117,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
      * @param value Value to set for the successDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._successDeviceCount = value;
     }
@@ -123,6 +126,7 @@ public class DeviceManagementScriptUserState extends Entity implements Parsable 
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

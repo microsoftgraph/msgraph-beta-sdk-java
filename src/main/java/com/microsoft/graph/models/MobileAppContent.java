@@ -17,9 +17,9 @@ public class MobileAppContent extends Entity implements Parsable {
      * Instantiates a new mobileAppContent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppContent() {
         super();
-        this.setOdataType("#microsoft.graph.mobileAppContent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,11 +45,10 @@ public class MobileAppContent extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MobileAppContent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("containedApps", (n) -> { currentObject.setContainedApps(n.getCollectionOfObjectValues(MobileContainedApp::createFromDiscriminatorValue)); });
-            this.put("files", (n) -> { currentObject.setFiles(n.getCollectionOfObjectValues(MobileAppContentFile::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("containedApps", (n) -> { this.setContainedApps(n.getCollectionOfObjectValues(MobileContainedApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("files", (n) -> { this.setFiles(n.getCollectionOfObjectValues(MobileAppContentFile::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the files property value. The list of files for this app content version.
@@ -64,6 +63,7 @@ public class MobileAppContent extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +75,7 @@ public class MobileAppContent extends Entity implements Parsable {
      * @param value Value to set for the containedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContainedApps(@javax.annotation.Nullable final java.util.List<MobileContainedApp> value) {
         this._containedApps = value;
     }
@@ -83,6 +84,7 @@ public class MobileAppContent extends Entity implements Parsable {
      * @param value Value to set for the files property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFiles(@javax.annotation.Nullable final java.util.List<MobileAppContentFile> value) {
         this._files = value;
     }

@@ -24,9 +24,9 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      * Instantiates a new AdminConsentRequestPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AdminConsentRequestPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.adminConsentRequestPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,15 +44,14 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AdminConsentRequestPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("notifyReviewers", (n) -> { currentObject.setNotifyReviewers(n.getBooleanValue()); });
-            this.put("remindersEnabled", (n) -> { currentObject.setRemindersEnabled(n.getBooleanValue()); });
-            this.put("requestDurationInDays", (n) -> { currentObject.setRequestDurationInDays(n.getIntegerValue()); });
-            this.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("notifyReviewers", (n) -> { this.setNotifyReviewers(n.getBooleanValue()); });
+        deserializerMap.put("remindersEnabled", (n) -> { this.setRemindersEnabled(n.getBooleanValue()); });
+        deserializerMap.put("requestDurationInDays", (n) -> { this.setRequestDurationInDays(n.getIntegerValue()); });
+        deserializerMap.put("reviewers", (n) -> { this.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabled property value. Specifies whether the admin consent request feature is enabled or disabled. Required.
@@ -107,6 +106,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +122,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }
@@ -130,6 +131,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      * @param value Value to set for the notifyReviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotifyReviewers(@javax.annotation.Nullable final Boolean value) {
         this._notifyReviewers = value;
     }
@@ -138,6 +140,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      * @param value Value to set for the remindersEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemindersEnabled(@javax.annotation.Nullable final Boolean value) {
         this._remindersEnabled = value;
     }
@@ -146,6 +149,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      * @param value Value to set for the requestDurationInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestDurationInDays(@javax.annotation.Nullable final Integer value) {
         this._requestDurationInDays = value;
     }
@@ -154,6 +158,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      * @param value Value to set for the reviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this._reviewers = value;
     }
@@ -162,6 +167,7 @@ public class AdminConsentRequestPolicy extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
         this._version = value;
     }

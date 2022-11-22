@@ -39,9 +39,9 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      * Instantiates a new workbookWorksheetProtectionOptions and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookWorksheetProtectionOptions() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.workbookWorksheetProtectionOptions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -155,21 +155,20 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookWorksheetProtectionOptions currentObject = this;
-        return new HashMap<>(12) {{
-            this.put("allowAutoFilter", (n) -> { currentObject.setAllowAutoFilter(n.getBooleanValue()); });
-            this.put("allowDeleteColumns", (n) -> { currentObject.setAllowDeleteColumns(n.getBooleanValue()); });
-            this.put("allowDeleteRows", (n) -> { currentObject.setAllowDeleteRows(n.getBooleanValue()); });
-            this.put("allowFormatCells", (n) -> { currentObject.setAllowFormatCells(n.getBooleanValue()); });
-            this.put("allowFormatColumns", (n) -> { currentObject.setAllowFormatColumns(n.getBooleanValue()); });
-            this.put("allowFormatRows", (n) -> { currentObject.setAllowFormatRows(n.getBooleanValue()); });
-            this.put("allowInsertColumns", (n) -> { currentObject.setAllowInsertColumns(n.getBooleanValue()); });
-            this.put("allowInsertHyperlinks", (n) -> { currentObject.setAllowInsertHyperlinks(n.getBooleanValue()); });
-            this.put("allowInsertRows", (n) -> { currentObject.setAllowInsertRows(n.getBooleanValue()); });
-            this.put("allowPivotTables", (n) -> { currentObject.setAllowPivotTables(n.getBooleanValue()); });
-            this.put("allowSort", (n) -> { currentObject.setAllowSort(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(12);
+        deserializerMap.put("allowAutoFilter", (n) -> { this.setAllowAutoFilter(n.getBooleanValue()); });
+        deserializerMap.put("allowDeleteColumns", (n) -> { this.setAllowDeleteColumns(n.getBooleanValue()); });
+        deserializerMap.put("allowDeleteRows", (n) -> { this.setAllowDeleteRows(n.getBooleanValue()); });
+        deserializerMap.put("allowFormatCells", (n) -> { this.setAllowFormatCells(n.getBooleanValue()); });
+        deserializerMap.put("allowFormatColumns", (n) -> { this.setAllowFormatColumns(n.getBooleanValue()); });
+        deserializerMap.put("allowFormatRows", (n) -> { this.setAllowFormatRows(n.getBooleanValue()); });
+        deserializerMap.put("allowInsertColumns", (n) -> { this.setAllowInsertColumns(n.getBooleanValue()); });
+        deserializerMap.put("allowInsertHyperlinks", (n) -> { this.setAllowInsertHyperlinks(n.getBooleanValue()); });
+        deserializerMap.put("allowInsertRows", (n) -> { this.setAllowInsertRows(n.getBooleanValue()); });
+        deserializerMap.put("allowPivotTables", (n) -> { this.setAllowPivotTables(n.getBooleanValue()); });
+        deserializerMap.put("allowSort", (n) -> { this.setAllowSort(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -184,6 +183,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowAutoFilter", this.getAllowAutoFilter());
@@ -205,6 +205,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -213,6 +214,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      * @param value Value to set for the allowAutoFilter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowAutoFilter(@javax.annotation.Nullable final Boolean value) {
         this._allowAutoFilter = value;
     }
@@ -221,6 +223,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      * @param value Value to set for the allowDeleteColumns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowDeleteColumns(@javax.annotation.Nullable final Boolean value) {
         this._allowDeleteColumns = value;
     }
@@ -229,6 +232,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      * @param value Value to set for the allowDeleteRows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowDeleteRows(@javax.annotation.Nullable final Boolean value) {
         this._allowDeleteRows = value;
     }
@@ -237,6 +241,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      * @param value Value to set for the allowFormatCells property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowFormatCells(@javax.annotation.Nullable final Boolean value) {
         this._allowFormatCells = value;
     }
@@ -245,6 +250,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      * @param value Value to set for the allowFormatColumns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowFormatColumns(@javax.annotation.Nullable final Boolean value) {
         this._allowFormatColumns = value;
     }
@@ -253,6 +259,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      * @param value Value to set for the allowFormatRows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowFormatRows(@javax.annotation.Nullable final Boolean value) {
         this._allowFormatRows = value;
     }
@@ -261,6 +268,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      * @param value Value to set for the allowInsertColumns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowInsertColumns(@javax.annotation.Nullable final Boolean value) {
         this._allowInsertColumns = value;
     }
@@ -269,6 +277,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      * @param value Value to set for the allowInsertHyperlinks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowInsertHyperlinks(@javax.annotation.Nullable final Boolean value) {
         this._allowInsertHyperlinks = value;
     }
@@ -277,6 +286,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      * @param value Value to set for the allowInsertRows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowInsertRows(@javax.annotation.Nullable final Boolean value) {
         this._allowInsertRows = value;
     }
@@ -285,6 +295,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      * @param value Value to set for the allowPivotTables property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowPivotTables(@javax.annotation.Nullable final Boolean value) {
         this._allowPivotTables = value;
     }
@@ -293,6 +304,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      * @param value Value to set for the allowSort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowSort(@javax.annotation.Nullable final Boolean value) {
         this._allowSort = value;
     }
@@ -301,6 +313,7 @@ public class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder,
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

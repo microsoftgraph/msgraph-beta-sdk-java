@@ -34,9 +34,9 @@ public class RbacApplication extends Entity implements Parsable {
      * Instantiates a new RbacApplication and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RbacApplication() {
         super();
-        this.setOdataType("#microsoft.graph.rbacApplication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,20 +54,19 @@ public class RbacApplication extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RbacApplication currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("resourceNamespaces", (n) -> { currentObject.setResourceNamespaces(n.getCollectionOfObjectValues(UnifiedRbacResourceNamespace::createFromDiscriminatorValue)); });
-            this.put("roleAssignmentApprovals", (n) -> { currentObject.setRoleAssignmentApprovals(n.getCollectionOfObjectValues(Approval::createFromDiscriminatorValue)); });
-            this.put("roleAssignments", (n) -> { currentObject.setRoleAssignments(n.getCollectionOfObjectValues(UnifiedRoleAssignment::createFromDiscriminatorValue)); });
-            this.put("roleAssignmentScheduleInstances", (n) -> { currentObject.setRoleAssignmentScheduleInstances(n.getCollectionOfObjectValues(UnifiedRoleAssignmentScheduleInstance::createFromDiscriminatorValue)); });
-            this.put("roleAssignmentScheduleRequests", (n) -> { currentObject.setRoleAssignmentScheduleRequests(n.getCollectionOfObjectValues(UnifiedRoleAssignmentScheduleRequest::createFromDiscriminatorValue)); });
-            this.put("roleAssignmentSchedules", (n) -> { currentObject.setRoleAssignmentSchedules(n.getCollectionOfObjectValues(UnifiedRoleAssignmentSchedule::createFromDiscriminatorValue)); });
-            this.put("roleDefinitions", (n) -> { currentObject.setRoleDefinitions(n.getCollectionOfObjectValues(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
-            this.put("roleEligibilityScheduleInstances", (n) -> { currentObject.setRoleEligibilityScheduleInstances(n.getCollectionOfObjectValues(UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue)); });
-            this.put("roleEligibilityScheduleRequests", (n) -> { currentObject.setRoleEligibilityScheduleRequests(n.getCollectionOfObjectValues(UnifiedRoleEligibilityScheduleRequest::createFromDiscriminatorValue)); });
-            this.put("roleEligibilitySchedules", (n) -> { currentObject.setRoleEligibilitySchedules(n.getCollectionOfObjectValues(UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue)); });
-            this.put("transitiveRoleAssignments", (n) -> { currentObject.setTransitiveRoleAssignments(n.getCollectionOfObjectValues(UnifiedRoleAssignment::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("resourceNamespaces", (n) -> { this.setResourceNamespaces(n.getCollectionOfObjectValues(UnifiedRbacResourceNamespace::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleAssignmentApprovals", (n) -> { this.setRoleAssignmentApprovals(n.getCollectionOfObjectValues(Approval::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleAssignments", (n) -> { this.setRoleAssignments(n.getCollectionOfObjectValues(UnifiedRoleAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleAssignmentScheduleInstances", (n) -> { this.setRoleAssignmentScheduleInstances(n.getCollectionOfObjectValues(UnifiedRoleAssignmentScheduleInstance::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleAssignmentScheduleRequests", (n) -> { this.setRoleAssignmentScheduleRequests(n.getCollectionOfObjectValues(UnifiedRoleAssignmentScheduleRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleAssignmentSchedules", (n) -> { this.setRoleAssignmentSchedules(n.getCollectionOfObjectValues(UnifiedRoleAssignmentSchedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleDefinitions", (n) -> { this.setRoleDefinitions(n.getCollectionOfObjectValues(UnifiedRoleDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleEligibilityScheduleInstances", (n) -> { this.setRoleEligibilityScheduleInstances(n.getCollectionOfObjectValues(UnifiedRoleEligibilityScheduleInstance::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleEligibilityScheduleRequests", (n) -> { this.setRoleEligibilityScheduleRequests(n.getCollectionOfObjectValues(UnifiedRoleEligibilityScheduleRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleEligibilitySchedules", (n) -> { this.setRoleEligibilitySchedules(n.getCollectionOfObjectValues(UnifiedRoleEligibilitySchedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("transitiveRoleAssignments", (n) -> { this.setTransitiveRoleAssignments(n.getCollectionOfObjectValues(UnifiedRoleAssignment::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the resourceNamespaces property value. The resourceNamespaces property
@@ -162,6 +161,7 @@ public class RbacApplication extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -182,6 +182,7 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the resourceNamespaces property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceNamespaces(@javax.annotation.Nullable final java.util.List<UnifiedRbacResourceNamespace> value) {
         this._resourceNamespaces = value;
     }
@@ -190,6 +191,7 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleAssignmentApprovals property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignmentApprovals(@javax.annotation.Nullable final java.util.List<Approval> value) {
         this._roleAssignmentApprovals = value;
     }
@@ -198,6 +200,7 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignment> value) {
         this._roleAssignments = value;
     }
@@ -206,6 +209,7 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleAssignmentScheduleInstances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignmentScheduleInstances(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignmentScheduleInstance> value) {
         this._roleAssignmentScheduleInstances = value;
     }
@@ -214,6 +218,7 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleAssignmentScheduleRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignmentScheduleRequests(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignmentScheduleRequest> value) {
         this._roleAssignmentScheduleRequests = value;
     }
@@ -222,6 +227,7 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleAssignmentSchedules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignmentSchedules(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignmentSchedule> value) {
         this._roleAssignmentSchedules = value;
     }
@@ -230,6 +236,7 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitions(@javax.annotation.Nullable final java.util.List<UnifiedRoleDefinition> value) {
         this._roleDefinitions = value;
     }
@@ -238,6 +245,7 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleEligibilityScheduleInstances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleEligibilityScheduleInstances(@javax.annotation.Nullable final java.util.List<UnifiedRoleEligibilityScheduleInstance> value) {
         this._roleEligibilityScheduleInstances = value;
     }
@@ -246,6 +254,7 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleEligibilityScheduleRequests property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleEligibilityScheduleRequests(@javax.annotation.Nullable final java.util.List<UnifiedRoleEligibilityScheduleRequest> value) {
         this._roleEligibilityScheduleRequests = value;
     }
@@ -254,6 +263,7 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the roleEligibilitySchedules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleEligibilitySchedules(@javax.annotation.Nullable final java.util.List<UnifiedRoleEligibilitySchedule> value) {
         this._roleEligibilitySchedules = value;
     }
@@ -262,6 +272,7 @@ public class RbacApplication extends Entity implements Parsable {
      * @param value Value to set for the transitiveRoleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransitiveRoleAssignments(@javax.annotation.Nullable final java.util.List<UnifiedRoleAssignment> value) {
         this._transitiveRoleAssignments = value;
     }

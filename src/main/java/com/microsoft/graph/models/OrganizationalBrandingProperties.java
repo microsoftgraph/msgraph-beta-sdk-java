@@ -12,11 +12,11 @@ import java.util.Objects;
 public class OrganizationalBrandingProperties extends Entity implements Parsable {
     /** Color that appears in place of the background image in low-bandwidth connections. We recommend that you use the primary color of your banner logo or your organization color. Specify this in hexadecimal format, for example, white is #FFFFFF. */
     private String _backgroundColor;
-    /** Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster. */
+    /** Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster. */
     private byte[] _backgroundImage;
     /** A relative URL for the backgroundImage property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only. */
     private String _backgroundImageRelativeUrl;
-    /** A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG not larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo. */
+    /** A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG not larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo. */
     private byte[] _bannerLogo;
     /** A relative URL for the bannerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only. */
     private String _bannerLogoRelativeUrl;
@@ -28,6 +28,10 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
     private String _customCannotAccessYourAccountText;
     /** A custom URL to replace the default URL of the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in page. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters. DO NOT USE. Use customAccountResetCredentialsUrl instead. */
     private String _customCannotAccessYourAccountUrl;
+    /** The customCSS property */
+    private byte[] _customCSS;
+    /** The customCSSRelativeUrl property */
+    private String _customCSSRelativeUrl;
     /** A string to replace the default 'Forgot my password' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters. */
     private String _customForgotMyPasswordText;
     /** A string to replace the default 'Privacy and Cookies' hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters. */
@@ -46,6 +50,12 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
     private String _faviconRelativeUrl;
     /** The RGB color to apply to customize the color of the header. */
     private String _headerBackgroundColor;
+    /** The headerLogo property */
+    private byte[] _headerLogo;
+    /** The headerLogoRelativeUrl property */
+    private String _headerLogoRelativeUrl;
+    /** The loginPageLayoutConfiguration property */
+    private LoginPageLayoutConfiguration _loginPageLayoutConfiguration;
     /** Represents the various texts that can be hidden on the login page for a tenant. */
     private LoginPageTextVisibilitySettings _loginPageTextVisibilitySettings;
     /** Text that appears at the bottom of the sign-in box. Use this to communicate additional information, such as the phone number to your help desk or a legal statement. This text must be in Unicode format and not exceed 1024 characters. */
@@ -64,9 +74,9 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * Instantiates a new organizationalBrandingProperties and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OrganizationalBrandingProperties() {
         super();
-        this.setOdataType("#microsoft.graph.organizationalBrandingProperties");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -95,7 +105,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this._backgroundColor;
     }
     /**
-     * Gets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Gets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -111,7 +121,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         return this._backgroundImageRelativeUrl;
     }
     /**
-     * Gets the bannerLogo property value. A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG not larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
+     * Gets the bannerLogo property value. A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG not larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo.
      * @return a binary
      */
     @javax.annotation.Nullable
@@ -157,6 +167,22 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
     @javax.annotation.Nullable
     public String getCustomCannotAccessYourAccountUrl() {
         return this._customCannotAccessYourAccountUrl;
+    }
+    /**
+     * Gets the customCSS property value. The customCSS property
+     * @return a binary
+     */
+    @javax.annotation.Nullable
+    public byte[] getCustomCSS() {
+        return this._customCSS;
+    }
+    /**
+     * Gets the customCSSRelativeUrl property value. The customCSSRelativeUrl property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getCustomCSSRelativeUrl() {
+        return this._customCSSRelativeUrl;
     }
     /**
      * Gets the customForgotMyPasswordText property value. A string to replace the default 'Forgot my password' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters.
@@ -228,34 +254,38 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OrganizationalBrandingProperties currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("backgroundColor", (n) -> { currentObject.setBackgroundColor(n.getStringValue()); });
-            this.put("backgroundImage", (n) -> { currentObject.setBackgroundImage(n.getByteArrayValue()); });
-            this.put("backgroundImageRelativeUrl", (n) -> { currentObject.setBackgroundImageRelativeUrl(n.getStringValue()); });
-            this.put("bannerLogo", (n) -> { currentObject.setBannerLogo(n.getByteArrayValue()); });
-            this.put("bannerLogoRelativeUrl", (n) -> { currentObject.setBannerLogoRelativeUrl(n.getStringValue()); });
-            this.put("cdnList", (n) -> { currentObject.setCdnList(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("customAccountResetCredentialsUrl", (n) -> { currentObject.setCustomAccountResetCredentialsUrl(n.getStringValue()); });
-            this.put("customCannotAccessYourAccountText", (n) -> { currentObject.setCustomCannotAccessYourAccountText(n.getStringValue()); });
-            this.put("customCannotAccessYourAccountUrl", (n) -> { currentObject.setCustomCannotAccessYourAccountUrl(n.getStringValue()); });
-            this.put("customForgotMyPasswordText", (n) -> { currentObject.setCustomForgotMyPasswordText(n.getStringValue()); });
-            this.put("customPrivacyAndCookiesText", (n) -> { currentObject.setCustomPrivacyAndCookiesText(n.getStringValue()); });
-            this.put("customPrivacyAndCookiesUrl", (n) -> { currentObject.setCustomPrivacyAndCookiesUrl(n.getStringValue()); });
-            this.put("customResetItNowText", (n) -> { currentObject.setCustomResetItNowText(n.getStringValue()); });
-            this.put("customTermsOfUseText", (n) -> { currentObject.setCustomTermsOfUseText(n.getStringValue()); });
-            this.put("customTermsOfUseUrl", (n) -> { currentObject.setCustomTermsOfUseUrl(n.getStringValue()); });
-            this.put("favicon", (n) -> { currentObject.setFavicon(n.getByteArrayValue()); });
-            this.put("faviconRelativeUrl", (n) -> { currentObject.setFaviconRelativeUrl(n.getStringValue()); });
-            this.put("headerBackgroundColor", (n) -> { currentObject.setHeaderBackgroundColor(n.getStringValue()); });
-            this.put("loginPageTextVisibilitySettings", (n) -> { currentObject.setLoginPageTextVisibilitySettings(n.getObjectValue(LoginPageTextVisibilitySettings::createFromDiscriminatorValue)); });
-            this.put("signInPageText", (n) -> { currentObject.setSignInPageText(n.getStringValue()); });
-            this.put("squareLogo", (n) -> { currentObject.setSquareLogo(n.getByteArrayValue()); });
-            this.put("squareLogoDark", (n) -> { currentObject.setSquareLogoDark(n.getByteArrayValue()); });
-            this.put("squareLogoDarkRelativeUrl", (n) -> { currentObject.setSquareLogoDarkRelativeUrl(n.getStringValue()); });
-            this.put("squareLogoRelativeUrl", (n) -> { currentObject.setSquareLogoRelativeUrl(n.getStringValue()); });
-            this.put("usernameHintText", (n) -> { currentObject.setUsernameHintText(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("backgroundColor", (n) -> { this.setBackgroundColor(n.getStringValue()); });
+        deserializerMap.put("backgroundImage", (n) -> { this.setBackgroundImage(n.getByteArrayValue()); });
+        deserializerMap.put("backgroundImageRelativeUrl", (n) -> { this.setBackgroundImageRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("bannerLogo", (n) -> { this.setBannerLogo(n.getByteArrayValue()); });
+        deserializerMap.put("bannerLogoRelativeUrl", (n) -> { this.setBannerLogoRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("cdnList", (n) -> { this.setCdnList(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("customAccountResetCredentialsUrl", (n) -> { this.setCustomAccountResetCredentialsUrl(n.getStringValue()); });
+        deserializerMap.put("customCannotAccessYourAccountText", (n) -> { this.setCustomCannotAccessYourAccountText(n.getStringValue()); });
+        deserializerMap.put("customCannotAccessYourAccountUrl", (n) -> { this.setCustomCannotAccessYourAccountUrl(n.getStringValue()); });
+        deserializerMap.put("customCSS", (n) -> { this.setCustomCSS(n.getByteArrayValue()); });
+        deserializerMap.put("customCSSRelativeUrl", (n) -> { this.setCustomCSSRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("customForgotMyPasswordText", (n) -> { this.setCustomForgotMyPasswordText(n.getStringValue()); });
+        deserializerMap.put("customPrivacyAndCookiesText", (n) -> { this.setCustomPrivacyAndCookiesText(n.getStringValue()); });
+        deserializerMap.put("customPrivacyAndCookiesUrl", (n) -> { this.setCustomPrivacyAndCookiesUrl(n.getStringValue()); });
+        deserializerMap.put("customResetItNowText", (n) -> { this.setCustomResetItNowText(n.getStringValue()); });
+        deserializerMap.put("customTermsOfUseText", (n) -> { this.setCustomTermsOfUseText(n.getStringValue()); });
+        deserializerMap.put("customTermsOfUseUrl", (n) -> { this.setCustomTermsOfUseUrl(n.getStringValue()); });
+        deserializerMap.put("favicon", (n) -> { this.setFavicon(n.getByteArrayValue()); });
+        deserializerMap.put("faviconRelativeUrl", (n) -> { this.setFaviconRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("headerBackgroundColor", (n) -> { this.setHeaderBackgroundColor(n.getStringValue()); });
+        deserializerMap.put("headerLogo", (n) -> { this.setHeaderLogo(n.getByteArrayValue()); });
+        deserializerMap.put("headerLogoRelativeUrl", (n) -> { this.setHeaderLogoRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("loginPageLayoutConfiguration", (n) -> { this.setLoginPageLayoutConfiguration(n.getObjectValue(LoginPageLayoutConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("loginPageTextVisibilitySettings", (n) -> { this.setLoginPageTextVisibilitySettings(n.getObjectValue(LoginPageTextVisibilitySettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("signInPageText", (n) -> { this.setSignInPageText(n.getStringValue()); });
+        deserializerMap.put("squareLogo", (n) -> { this.setSquareLogo(n.getByteArrayValue()); });
+        deserializerMap.put("squareLogoDark", (n) -> { this.setSquareLogoDark(n.getByteArrayValue()); });
+        deserializerMap.put("squareLogoDarkRelativeUrl", (n) -> { this.setSquareLogoDarkRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("squareLogoRelativeUrl", (n) -> { this.setSquareLogoRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("usernameHintText", (n) -> { this.setUsernameHintText(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the headerBackgroundColor property value. The RGB color to apply to customize the color of the header.
@@ -264,6 +294,30 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
     @javax.annotation.Nullable
     public String getHeaderBackgroundColor() {
         return this._headerBackgroundColor;
+    }
+    /**
+     * Gets the headerLogo property value. The headerLogo property
+     * @return a binary
+     */
+    @javax.annotation.Nullable
+    public byte[] getHeaderLogo() {
+        return this._headerLogo;
+    }
+    /**
+     * Gets the headerLogoRelativeUrl property value. The headerLogoRelativeUrl property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getHeaderLogoRelativeUrl() {
+        return this._headerLogoRelativeUrl;
+    }
+    /**
+     * Gets the loginPageLayoutConfiguration property value. The loginPageLayoutConfiguration property
+     * @return a loginPageLayoutConfiguration
+     */
+    @javax.annotation.Nullable
+    public LoginPageLayoutConfiguration getLoginPageLayoutConfiguration() {
+        return this._loginPageLayoutConfiguration;
     }
     /**
      * Gets the loginPageTextVisibilitySettings property value. Represents the various texts that can be hidden on the login page for a tenant.
@@ -326,6 +380,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -338,6 +393,8 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         writer.writeStringValue("customAccountResetCredentialsUrl", this.getCustomAccountResetCredentialsUrl());
         writer.writeStringValue("customCannotAccessYourAccountText", this.getCustomCannotAccessYourAccountText());
         writer.writeStringValue("customCannotAccessYourAccountUrl", this.getCustomCannotAccessYourAccountUrl());
+        writer.writeByteArrayValue("customCSS", this.getCustomCSS());
+        writer.writeStringValue("customCSSRelativeUrl", this.getCustomCSSRelativeUrl());
         writer.writeStringValue("customForgotMyPasswordText", this.getCustomForgotMyPasswordText());
         writer.writeStringValue("customPrivacyAndCookiesText", this.getCustomPrivacyAndCookiesText());
         writer.writeStringValue("customPrivacyAndCookiesUrl", this.getCustomPrivacyAndCookiesUrl());
@@ -347,6 +404,9 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         writer.writeByteArrayValue("favicon", this.getFavicon());
         writer.writeStringValue("faviconRelativeUrl", this.getFaviconRelativeUrl());
         writer.writeStringValue("headerBackgroundColor", this.getHeaderBackgroundColor());
+        writer.writeByteArrayValue("headerLogo", this.getHeaderLogo());
+        writer.writeStringValue("headerLogoRelativeUrl", this.getHeaderLogoRelativeUrl());
+        writer.writeObjectValue("loginPageLayoutConfiguration", this.getLoginPageLayoutConfiguration());
         writer.writeObjectValue("loginPageTextVisibilitySettings", this.getLoginPageTextVisibilitySettings());
         writer.writeStringValue("signInPageText", this.getSignInPageText());
         writer.writeByteArrayValue("squareLogo", this.getSquareLogo());
@@ -360,14 +420,16 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the backgroundColor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBackgroundColor(@javax.annotation.Nullable final String value) {
         this._backgroundColor = value;
     }
     /**
-     * Sets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Sets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
      * @param value Value to set for the backgroundImage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBackgroundImage(@javax.annotation.Nullable final byte[] value) {
         this._backgroundImage = value;
     }
@@ -376,14 +438,16 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the backgroundImageRelativeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBackgroundImageRelativeUrl(@javax.annotation.Nullable final String value) {
         this._backgroundImageRelativeUrl = value;
     }
     /**
-     * Sets the bannerLogo property value. A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG not larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
+     * Sets the bannerLogo property value. A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG not larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo.
      * @param value Value to set for the bannerLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBannerLogo(@javax.annotation.Nullable final byte[] value) {
         this._bannerLogo = value;
     }
@@ -392,6 +456,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the bannerLogoRelativeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBannerLogoRelativeUrl(@javax.annotation.Nullable final String value) {
         this._bannerLogoRelativeUrl = value;
     }
@@ -400,6 +465,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the cdnList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCdnList(@javax.annotation.Nullable final java.util.List<String> value) {
         this._cdnList = value;
     }
@@ -408,6 +474,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the customAccountResetCredentialsUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomAccountResetCredentialsUrl(@javax.annotation.Nullable final String value) {
         this._customAccountResetCredentialsUrl = value;
     }
@@ -416,6 +483,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the customCannotAccessYourAccountText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomCannotAccessYourAccountText(@javax.annotation.Nullable final String value) {
         this._customCannotAccessYourAccountText = value;
     }
@@ -424,14 +492,34 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the customCannotAccessYourAccountUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomCannotAccessYourAccountUrl(@javax.annotation.Nullable final String value) {
         this._customCannotAccessYourAccountUrl = value;
+    }
+    /**
+     * Sets the customCSS property value. The customCSS property
+     * @param value Value to set for the customCSS property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCustomCSS(@javax.annotation.Nullable final byte[] value) {
+        this._customCSS = value;
+    }
+    /**
+     * Sets the customCSSRelativeUrl property value. The customCSSRelativeUrl property
+     * @param value Value to set for the customCSSRelativeUrl property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCustomCSSRelativeUrl(@javax.annotation.Nullable final String value) {
+        this._customCSSRelativeUrl = value;
     }
     /**
      * Sets the customForgotMyPasswordText property value. A string to replace the default 'Forgot my password' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters.
      * @param value Value to set for the customForgotMyPasswordText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomForgotMyPasswordText(@javax.annotation.Nullable final String value) {
         this._customForgotMyPasswordText = value;
     }
@@ -440,6 +528,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the customPrivacyAndCookiesText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomPrivacyAndCookiesText(@javax.annotation.Nullable final String value) {
         this._customPrivacyAndCookiesText = value;
     }
@@ -448,6 +537,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the customPrivacyAndCookiesUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomPrivacyAndCookiesUrl(@javax.annotation.Nullable final String value) {
         this._customPrivacyAndCookiesUrl = value;
     }
@@ -456,6 +546,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the customResetItNowText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomResetItNowText(@javax.annotation.Nullable final String value) {
         this._customResetItNowText = value;
     }
@@ -464,6 +555,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the customTermsOfUseText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomTermsOfUseText(@javax.annotation.Nullable final String value) {
         this._customTermsOfUseText = value;
     }
@@ -472,6 +564,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the customTermsOfUseUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomTermsOfUseUrl(@javax.annotation.Nullable final String value) {
         this._customTermsOfUseUrl = value;
     }
@@ -480,6 +573,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the favicon property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFavicon(@javax.annotation.Nullable final byte[] value) {
         this._favicon = value;
     }
@@ -488,6 +582,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the faviconRelativeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFaviconRelativeUrl(@javax.annotation.Nullable final String value) {
         this._faviconRelativeUrl = value;
     }
@@ -496,14 +591,43 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the headerBackgroundColor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHeaderBackgroundColor(@javax.annotation.Nullable final String value) {
         this._headerBackgroundColor = value;
+    }
+    /**
+     * Sets the headerLogo property value. The headerLogo property
+     * @param value Value to set for the headerLogo property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setHeaderLogo(@javax.annotation.Nullable final byte[] value) {
+        this._headerLogo = value;
+    }
+    /**
+     * Sets the headerLogoRelativeUrl property value. The headerLogoRelativeUrl property
+     * @param value Value to set for the headerLogoRelativeUrl property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setHeaderLogoRelativeUrl(@javax.annotation.Nullable final String value) {
+        this._headerLogoRelativeUrl = value;
+    }
+    /**
+     * Sets the loginPageLayoutConfiguration property value. The loginPageLayoutConfiguration property
+     * @param value Value to set for the loginPageLayoutConfiguration property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLoginPageLayoutConfiguration(@javax.annotation.Nullable final LoginPageLayoutConfiguration value) {
+        this._loginPageLayoutConfiguration = value;
     }
     /**
      * Sets the loginPageTextVisibilitySettings property value. Represents the various texts that can be hidden on the login page for a tenant.
      * @param value Value to set for the loginPageTextVisibilitySettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoginPageTextVisibilitySettings(@javax.annotation.Nullable final LoginPageTextVisibilitySettings value) {
         this._loginPageTextVisibilitySettings = value;
     }
@@ -512,6 +636,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the signInPageText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInPageText(@javax.annotation.Nullable final String value) {
         this._signInPageText = value;
     }
@@ -520,6 +645,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the squareLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSquareLogo(@javax.annotation.Nullable final byte[] value) {
         this._squareLogo = value;
     }
@@ -528,6 +654,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the squareLogoDark property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSquareLogoDark(@javax.annotation.Nullable final byte[] value) {
         this._squareLogoDark = value;
     }
@@ -536,6 +663,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the squareLogoDarkRelativeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSquareLogoDarkRelativeUrl(@javax.annotation.Nullable final String value) {
         this._squareLogoDarkRelativeUrl = value;
     }
@@ -544,6 +672,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the squareLogoRelativeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSquareLogoRelativeUrl(@javax.annotation.Nullable final String value) {
         this._squareLogoRelativeUrl = value;
     }
@@ -552,6 +681,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the usernameHintText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsernameHintText(@javax.annotation.Nullable final String value) {
         this._usernameHintText = value;
     }

@@ -19,9 +19,9 @@ public class ExtractSensitivityLabelsResult implements AdditionalDataHolder, Par
      * Instantiates a new extractSensitivityLabelsResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExtractSensitivityLabelsResult() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.extractSensitivityLabelsResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,11 +47,10 @@ public class ExtractSensitivityLabelsResult implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExtractSensitivityLabelsResult currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("labels", (n) -> { currentObject.setLabels(n.getCollectionOfObjectValues(SensitivityLabelAssignment::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("labels", (n) -> { this.setLabels(n.getCollectionOfObjectValues(SensitivityLabelAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the labels property value. List of sensitivity labels assigned to a file.
@@ -74,6 +73,7 @@ public class ExtractSensitivityLabelsResult implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("labels", this.getLabels());
@@ -85,6 +85,7 @@ public class ExtractSensitivityLabelsResult implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +94,7 @@ public class ExtractSensitivityLabelsResult implements AdditionalDataHolder, Par
      * @param value Value to set for the labels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabels(@javax.annotation.Nullable final java.util.List<SensitivityLabelAssignment> value) {
         this._labels = value;
     }
@@ -101,6 +103,7 @@ public class ExtractSensitivityLabelsResult implements AdditionalDataHolder, Par
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

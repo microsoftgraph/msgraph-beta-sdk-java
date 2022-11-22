@@ -14,9 +14,9 @@ public class WorkbookRangeFill extends Entity implements Parsable {
      * Instantiates a new workbookRangeFill and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookRangeFill() {
         super();
-        this.setOdataType("#microsoft.graph.workbookRangeFill");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,16 +42,16 @@ public class WorkbookRangeFill extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookRangeFill currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +62,7 @@ public class WorkbookRangeFill extends Entity implements Parsable {
      * @param value Value to set for the color property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColor(@javax.annotation.Nullable final String value) {
         this._color = value;
     }

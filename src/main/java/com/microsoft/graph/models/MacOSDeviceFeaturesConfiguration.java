@@ -96,6 +96,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * Instantiates a new MacOSDeviceFeaturesConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSDeviceFeaturesConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSDeviceFeaturesConfiguration");
@@ -356,51 +357,50 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSDeviceFeaturesConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("adminShowHostInfo", (n) -> { currentObject.setAdminShowHostInfo(n.getBooleanValue()); });
-            this.put("appAssociatedDomains", (n) -> { currentObject.setAppAssociatedDomains(n.getCollectionOfObjectValues(MacOSAssociatedDomainsItem::createFromDiscriminatorValue)); });
-            this.put("associatedDomains", (n) -> { currentObject.setAssociatedDomains(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("authorizedUsersListHidden", (n) -> { currentObject.setAuthorizedUsersListHidden(n.getBooleanValue()); });
-            this.put("authorizedUsersListHideAdminUsers", (n) -> { currentObject.setAuthorizedUsersListHideAdminUsers(n.getBooleanValue()); });
-            this.put("authorizedUsersListHideLocalUsers", (n) -> { currentObject.setAuthorizedUsersListHideLocalUsers(n.getBooleanValue()); });
-            this.put("authorizedUsersListHideMobileAccounts", (n) -> { currentObject.setAuthorizedUsersListHideMobileAccounts(n.getBooleanValue()); });
-            this.put("authorizedUsersListIncludeNetworkUsers", (n) -> { currentObject.setAuthorizedUsersListIncludeNetworkUsers(n.getBooleanValue()); });
-            this.put("authorizedUsersListShowOtherManagedUsers", (n) -> { currentObject.setAuthorizedUsersListShowOtherManagedUsers(n.getBooleanValue()); });
-            this.put("autoLaunchItems", (n) -> { currentObject.setAutoLaunchItems(n.getCollectionOfObjectValues(MacOSLaunchItem::createFromDiscriminatorValue)); });
-            this.put("consoleAccessDisabled", (n) -> { currentObject.setConsoleAccessDisabled(n.getBooleanValue()); });
-            this.put("contentCachingBlockDeletion", (n) -> { currentObject.setContentCachingBlockDeletion(n.getBooleanValue()); });
-            this.put("contentCachingClientListenRanges", (n) -> { currentObject.setContentCachingClientListenRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
-            this.put("contentCachingClientPolicy", (n) -> { currentObject.setContentCachingClientPolicy(n.getEnumValue(MacOSContentCachingClientPolicy.class)); });
-            this.put("contentCachingDataPath", (n) -> { currentObject.setContentCachingDataPath(n.getStringValue()); });
-            this.put("contentCachingDisableConnectionSharing", (n) -> { currentObject.setContentCachingDisableConnectionSharing(n.getBooleanValue()); });
-            this.put("contentCachingEnabled", (n) -> { currentObject.setContentCachingEnabled(n.getBooleanValue()); });
-            this.put("contentCachingForceConnectionSharing", (n) -> { currentObject.setContentCachingForceConnectionSharing(n.getBooleanValue()); });
-            this.put("contentCachingKeepAwake", (n) -> { currentObject.setContentCachingKeepAwake(n.getBooleanValue()); });
-            this.put("contentCachingLogClientIdentities", (n) -> { currentObject.setContentCachingLogClientIdentities(n.getBooleanValue()); });
-            this.put("contentCachingMaxSizeBytes", (n) -> { currentObject.setContentCachingMaxSizeBytes(n.getLongValue()); });
-            this.put("contentCachingParents", (n) -> { currentObject.setContentCachingParents(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("contentCachingParentSelectionPolicy", (n) -> { currentObject.setContentCachingParentSelectionPolicy(n.getEnumValue(MacOSContentCachingParentSelectionPolicy.class)); });
-            this.put("contentCachingPeerFilterRanges", (n) -> { currentObject.setContentCachingPeerFilterRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
-            this.put("contentCachingPeerListenRanges", (n) -> { currentObject.setContentCachingPeerListenRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
-            this.put("contentCachingPeerPolicy", (n) -> { currentObject.setContentCachingPeerPolicy(n.getEnumValue(MacOSContentCachingPeerPolicy.class)); });
-            this.put("contentCachingPort", (n) -> { currentObject.setContentCachingPort(n.getIntegerValue()); });
-            this.put("contentCachingPublicRanges", (n) -> { currentObject.setContentCachingPublicRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
-            this.put("contentCachingShowAlerts", (n) -> { currentObject.setContentCachingShowAlerts(n.getBooleanValue()); });
-            this.put("contentCachingType", (n) -> { currentObject.setContentCachingType(n.getEnumValue(MacOSContentCachingType.class)); });
-            this.put("loginWindowText", (n) -> { currentObject.setLoginWindowText(n.getStringValue()); });
-            this.put("logOutDisabledWhileLoggedIn", (n) -> { currentObject.setLogOutDisabledWhileLoggedIn(n.getBooleanValue()); });
-            this.put("macOSSingleSignOnExtension", (n) -> { currentObject.setMacOSSingleSignOnExtension(n.getObjectValue(MacOSSingleSignOnExtension::createFromDiscriminatorValue)); });
-            this.put("powerOffDisabledWhileLoggedIn", (n) -> { currentObject.setPowerOffDisabledWhileLoggedIn(n.getBooleanValue()); });
-            this.put("restartDisabled", (n) -> { currentObject.setRestartDisabled(n.getBooleanValue()); });
-            this.put("restartDisabledWhileLoggedIn", (n) -> { currentObject.setRestartDisabledWhileLoggedIn(n.getBooleanValue()); });
-            this.put("screenLockDisableImmediate", (n) -> { currentObject.setScreenLockDisableImmediate(n.getBooleanValue()); });
-            this.put("shutDownDisabled", (n) -> { currentObject.setShutDownDisabled(n.getBooleanValue()); });
-            this.put("shutDownDisabledWhileLoggedIn", (n) -> { currentObject.setShutDownDisabledWhileLoggedIn(n.getBooleanValue()); });
-            this.put("singleSignOnExtension", (n) -> { currentObject.setSingleSignOnExtension(n.getObjectValue(SingleSignOnExtension::createFromDiscriminatorValue)); });
-            this.put("singleSignOnExtensionPkinitCertificate", (n) -> { currentObject.setSingleSignOnExtensionPkinitCertificate(n.getObjectValue(MacOSCertificateProfileBase::createFromDiscriminatorValue)); });
-            this.put("sleepDisabled", (n) -> { currentObject.setSleepDisabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("adminShowHostInfo", (n) -> { this.setAdminShowHostInfo(n.getBooleanValue()); });
+        deserializerMap.put("appAssociatedDomains", (n) -> { this.setAppAssociatedDomains(n.getCollectionOfObjectValues(MacOSAssociatedDomainsItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("associatedDomains", (n) -> { this.setAssociatedDomains(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("authorizedUsersListHidden", (n) -> { this.setAuthorizedUsersListHidden(n.getBooleanValue()); });
+        deserializerMap.put("authorizedUsersListHideAdminUsers", (n) -> { this.setAuthorizedUsersListHideAdminUsers(n.getBooleanValue()); });
+        deserializerMap.put("authorizedUsersListHideLocalUsers", (n) -> { this.setAuthorizedUsersListHideLocalUsers(n.getBooleanValue()); });
+        deserializerMap.put("authorizedUsersListHideMobileAccounts", (n) -> { this.setAuthorizedUsersListHideMobileAccounts(n.getBooleanValue()); });
+        deserializerMap.put("authorizedUsersListIncludeNetworkUsers", (n) -> { this.setAuthorizedUsersListIncludeNetworkUsers(n.getBooleanValue()); });
+        deserializerMap.put("authorizedUsersListShowOtherManagedUsers", (n) -> { this.setAuthorizedUsersListShowOtherManagedUsers(n.getBooleanValue()); });
+        deserializerMap.put("autoLaunchItems", (n) -> { this.setAutoLaunchItems(n.getCollectionOfObjectValues(MacOSLaunchItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("consoleAccessDisabled", (n) -> { this.setConsoleAccessDisabled(n.getBooleanValue()); });
+        deserializerMap.put("contentCachingBlockDeletion", (n) -> { this.setContentCachingBlockDeletion(n.getBooleanValue()); });
+        deserializerMap.put("contentCachingClientListenRanges", (n) -> { this.setContentCachingClientListenRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentCachingClientPolicy", (n) -> { this.setContentCachingClientPolicy(n.getEnumValue(MacOSContentCachingClientPolicy.class)); });
+        deserializerMap.put("contentCachingDataPath", (n) -> { this.setContentCachingDataPath(n.getStringValue()); });
+        deserializerMap.put("contentCachingDisableConnectionSharing", (n) -> { this.setContentCachingDisableConnectionSharing(n.getBooleanValue()); });
+        deserializerMap.put("contentCachingEnabled", (n) -> { this.setContentCachingEnabled(n.getBooleanValue()); });
+        deserializerMap.put("contentCachingForceConnectionSharing", (n) -> { this.setContentCachingForceConnectionSharing(n.getBooleanValue()); });
+        deserializerMap.put("contentCachingKeepAwake", (n) -> { this.setContentCachingKeepAwake(n.getBooleanValue()); });
+        deserializerMap.put("contentCachingLogClientIdentities", (n) -> { this.setContentCachingLogClientIdentities(n.getBooleanValue()); });
+        deserializerMap.put("contentCachingMaxSizeBytes", (n) -> { this.setContentCachingMaxSizeBytes(n.getLongValue()); });
+        deserializerMap.put("contentCachingParents", (n) -> { this.setContentCachingParents(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("contentCachingParentSelectionPolicy", (n) -> { this.setContentCachingParentSelectionPolicy(n.getEnumValue(MacOSContentCachingParentSelectionPolicy.class)); });
+        deserializerMap.put("contentCachingPeerFilterRanges", (n) -> { this.setContentCachingPeerFilterRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentCachingPeerListenRanges", (n) -> { this.setContentCachingPeerListenRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentCachingPeerPolicy", (n) -> { this.setContentCachingPeerPolicy(n.getEnumValue(MacOSContentCachingPeerPolicy.class)); });
+        deserializerMap.put("contentCachingPort", (n) -> { this.setContentCachingPort(n.getIntegerValue()); });
+        deserializerMap.put("contentCachingPublicRanges", (n) -> { this.setContentCachingPublicRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentCachingShowAlerts", (n) -> { this.setContentCachingShowAlerts(n.getBooleanValue()); });
+        deserializerMap.put("contentCachingType", (n) -> { this.setContentCachingType(n.getEnumValue(MacOSContentCachingType.class)); });
+        deserializerMap.put("loginWindowText", (n) -> { this.setLoginWindowText(n.getStringValue()); });
+        deserializerMap.put("logOutDisabledWhileLoggedIn", (n) -> { this.setLogOutDisabledWhileLoggedIn(n.getBooleanValue()); });
+        deserializerMap.put("macOSSingleSignOnExtension", (n) -> { this.setMacOSSingleSignOnExtension(n.getObjectValue(MacOSSingleSignOnExtension::createFromDiscriminatorValue)); });
+        deserializerMap.put("powerOffDisabledWhileLoggedIn", (n) -> { this.setPowerOffDisabledWhileLoggedIn(n.getBooleanValue()); });
+        deserializerMap.put("restartDisabled", (n) -> { this.setRestartDisabled(n.getBooleanValue()); });
+        deserializerMap.put("restartDisabledWhileLoggedIn", (n) -> { this.setRestartDisabledWhileLoggedIn(n.getBooleanValue()); });
+        deserializerMap.put("screenLockDisableImmediate", (n) -> { this.setScreenLockDisableImmediate(n.getBooleanValue()); });
+        deserializerMap.put("shutDownDisabled", (n) -> { this.setShutDownDisabled(n.getBooleanValue()); });
+        deserializerMap.put("shutDownDisabledWhileLoggedIn", (n) -> { this.setShutDownDisabledWhileLoggedIn(n.getBooleanValue()); });
+        deserializerMap.put("singleSignOnExtension", (n) -> { this.setSingleSignOnExtension(n.getObjectValue(SingleSignOnExtension::createFromDiscriminatorValue)); });
+        deserializerMap.put("singleSignOnExtensionPkinitCertificate", (n) -> { this.setSingleSignOnExtensionPkinitCertificate(n.getObjectValue(MacOSCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("sleepDisabled", (n) -> { this.setSleepDisabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the loginWindowText property value. Custom text to be displayed on the login window.
@@ -503,6 +503,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -554,6 +555,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the adminShowHostInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdminShowHostInfo(@javax.annotation.Nullable final Boolean value) {
         this._adminShowHostInfo = value;
     }
@@ -562,6 +564,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the appAssociatedDomains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppAssociatedDomains(@javax.annotation.Nullable final java.util.List<MacOSAssociatedDomainsItem> value) {
         this._appAssociatedDomains = value;
     }
@@ -570,6 +573,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the associatedDomains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssociatedDomains(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._associatedDomains = value;
     }
@@ -578,6 +582,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the authorizedUsersListHidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthorizedUsersListHidden(@javax.annotation.Nullable final Boolean value) {
         this._authorizedUsersListHidden = value;
     }
@@ -586,6 +591,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the authorizedUsersListHideAdminUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthorizedUsersListHideAdminUsers(@javax.annotation.Nullable final Boolean value) {
         this._authorizedUsersListHideAdminUsers = value;
     }
@@ -594,6 +600,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the authorizedUsersListHideLocalUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthorizedUsersListHideLocalUsers(@javax.annotation.Nullable final Boolean value) {
         this._authorizedUsersListHideLocalUsers = value;
     }
@@ -602,6 +609,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the authorizedUsersListHideMobileAccounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthorizedUsersListHideMobileAccounts(@javax.annotation.Nullable final Boolean value) {
         this._authorizedUsersListHideMobileAccounts = value;
     }
@@ -610,6 +618,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the authorizedUsersListIncludeNetworkUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthorizedUsersListIncludeNetworkUsers(@javax.annotation.Nullable final Boolean value) {
         this._authorizedUsersListIncludeNetworkUsers = value;
     }
@@ -618,6 +627,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the authorizedUsersListShowOtherManagedUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthorizedUsersListShowOtherManagedUsers(@javax.annotation.Nullable final Boolean value) {
         this._authorizedUsersListShowOtherManagedUsers = value;
     }
@@ -626,6 +636,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the autoLaunchItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoLaunchItems(@javax.annotation.Nullable final java.util.List<MacOSLaunchItem> value) {
         this._autoLaunchItems = value;
     }
@@ -634,6 +645,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the consoleAccessDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConsoleAccessDisabled(@javax.annotation.Nullable final Boolean value) {
         this._consoleAccessDisabled = value;
     }
@@ -642,6 +654,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingBlockDeletion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingBlockDeletion(@javax.annotation.Nullable final Boolean value) {
         this._contentCachingBlockDeletion = value;
     }
@@ -650,6 +663,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingClientListenRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingClientListenRanges(@javax.annotation.Nullable final java.util.List<IpRange> value) {
         this._contentCachingClientListenRanges = value;
     }
@@ -658,6 +672,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingClientPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingClientPolicy(@javax.annotation.Nullable final MacOSContentCachingClientPolicy value) {
         this._contentCachingClientPolicy = value;
     }
@@ -666,6 +681,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingDataPath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingDataPath(@javax.annotation.Nullable final String value) {
         this._contentCachingDataPath = value;
     }
@@ -674,6 +690,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingDisableConnectionSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingDisableConnectionSharing(@javax.annotation.Nullable final Boolean value) {
         this._contentCachingDisableConnectionSharing = value;
     }
@@ -682,6 +699,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingEnabled(@javax.annotation.Nullable final Boolean value) {
         this._contentCachingEnabled = value;
     }
@@ -690,6 +708,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingForceConnectionSharing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingForceConnectionSharing(@javax.annotation.Nullable final Boolean value) {
         this._contentCachingForceConnectionSharing = value;
     }
@@ -698,6 +717,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingKeepAwake property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingKeepAwake(@javax.annotation.Nullable final Boolean value) {
         this._contentCachingKeepAwake = value;
     }
@@ -706,6 +726,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingLogClientIdentities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingLogClientIdentities(@javax.annotation.Nullable final Boolean value) {
         this._contentCachingLogClientIdentities = value;
     }
@@ -714,6 +735,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingMaxSizeBytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingMaxSizeBytes(@javax.annotation.Nullable final Long value) {
         this._contentCachingMaxSizeBytes = value;
     }
@@ -722,6 +744,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingParents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingParents(@javax.annotation.Nullable final java.util.List<String> value) {
         this._contentCachingParents = value;
     }
@@ -730,6 +753,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingParentSelectionPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingParentSelectionPolicy(@javax.annotation.Nullable final MacOSContentCachingParentSelectionPolicy value) {
         this._contentCachingParentSelectionPolicy = value;
     }
@@ -738,6 +762,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingPeerFilterRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingPeerFilterRanges(@javax.annotation.Nullable final java.util.List<IpRange> value) {
         this._contentCachingPeerFilterRanges = value;
     }
@@ -746,6 +771,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingPeerListenRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingPeerListenRanges(@javax.annotation.Nullable final java.util.List<IpRange> value) {
         this._contentCachingPeerListenRanges = value;
     }
@@ -754,6 +780,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingPeerPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingPeerPolicy(@javax.annotation.Nullable final MacOSContentCachingPeerPolicy value) {
         this._contentCachingPeerPolicy = value;
     }
@@ -762,6 +789,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingPort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingPort(@javax.annotation.Nullable final Integer value) {
         this._contentCachingPort = value;
     }
@@ -770,6 +798,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingPublicRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingPublicRanges(@javax.annotation.Nullable final java.util.List<IpRange> value) {
         this._contentCachingPublicRanges = value;
     }
@@ -778,6 +807,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingShowAlerts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingShowAlerts(@javax.annotation.Nullable final Boolean value) {
         this._contentCachingShowAlerts = value;
     }
@@ -786,6 +816,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the contentCachingType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCachingType(@javax.annotation.Nullable final MacOSContentCachingType value) {
         this._contentCachingType = value;
     }
@@ -794,6 +825,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the loginWindowText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoginWindowText(@javax.annotation.Nullable final String value) {
         this._loginWindowText = value;
     }
@@ -802,6 +834,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the logOutDisabledWhileLoggedIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogOutDisabledWhileLoggedIn(@javax.annotation.Nullable final Boolean value) {
         this._logOutDisabledWhileLoggedIn = value;
     }
@@ -810,6 +843,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the macOSSingleSignOnExtension property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacOSSingleSignOnExtension(@javax.annotation.Nullable final MacOSSingleSignOnExtension value) {
         this._macOSSingleSignOnExtension = value;
     }
@@ -818,6 +852,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the powerOffDisabledWhileLoggedIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPowerOffDisabledWhileLoggedIn(@javax.annotation.Nullable final Boolean value) {
         this._powerOffDisabledWhileLoggedIn = value;
     }
@@ -826,6 +861,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the restartDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestartDisabled(@javax.annotation.Nullable final Boolean value) {
         this._restartDisabled = value;
     }
@@ -834,6 +870,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the restartDisabledWhileLoggedIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestartDisabledWhileLoggedIn(@javax.annotation.Nullable final Boolean value) {
         this._restartDisabledWhileLoggedIn = value;
     }
@@ -842,6 +879,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the screenLockDisableImmediate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreenLockDisableImmediate(@javax.annotation.Nullable final Boolean value) {
         this._screenLockDisableImmediate = value;
     }
@@ -850,6 +888,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the shutDownDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShutDownDisabled(@javax.annotation.Nullable final Boolean value) {
         this._shutDownDisabled = value;
     }
@@ -858,6 +897,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the shutDownDisabledWhileLoggedIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShutDownDisabledWhileLoggedIn(@javax.annotation.Nullable final Boolean value) {
         this._shutDownDisabledWhileLoggedIn = value;
     }
@@ -866,6 +906,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the singleSignOnExtension property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleSignOnExtension(@javax.annotation.Nullable final SingleSignOnExtension value) {
         this._singleSignOnExtension = value;
     }
@@ -874,6 +915,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the singleSignOnExtensionPkinitCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleSignOnExtensionPkinitCertificate(@javax.annotation.Nullable final MacOSCertificateProfileBase value) {
         this._singleSignOnExtensionPkinitCertificate = value;
     }
@@ -882,6 +924,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
      * @param value Value to set for the sleepDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSleepDisabled(@javax.annotation.Nullable final Boolean value) {
         this._sleepDisabled = value;
     }

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class AccessPackageResourceRole extends Entity implements Parsable {
     /** The accessPackageResource property */
     private AccessPackageResource _accessPackageResource;
@@ -23,9 +23,9 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      * Instantiates a new accessPackageResourceRole and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageResourceRole() {
         super();
-        this.setOdataType("#microsoft.graph.accessPackageResourceRole");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,14 +67,13 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessPackageResourceRole currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessPackageResource", (n) -> { currentObject.setAccessPackageResource(n.getObjectValue(AccessPackageResource::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("originId", (n) -> { currentObject.setOriginId(n.getStringValue()); });
-            this.put("originSystem", (n) -> { currentObject.setOriginSystem(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackageResource", (n) -> { this.setAccessPackageResource(n.getObjectValue(AccessPackageResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("originId", (n) -> { this.setOriginId(n.getStringValue()); });
+        deserializerMap.put("originSystem", (n) -> { this.setOriginSystem(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the originId property value. The unique identifier of the resource role in the origin system. For a SharePoint Online site, the originId will be the sequence number of the role in the site.
@@ -97,6 +96,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +111,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResource(@javax.annotation.Nullable final AccessPackageResource value) {
         this._accessPackageResource = value;
     }
@@ -119,6 +120,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -127,6 +129,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -135,6 +138,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      * @param value Value to set for the originId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginId(@javax.annotation.Nullable final String value) {
         this._originId = value;
     }
@@ -143,6 +147,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
      * @param value Value to set for the originSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginSystem(@javax.annotation.Nullable final String value) {
         this._originSystem = value;
     }

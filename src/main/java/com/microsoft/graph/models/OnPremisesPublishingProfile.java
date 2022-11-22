@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class OnPremisesPublishingProfile extends Entity implements Parsable {
     /** List of existing onPremisesAgentGroup objects. Read-only. Nullable. */
     private java.util.List<OnPremisesAgentGroup> _agentGroups;
@@ -18,22 +19,24 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     private java.util.List<Connector> _connectors;
     /** Represents a hybridAgentUpdaterConfiguration object. */
     private HybridAgentUpdaterConfiguration _hybridAgentUpdaterConfiguration;
+    /** The isDefaultAccessEnabled property */
+    private Boolean _isDefaultAccessEnabled;
     /** Represents if Azure AD Application Proxy is enabled for the tenant. */
     private Boolean _isEnabled;
     /** List of existing publishedResource objects. Read-only. Nullable. */
     private java.util.List<PublishedResource> _publishedResources;
     /**
-     * Instantiates a new OnPremisesPublishingProfile and sets the default values.
+     * Instantiates a new onPremisesPublishingProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnPremisesPublishingProfile() {
         super();
-        this.setOdataType("#microsoft.graph.onPremisesPublishingProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OnPremisesPublishingProfile
+     * @return a onPremisesPublishingProfile
      */
     @javax.annotation.Nonnull
     public static OnPremisesPublishingProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -78,16 +81,16 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnPremisesPublishingProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("agentGroups", (n) -> { currentObject.setAgentGroups(n.getCollectionOfObjectValues(OnPremisesAgentGroup::createFromDiscriminatorValue)); });
-            this.put("agents", (n) -> { currentObject.setAgents(n.getCollectionOfObjectValues(OnPremisesAgent::createFromDiscriminatorValue)); });
-            this.put("connectorGroups", (n) -> { currentObject.setConnectorGroups(n.getCollectionOfObjectValues(ConnectorGroup::createFromDiscriminatorValue)); });
-            this.put("connectors", (n) -> { currentObject.setConnectors(n.getCollectionOfObjectValues(Connector::createFromDiscriminatorValue)); });
-            this.put("hybridAgentUpdaterConfiguration", (n) -> { currentObject.setHybridAgentUpdaterConfiguration(n.getObjectValue(HybridAgentUpdaterConfiguration::createFromDiscriminatorValue)); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("publishedResources", (n) -> { currentObject.setPublishedResources(n.getCollectionOfObjectValues(PublishedResource::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("agentGroups", (n) -> { this.setAgentGroups(n.getCollectionOfObjectValues(OnPremisesAgentGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("agents", (n) -> { this.setAgents(n.getCollectionOfObjectValues(OnPremisesAgent::createFromDiscriminatorValue)); });
+        deserializerMap.put("connectorGroups", (n) -> { this.setConnectorGroups(n.getCollectionOfObjectValues(ConnectorGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("connectors", (n) -> { this.setConnectors(n.getCollectionOfObjectValues(Connector::createFromDiscriminatorValue)); });
+        deserializerMap.put("hybridAgentUpdaterConfiguration", (n) -> { this.setHybridAgentUpdaterConfiguration(n.getObjectValue(HybridAgentUpdaterConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("isDefaultAccessEnabled", (n) -> { this.setIsDefaultAccessEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("publishedResources", (n) -> { this.setPublishedResources(n.getCollectionOfObjectValues(PublishedResource::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the hybridAgentUpdaterConfiguration property value. Represents a hybridAgentUpdaterConfiguration object.
@@ -96,6 +99,14 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
     @javax.annotation.Nullable
     public HybridAgentUpdaterConfiguration getHybridAgentUpdaterConfiguration() {
         return this._hybridAgentUpdaterConfiguration;
+    }
+    /**
+     * Gets the isDefaultAccessEnabled property value. The isDefaultAccessEnabled property
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsDefaultAccessEnabled() {
+        return this._isDefaultAccessEnabled;
     }
     /**
      * Gets the isEnabled property value. Represents if Azure AD Application Proxy is enabled for the tenant.
@@ -118,6 +129,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -126,6 +138,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("connectorGroups", this.getConnectorGroups());
         writer.writeCollectionOfObjectValues("connectors", this.getConnectors());
         writer.writeObjectValue("hybridAgentUpdaterConfiguration", this.getHybridAgentUpdaterConfiguration());
+        writer.writeBooleanValue("isDefaultAccessEnabled", this.getIsDefaultAccessEnabled());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeCollectionOfObjectValues("publishedResources", this.getPublishedResources());
     }
@@ -134,6 +147,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param value Value to set for the agentGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgentGroups(@javax.annotation.Nullable final java.util.List<OnPremisesAgentGroup> value) {
         this._agentGroups = value;
     }
@@ -142,6 +156,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param value Value to set for the agents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAgents(@javax.annotation.Nullable final java.util.List<OnPremisesAgent> value) {
         this._agents = value;
     }
@@ -150,6 +165,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param value Value to set for the connectorGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectorGroups(@javax.annotation.Nullable final java.util.List<ConnectorGroup> value) {
         this._connectorGroups = value;
     }
@@ -158,6 +174,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param value Value to set for the connectors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectors(@javax.annotation.Nullable final java.util.List<Connector> value) {
         this._connectors = value;
     }
@@ -166,14 +183,25 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param value Value to set for the hybridAgentUpdaterConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHybridAgentUpdaterConfiguration(@javax.annotation.Nullable final HybridAgentUpdaterConfiguration value) {
         this._hybridAgentUpdaterConfiguration = value;
+    }
+    /**
+     * Sets the isDefaultAccessEnabled property value. The isDefaultAccessEnabled property
+     * @param value Value to set for the isDefaultAccessEnabled property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsDefaultAccessEnabled(@javax.annotation.Nullable final Boolean value) {
+        this._isDefaultAccessEnabled = value;
     }
     /**
      * Sets the isEnabled property value. Represents if Azure AD Application Proxy is enabled for the tenant.
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }
@@ -182,6 +210,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      * @param value Value to set for the publishedResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishedResources(@javax.annotation.Nullable final java.util.List<PublishedResource> value) {
         this._publishedResources = value;
     }

@@ -16,6 +16,7 @@ public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManag
      * Instantiates a new DeviceManagementConfigurationChoiceSettingValue and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingValue() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingValue");
@@ -44,11 +45,10 @@ public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManag
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationChoiceSettingValue currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingInstance::createFromDiscriminatorValue)); });
-            this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("children", (n) -> { this.setChildren(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingInstance::createFromDiscriminatorValue)); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. Choice setting value: an OptionDefinition ItemId.
@@ -63,6 +63,7 @@ public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManag
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +75,7 @@ public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManag
      * @param value Value to set for the children property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildren(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingInstance> value) {
         this._children = value;
     }
@@ -82,6 +84,7 @@ public class DeviceManagementConfigurationChoiceSettingValue extends DeviceManag
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final String value) {
         this._value = value;
     }

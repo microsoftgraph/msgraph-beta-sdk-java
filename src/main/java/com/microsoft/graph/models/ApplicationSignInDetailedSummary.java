@@ -23,9 +23,9 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
      * Instantiates a new ApplicationSignInDetailedSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ApplicationSignInDetailedSummary() {
         super();
-        this.setOdataType("#microsoft.graph.applicationSignInDetailedSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,14 +67,13 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ApplicationSignInDetailedSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("aggregatedEventDateTime", (n) -> { currentObject.setAggregatedEventDateTime(n.getOffsetDateTimeValue()); });
-            this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("signInCount", (n) -> { currentObject.setSignInCount(n.getLongValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(SignInStatus::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("aggregatedEventDateTime", (n) -> { this.setAggregatedEventDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("appDisplayName", (n) -> { this.setAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
+        deserializerMap.put("signInCount", (n) -> { this.setSignInCount(n.getLongValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(SignInStatus::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the signInCount property value. Count of sign-ins made by the application.
@@ -97,6 +96,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +111,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
      * @param value Value to set for the aggregatedEventDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAggregatedEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._aggregatedEventDateTime = value;
     }
@@ -119,6 +120,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
         this._appDisplayName = value;
     }
@@ -127,6 +129,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
         this._appId = value;
     }
@@ -135,6 +138,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
      * @param value Value to set for the signInCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInCount(@javax.annotation.Nullable final Long value) {
         this._signInCount = value;
     }
@@ -143,6 +147,7 @@ public class ApplicationSignInDetailedSummary extends Entity implements Parsable
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final SignInStatus value) {
         this._status = value;
     }

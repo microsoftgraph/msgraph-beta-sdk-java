@@ -20,6 +20,7 @@ public class ChangePasswordPostRequestBody implements AdditionalDataHolder, Pars
      * Instantiates a new changePasswordPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChangePasswordPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -55,11 +56,10 @@ public class ChangePasswordPostRequestBody implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ChangePasswordPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("currentPassword", (n) -> { currentObject.setCurrentPassword(n.getStringValue()); });
-            this.put("newPassword", (n) -> { currentObject.setNewPassword(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("currentPassword", (n) -> { this.setCurrentPassword(n.getStringValue()); });
+        deserializerMap.put("newPassword", (n) -> { this.setNewPassword(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the newPassword property value. The newPassword property
@@ -74,6 +74,7 @@ public class ChangePasswordPostRequestBody implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("currentPassword", this.getCurrentPassword());
@@ -85,6 +86,7 @@ public class ChangePasswordPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +95,7 @@ public class ChangePasswordPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the currentPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrentPassword(@javax.annotation.Nullable final String value) {
         this._currentPassword = value;
     }
@@ -101,6 +104,7 @@ public class ChangePasswordPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the newPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNewPassword(@javax.annotation.Nullable final String value) {
         this._newPassword = value;
     }

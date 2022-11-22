@@ -28,9 +28,9 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * Instantiates a new CaseExportOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CaseExportOperation() {
         super();
-        this.setOdataType("#microsoft.graph.ediscovery.caseExportOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -88,17 +88,16 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CaseExportOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("azureBlobContainer", (n) -> { currentObject.setAzureBlobContainer(n.getStringValue()); });
-            this.put("azureBlobToken", (n) -> { currentObject.setAzureBlobToken(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("exportOptions", (n) -> { currentObject.setExportOptions(n.getEnumValue(ExportOptions.class)); });
-            this.put("exportStructure", (n) -> { currentObject.setExportStructure(n.getEnumValue(ExportFileStructure.class)); });
-            this.put("outputFolderId", (n) -> { currentObject.setOutputFolderId(n.getStringValue()); });
-            this.put("outputName", (n) -> { currentObject.setOutputName(n.getStringValue()); });
-            this.put("reviewSet", (n) -> { currentObject.setReviewSet(n.getObjectValue(ReviewSet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("azureBlobContainer", (n) -> { this.setAzureBlobContainer(n.getStringValue()); });
+        deserializerMap.put("azureBlobToken", (n) -> { this.setAzureBlobToken(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("exportOptions", (n) -> { this.setExportOptions(n.getEnumValue(ExportOptions.class)); });
+        deserializerMap.put("exportStructure", (n) -> { this.setExportStructure(n.getEnumValue(ExportFileStructure.class)); });
+        deserializerMap.put("outputFolderId", (n) -> { this.setOutputFolderId(n.getStringValue()); });
+        deserializerMap.put("outputName", (n) -> { this.setOutputName(n.getStringValue()); });
+        deserializerMap.put("reviewSet", (n) -> { this.setReviewSet(n.getObjectValue(ReviewSet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the outputFolderId property value. The outputFolderId property
@@ -129,6 +128,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,6 +146,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * @param value Value to set for the azureBlobContainer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureBlobContainer(@javax.annotation.Nullable final String value) {
         this._azureBlobContainer = value;
     }
@@ -154,6 +155,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * @param value Value to set for the azureBlobToken property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureBlobToken(@javax.annotation.Nullable final String value) {
         this._azureBlobToken = value;
     }
@@ -162,6 +164,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -170,6 +173,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * @param value Value to set for the exportOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExportOptions(@javax.annotation.Nullable final ExportOptions value) {
         this._exportOptions = value;
     }
@@ -178,6 +182,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * @param value Value to set for the exportStructure property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExportStructure(@javax.annotation.Nullable final ExportFileStructure value) {
         this._exportStructure = value;
     }
@@ -186,6 +191,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * @param value Value to set for the outputFolderId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutputFolderId(@javax.annotation.Nullable final String value) {
         this._outputFolderId = value;
     }
@@ -194,6 +200,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * @param value Value to set for the outputName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutputName(@javax.annotation.Nullable final String value) {
         this._outputName = value;
     }
@@ -202,6 +209,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
      * @param value Value to set for the reviewSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewSet(@javax.annotation.Nullable final ReviewSet value) {
         this._reviewSet = value;
     }

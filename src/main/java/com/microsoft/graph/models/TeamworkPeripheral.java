@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class TeamworkPeripheral extends Entity implements Parsable {
     /** Display name for the peripheral. */
     private String _displayName;
@@ -15,17 +16,17 @@ public class TeamworkPeripheral extends Entity implements Parsable {
     /** The unique identifier for the vendor of the device. Each vendor has a unique ID. */
     private String _vendorId;
     /**
-     * Instantiates a new TeamworkPeripheral and sets the default values.
+     * Instantiates a new teamworkPeripheral and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkPeripheral() {
         super();
-        this.setOdataType("#microsoft.graph.teamworkPeripheral");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a TeamworkPeripheral
+     * @return a teamworkPeripheral
      */
     @javax.annotation.Nonnull
     public static TeamworkPeripheral createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -46,12 +47,11 @@ public class TeamworkPeripheral extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamworkPeripheral currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("productId", (n) -> { currentObject.setProductId(n.getStringValue()); });
-            this.put("vendorId", (n) -> { currentObject.setVendorId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("productId", (n) -> { this.setProductId(n.getStringValue()); });
+        deserializerMap.put("vendorId", (n) -> { this.setVendorId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the productId property value. The product ID of the device. Each product from a vendor has its own ID.
@@ -74,6 +74,7 @@ public class TeamworkPeripheral extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +87,7 @@ public class TeamworkPeripheral extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -94,6 +96,7 @@ public class TeamworkPeripheral extends Entity implements Parsable {
      * @param value Value to set for the productId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductId(@javax.annotation.Nullable final String value) {
         this._productId = value;
     }
@@ -102,6 +105,7 @@ public class TeamworkPeripheral extends Entity implements Parsable {
      * @param value Value to set for the vendorId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorId(@javax.annotation.Nullable final String value) {
         this._vendorId = value;
     }

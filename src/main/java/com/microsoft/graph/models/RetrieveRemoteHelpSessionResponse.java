@@ -37,9 +37,9 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * Instantiates a new retrieveRemoteHelpSessionResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RetrieveRemoteHelpSessionResponse() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.retrieveRemoteHelpSessionResponse");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -105,19 +105,18 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RetrieveRemoteHelpSessionResponse currentObject = this;
-        return new HashMap<>(10) {{
-            this.put("acsGroupId", (n) -> { currentObject.setAcsGroupId(n.getStringValue()); });
-            this.put("acsHelperUserId", (n) -> { currentObject.setAcsHelperUserId(n.getStringValue()); });
-            this.put("acsHelperUserToken", (n) -> { currentObject.setAcsHelperUserToken(n.getStringValue()); });
-            this.put("acsSharerUserId", (n) -> { currentObject.setAcsSharerUserId(n.getStringValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("pubSubGroupId", (n) -> { currentObject.setPubSubGroupId(n.getStringValue()); });
-            this.put("pubSubHelperAccessUri", (n) -> { currentObject.setPubSubHelperAccessUri(n.getStringValue()); });
-            this.put("sessionExpirationDateTime", (n) -> { currentObject.setSessionExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("sessionKey", (n) -> { currentObject.setSessionKey(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("acsGroupId", (n) -> { this.setAcsGroupId(n.getStringValue()); });
+        deserializerMap.put("acsHelperUserId", (n) -> { this.setAcsHelperUserId(n.getStringValue()); });
+        deserializerMap.put("acsHelperUserToken", (n) -> { this.setAcsHelperUserToken(n.getStringValue()); });
+        deserializerMap.put("acsSharerUserId", (n) -> { this.setAcsSharerUserId(n.getStringValue()); });
+        deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("pubSubGroupId", (n) -> { this.setPubSubGroupId(n.getStringValue()); });
+        deserializerMap.put("pubSubHelperAccessUri", (n) -> { this.setPubSubHelperAccessUri(n.getStringValue()); });
+        deserializerMap.put("sessionExpirationDateTime", (n) -> { this.setSessionExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("sessionKey", (n) -> { this.setSessionKey(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -164,6 +163,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("acsGroupId", this.getAcsGroupId());
@@ -183,6 +183,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the acsGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcsGroupId(@javax.annotation.Nullable final String value) {
         this._acsGroupId = value;
     }
@@ -191,6 +192,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the acsHelperUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcsHelperUserId(@javax.annotation.Nullable final String value) {
         this._acsHelperUserId = value;
     }
@@ -199,6 +201,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the acsHelperUserToken property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcsHelperUserToken(@javax.annotation.Nullable final String value) {
         this._acsHelperUserToken = value;
     }
@@ -207,6 +210,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the acsSharerUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcsSharerUserId(@javax.annotation.Nullable final String value) {
         this._acsSharerUserId = value;
     }
@@ -215,6 +219,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -223,6 +228,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -231,6 +237,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -239,6 +246,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the pubSubGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPubSubGroupId(@javax.annotation.Nullable final String value) {
         this._pubSubGroupId = value;
     }
@@ -247,6 +255,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the pubSubHelperAccessUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPubSubHelperAccessUri(@javax.annotation.Nullable final String value) {
         this._pubSubHelperAccessUri = value;
     }
@@ -255,6 +264,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the sessionExpirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessionExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._sessionExpirationDateTime = value;
     }
@@ -263,6 +273,7 @@ public class RetrieveRemoteHelpSessionResponse implements AdditionalDataHolder, 
      * @param value Value to set for the sessionKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessionKey(@javax.annotation.Nullable final String value) {
         this._sessionKey = value;
     }

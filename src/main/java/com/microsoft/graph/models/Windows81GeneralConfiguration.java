@@ -82,6 +82,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * Instantiates a new Windows81GeneralConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows81GeneralConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows81GeneralConfiguration");
@@ -270,44 +271,43 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows81GeneralConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accountsBlockAddingNonMicrosoftAccountEmail", (n) -> { currentObject.setAccountsBlockAddingNonMicrosoftAccountEmail(n.getBooleanValue()); });
-            this.put("applyOnlyToWindows81", (n) -> { currentObject.setApplyOnlyToWindows81(n.getBooleanValue()); });
-            this.put("browserBlockAutofill", (n) -> { currentObject.setBrowserBlockAutofill(n.getBooleanValue()); });
-            this.put("browserBlockAutomaticDetectionOfIntranetSites", (n) -> { currentObject.setBrowserBlockAutomaticDetectionOfIntranetSites(n.getBooleanValue()); });
-            this.put("browserBlockEnterpriseModeAccess", (n) -> { currentObject.setBrowserBlockEnterpriseModeAccess(n.getBooleanValue()); });
-            this.put("browserBlockJavaScript", (n) -> { currentObject.setBrowserBlockJavaScript(n.getBooleanValue()); });
-            this.put("browserBlockPlugins", (n) -> { currentObject.setBrowserBlockPlugins(n.getBooleanValue()); });
-            this.put("browserBlockPopups", (n) -> { currentObject.setBrowserBlockPopups(n.getBooleanValue()); });
-            this.put("browserBlockSendingDoNotTrackHeader", (n) -> { currentObject.setBrowserBlockSendingDoNotTrackHeader(n.getBooleanValue()); });
-            this.put("browserBlockSingleWordEntryOnIntranetSites", (n) -> { currentObject.setBrowserBlockSingleWordEntryOnIntranetSites(n.getBooleanValue()); });
-            this.put("browserEnterpriseModeSiteListLocation", (n) -> { currentObject.setBrowserEnterpriseModeSiteListLocation(n.getStringValue()); });
-            this.put("browserInternetSecurityLevel", (n) -> { currentObject.setBrowserInternetSecurityLevel(n.getEnumValue(InternetSiteSecurityLevel.class)); });
-            this.put("browserIntranetSecurityLevel", (n) -> { currentObject.setBrowserIntranetSecurityLevel(n.getEnumValue(SiteSecurityLevel.class)); });
-            this.put("browserLoggingReportLocation", (n) -> { currentObject.setBrowserLoggingReportLocation(n.getStringValue()); });
-            this.put("browserRequireFirewall", (n) -> { currentObject.setBrowserRequireFirewall(n.getBooleanValue()); });
-            this.put("browserRequireFraudWarning", (n) -> { currentObject.setBrowserRequireFraudWarning(n.getBooleanValue()); });
-            this.put("browserRequireHighSecurityForRestrictedSites", (n) -> { currentObject.setBrowserRequireHighSecurityForRestrictedSites(n.getBooleanValue()); });
-            this.put("browserRequireSmartScreen", (n) -> { currentObject.setBrowserRequireSmartScreen(n.getBooleanValue()); });
-            this.put("browserTrustedSitesSecurityLevel", (n) -> { currentObject.setBrowserTrustedSitesSecurityLevel(n.getEnumValue(SiteSecurityLevel.class)); });
-            this.put("cellularBlockDataRoaming", (n) -> { currentObject.setCellularBlockDataRoaming(n.getBooleanValue()); });
-            this.put("diagnosticsBlockDataSubmission", (n) -> { currentObject.setDiagnosticsBlockDataSubmission(n.getBooleanValue()); });
-            this.put("minimumAutoInstallClassification", (n) -> { currentObject.setMinimumAutoInstallClassification(n.getEnumValue(UpdateClassification.class)); });
-            this.put("passwordBlockPicturePasswordAndPin", (n) -> { currentObject.setPasswordBlockPicturePasswordAndPin(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumCharacterSetCount", (n) -> { currentObject.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
-            this.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
-            this.put("storageRequireDeviceEncryption", (n) -> { currentObject.setStorageRequireDeviceEncryption(n.getBooleanValue()); });
-            this.put("updatesMinimumAutoInstallClassification", (n) -> { currentObject.setUpdatesMinimumAutoInstallClassification(n.getEnumValue(UpdateClassification.class)); });
-            this.put("updatesRequireAutomaticUpdates", (n) -> { currentObject.setUpdatesRequireAutomaticUpdates(n.getBooleanValue()); });
-            this.put("userAccountControlSettings", (n) -> { currentObject.setUserAccountControlSettings(n.getEnumValue(WindowsUserAccountControlSettings.class)); });
-            this.put("workFoldersUrl", (n) -> { currentObject.setWorkFoldersUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountsBlockAddingNonMicrosoftAccountEmail", (n) -> { this.setAccountsBlockAddingNonMicrosoftAccountEmail(n.getBooleanValue()); });
+        deserializerMap.put("applyOnlyToWindows81", (n) -> { this.setApplyOnlyToWindows81(n.getBooleanValue()); });
+        deserializerMap.put("browserBlockAutofill", (n) -> { this.setBrowserBlockAutofill(n.getBooleanValue()); });
+        deserializerMap.put("browserBlockAutomaticDetectionOfIntranetSites", (n) -> { this.setBrowserBlockAutomaticDetectionOfIntranetSites(n.getBooleanValue()); });
+        deserializerMap.put("browserBlockEnterpriseModeAccess", (n) -> { this.setBrowserBlockEnterpriseModeAccess(n.getBooleanValue()); });
+        deserializerMap.put("browserBlockJavaScript", (n) -> { this.setBrowserBlockJavaScript(n.getBooleanValue()); });
+        deserializerMap.put("browserBlockPlugins", (n) -> { this.setBrowserBlockPlugins(n.getBooleanValue()); });
+        deserializerMap.put("browserBlockPopups", (n) -> { this.setBrowserBlockPopups(n.getBooleanValue()); });
+        deserializerMap.put("browserBlockSendingDoNotTrackHeader", (n) -> { this.setBrowserBlockSendingDoNotTrackHeader(n.getBooleanValue()); });
+        deserializerMap.put("browserBlockSingleWordEntryOnIntranetSites", (n) -> { this.setBrowserBlockSingleWordEntryOnIntranetSites(n.getBooleanValue()); });
+        deserializerMap.put("browserEnterpriseModeSiteListLocation", (n) -> { this.setBrowserEnterpriseModeSiteListLocation(n.getStringValue()); });
+        deserializerMap.put("browserInternetSecurityLevel", (n) -> { this.setBrowserInternetSecurityLevel(n.getEnumValue(InternetSiteSecurityLevel.class)); });
+        deserializerMap.put("browserIntranetSecurityLevel", (n) -> { this.setBrowserIntranetSecurityLevel(n.getEnumValue(SiteSecurityLevel.class)); });
+        deserializerMap.put("browserLoggingReportLocation", (n) -> { this.setBrowserLoggingReportLocation(n.getStringValue()); });
+        deserializerMap.put("browserRequireFirewall", (n) -> { this.setBrowserRequireFirewall(n.getBooleanValue()); });
+        deserializerMap.put("browserRequireFraudWarning", (n) -> { this.setBrowserRequireFraudWarning(n.getBooleanValue()); });
+        deserializerMap.put("browserRequireHighSecurityForRestrictedSites", (n) -> { this.setBrowserRequireHighSecurityForRestrictedSites(n.getBooleanValue()); });
+        deserializerMap.put("browserRequireSmartScreen", (n) -> { this.setBrowserRequireSmartScreen(n.getBooleanValue()); });
+        deserializerMap.put("browserTrustedSitesSecurityLevel", (n) -> { this.setBrowserTrustedSitesSecurityLevel(n.getEnumValue(SiteSecurityLevel.class)); });
+        deserializerMap.put("cellularBlockDataRoaming", (n) -> { this.setCellularBlockDataRoaming(n.getBooleanValue()); });
+        deserializerMap.put("diagnosticsBlockDataSubmission", (n) -> { this.setDiagnosticsBlockDataSubmission(n.getBooleanValue()); });
+        deserializerMap.put("minimumAutoInstallClassification", (n) -> { this.setMinimumAutoInstallClassification(n.getEnumValue(UpdateClassification.class)); });
+        deserializerMap.put("passwordBlockPicturePasswordAndPin", (n) -> { this.setPasswordBlockPicturePasswordAndPin(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { this.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumCharacterSetCount", (n) -> { this.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { this.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { this.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { this.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
+        deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { this.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
+        deserializerMap.put("storageRequireDeviceEncryption", (n) -> { this.setStorageRequireDeviceEncryption(n.getBooleanValue()); });
+        deserializerMap.put("updatesMinimumAutoInstallClassification", (n) -> { this.setUpdatesMinimumAutoInstallClassification(n.getEnumValue(UpdateClassification.class)); });
+        deserializerMap.put("updatesRequireAutomaticUpdates", (n) -> { this.setUpdatesRequireAutomaticUpdates(n.getBooleanValue()); });
+        deserializerMap.put("userAccountControlSettings", (n) -> { this.setUserAccountControlSettings(n.getEnumValue(WindowsUserAccountControlSettings.class)); });
+        deserializerMap.put("workFoldersUrl", (n) -> { this.setWorkFoldersUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the minimumAutoInstallClassification property value. Possible values for automatic update classification.
@@ -426,11 +426,11 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("accountsBlockAddingNonMicrosoftAccountEmail", this.getAccountsBlockAddingNonMicrosoftAccountEmail());
-        writer.writeBooleanValue("applyOnlyToWindows81", this.getApplyOnlyToWindows81());
         writer.writeBooleanValue("browserBlockAutofill", this.getBrowserBlockAutofill());
         writer.writeBooleanValue("browserBlockAutomaticDetectionOfIntranetSites", this.getBrowserBlockAutomaticDetectionOfIntranetSites());
         writer.writeBooleanValue("browserBlockEnterpriseModeAccess", this.getBrowserBlockEnterpriseModeAccess());
@@ -470,6 +470,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the accountsBlockAddingNonMicrosoftAccountEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountsBlockAddingNonMicrosoftAccountEmail(@javax.annotation.Nullable final Boolean value) {
         this._accountsBlockAddingNonMicrosoftAccountEmail = value;
     }
@@ -478,6 +479,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the applyOnlyToWindows81 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplyOnlyToWindows81(@javax.annotation.Nullable final Boolean value) {
         this._applyOnlyToWindows81 = value;
     }
@@ -486,6 +488,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserBlockAutofill property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserBlockAutofill(@javax.annotation.Nullable final Boolean value) {
         this._browserBlockAutofill = value;
     }
@@ -494,6 +497,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserBlockAutomaticDetectionOfIntranetSites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserBlockAutomaticDetectionOfIntranetSites(@javax.annotation.Nullable final Boolean value) {
         this._browserBlockAutomaticDetectionOfIntranetSites = value;
     }
@@ -502,6 +506,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserBlockEnterpriseModeAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserBlockEnterpriseModeAccess(@javax.annotation.Nullable final Boolean value) {
         this._browserBlockEnterpriseModeAccess = value;
     }
@@ -510,6 +515,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserBlockJavaScript property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserBlockJavaScript(@javax.annotation.Nullable final Boolean value) {
         this._browserBlockJavaScript = value;
     }
@@ -518,6 +524,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserBlockPlugins property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserBlockPlugins(@javax.annotation.Nullable final Boolean value) {
         this._browserBlockPlugins = value;
     }
@@ -526,6 +533,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserBlockPopups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserBlockPopups(@javax.annotation.Nullable final Boolean value) {
         this._browserBlockPopups = value;
     }
@@ -534,6 +542,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserBlockSendingDoNotTrackHeader property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserBlockSendingDoNotTrackHeader(@javax.annotation.Nullable final Boolean value) {
         this._browserBlockSendingDoNotTrackHeader = value;
     }
@@ -542,6 +551,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserBlockSingleWordEntryOnIntranetSites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserBlockSingleWordEntryOnIntranetSites(@javax.annotation.Nullable final Boolean value) {
         this._browserBlockSingleWordEntryOnIntranetSites = value;
     }
@@ -550,6 +560,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserEnterpriseModeSiteListLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserEnterpriseModeSiteListLocation(@javax.annotation.Nullable final String value) {
         this._browserEnterpriseModeSiteListLocation = value;
     }
@@ -558,6 +569,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserInternetSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserInternetSecurityLevel(@javax.annotation.Nullable final InternetSiteSecurityLevel value) {
         this._browserInternetSecurityLevel = value;
     }
@@ -566,6 +578,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserIntranetSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserIntranetSecurityLevel(@javax.annotation.Nullable final SiteSecurityLevel value) {
         this._browserIntranetSecurityLevel = value;
     }
@@ -574,6 +587,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserLoggingReportLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserLoggingReportLocation(@javax.annotation.Nullable final String value) {
         this._browserLoggingReportLocation = value;
     }
@@ -582,6 +596,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserRequireFirewall property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserRequireFirewall(@javax.annotation.Nullable final Boolean value) {
         this._browserRequireFirewall = value;
     }
@@ -590,6 +605,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserRequireFraudWarning property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserRequireFraudWarning(@javax.annotation.Nullable final Boolean value) {
         this._browserRequireFraudWarning = value;
     }
@@ -598,6 +614,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserRequireHighSecurityForRestrictedSites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserRequireHighSecurityForRestrictedSites(@javax.annotation.Nullable final Boolean value) {
         this._browserRequireHighSecurityForRestrictedSites = value;
     }
@@ -606,6 +623,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserRequireSmartScreen property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserRequireSmartScreen(@javax.annotation.Nullable final Boolean value) {
         this._browserRequireSmartScreen = value;
     }
@@ -614,6 +632,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the browserTrustedSitesSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowserTrustedSitesSecurityLevel(@javax.annotation.Nullable final SiteSecurityLevel value) {
         this._browserTrustedSitesSecurityLevel = value;
     }
@@ -622,6 +641,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockDataRoaming property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockDataRoaming(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockDataRoaming = value;
     }
@@ -630,6 +650,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the diagnosticsBlockDataSubmission property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiagnosticsBlockDataSubmission(@javax.annotation.Nullable final Boolean value) {
         this._diagnosticsBlockDataSubmission = value;
     }
@@ -638,6 +659,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the minimumAutoInstallClassification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumAutoInstallClassification(@javax.annotation.Nullable final UpdateClassification value) {
         this._minimumAutoInstallClassification = value;
     }
@@ -646,6 +668,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordBlockPicturePasswordAndPin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockPicturePasswordAndPin(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockPicturePasswordAndPin = value;
     }
@@ -654,6 +677,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -662,6 +686,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumCharacterSetCount = value;
     }
@@ -670,6 +695,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -678,6 +704,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
@@ -686,6 +713,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordBlockCount = value;
     }
@@ -694,6 +722,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -702,6 +731,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
         this._passwordSignInFailureCountBeforeFactoryReset = value;
     }
@@ -710,6 +740,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the storageRequireDeviceEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRequireDeviceEncryption(@javax.annotation.Nullable final Boolean value) {
         this._storageRequireDeviceEncryption = value;
     }
@@ -718,6 +749,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the updatesMinimumAutoInstallClassification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdatesMinimumAutoInstallClassification(@javax.annotation.Nullable final UpdateClassification value) {
         this._updatesMinimumAutoInstallClassification = value;
     }
@@ -726,6 +758,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the updatesRequireAutomaticUpdates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdatesRequireAutomaticUpdates(@javax.annotation.Nullable final Boolean value) {
         this._updatesRequireAutomaticUpdates = value;
     }
@@ -734,6 +767,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the userAccountControlSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAccountControlSettings(@javax.annotation.Nullable final WindowsUserAccountControlSettings value) {
         this._userAccountControlSettings = value;
     }
@@ -742,6 +776,7 @@ public class Windows81GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the workFoldersUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkFoldersUrl(@javax.annotation.Nullable final String value) {
         this._workFoldersUrl = value;
     }

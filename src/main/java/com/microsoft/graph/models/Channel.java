@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Channel extends Entity implements Parsable {
     /** Read only. Timestamp at which the channel was created. */
     private OffsetDateTime _createdDateTime;
@@ -32,6 +32,8 @@ public class Channel extends Entity implements Parsable {
     private ChannelModerationSettings _moderationSettings;
     /** A collection of teams with which a channel is shared. */
     private java.util.List<SharedWithChannelTeamInfo> _sharedWithTeams;
+    /** The summary property */
+    private ChannelSummary _summary;
     /** A collection of all the tabs in the channel. A navigation property. */
     private java.util.List<TeamsTab> _tabs;
     /** The ID of the Azure Active Directory tenant. */
@@ -42,9 +44,9 @@ public class Channel extends Entity implements Parsable {
      * Instantiates a new channel and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Channel() {
         super();
-        this.setOdataType("#microsoft.graph.channel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -94,23 +96,23 @@ public class Channel extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Channel currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("filesFolder", (n) -> { currentObject.setFilesFolder(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
-            this.put("isFavoriteByDefault", (n) -> { currentObject.setIsFavoriteByDefault(n.getBooleanValue()); });
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
-            this.put("membershipType", (n) -> { currentObject.setMembershipType(n.getEnumValue(ChannelMembershipType.class)); });
-            this.put("messages", (n) -> { currentObject.setMessages(n.getCollectionOfObjectValues(ChatMessage::createFromDiscriminatorValue)); });
-            this.put("moderationSettings", (n) -> { currentObject.setModerationSettings(n.getObjectValue(ChannelModerationSettings::createFromDiscriminatorValue)); });
-            this.put("sharedWithTeams", (n) -> { currentObject.setSharedWithTeams(n.getCollectionOfObjectValues(SharedWithChannelTeamInfo::createFromDiscriminatorValue)); });
-            this.put("tabs", (n) -> { currentObject.setTabs(n.getCollectionOfObjectValues(TeamsTab::createFromDiscriminatorValue)); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("webUrl", (n) -> { currentObject.setWebUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("filesFolder", (n) -> { this.setFilesFolder(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("isFavoriteByDefault", (n) -> { this.setIsFavoriteByDefault(n.getBooleanValue()); });
+        deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
+        deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getEnumValue(ChannelMembershipType.class)); });
+        deserializerMap.put("messages", (n) -> { this.setMessages(n.getCollectionOfObjectValues(ChatMessage::createFromDiscriminatorValue)); });
+        deserializerMap.put("moderationSettings", (n) -> { this.setModerationSettings(n.getObjectValue(ChannelModerationSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharedWithTeams", (n) -> { this.setSharedWithTeams(n.getCollectionOfObjectValues(SharedWithChannelTeamInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("summary", (n) -> { this.setSummary(n.getObjectValue(ChannelSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("tabs", (n) -> { this.setTabs(n.getCollectionOfObjectValues(TeamsTab::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the filesFolder property value. Metadata for the location where the channel's files are stored.
@@ -169,6 +171,14 @@ public class Channel extends Entity implements Parsable {
         return this._sharedWithTeams;
     }
     /**
+     * Gets the summary property value. The summary property
+     * @return a channelSummary
+     */
+    @javax.annotation.Nullable
+    public ChannelSummary getSummary() {
+        return this._summary;
+    }
+    /**
      * Gets the tabs property value. A collection of all the tabs in the channel. A navigation property.
      * @return a teamsTab
      */
@@ -197,6 +207,7 @@ public class Channel extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -211,6 +222,7 @@ public class Channel extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("messages", this.getMessages());
         writer.writeObjectValue("moderationSettings", this.getModerationSettings());
         writer.writeCollectionOfObjectValues("sharedWithTeams", this.getSharedWithTeams());
+        writer.writeObjectValue("summary", this.getSummary());
         writer.writeCollectionOfObjectValues("tabs", this.getTabs());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeStringValue("webUrl", this.getWebUrl());
@@ -220,6 +232,7 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -228,6 +241,7 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -236,6 +250,7 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -244,6 +259,7 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
         this._email = value;
     }
@@ -252,6 +268,7 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the filesFolder property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilesFolder(@javax.annotation.Nullable final DriveItem value) {
         this._filesFolder = value;
     }
@@ -260,6 +277,7 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the isFavoriteByDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsFavoriteByDefault(@javax.annotation.Nullable final Boolean value) {
         this._isFavoriteByDefault = value;
     }
@@ -268,6 +286,7 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<ConversationMember> value) {
         this._members = value;
     }
@@ -276,6 +295,7 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the membershipType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembershipType(@javax.annotation.Nullable final ChannelMembershipType value) {
         this._membershipType = value;
     }
@@ -284,6 +304,7 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the messages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessages(@javax.annotation.Nullable final java.util.List<ChatMessage> value) {
         this._messages = value;
     }
@@ -292,6 +313,7 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the moderationSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModerationSettings(@javax.annotation.Nullable final ChannelModerationSettings value) {
         this._moderationSettings = value;
     }
@@ -300,14 +322,25 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the sharedWithTeams property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedWithTeams(@javax.annotation.Nullable final java.util.List<SharedWithChannelTeamInfo> value) {
         this._sharedWithTeams = value;
+    }
+    /**
+     * Sets the summary property value. The summary property
+     * @param value Value to set for the summary property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSummary(@javax.annotation.Nullable final ChannelSummary value) {
+        this._summary = value;
     }
     /**
      * Sets the tabs property value. A collection of all the tabs in the channel. A navigation property.
      * @param value Value to set for the tabs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTabs(@javax.annotation.Nullable final java.util.List<TeamsTab> value) {
         this._tabs = value;
     }
@@ -316,6 +349,7 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
@@ -324,6 +358,7 @@ public class Channel extends Entity implements Parsable {
      * @param value Value to set for the webUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebUrl(@javax.annotation.Nullable final String value) {
         this._webUrl = value;
     }

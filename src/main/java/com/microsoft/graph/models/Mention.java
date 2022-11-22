@@ -30,9 +30,9 @@ public class Mention extends Entity implements Parsable {
      * Instantiates a new mention and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Mention() {
         super();
-        this.setOdataType("#microsoft.graph.mention");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -90,17 +90,16 @@ public class Mention extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Mention currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("application", (n) -> { currentObject.setApplication(n.getStringValue()); });
-            this.put("clientReference", (n) -> { currentObject.setClientReference(n.getStringValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deepLink", (n) -> { currentObject.setDeepLink(n.getStringValue()); });
-            this.put("mentioned", (n) -> { currentObject.setMentioned(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
-            this.put("mentionText", (n) -> { currentObject.setMentionText(n.getStringValue()); });
-            this.put("serverCreatedDateTime", (n) -> { currentObject.setServerCreatedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("application", (n) -> { this.setApplication(n.getStringValue()); });
+        deserializerMap.put("clientReference", (n) -> { this.setClientReference(n.getStringValue()); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deepLink", (n) -> { this.setDeepLink(n.getStringValue()); });
+        deserializerMap.put("mentioned", (n) -> { this.setMentioned(n.getObjectValue(EmailAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("mentionText", (n) -> { this.setMentionText(n.getStringValue()); });
+        deserializerMap.put("serverCreatedDateTime", (n) -> { this.setServerCreatedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mentioned property value. The mentioned property
@@ -131,6 +130,7 @@ public class Mention extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -148,6 +148,7 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the application property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplication(@javax.annotation.Nullable final String value) {
         this._application = value;
     }
@@ -156,6 +157,7 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the clientReference property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientReference(@javax.annotation.Nullable final String value) {
         this._clientReference = value;
     }
@@ -164,6 +166,7 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final EmailAddress value) {
         this._createdBy = value;
     }
@@ -172,6 +175,7 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -180,6 +184,7 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the deepLink property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeepLink(@javax.annotation.Nullable final String value) {
         this._deepLink = value;
     }
@@ -188,6 +193,7 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the mentioned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMentioned(@javax.annotation.Nullable final EmailAddress value) {
         this._mentioned = value;
     }
@@ -196,6 +202,7 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the mentionText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMentionText(@javax.annotation.Nullable final String value) {
         this._mentionText = value;
     }
@@ -204,6 +211,7 @@ public class Mention extends Entity implements Parsable {
      * @param value Value to set for the serverCreatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServerCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._serverCreatedDateTime = value;
     }

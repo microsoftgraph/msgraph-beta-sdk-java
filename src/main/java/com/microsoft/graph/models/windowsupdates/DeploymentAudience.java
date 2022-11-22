@@ -17,9 +17,9 @@ public class DeploymentAudience extends Entity implements Parsable {
      * Instantiates a new deploymentAudience and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeploymentAudience() {
         super();
-        this.setOdataType("#microsoft.graph.windowsUpdates.deploymentAudience");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,11 +45,10 @@ public class DeploymentAudience extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeploymentAudience currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("exclusions", (n) -> { currentObject.setExclusions(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("exclusions", (n) -> { this.setExclusions(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
+        deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the members property value. Specifies the assets to include in the audience.
@@ -64,6 +63,7 @@ public class DeploymentAudience extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +75,7 @@ public class DeploymentAudience extends Entity implements Parsable {
      * @param value Value to set for the exclusions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExclusions(@javax.annotation.Nullable final java.util.List<UpdatableAsset> value) {
         this._exclusions = value;
     }
@@ -83,6 +84,7 @@ public class DeploymentAudience extends Entity implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<UpdatableAsset> value) {
         this._members = value;
     }

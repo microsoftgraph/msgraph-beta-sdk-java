@@ -35,9 +35,9 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
      * Instantiates a new omaSetting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OmaSetting() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.omaSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -92,15 +92,14 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OmaSetting currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isEncrypted", (n) -> { currentObject.setIsEncrypted(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("omaUri", (n) -> { currentObject.setOmaUri(n.getStringValue()); });
-            this.put("secretReferenceValueId", (n) -> { currentObject.setSecretReferenceValueId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isEncrypted", (n) -> { this.setIsEncrypted(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("omaUri", (n) -> { this.setOmaUri(n.getStringValue()); });
+        deserializerMap.put("secretReferenceValueId", (n) -> { this.setSecretReferenceValueId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isEncrypted property value. Indicates whether the value field is encrypted. This property is read-only.
@@ -139,14 +138,13 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeBooleanValue("isEncrypted", this.getIsEncrypted());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("omaUri", this.getOmaUri());
-        writer.writeStringValue("secretReferenceValueId", this.getSecretReferenceValueId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -154,6 +152,7 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -162,6 +161,7 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -170,6 +170,7 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -178,6 +179,7 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isEncrypted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEncrypted(@javax.annotation.Nullable final Boolean value) {
         this._isEncrypted = value;
     }
@@ -186,6 +188,7 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -194,6 +197,7 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the omaUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOmaUri(@javax.annotation.Nullable final String value) {
         this._omaUri = value;
     }
@@ -202,6 +206,7 @@ public class OmaSetting implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the secretReferenceValueId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecretReferenceValueId(@javax.annotation.Nullable final String value) {
         this._secretReferenceValueId = value;
     }

@@ -19,9 +19,9 @@ public class ExternalLink implements AdditionalDataHolder, Parsable {
      * Instantiates a new externalLink and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExternalLink() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.externalLink");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,11 +47,10 @@ public class ExternalLink implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExternalLink currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("href", (n) -> { currentObject.setHref(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("href", (n) -> { this.setHref(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the href property value. The url of the link.
@@ -74,6 +73,7 @@ public class ExternalLink implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("href", this.getHref());
@@ -85,6 +85,7 @@ public class ExternalLink implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +94,7 @@ public class ExternalLink implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the href property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHref(@javax.annotation.Nullable final String value) {
         this._href = value;
     }
@@ -101,6 +103,7 @@ public class ExternalLink implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

@@ -23,9 +23,9 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
      * Instantiates a new userFlowApiConnectorConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserFlowApiConnectorConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.userFlowApiConnectorConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,13 +51,12 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserFlowApiConnectorConfiguration currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("postAttributeCollection", (n) -> { currentObject.setPostAttributeCollection(n.getObjectValue(IdentityApiConnector::createFromDiscriminatorValue)); });
-            this.put("postFederationSignup", (n) -> { currentObject.setPostFederationSignup(n.getObjectValue(IdentityApiConnector::createFromDiscriminatorValue)); });
-            this.put("preTokenIssuance", (n) -> { currentObject.setPreTokenIssuance(n.getObjectValue(IdentityApiConnector::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("postAttributeCollection", (n) -> { this.setPostAttributeCollection(n.getObjectValue(IdentityApiConnector::createFromDiscriminatorValue)); });
+        deserializerMap.put("postFederationSignup", (n) -> { this.setPostFederationSignup(n.getObjectValue(IdentityApiConnector::createFromDiscriminatorValue)); });
+        deserializerMap.put("preTokenIssuance", (n) -> { this.setPreTokenIssuance(n.getObjectValue(IdentityApiConnector::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -96,6 +95,7 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -109,6 +109,7 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +118,7 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -125,6 +127,7 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
      * @param value Value to set for the postAttributeCollection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostAttributeCollection(@javax.annotation.Nullable final IdentityApiConnector value) {
         this._postAttributeCollection = value;
     }
@@ -133,6 +136,7 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
      * @param value Value to set for the postFederationSignup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostFederationSignup(@javax.annotation.Nullable final IdentityApiConnector value) {
         this._postFederationSignup = value;
     }
@@ -141,6 +145,7 @@ public class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, 
      * @param value Value to set for the preTokenIssuance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreTokenIssuance(@javax.annotation.Nullable final IdentityApiConnector value) {
         this._preTokenIssuance = value;
     }

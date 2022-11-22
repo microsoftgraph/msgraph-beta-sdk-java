@@ -23,6 +23,7 @@ public class GetHealthMetricTimeSeriesPostRequestBody implements AdditionalDataH
      * Instantiates a new getHealthMetricTimeSeriesPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetHealthMetricTimeSeriesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -58,12 +59,11 @@ public class GetHealthMetricTimeSeriesPostRequestBody implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GetHealthMetricTimeSeriesPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("metricName", (n) -> { currentObject.setMetricName(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("metricName", (n) -> { this.setMetricName(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the metricName property value. The metricName property
@@ -86,6 +86,7 @@ public class GetHealthMetricTimeSeriesPostRequestBody implements AdditionalDataH
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
@@ -98,6 +99,7 @@ public class GetHealthMetricTimeSeriesPostRequestBody implements AdditionalDataH
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +108,7 @@ public class GetHealthMetricTimeSeriesPostRequestBody implements AdditionalDataH
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -114,6 +117,7 @@ public class GetHealthMetricTimeSeriesPostRequestBody implements AdditionalDataH
      * @param value Value to set for the metricName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetricName(@javax.annotation.Nullable final String value) {
         this._metricName = value;
     }
@@ -122,6 +126,7 @@ public class GetHealthMetricTimeSeriesPostRequestBody implements AdditionalDataH
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }

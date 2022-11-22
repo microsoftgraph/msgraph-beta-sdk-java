@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class UsedInsight extends Entity implements Parsable {
     /** Information about when the item was last viewed or modified by the user. Read only. */
     private UsageDetails _lastUsed;
@@ -21,9 +21,9 @@ public class UsedInsight extends Entity implements Parsable {
      * Instantiates a new usedInsight and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UsedInsight() {
         super();
-        this.setOdataType("#microsoft.graph.usedInsight");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,13 +41,12 @@ public class UsedInsight extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UsedInsight currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("lastUsed", (n) -> { currentObject.setLastUsed(n.getObjectValue(UsageDetails::createFromDiscriminatorValue)); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
-            this.put("resourceReference", (n) -> { currentObject.setResourceReference(n.getObjectValue(ResourceReference::createFromDiscriminatorValue)); });
-            this.put("resourceVisualization", (n) -> { currentObject.setResourceVisualization(n.getObjectValue(ResourceVisualization::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("lastUsed", (n) -> { this.setLastUsed(n.getObjectValue(UsageDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("resource", (n) -> { this.setResource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceReference", (n) -> { this.setResourceReference(n.getObjectValue(ResourceReference::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceVisualization", (n) -> { this.setResourceVisualization(n.getObjectValue(ResourceVisualization::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read only.
@@ -86,19 +85,19 @@ public class UsedInsight extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("lastUsed", this.getLastUsed());
         writer.writeObjectValue("resource", this.getResource());
-        writer.writeObjectValue("resourceReference", this.getResourceReference());
-        writer.writeObjectValue("resourceVisualization", this.getResourceVisualization());
     }
     /**
      * Sets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read only.
      * @param value Value to set for the lastUsed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUsed(@javax.annotation.Nullable final UsageDetails value) {
         this._lastUsed = value;
     }
@@ -107,6 +106,7 @@ public class UsedInsight extends Entity implements Parsable {
      * @param value Value to set for the resource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final Entity value) {
         this._resource = value;
     }
@@ -115,6 +115,7 @@ public class UsedInsight extends Entity implements Parsable {
      * @param value Value to set for the resourceReference property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceReference(@javax.annotation.Nullable final ResourceReference value) {
         this._resourceReference = value;
     }
@@ -123,6 +124,7 @@ public class UsedInsight extends Entity implements Parsable {
      * @param value Value to set for the resourceVisualization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceVisualization(@javax.annotation.Nullable final ResourceVisualization value) {
         this._resourceVisualization = value;
     }

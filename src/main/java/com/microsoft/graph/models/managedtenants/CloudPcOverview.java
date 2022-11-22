@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class CloudPcOverview extends Entity implements Parsable {
     /** Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only. */
     private OffsetDateTime _lastRefreshedDateTime;
@@ -43,21 +43,21 @@ public class CloudPcOverview extends Entity implements Parsable {
     private String _tenantDisplayName;
     /** The tenantId property */
     private String _tenantId;
-    /** The totalBusinessLicenses property */
+    /** The total number of cloud PC devices that have the Business SKU. Optional. Read-only. */
     private Integer _totalBusinessLicenses;
     /** The total number of cloud PC connection statuses for the given managed tenant. Optional. Read-only. */
     private Integer _totalCloudPcConnectionStatus;
     /** The total number of cloud PC statues for the given managed tenant. Optional. Read-only. */
     private Integer _totalCloudPcStatus;
-    /** The totalEnterpriseLicenses property */
+    /** The total number of cloud PC devices that have the Enterprise SKU. Optional. Read-only. */
     private Integer _totalEnterpriseLicenses;
     /**
      * Instantiates a new cloudPcOverview and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcOverview() {
         super();
-        this.setOdataType("#microsoft.graph.managedTenants.cloudPcOverview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,29 +75,28 @@ public class CloudPcOverview extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcOverview currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("lastRefreshedDateTime", (n) -> { currentObject.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("numberOfCloudPcConnectionStatusFailed", (n) -> { currentObject.setNumberOfCloudPcConnectionStatusFailed(n.getIntegerValue()); });
-            this.put("numberOfCloudPcConnectionStatusPassed", (n) -> { currentObject.setNumberOfCloudPcConnectionStatusPassed(n.getIntegerValue()); });
-            this.put("numberOfCloudPcConnectionStatusPending", (n) -> { currentObject.setNumberOfCloudPcConnectionStatusPending(n.getIntegerValue()); });
-            this.put("numberOfCloudPcConnectionStatusRunning", (n) -> { currentObject.setNumberOfCloudPcConnectionStatusRunning(n.getIntegerValue()); });
-            this.put("numberOfCloudPcConnectionStatusUnkownFutureValue", (n) -> { currentObject.setNumberOfCloudPcConnectionStatusUnkownFutureValue(n.getIntegerValue()); });
-            this.put("numberOfCloudPcStatusDeprovisioning", (n) -> { currentObject.setNumberOfCloudPcStatusDeprovisioning(n.getIntegerValue()); });
-            this.put("numberOfCloudPcStatusFailed", (n) -> { currentObject.setNumberOfCloudPcStatusFailed(n.getIntegerValue()); });
-            this.put("numberOfCloudPcStatusInGracePeriod", (n) -> { currentObject.setNumberOfCloudPcStatusInGracePeriod(n.getIntegerValue()); });
-            this.put("numberOfCloudPcStatusNotProvisioned", (n) -> { currentObject.setNumberOfCloudPcStatusNotProvisioned(n.getIntegerValue()); });
-            this.put("numberOfCloudPcStatusProvisioned", (n) -> { currentObject.setNumberOfCloudPcStatusProvisioned(n.getIntegerValue()); });
-            this.put("numberOfCloudPcStatusProvisioning", (n) -> { currentObject.setNumberOfCloudPcStatusProvisioning(n.getIntegerValue()); });
-            this.put("numberOfCloudPcStatusUnknown", (n) -> { currentObject.setNumberOfCloudPcStatusUnknown(n.getIntegerValue()); });
-            this.put("numberOfCloudPcStatusUpgrading", (n) -> { currentObject.setNumberOfCloudPcStatusUpgrading(n.getIntegerValue()); });
-            this.put("tenantDisplayName", (n) -> { currentObject.setTenantDisplayName(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("totalBusinessLicenses", (n) -> { currentObject.setTotalBusinessLicenses(n.getIntegerValue()); });
-            this.put("totalCloudPcConnectionStatus", (n) -> { currentObject.setTotalCloudPcConnectionStatus(n.getIntegerValue()); });
-            this.put("totalCloudPcStatus", (n) -> { currentObject.setTotalCloudPcStatus(n.getIntegerValue()); });
-            this.put("totalEnterpriseLicenses", (n) -> { currentObject.setTotalEnterpriseLicenses(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("lastRefreshedDateTime", (n) -> { this.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("numberOfCloudPcConnectionStatusFailed", (n) -> { this.setNumberOfCloudPcConnectionStatusFailed(n.getIntegerValue()); });
+        deserializerMap.put("numberOfCloudPcConnectionStatusPassed", (n) -> { this.setNumberOfCloudPcConnectionStatusPassed(n.getIntegerValue()); });
+        deserializerMap.put("numberOfCloudPcConnectionStatusPending", (n) -> { this.setNumberOfCloudPcConnectionStatusPending(n.getIntegerValue()); });
+        deserializerMap.put("numberOfCloudPcConnectionStatusRunning", (n) -> { this.setNumberOfCloudPcConnectionStatusRunning(n.getIntegerValue()); });
+        deserializerMap.put("numberOfCloudPcConnectionStatusUnkownFutureValue", (n) -> { this.setNumberOfCloudPcConnectionStatusUnkownFutureValue(n.getIntegerValue()); });
+        deserializerMap.put("numberOfCloudPcStatusDeprovisioning", (n) -> { this.setNumberOfCloudPcStatusDeprovisioning(n.getIntegerValue()); });
+        deserializerMap.put("numberOfCloudPcStatusFailed", (n) -> { this.setNumberOfCloudPcStatusFailed(n.getIntegerValue()); });
+        deserializerMap.put("numberOfCloudPcStatusInGracePeriod", (n) -> { this.setNumberOfCloudPcStatusInGracePeriod(n.getIntegerValue()); });
+        deserializerMap.put("numberOfCloudPcStatusNotProvisioned", (n) -> { this.setNumberOfCloudPcStatusNotProvisioned(n.getIntegerValue()); });
+        deserializerMap.put("numberOfCloudPcStatusProvisioned", (n) -> { this.setNumberOfCloudPcStatusProvisioned(n.getIntegerValue()); });
+        deserializerMap.put("numberOfCloudPcStatusProvisioning", (n) -> { this.setNumberOfCloudPcStatusProvisioning(n.getIntegerValue()); });
+        deserializerMap.put("numberOfCloudPcStatusUnknown", (n) -> { this.setNumberOfCloudPcStatusUnknown(n.getIntegerValue()); });
+        deserializerMap.put("numberOfCloudPcStatusUpgrading", (n) -> { this.setNumberOfCloudPcStatusUpgrading(n.getIntegerValue()); });
+        deserializerMap.put("tenantDisplayName", (n) -> { this.setTenantDisplayName(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("totalBusinessLicenses", (n) -> { this.setTotalBusinessLicenses(n.getIntegerValue()); });
+        deserializerMap.put("totalCloudPcConnectionStatus", (n) -> { this.setTotalCloudPcConnectionStatus(n.getIntegerValue()); });
+        deserializerMap.put("totalCloudPcStatus", (n) -> { this.setTotalCloudPcStatus(n.getIntegerValue()); });
+        deserializerMap.put("totalEnterpriseLicenses", (n) -> { this.setTotalEnterpriseLicenses(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
@@ -228,7 +227,7 @@ public class CloudPcOverview extends Entity implements Parsable {
         return this._tenantId;
     }
     /**
-     * Gets the totalBusinessLicenses property value. The totalBusinessLicenses property
+     * Gets the totalBusinessLicenses property value. The total number of cloud PC devices that have the Business SKU. Optional. Read-only.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -252,7 +251,7 @@ public class CloudPcOverview extends Entity implements Parsable {
         return this._totalCloudPcStatus;
     }
     /**
-     * Gets the totalEnterpriseLicenses property value. The totalEnterpriseLicenses property
+     * Gets the totalEnterpriseLicenses property value. The total number of cloud PC devices that have the Enterprise SKU. Optional. Read-only.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -264,6 +263,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -293,6 +293,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the lastRefreshedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastRefreshedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastRefreshedDateTime = value;
     }
@@ -301,6 +302,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the numberOfCloudPcConnectionStatusFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfCloudPcConnectionStatusFailed(@javax.annotation.Nullable final Integer value) {
         this._numberOfCloudPcConnectionStatusFailed = value;
     }
@@ -309,6 +311,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the numberOfCloudPcConnectionStatusPassed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfCloudPcConnectionStatusPassed(@javax.annotation.Nullable final Integer value) {
         this._numberOfCloudPcConnectionStatusPassed = value;
     }
@@ -317,6 +320,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the numberOfCloudPcConnectionStatusPending property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfCloudPcConnectionStatusPending(@javax.annotation.Nullable final Integer value) {
         this._numberOfCloudPcConnectionStatusPending = value;
     }
@@ -325,6 +329,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the numberOfCloudPcConnectionStatusRunning property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfCloudPcConnectionStatusRunning(@javax.annotation.Nullable final Integer value) {
         this._numberOfCloudPcConnectionStatusRunning = value;
     }
@@ -333,6 +338,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the numberOfCloudPcConnectionStatusUnkownFutureValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfCloudPcConnectionStatusUnkownFutureValue(@javax.annotation.Nullable final Integer value) {
         this._numberOfCloudPcConnectionStatusUnkownFutureValue = value;
     }
@@ -341,6 +347,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the numberOfCloudPcStatusDeprovisioning property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfCloudPcStatusDeprovisioning(@javax.annotation.Nullable final Integer value) {
         this._numberOfCloudPcStatusDeprovisioning = value;
     }
@@ -349,6 +356,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the numberOfCloudPcStatusFailed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfCloudPcStatusFailed(@javax.annotation.Nullable final Integer value) {
         this._numberOfCloudPcStatusFailed = value;
     }
@@ -357,6 +365,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the numberOfCloudPcStatusInGracePeriod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfCloudPcStatusInGracePeriod(@javax.annotation.Nullable final Integer value) {
         this._numberOfCloudPcStatusInGracePeriod = value;
     }
@@ -365,6 +374,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the numberOfCloudPcStatusNotProvisioned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfCloudPcStatusNotProvisioned(@javax.annotation.Nullable final Integer value) {
         this._numberOfCloudPcStatusNotProvisioned = value;
     }
@@ -373,6 +383,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the numberOfCloudPcStatusProvisioned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfCloudPcStatusProvisioned(@javax.annotation.Nullable final Integer value) {
         this._numberOfCloudPcStatusProvisioned = value;
     }
@@ -381,6 +392,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the numberOfCloudPcStatusProvisioning property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfCloudPcStatusProvisioning(@javax.annotation.Nullable final Integer value) {
         this._numberOfCloudPcStatusProvisioning = value;
     }
@@ -389,6 +401,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the numberOfCloudPcStatusUnknown property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfCloudPcStatusUnknown(@javax.annotation.Nullable final Integer value) {
         this._numberOfCloudPcStatusUnknown = value;
     }
@@ -397,6 +410,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the numberOfCloudPcStatusUpgrading property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfCloudPcStatusUpgrading(@javax.annotation.Nullable final Integer value) {
         this._numberOfCloudPcStatusUpgrading = value;
     }
@@ -405,6 +419,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
         this._tenantDisplayName = value;
     }
@@ -413,14 +428,16 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
     /**
-     * Sets the totalBusinessLicenses property value. The totalBusinessLicenses property
+     * Sets the totalBusinessLicenses property value. The total number of cloud PC devices that have the Business SKU. Optional. Read-only.
      * @param value Value to set for the totalBusinessLicenses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalBusinessLicenses(@javax.annotation.Nullable final Integer value) {
         this._totalBusinessLicenses = value;
     }
@@ -429,6 +446,7 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the totalCloudPcConnectionStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalCloudPcConnectionStatus(@javax.annotation.Nullable final Integer value) {
         this._totalCloudPcConnectionStatus = value;
     }
@@ -437,14 +455,16 @@ public class CloudPcOverview extends Entity implements Parsable {
      * @param value Value to set for the totalCloudPcStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalCloudPcStatus(@javax.annotation.Nullable final Integer value) {
         this._totalCloudPcStatus = value;
     }
     /**
-     * Sets the totalEnterpriseLicenses property value. The totalEnterpriseLicenses property
+     * Sets the totalEnterpriseLicenses property value. The total number of cloud PC devices that have the Enterprise SKU. Optional. Read-only.
      * @param value Value to set for the totalEnterpriseLicenses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalEnterpriseLicenses(@javax.annotation.Nullable final Integer value) {
         this._totalEnterpriseLicenses = value;
     }

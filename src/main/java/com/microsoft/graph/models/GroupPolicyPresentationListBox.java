@@ -16,6 +16,7 @@ public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentat
      * Instantiates a new GroupPolicyPresentationListBox and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationListBox() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyPresentationListBox");
@@ -44,11 +45,10 @@ public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentat
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyPresentationListBox currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("explicitValue", (n) -> { currentObject.setExplicitValue(n.getBooleanValue()); });
-            this.put("valuePrefix", (n) -> { currentObject.setValuePrefix(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("explicitValue", (n) -> { this.setExplicitValue(n.getBooleanValue()); });
+        deserializerMap.put("valuePrefix", (n) -> { this.setValuePrefix(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the valuePrefix property value. Not yet documented
@@ -63,6 +63,7 @@ public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentat
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +75,7 @@ public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentat
      * @param value Value to set for the explicitValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExplicitValue(@javax.annotation.Nullable final Boolean value) {
         this._explicitValue = value;
     }
@@ -82,6 +84,7 @@ public class GroupPolicyPresentationListBox extends GroupPolicyUploadedPresentat
      * @param value Value to set for the valuePrefix property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValuePrefix(@javax.annotation.Nullable final String value) {
         this._valuePrefix = value;
     }

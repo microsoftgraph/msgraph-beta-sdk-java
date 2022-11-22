@@ -16,6 +16,7 @@ public class MacOsVppAppAssignmentSettings extends MobileAppAssignmentSettings i
      * Instantiates a new MacOsVppAppAssignmentSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOsVppAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.macOsVppAppAssignmentSettings");
@@ -36,11 +37,10 @@ public class MacOsVppAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOsVppAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("uninstallOnDeviceRemoval", (n) -> { currentObject.setUninstallOnDeviceRemoval(n.getBooleanValue()); });
-            this.put("useDeviceLicensing", (n) -> { currentObject.setUseDeviceLicensing(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("uninstallOnDeviceRemoval", (n) -> { this.setUninstallOnDeviceRemoval(n.getBooleanValue()); });
+        deserializerMap.put("useDeviceLicensing", (n) -> { this.setUseDeviceLicensing(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the uninstallOnDeviceRemoval property value. Whether or not to uninstall the app when device is removed from Intune.
@@ -63,6 +63,7 @@ public class MacOsVppAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +75,7 @@ public class MacOsVppAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param value Value to set for the uninstallOnDeviceRemoval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUninstallOnDeviceRemoval(@javax.annotation.Nullable final Boolean value) {
         this._uninstallOnDeviceRemoval = value;
     }
@@ -82,6 +84,7 @@ public class MacOsVppAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param value Value to set for the useDeviceLicensing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseDeviceLicensing(@javax.annotation.Nullable final Boolean value) {
         this._useDeviceLicensing = value;
     }

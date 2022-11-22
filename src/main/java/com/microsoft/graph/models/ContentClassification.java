@@ -25,9 +25,9 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
      * Instantiates a new contentClassification and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ContentClassification() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.contentClassification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,14 +61,13 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ContentClassification currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("confidence", (n) -> { currentObject.setConfidence(n.getIntegerValue()); });
-            this.put("matches", (n) -> { currentObject.setMatches(n.getCollectionOfObjectValues(MatchLocation::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sensitiveTypeId", (n) -> { currentObject.setSensitiveTypeId(n.getStringValue()); });
-            this.put("uniqueCount", (n) -> { currentObject.setUniqueCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("confidence", (n) -> { this.setConfidence(n.getIntegerValue()); });
+        deserializerMap.put("matches", (n) -> { this.setMatches(n.getCollectionOfObjectValues(MatchLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sensitiveTypeId", (n) -> { this.setSensitiveTypeId(n.getStringValue()); });
+        deserializerMap.put("uniqueCount", (n) -> { this.setUniqueCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the matches property value. The matches property
@@ -107,6 +106,7 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("confidence", this.getConfidence());
@@ -121,6 +121,7 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +130,7 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the confidence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfidence(@javax.annotation.Nullable final Integer value) {
         this._confidence = value;
     }
@@ -137,6 +139,7 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the matches property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMatches(@javax.annotation.Nullable final java.util.List<MatchLocation> value) {
         this._matches = value;
     }
@@ -145,6 +148,7 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -153,6 +157,7 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sensitiveTypeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitiveTypeId(@javax.annotation.Nullable final String value) {
         this._sensitiveTypeId = value;
     }
@@ -161,6 +166,7 @@ public class ContentClassification implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the uniqueCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUniqueCount(@javax.annotation.Nullable final Integer value) {
         this._uniqueCount = value;
     }

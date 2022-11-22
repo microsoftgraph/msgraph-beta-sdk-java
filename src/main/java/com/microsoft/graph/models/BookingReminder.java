@@ -25,9 +25,9 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      * Instantiates a new bookingReminder and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BookingReminder() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bookingReminder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,13 +53,12 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BookingReminder currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("offset", (n) -> { currentObject.setOffset(n.getPeriodValue()); });
-            this.put("recipients", (n) -> { currentObject.setRecipients(n.getEnumValue(BookingReminderRecipients.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("offset", (n) -> { this.setOffset(n.getPeriodValue()); });
+        deserializerMap.put("recipients", (n) -> { this.setRecipients(n.getEnumValue(BookingReminderRecipients.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the message property value. The message in the reminder.
@@ -98,6 +97,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("message", this.getMessage());
@@ -111,6 +111,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -119,6 +120,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the message property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final String value) {
         this._message = value;
     }
@@ -127,6 +129,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -135,6 +138,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the offset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOffset(@javax.annotation.Nullable final Period value) {
         this._offset = value;
     }
@@ -143,6 +147,7 @@ public class BookingReminder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the recipients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipients(@javax.annotation.Nullable final BookingReminderRecipients value) {
         this._recipients = value;
     }

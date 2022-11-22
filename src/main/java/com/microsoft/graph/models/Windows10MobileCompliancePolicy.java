@@ -48,6 +48,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * Instantiates a new Windows10MobileCompliancePolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10MobileCompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.windows10MobileCompliancePolicy");
@@ -100,27 +101,26 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10MobileCompliancePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeFirewallRequired", (n) -> { currentObject.setActiveFirewallRequired(n.getBooleanValue()); });
-            this.put("bitLockerEnabled", (n) -> { currentObject.setBitLockerEnabled(n.getBooleanValue()); });
-            this.put("codeIntegrityEnabled", (n) -> { currentObject.setCodeIntegrityEnabled(n.getBooleanValue()); });
-            this.put("earlyLaunchAntiMalwareDriverEnabled", (n) -> { currentObject.setEarlyLaunchAntiMalwareDriverEnabled(n.getBooleanValue()); });
-            this.put("osMaximumVersion", (n) -> { currentObject.setOsMaximumVersion(n.getStringValue()); });
-            this.put("osMinimumVersion", (n) -> { currentObject.setOsMinimumVersion(n.getStringValue()); });
-            this.put("passwordBlockSimple", (n) -> { currentObject.setPasswordBlockSimple(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumCharacterSetCount", (n) -> { currentObject.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeLock", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
-            this.put("passwordRequireToUnlockFromIdle", (n) -> { currentObject.setPasswordRequireToUnlockFromIdle(n.getBooleanValue()); });
-            this.put("secureBootEnabled", (n) -> { currentObject.setSecureBootEnabled(n.getBooleanValue()); });
-            this.put("storageRequireEncryption", (n) -> { currentObject.setStorageRequireEncryption(n.getBooleanValue()); });
-            this.put("validOperatingSystemBuildRanges", (n) -> { currentObject.setValidOperatingSystemBuildRanges(n.getCollectionOfObjectValues(OperatingSystemVersionRange::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeFirewallRequired", (n) -> { this.setActiveFirewallRequired(n.getBooleanValue()); });
+        deserializerMap.put("bitLockerEnabled", (n) -> { this.setBitLockerEnabled(n.getBooleanValue()); });
+        deserializerMap.put("codeIntegrityEnabled", (n) -> { this.setCodeIntegrityEnabled(n.getBooleanValue()); });
+        deserializerMap.put("earlyLaunchAntiMalwareDriverEnabled", (n) -> { this.setEarlyLaunchAntiMalwareDriverEnabled(n.getBooleanValue()); });
+        deserializerMap.put("osMaximumVersion", (n) -> { this.setOsMaximumVersion(n.getStringValue()); });
+        deserializerMap.put("osMinimumVersion", (n) -> { this.setOsMinimumVersion(n.getStringValue()); });
+        deserializerMap.put("passwordBlockSimple", (n) -> { this.setPasswordBlockSimple(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { this.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumCharacterSetCount", (n) -> { this.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { this.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeLock", (n) -> { this.setPasswordMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { this.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequired", (n) -> { this.setPasswordRequired(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
+        deserializerMap.put("passwordRequireToUnlockFromIdle", (n) -> { this.setPasswordRequireToUnlockFromIdle(n.getBooleanValue()); });
+        deserializerMap.put("secureBootEnabled", (n) -> { this.setSecureBootEnabled(n.getBooleanValue()); });
+        deserializerMap.put("storageRequireEncryption", (n) -> { this.setStorageRequireEncryption(n.getBooleanValue()); });
+        deserializerMap.put("validOperatingSystemBuildRanges", (n) -> { this.setValidOperatingSystemBuildRanges(n.getCollectionOfObjectValues(OperatingSystemVersionRange::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the osMaximumVersion property value. Maximum Windows Phone version.
@@ -239,6 +239,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -266,6 +267,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the activeFirewallRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveFirewallRequired(@javax.annotation.Nullable final Boolean value) {
         this._activeFirewallRequired = value;
     }
@@ -274,6 +276,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the bitLockerEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBitLockerEnabled(@javax.annotation.Nullable final Boolean value) {
         this._bitLockerEnabled = value;
     }
@@ -282,6 +285,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the codeIntegrityEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCodeIntegrityEnabled(@javax.annotation.Nullable final Boolean value) {
         this._codeIntegrityEnabled = value;
     }
@@ -290,6 +294,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the earlyLaunchAntiMalwareDriverEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEarlyLaunchAntiMalwareDriverEnabled(@javax.annotation.Nullable final Boolean value) {
         this._earlyLaunchAntiMalwareDriverEnabled = value;
     }
@@ -298,6 +303,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the osMaximumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
         this._osMaximumVersion = value;
     }
@@ -306,6 +312,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the osMinimumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
         this._osMinimumVersion = value;
     }
@@ -314,6 +321,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the passwordBlockSimple property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockSimple(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockSimple = value;
     }
@@ -322,6 +330,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -330,6 +339,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumCharacterSetCount = value;
     }
@@ -338,6 +348,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -346,6 +357,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the passwordMinutesOfInactivityBeforeLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeLock = value;
     }
@@ -354,6 +366,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordBlockCount = value;
     }
@@ -362,6 +375,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequired = value;
     }
@@ -370,6 +384,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -378,6 +393,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the passwordRequireToUnlockFromIdle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequireToUnlockFromIdle(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequireToUnlockFromIdle = value;
     }
@@ -386,6 +402,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the secureBootEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecureBootEnabled(@javax.annotation.Nullable final Boolean value) {
         this._secureBootEnabled = value;
     }
@@ -394,6 +411,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the storageRequireEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRequireEncryption(@javax.annotation.Nullable final Boolean value) {
         this._storageRequireEncryption = value;
     }
@@ -402,6 +420,7 @@ public class Windows10MobileCompliancePolicy extends DeviceCompliancePolicy impl
      * @param value Value to set for the validOperatingSystemBuildRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValidOperatingSystemBuildRanges(@javax.annotation.Nullable final java.util.List<OperatingSystemVersionRange> value) {
         this._validOperatingSystemBuildRanges = value;
     }

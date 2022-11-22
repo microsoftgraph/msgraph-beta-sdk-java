@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class WindowsProtectionState extends Entity implements Parsable {
     /** The anti-malware version for the managed device. Optional. Read-only. */
     private String _antiMalwareVersion;
@@ -65,9 +65,9 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * Instantiates a new windowsProtectionState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsProtectionState() {
         super();
-        this.setOdataType("#microsoft.graph.managedTenants.windowsProtectionState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -125,34 +125,33 @@ public class WindowsProtectionState extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsProtectionState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("antiMalwareVersion", (n) -> { currentObject.setAntiMalwareVersion(n.getStringValue()); });
-            this.put("attentionRequired", (n) -> { currentObject.setAttentionRequired(n.getBooleanValue()); });
-            this.put("deviceDeleted", (n) -> { currentObject.setDeviceDeleted(n.getBooleanValue()); });
-            this.put("devicePropertyRefreshDateTime", (n) -> { currentObject.setDevicePropertyRefreshDateTime(n.getOffsetDateTimeValue()); });
-            this.put("engineVersion", (n) -> { currentObject.setEngineVersion(n.getStringValue()); });
-            this.put("fullScanOverdue", (n) -> { currentObject.setFullScanOverdue(n.getBooleanValue()); });
-            this.put("fullScanRequired", (n) -> { currentObject.setFullScanRequired(n.getBooleanValue()); });
-            this.put("lastFullScanDateTime", (n) -> { currentObject.setLastFullScanDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastFullScanSignatureVersion", (n) -> { currentObject.setLastFullScanSignatureVersion(n.getStringValue()); });
-            this.put("lastQuickScanDateTime", (n) -> { currentObject.setLastQuickScanDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastQuickScanSignatureVersion", (n) -> { currentObject.setLastQuickScanSignatureVersion(n.getStringValue()); });
-            this.put("lastRefreshedDateTime", (n) -> { currentObject.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastReportedDateTime", (n) -> { currentObject.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("malwareProtectionEnabled", (n) -> { currentObject.setMalwareProtectionEnabled(n.getBooleanValue()); });
-            this.put("managedDeviceHealthState", (n) -> { currentObject.setManagedDeviceHealthState(n.getStringValue()); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-            this.put("managedDeviceName", (n) -> { currentObject.setManagedDeviceName(n.getStringValue()); });
-            this.put("networkInspectionSystemEnabled", (n) -> { currentObject.setNetworkInspectionSystemEnabled(n.getBooleanValue()); });
-            this.put("quickScanOverdue", (n) -> { currentObject.setQuickScanOverdue(n.getBooleanValue()); });
-            this.put("realTimeProtectionEnabled", (n) -> { currentObject.setRealTimeProtectionEnabled(n.getBooleanValue()); });
-            this.put("rebootRequired", (n) -> { currentObject.setRebootRequired(n.getBooleanValue()); });
-            this.put("signatureUpdateOverdue", (n) -> { currentObject.setSignatureUpdateOverdue(n.getBooleanValue()); });
-            this.put("signatureVersion", (n) -> { currentObject.setSignatureVersion(n.getStringValue()); });
-            this.put("tenantDisplayName", (n) -> { currentObject.setTenantDisplayName(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("antiMalwareVersion", (n) -> { this.setAntiMalwareVersion(n.getStringValue()); });
+        deserializerMap.put("attentionRequired", (n) -> { this.setAttentionRequired(n.getBooleanValue()); });
+        deserializerMap.put("deviceDeleted", (n) -> { this.setDeviceDeleted(n.getBooleanValue()); });
+        deserializerMap.put("devicePropertyRefreshDateTime", (n) -> { this.setDevicePropertyRefreshDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("engineVersion", (n) -> { this.setEngineVersion(n.getStringValue()); });
+        deserializerMap.put("fullScanOverdue", (n) -> { this.setFullScanOverdue(n.getBooleanValue()); });
+        deserializerMap.put("fullScanRequired", (n) -> { this.setFullScanRequired(n.getBooleanValue()); });
+        deserializerMap.put("lastFullScanDateTime", (n) -> { this.setLastFullScanDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastFullScanSignatureVersion", (n) -> { this.setLastFullScanSignatureVersion(n.getStringValue()); });
+        deserializerMap.put("lastQuickScanDateTime", (n) -> { this.setLastQuickScanDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastQuickScanSignatureVersion", (n) -> { this.setLastQuickScanSignatureVersion(n.getStringValue()); });
+        deserializerMap.put("lastRefreshedDateTime", (n) -> { this.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastReportedDateTime", (n) -> { this.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("malwareProtectionEnabled", (n) -> { this.setMalwareProtectionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("managedDeviceHealthState", (n) -> { this.setManagedDeviceHealthState(n.getStringValue()); });
+        deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
+        deserializerMap.put("managedDeviceName", (n) -> { this.setManagedDeviceName(n.getStringValue()); });
+        deserializerMap.put("networkInspectionSystemEnabled", (n) -> { this.setNetworkInspectionSystemEnabled(n.getBooleanValue()); });
+        deserializerMap.put("quickScanOverdue", (n) -> { this.setQuickScanOverdue(n.getBooleanValue()); });
+        deserializerMap.put("realTimeProtectionEnabled", (n) -> { this.setRealTimeProtectionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("rebootRequired", (n) -> { this.setRebootRequired(n.getBooleanValue()); });
+        deserializerMap.put("signatureUpdateOverdue", (n) -> { this.setSignatureUpdateOverdue(n.getBooleanValue()); });
+        deserializerMap.put("signatureVersion", (n) -> { this.setSignatureVersion(n.getStringValue()); });
+        deserializerMap.put("tenantDisplayName", (n) -> { this.setTenantDisplayName(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fullScanOverdue property value. A flag indicating whether quick scan is overdue for the managed device. Optional. Read-only.
@@ -319,6 +318,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -353,6 +353,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the antiMalwareVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAntiMalwareVersion(@javax.annotation.Nullable final String value) {
         this._antiMalwareVersion = value;
     }
@@ -361,6 +362,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the attentionRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttentionRequired(@javax.annotation.Nullable final Boolean value) {
         this._attentionRequired = value;
     }
@@ -369,6 +371,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the deviceDeleted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDeleted(@javax.annotation.Nullable final Boolean value) {
         this._deviceDeleted = value;
     }
@@ -377,6 +380,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the devicePropertyRefreshDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevicePropertyRefreshDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._devicePropertyRefreshDateTime = value;
     }
@@ -385,6 +389,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the engineVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEngineVersion(@javax.annotation.Nullable final String value) {
         this._engineVersion = value;
     }
@@ -393,6 +398,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the fullScanOverdue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFullScanOverdue(@javax.annotation.Nullable final Boolean value) {
         this._fullScanOverdue = value;
     }
@@ -401,6 +407,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the fullScanRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFullScanRequired(@javax.annotation.Nullable final Boolean value) {
         this._fullScanRequired = value;
     }
@@ -409,6 +416,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the lastFullScanDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastFullScanDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastFullScanDateTime = value;
     }
@@ -417,6 +425,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the lastFullScanSignatureVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastFullScanSignatureVersion(@javax.annotation.Nullable final String value) {
         this._lastFullScanSignatureVersion = value;
     }
@@ -425,6 +434,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the lastQuickScanDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastQuickScanDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastQuickScanDateTime = value;
     }
@@ -433,6 +443,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the lastQuickScanSignatureVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastQuickScanSignatureVersion(@javax.annotation.Nullable final String value) {
         this._lastQuickScanSignatureVersion = value;
     }
@@ -441,6 +452,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the lastRefreshedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastRefreshedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastRefreshedDateTime = value;
     }
@@ -449,6 +461,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the lastReportedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastReportedDateTime = value;
     }
@@ -457,6 +470,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the malwareProtectionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMalwareProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._malwareProtectionEnabled = value;
     }
@@ -465,6 +479,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceHealthState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceHealthState(@javax.annotation.Nullable final String value) {
         this._managedDeviceHealthState = value;
     }
@@ -473,6 +488,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
     }
@@ -481,6 +497,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceName(@javax.annotation.Nullable final String value) {
         this._managedDeviceName = value;
     }
@@ -489,6 +506,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the networkInspectionSystemEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkInspectionSystemEnabled(@javax.annotation.Nullable final Boolean value) {
         this._networkInspectionSystemEnabled = value;
     }
@@ -497,6 +515,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the quickScanOverdue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuickScanOverdue(@javax.annotation.Nullable final Boolean value) {
         this._quickScanOverdue = value;
     }
@@ -505,6 +524,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the realTimeProtectionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRealTimeProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._realTimeProtectionEnabled = value;
     }
@@ -513,6 +533,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the rebootRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRebootRequired(@javax.annotation.Nullable final Boolean value) {
         this._rebootRequired = value;
     }
@@ -521,6 +542,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the signatureUpdateOverdue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignatureUpdateOverdue(@javax.annotation.Nullable final Boolean value) {
         this._signatureUpdateOverdue = value;
     }
@@ -529,6 +551,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the signatureVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignatureVersion(@javax.annotation.Nullable final String value) {
         this._signatureVersion = value;
     }
@@ -537,6 +560,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
         this._tenantDisplayName = value;
     }
@@ -545,6 +569,7 @@ public class WindowsProtectionState extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }

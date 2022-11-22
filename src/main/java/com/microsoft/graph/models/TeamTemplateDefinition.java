@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class TeamTemplateDefinition extends Entity implements Parsable {
     /** The audience property */
     private TeamTemplateAudience _audience;
@@ -38,9 +37,9 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      * Instantiates a new teamTemplateDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamTemplateDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.teamTemplateDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -90,21 +89,20 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamTemplateDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("audience", (n) -> { currentObject.setAudience(n.getEnumValue(TeamTemplateAudience.class)); });
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("iconUrl", (n) -> { currentObject.setIconUrl(n.getStringValue()); });
-            this.put("languageTag", (n) -> { currentObject.setLanguageTag(n.getStringValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("parentTemplateId", (n) -> { currentObject.setParentTemplateId(n.getStringValue()); });
-            this.put("publisherName", (n) -> { currentObject.setPublisherName(n.getStringValue()); });
-            this.put("shortDescription", (n) -> { currentObject.setShortDescription(n.getStringValue()); });
-            this.put("teamDefinition", (n) -> { currentObject.setTeamDefinition(n.getObjectValue(Team::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("audience", (n) -> { this.setAudience(n.getEnumValue(TeamTemplateAudience.class)); });
+        deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("iconUrl", (n) -> { this.setIconUrl(n.getStringValue()); });
+        deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("parentTemplateId", (n) -> { this.setParentTemplateId(n.getStringValue()); });
+        deserializerMap.put("publisherName", (n) -> { this.setPublisherName(n.getStringValue()); });
+        deserializerMap.put("shortDescription", (n) -> { this.setShortDescription(n.getStringValue()); });
+        deserializerMap.put("teamDefinition", (n) -> { this.setTeamDefinition(n.getObjectValue(Team::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the iconUrl property value. The iconUrl property
@@ -175,6 +173,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -196,6 +195,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      * @param value Value to set for the audience property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAudience(@javax.annotation.Nullable final TeamTemplateAudience value) {
         this._audience = value;
     }
@@ -204,6 +204,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
         this._categories = value;
     }
@@ -212,6 +213,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -220,6 +222,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -228,6 +231,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      * @param value Value to set for the iconUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIconUrl(@javax.annotation.Nullable final String value) {
         this._iconUrl = value;
     }
@@ -236,6 +240,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      * @param value Value to set for the languageTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguageTag(@javax.annotation.Nullable final String value) {
         this._languageTag = value;
     }
@@ -244,6 +249,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -252,6 +258,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -260,6 +267,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      * @param value Value to set for the parentTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentTemplateId(@javax.annotation.Nullable final String value) {
         this._parentTemplateId = value;
     }
@@ -268,6 +276,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      * @param value Value to set for the publisherName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisherName(@javax.annotation.Nullable final String value) {
         this._publisherName = value;
     }
@@ -276,6 +285,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      * @param value Value to set for the shortDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShortDescription(@javax.annotation.Nullable final String value) {
         this._shortDescription = value;
     }
@@ -284,6 +294,7 @@ public class TeamTemplateDefinition extends Entity implements Parsable {
      * @param value Value to set for the teamDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamDefinition(@javax.annotation.Nullable final Team value) {
         this._teamDefinition = value;
     }

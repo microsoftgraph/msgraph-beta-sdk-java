@@ -18,6 +18,7 @@ public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessPr
      * Instantiates a new Windows10XVpnConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10XVpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10XVpnConfiguration");
@@ -62,18 +63,18 @@ public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessPr
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10XVpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authenticationCertificateId", (n) -> { currentObject.setAuthenticationCertificateId(n.getStringValue()); });
-            this.put("customXml", (n) -> { currentObject.setCustomXml(n.getByteArrayValue()); });
-            this.put("customXmlFileName", (n) -> { currentObject.setCustomXmlFileName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationCertificateId", (n) -> { this.setAuthenticationCertificateId(n.getStringValue()); });
+        deserializerMap.put("customXml", (n) -> { this.setCustomXml(n.getByteArrayValue()); });
+        deserializerMap.put("customXmlFileName", (n) -> { this.setCustomXmlFileName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +87,7 @@ public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessPr
      * @param value Value to set for the authenticationCertificateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationCertificateId(@javax.annotation.Nullable final String value) {
         this._authenticationCertificateId = value;
     }
@@ -94,6 +96,7 @@ public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessPr
      * @param value Value to set for the customXml property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomXml(@javax.annotation.Nullable final byte[] value) {
         this._customXml = value;
     }
@@ -102,6 +105,7 @@ public class Windows10XVpnConfiguration extends DeviceManagementResourceAccessPr
      * @param value Value to set for the customXmlFileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomXmlFileName(@javax.annotation.Nullable final String value) {
         this._customXmlFileName = value;
     }

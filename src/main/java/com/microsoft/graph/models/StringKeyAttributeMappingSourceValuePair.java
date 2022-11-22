@@ -21,9 +21,9 @@ public class StringKeyAttributeMappingSourceValuePair implements AdditionalDataH
      * Instantiates a new stringKeyAttributeMappingSourceValuePair and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public StringKeyAttributeMappingSourceValuePair() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.stringKeyAttributeMappingSourceValuePair");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,12 +49,11 @@ public class StringKeyAttributeMappingSourceValuePair implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final StringKeyAttributeMappingSourceValuePair currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("key", (n) -> { currentObject.setKey(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getObjectValue(AttributeMappingSource::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("key", (n) -> { this.setKey(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getObjectValue(AttributeMappingSource::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the key property value. The name of the parameter.
@@ -85,6 +84,7 @@ public class StringKeyAttributeMappingSourceValuePair implements AdditionalDataH
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("key", this.getKey());
@@ -97,6 +97,7 @@ public class StringKeyAttributeMappingSourceValuePair implements AdditionalDataH
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class StringKeyAttributeMappingSourceValuePair implements AdditionalDataH
      * @param value Value to set for the key property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKey(@javax.annotation.Nullable final String value) {
         this._key = value;
     }
@@ -113,6 +115,7 @@ public class StringKeyAttributeMappingSourceValuePair implements AdditionalDataH
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +124,7 @@ public class StringKeyAttributeMappingSourceValuePair implements AdditionalDataH
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final AttributeMappingSource value) {
         this._value = value;
     }

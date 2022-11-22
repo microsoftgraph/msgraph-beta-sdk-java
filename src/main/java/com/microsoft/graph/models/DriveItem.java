@@ -82,6 +82,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * Instantiates a new driveItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DriveItem() {
         super();
         this.setOdataType("#microsoft.graph.driveItem");
@@ -166,44 +167,43 @@ public class DriveItem extends BaseItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DriveItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(ItemActivityOLD::createFromDiscriminatorValue)); });
-            this.put("analytics", (n) -> { currentObject.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
-            this.put("audio", (n) -> { currentObject.setAudio(n.getObjectValue(Audio::createFromDiscriminatorValue)); });
-            this.put("bundle", (n) -> { currentObject.setBundle(n.getObjectValue(Bundle::createFromDiscriminatorValue)); });
-            this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("cTag", (n) -> { currentObject.setCTag(n.getStringValue()); });
-            this.put("deleted", (n) -> { currentObject.setDeleted(n.getObjectValue(Deleted::createFromDiscriminatorValue)); });
-            this.put("file", (n) -> { currentObject.setFile(n.getObjectValue(File::createFromDiscriminatorValue)); });
-            this.put("fileSystemInfo", (n) -> { currentObject.setFileSystemInfo(n.getObjectValue(FileSystemInfo::createFromDiscriminatorValue)); });
-            this.put("folder", (n) -> { currentObject.setFolder(n.getObjectValue(Folder::createFromDiscriminatorValue)); });
-            this.put("image", (n) -> { currentObject.setImage(n.getObjectValue(Image::createFromDiscriminatorValue)); });
-            this.put("listItem", (n) -> { currentObject.setListItem(n.getObjectValue(ListItem::createFromDiscriminatorValue)); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(GeoCoordinates::createFromDiscriminatorValue)); });
-            this.put("malware", (n) -> { currentObject.setMalware(n.getObjectValue(Malware::createFromDiscriminatorValue)); });
-            this.put("media", (n) -> { currentObject.setMedia(n.getObjectValue(Media::createFromDiscriminatorValue)); });
-            this.put("package", (n) -> { currentObject.setPackage(n.getObjectValue(Package_escaped::createFromDiscriminatorValue)); });
-            this.put("pendingOperations", (n) -> { currentObject.setPendingOperations(n.getObjectValue(PendingOperations::createFromDiscriminatorValue)); });
-            this.put("permissions", (n) -> { currentObject.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
-            this.put("photo", (n) -> { currentObject.setPhoto(n.getObjectValue(Photo::createFromDiscriminatorValue)); });
-            this.put("publication", (n) -> { currentObject.setPublication(n.getObjectValue(PublicationFacet::createFromDiscriminatorValue)); });
-            this.put("remoteItem", (n) -> { currentObject.setRemoteItem(n.getObjectValue(RemoteItem::createFromDiscriminatorValue)); });
-            this.put("root", (n) -> { currentObject.setRoot(n.getObjectValue(Root::createFromDiscriminatorValue)); });
-            this.put("searchResult", (n) -> { currentObject.setSearchResult(n.getObjectValue(SearchResult::createFromDiscriminatorValue)); });
-            this.put("shared", (n) -> { currentObject.setShared(n.getObjectValue(Shared::createFromDiscriminatorValue)); });
-            this.put("sharepointIds", (n) -> { currentObject.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
-            this.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
-            this.put("source", (n) -> { currentObject.setSource(n.getObjectValue(DriveItemSource::createFromDiscriminatorValue)); });
-            this.put("specialFolder", (n) -> { currentObject.setSpecialFolder(n.getObjectValue(SpecialFolder::createFromDiscriminatorValue)); });
-            this.put("subscriptions", (n) -> { currentObject.setSubscriptions(n.getCollectionOfObjectValues(Subscription::createFromDiscriminatorValue)); });
-            this.put("thumbnails", (n) -> { currentObject.setThumbnails(n.getCollectionOfObjectValues(ThumbnailSet::createFromDiscriminatorValue)); });
-            this.put("versions", (n) -> { currentObject.setVersions(n.getCollectionOfObjectValues(DriveItemVersion::createFromDiscriminatorValue)); });
-            this.put("video", (n) -> { currentObject.setVideo(n.getObjectValue(Video::createFromDiscriminatorValue)); });
-            this.put("webDavUrl", (n) -> { currentObject.setWebDavUrl(n.getStringValue()); });
-            this.put("workbook", (n) -> { currentObject.setWorkbook(n.getObjectValue(Workbook::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activities", (n) -> { this.setActivities(n.getCollectionOfObjectValues(ItemActivityOLD::createFromDiscriminatorValue)); });
+        deserializerMap.put("analytics", (n) -> { this.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
+        deserializerMap.put("audio", (n) -> { this.setAudio(n.getObjectValue(Audio::createFromDiscriminatorValue)); });
+        deserializerMap.put("bundle", (n) -> { this.setBundle(n.getObjectValue(Bundle::createFromDiscriminatorValue)); });
+        deserializerMap.put("children", (n) -> { this.setChildren(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("cTag", (n) -> { this.setCTag(n.getStringValue()); });
+        deserializerMap.put("deleted", (n) -> { this.setDeleted(n.getObjectValue(Deleted::createFromDiscriminatorValue)); });
+        deserializerMap.put("file", (n) -> { this.setFile(n.getObjectValue(File::createFromDiscriminatorValue)); });
+        deserializerMap.put("fileSystemInfo", (n) -> { this.setFileSystemInfo(n.getObjectValue(FileSystemInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("folder", (n) -> { this.setFolder(n.getObjectValue(Folder::createFromDiscriminatorValue)); });
+        deserializerMap.put("image", (n) -> { this.setImage(n.getObjectValue(Image::createFromDiscriminatorValue)); });
+        deserializerMap.put("listItem", (n) -> { this.setListItem(n.getObjectValue(ListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(GeoCoordinates::createFromDiscriminatorValue)); });
+        deserializerMap.put("malware", (n) -> { this.setMalware(n.getObjectValue(Malware::createFromDiscriminatorValue)); });
+        deserializerMap.put("media", (n) -> { this.setMedia(n.getObjectValue(Media::createFromDiscriminatorValue)); });
+        deserializerMap.put("package", (n) -> { this.setPackage(n.getObjectValue(Package_escaped::createFromDiscriminatorValue)); });
+        deserializerMap.put("pendingOperations", (n) -> { this.setPendingOperations(n.getObjectValue(PendingOperations::createFromDiscriminatorValue)); });
+        deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
+        deserializerMap.put("photo", (n) -> { this.setPhoto(n.getObjectValue(Photo::createFromDiscriminatorValue)); });
+        deserializerMap.put("publication", (n) -> { this.setPublication(n.getObjectValue(PublicationFacet::createFromDiscriminatorValue)); });
+        deserializerMap.put("remoteItem", (n) -> { this.setRemoteItem(n.getObjectValue(RemoteItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("root", (n) -> { this.setRoot(n.getObjectValue(Root::createFromDiscriminatorValue)); });
+        deserializerMap.put("searchResult", (n) -> { this.setSearchResult(n.getObjectValue(SearchResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("shared", (n) -> { this.setShared(n.getObjectValue(Shared::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharepointIds", (n) -> { this.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
+        deserializerMap.put("size", (n) -> { this.setSize(n.getLongValue()); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getObjectValue(DriveItemSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("specialFolder", (n) -> { this.setSpecialFolder(n.getObjectValue(SpecialFolder::createFromDiscriminatorValue)); });
+        deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getCollectionOfObjectValues(Subscription::createFromDiscriminatorValue)); });
+        deserializerMap.put("thumbnails", (n) -> { this.setThumbnails(n.getCollectionOfObjectValues(ThumbnailSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("versions", (n) -> { this.setVersions(n.getCollectionOfObjectValues(DriveItemVersion::createFromDiscriminatorValue)); });
+        deserializerMap.put("video", (n) -> { this.setVideo(n.getObjectValue(Video::createFromDiscriminatorValue)); });
+        deserializerMap.put("webDavUrl", (n) -> { this.setWebDavUrl(n.getStringValue()); });
+        deserializerMap.put("workbook", (n) -> { this.setWorkbook(n.getObjectValue(Workbook::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the file property value. File metadata, if the item is a file. Read-only.
@@ -426,6 +426,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -470,6 +471,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the activities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivities(@javax.annotation.Nullable final java.util.List<ItemActivityOLD> value) {
         this._activities = value;
     }
@@ -478,6 +480,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the analytics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnalytics(@javax.annotation.Nullable final ItemAnalytics value) {
         this._analytics = value;
     }
@@ -486,6 +489,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the audio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAudio(@javax.annotation.Nullable final Audio value) {
         this._audio = value;
     }
@@ -494,6 +498,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the bundle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBundle(@javax.annotation.Nullable final Bundle value) {
         this._bundle = value;
     }
@@ -502,6 +507,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the children property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildren(@javax.annotation.Nullable final java.util.List<DriveItem> value) {
         this._children = value;
     }
@@ -510,6 +516,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
         this._content = value;
     }
@@ -518,6 +525,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the cTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCTag(@javax.annotation.Nullable final String value) {
         this._cTag = value;
     }
@@ -526,6 +534,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the deleted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeleted(@javax.annotation.Nullable final Deleted value) {
         this._deleted = value;
     }
@@ -534,6 +543,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the file property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFile(@javax.annotation.Nullable final File value) {
         this._file = value;
     }
@@ -542,6 +552,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the fileSystemInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileSystemInfo(@javax.annotation.Nullable final FileSystemInfo value) {
         this._fileSystemInfo = value;
     }
@@ -550,6 +561,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the folder property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFolder(@javax.annotation.Nullable final Folder value) {
         this._folder = value;
     }
@@ -558,6 +570,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the image property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImage(@javax.annotation.Nullable final Image value) {
         this._image = value;
     }
@@ -566,6 +579,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the listItem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setListItem(@javax.annotation.Nullable final ListItem value) {
         this._listItem = value;
     }
@@ -574,6 +588,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final GeoCoordinates value) {
         this._location = value;
     }
@@ -582,6 +597,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the malware property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMalware(@javax.annotation.Nullable final Malware value) {
         this._malware = value;
     }
@@ -590,6 +606,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the media property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMedia(@javax.annotation.Nullable final Media value) {
         this._media = value;
     }
@@ -598,6 +615,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the package property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackage(@javax.annotation.Nullable final Package_escaped value) {
         this._package_escaped = value;
     }
@@ -606,6 +624,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the pendingOperations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingOperations(@javax.annotation.Nullable final PendingOperations value) {
         this._pendingOperations = value;
     }
@@ -614,6 +633,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the permissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissions(@javax.annotation.Nullable final java.util.List<Permission> value) {
         this._permissions = value;
     }
@@ -622,6 +642,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the photo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoto(@javax.annotation.Nullable final Photo value) {
         this._photo = value;
     }
@@ -630,6 +651,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the publication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublication(@javax.annotation.Nullable final PublicationFacet value) {
         this._publication = value;
     }
@@ -638,6 +660,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the remoteItem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteItem(@javax.annotation.Nullable final RemoteItem value) {
         this._remoteItem = value;
     }
@@ -646,6 +669,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the root property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoot(@javax.annotation.Nullable final Root value) {
         this._root = value;
     }
@@ -654,6 +678,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the searchResult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearchResult(@javax.annotation.Nullable final SearchResult value) {
         this._searchResult = value;
     }
@@ -662,6 +687,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the shared property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShared(@javax.annotation.Nullable final Shared value) {
         this._shared = value;
     }
@@ -670,6 +696,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the sharepointIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharepointIds(@javax.annotation.Nullable final SharepointIds value) {
         this._sharepointIds = value;
     }
@@ -678,6 +705,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Long value) {
         this._size = value;
     }
@@ -686,6 +714,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final DriveItemSource value) {
         this._source = value;
     }
@@ -694,6 +723,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the specialFolder property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpecialFolder(@javax.annotation.Nullable final SpecialFolder value) {
         this._specialFolder = value;
     }
@@ -702,6 +732,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the subscriptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptions(@javax.annotation.Nullable final java.util.List<Subscription> value) {
         this._subscriptions = value;
     }
@@ -710,6 +741,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the thumbnails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbnails(@javax.annotation.Nullable final java.util.List<ThumbnailSet> value) {
         this._thumbnails = value;
     }
@@ -718,6 +750,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the versions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersions(@javax.annotation.Nullable final java.util.List<DriveItemVersion> value) {
         this._versions = value;
     }
@@ -726,6 +759,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the video property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVideo(@javax.annotation.Nullable final Video value) {
         this._video = value;
     }
@@ -734,6 +768,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the webDavUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebDavUrl(@javax.annotation.Nullable final String value) {
         this._webDavUrl = value;
     }
@@ -742,6 +777,7 @@ public class DriveItem extends BaseItem implements Parsable {
      * @param value Value to set for the workbook property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkbook(@javax.annotation.Nullable final Workbook value) {
         this._workbook = value;
     }

@@ -24,6 +24,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * Instantiates a new parseExpressionPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ParseExpressionPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -59,12 +60,11 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ParseExpressionPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("expression", (n) -> { currentObject.setExpression(n.getStringValue()); });
-            this.put("targetAttributeDefinition", (n) -> { currentObject.setTargetAttributeDefinition(n.getObjectValue(AttributeDefinition::createFromDiscriminatorValue)); });
-            this.put("testInputObject", (n) -> { currentObject.setTestInputObject(n.getObjectValue(ExpressionInputObject::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("expression", (n) -> { this.setExpression(n.getStringValue()); });
+        deserializerMap.put("targetAttributeDefinition", (n) -> { this.setTargetAttributeDefinition(n.getObjectValue(AttributeDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("testInputObject", (n) -> { this.setTestInputObject(n.getObjectValue(ExpressionInputObject::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the targetAttributeDefinition property value. The targetAttributeDefinition property
@@ -87,6 +87,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("expression", this.getExpression());
@@ -99,6 +100,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -107,6 +109,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the expression property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpression(@javax.annotation.Nullable final String value) {
         this._expression = value;
     }
@@ -115,6 +118,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the targetAttributeDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetAttributeDefinition(@javax.annotation.Nullable final AttributeDefinition value) {
         this._targetAttributeDefinition = value;
     }
@@ -123,6 +127,7 @@ public class ParseExpressionPostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the testInputObject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTestInputObject(@javax.annotation.Nullable final ExpressionInputObject value) {
         this._testInputObject = value;
     }

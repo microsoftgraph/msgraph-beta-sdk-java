@@ -23,17 +23,17 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
     /** The estimated size of unindexed items for the collection. */
     private Long _unindexedItemsSize;
     /**
-     * Instantiates a new ediscoveryEstimateOperation and sets the default values.
+     * Instantiates a new EdiscoveryEstimateOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EdiscoveryEstimateOperation() {
         super();
-        this.setOdataType("#microsoft.graph.security.ediscoveryEstimateOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ediscoveryEstimateOperation
+     * @return a EdiscoveryEstimateOperation
      */
     @javax.annotation.Nonnull
     public static EdiscoveryEstimateOperation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -46,16 +46,15 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EdiscoveryEstimateOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("indexedItemCount", (n) -> { currentObject.setIndexedItemCount(n.getLongValue()); });
-            this.put("indexedItemsSize", (n) -> { currentObject.setIndexedItemsSize(n.getLongValue()); });
-            this.put("mailboxCount", (n) -> { currentObject.setMailboxCount(n.getIntegerValue()); });
-            this.put("search", (n) -> { currentObject.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
-            this.put("siteCount", (n) -> { currentObject.setSiteCount(n.getIntegerValue()); });
-            this.put("unindexedItemCount", (n) -> { currentObject.setUnindexedItemCount(n.getLongValue()); });
-            this.put("unindexedItemsSize", (n) -> { currentObject.setUnindexedItemsSize(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("indexedItemCount", (n) -> { this.setIndexedItemCount(n.getLongValue()); });
+        deserializerMap.put("indexedItemsSize", (n) -> { this.setIndexedItemsSize(n.getLongValue()); });
+        deserializerMap.put("mailboxCount", (n) -> { this.setMailboxCount(n.getIntegerValue()); });
+        deserializerMap.put("search", (n) -> { this.setSearch(n.getObjectValue(EdiscoverySearch::createFromDiscriminatorValue)); });
+        deserializerMap.put("siteCount", (n) -> { this.setSiteCount(n.getIntegerValue()); });
+        deserializerMap.put("unindexedItemCount", (n) -> { this.setUnindexedItemCount(n.getLongValue()); });
+        deserializerMap.put("unindexedItemsSize", (n) -> { this.setUnindexedItemsSize(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the indexedItemCount property value. The estimated count of items for the search that matched the content query.
@@ -118,6 +117,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +134,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      * @param value Value to set for the indexedItemCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIndexedItemCount(@javax.annotation.Nullable final Long value) {
         this._indexedItemCount = value;
     }
@@ -142,6 +143,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      * @param value Value to set for the indexedItemsSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIndexedItemsSize(@javax.annotation.Nullable final Long value) {
         this._indexedItemsSize = value;
     }
@@ -150,6 +152,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      * @param value Value to set for the mailboxCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailboxCount(@javax.annotation.Nullable final Integer value) {
         this._mailboxCount = value;
     }
@@ -158,6 +161,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      * @param value Value to set for the search property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearch(@javax.annotation.Nullable final EdiscoverySearch value) {
         this._search = value;
     }
@@ -166,6 +170,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      * @param value Value to set for the siteCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteCount(@javax.annotation.Nullable final Integer value) {
         this._siteCount = value;
     }
@@ -174,6 +179,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      * @param value Value to set for the unindexedItemCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnindexedItemCount(@javax.annotation.Nullable final Long value) {
         this._unindexedItemCount = value;
     }
@@ -182,6 +188,7 @@ public class EdiscoveryEstimateOperation extends CaseOperation implements Parsab
      * @param value Value to set for the unindexedItemsSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnindexedItemsSize(@javax.annotation.Nullable final Long value) {
         this._unindexedItemsSize = value;
     }

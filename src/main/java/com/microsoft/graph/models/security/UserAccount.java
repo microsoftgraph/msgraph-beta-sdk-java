@@ -27,9 +27,9 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * Instantiates a new userAccount and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserAccount() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.security.userAccount");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,15 +79,14 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserAccount currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
-            this.put("azureAdUserId", (n) -> { currentObject.setAzureAdUserId(n.getStringValue()); });
-            this.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("userSid", (n) -> { currentObject.setUserSid(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
+        deserializerMap.put("azureAdUserId", (n) -> { this.setAzureAdUserId(n.getStringValue()); });
+        deserializerMap.put("domainName", (n) -> { this.setDomainName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("userSid", (n) -> { this.setUserSid(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -118,6 +117,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("accountName", this.getAccountName());
@@ -133,6 +133,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountName(@javax.annotation.Nullable final String value) {
         this._accountName = value;
     }
@@ -141,6 +142,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -149,6 +151,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the azureAdUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureAdUserId(@javax.annotation.Nullable final String value) {
         this._azureAdUserId = value;
     }
@@ -157,6 +160,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the domainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainName(@javax.annotation.Nullable final String value) {
         this._domainName = value;
     }
@@ -165,6 +169,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -173,6 +178,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }
@@ -181,6 +187,7 @@ public class UserAccount implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userSid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserSid(@javax.annotation.Nullable final String value) {
         this._userSid = value;
     }

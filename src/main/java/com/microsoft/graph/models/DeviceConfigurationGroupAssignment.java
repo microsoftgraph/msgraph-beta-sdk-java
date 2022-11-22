@@ -19,9 +19,9 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      * Instantiates a new deviceConfigurationGroupAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceConfigurationGroupAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.deviceConfigurationGroupAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,12 +55,11 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceConfigurationGroupAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceConfiguration", (n) -> { currentObject.setDeviceConfiguration(n.getObjectValue(DeviceConfiguration::createFromDiscriminatorValue)); });
-            this.put("excludeGroup", (n) -> { currentObject.setExcludeGroup(n.getBooleanValue()); });
-            this.put("targetGroupId", (n) -> { currentObject.setTargetGroupId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceConfiguration", (n) -> { this.setDeviceConfiguration(n.getObjectValue(DeviceConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("excludeGroup", (n) -> { this.setExcludeGroup(n.getBooleanValue()); });
+        deserializerMap.put("targetGroupId", (n) -> { this.setTargetGroupId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the targetGroupId property value. The Id of the AAD group we are targeting the device configuration to.
@@ -75,6 +74,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +87,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      * @param value Value to set for the deviceConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceConfiguration(@javax.annotation.Nullable final DeviceConfiguration value) {
         this._deviceConfiguration = value;
     }
@@ -95,6 +96,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      * @param value Value to set for the excludeGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludeGroup(@javax.annotation.Nullable final Boolean value) {
         this._excludeGroup = value;
     }
@@ -103,6 +105,7 @@ public class DeviceConfigurationGroupAssignment extends Entity implements Parsab
      * @param value Value to set for the targetGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetGroupId(@javax.annotation.Nullable final String value) {
         this._targetGroupId = value;
     }

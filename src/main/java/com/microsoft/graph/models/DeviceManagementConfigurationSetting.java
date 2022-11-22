@@ -17,9 +17,9 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
      * Instantiates a new deviceManagementConfigurationSetting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSetting() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,11 +37,10 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationSetting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("settingDefinitions", (n) -> { currentObject.setSettingDefinitions(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
-            this.put("settingInstance", (n) -> { currentObject.setSettingInstance(n.getObjectValue(DeviceManagementConfigurationSettingInstance::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("settingDefinitions", (n) -> { this.setSettingDefinitions(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("settingInstance", (n) -> { this.setSettingInstance(n.getObjectValue(DeviceManagementConfigurationSettingInstance::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the settingDefinitions property value. List of related Setting Definitions. This property is read-only.
@@ -64,6 +63,7 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +75,7 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
      * @param value Value to set for the settingDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingDefinitions(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDefinition> value) {
         this._settingDefinitions = value;
     }
@@ -83,6 +84,7 @@ public class DeviceManagementConfigurationSetting extends Entity implements Pars
      * @param value Value to set for the settingInstance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingInstance(@javax.annotation.Nullable final DeviceManagementConfigurationSettingInstance value) {
         this._settingInstance = value;
     }

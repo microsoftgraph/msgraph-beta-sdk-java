@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class PermissionGrantConditionSet extends Entity implements Parsable {
     /** Set to true to only match on client applications that are Microsoft 365 certified. Set to false to match on any other client app. Default is false. */
     private Boolean _certifiedClientApplicationsOnly;
@@ -23,7 +23,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
     private String _permissionClassification;
     /** The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the publishedPermissionScopes property of the API's **servicePrincipal** object. The id of application permissions can be found in the appRoles property of the API's **servicePrincipal** object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's **servicePrincipal** object. Default is the single value all. */
     private java.util.List<String> _permissions;
-    /** The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required. */
+    /** The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required. */
     private PermissionType _permissionType;
     /** The appId of the resource application (e.g. the API) for which a permission is being granted, or any to match with any resource application or API. Default is any. */
     private String _resourceApplication;
@@ -31,9 +31,9 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * Instantiates a new permissionGrantConditionSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PermissionGrantConditionSet() {
         super();
-        this.setOdataType("#microsoft.graph.permissionGrantConditionSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -91,18 +91,17 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PermissionGrantConditionSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certifiedClientApplicationsOnly", (n) -> { currentObject.setCertifiedClientApplicationsOnly(n.getBooleanValue()); });
-            this.put("clientApplicationIds", (n) -> { currentObject.setClientApplicationIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("clientApplicationPublisherIds", (n) -> { currentObject.setClientApplicationPublisherIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("clientApplicationsFromVerifiedPublisherOnly", (n) -> { currentObject.setClientApplicationsFromVerifiedPublisherOnly(n.getBooleanValue()); });
-            this.put("clientApplicationTenantIds", (n) -> { currentObject.setClientApplicationTenantIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("permissionClassification", (n) -> { currentObject.setPermissionClassification(n.getStringValue()); });
-            this.put("permissions", (n) -> { currentObject.setPermissions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("permissionType", (n) -> { currentObject.setPermissionType(n.getEnumValue(PermissionType.class)); });
-            this.put("resourceApplication", (n) -> { currentObject.setResourceApplication(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certifiedClientApplicationsOnly", (n) -> { this.setCertifiedClientApplicationsOnly(n.getBooleanValue()); });
+        deserializerMap.put("clientApplicationIds", (n) -> { this.setClientApplicationIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("clientApplicationPublisherIds", (n) -> { this.setClientApplicationPublisherIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("clientApplicationsFromVerifiedPublisherOnly", (n) -> { this.setClientApplicationsFromVerifiedPublisherOnly(n.getBooleanValue()); });
+        deserializerMap.put("clientApplicationTenantIds", (n) -> { this.setClientApplicationTenantIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("permissionClassification", (n) -> { this.setPermissionClassification(n.getStringValue()); });
+        deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("permissionType", (n) -> { this.setPermissionType(n.getEnumValue(PermissionType.class)); });
+        deserializerMap.put("resourceApplication", (n) -> { this.setResourceApplication(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the permissionClassification property value. The permission classification for the permission being granted, or all to match with any permission classification (including permissions which are not classified). Default is all.
@@ -121,7 +120,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         return this._permissions;
     }
     /**
-     * Gets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
+     * Gets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
      * @return a permissionType
      */
     @javax.annotation.Nullable
@@ -141,6 +140,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +159,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the certifiedClientApplicationsOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertifiedClientApplicationsOnly(@javax.annotation.Nullable final Boolean value) {
         this._certifiedClientApplicationsOnly = value;
     }
@@ -167,6 +168,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the clientApplicationIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientApplicationIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._clientApplicationIds = value;
     }
@@ -175,6 +177,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the clientApplicationPublisherIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientApplicationPublisherIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._clientApplicationPublisherIds = value;
     }
@@ -183,6 +186,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the clientApplicationsFromVerifiedPublisherOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientApplicationsFromVerifiedPublisherOnly(@javax.annotation.Nullable final Boolean value) {
         this._clientApplicationsFromVerifiedPublisherOnly = value;
     }
@@ -191,6 +195,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the clientApplicationTenantIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientApplicationTenantIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._clientApplicationTenantIds = value;
     }
@@ -199,6 +204,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the permissionClassification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionClassification(@javax.annotation.Nullable final String value) {
         this._permissionClassification = value;
     }
@@ -207,14 +213,16 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the permissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._permissions = value;
     }
     /**
-     * Sets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consent—this value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
+     * Sets the permissionType property value. The permission type of the permission being granted. Possible values: application for application permissions (e.g. app roles), or delegated for delegated permissions. The value delegatedUserConsentable indicates delegated permissions which have not been configured by the API publisher to require admin consentthis value may be used in built-in permission grant policies, but cannot be used in custom permission grant policies. Required.
      * @param value Value to set for the permissionType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionType(@javax.annotation.Nullable final PermissionType value) {
         this._permissionType = value;
     }
@@ -223,6 +231,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
      * @param value Value to set for the resourceApplication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceApplication(@javax.annotation.Nullable final String value) {
         this._resourceApplication = value;
     }

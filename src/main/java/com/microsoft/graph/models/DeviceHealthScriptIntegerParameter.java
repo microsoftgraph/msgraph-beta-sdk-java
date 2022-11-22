@@ -14,6 +14,7 @@ public class DeviceHealthScriptIntegerParameter extends DeviceHealthScriptParame
      * Instantiates a new DeviceHealthScriptIntegerParameter and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceHealthScriptIntegerParameter() {
         super();
         this.setOdataType("#microsoft.graph.deviceHealthScriptIntegerParameter");
@@ -42,16 +43,16 @@ public class DeviceHealthScriptIntegerParameter extends DeviceHealthScriptParame
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceHealthScriptIntegerParameter currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class DeviceHealthScriptIntegerParameter extends DeviceHealthScriptParame
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final Integer value) {
         this._defaultValue = value;
     }

@@ -13,6 +13,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Base Profile Type for Resource Access */
 public class DeviceManagementResourceAccessProfileBase extends Entity implements Parsable {
     /** The list of assignments for the device configuration profile. */
     private java.util.List<DeviceManagementResourceAccessProfileAssignment> _assignments;
@@ -29,17 +30,17 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
     /** Version of the profile */
     private Integer _version;
     /**
-     * Instantiates a new DeviceManagementResourceAccessProfileBase and sets the default values.
+     * Instantiates a new deviceManagementResourceAccessProfileBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementResourceAccessProfileBase() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementResourceAccessProfileBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceManagementResourceAccessProfileBase
+     * @return a deviceManagementResourceAccessProfileBase
      */
     @javax.annotation.Nonnull
     public static DeviceManagementResourceAccessProfileBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -95,16 +96,15 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementResourceAccessProfileBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(DeviceManagementResourceAccessProfileAssignment::createFromDiscriminatorValue)); });
-            this.put("creationDateTime", (n) -> { currentObject.setCreationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(DeviceManagementResourceAccessProfileAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("creationDateTime", (n) -> { this.setCreationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime profile was last modified
@@ -135,6 +135,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -151,6 +152,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<DeviceManagementResourceAccessProfileAssignment> value) {
         this._assignments = value;
     }
@@ -159,6 +161,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
      * @param value Value to set for the creationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._creationDateTime = value;
     }
@@ -167,6 +170,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -175,6 +179,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -183,6 +188,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -191,6 +197,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -199,6 +206,7 @@ public class DeviceManagementResourceAccessProfileBase extends Entity implements
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
         this._version = value;
     }

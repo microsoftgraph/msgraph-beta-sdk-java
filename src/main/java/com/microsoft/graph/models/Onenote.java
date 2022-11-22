@@ -24,9 +24,9 @@ public class Onenote extends Entity implements Parsable {
      * Instantiates a new onenote and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Onenote() {
         super();
-        this.setOdataType("#microsoft.graph.onenote");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,15 +44,14 @@ public class Onenote extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Onenote currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("notebooks", (n) -> { currentObject.setNotebooks(n.getCollectionOfObjectValues(Notebook::createFromDiscriminatorValue)); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(OnenoteOperation::createFromDiscriminatorValue)); });
-            this.put("pages", (n) -> { currentObject.setPages(n.getCollectionOfObjectValues(OnenotePage::createFromDiscriminatorValue)); });
-            this.put("resources", (n) -> { currentObject.setResources(n.getCollectionOfObjectValues(OnenoteResource::createFromDiscriminatorValue)); });
-            this.put("sectionGroups", (n) -> { currentObject.setSectionGroups(n.getCollectionOfObjectValues(SectionGroup::createFromDiscriminatorValue)); });
-            this.put("sections", (n) -> { currentObject.setSections(n.getCollectionOfObjectValues(OnenoteSection::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("notebooks", (n) -> { this.setNotebooks(n.getCollectionOfObjectValues(Notebook::createFromDiscriminatorValue)); });
+        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(OnenoteOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("pages", (n) -> { this.setPages(n.getCollectionOfObjectValues(OnenotePage::createFromDiscriminatorValue)); });
+        deserializerMap.put("resources", (n) -> { this.setResources(n.getCollectionOfObjectValues(OnenoteResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("sectionGroups", (n) -> { this.setSectionGroups(n.getCollectionOfObjectValues(SectionGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("sections", (n) -> { this.setSections(n.getCollectionOfObjectValues(OnenoteSection::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the notebooks property value. The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
@@ -107,6 +106,7 @@ public class Onenote extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +122,7 @@ public class Onenote extends Entity implements Parsable {
      * @param value Value to set for the notebooks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotebooks(@javax.annotation.Nullable final java.util.List<Notebook> value) {
         this._notebooks = value;
     }
@@ -130,6 +131,7 @@ public class Onenote extends Entity implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<OnenoteOperation> value) {
         this._operations = value;
     }
@@ -138,6 +140,7 @@ public class Onenote extends Entity implements Parsable {
      * @param value Value to set for the pages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPages(@javax.annotation.Nullable final java.util.List<OnenotePage> value) {
         this._pages = value;
     }
@@ -146,6 +149,7 @@ public class Onenote extends Entity implements Parsable {
      * @param value Value to set for the resources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResources(@javax.annotation.Nullable final java.util.List<OnenoteResource> value) {
         this._resources = value;
     }
@@ -154,6 +158,7 @@ public class Onenote extends Entity implements Parsable {
      * @param value Value to set for the sectionGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSectionGroups(@javax.annotation.Nullable final java.util.List<SectionGroup> value) {
         this._sectionGroups = value;
     }
@@ -162,6 +167,7 @@ public class Onenote extends Entity implements Parsable {
      * @param value Value to set for the sections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSections(@javax.annotation.Nullable final java.util.List<OnenoteSection> value) {
         this._sections = value;
     }

@@ -14,6 +14,7 @@ public class OpenShiftItem extends ShiftItem implements Parsable {
      * Instantiates a new OpenShiftItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OpenShiftItem() {
         super();
         this.setOdataType("#microsoft.graph.openShiftItem");
@@ -34,10 +35,9 @@ public class OpenShiftItem extends ShiftItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OpenShiftItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("openSlotCount", (n) -> { currentObject.setOpenSlotCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("openSlotCount", (n) -> { this.setOpenSlotCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the openSlotCount property value. Count of the number of slots for the given open shift.
@@ -52,6 +52,7 @@ public class OpenShiftItem extends ShiftItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class OpenShiftItem extends ShiftItem implements Parsable {
      * @param value Value to set for the openSlotCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOpenSlotCount(@javax.annotation.Nullable final Integer value) {
         this._openSlotCount = value;
     }

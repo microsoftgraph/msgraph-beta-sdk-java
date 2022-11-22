@@ -27,9 +27,9 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
      * Instantiates a new teamworkDisplayConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkDisplayConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamworkDisplayConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -71,15 +71,14 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamworkDisplayConfiguration currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("configuredDisplays", (n) -> { currentObject.setConfiguredDisplays(n.getCollectionOfObjectValues(TeamworkConfiguredPeripheral::createFromDiscriminatorValue)); });
-            this.put("displayCount", (n) -> { currentObject.setDisplayCount(n.getIntegerValue()); });
-            this.put("inBuiltDisplayScreenConfiguration", (n) -> { currentObject.setInBuiltDisplayScreenConfiguration(n.getObjectValue(TeamworkDisplayScreenConfiguration::createFromDiscriminatorValue)); });
-            this.put("isContentDuplicationAllowed", (n) -> { currentObject.setIsContentDuplicationAllowed(n.getBooleanValue()); });
-            this.put("isDualDisplayModeEnabled", (n) -> { currentObject.setIsDualDisplayModeEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("configuredDisplays", (n) -> { this.setConfiguredDisplays(n.getCollectionOfObjectValues(TeamworkConfiguredPeripheral::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayCount", (n) -> { this.setDisplayCount(n.getIntegerValue()); });
+        deserializerMap.put("inBuiltDisplayScreenConfiguration", (n) -> { this.setInBuiltDisplayScreenConfiguration(n.getObjectValue(TeamworkDisplayScreenConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("isContentDuplicationAllowed", (n) -> { this.setIsContentDuplicationAllowed(n.getBooleanValue()); });
+        deserializerMap.put("isDualDisplayModeEnabled", (n) -> { this.setIsDualDisplayModeEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the inBuiltDisplayScreenConfiguration property value. Configuration for the inbuilt display. Not applicable for Teams Rooms devices.
@@ -118,6 +117,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("configuredDisplays", this.getConfiguredDisplays());
@@ -133,6 +133,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +142,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the configuredDisplays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfiguredDisplays(@javax.annotation.Nullable final java.util.List<TeamworkConfiguredPeripheral> value) {
         this._configuredDisplays = value;
     }
@@ -149,6 +151,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the displayCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayCount(@javax.annotation.Nullable final Integer value) {
         this._displayCount = value;
     }
@@ -157,6 +160,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the inBuiltDisplayScreenConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInBuiltDisplayScreenConfiguration(@javax.annotation.Nullable final TeamworkDisplayScreenConfiguration value) {
         this._inBuiltDisplayScreenConfiguration = value;
     }
@@ -165,6 +169,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the isContentDuplicationAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsContentDuplicationAllowed(@javax.annotation.Nullable final Boolean value) {
         this._isContentDuplicationAllowed = value;
     }
@@ -173,6 +178,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the isDualDisplayModeEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDualDisplayModeEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isDualDisplayModeEnabled = value;
     }
@@ -181,6 +187,7 @@ public class TeamworkDisplayConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

@@ -18,6 +18,7 @@ public class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfi
      * Instantiates a new AndroidWorkProfileNineWorkEasConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidWorkProfileNineWorkEasConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidWorkProfileNineWorkEasConfiguration");
@@ -38,12 +39,11 @@ public class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfi
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidWorkProfileNineWorkEasConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("syncCalendar", (n) -> { currentObject.setSyncCalendar(n.getBooleanValue()); });
-            this.put("syncContacts", (n) -> { currentObject.setSyncContacts(n.getBooleanValue()); });
-            this.put("syncTasks", (n) -> { currentObject.setSyncTasks(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("syncCalendar", (n) -> { this.setSyncCalendar(n.getBooleanValue()); });
+        deserializerMap.put("syncContacts", (n) -> { this.setSyncContacts(n.getBooleanValue()); });
+        deserializerMap.put("syncTasks", (n) -> { this.setSyncTasks(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the syncCalendar property value. Toggles syncing the calendar. If set to false the calendar is turned off on the device.
@@ -74,6 +74,7 @@ public class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfi
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +87,7 @@ public class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfi
      * @param value Value to set for the syncCalendar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSyncCalendar(@javax.annotation.Nullable final Boolean value) {
         this._syncCalendar = value;
     }
@@ -94,6 +96,7 @@ public class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfi
      * @param value Value to set for the syncContacts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSyncContacts(@javax.annotation.Nullable final Boolean value) {
         this._syncContacts = value;
     }
@@ -102,6 +105,7 @@ public class AndroidWorkProfileNineWorkEasConfiguration extends AndroidWorkProfi
      * @param value Value to set for the syncTasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSyncTasks(@javax.annotation.Nullable final Boolean value) {
         this._syncTasks = value;
     }

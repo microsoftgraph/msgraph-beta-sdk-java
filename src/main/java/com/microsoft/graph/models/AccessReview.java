@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class AccessReview extends Entity implements Parsable {
     /** The business flow template identifier. Required on create.  This value is case sensitive. */
     private String _businessFlowTemplateId;
@@ -38,17 +39,17 @@ public class AccessReview extends Entity implements Parsable {
     /** This read-only field specifies the status of an accessReview. The typical states include Initializing, NotStarted, Starting,InProgress, Completing, Completed, AutoReviewing, and AutoReviewed. */
     private String _status;
     /**
-     * Instantiates a new AccessReview and sets the default values.
+     * Instantiates a new accessReview and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReview() {
         super();
-        this.setOdataType("#microsoft.graph.accessReview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AccessReview
+     * @return a accessReview
      */
     @javax.annotation.Nonnull
     public static AccessReview createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -109,23 +110,22 @@ public class AccessReview extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReview currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("businessFlowTemplateId", (n) -> { currentObject.setBusinessFlowTemplateId(n.getStringValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
-            this.put("decisions", (n) -> { currentObject.setDecisions(n.getCollectionOfObjectValues(AccessReviewDecision::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("instances", (n) -> { currentObject.setInstances(n.getCollectionOfObjectValues(AccessReview::createFromDiscriminatorValue)); });
-            this.put("myDecisions", (n) -> { currentObject.setMyDecisions(n.getCollectionOfObjectValues(AccessReviewDecision::createFromDiscriminatorValue)); });
-            this.put("reviewedEntity", (n) -> { currentObject.setReviewedEntity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewer::createFromDiscriminatorValue)); });
-            this.put("reviewerType", (n) -> { currentObject.setReviewerType(n.getStringValue()); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(AccessReviewSettings::createFromDiscriminatorValue)); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("businessFlowTemplateId", (n) -> { this.setBusinessFlowTemplateId(n.getStringValue()); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("decisions", (n) -> { this.setDecisions(n.getCollectionOfObjectValues(AccessReviewDecision::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("instances", (n) -> { this.setInstances(n.getCollectionOfObjectValues(AccessReview::createFromDiscriminatorValue)); });
+        deserializerMap.put("myDecisions", (n) -> { this.setMyDecisions(n.getCollectionOfObjectValues(AccessReviewDecision::createFromDiscriminatorValue)); });
+        deserializerMap.put("reviewedEntity", (n) -> { this.setReviewedEntity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("reviewers", (n) -> { this.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewer::createFromDiscriminatorValue)); });
+        deserializerMap.put("reviewerType", (n) -> { this.setReviewerType(n.getStringValue()); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(AccessReviewSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the instances property value. The collection of access reviews instances past, present and future, if this object is a recurring access review.
@@ -196,6 +196,7 @@ public class AccessReview extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -219,6 +220,7 @@ public class AccessReview extends Entity implements Parsable {
      * @param value Value to set for the businessFlowTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBusinessFlowTemplateId(@javax.annotation.Nullable final String value) {
         this._businessFlowTemplateId = value;
     }
@@ -227,6 +229,7 @@ public class AccessReview extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final UserIdentity value) {
         this._createdBy = value;
     }
@@ -235,6 +238,7 @@ public class AccessReview extends Entity implements Parsable {
      * @param value Value to set for the decisions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecisions(@javax.annotation.Nullable final java.util.List<AccessReviewDecision> value) {
         this._decisions = value;
     }
@@ -243,6 +247,7 @@ public class AccessReview extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -251,6 +256,7 @@ public class AccessReview extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -259,6 +265,7 @@ public class AccessReview extends Entity implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -267,6 +274,7 @@ public class AccessReview extends Entity implements Parsable {
      * @param value Value to set for the instances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstances(@javax.annotation.Nullable final java.util.List<AccessReview> value) {
         this._instances = value;
     }
@@ -275,6 +283,7 @@ public class AccessReview extends Entity implements Parsable {
      * @param value Value to set for the myDecisions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMyDecisions(@javax.annotation.Nullable final java.util.List<AccessReviewDecision> value) {
         this._myDecisions = value;
     }
@@ -283,6 +292,7 @@ public class AccessReview extends Entity implements Parsable {
      * @param value Value to set for the reviewedEntity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewedEntity(@javax.annotation.Nullable final Identity value) {
         this._reviewedEntity = value;
     }
@@ -291,6 +301,7 @@ public class AccessReview extends Entity implements Parsable {
      * @param value Value to set for the reviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewer> value) {
         this._reviewers = value;
     }
@@ -299,6 +310,7 @@ public class AccessReview extends Entity implements Parsable {
      * @param value Value to set for the reviewerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewerType(@javax.annotation.Nullable final String value) {
         this._reviewerType = value;
     }
@@ -307,6 +319,7 @@ public class AccessReview extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final AccessReviewSettings value) {
         this._settings = value;
     }
@@ -315,6 +328,7 @@ public class AccessReview extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -323,6 +337,7 @@ public class AccessReview extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }

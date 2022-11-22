@@ -59,9 +59,9 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new deviceInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.deviceInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -135,31 +135,30 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceInfo currentObject = this;
-        return new HashMap<>(22) {{
-            this.put("captureDeviceDriver", (n) -> { currentObject.setCaptureDeviceDriver(n.getStringValue()); });
-            this.put("captureDeviceName", (n) -> { currentObject.setCaptureDeviceName(n.getStringValue()); });
-            this.put("captureNotFunctioningEventRatio", (n) -> { currentObject.setCaptureNotFunctioningEventRatio(n.getFloatValue()); });
-            this.put("cpuInsufficentEventRatio", (n) -> { currentObject.setCpuInsufficentEventRatio(n.getFloatValue()); });
-            this.put("deviceClippingEventRatio", (n) -> { currentObject.setDeviceClippingEventRatio(n.getFloatValue()); });
-            this.put("deviceGlitchEventRatio", (n) -> { currentObject.setDeviceGlitchEventRatio(n.getFloatValue()); });
-            this.put("howlingEventCount", (n) -> { currentObject.setHowlingEventCount(n.getIntegerValue()); });
-            this.put("initialSignalLevelRootMeanSquare", (n) -> { currentObject.setInitialSignalLevelRootMeanSquare(n.getFloatValue()); });
-            this.put("lowSpeechLevelEventRatio", (n) -> { currentObject.setLowSpeechLevelEventRatio(n.getFloatValue()); });
-            this.put("lowSpeechToNoiseEventRatio", (n) -> { currentObject.setLowSpeechToNoiseEventRatio(n.getFloatValue()); });
-            this.put("micGlitchRate", (n) -> { currentObject.setMicGlitchRate(n.getFloatValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("receivedNoiseLevel", (n) -> { currentObject.setReceivedNoiseLevel(n.getIntegerValue()); });
-            this.put("receivedSignalLevel", (n) -> { currentObject.setReceivedSignalLevel(n.getIntegerValue()); });
-            this.put("renderDeviceDriver", (n) -> { currentObject.setRenderDeviceDriver(n.getStringValue()); });
-            this.put("renderDeviceName", (n) -> { currentObject.setRenderDeviceName(n.getStringValue()); });
-            this.put("renderMuteEventRatio", (n) -> { currentObject.setRenderMuteEventRatio(n.getFloatValue()); });
-            this.put("renderNotFunctioningEventRatio", (n) -> { currentObject.setRenderNotFunctioningEventRatio(n.getFloatValue()); });
-            this.put("renderZeroVolumeEventRatio", (n) -> { currentObject.setRenderZeroVolumeEventRatio(n.getFloatValue()); });
-            this.put("sentNoiseLevel", (n) -> { currentObject.setSentNoiseLevel(n.getIntegerValue()); });
-            this.put("sentSignalLevel", (n) -> { currentObject.setSentSignalLevel(n.getIntegerValue()); });
-            this.put("speakerGlitchRate", (n) -> { currentObject.setSpeakerGlitchRate(n.getFloatValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(22);
+        deserializerMap.put("captureDeviceDriver", (n) -> { this.setCaptureDeviceDriver(n.getStringValue()); });
+        deserializerMap.put("captureDeviceName", (n) -> { this.setCaptureDeviceName(n.getStringValue()); });
+        deserializerMap.put("captureNotFunctioningEventRatio", (n) -> { this.setCaptureNotFunctioningEventRatio(n.getFloatValue()); });
+        deserializerMap.put("cpuInsufficentEventRatio", (n) -> { this.setCpuInsufficentEventRatio(n.getFloatValue()); });
+        deserializerMap.put("deviceClippingEventRatio", (n) -> { this.setDeviceClippingEventRatio(n.getFloatValue()); });
+        deserializerMap.put("deviceGlitchEventRatio", (n) -> { this.setDeviceGlitchEventRatio(n.getFloatValue()); });
+        deserializerMap.put("howlingEventCount", (n) -> { this.setHowlingEventCount(n.getIntegerValue()); });
+        deserializerMap.put("initialSignalLevelRootMeanSquare", (n) -> { this.setInitialSignalLevelRootMeanSquare(n.getFloatValue()); });
+        deserializerMap.put("lowSpeechLevelEventRatio", (n) -> { this.setLowSpeechLevelEventRatio(n.getFloatValue()); });
+        deserializerMap.put("lowSpeechToNoiseEventRatio", (n) -> { this.setLowSpeechToNoiseEventRatio(n.getFloatValue()); });
+        deserializerMap.put("micGlitchRate", (n) -> { this.setMicGlitchRate(n.getFloatValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("receivedNoiseLevel", (n) -> { this.setReceivedNoiseLevel(n.getIntegerValue()); });
+        deserializerMap.put("receivedSignalLevel", (n) -> { this.setReceivedSignalLevel(n.getIntegerValue()); });
+        deserializerMap.put("renderDeviceDriver", (n) -> { this.setRenderDeviceDriver(n.getStringValue()); });
+        deserializerMap.put("renderDeviceName", (n) -> { this.setRenderDeviceName(n.getStringValue()); });
+        deserializerMap.put("renderMuteEventRatio", (n) -> { this.setRenderMuteEventRatio(n.getFloatValue()); });
+        deserializerMap.put("renderNotFunctioningEventRatio", (n) -> { this.setRenderNotFunctioningEventRatio(n.getFloatValue()); });
+        deserializerMap.put("renderZeroVolumeEventRatio", (n) -> { this.setRenderZeroVolumeEventRatio(n.getFloatValue()); });
+        deserializerMap.put("sentNoiseLevel", (n) -> { this.setSentNoiseLevel(n.getIntegerValue()); });
+        deserializerMap.put("sentSignalLevel", (n) -> { this.setSentSignalLevel(n.getIntegerValue()); });
+        deserializerMap.put("speakerGlitchRate", (n) -> { this.setSpeakerGlitchRate(n.getFloatValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the howlingEventCount property value. Number of times during the call that the media endpoint detected howling or screeching audio.
@@ -294,6 +293,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("captureDeviceDriver", this.getCaptureDeviceDriver());
@@ -325,6 +325,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -333,6 +334,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the captureDeviceDriver property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCaptureDeviceDriver(@javax.annotation.Nullable final String value) {
         this._captureDeviceDriver = value;
     }
@@ -341,6 +343,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the captureDeviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCaptureDeviceName(@javax.annotation.Nullable final String value) {
         this._captureDeviceName = value;
     }
@@ -349,6 +352,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the captureNotFunctioningEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCaptureNotFunctioningEventRatio(@javax.annotation.Nullable final Float value) {
         this._captureNotFunctioningEventRatio = value;
     }
@@ -357,6 +361,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the cpuInsufficentEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCpuInsufficentEventRatio(@javax.annotation.Nullable final Float value) {
         this._cpuInsufficentEventRatio = value;
     }
@@ -365,6 +370,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceClippingEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceClippingEventRatio(@javax.annotation.Nullable final Float value) {
         this._deviceClippingEventRatio = value;
     }
@@ -373,6 +379,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceGlitchEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceGlitchEventRatio(@javax.annotation.Nullable final Float value) {
         this._deviceGlitchEventRatio = value;
     }
@@ -381,6 +388,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the howlingEventCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHowlingEventCount(@javax.annotation.Nullable final Integer value) {
         this._howlingEventCount = value;
     }
@@ -389,6 +397,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the initialSignalLevelRootMeanSquare property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitialSignalLevelRootMeanSquare(@javax.annotation.Nullable final Float value) {
         this._initialSignalLevelRootMeanSquare = value;
     }
@@ -397,6 +406,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lowSpeechLevelEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLowSpeechLevelEventRatio(@javax.annotation.Nullable final Float value) {
         this._lowSpeechLevelEventRatio = value;
     }
@@ -405,6 +415,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lowSpeechToNoiseEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLowSpeechToNoiseEventRatio(@javax.annotation.Nullable final Float value) {
         this._lowSpeechToNoiseEventRatio = value;
     }
@@ -413,6 +424,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the micGlitchRate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicGlitchRate(@javax.annotation.Nullable final Float value) {
         this._micGlitchRate = value;
     }
@@ -421,6 +433,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -429,6 +442,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the receivedNoiseLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReceivedNoiseLevel(@javax.annotation.Nullable final Integer value) {
         this._receivedNoiseLevel = value;
     }
@@ -437,6 +451,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the receivedSignalLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReceivedSignalLevel(@javax.annotation.Nullable final Integer value) {
         this._receivedSignalLevel = value;
     }
@@ -445,6 +460,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the renderDeviceDriver property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRenderDeviceDriver(@javax.annotation.Nullable final String value) {
         this._renderDeviceDriver = value;
     }
@@ -453,6 +469,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the renderDeviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRenderDeviceName(@javax.annotation.Nullable final String value) {
         this._renderDeviceName = value;
     }
@@ -461,6 +478,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the renderMuteEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRenderMuteEventRatio(@javax.annotation.Nullable final Float value) {
         this._renderMuteEventRatio = value;
     }
@@ -469,6 +487,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the renderNotFunctioningEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRenderNotFunctioningEventRatio(@javax.annotation.Nullable final Float value) {
         this._renderNotFunctioningEventRatio = value;
     }
@@ -477,6 +496,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the renderZeroVolumeEventRatio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRenderZeroVolumeEventRatio(@javax.annotation.Nullable final Float value) {
         this._renderZeroVolumeEventRatio = value;
     }
@@ -485,6 +505,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sentNoiseLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentNoiseLevel(@javax.annotation.Nullable final Integer value) {
         this._sentNoiseLevel = value;
     }
@@ -493,6 +514,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sentSignalLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentSignalLevel(@javax.annotation.Nullable final Integer value) {
         this._sentSignalLevel = value;
     }
@@ -501,6 +523,7 @@ public class DeviceInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the speakerGlitchRate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpeakerGlitchRate(@javax.annotation.Nullable final Float value) {
         this._speakerGlitchRate = value;
     }

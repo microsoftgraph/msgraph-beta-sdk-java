@@ -28,9 +28,9 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * Instantiates a new deviceManagementTroubleshootingErrorDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementTroubleshootingErrorDetails() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceManagementTroubleshootingErrorDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -80,15 +80,14 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementTroubleshootingErrorDetails currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("context", (n) -> { currentObject.setContext(n.getStringValue()); });
-            this.put("failure", (n) -> { currentObject.setFailure(n.getStringValue()); });
-            this.put("failureDetails", (n) -> { currentObject.setFailureDetails(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("remediation", (n) -> { currentObject.setRemediation(n.getStringValue()); });
-            this.put("resources", (n) -> { currentObject.setResources(n.getCollectionOfObjectValues(DeviceManagementTroubleshootingErrorResource::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("context", (n) -> { this.setContext(n.getStringValue()); });
+        deserializerMap.put("failure", (n) -> { this.setFailure(n.getStringValue()); });
+        deserializerMap.put("failureDetails", (n) -> { this.setFailureDetails(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("remediation", (n) -> { this.setRemediation(n.getStringValue()); });
+        deserializerMap.put("resources", (n) -> { this.setResources(n.getCollectionOfObjectValues(DeviceManagementTroubleshootingErrorResource::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -119,6 +118,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("context", this.getContext());
@@ -134,6 +134,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +143,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * @param value Value to set for the context property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContext(@javax.annotation.Nullable final String value) {
         this._context = value;
     }
@@ -150,6 +152,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * @param value Value to set for the failure property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailure(@javax.annotation.Nullable final String value) {
         this._failure = value;
     }
@@ -158,6 +161,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * @param value Value to set for the failureDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailureDetails(@javax.annotation.Nullable final String value) {
         this._failureDetails = value;
     }
@@ -166,6 +170,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -174,6 +179,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * @param value Value to set for the remediation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediation(@javax.annotation.Nullable final String value) {
         this._remediation = value;
     }
@@ -182,6 +188,7 @@ public class DeviceManagementTroubleshootingErrorDetails implements AdditionalDa
      * @param value Value to set for the resources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResources(@javax.annotation.Nullable final java.util.List<DeviceManagementTroubleshootingErrorResource> value) {
         this._resources = value;
     }

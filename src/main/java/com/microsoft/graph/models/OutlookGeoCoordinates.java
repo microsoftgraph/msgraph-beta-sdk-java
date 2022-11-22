@@ -27,9 +27,9 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      * Instantiates a new outlookGeoCoordinates and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OutlookGeoCoordinates() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.outlookGeoCoordinates");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,15 +79,14 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OutlookGeoCoordinates currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("accuracy", (n) -> { currentObject.setAccuracy(n.getDoubleValue()); });
-            this.put("altitude", (n) -> { currentObject.setAltitude(n.getDoubleValue()); });
-            this.put("altitudeAccuracy", (n) -> { currentObject.setAltitudeAccuracy(n.getDoubleValue()); });
-            this.put("latitude", (n) -> { currentObject.setLatitude(n.getDoubleValue()); });
-            this.put("longitude", (n) -> { currentObject.setLongitude(n.getDoubleValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("accuracy", (n) -> { this.setAccuracy(n.getDoubleValue()); });
+        deserializerMap.put("altitude", (n) -> { this.setAltitude(n.getDoubleValue()); });
+        deserializerMap.put("altitudeAccuracy", (n) -> { this.setAltitudeAccuracy(n.getDoubleValue()); });
+        deserializerMap.put("latitude", (n) -> { this.setLatitude(n.getDoubleValue()); });
+        deserializerMap.put("longitude", (n) -> { this.setLongitude(n.getDoubleValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the latitude property value. The latitude of the location.
@@ -118,6 +117,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeDoubleValue("accuracy", this.getAccuracy());
@@ -133,6 +133,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accuracy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccuracy(@javax.annotation.Nullable final Double value) {
         this._accuracy = value;
     }
@@ -141,6 +142,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -149,6 +151,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the altitude property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAltitude(@javax.annotation.Nullable final Double value) {
         this._altitude = value;
     }
@@ -157,6 +160,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the altitudeAccuracy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAltitudeAccuracy(@javax.annotation.Nullable final Double value) {
         this._altitudeAccuracy = value;
     }
@@ -165,6 +169,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the latitude property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLatitude(@javax.annotation.Nullable final Double value) {
         this._latitude = value;
     }
@@ -173,6 +178,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the longitude property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLongitude(@javax.annotation.Nullable final Double value) {
         this._longitude = value;
     }
@@ -181,6 +187,7 @@ public class OutlookGeoCoordinates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

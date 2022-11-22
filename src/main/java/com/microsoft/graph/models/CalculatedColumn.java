@@ -23,9 +23,9 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      * Instantiates a new calculatedColumn and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CalculatedColumn() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.calculatedColumn");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,13 +51,12 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CalculatedColumn currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("format", (n) -> { currentObject.setFormat(n.getStringValue()); });
-            this.put("formula", (n) -> { currentObject.setFormula(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("outputType", (n) -> { currentObject.setOutputType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("format", (n) -> { this.setFormat(n.getStringValue()); });
+        deserializerMap.put("formula", (n) -> { this.setFormula(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("outputType", (n) -> { this.setOutputType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the format property value. For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.
@@ -96,6 +95,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("format", this.getFormat());
@@ -109,6 +109,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +118,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the format property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final String value) {
         this._format = value;
     }
@@ -125,6 +127,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the formula property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormula(@javax.annotation.Nullable final String value) {
         this._formula = value;
     }
@@ -133,6 +136,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +145,7 @@ public class CalculatedColumn implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the outputType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutputType(@javax.annotation.Nullable final String value) {
         this._outputType = value;
     }

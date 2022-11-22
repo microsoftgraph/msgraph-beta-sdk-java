@@ -25,9 +25,9 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
      * Instantiates a new accessReviewRecurrenceSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewRecurrenceSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessReviewRecurrenceSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,14 +61,13 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewRecurrenceSettings currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("durationInDays", (n) -> { currentObject.setDurationInDays(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recurrenceCount", (n) -> { currentObject.setRecurrenceCount(n.getIntegerValue()); });
-            this.put("recurrenceEndType", (n) -> { currentObject.setRecurrenceEndType(n.getStringValue()); });
-            this.put("recurrenceType", (n) -> { currentObject.setRecurrenceType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("durationInDays", (n) -> { this.setDurationInDays(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recurrenceCount", (n) -> { this.setRecurrenceCount(n.getIntegerValue()); });
+        deserializerMap.put("recurrenceEndType", (n) -> { this.setRecurrenceEndType(n.getStringValue()); });
+        deserializerMap.put("recurrenceType", (n) -> { this.setRecurrenceType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,6 +106,7 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("durationInDays", this.getDurationInDays());
@@ -121,6 +121,7 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +130,7 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
      * @param value Value to set for the durationInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationInDays(@javax.annotation.Nullable final Integer value) {
         this._durationInDays = value;
     }
@@ -137,6 +139,7 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -145,6 +148,7 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
      * @param value Value to set for the recurrenceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrenceCount(@javax.annotation.Nullable final Integer value) {
         this._recurrenceCount = value;
     }
@@ -153,6 +157,7 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
      * @param value Value to set for the recurrenceEndType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrenceEndType(@javax.annotation.Nullable final String value) {
         this._recurrenceEndType = value;
     }
@@ -161,6 +166,7 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Par
      * @param value Value to set for the recurrenceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrenceType(@javax.annotation.Nullable final String value) {
         this._recurrenceType = value;
     }

@@ -20,6 +20,7 @@ public class ClassifyFilePostRequestBody implements AdditionalDataHolder, Parsab
      * Instantiates a new classifyFilePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ClassifyFilePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -47,11 +48,10 @@ public class ClassifyFilePostRequestBody implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ClassifyFilePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("file", (n) -> { currentObject.setFile(n.getByteArrayValue()); });
-            this.put("sensitiveTypeIds", (n) -> { currentObject.setSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("file", (n) -> { this.setFile(n.getByteArrayValue()); });
+        deserializerMap.put("sensitiveTypeIds", (n) -> { this.setSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the file property value. The file property
@@ -74,6 +74,7 @@ public class ClassifyFilePostRequestBody implements AdditionalDataHolder, Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("file", this.getFile());
@@ -85,6 +86,7 @@ public class ClassifyFilePostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +95,7 @@ public class ClassifyFilePostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the file property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFile(@javax.annotation.Nullable final byte[] value) {
         this._file = value;
     }
@@ -101,6 +104,7 @@ public class ClassifyFilePostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the sensitiveTypeIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitiveTypeIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._sensitiveTypeIds = value;
     }

@@ -35,7 +35,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     /** Details about the remediation status. */
     private String _remediationStatusDetails;
     /** The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'. */
-    private java.util.List<String> _roles;
+    private java.util.List<EvidenceRole> _roles;
     /** Array of custom tags associated with an evidence instance, for example to denote a group of devices, high value assets, etc. */
     private java.util.List<String> _tags;
     /** The verdict property */
@@ -44,9 +44,9 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * Instantiates a new alertEvidence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AlertEvidence() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.security.alertEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -100,16 +100,15 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AlertEvidence currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("remediationStatus", (n) -> { currentObject.setRemediationStatus(n.getEnumValue(EvidenceRemediationStatus.class)); });
-            this.put("remediationStatusDetails", (n) -> { currentObject.setRemediationStatusDetails(n.getStringValue()); });
-            this.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("verdict", (n) -> { currentObject.setVerdict(n.getEnumValue(EvidenceVerdict.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("remediationStatus", (n) -> { this.setRemediationStatus(n.getEnumValue(EvidenceRemediationStatus.class)); });
+        deserializerMap.put("remediationStatusDetails", (n) -> { this.setRemediationStatusDetails(n.getStringValue()); });
+        deserializerMap.put("roles", (n) -> { this.setRoles(n.getCollectionOfEnumValues(EvidenceRole.class)); });
+        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("verdict", (n) -> { this.setVerdict(n.getEnumValue(EvidenceVerdict.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -137,10 +136,10 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'.
-     * @return a string
+     * @return a evidenceRole
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getRoles() {
+    public java.util.List<EvidenceRole> getRoles() {
         return this._roles;
     }
     /**
@@ -164,13 +163,14 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("remediationStatus", this.getRemediationStatus());
         writer.writeStringValue("remediationStatusDetails", this.getRemediationStatusDetails());
-        writer.writeCollectionOfPrimitiveValues("roles", this.getRoles());
+        writer.writeCollectionOfEnumValues("roles", this.getRoles());
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
         writer.writeEnumValue("verdict", this.getVerdict());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -180,6 +180,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -188,6 +189,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -196,6 +198,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -204,6 +207,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the remediationStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediationStatus(@javax.annotation.Nullable final EvidenceRemediationStatus value) {
         this._remediationStatus = value;
     }
@@ -212,6 +216,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the remediationStatusDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediationStatusDetails(@javax.annotation.Nullable final String value) {
         this._remediationStatusDetails = value;
     }
@@ -220,7 +225,8 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the roles property.
      * @return a void
      */
-    public void setRoles(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setRoles(@javax.annotation.Nullable final java.util.List<EvidenceRole> value) {
         this._roles = value;
     }
     /**
@@ -228,6 +234,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
     }
@@ -236,6 +243,7 @@ public class AlertEvidence implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the verdict property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVerdict(@javax.annotation.Nullable final EvidenceVerdict value) {
         this._verdict = value;
     }

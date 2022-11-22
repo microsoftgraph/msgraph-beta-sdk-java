@@ -18,9 +18,9 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
      * Instantiates a new B2cAuthenticationMethodsPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public B2cAuthenticationMethodsPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.b2cAuthenticationMethodsPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -38,12 +38,11 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final B2cAuthenticationMethodsPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("isEmailPasswordAuthenticationEnabled", (n) -> { currentObject.setIsEmailPasswordAuthenticationEnabled(n.getBooleanValue()); });
-            this.put("isPhoneOneTimePasswordAuthenticationEnabled", (n) -> { currentObject.setIsPhoneOneTimePasswordAuthenticationEnabled(n.getBooleanValue()); });
-            this.put("isUserNameAuthenticationEnabled", (n) -> { currentObject.setIsUserNameAuthenticationEnabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isEmailPasswordAuthenticationEnabled", (n) -> { this.setIsEmailPasswordAuthenticationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isPhoneOneTimePasswordAuthenticationEnabled", (n) -> { this.setIsPhoneOneTimePasswordAuthenticationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isUserNameAuthenticationEnabled", (n) -> { this.setIsUserNameAuthenticationEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isEmailPasswordAuthenticationEnabled property value. The tenant admin can configure local accounts using email if the email and password authentication method is enabled.
@@ -74,6 +73,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +86,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the isEmailPasswordAuthenticationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEmailPasswordAuthenticationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEmailPasswordAuthenticationEnabled = value;
     }
@@ -94,6 +95,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the isPhoneOneTimePasswordAuthenticationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPhoneOneTimePasswordAuthenticationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isPhoneOneTimePasswordAuthenticationEnabled = value;
     }
@@ -102,6 +104,7 @@ public class B2cAuthenticationMethodsPolicy extends Entity implements Parsable {
      * @param value Value to set for the isUserNameAuthenticationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsUserNameAuthenticationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isUserNameAuthenticationEnabled = value;
     }

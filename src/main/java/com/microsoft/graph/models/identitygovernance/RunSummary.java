@@ -11,15 +11,15 @@ import java.util.Objects;
 public class RunSummary implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The failedRuns property */
+    /** The number of failed workflow runs. */
     private Integer _failedRuns;
-    /** The failedTasks property */
+    /** The number of failed tasks of a workflow. */
     private Integer _failedTasks;
     /** The OdataType property */
     private String _odataType;
-    /** The successfulRuns property */
+    /** The number of successful workflow runs. */
     private Integer _successfulRuns;
-    /** The totalRuns property */
+    /** The total number of runs for a workflow. */
     private Integer _totalRuns;
     /** The totalTasks property */
     private Integer _totalTasks;
@@ -29,9 +29,9 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * Instantiates a new runSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RunSummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.identityGovernance.runSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +52,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the failedRuns property value. The failedRuns property
+     * Gets the failedRuns property value. The number of failed workflow runs.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -60,7 +60,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
         return this._failedRuns;
     }
     /**
-     * Gets the failedTasks property value. The failedTasks property
+     * Gets the failedTasks property value. The number of failed tasks of a workflow.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -73,16 +73,15 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RunSummary currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("failedRuns", (n) -> { currentObject.setFailedRuns(n.getIntegerValue()); });
-            this.put("failedTasks", (n) -> { currentObject.setFailedTasks(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("successfulRuns", (n) -> { currentObject.setSuccessfulRuns(n.getIntegerValue()); });
-            this.put("totalRuns", (n) -> { currentObject.setTotalRuns(n.getIntegerValue()); });
-            this.put("totalTasks", (n) -> { currentObject.setTotalTasks(n.getIntegerValue()); });
-            this.put("totalUsers", (n) -> { currentObject.setTotalUsers(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("failedRuns", (n) -> { this.setFailedRuns(n.getIntegerValue()); });
+        deserializerMap.put("failedTasks", (n) -> { this.setFailedTasks(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("successfulRuns", (n) -> { this.setSuccessfulRuns(n.getIntegerValue()); });
+        deserializerMap.put("totalRuns", (n) -> { this.setTotalRuns(n.getIntegerValue()); });
+        deserializerMap.put("totalTasks", (n) -> { this.setTotalTasks(n.getIntegerValue()); });
+        deserializerMap.put("totalUsers", (n) -> { this.setTotalUsers(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -93,7 +92,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the successfulRuns property value. The successfulRuns property
+     * Gets the successfulRuns property value. The number of successful workflow runs.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -101,7 +100,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
         return this._successfulRuns;
     }
     /**
-     * Gets the totalRuns property value. The totalRuns property
+     * Gets the totalRuns property value. The total number of runs for a workflow.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -129,6 +128,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("failedRuns", this.getFailedRuns());
@@ -145,22 +145,25 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
     /**
-     * Sets the failedRuns property value. The failedRuns property
+     * Sets the failedRuns property value. The number of failed workflow runs.
      * @param value Value to set for the failedRuns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedRuns(@javax.annotation.Nullable final Integer value) {
         this._failedRuns = value;
     }
     /**
-     * Sets the failedTasks property value. The failedTasks property
+     * Sets the failedTasks property value. The number of failed tasks of a workflow.
      * @param value Value to set for the failedTasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedTasks(@javax.annotation.Nullable final Integer value) {
         this._failedTasks = value;
     }
@@ -169,22 +172,25 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
     /**
-     * Sets the successfulRuns property value. The successfulRuns property
+     * Sets the successfulRuns property value. The number of successful workflow runs.
      * @param value Value to set for the successfulRuns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessfulRuns(@javax.annotation.Nullable final Integer value) {
         this._successfulRuns = value;
     }
     /**
-     * Sets the totalRuns property value. The totalRuns property
+     * Sets the totalRuns property value. The total number of runs for a workflow.
      * @param value Value to set for the totalRuns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalRuns(@javax.annotation.Nullable final Integer value) {
         this._totalRuns = value;
     }
@@ -193,6 +199,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the totalTasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalTasks(@javax.annotation.Nullable final Integer value) {
         this._totalTasks = value;
     }
@@ -201,6 +208,7 @@ public class RunSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the totalUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalUsers(@javax.annotation.Nullable final Integer value) {
         this._totalUsers = value;
     }

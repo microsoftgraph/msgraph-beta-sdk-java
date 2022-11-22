@@ -103,6 +103,7 @@ public class Event extends OutlookItem implements Parsable {
      * Instantiates a new Event and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Event() {
         super();
         this.setOdataType("#microsoft.graph.event");
@@ -203,54 +204,53 @@ public class Event extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Event currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowNewTimeProposals", (n) -> { currentObject.setAllowNewTimeProposals(n.getBooleanValue()); });
-            this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
-            this.put("attendees", (n) -> { currentObject.setAttendees(n.getCollectionOfObjectValues(Attendee::createFromDiscriminatorValue)); });
-            this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("bodyPreview", (n) -> { currentObject.setBodyPreview(n.getStringValue()); });
-            this.put("calendar", (n) -> { currentObject.setCalendar(n.getObjectValue(Calendar::createFromDiscriminatorValue)); });
-            this.put("cancelledOccurrences", (n) -> { currentObject.setCancelledOccurrences(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("end", (n) -> { currentObject.setEnd(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("exceptionOccurrences", (n) -> { currentObject.setExceptionOccurrences(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
-            this.put("hideAttendees", (n) -> { currentObject.setHideAttendees(n.getBooleanValue()); });
-            this.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
-            this.put("instances", (n) -> { currentObject.setInstances(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
-            this.put("isAllDay", (n) -> { currentObject.setIsAllDay(n.getBooleanValue()); });
-            this.put("isCancelled", (n) -> { currentObject.setIsCancelled(n.getBooleanValue()); });
-            this.put("isDraft", (n) -> { currentObject.setIsDraft(n.getBooleanValue()); });
-            this.put("isOnlineMeeting", (n) -> { currentObject.setIsOnlineMeeting(n.getBooleanValue()); });
-            this.put("isOrganizer", (n) -> { currentObject.setIsOrganizer(n.getBooleanValue()); });
-            this.put("isReminderOn", (n) -> { currentObject.setIsReminderOn(n.getBooleanValue()); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
-            this.put("locations", (n) -> { currentObject.setLocations(n.getCollectionOfObjectValues(Location::createFromDiscriminatorValue)); });
-            this.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("occurrenceId", (n) -> { currentObject.setOccurrenceId(n.getStringValue()); });
-            this.put("onlineMeeting", (n) -> { currentObject.setOnlineMeeting(n.getObjectValue(OnlineMeetingInfo::createFromDiscriminatorValue)); });
-            this.put("onlineMeetingProvider", (n) -> { currentObject.setOnlineMeetingProvider(n.getEnumValue(OnlineMeetingProviderType.class)); });
-            this.put("onlineMeetingUrl", (n) -> { currentObject.setOnlineMeetingUrl(n.getStringValue()); });
-            this.put("organizer", (n) -> { currentObject.setOrganizer(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
-            this.put("originalEndTimeZone", (n) -> { currentObject.setOriginalEndTimeZone(n.getStringValue()); });
-            this.put("originalStart", (n) -> { currentObject.setOriginalStart(n.getOffsetDateTimeValue()); });
-            this.put("originalStartTimeZone", (n) -> { currentObject.setOriginalStartTimeZone(n.getStringValue()); });
-            this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
-            this.put("reminderMinutesBeforeStart", (n) -> { currentObject.setReminderMinutesBeforeStart(n.getIntegerValue()); });
-            this.put("responseRequested", (n) -> { currentObject.setResponseRequested(n.getBooleanValue()); });
-            this.put("responseStatus", (n) -> { currentObject.setResponseStatus(n.getObjectValue(ResponseStatus::createFromDiscriminatorValue)); });
-            this.put("sensitivity", (n) -> { currentObject.setSensitivity(n.getEnumValue(Sensitivity.class)); });
-            this.put("seriesMasterId", (n) -> { currentObject.setSeriesMasterId(n.getStringValue()); });
-            this.put("showAs", (n) -> { currentObject.setShowAs(n.getEnumValue(FreeBusyStatus.class)); });
-            this.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("start", (n) -> { currentObject.setStart(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
-            this.put("transactionId", (n) -> { currentObject.setTransactionId(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(EventType.class)); });
-            this.put("uid", (n) -> { currentObject.setUid(n.getStringValue()); });
-            this.put("webLink", (n) -> { currentObject.setWebLink(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowNewTimeProposals", (n) -> { this.setAllowNewTimeProposals(n.getBooleanValue()); });
+        deserializerMap.put("attachments", (n) -> { this.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
+        deserializerMap.put("attendees", (n) -> { this.setAttendees(n.getCollectionOfObjectValues(Attendee::createFromDiscriminatorValue)); });
+        deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("bodyPreview", (n) -> { this.setBodyPreview(n.getStringValue()); });
+        deserializerMap.put("calendar", (n) -> { this.setCalendar(n.getObjectValue(Calendar::createFromDiscriminatorValue)); });
+        deserializerMap.put("cancelledOccurrences", (n) -> { this.setCancelledOccurrences(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("end", (n) -> { this.setEnd(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("exceptionOccurrences", (n) -> { this.setExceptionOccurrences(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
+        deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
+        deserializerMap.put("hideAttendees", (n) -> { this.setHideAttendees(n.getBooleanValue()); });
+        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(Importance.class)); });
+        deserializerMap.put("instances", (n) -> { this.setInstances(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
+        deserializerMap.put("isAllDay", (n) -> { this.setIsAllDay(n.getBooleanValue()); });
+        deserializerMap.put("isCancelled", (n) -> { this.setIsCancelled(n.getBooleanValue()); });
+        deserializerMap.put("isDraft", (n) -> { this.setIsDraft(n.getBooleanValue()); });
+        deserializerMap.put("isOnlineMeeting", (n) -> { this.setIsOnlineMeeting(n.getBooleanValue()); });
+        deserializerMap.put("isOrganizer", (n) -> { this.setIsOrganizer(n.getBooleanValue()); });
+        deserializerMap.put("isReminderOn", (n) -> { this.setIsReminderOn(n.getBooleanValue()); });
+        deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
+        deserializerMap.put("locations", (n) -> { this.setLocations(n.getCollectionOfObjectValues(Location::createFromDiscriminatorValue)); });
+        deserializerMap.put("multiValueExtendedProperties", (n) -> { this.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("occurrenceId", (n) -> { this.setOccurrenceId(n.getStringValue()); });
+        deserializerMap.put("onlineMeeting", (n) -> { this.setOnlineMeeting(n.getObjectValue(OnlineMeetingInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("onlineMeetingProvider", (n) -> { this.setOnlineMeetingProvider(n.getEnumValue(OnlineMeetingProviderType.class)); });
+        deserializerMap.put("onlineMeetingUrl", (n) -> { this.setOnlineMeetingUrl(n.getStringValue()); });
+        deserializerMap.put("organizer", (n) -> { this.setOrganizer(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("originalEndTimeZone", (n) -> { this.setOriginalEndTimeZone(n.getStringValue()); });
+        deserializerMap.put("originalStart", (n) -> { this.setOriginalStart(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("originalStartTimeZone", (n) -> { this.setOriginalStartTimeZone(n.getStringValue()); });
+        deserializerMap.put("recurrence", (n) -> { this.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
+        deserializerMap.put("reminderMinutesBeforeStart", (n) -> { this.setReminderMinutesBeforeStart(n.getIntegerValue()); });
+        deserializerMap.put("responseRequested", (n) -> { this.setResponseRequested(n.getBooleanValue()); });
+        deserializerMap.put("responseStatus", (n) -> { this.setResponseStatus(n.getObjectValue(ResponseStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("sensitivity", (n) -> { this.setSensitivity(n.getEnumValue(Sensitivity.class)); });
+        deserializerMap.put("seriesMasterId", (n) -> { this.setSeriesMasterId(n.getStringValue()); });
+        deserializerMap.put("showAs", (n) -> { this.setShowAs(n.getEnumValue(FreeBusyStatus.class)); });
+        deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("start", (n) -> { this.setStart(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
+        deserializerMap.put("transactionId", (n) -> { this.setTransactionId(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(EventType.class)); });
+        deserializerMap.put("uid", (n) -> { this.setUid(n.getStringValue()); });
+        deserializerMap.put("webLink", (n) -> { this.setWebLink(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hasAttachments property value. Set to true if the event has attachments.
@@ -537,6 +537,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -591,6 +592,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the allowNewTimeProposals property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowNewTimeProposals(@javax.annotation.Nullable final Boolean value) {
         this._allowNewTimeProposals = value;
     }
@@ -599,6 +601,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the attachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttachments(@javax.annotation.Nullable final java.util.List<Attachment> value) {
         this._attachments = value;
     }
@@ -607,6 +610,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the attendees property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttendees(@javax.annotation.Nullable final java.util.List<Attendee> value) {
         this._attendees = value;
     }
@@ -615,6 +619,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the body property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBody(@javax.annotation.Nullable final ItemBody value) {
         this._body = value;
     }
@@ -623,6 +628,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the bodyPreview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBodyPreview(@javax.annotation.Nullable final String value) {
         this._bodyPreview = value;
     }
@@ -631,6 +637,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the calendar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalendar(@javax.annotation.Nullable final Calendar value) {
         this._calendar = value;
     }
@@ -639,6 +646,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the cancelledOccurrences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCancelledOccurrences(@javax.annotation.Nullable final java.util.List<String> value) {
         this._cancelledOccurrences = value;
     }
@@ -647,6 +655,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the end property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnd(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._end = value;
     }
@@ -655,6 +664,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the exceptionOccurrences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExceptionOccurrences(@javax.annotation.Nullable final java.util.List<Event> value) {
         this._exceptionOccurrences = value;
     }
@@ -663,6 +673,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -671,6 +682,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
         this._hasAttachments = value;
     }
@@ -679,6 +691,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the hideAttendees property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideAttendees(@javax.annotation.Nullable final Boolean value) {
         this._hideAttendees = value;
     }
@@ -687,6 +700,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the importance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportance(@javax.annotation.Nullable final Importance value) {
         this._importance = value;
     }
@@ -695,6 +709,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the instances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstances(@javax.annotation.Nullable final java.util.List<Event> value) {
         this._instances = value;
     }
@@ -703,6 +718,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the isAllDay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAllDay(@javax.annotation.Nullable final Boolean value) {
         this._isAllDay = value;
     }
@@ -711,6 +727,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the isCancelled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCancelled(@javax.annotation.Nullable final Boolean value) {
         this._isCancelled = value;
     }
@@ -719,6 +736,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the isDraft property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDraft(@javax.annotation.Nullable final Boolean value) {
         this._isDraft = value;
     }
@@ -727,6 +745,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the isOnlineMeeting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsOnlineMeeting(@javax.annotation.Nullable final Boolean value) {
         this._isOnlineMeeting = value;
     }
@@ -735,6 +754,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the isOrganizer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsOrganizer(@javax.annotation.Nullable final Boolean value) {
         this._isOrganizer = value;
     }
@@ -743,6 +763,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the isReminderOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsReminderOn(@javax.annotation.Nullable final Boolean value) {
         this._isReminderOn = value;
     }
@@ -751,6 +772,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final Location value) {
         this._location = value;
     }
@@ -759,6 +781,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the locations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocations(@javax.annotation.Nullable final java.util.List<Location> value) {
         this._locations = value;
     }
@@ -767,6 +790,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the multiValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this._multiValueExtendedProperties = value;
     }
@@ -775,6 +799,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the occurrenceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOccurrenceId(@javax.annotation.Nullable final String value) {
         this._occurrenceId = value;
     }
@@ -783,6 +808,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the onlineMeeting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnlineMeeting(@javax.annotation.Nullable final OnlineMeetingInfo value) {
         this._onlineMeeting = value;
     }
@@ -791,6 +817,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the onlineMeetingProvider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnlineMeetingProvider(@javax.annotation.Nullable final OnlineMeetingProviderType value) {
         this._onlineMeetingProvider = value;
     }
@@ -799,6 +826,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the onlineMeetingUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnlineMeetingUrl(@javax.annotation.Nullable final String value) {
         this._onlineMeetingUrl = value;
     }
@@ -807,6 +835,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the organizer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizer(@javax.annotation.Nullable final Recipient value) {
         this._organizer = value;
     }
@@ -815,6 +844,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the originalEndTimeZone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginalEndTimeZone(@javax.annotation.Nullable final String value) {
         this._originalEndTimeZone = value;
     }
@@ -823,6 +853,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the originalStart property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginalStart(@javax.annotation.Nullable final OffsetDateTime value) {
         this._originalStart = value;
     }
@@ -831,6 +862,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the originalStartTimeZone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginalStartTimeZone(@javax.annotation.Nullable final String value) {
         this._originalStartTimeZone = value;
     }
@@ -839,6 +871,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the recurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrence(@javax.annotation.Nullable final PatternedRecurrence value) {
         this._recurrence = value;
     }
@@ -847,6 +880,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the reminderMinutesBeforeStart property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReminderMinutesBeforeStart(@javax.annotation.Nullable final Integer value) {
         this._reminderMinutesBeforeStart = value;
     }
@@ -855,6 +889,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the responseRequested property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResponseRequested(@javax.annotation.Nullable final Boolean value) {
         this._responseRequested = value;
     }
@@ -863,6 +898,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the responseStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResponseStatus(@javax.annotation.Nullable final ResponseStatus value) {
         this._responseStatus = value;
     }
@@ -871,6 +907,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the sensitivity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitivity(@javax.annotation.Nullable final Sensitivity value) {
         this._sensitivity = value;
     }
@@ -879,6 +916,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the seriesMasterId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSeriesMasterId(@javax.annotation.Nullable final String value) {
         this._seriesMasterId = value;
     }
@@ -887,6 +925,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the showAs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowAs(@javax.annotation.Nullable final FreeBusyStatus value) {
         this._showAs = value;
     }
@@ -895,6 +934,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the singleValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this._singleValueExtendedProperties = value;
     }
@@ -903,6 +943,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the start property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStart(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._start = value;
     }
@@ -911,6 +952,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
         this._subject = value;
     }
@@ -919,6 +961,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the transactionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransactionId(@javax.annotation.Nullable final String value) {
         this._transactionId = value;
     }
@@ -927,6 +970,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final EventType value) {
         this._type = value;
     }
@@ -935,6 +979,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the uid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUid(@javax.annotation.Nullable final String value) {
         this._uid = value;
     }
@@ -943,6 +988,7 @@ public class Event extends OutlookItem implements Parsable {
      * @param value Value to set for the webLink property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebLink(@javax.annotation.Nullable final String value) {
         this._webLink = value;
     }

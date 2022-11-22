@@ -30,9 +30,9 @@ public class DataClassificationService extends Entity implements Parsable {
      * Instantiates a new DataClassificationService and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DataClassificationService() {
         super();
-        this.setOdataType("#microsoft.graph.dataClassificationService");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -98,18 +98,17 @@ public class DataClassificationService extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DataClassificationService currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("classifyFileJobs", (n) -> { currentObject.setClassifyFileJobs(n.getCollectionOfObjectValues(JobResponseBase::createFromDiscriminatorValue)); });
-            this.put("classifyTextJobs", (n) -> { currentObject.setClassifyTextJobs(n.getCollectionOfObjectValues(JobResponseBase::createFromDiscriminatorValue)); });
-            this.put("evaluateDlpPoliciesJobs", (n) -> { currentObject.setEvaluateDlpPoliciesJobs(n.getCollectionOfObjectValues(JobResponseBase::createFromDiscriminatorValue)); });
-            this.put("evaluateLabelJobs", (n) -> { currentObject.setEvaluateLabelJobs(n.getCollectionOfObjectValues(JobResponseBase::createFromDiscriminatorValue)); });
-            this.put("exactMatchDataStores", (n) -> { currentObject.setExactMatchDataStores(n.getCollectionOfObjectValues(ExactMatchDataStore::createFromDiscriminatorValue)); });
-            this.put("exactMatchUploadAgents", (n) -> { currentObject.setExactMatchUploadAgents(n.getCollectionOfObjectValues(ExactMatchUploadAgent::createFromDiscriminatorValue)); });
-            this.put("jobs", (n) -> { currentObject.setJobs(n.getCollectionOfObjectValues(JobResponseBase::createFromDiscriminatorValue)); });
-            this.put("sensitiveTypes", (n) -> { currentObject.setSensitiveTypes(n.getCollectionOfObjectValues(SensitiveType::createFromDiscriminatorValue)); });
-            this.put("sensitivityLabels", (n) -> { currentObject.setSensitivityLabels(n.getCollectionOfObjectValues(SensitivityLabel::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("classifyFileJobs", (n) -> { this.setClassifyFileJobs(n.getCollectionOfObjectValues(JobResponseBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("classifyTextJobs", (n) -> { this.setClassifyTextJobs(n.getCollectionOfObjectValues(JobResponseBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("evaluateDlpPoliciesJobs", (n) -> { this.setEvaluateDlpPoliciesJobs(n.getCollectionOfObjectValues(JobResponseBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("evaluateLabelJobs", (n) -> { this.setEvaluateLabelJobs(n.getCollectionOfObjectValues(JobResponseBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("exactMatchDataStores", (n) -> { this.setExactMatchDataStores(n.getCollectionOfObjectValues(ExactMatchDataStore::createFromDiscriminatorValue)); });
+        deserializerMap.put("exactMatchUploadAgents", (n) -> { this.setExactMatchUploadAgents(n.getCollectionOfObjectValues(ExactMatchUploadAgent::createFromDiscriminatorValue)); });
+        deserializerMap.put("jobs", (n) -> { this.setJobs(n.getCollectionOfObjectValues(JobResponseBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("sensitiveTypes", (n) -> { this.setSensitiveTypes(n.getCollectionOfObjectValues(SensitiveType::createFromDiscriminatorValue)); });
+        deserializerMap.put("sensitivityLabels", (n) -> { this.setSensitivityLabels(n.getCollectionOfObjectValues(SensitivityLabel::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the jobs property value. The jobs property
@@ -140,6 +139,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,6 +158,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the classifyFileJobs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassifyFileJobs(@javax.annotation.Nullable final java.util.List<JobResponseBase> value) {
         this._classifyFileJobs = value;
     }
@@ -166,6 +167,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the classifyTextJobs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassifyTextJobs(@javax.annotation.Nullable final java.util.List<JobResponseBase> value) {
         this._classifyTextJobs = value;
     }
@@ -174,6 +176,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the evaluateDlpPoliciesJobs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvaluateDlpPoliciesJobs(@javax.annotation.Nullable final java.util.List<JobResponseBase> value) {
         this._evaluateDlpPoliciesJobs = value;
     }
@@ -182,6 +185,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the evaluateLabelJobs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvaluateLabelJobs(@javax.annotation.Nullable final java.util.List<JobResponseBase> value) {
         this._evaluateLabelJobs = value;
     }
@@ -190,6 +194,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the exactMatchDataStores property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExactMatchDataStores(@javax.annotation.Nullable final java.util.List<ExactMatchDataStore> value) {
         this._exactMatchDataStores = value;
     }
@@ -198,6 +203,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the exactMatchUploadAgents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExactMatchUploadAgents(@javax.annotation.Nullable final java.util.List<ExactMatchUploadAgent> value) {
         this._exactMatchUploadAgents = value;
     }
@@ -206,6 +212,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the jobs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJobs(@javax.annotation.Nullable final java.util.List<JobResponseBase> value) {
         this._jobs = value;
     }
@@ -214,6 +221,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the sensitiveTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitiveTypes(@javax.annotation.Nullable final java.util.List<SensitiveType> value) {
         this._sensitiveTypes = value;
     }
@@ -222,6 +230,7 @@ public class DataClassificationService extends Entity implements Parsable {
      * @param value Value to set for the sensitivityLabels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitivityLabels(@javax.annotation.Nullable final java.util.List<SensitivityLabel> value) {
         this._sensitivityLabels = value;
     }

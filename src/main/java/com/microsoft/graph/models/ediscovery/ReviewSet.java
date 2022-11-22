@@ -23,9 +23,9 @@ public class ReviewSet extends Entity implements Parsable {
      * Instantiates a new reviewSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ReviewSet() {
         super();
-        this.setOdataType("#microsoft.graph.ediscovery.reviewSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,13 +67,12 @@ public class ReviewSet extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ReviewSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("queries", (n) -> { currentObject.setQueries(n.getCollectionOfObjectValues(ReviewSetQuery::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("queries", (n) -> { this.setQueries(n.getCollectionOfObjectValues(ReviewSetQuery::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the queries property value. The queries property
@@ -88,6 +87,7 @@ public class ReviewSet extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -101,6 +101,7 @@ public class ReviewSet extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -109,6 +110,7 @@ public class ReviewSet extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -117,6 +119,7 @@ public class ReviewSet extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -125,6 +128,7 @@ public class ReviewSet extends Entity implements Parsable {
      * @param value Value to set for the queries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueries(@javax.annotation.Nullable final java.util.List<ReviewSetQuery> value) {
         this._queries = value;
     }

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class MessageEvent extends Entity implements Parsable {
     /** The dateTime property */
     private OffsetDateTime _dateTime;
@@ -16,17 +17,17 @@ public class MessageEvent extends Entity implements Parsable {
     /** The eventType property */
     private MessageEventType _eventType;
     /**
-     * Instantiates a new MessageEvent and sets the default values.
+     * Instantiates a new messageEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MessageEvent() {
         super();
-        this.setOdataType("#microsoft.graph.messageEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MessageEvent
+     * @return a messageEvent
      */
     @javax.annotation.Nonnull
     public static MessageEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -63,18 +64,18 @@ public class MessageEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MessageEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("dateTime", (n) -> { currentObject.setDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("eventType", (n) -> { currentObject.setEventType(n.getEnumValue(MessageEventType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("dateTime", (n) -> { this.setDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("eventType", (n) -> { this.setEventType(n.getEnumValue(MessageEventType.class)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +88,7 @@ public class MessageEvent extends Entity implements Parsable {
      * @param value Value to set for the dateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._dateTime = value;
     }
@@ -95,6 +97,7 @@ public class MessageEvent extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -103,6 +106,7 @@ public class MessageEvent extends Entity implements Parsable {
      * @param value Value to set for the eventType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventType(@javax.annotation.Nullable final MessageEventType value) {
         this._eventType = value;
     }

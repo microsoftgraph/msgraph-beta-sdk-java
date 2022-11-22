@@ -35,9 +35,9 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * Instantiates a new accessPackageResourceEnvironment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageResourceEnvironment() {
         super();
-        this.setOdataType("#microsoft.graph.accessPackageResourceEnvironment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -103,20 +103,19 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessPackageResourceEnvironment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessPackageResources", (n) -> { currentObject.setAccessPackageResources(n.getCollectionOfObjectValues(AccessPackageResource::createFromDiscriminatorValue)); });
-            this.put("connectionInfo", (n) -> { currentObject.setConnectionInfo(n.getObjectValue(ConnectionInfo::createFromDiscriminatorValue)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isDefaultEnvironment", (n) -> { currentObject.setIsDefaultEnvironment(n.getBooleanValue()); });
-            this.put("modifiedBy", (n) -> { currentObject.setModifiedBy(n.getStringValue()); });
-            this.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("originId", (n) -> { currentObject.setOriginId(n.getStringValue()); });
-            this.put("originSystem", (n) -> { currentObject.setOriginSystem(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackageResources", (n) -> { this.setAccessPackageResources(n.getCollectionOfObjectValues(AccessPackageResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("connectionInfo", (n) -> { this.setConnectionInfo(n.getObjectValue(ConnectionInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isDefaultEnvironment", (n) -> { this.setIsDefaultEnvironment(n.getBooleanValue()); });
+        deserializerMap.put("modifiedBy", (n) -> { this.setModifiedBy(n.getStringValue()); });
+        deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("originId", (n) -> { this.setOriginId(n.getStringValue()); });
+        deserializerMap.put("originSystem", (n) -> { this.setOriginSystem(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefaultEnvironment property value. Determines whether this is default environment or not. It is set to true for all static origin systems, such as Azure AD groups and Azure AD Applications.
@@ -163,6 +162,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -183,6 +183,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the accessPackageResources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResources(@javax.annotation.Nullable final java.util.List<AccessPackageResource> value) {
         this._accessPackageResources = value;
     }
@@ -191,6 +192,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the connectionInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectionInfo(@javax.annotation.Nullable final ConnectionInfo value) {
         this._connectionInfo = value;
     }
@@ -199,6 +201,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final String value) {
         this._createdBy = value;
     }
@@ -207,6 +210,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -215,6 +219,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -223,6 +228,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -231,6 +237,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the isDefaultEnvironment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefaultEnvironment(@javax.annotation.Nullable final Boolean value) {
         this._isDefaultEnvironment = value;
     }
@@ -239,6 +246,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the modifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedBy(@javax.annotation.Nullable final String value) {
         this._modifiedBy = value;
     }
@@ -247,6 +255,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._modifiedDateTime = value;
     }
@@ -255,6 +264,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the originId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginId(@javax.annotation.Nullable final String value) {
         this._originId = value;
     }
@@ -263,6 +273,7 @@ public class AccessPackageResourceEnvironment extends Entity implements Parsable
      * @param value Value to set for the originSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginSystem(@javax.annotation.Nullable final String value) {
         this._originSystem = value;
     }

@@ -14,6 +14,7 @@ public class MacOSVpnConfiguration extends AppleVpnConfiguration implements Pars
      * Instantiates a new MacOSVpnConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSVpnConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSVpnConfiguration");
@@ -34,10 +35,9 @@ public class MacOSVpnConfiguration extends AppleVpnConfiguration implements Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSVpnConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("identityCertificate", (n) -> { currentObject.setIdentityCertificate(n.getObjectValue(MacOSCertificateProfileBase::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("identityCertificate", (n) -> { this.setIdentityCertificate(n.getObjectValue(MacOSCertificateProfileBase::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.
@@ -52,6 +52,7 @@ public class MacOSVpnConfiguration extends AppleVpnConfiguration implements Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class MacOSVpnConfiguration extends AppleVpnConfiguration implements Pars
      * @param value Value to set for the identityCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificate(@javax.annotation.Nullable final MacOSCertificateProfileBase value) {
         this._identityCertificate = value;
     }

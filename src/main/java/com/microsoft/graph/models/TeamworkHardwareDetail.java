@@ -27,9 +27,9 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * Instantiates a new teamworkHardwareDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkHardwareDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamworkHardwareDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,15 +55,14 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamworkHardwareDetail currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("macAddresses", (n) -> { currentObject.setMacAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
-            this.put("uniqueId", (n) -> { currentObject.setUniqueId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("macAddresses", (n) -> { this.setMacAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("serialNumber", (n) -> { this.setSerialNumber(n.getStringValue()); });
+        deserializerMap.put("uniqueId", (n) -> { this.setUniqueId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the macAddresses property value. MAC address.
@@ -118,6 +117,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("macAddresses", this.getMacAddresses());
@@ -133,6 +133,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +142,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the macAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
         this._macAddresses = value;
     }
@@ -149,6 +151,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -157,6 +160,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
@@ -165,6 +169,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -173,6 +178,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the serialNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSerialNumber(@javax.annotation.Nullable final String value) {
         this._serialNumber = value;
     }
@@ -181,6 +187,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the uniqueId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUniqueId(@javax.annotation.Nullable final String value) {
         this._uniqueId = value;
     }

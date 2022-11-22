@@ -8,11 +8,11 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class PlannerPlan extends PlannerDelta implements Parsable {
     /** Collection of buckets in the plan. Read-only. Nullable. */
     private java.util.List<PlannerBucket> _buckets;
-    /** Identifies the container of the plan. After it is set, this property can’t be updated. Required. */
+    /** Identifies the container of the plan. After it is set, this property cant be updated. Required. */
     private PlannerPlanContainer _container;
     /** Read-only. Additional user experiences in which this plan is used, represented as plannerPlanContext entries. */
     private PlannerPlanContextCollection _contexts;
@@ -20,6 +20,8 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
     private IdentitySet _createdBy;
     /** Read-only. Date and time at which the plan is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
     private OffsetDateTime _createdDateTime;
+    /** The creationSource property */
+    private PlannerPlanCreation _creationSource;
     /** Additional details about the plan. Read-only. Nullable. */
     private PlannerPlanDetails _details;
     /** The owner property */
@@ -32,9 +34,9 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * Instantiates a new plannerPlan and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerPlan() {
         super();
-        this.setOdataType("#microsoft.graph.plannerPlan");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,7 +57,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         return this._buckets;
     }
     /**
-     * Gets the container property value. Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+     * Gets the container property value. Identifies the container of the plan. After it is set, this property cant be updated. Required.
      * @return a plannerPlanContainer
      */
     @javax.annotation.Nullable
@@ -87,6 +89,14 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         return this._createdDateTime;
     }
     /**
+     * Gets the creationSource property value. The creationSource property
+     * @return a plannerPlanCreation
+     */
+    @javax.annotation.Nullable
+    public PlannerPlanCreation getCreationSource() {
+        return this._creationSource;
+    }
+    /**
      * Gets the details property value. Additional details about the plan. Read-only. Nullable.
      * @return a plannerPlanDetails
      */
@@ -100,18 +110,18 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerPlan currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("buckets", (n) -> { currentObject.setBuckets(n.getCollectionOfObjectValues(PlannerBucket::createFromDiscriminatorValue)); });
-            this.put("container", (n) -> { currentObject.setContainer(n.getObjectValue(PlannerPlanContainer::createFromDiscriminatorValue)); });
-            this.put("contexts", (n) -> { currentObject.setContexts(n.getObjectValue(PlannerPlanContextCollection::createFromDiscriminatorValue)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("details", (n) -> { currentObject.setDetails(n.getObjectValue(PlannerPlanDetails::createFromDiscriminatorValue)); });
-            this.put("owner", (n) -> { currentObject.setOwner(n.getStringValue()); });
-            this.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("buckets", (n) -> { this.setBuckets(n.getCollectionOfObjectValues(PlannerBucket::createFromDiscriminatorValue)); });
+        deserializerMap.put("container", (n) -> { this.setContainer(n.getObjectValue(PlannerPlanContainer::createFromDiscriminatorValue)); });
+        deserializerMap.put("contexts", (n) -> { this.setContexts(n.getObjectValue(PlannerPlanContextCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("creationSource", (n) -> { this.setCreationSource(n.getObjectValue(PlannerPlanCreation::createFromDiscriminatorValue)); });
+        deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(PlannerPlanDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("owner", (n) -> { this.setOwner(n.getStringValue()); });
+        deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the owner property value. The owner property
@@ -142,6 +152,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -150,6 +161,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         writer.writeObjectValue("contexts", this.getContexts());
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeObjectValue("creationSource", this.getCreationSource());
         writer.writeObjectValue("details", this.getDetails());
         writer.writeStringValue("owner", this.getOwner());
         writer.writeCollectionOfObjectValues("tasks", this.getTasks());
@@ -160,14 +172,16 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * @param value Value to set for the buckets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBuckets(@javax.annotation.Nullable final java.util.List<PlannerBucket> value) {
         this._buckets = value;
     }
     /**
-     * Sets the container property value. Identifies the container of the plan. After it is set, this property can’t be updated. Required.
+     * Sets the container property value. Identifies the container of the plan. After it is set, this property cant be updated. Required.
      * @param value Value to set for the container property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContainer(@javax.annotation.Nullable final PlannerPlanContainer value) {
         this._container = value;
     }
@@ -176,6 +190,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * @param value Value to set for the contexts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContexts(@javax.annotation.Nullable final PlannerPlanContextCollection value) {
         this._contexts = value;
     }
@@ -184,6 +199,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -192,14 +208,25 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
+    }
+    /**
+     * Sets the creationSource property value. The creationSource property
+     * @param value Value to set for the creationSource property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCreationSource(@javax.annotation.Nullable final PlannerPlanCreation value) {
+        this._creationSource = value;
     }
     /**
      * Sets the details property value. Additional details about the plan. Read-only. Nullable.
      * @param value Value to set for the details property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final PlannerPlanDetails value) {
         this._details = value;
     }
@@ -208,6 +235,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * @param value Value to set for the owner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwner(@javax.annotation.Nullable final String value) {
         this._owner = value;
     }
@@ -216,6 +244,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * @param value Value to set for the tasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTasks(@javax.annotation.Nullable final java.util.List<PlannerTask> value) {
         this._tasks = value;
     }
@@ -224,6 +253,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }

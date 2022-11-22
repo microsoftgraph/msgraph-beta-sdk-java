@@ -1,5 +1,6 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.devicemanagement.Monitoring;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -185,16 +186,14 @@ public class DeviceManagement extends Entity implements Parsable {
     private java.util.List<MobileAppTroubleshootingEvent> _mobileAppTroubleshootingEvents;
     /** The list of Mobile threat Defense connectors configured by the tenant. */
     private java.util.List<MobileThreatDefenseConnector> _mobileThreatDefenseConnectors;
+    /** The monitoring property */
+    private Monitoring _monitoring;
     /** The collection of Ndes connectors for this account. */
     private java.util.List<NdesConnector> _ndesConnectors;
     /** The Notification Message Templates. */
     private java.util.List<NotificationMessageTemplate> _notificationMessageTemplates;
     /** List of OEM Warranty Statuses */
     private java.util.List<OemWarrantyInformationOnboarding> _oemWarrantyInformationOnboarding;
-    /** A list of OrganizationalMessageDetails */
-    private java.util.List<OrganizationalMessageDetail> _organizationalMessageDetails;
-    /** A list of OrganizationalMessageGuidedContents */
-    private java.util.List<OrganizationalMessageGuidedContent> _organizationalMessageGuidedContents;
     /** The list of device remote action audits with the tenant. */
     private java.util.List<RemoteActionAudit> _remoteActionAudits;
     /** The remote assist partners. */
@@ -241,6 +240,12 @@ public class DeviceManagement extends Entity implements Parsable {
     private java.util.List<DeviceManagementTroubleshootingEvent> _troubleshootingEvents;
     /** When enabled, users assigned as administrators via Role Assignment Memberships do not require an assigned Intune license. Prior to this, only Intune licensed users were granted permissions with an Intune role unless they were assigned a role via Azure Active Directory. You are limited to 350 unlicensed direct members for each AAD security group in a role assignment, but you can assign multiple AAD security groups to a role if you need to support more than 350 unlicensed administrators. Licensed administrators are unaffected, do not have to be direct members, nor does the 350 member limit apply. This property is read-only. */
     private Boolean _unlicensedAdminstratorsEnabled;
+    /** The user experience analytics anomaly entity contains anomaly details. */
+    private java.util.List<UserExperienceAnalyticsAnomaly> _userExperienceAnalyticsAnomaly;
+    /** The user experience analytics anomaly entity contains device details. */
+    private java.util.List<UserExperienceAnalyticsAnomalyDevice> _userExperienceAnalyticsAnomalyDevice;
+    /** The user experience analytics anomaly severity overview entity contains the count information for each severity of anomaly. */
+    private UserExperienceAnalyticsAnomalySeverityOverview _userExperienceAnalyticsAnomalySeverityOverview;
     /** User experience analytics appHealth Application Performance */
     private java.util.List<UserExperienceAnalyticsAppHealthApplicationPerformance> _userExperienceAnalyticsAppHealthApplicationPerformance;
     /** User experience analytics appHealth Application Performance by App Version */
@@ -309,8 +314,6 @@ public class DeviceManagement extends Entity implements Parsable {
     private java.util.List<UserExperienceAnalyticsNotAutopilotReadyDevice> _userExperienceAnalyticsNotAutopilotReadyDevice;
     /** User experience analytics overview */
     private UserExperienceAnalyticsOverview _userExperienceAnalyticsOverview;
-    /** User experience analytics regression summary */
-    private UserExperienceAnalyticsRegressionSummary _userExperienceAnalyticsRegressionSummary;
     /** User experience analytics remote connection */
     private java.util.List<UserExperienceAnalyticsRemoteConnection> _userExperienceAnalyticsRemoteConnection;
     /** User experience analytics resource performance */
@@ -361,9 +364,9 @@ public class DeviceManagement extends Entity implements Parsable {
      * Instantiates a new DeviceManagement and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagement() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -861,183 +864,183 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagement currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accountMoveCompletionDateTime", (n) -> { currentObject.setAccountMoveCompletionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("adminConsent", (n) -> { currentObject.setAdminConsent(n.getObjectValue(AdminConsent::createFromDiscriminatorValue)); });
-            this.put("advancedThreatProtectionOnboardingStateSummary", (n) -> { currentObject.setAdvancedThreatProtectionOnboardingStateSummary(n.getObjectValue(AdvancedThreatProtectionOnboardingStateSummary::createFromDiscriminatorValue)); });
-            this.put("androidDeviceOwnerEnrollmentProfiles", (n) -> { currentObject.setAndroidDeviceOwnerEnrollmentProfiles(n.getCollectionOfObjectValues(AndroidDeviceOwnerEnrollmentProfile::createFromDiscriminatorValue)); });
-            this.put("androidForWorkAppConfigurationSchemas", (n) -> { currentObject.setAndroidForWorkAppConfigurationSchemas(n.getCollectionOfObjectValues(AndroidForWorkAppConfigurationSchema::createFromDiscriminatorValue)); });
-            this.put("androidForWorkEnrollmentProfiles", (n) -> { currentObject.setAndroidForWorkEnrollmentProfiles(n.getCollectionOfObjectValues(AndroidForWorkEnrollmentProfile::createFromDiscriminatorValue)); });
-            this.put("androidForWorkSettings", (n) -> { currentObject.setAndroidForWorkSettings(n.getObjectValue(AndroidForWorkSettings::createFromDiscriminatorValue)); });
-            this.put("androidManagedStoreAccountEnterpriseSettings", (n) -> { currentObject.setAndroidManagedStoreAccountEnterpriseSettings(n.getObjectValue(AndroidManagedStoreAccountEnterpriseSettings::createFromDiscriminatorValue)); });
-            this.put("androidManagedStoreAppConfigurationSchemas", (n) -> { currentObject.setAndroidManagedStoreAppConfigurationSchemas(n.getCollectionOfObjectValues(AndroidManagedStoreAppConfigurationSchema::createFromDiscriminatorValue)); });
-            this.put("applePushNotificationCertificate", (n) -> { currentObject.setApplePushNotificationCertificate(n.getObjectValue(ApplePushNotificationCertificate::createFromDiscriminatorValue)); });
-            this.put("appleUserInitiatedEnrollmentProfiles", (n) -> { currentObject.setAppleUserInitiatedEnrollmentProfiles(n.getCollectionOfObjectValues(AppleUserInitiatedEnrollmentProfile::createFromDiscriminatorValue)); });
-            this.put("assignmentFilters", (n) -> { currentObject.setAssignmentFilters(n.getCollectionOfObjectValues(DeviceAndAppManagementAssignmentFilter::createFromDiscriminatorValue)); });
-            this.put("auditEvents", (n) -> { currentObject.setAuditEvents(n.getCollectionOfObjectValues(AuditEvent::createFromDiscriminatorValue)); });
-            this.put("autopilotEvents", (n) -> { currentObject.setAutopilotEvents(n.getCollectionOfObjectValues(DeviceManagementAutopilotEvent::createFromDiscriminatorValue)); });
-            this.put("cartToClassAssociations", (n) -> { currentObject.setCartToClassAssociations(n.getCollectionOfObjectValues(CartToClassAssociation::createFromDiscriminatorValue)); });
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfObjectValues(DeviceManagementSettingCategory::createFromDiscriminatorValue)); });
-            this.put("certificateConnectorDetails", (n) -> { currentObject.setCertificateConnectorDetails(n.getCollectionOfObjectValues(CertificateConnectorDetails::createFromDiscriminatorValue)); });
-            this.put("chromeOSOnboardingSettings", (n) -> { currentObject.setChromeOSOnboardingSettings(n.getCollectionOfObjectValues(ChromeOSOnboardingSettings::createFromDiscriminatorValue)); });
-            this.put("cloudPCConnectivityIssues", (n) -> { currentObject.setCloudPCConnectivityIssues(n.getCollectionOfObjectValues(CloudPCConnectivityIssue::createFromDiscriminatorValue)); });
-            this.put("comanagedDevices", (n) -> { currentObject.setComanagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
-            this.put("comanagementEligibleDevices", (n) -> { currentObject.setComanagementEligibleDevices(n.getCollectionOfObjectValues(ComanagementEligibleDevice::createFromDiscriminatorValue)); });
-            this.put("complianceCategories", (n) -> { currentObject.setComplianceCategories(n.getCollectionOfObjectValues(DeviceManagementConfigurationCategory::createFromDiscriminatorValue)); });
-            this.put("complianceManagementPartners", (n) -> { currentObject.setComplianceManagementPartners(n.getCollectionOfObjectValues(ComplianceManagementPartner::createFromDiscriminatorValue)); });
-            this.put("compliancePolicies", (n) -> { currentObject.setCompliancePolicies(n.getCollectionOfObjectValues(DeviceManagementCompliancePolicy::createFromDiscriminatorValue)); });
-            this.put("complianceSettings", (n) -> { currentObject.setComplianceSettings(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
-            this.put("conditionalAccessSettings", (n) -> { currentObject.setConditionalAccessSettings(n.getObjectValue(OnPremisesConditionalAccessSettings::createFromDiscriminatorValue)); });
-            this.put("configManagerCollections", (n) -> { currentObject.setConfigManagerCollections(n.getCollectionOfObjectValues(ConfigManagerCollection::createFromDiscriminatorValue)); });
-            this.put("configurationCategories", (n) -> { currentObject.setConfigurationCategories(n.getCollectionOfObjectValues(DeviceManagementConfigurationCategory::createFromDiscriminatorValue)); });
-            this.put("configurationPolicies", (n) -> { currentObject.setConfigurationPolicies(n.getCollectionOfObjectValues(DeviceManagementConfigurationPolicy::createFromDiscriminatorValue)); });
-            this.put("configurationPolicyTemplates", (n) -> { currentObject.setConfigurationPolicyTemplates(n.getCollectionOfObjectValues(DeviceManagementConfigurationPolicyTemplate::createFromDiscriminatorValue)); });
-            this.put("configurationSettings", (n) -> { currentObject.setConfigurationSettings(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
-            this.put("dataProcessorServiceForWindowsFeaturesOnboarding", (n) -> { currentObject.setDataProcessorServiceForWindowsFeaturesOnboarding(n.getObjectValue(DataProcessorServiceForWindowsFeaturesOnboarding::createFromDiscriminatorValue)); });
-            this.put("dataSharingConsents", (n) -> { currentObject.setDataSharingConsents(n.getCollectionOfObjectValues(DataSharingConsent::createFromDiscriminatorValue)); });
-            this.put("depOnboardingSettings", (n) -> { currentObject.setDepOnboardingSettings(n.getCollectionOfObjectValues(DepOnboardingSetting::createFromDiscriminatorValue)); });
-            this.put("derivedCredentials", (n) -> { currentObject.setDerivedCredentials(n.getCollectionOfObjectValues(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
-            this.put("detectedApps", (n) -> { currentObject.setDetectedApps(n.getCollectionOfObjectValues(DetectedApp::createFromDiscriminatorValue)); });
-            this.put("deviceCategories", (n) -> { currentObject.setDeviceCategories(n.getCollectionOfObjectValues(DeviceCategory::createFromDiscriminatorValue)); });
-            this.put("deviceCompliancePolicies", (n) -> { currentObject.setDeviceCompliancePolicies(n.getCollectionOfObjectValues(DeviceCompliancePolicy::createFromDiscriminatorValue)); });
-            this.put("deviceCompliancePolicyDeviceStateSummary", (n) -> { currentObject.setDeviceCompliancePolicyDeviceStateSummary(n.getObjectValue(DeviceCompliancePolicyDeviceStateSummary::createFromDiscriminatorValue)); });
-            this.put("deviceCompliancePolicySettingStateSummaries", (n) -> { currentObject.setDeviceCompliancePolicySettingStateSummaries(n.getCollectionOfObjectValues(DeviceCompliancePolicySettingStateSummary::createFromDiscriminatorValue)); });
-            this.put("deviceComplianceReportSummarizationDateTime", (n) -> { currentObject.setDeviceComplianceReportSummarizationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deviceComplianceScripts", (n) -> { currentObject.setDeviceComplianceScripts(n.getCollectionOfObjectValues(DeviceComplianceScript::createFromDiscriminatorValue)); });
-            this.put("deviceConfigurationConflictSummary", (n) -> { currentObject.setDeviceConfigurationConflictSummary(n.getCollectionOfObjectValues(DeviceConfigurationConflictSummary::createFromDiscriminatorValue)); });
-            this.put("deviceConfigurationDeviceStateSummaries", (n) -> { currentObject.setDeviceConfigurationDeviceStateSummaries(n.getObjectValue(DeviceConfigurationDeviceStateSummary::createFromDiscriminatorValue)); });
-            this.put("deviceConfigurationRestrictedAppsViolations", (n) -> { currentObject.setDeviceConfigurationRestrictedAppsViolations(n.getCollectionOfObjectValues(RestrictedAppsViolation::createFromDiscriminatorValue)); });
-            this.put("deviceConfigurations", (n) -> { currentObject.setDeviceConfigurations(n.getCollectionOfObjectValues(DeviceConfiguration::createFromDiscriminatorValue)); });
-            this.put("deviceConfigurationsAllManagedDeviceCertificateStates", (n) -> { currentObject.setDeviceConfigurationsAllManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedAllDeviceCertificateState::createFromDiscriminatorValue)); });
-            this.put("deviceConfigurationUserStateSummaries", (n) -> { currentObject.setDeviceConfigurationUserStateSummaries(n.getObjectValue(DeviceConfigurationUserStateSummary::createFromDiscriminatorValue)); });
-            this.put("deviceCustomAttributeShellScripts", (n) -> { currentObject.setDeviceCustomAttributeShellScripts(n.getCollectionOfObjectValues(DeviceCustomAttributeShellScript::createFromDiscriminatorValue)); });
-            this.put("deviceEnrollmentConfigurations", (n) -> { currentObject.setDeviceEnrollmentConfigurations(n.getCollectionOfObjectValues(DeviceEnrollmentConfiguration::createFromDiscriminatorValue)); });
-            this.put("deviceHealthScripts", (n) -> { currentObject.setDeviceHealthScripts(n.getCollectionOfObjectValues(DeviceHealthScript::createFromDiscriminatorValue)); });
-            this.put("deviceManagementPartners", (n) -> { currentObject.setDeviceManagementPartners(n.getCollectionOfObjectValues(DeviceManagementPartner::createFromDiscriminatorValue)); });
-            this.put("deviceManagementScripts", (n) -> { currentObject.setDeviceManagementScripts(n.getCollectionOfObjectValues(DeviceManagementScript::createFromDiscriminatorValue)); });
-            this.put("deviceProtectionOverview", (n) -> { currentObject.setDeviceProtectionOverview(n.getObjectValue(DeviceProtectionOverview::createFromDiscriminatorValue)); });
-            this.put("deviceShellScripts", (n) -> { currentObject.setDeviceShellScripts(n.getCollectionOfObjectValues(DeviceShellScript::createFromDiscriminatorValue)); });
-            this.put("domainJoinConnectors", (n) -> { currentObject.setDomainJoinConnectors(n.getCollectionOfObjectValues(DeviceManagementDomainJoinConnector::createFromDiscriminatorValue)); });
-            this.put("embeddedSIMActivationCodePools", (n) -> { currentObject.setEmbeddedSIMActivationCodePools(n.getCollectionOfObjectValues(EmbeddedSIMActivationCodePool::createFromDiscriminatorValue)); });
-            this.put("exchangeConnectors", (n) -> { currentObject.setExchangeConnectors(n.getCollectionOfObjectValues(DeviceManagementExchangeConnector::createFromDiscriminatorValue)); });
-            this.put("exchangeOnPremisesPolicies", (n) -> { currentObject.setExchangeOnPremisesPolicies(n.getCollectionOfObjectValues(DeviceManagementExchangeOnPremisesPolicy::createFromDiscriminatorValue)); });
-            this.put("exchangeOnPremisesPolicy", (n) -> { currentObject.setExchangeOnPremisesPolicy(n.getObjectValue(DeviceManagementExchangeOnPremisesPolicy::createFromDiscriminatorValue)); });
-            this.put("groupPolicyCategories", (n) -> { currentObject.setGroupPolicyCategories(n.getCollectionOfObjectValues(GroupPolicyCategory::createFromDiscriminatorValue)); });
-            this.put("groupPolicyConfigurations", (n) -> { currentObject.setGroupPolicyConfigurations(n.getCollectionOfObjectValues(GroupPolicyConfiguration::createFromDiscriminatorValue)); });
-            this.put("groupPolicyDefinitionFiles", (n) -> { currentObject.setGroupPolicyDefinitionFiles(n.getCollectionOfObjectValues(GroupPolicyDefinitionFile::createFromDiscriminatorValue)); });
-            this.put("groupPolicyDefinitions", (n) -> { currentObject.setGroupPolicyDefinitions(n.getCollectionOfObjectValues(GroupPolicyDefinition::createFromDiscriminatorValue)); });
-            this.put("groupPolicyMigrationReports", (n) -> { currentObject.setGroupPolicyMigrationReports(n.getCollectionOfObjectValues(GroupPolicyMigrationReport::createFromDiscriminatorValue)); });
-            this.put("groupPolicyObjectFiles", (n) -> { currentObject.setGroupPolicyObjectFiles(n.getCollectionOfObjectValues(GroupPolicyObjectFile::createFromDiscriminatorValue)); });
-            this.put("groupPolicyUploadedDefinitionFiles", (n) -> { currentObject.setGroupPolicyUploadedDefinitionFiles(n.getCollectionOfObjectValues(GroupPolicyUploadedDefinitionFile::createFromDiscriminatorValue)); });
-            this.put("importedDeviceIdentities", (n) -> { currentObject.setImportedDeviceIdentities(n.getCollectionOfObjectValues(ImportedDeviceIdentity::createFromDiscriminatorValue)); });
-            this.put("importedWindowsAutopilotDeviceIdentities", (n) -> { currentObject.setImportedWindowsAutopilotDeviceIdentities(n.getCollectionOfObjectValues(ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
-            this.put("intents", (n) -> { currentObject.setIntents(n.getCollectionOfObjectValues(DeviceManagementIntent::createFromDiscriminatorValue)); });
-            this.put("intuneAccountId", (n) -> { currentObject.setIntuneAccountId(n.getStringValue()); });
-            this.put("intuneBrand", (n) -> { currentObject.setIntuneBrand(n.getObjectValue(IntuneBrand::createFromDiscriminatorValue)); });
-            this.put("intuneBrandingProfiles", (n) -> { currentObject.setIntuneBrandingProfiles(n.getCollectionOfObjectValues(IntuneBrandingProfile::createFromDiscriminatorValue)); });
-            this.put("iosUpdateStatuses", (n) -> { currentObject.setIosUpdateStatuses(n.getCollectionOfObjectValues(IosUpdateDeviceStatus::createFromDiscriminatorValue)); });
-            this.put("lastReportAggregationDateTime", (n) -> { currentObject.setLastReportAggregationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("legacyPcManangementEnabled", (n) -> { currentObject.setLegacyPcManangementEnabled(n.getBooleanValue()); });
-            this.put("macOSSoftwareUpdateAccountSummaries", (n) -> { currentObject.setMacOSSoftwareUpdateAccountSummaries(n.getCollectionOfObjectValues(MacOSSoftwareUpdateAccountSummary::createFromDiscriminatorValue)); });
-            this.put("managedDeviceCleanupSettings", (n) -> { currentObject.setManagedDeviceCleanupSettings(n.getObjectValue(ManagedDeviceCleanupSettings::createFromDiscriminatorValue)); });
-            this.put("managedDeviceEncryptionStates", (n) -> { currentObject.setManagedDeviceEncryptionStates(n.getCollectionOfObjectValues(ManagedDeviceEncryptionState::createFromDiscriminatorValue)); });
-            this.put("managedDeviceOverview", (n) -> { currentObject.setManagedDeviceOverview(n.getObjectValue(ManagedDeviceOverview::createFromDiscriminatorValue)); });
-            this.put("managedDevices", (n) -> { currentObject.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
-            this.put("maximumDepTokens", (n) -> { currentObject.setMaximumDepTokens(n.getIntegerValue()); });
-            this.put("microsoftTunnelConfigurations", (n) -> { currentObject.setMicrosoftTunnelConfigurations(n.getCollectionOfObjectValues(MicrosoftTunnelConfiguration::createFromDiscriminatorValue)); });
-            this.put("microsoftTunnelHealthThresholds", (n) -> { currentObject.setMicrosoftTunnelHealthThresholds(n.getCollectionOfObjectValues(MicrosoftTunnelHealthThreshold::createFromDiscriminatorValue)); });
-            this.put("microsoftTunnelServerLogCollectionResponses", (n) -> { currentObject.setMicrosoftTunnelServerLogCollectionResponses(n.getCollectionOfObjectValues(MicrosoftTunnelServerLogCollectionResponse::createFromDiscriminatorValue)); });
-            this.put("microsoftTunnelSites", (n) -> { currentObject.setMicrosoftTunnelSites(n.getCollectionOfObjectValues(MicrosoftTunnelSite::createFromDiscriminatorValue)); });
-            this.put("mobileAppTroubleshootingEvents", (n) -> { currentObject.setMobileAppTroubleshootingEvents(n.getCollectionOfObjectValues(MobileAppTroubleshootingEvent::createFromDiscriminatorValue)); });
-            this.put("mobileThreatDefenseConnectors", (n) -> { currentObject.setMobileThreatDefenseConnectors(n.getCollectionOfObjectValues(MobileThreatDefenseConnector::createFromDiscriminatorValue)); });
-            this.put("ndesConnectors", (n) -> { currentObject.setNdesConnectors(n.getCollectionOfObjectValues(NdesConnector::createFromDiscriminatorValue)); });
-            this.put("notificationMessageTemplates", (n) -> { currentObject.setNotificationMessageTemplates(n.getCollectionOfObjectValues(NotificationMessageTemplate::createFromDiscriminatorValue)); });
-            this.put("oemWarrantyInformationOnboarding", (n) -> { currentObject.setOemWarrantyInformationOnboarding(n.getCollectionOfObjectValues(OemWarrantyInformationOnboarding::createFromDiscriminatorValue)); });
-            this.put("organizationalMessageDetails", (n) -> { currentObject.setOrganizationalMessageDetails(n.getCollectionOfObjectValues(OrganizationalMessageDetail::createFromDiscriminatorValue)); });
-            this.put("organizationalMessageGuidedContents", (n) -> { currentObject.setOrganizationalMessageGuidedContents(n.getCollectionOfObjectValues(OrganizationalMessageGuidedContent::createFromDiscriminatorValue)); });
-            this.put("remoteActionAudits", (n) -> { currentObject.setRemoteActionAudits(n.getCollectionOfObjectValues(RemoteActionAudit::createFromDiscriminatorValue)); });
-            this.put("remoteAssistancePartners", (n) -> { currentObject.setRemoteAssistancePartners(n.getCollectionOfObjectValues(RemoteAssistancePartner::createFromDiscriminatorValue)); });
-            this.put("remoteAssistanceSettings", (n) -> { currentObject.setRemoteAssistanceSettings(n.getObjectValue(RemoteAssistanceSettings::createFromDiscriminatorValue)); });
-            this.put("reports", (n) -> { currentObject.setReports(n.getObjectValue(DeviceManagementReports::createFromDiscriminatorValue)); });
-            this.put("resourceAccessProfiles", (n) -> { currentObject.setResourceAccessProfiles(n.getCollectionOfObjectValues(DeviceManagementResourceAccessProfileBase::createFromDiscriminatorValue)); });
-            this.put("resourceOperations", (n) -> { currentObject.setResourceOperations(n.getCollectionOfObjectValues(ResourceOperation::createFromDiscriminatorValue)); });
-            this.put("reusablePolicySettings", (n) -> { currentObject.setReusablePolicySettings(n.getCollectionOfObjectValues(DeviceManagementReusablePolicySetting::createFromDiscriminatorValue)); });
-            this.put("reusableSettings", (n) -> { currentObject.setReusableSettings(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
-            this.put("roleAssignments", (n) -> { currentObject.setRoleAssignments(n.getCollectionOfObjectValues(DeviceAndAppManagementRoleAssignment::createFromDiscriminatorValue)); });
-            this.put("roleDefinitions", (n) -> { currentObject.setRoleDefinitions(n.getCollectionOfObjectValues(RoleDefinition::createFromDiscriminatorValue)); });
-            this.put("roleScopeTags", (n) -> { currentObject.setRoleScopeTags(n.getCollectionOfObjectValues(RoleScopeTag::createFromDiscriminatorValue)); });
-            this.put("settingDefinitions", (n) -> { currentObject.setSettingDefinitions(n.getCollectionOfObjectValues(DeviceManagementSettingDefinition::createFromDiscriminatorValue)); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(DeviceManagementSettings::createFromDiscriminatorValue)); });
-            this.put("softwareUpdateStatusSummary", (n) -> { currentObject.setSoftwareUpdateStatusSummary(n.getObjectValue(SoftwareUpdateStatusSummary::createFromDiscriminatorValue)); });
-            this.put("subscriptions", (n) -> { currentObject.setSubscriptions(n.getEnumValue(DeviceManagementSubscriptions.class)); });
-            this.put("subscriptionState", (n) -> { currentObject.setSubscriptionState(n.getEnumValue(DeviceManagementSubscriptionState.class)); });
-            this.put("telecomExpenseManagementPartners", (n) -> { currentObject.setTelecomExpenseManagementPartners(n.getCollectionOfObjectValues(TelecomExpenseManagementPartner::createFromDiscriminatorValue)); });
-            this.put("templates", (n) -> { currentObject.setTemplates(n.getCollectionOfObjectValues(DeviceManagementTemplate::createFromDiscriminatorValue)); });
-            this.put("templateSettings", (n) -> { currentObject.setTemplateSettings(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingTemplate::createFromDiscriminatorValue)); });
-            this.put("tenantAttachRBAC", (n) -> { currentObject.setTenantAttachRBAC(n.getObjectValue(TenantAttachRBAC::createFromDiscriminatorValue)); });
-            this.put("termsAndConditions", (n) -> { currentObject.setTermsAndConditions(n.getCollectionOfObjectValues(TermsAndConditions::createFromDiscriminatorValue)); });
-            this.put("troubleshootingEvents", (n) -> { currentObject.setTroubleshootingEvents(n.getCollectionOfObjectValues(DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue)); });
-            this.put("unlicensedAdminstratorsEnabled", (n) -> { currentObject.setUnlicensedAdminstratorsEnabled(n.getBooleanValue()); });
-            this.put("userExperienceAnalyticsAppHealthApplicationPerformance", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthApplicationPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthApplicationPerformance::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsAppHealthDeviceModelPerformance", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthDeviceModelPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthDeviceModelPerformance::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsAppHealthDevicePerformance", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthDevicePerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthDevicePerformance::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsAppHealthDevicePerformanceDetails", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthDevicePerformanceDetails(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthDevicePerformanceDetails::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsAppHealthOSVersionPerformance", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthOSVersionPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthOSVersionPerformance::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsAppHealthOverview", (n) -> { currentObject.setUserExperienceAnalyticsAppHealthOverview(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsBaselines", (n) -> { currentObject.setUserExperienceAnalyticsBaselines(n.getCollectionOfObjectValues(UserExperienceAnalyticsBaseline::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsBatteryHealthAppImpact", (n) -> { currentObject.setUserExperienceAnalyticsBatteryHealthAppImpact(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthAppImpact::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsBatteryHealthCapacityDetails", (n) -> { currentObject.setUserExperienceAnalyticsBatteryHealthCapacityDetails(n.getObjectValue(UserExperienceAnalyticsBatteryHealthCapacityDetails::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsBatteryHealthDeviceAppImpact", (n) -> { currentObject.setUserExperienceAnalyticsBatteryHealthDeviceAppImpact(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthDeviceAppImpact::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsBatteryHealthDevicePerformance", (n) -> { currentObject.setUserExperienceAnalyticsBatteryHealthDevicePerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthDevicePerformance::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory", (n) -> { currentObject.setUserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsBatteryHealthModelPerformance", (n) -> { currentObject.setUserExperienceAnalyticsBatteryHealthModelPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthModelPerformance::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsBatteryHealthOsPerformance", (n) -> { currentObject.setUserExperienceAnalyticsBatteryHealthOsPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthOsPerformance::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsBatteryHealthRuntimeDetails", (n) -> { currentObject.setUserExperienceAnalyticsBatteryHealthRuntimeDetails(n.getObjectValue(UserExperienceAnalyticsBatteryHealthRuntimeDetails::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsCategories", (n) -> { currentObject.setUserExperienceAnalyticsCategories(n.getCollectionOfObjectValues(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsDeviceMetricHistory", (n) -> { currentObject.setUserExperienceAnalyticsDeviceMetricHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsMetricHistory::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsDevicePerformance", (n) -> { currentObject.setUserExperienceAnalyticsDevicePerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsDevicePerformance::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsDeviceScope", (n) -> { currentObject.setUserExperienceAnalyticsDeviceScope(n.getObjectValue(UserExperienceAnalyticsDeviceScope::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsDeviceScopes", (n) -> { currentObject.setUserExperienceAnalyticsDeviceScopes(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceScope::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsDeviceScores", (n) -> { currentObject.setUserExperienceAnalyticsDeviceScores(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceScores::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsDeviceStartupHistory", (n) -> { currentObject.setUserExperienceAnalyticsDeviceStartupHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceStartupHistory::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsDeviceStartupProcesses", (n) -> { currentObject.setUserExperienceAnalyticsDeviceStartupProcesses(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceStartupProcess::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsDeviceStartupProcessPerformance", (n) -> { currentObject.setUserExperienceAnalyticsDeviceStartupProcessPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceStartupProcessPerformance::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsDevicesWithoutCloudIdentity", (n) -> { currentObject.setUserExperienceAnalyticsDevicesWithoutCloudIdentity(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceWithoutCloudIdentity::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsImpactingProcess", (n) -> { currentObject.setUserExperienceAnalyticsImpactingProcess(n.getCollectionOfObjectValues(UserExperienceAnalyticsImpactingProcess::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsMetricHistory", (n) -> { currentObject.setUserExperienceAnalyticsMetricHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsMetricHistory::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsModelScores", (n) -> { currentObject.setUserExperienceAnalyticsModelScores(n.getCollectionOfObjectValues(UserExperienceAnalyticsModelScores::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsNotAutopilotReadyDevice", (n) -> { currentObject.setUserExperienceAnalyticsNotAutopilotReadyDevice(n.getCollectionOfObjectValues(UserExperienceAnalyticsNotAutopilotReadyDevice::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsOverview", (n) -> { currentObject.setUserExperienceAnalyticsOverview(n.getObjectValue(UserExperienceAnalyticsOverview::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsRegressionSummary", (n) -> { currentObject.setUserExperienceAnalyticsRegressionSummary(n.getObjectValue(UserExperienceAnalyticsRegressionSummary::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsRemoteConnection", (n) -> { currentObject.setUserExperienceAnalyticsRemoteConnection(n.getCollectionOfObjectValues(UserExperienceAnalyticsRemoteConnection::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsResourcePerformance", (n) -> { currentObject.setUserExperienceAnalyticsResourcePerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsResourcePerformance::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsScoreHistory", (n) -> { currentObject.setUserExperienceAnalyticsScoreHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsScoreHistory::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsSettings", (n) -> { currentObject.setUserExperienceAnalyticsSettings(n.getObjectValue(UserExperienceAnalyticsSettings::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric", (n) -> { currentObject.setUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric(n.getObjectValue(UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsWorkFromAnywhereMetrics", (n) -> { currentObject.setUserExperienceAnalyticsWorkFromAnywhereMetrics(n.getCollectionOfObjectValues(UserExperienceAnalyticsWorkFromAnywhereMetric::createFromDiscriminatorValue)); });
-            this.put("userExperienceAnalyticsWorkFromAnywhereModelPerformance", (n) -> { currentObject.setUserExperienceAnalyticsWorkFromAnywhereModelPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsWorkFromAnywhereModelPerformance::createFromDiscriminatorValue)); });
-            this.put("userPfxCertificates", (n) -> { currentObject.setUserPfxCertificates(n.getCollectionOfObjectValues(UserPFXCertificate::createFromDiscriminatorValue)); });
-            this.put("virtualEndpoint", (n) -> { currentObject.setVirtualEndpoint(n.getObjectValue(VirtualEndpoint::createFromDiscriminatorValue)); });
-            this.put("windowsAutopilotDeploymentProfiles", (n) -> { currentObject.setWindowsAutopilotDeploymentProfiles(n.getCollectionOfObjectValues(WindowsAutopilotDeploymentProfile::createFromDiscriminatorValue)); });
-            this.put("windowsAutopilotDeviceIdentities", (n) -> { currentObject.setWindowsAutopilotDeviceIdentities(n.getCollectionOfObjectValues(WindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
-            this.put("windowsAutopilotSettings", (n) -> { currentObject.setWindowsAutopilotSettings(n.getObjectValue(WindowsAutopilotSettings::createFromDiscriminatorValue)); });
-            this.put("windowsDriverUpdateProfiles", (n) -> { currentObject.setWindowsDriverUpdateProfiles(n.getCollectionOfObjectValues(WindowsDriverUpdateProfile::createFromDiscriminatorValue)); });
-            this.put("windowsFeatureUpdateProfiles", (n) -> { currentObject.setWindowsFeatureUpdateProfiles(n.getCollectionOfObjectValues(WindowsFeatureUpdateProfile::createFromDiscriminatorValue)); });
-            this.put("windowsInformationProtectionAppLearningSummaries", (n) -> { currentObject.setWindowsInformationProtectionAppLearningSummaries(n.getCollectionOfObjectValues(WindowsInformationProtectionAppLearningSummary::createFromDiscriminatorValue)); });
-            this.put("windowsInformationProtectionNetworkLearningSummaries", (n) -> { currentObject.setWindowsInformationProtectionNetworkLearningSummaries(n.getCollectionOfObjectValues(WindowsInformationProtectionNetworkLearningSummary::createFromDiscriminatorValue)); });
-            this.put("windowsMalwareInformation", (n) -> { currentObject.setWindowsMalwareInformation(n.getCollectionOfObjectValues(WindowsMalwareInformation::createFromDiscriminatorValue)); });
-            this.put("windowsMalwareOverview", (n) -> { currentObject.setWindowsMalwareOverview(n.getObjectValue(WindowsMalwareOverview::createFromDiscriminatorValue)); });
-            this.put("windowsQualityUpdateProfiles", (n) -> { currentObject.setWindowsQualityUpdateProfiles(n.getCollectionOfObjectValues(WindowsQualityUpdateProfile::createFromDiscriminatorValue)); });
-            this.put("windowsUpdateCatalogItems", (n) -> { currentObject.setWindowsUpdateCatalogItems(n.getCollectionOfObjectValues(WindowsUpdateCatalogItem::createFromDiscriminatorValue)); });
-            this.put("zebraFotaArtifacts", (n) -> { currentObject.setZebraFotaArtifacts(n.getCollectionOfObjectValues(ZebraFotaArtifact::createFromDiscriminatorValue)); });
-            this.put("zebraFotaConnector", (n) -> { currentObject.setZebraFotaConnector(n.getObjectValue(ZebraFotaConnector::createFromDiscriminatorValue)); });
-            this.put("zebraFotaDeployments", (n) -> { currentObject.setZebraFotaDeployments(n.getCollectionOfObjectValues(ZebraFotaDeployment::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountMoveCompletionDateTime", (n) -> { this.setAccountMoveCompletionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("adminConsent", (n) -> { this.setAdminConsent(n.getObjectValue(AdminConsent::createFromDiscriminatorValue)); });
+        deserializerMap.put("advancedThreatProtectionOnboardingStateSummary", (n) -> { this.setAdvancedThreatProtectionOnboardingStateSummary(n.getObjectValue(AdvancedThreatProtectionOnboardingStateSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("androidDeviceOwnerEnrollmentProfiles", (n) -> { this.setAndroidDeviceOwnerEnrollmentProfiles(n.getCollectionOfObjectValues(AndroidDeviceOwnerEnrollmentProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("androidForWorkAppConfigurationSchemas", (n) -> { this.setAndroidForWorkAppConfigurationSchemas(n.getCollectionOfObjectValues(AndroidForWorkAppConfigurationSchema::createFromDiscriminatorValue)); });
+        deserializerMap.put("androidForWorkEnrollmentProfiles", (n) -> { this.setAndroidForWorkEnrollmentProfiles(n.getCollectionOfObjectValues(AndroidForWorkEnrollmentProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("androidForWorkSettings", (n) -> { this.setAndroidForWorkSettings(n.getObjectValue(AndroidForWorkSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("androidManagedStoreAccountEnterpriseSettings", (n) -> { this.setAndroidManagedStoreAccountEnterpriseSettings(n.getObjectValue(AndroidManagedStoreAccountEnterpriseSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("androidManagedStoreAppConfigurationSchemas", (n) -> { this.setAndroidManagedStoreAppConfigurationSchemas(n.getCollectionOfObjectValues(AndroidManagedStoreAppConfigurationSchema::createFromDiscriminatorValue)); });
+        deserializerMap.put("applePushNotificationCertificate", (n) -> { this.setApplePushNotificationCertificate(n.getObjectValue(ApplePushNotificationCertificate::createFromDiscriminatorValue)); });
+        deserializerMap.put("appleUserInitiatedEnrollmentProfiles", (n) -> { this.setAppleUserInitiatedEnrollmentProfiles(n.getCollectionOfObjectValues(AppleUserInitiatedEnrollmentProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignmentFilters", (n) -> { this.setAssignmentFilters(n.getCollectionOfObjectValues(DeviceAndAppManagementAssignmentFilter::createFromDiscriminatorValue)); });
+        deserializerMap.put("auditEvents", (n) -> { this.setAuditEvents(n.getCollectionOfObjectValues(AuditEvent::createFromDiscriminatorValue)); });
+        deserializerMap.put("autopilotEvents", (n) -> { this.setAutopilotEvents(n.getCollectionOfObjectValues(DeviceManagementAutopilotEvent::createFromDiscriminatorValue)); });
+        deserializerMap.put("cartToClassAssociations", (n) -> { this.setCartToClassAssociations(n.getCollectionOfObjectValues(CartToClassAssociation::createFromDiscriminatorValue)); });
+        deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfObjectValues(DeviceManagementSettingCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("certificateConnectorDetails", (n) -> { this.setCertificateConnectorDetails(n.getCollectionOfObjectValues(CertificateConnectorDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("chromeOSOnboardingSettings", (n) -> { this.setChromeOSOnboardingSettings(n.getCollectionOfObjectValues(ChromeOSOnboardingSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudPCConnectivityIssues", (n) -> { this.setCloudPCConnectivityIssues(n.getCollectionOfObjectValues(CloudPCConnectivityIssue::createFromDiscriminatorValue)); });
+        deserializerMap.put("comanagedDevices", (n) -> { this.setComanagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
+        deserializerMap.put("comanagementEligibleDevices", (n) -> { this.setComanagementEligibleDevices(n.getCollectionOfObjectValues(ComanagementEligibleDevice::createFromDiscriminatorValue)); });
+        deserializerMap.put("complianceCategories", (n) -> { this.setComplianceCategories(n.getCollectionOfObjectValues(DeviceManagementConfigurationCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("complianceManagementPartners", (n) -> { this.setComplianceManagementPartners(n.getCollectionOfObjectValues(ComplianceManagementPartner::createFromDiscriminatorValue)); });
+        deserializerMap.put("compliancePolicies", (n) -> { this.setCompliancePolicies(n.getCollectionOfObjectValues(DeviceManagementCompliancePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("complianceSettings", (n) -> { this.setComplianceSettings(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("conditionalAccessSettings", (n) -> { this.setConditionalAccessSettings(n.getObjectValue(OnPremisesConditionalAccessSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("configManagerCollections", (n) -> { this.setConfigManagerCollections(n.getCollectionOfObjectValues(ConfigManagerCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("configurationCategories", (n) -> { this.setConfigurationCategories(n.getCollectionOfObjectValues(DeviceManagementConfigurationCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("configurationPolicies", (n) -> { this.setConfigurationPolicies(n.getCollectionOfObjectValues(DeviceManagementConfigurationPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("configurationPolicyTemplates", (n) -> { this.setConfigurationPolicyTemplates(n.getCollectionOfObjectValues(DeviceManagementConfigurationPolicyTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("configurationSettings", (n) -> { this.setConfigurationSettings(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("dataProcessorServiceForWindowsFeaturesOnboarding", (n) -> { this.setDataProcessorServiceForWindowsFeaturesOnboarding(n.getObjectValue(DataProcessorServiceForWindowsFeaturesOnboarding::createFromDiscriminatorValue)); });
+        deserializerMap.put("dataSharingConsents", (n) -> { this.setDataSharingConsents(n.getCollectionOfObjectValues(DataSharingConsent::createFromDiscriminatorValue)); });
+        deserializerMap.put("depOnboardingSettings", (n) -> { this.setDepOnboardingSettings(n.getCollectionOfObjectValues(DepOnboardingSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("derivedCredentials", (n) -> { this.setDerivedCredentials(n.getCollectionOfObjectValues(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("detectedApps", (n) -> { this.setDetectedApps(n.getCollectionOfObjectValues(DetectedApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceCategories", (n) -> { this.setDeviceCategories(n.getCollectionOfObjectValues(DeviceCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceCompliancePolicies", (n) -> { this.setDeviceCompliancePolicies(n.getCollectionOfObjectValues(DeviceCompliancePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceCompliancePolicyDeviceStateSummary", (n) -> { this.setDeviceCompliancePolicyDeviceStateSummary(n.getObjectValue(DeviceCompliancePolicyDeviceStateSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceCompliancePolicySettingStateSummaries", (n) -> { this.setDeviceCompliancePolicySettingStateSummaries(n.getCollectionOfObjectValues(DeviceCompliancePolicySettingStateSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceComplianceReportSummarizationDateTime", (n) -> { this.setDeviceComplianceReportSummarizationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceComplianceScripts", (n) -> { this.setDeviceComplianceScripts(n.getCollectionOfObjectValues(DeviceComplianceScript::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceConfigurationConflictSummary", (n) -> { this.setDeviceConfigurationConflictSummary(n.getCollectionOfObjectValues(DeviceConfigurationConflictSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceConfigurationDeviceStateSummaries", (n) -> { this.setDeviceConfigurationDeviceStateSummaries(n.getObjectValue(DeviceConfigurationDeviceStateSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceConfigurationRestrictedAppsViolations", (n) -> { this.setDeviceConfigurationRestrictedAppsViolations(n.getCollectionOfObjectValues(RestrictedAppsViolation::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceConfigurations", (n) -> { this.setDeviceConfigurations(n.getCollectionOfObjectValues(DeviceConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceConfigurationsAllManagedDeviceCertificateStates", (n) -> { this.setDeviceConfigurationsAllManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedAllDeviceCertificateState::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceConfigurationUserStateSummaries", (n) -> { this.setDeviceConfigurationUserStateSummaries(n.getObjectValue(DeviceConfigurationUserStateSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceCustomAttributeShellScripts", (n) -> { this.setDeviceCustomAttributeShellScripts(n.getCollectionOfObjectValues(DeviceCustomAttributeShellScript::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceEnrollmentConfigurations", (n) -> { this.setDeviceEnrollmentConfigurations(n.getCollectionOfObjectValues(DeviceEnrollmentConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceHealthScripts", (n) -> { this.setDeviceHealthScripts(n.getCollectionOfObjectValues(DeviceHealthScript::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceManagementPartners", (n) -> { this.setDeviceManagementPartners(n.getCollectionOfObjectValues(DeviceManagementPartner::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceManagementScripts", (n) -> { this.setDeviceManagementScripts(n.getCollectionOfObjectValues(DeviceManagementScript::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceProtectionOverview", (n) -> { this.setDeviceProtectionOverview(n.getObjectValue(DeviceProtectionOverview::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceShellScripts", (n) -> { this.setDeviceShellScripts(n.getCollectionOfObjectValues(DeviceShellScript::createFromDiscriminatorValue)); });
+        deserializerMap.put("domainJoinConnectors", (n) -> { this.setDomainJoinConnectors(n.getCollectionOfObjectValues(DeviceManagementDomainJoinConnector::createFromDiscriminatorValue)); });
+        deserializerMap.put("embeddedSIMActivationCodePools", (n) -> { this.setEmbeddedSIMActivationCodePools(n.getCollectionOfObjectValues(EmbeddedSIMActivationCodePool::createFromDiscriminatorValue)); });
+        deserializerMap.put("exchangeConnectors", (n) -> { this.setExchangeConnectors(n.getCollectionOfObjectValues(DeviceManagementExchangeConnector::createFromDiscriminatorValue)); });
+        deserializerMap.put("exchangeOnPremisesPolicies", (n) -> { this.setExchangeOnPremisesPolicies(n.getCollectionOfObjectValues(DeviceManagementExchangeOnPremisesPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("exchangeOnPremisesPolicy", (n) -> { this.setExchangeOnPremisesPolicy(n.getObjectValue(DeviceManagementExchangeOnPremisesPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("groupPolicyCategories", (n) -> { this.setGroupPolicyCategories(n.getCollectionOfObjectValues(GroupPolicyCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("groupPolicyConfigurations", (n) -> { this.setGroupPolicyConfigurations(n.getCollectionOfObjectValues(GroupPolicyConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("groupPolicyDefinitionFiles", (n) -> { this.setGroupPolicyDefinitionFiles(n.getCollectionOfObjectValues(GroupPolicyDefinitionFile::createFromDiscriminatorValue)); });
+        deserializerMap.put("groupPolicyDefinitions", (n) -> { this.setGroupPolicyDefinitions(n.getCollectionOfObjectValues(GroupPolicyDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("groupPolicyMigrationReports", (n) -> { this.setGroupPolicyMigrationReports(n.getCollectionOfObjectValues(GroupPolicyMigrationReport::createFromDiscriminatorValue)); });
+        deserializerMap.put("groupPolicyObjectFiles", (n) -> { this.setGroupPolicyObjectFiles(n.getCollectionOfObjectValues(GroupPolicyObjectFile::createFromDiscriminatorValue)); });
+        deserializerMap.put("groupPolicyUploadedDefinitionFiles", (n) -> { this.setGroupPolicyUploadedDefinitionFiles(n.getCollectionOfObjectValues(GroupPolicyUploadedDefinitionFile::createFromDiscriminatorValue)); });
+        deserializerMap.put("importedDeviceIdentities", (n) -> { this.setImportedDeviceIdentities(n.getCollectionOfObjectValues(ImportedDeviceIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("importedWindowsAutopilotDeviceIdentities", (n) -> { this.setImportedWindowsAutopilotDeviceIdentities(n.getCollectionOfObjectValues(ImportedWindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("intents", (n) -> { this.setIntents(n.getCollectionOfObjectValues(DeviceManagementIntent::createFromDiscriminatorValue)); });
+        deserializerMap.put("intuneAccountId", (n) -> { this.setIntuneAccountId(n.getStringValue()); });
+        deserializerMap.put("intuneBrand", (n) -> { this.setIntuneBrand(n.getObjectValue(IntuneBrand::createFromDiscriminatorValue)); });
+        deserializerMap.put("intuneBrandingProfiles", (n) -> { this.setIntuneBrandingProfiles(n.getCollectionOfObjectValues(IntuneBrandingProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("iosUpdateStatuses", (n) -> { this.setIosUpdateStatuses(n.getCollectionOfObjectValues(IosUpdateDeviceStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastReportAggregationDateTime", (n) -> { this.setLastReportAggregationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("legacyPcManangementEnabled", (n) -> { this.setLegacyPcManangementEnabled(n.getBooleanValue()); });
+        deserializerMap.put("macOSSoftwareUpdateAccountSummaries", (n) -> { this.setMacOSSoftwareUpdateAccountSummaries(n.getCollectionOfObjectValues(MacOSSoftwareUpdateAccountSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedDeviceCleanupSettings", (n) -> { this.setManagedDeviceCleanupSettings(n.getObjectValue(ManagedDeviceCleanupSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedDeviceEncryptionStates", (n) -> { this.setManagedDeviceEncryptionStates(n.getCollectionOfObjectValues(ManagedDeviceEncryptionState::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedDeviceOverview", (n) -> { this.setManagedDeviceOverview(n.getObjectValue(ManagedDeviceOverview::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedDevices", (n) -> { this.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
+        deserializerMap.put("maximumDepTokens", (n) -> { this.setMaximumDepTokens(n.getIntegerValue()); });
+        deserializerMap.put("microsoftTunnelConfigurations", (n) -> { this.setMicrosoftTunnelConfigurations(n.getCollectionOfObjectValues(MicrosoftTunnelConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("microsoftTunnelHealthThresholds", (n) -> { this.setMicrosoftTunnelHealthThresholds(n.getCollectionOfObjectValues(MicrosoftTunnelHealthThreshold::createFromDiscriminatorValue)); });
+        deserializerMap.put("microsoftTunnelServerLogCollectionResponses", (n) -> { this.setMicrosoftTunnelServerLogCollectionResponses(n.getCollectionOfObjectValues(MicrosoftTunnelServerLogCollectionResponse::createFromDiscriminatorValue)); });
+        deserializerMap.put("microsoftTunnelSites", (n) -> { this.setMicrosoftTunnelSites(n.getCollectionOfObjectValues(MicrosoftTunnelSite::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobileAppTroubleshootingEvents", (n) -> { this.setMobileAppTroubleshootingEvents(n.getCollectionOfObjectValues(MobileAppTroubleshootingEvent::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobileThreatDefenseConnectors", (n) -> { this.setMobileThreatDefenseConnectors(n.getCollectionOfObjectValues(MobileThreatDefenseConnector::createFromDiscriminatorValue)); });
+        deserializerMap.put("monitoring", (n) -> { this.setMonitoring(n.getObjectValue(Monitoring::createFromDiscriminatorValue)); });
+        deserializerMap.put("ndesConnectors", (n) -> { this.setNdesConnectors(n.getCollectionOfObjectValues(NdesConnector::createFromDiscriminatorValue)); });
+        deserializerMap.put("notificationMessageTemplates", (n) -> { this.setNotificationMessageTemplates(n.getCollectionOfObjectValues(NotificationMessageTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("oemWarrantyInformationOnboarding", (n) -> { this.setOemWarrantyInformationOnboarding(n.getCollectionOfObjectValues(OemWarrantyInformationOnboarding::createFromDiscriminatorValue)); });
+        deserializerMap.put("remoteActionAudits", (n) -> { this.setRemoteActionAudits(n.getCollectionOfObjectValues(RemoteActionAudit::createFromDiscriminatorValue)); });
+        deserializerMap.put("remoteAssistancePartners", (n) -> { this.setRemoteAssistancePartners(n.getCollectionOfObjectValues(RemoteAssistancePartner::createFromDiscriminatorValue)); });
+        deserializerMap.put("remoteAssistanceSettings", (n) -> { this.setRemoteAssistanceSettings(n.getObjectValue(RemoteAssistanceSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("reports", (n) -> { this.setReports(n.getObjectValue(DeviceManagementReports::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceAccessProfiles", (n) -> { this.setResourceAccessProfiles(n.getCollectionOfObjectValues(DeviceManagementResourceAccessProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceOperations", (n) -> { this.setResourceOperations(n.getCollectionOfObjectValues(ResourceOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("reusablePolicySettings", (n) -> { this.setReusablePolicySettings(n.getCollectionOfObjectValues(DeviceManagementReusablePolicySetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("reusableSettings", (n) -> { this.setReusableSettings(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleAssignments", (n) -> { this.setRoleAssignments(n.getCollectionOfObjectValues(DeviceAndAppManagementRoleAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleDefinitions", (n) -> { this.setRoleDefinitions(n.getCollectionOfObjectValues(RoleDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleScopeTags", (n) -> { this.setRoleScopeTags(n.getCollectionOfObjectValues(RoleScopeTag::createFromDiscriminatorValue)); });
+        deserializerMap.put("settingDefinitions", (n) -> { this.setSettingDefinitions(n.getCollectionOfObjectValues(DeviceManagementSettingDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(DeviceManagementSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("softwareUpdateStatusSummary", (n) -> { this.setSoftwareUpdateStatusSummary(n.getObjectValue(SoftwareUpdateStatusSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getEnumValue(DeviceManagementSubscriptions.class)); });
+        deserializerMap.put("subscriptionState", (n) -> { this.setSubscriptionState(n.getEnumValue(DeviceManagementSubscriptionState.class)); });
+        deserializerMap.put("telecomExpenseManagementPartners", (n) -> { this.setTelecomExpenseManagementPartners(n.getCollectionOfObjectValues(TelecomExpenseManagementPartner::createFromDiscriminatorValue)); });
+        deserializerMap.put("templates", (n) -> { this.setTemplates(n.getCollectionOfObjectValues(DeviceManagementTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("templateSettings", (n) -> { this.setTemplateSettings(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantAttachRBAC", (n) -> { this.setTenantAttachRBAC(n.getObjectValue(TenantAttachRBAC::createFromDiscriminatorValue)); });
+        deserializerMap.put("termsAndConditions", (n) -> { this.setTermsAndConditions(n.getCollectionOfObjectValues(TermsAndConditions::createFromDiscriminatorValue)); });
+        deserializerMap.put("troubleshootingEvents", (n) -> { this.setTroubleshootingEvents(n.getCollectionOfObjectValues(DeviceManagementTroubleshootingEvent::createFromDiscriminatorValue)); });
+        deserializerMap.put("unlicensedAdminstratorsEnabled", (n) -> { this.setUnlicensedAdminstratorsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("userExperienceAnalyticsAnomaly", (n) -> { this.setUserExperienceAnalyticsAnomaly(n.getCollectionOfObjectValues(UserExperienceAnalyticsAnomaly::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAnomalyDevice", (n) -> { this.setUserExperienceAnalyticsAnomalyDevice(n.getCollectionOfObjectValues(UserExperienceAnalyticsAnomalyDevice::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAnomalySeverityOverview", (n) -> { this.setUserExperienceAnalyticsAnomalySeverityOverview(n.getObjectValue(UserExperienceAnalyticsAnomalySeverityOverview::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformance", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthApplicationPerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthDeviceModelPerformance", (n) -> { this.setUserExperienceAnalyticsAppHealthDeviceModelPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthDeviceModelPerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthDevicePerformance", (n) -> { this.setUserExperienceAnalyticsAppHealthDevicePerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthDevicePerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthDevicePerformanceDetails", (n) -> { this.setUserExperienceAnalyticsAppHealthDevicePerformanceDetails(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthDevicePerformanceDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthOSVersionPerformance", (n) -> { this.setUserExperienceAnalyticsAppHealthOSVersionPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthOSVersionPerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthOverview", (n) -> { this.setUserExperienceAnalyticsAppHealthOverview(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsBaselines", (n) -> { this.setUserExperienceAnalyticsBaselines(n.getCollectionOfObjectValues(UserExperienceAnalyticsBaseline::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsBatteryHealthAppImpact", (n) -> { this.setUserExperienceAnalyticsBatteryHealthAppImpact(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthAppImpact::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsBatteryHealthCapacityDetails", (n) -> { this.setUserExperienceAnalyticsBatteryHealthCapacityDetails(n.getObjectValue(UserExperienceAnalyticsBatteryHealthCapacityDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsBatteryHealthDeviceAppImpact", (n) -> { this.setUserExperienceAnalyticsBatteryHealthDeviceAppImpact(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthDeviceAppImpact::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsBatteryHealthDevicePerformance", (n) -> { this.setUserExperienceAnalyticsBatteryHealthDevicePerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthDevicePerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory", (n) -> { this.setUserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsBatteryHealthModelPerformance", (n) -> { this.setUserExperienceAnalyticsBatteryHealthModelPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthModelPerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsBatteryHealthOsPerformance", (n) -> { this.setUserExperienceAnalyticsBatteryHealthOsPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsBatteryHealthOsPerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsBatteryHealthRuntimeDetails", (n) -> { this.setUserExperienceAnalyticsBatteryHealthRuntimeDetails(n.getObjectValue(UserExperienceAnalyticsBatteryHealthRuntimeDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsCategories", (n) -> { this.setUserExperienceAnalyticsCategories(n.getCollectionOfObjectValues(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsDeviceMetricHistory", (n) -> { this.setUserExperienceAnalyticsDeviceMetricHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsMetricHistory::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsDevicePerformance", (n) -> { this.setUserExperienceAnalyticsDevicePerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsDevicePerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsDeviceScope", (n) -> { this.setUserExperienceAnalyticsDeviceScope(n.getObjectValue(UserExperienceAnalyticsDeviceScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsDeviceScopes", (n) -> { this.setUserExperienceAnalyticsDeviceScopes(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsDeviceScores", (n) -> { this.setUserExperienceAnalyticsDeviceScores(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceScores::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsDeviceStartupHistory", (n) -> { this.setUserExperienceAnalyticsDeviceStartupHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceStartupHistory::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsDeviceStartupProcesses", (n) -> { this.setUserExperienceAnalyticsDeviceStartupProcesses(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceStartupProcess::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsDeviceStartupProcessPerformance", (n) -> { this.setUserExperienceAnalyticsDeviceStartupProcessPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceStartupProcessPerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsDevicesWithoutCloudIdentity", (n) -> { this.setUserExperienceAnalyticsDevicesWithoutCloudIdentity(n.getCollectionOfObjectValues(UserExperienceAnalyticsDeviceWithoutCloudIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsImpactingProcess", (n) -> { this.setUserExperienceAnalyticsImpactingProcess(n.getCollectionOfObjectValues(UserExperienceAnalyticsImpactingProcess::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsMetricHistory", (n) -> { this.setUserExperienceAnalyticsMetricHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsMetricHistory::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsModelScores", (n) -> { this.setUserExperienceAnalyticsModelScores(n.getCollectionOfObjectValues(UserExperienceAnalyticsModelScores::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsNotAutopilotReadyDevice", (n) -> { this.setUserExperienceAnalyticsNotAutopilotReadyDevice(n.getCollectionOfObjectValues(UserExperienceAnalyticsNotAutopilotReadyDevice::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsOverview", (n) -> { this.setUserExperienceAnalyticsOverview(n.getObjectValue(UserExperienceAnalyticsOverview::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsRemoteConnection", (n) -> { this.setUserExperienceAnalyticsRemoteConnection(n.getCollectionOfObjectValues(UserExperienceAnalyticsRemoteConnection::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsResourcePerformance", (n) -> { this.setUserExperienceAnalyticsResourcePerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsResourcePerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsScoreHistory", (n) -> { this.setUserExperienceAnalyticsScoreHistory(n.getCollectionOfObjectValues(UserExperienceAnalyticsScoreHistory::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsSettings", (n) -> { this.setUserExperienceAnalyticsSettings(n.getObjectValue(UserExperienceAnalyticsSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric", (n) -> { this.setUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric(n.getObjectValue(UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsWorkFromAnywhereMetrics", (n) -> { this.setUserExperienceAnalyticsWorkFromAnywhereMetrics(n.getCollectionOfObjectValues(UserExperienceAnalyticsWorkFromAnywhereMetric::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsWorkFromAnywhereModelPerformance", (n) -> { this.setUserExperienceAnalyticsWorkFromAnywhereModelPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsWorkFromAnywhereModelPerformance::createFromDiscriminatorValue)); });
+        deserializerMap.put("userPfxCertificates", (n) -> { this.setUserPfxCertificates(n.getCollectionOfObjectValues(UserPFXCertificate::createFromDiscriminatorValue)); });
+        deserializerMap.put("virtualEndpoint", (n) -> { this.setVirtualEndpoint(n.getObjectValue(VirtualEndpoint::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsAutopilotDeploymentProfiles", (n) -> { this.setWindowsAutopilotDeploymentProfiles(n.getCollectionOfObjectValues(WindowsAutopilotDeploymentProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsAutopilotDeviceIdentities", (n) -> { this.setWindowsAutopilotDeviceIdentities(n.getCollectionOfObjectValues(WindowsAutopilotDeviceIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsAutopilotSettings", (n) -> { this.setWindowsAutopilotSettings(n.getObjectValue(WindowsAutopilotSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsDriverUpdateProfiles", (n) -> { this.setWindowsDriverUpdateProfiles(n.getCollectionOfObjectValues(WindowsDriverUpdateProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsFeatureUpdateProfiles", (n) -> { this.setWindowsFeatureUpdateProfiles(n.getCollectionOfObjectValues(WindowsFeatureUpdateProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsInformationProtectionAppLearningSummaries", (n) -> { this.setWindowsInformationProtectionAppLearningSummaries(n.getCollectionOfObjectValues(WindowsInformationProtectionAppLearningSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsInformationProtectionNetworkLearningSummaries", (n) -> { this.setWindowsInformationProtectionNetworkLearningSummaries(n.getCollectionOfObjectValues(WindowsInformationProtectionNetworkLearningSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsMalwareInformation", (n) -> { this.setWindowsMalwareInformation(n.getCollectionOfObjectValues(WindowsMalwareInformation::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsMalwareOverview", (n) -> { this.setWindowsMalwareOverview(n.getObjectValue(WindowsMalwareOverview::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsQualityUpdateProfiles", (n) -> { this.setWindowsQualityUpdateProfiles(n.getCollectionOfObjectValues(WindowsQualityUpdateProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsUpdateCatalogItems", (n) -> { this.setWindowsUpdateCatalogItems(n.getCollectionOfObjectValues(WindowsUpdateCatalogItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("zebraFotaArtifacts", (n) -> { this.setZebraFotaArtifacts(n.getCollectionOfObjectValues(ZebraFotaArtifact::createFromDiscriminatorValue)); });
+        deserializerMap.put("zebraFotaConnector", (n) -> { this.setZebraFotaConnector(n.getObjectValue(ZebraFotaConnector::createFromDiscriminatorValue)); });
+        deserializerMap.put("zebraFotaDeployments", (n) -> { this.setZebraFotaDeployments(n.getCollectionOfObjectValues(ZebraFotaDeployment::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the groupPolicyCategories property value. The available group policy categories for this account.
@@ -1264,6 +1267,14 @@ public class DeviceManagement extends Entity implements Parsable {
         return this._mobileThreatDefenseConnectors;
     }
     /**
+     * Gets the monitoring property value. The monitoring property
+     * @return a monitoring
+     */
+    @javax.annotation.Nullable
+    public Monitoring getMonitoring() {
+        return this._monitoring;
+    }
+    /**
      * Gets the ndesConnectors property value. The collection of Ndes connectors for this account.
      * @return a ndesConnector
      */
@@ -1286,22 +1297,6 @@ public class DeviceManagement extends Entity implements Parsable {
     @javax.annotation.Nullable
     public java.util.List<OemWarrantyInformationOnboarding> getOemWarrantyInformationOnboarding() {
         return this._oemWarrantyInformationOnboarding;
-    }
-    /**
-     * Gets the organizationalMessageDetails property value. A list of OrganizationalMessageDetails
-     * @return a organizationalMessageDetail
-     */
-    @javax.annotation.Nullable
-    public java.util.List<OrganizationalMessageDetail> getOrganizationalMessageDetails() {
-        return this._organizationalMessageDetails;
-    }
-    /**
-     * Gets the organizationalMessageGuidedContents property value. A list of OrganizationalMessageGuidedContents
-     * @return a organizationalMessageGuidedContent
-     */
-    @javax.annotation.Nullable
-    public java.util.List<OrganizationalMessageGuidedContent> getOrganizationalMessageGuidedContents() {
-        return this._organizationalMessageGuidedContents;
     }
     /**
      * Gets the remoteActionAudits property value. The list of device remote action audits with the tenant.
@@ -1486,6 +1481,30 @@ public class DeviceManagement extends Entity implements Parsable {
     @javax.annotation.Nullable
     public Boolean getUnlicensedAdminstratorsEnabled() {
         return this._unlicensedAdminstratorsEnabled;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAnomaly property value. The user experience analytics anomaly entity contains anomaly details.
+     * @return a userExperienceAnalyticsAnomaly
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAnomaly> getUserExperienceAnalyticsAnomaly() {
+        return this._userExperienceAnalyticsAnomaly;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAnomalyDevice property value. The user experience analytics anomaly entity contains device details.
+     * @return a userExperienceAnalyticsAnomalyDevice
+     */
+    @javax.annotation.Nullable
+    public java.util.List<UserExperienceAnalyticsAnomalyDevice> getUserExperienceAnalyticsAnomalyDevice() {
+        return this._userExperienceAnalyticsAnomalyDevice;
+    }
+    /**
+     * Gets the userExperienceAnalyticsAnomalySeverityOverview property value. The user experience analytics anomaly severity overview entity contains the count information for each severity of anomaly.
+     * @return a userExperienceAnalyticsAnomalySeverityOverview
+     */
+    @javax.annotation.Nullable
+    public UserExperienceAnalyticsAnomalySeverityOverview getUserExperienceAnalyticsAnomalySeverityOverview() {
+        return this._userExperienceAnalyticsAnomalySeverityOverview;
     }
     /**
      * Gets the userExperienceAnalyticsAppHealthApplicationPerformance property value. User experience analytics appHealth Application Performance
@@ -1760,14 +1779,6 @@ public class DeviceManagement extends Entity implements Parsable {
         return this._userExperienceAnalyticsOverview;
     }
     /**
-     * Gets the userExperienceAnalyticsRegressionSummary property value. User experience analytics regression summary
-     * @return a userExperienceAnalyticsRegressionSummary
-     */
-    @javax.annotation.Nullable
-    public UserExperienceAnalyticsRegressionSummary getUserExperienceAnalyticsRegressionSummary() {
-        return this._userExperienceAnalyticsRegressionSummary;
-    }
-    /**
      * Gets the userExperienceAnalyticsRemoteConnection property value. User experience analytics remote connection
      * @return a userExperienceAnalyticsRemoteConnection
      */
@@ -1956,6 +1967,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -1999,7 +2011,6 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("deviceCompliancePolicies", this.getDeviceCompliancePolicies());
         writer.writeObjectValue("deviceCompliancePolicyDeviceStateSummary", this.getDeviceCompliancePolicyDeviceStateSummary());
         writer.writeCollectionOfObjectValues("deviceCompliancePolicySettingStateSummaries", this.getDeviceCompliancePolicySettingStateSummaries());
-        writer.writeOffsetDateTimeValue("deviceComplianceReportSummarizationDateTime", this.getDeviceComplianceReportSummarizationDateTime());
         writer.writeCollectionOfObjectValues("deviceComplianceScripts", this.getDeviceComplianceScripts());
         writer.writeCollectionOfObjectValues("deviceConfigurationConflictSummary", this.getDeviceConfigurationConflictSummary());
         writer.writeObjectValue("deviceConfigurationDeviceStateSummaries", this.getDeviceConfigurationDeviceStateSummaries());
@@ -2033,8 +2044,6 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeObjectValue("intuneBrand", this.getIntuneBrand());
         writer.writeCollectionOfObjectValues("intuneBrandingProfiles", this.getIntuneBrandingProfiles());
         writer.writeCollectionOfObjectValues("iosUpdateStatuses", this.getIosUpdateStatuses());
-        writer.writeOffsetDateTimeValue("lastReportAggregationDateTime", this.getLastReportAggregationDateTime());
-        writer.writeBooleanValue("legacyPcManangementEnabled", this.getLegacyPcManangementEnabled());
         writer.writeCollectionOfObjectValues("macOSSoftwareUpdateAccountSummaries", this.getMacOSSoftwareUpdateAccountSummaries());
         writer.writeObjectValue("managedDeviceCleanupSettings", this.getManagedDeviceCleanupSettings());
         writer.writeCollectionOfObjectValues("managedDeviceEncryptionStates", this.getManagedDeviceEncryptionStates());
@@ -2047,11 +2056,10 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("microsoftTunnelSites", this.getMicrosoftTunnelSites());
         writer.writeCollectionOfObjectValues("mobileAppTroubleshootingEvents", this.getMobileAppTroubleshootingEvents());
         writer.writeCollectionOfObjectValues("mobileThreatDefenseConnectors", this.getMobileThreatDefenseConnectors());
+        writer.writeObjectValue("monitoring", this.getMonitoring());
         writer.writeCollectionOfObjectValues("ndesConnectors", this.getNdesConnectors());
         writer.writeCollectionOfObjectValues("notificationMessageTemplates", this.getNotificationMessageTemplates());
         writer.writeCollectionOfObjectValues("oemWarrantyInformationOnboarding", this.getOemWarrantyInformationOnboarding());
-        writer.writeCollectionOfObjectValues("organizationalMessageDetails", this.getOrganizationalMessageDetails());
-        writer.writeCollectionOfObjectValues("organizationalMessageGuidedContents", this.getOrganizationalMessageGuidedContents());
         writer.writeCollectionOfObjectValues("remoteActionAudits", this.getRemoteActionAudits());
         writer.writeCollectionOfObjectValues("remoteAssistancePartners", this.getRemoteAssistancePartners());
         writer.writeObjectValue("remoteAssistanceSettings", this.getRemoteAssistanceSettings());
@@ -2074,7 +2082,9 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeObjectValue("tenantAttachRBAC", this.getTenantAttachRBAC());
         writer.writeCollectionOfObjectValues("termsAndConditions", this.getTermsAndConditions());
         writer.writeCollectionOfObjectValues("troubleshootingEvents", this.getTroubleshootingEvents());
-        writer.writeBooleanValue("unlicensedAdminstratorsEnabled", this.getUnlicensedAdminstratorsEnabled());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAnomaly", this.getUserExperienceAnalyticsAnomaly());
+        writer.writeCollectionOfObjectValues("userExperienceAnalyticsAnomalyDevice", this.getUserExperienceAnalyticsAnomalyDevice());
+        writer.writeObjectValue("userExperienceAnalyticsAnomalySeverityOverview", this.getUserExperienceAnalyticsAnomalySeverityOverview());
         writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthApplicationPerformance", this.getUserExperienceAnalyticsAppHealthApplicationPerformance());
         writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion", this.getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion());
         writer.writeCollectionOfObjectValues("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", this.getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails());
@@ -2109,7 +2119,6 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("userExperienceAnalyticsModelScores", this.getUserExperienceAnalyticsModelScores());
         writer.writeCollectionOfObjectValues("userExperienceAnalyticsNotAutopilotReadyDevice", this.getUserExperienceAnalyticsNotAutopilotReadyDevice());
         writer.writeObjectValue("userExperienceAnalyticsOverview", this.getUserExperienceAnalyticsOverview());
-        writer.writeObjectValue("userExperienceAnalyticsRegressionSummary", this.getUserExperienceAnalyticsRegressionSummary());
         writer.writeCollectionOfObjectValues("userExperienceAnalyticsRemoteConnection", this.getUserExperienceAnalyticsRemoteConnection());
         writer.writeCollectionOfObjectValues("userExperienceAnalyticsResourcePerformance", this.getUserExperienceAnalyticsResourcePerformance());
         writer.writeCollectionOfObjectValues("userExperienceAnalyticsScoreHistory", this.getUserExperienceAnalyticsScoreHistory());
@@ -2139,6 +2148,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the accountMoveCompletionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountMoveCompletionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._accountMoveCompletionDateTime = value;
     }
@@ -2147,6 +2157,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the adminConsent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdminConsent(@javax.annotation.Nullable final AdminConsent value) {
         this._adminConsent = value;
     }
@@ -2155,6 +2166,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the advancedThreatProtectionOnboardingStateSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionOnboardingStateSummary(@javax.annotation.Nullable final AdvancedThreatProtectionOnboardingStateSummary value) {
         this._advancedThreatProtectionOnboardingStateSummary = value;
     }
@@ -2163,6 +2175,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the androidDeviceOwnerEnrollmentProfiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidDeviceOwnerEnrollmentProfiles(@javax.annotation.Nullable final java.util.List<AndroidDeviceOwnerEnrollmentProfile> value) {
         this._androidDeviceOwnerEnrollmentProfiles = value;
     }
@@ -2171,6 +2184,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the androidForWorkAppConfigurationSchemas property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidForWorkAppConfigurationSchemas(@javax.annotation.Nullable final java.util.List<AndroidForWorkAppConfigurationSchema> value) {
         this._androidForWorkAppConfigurationSchemas = value;
     }
@@ -2179,6 +2193,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the androidForWorkEnrollmentProfiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidForWorkEnrollmentProfiles(@javax.annotation.Nullable final java.util.List<AndroidForWorkEnrollmentProfile> value) {
         this._androidForWorkEnrollmentProfiles = value;
     }
@@ -2187,6 +2202,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the androidForWorkSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidForWorkSettings(@javax.annotation.Nullable final AndroidForWorkSettings value) {
         this._androidForWorkSettings = value;
     }
@@ -2195,6 +2211,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the androidManagedStoreAccountEnterpriseSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidManagedStoreAccountEnterpriseSettings(@javax.annotation.Nullable final AndroidManagedStoreAccountEnterpriseSettings value) {
         this._androidManagedStoreAccountEnterpriseSettings = value;
     }
@@ -2203,6 +2220,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the androidManagedStoreAppConfigurationSchemas property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidManagedStoreAppConfigurationSchemas(@javax.annotation.Nullable final java.util.List<AndroidManagedStoreAppConfigurationSchema> value) {
         this._androidManagedStoreAppConfigurationSchemas = value;
     }
@@ -2211,6 +2229,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the applePushNotificationCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplePushNotificationCertificate(@javax.annotation.Nullable final ApplePushNotificationCertificate value) {
         this._applePushNotificationCertificate = value;
     }
@@ -2219,6 +2238,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the appleUserInitiatedEnrollmentProfiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppleUserInitiatedEnrollmentProfiles(@javax.annotation.Nullable final java.util.List<AppleUserInitiatedEnrollmentProfile> value) {
         this._appleUserInitiatedEnrollmentProfiles = value;
     }
@@ -2227,6 +2247,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the assignmentFilters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentFilters(@javax.annotation.Nullable final java.util.List<DeviceAndAppManagementAssignmentFilter> value) {
         this._assignmentFilters = value;
     }
@@ -2235,6 +2256,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the auditEvents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuditEvents(@javax.annotation.Nullable final java.util.List<AuditEvent> value) {
         this._auditEvents = value;
     }
@@ -2243,6 +2265,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the autopilotEvents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutopilotEvents(@javax.annotation.Nullable final java.util.List<DeviceManagementAutopilotEvent> value) {
         this._autopilotEvents = value;
     }
@@ -2251,6 +2274,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the cartToClassAssociations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCartToClassAssociations(@javax.annotation.Nullable final java.util.List<CartToClassAssociation> value) {
         this._cartToClassAssociations = value;
     }
@@ -2259,6 +2283,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<DeviceManagementSettingCategory> value) {
         this._categories = value;
     }
@@ -2267,6 +2292,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the certificateConnectorDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateConnectorDetails(@javax.annotation.Nullable final java.util.List<CertificateConnectorDetails> value) {
         this._certificateConnectorDetails = value;
     }
@@ -2275,6 +2301,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the chromeOSOnboardingSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChromeOSOnboardingSettings(@javax.annotation.Nullable final java.util.List<ChromeOSOnboardingSettings> value) {
         this._chromeOSOnboardingSettings = value;
     }
@@ -2283,6 +2310,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the cloudPCConnectivityIssues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPCConnectivityIssues(@javax.annotation.Nullable final java.util.List<CloudPCConnectivityIssue> value) {
         this._cloudPCConnectivityIssues = value;
     }
@@ -2291,6 +2319,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the comanagedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComanagedDevices(@javax.annotation.Nullable final java.util.List<ManagedDevice> value) {
         this._comanagedDevices = value;
     }
@@ -2299,6 +2328,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the comanagementEligibleDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComanagementEligibleDevices(@javax.annotation.Nullable final java.util.List<ComanagementEligibleDevice> value) {
         this._comanagementEligibleDevices = value;
     }
@@ -2307,6 +2337,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the complianceCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceCategories(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationCategory> value) {
         this._complianceCategories = value;
     }
@@ -2315,6 +2346,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the complianceManagementPartners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceManagementPartners(@javax.annotation.Nullable final java.util.List<ComplianceManagementPartner> value) {
         this._complianceManagementPartners = value;
     }
@@ -2323,6 +2355,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the compliancePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliancePolicies(@javax.annotation.Nullable final java.util.List<DeviceManagementCompliancePolicy> value) {
         this._compliancePolicies = value;
     }
@@ -2331,6 +2364,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the complianceSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDefinition> value) {
         this._complianceSettings = value;
     }
@@ -2339,6 +2373,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the conditionalAccessSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionalAccessSettings(@javax.annotation.Nullable final OnPremisesConditionalAccessSettings value) {
         this._conditionalAccessSettings = value;
     }
@@ -2347,6 +2382,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the configManagerCollections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigManagerCollections(@javax.annotation.Nullable final java.util.List<ConfigManagerCollection> value) {
         this._configManagerCollections = value;
     }
@@ -2355,6 +2391,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the configurationCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationCategories(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationCategory> value) {
         this._configurationCategories = value;
     }
@@ -2363,6 +2400,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the configurationPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationPolicies(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationPolicy> value) {
         this._configurationPolicies = value;
     }
@@ -2371,6 +2409,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the configurationPolicyTemplates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationPolicyTemplates(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationPolicyTemplate> value) {
         this._configurationPolicyTemplates = value;
     }
@@ -2379,6 +2418,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the configurationSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDefinition> value) {
         this._configurationSettings = value;
     }
@@ -2387,6 +2427,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the dataProcessorServiceForWindowsFeaturesOnboarding property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataProcessorServiceForWindowsFeaturesOnboarding(@javax.annotation.Nullable final DataProcessorServiceForWindowsFeaturesOnboarding value) {
         this._dataProcessorServiceForWindowsFeaturesOnboarding = value;
     }
@@ -2395,6 +2436,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the dataSharingConsents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataSharingConsents(@javax.annotation.Nullable final java.util.List<DataSharingConsent> value) {
         this._dataSharingConsents = value;
     }
@@ -2403,6 +2445,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the depOnboardingSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDepOnboardingSettings(@javax.annotation.Nullable final java.util.List<DepOnboardingSetting> value) {
         this._depOnboardingSettings = value;
     }
@@ -2411,6 +2454,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the derivedCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDerivedCredentials(@javax.annotation.Nullable final java.util.List<DeviceManagementDerivedCredentialSettings> value) {
         this._derivedCredentials = value;
     }
@@ -2419,6 +2463,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the detectedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectedApps(@javax.annotation.Nullable final java.util.List<DetectedApp> value) {
         this._detectedApps = value;
     }
@@ -2427,6 +2472,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCategories(@javax.annotation.Nullable final java.util.List<DeviceCategory> value) {
         this._deviceCategories = value;
     }
@@ -2435,6 +2481,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceCompliancePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCompliancePolicies(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicy> value) {
         this._deviceCompliancePolicies = value;
     }
@@ -2443,6 +2490,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceCompliancePolicyDeviceStateSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCompliancePolicyDeviceStateSummary(@javax.annotation.Nullable final DeviceCompliancePolicyDeviceStateSummary value) {
         this._deviceCompliancePolicyDeviceStateSummary = value;
     }
@@ -2451,6 +2499,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceCompliancePolicySettingStateSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCompliancePolicySettingStateSummaries(@javax.annotation.Nullable final java.util.List<DeviceCompliancePolicySettingStateSummary> value) {
         this._deviceCompliancePolicySettingStateSummaries = value;
     }
@@ -2459,6 +2508,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceComplianceReportSummarizationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceComplianceReportSummarizationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._deviceComplianceReportSummarizationDateTime = value;
     }
@@ -2467,6 +2517,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceComplianceScripts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceComplianceScripts(@javax.annotation.Nullable final java.util.List<DeviceComplianceScript> value) {
         this._deviceComplianceScripts = value;
     }
@@ -2475,6 +2526,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceConfigurationConflictSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceConfigurationConflictSummary(@javax.annotation.Nullable final java.util.List<DeviceConfigurationConflictSummary> value) {
         this._deviceConfigurationConflictSummary = value;
     }
@@ -2483,6 +2535,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceConfigurationDeviceStateSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceConfigurationDeviceStateSummaries(@javax.annotation.Nullable final DeviceConfigurationDeviceStateSummary value) {
         this._deviceConfigurationDeviceStateSummaries = value;
     }
@@ -2491,6 +2544,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceConfigurationRestrictedAppsViolations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceConfigurationRestrictedAppsViolations(@javax.annotation.Nullable final java.util.List<RestrictedAppsViolation> value) {
         this._deviceConfigurationRestrictedAppsViolations = value;
     }
@@ -2499,6 +2553,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceConfigurations(@javax.annotation.Nullable final java.util.List<DeviceConfiguration> value) {
         this._deviceConfigurations = value;
     }
@@ -2507,6 +2562,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceConfigurationsAllManagedDeviceCertificateStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceConfigurationsAllManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedAllDeviceCertificateState> value) {
         this._deviceConfigurationsAllManagedDeviceCertificateStates = value;
     }
@@ -2515,6 +2571,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceConfigurationUserStateSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceConfigurationUserStateSummaries(@javax.annotation.Nullable final DeviceConfigurationUserStateSummary value) {
         this._deviceConfigurationUserStateSummaries = value;
     }
@@ -2523,6 +2580,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceCustomAttributeShellScripts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCustomAttributeShellScripts(@javax.annotation.Nullable final java.util.List<DeviceCustomAttributeShellScript> value) {
         this._deviceCustomAttributeShellScripts = value;
     }
@@ -2531,6 +2589,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceEnrollmentConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceEnrollmentConfigurations(@javax.annotation.Nullable final java.util.List<DeviceEnrollmentConfiguration> value) {
         this._deviceEnrollmentConfigurations = value;
     }
@@ -2539,6 +2598,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceHealthScripts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceHealthScripts(@javax.annotation.Nullable final java.util.List<DeviceHealthScript> value) {
         this._deviceHealthScripts = value;
     }
@@ -2547,6 +2607,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceManagementPartners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceManagementPartners(@javax.annotation.Nullable final java.util.List<DeviceManagementPartner> value) {
         this._deviceManagementPartners = value;
     }
@@ -2555,6 +2616,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceManagementScripts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceManagementScripts(@javax.annotation.Nullable final java.util.List<DeviceManagementScript> value) {
         this._deviceManagementScripts = value;
     }
@@ -2563,6 +2625,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceProtectionOverview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceProtectionOverview(@javax.annotation.Nullable final DeviceProtectionOverview value) {
         this._deviceProtectionOverview = value;
     }
@@ -2571,6 +2634,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the deviceShellScripts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceShellScripts(@javax.annotation.Nullable final java.util.List<DeviceShellScript> value) {
         this._deviceShellScripts = value;
     }
@@ -2579,6 +2643,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the domainJoinConnectors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainJoinConnectors(@javax.annotation.Nullable final java.util.List<DeviceManagementDomainJoinConnector> value) {
         this._domainJoinConnectors = value;
     }
@@ -2587,6 +2652,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the embeddedSIMActivationCodePools property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmbeddedSIMActivationCodePools(@javax.annotation.Nullable final java.util.List<EmbeddedSIMActivationCodePool> value) {
         this._embeddedSIMActivationCodePools = value;
     }
@@ -2595,6 +2661,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the exchangeConnectors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchangeConnectors(@javax.annotation.Nullable final java.util.List<DeviceManagementExchangeConnector> value) {
         this._exchangeConnectors = value;
     }
@@ -2603,6 +2670,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the exchangeOnPremisesPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchangeOnPremisesPolicies(@javax.annotation.Nullable final java.util.List<DeviceManagementExchangeOnPremisesPolicy> value) {
         this._exchangeOnPremisesPolicies = value;
     }
@@ -2611,6 +2679,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the exchangeOnPremisesPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchangeOnPremisesPolicy(@javax.annotation.Nullable final DeviceManagementExchangeOnPremisesPolicy value) {
         this._exchangeOnPremisesPolicy = value;
     }
@@ -2619,6 +2688,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the groupPolicyCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyCategories(@javax.annotation.Nullable final java.util.List<GroupPolicyCategory> value) {
         this._groupPolicyCategories = value;
     }
@@ -2627,6 +2697,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the groupPolicyConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyConfigurations(@javax.annotation.Nullable final java.util.List<GroupPolicyConfiguration> value) {
         this._groupPolicyConfigurations = value;
     }
@@ -2635,6 +2706,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the groupPolicyDefinitionFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyDefinitionFiles(@javax.annotation.Nullable final java.util.List<GroupPolicyDefinitionFile> value) {
         this._groupPolicyDefinitionFiles = value;
     }
@@ -2643,6 +2715,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the groupPolicyDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyDefinitions(@javax.annotation.Nullable final java.util.List<GroupPolicyDefinition> value) {
         this._groupPolicyDefinitions = value;
     }
@@ -2651,6 +2724,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the groupPolicyMigrationReports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyMigrationReports(@javax.annotation.Nullable final java.util.List<GroupPolicyMigrationReport> value) {
         this._groupPolicyMigrationReports = value;
     }
@@ -2659,6 +2733,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the groupPolicyObjectFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyObjectFiles(@javax.annotation.Nullable final java.util.List<GroupPolicyObjectFile> value) {
         this._groupPolicyObjectFiles = value;
     }
@@ -2667,6 +2742,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the groupPolicyUploadedDefinitionFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyUploadedDefinitionFiles(@javax.annotation.Nullable final java.util.List<GroupPolicyUploadedDefinitionFile> value) {
         this._groupPolicyUploadedDefinitionFiles = value;
     }
@@ -2675,6 +2751,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the importedDeviceIdentities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportedDeviceIdentities(@javax.annotation.Nullable final java.util.List<ImportedDeviceIdentity> value) {
         this._importedDeviceIdentities = value;
     }
@@ -2683,6 +2760,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the importedWindowsAutopilotDeviceIdentities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportedWindowsAutopilotDeviceIdentities(@javax.annotation.Nullable final java.util.List<ImportedWindowsAutopilotDeviceIdentity> value) {
         this._importedWindowsAutopilotDeviceIdentities = value;
     }
@@ -2691,6 +2769,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the intents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntents(@javax.annotation.Nullable final java.util.List<DeviceManagementIntent> value) {
         this._intents = value;
     }
@@ -2699,6 +2778,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the intuneAccountId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntuneAccountId(@javax.annotation.Nullable final String value) {
         this._intuneAccountId = value;
     }
@@ -2707,6 +2787,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the intuneBrand property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntuneBrand(@javax.annotation.Nullable final IntuneBrand value) {
         this._intuneBrand = value;
     }
@@ -2715,6 +2796,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the intuneBrandingProfiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntuneBrandingProfiles(@javax.annotation.Nullable final java.util.List<IntuneBrandingProfile> value) {
         this._intuneBrandingProfiles = value;
     }
@@ -2723,6 +2805,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the iosUpdateStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosUpdateStatuses(@javax.annotation.Nullable final java.util.List<IosUpdateDeviceStatus> value) {
         this._iosUpdateStatuses = value;
     }
@@ -2731,6 +2814,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the lastReportAggregationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastReportAggregationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastReportAggregationDateTime = value;
     }
@@ -2739,6 +2823,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the legacyPcManangementEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLegacyPcManangementEnabled(@javax.annotation.Nullable final Boolean value) {
         this._legacyPcManangementEnabled = value;
     }
@@ -2747,6 +2832,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the macOSSoftwareUpdateAccountSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacOSSoftwareUpdateAccountSummaries(@javax.annotation.Nullable final java.util.List<MacOSSoftwareUpdateAccountSummary> value) {
         this._macOSSoftwareUpdateAccountSummaries = value;
     }
@@ -2755,6 +2841,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceCleanupSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceCleanupSettings(@javax.annotation.Nullable final ManagedDeviceCleanupSettings value) {
         this._managedDeviceCleanupSettings = value;
     }
@@ -2763,6 +2850,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceEncryptionStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceEncryptionStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceEncryptionState> value) {
         this._managedDeviceEncryptionStates = value;
     }
@@ -2771,6 +2859,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceOverview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceOverview(@javax.annotation.Nullable final ManagedDeviceOverview value) {
         this._managedDeviceOverview = value;
     }
@@ -2779,6 +2868,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the managedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDevices(@javax.annotation.Nullable final java.util.List<ManagedDevice> value) {
         this._managedDevices = value;
     }
@@ -2787,6 +2877,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the maximumDepTokens property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumDepTokens(@javax.annotation.Nullable final Integer value) {
         this._maximumDepTokens = value;
     }
@@ -2795,6 +2886,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the microsoftTunnelConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftTunnelConfigurations(@javax.annotation.Nullable final java.util.List<MicrosoftTunnelConfiguration> value) {
         this._microsoftTunnelConfigurations = value;
     }
@@ -2803,6 +2895,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the microsoftTunnelHealthThresholds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftTunnelHealthThresholds(@javax.annotation.Nullable final java.util.List<MicrosoftTunnelHealthThreshold> value) {
         this._microsoftTunnelHealthThresholds = value;
     }
@@ -2811,6 +2904,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the microsoftTunnelServerLogCollectionResponses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftTunnelServerLogCollectionResponses(@javax.annotation.Nullable final java.util.List<MicrosoftTunnelServerLogCollectionResponse> value) {
         this._microsoftTunnelServerLogCollectionResponses = value;
     }
@@ -2819,6 +2913,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the microsoftTunnelSites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftTunnelSites(@javax.annotation.Nullable final java.util.List<MicrosoftTunnelSite> value) {
         this._microsoftTunnelSites = value;
     }
@@ -2827,6 +2922,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the mobileAppTroubleshootingEvents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileAppTroubleshootingEvents(@javax.annotation.Nullable final java.util.List<MobileAppTroubleshootingEvent> value) {
         this._mobileAppTroubleshootingEvents = value;
     }
@@ -2835,14 +2931,25 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the mobileThreatDefenseConnectors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileThreatDefenseConnectors(@javax.annotation.Nullable final java.util.List<MobileThreatDefenseConnector> value) {
         this._mobileThreatDefenseConnectors = value;
+    }
+    /**
+     * Sets the monitoring property value. The monitoring property
+     * @param value Value to set for the monitoring property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setMonitoring(@javax.annotation.Nullable final Monitoring value) {
+        this._monitoring = value;
     }
     /**
      * Sets the ndesConnectors property value. The collection of Ndes connectors for this account.
      * @param value Value to set for the ndesConnectors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNdesConnectors(@javax.annotation.Nullable final java.util.List<NdesConnector> value) {
         this._ndesConnectors = value;
     }
@@ -2851,6 +2958,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the notificationMessageTemplates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationMessageTemplates(@javax.annotation.Nullable final java.util.List<NotificationMessageTemplate> value) {
         this._notificationMessageTemplates = value;
     }
@@ -2859,30 +2967,16 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the oemWarrantyInformationOnboarding property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOemWarrantyInformationOnboarding(@javax.annotation.Nullable final java.util.List<OemWarrantyInformationOnboarding> value) {
         this._oemWarrantyInformationOnboarding = value;
-    }
-    /**
-     * Sets the organizationalMessageDetails property value. A list of OrganizationalMessageDetails
-     * @param value Value to set for the organizationalMessageDetails property.
-     * @return a void
-     */
-    public void setOrganizationalMessageDetails(@javax.annotation.Nullable final java.util.List<OrganizationalMessageDetail> value) {
-        this._organizationalMessageDetails = value;
-    }
-    /**
-     * Sets the organizationalMessageGuidedContents property value. A list of OrganizationalMessageGuidedContents
-     * @param value Value to set for the organizationalMessageGuidedContents property.
-     * @return a void
-     */
-    public void setOrganizationalMessageGuidedContents(@javax.annotation.Nullable final java.util.List<OrganizationalMessageGuidedContent> value) {
-        this._organizationalMessageGuidedContents = value;
     }
     /**
      * Sets the remoteActionAudits property value. The list of device remote action audits with the tenant.
      * @param value Value to set for the remoteActionAudits property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteActionAudits(@javax.annotation.Nullable final java.util.List<RemoteActionAudit> value) {
         this._remoteActionAudits = value;
     }
@@ -2891,6 +2985,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the remoteAssistancePartners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteAssistancePartners(@javax.annotation.Nullable final java.util.List<RemoteAssistancePartner> value) {
         this._remoteAssistancePartners = value;
     }
@@ -2899,6 +2994,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the remoteAssistanceSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteAssistanceSettings(@javax.annotation.Nullable final RemoteAssistanceSettings value) {
         this._remoteAssistanceSettings = value;
     }
@@ -2907,6 +3003,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the reports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReports(@javax.annotation.Nullable final DeviceManagementReports value) {
         this._reports = value;
     }
@@ -2915,6 +3012,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the resourceAccessProfiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceAccessProfiles(@javax.annotation.Nullable final java.util.List<DeviceManagementResourceAccessProfileBase> value) {
         this._resourceAccessProfiles = value;
     }
@@ -2923,6 +3021,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the resourceOperations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceOperations(@javax.annotation.Nullable final java.util.List<ResourceOperation> value) {
         this._resourceOperations = value;
     }
@@ -2931,6 +3030,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the reusablePolicySettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReusablePolicySettings(@javax.annotation.Nullable final java.util.List<DeviceManagementReusablePolicySetting> value) {
         this._reusablePolicySettings = value;
     }
@@ -2939,6 +3039,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the reusableSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReusableSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDefinition> value) {
         this._reusableSettings = value;
     }
@@ -2947,6 +3048,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the roleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<DeviceAndAppManagementRoleAssignment> value) {
         this._roleAssignments = value;
     }
@@ -2955,6 +3057,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the roleDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitions(@javax.annotation.Nullable final java.util.List<RoleDefinition> value) {
         this._roleDefinitions = value;
     }
@@ -2963,6 +3066,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTags(@javax.annotation.Nullable final java.util.List<RoleScopeTag> value) {
         this._roleScopeTags = value;
     }
@@ -2971,6 +3075,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the settingDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingDefinitions(@javax.annotation.Nullable final java.util.List<DeviceManagementSettingDefinition> value) {
         this._settingDefinitions = value;
     }
@@ -2979,6 +3084,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final DeviceManagementSettings value) {
         this._settings = value;
     }
@@ -2987,6 +3093,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the softwareUpdateStatusSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSoftwareUpdateStatusSummary(@javax.annotation.Nullable final SoftwareUpdateStatusSummary value) {
         this._softwareUpdateStatusSummary = value;
     }
@@ -2995,6 +3102,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the subscriptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptions(@javax.annotation.Nullable final DeviceManagementSubscriptions value) {
         this._subscriptions = value;
     }
@@ -3003,6 +3111,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the subscriptionState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptionState(@javax.annotation.Nullable final DeviceManagementSubscriptionState value) {
         this._subscriptionState = value;
     }
@@ -3011,6 +3120,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the telecomExpenseManagementPartners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTelecomExpenseManagementPartners(@javax.annotation.Nullable final java.util.List<TelecomExpenseManagementPartner> value) {
         this._telecomExpenseManagementPartners = value;
     }
@@ -3019,6 +3129,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the templates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplates(@javax.annotation.Nullable final java.util.List<DeviceManagementTemplate> value) {
         this._templates = value;
     }
@@ -3027,6 +3138,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the templateSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateSettings(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingTemplate> value) {
         this._templateSettings = value;
     }
@@ -3035,6 +3147,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the tenantAttachRBAC property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantAttachRBAC(@javax.annotation.Nullable final TenantAttachRBAC value) {
         this._tenantAttachRBAC = value;
     }
@@ -3043,6 +3156,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the termsAndConditions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermsAndConditions(@javax.annotation.Nullable final java.util.List<TermsAndConditions> value) {
         this._termsAndConditions = value;
     }
@@ -3051,6 +3165,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the troubleshootingEvents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTroubleshootingEvents(@javax.annotation.Nullable final java.util.List<DeviceManagementTroubleshootingEvent> value) {
         this._troubleshootingEvents = value;
     }
@@ -3059,14 +3174,43 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the unlicensedAdminstratorsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnlicensedAdminstratorsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._unlicensedAdminstratorsEnabled = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAnomaly property value. The user experience analytics anomaly entity contains anomaly details.
+     * @param value Value to set for the userExperienceAnalyticsAnomaly property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsAnomaly(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAnomaly> value) {
+        this._userExperienceAnalyticsAnomaly = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAnomalyDevice property value. The user experience analytics anomaly entity contains device details.
+     * @param value Value to set for the userExperienceAnalyticsAnomalyDevice property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsAnomalyDevice(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAnomalyDevice> value) {
+        this._userExperienceAnalyticsAnomalyDevice = value;
+    }
+    /**
+     * Sets the userExperienceAnalyticsAnomalySeverityOverview property value. The user experience analytics anomaly severity overview entity contains the count information for each severity of anomaly.
+     * @param value Value to set for the userExperienceAnalyticsAnomalySeverityOverview property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setUserExperienceAnalyticsAnomalySeverityOverview(@javax.annotation.Nullable final UserExperienceAnalyticsAnomalySeverityOverview value) {
+        this._userExperienceAnalyticsAnomalySeverityOverview = value;
     }
     /**
      * Sets the userExperienceAnalyticsAppHealthApplicationPerformance property value. User experience analytics appHealth Application Performance
      * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthApplicationPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthApplicationPerformance> value) {
         this._userExperienceAnalyticsAppHealthApplicationPerformance = value;
     }
@@ -3075,6 +3219,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion> value) {
         this._userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion = value;
     }
@@ -3083,6 +3228,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails> value) {
         this._userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails = value;
     }
@@ -3091,6 +3237,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> value) {
         this._userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId = value;
     }
@@ -3099,6 +3246,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion> value) {
         this._userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion = value;
     }
@@ -3107,6 +3255,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsAppHealthDeviceModelPerformance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthDeviceModelPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthDeviceModelPerformance> value) {
         this._userExperienceAnalyticsAppHealthDeviceModelPerformance = value;
     }
@@ -3115,6 +3264,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsAppHealthDevicePerformance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthDevicePerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthDevicePerformance> value) {
         this._userExperienceAnalyticsAppHealthDevicePerformance = value;
     }
@@ -3123,6 +3273,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsAppHealthDevicePerformanceDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthDevicePerformanceDetails(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthDevicePerformanceDetails> value) {
         this._userExperienceAnalyticsAppHealthDevicePerformanceDetails = value;
     }
@@ -3131,6 +3282,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsAppHealthOSVersionPerformance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthOSVersionPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthOSVersionPerformance> value) {
         this._userExperienceAnalyticsAppHealthOSVersionPerformance = value;
     }
@@ -3139,6 +3291,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsAppHealthOverview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsAppHealthOverview(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
         this._userExperienceAnalyticsAppHealthOverview = value;
     }
@@ -3147,6 +3300,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsBaselines property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsBaselines(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsBaseline> value) {
         this._userExperienceAnalyticsBaselines = value;
     }
@@ -3155,6 +3309,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsBatteryHealthAppImpact property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsBatteryHealthAppImpact(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsBatteryHealthAppImpact> value) {
         this._userExperienceAnalyticsBatteryHealthAppImpact = value;
     }
@@ -3163,6 +3318,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsBatteryHealthCapacityDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsBatteryHealthCapacityDetails(@javax.annotation.Nullable final UserExperienceAnalyticsBatteryHealthCapacityDetails value) {
         this._userExperienceAnalyticsBatteryHealthCapacityDetails = value;
     }
@@ -3171,6 +3327,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsBatteryHealthDeviceAppImpact property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsBatteryHealthDeviceAppImpact(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsBatteryHealthDeviceAppImpact> value) {
         this._userExperienceAnalyticsBatteryHealthDeviceAppImpact = value;
     }
@@ -3179,6 +3336,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsBatteryHealthDevicePerformance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsBatteryHealthDevicePerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsBatteryHealthDevicePerformance> value) {
         this._userExperienceAnalyticsBatteryHealthDevicePerformance = value;
     }
@@ -3187,6 +3345,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistory> value) {
         this._userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory = value;
     }
@@ -3195,6 +3354,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsBatteryHealthModelPerformance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsBatteryHealthModelPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsBatteryHealthModelPerformance> value) {
         this._userExperienceAnalyticsBatteryHealthModelPerformance = value;
     }
@@ -3203,6 +3363,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsBatteryHealthOsPerformance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsBatteryHealthOsPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsBatteryHealthOsPerformance> value) {
         this._userExperienceAnalyticsBatteryHealthOsPerformance = value;
     }
@@ -3211,6 +3372,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsBatteryHealthRuntimeDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsBatteryHealthRuntimeDetails(@javax.annotation.Nullable final UserExperienceAnalyticsBatteryHealthRuntimeDetails value) {
         this._userExperienceAnalyticsBatteryHealthRuntimeDetails = value;
     }
@@ -3219,6 +3381,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsCategories(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsCategory> value) {
         this._userExperienceAnalyticsCategories = value;
     }
@@ -3227,6 +3390,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsDeviceMetricHistory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsDeviceMetricHistory(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsMetricHistory> value) {
         this._userExperienceAnalyticsDeviceMetricHistory = value;
     }
@@ -3235,6 +3399,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsDevicePerformance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsDevicePerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDevicePerformance> value) {
         this._userExperienceAnalyticsDevicePerformance = value;
     }
@@ -3243,6 +3408,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsDeviceScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsDeviceScope(@javax.annotation.Nullable final UserExperienceAnalyticsDeviceScope value) {
         this._userExperienceAnalyticsDeviceScope = value;
     }
@@ -3251,6 +3417,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsDeviceScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsDeviceScopes(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceScope> value) {
         this._userExperienceAnalyticsDeviceScopes = value;
     }
@@ -3259,6 +3426,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsDeviceScores property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsDeviceScores(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceScores> value) {
         this._userExperienceAnalyticsDeviceScores = value;
     }
@@ -3267,6 +3435,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsDeviceStartupHistory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsDeviceStartupHistory(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceStartupHistory> value) {
         this._userExperienceAnalyticsDeviceStartupHistory = value;
     }
@@ -3275,6 +3444,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsDeviceStartupProcesses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsDeviceStartupProcesses(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceStartupProcess> value) {
         this._userExperienceAnalyticsDeviceStartupProcesses = value;
     }
@@ -3283,6 +3453,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsDeviceStartupProcessPerformance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsDeviceStartupProcessPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceStartupProcessPerformance> value) {
         this._userExperienceAnalyticsDeviceStartupProcessPerformance = value;
     }
@@ -3291,6 +3462,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsDevicesWithoutCloudIdentity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsDevicesWithoutCloudIdentity(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsDeviceWithoutCloudIdentity> value) {
         this._userExperienceAnalyticsDevicesWithoutCloudIdentity = value;
     }
@@ -3299,6 +3471,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsImpactingProcess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsImpactingProcess(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsImpactingProcess> value) {
         this._userExperienceAnalyticsImpactingProcess = value;
     }
@@ -3307,6 +3480,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsMetricHistory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsMetricHistory(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsMetricHistory> value) {
         this._userExperienceAnalyticsMetricHistory = value;
     }
@@ -3315,6 +3489,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsModelScores property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsModelScores(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsModelScores> value) {
         this._userExperienceAnalyticsModelScores = value;
     }
@@ -3323,6 +3498,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsNotAutopilotReadyDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsNotAutopilotReadyDevice(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsNotAutopilotReadyDevice> value) {
         this._userExperienceAnalyticsNotAutopilotReadyDevice = value;
     }
@@ -3331,22 +3507,16 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsOverview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsOverview(@javax.annotation.Nullable final UserExperienceAnalyticsOverview value) {
         this._userExperienceAnalyticsOverview = value;
-    }
-    /**
-     * Sets the userExperienceAnalyticsRegressionSummary property value. User experience analytics regression summary
-     * @param value Value to set for the userExperienceAnalyticsRegressionSummary property.
-     * @return a void
-     */
-    public void setUserExperienceAnalyticsRegressionSummary(@javax.annotation.Nullable final UserExperienceAnalyticsRegressionSummary value) {
-        this._userExperienceAnalyticsRegressionSummary = value;
     }
     /**
      * Sets the userExperienceAnalyticsRemoteConnection property value. User experience analytics remote connection
      * @param value Value to set for the userExperienceAnalyticsRemoteConnection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsRemoteConnection(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsRemoteConnection> value) {
         this._userExperienceAnalyticsRemoteConnection = value;
     }
@@ -3355,6 +3525,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsResourcePerformance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsResourcePerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsResourcePerformance> value) {
         this._userExperienceAnalyticsResourcePerformance = value;
     }
@@ -3363,6 +3534,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsScoreHistory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsScoreHistory(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsScoreHistory> value) {
         this._userExperienceAnalyticsScoreHistory = value;
     }
@@ -3371,6 +3543,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsSettings(@javax.annotation.Nullable final UserExperienceAnalyticsSettings value) {
         this._userExperienceAnalyticsSettings = value;
     }
@@ -3379,6 +3552,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric(@javax.annotation.Nullable final UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric value) {
         this._userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric = value;
     }
@@ -3387,6 +3561,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsWorkFromAnywhereMetrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsWorkFromAnywhereMetrics(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsWorkFromAnywhereMetric> value) {
         this._userExperienceAnalyticsWorkFromAnywhereMetrics = value;
     }
@@ -3395,6 +3570,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userExperienceAnalyticsWorkFromAnywhereModelPerformance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsWorkFromAnywhereModelPerformance(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsWorkFromAnywhereModelPerformance> value) {
         this._userExperienceAnalyticsWorkFromAnywhereModelPerformance = value;
     }
@@ -3403,6 +3579,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the userPfxCertificates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPfxCertificates(@javax.annotation.Nullable final java.util.List<UserPFXCertificate> value) {
         this._userPfxCertificates = value;
     }
@@ -3411,6 +3588,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the virtualEndpoint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVirtualEndpoint(@javax.annotation.Nullable final VirtualEndpoint value) {
         this._virtualEndpoint = value;
     }
@@ -3419,6 +3597,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the windowsAutopilotDeploymentProfiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsAutopilotDeploymentProfiles(@javax.annotation.Nullable final java.util.List<WindowsAutopilotDeploymentProfile> value) {
         this._windowsAutopilotDeploymentProfiles = value;
     }
@@ -3427,6 +3606,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the windowsAutopilotDeviceIdentities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsAutopilotDeviceIdentities(@javax.annotation.Nullable final java.util.List<WindowsAutopilotDeviceIdentity> value) {
         this._windowsAutopilotDeviceIdentities = value;
     }
@@ -3435,6 +3615,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the windowsAutopilotSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsAutopilotSettings(@javax.annotation.Nullable final WindowsAutopilotSettings value) {
         this._windowsAutopilotSettings = value;
     }
@@ -3443,6 +3624,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the windowsDriverUpdateProfiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsDriverUpdateProfiles(@javax.annotation.Nullable final java.util.List<WindowsDriverUpdateProfile> value) {
         this._windowsDriverUpdateProfiles = value;
     }
@@ -3451,6 +3633,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the windowsFeatureUpdateProfiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsFeatureUpdateProfiles(@javax.annotation.Nullable final java.util.List<WindowsFeatureUpdateProfile> value) {
         this._windowsFeatureUpdateProfiles = value;
     }
@@ -3459,6 +3642,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the windowsInformationProtectionAppLearningSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsInformationProtectionAppLearningSummaries(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionAppLearningSummary> value) {
         this._windowsInformationProtectionAppLearningSummaries = value;
     }
@@ -3467,6 +3651,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the windowsInformationProtectionNetworkLearningSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsInformationProtectionNetworkLearningSummaries(@javax.annotation.Nullable final java.util.List<WindowsInformationProtectionNetworkLearningSummary> value) {
         this._windowsInformationProtectionNetworkLearningSummaries = value;
     }
@@ -3475,6 +3660,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the windowsMalwareInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsMalwareInformation(@javax.annotation.Nullable final java.util.List<WindowsMalwareInformation> value) {
         this._windowsMalwareInformation = value;
     }
@@ -3483,6 +3669,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the windowsMalwareOverview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsMalwareOverview(@javax.annotation.Nullable final WindowsMalwareOverview value) {
         this._windowsMalwareOverview = value;
     }
@@ -3491,6 +3678,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the windowsQualityUpdateProfiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsQualityUpdateProfiles(@javax.annotation.Nullable final java.util.List<WindowsQualityUpdateProfile> value) {
         this._windowsQualityUpdateProfiles = value;
     }
@@ -3499,6 +3687,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the windowsUpdateCatalogItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsUpdateCatalogItems(@javax.annotation.Nullable final java.util.List<WindowsUpdateCatalogItem> value) {
         this._windowsUpdateCatalogItems = value;
     }
@@ -3507,6 +3696,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the zebraFotaArtifacts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setZebraFotaArtifacts(@javax.annotation.Nullable final java.util.List<ZebraFotaArtifact> value) {
         this._zebraFotaArtifacts = value;
     }
@@ -3515,6 +3705,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the zebraFotaConnector property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setZebraFotaConnector(@javax.annotation.Nullable final ZebraFotaConnector value) {
         this._zebraFotaConnector = value;
     }
@@ -3523,6 +3714,7 @@ public class DeviceManagement extends Entity implements Parsable {
      * @param value Value to set for the zebraFotaDeployments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setZebraFotaDeployments(@javax.annotation.Nullable final java.util.List<ZebraFotaDeployment> value) {
         this._zebraFotaDeployments = value;
     }

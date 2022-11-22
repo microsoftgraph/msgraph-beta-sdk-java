@@ -16,9 +16,9 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
      * Instantiates a new IpNamedLocation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IpNamedLocation() {
         super();
-        this.setOdataType("#microsoft.graph.ipNamedLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,11 +36,10 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IpNamedLocation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("ipRanges", (n) -> { currentObject.setIpRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
-            this.put("isTrusted", (n) -> { currentObject.setIsTrusted(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("ipRanges", (n) -> { this.setIpRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("isTrusted", (n) -> { this.setIsTrusted(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ipRanges property value. List of IP address ranges in IPv4 CIDR format (e.g. 1.2.3.4/32) or any allowable IPv6 format from IETF RFC596. Required.
@@ -63,6 +62,7 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +74,7 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
      * @param value Value to set for the ipRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpRanges(@javax.annotation.Nullable final java.util.List<IpRange> value) {
         this._ipRanges = value;
     }
@@ -82,6 +83,7 @@ public class IpNamedLocation extends NamedLocation implements Parsable {
      * @param value Value to set for the isTrusted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsTrusted(@javax.annotation.Nullable final Boolean value) {
         this._isTrusted = value;
     }

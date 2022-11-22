@@ -25,9 +25,9 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
      * Instantiates a new deviceHealthScriptRemediationHistoryData and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceHealthScriptRemediationHistoryData() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceHealthScriptRemediationHistoryData");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,13 +61,12 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceHealthScriptRemediationHistoryData currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("date", (n) -> { currentObject.setDate(n.getLocalDateValue()); });
-            this.put("noIssueDeviceCount", (n) -> { currentObject.setNoIssueDeviceCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("remediatedDeviceCount", (n) -> { currentObject.setRemediatedDeviceCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("date", (n) -> { this.setDate(n.getLocalDateValue()); });
+        deserializerMap.put("noIssueDeviceCount", (n) -> { this.setNoIssueDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("remediatedDeviceCount", (n) -> { this.setRemediatedDeviceCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the noIssueDeviceCount property value. The number of devices that were found to have no issue by the device health script.
@@ -98,6 +97,7 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLocalDateValue("date", this.getDate());
@@ -111,6 +111,7 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -119,6 +120,7 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
      * @param value Value to set for the date property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDate(@javax.annotation.Nullable final LocalDate value) {
         this._date = value;
     }
@@ -127,6 +129,7 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
      * @param value Value to set for the noIssueDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNoIssueDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._noIssueDeviceCount = value;
     }
@@ -135,6 +138,7 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -143,6 +147,7 @@ public class DeviceHealthScriptRemediationHistoryData implements AdditionalDataH
      * @param value Value to set for the remediatedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediatedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._remediatedDeviceCount = value;
     }

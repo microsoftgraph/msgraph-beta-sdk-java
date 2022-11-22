@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The Role Definition resource. The role definition is the foundation of role based access in Intune. The role combines an Intune resource such as a Mobile App and associated role permissions such as Create or Read for the resource. There are two types of roles, built-in and custom. Built-in roles cannot be modified. Both built-in roles and custom roles must have assignments to be enforced. Create custom roles if you want to define a role that allows any of the available resources and role permissions to be combined into a single role. */
 public class RoleDefinition extends Entity implements Parsable {
     /** Description of the Role definition. */
     private String _description;
@@ -29,9 +30,9 @@ public class RoleDefinition extends Entity implements Parsable {
      * Instantiates a new roleDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RoleDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.roleDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,17 +73,16 @@ public class RoleDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RoleDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isBuiltIn", (n) -> { currentObject.setIsBuiltIn(n.getBooleanValue()); });
-            this.put("isBuiltInRoleDefinition", (n) -> { currentObject.setIsBuiltInRoleDefinition(n.getBooleanValue()); });
-            this.put("permissions", (n) -> { currentObject.setPermissions(n.getCollectionOfObjectValues(RolePermission::createFromDiscriminatorValue)); });
-            this.put("roleAssignments", (n) -> { currentObject.setRoleAssignments(n.getCollectionOfObjectValues(RoleAssignment::createFromDiscriminatorValue)); });
-            this.put("rolePermissions", (n) -> { currentObject.setRolePermissions(n.getCollectionOfObjectValues(RolePermission::createFromDiscriminatorValue)); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isBuiltIn", (n) -> { this.setIsBuiltIn(n.getBooleanValue()); });
+        deserializerMap.put("isBuiltInRoleDefinition", (n) -> { this.setIsBuiltInRoleDefinition(n.getBooleanValue()); });
+        deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfObjectValues(RolePermission::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleAssignments", (n) -> { this.setRoleAssignments(n.getCollectionOfObjectValues(RoleAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("rolePermissions", (n) -> { this.setRolePermissions(n.getCollectionOfObjectValues(RolePermission::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isBuiltIn property value. Type of Role. Set to True if it is built-in, or set to False if it is a custom role definition.
@@ -137,6 +137,7 @@ public class RoleDefinition extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -154,6 +155,7 @@ public class RoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -162,6 +164,7 @@ public class RoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -170,6 +173,7 @@ public class RoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the isBuiltIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsBuiltIn(@javax.annotation.Nullable final Boolean value) {
         this._isBuiltIn = value;
     }
@@ -178,6 +182,7 @@ public class RoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the isBuiltInRoleDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsBuiltInRoleDefinition(@javax.annotation.Nullable final Boolean value) {
         this._isBuiltInRoleDefinition = value;
     }
@@ -186,6 +191,7 @@ public class RoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the permissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissions(@javax.annotation.Nullable final java.util.List<RolePermission> value) {
         this._permissions = value;
     }
@@ -194,6 +200,7 @@ public class RoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the roleAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleAssignments(@javax.annotation.Nullable final java.util.List<RoleAssignment> value) {
         this._roleAssignments = value;
     }
@@ -202,6 +209,7 @@ public class RoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the rolePermissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRolePermissions(@javax.annotation.Nullable final java.util.List<RolePermission> value) {
         this._rolePermissions = value;
     }
@@ -210,6 +218,7 @@ public class RoleDefinition extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }

@@ -24,6 +24,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      * Instantiates a new AddWatermarkAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AddWatermarkAction() {
         super();
         this.setOdataType("#microsoft.graph.addWatermarkAction");
@@ -44,15 +45,14 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AddWatermarkAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("fontColor", (n) -> { currentObject.setFontColor(n.getStringValue()); });
-            this.put("fontName", (n) -> { currentObject.setFontName(n.getStringValue()); });
-            this.put("fontSize", (n) -> { currentObject.setFontSize(n.getIntegerValue()); });
-            this.put("layout", (n) -> { currentObject.setLayout(n.getEnumValue(WatermarkLayout.class)); });
-            this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
-            this.put("uiElementName", (n) -> { currentObject.setUiElementName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fontColor", (n) -> { this.setFontColor(n.getStringValue()); });
+        deserializerMap.put("fontName", (n) -> { this.setFontName(n.getStringValue()); });
+        deserializerMap.put("fontSize", (n) -> { this.setFontSize(n.getIntegerValue()); });
+        deserializerMap.put("layout", (n) -> { this.setLayout(n.getEnumValue(WatermarkLayout.class)); });
+        deserializerMap.put("text", (n) -> { this.setText(n.getStringValue()); });
+        deserializerMap.put("uiElementName", (n) -> { this.setUiElementName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fontColor property value. Color of the font to use for the watermark.
@@ -107,6 +107,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +123,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      * @param value Value to set for the fontColor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFontColor(@javax.annotation.Nullable final String value) {
         this._fontColor = value;
     }
@@ -130,6 +132,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      * @param value Value to set for the fontName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFontName(@javax.annotation.Nullable final String value) {
         this._fontName = value;
     }
@@ -138,6 +141,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      * @param value Value to set for the fontSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFontSize(@javax.annotation.Nullable final Integer value) {
         this._fontSize = value;
     }
@@ -146,6 +150,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      * @param value Value to set for the layout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLayout(@javax.annotation.Nullable final WatermarkLayout value) {
         this._layout = value;
     }
@@ -154,6 +159,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final String value) {
         this._text = value;
     }
@@ -162,6 +168,7 @@ public class AddWatermarkAction extends InformationProtectionAction implements P
      * @param value Value to set for the uiElementName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUiElementName(@javax.annotation.Nullable final String value) {
         this._uiElementName = value;
     }

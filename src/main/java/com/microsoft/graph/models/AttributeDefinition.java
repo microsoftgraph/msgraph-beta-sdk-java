@@ -41,9 +41,9 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * Instantiates a new attributeDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AttributeDefinition() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.attributeDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -101,22 +101,21 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AttributeDefinition currentObject = this;
-        return new HashMap<>(13) {{
-            this.put("anchor", (n) -> { currentObject.setAnchor(n.getBooleanValue()); });
-            this.put("apiExpressions", (n) -> { currentObject.setApiExpressions(n.getCollectionOfObjectValues(StringKeyStringValuePair::createFromDiscriminatorValue)); });
-            this.put("caseExact", (n) -> { currentObject.setCaseExact(n.getBooleanValue()); });
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getStringValue()); });
-            this.put("flowNullValues", (n) -> { currentObject.setFlowNullValues(n.getBooleanValue()); });
-            this.put("metadata", (n) -> { currentObject.setMetadata(n.getCollectionOfObjectValues(MetadataEntry::createFromDiscriminatorValue)); });
-            this.put("multivalued", (n) -> { currentObject.setMultivalued(n.getBooleanValue()); });
-            this.put("mutability", (n) -> { currentObject.setMutability(n.getEnumValue(Mutability.class)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("referencedObjects", (n) -> { currentObject.setReferencedObjects(n.getCollectionOfObjectValues(ReferencedObject::createFromDiscriminatorValue)); });
-            this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(AttributeType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(13);
+        deserializerMap.put("anchor", (n) -> { this.setAnchor(n.getBooleanValue()); });
+        deserializerMap.put("apiExpressions", (n) -> { this.setApiExpressions(n.getCollectionOfObjectValues(StringKeyStringValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("caseExact", (n) -> { this.setCaseExact(n.getBooleanValue()); });
+        deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getStringValue()); });
+        deserializerMap.put("flowNullValues", (n) -> { this.setFlowNullValues(n.getBooleanValue()); });
+        deserializerMap.put("metadata", (n) -> { this.setMetadata(n.getCollectionOfObjectValues(MetadataEntry::createFromDiscriminatorValue)); });
+        deserializerMap.put("multivalued", (n) -> { this.setMultivalued(n.getBooleanValue()); });
+        deserializerMap.put("mutability", (n) -> { this.setMutability(n.getEnumValue(Mutability.class)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("referencedObjects", (n) -> { this.setReferencedObjects(n.getCollectionOfObjectValues(ReferencedObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("required", (n) -> { this.setRequired(n.getBooleanValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(AttributeType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the flowNullValues property value. 'true' to allow null values for attributes.
@@ -195,6 +194,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("anchor", this.getAnchor());
@@ -217,6 +217,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -225,6 +226,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the anchor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnchor(@javax.annotation.Nullable final Boolean value) {
         this._anchor = value;
     }
@@ -233,6 +235,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the apiExpressions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApiExpressions(@javax.annotation.Nullable final java.util.List<StringKeyStringValuePair> value) {
         this._apiExpressions = value;
     }
@@ -241,6 +244,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the caseExact property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCaseExact(@javax.annotation.Nullable final Boolean value) {
         this._caseExact = value;
     }
@@ -249,6 +253,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final String value) {
         this._defaultValue = value;
     }
@@ -257,6 +262,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the flowNullValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFlowNullValues(@javax.annotation.Nullable final Boolean value) {
         this._flowNullValues = value;
     }
@@ -265,6 +271,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the metadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetadata(@javax.annotation.Nullable final java.util.List<MetadataEntry> value) {
         this._metadata = value;
     }
@@ -273,6 +280,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the multivalued property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultivalued(@javax.annotation.Nullable final Boolean value) {
         this._multivalued = value;
     }
@@ -281,6 +289,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mutability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMutability(@javax.annotation.Nullable final Mutability value) {
         this._mutability = value;
     }
@@ -289,6 +298,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -297,6 +307,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -305,6 +316,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the referencedObjects property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReferencedObjects(@javax.annotation.Nullable final java.util.List<ReferencedObject> value) {
         this._referencedObjects = value;
     }
@@ -313,6 +325,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the required property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequired(@javax.annotation.Nullable final Boolean value) {
         this._required = value;
     }
@@ -321,6 +334,7 @@ public class AttributeDefinition implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final AttributeType value) {
         this._type = value;
     }

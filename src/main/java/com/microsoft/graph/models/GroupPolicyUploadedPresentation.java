@@ -21,6 +21,7 @@ public class GroupPolicyUploadedPresentation extends GroupPolicyPresentation imp
      * Instantiates a new GroupPolicyUploadedPresentation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyUploadedPresentation() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyUploadedPresentation");
@@ -56,15 +57,15 @@ public class GroupPolicyUploadedPresentation extends GroupPolicyPresentation imp
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyUploadedPresentation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

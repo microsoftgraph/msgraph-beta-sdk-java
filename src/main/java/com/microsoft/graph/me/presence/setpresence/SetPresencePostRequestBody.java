@@ -25,6 +25,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * Instantiates a new setPresencePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SetPresencePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -76,13 +77,12 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SetPresencePostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getStringValue()); });
-            this.put("availability", (n) -> { currentObject.setAvailability(n.getStringValue()); });
-            this.put("expirationDuration", (n) -> { currentObject.setExpirationDuration(n.getPeriodValue()); });
-            this.put("sessionId", (n) -> { currentObject.setSessionId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getStringValue()); });
+        deserializerMap.put("availability", (n) -> { this.setAvailability(n.getStringValue()); });
+        deserializerMap.put("expirationDuration", (n) -> { this.setExpirationDuration(n.getPeriodValue()); });
+        deserializerMap.put("sessionId", (n) -> { this.setSessionId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the sessionId property value. The sessionId property
@@ -97,6 +97,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("activity", this.getActivity());
@@ -110,6 +111,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the activity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final String value) {
         this._activity = value;
     }
@@ -118,6 +120,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -126,6 +129,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the availability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailability(@javax.annotation.Nullable final String value) {
         this._availability = value;
     }
@@ -134,6 +138,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the expirationDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDuration(@javax.annotation.Nullable final Period value) {
         this._expirationDuration = value;
     }
@@ -142,6 +147,7 @@ public class SetPresencePostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the sessionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessionId(@javax.annotation.Nullable final String value) {
         this._sessionId = value;
     }

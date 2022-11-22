@@ -18,7 +18,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     private java.util.List<CustomUpdateTimeWindow> _customUpdateTimeWindows;
     /** Update behavior options for macOS software updates. */
     private MacOSSoftwareUpdateBehavior _firmwareUpdateBehavior;
-    /** Update schedule type for macOS software updates. */
+    /** Updatescheduletypefor macOS software updates. */
     private MacOSSoftwareUpdateScheduleType _updateScheduleType;
     /** Minutes indicating UTC offset for each update time window */
     private Integer _updateTimeWindowUtcOffsetInMinutes;
@@ -26,6 +26,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * Instantiates a new MacOSSoftwareUpdateConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSSoftwareUpdateConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSSoftwareUpdateConfiguration");
@@ -78,16 +79,15 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSSoftwareUpdateConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allOtherUpdateBehavior", (n) -> { currentObject.setAllOtherUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
-            this.put("configDataUpdateBehavior", (n) -> { currentObject.setConfigDataUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
-            this.put("criticalUpdateBehavior", (n) -> { currentObject.setCriticalUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
-            this.put("customUpdateTimeWindows", (n) -> { currentObject.setCustomUpdateTimeWindows(n.getCollectionOfObjectValues(CustomUpdateTimeWindow::createFromDiscriminatorValue)); });
-            this.put("firmwareUpdateBehavior", (n) -> { currentObject.setFirmwareUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
-            this.put("updateScheduleType", (n) -> { currentObject.setUpdateScheduleType(n.getEnumValue(MacOSSoftwareUpdateScheduleType.class)); });
-            this.put("updateTimeWindowUtcOffsetInMinutes", (n) -> { currentObject.setUpdateTimeWindowUtcOffsetInMinutes(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allOtherUpdateBehavior", (n) -> { this.setAllOtherUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
+        deserializerMap.put("configDataUpdateBehavior", (n) -> { this.setConfigDataUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
+        deserializerMap.put("criticalUpdateBehavior", (n) -> { this.setCriticalUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
+        deserializerMap.put("customUpdateTimeWindows", (n) -> { this.setCustomUpdateTimeWindows(n.getCollectionOfObjectValues(CustomUpdateTimeWindow::createFromDiscriminatorValue)); });
+        deserializerMap.put("firmwareUpdateBehavior", (n) -> { this.setFirmwareUpdateBehavior(n.getEnumValue(MacOSSoftwareUpdateBehavior.class)); });
+        deserializerMap.put("updateScheduleType", (n) -> { this.setUpdateScheduleType(n.getEnumValue(MacOSSoftwareUpdateScheduleType.class)); });
+        deserializerMap.put("updateTimeWindowUtcOffsetInMinutes", (n) -> { this.setUpdateTimeWindowUtcOffsetInMinutes(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the firmwareUpdateBehavior property value. Update behavior options for macOS software updates.
@@ -98,7 +98,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         return this._firmwareUpdateBehavior;
     }
     /**
-     * Gets the updateScheduleType property value. Update schedule type for macOS software updates.
+     * Gets the updateScheduleType property value. Updatescheduletypefor macOS software updates.
      * @return a macOSSoftwareUpdateScheduleType
      */
     @javax.annotation.Nullable
@@ -118,6 +118,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +135,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the allOtherUpdateBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllOtherUpdateBehavior(@javax.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
         this._allOtherUpdateBehavior = value;
     }
@@ -142,6 +144,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the configDataUpdateBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigDataUpdateBehavior(@javax.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
         this._configDataUpdateBehavior = value;
     }
@@ -150,6 +153,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the criticalUpdateBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCriticalUpdateBehavior(@javax.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
         this._criticalUpdateBehavior = value;
     }
@@ -158,6 +162,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the customUpdateTimeWindows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomUpdateTimeWindows(@javax.annotation.Nullable final java.util.List<CustomUpdateTimeWindow> value) {
         this._customUpdateTimeWindows = value;
     }
@@ -166,14 +171,16 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the firmwareUpdateBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirmwareUpdateBehavior(@javax.annotation.Nullable final MacOSSoftwareUpdateBehavior value) {
         this._firmwareUpdateBehavior = value;
     }
     /**
-     * Sets the updateScheduleType property value. Update schedule type for macOS software updates.
+     * Sets the updateScheduleType property value. Updatescheduletypefor macOS software updates.
      * @param value Value to set for the updateScheduleType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateScheduleType(@javax.annotation.Nullable final MacOSSoftwareUpdateScheduleType value) {
         this._updateScheduleType = value;
     }
@@ -182,6 +189,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the updateTimeWindowUtcOffsetInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateTimeWindowUtcOffsetInMinutes(@javax.annotation.Nullable final Integer value) {
         this._updateTimeWindowUtcOffsetInMinutes = value;
     }

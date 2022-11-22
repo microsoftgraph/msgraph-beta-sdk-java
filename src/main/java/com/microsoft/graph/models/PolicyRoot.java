@@ -23,6 +23,8 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     private AuthenticationFlowsPolicy _authenticationFlowsPolicy;
     /** The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD). */
     private AuthenticationMethodsPolicy _authenticationMethodsPolicy;
+    /** The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access. */
+    private java.util.List<AuthenticationStrengthPolicy> _authenticationStrengthPolicies;
     /** The policy that controls Azure AD authorization settings. */
     private java.util.List<AuthorizationPolicy> _authorizationPolicy;
     /** The Azure AD B2C policies that define how end users register via local accounts. */
@@ -69,9 +71,9 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * Instantiates a new PolicyRoot and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PolicyRoot() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.policyRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -138,6 +140,14 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nullable
     public AuthenticationMethodsPolicy getAuthenticationMethodsPolicy() {
         return this._authenticationMethodsPolicy;
+    }
+    /**
+     * Gets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     * @return a authenticationStrengthPolicy
+     */
+    @javax.annotation.Nullable
+    public java.util.List<AuthenticationStrengthPolicy> getAuthenticationStrengthPolicies() {
+        return this._authenticationStrengthPolicies;
     }
     /**
      * Gets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.
@@ -225,36 +235,36 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PolicyRoot currentObject = this;
-        return new HashMap<>(27) {{
-            this.put("accessReviewPolicy", (n) -> { currentObject.setAccessReviewPolicy(n.getObjectValue(AccessReviewPolicy::createFromDiscriminatorValue)); });
-            this.put("activityBasedTimeoutPolicies", (n) -> { currentObject.setActivityBasedTimeoutPolicies(n.getCollectionOfObjectValues(ActivityBasedTimeoutPolicy::createFromDiscriminatorValue)); });
-            this.put("adminConsentRequestPolicy", (n) -> { currentObject.setAdminConsentRequestPolicy(n.getObjectValue(AdminConsentRequestPolicy::createFromDiscriminatorValue)); });
-            this.put("appManagementPolicies", (n) -> { currentObject.setAppManagementPolicies(n.getCollectionOfObjectValues(AppManagementPolicy::createFromDiscriminatorValue)); });
-            this.put("authenticationFlowsPolicy", (n) -> { currentObject.setAuthenticationFlowsPolicy(n.getObjectValue(AuthenticationFlowsPolicy::createFromDiscriminatorValue)); });
-            this.put("authenticationMethodsPolicy", (n) -> { currentObject.setAuthenticationMethodsPolicy(n.getObjectValue(AuthenticationMethodsPolicy::createFromDiscriminatorValue)); });
-            this.put("authorizationPolicy", (n) -> { currentObject.setAuthorizationPolicy(n.getCollectionOfObjectValues(AuthorizationPolicy::createFromDiscriminatorValue)); });
-            this.put("b2cAuthenticationMethodsPolicy", (n) -> { currentObject.setB2cAuthenticationMethodsPolicy(n.getObjectValue(B2cAuthenticationMethodsPolicy::createFromDiscriminatorValue)); });
-            this.put("claimsMappingPolicies", (n) -> { currentObject.setClaimsMappingPolicies(n.getCollectionOfObjectValues(ClaimsMappingPolicy::createFromDiscriminatorValue)); });
-            this.put("conditionalAccessPolicies", (n) -> { currentObject.setConditionalAccessPolicies(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
-            this.put("crossTenantAccessPolicy", (n) -> { currentObject.setCrossTenantAccessPolicy(n.getObjectValue(CrossTenantAccessPolicy::createFromDiscriminatorValue)); });
-            this.put("defaultAppManagementPolicy", (n) -> { currentObject.setDefaultAppManagementPolicy(n.getObjectValue(TenantAppManagementPolicy::createFromDiscriminatorValue)); });
-            this.put("deviceRegistrationPolicy", (n) -> { currentObject.setDeviceRegistrationPolicy(n.getObjectValue(DeviceRegistrationPolicy::createFromDiscriminatorValue)); });
-            this.put("directoryRoleAccessReviewPolicy", (n) -> { currentObject.setDirectoryRoleAccessReviewPolicy(n.getObjectValue(DirectoryRoleAccessReviewPolicy::createFromDiscriminatorValue)); });
-            this.put("externalIdentitiesPolicy", (n) -> { currentObject.setExternalIdentitiesPolicy(n.getObjectValue(ExternalIdentitiesPolicy::createFromDiscriminatorValue)); });
-            this.put("featureRolloutPolicies", (n) -> { currentObject.setFeatureRolloutPolicies(n.getCollectionOfObjectValues(FeatureRolloutPolicy::createFromDiscriminatorValue)); });
-            this.put("homeRealmDiscoveryPolicies", (n) -> { currentObject.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
-            this.put("identitySecurityDefaultsEnforcementPolicy", (n) -> { currentObject.setIdentitySecurityDefaultsEnforcementPolicy(n.getObjectValue(IdentitySecurityDefaultsEnforcementPolicy::createFromDiscriminatorValue)); });
-            this.put("mobileAppManagementPolicies", (n) -> { currentObject.setMobileAppManagementPolicies(n.getCollectionOfObjectValues(MobilityManagementPolicy::createFromDiscriminatorValue)); });
-            this.put("mobileDeviceManagementPolicies", (n) -> { currentObject.setMobileDeviceManagementPolicies(n.getCollectionOfObjectValues(MobilityManagementPolicy::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("permissionGrantPolicies", (n) -> { currentObject.setPermissionGrantPolicies(n.getCollectionOfObjectValues(PermissionGrantPolicy::createFromDiscriminatorValue)); });
-            this.put("roleManagementPolicies", (n) -> { currentObject.setRoleManagementPolicies(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicy::createFromDiscriminatorValue)); });
-            this.put("roleManagementPolicyAssignments", (n) -> { currentObject.setRoleManagementPolicyAssignments(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicyAssignment::createFromDiscriminatorValue)); });
-            this.put("servicePrincipalCreationPolicies", (n) -> { currentObject.setServicePrincipalCreationPolicies(n.getCollectionOfObjectValues(ServicePrincipalCreationPolicy::createFromDiscriminatorValue)); });
-            this.put("tokenIssuancePolicies", (n) -> { currentObject.setTokenIssuancePolicies(n.getCollectionOfObjectValues(TokenIssuancePolicy::createFromDiscriminatorValue)); });
-            this.put("tokenLifetimePolicies", (n) -> { currentObject.setTokenLifetimePolicies(n.getCollectionOfObjectValues(TokenLifetimePolicy::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(28);
+        deserializerMap.put("accessReviewPolicy", (n) -> { this.setAccessReviewPolicy(n.getObjectValue(AccessReviewPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("activityBasedTimeoutPolicies", (n) -> { this.setActivityBasedTimeoutPolicies(n.getCollectionOfObjectValues(ActivityBasedTimeoutPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("adminConsentRequestPolicy", (n) -> { this.setAdminConsentRequestPolicy(n.getObjectValue(AdminConsentRequestPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("appManagementPolicies", (n) -> { this.setAppManagementPolicies(n.getCollectionOfObjectValues(AppManagementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationFlowsPolicy", (n) -> { this.setAuthenticationFlowsPolicy(n.getObjectValue(AuthenticationFlowsPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationMethodsPolicy", (n) -> { this.setAuthenticationMethodsPolicy(n.getObjectValue(AuthenticationMethodsPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationStrengthPolicies", (n) -> { this.setAuthenticationStrengthPolicies(n.getCollectionOfObjectValues(AuthenticationStrengthPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("authorizationPolicy", (n) -> { this.setAuthorizationPolicy(n.getCollectionOfObjectValues(AuthorizationPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("b2cAuthenticationMethodsPolicy", (n) -> { this.setB2cAuthenticationMethodsPolicy(n.getObjectValue(B2cAuthenticationMethodsPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("claimsMappingPolicies", (n) -> { this.setClaimsMappingPolicies(n.getCollectionOfObjectValues(ClaimsMappingPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("conditionalAccessPolicies", (n) -> { this.setConditionalAccessPolicies(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("crossTenantAccessPolicy", (n) -> { this.setCrossTenantAccessPolicy(n.getObjectValue(CrossTenantAccessPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultAppManagementPolicy", (n) -> { this.setDefaultAppManagementPolicy(n.getObjectValue(TenantAppManagementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceRegistrationPolicy", (n) -> { this.setDeviceRegistrationPolicy(n.getObjectValue(DeviceRegistrationPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("directoryRoleAccessReviewPolicy", (n) -> { this.setDirectoryRoleAccessReviewPolicy(n.getObjectValue(DirectoryRoleAccessReviewPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalIdentitiesPolicy", (n) -> { this.setExternalIdentitiesPolicy(n.getObjectValue(ExternalIdentitiesPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("featureRolloutPolicies", (n) -> { this.setFeatureRolloutPolicies(n.getCollectionOfObjectValues(FeatureRolloutPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("homeRealmDiscoveryPolicies", (n) -> { this.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("identitySecurityDefaultsEnforcementPolicy", (n) -> { this.setIdentitySecurityDefaultsEnforcementPolicy(n.getObjectValue(IdentitySecurityDefaultsEnforcementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobileAppManagementPolicies", (n) -> { this.setMobileAppManagementPolicies(n.getCollectionOfObjectValues(MobilityManagementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobileDeviceManagementPolicies", (n) -> { this.setMobileDeviceManagementPolicies(n.getCollectionOfObjectValues(MobilityManagementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("permissionGrantPolicies", (n) -> { this.setPermissionGrantPolicies(n.getCollectionOfObjectValues(PermissionGrantPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleManagementPolicies", (n) -> { this.setRoleManagementPolicies(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleManagementPolicyAssignments", (n) -> { this.setRoleManagementPolicyAssignments(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicyAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("servicePrincipalCreationPolicies", (n) -> { this.setServicePrincipalCreationPolicies(n.getCollectionOfObjectValues(ServicePrincipalCreationPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("tokenIssuancePolicies", (n) -> { this.setTokenIssuancePolicies(n.getCollectionOfObjectValues(TokenIssuancePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("tokenLifetimePolicies", (n) -> { this.setTokenLifetimePolicies(n.getCollectionOfObjectValues(TokenLifetimePolicy::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the homeRealmDiscoveryPolicies property value. The policy to control Azure AD authentication behavior for federated users.
@@ -349,6 +359,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("accessReviewPolicy", this.getAccessReviewPolicy());
@@ -357,6 +368,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
         writer.writeCollectionOfObjectValues("appManagementPolicies", this.getAppManagementPolicies());
         writer.writeObjectValue("authenticationFlowsPolicy", this.getAuthenticationFlowsPolicy());
         writer.writeObjectValue("authenticationMethodsPolicy", this.getAuthenticationMethodsPolicy());
+        writer.writeCollectionOfObjectValues("authenticationStrengthPolicies", this.getAuthenticationStrengthPolicies());
         writer.writeCollectionOfObjectValues("authorizationPolicy", this.getAuthorizationPolicy());
         writer.writeObjectValue("b2cAuthenticationMethodsPolicy", this.getB2cAuthenticationMethodsPolicy());
         writer.writeCollectionOfObjectValues("claimsMappingPolicies", this.getClaimsMappingPolicies());
@@ -385,6 +397,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accessReviewPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessReviewPolicy(@javax.annotation.Nullable final AccessReviewPolicy value) {
         this._accessReviewPolicy = value;
     }
@@ -393,6 +406,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the activityBasedTimeoutPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityBasedTimeoutPolicies(@javax.annotation.Nullable final java.util.List<ActivityBasedTimeoutPolicy> value) {
         this._activityBasedTimeoutPolicies = value;
     }
@@ -401,6 +415,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -409,6 +424,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the adminConsentRequestPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdminConsentRequestPolicy(@javax.annotation.Nullable final AdminConsentRequestPolicy value) {
         this._adminConsentRequestPolicy = value;
     }
@@ -417,6 +433,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the appManagementPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppManagementPolicies(@javax.annotation.Nullable final java.util.List<AppManagementPolicy> value) {
         this._appManagementPolicies = value;
     }
@@ -425,6 +442,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the authenticationFlowsPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationFlowsPolicy(@javax.annotation.Nullable final AuthenticationFlowsPolicy value) {
         this._authenticationFlowsPolicy = value;
     }
@@ -433,14 +451,25 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the authenticationMethodsPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethodsPolicy(@javax.annotation.Nullable final AuthenticationMethodsPolicy value) {
         this._authenticationMethodsPolicy = value;
+    }
+    /**
+     * Sets the authenticationStrengthPolicies property value. The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     * @param value Value to set for the authenticationStrengthPolicies property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAuthenticationStrengthPolicies(@javax.annotation.Nullable final java.util.List<AuthenticationStrengthPolicy> value) {
+        this._authenticationStrengthPolicies = value;
     }
     /**
      * Sets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.
      * @param value Value to set for the authorizationPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthorizationPolicy(@javax.annotation.Nullable final java.util.List<AuthorizationPolicy> value) {
         this._authorizationPolicy = value;
     }
@@ -449,6 +478,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the b2cAuthenticationMethodsPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setB2cAuthenticationMethodsPolicy(@javax.annotation.Nullable final B2cAuthenticationMethodsPolicy value) {
         this._b2cAuthenticationMethodsPolicy = value;
     }
@@ -457,6 +487,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the claimsMappingPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClaimsMappingPolicies(@javax.annotation.Nullable final java.util.List<ClaimsMappingPolicy> value) {
         this._claimsMappingPolicies = value;
     }
@@ -465,6 +496,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the conditionalAccessPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionalAccessPolicies(@javax.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
         this._conditionalAccessPolicies = value;
     }
@@ -473,6 +505,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the crossTenantAccessPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCrossTenantAccessPolicy(@javax.annotation.Nullable final CrossTenantAccessPolicy value) {
         this._crossTenantAccessPolicy = value;
     }
@@ -481,6 +514,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the defaultAppManagementPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultAppManagementPolicy(@javax.annotation.Nullable final TenantAppManagementPolicy value) {
         this._defaultAppManagementPolicy = value;
     }
@@ -489,6 +523,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceRegistrationPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceRegistrationPolicy(@javax.annotation.Nullable final DeviceRegistrationPolicy value) {
         this._deviceRegistrationPolicy = value;
     }
@@ -497,6 +532,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the directoryRoleAccessReviewPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectoryRoleAccessReviewPolicy(@javax.annotation.Nullable final DirectoryRoleAccessReviewPolicy value) {
         this._directoryRoleAccessReviewPolicy = value;
     }
@@ -505,6 +541,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the externalIdentitiesPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalIdentitiesPolicy(@javax.annotation.Nullable final ExternalIdentitiesPolicy value) {
         this._externalIdentitiesPolicy = value;
     }
@@ -513,6 +550,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the featureRolloutPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeatureRolloutPolicies(@javax.annotation.Nullable final java.util.List<FeatureRolloutPolicy> value) {
         this._featureRolloutPolicies = value;
     }
@@ -521,6 +559,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the homeRealmDiscoveryPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeRealmDiscoveryPolicies(@javax.annotation.Nullable final java.util.List<HomeRealmDiscoveryPolicy> value) {
         this._homeRealmDiscoveryPolicies = value;
     }
@@ -529,6 +568,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the identitySecurityDefaultsEnforcementPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentitySecurityDefaultsEnforcementPolicy(@javax.annotation.Nullable final IdentitySecurityDefaultsEnforcementPolicy value) {
         this._identitySecurityDefaultsEnforcementPolicy = value;
     }
@@ -537,6 +577,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mobileAppManagementPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileAppManagementPolicies(@javax.annotation.Nullable final java.util.List<MobilityManagementPolicy> value) {
         this._mobileAppManagementPolicies = value;
     }
@@ -545,6 +586,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mobileDeviceManagementPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileDeviceManagementPolicies(@javax.annotation.Nullable final java.util.List<MobilityManagementPolicy> value) {
         this._mobileDeviceManagementPolicies = value;
     }
@@ -553,6 +595,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -561,6 +604,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the permissionGrantPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionGrantPolicies(@javax.annotation.Nullable final java.util.List<PermissionGrantPolicy> value) {
         this._permissionGrantPolicies = value;
     }
@@ -569,6 +613,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the roleManagementPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleManagementPolicies(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicy> value) {
         this._roleManagementPolicies = value;
     }
@@ -577,6 +622,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the roleManagementPolicyAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleManagementPolicyAssignments(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyAssignment> value) {
         this._roleManagementPolicyAssignments = value;
     }
@@ -585,6 +631,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the servicePrincipalCreationPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalCreationPolicies(@javax.annotation.Nullable final java.util.List<ServicePrincipalCreationPolicy> value) {
         this._servicePrincipalCreationPolicies = value;
     }
@@ -593,6 +640,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tokenIssuancePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenIssuancePolicies(@javax.annotation.Nullable final java.util.List<TokenIssuancePolicy> value) {
         this._tokenIssuancePolicies = value;
     }
@@ -601,6 +649,7 @@ public class PolicyRoot implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tokenLifetimePolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenLifetimePolicies(@javax.annotation.Nullable final java.util.List<TokenLifetimePolicy> value) {
         this._tokenLifetimePolicies = value;
     }

@@ -16,6 +16,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplat
      * Instantiates a new DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionInstanceTemplate");
@@ -52,17 +53,17 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplat
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowUnmanagedValues", (n) -> { currentObject.setAllowUnmanagedValues(n.getBooleanValue()); });
-            this.put("choiceSettingCollectionValueTemplate", (n) -> { currentObject.setChoiceSettingCollectionValueTemplate(n.getCollectionOfObjectValues(DeviceManagementConfigurationChoiceSettingValueTemplate::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowUnmanagedValues", (n) -> { this.setAllowUnmanagedValues(n.getBooleanValue()); });
+        deserializerMap.put("choiceSettingCollectionValueTemplate", (n) -> { this.setChoiceSettingCollectionValueTemplate(n.getCollectionOfObjectValues(DeviceManagementConfigurationChoiceSettingValueTemplate::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +75,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplat
      * @param value Value to set for the allowUnmanagedValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowUnmanagedValues(@javax.annotation.Nullable final Boolean value) {
         this._allowUnmanagedValues = value;
     }
@@ -82,6 +84,7 @@ public class DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplat
      * @param value Value to set for the choiceSettingCollectionValueTemplate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChoiceSettingCollectionValueTemplate(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationChoiceSettingValueTemplate> value) {
         this._choiceSettingCollectionValueTemplate = value;
     }

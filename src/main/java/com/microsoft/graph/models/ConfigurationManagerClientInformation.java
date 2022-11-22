@@ -24,9 +24,9 @@ public class ConfigurationManagerClientInformation implements AdditionalDataHold
      * Instantiates a new configurationManagerClientInformation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConfigurationManagerClientInformation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.configurationManagerClientInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,13 +68,12 @@ public class ConfigurationManagerClientInformation implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConfigurationManagerClientInformation currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("clientIdentifier", (n) -> { currentObject.setClientIdentifier(n.getStringValue()); });
-            this.put("clientVersion", (n) -> { currentObject.setClientVersion(n.getStringValue()); });
-            this.put("isBlocked", (n) -> { currentObject.setIsBlocked(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("clientIdentifier", (n) -> { this.setClientIdentifier(n.getStringValue()); });
+        deserializerMap.put("clientVersion", (n) -> { this.setClientVersion(n.getStringValue()); });
+        deserializerMap.put("isBlocked", (n) -> { this.setIsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isBlocked property value. Configuration Manager Client blocked status from SCCM
@@ -97,6 +96,7 @@ public class ConfigurationManagerClientInformation implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("clientIdentifier", this.getClientIdentifier());
@@ -110,6 +110,7 @@ public class ConfigurationManagerClientInformation implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +119,7 @@ public class ConfigurationManagerClientInformation implements AdditionalDataHold
      * @param value Value to set for the clientIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientIdentifier(@javax.annotation.Nullable final String value) {
         this._clientIdentifier = value;
     }
@@ -126,6 +128,7 @@ public class ConfigurationManagerClientInformation implements AdditionalDataHold
      * @param value Value to set for the clientVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientVersion(@javax.annotation.Nullable final String value) {
         this._clientVersion = value;
     }
@@ -134,6 +137,7 @@ public class ConfigurationManagerClientInformation implements AdditionalDataHold
      * @param value Value to set for the isBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsBlocked(@javax.annotation.Nullable final Boolean value) {
         this._isBlocked = value;
     }
@@ -142,6 +146,7 @@ public class ConfigurationManagerClientInformation implements AdditionalDataHold
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

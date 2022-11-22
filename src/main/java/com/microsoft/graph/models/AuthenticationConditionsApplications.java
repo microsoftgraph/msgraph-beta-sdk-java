@@ -21,9 +21,9 @@ public class AuthenticationConditionsApplications implements AdditionalDataHolde
      * Instantiates a new authenticationConditionsApplications and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthenticationConditionsApplications() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.authenticationConditionsApplications");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,12 +49,11 @@ public class AuthenticationConditionsApplications implements AdditionalDataHolde
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthenticationConditionsApplications currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("includeAllApplications", (n) -> { currentObject.setIncludeAllApplications(n.getBooleanValue()); });
-            this.put("includeApplications", (n) -> { currentObject.setIncludeApplications(n.getCollectionOfObjectValues(AuthenticationConditionApplication::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("includeAllApplications", (n) -> { this.setIncludeAllApplications(n.getBooleanValue()); });
+        deserializerMap.put("includeApplications", (n) -> { this.setIncludeApplications(n.getCollectionOfObjectValues(AuthenticationConditionApplication::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the includeAllApplications property value. The includeAllApplications property
@@ -85,6 +84,7 @@ public class AuthenticationConditionsApplications implements AdditionalDataHolde
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("includeAllApplications", this.getIncludeAllApplications());
@@ -97,6 +97,7 @@ public class AuthenticationConditionsApplications implements AdditionalDataHolde
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class AuthenticationConditionsApplications implements AdditionalDataHolde
      * @param value Value to set for the includeAllApplications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeAllApplications(@javax.annotation.Nullable final Boolean value) {
         this._includeAllApplications = value;
     }
@@ -113,6 +115,7 @@ public class AuthenticationConditionsApplications implements AdditionalDataHolde
      * @param value Value to set for the includeApplications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeApplications(@javax.annotation.Nullable final java.util.List<AuthenticationConditionApplication> value) {
         this._includeApplications = value;
     }
@@ -121,6 +124,7 @@ public class AuthenticationConditionsApplications implements AdditionalDataHolde
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

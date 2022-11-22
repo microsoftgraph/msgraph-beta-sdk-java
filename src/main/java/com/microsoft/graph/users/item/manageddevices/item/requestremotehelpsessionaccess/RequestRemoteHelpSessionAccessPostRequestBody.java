@@ -20,6 +20,7 @@ public class RequestRemoteHelpSessionAccessPostRequestBody implements Additional
      * Instantiates a new requestRemoteHelpSessionAccessPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RequestRemoteHelpSessionAccessPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -47,11 +48,10 @@ public class RequestRemoteHelpSessionAccessPostRequestBody implements Additional
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RequestRemoteHelpSessionAccessPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("pubSubConnectionId", (n) -> { currentObject.setPubSubConnectionId(n.getStringValue()); });
-            this.put("sessionKey", (n) -> { currentObject.setSessionKey(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("pubSubConnectionId", (n) -> { this.setPubSubConnectionId(n.getStringValue()); });
+        deserializerMap.put("sessionKey", (n) -> { this.setSessionKey(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the pubSubConnectionId property value. The pubSubConnectionId property
@@ -74,6 +74,7 @@ public class RequestRemoteHelpSessionAccessPostRequestBody implements Additional
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("pubSubConnectionId", this.getPubSubConnectionId());
@@ -85,6 +86,7 @@ public class RequestRemoteHelpSessionAccessPostRequestBody implements Additional
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +95,7 @@ public class RequestRemoteHelpSessionAccessPostRequestBody implements Additional
      * @param value Value to set for the pubSubConnectionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPubSubConnectionId(@javax.annotation.Nullable final String value) {
         this._pubSubConnectionId = value;
     }
@@ -101,6 +104,7 @@ public class RequestRemoteHelpSessionAccessPostRequestBody implements Additional
      * @param value Value to set for the sessionKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessionKey(@javax.annotation.Nullable final String value) {
         this._sessionKey = value;
     }
