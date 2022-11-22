@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.PlannerBucketCreation;
 import com.microsoft.graph.models.PlannerDelta;
 import com.microsoft.graph.requests.PlannerTaskCollectionPage;
 
@@ -26,6 +27,15 @@ import javax.annotation.Nonnull;
  */
 public class PlannerBucket extends PlannerDelta implements IJsonBackedObject {
 
+
+    /**
+     * The Creation Source.
+     * 
+     */
+    @SerializedName(value = "creationSource", alternate = {"CreationSource"})
+    @Expose
+	@Nullable
+    public PlannerBucketCreation creationSource;
 
     /**
      * The Name.

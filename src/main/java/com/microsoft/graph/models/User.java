@@ -40,7 +40,6 @@ import com.microsoft.graph.models.ProfilePhoto;
 import com.microsoft.graph.models.Profile;
 import com.microsoft.graph.models.Presence;
 import com.microsoft.graph.models.Authentication;
-import com.microsoft.graph.models.Tasks;
 import com.microsoft.graph.models.UserTeamwork;
 import com.microsoft.graph.models.Todo;
 import com.microsoft.graph.requests.CloudPCCollectionPage;
@@ -1319,15 +1318,6 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Authentication authentication;
-
-    /**
-     * The Tasks.
-     * 
-     */
-    @SerializedName(value = "tasks", alternate = {"Tasks"})
-    @Expose
-	@Nullable
-    public Tasks tasks;
 
     /**
      * The Chats.

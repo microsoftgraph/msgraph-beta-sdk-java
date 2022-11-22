@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.CloudPcRegionGroup;
 import com.microsoft.graph.models.CloudPcSupportedRegionStatus;
 import com.microsoft.graph.models.CloudPcManagementService;
 import com.microsoft.graph.models.Entity;
@@ -35,6 +36,15 @@ public class CloudPcSupportedRegion extends Entity implements IJsonBackedObject 
     @Expose
 	@Nullable
     public String displayName;
+
+    /**
+     * The Region Group.
+     * 
+     */
+    @SerializedName(value = "regionGroup", alternate = {"RegionGroup"})
+    @Expose
+	@Nullable
+    public CloudPcRegionGroup regionGroup;
 
     /**
      * The Region Status.

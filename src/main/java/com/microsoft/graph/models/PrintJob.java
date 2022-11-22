@@ -32,6 +32,24 @@ public class PrintJob extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Acknowledged Date Time.
+     * 
+     */
+    @SerializedName(value = "acknowledgedDateTime", alternate = {"AcknowledgedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime acknowledgedDateTime;
+
+    /**
+     * The Completed Date Time.
+     * 
+     */
+    @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime completedDateTime;
+
+    /**
      * The Configuration.
      * A group of settings that a printer should use to print a job.
      */
@@ -66,6 +84,15 @@ public class PrintJob extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String displayName;
+
+    /**
+     * The Error Code.
+     * 
+     */
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
+    @Expose
+	@Nullable
+    public Integer errorCode;
 
     /**
      * The Is Fetchable.
