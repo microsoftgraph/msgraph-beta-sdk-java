@@ -26,10 +26,21 @@ jobs:
           cache: gradle
       - name: Detect Secrets
         uses: RobertFischer/detect-secrets-action@v2.0.0
+        
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        # Override language selection by uncommenting this and choosing your languages
+        with:
+          languages: java
+        
       - name: Grant Execute permission for gradlew
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew build
+        
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2 
+        
       - name: Upload Unit Test Results
         if: ${{ always() }}
         uses: actions/upload-artifact@v3
