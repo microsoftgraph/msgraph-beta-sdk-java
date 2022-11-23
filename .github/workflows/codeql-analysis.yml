@@ -13,7 +13,7 @@ on:
 jobs:
   analyze:
     name: Analyze
-    runs-on: [self-hosted, 1ES.Pool=1es-ubuntu-msgraph-beta-sdk-java-mem-latest]
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
@@ -28,10 +28,10 @@ jobs:
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
-    - name: Autobuild
-      env: 
-        JAVA_TOOL_OPTIONS: -Xmx5g -XX:MaxMetaspaceSize=2g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8  
-      uses: github/codeql-action/autobuild@v2
+    #- name: Autobuild
+    #  env: 
+    #    JAVA_TOOL_OPTIONS: -Xmx5g -XX:MaxMetaspaceSize=2g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8  
+    #  uses: github/codeql-action/autobuild@v2
 
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 https://git.io/JvXDl
@@ -40,9 +40,7 @@ jobs:
     #    and modify them (or add more) to build your code if your project
     #    uses a compiled language
 
-    #- run: |
-    #   make bootstrap
-    #   make release
+    - run: ./gradlew clean build 
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
