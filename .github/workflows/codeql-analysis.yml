@@ -13,7 +13,7 @@ on:
 jobs:
   analyze:
     name: Analyze
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, 1ES.Pool=1es-ubuntu-msgraph-beta-sdk-java-mem-latest]
 
     steps:
     - name: Checkout repository
@@ -30,9 +30,7 @@ jobs:
     # If this step fails, then you should remove it and run the build manually (see below)
     - name: Autobuild
       env: 
-        CODEQL_RAM: 6144
-        CODEQL_EXTRACTOR_JAVA_RAM: 6144
-        JAVA_TOOL_OPTIONS: -Xmx6g -XX:MaxMetaspaceSize=2g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8  
+        JAVA_TOOL_OPTIONS: -Xmx5g -XX:MaxMetaspaceSize=2g -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8  
       uses: github/codeql-action/autobuild@v2
 
     # ℹ️ Command-line programs to run using the OS shell.
