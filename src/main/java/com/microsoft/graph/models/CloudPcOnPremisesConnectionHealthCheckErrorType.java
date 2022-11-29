@@ -224,6 +224,14 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     PERMISSION_CHECK_UNKNOWN_ERROR,
     /**
+    * udp Connectivity Check Stun Url Not Allow Listed
+    */
+    UDP_CONNECTIVITY_CHECK_STUN_URL_NOT_ALLOW_LISTED,
+    /**
+    * udp Connectivity Check Unknown Error
+    */
+    UDP_CONNECTIVITY_CHECK_UNKNOWN_ERROR,
+    /**
     * internal Server Error Deployment Canceled
     */
     INTERNAL_SERVER_ERROR_DEPLOYMENT_CANCELED,

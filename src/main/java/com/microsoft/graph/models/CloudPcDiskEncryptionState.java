@@ -16,9 +16,9 @@ public enum CloudPcDiskEncryptionState
     */
     NOT_AVAILABLE,
     /**
-    * not Encryped
+    * not Encrypted
     */
-    NOT_ENCRYPED,
+    NOT_ENCRYPTED,
     /**
     * encrypted Using Platform Managed Key
     */

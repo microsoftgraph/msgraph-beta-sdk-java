@@ -8,11 +8,14 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CloudPcConnectivityResult;
 import com.microsoft.graph.models.CloudPcDiskEncryptionState;
 import com.microsoft.graph.models.CloudPcLoginResult;
 import com.microsoft.graph.models.CloudPcRemoteActionResult;
 import com.microsoft.graph.models.CloudPcOperatingSystem;
+import com.microsoft.graph.models.CloudPcPartnerAgentInstallResult;
+import com.microsoft.graph.models.CloudPcProvisioningType;
 import com.microsoft.graph.models.CloudPcServicePlanType;
 import com.microsoft.graph.models.CloudPcStatus;
 import com.microsoft.graph.models.CloudPcStatusDetails;
@@ -152,6 +155,15 @@ public class CloudPC extends Entity implements IJsonBackedObject {
     public CloudPcOperatingSystem osVersion;
 
     /**
+     * The Partner Agent Install Results.
+     * 
+     */
+    @SerializedName(value = "partnerAgentInstallResults", alternate = {"PartnerAgentInstallResults"})
+    @Expose
+	@Nullable
+    public java.util.List<CloudPcPartnerAgentInstallResult> partnerAgentInstallResults;
+
+    /**
      * The Provisioning Policy Id.
      * The provisioning policy ID of the Cloud PC.
      */
@@ -168,6 +180,15 @@ public class CloudPC extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String provisioningPolicyName;
+
+    /**
+     * The Provisioning Type.
+     * 
+     */
+    @SerializedName(value = "provisioningType", alternate = {"ProvisioningType"})
+    @Expose
+	@Nullable
+    public CloudPcProvisioningType provisioningType;
 
     /**
      * The Service Plan Id.

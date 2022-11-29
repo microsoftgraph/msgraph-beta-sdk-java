@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PlannerPlanContainer;
 import com.microsoft.graph.models.PlannerPlanContextCollection;
 import com.microsoft.graph.models.IdentitySet;
+import com.microsoft.graph.models.PlannerPlanCreation;
 import com.microsoft.graph.models.PlannerPlanDetails;
 import com.microsoft.graph.models.PlannerDelta;
 import com.microsoft.graph.requests.PlannerBucketCollectionPage;
@@ -67,6 +68,15 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime createdDateTime;
+
+    /**
+     * The Creation Source.
+     * 
+     */
+    @SerializedName(value = "creationSource", alternate = {"CreationSource"})
+    @Expose
+	@Nullable
+    public PlannerPlanCreation creationSource;
 
     /**
      * The Owner.

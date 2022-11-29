@@ -477,6 +477,26 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
         return new com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollections") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the ManagementTemplateCollectionTenantSummary collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionTenantSummaryCollectionRequestBuilder managementTemplateCollectionTenantSummaries() {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionTenantSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollectionTenantSummaries"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagementTemplateCollectionTenantSummary item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionTenantSummaryRequestBuilder managementTemplateCollectionTenantSummaries(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionTenantSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateCollectionTenantSummaries") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the ManagementTemplate collection
      *
      * @return the collection request builder
@@ -515,6 +535,26 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
     @Nonnull
     public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepRequestBuilder managementTemplateSteps(@Nonnull final String id) {
         return new com.microsoft.graph.managedtenants.requests.ManagementTemplateStepRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateSteps") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the ManagementTemplateStepTenantSummary collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepTenantSummaryCollectionRequestBuilder managementTemplateStepTenantSummaries() {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateStepTenantSummaryCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateStepTenantSummaries"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ManagementTemplateStepTenantSummary item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepTenantSummaryRequestBuilder managementTemplateStepTenantSummaries(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.ManagementTemplateStepTenantSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("managementTemplateStepTenantSummaries") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagementTemplateStepVersion collection

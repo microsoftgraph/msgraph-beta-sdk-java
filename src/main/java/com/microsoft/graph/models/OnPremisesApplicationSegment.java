@@ -22,7 +22,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the On Premises Application Segment.
+ * @deprecated The onPremisesApplicationSegment type is deprecated and will being used on June 01, 2023. Please use the new applicationSegment type.
  */
+@Deprecated
 public class OnPremisesApplicationSegment implements IJsonBackedObject {
 
     /** the OData type of the object as returned by the service */

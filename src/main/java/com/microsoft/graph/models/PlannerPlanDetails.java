@@ -30,7 +30,7 @@ public class PlannerPlanDetails extends PlannerDelta implements IJsonBackedObjec
 
     /**
      * The Category Descriptions.
-     * An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan
+     * An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan.
      */
     @SerializedName(value = "categoryDescriptions", alternate = {"CategoryDescriptions"})
     @Expose
@@ -39,7 +39,7 @@ public class PlannerPlanDetails extends PlannerDelta implements IJsonBackedObjec
 
     /**
      * The Context Details.
-     * Read-only. A collection of additional information associated with plannerPlanContext entries that are defined for the plannerPlan container.
+     * A collection of additional information associated with plannerPlanContext entries that are defined for the plannerPlan container. Read-only.
      */
     @SerializedName(value = "contextDetails", alternate = {"ContextDetails"})
     @Expose

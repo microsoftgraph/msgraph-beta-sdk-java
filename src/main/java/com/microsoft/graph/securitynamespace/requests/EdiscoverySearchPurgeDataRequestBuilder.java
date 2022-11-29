@@ -6,8 +6,11 @@
 package com.microsoft.graph.security.requests;
 import com.microsoft.graph.security.requests.EdiscoverySearchPurgeDataRequest;
 import com.microsoft.graph.security.models.EdiscoverySearch;
-
+import com.microsoft.graph.security.models.PurgeType;
+import com.microsoft.graph.security.models.PurgeAreas;
+import java.util.EnumSet;
 import com.microsoft.graph.http.BaseActionRequestBuilder;
+import com.microsoft.graph.security.models.EdiscoverySearchPurgeDataParameterSet;
 import com.microsoft.graph.core.IBaseClient;
 import com.google.gson.JsonElement;
 import javax.annotation.Nullable;
@@ -29,6 +32,19 @@ public class EdiscoverySearchPurgeDataRequestBuilder extends BaseActionRequestBu
      */
     public EdiscoverySearchPurgeDataRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions) {
         super(requestUrl, client, requestOptions);
+    }
+    private EdiscoverySearchPurgeDataParameterSet body;
+    /**
+     * The request builder for this EdiscoverySearchPurgeData
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param parameters     the parameters for the service method
+     */
+    public EdiscoverySearchPurgeDataRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final EdiscoverySearchPurgeDataParameterSet parameters) {
+        super(requestUrl, client, requestOptions);
+        this.body = parameters;
     }
 
     /**
@@ -54,6 +70,7 @@ public class EdiscoverySearchPurgeDataRequestBuilder extends BaseActionRequestBu
                 getRequestUrl(),
                 getClient(),
                 requestOptions);
+        request.body = this.body;
         return request;
     }
 }
