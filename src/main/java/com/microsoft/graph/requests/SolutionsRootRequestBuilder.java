@@ -56,4 +56,24 @@ public class SolutionsRootRequestBuilder extends BaseRequestBuilder<SolutionsRoo
     }
 
 
+    /**
+     *  Gets a request builder for the BusinessScenario collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.BusinessScenarioCollectionRequestBuilder businessScenarios() {
+        return new com.microsoft.graph.requests.BusinessScenarioCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("businessScenarios"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the BusinessScenario item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.BusinessScenarioRequestBuilder businessScenarios(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.BusinessScenarioRequestBuilder(getRequestUrlWithAdditionalSegment("businessScenarios") + "/" + id, getClient(), null);
+    }
 }

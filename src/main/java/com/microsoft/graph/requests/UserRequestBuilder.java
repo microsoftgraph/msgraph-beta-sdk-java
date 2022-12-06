@@ -1615,16 +1615,6 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
     public com.microsoft.graph.requests.AuthenticationRequestBuilder authentication() {
         return new com.microsoft.graph.requests.AuthenticationRequestBuilder(getRequestUrlWithAdditionalSegment("authentication"), getClient(), null);
     }
-
-    /**
-     * Gets the request builder for Tasks
-     *
-     * @return the TasksRequestBuilder instance
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.TasksRequestBuilder tasks() {
-        return new com.microsoft.graph.requests.TasksRequestBuilder(getRequestUrlWithAdditionalSegment("tasks"), getClient(), null);
-    }
     /**
      *  Gets a request builder for the Chat collection
      *

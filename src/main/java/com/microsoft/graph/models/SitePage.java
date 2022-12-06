@@ -31,7 +31,7 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * The content type of the page.
+     * Inherited from baseItem.
      */
     @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose
@@ -49,7 +49,7 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Publishing State.
-     * 
+     * The publishing status and the MM.mm version of the page.
      */
     @SerializedName(value = "publishingState", alternate = {"PublishingState"})
     @Expose
@@ -58,7 +58,7 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Title.
-     * 
+     * Title of the sitePage.
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose

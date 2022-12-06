@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.SitePageData;
+import com.microsoft.graph.models.Entity;
 
 
 import com.google.gson.JsonObject;
@@ -22,25 +23,12 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Web Part.
  */
-public class WebPart implements IJsonBackedObject {
+public class WebPart extends Entity implements IJsonBackedObject {
 
-    /** the OData type of the object as returned by the service */
-    @SerializedName("@odata.type")
-    @Expose
-    @Nullable
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    @Nonnull
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Data.
-     * The required properties for the webPart (varies by webPart)
+     * 
      */
     @SerializedName(value = "data", alternate = {"Data"})
     @Expose
@@ -49,7 +37,7 @@ public class WebPart implements IJsonBackedObject {
 
     /**
      * The Type.
-     * A unique identifier specifying the webPart type. Read-only.
+     * 
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

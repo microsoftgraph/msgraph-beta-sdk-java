@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.PlannerCreationSourceKind;
 import com.microsoft.graph.models.PlannerTeamsPublicationInfo;
 
 
@@ -37,6 +38,15 @@ public class PlannerTaskCreation implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Creation Source Kind.
+     * 
+     */
+    @SerializedName(value = "creationSourceKind", alternate = {"CreationSourceKind"})
+    @Expose
+	@Nullable
+    public PlannerCreationSourceKind creationSourceKind;
 
     /**
      * The Teams Publication Info.

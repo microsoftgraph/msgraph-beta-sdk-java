@@ -40,7 +40,6 @@ import com.microsoft.graph.models.ProfilePhoto;
 import com.microsoft.graph.models.Profile;
 import com.microsoft.graph.models.Presence;
 import com.microsoft.graph.models.Authentication;
-import com.microsoft.graph.models.Tasks;
 import com.microsoft.graph.models.UserTeamwork;
 import com.microsoft.graph.models.Todo;
 import com.microsoft.graph.requests.CloudPCCollectionPage;
@@ -117,7 +116,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Assigned Licenses.
-     * The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses. Not nullable. Supports $filter (eq, not, and counting empty collections).
+     * The licenses that are assigned to the user, including inherited (group-based) licenses. This property doesn't differentiate directly-assigned and inherited licenses. Use the licenseAssignmentStates property to identify the directly-assigned and inherited licenses. Not nullable. Supports $filter (eq, not, /$count eq 0, /$count ne 0).
      */
     @SerializedName(value = "assignedLicenses", alternate = {"AssignedLicenses"})
     @Expose
@@ -531,7 +530,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Other Mails.
-     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, and counting empty collections).
+     * A list of additional email addresses for the user; for example: ['bob@contoso.com', 'Robert@fabrikam.com'].NOTE: This property cannot contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0).
      */
     @SerializedName(value = "otherMails", alternate = {"OtherMails"})
     @Expose
@@ -594,7 +593,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Proxy Addresses.
-     * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, and counting empty collections).
+     * For example: ['SMTP: bob@contoso.com', 'smtp: bob@sales.contoso.com']. Changes to the mail property will also update this collection to include the value as an SMTP address. For more information, see mail and proxyAddresses properties. The proxy address prefixed with SMTP (capitalized) is the primary proxy address while those prefixed with smtp are the secondary proxy addresses. For Azure AD B2C accounts, this property has a limit of ten unique addresses. Read-only in Microsoft Graph; you can update this property only through the Microsoft 365 admin center. Not nullable. Supports $filter (eq, not, ge, le, startsWith, endsWith, /$count eq 0, /$count ne 0).
      */
     @SerializedName(value = "proxyAddresses", alternate = {"ProxyAddresses"})
     @Expose
@@ -915,7 +914,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Owned Objects.
-     * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
+     * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      */
 	@Nullable
     public com.microsoft.graph.requests.DirectoryObjectCollectionPage ownedObjects;
@@ -1319,15 +1318,6 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Authentication authentication;
-
-    /**
-     * The Tasks.
-     * 
-     */
-    @SerializedName(value = "tasks", alternate = {"Tasks"})
-    @Expose
-	@Nullable
-    public Tasks tasks;
 
     /**
      * The Chats.

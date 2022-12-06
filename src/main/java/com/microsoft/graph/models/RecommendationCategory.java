@@ -20,6 +20,10 @@ public enum RecommendationCategory
     */
     SECURITY,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * productivity
     */
     PRODUCTIVITY,
@@ -31,10 +35,6 @@ public enum RecommendationCategory
     * configuration
     */
     CONFIGURATION,
-    /**
-    * unknown Future Value
-    */
-    UNKNOWN_FUTURE_VALUE,
     /**
     * For RecommendationCategory values that were not expected from the service
     */

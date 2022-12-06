@@ -42,6 +42,15 @@ public class OnPremisesPublishingProfile extends Entity implements IJsonBackedOb
     public HybridAgentUpdaterConfiguration hybridAgentUpdaterConfiguration;
 
     /**
+     * The Is Default Access Enabled.
+     * 
+     */
+    @SerializedName(value = "isDefaultAccessEnabled", alternate = {"IsDefaultAccessEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isDefaultAccessEnabled;
+
+    /**
      * The Is Enabled.
      * Represents if Azure AD Application Proxy is enabled for the tenant.
      */

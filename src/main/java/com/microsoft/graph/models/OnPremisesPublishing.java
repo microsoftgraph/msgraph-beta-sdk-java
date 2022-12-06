@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ExternalAuthenticationType;
 import com.microsoft.graph.models.OnPremisesApplicationSegment;
+import com.microsoft.graph.models.SegmentConfiguration;
 import com.microsoft.graph.models.OnPremisesPublishingSingleSignOn;
 import com.microsoft.graph.models.VerifiedCustomDomainCertificatesMetadata;
 import com.microsoft.graph.models.KeyCredential;
@@ -173,11 +174,22 @@ public class OnPremisesPublishing implements IJsonBackedObject {
     /**
      * The On Premises Application Segments.
      * Represents the application segment collection for an on-premises wildcard application.
+     * @deprecated The onPremisesApplicationSegment type is deprecated and will being used on June 01, 2023. Please use the new applicationSegment type.
      */
+    @Deprecated
     @SerializedName(value = "onPremisesApplicationSegments", alternate = {"OnPremisesApplicationSegments"})
     @Expose
 	@Nullable
     public java.util.List<OnPremisesApplicationSegment> onPremisesApplicationSegments;
+
+    /**
+     * The Segments Configuration.
+     * 
+     */
+    @SerializedName(value = "segmentsConfiguration", alternate = {"SegmentsConfiguration"})
+    @Expose
+	@Nullable
+    public SegmentConfiguration segmentsConfiguration;
 
     /**
      * The Single Sign On Settings.

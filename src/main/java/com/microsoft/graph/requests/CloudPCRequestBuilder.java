@@ -12,6 +12,8 @@ import com.microsoft.graph.models.CloudPcUserAccountType;
 import com.microsoft.graph.models.CloudPcOperatingSystem;
 import com.microsoft.graph.models.CloudPcConnectivityEvent;
 import com.microsoft.graph.models.CloudPcLaunchInfo;
+import com.microsoft.graph.models.ShiftWorkCloudPcAccessState;
+import com.microsoft.graph.models.CloudPcRemoteActionCapability;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -128,6 +130,15 @@ public class CloudPCRequestBuilder extends BaseRequestBuilder<CloudPC> {
      * @return the request builder
      */
     @Nonnull
+    public CloudPCRetryPartnerAgentInstallationRequestBuilder retryPartnerAgentInstallation() {
+        return new CloudPCRetryPartnerAgentInstallationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.retryPartnerAgentInstallation"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
     public CloudPCTroubleshootRequestBuilder troubleshoot() {
         return new CloudPCTroubleshootRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.troubleshoot"), getClient(), null);
     }
@@ -148,5 +159,23 @@ public class CloudPCRequestBuilder extends BaseRequestBuilder<CloudPC> {
     @Nonnull
     public CloudPCGetCloudPcLaunchInfoRequestBuilder getCloudPcLaunchInfo() {
         return new CloudPCGetCloudPcLaunchInfoRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getCloudPcLaunchInfo"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public CloudPCGetShiftWorkCloudPcAccessStateRequestBuilder getShiftWorkCloudPcAccessState() {
+        return new CloudPCGetShiftWorkCloudPcAccessStateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getShiftWorkCloudPcAccessState"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public CloudPCGetSupportedCloudPcRemoteActionsCollectionRequestBuilder getSupportedCloudPcRemoteActions() {
+        return new CloudPCGetSupportedCloudPcRemoteActionsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSupportedCloudPcRemoteActions"), getClient(), null);
     }
 }

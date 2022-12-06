@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.CloudPcRegionGroup;
 import com.microsoft.graph.models.CloudPcDomainJoinType;
 
 
@@ -46,6 +47,15 @@ public class CloudPcDomainJoinConfiguration implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String onPremisesConnectionId;
+
+    /**
+     * The Region Group.
+     * 
+     */
+    @SerializedName(value = "regionGroup", alternate = {"RegionGroup"})
+    @Expose
+	@Nullable
+    public CloudPcRegionGroup regionGroup;
 
     /**
      * The Region Name.

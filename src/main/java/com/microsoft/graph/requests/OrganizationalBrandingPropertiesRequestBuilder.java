@@ -78,6 +78,16 @@ public class OrganizationalBrandingPropertiesRequestBuilder extends BaseRequestB
     }
 
     /**
+     * Gets the request builder for customCSS
+     *
+     * @return the OrganizationalBrandingPropertiesCustomCSSStreamRequestBuilder instance
+     */
+    @Nonnull
+    public OrganizationalBrandingPropertiesCustomCSSStreamRequestBuilder customCSS() {
+        return new OrganizationalBrandingPropertiesCustomCSSStreamRequestBuilder(getRequestUrlWithAdditionalSegment("customCSS"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for favicon
      *
      * @return the OrganizationalBrandingPropertiesFaviconStreamRequestBuilder instance
@@ -85,6 +95,16 @@ public class OrganizationalBrandingPropertiesRequestBuilder extends BaseRequestB
     @Nonnull
     public OrganizationalBrandingPropertiesFaviconStreamRequestBuilder favicon() {
         return new OrganizationalBrandingPropertiesFaviconStreamRequestBuilder(getRequestUrlWithAdditionalSegment("favicon"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for headerLogo
+     *
+     * @return the OrganizationalBrandingPropertiesHeaderLogoStreamRequestBuilder instance
+     */
+    @Nonnull
+    public OrganizationalBrandingPropertiesHeaderLogoStreamRequestBuilder headerLogo() {
+        return new OrganizationalBrandingPropertiesHeaderLogoStreamRequestBuilder(getRequestUrlWithAdditionalSegment("headerLogo"), getClient(), null);
     }
 
     /**

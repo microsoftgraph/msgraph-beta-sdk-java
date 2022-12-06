@@ -35,7 +35,7 @@ public class ServicePrincipalRiskDetection extends Entity implements IJsonBacked
 
     /**
      * The Activity.
-     * Indicates the activity type the detected risk is linked to.  The possible values are: signin, unknownFutureValue, servicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: servicePrincipal.
+     * Indicates the activity type the detected risk is linked to.  The possible values are: signin, servicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: servicePrincipal.
      */
     @SerializedName(value = "activity", alternate = {"Activity"})
     @Expose
@@ -143,7 +143,7 @@ public class ServicePrincipalRiskDetection extends Entity implements IJsonBacked
 
     /**
      * The Risk Detail.
-     * Details of the detected risk. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden. The possible values are: none, hidden, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
+     * Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
      */
     @SerializedName(value = "riskDetail", alternate = {"RiskDetail"})
     @Expose
@@ -152,7 +152,7 @@ public class ServicePrincipalRiskDetection extends Entity implements IJsonBacked
 
     /**
      * The Risk Event Type.
-     * The type of risk event detected. The possible values are:  investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, unknownFutureValue. Supports $filter (eq).
+     * The type of risk event detected. The possible values are: investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, anomalousServicePrincipalActivity, maliciousApplication, suspiciousApplication.
      */
     @SerializedName(value = "riskEventType", alternate = {"RiskEventType"})
     @Expose
@@ -161,7 +161,7 @@ public class ServicePrincipalRiskDetection extends Entity implements IJsonBacked
 
     /**
      * The Risk Level.
-     * Level of the detected risk. Note: Details for this property are only available for Azure AD Premium P2 customers. P1 customers will be returned hidden. The possible values are: low, medium, high, hidden, none, unknownFutureValue.
+     * Level of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: low, medium, high, hidden, none.
      */
     @SerializedName(value = "riskLevel", alternate = {"RiskLevel"})
     @Expose
@@ -170,7 +170,7 @@ public class ServicePrincipalRiskDetection extends Entity implements IJsonBacked
 
     /**
      * The Risk State.
-     * The state of a detected risky service principal or sign-in activity. The possible values are: none, dismissed, atRisk, confirmedCompromised, unknownFutureValue.
+     * The state of a detected risky service principal or sign-in activity. The possible values are: none, dismissed, atRisk, confirmedCompromised.
      */
     @SerializedName(value = "riskState", alternate = {"RiskState"})
     @Expose
@@ -206,7 +206,7 @@ public class ServicePrincipalRiskDetection extends Entity implements IJsonBacked
 
     /**
      * The Token Issuer Type.
-     * Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD, UnknownFutureValue.
+     * Indicates the type of token issuer for the detected sign-in risk. The possible values are: AzureAD.
      */
     @SerializedName(value = "tokenIssuerType", alternate = {"TokenIssuerType"})
     @Expose
