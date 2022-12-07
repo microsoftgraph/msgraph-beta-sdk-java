@@ -36,9 +36,9 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * Instantiates a new messageSecurityState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MessageSecurityState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.messageSecurityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -96,19 +96,18 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MessageSecurityState currentObject = this;
-        return new HashMap<>(10) {{
-            this.put("connectingIP", (n) -> { currentObject.setConnectingIP(n.getStringValue()); });
-            this.put("deliveryAction", (n) -> { currentObject.setDeliveryAction(n.getStringValue()); });
-            this.put("deliveryLocation", (n) -> { currentObject.setDeliveryLocation(n.getStringValue()); });
-            this.put("directionality", (n) -> { currentObject.setDirectionality(n.getStringValue()); });
-            this.put("internetMessageId", (n) -> { currentObject.setInternetMessageId(n.getStringValue()); });
-            this.put("messageFingerprint", (n) -> { currentObject.setMessageFingerprint(n.getStringValue()); });
-            this.put("messageReceivedDateTime", (n) -> { currentObject.setMessageReceivedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("messageSubject", (n) -> { currentObject.setMessageSubject(n.getStringValue()); });
-            this.put("networkMessageId", (n) -> { currentObject.setNetworkMessageId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("connectingIP", (n) -> { this.setConnectingIP(n.getStringValue()); });
+        deserializerMap.put("deliveryAction", (n) -> { this.setDeliveryAction(n.getStringValue()); });
+        deserializerMap.put("deliveryLocation", (n) -> { this.setDeliveryLocation(n.getStringValue()); });
+        deserializerMap.put("directionality", (n) -> { this.setDirectionality(n.getStringValue()); });
+        deserializerMap.put("internetMessageId", (n) -> { this.setInternetMessageId(n.getStringValue()); });
+        deserializerMap.put("messageFingerprint", (n) -> { this.setMessageFingerprint(n.getStringValue()); });
+        deserializerMap.put("messageReceivedDateTime", (n) -> { this.setMessageReceivedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("messageSubject", (n) -> { this.setMessageSubject(n.getStringValue()); });
+        deserializerMap.put("networkMessageId", (n) -> { this.setNetworkMessageId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the internetMessageId property value. The internetMessageId property
@@ -163,6 +162,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("connectingIP", this.getConnectingIP());
@@ -182,6 +182,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -190,6 +191,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the connectingIP property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectingIP(@javax.annotation.Nullable final String value) {
         this._connectingIP = value;
     }
@@ -198,6 +200,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deliveryAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeliveryAction(@javax.annotation.Nullable final String value) {
         this._deliveryAction = value;
     }
@@ -206,6 +209,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deliveryLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeliveryLocation(@javax.annotation.Nullable final String value) {
         this._deliveryLocation = value;
     }
@@ -214,6 +218,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the directionality property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectionality(@javax.annotation.Nullable final String value) {
         this._directionality = value;
     }
@@ -222,6 +227,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the internetMessageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInternetMessageId(@javax.annotation.Nullable final String value) {
         this._internetMessageId = value;
     }
@@ -230,6 +236,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the messageFingerprint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessageFingerprint(@javax.annotation.Nullable final String value) {
         this._messageFingerprint = value;
     }
@@ -238,6 +245,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the messageReceivedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessageReceivedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._messageReceivedDateTime = value;
     }
@@ -246,6 +254,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the messageSubject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessageSubject(@javax.annotation.Nullable final String value) {
         this._messageSubject = value;
     }
@@ -254,6 +263,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the networkMessageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkMessageId(@javax.annotation.Nullable final String value) {
         this._networkMessageId = value;
     }
@@ -262,6 +272,7 @@ public class MessageSecurityState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

@@ -21,9 +21,9 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
      * Instantiates a new channelIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ChannelIdentity() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.channelIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,12 +57,11 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ChannelIdentity currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("channelId", (n) -> { currentObject.setChannelId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("channelId", (n) -> { this.setChannelId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("teamId", (n) -> { this.setTeamId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -85,6 +84,7 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("channelId", this.getChannelId());
@@ -97,6 +97,7 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the channelId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChannelId(@javax.annotation.Nullable final String value) {
         this._channelId = value;
     }
@@ -113,6 +115,7 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +124,7 @@ public class ChannelIdentity implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the teamId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamId(@javax.annotation.Nullable final String value) {
         this._teamId = value;
     }

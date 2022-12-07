@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable {
     /** The page's HTML content. */
     private byte[] _content;
@@ -36,6 +36,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      * Instantiates a new onenotePage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnenotePage() {
         super();
         this.setOdataType("#microsoft.graph.onenotePage");
@@ -80,20 +81,19 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnenotePage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("contentUrl", (n) -> { currentObject.setContentUrl(n.getStringValue()); });
-            this.put("createdByAppId", (n) -> { currentObject.setCreatedByAppId(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("level", (n) -> { currentObject.setLevel(n.getIntegerValue()); });
-            this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(PageLinks::createFromDiscriminatorValue)); });
-            this.put("order", (n) -> { currentObject.setOrder(n.getIntegerValue()); });
-            this.put("parentNotebook", (n) -> { currentObject.setParentNotebook(n.getObjectValue(Notebook::createFromDiscriminatorValue)); });
-            this.put("parentSection", (n) -> { currentObject.setParentSection(n.getObjectValue(OnenoteSection::createFromDiscriminatorValue)); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-            this.put("userTags", (n) -> { currentObject.setUserTags(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("contentUrl", (n) -> { this.setContentUrl(n.getStringValue()); });
+        deserializerMap.put("createdByAppId", (n) -> { this.setCreatedByAppId(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("level", (n) -> { this.setLevel(n.getIntegerValue()); });
+        deserializerMap.put("links", (n) -> { this.setLinks(n.getObjectValue(PageLinks::createFromDiscriminatorValue)); });
+        deserializerMap.put("order", (n) -> { this.setOrder(n.getIntegerValue()); });
+        deserializerMap.put("parentNotebook", (n) -> { this.setParentNotebook(n.getObjectValue(Notebook::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentSection", (n) -> { this.setParentSection(n.getObjectValue(OnenoteSection::createFromDiscriminatorValue)); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
+        deserializerMap.put("userTags", (n) -> { this.setUserTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -164,6 +164,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -184,6 +185,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
         this._content = value;
     }
@@ -192,6 +194,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      * @param value Value to set for the contentUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentUrl(@javax.annotation.Nullable final String value) {
         this._contentUrl = value;
     }
@@ -200,6 +203,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      * @param value Value to set for the createdByAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedByAppId(@javax.annotation.Nullable final String value) {
         this._createdByAppId = value;
     }
@@ -208,6 +212,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -216,6 +221,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      * @param value Value to set for the level property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLevel(@javax.annotation.Nullable final Integer value) {
         this._level = value;
     }
@@ -224,6 +230,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      * @param value Value to set for the links property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLinks(@javax.annotation.Nullable final PageLinks value) {
         this._links = value;
     }
@@ -232,6 +239,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      * @param value Value to set for the order property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrder(@javax.annotation.Nullable final Integer value) {
         this._order = value;
     }
@@ -240,6 +248,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      * @param value Value to set for the parentNotebook property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentNotebook(@javax.annotation.Nullable final Notebook value) {
         this._parentNotebook = value;
     }
@@ -248,6 +257,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      * @param value Value to set for the parentSection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentSection(@javax.annotation.Nullable final OnenoteSection value) {
         this._parentSection = value;
     }
@@ -256,6 +266,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }
@@ -264,6 +275,7 @@ public class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsa
      * @param value Value to set for the userTags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._userTags = value;
     }

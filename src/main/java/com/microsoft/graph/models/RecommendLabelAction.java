@@ -20,6 +20,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * Instantiates a new RecommendLabelAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RecommendLabelAction() {
         super();
         this.setOdataType("#microsoft.graph.recommendLabelAction");
@@ -56,13 +57,12 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RecommendLabelAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("actions", (n) -> { currentObject.setActions(n.getCollectionOfObjectValues(InformationProtectionAction::createFromDiscriminatorValue)); });
-            this.put("actionSource", (n) -> { currentObject.setActionSource(n.getEnumValue(ActionSource.class)); });
-            this.put("label", (n) -> { currentObject.setLabel(n.getObjectValue(LabelDetails::createFromDiscriminatorValue)); });
-            this.put("responsibleSensitiveTypeIds", (n) -> { currentObject.setResponsibleSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("actions", (n) -> { this.setActions(n.getCollectionOfObjectValues(InformationProtectionAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("actionSource", (n) -> { this.setActionSource(n.getEnumValue(ActionSource.class)); });
+        deserializerMap.put("label", (n) -> { this.setLabel(n.getObjectValue(LabelDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("responsibleSensitiveTypeIds", (n) -> { this.setResponsibleSensitiveTypeIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the label property value. The label that is being recommended.
@@ -85,6 +85,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +99,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * @param value Value to set for the actions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActions(@javax.annotation.Nullable final java.util.List<InformationProtectionAction> value) {
         this._actions = value;
     }
@@ -106,6 +108,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * @param value Value to set for the actionSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionSource(@javax.annotation.Nullable final ActionSource value) {
         this._actionSource = value;
     }
@@ -114,6 +117,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * @param value Value to set for the label property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabel(@javax.annotation.Nullable final LabelDetails value) {
         this._label = value;
     }
@@ -122,6 +126,7 @@ public class RecommendLabelAction extends InformationProtectionAction implements
      * @param value Value to set for the responsibleSensitiveTypeIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResponsibleSensitiveTypeIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._responsibleSensitiveTypeIds = value;
     }

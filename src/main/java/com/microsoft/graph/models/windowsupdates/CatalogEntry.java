@@ -12,7 +12,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class CatalogEntry extends Entity implements Parsable {
     /** The date on which the content is no longer available to deploy using the service. Read-only. */
     private OffsetDateTime _deployableUntilDateTime;
@@ -24,9 +24,9 @@ public class CatalogEntry extends Entity implements Parsable {
      * Instantiates a new catalogEntry and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CatalogEntry() {
         super();
-        this.setOdataType("#microsoft.graph.windowsUpdates.catalogEntry");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,12 +69,11 @@ public class CatalogEntry extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CatalogEntry currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deployableUntilDateTime", (n) -> { currentObject.setDeployableUntilDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("releaseDateTime", (n) -> { currentObject.setReleaseDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deployableUntilDateTime", (n) -> { this.setDeployableUntilDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("releaseDateTime", (n) -> { this.setReleaseDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the releaseDateTime property value. The release date for the content. Read-only.
@@ -89,6 +88,7 @@ public class CatalogEntry extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -101,6 +101,7 @@ public class CatalogEntry extends Entity implements Parsable {
      * @param value Value to set for the deployableUntilDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployableUntilDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._deployableUntilDateTime = value;
     }
@@ -109,6 +110,7 @@ public class CatalogEntry extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -117,6 +119,7 @@ public class CatalogEntry extends Entity implements Parsable {
      * @param value Value to set for the releaseDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReleaseDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._releaseDateTime = value;
     }

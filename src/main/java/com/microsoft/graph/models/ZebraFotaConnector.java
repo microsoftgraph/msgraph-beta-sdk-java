@@ -23,9 +23,9 @@ public class ZebraFotaConnector extends Entity implements Parsable {
      * Instantiates a new zebraFotaConnector and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ZebraFotaConnector() {
         super();
-        this.setOdataType("#microsoft.graph.zebraFotaConnector");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,14 +59,13 @@ public class ZebraFotaConnector extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ZebraFotaConnector currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("enrollmentAuthorizationUrl", (n) -> { currentObject.setEnrollmentAuthorizationUrl(n.getStringValue()); });
-            this.put("enrollmentToken", (n) -> { currentObject.setEnrollmentToken(n.getStringValue()); });
-            this.put("fotaAppsApproved", (n) -> { currentObject.setFotaAppsApproved(n.getBooleanValue()); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ZebraFotaConnectorState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("enrollmentAuthorizationUrl", (n) -> { this.setEnrollmentAuthorizationUrl(n.getStringValue()); });
+        deserializerMap.put("enrollmentToken", (n) -> { this.setEnrollmentToken(n.getStringValue()); });
+        deserializerMap.put("fotaAppsApproved", (n) -> { this.setFotaAppsApproved(n.getBooleanValue()); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ZebraFotaConnectorState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the fotaAppsApproved property value. Flag indicating if required Firmware Over-the-Air (FOTA) Apps have been approved.
@@ -97,6 +96,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +111,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
      * @param value Value to set for the enrollmentAuthorizationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentAuthorizationUrl(@javax.annotation.Nullable final String value) {
         this._enrollmentAuthorizationUrl = value;
     }
@@ -119,6 +120,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
      * @param value Value to set for the enrollmentToken property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentToken(@javax.annotation.Nullable final String value) {
         this._enrollmentToken = value;
     }
@@ -127,6 +129,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
      * @param value Value to set for the fotaAppsApproved property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFotaAppsApproved(@javax.annotation.Nullable final Boolean value) {
         this._fotaAppsApproved = value;
     }
@@ -135,6 +138,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSyncDateTime = value;
     }
@@ -143,6 +147,7 @@ public class ZebraFotaConnector extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ZebraFotaConnectorState value) {
         this._state = value;
     }

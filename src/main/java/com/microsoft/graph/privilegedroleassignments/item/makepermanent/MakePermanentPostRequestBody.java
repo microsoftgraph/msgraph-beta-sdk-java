@@ -22,6 +22,7 @@ public class MakePermanentPostRequestBody implements AdditionalDataHolder, Parsa
      * Instantiates a new makePermanentPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MakePermanentPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -49,12 +50,11 @@ public class MakePermanentPostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MakePermanentPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
-            this.put("ticketNumber", (n) -> { currentObject.setTicketNumber(n.getStringValue()); });
-            this.put("ticketSystem", (n) -> { currentObject.setTicketSystem(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("reason", (n) -> { this.setReason(n.getStringValue()); });
+        deserializerMap.put("ticketNumber", (n) -> { this.setTicketNumber(n.getStringValue()); });
+        deserializerMap.put("ticketSystem", (n) -> { this.setTicketSystem(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the reason property value. The reason property
@@ -85,6 +85,7 @@ public class MakePermanentPostRequestBody implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("reason", this.getReason());
@@ -97,6 +98,7 @@ public class MakePermanentPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +107,7 @@ public class MakePermanentPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the reason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReason(@javax.annotation.Nullable final String value) {
         this._reason = value;
     }
@@ -113,6 +116,7 @@ public class MakePermanentPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the ticketNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTicketNumber(@javax.annotation.Nullable final String value) {
         this._ticketNumber = value;
     }
@@ -121,6 +125,7 @@ public class MakePermanentPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the ticketSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTicketSystem(@javax.annotation.Nullable final String value) {
         this._ticketSystem = value;
     }

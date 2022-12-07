@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class IpSecurityProfile extends Entity implements Parsable {
     /** The activityGroupNames property */
     private java.util.List<String> _activityGroupNames;
@@ -36,17 +37,17 @@ public class IpSecurityProfile extends Entity implements Parsable {
     /** The vendorInformation property */
     private SecurityVendorInformation _vendorInformation;
     /**
-     * Instantiates a new IpSecurityProfile and sets the default values.
+     * Instantiates a new ipSecurityProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IpSecurityProfile() {
         super();
-        this.setOdataType("#microsoft.graph.ipSecurityProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a IpSecurityProfile
+     * @return a ipSecurityProfile
      */
     @javax.annotation.Nonnull
     public static IpSecurityProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -107,22 +108,21 @@ public class IpSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IpSecurityProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activityGroupNames", (n) -> { currentObject.setActivityGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
-            this.put("azureSubscriptionId", (n) -> { currentObject.setAzureSubscriptionId(n.getStringValue()); });
-            this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
-            this.put("countHits", (n) -> { currentObject.setCountHits(n.getIntegerValue()); });
-            this.put("countHosts", (n) -> { currentObject.setCountHosts(n.getIntegerValue()); });
-            this.put("firstSeenDateTime", (n) -> { currentObject.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("ipCategories", (n) -> { currentObject.setIpCategories(n.getCollectionOfObjectValues(IpCategory::createFromDiscriminatorValue)); });
-            this.put("ipReferenceData", (n) -> { currentObject.setIpReferenceData(n.getCollectionOfObjectValues(IpReferenceData::createFromDiscriminatorValue)); });
-            this.put("lastSeenDateTime", (n) -> { currentObject.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("vendorInformation", (n) -> { currentObject.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activityGroupNames", (n) -> { this.setActivityGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("address", (n) -> { this.setAddress(n.getStringValue()); });
+        deserializerMap.put("azureSubscriptionId", (n) -> { this.setAzureSubscriptionId(n.getStringValue()); });
+        deserializerMap.put("azureTenantId", (n) -> { this.setAzureTenantId(n.getStringValue()); });
+        deserializerMap.put("countHits", (n) -> { this.setCountHits(n.getIntegerValue()); });
+        deserializerMap.put("countHosts", (n) -> { this.setCountHosts(n.getIntegerValue()); });
+        deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("ipCategories", (n) -> { this.setIpCategories(n.getCollectionOfObjectValues(IpCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("ipReferenceData", (n) -> { this.setIpReferenceData(n.getCollectionOfObjectValues(IpReferenceData::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastSeenDateTime", (n) -> { this.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getStringValue()); });
+        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("vendorInformation", (n) -> { this.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the firstSeenDateTime property value. The firstSeenDateTime property
@@ -185,6 +185,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -207,6 +208,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the activityGroupNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityGroupNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._activityGroupNames = value;
     }
@@ -215,6 +217,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddress(@javax.annotation.Nullable final String value) {
         this._address = value;
     }
@@ -223,6 +226,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the azureSubscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureSubscriptionId(@javax.annotation.Nullable final String value) {
         this._azureSubscriptionId = value;
     }
@@ -231,6 +235,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
         this._azureTenantId = value;
     }
@@ -239,6 +244,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the countHits property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountHits(@javax.annotation.Nullable final Integer value) {
         this._countHits = value;
     }
@@ -247,6 +253,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the countHosts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountHosts(@javax.annotation.Nullable final Integer value) {
         this._countHosts = value;
     }
@@ -255,6 +262,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the firstSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._firstSeenDateTime = value;
     }
@@ -263,6 +271,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the ipCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpCategories(@javax.annotation.Nullable final java.util.List<IpCategory> value) {
         this._ipCategories = value;
     }
@@ -271,6 +280,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the ipReferenceData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpReferenceData(@javax.annotation.Nullable final java.util.List<IpReferenceData> value) {
         this._ipReferenceData = value;
     }
@@ -279,6 +289,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSeenDateTime = value;
     }
@@ -287,6 +298,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the riskScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
         this._riskScore = value;
     }
@@ -295,6 +307,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
     }
@@ -303,6 +316,7 @@ public class IpSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
         this._vendorInformation = value;
     }

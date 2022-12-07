@@ -23,9 +23,9 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Pa
      * Instantiates a new teamworkMicrophoneConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkMicrophoneConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamworkMicrophoneConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,13 +59,12 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamworkMicrophoneConfiguration currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("defaultMicrophone", (n) -> { currentObject.setDefaultMicrophone(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
-            this.put("isMicrophoneOptional", (n) -> { currentObject.setIsMicrophoneOptional(n.getBooleanValue()); });
-            this.put("microphones", (n) -> { currentObject.setMicrophones(n.getCollectionOfObjectValues(TeamworkPeripheral::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("defaultMicrophone", (n) -> { this.setDefaultMicrophone(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
+        deserializerMap.put("isMicrophoneOptional", (n) -> { this.setIsMicrophoneOptional(n.getBooleanValue()); });
+        deserializerMap.put("microphones", (n) -> { this.setMicrophones(n.getCollectionOfObjectValues(TeamworkPeripheral::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isMicrophoneOptional property value. True if the configured microphone is optional. False if the microphone is not optional and the health state of the device should be computed.
@@ -96,6 +95,7 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("defaultMicrophone", this.getDefaultMicrophone());
@@ -109,6 +109,7 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +118,7 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Pa
      * @param value Value to set for the defaultMicrophone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultMicrophone(@javax.annotation.Nullable final TeamworkPeripheral value) {
         this._defaultMicrophone = value;
     }
@@ -125,6 +127,7 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Pa
      * @param value Value to set for the isMicrophoneOptional property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMicrophoneOptional(@javax.annotation.Nullable final Boolean value) {
         this._isMicrophoneOptional = value;
     }
@@ -133,6 +136,7 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Pa
      * @param value Value to set for the microphones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrophones(@javax.annotation.Nullable final java.util.List<TeamworkPeripheral> value) {
         this._microphones = value;
     }
@@ -141,6 +145,7 @@ public class TeamworkMicrophoneConfiguration implements AdditionalDataHolder, Pa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

@@ -31,9 +31,9 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      * Instantiates a new subjectRightsRequestDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SubjectRightsRequestDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.subjectRightsRequestDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,17 +67,16 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SubjectRightsRequestDetail currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("excludedItemCount", (n) -> { currentObject.setExcludedItemCount(n.getLongValue()); });
-            this.put("insightCounts", (n) -> { currentObject.setInsightCounts(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("itemCount", (n) -> { currentObject.setItemCount(n.getLongValue()); });
-            this.put("itemNeedReview", (n) -> { currentObject.setItemNeedReview(n.getLongValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("productItemCounts", (n) -> { currentObject.setProductItemCounts(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("signedOffItemCount", (n) -> { currentObject.setSignedOffItemCount(n.getLongValue()); });
-            this.put("totalItemSize", (n) -> { currentObject.setTotalItemSize(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("excludedItemCount", (n) -> { this.setExcludedItemCount(n.getLongValue()); });
+        deserializerMap.put("insightCounts", (n) -> { this.setInsightCounts(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("itemCount", (n) -> { this.setItemCount(n.getLongValue()); });
+        deserializerMap.put("itemNeedReview", (n) -> { this.setItemNeedReview(n.getLongValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("productItemCounts", (n) -> { this.setProductItemCounts(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("signedOffItemCount", (n) -> { this.setSignedOffItemCount(n.getLongValue()); });
+        deserializerMap.put("totalItemSize", (n) -> { this.setTotalItemSize(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the insightCounts property value. Count of items per insight.
@@ -140,6 +139,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeLongValue("excludedItemCount", this.getExcludedItemCount());
@@ -157,6 +157,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -165,6 +166,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the excludedItemCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludedItemCount(@javax.annotation.Nullable final Long value) {
         this._excludedItemCount = value;
     }
@@ -173,6 +175,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the insightCounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInsightCounts(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._insightCounts = value;
     }
@@ -181,6 +184,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the itemCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItemCount(@javax.annotation.Nullable final Long value) {
         this._itemCount = value;
     }
@@ -189,6 +193,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the itemNeedReview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItemNeedReview(@javax.annotation.Nullable final Long value) {
         this._itemNeedReview = value;
     }
@@ -197,6 +202,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -205,6 +211,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the productItemCounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductItemCounts(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._productItemCounts = value;
     }
@@ -213,6 +220,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the signedOffItemCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignedOffItemCount(@javax.annotation.Nullable final Long value) {
         this._signedOffItemCount = value;
     }
@@ -221,6 +229,7 @@ public class SubjectRightsRequestDetail implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the totalItemSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalItemSize(@javax.annotation.Nullable final Long value) {
         this._totalItemSize = value;
     }

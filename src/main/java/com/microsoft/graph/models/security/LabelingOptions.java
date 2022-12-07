@@ -25,9 +25,9 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      * Instantiates a new labelingOptions and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LabelingOptions() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.security.labelingOptions");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,14 +77,13 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LabelingOptions currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("assignmentMethod", (n) -> { currentObject.setAssignmentMethod(n.getEnumValue(AssignmentMethod.class)); });
-            this.put("downgradeJustification", (n) -> { currentObject.setDowngradeJustification(n.getObjectValue(DowngradeJustification::createFromDiscriminatorValue)); });
-            this.put("extendedProperties", (n) -> { currentObject.setExtendedProperties(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("labelId", (n) -> { currentObject.setLabelId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("assignmentMethod", (n) -> { this.setAssignmentMethod(n.getEnumValue(AssignmentMethod.class)); });
+        deserializerMap.put("downgradeJustification", (n) -> { this.setDowngradeJustification(n.getObjectValue(DowngradeJustification::createFromDiscriminatorValue)); });
+        deserializerMap.put("extendedProperties", (n) -> { this.setExtendedProperties(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("labelId", (n) -> { this.setLabelId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the labelId property value. The GUID of the label that should be applied to the information.
@@ -107,6 +106,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("assignmentMethod", this.getAssignmentMethod());
@@ -121,6 +121,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +130,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the assignmentMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentMethod(@javax.annotation.Nullable final AssignmentMethod value) {
         this._assignmentMethod = value;
     }
@@ -137,6 +139,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the downgradeJustification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDowngradeJustification(@javax.annotation.Nullable final DowngradeJustification value) {
         this._downgradeJustification = value;
     }
@@ -145,6 +148,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the extendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtendedProperties(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._extendedProperties = value;
     }
@@ -153,6 +157,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the labelId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabelId(@javax.annotation.Nullable final String value) {
         this._labelId = value;
     }
@@ -161,6 +166,7 @@ public class LabelingOptions implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

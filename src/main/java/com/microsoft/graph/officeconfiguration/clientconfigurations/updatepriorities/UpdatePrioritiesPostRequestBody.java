@@ -20,6 +20,7 @@ public class UpdatePrioritiesPostRequestBody implements AdditionalDataHolder, Pa
      * Instantiates a new updatePrioritiesPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdatePrioritiesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -47,11 +48,10 @@ public class UpdatePrioritiesPostRequestBody implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UpdatePrioritiesPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("officeConfigurationPolicyIds", (n) -> { currentObject.setOfficeConfigurationPolicyIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("officeConfigurationPriorities", (n) -> { currentObject.setOfficeConfigurationPriorities(n.getCollectionOfPrimitiveValues(Integer.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("officeConfigurationPolicyIds", (n) -> { this.setOfficeConfigurationPolicyIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("officeConfigurationPriorities", (n) -> { this.setOfficeConfigurationPriorities(n.getCollectionOfPrimitiveValues(Integer.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the officeConfigurationPolicyIds property value. The officeConfigurationPolicyIds property
@@ -74,6 +74,7 @@ public class UpdatePrioritiesPostRequestBody implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("officeConfigurationPolicyIds", this.getOfficeConfigurationPolicyIds());
@@ -85,6 +86,7 @@ public class UpdatePrioritiesPostRequestBody implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +95,7 @@ public class UpdatePrioritiesPostRequestBody implements AdditionalDataHolder, Pa
      * @param value Value to set for the officeConfigurationPolicyIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOfficeConfigurationPolicyIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._officeConfigurationPolicyIds = value;
     }
@@ -101,6 +104,7 @@ public class UpdatePrioritiesPostRequestBody implements AdditionalDataHolder, Pa
      * @param value Value to set for the officeConfigurationPriorities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOfficeConfigurationPriorities(@javax.annotation.Nullable final java.util.List<Integer> value) {
         this._officeConfigurationPriorities = value;
     }

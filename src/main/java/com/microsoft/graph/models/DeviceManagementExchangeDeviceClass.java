@@ -22,9 +22,9 @@ public class DeviceManagementExchangeDeviceClass implements AdditionalDataHolder
      * Instantiates a new deviceManagementExchangeDeviceClass and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementExchangeDeviceClass() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceManagementExchangeDeviceClass");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +50,11 @@ public class DeviceManagementExchangeDeviceClass implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementExchangeDeviceClass currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(DeviceManagementExchangeAccessRuleType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(DeviceManagementExchangeAccessRuleType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. Name of the device class which will be impacted by this rule.
@@ -86,6 +85,7 @@ public class DeviceManagementExchangeDeviceClass implements AdditionalDataHolder
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("name", this.getName());
@@ -98,6 +98,7 @@ public class DeviceManagementExchangeDeviceClass implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +107,7 @@ public class DeviceManagementExchangeDeviceClass implements AdditionalDataHolder
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -114,6 +116,7 @@ public class DeviceManagementExchangeDeviceClass implements AdditionalDataHolder
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -122,6 +125,7 @@ public class DeviceManagementExchangeDeviceClass implements AdditionalDataHolder
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final DeviceManagementExchangeAccessRuleType value) {
         this._type = value;
     }

@@ -68,9 +68,9 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * Instantiates a new windowsAutopilotDeviceIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsAutopilotDeviceIdentity() {
         super();
-        this.setOdataType("#microsoft.graph.windowsAutopilotDeviceIdentity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -184,36 +184,35 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsAutopilotDeviceIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("addressableUserName", (n) -> { currentObject.setAddressableUserName(n.getStringValue()); });
-            this.put("azureActiveDirectoryDeviceId", (n) -> { currentObject.setAzureActiveDirectoryDeviceId(n.getStringValue()); });
-            this.put("azureAdDeviceId", (n) -> { currentObject.setAzureAdDeviceId(n.getStringValue()); });
-            this.put("deploymentProfile", (n) -> { currentObject.setDeploymentProfile(n.getObjectValue(WindowsAutopilotDeploymentProfile::createFromDiscriminatorValue)); });
-            this.put("deploymentProfileAssignedDateTime", (n) -> { currentObject.setDeploymentProfileAssignedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deploymentProfileAssignmentDetailedStatus", (n) -> { currentObject.setDeploymentProfileAssignmentDetailedStatus(n.getEnumValue(WindowsAutopilotProfileAssignmentDetailedStatus.class)); });
-            this.put("deploymentProfileAssignmentStatus", (n) -> { currentObject.setDeploymentProfileAssignmentStatus(n.getEnumValue(WindowsAutopilotProfileAssignmentStatus.class)); });
-            this.put("deviceAccountPassword", (n) -> { currentObject.setDeviceAccountPassword(n.getStringValue()); });
-            this.put("deviceAccountUpn", (n) -> { currentObject.setDeviceAccountUpn(n.getStringValue()); });
-            this.put("deviceFriendlyName", (n) -> { currentObject.setDeviceFriendlyName(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("enrollmentState", (n) -> { currentObject.setEnrollmentState(n.getEnumValue(EnrollmentState.class)); });
-            this.put("groupTag", (n) -> { currentObject.setGroupTag(n.getStringValue()); });
-            this.put("intendedDeploymentProfile", (n) -> { currentObject.setIntendedDeploymentProfile(n.getObjectValue(WindowsAutopilotDeploymentProfile::createFromDiscriminatorValue)); });
-            this.put("lastContactedDateTime", (n) -> { currentObject.setLastContactedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("productKey", (n) -> { currentObject.setProductKey(n.getStringValue()); });
-            this.put("purchaseOrderIdentifier", (n) -> { currentObject.setPurchaseOrderIdentifier(n.getStringValue()); });
-            this.put("remediationState", (n) -> { currentObject.setRemediationState(n.getEnumValue(WindowsAutopilotDeviceRemediationState.class)); });
-            this.put("remediationStateLastModifiedDateTime", (n) -> { currentObject.setRemediationStateLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("resourceName", (n) -> { currentObject.setResourceName(n.getStringValue()); });
-            this.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
-            this.put("skuNumber", (n) -> { currentObject.setSkuNumber(n.getStringValue()); });
-            this.put("systemFamily", (n) -> { currentObject.setSystemFamily(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("addressableUserName", (n) -> { this.setAddressableUserName(n.getStringValue()); });
+        deserializerMap.put("azureActiveDirectoryDeviceId", (n) -> { this.setAzureActiveDirectoryDeviceId(n.getStringValue()); });
+        deserializerMap.put("azureAdDeviceId", (n) -> { this.setAzureAdDeviceId(n.getStringValue()); });
+        deserializerMap.put("deploymentProfile", (n) -> { this.setDeploymentProfile(n.getObjectValue(WindowsAutopilotDeploymentProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("deploymentProfileAssignedDateTime", (n) -> { this.setDeploymentProfileAssignedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deploymentProfileAssignmentDetailedStatus", (n) -> { this.setDeploymentProfileAssignmentDetailedStatus(n.getEnumValue(WindowsAutopilotProfileAssignmentDetailedStatus.class)); });
+        deserializerMap.put("deploymentProfileAssignmentStatus", (n) -> { this.setDeploymentProfileAssignmentStatus(n.getEnumValue(WindowsAutopilotProfileAssignmentStatus.class)); });
+        deserializerMap.put("deviceAccountPassword", (n) -> { this.setDeviceAccountPassword(n.getStringValue()); });
+        deserializerMap.put("deviceAccountUpn", (n) -> { this.setDeviceAccountUpn(n.getStringValue()); });
+        deserializerMap.put("deviceFriendlyName", (n) -> { this.setDeviceFriendlyName(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enrollmentState", (n) -> { this.setEnrollmentState(n.getEnumValue(EnrollmentState.class)); });
+        deserializerMap.put("groupTag", (n) -> { this.setGroupTag(n.getStringValue()); });
+        deserializerMap.put("intendedDeploymentProfile", (n) -> { this.setIntendedDeploymentProfile(n.getObjectValue(WindowsAutopilotDeploymentProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastContactedDateTime", (n) -> { this.setLastContactedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("productKey", (n) -> { this.setProductKey(n.getStringValue()); });
+        deserializerMap.put("purchaseOrderIdentifier", (n) -> { this.setPurchaseOrderIdentifier(n.getStringValue()); });
+        deserializerMap.put("remediationState", (n) -> { this.setRemediationState(n.getEnumValue(WindowsAutopilotDeviceRemediationState.class)); });
+        deserializerMap.put("remediationStateLastModifiedDateTime", (n) -> { this.setRemediationStateLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("resourceName", (n) -> { this.setResourceName(n.getStringValue()); });
+        deserializerMap.put("serialNumber", (n) -> { this.setSerialNumber(n.getStringValue()); });
+        deserializerMap.put("skuNumber", (n) -> { this.setSkuNumber(n.getStringValue()); });
+        deserializerMap.put("systemFamily", (n) -> { this.setSystemFamily(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupTag property value. Group Tag of the Windows autopilot device.
@@ -340,6 +339,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -376,6 +376,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the addressableUserName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddressableUserName(@javax.annotation.Nullable final String value) {
         this._addressableUserName = value;
     }
@@ -384,6 +385,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the azureActiveDirectoryDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureActiveDirectoryDeviceId(@javax.annotation.Nullable final String value) {
         this._azureActiveDirectoryDeviceId = value;
     }
@@ -392,6 +394,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the azureAdDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureAdDeviceId(@javax.annotation.Nullable final String value) {
         this._azureAdDeviceId = value;
     }
@@ -400,6 +403,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the deploymentProfile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentProfile(@javax.annotation.Nullable final WindowsAutopilotDeploymentProfile value) {
         this._deploymentProfile = value;
     }
@@ -408,6 +412,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the deploymentProfileAssignedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentProfileAssignedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._deploymentProfileAssignedDateTime = value;
     }
@@ -416,6 +421,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the deploymentProfileAssignmentDetailedStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentProfileAssignmentDetailedStatus(@javax.annotation.Nullable final WindowsAutopilotProfileAssignmentDetailedStatus value) {
         this._deploymentProfileAssignmentDetailedStatus = value;
     }
@@ -424,6 +430,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the deploymentProfileAssignmentStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentProfileAssignmentStatus(@javax.annotation.Nullable final WindowsAutopilotProfileAssignmentStatus value) {
         this._deploymentProfileAssignmentStatus = value;
     }
@@ -432,6 +439,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the deviceAccountPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceAccountPassword(@javax.annotation.Nullable final String value) {
         this._deviceAccountPassword = value;
     }
@@ -440,6 +448,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the deviceAccountUpn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceAccountUpn(@javax.annotation.Nullable final String value) {
         this._deviceAccountUpn = value;
     }
@@ -448,6 +457,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the deviceFriendlyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceFriendlyName(@javax.annotation.Nullable final String value) {
         this._deviceFriendlyName = value;
     }
@@ -456,6 +466,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -464,6 +475,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the enrollmentState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentState(@javax.annotation.Nullable final EnrollmentState value) {
         this._enrollmentState = value;
     }
@@ -472,6 +484,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the groupTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupTag(@javax.annotation.Nullable final String value) {
         this._groupTag = value;
     }
@@ -480,6 +493,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the intendedDeploymentProfile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntendedDeploymentProfile(@javax.annotation.Nullable final WindowsAutopilotDeploymentProfile value) {
         this._intendedDeploymentProfile = value;
     }
@@ -488,6 +502,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the lastContactedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastContactedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastContactedDateTime = value;
     }
@@ -496,6 +511,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
     }
@@ -504,6 +520,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -512,6 +529,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
@@ -520,6 +538,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the productKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductKey(@javax.annotation.Nullable final String value) {
         this._productKey = value;
     }
@@ -528,6 +547,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the purchaseOrderIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPurchaseOrderIdentifier(@javax.annotation.Nullable final String value) {
         this._purchaseOrderIdentifier = value;
     }
@@ -536,6 +556,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the remediationState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediationState(@javax.annotation.Nullable final WindowsAutopilotDeviceRemediationState value) {
         this._remediationState = value;
     }
@@ -544,6 +565,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the remediationStateLastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediationStateLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._remediationStateLastModifiedDateTime = value;
     }
@@ -552,6 +574,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the resourceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceName(@javax.annotation.Nullable final String value) {
         this._resourceName = value;
     }
@@ -560,6 +583,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the serialNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSerialNumber(@javax.annotation.Nullable final String value) {
         this._serialNumber = value;
     }
@@ -568,6 +592,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the skuNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkuNumber(@javax.annotation.Nullable final String value) {
         this._skuNumber = value;
     }
@@ -576,6 +601,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the systemFamily property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemFamily(@javax.annotation.Nullable final String value) {
         this._systemFamily = value;
     }
@@ -584,6 +610,7 @@ public class WindowsAutopilotDeviceIdentity extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

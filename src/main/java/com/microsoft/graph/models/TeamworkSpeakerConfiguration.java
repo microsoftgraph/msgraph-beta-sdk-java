@@ -27,9 +27,9 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
      * Instantiates a new teamworkSpeakerConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkSpeakerConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamworkSpeakerConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -71,15 +71,14 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamworkSpeakerConfiguration currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("defaultCommunicationSpeaker", (n) -> { currentObject.setDefaultCommunicationSpeaker(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
-            this.put("defaultSpeaker", (n) -> { currentObject.setDefaultSpeaker(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
-            this.put("isCommunicationSpeakerOptional", (n) -> { currentObject.setIsCommunicationSpeakerOptional(n.getBooleanValue()); });
-            this.put("isSpeakerOptional", (n) -> { currentObject.setIsSpeakerOptional(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("speakers", (n) -> { currentObject.setSpeakers(n.getCollectionOfObjectValues(TeamworkPeripheral::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("defaultCommunicationSpeaker", (n) -> { this.setDefaultCommunicationSpeaker(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultSpeaker", (n) -> { this.setDefaultSpeaker(n.getObjectValue(TeamworkPeripheral::createFromDiscriminatorValue)); });
+        deserializerMap.put("isCommunicationSpeakerOptional", (n) -> { this.setIsCommunicationSpeakerOptional(n.getBooleanValue()); });
+        deserializerMap.put("isSpeakerOptional", (n) -> { this.setIsSpeakerOptional(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("speakers", (n) -> { this.setSpeakers(n.getCollectionOfObjectValues(TeamworkPeripheral::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isCommunicationSpeakerOptional property value. True if the communication speaker is optional. Used to compute the health state if the communication speaker is not optional.
@@ -118,6 +117,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("defaultCommunicationSpeaker", this.getDefaultCommunicationSpeaker());
@@ -133,6 +133,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +142,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the defaultCommunicationSpeaker property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultCommunicationSpeaker(@javax.annotation.Nullable final TeamworkPeripheral value) {
         this._defaultCommunicationSpeaker = value;
     }
@@ -149,6 +151,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the defaultSpeaker property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultSpeaker(@javax.annotation.Nullable final TeamworkPeripheral value) {
         this._defaultSpeaker = value;
     }
@@ -157,6 +160,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the isCommunicationSpeakerOptional property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCommunicationSpeakerOptional(@javax.annotation.Nullable final Boolean value) {
         this._isCommunicationSpeakerOptional = value;
     }
@@ -165,6 +169,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the isSpeakerOptional property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSpeakerOptional(@javax.annotation.Nullable final Boolean value) {
         this._isSpeakerOptional = value;
     }
@@ -173,6 +178,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -181,6 +187,7 @@ public class TeamworkSpeakerConfiguration implements AdditionalDataHolder, Parsa
      * @param value Value to set for the speakers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpeakers(@javax.annotation.Nullable final java.util.List<TeamworkPeripheral> value) {
         this._speakers = value;
     }

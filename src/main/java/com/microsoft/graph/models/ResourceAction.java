@@ -22,9 +22,9 @@ public class ResourceAction implements AdditionalDataHolder, Parsable {
      * Instantiates a new resourceAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ResourceAction() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.resourceAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,12 +58,11 @@ public class ResourceAction implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ResourceAction currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("allowedResourceActions", (n) -> { currentObject.setAllowedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("notAllowedResourceActions", (n) -> { currentObject.setNotAllowedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("allowedResourceActions", (n) -> { this.setAllowedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("notAllowedResourceActions", (n) -> { this.setNotAllowedResourceActions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the notAllowedResourceActions property value. Not Allowed Actions.
@@ -86,6 +85,7 @@ public class ResourceAction implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("allowedResourceActions", this.getAllowedResourceActions());
@@ -98,6 +98,7 @@ public class ResourceAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +107,7 @@ public class ResourceAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowedResourceActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedResourceActions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedResourceActions = value;
     }
@@ -114,6 +116,7 @@ public class ResourceAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the notAllowedResourceActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotAllowedResourceActions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._notAllowedResourceActions = value;
     }
@@ -122,6 +125,7 @@ public class ResourceAction implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

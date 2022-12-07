@@ -24,6 +24,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      * Instantiates a new TemporaryAccessPassAuthenticationMethodConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TemporaryAccessPassAuthenticationMethodConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration");
@@ -60,15 +61,14 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TemporaryAccessPassAuthenticationMethodConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultLength", (n) -> { currentObject.setDefaultLength(n.getIntegerValue()); });
-            this.put("defaultLifetimeInMinutes", (n) -> { currentObject.setDefaultLifetimeInMinutes(n.getIntegerValue()); });
-            this.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
-            this.put("isUsableOnce", (n) -> { currentObject.setIsUsableOnce(n.getBooleanValue()); });
-            this.put("maximumLifetimeInMinutes", (n) -> { currentObject.setMaximumLifetimeInMinutes(n.getIntegerValue()); });
-            this.put("minimumLifetimeInMinutes", (n) -> { currentObject.setMinimumLifetimeInMinutes(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultLength", (n) -> { this.setDefaultLength(n.getIntegerValue()); });
+        deserializerMap.put("defaultLifetimeInMinutes", (n) -> { this.setDefaultLifetimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
+        deserializerMap.put("isUsableOnce", (n) -> { this.setIsUsableOnce(n.getBooleanValue()); });
+        deserializerMap.put("maximumLifetimeInMinutes", (n) -> { this.setMaximumLifetimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("minimumLifetimeInMinutes", (n) -> { this.setMinimumLifetimeInMinutes(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method.
@@ -107,6 +107,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +123,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      * @param value Value to set for the defaultLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultLength(@javax.annotation.Nullable final Integer value) {
         this._defaultLength = value;
     }
@@ -130,6 +132,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      * @param value Value to set for the defaultLifetimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultLifetimeInMinutes(@javax.annotation.Nullable final Integer value) {
         this._defaultLifetimeInMinutes = value;
     }
@@ -138,6 +141,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      * @param value Value to set for the includeTargets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeTargets(@javax.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
         this._includeTargets = value;
     }
@@ -146,6 +150,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      * @param value Value to set for the isUsableOnce property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsUsableOnce(@javax.annotation.Nullable final Boolean value) {
         this._isUsableOnce = value;
     }
@@ -154,6 +159,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      * @param value Value to set for the maximumLifetimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumLifetimeInMinutes(@javax.annotation.Nullable final Integer value) {
         this._maximumLifetimeInMinutes = value;
     }
@@ -162,6 +168,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      * @param value Value to set for the minimumLifetimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumLifetimeInMinutes(@javax.annotation.Nullable final Integer value) {
         this._minimumLifetimeInMinutes = value;
     }

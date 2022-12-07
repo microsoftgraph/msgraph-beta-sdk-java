@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ColumnLink extends Entity implements Parsable {
     /** The name of the column  in this content type. */
     private String _name;
@@ -15,9 +15,9 @@ public class ColumnLink extends Entity implements Parsable {
      * Instantiates a new columnLink and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ColumnLink() {
         super();
-        this.setOdataType("#microsoft.graph.columnLink");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,10 +35,9 @@ public class ColumnLink extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ColumnLink currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. The name of the column  in this content type.
@@ -53,6 +52,7 @@ public class ColumnLink extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +63,7 @@ public class ColumnLink extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }

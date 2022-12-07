@@ -23,9 +23,9 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * Instantiates a new servicePrincipalCreationConditionSet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServicePrincipalCreationConditionSet() {
         super();
-        this.setOdataType("#microsoft.graph.servicePrincipalCreationConditionSet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -83,20 +83,20 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ServicePrincipalCreationConditionSet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicationIds", (n) -> { currentObject.setApplicationIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("applicationPublisherIds", (n) -> { currentObject.setApplicationPublisherIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("applicationsFromVerifiedPublisherOnly", (n) -> { currentObject.setApplicationsFromVerifiedPublisherOnly(n.getBooleanValue()); });
-            this.put("applicationTenantIds", (n) -> { currentObject.setApplicationTenantIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("certifiedApplicationsOnly", (n) -> { currentObject.setCertifiedApplicationsOnly(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationIds", (n) -> { this.setApplicationIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("applicationPublisherIds", (n) -> { this.setApplicationPublisherIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("applicationsFromVerifiedPublisherOnly", (n) -> { this.setApplicationsFromVerifiedPublisherOnly(n.getBooleanValue()); });
+        deserializerMap.put("applicationTenantIds", (n) -> { this.setApplicationTenantIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("certifiedApplicationsOnly", (n) -> { this.setCertifiedApplicationsOnly(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +111,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * @param value Value to set for the applicationIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._applicationIds = value;
     }
@@ -119,6 +120,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * @param value Value to set for the applicationPublisherIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationPublisherIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._applicationPublisherIds = value;
     }
@@ -127,6 +129,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * @param value Value to set for the applicationsFromVerifiedPublisherOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationsFromVerifiedPublisherOnly(@javax.annotation.Nullable final Boolean value) {
         this._applicationsFromVerifiedPublisherOnly = value;
     }
@@ -135,6 +138,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * @param value Value to set for the applicationTenantIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationTenantIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._applicationTenantIds = value;
     }
@@ -143,6 +147,7 @@ public class ServicePrincipalCreationConditionSet extends Entity implements Pars
      * @param value Value to set for the certifiedApplicationsOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertifiedApplicationsOnly(@javax.annotation.Nullable final Boolean value) {
         this._certifiedApplicationsOnly = value;
     }

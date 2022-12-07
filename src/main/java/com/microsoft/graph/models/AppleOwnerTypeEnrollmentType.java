@@ -21,9 +21,9 @@ public class AppleOwnerTypeEnrollmentType implements AdditionalDataHolder, Parsa
      * Instantiates a new appleOwnerTypeEnrollmentType and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppleOwnerTypeEnrollmentType() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.appleOwnerTypeEnrollmentType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,12 +57,11 @@ public class AppleOwnerTypeEnrollmentType implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AppleOwnerTypeEnrollmentType currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("enrollmentType", (n) -> { currentObject.setEnrollmentType(n.getEnumValue(AppleUserInitiatedEnrollmentType.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("ownerType", (n) -> { currentObject.setOwnerType(n.getEnumValue(ManagedDeviceOwnerType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("enrollmentType", (n) -> { this.setEnrollmentType(n.getEnumValue(AppleUserInitiatedEnrollmentType.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("ownerType", (n) -> { this.setOwnerType(n.getEnumValue(ManagedDeviceOwnerType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -85,6 +84,7 @@ public class AppleOwnerTypeEnrollmentType implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("enrollmentType", this.getEnrollmentType());
@@ -97,6 +97,7 @@ public class AppleOwnerTypeEnrollmentType implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class AppleOwnerTypeEnrollmentType implements AdditionalDataHolder, Parsa
      * @param value Value to set for the enrollmentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentType(@javax.annotation.Nullable final AppleUserInitiatedEnrollmentType value) {
         this._enrollmentType = value;
     }
@@ -113,6 +115,7 @@ public class AppleOwnerTypeEnrollmentType implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +124,7 @@ public class AppleOwnerTypeEnrollmentType implements AdditionalDataHolder, Parsa
      * @param value Value to set for the ownerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnerType(@javax.annotation.Nullable final ManagedDeviceOwnerType value) {
         this._ownerType = value;
     }

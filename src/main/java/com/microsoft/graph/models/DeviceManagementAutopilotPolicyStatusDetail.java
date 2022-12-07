@@ -26,9 +26,9 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      * Instantiates a new deviceManagementAutopilotPolicyStatusDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementAutopilotPolicyStatusDetail() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementAutopilotPolicyStatusDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,15 +70,14 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementAutopilotPolicyStatusDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("complianceStatus", (n) -> { currentObject.setComplianceStatus(n.getEnumValue(DeviceManagementAutopilotPolicyComplianceStatus.class)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });
-            this.put("lastReportedDateTime", (n) -> { currentObject.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("policyType", (n) -> { currentObject.setPolicyType(n.getEnumValue(DeviceManagementAutopilotPolicyType.class)); });
-            this.put("trackedOnEnrollmentStatus", (n) -> { currentObject.setTrackedOnEnrollmentStatus(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("complianceStatus", (n) -> { this.setComplianceStatus(n.getEnumValue(DeviceManagementAutopilotPolicyComplianceStatus.class)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getIntegerValue()); });
+        deserializerMap.put("lastReportedDateTime", (n) -> { this.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("policyType", (n) -> { this.setPolicyType(n.getEnumValue(DeviceManagementAutopilotPolicyType.class)); });
+        deserializerMap.put("trackedOnEnrollmentStatus", (n) -> { this.setTrackedOnEnrollmentStatus(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastReportedDateTime property value. Timestamp of the reported policy status
@@ -109,6 +108,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -124,6 +124,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      * @param value Value to set for the complianceStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceStatus(@javax.annotation.Nullable final DeviceManagementAutopilotPolicyComplianceStatus value) {
         this._complianceStatus = value;
     }
@@ -132,6 +133,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -140,6 +142,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final Integer value) {
         this._errorCode = value;
     }
@@ -148,6 +151,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      * @param value Value to set for the lastReportedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastReportedDateTime = value;
     }
@@ -156,6 +160,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      * @param value Value to set for the policyType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyType(@javax.annotation.Nullable final DeviceManagementAutopilotPolicyType value) {
         this._policyType = value;
     }
@@ -164,6 +169,7 @@ public class DeviceManagementAutopilotPolicyStatusDetail extends Entity implemen
      * @param value Value to set for the trackedOnEnrollmentStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrackedOnEnrollmentStatus(@javax.annotation.Nullable final Boolean value) {
         this._trackedOnEnrollmentStatus = value;
     }

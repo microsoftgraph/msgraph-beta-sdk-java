@@ -14,6 +14,7 @@ public class DeviceManagementConfigurationGroupSettingValue extends DeviceManage
      * Instantiates a new DeviceManagementConfigurationGroupSettingValue and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationGroupSettingValue() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationGroupSettingValue");
@@ -42,16 +43,16 @@ public class DeviceManagementConfigurationGroupSettingValue extends DeviceManage
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationGroupSettingValue currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingInstance::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("children", (n) -> { this.setChildren(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingInstance::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class DeviceManagementConfigurationGroupSettingValue extends DeviceManage
      * @param value Value to set for the children property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildren(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingInstance> value) {
         this._children = value;
     }

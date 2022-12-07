@@ -14,6 +14,7 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
      * Instantiates a new ServiceHostedMediaConfig and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServiceHostedMediaConfig() {
         super();
         this.setOdataType("#microsoft.graph.serviceHostedMediaConfig");
@@ -34,10 +35,9 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ServiceHostedMediaConfig currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("preFetchMedia", (n) -> { currentObject.setPreFetchMedia(n.getCollectionOfObjectValues(MediaInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("preFetchMedia", (n) -> { this.setPreFetchMedia(n.getCollectionOfObjectValues(MediaInfo::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the preFetchMedia property value. The list of media to pre-fetch.
@@ -52,6 +52,7 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
      * @param value Value to set for the preFetchMedia property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreFetchMedia(@javax.annotation.Nullable final java.util.List<MediaInfo> value) {
         this._preFetchMedia = value;
     }

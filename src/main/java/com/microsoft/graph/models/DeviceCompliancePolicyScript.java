@@ -21,9 +21,9 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Parsa
      * Instantiates a new deviceCompliancePolicyScript and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceCompliancePolicyScript() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceCompliancePolicyScript");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,12 +57,11 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceCompliancePolicyScript currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("deviceComplianceScriptId", (n) -> { currentObject.setDeviceComplianceScriptId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("rulesContent", (n) -> { currentObject.setRulesContent(n.getByteArrayValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("deviceComplianceScriptId", (n) -> { this.setDeviceComplianceScriptId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("rulesContent", (n) -> { this.setRulesContent(n.getByteArrayValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -85,6 +84,7 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("deviceComplianceScriptId", this.getDeviceComplianceScriptId());
@@ -97,6 +97,7 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Parsa
      * @param value Value to set for the deviceComplianceScriptId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceComplianceScriptId(@javax.annotation.Nullable final String value) {
         this._deviceComplianceScriptId = value;
     }
@@ -113,6 +115,7 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +124,7 @@ public class DeviceCompliancePolicyScript implements AdditionalDataHolder, Parsa
      * @param value Value to set for the rulesContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRulesContent(@javax.annotation.Nullable final byte[] value) {
         this._rulesContent = value;
     }

@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** A ConfigManager defined collection of devices or users. */
 public class ConfigManagerCollection extends Entity implements Parsable {
     /** The collection identifier in SCCM. */
     private String _collectionIdentifier;
@@ -22,17 +23,17 @@ public class ConfigManagerCollection extends Entity implements Parsable {
     /** The last modified date. */
     private OffsetDateTime _lastModifiedDateTime;
     /**
-     * Instantiates a new ConfigManagerCollection and sets the default values.
+     * Instantiates a new configManagerCollection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConfigManagerCollection() {
         super();
-        this.setOdataType("#microsoft.graph.configManagerCollection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ConfigManagerCollection
+     * @return a configManagerCollection
      */
     @javax.annotation.Nonnull
     public static ConfigManagerCollection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -69,15 +70,14 @@ public class ConfigManagerCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConfigManagerCollection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("collectionIdentifier", (n) -> { currentObject.setCollectionIdentifier(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("hierarchyIdentifier", (n) -> { currentObject.setHierarchyIdentifier(n.getStringValue()); });
-            this.put("hierarchyName", (n) -> { currentObject.setHierarchyName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("collectionIdentifier", (n) -> { this.setCollectionIdentifier(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("hierarchyIdentifier", (n) -> { this.setHierarchyIdentifier(n.getStringValue()); });
+        deserializerMap.put("hierarchyName", (n) -> { this.setHierarchyName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hierarchyIdentifier property value. The Hierarchy Identifier.
@@ -108,6 +108,7 @@ public class ConfigManagerCollection extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +124,7 @@ public class ConfigManagerCollection extends Entity implements Parsable {
      * @param value Value to set for the collectionIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCollectionIdentifier(@javax.annotation.Nullable final String value) {
         this._collectionIdentifier = value;
     }
@@ -131,6 +133,7 @@ public class ConfigManagerCollection extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -139,6 +142,7 @@ public class ConfigManagerCollection extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -147,6 +151,7 @@ public class ConfigManagerCollection extends Entity implements Parsable {
      * @param value Value to set for the hierarchyIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHierarchyIdentifier(@javax.annotation.Nullable final String value) {
         this._hierarchyIdentifier = value;
     }
@@ -155,6 +160,7 @@ public class ConfigManagerCollection extends Entity implements Parsable {
      * @param value Value to set for the hierarchyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHierarchyName(@javax.annotation.Nullable final String value) {
         this._hierarchyName = value;
     }
@@ -163,6 +169,7 @@ public class ConfigManagerCollection extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }

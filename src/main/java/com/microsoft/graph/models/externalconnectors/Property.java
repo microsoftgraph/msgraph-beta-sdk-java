@@ -11,8 +11,10 @@ import java.util.Objects;
 public class Property implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^. Optional. */
+    /** A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string might not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^. Optional. */
     private java.util.List<String> _aliases;
+    /** Specifies if the property will be matched exactly for queries. Exact matching can only be set to true for non-searchable properties of type string or stringCollection. Optional. */
+    private Boolean _isExactMatchRequired;
     /** Specifies if the property is queryable. Queryable properties can be used in Keyword Query Language (KQL) queries. Optional. */
     private Boolean _isQueryable;
     /** Specifies if the property is refinable.  Refinable properties can be used to filter search results in the Search API and add a refiner control in the Microsoft Search user experience. Optional. */
@@ -22,8 +24,8 @@ public class Property implements AdditionalDataHolder, Parsable {
     /** Specifies if the property is searchable. Only properties of type string or stringCollection can be searchable. Non-searchable properties are not added to the search index. Optional. */
     private Boolean _isSearchable;
     /** Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). Optional.The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, iconUrl, containerName, containerUrl. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: iconUrl, containerName, containerUrl. */
-    private java.util.List<String> _labels;
-    /** The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required. */
+    private java.util.List<Label> _labels;
+    /** The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, the property name may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required. */
     private String _name;
     /** The OdataType property */
     private String _odataType;
@@ -33,9 +35,9 @@ public class Property implements AdditionalDataHolder, Parsable {
      * Instantiates a new property and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Property() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.externalConnectors.property");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,7 +58,7 @@ public class Property implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the aliases property value. A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^. Optional.
+     * Gets the aliases property value. A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string might not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^. Optional.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -69,18 +71,26 @@ public class Property implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Property currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("aliases", (n) -> { currentObject.setAliases(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isQueryable", (n) -> { currentObject.setIsQueryable(n.getBooleanValue()); });
-            this.put("isRefinable", (n) -> { currentObject.setIsRefinable(n.getBooleanValue()); });
-            this.put("isRetrievable", (n) -> { currentObject.setIsRetrievable(n.getBooleanValue()); });
-            this.put("isSearchable", (n) -> { currentObject.setIsSearchable(n.getBooleanValue()); });
-            this.put("labels", (n) -> { currentObject.setLabels(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(PropertyType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("aliases", (n) -> { this.setAliases(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isExactMatchRequired", (n) -> { this.setIsExactMatchRequired(n.getBooleanValue()); });
+        deserializerMap.put("isQueryable", (n) -> { this.setIsQueryable(n.getBooleanValue()); });
+        deserializerMap.put("isRefinable", (n) -> { this.setIsRefinable(n.getBooleanValue()); });
+        deserializerMap.put("isRetrievable", (n) -> { this.setIsRetrievable(n.getBooleanValue()); });
+        deserializerMap.put("isSearchable", (n) -> { this.setIsSearchable(n.getBooleanValue()); });
+        deserializerMap.put("labels", (n) -> { this.setLabels(n.getCollectionOfEnumValues(Label.class)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PropertyType.class)); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the isExactMatchRequired property value. Specifies if the property will be matched exactly for queries. Exact matching can only be set to true for non-searchable properties of type string or stringCollection. Optional.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getIsExactMatchRequired() {
+        return this._isExactMatchRequired;
     }
     /**
      * Gets the isQueryable property value. Specifies if the property is queryable. Queryable properties can be used in Keyword Query Language (KQL) queries. Optional.
@@ -116,14 +126,14 @@ public class Property implements AdditionalDataHolder, Parsable {
     }
     /**
      * Gets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). Optional.The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, iconUrl, containerName, containerUrl. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: iconUrl, containerName, containerUrl.
-     * @return a string
+     * @return a label
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getLabels() {
+    public java.util.List<Label> getLabels() {
         return this._labels;
     }
     /**
-     * Gets the name property value. The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required.
+     * Gets the name property value. The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, the property name may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -151,14 +161,16 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("aliases", this.getAliases());
+        writer.writeBooleanValue("isExactMatchRequired", this.getIsExactMatchRequired());
         writer.writeBooleanValue("isQueryable", this.getIsQueryable());
         writer.writeBooleanValue("isRefinable", this.getIsRefinable());
         writer.writeBooleanValue("isRetrievable", this.getIsRetrievable());
         writer.writeBooleanValue("isSearchable", this.getIsSearchable());
-        writer.writeCollectionOfPrimitiveValues("labels", this.getLabels());
+        writer.writeCollectionOfEnumValues("labels", this.getLabels());
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeEnumValue("type", this.getType());
@@ -169,22 +181,34 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
     /**
-     * Sets the aliases property value. A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^. Optional.
+     * Sets the aliases property value. A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string might not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^. Optional.
      * @param value Value to set for the aliases property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAliases(@javax.annotation.Nullable final java.util.List<String> value) {
         this._aliases = value;
+    }
+    /**
+     * Sets the isExactMatchRequired property value. Specifies if the property will be matched exactly for queries. Exact matching can only be set to true for non-searchable properties of type string or stringCollection. Optional.
+     * @param value Value to set for the isExactMatchRequired property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setIsExactMatchRequired(@javax.annotation.Nullable final Boolean value) {
+        this._isExactMatchRequired = value;
     }
     /**
      * Sets the isQueryable property value. Specifies if the property is queryable. Queryable properties can be used in Keyword Query Language (KQL) queries. Optional.
      * @param value Value to set for the isQueryable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsQueryable(@javax.annotation.Nullable final Boolean value) {
         this._isQueryable = value;
     }
@@ -193,6 +217,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isRefinable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRefinable(@javax.annotation.Nullable final Boolean value) {
         this._isRefinable = value;
     }
@@ -201,6 +226,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isRetrievable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRetrievable(@javax.annotation.Nullable final Boolean value) {
         this._isRetrievable = value;
     }
@@ -209,6 +235,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isSearchable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSearchable(@javax.annotation.Nullable final Boolean value) {
         this._isSearchable = value;
     }
@@ -217,14 +244,16 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the labels property.
      * @return a void
      */
-    public void setLabels(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setLabels(@javax.annotation.Nullable final java.util.List<Label> value) {
         this._labels = value;
     }
     /**
-     * Sets the name property value. The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required.
+     * Sets the name property value. The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, the property name may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required.
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -233,6 +262,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -241,6 +271,7 @@ public class Property implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final PropertyType value) {
         this._type = value;
     }

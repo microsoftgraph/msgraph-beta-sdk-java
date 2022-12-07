@@ -36,9 +36,9 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * Instantiates a new macOSSoftwareUpdateAccountSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSSoftwareUpdateAccountSummary() {
         super();
-        this.setOdataType("#microsoft.graph.macOSSoftwareUpdateAccountSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -96,20 +96,19 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSSoftwareUpdateAccountSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("categorySummaries", (n) -> { currentObject.setCategorySummaries(n.getCollectionOfObjectValues(MacOSSoftwareUpdateCategorySummary::createFromDiscriminatorValue)); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("failedUpdateCount", (n) -> { currentObject.setFailedUpdateCount(n.getIntegerValue()); });
-            this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
-            this.put("successfulUpdateCount", (n) -> { currentObject.setSuccessfulUpdateCount(n.getIntegerValue()); });
-            this.put("totalUpdateCount", (n) -> { currentObject.setTotalUpdateCount(n.getIntegerValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("categorySummaries", (n) -> { this.setCategorySummaries(n.getCollectionOfObjectValues(MacOSSoftwareUpdateCategorySummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("failedUpdateCount", (n) -> { this.setFailedUpdateCount(n.getIntegerValue()); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getStringValue()); });
+        deserializerMap.put("successfulUpdateCount", (n) -> { this.setSuccessfulUpdateCount(n.getIntegerValue()); });
+        deserializerMap.put("totalUpdateCount", (n) -> { this.setTotalUpdateCount(n.getIntegerValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastUpdatedDateTime property value. Last date time the report for this device was updated.
@@ -164,6 +163,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -184,6 +184,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * @param value Value to set for the categorySummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategorySummaries(@javax.annotation.Nullable final java.util.List<MacOSSoftwareUpdateCategorySummary> value) {
         this._categorySummaries = value;
     }
@@ -192,6 +193,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -200,6 +202,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
         this._deviceName = value;
     }
@@ -208,6 +211,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -216,6 +220,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * @param value Value to set for the failedUpdateCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedUpdateCount(@javax.annotation.Nullable final Integer value) {
         this._failedUpdateCount = value;
     }
@@ -224,6 +229,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastUpdatedDateTime = value;
     }
@@ -232,6 +238,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
         this._osVersion = value;
     }
@@ -240,6 +247,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * @param value Value to set for the successfulUpdateCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessfulUpdateCount(@javax.annotation.Nullable final Integer value) {
         this._successfulUpdateCount = value;
     }
@@ -248,6 +256,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * @param value Value to set for the totalUpdateCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalUpdateCount(@javax.annotation.Nullable final Integer value) {
         this._totalUpdateCount = value;
     }
@@ -256,6 +265,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -264,6 +274,7 @@ public class MacOSSoftwareUpdateAccountSummary extends Entity implements Parsabl
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

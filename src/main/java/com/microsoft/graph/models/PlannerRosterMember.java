@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class PlannerRosterMember extends Entity implements Parsable {
     /** Additional roles associated with the PlannerRosterMember, which determines permissions of the member in the plannerRoster. Currently there are no available roles to assign, and every member has full control over the contents of the plannerRoster. */
     private java.util.List<String> _roles;
@@ -19,9 +19,9 @@ public class PlannerRosterMember extends Entity implements Parsable {
      * Instantiates a new plannerRosterMember and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerRosterMember() {
         super();
-        this.setOdataType("#microsoft.graph.plannerRosterMember");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,12 +39,11 @@ public class PlannerRosterMember extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerRosterMember currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("roles", (n) -> { this.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the roles property value. Additional roles associated with the PlannerRosterMember, which determines permissions of the member in the plannerRoster. Currently there are no available roles to assign, and every member has full control over the contents of the plannerRoster.
@@ -75,6 +74,7 @@ public class PlannerRosterMember extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +87,7 @@ public class PlannerRosterMember extends Entity implements Parsable {
      * @param value Value to set for the roles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoles(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roles = value;
     }
@@ -95,6 +96,7 @@ public class PlannerRosterMember extends Entity implements Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
@@ -103,6 +105,7 @@ public class PlannerRosterMember extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

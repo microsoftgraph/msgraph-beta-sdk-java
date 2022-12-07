@@ -31,9 +31,9 @@ public class Term extends Entity implements Parsable {
      * Instantiates a new term and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Term() {
         super();
-        this.setOdataType("#microsoft.graph.termStore.term");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -75,17 +75,16 @@ public class Term extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Term currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("children", (n) -> { currentObject.setChildren(n.getCollectionOfObjectValues(Term::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("descriptions", (n) -> { currentObject.setDescriptions(n.getCollectionOfObjectValues(LocalizedDescription::createFromDiscriminatorValue)); });
-            this.put("labels", (n) -> { currentObject.setLabels(n.getCollectionOfObjectValues(LocalizedLabel::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("properties", (n) -> { currentObject.setProperties(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
-            this.put("relations", (n) -> { currentObject.setRelations(n.getCollectionOfObjectValues(Relation::createFromDiscriminatorValue)); });
-            this.put("set", (n) -> { currentObject.setSet(n.getObjectValue(Set::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("children", (n) -> { this.setChildren(n.getCollectionOfObjectValues(Term::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("descriptions", (n) -> { this.setDescriptions(n.getCollectionOfObjectValues(LocalizedDescription::createFromDiscriminatorValue)); });
+        deserializerMap.put("labels", (n) -> { this.setLabels(n.getCollectionOfObjectValues(LocalizedLabel::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("properties", (n) -> { this.setProperties(n.getCollectionOfObjectValues(KeyValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("relations", (n) -> { this.setRelations(n.getCollectionOfObjectValues(Relation::createFromDiscriminatorValue)); });
+        deserializerMap.put("set", (n) -> { this.setSet(n.getObjectValue(Set::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the labels property value. Label metadata for a term.
@@ -132,6 +131,7 @@ public class Term extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -149,6 +149,7 @@ public class Term extends Entity implements Parsable {
      * @param value Value to set for the children property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildren(@javax.annotation.Nullable final java.util.List<Term> value) {
         this._children = value;
     }
@@ -157,6 +158,7 @@ public class Term extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -165,6 +167,7 @@ public class Term extends Entity implements Parsable {
      * @param value Value to set for the descriptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescriptions(@javax.annotation.Nullable final java.util.List<LocalizedDescription> value) {
         this._descriptions = value;
     }
@@ -173,6 +176,7 @@ public class Term extends Entity implements Parsable {
      * @param value Value to set for the labels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabels(@javax.annotation.Nullable final java.util.List<LocalizedLabel> value) {
         this._labels = value;
     }
@@ -181,6 +185,7 @@ public class Term extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -189,6 +194,7 @@ public class Term extends Entity implements Parsable {
      * @param value Value to set for the properties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProperties(@javax.annotation.Nullable final java.util.List<KeyValue> value) {
         this._properties = value;
     }
@@ -197,6 +203,7 @@ public class Term extends Entity implements Parsable {
      * @param value Value to set for the relations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelations(@javax.annotation.Nullable final java.util.List<Relation> value) {
         this._relations = value;
     }
@@ -205,6 +212,7 @@ public class Term extends Entity implements Parsable {
      * @param value Value to set for the set property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSet(@javax.annotation.Nullable final Set value) {
         this._set = value;
     }

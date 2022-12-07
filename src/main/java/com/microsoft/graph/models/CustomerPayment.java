@@ -10,7 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class CustomerPayment extends Entity implements Parsable {
     /** The amount property */
     private BigDecimal _amount;
@@ -46,9 +46,9 @@ public class CustomerPayment extends Entity implements Parsable {
      * Instantiates a new customerPayment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CustomerPayment() {
         super();
-        this.setOdataType("#microsoft.graph.customerPayment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -154,24 +154,23 @@ public class CustomerPayment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CustomerPayment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("amount", (n) -> { currentObject.setAmount(n.getBigDecimalValue()); });
-            this.put("appliesToInvoiceId", (n) -> { currentObject.setAppliesToInvoiceId(n.getStringValue()); });
-            this.put("appliesToInvoiceNumber", (n) -> { currentObject.setAppliesToInvoiceNumber(n.getStringValue()); });
-            this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
-            this.put("contactId", (n) -> { currentObject.setContactId(n.getStringValue()); });
-            this.put("customer", (n) -> { currentObject.setCustomer(n.getObjectValue(Customer::createFromDiscriminatorValue)); });
-            this.put("customerId", (n) -> { currentObject.setCustomerId(n.getStringValue()); });
-            this.put("customerNumber", (n) -> { currentObject.setCustomerNumber(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("documentNumber", (n) -> { currentObject.setDocumentNumber(n.getStringValue()); });
-            this.put("externalDocumentNumber", (n) -> { currentObject.setExternalDocumentNumber(n.getStringValue()); });
-            this.put("journalDisplayName", (n) -> { currentObject.setJournalDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lineNumber", (n) -> { currentObject.setLineNumber(n.getIntegerValue()); });
-            this.put("postingDate", (n) -> { currentObject.setPostingDate(n.getLocalDateValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("amount", (n) -> { this.setAmount(n.getBigDecimalValue()); });
+        deserializerMap.put("appliesToInvoiceId", (n) -> { this.setAppliesToInvoiceId(n.getStringValue()); });
+        deserializerMap.put("appliesToInvoiceNumber", (n) -> { this.setAppliesToInvoiceNumber(n.getStringValue()); });
+        deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
+        deserializerMap.put("contactId", (n) -> { this.setContactId(n.getStringValue()); });
+        deserializerMap.put("customer", (n) -> { this.setCustomer(n.getObjectValue(Customer::createFromDiscriminatorValue)); });
+        deserializerMap.put("customerId", (n) -> { this.setCustomerId(n.getStringValue()); });
+        deserializerMap.put("customerNumber", (n) -> { this.setCustomerNumber(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("documentNumber", (n) -> { this.setDocumentNumber(n.getStringValue()); });
+        deserializerMap.put("externalDocumentNumber", (n) -> { this.setExternalDocumentNumber(n.getStringValue()); });
+        deserializerMap.put("journalDisplayName", (n) -> { this.setJournalDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lineNumber", (n) -> { this.setLineNumber(n.getIntegerValue()); });
+        deserializerMap.put("postingDate", (n) -> { this.setPostingDate(n.getLocalDateValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the journalDisplayName property value. The journalDisplayName property
@@ -210,6 +209,7 @@ public class CustomerPayment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -234,6 +234,7 @@ public class CustomerPayment extends Entity implements Parsable {
      * @param value Value to set for the amount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAmount(@javax.annotation.Nullable final BigDecimal value) {
         this._amount = value;
     }
@@ -242,6 +243,7 @@ public class CustomerPayment extends Entity implements Parsable {
      * @param value Value to set for the appliesToInvoiceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliesToInvoiceId(@javax.annotation.Nullable final String value) {
         this._appliesToInvoiceId = value;
     }
@@ -250,6 +252,7 @@ public class CustomerPayment extends Entity implements Parsable {
      * @param value Value to set for the appliesToInvoiceNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliesToInvoiceNumber(@javax.annotation.Nullable final String value) {
         this._appliesToInvoiceNumber = value;
     }
@@ -258,6 +261,7 @@ public class CustomerPayment extends Entity implements Parsable {
      * @param value Value to set for the comment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComment(@javax.annotation.Nullable final String value) {
         this._comment = value;
     }
@@ -266,6 +270,7 @@ public class CustomerPayment extends Entity implements Parsable {
      * @param value Value to set for the contactId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactId(@javax.annotation.Nullable final String value) {
         this._contactId = value;
     }
@@ -274,6 +279,7 @@ public class CustomerPayment extends Entity implements Parsable {
      * @param value Value to set for the customer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomer(@javax.annotation.Nullable final Customer value) {
         this._customer = value;
     }
@@ -282,6 +288,7 @@ public class CustomerPayment extends Entity implements Parsable {
      * @param value Value to set for the customerId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerId(@javax.annotation.Nullable final String value) {
         this._customerId = value;
     }
@@ -290,6 +297,7 @@ public class CustomerPayment extends Entity implements Parsable {
      * @param value Value to set for the customerNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerNumber(@javax.annotation.Nullable final String value) {
         this._customerNumber = value;
     }
@@ -298,6 +306,7 @@ public class CustomerPayment extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -306,6 +315,7 @@ public class CustomerPayment extends Entity implements Parsable {
      * @param value Value to set for the documentNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDocumentNumber(@javax.annotation.Nullable final String value) {
         this._documentNumber = value;
     }
@@ -314,6 +324,7 @@ public class CustomerPayment extends Entity implements Parsable {
      * @param value Value to set for the externalDocumentNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalDocumentNumber(@javax.annotation.Nullable final String value) {
         this._externalDocumentNumber = value;
     }
@@ -322,6 +333,7 @@ public class CustomerPayment extends Entity implements Parsable {
      * @param value Value to set for the journalDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJournalDisplayName(@javax.annotation.Nullable final String value) {
         this._journalDisplayName = value;
     }
@@ -330,6 +342,7 @@ public class CustomerPayment extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -338,6 +351,7 @@ public class CustomerPayment extends Entity implements Parsable {
      * @param value Value to set for the lineNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLineNumber(@javax.annotation.Nullable final Integer value) {
         this._lineNumber = value;
     }
@@ -346,6 +360,7 @@ public class CustomerPayment extends Entity implements Parsable {
      * @param value Value to set for the postingDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostingDate(@javax.annotation.Nullable final LocalDate value) {
         this._postingDate = value;
     }

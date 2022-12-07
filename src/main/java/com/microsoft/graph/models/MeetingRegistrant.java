@@ -25,6 +25,7 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
      * Instantiates a new MeetingRegistrant and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MeetingRegistrant() {
         super();
         this.setOdataType("#microsoft.graph.meetingRegistrant");
@@ -61,15 +62,14 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MeetingRegistrant currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("customQuestionAnswers", (n) -> { currentObject.setCustomQuestionAnswers(n.getCollectionOfObjectValues(CustomQuestionAnswer::createFromDiscriminatorValue)); });
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("firstName", (n) -> { currentObject.setFirstName(n.getStringValue()); });
-            this.put("lastName", (n) -> { currentObject.setLastName(n.getStringValue()); });
-            this.put("registrationDateTime", (n) -> { currentObject.setRegistrationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(MeetingRegistrantStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("customQuestionAnswers", (n) -> { this.setCustomQuestionAnswers(n.getCollectionOfObjectValues(CustomQuestionAnswer::createFromDiscriminatorValue)); });
+        deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("firstName", (n) -> { this.setFirstName(n.getStringValue()); });
+        deserializerMap.put("lastName", (n) -> { this.setLastName(n.getStringValue()); });
+        deserializerMap.put("registrationDateTime", (n) -> { this.setRegistrationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(MeetingRegistrantStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the firstName property value. The first name of the registrant.
@@ -108,6 +108,7 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +124,7 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
      * @param value Value to set for the customQuestionAnswers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomQuestionAnswers(@javax.annotation.Nullable final java.util.List<CustomQuestionAnswer> value) {
         this._customQuestionAnswers = value;
     }
@@ -131,6 +133,7 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
         this._email = value;
     }
@@ -139,6 +142,7 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
      * @param value Value to set for the firstName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirstName(@javax.annotation.Nullable final String value) {
         this._firstName = value;
     }
@@ -147,6 +151,7 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
      * @param value Value to set for the lastName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastName(@javax.annotation.Nullable final String value) {
         this._lastName = value;
     }
@@ -155,6 +160,7 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
      * @param value Value to set for the registrationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistrationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._registrationDateTime = value;
     }
@@ -163,6 +169,7 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final MeetingRegistrantStatus value) {
         this._status = value;
     }

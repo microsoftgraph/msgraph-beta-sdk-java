@@ -27,6 +27,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * Instantiates a new windowsPhone81CertificateProfileBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsPhone81CertificateProfileBase() {
         super();
         this.setOdataType("#microsoft.graph.windowsPhone81CertificateProfileBase");
@@ -78,16 +79,15 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsPhone81CertificateProfileBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certificateValidityPeriodScale", (n) -> { currentObject.setCertificateValidityPeriodScale(n.getEnumValue(CertificateValidityPeriodScale.class)); });
-            this.put("certificateValidityPeriodValue", (n) -> { currentObject.setCertificateValidityPeriodValue(n.getIntegerValue()); });
-            this.put("extendedKeyUsages", (n) -> { currentObject.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
-            this.put("keyStorageProvider", (n) -> { currentObject.setKeyStorageProvider(n.getEnumValue(KeyStorageProviderOption.class)); });
-            this.put("renewalThresholdPercentage", (n) -> { currentObject.setRenewalThresholdPercentage(n.getIntegerValue()); });
-            this.put("subjectAlternativeNameType", (n) -> { currentObject.setSubjectAlternativeNameType(n.getEnumValue(SubjectAlternativeNameType.class)); });
-            this.put("subjectNameFormat", (n) -> { currentObject.setSubjectNameFormat(n.getEnumValue(SubjectNameFormat.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certificateValidityPeriodScale", (n) -> { this.setCertificateValidityPeriodScale(n.getEnumValue(CertificateValidityPeriodScale.class)); });
+        deserializerMap.put("certificateValidityPeriodValue", (n) -> { this.setCertificateValidityPeriodValue(n.getIntegerValue()); });
+        deserializerMap.put("extendedKeyUsages", (n) -> { this.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
+        deserializerMap.put("keyStorageProvider", (n) -> { this.setKeyStorageProvider(n.getEnumValue(KeyStorageProviderOption.class)); });
+        deserializerMap.put("renewalThresholdPercentage", (n) -> { this.setRenewalThresholdPercentage(n.getIntegerValue()); });
+        deserializerMap.put("subjectAlternativeNameType", (n) -> { this.setSubjectAlternativeNameType(n.getEnumValue(SubjectAlternativeNameType.class)); });
+        deserializerMap.put("subjectNameFormat", (n) -> { this.setSubjectNameFormat(n.getEnumValue(SubjectNameFormat.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the keyStorageProvider property value. Key Storage Provider (KSP) Import Options.
@@ -126,6 +126,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -142,6 +143,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param value Value to set for the certificateValidityPeriodScale property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateValidityPeriodScale(@javax.annotation.Nullable final CertificateValidityPeriodScale value) {
         this._certificateValidityPeriodScale = value;
     }
@@ -150,6 +152,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param value Value to set for the certificateValidityPeriodValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateValidityPeriodValue(@javax.annotation.Nullable final Integer value) {
         this._certificateValidityPeriodValue = value;
     }
@@ -158,6 +161,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param value Value to set for the extendedKeyUsages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtendedKeyUsages(@javax.annotation.Nullable final java.util.List<ExtendedKeyUsage> value) {
         this._extendedKeyUsages = value;
     }
@@ -166,6 +170,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param value Value to set for the keyStorageProvider property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyStorageProvider(@javax.annotation.Nullable final KeyStorageProviderOption value) {
         this._keyStorageProvider = value;
     }
@@ -174,6 +179,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param value Value to set for the renewalThresholdPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRenewalThresholdPercentage(@javax.annotation.Nullable final Integer value) {
         this._renewalThresholdPercentage = value;
     }
@@ -182,6 +188,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param value Value to set for the subjectAlternativeNameType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectAlternativeNameType(@javax.annotation.Nullable final SubjectAlternativeNameType value) {
         this._subjectAlternativeNameType = value;
     }
@@ -190,6 +197,7 @@ public class WindowsPhone81CertificateProfileBase extends DeviceConfiguration im
      * @param value Value to set for the subjectNameFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectNameFormat(@javax.annotation.Nullable final SubjectNameFormat value) {
         this._subjectNameFormat = value;
     }

@@ -49,6 +49,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * Instantiates a new SharedPCConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SharedPCConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.sharedPCConfiguration");
@@ -141,27 +142,26 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SharedPCConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accountManagerPolicy", (n) -> { currentObject.setAccountManagerPolicy(n.getObjectValue(SharedPCAccountManagerPolicy::createFromDiscriminatorValue)); });
-            this.put("allowedAccounts", (n) -> { currentObject.setAllowedAccounts(n.getEnumValue(SharedPCAllowedAccountType.class)); });
-            this.put("allowLocalStorage", (n) -> { currentObject.setAllowLocalStorage(n.getBooleanValue()); });
-            this.put("disableAccountManager", (n) -> { currentObject.setDisableAccountManager(n.getBooleanValue()); });
-            this.put("disableEduPolicies", (n) -> { currentObject.setDisableEduPolicies(n.getBooleanValue()); });
-            this.put("disablePowerPolicies", (n) -> { currentObject.setDisablePowerPolicies(n.getBooleanValue()); });
-            this.put("disableSignInOnResume", (n) -> { currentObject.setDisableSignInOnResume(n.getBooleanValue()); });
-            this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
-            this.put("fastFirstSignIn", (n) -> { currentObject.setFastFirstSignIn(n.getEnumValue(Enablement.class)); });
-            this.put("idleTimeBeforeSleepInSeconds", (n) -> { currentObject.setIdleTimeBeforeSleepInSeconds(n.getIntegerValue()); });
-            this.put("kioskAppDisplayName", (n) -> { currentObject.setKioskAppDisplayName(n.getStringValue()); });
-            this.put("kioskAppUserModelId", (n) -> { currentObject.setKioskAppUserModelId(n.getStringValue()); });
-            this.put("localStorage", (n) -> { currentObject.setLocalStorage(n.getEnumValue(Enablement.class)); });
-            this.put("maintenanceStartTime", (n) -> { currentObject.setMaintenanceStartTime(n.getLocalTimeValue()); });
-            this.put("setAccountManager", (n) -> { currentObject.setSetAccountManager(n.getEnumValue(Enablement.class)); });
-            this.put("setEduPolicies", (n) -> { currentObject.setSetEduPolicies(n.getEnumValue(Enablement.class)); });
-            this.put("setPowerPolicies", (n) -> { currentObject.setSetPowerPolicies(n.getEnumValue(Enablement.class)); });
-            this.put("signInOnResume", (n) -> { currentObject.setSignInOnResume(n.getEnumValue(Enablement.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountManagerPolicy", (n) -> { this.setAccountManagerPolicy(n.getObjectValue(SharedPCAccountManagerPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("allowedAccounts", (n) -> { this.setAllowedAccounts(n.getEnumValue(SharedPCAllowedAccountType.class)); });
+        deserializerMap.put("allowLocalStorage", (n) -> { this.setAllowLocalStorage(n.getBooleanValue()); });
+        deserializerMap.put("disableAccountManager", (n) -> { this.setDisableAccountManager(n.getBooleanValue()); });
+        deserializerMap.put("disableEduPolicies", (n) -> { this.setDisableEduPolicies(n.getBooleanValue()); });
+        deserializerMap.put("disablePowerPolicies", (n) -> { this.setDisablePowerPolicies(n.getBooleanValue()); });
+        deserializerMap.put("disableSignInOnResume", (n) -> { this.setDisableSignInOnResume(n.getBooleanValue()); });
+        deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
+        deserializerMap.put("fastFirstSignIn", (n) -> { this.setFastFirstSignIn(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("idleTimeBeforeSleepInSeconds", (n) -> { this.setIdleTimeBeforeSleepInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("kioskAppDisplayName", (n) -> { this.setKioskAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("kioskAppUserModelId", (n) -> { this.setKioskAppUserModelId(n.getStringValue()); });
+        deserializerMap.put("localStorage", (n) -> { this.setLocalStorage(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("maintenanceStartTime", (n) -> { this.setMaintenanceStartTime(n.getLocalTimeValue()); });
+        deserializerMap.put("setAccountManager", (n) -> { this.setSetAccountManager(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("setEduPolicies", (n) -> { this.setSetEduPolicies(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("setPowerPolicies", (n) -> { this.setSetPowerPolicies(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("signInOnResume", (n) -> { this.setSignInOnResume(n.getEnumValue(Enablement.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the idleTimeBeforeSleepInSeconds property value. Specifies the time in seconds that a device must sit idle before the PC goes to sleep. Setting this value to 0 prevents the sleep timeout from occurring.
@@ -240,6 +240,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -267,6 +268,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the accountManagerPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountManagerPolicy(@javax.annotation.Nullable final SharedPCAccountManagerPolicy value) {
         this._accountManagerPolicy = value;
     }
@@ -275,6 +277,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the allowedAccounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedAccounts(@javax.annotation.Nullable final SharedPCAllowedAccountType value) {
         this._allowedAccounts = value;
     }
@@ -283,6 +286,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the allowLocalStorage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowLocalStorage(@javax.annotation.Nullable final Boolean value) {
         this._allowLocalStorage = value;
     }
@@ -291,6 +295,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the disableAccountManager property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableAccountManager(@javax.annotation.Nullable final Boolean value) {
         this._disableAccountManager = value;
     }
@@ -299,6 +304,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the disableEduPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableEduPolicies(@javax.annotation.Nullable final Boolean value) {
         this._disableEduPolicies = value;
     }
@@ -307,6 +313,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the disablePowerPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisablePowerPolicies(@javax.annotation.Nullable final Boolean value) {
         this._disablePowerPolicies = value;
     }
@@ -315,6 +322,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the disableSignInOnResume property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableSignInOnResume(@javax.annotation.Nullable final Boolean value) {
         this._disableSignInOnResume = value;
     }
@@ -323,6 +331,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the enabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
         this._enabled = value;
     }
@@ -331,6 +340,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the fastFirstSignIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFastFirstSignIn(@javax.annotation.Nullable final Enablement value) {
         this._fastFirstSignIn = value;
     }
@@ -339,6 +349,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the idleTimeBeforeSleepInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdleTimeBeforeSleepInSeconds(@javax.annotation.Nullable final Integer value) {
         this._idleTimeBeforeSleepInSeconds = value;
     }
@@ -347,6 +358,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the kioskAppDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskAppDisplayName(@javax.annotation.Nullable final String value) {
         this._kioskAppDisplayName = value;
     }
@@ -355,6 +367,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the kioskAppUserModelId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKioskAppUserModelId(@javax.annotation.Nullable final String value) {
         this._kioskAppUserModelId = value;
     }
@@ -363,6 +376,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the localStorage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalStorage(@javax.annotation.Nullable final Enablement value) {
         this._localStorage = value;
     }
@@ -371,6 +385,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the maintenanceStartTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaintenanceStartTime(@javax.annotation.Nullable final LocalTime value) {
         this._maintenanceStartTime = value;
     }
@@ -379,6 +394,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the setAccountManager property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSetAccountManager(@javax.annotation.Nullable final Enablement value) {
         this._setAccountManager = value;
     }
@@ -387,6 +403,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the setEduPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSetEduPolicies(@javax.annotation.Nullable final Enablement value) {
         this._setEduPolicies = value;
     }
@@ -395,6 +412,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the setPowerPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSetPowerPolicies(@javax.annotation.Nullable final Enablement value) {
         this._setPowerPolicies = value;
     }
@@ -403,6 +421,7 @@ public class SharedPCConfiguration extends DeviceConfiguration implements Parsab
      * @param value Value to set for the signInOnResume property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInOnResume(@javax.annotation.Nullable final Enablement value) {
         this._signInOnResume = value;
     }

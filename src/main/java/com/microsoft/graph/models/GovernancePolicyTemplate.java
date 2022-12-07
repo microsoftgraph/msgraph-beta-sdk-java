@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of approvalWorkflowProvider entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class GovernancePolicyTemplate extends Entity implements Parsable {
     /** The displayName property */
     private String _displayName;
@@ -19,9 +19,9 @@ public class GovernancePolicyTemplate extends Entity implements Parsable {
      * Instantiates a new governancePolicyTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GovernancePolicyTemplate() {
         super();
-        this.setOdataType("#microsoft.graph.governancePolicyTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,12 +47,11 @@ public class GovernancePolicyTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GovernancePolicyTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("policy", (n) -> { currentObject.setPolicy(n.getObjectValue(GovernancePolicy::createFromDiscriminatorValue)); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(BusinessFlowSettings::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("policy", (n) -> { this.setPolicy(n.getObjectValue(GovernancePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(BusinessFlowSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the policy property value. The policy property
@@ -75,6 +74,7 @@ public class GovernancePolicyTemplate extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +87,7 @@ public class GovernancePolicyTemplate extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -95,6 +96,7 @@ public class GovernancePolicyTemplate extends Entity implements Parsable {
      * @param value Value to set for the policy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicy(@javax.annotation.Nullable final GovernancePolicy value) {
         this._policy = value;
     }
@@ -103,6 +105,7 @@ public class GovernancePolicyTemplate extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final BusinessFlowSettings value) {
         this._settings = value;
     }

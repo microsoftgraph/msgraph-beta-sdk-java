@@ -17,9 +17,9 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
      * Instantiates a new DeviceManagementConfigurationChoiceSettingDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,11 +52,10 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationChoiceSettingDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultOptionId", (n) -> { currentObject.setDefaultOptionId(n.getStringValue()); });
-            this.put("options", (n) -> { currentObject.setOptions(n.getCollectionOfObjectValues(DeviceManagementConfigurationOptionDefinition::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultOptionId", (n) -> { this.setDefaultOptionId(n.getStringValue()); });
+        deserializerMap.put("options", (n) -> { this.setOptions(n.getCollectionOfObjectValues(DeviceManagementConfigurationOptionDefinition::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the options property value. Options for the setting that can be selected
@@ -71,6 +70,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -82,6 +82,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
      * @param value Value to set for the defaultOptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultOptionId(@javax.annotation.Nullable final String value) {
         this._defaultOptionId = value;
     }
@@ -90,6 +91,7 @@ public class DeviceManagementConfigurationChoiceSettingDefinition extends Device
      * @param value Value to set for the options property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOptions(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationOptionDefinition> value) {
         this._options = value;
     }

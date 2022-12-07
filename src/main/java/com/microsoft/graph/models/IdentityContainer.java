@@ -37,9 +37,9 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      * Instantiates a new IdentityContainer and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IdentityContainer() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.identityContainer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -121,20 +121,19 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IdentityContainer currentObject = this;
-        return new HashMap<>(11) {{
-            this.put("apiConnectors", (n) -> { currentObject.setApiConnectors(n.getCollectionOfObjectValues(IdentityApiConnector::createFromDiscriminatorValue)); });
-            this.put("authenticationEventListeners", (n) -> { currentObject.setAuthenticationEventListeners(n.getCollectionOfObjectValues(AuthenticationEventListener::createFromDiscriminatorValue)); });
-            this.put("b2cUserFlows", (n) -> { currentObject.setB2cUserFlows(n.getCollectionOfObjectValues(B2cIdentityUserFlow::createFromDiscriminatorValue)); });
-            this.put("b2xUserFlows", (n) -> { currentObject.setB2xUserFlows(n.getCollectionOfObjectValues(B2xIdentityUserFlow::createFromDiscriminatorValue)); });
-            this.put("conditionalAccess", (n) -> { currentObject.setConditionalAccess(n.getObjectValue(ConditionalAccessRoot::createFromDiscriminatorValue)); });
-            this.put("continuousAccessEvaluationPolicy", (n) -> { currentObject.setContinuousAccessEvaluationPolicy(n.getObjectValue(ContinuousAccessEvaluationPolicy::createFromDiscriminatorValue)); });
-            this.put("customAuthenticationExtensions", (n) -> { currentObject.setCustomAuthenticationExtensions(n.getCollectionOfObjectValues(CustomAuthenticationExtension::createFromDiscriminatorValue)); });
-            this.put("identityProviders", (n) -> { currentObject.setIdentityProviders(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("userFlowAttributes", (n) -> { currentObject.setUserFlowAttributes(n.getCollectionOfObjectValues(IdentityUserFlowAttribute::createFromDiscriminatorValue)); });
-            this.put("userFlows", (n) -> { currentObject.setUserFlows(n.getCollectionOfObjectValues(IdentityUserFlow::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(11);
+        deserializerMap.put("apiConnectors", (n) -> { this.setApiConnectors(n.getCollectionOfObjectValues(IdentityApiConnector::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationEventListeners", (n) -> { this.setAuthenticationEventListeners(n.getCollectionOfObjectValues(AuthenticationEventListener::createFromDiscriminatorValue)); });
+        deserializerMap.put("b2cUserFlows", (n) -> { this.setB2cUserFlows(n.getCollectionOfObjectValues(B2cIdentityUserFlow::createFromDiscriminatorValue)); });
+        deserializerMap.put("b2xUserFlows", (n) -> { this.setB2xUserFlows(n.getCollectionOfObjectValues(B2xIdentityUserFlow::createFromDiscriminatorValue)); });
+        deserializerMap.put("conditionalAccess", (n) -> { this.setConditionalAccess(n.getObjectValue(ConditionalAccessRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("continuousAccessEvaluationPolicy", (n) -> { this.setContinuousAccessEvaluationPolicy(n.getObjectValue(ContinuousAccessEvaluationPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("customAuthenticationExtensions", (n) -> { this.setCustomAuthenticationExtensions(n.getCollectionOfObjectValues(CustomAuthenticationExtension::createFromDiscriminatorValue)); });
+        deserializerMap.put("identityProviders", (n) -> { this.setIdentityProviders(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("userFlowAttributes", (n) -> { this.setUserFlowAttributes(n.getCollectionOfObjectValues(IdentityUserFlowAttribute::createFromDiscriminatorValue)); });
+        deserializerMap.put("userFlows", (n) -> { this.setUserFlows(n.getCollectionOfObjectValues(IdentityUserFlow::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the identityProviders property value. Represents entry point for identity provider base.
@@ -173,6 +172,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("apiConnectors", this.getApiConnectors());
@@ -193,6 +193,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -201,6 +202,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the apiConnectors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApiConnectors(@javax.annotation.Nullable final java.util.List<IdentityApiConnector> value) {
         this._apiConnectors = value;
     }
@@ -209,6 +211,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the authenticationEventListeners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationEventListeners(@javax.annotation.Nullable final java.util.List<AuthenticationEventListener> value) {
         this._authenticationEventListeners = value;
     }
@@ -217,6 +220,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the b2cUserFlows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setB2cUserFlows(@javax.annotation.Nullable final java.util.List<B2cIdentityUserFlow> value) {
         this._b2cUserFlows = value;
     }
@@ -225,6 +229,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the b2xUserFlows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setB2xUserFlows(@javax.annotation.Nullable final java.util.List<B2xIdentityUserFlow> value) {
         this._b2xUserFlows = value;
     }
@@ -233,6 +238,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the conditionalAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionalAccess(@javax.annotation.Nullable final ConditionalAccessRoot value) {
         this._conditionalAccess = value;
     }
@@ -241,6 +247,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the continuousAccessEvaluationPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContinuousAccessEvaluationPolicy(@javax.annotation.Nullable final ContinuousAccessEvaluationPolicy value) {
         this._continuousAccessEvaluationPolicy = value;
     }
@@ -249,6 +256,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the customAuthenticationExtensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomAuthenticationExtensions(@javax.annotation.Nullable final java.util.List<CustomAuthenticationExtension> value) {
         this._customAuthenticationExtensions = value;
     }
@@ -257,6 +265,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the identityProviders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityProviders(@javax.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
         this._identityProviders = value;
     }
@@ -265,6 +274,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -273,6 +283,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userFlowAttributes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserFlowAttributes(@javax.annotation.Nullable final java.util.List<IdentityUserFlowAttribute> value) {
         this._userFlowAttributes = value;
     }
@@ -281,6 +292,7 @@ public class IdentityContainer implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userFlows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserFlows(@javax.annotation.Nullable final java.util.List<IdentityUserFlow> value) {
         this._userFlows = value;
     }

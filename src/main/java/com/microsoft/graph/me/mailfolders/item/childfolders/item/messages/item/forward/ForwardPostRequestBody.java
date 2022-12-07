@@ -24,6 +24,7 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new forwardPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ForwardPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -59,12 +60,11 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ForwardPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
-            this.put("message", (n) -> { currentObject.setMessage(n.getObjectValue(Message::createFromDiscriminatorValue)); });
-            this.put("toRecipients", (n) -> { currentObject.setToRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
+        deserializerMap.put("message", (n) -> { this.setMessage(n.getObjectValue(Message::createFromDiscriminatorValue)); });
+        deserializerMap.put("toRecipients", (n) -> { this.setToRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the message property value. The Message property
@@ -87,6 +87,7 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("comment", this.getComment());
@@ -99,6 +100,7 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -107,6 +109,7 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the Comment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComment(@javax.annotation.Nullable final String value) {
         this._comment = value;
     }
@@ -115,6 +118,7 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the Message property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final Message value) {
         this._message = value;
     }
@@ -123,6 +127,7 @@ public class ForwardPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ToRecipients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setToRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
         this._toRecipients = value;
     }

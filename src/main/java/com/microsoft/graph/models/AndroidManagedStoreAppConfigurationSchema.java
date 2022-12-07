@@ -19,9 +19,9 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * Instantiates a new androidManagedStoreAppConfigurationSchema and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidManagedStoreAppConfigurationSchema() {
         super();
-        this.setOdataType("#microsoft.graph.androidManagedStoreAppConfigurationSchema");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,12 +47,11 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidManagedStoreAppConfigurationSchema currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("exampleJson", (n) -> { currentObject.setExampleJson(n.getByteArrayValue()); });
-            this.put("nestedSchemaItems", (n) -> { currentObject.setNestedSchemaItems(n.getCollectionOfObjectValues(AndroidManagedStoreAppConfigurationSchemaItem::createFromDiscriminatorValue)); });
-            this.put("schemaItems", (n) -> { currentObject.setSchemaItems(n.getCollectionOfObjectValues(AndroidManagedStoreAppConfigurationSchemaItem::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("exampleJson", (n) -> { this.setExampleJson(n.getByteArrayValue()); });
+        deserializerMap.put("nestedSchemaItems", (n) -> { this.setNestedSchemaItems(n.getCollectionOfObjectValues(AndroidManagedStoreAppConfigurationSchemaItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("schemaItems", (n) -> { this.setSchemaItems(n.getCollectionOfObjectValues(AndroidManagedStoreAppConfigurationSchemaItem::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the nestedSchemaItems property value. Collection of items each representing a named configuration option in the schema. It contains a flat list of all configuration.
@@ -75,6 +74,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +87,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * @param value Value to set for the exampleJson property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExampleJson(@javax.annotation.Nullable final byte[] value) {
         this._exampleJson = value;
     }
@@ -95,6 +96,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * @param value Value to set for the nestedSchemaItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNestedSchemaItems(@javax.annotation.Nullable final java.util.List<AndroidManagedStoreAppConfigurationSchemaItem> value) {
         this._nestedSchemaItems = value;
     }
@@ -103,6 +105,7 @@ public class AndroidManagedStoreAppConfigurationSchema extends Entity implements
      * @param value Value to set for the schemaItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchemaItems(@javax.annotation.Nullable final java.util.List<AndroidManagedStoreAppConfigurationSchemaItem> value) {
         this._schemaItems = value;
     }

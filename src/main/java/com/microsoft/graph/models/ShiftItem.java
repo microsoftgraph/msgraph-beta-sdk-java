@@ -19,9 +19,9 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      * Instantiates a new ShiftItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ShiftItem() {
         super();
-        this.setOdataType("#microsoft.graph.shiftItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,12 +62,11 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ShiftItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(ShiftActivity::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activities", (n) -> { this.setActivities(n.getCollectionOfObjectValues(ShiftActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("notes", (n) -> { this.setNotes(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the notes property value. The shift notes for the shiftItem.
@@ -82,6 +81,7 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -94,6 +94,7 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      * @param value Value to set for the activities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivities(@javax.annotation.Nullable final java.util.List<ShiftActivity> value) {
         this._activities = value;
     }
@@ -102,6 +103,7 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -110,6 +112,7 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final String value) {
         this._notes = value;
     }

@@ -29,9 +29,9 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * Instantiates a new bookingSchedulingPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BookingSchedulingPolicy() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bookingSchedulingPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,15 +65,14 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BookingSchedulingPolicy currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("allowStaffSelection", (n) -> { currentObject.setAllowStaffSelection(n.getBooleanValue()); });
-            this.put("maximumAdvance", (n) -> { currentObject.setMaximumAdvance(n.getPeriodValue()); });
-            this.put("minimumLeadTime", (n) -> { currentObject.setMinimumLeadTime(n.getPeriodValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sendConfirmationsToOwner", (n) -> { currentObject.setSendConfirmationsToOwner(n.getBooleanValue()); });
-            this.put("timeSlotInterval", (n) -> { currentObject.setTimeSlotInterval(n.getPeriodValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("allowStaffSelection", (n) -> { this.setAllowStaffSelection(n.getBooleanValue()); });
+        deserializerMap.put("maximumAdvance", (n) -> { this.setMaximumAdvance(n.getPeriodValue()); });
+        deserializerMap.put("minimumLeadTime", (n) -> { this.setMinimumLeadTime(n.getPeriodValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sendConfirmationsToOwner", (n) -> { this.setSendConfirmationsToOwner(n.getBooleanValue()); });
+        deserializerMap.put("timeSlotInterval", (n) -> { this.setTimeSlotInterval(n.getPeriodValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the maximumAdvance property value. Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
@@ -120,6 +119,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowStaffSelection", this.getAllowStaffSelection());
@@ -135,6 +135,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -143,6 +144,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowStaffSelection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowStaffSelection(@javax.annotation.Nullable final Boolean value) {
         this._allowStaffSelection = value;
     }
@@ -151,6 +153,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the maximumAdvance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumAdvance(@javax.annotation.Nullable final Period value) {
         this._maximumAdvance = value;
     }
@@ -159,6 +162,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the minimumLeadTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumLeadTime(@javax.annotation.Nullable final Period value) {
         this._minimumLeadTime = value;
     }
@@ -167,6 +171,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -175,6 +180,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sendConfirmationsToOwner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSendConfirmationsToOwner(@javax.annotation.Nullable final Boolean value) {
         this._sendConfirmationsToOwner = value;
     }
@@ -183,6 +189,7 @@ public class BookingSchedulingPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the timeSlotInterval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeSlotInterval(@javax.annotation.Nullable final Period value) {
         this._timeSlotInterval = value;
     }

@@ -32,9 +32,9 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * Instantiates a new win32LobAppMsiInformation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Win32LobAppMsiInformation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.win32LobAppMsiInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,17 +60,16 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Win32LobAppMsiInformation currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("packageType", (n) -> { currentObject.setPackageType(n.getEnumValue(Win32LobAppMsiPackageType.class)); });
-            this.put("productCode", (n) -> { currentObject.setProductCode(n.getStringValue()); });
-            this.put("productName", (n) -> { currentObject.setProductName(n.getStringValue()); });
-            this.put("productVersion", (n) -> { currentObject.setProductVersion(n.getStringValue()); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
-            this.put("requiresReboot", (n) -> { currentObject.setRequiresReboot(n.getBooleanValue()); });
-            this.put("upgradeCode", (n) -> { currentObject.setUpgradeCode(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("packageType", (n) -> { this.setPackageType(n.getEnumValue(Win32LobAppMsiPackageType.class)); });
+        deserializerMap.put("productCode", (n) -> { this.setProductCode(n.getStringValue()); });
+        deserializerMap.put("productName", (n) -> { this.setProductName(n.getStringValue()); });
+        deserializerMap.put("productVersion", (n) -> { this.setProductVersion(n.getStringValue()); });
+        deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
+        deserializerMap.put("requiresReboot", (n) -> { this.setRequiresReboot(n.getBooleanValue()); });
+        deserializerMap.put("upgradeCode", (n) -> { this.setUpgradeCode(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -141,6 +140,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -158,6 +158,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -166,6 +167,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -174,6 +176,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the packageType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackageType(@javax.annotation.Nullable final Win32LobAppMsiPackageType value) {
         this._packageType = value;
     }
@@ -182,6 +185,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the productCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductCode(@javax.annotation.Nullable final String value) {
         this._productCode = value;
     }
@@ -190,6 +194,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the productName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductName(@javax.annotation.Nullable final String value) {
         this._productName = value;
     }
@@ -198,6 +203,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the productVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductVersion(@javax.annotation.Nullable final String value) {
         this._productVersion = value;
     }
@@ -206,6 +212,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
         this._publisher = value;
     }
@@ -214,6 +221,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the requiresReboot property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiresReboot(@javax.annotation.Nullable final Boolean value) {
         this._requiresReboot = value;
     }
@@ -222,6 +230,7 @@ public class Win32LobAppMsiInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the upgradeCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpgradeCode(@javax.annotation.Nullable final String value) {
         this._upgradeCode = value;
     }

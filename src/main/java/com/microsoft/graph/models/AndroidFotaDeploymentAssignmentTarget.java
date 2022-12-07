@@ -20,9 +20,9 @@ public class AndroidFotaDeploymentAssignmentTarget implements AdditionalDataHold
      * Instantiates a new androidFotaDeploymentAssignmentTarget and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidFotaDeploymentAssignmentTarget() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.androidFotaDeploymentAssignmentTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,11 +48,10 @@ public class AndroidFotaDeploymentAssignmentTarget implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidFotaDeploymentAssignmentTarget currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("groupId", (n) -> { this.setGroupId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupId property value. AAD Group Id.
@@ -75,6 +74,7 @@ public class AndroidFotaDeploymentAssignmentTarget implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("groupId", this.getGroupId());
@@ -86,6 +86,7 @@ public class AndroidFotaDeploymentAssignmentTarget implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -94,6 +95,7 @@ public class AndroidFotaDeploymentAssignmentTarget implements AdditionalDataHold
      * @param value Value to set for the groupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupId(@javax.annotation.Nullable final String value) {
         this._groupId = value;
     }
@@ -102,6 +104,7 @@ public class AndroidFotaDeploymentAssignmentTarget implements AdditionalDataHold
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

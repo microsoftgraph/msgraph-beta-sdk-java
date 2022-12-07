@@ -23,6 +23,7 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
      * Instantiates a new setUserPreferredPresencePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SetUserPreferredPresencePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -74,18 +75,18 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SetUserPreferredPresencePostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getStringValue()); });
-            this.put("availability", (n) -> { currentObject.setAvailability(n.getStringValue()); });
-            this.put("expirationDuration", (n) -> { currentObject.setExpirationDuration(n.getPeriodValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getStringValue()); });
+        deserializerMap.put("availability", (n) -> { this.setAvailability(n.getStringValue()); });
+        deserializerMap.put("expirationDuration", (n) -> { this.setExpirationDuration(n.getPeriodValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("activity", this.getActivity());
@@ -98,6 +99,7 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
      * @param value Value to set for the activity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final String value) {
         this._activity = value;
     }
@@ -106,6 +108,7 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -114,6 +117,7 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
      * @param value Value to set for the availability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailability(@javax.annotation.Nullable final String value) {
         this._availability = value;
     }
@@ -122,6 +126,7 @@ public class SetUserPreferredPresencePostRequestBody implements AdditionalDataHo
      * @param value Value to set for the expirationDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDuration(@javax.annotation.Nullable final Period value) {
         this._expirationDuration = value;
     }

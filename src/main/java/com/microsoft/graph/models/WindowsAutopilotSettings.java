@@ -19,9 +19,9 @@ public class WindowsAutopilotSettings extends Entity implements Parsable {
      * Instantiates a new windowsAutopilotSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsAutopilotSettings() {
         super();
-        this.setOdataType("#microsoft.graph.windowsAutopilotSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,12 +39,11 @@ public class WindowsAutopilotSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsAutopilotSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("lastManualSyncTriggerDateTime", (n) -> { currentObject.setLastManualSyncTriggerDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("syncStatus", (n) -> { currentObject.setSyncStatus(n.getEnumValue(WindowsAutopilotSyncStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("lastManualSyncTriggerDateTime", (n) -> { this.setLastManualSyncTriggerDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("syncStatus", (n) -> { this.setSyncStatus(n.getEnumValue(WindowsAutopilotSyncStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastManualSyncTriggerDateTime property value. Last data sync date time with DDS service.
@@ -75,6 +74,7 @@ public class WindowsAutopilotSettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +87,7 @@ public class WindowsAutopilotSettings extends Entity implements Parsable {
      * @param value Value to set for the lastManualSyncTriggerDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastManualSyncTriggerDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastManualSyncTriggerDateTime = value;
     }
@@ -95,6 +96,7 @@ public class WindowsAutopilotSettings extends Entity implements Parsable {
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSyncDateTime = value;
     }
@@ -103,6 +105,7 @@ public class WindowsAutopilotSettings extends Entity implements Parsable {
      * @param value Value to set for the syncStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSyncStatus(@javax.annotation.Nullable final WindowsAutopilotSyncStatus value) {
         this._syncStatus = value;
     }

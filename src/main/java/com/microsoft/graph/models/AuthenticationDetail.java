@@ -30,9 +30,9 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      * Instantiates a new authenticationDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthenticationDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.authenticationDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -98,16 +98,15 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthenticationDetail currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getStringValue()); });
-            this.put("authenticationMethodDetail", (n) -> { currentObject.setAuthenticationMethodDetail(n.getStringValue()); });
-            this.put("authenticationStepDateTime", (n) -> { currentObject.setAuthenticationStepDateTime(n.getOffsetDateTimeValue()); });
-            this.put("authenticationStepRequirement", (n) -> { currentObject.setAuthenticationStepRequirement(n.getStringValue()); });
-            this.put("authenticationStepResultDetail", (n) -> { currentObject.setAuthenticationStepResultDetail(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("succeeded", (n) -> { currentObject.setSucceeded(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getStringValue()); });
+        deserializerMap.put("authenticationMethodDetail", (n) -> { this.setAuthenticationMethodDetail(n.getStringValue()); });
+        deserializerMap.put("authenticationStepDateTime", (n) -> { this.setAuthenticationStepDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("authenticationStepRequirement", (n) -> { this.setAuthenticationStepRequirement(n.getStringValue()); });
+        deserializerMap.put("authenticationStepResultDetail", (n) -> { this.setAuthenticationStepResultDetail(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("succeeded", (n) -> { this.setSucceeded(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -130,6 +129,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("authenticationMethod", this.getAuthenticationMethod());
@@ -146,6 +146,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -154,6 +155,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final String value) {
         this._authenticationMethod = value;
     }
@@ -162,6 +164,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the authenticationMethodDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethodDetail(@javax.annotation.Nullable final String value) {
         this._authenticationMethodDetail = value;
     }
@@ -170,6 +173,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the authenticationStepDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationStepDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._authenticationStepDateTime = value;
     }
@@ -178,6 +182,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the authenticationStepRequirement property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationStepRequirement(@javax.annotation.Nullable final String value) {
         this._authenticationStepRequirement = value;
     }
@@ -186,6 +191,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the authenticationStepResultDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationStepResultDetail(@javax.annotation.Nullable final String value) {
         this._authenticationStepResultDetail = value;
     }
@@ -194,6 +200,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -202,6 +209,7 @@ public class AuthenticationDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the succeeded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSucceeded(@javax.annotation.Nullable final Boolean value) {
         this._succeeded = value;
     }

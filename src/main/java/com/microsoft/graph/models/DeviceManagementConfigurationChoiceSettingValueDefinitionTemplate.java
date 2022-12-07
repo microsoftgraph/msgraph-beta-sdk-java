@@ -20,9 +20,9 @@ public class DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate i
      * Instantiates a new deviceManagementConfigurationChoiceSettingValueDefinitionTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceManagementConfigurationChoiceSettingValueDefinitionTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,11 +56,10 @@ public class DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate i
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("allowedOptions", (n) -> { currentObject.setAllowedOptions(n.getCollectionOfObjectValues(DeviceManagementConfigurationOptionDefinitionTemplate::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("allowedOptions", (n) -> { this.setAllowedOptions(n.getCollectionOfObjectValues(DeviceManagementConfigurationOptionDefinitionTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -75,6 +74,7 @@ public class DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate i
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("allowedOptions", this.getAllowedOptions());
@@ -86,6 +86,7 @@ public class DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate i
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -94,6 +95,7 @@ public class DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate i
      * @param value Value to set for the allowedOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedOptions(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationOptionDefinitionTemplate> value) {
         this._allowedOptions = value;
     }
@@ -102,6 +104,7 @@ public class DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate i
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

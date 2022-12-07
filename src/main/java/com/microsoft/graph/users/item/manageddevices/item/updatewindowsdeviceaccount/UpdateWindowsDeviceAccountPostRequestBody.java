@@ -19,6 +19,7 @@ public class UpdateWindowsDeviceAccountPostRequestBody implements AdditionalData
      * Instantiates a new updateWindowsDeviceAccountPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateWindowsDeviceAccountPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,10 +47,9 @@ public class UpdateWindowsDeviceAccountPostRequestBody implements AdditionalData
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UpdateWindowsDeviceAccountPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("updateWindowsDeviceAccountActionParameter", (n) -> { currentObject.setUpdateWindowsDeviceAccountActionParameter(n.getObjectValue(UpdateWindowsDeviceAccountActionParameter::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("updateWindowsDeviceAccountActionParameter", (n) -> { this.setUpdateWindowsDeviceAccountActionParameter(n.getObjectValue(UpdateWindowsDeviceAccountActionParameter::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the updateWindowsDeviceAccountActionParameter property value. The updateWindowsDeviceAccountActionParameter property
@@ -64,6 +64,7 @@ public class UpdateWindowsDeviceAccountPostRequestBody implements AdditionalData
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("updateWindowsDeviceAccountActionParameter", this.getUpdateWindowsDeviceAccountActionParameter());
@@ -74,6 +75,7 @@ public class UpdateWindowsDeviceAccountPostRequestBody implements AdditionalData
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +84,7 @@ public class UpdateWindowsDeviceAccountPostRequestBody implements AdditionalData
      * @param value Value to set for the updateWindowsDeviceAccountActionParameter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateWindowsDeviceAccountActionParameter(@javax.annotation.Nullable final UpdateWindowsDeviceAccountActionParameter value) {
         this._updateWindowsDeviceAccountActionParameter = value;
     }

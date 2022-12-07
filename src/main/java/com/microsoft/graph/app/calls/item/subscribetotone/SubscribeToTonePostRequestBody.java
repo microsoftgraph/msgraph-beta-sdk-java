@@ -18,6 +18,7 @@ public class SubscribeToTonePostRequestBody implements AdditionalDataHolder, Par
      * Instantiates a new subscribeToTonePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SubscribeToTonePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,16 +54,16 @@ public class SubscribeToTonePostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SubscribeToTonePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("clientContext", (n) -> { this.setClientContext(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("clientContext", this.getClientContext());
@@ -73,6 +74,7 @@ public class SubscribeToTonePostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +83,7 @@ public class SubscribeToTonePostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the clientContext property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientContext(@javax.annotation.Nullable final String value) {
         this._clientContext = value;
     }

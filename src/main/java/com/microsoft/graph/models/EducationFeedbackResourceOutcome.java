@@ -10,12 +10,13 @@ import java.util.Objects;
 public class EducationFeedbackResourceOutcome extends EducationOutcome implements Parsable {
     /** The actual feedback resource. */
     private EducationResource _feedbackResource;
-    /** The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, and unknownFutureValue. */
+    /** The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue. */
     private EducationFeedbackResourceOutcomeStatus _resourceStatus;
     /**
      * Instantiates a new EducationFeedbackResourceOutcome and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationFeedbackResourceOutcome() {
         super();
         this.setOdataType("#microsoft.graph.educationFeedbackResourceOutcome");
@@ -44,14 +45,13 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationFeedbackResourceOutcome currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("feedbackResource", (n) -> { currentObject.setFeedbackResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
-            this.put("resourceStatus", (n) -> { currentObject.setResourceStatus(n.getEnumValue(EducationFeedbackResourceOutcomeStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("feedbackResource", (n) -> { this.setFeedbackResource(n.getObjectValue(EducationResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceStatus", (n) -> { this.setResourceStatus(n.getEnumValue(EducationFeedbackResourceOutcomeStatus.class)); });
+        return deserializerMap;
     }
     /**
-     * Gets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, and unknownFutureValue.
+     * Gets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
      * @return a educationFeedbackResourceOutcomeStatus
      */
     @javax.annotation.Nullable
@@ -63,6 +63,7 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,14 +75,16 @@ public class EducationFeedbackResourceOutcome extends EducationOutcome implement
      * @param value Value to set for the feedbackResource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeedbackResource(@javax.annotation.Nullable final EducationResource value) {
         this._feedbackResource = value;
     }
     /**
-     * Sets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, and unknownFutureValue.
+     * Sets the resourceStatus property value. The status of the feedback resource. The possible values are: notPublished, pendingPublish, published, failedPublish, unknownFutureValue.
      * @param value Value to set for the resourceStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceStatus(@javax.annotation.Nullable final EducationFeedbackResourceOutcomeStatus value) {
         this._resourceStatus = value;
     }

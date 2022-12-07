@@ -22,6 +22,7 @@ public class DirectoryRole extends DirectoryObject implements Parsable {
      * Instantiates a new DirectoryRole and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectoryRole() {
         super();
         this.setOdataType("#microsoft.graph.directoryRole");
@@ -58,14 +59,13 @@ public class DirectoryRole extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DirectoryRole currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("roleTemplateId", (n) -> { currentObject.setRoleTemplateId(n.getStringValue()); });
-            this.put("scopedMembers", (n) -> { currentObject.setScopedMembers(n.getCollectionOfObjectValues(ScopedRoleMembership::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleTemplateId", (n) -> { this.setRoleTemplateId(n.getStringValue()); });
+        deserializerMap.put("scopedMembers", (n) -> { this.setScopedMembers(n.getCollectionOfObjectValues(ScopedRoleMembership::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the members property value. Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable. Supports $expand.
@@ -96,6 +96,7 @@ public class DirectoryRole extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +111,7 @@ public class DirectoryRole extends DirectoryObject implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -118,6 +120,7 @@ public class DirectoryRole extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -126,6 +129,7 @@ public class DirectoryRole extends DirectoryObject implements Parsable {
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._members = value;
     }
@@ -134,6 +138,7 @@ public class DirectoryRole extends DirectoryObject implements Parsable {
      * @param value Value to set for the roleTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleTemplateId(@javax.annotation.Nullable final String value) {
         this._roleTemplateId = value;
     }
@@ -142,6 +147,7 @@ public class DirectoryRole extends DirectoryObject implements Parsable {
      * @param value Value to set for the scopedMembers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScopedMembers(@javax.annotation.Nullable final java.util.List<ScopedRoleMembership> value) {
         this._scopedMembers = value;
     }

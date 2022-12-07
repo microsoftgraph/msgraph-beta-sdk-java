@@ -22,6 +22,7 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
      * Instantiates a new evaluateClassificationResultsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EvaluateClassificationResultsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -65,17 +66,17 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EvaluateClassificationResultsPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("classificationResults", (n) -> { currentObject.setClassificationResults(n.getCollectionOfObjectValues(ClassificationResult::createFromDiscriminatorValue)); });
-            this.put("contentInfo", (n) -> { currentObject.setContentInfo(n.getObjectValue(ContentInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("classificationResults", (n) -> { this.setClassificationResults(n.getCollectionOfObjectValues(ClassificationResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentInfo", (n) -> { this.setContentInfo(n.getObjectValue(ContentInfo::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("classificationResults", this.getClassificationResults());
@@ -87,6 +88,7 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -95,6 +97,7 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
      * @param value Value to set for the classificationResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassificationResults(@javax.annotation.Nullable final java.util.List<ClassificationResult> value) {
         this._classificationResults = value;
     }
@@ -103,6 +106,7 @@ public class EvaluateClassificationResultsPostRequestBody implements AdditionalD
      * @param value Value to set for the contentInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentInfo(@javax.annotation.Nullable final ContentInfo value) {
         this._contentInfo = value;
     }

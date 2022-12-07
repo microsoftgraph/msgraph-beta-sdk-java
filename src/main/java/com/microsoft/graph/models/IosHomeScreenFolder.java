@@ -14,6 +14,7 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
      * Instantiates a new IosHomeScreenFolder and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosHomeScreenFolder() {
         super();
         this.setOdataType("#microsoft.graph.iosHomeScreenFolder");
@@ -34,10 +35,9 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosHomeScreenFolder currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("pages", (n) -> { currentObject.setPages(n.getCollectionOfObjectValues(IosHomeScreenFolderPage::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("pages", (n) -> { this.setPages(n.getCollectionOfObjectValues(IosHomeScreenFolderPage::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the pages property value. Pages of Home Screen Layout Icons which must be applications or web clips. This collection can contain a maximum of 500 elements.
@@ -52,6 +52,7 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class IosHomeScreenFolder extends IosHomeScreenItem implements Parsable {
      * @param value Value to set for the pages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPages(@javax.annotation.Nullable final java.util.List<IosHomeScreenFolderPage> value) {
         this._pages = value;
     }

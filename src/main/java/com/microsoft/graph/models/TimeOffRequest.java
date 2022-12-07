@@ -19,6 +19,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      * Instantiates a new TimeOffRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TimeOffRequest() {
         super();
         this.setOdataType("#microsoft.graph.timeOffRequest");
@@ -47,12 +48,11 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TimeOffRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("timeOffReasonId", (n) -> { currentObject.setTimeOffReasonId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("timeOffReasonId", (n) -> { this.setTimeOffReasonId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the startDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -75,6 +75,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +88,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -95,6 +97,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -103,6 +106,7 @@ public class TimeOffRequest extends ScheduleChangeRequest implements Parsable {
      * @param value Value to set for the timeOffReasonId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTimeOffReasonId(@javax.annotation.Nullable final String value) {
         this._timeOffReasonId = value;
     }

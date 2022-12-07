@@ -10,7 +10,7 @@ import java.util.Objects;
 public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
     /** The name of the timeOffReason. Required. */
     private String _displayName;
-    /** Supported icon types: none; car; calendar; running; plane; firstAid; doctor; notWorking; clock; juryDuty; globe; cup; phone; weather; umbrella; piggyBank; dog; cake; trafficCone; pin; sunny. Required. */
+    /** Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required. */
     private TimeOffReasonIconType _iconType;
     /** Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required. */
     private Boolean _isActive;
@@ -18,6 +18,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      * Instantiates a new TimeOffReason and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TimeOffReason() {
         super();
         this.setOdataType("#microsoft.graph.timeOffReason");
@@ -46,15 +47,14 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TimeOffReason currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("iconType", (n) -> { currentObject.setIconType(n.getEnumValue(TimeOffReasonIconType.class)); });
-            this.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("iconType", (n) -> { this.setIconType(n.getEnumValue(TimeOffReasonIconType.class)); });
+        deserializerMap.put("isActive", (n) -> { this.setIsActive(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the iconType property value. Supported icon types: none; car; calendar; running; plane; firstAid; doctor; notWorking; clock; juryDuty; globe; cup; phone; weather; umbrella; piggyBank; dog; cake; trafficCone; pin; sunny. Required.
+     * Gets the iconType property value. Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.
      * @return a timeOffReasonIconType
      */
     @javax.annotation.Nullable
@@ -74,6 +74,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,14 +87,16 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
     /**
-     * Sets the iconType property value. Supported icon types: none; car; calendar; running; plane; firstAid; doctor; notWorking; clock; juryDuty; globe; cup; phone; weather; umbrella; piggyBank; dog; cake; trafficCone; pin; sunny. Required.
+     * Sets the iconType property value. Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.
      * @param value Value to set for the iconType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIconType(@javax.annotation.Nullable final TimeOffReasonIconType value) {
         this._iconType = value;
     }
@@ -102,6 +105,7 @@ public class TimeOffReason extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the isActive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsActive(@javax.annotation.Nullable final Boolean value) {
         this._isActive = value;
     }

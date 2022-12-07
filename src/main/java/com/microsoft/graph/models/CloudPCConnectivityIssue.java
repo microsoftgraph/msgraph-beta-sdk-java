@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analyte connectivity issue entity. */
 public class CloudPCConnectivityIssue extends Entity implements Parsable {
     /** The Intune DeviceId of the device the connection is associated with. */
     private String _deviceId;
@@ -22,17 +23,17 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
     /** The unique id of user who initialize the connection. */
     private String _userId;
     /**
-     * Instantiates a new CloudPCConnectivityIssue and sets the default values.
+     * Instantiates a new cloudPCConnectivityIssue and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPCConnectivityIssue() {
         super();
-        this.setOdataType("#microsoft.graph.cloudPCConnectivityIssue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudPCConnectivityIssue
+     * @return a cloudPCConnectivityIssue
      */
     @javax.annotation.Nonnull
     public static CloudPCConnectivityIssue createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -77,15 +78,14 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPCConnectivityIssue currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
-            this.put("errorDateTime", (n) -> { currentObject.setErrorDateTime(n.getOffsetDateTimeValue()); });
-            this.put("errorDescription", (n) -> { currentObject.setErrorDescription(n.getStringValue()); });
-            this.put("recommendedAction", (n) -> { currentObject.setRecommendedAction(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getStringValue()); });
+        deserializerMap.put("errorDateTime", (n) -> { this.setErrorDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("errorDescription", (n) -> { this.setErrorDescription(n.getStringValue()); });
+        deserializerMap.put("recommendedAction", (n) -> { this.setRecommendedAction(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the recommendedAction property value. The recommended action to fix the corresponding error.
@@ -108,6 +108,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +124,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -131,6 +133,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final String value) {
         this._errorCode = value;
     }
@@ -139,6 +142,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      * @param value Value to set for the errorDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._errorDateTime = value;
     }
@@ -147,6 +151,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      * @param value Value to set for the errorDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDescription(@javax.annotation.Nullable final String value) {
         this._errorDescription = value;
     }
@@ -155,6 +160,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      * @param value Value to set for the recommendedAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendedAction(@javax.annotation.Nullable final String value) {
         this._recommendedAction = value;
     }
@@ -163,6 +169,7 @@ public class CloudPCConnectivityIssue extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

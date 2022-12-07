@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Simulation extends Entity implements Parsable {
     /** The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations. */
     private SimulationAttackTechnique _attackTechnique;
@@ -26,7 +26,7 @@ public class Simulation extends Entity implements Parsable {
     private String _description;
     /** Display name of the attack simulation and training campaign. Supports $filter and $orderby. */
     private String _displayName;
-    /** Flag representing if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby. */
+    /** Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby. */
     private Boolean _isAutomated;
     /** Identity of the user who most recently modified the attack simulation and training campaign. */
     private EmailIdentity _lastModifiedBy;
@@ -44,9 +44,9 @@ public class Simulation extends Entity implements Parsable {
      * Instantiates a new simulation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Simulation() {
         super();
-        this.setOdataType("#microsoft.graph.simulation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -128,27 +128,26 @@ public class Simulation extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Simulation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("attackTechnique", (n) -> { currentObject.setAttackTechnique(n.getEnumValue(SimulationAttackTechnique.class)); });
-            this.put("attackType", (n) -> { currentObject.setAttackType(n.getEnumValue(SimulationAttackType.class)); });
-            this.put("automationId", (n) -> { currentObject.setAutomationId(n.getStringValue()); });
-            this.put("completionDateTime", (n) -> { currentObject.setCompletionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isAutomated", (n) -> { currentObject.setIsAutomated(n.getBooleanValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("launchDateTime", (n) -> { currentObject.setLaunchDateTime(n.getOffsetDateTimeValue()); });
-            this.put("payloadDeliveryPlatform", (n) -> { currentObject.setPayloadDeliveryPlatform(n.getEnumValue(PayloadDeliveryPlatform.class)); });
-            this.put("report", (n) -> { currentObject.setReport(n.getObjectValue(SimulationReport::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(SimulationStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("attackTechnique", (n) -> { this.setAttackTechnique(n.getEnumValue(SimulationAttackTechnique.class)); });
+        deserializerMap.put("attackType", (n) -> { this.setAttackType(n.getEnumValue(SimulationAttackType.class)); });
+        deserializerMap.put("automationId", (n) -> { this.setAutomationId(n.getStringValue()); });
+        deserializerMap.put("completionDateTime", (n) -> { this.setCompletionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isAutomated", (n) -> { this.setIsAutomated(n.getBooleanValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(EmailIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("launchDateTime", (n) -> { this.setLaunchDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("payloadDeliveryPlatform", (n) -> { this.setPayloadDeliveryPlatform(n.getEnumValue(PayloadDeliveryPlatform.class)); });
+        deserializerMap.put("report", (n) -> { this.setReport(n.getObjectValue(SimulationReport::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SimulationStatus.class)); });
+        return deserializerMap;
     }
     /**
-     * Gets the isAutomated property value. Flag representing if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
+     * Gets the isAutomated property value. Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -208,6 +207,7 @@ public class Simulation extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -232,6 +232,7 @@ public class Simulation extends Entity implements Parsable {
      * @param value Value to set for the attackTechnique property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttackTechnique(@javax.annotation.Nullable final SimulationAttackTechnique value) {
         this._attackTechnique = value;
     }
@@ -240,6 +241,7 @@ public class Simulation extends Entity implements Parsable {
      * @param value Value to set for the attackType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttackType(@javax.annotation.Nullable final SimulationAttackType value) {
         this._attackType = value;
     }
@@ -248,6 +250,7 @@ public class Simulation extends Entity implements Parsable {
      * @param value Value to set for the automationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutomationId(@javax.annotation.Nullable final String value) {
         this._automationId = value;
     }
@@ -256,6 +259,7 @@ public class Simulation extends Entity implements Parsable {
      * @param value Value to set for the completionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._completionDateTime = value;
     }
@@ -264,6 +268,7 @@ public class Simulation extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final EmailIdentity value) {
         this._createdBy = value;
     }
@@ -272,6 +277,7 @@ public class Simulation extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -280,6 +286,7 @@ public class Simulation extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -288,14 +295,16 @@ public class Simulation extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
     /**
-     * Sets the isAutomated property value. Flag representing if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
+     * Sets the isAutomated property value. Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
      * @param value Value to set for the isAutomated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAutomated(@javax.annotation.Nullable final Boolean value) {
         this._isAutomated = value;
     }
@@ -304,6 +313,7 @@ public class Simulation extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final EmailIdentity value) {
         this._lastModifiedBy = value;
     }
@@ -312,6 +322,7 @@ public class Simulation extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -320,6 +331,7 @@ public class Simulation extends Entity implements Parsable {
      * @param value Value to set for the launchDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLaunchDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._launchDateTime = value;
     }
@@ -328,6 +340,7 @@ public class Simulation extends Entity implements Parsable {
      * @param value Value to set for the payloadDeliveryPlatform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadDeliveryPlatform(@javax.annotation.Nullable final PayloadDeliveryPlatform value) {
         this._payloadDeliveryPlatform = value;
     }
@@ -336,6 +349,7 @@ public class Simulation extends Entity implements Parsable {
      * @param value Value to set for the report property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReport(@javax.annotation.Nullable final SimulationReport value) {
         this._report = value;
     }
@@ -344,6 +358,7 @@ public class Simulation extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final SimulationStatus value) {
         this._status = value;
     }

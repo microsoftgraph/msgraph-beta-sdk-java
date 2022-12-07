@@ -16,9 +16,9 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
      * Instantiates a new cloudPcForensicStorageAccount and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcForensicStorageAccount() {
         super();
-        this.setOdataType("#microsoft.graph.cloudPcForensicStorageAccount");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,11 +36,10 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcForensicStorageAccount currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("storageAccountId", (n) -> { currentObject.setStorageAccountId(n.getStringValue()); });
-            this.put("storageAccountName", (n) -> { currentObject.setStorageAccountName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("storageAccountId", (n) -> { this.setStorageAccountId(n.getStringValue()); });
+        deserializerMap.put("storageAccountName", (n) -> { this.setStorageAccountName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the storageAccountId property value. The ID of the storage account.
@@ -63,6 +62,7 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +74,7 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
      * @param value Value to set for the storageAccountId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageAccountId(@javax.annotation.Nullable final String value) {
         this._storageAccountId = value;
     }
@@ -82,6 +83,7 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
      * @param value Value to set for the storageAccountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageAccountName(@javax.annotation.Nullable final String value) {
         this._storageAccountName = value;
     }

@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class Group extends Entity implements Parsable {
     /** Date and time of the group creation. Read-only. */
     private OffsetDateTime _createdDateTime;
@@ -27,9 +27,9 @@ public class Group extends Entity implements Parsable {
      * Instantiates a new group and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Group() {
         super();
-        this.setOdataType("#microsoft.graph.termStore.group");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -71,15 +71,14 @@ public class Group extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Group currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("parentSiteId", (n) -> { currentObject.setParentSiteId(n.getStringValue()); });
-            this.put("scope", (n) -> { currentObject.setScope(n.getEnumValue(TermGroupScope.class)); });
-            this.put("sets", (n) -> { currentObject.setSets(n.getCollectionOfObjectValues(Set::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("parentSiteId", (n) -> { this.setParentSiteId(n.getStringValue()); });
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getEnumValue(TermGroupScope.class)); });
+        deserializerMap.put("sets", (n) -> { this.setSets(n.getCollectionOfObjectValues(Set::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the parentSiteId property value. ID of the parent site of this group.
@@ -110,6 +109,7 @@ public class Group extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -125,6 +125,7 @@ public class Group extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -133,6 +134,7 @@ public class Group extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -141,6 +143,7 @@ public class Group extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -149,6 +152,7 @@ public class Group extends Entity implements Parsable {
      * @param value Value to set for the parentSiteId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentSiteId(@javax.annotation.Nullable final String value) {
         this._parentSiteId = value;
     }
@@ -157,6 +161,7 @@ public class Group extends Entity implements Parsable {
      * @param value Value to set for the scope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final TermGroupScope value) {
         this._scope = value;
     }
@@ -165,6 +170,7 @@ public class Group extends Entity implements Parsable {
      * @param value Value to set for the sets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSets(@javax.annotation.Nullable final java.util.List<Set> value) {
         this._sets = value;
     }

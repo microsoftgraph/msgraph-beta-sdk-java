@@ -23,9 +23,9 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
      * Instantiates a new deviceKey and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceKey() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceKey");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,13 +59,12 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceKey currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("keyMaterial", (n) -> { currentObject.setKeyMaterial(n.getByteArrayValue()); });
-            this.put("keyType", (n) -> { currentObject.setKeyType(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("keyMaterial", (n) -> { this.setKeyMaterial(n.getByteArrayValue()); });
+        deserializerMap.put("keyType", (n) -> { this.setKeyType(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the keyMaterial property value. The keyMaterial property
@@ -96,6 +95,7 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("deviceId", this.getDeviceId());
@@ -109,6 +109,7 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +118,7 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -125,6 +127,7 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the keyMaterial property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyMaterial(@javax.annotation.Nullable final byte[] value) {
         this._keyMaterial = value;
     }
@@ -133,6 +136,7 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the keyType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyType(@javax.annotation.Nullable final String value) {
         this._keyType = value;
     }
@@ -141,6 +145,7 @@ public class DeviceKey implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

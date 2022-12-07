@@ -22,6 +22,7 @@ public class ValidateAuthenticationConfigurationPostRequestBody implements Addit
      * Instantiates a new validateAuthenticationConfigurationPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ValidateAuthenticationConfigurationPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -65,17 +66,17 @@ public class ValidateAuthenticationConfigurationPostRequestBody implements Addit
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ValidateAuthenticationConfigurationPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("authenticationConfiguration", (n) -> { currentObject.setAuthenticationConfiguration(n.getObjectValue(CustomExtensionAuthenticationConfiguration::createFromDiscriminatorValue)); });
-            this.put("endpointConfiguration", (n) -> { currentObject.setEndpointConfiguration(n.getObjectValue(CustomExtensionEndpointConfiguration::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("authenticationConfiguration", (n) -> { this.setAuthenticationConfiguration(n.getObjectValue(CustomExtensionAuthenticationConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("endpointConfiguration", (n) -> { this.setEndpointConfiguration(n.getObjectValue(CustomExtensionEndpointConfiguration::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("authenticationConfiguration", this.getAuthenticationConfiguration());
@@ -87,6 +88,7 @@ public class ValidateAuthenticationConfigurationPostRequestBody implements Addit
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -95,6 +97,7 @@ public class ValidateAuthenticationConfigurationPostRequestBody implements Addit
      * @param value Value to set for the authenticationConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationConfiguration(@javax.annotation.Nullable final CustomExtensionAuthenticationConfiguration value) {
         this._authenticationConfiguration = value;
     }
@@ -103,6 +106,7 @@ public class ValidateAuthenticationConfigurationPostRequestBody implements Addit
      * @param value Value to set for the endpointConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpointConfiguration(@javax.annotation.Nullable final CustomExtensionEndpointConfiguration value) {
         this._endpointConfiguration = value;
     }

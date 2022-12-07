@@ -28,6 +28,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new applyPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ApplyPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -63,15 +64,14 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ApplyPostRequestBody currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("excludeGroups", (n) -> { currentObject.setExcludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("includeAllUsers", (n) -> { currentObject.setIncludeAllUsers(n.getBooleanValue()); });
-            this.put("includeGroups", (n) -> { currentObject.setIncludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("managementTemplateId", (n) -> { currentObject.setManagementTemplateId(n.getStringValue()); });
-            this.put("tenantGroupId", (n) -> { currentObject.setTenantGroupId(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("excludeGroups", (n) -> { this.setExcludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("includeAllUsers", (n) -> { this.setIncludeAllUsers(n.getBooleanValue()); });
+        deserializerMap.put("includeGroups", (n) -> { this.setIncludeGroups(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("managementTemplateId", (n) -> { this.setManagementTemplateId(n.getStringValue()); });
+        deserializerMap.put("tenantGroupId", (n) -> { this.setTenantGroupId(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the includeAllUsers property value. The includeAllUsers property
@@ -118,6 +118,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("excludeGroups", this.getExcludeGroups());
@@ -133,6 +134,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +143,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the excludeGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludeGroups(@javax.annotation.Nullable final java.util.List<String> value) {
         this._excludeGroups = value;
     }
@@ -149,6 +152,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the includeAllUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeAllUsers(@javax.annotation.Nullable final Boolean value) {
         this._includeAllUsers = value;
     }
@@ -157,6 +161,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the includeGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeGroups(@javax.annotation.Nullable final java.util.List<String> value) {
         this._includeGroups = value;
     }
@@ -165,6 +170,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the managementTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementTemplateId(@javax.annotation.Nullable final String value) {
         this._managementTemplateId = value;
     }
@@ -173,6 +179,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tenantGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantGroupId(@javax.annotation.Nullable final String value) {
         this._tenantGroupId = value;
     }
@@ -181,6 +188,7 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }

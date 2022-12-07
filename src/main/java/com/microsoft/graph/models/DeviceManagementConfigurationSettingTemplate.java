@@ -17,9 +17,9 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
      * Instantiates a new deviceManagementConfigurationSettingTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingTemplate() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSettingTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,11 +37,10 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationSettingTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("settingDefinitions", (n) -> { currentObject.setSettingDefinitions(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
-            this.put("settingInstanceTemplate", (n) -> { currentObject.setSettingInstanceTemplate(n.getObjectValue(DeviceManagementConfigurationSettingInstanceTemplate::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("settingDefinitions", (n) -> { this.setSettingDefinitions(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("settingInstanceTemplate", (n) -> { this.setSettingInstanceTemplate(n.getObjectValue(DeviceManagementConfigurationSettingInstanceTemplate::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the settingDefinitions property value. List of related Setting Definitions
@@ -64,6 +63,7 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +75,7 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
      * @param value Value to set for the settingDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingDefinitions(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDefinition> value) {
         this._settingDefinitions = value;
     }
@@ -83,6 +84,7 @@ public class DeviceManagementConfigurationSettingTemplate extends Entity impleme
      * @param value Value to set for the settingInstanceTemplate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingInstanceTemplate(@javax.annotation.Nullable final DeviceManagementConfigurationSettingInstanceTemplate value) {
         this._settingInstanceTemplate = value;
     }

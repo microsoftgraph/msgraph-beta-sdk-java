@@ -31,6 +31,7 @@ public class Printer extends PrinterBase implements Parsable {
      * Instantiates a new printer and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Printer() {
         super();
         this.setOdataType("#microsoft.graph.printer");
@@ -67,18 +68,17 @@ public class Printer extends PrinterBase implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Printer currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("acceptingJobs", (n) -> { currentObject.setAcceptingJobs(n.getBooleanValue()); });
-            this.put("connectors", (n) -> { currentObject.setConnectors(n.getCollectionOfObjectValues(PrintConnector::createFromDiscriminatorValue)); });
-            this.put("hasPhysicalDevice", (n) -> { currentObject.setHasPhysicalDevice(n.getBooleanValue()); });
-            this.put("isShared", (n) -> { currentObject.setIsShared(n.getBooleanValue()); });
-            this.put("lastSeenDateTime", (n) -> { currentObject.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("registeredDateTime", (n) -> { currentObject.setRegisteredDateTime(n.getOffsetDateTimeValue()); });
-            this.put("share", (n) -> { currentObject.setShare(n.getObjectValue(PrinterShare::createFromDiscriminatorValue)); });
-            this.put("shares", (n) -> { currentObject.setShares(n.getCollectionOfObjectValues(PrinterShare::createFromDiscriminatorValue)); });
-            this.put("taskTriggers", (n) -> { currentObject.setTaskTriggers(n.getCollectionOfObjectValues(PrintTaskTrigger::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("acceptingJobs", (n) -> { this.setAcceptingJobs(n.getBooleanValue()); });
+        deserializerMap.put("connectors", (n) -> { this.setConnectors(n.getCollectionOfObjectValues(PrintConnector::createFromDiscriminatorValue)); });
+        deserializerMap.put("hasPhysicalDevice", (n) -> { this.setHasPhysicalDevice(n.getBooleanValue()); });
+        deserializerMap.put("isShared", (n) -> { this.setIsShared(n.getBooleanValue()); });
+        deserializerMap.put("lastSeenDateTime", (n) -> { this.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("registeredDateTime", (n) -> { this.setRegisteredDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("share", (n) -> { this.setShare(n.getObjectValue(PrinterShare::createFromDiscriminatorValue)); });
+        deserializerMap.put("shares", (n) -> { this.setShares(n.getCollectionOfObjectValues(PrinterShare::createFromDiscriminatorValue)); });
+        deserializerMap.put("taskTriggers", (n) -> { this.setTaskTriggers(n.getCollectionOfObjectValues(PrintTaskTrigger::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the hasPhysicalDevice property value. True if the printer has a physical device for printing. Read-only.
@@ -141,6 +141,7 @@ public class Printer extends PrinterBase implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +160,7 @@ public class Printer extends PrinterBase implements Parsable {
      * @param value Value to set for the acceptingJobs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAcceptingJobs(@javax.annotation.Nullable final Boolean value) {
         this._acceptingJobs = value;
     }
@@ -167,6 +169,7 @@ public class Printer extends PrinterBase implements Parsable {
      * @param value Value to set for the connectors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectors(@javax.annotation.Nullable final java.util.List<PrintConnector> value) {
         this._connectors = value;
     }
@@ -175,6 +178,7 @@ public class Printer extends PrinterBase implements Parsable {
      * @param value Value to set for the hasPhysicalDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasPhysicalDevice(@javax.annotation.Nullable final Boolean value) {
         this._hasPhysicalDevice = value;
     }
@@ -183,6 +187,7 @@ public class Printer extends PrinterBase implements Parsable {
      * @param value Value to set for the isShared property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsShared(@javax.annotation.Nullable final Boolean value) {
         this._isShared = value;
     }
@@ -191,6 +196,7 @@ public class Printer extends PrinterBase implements Parsable {
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSeenDateTime = value;
     }
@@ -199,6 +205,7 @@ public class Printer extends PrinterBase implements Parsable {
      * @param value Value to set for the registeredDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegisteredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._registeredDateTime = value;
     }
@@ -207,6 +214,7 @@ public class Printer extends PrinterBase implements Parsable {
      * @param value Value to set for the share property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShare(@javax.annotation.Nullable final PrinterShare value) {
         this._share = value;
     }
@@ -215,6 +223,7 @@ public class Printer extends PrinterBase implements Parsable {
      * @param value Value to set for the shares property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShares(@javax.annotation.Nullable final java.util.List<PrinterShare> value) {
         this._shares = value;
     }
@@ -223,6 +232,7 @@ public class Printer extends PrinterBase implements Parsable {
      * @param value Value to set for the taskTriggers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaskTriggers(@javax.annotation.Nullable final java.util.List<PrintTaskTrigger> value) {
         this._taskTriggers = value;
     }

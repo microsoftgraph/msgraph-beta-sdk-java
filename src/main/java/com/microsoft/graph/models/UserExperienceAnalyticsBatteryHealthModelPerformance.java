@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The user experience analytics battery health model performance entity contains battery related information for all unique device models in their organization. */
 public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity implements Parsable {
     /** Number of active devices for that model. Valid values -2147483648 to 2147483647 */
     private Integer _activeDevices;
@@ -14,26 +15,26 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
     private Integer _averageBatteryAgeInDays;
     /** The mean of the estimated runtimes on full charge for all devices of a given model. Unit in minutes. Valid values -2147483648 to 2147483647 */
     private Integer _averageEstimatedRuntimeInMinutes;
-    /** The mean of the maximum capacity for all devices of a given model. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values -2147483648 to 2147483647 */
+    /** The mean of the maximum capacity for all devices of a given model. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values -2147483648 to 2147483647 */
     private Integer _averageMaxCapacityPercentage;
     /** Name of the device manufacturer. */
     private String _manufacturer;
     /** The model name of the device. */
     private String _model;
-    /** A weighted average of a model’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647 */
+    /** A weighted average of a models maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647 */
     private Integer _modelBatteryHealthScore;
     /**
-     * Instantiates a new UserExperienceAnalyticsBatteryHealthModelPerformance and sets the default values.
+     * Instantiates a new userExperienceAnalyticsBatteryHealthModelPerformance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsBatteryHealthModelPerformance() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsBatteryHealthModelPerformance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBatteryHealthModelPerformance
+     * @return a userExperienceAnalyticsBatteryHealthModelPerformance
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthModelPerformance createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -65,7 +66,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
         return this._averageEstimatedRuntimeInMinutes;
     }
     /**
-     * Gets the averageMaxCapacityPercentage property value. The mean of the maximum capacity for all devices of a given model. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values -2147483648 to 2147483647
+     * Gets the averageMaxCapacityPercentage property value. The mean of the maximum capacity for all devices of a given model. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -78,16 +79,15 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsBatteryHealthModelPerformance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeDevices", (n) -> { currentObject.setActiveDevices(n.getIntegerValue()); });
-            this.put("averageBatteryAgeInDays", (n) -> { currentObject.setAverageBatteryAgeInDays(n.getIntegerValue()); });
-            this.put("averageEstimatedRuntimeInMinutes", (n) -> { currentObject.setAverageEstimatedRuntimeInMinutes(n.getIntegerValue()); });
-            this.put("averageMaxCapacityPercentage", (n) -> { currentObject.setAverageMaxCapacityPercentage(n.getIntegerValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("modelBatteryHealthScore", (n) -> { currentObject.setModelBatteryHealthScore(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeDevices", (n) -> { this.setActiveDevices(n.getIntegerValue()); });
+        deserializerMap.put("averageBatteryAgeInDays", (n) -> { this.setAverageBatteryAgeInDays(n.getIntegerValue()); });
+        deserializerMap.put("averageEstimatedRuntimeInMinutes", (n) -> { this.setAverageEstimatedRuntimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("averageMaxCapacityPercentage", (n) -> { this.setAverageMaxCapacityPercentage(n.getIntegerValue()); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("modelBatteryHealthScore", (n) -> { this.setModelBatteryHealthScore(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the manufacturer property value. Name of the device manufacturer.
@@ -106,7 +106,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
         return this._model;
     }
     /**
-     * Gets the modelBatteryHealthScore property value. A weighted average of a model’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
+     * Gets the modelBatteryHealthScore property value. A weighted average of a models maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -118,6 +118,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +135,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
      * @param value Value to set for the activeDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveDevices(@javax.annotation.Nullable final Integer value) {
         this._activeDevices = value;
     }
@@ -142,6 +144,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
      * @param value Value to set for the averageBatteryAgeInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageBatteryAgeInDays(@javax.annotation.Nullable final Integer value) {
         this._averageBatteryAgeInDays = value;
     }
@@ -150,14 +153,16 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
      * @param value Value to set for the averageEstimatedRuntimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageEstimatedRuntimeInMinutes(@javax.annotation.Nullable final Integer value) {
         this._averageEstimatedRuntimeInMinutes = value;
     }
     /**
-     * Sets the averageMaxCapacityPercentage property value. The mean of the maximum capacity for all devices of a given model. Maximum capacity measures the full charge vs. design capacity for a device’s batteries.. Valid values -2147483648 to 2147483647
+     * Sets the averageMaxCapacityPercentage property value. The mean of the maximum capacity for all devices of a given model. Maximum capacity measures the full charge vs. design capacity for a devices batteries.. Valid values -2147483648 to 2147483647
      * @param value Value to set for the averageMaxCapacityPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageMaxCapacityPercentage(@javax.annotation.Nullable final Integer value) {
         this._averageMaxCapacityPercentage = value;
     }
@@ -166,6 +171,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -174,14 +180,16 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
     /**
-     * Sets the modelBatteryHealthScore property value. A weighted average of a model’s maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
+     * Sets the modelBatteryHealthScore property value. A weighted average of a models maximum capacity score and runtime estimate score. Values range from 0-100. Valid values -2147483648 to 2147483647
      * @param value Value to set for the modelBatteryHealthScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModelBatteryHealthScore(@javax.annotation.Nullable final Integer value) {
         this._modelBatteryHealthScore = value;
     }

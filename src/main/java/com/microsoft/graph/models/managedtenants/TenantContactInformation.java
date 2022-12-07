@@ -27,9 +27,9 @@ public class TenantContactInformation implements AdditionalDataHolder, Parsable 
      * Instantiates a new tenantContactInformation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TenantContactInformation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.managedTenants.tenantContactInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,15 +63,14 @@ public class TenantContactInformation implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TenantContactInformation currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("phone", (n) -> { currentObject.setPhone(n.getStringValue()); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("notes", (n) -> { this.setNotes(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("phone", (n) -> { this.setPhone(n.getStringValue()); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. The name for the contact. Required.
@@ -118,6 +117,7 @@ public class TenantContactInformation implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("email", this.getEmail());
@@ -133,6 +133,7 @@ public class TenantContactInformation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +142,7 @@ public class TenantContactInformation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
         this._email = value;
     }
@@ -149,6 +151,7 @@ public class TenantContactInformation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -157,6 +160,7 @@ public class TenantContactInformation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final String value) {
         this._notes = value;
     }
@@ -165,6 +169,7 @@ public class TenantContactInformation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -173,6 +178,7 @@ public class TenantContactInformation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the phone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhone(@javax.annotation.Nullable final String value) {
         this._phone = value;
     }
@@ -181,6 +187,7 @@ public class TenantContactInformation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }

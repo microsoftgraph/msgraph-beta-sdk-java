@@ -20,6 +20,7 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
      * Instantiates a new getByIdsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetByIdsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -47,11 +48,10 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GetByIdsPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("ids", (n) -> { currentObject.setIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("types", (n) -> { currentObject.setTypes(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("ids", (n) -> { this.setIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("types", (n) -> { this.setTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the ids property value. The ids property
@@ -74,6 +74,7 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("ids", this.getIds());
@@ -85,6 +86,7 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +95,7 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ids property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._ids = value;
     }
@@ -101,6 +104,7 @@ public class GetByIdsPostRequestBody implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the types property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTypes(@javax.annotation.Nullable final java.util.List<String> value) {
         this._types = value;
     }

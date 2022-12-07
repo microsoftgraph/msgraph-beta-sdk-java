@@ -15,6 +15,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** The Base Class of Device Enrollment Configuration */
 public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     /** The list of group assignments for the device configuration profile */
     private java.util.List<EnrollmentConfigurationAssignment> _assignments;
@@ -35,17 +36,17 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
     /** The version of the device enrollment configuration */
     private Integer _version;
     /**
-     * Instantiates a new DeviceEnrollmentConfiguration and sets the default values.
+     * Instantiates a new deviceEnrollmentConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceEnrollmentConfiguration() {
         super();
-        this.setOdataType("#microsoft.graph.deviceEnrollmentConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a DeviceEnrollmentConfiguration
+     * @return a deviceEnrollmentConfiguration
      */
     @javax.annotation.Nonnull
     public static DeviceEnrollmentConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -111,18 +112,17 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceEnrollmentConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(EnrollmentConfigurationAssignment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("deviceEnrollmentConfigurationType", (n) -> { currentObject.setDeviceEnrollmentConfigurationType(n.getEnumValue(DeviceEnrollmentConfigurationType.class)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(EnrollmentConfigurationAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("deviceEnrollmentConfigurationType", (n) -> { this.setDeviceEnrollmentConfigurationType(n.getEnumValue(DeviceEnrollmentConfigurationType.class)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modified date time in UTC of the device enrollment configuration
@@ -161,6 +161,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -179,6 +180,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<EnrollmentConfigurationAssignment> value) {
         this._assignments = value;
     }
@@ -187,6 +189,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -195,6 +198,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -203,6 +207,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * @param value Value to set for the deviceEnrollmentConfigurationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceEnrollmentConfigurationType(@javax.annotation.Nullable final DeviceEnrollmentConfigurationType value) {
         this._deviceEnrollmentConfigurationType = value;
     }
@@ -211,6 +216,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -219,6 +225,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -227,6 +234,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }
@@ -235,6 +243,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -243,6 +252,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
         this._version = value;
     }

@@ -26,9 +26,9 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * Instantiates a new deviceManagementConfigurationPolicyTemplateReference and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationPolicyTemplateReference() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceManagementConfigurationPolicyTemplateReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,14 +54,13 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationPolicyTemplateReference currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("templateDisplayName", (n) -> { currentObject.setTemplateDisplayName(n.getStringValue()); });
-            this.put("templateDisplayVersion", (n) -> { currentObject.setTemplateDisplayVersion(n.getStringValue()); });
-            this.put("templateFamily", (n) -> { currentObject.setTemplateFamily(n.getEnumValue(DeviceManagementConfigurationTemplateFamily.class)); });
-            this.put("templateId", (n) -> { currentObject.setTemplateId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("templateDisplayName", (n) -> { this.setTemplateDisplayName(n.getStringValue()); });
+        deserializerMap.put("templateDisplayVersion", (n) -> { this.setTemplateDisplayVersion(n.getStringValue()); });
+        deserializerMap.put("templateFamily", (n) -> { this.setTemplateFamily(n.getEnumValue(DeviceManagementConfigurationTemplateFamily.class)); });
+        deserializerMap.put("templateId", (n) -> { this.setTemplateId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -108,11 +107,10 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeStringValue("templateDisplayName", this.getTemplateDisplayName());
-        writer.writeStringValue("templateDisplayVersion", this.getTemplateDisplayVersion());
         writer.writeEnumValue("templateFamily", this.getTemplateFamily());
         writer.writeStringValue("templateId", this.getTemplateId());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -122,6 +120,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +129,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -138,6 +138,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * @param value Value to set for the templateDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateDisplayName(@javax.annotation.Nullable final String value) {
         this._templateDisplayName = value;
     }
@@ -146,6 +147,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * @param value Value to set for the templateDisplayVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateDisplayVersion(@javax.annotation.Nullable final String value) {
         this._templateDisplayVersion = value;
     }
@@ -154,6 +156,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * @param value Value to set for the templateFamily property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateFamily(@javax.annotation.Nullable final DeviceManagementConfigurationTemplateFamily value) {
         this._templateFamily = value;
     }
@@ -162,6 +165,7 @@ public class DeviceManagementConfigurationPolicyTemplateReference implements Add
      * @param value Value to set for the templateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateId(@javax.annotation.Nullable final String value) {
         this._templateId = value;
     }

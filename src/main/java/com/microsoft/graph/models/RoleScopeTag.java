@@ -21,9 +21,9 @@ public class RoleScopeTag extends Entity implements Parsable {
      * Instantiates a new roleScopeTag and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RoleScopeTag() {
         super();
-        this.setOdataType("#microsoft.graph.roleScopeTag");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,13 +65,12 @@ public class RoleScopeTag extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RoleScopeTag currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(RoleScopeTagAutoAssignment::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isBuiltIn", (n) -> { currentObject.setIsBuiltIn(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(RoleScopeTagAutoAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isBuiltIn", (n) -> { this.setIsBuiltIn(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isBuiltIn property value. Description of the Role Scope Tag. This property is read-only.
@@ -86,19 +85,20 @@ public class RoleScopeTag extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeBooleanValue("isBuiltIn", this.getIsBuiltIn());
     }
     /**
      * Sets the assignments property value. The list of assignments for this Role Scope Tag.
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<RoleScopeTagAutoAssignment> value) {
         this._assignments = value;
     }
@@ -107,6 +107,7 @@ public class RoleScopeTag extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -115,6 +116,7 @@ public class RoleScopeTag extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -123,6 +125,7 @@ public class RoleScopeTag extends Entity implements Parsable {
      * @param value Value to set for the isBuiltIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsBuiltIn(@javax.annotation.Nullable final Boolean value) {
         this._isBuiltIn = value;
     }

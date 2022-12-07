@@ -25,9 +25,9 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      * Instantiates a new searchResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SearchResponse() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.searchResponse");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,14 +53,13 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SearchResponse currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("hitsContainers", (n) -> { currentObject.setHitsContainers(n.getCollectionOfObjectValues(SearchHitsContainer::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("queryAlterationResponse", (n) -> { currentObject.setQueryAlterationResponse(n.getObjectValue(AlterationResponse::createFromDiscriminatorValue)); });
-            this.put("resultTemplates", (n) -> { currentObject.setResultTemplates(n.getObjectValue(ResultTemplateDictionary::createFromDiscriminatorValue)); });
-            this.put("searchTerms", (n) -> { currentObject.setSearchTerms(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("hitsContainers", (n) -> { this.setHitsContainers(n.getCollectionOfObjectValues(SearchHitsContainer::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("queryAlterationResponse", (n) -> { this.setQueryAlterationResponse(n.getObjectValue(AlterationResponse::createFromDiscriminatorValue)); });
+        deserializerMap.put("resultTemplates", (n) -> { this.setResultTemplates(n.getObjectValue(ResultTemplateDictionary::createFromDiscriminatorValue)); });
+        deserializerMap.put("searchTerms", (n) -> { this.setSearchTerms(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the hitsContainers property value. A collection of search results.
@@ -107,6 +106,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("hitsContainers", this.getHitsContainers());
@@ -121,6 +121,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +130,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the hitsContainers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHitsContainers(@javax.annotation.Nullable final java.util.List<SearchHitsContainer> value) {
         this._hitsContainers = value;
     }
@@ -137,6 +139,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -145,6 +148,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the queryAlterationResponse property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueryAlterationResponse(@javax.annotation.Nullable final AlterationResponse value) {
         this._queryAlterationResponse = value;
     }
@@ -153,6 +157,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the resultTemplates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResultTemplates(@javax.annotation.Nullable final ResultTemplateDictionary value) {
         this._resultTemplates = value;
     }
@@ -161,6 +166,7 @@ public class SearchResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the searchTerms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearchTerms(@javax.annotation.Nullable final java.util.List<String> value) {
         this._searchTerms = value;
     }

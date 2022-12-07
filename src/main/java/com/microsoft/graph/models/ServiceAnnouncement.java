@@ -15,17 +15,17 @@ public class ServiceAnnouncement extends Entity implements Parsable {
     /** A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly. */
     private java.util.List<ServiceUpdateMessage> _messages;
     /**
-     * Instantiates a new serviceAnnouncement and sets the default values.
+     * Instantiates a new ServiceAnnouncement and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServiceAnnouncement() {
         super();
-        this.setOdataType("#microsoft.graph.serviceAnnouncement");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a serviceAnnouncement
+     * @return a ServiceAnnouncement
      */
     @javax.annotation.Nonnull
     public static ServiceAnnouncement createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -38,12 +38,11 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ServiceAnnouncement currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("healthOverviews", (n) -> { currentObject.setHealthOverviews(n.getCollectionOfObjectValues(ServiceHealth::createFromDiscriminatorValue)); });
-            this.put("issues", (n) -> { currentObject.setIssues(n.getCollectionOfObjectValues(ServiceHealthIssue::createFromDiscriminatorValue)); });
-            this.put("messages", (n) -> { currentObject.setMessages(n.getCollectionOfObjectValues(ServiceUpdateMessage::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("healthOverviews", (n) -> { this.setHealthOverviews(n.getCollectionOfObjectValues(ServiceHealth::createFromDiscriminatorValue)); });
+        deserializerMap.put("issues", (n) -> { this.setIssues(n.getCollectionOfObjectValues(ServiceHealthIssue::createFromDiscriminatorValue)); });
+        deserializerMap.put("messages", (n) -> { this.setMessages(n.getCollectionOfObjectValues(ServiceUpdateMessage::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the healthOverviews property value. A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
@@ -74,6 +73,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +86,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * @param value Value to set for the healthOverviews property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthOverviews(@javax.annotation.Nullable final java.util.List<ServiceHealth> value) {
         this._healthOverviews = value;
     }
@@ -94,6 +95,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * @param value Value to set for the issues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssues(@javax.annotation.Nullable final java.util.List<ServiceHealthIssue> value) {
         this._issues = value;
     }
@@ -102,6 +104,7 @@ public class ServiceAnnouncement extends Entity implements Parsable {
      * @param value Value to set for the messages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessages(@javax.annotation.Nullable final java.util.List<ServiceUpdateMessage> value) {
         this._messages = value;
     }

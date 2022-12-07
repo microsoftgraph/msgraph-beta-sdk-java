@@ -19,9 +19,9 @@ public class UsageRight extends Entity implements Parsable {
      * Instantiates a new usageRight and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UsageRight() {
         super();
-        this.setOdataType("#microsoft.graph.usageRight");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,12 +47,11 @@ public class UsageRight extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UsageRight currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("catalogId", (n) -> { currentObject.setCatalogId(n.getStringValue()); });
-            this.put("serviceIdentifier", (n) -> { currentObject.setServiceIdentifier(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(UsageRightState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("catalogId", (n) -> { this.setCatalogId(n.getStringValue()); });
+        deserializerMap.put("serviceIdentifier", (n) -> { this.setServiceIdentifier(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(UsageRightState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the serviceIdentifier property value. Identifier of the service corresponding to the usage right.
@@ -75,6 +74,7 @@ public class UsageRight extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +87,7 @@ public class UsageRight extends Entity implements Parsable {
      * @param value Value to set for the catalogId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCatalogId(@javax.annotation.Nullable final String value) {
         this._catalogId = value;
     }
@@ -95,6 +96,7 @@ public class UsageRight extends Entity implements Parsable {
      * @param value Value to set for the serviceIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceIdentifier(@javax.annotation.Nullable final String value) {
         this._serviceIdentifier = value;
     }
@@ -103,6 +105,7 @@ public class UsageRight extends Entity implements Parsable {
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final UsageRightState value) {
         this._state = value;
     }

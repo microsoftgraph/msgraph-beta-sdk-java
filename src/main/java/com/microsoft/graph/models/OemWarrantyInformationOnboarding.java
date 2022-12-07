@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Warranty status entity for a given OEM */
 public class OemWarrantyInformationOnboarding extends Entity implements Parsable {
     /** Specifies whether warranty API is available. This property is read-only. */
     private Boolean _available;
@@ -15,17 +16,17 @@ public class OemWarrantyInformationOnboarding extends Entity implements Parsable
     /** OEM name. This property is read-only. */
     private String _oemName;
     /**
-     * Instantiates a new OemWarrantyInformationOnboarding and sets the default values.
+     * Instantiates a new oemWarrantyInformationOnboarding and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OemWarrantyInformationOnboarding() {
         super();
-        this.setOdataType("#microsoft.graph.oemWarrantyInformationOnboarding");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OemWarrantyInformationOnboarding
+     * @return a oemWarrantyInformationOnboarding
      */
     @javax.annotation.Nonnull
     public static OemWarrantyInformationOnboarding createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -54,12 +55,11 @@ public class OemWarrantyInformationOnboarding extends Entity implements Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OemWarrantyInformationOnboarding currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("available", (n) -> { currentObject.setAvailable(n.getBooleanValue()); });
-            this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
-            this.put("oemName", (n) -> { currentObject.setOemName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("available", (n) -> { this.setAvailable(n.getBooleanValue()); });
+        deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
+        deserializerMap.put("oemName", (n) -> { this.setOemName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the oemName property value. OEM name. This property is read-only.
@@ -74,18 +74,17 @@ public class OemWarrantyInformationOnboarding extends Entity implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeBooleanValue("available", this.getAvailable());
-        writer.writeBooleanValue("enabled", this.getEnabled());
-        writer.writeStringValue("oemName", this.getOemName());
     }
     /**
      * Sets the available property value. Specifies whether warranty API is available. This property is read-only.
      * @param value Value to set for the available property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailable(@javax.annotation.Nullable final Boolean value) {
         this._available = value;
     }
@@ -94,6 +93,7 @@ public class OemWarrantyInformationOnboarding extends Entity implements Parsable
      * @param value Value to set for the enabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
         this._enabled = value;
     }
@@ -102,6 +102,7 @@ public class OemWarrantyInformationOnboarding extends Entity implements Parsable
      * @param value Value to set for the oemName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOemName(@javax.annotation.Nullable final String value) {
         this._oemName = value;
     }

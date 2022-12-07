@@ -19,6 +19,7 @@ public class UpdateRelationshipsPostRequestBody implements AdditionalDataHolder,
      * Instantiates a new updateRelationshipsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateRelationshipsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,10 +47,9 @@ public class UpdateRelationshipsPostRequestBody implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UpdateRelationshipsPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("relationships", (n) -> { currentObject.setRelationships(n.getCollectionOfObjectValues(MobileAppRelationship::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("relationships", (n) -> { this.setRelationships(n.getCollectionOfObjectValues(MobileAppRelationship::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the relationships property value. The relationships property
@@ -64,6 +64,7 @@ public class UpdateRelationshipsPostRequestBody implements AdditionalDataHolder,
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("relationships", this.getRelationships());
@@ -74,6 +75,7 @@ public class UpdateRelationshipsPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +84,7 @@ public class UpdateRelationshipsPostRequestBody implements AdditionalDataHolder,
      * @param value Value to set for the relationships property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelationships(@javax.annotation.Nullable final java.util.List<MobileAppRelationship> value) {
         this._relationships = value;
     }

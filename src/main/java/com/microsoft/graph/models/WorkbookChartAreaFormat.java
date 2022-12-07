@@ -16,9 +16,9 @@ public class WorkbookChartAreaFormat extends Entity implements Parsable {
      * Instantiates a new workbookChartAreaFormat and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChartAreaFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartAreaFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,11 +36,10 @@ public class WorkbookChartAreaFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChartAreaFormat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("fill", (n) -> { currentObject.setFill(n.getObjectValue(WorkbookChartFill::createFromDiscriminatorValue)); });
-            this.put("font", (n) -> { currentObject.setFont(n.getObjectValue(WorkbookChartFont::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fill", (n) -> { this.setFill(n.getObjectValue(WorkbookChartFill::createFromDiscriminatorValue)); });
+        deserializerMap.put("font", (n) -> { this.setFont(n.getObjectValue(WorkbookChartFont::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the fill property value. Represents the fill format of an object, which includes background formatting information. Read-only.
@@ -63,6 +62,7 @@ public class WorkbookChartAreaFormat extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +74,7 @@ public class WorkbookChartAreaFormat extends Entity implements Parsable {
      * @param value Value to set for the fill property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFill(@javax.annotation.Nullable final WorkbookChartFill value) {
         this._fill = value;
     }
@@ -82,6 +83,7 @@ public class WorkbookChartAreaFormat extends Entity implements Parsable {
      * @param value Value to set for the font property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFont(@javax.annotation.Nullable final WorkbookChartFont value) {
         this._font = value;
     }

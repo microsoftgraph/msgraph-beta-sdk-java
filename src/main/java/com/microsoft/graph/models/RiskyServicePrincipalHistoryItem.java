@@ -19,9 +19,9 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      * Instantiates a new riskyServicePrincipalHistoryItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RiskyServicePrincipalHistoryItem() {
         super();
-        this.setOdataType("#microsoft.graph.riskyServicePrincipalHistoryItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,12 +47,11 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RiskyServicePrincipalHistoryItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getObjectValue(RiskServicePrincipalActivity::createFromDiscriminatorValue)); });
-            this.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getStringValue()); });
-            this.put("servicePrincipalId", (n) -> { currentObject.setServicePrincipalId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getObjectValue(RiskServicePrincipalActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("initiatedBy", (n) -> { this.setInitiatedBy(n.getStringValue()); });
+        deserializerMap.put("servicePrincipalId", (n) -> { this.setServicePrincipalId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the initiatedBy property value. The identifier of the actor of the operation.
@@ -75,6 +74,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +87,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      * @param value Value to set for the activity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final RiskServicePrincipalActivity value) {
         this._activity = value;
     }
@@ -95,6 +96,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      * @param value Value to set for the initiatedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatedBy(@javax.annotation.Nullable final String value) {
         this._initiatedBy = value;
     }
@@ -103,6 +105,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      * @param value Value to set for the servicePrincipalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalId(@javax.annotation.Nullable final String value) {
         this._servicePrincipalId = value;
     }

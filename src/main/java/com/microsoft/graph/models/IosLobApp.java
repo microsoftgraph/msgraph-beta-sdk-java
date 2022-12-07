@@ -17,7 +17,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
     private String _bundleId;
     /** The expiration time. */
     private OffsetDateTime _expirationDateTime;
-    /** The identity version. */
+    /** The identity version. This property is being deprecated in 2211(November 2022) */
     private String _identityVersion;
     /** The value for the minimum applicable operating system. */
     private IosMinimumOperatingSystem _minimumSupportedOperatingSystem;
@@ -27,6 +27,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * Instantiates a new IosLobApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosLobApp() {
         super();
         this.setOdataType("#microsoft.graph.iosLobApp");
@@ -79,19 +80,18 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosLobApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicableDeviceType", (n) -> { currentObject.setApplicableDeviceType(n.getObjectValue(IosDeviceType::createFromDiscriminatorValue)); });
-            this.put("buildNumber", (n) -> { currentObject.setBuildNumber(n.getStringValue()); });
-            this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("identityVersion", (n) -> { currentObject.setIdentityVersion(n.getStringValue()); });
-            this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(IosMinimumOperatingSystem::createFromDiscriminatorValue)); });
-            this.put("versionNumber", (n) -> { currentObject.setVersionNumber(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicableDeviceType", (n) -> { this.setApplicableDeviceType(n.getObjectValue(IosDeviceType::createFromDiscriminatorValue)); });
+        deserializerMap.put("buildNumber", (n) -> { this.setBuildNumber(n.getStringValue()); });
+        deserializerMap.put("bundleId", (n) -> { this.setBundleId(n.getStringValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("identityVersion", (n) -> { this.setIdentityVersion(n.getStringValue()); });
+        deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { this.setMinimumSupportedOperatingSystem(n.getObjectValue(IosMinimumOperatingSystem::createFromDiscriminatorValue)); });
+        deserializerMap.put("versionNumber", (n) -> { this.setVersionNumber(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the identityVersion property value. The identity version.
+     * Gets the identityVersion property value. The identity version. This property is being deprecated in 2211(November 2022)
      * @return a string
      */
     @javax.annotation.Nullable
@@ -119,6 +119,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +136,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the applicableDeviceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicableDeviceType(@javax.annotation.Nullable final IosDeviceType value) {
         this._applicableDeviceType = value;
     }
@@ -143,6 +145,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the buildNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBuildNumber(@javax.annotation.Nullable final String value) {
         this._buildNumber = value;
     }
@@ -151,6 +154,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the bundleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBundleId(@javax.annotation.Nullable final String value) {
         this._bundleId = value;
     }
@@ -159,14 +163,16 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
     /**
-     * Sets the identityVersion property value. The identity version.
+     * Sets the identityVersion property value. The identity version. This property is being deprecated in 2211(November 2022)
      * @param value Value to set for the identityVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityVersion(@javax.annotation.Nullable final String value) {
         this._identityVersion = value;
     }
@@ -175,6 +181,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final IosMinimumOperatingSystem value) {
         this._minimumSupportedOperatingSystem = value;
     }
@@ -183,6 +190,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
      * @param value Value to set for the versionNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersionNumber(@javax.annotation.Nullable final String value) {
         this._versionNumber = value;
     }

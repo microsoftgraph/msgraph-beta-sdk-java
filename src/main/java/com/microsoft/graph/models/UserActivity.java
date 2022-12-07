@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class UserActivity extends Entity implements Parsable {
     /** The activationUrl property */
     private String _activationUrl;
@@ -38,17 +39,17 @@ public class UserActivity extends Entity implements Parsable {
     /** The visualElements property */
     private VisualInfo _visualElements;
     /**
-     * Instantiates a new UserActivity and sets the default values.
+     * Instantiates a new userActivity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserActivity() {
         super();
-        this.setOdataType("#microsoft.graph.userActivity");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserActivity
+     * @return a userActivity
      */
     @javax.annotation.Nonnull
     public static UserActivity createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -133,23 +134,22 @@ public class UserActivity extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserActivity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activationUrl", (n) -> { currentObject.setActivationUrl(n.getStringValue()); });
-            this.put("activitySourceHost", (n) -> { currentObject.setActivitySourceHost(n.getStringValue()); });
-            this.put("appActivityId", (n) -> { currentObject.setAppActivityId(n.getStringValue()); });
-            this.put("appDisplayName", (n) -> { currentObject.setAppDisplayName(n.getStringValue()); });
-            this.put("contentInfo", (n) -> { currentObject.setContentInfo(n.getObjectValue(Json::createFromDiscriminatorValue)); });
-            this.put("contentUrl", (n) -> { currentObject.setContentUrl(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("fallbackUrl", (n) -> { currentObject.setFallbackUrl(n.getStringValue()); });
-            this.put("historyItems", (n) -> { currentObject.setHistoryItems(n.getCollectionOfObjectValues(ActivityHistoryItem::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(Status.class)); });
-            this.put("userTimezone", (n) -> { currentObject.setUserTimezone(n.getStringValue()); });
-            this.put("visualElements", (n) -> { currentObject.setVisualElements(n.getObjectValue(VisualInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activationUrl", (n) -> { this.setActivationUrl(n.getStringValue()); });
+        deserializerMap.put("activitySourceHost", (n) -> { this.setActivitySourceHost(n.getStringValue()); });
+        deserializerMap.put("appActivityId", (n) -> { this.setAppActivityId(n.getStringValue()); });
+        deserializerMap.put("appDisplayName", (n) -> { this.setAppDisplayName(n.getStringValue()); });
+        deserializerMap.put("contentInfo", (n) -> { this.setContentInfo(n.getObjectValue(Json::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentUrl", (n) -> { this.setContentUrl(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("fallbackUrl", (n) -> { this.setFallbackUrl(n.getStringValue()); });
+        deserializerMap.put("historyItems", (n) -> { this.setHistoryItems(n.getCollectionOfObjectValues(ActivityHistoryItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(Status.class)); });
+        deserializerMap.put("userTimezone", (n) -> { this.setUserTimezone(n.getStringValue()); });
+        deserializerMap.put("visualElements", (n) -> { this.setVisualElements(n.getObjectValue(VisualInfo::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the historyItems property value. The historyItems property
@@ -196,6 +196,7 @@ public class UserActivity extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -219,6 +220,7 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the activationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivationUrl(@javax.annotation.Nullable final String value) {
         this._activationUrl = value;
     }
@@ -227,6 +229,7 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the activitySourceHost property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivitySourceHost(@javax.annotation.Nullable final String value) {
         this._activitySourceHost = value;
     }
@@ -235,6 +238,7 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the appActivityId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppActivityId(@javax.annotation.Nullable final String value) {
         this._appActivityId = value;
     }
@@ -243,6 +247,7 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the appDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppDisplayName(@javax.annotation.Nullable final String value) {
         this._appDisplayName = value;
     }
@@ -251,6 +256,7 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the contentInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentInfo(@javax.annotation.Nullable final Json value) {
         this._contentInfo = value;
     }
@@ -259,6 +265,7 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the contentUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentUrl(@javax.annotation.Nullable final String value) {
         this._contentUrl = value;
     }
@@ -267,6 +274,7 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -275,6 +283,7 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -283,6 +292,7 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the fallbackUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFallbackUrl(@javax.annotation.Nullable final String value) {
         this._fallbackUrl = value;
     }
@@ -291,6 +301,7 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the historyItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHistoryItems(@javax.annotation.Nullable final java.util.List<ActivityHistoryItem> value) {
         this._historyItems = value;
     }
@@ -299,6 +310,7 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -307,6 +319,7 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final Status value) {
         this._status = value;
     }
@@ -315,6 +328,7 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the userTimezone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserTimezone(@javax.annotation.Nullable final String value) {
         this._userTimezone = value;
     }
@@ -323,6 +337,7 @@ public class UserActivity extends Entity implements Parsable {
      * @param value Value to set for the visualElements property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVisualElements(@javax.annotation.Nullable final VisualInfo value) {
         this._visualElements = value;
     }

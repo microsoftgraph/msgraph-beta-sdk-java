@@ -21,9 +21,9 @@ public class ExcludeTarget implements AdditionalDataHolder, Parsable {
      * Instantiates a new excludeTarget and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExcludeTarget() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.excludeTarget");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,12 +49,11 @@ public class ExcludeTarget implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExcludeTarget currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("targetType", (n) -> { currentObject.setTargetType(n.getEnumValue(AuthenticationMethodTargetType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("targetType", (n) -> { this.setTargetType(n.getEnumValue(AuthenticationMethodTargetType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The object identifier of an Azure AD user or group.
@@ -85,6 +84,7 @@ public class ExcludeTarget implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("id", this.getId());
@@ -97,6 +97,7 @@ public class ExcludeTarget implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class ExcludeTarget implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -113,6 +115,7 @@ public class ExcludeTarget implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +124,7 @@ public class ExcludeTarget implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the targetType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetType(@javax.annotation.Nullable final AuthenticationMethodTargetType value) {
         this._targetType = value;
     }

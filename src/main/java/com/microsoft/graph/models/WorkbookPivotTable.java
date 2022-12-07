@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class WorkbookPivotTable extends Entity implements Parsable {
     /** Name of the PivotTable. */
     private String _name;
@@ -17,9 +17,9 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      * Instantiates a new workbookPivotTable and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookPivotTable() {
         super();
-        this.setOdataType("#microsoft.graph.workbookPivotTable");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,11 +37,10 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookPivotTable currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("worksheet", (n) -> { currentObject.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("worksheet", (n) -> { this.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. Name of the PivotTable.
@@ -64,6 +63,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +75,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -83,6 +84,7 @@ public class WorkbookPivotTable extends Entity implements Parsable {
      * @param value Value to set for the worksheet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorksheet(@javax.annotation.Nullable final WorkbookWorksheet value) {
         this._worksheet = value;
     }

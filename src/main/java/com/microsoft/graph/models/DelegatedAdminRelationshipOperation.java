@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class DelegatedAdminRelationshipOperation extends Entity implements Parsable {
     /** The time in ISO 8601 format and in UTC time when the long-running operation was created. Read-only. */
     private OffsetDateTime _createdDateTime;
@@ -24,9 +24,9 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * Instantiates a new delegatedAdminRelationshipOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DelegatedAdminRelationshipOperation() {
         super();
-        this.setOdataType("#microsoft.graph.delegatedAdminRelationshipOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,14 +60,13 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DelegatedAdminRelationshipOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("data", (n) -> { currentObject.setData(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("operationType", (n) -> { currentObject.setOperationType(n.getEnumValue(DelegatedAdminRelationshipOperationType.class)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(LongRunningOperationStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("data", (n) -> { this.setData(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getEnumValue(DelegatedAdminRelationshipOperationType.class)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(LongRunningOperationStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The time in ISO 8601 format and in UTC time when the long-running operation was last modified. Read-only.
@@ -98,6 +97,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -112,6 +112,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -120,6 +121,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * @param value Value to set for the data property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setData(@javax.annotation.Nullable final String value) {
         this._data = value;
     }
@@ -128,6 +130,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -136,6 +139,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * @param value Value to set for the operationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperationType(@javax.annotation.Nullable final DelegatedAdminRelationshipOperationType value) {
         this._operationType = value;
     }
@@ -144,6 +148,7 @@ public class DelegatedAdminRelationshipOperation extends Entity implements Parsa
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final LongRunningOperationStatus value) {
         this._status = value;
     }

@@ -1,5 +1,6 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.BusinessScenarioTask;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -8,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class PlannerTask extends PlannerDelta implements Parsable {
     /** Number of checklist items with value set to false, representing incomplete items. */
     private Integer _activeChecklistItemCount;
@@ -66,9 +67,9 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * Instantiates a new plannerTask and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerTask() {
         super();
-        this.setOdataType("#microsoft.graph.plannerTask");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -78,6 +79,13 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     @javax.annotation.Nonnull
     public static PlannerTask createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.businessScenarioTask": return new BusinessScenarioTask();
+            }
+        }
         return new PlannerTask();
     }
     /**
@@ -214,35 +222,34 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerTask currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeChecklistItemCount", (n) -> { currentObject.setActiveChecklistItemCount(n.getIntegerValue()); });
-            this.put("appliedCategories", (n) -> { currentObject.setAppliedCategories(n.getObjectValue(PlannerAppliedCategories::createFromDiscriminatorValue)); });
-            this.put("assignedToTaskBoardFormat", (n) -> { currentObject.setAssignedToTaskBoardFormat(n.getObjectValue(PlannerAssignedToTaskBoardTaskFormat::createFromDiscriminatorValue)); });
-            this.put("assigneePriority", (n) -> { currentObject.setAssigneePriority(n.getStringValue()); });
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getObjectValue(PlannerAssignments::createFromDiscriminatorValue)); });
-            this.put("bucketId", (n) -> { currentObject.setBucketId(n.getStringValue()); });
-            this.put("bucketTaskBoardFormat", (n) -> { currentObject.setBucketTaskBoardFormat(n.getObjectValue(PlannerBucketTaskBoardTaskFormat::createFromDiscriminatorValue)); });
-            this.put("checklistItemCount", (n) -> { currentObject.setChecklistItemCount(n.getIntegerValue()); });
-            this.put("completedBy", (n) -> { currentObject.setCompletedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("conversationThreadId", (n) -> { currentObject.setConversationThreadId(n.getStringValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("creationSource", (n) -> { currentObject.setCreationSource(n.getObjectValue(PlannerTaskCreation::createFromDiscriminatorValue)); });
-            this.put("details", (n) -> { currentObject.setDetails(n.getObjectValue(PlannerTaskDetails::createFromDiscriminatorValue)); });
-            this.put("dueDateTime", (n) -> { currentObject.setDueDateTime(n.getOffsetDateTimeValue()); });
-            this.put("hasDescription", (n) -> { currentObject.setHasDescription(n.getBooleanValue()); });
-            this.put("orderHint", (n) -> { currentObject.setOrderHint(n.getStringValue()); });
-            this.put("percentComplete", (n) -> { currentObject.setPercentComplete(n.getIntegerValue()); });
-            this.put("planId", (n) -> { currentObject.setPlanId(n.getStringValue()); });
-            this.put("previewType", (n) -> { currentObject.setPreviewType(n.getEnumValue(PlannerPreviewType.class)); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("progressTaskBoardFormat", (n) -> { currentObject.setProgressTaskBoardFormat(n.getObjectValue(PlannerProgressTaskBoardTaskFormat::createFromDiscriminatorValue)); });
-            this.put("referenceCount", (n) -> { currentObject.setReferenceCount(n.getIntegerValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("title", (n) -> { currentObject.setTitle(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeChecklistItemCount", (n) -> { this.setActiveChecklistItemCount(n.getIntegerValue()); });
+        deserializerMap.put("appliedCategories", (n) -> { this.setAppliedCategories(n.getObjectValue(PlannerAppliedCategories::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignedToTaskBoardFormat", (n) -> { this.setAssignedToTaskBoardFormat(n.getObjectValue(PlannerAssignedToTaskBoardTaskFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("assigneePriority", (n) -> { this.setAssigneePriority(n.getStringValue()); });
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getObjectValue(PlannerAssignments::createFromDiscriminatorValue)); });
+        deserializerMap.put("bucketId", (n) -> { this.setBucketId(n.getStringValue()); });
+        deserializerMap.put("bucketTaskBoardFormat", (n) -> { this.setBucketTaskBoardFormat(n.getObjectValue(PlannerBucketTaskBoardTaskFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("checklistItemCount", (n) -> { this.setChecklistItemCount(n.getIntegerValue()); });
+        deserializerMap.put("completedBy", (n) -> { this.setCompletedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("conversationThreadId", (n) -> { this.setConversationThreadId(n.getStringValue()); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("creationSource", (n) -> { this.setCreationSource(n.getObjectValue(PlannerTaskCreation::createFromDiscriminatorValue)); });
+        deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(PlannerTaskDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("dueDateTime", (n) -> { this.setDueDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("hasDescription", (n) -> { this.setHasDescription(n.getBooleanValue()); });
+        deserializerMap.put("orderHint", (n) -> { this.setOrderHint(n.getStringValue()); });
+        deserializerMap.put("percentComplete", (n) -> { this.setPercentComplete(n.getIntegerValue()); });
+        deserializerMap.put("planId", (n) -> { this.setPlanId(n.getStringValue()); });
+        deserializerMap.put("previewType", (n) -> { this.setPreviewType(n.getEnumValue(PlannerPreviewType.class)); });
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("progressTaskBoardFormat", (n) -> { this.setProgressTaskBoardFormat(n.getObjectValue(PlannerProgressTaskBoardTaskFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("referenceCount", (n) -> { this.setReferenceCount(n.getIntegerValue()); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hasDescription property value. Read-only. Value is true if the details object of the task has a non-empty description and false otherwise.
@@ -329,6 +336,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -364,6 +372,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the activeChecklistItemCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveChecklistItemCount(@javax.annotation.Nullable final Integer value) {
         this._activeChecklistItemCount = value;
     }
@@ -372,6 +381,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the appliedCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliedCategories(@javax.annotation.Nullable final PlannerAppliedCategories value) {
         this._appliedCategories = value;
     }
@@ -380,6 +390,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the assignedToTaskBoardFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedToTaskBoardFormat(@javax.annotation.Nullable final PlannerAssignedToTaskBoardTaskFormat value) {
         this._assignedToTaskBoardFormat = value;
     }
@@ -388,6 +399,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the assigneePriority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssigneePriority(@javax.annotation.Nullable final String value) {
         this._assigneePriority = value;
     }
@@ -396,6 +408,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final PlannerAssignments value) {
         this._assignments = value;
     }
@@ -404,6 +417,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the bucketId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBucketId(@javax.annotation.Nullable final String value) {
         this._bucketId = value;
     }
@@ -412,6 +426,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the bucketTaskBoardFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBucketTaskBoardFormat(@javax.annotation.Nullable final PlannerBucketTaskBoardTaskFormat value) {
         this._bucketTaskBoardFormat = value;
     }
@@ -420,6 +435,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the checklistItemCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChecklistItemCount(@javax.annotation.Nullable final Integer value) {
         this._checklistItemCount = value;
     }
@@ -428,6 +444,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the completedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._completedBy = value;
     }
@@ -436,6 +453,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._completedDateTime = value;
     }
@@ -444,6 +462,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the conversationThreadId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConversationThreadId(@javax.annotation.Nullable final String value) {
         this._conversationThreadId = value;
     }
@@ -452,6 +471,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -460,6 +480,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -468,6 +489,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the creationSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreationSource(@javax.annotation.Nullable final PlannerTaskCreation value) {
         this._creationSource = value;
     }
@@ -476,6 +498,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the details property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final PlannerTaskDetails value) {
         this._details = value;
     }
@@ -484,6 +507,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the dueDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDueDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._dueDateTime = value;
     }
@@ -492,6 +516,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the hasDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasDescription(@javax.annotation.Nullable final Boolean value) {
         this._hasDescription = value;
     }
@@ -500,6 +525,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the orderHint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrderHint(@javax.annotation.Nullable final String value) {
         this._orderHint = value;
     }
@@ -508,6 +534,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the percentComplete property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPercentComplete(@javax.annotation.Nullable final Integer value) {
         this._percentComplete = value;
     }
@@ -516,6 +543,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the planId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlanId(@javax.annotation.Nullable final String value) {
         this._planId = value;
     }
@@ -524,6 +552,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the previewType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreviewType(@javax.annotation.Nullable final PlannerPreviewType value) {
         this._previewType = value;
     }
@@ -532,6 +561,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }
@@ -540,6 +570,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the progressTaskBoardFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProgressTaskBoardFormat(@javax.annotation.Nullable final PlannerProgressTaskBoardTaskFormat value) {
         this._progressTaskBoardFormat = value;
     }
@@ -548,6 +579,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the referenceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReferenceCount(@javax.annotation.Nullable final Integer value) {
         this._referenceCount = value;
     }
@@ -556,6 +588,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -564,6 +597,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      * @param value Value to set for the title property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTitle(@javax.annotation.Nullable final String value) {
         this._title = value;
     }

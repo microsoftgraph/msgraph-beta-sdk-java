@@ -24,9 +24,9 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
      * Instantiates a new deploymentSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeploymentSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsUpdates.deploymentSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,13 +59,12 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeploymentSettings currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("monitoring", (n) -> { currentObject.setMonitoring(n.getObjectValue(MonitoringSettings::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("rollout", (n) -> { currentObject.setRollout(n.getObjectValue(RolloutSettings::createFromDiscriminatorValue)); });
-            this.put("safeguard", (n) -> { currentObject.setSafeguard(n.getObjectValue(SafeguardSettings::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("monitoring", (n) -> { this.setMonitoring(n.getObjectValue(MonitoringSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("rollout", (n) -> { this.setRollout(n.getObjectValue(RolloutSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("safeguard", (n) -> { this.setSafeguard(n.getObjectValue(SafeguardSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the monitoring property value. Settings governing conditions to monitor and automated actions to take.
@@ -104,6 +103,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("monitoring", this.getMonitoring());
@@ -117,6 +117,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -125,6 +126,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the monitoring property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMonitoring(@javax.annotation.Nullable final MonitoringSettings value) {
         this._monitoring = value;
     }
@@ -133,6 +135,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +144,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the rollout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRollout(@javax.annotation.Nullable final RolloutSettings value) {
         this._rollout = value;
     }
@@ -149,6 +153,7 @@ public class DeploymentSettings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the safeguard property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSafeguard(@javax.annotation.Nullable final SafeguardSettings value) {
         this._safeguard = value;
     }

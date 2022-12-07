@@ -24,9 +24,9 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      * Instantiates a new InnerError and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InnerError() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.InnerError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,13 +68,12 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final InnerError currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("client-request-id", (n) -> { currentObject.setClientRequestId(n.getStringValue()); });
-            this.put("date", (n) -> { currentObject.setDate(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("request-id", (n) -> { currentObject.setRequestId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("client-request-id", (n) -> { this.setClientRequestId(n.getStringValue()); });
+        deserializerMap.put("date", (n) -> { this.setDate(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("request-id", (n) -> { this.setRequestId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -97,6 +96,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("client-request-id", this.getClientRequestId());
@@ -110,6 +110,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +119,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the clientRequestId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientRequestId(@javax.annotation.Nullable final String value) {
         this._clientRequestId = value;
     }
@@ -126,6 +128,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the Date property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDate(@javax.annotation.Nullable final OffsetDateTime value) {
         this._date = value;
     }
@@ -134,6 +137,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -142,6 +146,7 @@ public class InnerError implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the requestId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestId(@javax.annotation.Nullable final String value) {
         this._requestId = value;
     }

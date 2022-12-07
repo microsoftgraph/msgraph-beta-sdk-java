@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class DeviceComplianceUserStatus extends Entity implements Parsable {
     /** Devices count for that user. */
     private Integer _devicesCount;
@@ -24,9 +24,9 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
      * Instantiates a new deviceComplianceUserStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceComplianceUserStatus() {
         super();
-        this.setOdataType("#microsoft.graph.deviceComplianceUserStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,14 +52,13 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceComplianceUserStatus currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("devicesCount", (n) -> { currentObject.setDevicesCount(n.getIntegerValue()); });
-            this.put("lastReportedDateTime", (n) -> { currentObject.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ComplianceStatus.class)); });
-            this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("devicesCount", (n) -> { this.setDevicesCount(n.getIntegerValue()); });
+        deserializerMap.put("lastReportedDateTime", (n) -> { this.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ComplianceStatus.class)); });
+        deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastReportedDateTime property value. Last modified date time of the policy report.
@@ -98,6 +97,7 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -112,6 +112,7 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
      * @param value Value to set for the devicesCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevicesCount(@javax.annotation.Nullable final Integer value) {
         this._devicesCount = value;
     }
@@ -120,6 +121,7 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
      * @param value Value to set for the lastReportedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastReportedDateTime = value;
     }
@@ -128,6 +130,7 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ComplianceStatus value) {
         this._status = value;
     }
@@ -136,6 +139,7 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
         this._userDisplayName = value;
     }
@@ -144,6 +148,7 @@ public class DeviceComplianceUserStatus extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

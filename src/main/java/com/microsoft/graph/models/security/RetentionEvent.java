@@ -40,9 +40,9 @@ public class RetentionEvent extends Entity implements Parsable {
      * Instantiates a new retentionEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RetentionEvent() {
         super();
-        this.setOdataType("#microsoft.graph.security.retentionEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -124,21 +124,20 @@ public class RetentionEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RetentionEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("eventPropagationResults", (n) -> { currentObject.setEventPropagationResults(n.getCollectionOfObjectValues(EventPropagationResult::createFromDiscriminatorValue)); });
-            this.put("eventQueries", (n) -> { currentObject.setEventQueries(n.getCollectionOfObjectValues(EventQuery::createFromDiscriminatorValue)); });
-            this.put("eventStatus", (n) -> { currentObject.setEventStatus(n.getObjectValue(RetentionEventStatus::createFromDiscriminatorValue)); });
-            this.put("eventTriggerDateTime", (n) -> { currentObject.setEventTriggerDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastStatusUpdateDateTime", (n) -> { currentObject.setLastStatusUpdateDateTime(n.getOffsetDateTimeValue()); });
-            this.put("retentionEventType", (n) -> { currentObject.setRetentionEventType(n.getObjectValue(RetentionEventType::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("eventPropagationResults", (n) -> { this.setEventPropagationResults(n.getCollectionOfObjectValues(EventPropagationResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("eventQueries", (n) -> { this.setEventQueries(n.getCollectionOfObjectValues(EventQuery::createFromDiscriminatorValue)); });
+        deserializerMap.put("eventStatus", (n) -> { this.setEventStatus(n.getObjectValue(RetentionEventStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("eventTriggerDateTime", (n) -> { this.setEventTriggerDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastStatusUpdateDateTime", (n) -> { this.setLastStatusUpdateDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("retentionEventType", (n) -> { this.setRetentionEventType(n.getObjectValue(RetentionEventType::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedBy property value. The user who last modified the retentionEvent.
@@ -177,6 +176,7 @@ public class RetentionEvent extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -198,6 +198,7 @@ public class RetentionEvent extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -206,6 +207,7 @@ public class RetentionEvent extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -214,6 +216,7 @@ public class RetentionEvent extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -222,6 +225,7 @@ public class RetentionEvent extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -230,6 +234,7 @@ public class RetentionEvent extends Entity implements Parsable {
      * @param value Value to set for the eventPropagationResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventPropagationResults(@javax.annotation.Nullable final java.util.List<EventPropagationResult> value) {
         this._eventPropagationResults = value;
     }
@@ -238,6 +243,7 @@ public class RetentionEvent extends Entity implements Parsable {
      * @param value Value to set for the eventQueries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventQueries(@javax.annotation.Nullable final java.util.List<EventQuery> value) {
         this._eventQueries = value;
     }
@@ -246,6 +252,7 @@ public class RetentionEvent extends Entity implements Parsable {
      * @param value Value to set for the eventStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventStatus(@javax.annotation.Nullable final RetentionEventStatus value) {
         this._eventStatus = value;
     }
@@ -254,6 +261,7 @@ public class RetentionEvent extends Entity implements Parsable {
      * @param value Value to set for the eventTriggerDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventTriggerDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._eventTriggerDateTime = value;
     }
@@ -262,6 +270,7 @@ public class RetentionEvent extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -270,6 +279,7 @@ public class RetentionEvent extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -278,6 +288,7 @@ public class RetentionEvent extends Entity implements Parsable {
      * @param value Value to set for the lastStatusUpdateDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastStatusUpdateDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastStatusUpdateDateTime = value;
     }
@@ -286,6 +297,7 @@ public class RetentionEvent extends Entity implements Parsable {
      * @param value Value to set for the retentionEventType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRetentionEventType(@javax.annotation.Nullable final RetentionEventType value) {
         this._retentionEventType = value;
     }

@@ -12,6 +12,7 @@ import com.microsoft.graph.models.IosVppApp;
 import com.microsoft.graph.models.MacOSDmgApp;
 import com.microsoft.graph.models.MacOSLobApp;
 import com.microsoft.graph.models.MacOSMdatpApp;
+import com.microsoft.graph.models.MacOSMicrosoftDefenderApp;
 import com.microsoft.graph.models.MacOSMicrosoftEdgeApp;
 import com.microsoft.graph.models.MacOSOfficeSuiteApp;
 import com.microsoft.graph.models.MacOsVppApp;
@@ -45,6 +46,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** An abstract class containing the base properties for Intune mobile apps. */
 public class MobileApp extends Entity implements Parsable {
     /** The list of group assignments for this mobile app. */
     private java.util.List<MobileAppAssignment> _assignments;
@@ -97,17 +99,17 @@ public class MobileApp extends Entity implements Parsable {
     /** The list of installation states for this mobile app. */
     private java.util.List<UserAppInstallStatus> _userStatuses;
     /**
-     * Instantiates a new MobileApp and sets the default values.
+     * Instantiates a new mobileApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileApp() {
         super();
-        this.setOdataType("#microsoft.graph.mobileApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MobileApp
+     * @return a mobileApp
      */
     @javax.annotation.Nonnull
     public static MobileApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -128,6 +130,7 @@ public class MobileApp extends Entity implements Parsable {
                 case "#microsoft.graph.macOSDmgApp": return new MacOSDmgApp();
                 case "#microsoft.graph.macOSLobApp": return new MacOSLobApp();
                 case "#microsoft.graph.macOSMdatpApp": return new MacOSMdatpApp();
+                case "#microsoft.graph.macOSMicrosoftDefenderApp": return new MacOSMicrosoftDefenderApp();
                 case "#microsoft.graph.macOSMicrosoftEdgeApp": return new MacOSMicrosoftEdgeApp();
                 case "#microsoft.graph.macOSOfficeSuiteApp": return new MacOSOfficeSuiteApp();
                 case "#microsoft.graph.macOsVppApp": return new MacOsVppApp();
@@ -227,34 +230,33 @@ public class MobileApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MobileApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(MobileAppAssignment::createFromDiscriminatorValue)); });
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfObjectValues(MobileAppCategory::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("dependentAppCount", (n) -> { currentObject.setDependentAppCount(n.getIntegerValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("developer", (n) -> { currentObject.setDeveloper(n.getStringValue()); });
-            this.put("deviceStatuses", (n) -> { currentObject.setDeviceStatuses(n.getCollectionOfObjectValues(MobileAppInstallStatus::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("informationUrl", (n) -> { currentObject.setInformationUrl(n.getStringValue()); });
-            this.put("installSummary", (n) -> { currentObject.setInstallSummary(n.getObjectValue(MobileAppInstallSummary::createFromDiscriminatorValue)); });
-            this.put("isAssigned", (n) -> { currentObject.setIsAssigned(n.getBooleanValue()); });
-            this.put("isFeatured", (n) -> { currentObject.setIsFeatured(n.getBooleanValue()); });
-            this.put("largeIcon", (n) -> { currentObject.setLargeIcon(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
-            this.put("owner", (n) -> { currentObject.setOwner(n.getStringValue()); });
-            this.put("privacyInformationUrl", (n) -> { currentObject.setPrivacyInformationUrl(n.getStringValue()); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
-            this.put("publishingState", (n) -> { currentObject.setPublishingState(n.getEnumValue(MobileAppPublishingState.class)); });
-            this.put("relationships", (n) -> { currentObject.setRelationships(n.getCollectionOfObjectValues(MobileAppRelationship::createFromDiscriminatorValue)); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("supersededAppCount", (n) -> { currentObject.setSupersededAppCount(n.getIntegerValue()); });
-            this.put("supersedingAppCount", (n) -> { currentObject.setSupersedingAppCount(n.getIntegerValue()); });
-            this.put("uploadState", (n) -> { currentObject.setUploadState(n.getIntegerValue()); });
-            this.put("userStatuses", (n) -> { currentObject.setUserStatuses(n.getCollectionOfObjectValues(UserAppInstallStatus::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(MobileAppAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfObjectValues(MobileAppCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("dependentAppCount", (n) -> { this.setDependentAppCount(n.getIntegerValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("developer", (n) -> { this.setDeveloper(n.getStringValue()); });
+        deserializerMap.put("deviceStatuses", (n) -> { this.setDeviceStatuses(n.getCollectionOfObjectValues(MobileAppInstallStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("informationUrl", (n) -> { this.setInformationUrl(n.getStringValue()); });
+        deserializerMap.put("installSummary", (n) -> { this.setInstallSummary(n.getObjectValue(MobileAppInstallSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("isAssigned", (n) -> { this.setIsAssigned(n.getBooleanValue()); });
+        deserializerMap.put("isFeatured", (n) -> { this.setIsFeatured(n.getBooleanValue()); });
+        deserializerMap.put("largeIcon", (n) -> { this.setLargeIcon(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("notes", (n) -> { this.setNotes(n.getStringValue()); });
+        deserializerMap.put("owner", (n) -> { this.setOwner(n.getStringValue()); });
+        deserializerMap.put("privacyInformationUrl", (n) -> { this.setPrivacyInformationUrl(n.getStringValue()); });
+        deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
+        deserializerMap.put("publishingState", (n) -> { this.setPublishingState(n.getEnumValue(MobileAppPublishingState.class)); });
+        deserializerMap.put("relationships", (n) -> { this.setRelationships(n.getCollectionOfObjectValues(MobileAppRelationship::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("supersededAppCount", (n) -> { this.setSupersededAppCount(n.getIntegerValue()); });
+        deserializerMap.put("supersedingAppCount", (n) -> { this.setSupersedingAppCount(n.getIntegerValue()); });
+        deserializerMap.put("uploadState", (n) -> { this.setUploadState(n.getIntegerValue()); });
+        deserializerMap.put("userStatuses", (n) -> { this.setUserStatuses(n.getCollectionOfObjectValues(UserAppInstallStatus::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the informationUrl property value. The more information Url.
@@ -397,6 +399,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -431,6 +434,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<MobileAppAssignment> value) {
         this._assignments = value;
     }
@@ -439,6 +443,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<MobileAppCategory> value) {
         this._categories = value;
     }
@@ -447,6 +452,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -455,6 +461,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the dependentAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDependentAppCount(@javax.annotation.Nullable final Integer value) {
         this._dependentAppCount = value;
     }
@@ -463,6 +470,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -471,6 +479,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the developer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeveloper(@javax.annotation.Nullable final String value) {
         this._developer = value;
     }
@@ -479,6 +488,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the deviceStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceStatuses(@javax.annotation.Nullable final java.util.List<MobileAppInstallStatus> value) {
         this._deviceStatuses = value;
     }
@@ -487,6 +497,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -495,6 +506,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the informationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInformationUrl(@javax.annotation.Nullable final String value) {
         this._informationUrl = value;
     }
@@ -503,6 +515,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the installSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallSummary(@javax.annotation.Nullable final MobileAppInstallSummary value) {
         this._installSummary = value;
     }
@@ -511,6 +524,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the isAssigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAssigned(@javax.annotation.Nullable final Boolean value) {
         this._isAssigned = value;
     }
@@ -519,6 +533,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the isFeatured property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsFeatured(@javax.annotation.Nullable final Boolean value) {
         this._isFeatured = value;
     }
@@ -527,6 +542,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the largeIcon property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLargeIcon(@javax.annotation.Nullable final MimeContent value) {
         this._largeIcon = value;
     }
@@ -535,6 +551,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -543,6 +560,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final String value) {
         this._notes = value;
     }
@@ -551,6 +569,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the owner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwner(@javax.annotation.Nullable final String value) {
         this._owner = value;
     }
@@ -559,6 +578,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the privacyInformationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyInformationUrl(@javax.annotation.Nullable final String value) {
         this._privacyInformationUrl = value;
     }
@@ -567,6 +587,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
         this._publisher = value;
     }
@@ -575,6 +596,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the publishingState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishingState(@javax.annotation.Nullable final MobileAppPublishingState value) {
         this._publishingState = value;
     }
@@ -583,6 +605,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the relationships property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelationships(@javax.annotation.Nullable final java.util.List<MobileAppRelationship> value) {
         this._relationships = value;
     }
@@ -591,6 +614,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._roleScopeTagIds = value;
     }
@@ -599,6 +623,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the supersededAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupersededAppCount(@javax.annotation.Nullable final Integer value) {
         this._supersededAppCount = value;
     }
@@ -607,6 +632,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the supersedingAppCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupersedingAppCount(@javax.annotation.Nullable final Integer value) {
         this._supersedingAppCount = value;
     }
@@ -615,6 +641,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the uploadState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUploadState(@javax.annotation.Nullable final Integer value) {
         this._uploadState = value;
     }
@@ -623,6 +650,7 @@ public class MobileApp extends Entity implements Parsable {
      * @param value Value to set for the userStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserStatuses(@javax.annotation.Nullable final java.util.List<UserAppInstallStatus> value) {
         this._userStatuses = value;
     }

@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class LegalHold extends Entity implements Parsable {
     /** KQL query that specifies content to be held in the specified locations. To learn more, see Keyword queries and search conditions for Content Search and eDiscovery.  To hold all content in the specified locations, leave contentQuery blank. */
     private String _contentQuery;
@@ -38,17 +39,17 @@ public class LegalHold extends Entity implements Parsable {
     /** Data source entity for a the legal hold. This is the container for a mailbox and OneDrive for Business site. */
     private java.util.List<UserSource> _userSources;
     /**
-     * Instantiates a new LegalHold and sets the default values.
+     * Instantiates a new legalHold and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LegalHold() {
         super();
-        this.setOdataType("#microsoft.graph.ediscovery.legalHold");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a LegalHold
+     * @return a legalHold
      */
     @javax.annotation.Nonnull
     public static LegalHold createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -109,22 +110,21 @@ public class LegalHold extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LegalHold currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contentQuery", (n) -> { currentObject.setContentQuery(n.getStringValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("errors", (n) -> { currentObject.setErrors(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("siteSources", (n) -> { currentObject.setSiteSources(n.getCollectionOfObjectValues(SiteSource::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(LegalHoldStatus.class)); });
-            this.put("unifiedGroupSources", (n) -> { currentObject.setUnifiedGroupSources(n.getCollectionOfObjectValues(UnifiedGroupSource::createFromDiscriminatorValue)); });
-            this.put("userSources", (n) -> { currentObject.setUserSources(n.getCollectionOfObjectValues(UserSource::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contentQuery", (n) -> { this.setContentQuery(n.getStringValue()); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("errors", (n) -> { this.setErrors(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("siteSources", (n) -> { this.setSiteSources(n.getCollectionOfObjectValues(SiteSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(LegalHoldStatus.class)); });
+        deserializerMap.put("unifiedGroupSources", (n) -> { this.setUnifiedGroupSources(n.getCollectionOfObjectValues(UnifiedGroupSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("userSources", (n) -> { this.setUserSources(n.getCollectionOfObjectValues(UserSource::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabled property value. Indicates whether the hold is enabled and actively holding content.
@@ -187,6 +187,7 @@ public class LegalHold extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -209,6 +210,7 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the contentQuery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentQuery(@javax.annotation.Nullable final String value) {
         this._contentQuery = value;
     }
@@ -217,6 +219,7 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -225,6 +228,7 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -233,6 +237,7 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -241,6 +246,7 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -249,6 +255,7 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the errors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrors(@javax.annotation.Nullable final java.util.List<String> value) {
         this._errors = value;
     }
@@ -257,6 +264,7 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }
@@ -265,6 +273,7 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -273,6 +282,7 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -281,6 +291,7 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the siteSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteSources(@javax.annotation.Nullable final java.util.List<SiteSource> value) {
         this._siteSources = value;
     }
@@ -289,6 +300,7 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final LegalHoldStatus value) {
         this._status = value;
     }
@@ -297,6 +309,7 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the unifiedGroupSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnifiedGroupSources(@javax.annotation.Nullable final java.util.List<UnifiedGroupSource> value) {
         this._unifiedGroupSources = value;
     }
@@ -305,6 +318,7 @@ public class LegalHold extends Entity implements Parsable {
      * @param value Value to set for the userSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserSources(@javax.annotation.Nullable final java.util.List<UserSource> value) {
         this._userSources = value;
     }

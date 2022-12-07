@@ -9,27 +9,27 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudPcUserSetting extends Entity implements Parsable {
-    /** Represents the set of Microsoft 365 groups and security groups in Azure AD that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample. */
+    /** Represents the set of Microsoft 365 groups and security groups in Azure Active Directory that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample. */
     private java.util.List<CloudPcUserSettingAssignment> _assignments;
     /** The date and time the setting was created. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'. */
     private OffsetDateTime _createdDateTime;
     /** The setting name displayed in the user interface. */
     private String _displayName;
-    /** The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'. */
+    /** The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this:'2014-01-01T00:00:00Z'. */
     private OffsetDateTime _lastModifiedDateTime;
     /** Indicates whether the local admin option is enabled. Default value is false. To enable the local admin option, change the setting to true. If the local admin option is enabled, the end user can be an admin of the Cloud PC device. */
     private Boolean _localAdminEnabled;
     /** Defines how frequently a restore point is created that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time. */
     private CloudPcRestorePointSetting _restorePointSetting;
-    /** Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true. If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal. */
+    /** Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal. */
     private Boolean _selfServiceEnabled;
     /**
      * Instantiates a new CloudPcUserSetting and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcUserSetting() {
         super();
-        this.setOdataType("#microsoft.graph.cloudPcUserSetting");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,7 +42,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return new CloudPcUserSetting();
     }
     /**
-     * Gets the assignments property value. Represents the set of Microsoft 365 groups and security groups in Azure AD that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
+     * Gets the assignments property value. Represents the set of Microsoft 365 groups and security groups in Azure Active Directory that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
      * @return a cloudPcUserSettingAssignment
      */
     @javax.annotation.Nullable
@@ -71,19 +71,18 @@ public class CloudPcUserSetting extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcUserSetting currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(CloudPcUserSettingAssignment::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("localAdminEnabled", (n) -> { currentObject.setLocalAdminEnabled(n.getBooleanValue()); });
-            this.put("restorePointSetting", (n) -> { currentObject.setRestorePointSetting(n.getObjectValue(CloudPcRestorePointSetting::createFromDiscriminatorValue)); });
-            this.put("selfServiceEnabled", (n) -> { currentObject.setSelfServiceEnabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(CloudPcUserSettingAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("localAdminEnabled", (n) -> { this.setLocalAdminEnabled(n.getBooleanValue()); });
+        deserializerMap.put("restorePointSetting", (n) -> { this.setRestorePointSetting(n.getObjectValue(CloudPcRestorePointSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("selfServiceEnabled", (n) -> { this.setSelfServiceEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
+     * Gets the lastModifiedDateTime property value. The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this:'2014-01-01T00:00:00Z'.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -107,7 +106,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return this._restorePointSetting;
     }
     /**
-     * Gets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true. If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
+     * Gets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -119,6 +118,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -131,10 +131,11 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         writer.writeBooleanValue("selfServiceEnabled", this.getSelfServiceEnabled());
     }
     /**
-     * Sets the assignments property value. Represents the set of Microsoft 365 groups and security groups in Azure AD that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
+     * Sets the assignments property value. Represents the set of Microsoft 365 groups and security groups in Azure Active Directory that have cloudPCUserSetting assigned. Returned only on $expand. For an example, see Get cloudPcUserSettingample.
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<CloudPcUserSettingAssignment> value) {
         this._assignments = value;
     }
@@ -143,6 +144,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -151,14 +153,16 @@ public class CloudPcUserSetting extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
+     * Sets the lastModifiedDateTime property value. The last date and time the setting was modified. The Timestamp type represents the date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 looks like this:'2014-01-01T00:00:00Z'.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -167,6 +171,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
      * @param value Value to set for the localAdminEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalAdminEnabled(@javax.annotation.Nullable final Boolean value) {
         this._localAdminEnabled = value;
     }
@@ -175,14 +180,16 @@ public class CloudPcUserSetting extends Entity implements Parsable {
      * @param value Value to set for the restorePointSetting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestorePointSetting(@javax.annotation.Nullable final CloudPcRestorePointSetting value) {
         this._restorePointSetting = value;
     }
     /**
-     * Sets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true. If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
+     * Sets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal.
      * @param value Value to set for the selfServiceEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSelfServiceEnabled(@javax.annotation.Nullable final Boolean value) {
         this._selfServiceEnabled = value;
     }

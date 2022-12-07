@@ -24,6 +24,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * Instantiates a new WindowsMobileMSI and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsMobileMSI() {
         super();
         this.setOdataType("#microsoft.graph.windowsMobileMSI");
@@ -52,15 +53,14 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsMobileMSI currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("commandLine", (n) -> { currentObject.setCommandLine(n.getStringValue()); });
-            this.put("identityVersion", (n) -> { currentObject.setIdentityVersion(n.getStringValue()); });
-            this.put("ignoreVersionDetection", (n) -> { currentObject.setIgnoreVersionDetection(n.getBooleanValue()); });
-            this.put("productCode", (n) -> { currentObject.setProductCode(n.getStringValue()); });
-            this.put("productVersion", (n) -> { currentObject.setProductVersion(n.getStringValue()); });
-            this.put("useDeviceContext", (n) -> { currentObject.setUseDeviceContext(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("commandLine", (n) -> { this.setCommandLine(n.getStringValue()); });
+        deserializerMap.put("identityVersion", (n) -> { this.setIdentityVersion(n.getStringValue()); });
+        deserializerMap.put("ignoreVersionDetection", (n) -> { this.setIgnoreVersionDetection(n.getBooleanValue()); });
+        deserializerMap.put("productCode", (n) -> { this.setProductCode(n.getStringValue()); });
+        deserializerMap.put("productVersion", (n) -> { this.setProductVersion(n.getStringValue()); });
+        deserializerMap.put("useDeviceContext", (n) -> { this.setUseDeviceContext(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the identityVersion property value. The identity version.
@@ -107,6 +107,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +123,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * @param value Value to set for the commandLine property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCommandLine(@javax.annotation.Nullable final String value) {
         this._commandLine = value;
     }
@@ -130,6 +132,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * @param value Value to set for the identityVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityVersion(@javax.annotation.Nullable final String value) {
         this._identityVersion = value;
     }
@@ -138,6 +141,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * @param value Value to set for the ignoreVersionDetection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIgnoreVersionDetection(@javax.annotation.Nullable final Boolean value) {
         this._ignoreVersionDetection = value;
     }
@@ -146,6 +150,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * @param value Value to set for the productCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductCode(@javax.annotation.Nullable final String value) {
         this._productCode = value;
     }
@@ -154,6 +159,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * @param value Value to set for the productVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductVersion(@javax.annotation.Nullable final String value) {
         this._productVersion = value;
     }
@@ -162,6 +168,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * @param value Value to set for the useDeviceContext property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseDeviceContext(@javax.annotation.Nullable final Boolean value) {
         this._useDeviceContext = value;
     }

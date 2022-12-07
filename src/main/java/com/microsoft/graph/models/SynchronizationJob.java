@@ -23,9 +23,9 @@ public class SynchronizationJob extends Entity implements Parsable {
      * Instantiates a new synchronizationJob and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SynchronizationJob() {
         super();
-        this.setOdataType("#microsoft.graph.synchronizationJob");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,14 +43,13 @@ public class SynchronizationJob extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SynchronizationJob currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(SynchronizationSchedule::createFromDiscriminatorValue)); });
-            this.put("schema", (n) -> { currentObject.setSchema(n.getObjectValue(SynchronizationSchema::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(SynchronizationStatus::createFromDiscriminatorValue)); });
-            this.put("synchronizationJobSettings", (n) -> { currentObject.setSynchronizationJobSettings(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("templateId", (n) -> { currentObject.setTemplateId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(SynchronizationSchedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("schema", (n) -> { this.setSchema(n.getObjectValue(SynchronizationSchema::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(SynchronizationStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("synchronizationJobSettings", (n) -> { this.setSynchronizationJobSettings(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("templateId", (n) -> { this.setTemplateId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the schedule property value. Schedule used to run the job. Read-only.
@@ -97,6 +96,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +111,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      * @param value Value to set for the schedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedule(@javax.annotation.Nullable final SynchronizationSchedule value) {
         this._schedule = value;
     }
@@ -119,6 +120,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      * @param value Value to set for the schema property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchema(@javax.annotation.Nullable final SynchronizationSchema value) {
         this._schema = value;
     }
@@ -127,6 +129,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final SynchronizationStatus value) {
         this._status = value;
     }
@@ -135,6 +138,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      * @param value Value to set for the synchronizationJobSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSynchronizationJobSettings(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._synchronizationJobSettings = value;
     }
@@ -143,6 +147,7 @@ public class SynchronizationJob extends Entity implements Parsable {
      * @param value Value to set for the templateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTemplateId(@javax.annotation.Nullable final String value) {
         this._templateId = value;
     }

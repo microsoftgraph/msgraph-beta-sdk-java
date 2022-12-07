@@ -33,9 +33,9 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      * Instantiates a new reminder and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Reminder() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.reminder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -117,18 +117,17 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Reminder currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("changeKey", (n) -> { currentObject.setChangeKey(n.getStringValue()); });
-            this.put("eventEndTime", (n) -> { currentObject.setEventEndTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("eventId", (n) -> { currentObject.setEventId(n.getStringValue()); });
-            this.put("eventLocation", (n) -> { currentObject.setEventLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
-            this.put("eventStartTime", (n) -> { currentObject.setEventStartTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("eventSubject", (n) -> { currentObject.setEventSubject(n.getStringValue()); });
-            this.put("eventWebLink", (n) -> { currentObject.setEventWebLink(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("reminderFireTime", (n) -> { currentObject.setReminderFireTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("changeKey", (n) -> { this.setChangeKey(n.getStringValue()); });
+        deserializerMap.put("eventEndTime", (n) -> { this.setEventEndTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("eventId", (n) -> { this.setEventId(n.getStringValue()); });
+        deserializerMap.put("eventLocation", (n) -> { this.setEventLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
+        deserializerMap.put("eventStartTime", (n) -> { this.setEventStartTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("eventSubject", (n) -> { this.setEventSubject(n.getStringValue()); });
+        deserializerMap.put("eventWebLink", (n) -> { this.setEventWebLink(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("reminderFireTime", (n) -> { this.setReminderFireTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -151,6 +150,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("changeKey", this.getChangeKey());
@@ -169,6 +169,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -177,6 +178,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the changeKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChangeKey(@javax.annotation.Nullable final String value) {
         this._changeKey = value;
     }
@@ -185,6 +187,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the eventEndTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventEndTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._eventEndTime = value;
     }
@@ -193,6 +196,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the eventId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventId(@javax.annotation.Nullable final String value) {
         this._eventId = value;
     }
@@ -201,6 +205,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the eventLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventLocation(@javax.annotation.Nullable final Location value) {
         this._eventLocation = value;
     }
@@ -209,6 +214,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the eventStartTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventStartTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._eventStartTime = value;
     }
@@ -217,6 +223,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the eventSubject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventSubject(@javax.annotation.Nullable final String value) {
         this._eventSubject = value;
     }
@@ -225,6 +232,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the eventWebLink property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventWebLink(@javax.annotation.Nullable final String value) {
         this._eventWebLink = value;
     }
@@ -233,6 +241,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -241,6 +250,7 @@ public class Reminder implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the reminderFireTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReminderFireTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._reminderFireTime = value;
     }

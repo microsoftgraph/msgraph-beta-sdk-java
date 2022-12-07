@@ -24,9 +24,9 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
      * Instantiates a new delegatedAdminAccessAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DelegatedAdminAccessAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.delegatedAdminAccessAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -68,14 +68,13 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DelegatedAdminAccessAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessContainer", (n) -> { currentObject.setAccessContainer(n.getObjectValue(DelegatedAdminAccessContainer::createFromDiscriminatorValue)); });
-            this.put("accessDetails", (n) -> { currentObject.setAccessDetails(n.getObjectValue(DelegatedAdminAccessDetails::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(DelegatedAdminAccessAssignmentStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessContainer", (n) -> { this.setAccessContainer(n.getObjectValue(DelegatedAdminAccessContainer::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessDetails", (n) -> { this.setAccessDetails(n.getObjectValue(DelegatedAdminAccessDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(DelegatedAdminAccessAssignmentStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time in ISO 8601 and in UTC time when this access assignment was last modified. Read-only.
@@ -98,6 +97,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -112,6 +112,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
      * @param value Value to set for the accessContainer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessContainer(@javax.annotation.Nullable final DelegatedAdminAccessContainer value) {
         this._accessContainer = value;
     }
@@ -120,6 +121,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
      * @param value Value to set for the accessDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessDetails(@javax.annotation.Nullable final DelegatedAdminAccessDetails value) {
         this._accessDetails = value;
     }
@@ -128,6 +130,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -136,6 +139,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -144,6 +148,7 @@ public class DelegatedAdminAccessAssignment extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final DelegatedAdminAccessAssignmentStatus value) {
         this._status = value;
     }

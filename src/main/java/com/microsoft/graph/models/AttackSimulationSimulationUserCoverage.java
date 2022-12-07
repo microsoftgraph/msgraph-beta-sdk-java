@@ -18,7 +18,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
     private Integer _clickCount;
     /** Number of compromising actions by the user in attack simulation and training campaigns. */
     private Integer _compromisedCount;
-    /** Date and time of latest attack simulation and training campaign that the user was included in. */
+    /** Date and time of the latest attack simulation and training campaign that the user was included in. */
     private OffsetDateTime _latestSimulationDateTime;
     /** The OdataType property */
     private String _odataType;
@@ -28,9 +28,9 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      * Instantiates a new attackSimulationSimulationUserCoverage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AttackSimulationSimulationUserCoverage() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.attackSimulationSimulationUserCoverage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -80,18 +80,17 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AttackSimulationSimulationUserCoverage currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("attackSimulationUser", (n) -> { currentObject.setAttackSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
-            this.put("clickCount", (n) -> { currentObject.setClickCount(n.getIntegerValue()); });
-            this.put("compromisedCount", (n) -> { currentObject.setCompromisedCount(n.getIntegerValue()); });
-            this.put("latestSimulationDateTime", (n) -> { currentObject.setLatestSimulationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("simulationCount", (n) -> { currentObject.setSimulationCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("attackSimulationUser", (n) -> { this.setAttackSimulationUser(n.getObjectValue(AttackSimulationUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("clickCount", (n) -> { this.setClickCount(n.getIntegerValue()); });
+        deserializerMap.put("compromisedCount", (n) -> { this.setCompromisedCount(n.getIntegerValue()); });
+        deserializerMap.put("latestSimulationDateTime", (n) -> { this.setLatestSimulationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("simulationCount", (n) -> { this.setSimulationCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the latestSimulationDateTime property value. Date and time of latest attack simulation and training campaign that the user was included in.
+     * Gets the latestSimulationDateTime property value. Date and time of the latest attack simulation and training campaign that the user was included in.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
@@ -119,6 +118,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("attackSimulationUser", this.getAttackSimulationUser());
@@ -134,6 +134,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +143,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      * @param value Value to set for the attackSimulationUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttackSimulationUser(@javax.annotation.Nullable final AttackSimulationUser value) {
         this._attackSimulationUser = value;
     }
@@ -150,6 +152,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      * @param value Value to set for the clickCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClickCount(@javax.annotation.Nullable final Integer value) {
         this._clickCount = value;
     }
@@ -158,14 +161,16 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      * @param value Value to set for the compromisedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompromisedCount(@javax.annotation.Nullable final Integer value) {
         this._compromisedCount = value;
     }
     /**
-     * Sets the latestSimulationDateTime property value. Date and time of latest attack simulation and training campaign that the user was included in.
+     * Sets the latestSimulationDateTime property value. Date and time of the latest attack simulation and training campaign that the user was included in.
      * @param value Value to set for the latestSimulationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLatestSimulationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._latestSimulationDateTime = value;
     }
@@ -174,6 +179,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -182,6 +188,7 @@ public class AttackSimulationSimulationUserCoverage implements AdditionalDataHol
      * @param value Value to set for the simulationCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSimulationCount(@javax.annotation.Nullable final Integer value) {
         this._simulationCount = value;
     }

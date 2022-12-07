@@ -13,6 +13,8 @@ import java.util.Objects;
 public class Admin implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** A container for Microsoft Edge resources. Read-only. */
+    private Edge _edge;
     /** The OdataType property */
     private String _odataType;
     /** A container for administrative resources to manage reports. */
@@ -27,9 +29,9 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * Instantiates a new Admin and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Admin() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.admin");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,19 +52,27 @@ public class Admin implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
+     * Gets the edge property value. A container for Microsoft Edge resources. Read-only.
+     * @return a edge
+     */
+    @javax.annotation.Nullable
+    public Edge getEdge() {
+        return this._edge;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Admin currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("reportSettings", (n) -> { currentObject.setReportSettings(n.getObjectValue(AdminReportSettings::createFromDiscriminatorValue)); });
-            this.put("serviceAnnouncement", (n) -> { currentObject.setServiceAnnouncement(n.getObjectValue(ServiceAnnouncement::createFromDiscriminatorValue)); });
-            this.put("sharepoint", (n) -> { currentObject.setSharepoint(n.getObjectValue(Sharepoint::createFromDiscriminatorValue)); });
-            this.put("windows", (n) -> { currentObject.setWindows(n.getObjectValue(Windows::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("edge", (n) -> { this.setEdge(n.getObjectValue(Edge::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("reportSettings", (n) -> { this.setReportSettings(n.getObjectValue(AdminReportSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("serviceAnnouncement", (n) -> { this.setServiceAnnouncement(n.getObjectValue(ServiceAnnouncement::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharepoint", (n) -> { this.setSharepoint(n.getObjectValue(Sharepoint::createFromDiscriminatorValue)); });
+        deserializerMap.put("windows", (n) -> { this.setWindows(n.getObjectValue(Windows::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -109,8 +119,10 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("edge", this.getEdge());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("reportSettings", this.getReportSettings());
         writer.writeObjectValue("serviceAnnouncement", this.getServiceAnnouncement());
@@ -123,14 +135,25 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the edge property value. A container for Microsoft Edge resources. Read-only.
+     * @param value Value to set for the edge property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setEdge(@javax.annotation.Nullable final Edge value) {
+        this._edge = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -139,6 +162,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the reportSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportSettings(@javax.annotation.Nullable final AdminReportSettings value) {
         this._reportSettings = value;
     }
@@ -147,6 +171,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the serviceAnnouncement property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServiceAnnouncement(@javax.annotation.Nullable final ServiceAnnouncement value) {
         this._serviceAnnouncement = value;
     }
@@ -155,6 +180,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sharepoint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharepoint(@javax.annotation.Nullable final Sharepoint value) {
         this._sharepoint = value;
     }
@@ -163,6 +189,7 @@ public class Admin implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the windows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindows(@javax.annotation.Nullable final Windows value) {
         this._windows = value;
     }

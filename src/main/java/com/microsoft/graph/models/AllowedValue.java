@@ -15,9 +15,9 @@ public class AllowedValue extends Entity implements Parsable {
      * Instantiates a new allowedValue and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AllowedValue() {
         super();
-        this.setOdataType("#microsoft.graph.allowedValue");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,10 +35,9 @@ public class AllowedValue extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AllowedValue currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("isActive", (n) -> { currentObject.setIsActive(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isActive", (n) -> { this.setIsActive(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isActive property value. Indicates whether the predefined value is active or deactivated. If set to false, this predefined value cannot be assigned to any additional supported directory objects.
@@ -53,6 +52,7 @@ public class AllowedValue extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +63,7 @@ public class AllowedValue extends Entity implements Parsable {
      * @param value Value to set for the isActive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsActive(@javax.annotation.Nullable final Boolean value) {
         this._isActive = value;
     }

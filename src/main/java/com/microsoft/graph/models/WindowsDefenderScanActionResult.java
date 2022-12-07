@@ -14,9 +14,9 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
      * Instantiates a new WindowsDefenderScanActionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDefenderScanActionResult() {
         super();
-        this.setOdataType("#microsoft.graph.windowsDefenderScanActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,10 +34,9 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsDefenderScanActionResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("scanType", (n) -> { currentObject.setScanType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("scanType", (n) -> { this.setScanType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the scanType property value. Scan type either full scan or quick scan
@@ -52,6 +51,7 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +62,7 @@ public class WindowsDefenderScanActionResult extends DeviceActionResult implemen
      * @param value Value to set for the scanType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScanType(@javax.annotation.Nullable final String value) {
         this._scanType = value;
     }

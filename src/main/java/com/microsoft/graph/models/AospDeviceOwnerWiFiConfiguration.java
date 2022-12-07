@@ -27,6 +27,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * Instantiates a new AospDeviceOwnerWiFiConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AospDeviceOwnerWiFiConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.aospDeviceOwnerWiFiConfiguration");
@@ -70,16 +71,15 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AospDeviceOwnerWiFiConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("connectAutomatically", (n) -> { currentObject.setConnectAutomatically(n.getBooleanValue()); });
-            this.put("connectWhenNetworkNameIsHidden", (n) -> { currentObject.setConnectWhenNetworkNameIsHidden(n.getBooleanValue()); });
-            this.put("networkName", (n) -> { currentObject.setNetworkName(n.getStringValue()); });
-            this.put("preSharedKey", (n) -> { currentObject.setPreSharedKey(n.getStringValue()); });
-            this.put("preSharedKeyIsSet", (n) -> { currentObject.setPreSharedKeyIsSet(n.getBooleanValue()); });
-            this.put("ssid", (n) -> { currentObject.setSsid(n.getStringValue()); });
-            this.put("wiFiSecurityType", (n) -> { currentObject.setWiFiSecurityType(n.getEnumValue(AospDeviceOwnerWiFiSecurityType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("connectAutomatically", (n) -> { this.setConnectAutomatically(n.getBooleanValue()); });
+        deserializerMap.put("connectWhenNetworkNameIsHidden", (n) -> { this.setConnectWhenNetworkNameIsHidden(n.getBooleanValue()); });
+        deserializerMap.put("networkName", (n) -> { this.setNetworkName(n.getStringValue()); });
+        deserializerMap.put("preSharedKey", (n) -> { this.setPreSharedKey(n.getStringValue()); });
+        deserializerMap.put("preSharedKeyIsSet", (n) -> { this.setPreSharedKeyIsSet(n.getBooleanValue()); });
+        deserializerMap.put("ssid", (n) -> { this.setSsid(n.getStringValue()); });
+        deserializerMap.put("wiFiSecurityType", (n) -> { this.setWiFiSecurityType(n.getEnumValue(AospDeviceOwnerWiFiSecurityType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the networkName property value. Network Name
@@ -126,6 +126,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -142,6 +143,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the connectAutomatically property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectAutomatically(@javax.annotation.Nullable final Boolean value) {
         this._connectAutomatically = value;
     }
@@ -150,6 +152,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the connectWhenNetworkNameIsHidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectWhenNetworkNameIsHidden(@javax.annotation.Nullable final Boolean value) {
         this._connectWhenNetworkNameIsHidden = value;
     }
@@ -158,6 +161,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the networkName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkName(@javax.annotation.Nullable final String value) {
         this._networkName = value;
     }
@@ -166,6 +170,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the preSharedKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreSharedKey(@javax.annotation.Nullable final String value) {
         this._preSharedKey = value;
     }
@@ -174,6 +179,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the preSharedKeyIsSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreSharedKeyIsSet(@javax.annotation.Nullable final Boolean value) {
         this._preSharedKeyIsSet = value;
     }
@@ -182,6 +188,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the ssid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSsid(@javax.annotation.Nullable final String value) {
         this._ssid = value;
     }
@@ -190,6 +197,7 @@ public class AospDeviceOwnerWiFiConfiguration extends DeviceConfiguration implem
      * @param value Value to set for the wiFiSecurityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWiFiSecurityType(@javax.annotation.Nullable final AospDeviceOwnerWiFiSecurityType value) {
         this._wiFiSecurityType = value;
     }

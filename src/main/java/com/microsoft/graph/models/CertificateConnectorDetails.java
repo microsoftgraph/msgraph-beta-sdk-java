@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Entity used to retrieve information about Intune Certificate Connectors. */
 public class CertificateConnectorDetails extends Entity implements Parsable {
     /** Connector name (set during enrollment). */
     private String _connectorName;
@@ -20,17 +21,17 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
     /** Name of the machine hosting this connector service. */
     private String _machineName;
     /**
-     * Instantiates a new CertificateConnectorDetails and sets the default values.
+     * Instantiates a new certificateConnectorDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CertificateConnectorDetails() {
         super();
-        this.setOdataType("#microsoft.graph.certificateConnectorDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CertificateConnectorDetails
+     * @return a certificateConnectorDetails
      */
     @javax.annotation.Nonnull
     public static CertificateConnectorDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -67,14 +68,13 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CertificateConnectorDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("connectorName", (n) -> { currentObject.setConnectorName(n.getStringValue()); });
-            this.put("connectorVersion", (n) -> { currentObject.setConnectorVersion(n.getStringValue()); });
-            this.put("enrollmentDateTime", (n) -> { currentObject.setEnrollmentDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastCheckinDateTime", (n) -> { currentObject.setLastCheckinDateTime(n.getOffsetDateTimeValue()); });
-            this.put("machineName", (n) -> { currentObject.setMachineName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("connectorName", (n) -> { this.setConnectorName(n.getStringValue()); });
+        deserializerMap.put("connectorVersion", (n) -> { this.setConnectorVersion(n.getStringValue()); });
+        deserializerMap.put("enrollmentDateTime", (n) -> { this.setEnrollmentDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastCheckinDateTime", (n) -> { this.setLastCheckinDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("machineName", (n) -> { this.setMachineName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastCheckinDateTime property value. Date/time when this connector last connected to the service.
@@ -97,6 +97,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +112,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * @param value Value to set for the connectorName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectorName(@javax.annotation.Nullable final String value) {
         this._connectorName = value;
     }
@@ -119,6 +121,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * @param value Value to set for the connectorVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectorVersion(@javax.annotation.Nullable final String value) {
         this._connectorVersion = value;
     }
@@ -127,6 +130,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * @param value Value to set for the enrollmentDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._enrollmentDateTime = value;
     }
@@ -135,6 +139,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * @param value Value to set for the lastCheckinDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastCheckinDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastCheckinDateTime = value;
     }
@@ -143,6 +148,7 @@ public class CertificateConnectorDetails extends Entity implements Parsable {
      * @param value Value to set for the machineName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMachineName(@javax.annotation.Nullable final String value) {
         this._machineName = value;
     }

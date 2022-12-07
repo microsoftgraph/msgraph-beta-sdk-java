@@ -23,9 +23,9 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
      * Instantiates a new driveRecipient and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DriveRecipient() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.driveRecipient");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,13 +67,12 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DriveRecipient currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("alias", (n) -> { currentObject.setAlias(n.getStringValue()); });
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("objectId", (n) -> { currentObject.setObjectId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("alias", (n) -> { this.setAlias(n.getStringValue()); });
+        deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("objectId", (n) -> { this.setObjectId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the objectId property value. The unique identifier for the recipient in the directory.
@@ -96,6 +95,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("alias", this.getAlias());
@@ -109,6 +109,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +118,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the alias property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlias(@javax.annotation.Nullable final String value) {
         this._alias = value;
     }
@@ -125,6 +127,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
         this._email = value;
     }
@@ -133,6 +136,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the objectId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setObjectId(@javax.annotation.Nullable final String value) {
         this._objectId = value;
     }
@@ -141,6 +145,7 @@ public class DriveRecipient implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

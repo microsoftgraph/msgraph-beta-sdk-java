@@ -37,9 +37,9 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * Instantiates a new userRegistrationDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserRegistrationDetails() {
         super();
-        this.setOdataType("#microsoft.graph.userRegistrationDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,21 +65,20 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserRegistrationDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultMfaMethod", (n) -> { currentObject.setDefaultMfaMethod(n.getEnumValue(DefaultMfaMethodType.class)); });
-            this.put("isAdmin", (n) -> { currentObject.setIsAdmin(n.getBooleanValue()); });
-            this.put("isMfaCapable", (n) -> { currentObject.setIsMfaCapable(n.getBooleanValue()); });
-            this.put("isMfaRegistered", (n) -> { currentObject.setIsMfaRegistered(n.getBooleanValue()); });
-            this.put("isPasswordlessCapable", (n) -> { currentObject.setIsPasswordlessCapable(n.getBooleanValue()); });
-            this.put("isSsprCapable", (n) -> { currentObject.setIsSsprCapable(n.getBooleanValue()); });
-            this.put("isSsprEnabled", (n) -> { currentObject.setIsSsprEnabled(n.getBooleanValue()); });
-            this.put("isSsprRegistered", (n) -> { currentObject.setIsSsprRegistered(n.getBooleanValue()); });
-            this.put("methodsRegistered", (n) -> { currentObject.setMethodsRegistered(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("userType", (n) -> { currentObject.setUserType(n.getEnumValue(SignInUserType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultMfaMethod", (n) -> { this.setDefaultMfaMethod(n.getEnumValue(DefaultMfaMethodType.class)); });
+        deserializerMap.put("isAdmin", (n) -> { this.setIsAdmin(n.getBooleanValue()); });
+        deserializerMap.put("isMfaCapable", (n) -> { this.setIsMfaCapable(n.getBooleanValue()); });
+        deserializerMap.put("isMfaRegistered", (n) -> { this.setIsMfaRegistered(n.getBooleanValue()); });
+        deserializerMap.put("isPasswordlessCapable", (n) -> { this.setIsPasswordlessCapable(n.getBooleanValue()); });
+        deserializerMap.put("isSsprCapable", (n) -> { this.setIsSsprCapable(n.getBooleanValue()); });
+        deserializerMap.put("isSsprEnabled", (n) -> { this.setIsSsprEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isSsprRegistered", (n) -> { this.setIsSsprRegistered(n.getBooleanValue()); });
+        deserializerMap.put("methodsRegistered", (n) -> { this.setMethodsRegistered(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("userType", (n) -> { this.setUserType(n.getEnumValue(SignInUserType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isAdmin property value. Whether the user has an admin role in the tenant. This value can be used to check the authentication methods that privileged accounts are registered for and capable of.
@@ -174,6 +173,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -195,6 +195,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the defaultMfaMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultMfaMethod(@javax.annotation.Nullable final DefaultMfaMethodType value) {
         this._defaultMfaMethod = value;
     }
@@ -203,6 +204,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the isAdmin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAdmin(@javax.annotation.Nullable final Boolean value) {
         this._isAdmin = value;
     }
@@ -211,6 +213,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the isMfaCapable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMfaCapable(@javax.annotation.Nullable final Boolean value) {
         this._isMfaCapable = value;
     }
@@ -219,6 +222,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the isMfaRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMfaRegistered(@javax.annotation.Nullable final Boolean value) {
         this._isMfaRegistered = value;
     }
@@ -227,6 +231,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the isPasswordlessCapable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPasswordlessCapable(@javax.annotation.Nullable final Boolean value) {
         this._isPasswordlessCapable = value;
     }
@@ -235,6 +240,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the isSsprCapable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSsprCapable(@javax.annotation.Nullable final Boolean value) {
         this._isSsprCapable = value;
     }
@@ -243,6 +249,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the isSsprEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSsprEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isSsprEnabled = value;
     }
@@ -251,6 +258,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the isSsprRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSsprRegistered(@javax.annotation.Nullable final Boolean value) {
         this._isSsprRegistered = value;
     }
@@ -259,6 +267,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the methodsRegistered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMethodsRegistered(@javax.annotation.Nullable final java.util.List<String> value) {
         this._methodsRegistered = value;
     }
@@ -267,6 +276,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
         this._userDisplayName = value;
     }
@@ -275,6 +285,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }
@@ -283,6 +294,7 @@ public class UserRegistrationDetails extends Entity implements Parsable {
      * @param value Value to set for the userType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserType(@javax.annotation.Nullable final SignInUserType value) {
         this._userType = value;
     }

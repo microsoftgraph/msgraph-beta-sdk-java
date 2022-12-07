@@ -29,9 +29,9 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      * Instantiates a new relatedContact and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RelatedContact() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.relatedContact");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -81,16 +81,15 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RelatedContact currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("accessConsent", (n) -> { currentObject.setAccessConsent(n.getBooleanValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("mobilePhone", (n) -> { currentObject.setMobilePhone(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("relationship", (n) -> { currentObject.setRelationship(n.getEnumValue(ContactRelationship.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("accessConsent", (n) -> { this.setAccessConsent(n.getBooleanValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("mobilePhone", (n) -> { this.setMobilePhone(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("relationship", (n) -> { this.setRelationship(n.getEnumValue(ContactRelationship.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The id property
@@ -129,6 +128,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("accessConsent", this.getAccessConsent());
@@ -145,6 +145,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accessConsent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessConsent(@javax.annotation.Nullable final Boolean value) {
         this._accessConsent = value;
     }
@@ -153,6 +154,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -161,6 +163,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -169,6 +172,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final String value) {
         this._emailAddress = value;
     }
@@ -177,6 +181,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -185,6 +190,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the mobilePhone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobilePhone(@javax.annotation.Nullable final String value) {
         this._mobilePhone = value;
     }
@@ -193,6 +199,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -201,6 +208,7 @@ public class RelatedContact implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the relationship property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelationship(@javax.annotation.Nullable final ContactRelationship value) {
         this._relationship = value;
     }

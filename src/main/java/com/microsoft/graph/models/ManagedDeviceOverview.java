@@ -24,17 +24,17 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
     /** The number of devices enrolled in MDM */
     private Integer _mdmEnrolledCount;
     /**
-     * Instantiates a new ManagedDeviceOverview and sets the default values.
+     * Instantiates a new managedDeviceOverview and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedDeviceOverview() {
         super();
-        this.setOdataType("#microsoft.graph.managedDeviceOverview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedDeviceOverview
+     * @return a managedDeviceOverview
      */
     @javax.annotation.Nonnull
     public static ManagedDeviceOverview createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -79,16 +79,15 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedDeviceOverview currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceExchangeAccessStateSummary", (n) -> { currentObject.setDeviceExchangeAccessStateSummary(n.getObjectValue(DeviceExchangeAccessStateSummary::createFromDiscriminatorValue)); });
-            this.put("deviceOperatingSystemSummary", (n) -> { currentObject.setDeviceOperatingSystemSummary(n.getObjectValue(DeviceOperatingSystemSummary::createFromDiscriminatorValue)); });
-            this.put("dualEnrolledDeviceCount", (n) -> { currentObject.setDualEnrolledDeviceCount(n.getIntegerValue()); });
-            this.put("enrolledDeviceCount", (n) -> { currentObject.setEnrolledDeviceCount(n.getIntegerValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("managedDeviceModelsAndManufacturers", (n) -> { currentObject.setManagedDeviceModelsAndManufacturers(n.getObjectValue(ManagedDeviceModelsAndManufacturers::createFromDiscriminatorValue)); });
-            this.put("mdmEnrolledCount", (n) -> { currentObject.setMdmEnrolledCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceExchangeAccessStateSummary", (n) -> { this.setDeviceExchangeAccessStateSummary(n.getObjectValue(DeviceExchangeAccessStateSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceOperatingSystemSummary", (n) -> { this.setDeviceOperatingSystemSummary(n.getObjectValue(DeviceOperatingSystemSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("dualEnrolledDeviceCount", (n) -> { this.setDualEnrolledDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("enrolledDeviceCount", (n) -> { this.setEnrolledDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managedDeviceModelsAndManufacturers", (n) -> { this.setManagedDeviceModelsAndManufacturers(n.getObjectValue(ManagedDeviceModelsAndManufacturers::createFromDiscriminatorValue)); });
+        deserializerMap.put("mdmEnrolledCount", (n) -> { this.setMdmEnrolledCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. Last modified date time of device overview
@@ -119,6 +118,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +135,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the deviceExchangeAccessStateSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceExchangeAccessStateSummary(@javax.annotation.Nullable final DeviceExchangeAccessStateSummary value) {
         this._deviceExchangeAccessStateSummary = value;
     }
@@ -143,6 +144,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the deviceOperatingSystemSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceOperatingSystemSummary(@javax.annotation.Nullable final DeviceOperatingSystemSummary value) {
         this._deviceOperatingSystemSummary = value;
     }
@@ -151,6 +153,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the dualEnrolledDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDualEnrolledDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._dualEnrolledDeviceCount = value;
     }
@@ -159,6 +162,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the enrolledDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrolledDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._enrolledDeviceCount = value;
     }
@@ -167,6 +171,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -175,6 +180,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceModelsAndManufacturers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceModelsAndManufacturers(@javax.annotation.Nullable final ManagedDeviceModelsAndManufacturers value) {
         this._managedDeviceModelsAndManufacturers = value;
     }
@@ -183,6 +189,7 @@ public class ManagedDeviceOverview extends Entity implements Parsable {
      * @param value Value to set for the mdmEnrolledCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMdmEnrolledCount(@javax.annotation.Nullable final Integer value) {
         this._mdmEnrolledCount = value;
     }

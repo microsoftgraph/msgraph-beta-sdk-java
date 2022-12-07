@@ -30,6 +30,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * Instantiates a new ExactMatchSessionBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExactMatchSessionBase() {
         super();
         this.setOdataType("#microsoft.graph.exactMatchSessionBase");
@@ -65,17 +66,16 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExactMatchSessionBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("dataStoreId", (n) -> { currentObject.setDataStoreId(n.getStringValue()); });
-            this.put("processingCompletionDateTime", (n) -> { currentObject.setProcessingCompletionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("remainingBlockCount", (n) -> { currentObject.setRemainingBlockCount(n.getIntegerValue()); });
-            this.put("remainingJobCount", (n) -> { currentObject.setRemainingJobCount(n.getIntegerValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
-            this.put("totalBlockCount", (n) -> { currentObject.setTotalBlockCount(n.getIntegerValue()); });
-            this.put("totalJobCount", (n) -> { currentObject.setTotalJobCount(n.getIntegerValue()); });
-            this.put("uploadCompletionDateTime", (n) -> { currentObject.setUploadCompletionDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("dataStoreId", (n) -> { this.setDataStoreId(n.getStringValue()); });
+        deserializerMap.put("processingCompletionDateTime", (n) -> { this.setProcessingCompletionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("remainingBlockCount", (n) -> { this.setRemainingBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("remainingJobCount", (n) -> { this.setRemainingJobCount(n.getIntegerValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
+        deserializerMap.put("totalBlockCount", (n) -> { this.setTotalBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("totalJobCount", (n) -> { this.setTotalJobCount(n.getIntegerValue()); });
+        deserializerMap.put("uploadCompletionDateTime", (n) -> { this.setUploadCompletionDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the processingCompletionDateTime property value. The processingCompletionDateTime property
@@ -138,6 +138,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -155,6 +156,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the dataStoreId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataStoreId(@javax.annotation.Nullable final String value) {
         this._dataStoreId = value;
     }
@@ -163,6 +165,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the processingCompletionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessingCompletionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._processingCompletionDateTime = value;
     }
@@ -171,6 +174,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the remainingBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemainingBlockCount(@javax.annotation.Nullable final Integer value) {
         this._remainingBlockCount = value;
     }
@@ -179,6 +183,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the remainingJobCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemainingJobCount(@javax.annotation.Nullable final Integer value) {
         this._remainingJobCount = value;
     }
@@ -187,6 +192,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final String value) {
         this._state = value;
     }
@@ -195,6 +201,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the totalBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalBlockCount(@javax.annotation.Nullable final Integer value) {
         this._totalBlockCount = value;
     }
@@ -203,6 +210,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the totalJobCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalJobCount(@javax.annotation.Nullable final Integer value) {
         this._totalJobCount = value;
     }
@@ -211,6 +219,7 @@ public class ExactMatchSessionBase extends ExactMatchJobBase implements Parsable
      * @param value Value to set for the uploadCompletionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUploadCompletionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._uploadCompletionDateTime = value;
     }

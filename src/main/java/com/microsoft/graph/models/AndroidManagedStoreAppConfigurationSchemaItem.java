@@ -40,9 +40,9 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      * Instantiates a new androidManagedStoreAppConfigurationSchemaItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidManagedStoreAppConfigurationSchemaItem() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.androidManagedStoreAppConfigurationSchemaItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -124,21 +124,20 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidManagedStoreAppConfigurationSchemaItem currentObject = this;
-        return new HashMap<>(12) {{
-            this.put("dataType", (n) -> { currentObject.setDataType(n.getEnumValue(AndroidManagedStoreAppConfigurationSchemaItemDataType.class)); });
-            this.put("defaultBoolValue", (n) -> { currentObject.setDefaultBoolValue(n.getBooleanValue()); });
-            this.put("defaultIntValue", (n) -> { currentObject.setDefaultIntValue(n.getIntegerValue()); });
-            this.put("defaultStringArrayValue", (n) -> { currentObject.setDefaultStringArrayValue(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defaultStringValue", (n) -> { currentObject.setDefaultStringValue(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("index", (n) -> { currentObject.setIndex(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("parentIndex", (n) -> { currentObject.setParentIndex(n.getIntegerValue()); });
-            this.put("schemaItemKey", (n) -> { currentObject.setSchemaItemKey(n.getStringValue()); });
-            this.put("selections", (n) -> { currentObject.setSelections(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(12);
+        deserializerMap.put("dataType", (n) -> { this.setDataType(n.getEnumValue(AndroidManagedStoreAppConfigurationSchemaItemDataType.class)); });
+        deserializerMap.put("defaultBoolValue", (n) -> { this.setDefaultBoolValue(n.getBooleanValue()); });
+        deserializerMap.put("defaultIntValue", (n) -> { this.setDefaultIntValue(n.getIntegerValue()); });
+        deserializerMap.put("defaultStringArrayValue", (n) -> { this.setDefaultStringArrayValue(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defaultStringValue", (n) -> { this.setDefaultStringValue(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("index", (n) -> { this.setIndex(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("parentIndex", (n) -> { this.setParentIndex(n.getIntegerValue()); });
+        deserializerMap.put("schemaItemKey", (n) -> { this.setSchemaItemKey(n.getStringValue()); });
+        deserializerMap.put("selections", (n) -> { this.setSelections(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the index property value. Unique index the application uses to maintain nested schema items
@@ -185,6 +184,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("dataType", this.getDataType());
@@ -206,6 +206,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -214,6 +215,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      * @param value Value to set for the dataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataType(@javax.annotation.Nullable final AndroidManagedStoreAppConfigurationSchemaItemDataType value) {
         this._dataType = value;
     }
@@ -222,6 +224,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      * @param value Value to set for the defaultBoolValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultBoolValue(@javax.annotation.Nullable final Boolean value) {
         this._defaultBoolValue = value;
     }
@@ -230,6 +233,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      * @param value Value to set for the defaultIntValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultIntValue(@javax.annotation.Nullable final Integer value) {
         this._defaultIntValue = value;
     }
@@ -238,6 +242,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      * @param value Value to set for the defaultStringArrayValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultStringArrayValue(@javax.annotation.Nullable final java.util.List<String> value) {
         this._defaultStringArrayValue = value;
     }
@@ -246,6 +251,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      * @param value Value to set for the defaultStringValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultStringValue(@javax.annotation.Nullable final String value) {
         this._defaultStringValue = value;
     }
@@ -254,6 +260,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -262,6 +269,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -270,6 +278,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      * @param value Value to set for the index property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIndex(@javax.annotation.Nullable final Integer value) {
         this._index = value;
     }
@@ -278,6 +287,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -286,6 +296,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      * @param value Value to set for the parentIndex property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentIndex(@javax.annotation.Nullable final Integer value) {
         this._parentIndex = value;
     }
@@ -294,6 +305,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      * @param value Value to set for the schemaItemKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchemaItemKey(@javax.annotation.Nullable final String value) {
         this._schemaItemKey = value;
     }
@@ -302,6 +314,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
      * @param value Value to set for the selections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSelections(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._selections = value;
     }

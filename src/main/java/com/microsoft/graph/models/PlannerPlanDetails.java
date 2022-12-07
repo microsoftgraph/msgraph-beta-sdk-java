@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerPlanDetails extends PlannerDelta implements Parsable {
-    /** An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan */
+    /** An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan. */
     private PlannerCategoryDescriptions _categoryDescriptions;
-    /** Read-only. A collection of additional information associated with plannerPlanContext entries that are defined for the plannerPlan container. */
+    /** A collection of additional information associated with plannerPlanContext entries that are defined for the plannerPlan container. Read-only. */
     private PlannerPlanContextDetailsCollection _contextDetails;
     /** The set of user IDs that this plan is shared with. If you are using Microsoft 365 groups, use the groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required in order for them to access the plan owned by the group. */
     private PlannerUserIds _sharedWith;
@@ -18,9 +18,9 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
      * Instantiates a new plannerPlanDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerPlanDetails() {
         super();
-        this.setOdataType("#microsoft.graph.plannerPlanDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,7 +33,7 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
         return new PlannerPlanDetails();
     }
     /**
-     * Gets the categoryDescriptions property value. An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan
+     * Gets the categoryDescriptions property value. An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan.
      * @return a plannerCategoryDescriptions
      */
     @javax.annotation.Nullable
@@ -41,7 +41,7 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
         return this._categoryDescriptions;
     }
     /**
-     * Gets the contextDetails property value. Read-only. A collection of additional information associated with plannerPlanContext entries that are defined for the plannerPlan container.
+     * Gets the contextDetails property value. A collection of additional information associated with plannerPlanContext entries that are defined for the plannerPlan container. Read-only.
      * @return a plannerPlanContextDetailsCollection
      */
     @javax.annotation.Nullable
@@ -54,12 +54,11 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerPlanDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("categoryDescriptions", (n) -> { currentObject.setCategoryDescriptions(n.getObjectValue(PlannerCategoryDescriptions::createFromDiscriminatorValue)); });
-            this.put("contextDetails", (n) -> { currentObject.setContextDetails(n.getObjectValue(PlannerPlanContextDetailsCollection::createFromDiscriminatorValue)); });
-            this.put("sharedWith", (n) -> { currentObject.setSharedWith(n.getObjectValue(PlannerUserIds::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("categoryDescriptions", (n) -> { this.setCategoryDescriptions(n.getObjectValue(PlannerCategoryDescriptions::createFromDiscriminatorValue)); });
+        deserializerMap.put("contextDetails", (n) -> { this.setContextDetails(n.getObjectValue(PlannerPlanContextDetailsCollection::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharedWith", (n) -> { this.setSharedWith(n.getObjectValue(PlannerUserIds::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the sharedWith property value. The set of user IDs that this plan is shared with. If you are using Microsoft 365 groups, use the groups API to manage group membership to share the group's plan. You can also add existing members of the group to this collection, although it is not required in order for them to access the plan owned by the group.
@@ -74,6 +73,7 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -82,18 +82,20 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
         writer.writeObjectValue("sharedWith", this.getSharedWith());
     }
     /**
-     * Sets the categoryDescriptions property value. An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan
+     * Sets the categoryDescriptions property value. An object that specifies the descriptions of the 25 categories that can be associated with tasks in the plan.
      * @param value Value to set for the categoryDescriptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategoryDescriptions(@javax.annotation.Nullable final PlannerCategoryDescriptions value) {
         this._categoryDescriptions = value;
     }
     /**
-     * Sets the contextDetails property value. Read-only. A collection of additional information associated with plannerPlanContext entries that are defined for the plannerPlan container.
+     * Sets the contextDetails property value. A collection of additional information associated with plannerPlanContext entries that are defined for the plannerPlan container. Read-only.
      * @param value Value to set for the contextDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContextDetails(@javax.annotation.Nullable final PlannerPlanContextDetailsCollection value) {
         this._contextDetails = value;
     }
@@ -102,6 +104,7 @@ public class PlannerPlanDetails extends PlannerDelta implements Parsable {
      * @param value Value to set for the sharedWith property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedWith(@javax.annotation.Nullable final PlannerUserIds value) {
         this._sharedWith = value;
     }

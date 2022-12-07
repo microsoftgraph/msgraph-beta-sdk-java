@@ -28,9 +28,9 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      * Instantiates a new assignmentFilterStatusDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AssignmentFilterStatusDetails() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.assignmentFilterStatusDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,15 +72,14 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AssignmentFilterStatusDetails currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("deviceProperties", (n) -> { currentObject.setDeviceProperties(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-            this.put("evalutionSummaries", (n) -> { currentObject.setEvalutionSummaries(n.getCollectionOfObjectValues(AssignmentFilterEvaluationSummary::createFromDiscriminatorValue)); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("payloadId", (n) -> { currentObject.setPayloadId(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("deviceProperties", (n) -> { this.setDeviceProperties(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("evalutionSummaries", (n) -> { this.setEvalutionSummaries(n.getCollectionOfObjectValues(AssignmentFilterEvaluationSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("payloadId", (n) -> { this.setPayloadId(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedDeviceId property value. Unique identifier for the device object.
@@ -119,6 +118,7 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("deviceProperties", this.getDeviceProperties());
@@ -134,6 +134,7 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +143,7 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      * @param value Value to set for the deviceProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceProperties(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
         this._deviceProperties = value;
     }
@@ -150,6 +152,7 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      * @param value Value to set for the evalutionSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvalutionSummaries(@javax.annotation.Nullable final java.util.List<AssignmentFilterEvaluationSummary> value) {
         this._evalutionSummaries = value;
     }
@@ -158,6 +161,7 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
         this._managedDeviceId = value;
     }
@@ -166,6 +170,7 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -174,6 +179,7 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      * @param value Value to set for the payloadId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadId(@javax.annotation.Nullable final String value) {
         this._payloadId = value;
     }
@@ -182,6 +188,7 @@ public class AssignmentFilterStatusDetails implements AdditionalDataHolder, Pars
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

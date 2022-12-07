@@ -21,9 +21,9 @@ public class CommsApplication implements AdditionalDataHolder, Parsable {
      * Instantiates a new CommsApplication and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CommsApplication() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.commsApplication");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,12 +57,11 @@ public class CommsApplication implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CommsApplication currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("calls", (n) -> { currentObject.setCalls(n.getCollectionOfObjectValues(Call::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("onlineMeetings", (n) -> { currentObject.setOnlineMeetings(n.getCollectionOfObjectValues(OnlineMeeting::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("calls", (n) -> { this.setCalls(n.getCollectionOfObjectValues(Call::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("onlineMeetings", (n) -> { this.setOnlineMeetings(n.getCollectionOfObjectValues(OnlineMeeting::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -85,6 +84,7 @@ public class CommsApplication implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("calls", this.getCalls());
@@ -97,6 +97,7 @@ public class CommsApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class CommsApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the calls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalls(@javax.annotation.Nullable final java.util.List<Call> value) {
         this._calls = value;
     }
@@ -113,6 +115,7 @@ public class CommsApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +124,7 @@ public class CommsApplication implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the onlineMeetings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnlineMeetings(@javax.annotation.Nullable final java.util.List<OnlineMeeting> value) {
         this._onlineMeetings = value;
     }

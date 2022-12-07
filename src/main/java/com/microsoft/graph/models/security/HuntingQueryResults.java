@@ -13,17 +13,17 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
     private Map<String, Object> _additionalData;
     /** The OdataType property */
     private String _odataType;
-    /** The results property */
+    /** The results of the hunting query. */
     private java.util.List<HuntingRowResult> _results;
-    /** The schema property */
+    /** The schema for the response. */
     private java.util.List<SinglePropertySchema> _schema;
     /**
      * Instantiates a new huntingQueryResults and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public HuntingQueryResults() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.security.huntingQueryResults");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,12 +49,11 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final HuntingQueryResults currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("results", (n) -> { currentObject.setResults(n.getCollectionOfObjectValues(HuntingRowResult::createFromDiscriminatorValue)); });
-            this.put("schema", (n) -> { currentObject.setSchema(n.getCollectionOfObjectValues(SinglePropertySchema::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("results", (n) -> { this.setResults(n.getCollectionOfObjectValues(HuntingRowResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("schema", (n) -> { this.setSchema(n.getCollectionOfObjectValues(SinglePropertySchema::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -65,7 +64,7 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the results property value. The results property
+     * Gets the results property value. The results of the hunting query.
      * @return a huntingRowResult
      */
     @javax.annotation.Nullable
@@ -73,7 +72,7 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
         return this._results;
     }
     /**
-     * Gets the schema property value. The schema property
+     * Gets the schema property value. The schema for the response.
      * @return a singlePropertySchema
      */
     @javax.annotation.Nullable
@@ -85,6 +84,7 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -97,6 +97,7 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,22 +106,25 @@ public class HuntingQueryResults implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
     /**
-     * Sets the results property value. The results property
+     * Sets the results property value. The results of the hunting query.
      * @param value Value to set for the results property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResults(@javax.annotation.Nullable final java.util.List<HuntingRowResult> value) {
         this._results = value;
     }
     /**
-     * Sets the schema property value. The schema property
+     * Sets the schema property value. The schema for the response.
      * @param value Value to set for the schema property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchema(@javax.annotation.Nullable final java.util.List<SinglePropertySchema> value) {
         this._schema = value;
     }

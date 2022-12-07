@@ -14,9 +14,9 @@ public class TeamsAppSettings extends Entity implements Parsable {
      * Instantiates a new TeamsAppSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamsAppSettings() {
         super();
-        this.setOdataType("#microsoft.graph.teamsAppSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,10 +34,9 @@ public class TeamsAppSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamsAppSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("isChatResourceSpecificConsentEnabled", (n) -> { currentObject.setIsChatResourceSpecificConsentEnabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isChatResourceSpecificConsentEnabled", (n) -> { this.setIsChatResourceSpecificConsentEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isChatResourceSpecificConsentEnabled property value. Indicates whether resource-specific consent for chats/meetings has been enabled for the tenant. If true, Teams apps that are allowed in the tenant and require resource-specific permissions can be installed inside chats and meetings. If false, the installation of any Teams app that requires resource-specific permissions in a chat or a meeting will be blocked.
@@ -52,6 +51,7 @@ public class TeamsAppSettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +62,7 @@ public class TeamsAppSettings extends Entity implements Parsable {
      * @param value Value to set for the isChatResourceSpecificConsentEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsChatResourceSpecificConsentEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isChatResourceSpecificConsentEnabled = value;
     }

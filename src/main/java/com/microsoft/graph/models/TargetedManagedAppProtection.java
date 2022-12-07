@@ -22,6 +22,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      * Instantiates a new TargetedManagedAppProtection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TargetedManagedAppProtection() {
         super();
         this.setOdataType("#microsoft.graph.targetedManagedAppProtection");
@@ -66,13 +67,12 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TargetedManagedAppProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appGroupType", (n) -> { currentObject.setAppGroupType(n.getEnumValue(TargetedManagedAppGroupType.class)); });
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
-            this.put("isAssigned", (n) -> { currentObject.setIsAssigned(n.getBooleanValue()); });
-            this.put("targetedAppManagementLevels", (n) -> { currentObject.setTargetedAppManagementLevels(n.getEnumValue(AppManagementLevel.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appGroupType", (n) -> { this.setAppGroupType(n.getEnumValue(TargetedManagedAppGroupType.class)); });
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(TargetedManagedAppPolicyAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("isAssigned", (n) -> { this.setIsAssigned(n.getBooleanValue()); });
+        deserializerMap.put("targetedAppManagementLevels", (n) -> { this.setTargetedAppManagementLevels(n.getEnumValue(AppManagementLevel.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isAssigned property value. Indicates if the policy is deployed to any inclusion groups or not.
@@ -95,6 +95,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -108,6 +109,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      * @param value Value to set for the appGroupType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppGroupType(@javax.annotation.Nullable final TargetedManagedAppGroupType value) {
         this._appGroupType = value;
     }
@@ -116,6 +118,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<TargetedManagedAppPolicyAssignment> value) {
         this._assignments = value;
     }
@@ -124,6 +127,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      * @param value Value to set for the isAssigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAssigned(@javax.annotation.Nullable final Boolean value) {
         this._isAssigned = value;
     }
@@ -132,6 +136,7 @@ public class TargetedManagedAppProtection extends ManagedAppProtection implement
      * @param value Value to set for the targetedAppManagementLevels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedAppManagementLevels(@javax.annotation.Nullable final AppManagementLevel value) {
         this._targetedAppManagementLevels = value;
     }

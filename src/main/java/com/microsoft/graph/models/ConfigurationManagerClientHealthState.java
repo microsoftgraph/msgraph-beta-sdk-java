@@ -25,9 +25,9 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
      * Instantiates a new configurationManagerClientHealthState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConfigurationManagerClientHealthState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.configurationManagerClientHealthState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,13 +61,12 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConfigurationManagerClientHealthState currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getIntegerValue()); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ConfigurationManagerClientState.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getIntegerValue()); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ConfigurationManagerClientState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastSyncDateTime property value. Datetime for last sync with configuration manager management point.
@@ -98,6 +97,7 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("errorCode", this.getErrorCode());
@@ -111,6 +111,7 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -119,6 +120,7 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final Integer value) {
         this._errorCode = value;
     }
@@ -127,6 +129,7 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastSyncDateTime = value;
     }
@@ -135,6 +138,7 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -143,6 +147,7 @@ public class ConfigurationManagerClientHealthState implements AdditionalDataHold
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ConfigurationManagerClientState value) {
         this._state = value;
     }

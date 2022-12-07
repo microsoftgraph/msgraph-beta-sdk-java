@@ -8,15 +8,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerBucketTaskBoardTaskFormat extends PlannerDelta implements Parsable {
-    /** Hint used to order tasks in the Bucket view of the Task Board. The format is defined as outlined here. */
+    /** Hint used to order tasks in the bucket view of the task board. For details about the supported format, see Using order hints in Planner. */
     private String _orderHint;
     /**
      * Instantiates a new plannerBucketTaskBoardTaskFormat and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerBucketTaskBoardTaskFormat() {
         super();
-        this.setOdataType("#microsoft.graph.plannerBucketTaskBoardTaskFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,13 +34,12 @@ public class PlannerBucketTaskBoardTaskFormat extends PlannerDelta implements Pa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerBucketTaskBoardTaskFormat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("orderHint", (n) -> { currentObject.setOrderHint(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("orderHint", (n) -> { this.setOrderHint(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the orderHint property value. Hint used to order tasks in the Bucket view of the Task Board. The format is defined as outlined here.
+     * Gets the orderHint property value. Hint used to order tasks in the bucket view of the task board. For details about the supported format, see Using order hints in Planner.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -52,16 +51,18 @@ public class PlannerBucketTaskBoardTaskFormat extends PlannerDelta implements Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("orderHint", this.getOrderHint());
     }
     /**
-     * Sets the orderHint property value. Hint used to order tasks in the Bucket view of the Task Board. The format is defined as outlined here.
+     * Sets the orderHint property value. Hint used to order tasks in the bucket view of the task board. For details about the supported format, see Using order hints in Planner.
      * @param value Value to set for the orderHint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrderHint(@javax.annotation.Nullable final String value) {
         this._orderHint = value;
     }

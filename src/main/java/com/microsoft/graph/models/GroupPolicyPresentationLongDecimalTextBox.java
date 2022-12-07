@@ -24,6 +24,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      * Instantiates a new GroupPolicyPresentationLongDecimalTextBox and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationLongDecimalTextBox() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyPresentationLongDecimalTextBox");
@@ -52,15 +53,14 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyPresentationLongDecimalTextBox currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getLongValue()); });
-            this.put("maxValue", (n) -> { currentObject.setMaxValue(n.getLongValue()); });
-            this.put("minValue", (n) -> { currentObject.setMinValue(n.getLongValue()); });
-            this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
-            this.put("spin", (n) -> { currentObject.setSpin(n.getBooleanValue()); });
-            this.put("spinStep", (n) -> { currentObject.setSpinStep(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getLongValue()); });
+        deserializerMap.put("maxValue", (n) -> { this.setMaxValue(n.getLongValue()); });
+        deserializerMap.put("minValue", (n) -> { this.setMinValue(n.getLongValue()); });
+        deserializerMap.put("required", (n) -> { this.setRequired(n.getBooleanValue()); });
+        deserializerMap.put("spin", (n) -> { this.setSpin(n.getBooleanValue()); });
+        deserializerMap.put("spinStep", (n) -> { this.setSpinStep(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the maxValue property value. An unsigned long that specifies the maximum allowed value. The default value is 9999.
@@ -107,6 +107,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +123,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final Long value) {
         this._defaultValue = value;
     }
@@ -130,6 +132,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      * @param value Value to set for the maxValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxValue(@javax.annotation.Nullable final Long value) {
         this._maxValue = value;
     }
@@ -138,6 +141,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      * @param value Value to set for the minValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinValue(@javax.annotation.Nullable final Long value) {
         this._minValue = value;
     }
@@ -146,6 +150,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      * @param value Value to set for the required property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequired(@javax.annotation.Nullable final Boolean value) {
         this._required = value;
     }
@@ -154,6 +159,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      * @param value Value to set for the spin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpin(@javax.annotation.Nullable final Boolean value) {
         this._spin = value;
     }
@@ -162,6 +168,7 @@ public class GroupPolicyPresentationLongDecimalTextBox extends GroupPolicyUpload
      * @param value Value to set for the spinStep property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpinStep(@javax.annotation.Nullable final Long value) {
         this._spinStep = value;
     }

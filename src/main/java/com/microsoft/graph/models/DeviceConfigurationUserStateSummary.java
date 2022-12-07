@@ -26,9 +26,9 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * Instantiates a new deviceConfigurationUserStateSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceConfigurationUserStateSummary() {
         super();
-        this.setOdataType("#microsoft.graph.deviceConfigurationUserStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,16 +70,15 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceConfigurationUserStateSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("compliantUserCount", (n) -> { currentObject.setCompliantUserCount(n.getIntegerValue()); });
-            this.put("conflictUserCount", (n) -> { currentObject.setConflictUserCount(n.getIntegerValue()); });
-            this.put("errorUserCount", (n) -> { currentObject.setErrorUserCount(n.getIntegerValue()); });
-            this.put("nonCompliantUserCount", (n) -> { currentObject.setNonCompliantUserCount(n.getIntegerValue()); });
-            this.put("notApplicableUserCount", (n) -> { currentObject.setNotApplicableUserCount(n.getIntegerValue()); });
-            this.put("remediatedUserCount", (n) -> { currentObject.setRemediatedUserCount(n.getIntegerValue()); });
-            this.put("unknownUserCount", (n) -> { currentObject.setUnknownUserCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("compliantUserCount", (n) -> { this.setCompliantUserCount(n.getIntegerValue()); });
+        deserializerMap.put("conflictUserCount", (n) -> { this.setConflictUserCount(n.getIntegerValue()); });
+        deserializerMap.put("errorUserCount", (n) -> { this.setErrorUserCount(n.getIntegerValue()); });
+        deserializerMap.put("nonCompliantUserCount", (n) -> { this.setNonCompliantUserCount(n.getIntegerValue()); });
+        deserializerMap.put("notApplicableUserCount", (n) -> { this.setNotApplicableUserCount(n.getIntegerValue()); });
+        deserializerMap.put("remediatedUserCount", (n) -> { this.setRemediatedUserCount(n.getIntegerValue()); });
+        deserializerMap.put("unknownUserCount", (n) -> { this.setUnknownUserCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the nonCompliantUserCount property value. Number of NonCompliant users
@@ -118,6 +117,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +134,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * @param value Value to set for the compliantUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantUserCount(@javax.annotation.Nullable final Integer value) {
         this._compliantUserCount = value;
     }
@@ -142,6 +143,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * @param value Value to set for the conflictUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConflictUserCount(@javax.annotation.Nullable final Integer value) {
         this._conflictUserCount = value;
     }
@@ -150,6 +152,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * @param value Value to set for the errorUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorUserCount(@javax.annotation.Nullable final Integer value) {
         this._errorUserCount = value;
     }
@@ -158,6 +161,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * @param value Value to set for the nonCompliantUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNonCompliantUserCount(@javax.annotation.Nullable final Integer value) {
         this._nonCompliantUserCount = value;
     }
@@ -166,6 +170,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * @param value Value to set for the notApplicableUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotApplicableUserCount(@javax.annotation.Nullable final Integer value) {
         this._notApplicableUserCount = value;
     }
@@ -174,6 +179,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * @param value Value to set for the remediatedUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediatedUserCount(@javax.annotation.Nullable final Integer value) {
         this._remediatedUserCount = value;
     }
@@ -182,6 +188,7 @@ public class DeviceConfigurationUserStateSummary extends Entity implements Parsa
      * @param value Value to set for the unknownUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnknownUserCount(@javax.annotation.Nullable final Integer value) {
         this._unknownUserCount = value;
     }

@@ -28,9 +28,9 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      * Instantiates a new accessReviewHistoryInstance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewHistoryInstance() {
         super();
-        this.setOdataType("#microsoft.graph.accessReviewHistoryInstance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,16 +64,15 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewHistoryInstance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("downloadUri", (n) -> { currentObject.setDownloadUri(n.getStringValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("fulfilledDateTime", (n) -> { currentObject.setFulfilledDateTime(n.getOffsetDateTimeValue()); });
-            this.put("reviewHistoryPeriodEndDateTime", (n) -> { currentObject.setReviewHistoryPeriodEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("reviewHistoryPeriodStartDateTime", (n) -> { currentObject.setReviewHistoryPeriodStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("runDateTime", (n) -> { currentObject.setRunDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AccessReviewHistoryStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("downloadUri", (n) -> { this.setDownloadUri(n.getStringValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("fulfilledDateTime", (n) -> { this.setFulfilledDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("reviewHistoryPeriodEndDateTime", (n) -> { this.setReviewHistoryPeriodEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("reviewHistoryPeriodStartDateTime", (n) -> { this.setReviewHistoryPeriodStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("runDateTime", (n) -> { this.setRunDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AccessReviewHistoryStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the fulfilledDateTime property value. Timestamp when all of the available data for this instance was collected. This will be set after this instance's status is set to done. Required.
@@ -120,6 +119,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -136,6 +136,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      * @param value Value to set for the downloadUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDownloadUri(@javax.annotation.Nullable final String value) {
         this._downloadUri = value;
     }
@@ -144,6 +145,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expirationDateTime = value;
     }
@@ -152,6 +154,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      * @param value Value to set for the fulfilledDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFulfilledDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._fulfilledDateTime = value;
     }
@@ -160,6 +163,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      * @param value Value to set for the reviewHistoryPeriodEndDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewHistoryPeriodEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._reviewHistoryPeriodEndDateTime = value;
     }
@@ -168,6 +172,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      * @param value Value to set for the reviewHistoryPeriodStartDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewHistoryPeriodStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._reviewHistoryPeriodStartDateTime = value;
     }
@@ -176,6 +181,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      * @param value Value to set for the runDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRunDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._runDateTime = value;
     }
@@ -184,6 +190,7 @@ public class AccessReviewHistoryInstance extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final AccessReviewHistoryStatus value) {
         this._status = value;
     }

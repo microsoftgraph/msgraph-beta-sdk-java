@@ -32,9 +32,9 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
      * Instantiates a new windowsEnrollmentStatusScreenSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsEnrollmentStatusScreenSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsEnrollmentStatusScreenSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -100,17 +100,16 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsEnrollmentStatusScreenSettings currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("allowDeviceUseBeforeProfileAndAppInstallComplete", (n) -> { currentObject.setAllowDeviceUseBeforeProfileAndAppInstallComplete(n.getBooleanValue()); });
-            this.put("allowDeviceUseOnInstallFailure", (n) -> { currentObject.setAllowDeviceUseOnInstallFailure(n.getBooleanValue()); });
-            this.put("allowLogCollectionOnInstallFailure", (n) -> { currentObject.setAllowLogCollectionOnInstallFailure(n.getBooleanValue()); });
-            this.put("blockDeviceSetupRetryByUser", (n) -> { currentObject.setBlockDeviceSetupRetryByUser(n.getBooleanValue()); });
-            this.put("customErrorMessage", (n) -> { currentObject.setCustomErrorMessage(n.getStringValue()); });
-            this.put("hideInstallationProgress", (n) -> { currentObject.setHideInstallationProgress(n.getBooleanValue()); });
-            this.put("installProgressTimeoutInMinutes", (n) -> { currentObject.setInstallProgressTimeoutInMinutes(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("allowDeviceUseBeforeProfileAndAppInstallComplete", (n) -> { this.setAllowDeviceUseBeforeProfileAndAppInstallComplete(n.getBooleanValue()); });
+        deserializerMap.put("allowDeviceUseOnInstallFailure", (n) -> { this.setAllowDeviceUseOnInstallFailure(n.getBooleanValue()); });
+        deserializerMap.put("allowLogCollectionOnInstallFailure", (n) -> { this.setAllowLogCollectionOnInstallFailure(n.getBooleanValue()); });
+        deserializerMap.put("blockDeviceSetupRetryByUser", (n) -> { this.setBlockDeviceSetupRetryByUser(n.getBooleanValue()); });
+        deserializerMap.put("customErrorMessage", (n) -> { this.setCustomErrorMessage(n.getStringValue()); });
+        deserializerMap.put("hideInstallationProgress", (n) -> { this.setHideInstallationProgress(n.getBooleanValue()); });
+        deserializerMap.put("installProgressTimeoutInMinutes", (n) -> { this.setInstallProgressTimeoutInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hideInstallationProgress property value. Show or hide installation progress to user
@@ -141,6 +140,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowDeviceUseBeforeProfileAndAppInstallComplete", this.getAllowDeviceUseBeforeProfileAndAppInstallComplete());
@@ -158,6 +158,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -166,6 +167,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
      * @param value Value to set for the allowDeviceUseBeforeProfileAndAppInstallComplete property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowDeviceUseBeforeProfileAndAppInstallComplete(@javax.annotation.Nullable final Boolean value) {
         this._allowDeviceUseBeforeProfileAndAppInstallComplete = value;
     }
@@ -174,6 +176,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
      * @param value Value to set for the allowDeviceUseOnInstallFailure property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowDeviceUseOnInstallFailure(@javax.annotation.Nullable final Boolean value) {
         this._allowDeviceUseOnInstallFailure = value;
     }
@@ -182,6 +185,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
      * @param value Value to set for the allowLogCollectionOnInstallFailure property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowLogCollectionOnInstallFailure(@javax.annotation.Nullable final Boolean value) {
         this._allowLogCollectionOnInstallFailure = value;
     }
@@ -190,6 +194,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
      * @param value Value to set for the blockDeviceSetupRetryByUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockDeviceSetupRetryByUser(@javax.annotation.Nullable final Boolean value) {
         this._blockDeviceSetupRetryByUser = value;
     }
@@ -198,6 +203,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
      * @param value Value to set for the customErrorMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomErrorMessage(@javax.annotation.Nullable final String value) {
         this._customErrorMessage = value;
     }
@@ -206,6 +212,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
      * @param value Value to set for the hideInstallationProgress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideInstallationProgress(@javax.annotation.Nullable final Boolean value) {
         this._hideInstallationProgress = value;
     }
@@ -214,6 +221,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
      * @param value Value to set for the installProgressTimeoutInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstallProgressTimeoutInMinutes(@javax.annotation.Nullable final Integer value) {
         this._installProgressTimeoutInMinutes = value;
     }
@@ -222,6 +230,7 @@ public class WindowsEnrollmentStatusScreenSettings implements AdditionalDataHold
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

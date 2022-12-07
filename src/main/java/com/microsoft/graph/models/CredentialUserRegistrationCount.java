@@ -16,9 +16,9 @@ public class CredentialUserRegistrationCount extends Entity implements Parsable 
      * Instantiates a new CredentialUserRegistrationCount and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CredentialUserRegistrationCount() {
         super();
-        this.setOdataType("#microsoft.graph.credentialUserRegistrationCount");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,11 +36,10 @@ public class CredentialUserRegistrationCount extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CredentialUserRegistrationCount currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("totalUserCount", (n) -> { currentObject.setTotalUserCount(n.getLongValue()); });
-            this.put("userRegistrationCounts", (n) -> { currentObject.setUserRegistrationCounts(n.getCollectionOfObjectValues(UserRegistrationCount::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("totalUserCount", (n) -> { this.setTotalUserCount(n.getLongValue()); });
+        deserializerMap.put("userRegistrationCounts", (n) -> { this.setUserRegistrationCounts(n.getCollectionOfObjectValues(UserRegistrationCount::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the totalUserCount property value. Provides the total user count in the tenant.
@@ -63,6 +62,7 @@ public class CredentialUserRegistrationCount extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +74,7 @@ public class CredentialUserRegistrationCount extends Entity implements Parsable 
      * @param value Value to set for the totalUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalUserCount(@javax.annotation.Nullable final Long value) {
         this._totalUserCount = value;
     }
@@ -82,6 +83,7 @@ public class CredentialUserRegistrationCount extends Entity implements Parsable 
      * @param value Value to set for the userRegistrationCounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRegistrationCounts(@javax.annotation.Nullable final java.util.List<UserRegistrationCount> value) {
         this._userRegistrationCounts = value;
     }

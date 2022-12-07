@@ -30,6 +30,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * Instantiates a new updateDevicePropertiesPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateDevicePropertiesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -97,16 +98,15 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UpdateDevicePropertiesPostRequestBody currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("addressableUserName", (n) -> { currentObject.setAddressableUserName(n.getStringValue()); });
-            this.put("deviceAccountPassword", (n) -> { currentObject.setDeviceAccountPassword(n.getStringValue()); });
-            this.put("deviceAccountUpn", (n) -> { currentObject.setDeviceAccountUpn(n.getStringValue()); });
-            this.put("deviceFriendlyName", (n) -> { currentObject.setDeviceFriendlyName(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("groupTag", (n) -> { currentObject.setGroupTag(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("addressableUserName", (n) -> { this.setAddressableUserName(n.getStringValue()); });
+        deserializerMap.put("deviceAccountPassword", (n) -> { this.setDeviceAccountPassword(n.getStringValue()); });
+        deserializerMap.put("deviceAccountUpn", (n) -> { this.setDeviceAccountUpn(n.getStringValue()); });
+        deserializerMap.put("deviceFriendlyName", (n) -> { this.setDeviceFriendlyName(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("groupTag", (n) -> { this.setGroupTag(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupTag property value. The groupTag property
@@ -129,6 +129,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("addressableUserName", this.getAddressableUserName());
@@ -145,6 +146,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +155,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the addressableUserName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddressableUserName(@javax.annotation.Nullable final String value) {
         this._addressableUserName = value;
     }
@@ -161,6 +164,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the deviceAccountPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceAccountPassword(@javax.annotation.Nullable final String value) {
         this._deviceAccountPassword = value;
     }
@@ -169,6 +173,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the deviceAccountUpn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceAccountUpn(@javax.annotation.Nullable final String value) {
         this._deviceAccountUpn = value;
     }
@@ -177,6 +182,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the deviceFriendlyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceFriendlyName(@javax.annotation.Nullable final String value) {
         this._deviceFriendlyName = value;
     }
@@ -185,6 +191,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -193,6 +200,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the groupTag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupTag(@javax.annotation.Nullable final String value) {
         this._groupTag = value;
     }
@@ -201,6 +209,7 @@ public class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

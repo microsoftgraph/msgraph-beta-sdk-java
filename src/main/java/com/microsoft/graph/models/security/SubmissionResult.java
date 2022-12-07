@@ -27,9 +27,9 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * Instantiates a new submissionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SubmissionResult() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.security.submissionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -87,15 +87,14 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SubmissionResult currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(SubmissionResultCategory.class)); });
-            this.put("detail", (n) -> { currentObject.setDetail(n.getEnumValue(SubmissionResultDetail.class)); });
-            this.put("detectedFiles", (n) -> { currentObject.setDetectedFiles(n.getCollectionOfObjectValues(SubmissionDetectedFile::createFromDiscriminatorValue)); });
-            this.put("detectedUrls", (n) -> { currentObject.setDetectedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("userMailboxSetting", (n) -> { currentObject.setUserMailboxSetting(n.getEnumValue(UserMailboxSetting.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(SubmissionResultCategory.class)); });
+        deserializerMap.put("detail", (n) -> { this.setDetail(n.getEnumValue(SubmissionResultDetail.class)); });
+        deserializerMap.put("detectedFiles", (n) -> { this.setDetectedFiles(n.getCollectionOfObjectValues(SubmissionDetectedFile::createFromDiscriminatorValue)); });
+        deserializerMap.put("detectedUrls", (n) -> { this.setDetectedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("userMailboxSetting", (n) -> { this.setUserMailboxSetting(n.getEnumValue(UserMailboxSetting.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -118,6 +117,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("category", this.getCategory());
@@ -133,6 +133,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +142,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final SubmissionResultCategory value) {
         this._category = value;
     }
@@ -149,6 +151,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the detail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetail(@javax.annotation.Nullable final SubmissionResultDetail value) {
         this._detail = value;
     }
@@ -157,6 +160,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the detectedFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectedFiles(@javax.annotation.Nullable final java.util.List<SubmissionDetectedFile> value) {
         this._detectedFiles = value;
     }
@@ -165,6 +169,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the detectedUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetectedUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._detectedUrls = value;
     }
@@ -173,6 +178,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -181,6 +187,7 @@ public class SubmissionResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userMailboxSetting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserMailboxSetting(@javax.annotation.Nullable final UserMailboxSetting value) {
         this._userMailboxSetting = value;
     }

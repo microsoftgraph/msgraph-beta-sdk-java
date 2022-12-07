@@ -18,6 +18,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      * Instantiates a new MacOSCustomAppConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSCustomAppConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSCustomAppConfiguration");
@@ -54,12 +55,11 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSCustomAppConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
-            this.put("configurationXml", (n) -> { currentObject.setConfigurationXml(n.getByteArrayValue()); });
-            this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("bundleId", (n) -> { this.setBundleId(n.getStringValue()); });
+        deserializerMap.put("configurationXml", (n) -> { this.setConfigurationXml(n.getByteArrayValue()); });
+        deserializerMap.put("fileName", (n) -> { this.setFileName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileName property value. Configuration file name (.plist
@@ -74,6 +74,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +87,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the bundleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBundleId(@javax.annotation.Nullable final String value) {
         this._bundleId = value;
     }
@@ -94,6 +96,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the configurationXml property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationXml(@javax.annotation.Nullable final byte[] value) {
         this._configurationXml = value;
     }
@@ -102,6 +105,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the fileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileName(@javax.annotation.Nullable final String value) {
         this._fileName = value;
     }

@@ -17,6 +17,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      * Instantiates a new WindowsUpdateScheduledInstall and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsUpdateScheduledInstall() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdateScheduledInstall");
@@ -37,11 +38,10 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsUpdateScheduledInstall currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("scheduledInstallDay", (n) -> { currentObject.setScheduledInstallDay(n.getEnumValue(WeeklySchedule.class)); });
-            this.put("scheduledInstallTime", (n) -> { currentObject.setScheduledInstallTime(n.getLocalTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("scheduledInstallDay", (n) -> { this.setScheduledInstallDay(n.getEnumValue(WeeklySchedule.class)); });
+        deserializerMap.put("scheduledInstallTime", (n) -> { this.setScheduledInstallTime(n.getLocalTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the scheduledInstallDay property value. Possible values for a weekly schedule.
@@ -64,6 +64,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +76,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      * @param value Value to set for the scheduledInstallDay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduledInstallDay(@javax.annotation.Nullable final WeeklySchedule value) {
         this._scheduledInstallDay = value;
     }
@@ -83,6 +85,7 @@ public class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleT
      * @param value Value to set for the scheduledInstallTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScheduledInstallTime(@javax.annotation.Nullable final LocalTime value) {
         this._scheduledInstallTime = value;
     }

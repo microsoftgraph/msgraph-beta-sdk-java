@@ -20,15 +20,15 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
     private String _displayName;
     /** The OdataType property */
     private String _odataType;
-    /** Status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue. */
+    /** The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue. */
     private TrainingStatus _trainingStatus;
     /**
      * Instantiates a new userTrainingStatusInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserTrainingStatusInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.userTrainingStatusInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -78,14 +78,13 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserTrainingStatusInfo currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("assignedDateTime", (n) -> { currentObject.setAssignedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("completionDateTime", (n) -> { currentObject.setCompletionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("trainingStatus", (n) -> { currentObject.setTrainingStatus(n.getEnumValue(TrainingStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("assignedDateTime", (n) -> { this.setAssignedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("completionDateTime", (n) -> { this.setCompletionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("trainingStatus", (n) -> { this.setTrainingStatus(n.getEnumValue(TrainingStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -96,7 +95,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the trainingStatus property value. Status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
+     * Gets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @return a trainingStatus
      */
     @javax.annotation.Nullable
@@ -108,6 +107,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("assignedDateTime", this.getAssignedDateTime());
@@ -122,6 +122,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +131,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the assignedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._assignedDateTime = value;
     }
@@ -138,6 +140,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the completionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._completionDateTime = value;
     }
@@ -146,6 +149,7 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -154,14 +158,16 @@ public class UserTrainingStatusInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
     /**
-     * Sets the trainingStatus property value. Status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
+     * Sets the trainingStatus property value. The status of the training assigned to the user. Possible values are: unknown, assigned, inProgress, completed, overdue, unknownFutureValue.
      * @param value Value to set for the trainingStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrainingStatus(@javax.annotation.Nullable final TrainingStatus value) {
         this._trainingStatus = value;
     }

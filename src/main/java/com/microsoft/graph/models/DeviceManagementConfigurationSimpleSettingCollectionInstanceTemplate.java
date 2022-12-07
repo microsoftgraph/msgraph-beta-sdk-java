@@ -16,6 +16,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionInstanceTemplat
      * Instantiates a new DeviceManagementConfigurationSimpleSettingCollectionInstanceTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSimpleSettingCollectionInstanceTemplate() {
         super();
         this.setOdataType("#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstanceTemplate");
@@ -44,11 +45,10 @@ public class DeviceManagementConfigurationSimpleSettingCollectionInstanceTemplat
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationSimpleSettingCollectionInstanceTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowUnmanagedValues", (n) -> { currentObject.setAllowUnmanagedValues(n.getBooleanValue()); });
-            this.put("simpleSettingCollectionValueTemplate", (n) -> { currentObject.setSimpleSettingCollectionValueTemplate(n.getCollectionOfObjectValues(DeviceManagementConfigurationSimpleSettingValueTemplate::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowUnmanagedValues", (n) -> { this.setAllowUnmanagedValues(n.getBooleanValue()); });
+        deserializerMap.put("simpleSettingCollectionValueTemplate", (n) -> { this.setSimpleSettingCollectionValueTemplate(n.getCollectionOfObjectValues(DeviceManagementConfigurationSimpleSettingValueTemplate::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the simpleSettingCollectionValueTemplate property value. Simple Setting Collection Value Template
@@ -63,6 +63,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionInstanceTemplat
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +75,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionInstanceTemplat
      * @param value Value to set for the allowUnmanagedValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowUnmanagedValues(@javax.annotation.Nullable final Boolean value) {
         this._allowUnmanagedValues = value;
     }
@@ -82,6 +84,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionInstanceTemplat
      * @param value Value to set for the simpleSettingCollectionValueTemplate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSimpleSettingCollectionValueTemplate(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSimpleSettingValueTemplate> value) {
         this._simpleSettingCollectionValueTemplate = value;
     }

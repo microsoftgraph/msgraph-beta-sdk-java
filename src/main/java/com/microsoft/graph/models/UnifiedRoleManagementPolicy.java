@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     /** Description for the policy. */
     private String _description;
@@ -28,17 +29,17 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
     /** The type of the scope where the policy is created. One of Directory, DirectoryRole. Required. */
     private String _scopeType;
     /**
-     * Instantiates a new UnifiedRoleManagementPolicy and sets the default values.
+     * Instantiates a new unifiedRoleManagementPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnifiedRoleManagementPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.unifiedRoleManagementPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UnifiedRoleManagementPolicy
+     * @return a unifiedRoleManagementPolicy
      */
     @javax.annotation.Nonnull
     public static UnifiedRoleManagementPolicy createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -75,18 +76,17 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UnifiedRoleManagementPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("effectiveRules", (n) -> { currentObject.setEffectiveRules(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicyRule::createFromDiscriminatorValue)); });
-            this.put("isOrganizationDefault", (n) -> { currentObject.setIsOrganizationDefault(n.getBooleanValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("rules", (n) -> { currentObject.setRules(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicyRule::createFromDiscriminatorValue)); });
-            this.put("scopeId", (n) -> { currentObject.setScopeId(n.getStringValue()); });
-            this.put("scopeType", (n) -> { currentObject.setScopeType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("effectiveRules", (n) -> { this.setEffectiveRules(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicyRule::createFromDiscriminatorValue)); });
+        deserializerMap.put("isOrganizationDefault", (n) -> { this.setIsOrganizationDefault(n.getBooleanValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("rules", (n) -> { this.setRules(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicyRule::createFromDiscriminatorValue)); });
+        deserializerMap.put("scopeId", (n) -> { this.setScopeId(n.getStringValue()); });
+        deserializerMap.put("scopeType", (n) -> { this.setScopeType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isOrganizationDefault property value. This can only be set to true for a single tenant-wide policy which will apply to all scopes and roles. Set the scopeId to / and scopeType to Directory. Supports $filter (eq, ne).
@@ -141,6 +141,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,6 +160,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -167,6 +169,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -175,6 +178,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the effectiveRules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEffectiveRules(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRule> value) {
         this._effectiveRules = value;
     }
@@ -183,6 +187,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the isOrganizationDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsOrganizationDefault(@javax.annotation.Nullable final Boolean value) {
         this._isOrganizationDefault = value;
     }
@@ -191,6 +196,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final Identity value) {
         this._lastModifiedBy = value;
     }
@@ -199,6 +205,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -207,6 +214,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the rules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRules(@javax.annotation.Nullable final java.util.List<UnifiedRoleManagementPolicyRule> value) {
         this._rules = value;
     }
@@ -215,6 +223,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the scopeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScopeId(@javax.annotation.Nullable final String value) {
         this._scopeId = value;
     }
@@ -223,6 +232,7 @@ public class UnifiedRoleManagementPolicy extends Entity implements Parsable {
      * @param value Value to set for the scopeType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScopeType(@javax.annotation.Nullable final String value) {
         this._scopeType = value;
     }

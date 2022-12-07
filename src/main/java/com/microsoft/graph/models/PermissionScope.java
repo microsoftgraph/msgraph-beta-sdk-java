@@ -35,9 +35,9 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      * Instantiates a new permissionScope and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PermissionScope() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.permissionScope");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,19 +79,18 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PermissionScope currentObject = this;
-        return new HashMap<>(10) {{
-            this.put("adminConsentDescription", (n) -> { currentObject.setAdminConsentDescription(n.getStringValue()); });
-            this.put("adminConsentDisplayName", (n) -> { currentObject.setAdminConsentDisplayName(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("origin", (n) -> { currentObject.setOrigin(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-            this.put("userConsentDescription", (n) -> { currentObject.setUserConsentDescription(n.getStringValue()); });
-            this.put("userConsentDisplayName", (n) -> { currentObject.setUserConsentDisplayName(n.getStringValue()); });
-            this.put("value", (n) -> { currentObject.setValue(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("adminConsentDescription", (n) -> { this.setAdminConsentDescription(n.getStringValue()); });
+        deserializerMap.put("adminConsentDisplayName", (n) -> { this.setAdminConsentDisplayName(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("origin", (n) -> { this.setOrigin(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        deserializerMap.put("userConsentDescription", (n) -> { this.setUserConsentDescription(n.getStringValue()); });
+        deserializerMap.put("userConsentDisplayName", (n) -> { this.setUserConsentDisplayName(n.getStringValue()); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. Unique delegated permission identifier inside the collection of delegated permissions defined for a resource application.
@@ -162,6 +161,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("adminConsentDescription", this.getAdminConsentDescription());
@@ -181,6 +181,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -189,6 +190,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the adminConsentDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdminConsentDescription(@javax.annotation.Nullable final String value) {
         this._adminConsentDescription = value;
     }
@@ -197,6 +199,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the adminConsentDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdminConsentDisplayName(@javax.annotation.Nullable final String value) {
         this._adminConsentDisplayName = value;
     }
@@ -205,6 +208,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -213,6 +217,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }
@@ -221,6 +226,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -229,6 +235,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the origin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrigin(@javax.annotation.Nullable final String value) {
         this._origin = value;
     }
@@ -237,6 +244,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
@@ -245,6 +253,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userConsentDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserConsentDescription(@javax.annotation.Nullable final String value) {
         this._userConsentDescription = value;
     }
@@ -253,6 +262,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the userConsentDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserConsentDisplayName(@javax.annotation.Nullable final String value) {
         this._userConsentDisplayName = value;
     }
@@ -261,6 +271,7 @@ public class PermissionScope implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final String value) {
         this._value = value;
     }

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class WorkbookTable extends Entity implements Parsable {
     /** Represents a collection of all the columns in the table. Read-only. */
     private java.util.List<WorkbookTableColumn> _columns;
@@ -41,9 +41,9 @@ public class WorkbookTable extends Entity implements Parsable {
      * Instantiates a new workbookTable and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookTable() {
         super();
-        this.setOdataType("#microsoft.graph.workbookTable");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,23 +69,22 @@ public class WorkbookTable extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookTable currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("columns", (n) -> { currentObject.setColumns(n.getCollectionOfObjectValues(WorkbookTableColumn::createFromDiscriminatorValue)); });
-            this.put("highlightFirstColumn", (n) -> { currentObject.setHighlightFirstColumn(n.getBooleanValue()); });
-            this.put("highlightLastColumn", (n) -> { currentObject.setHighlightLastColumn(n.getBooleanValue()); });
-            this.put("legacyId", (n) -> { currentObject.setLegacyId(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("rows", (n) -> { currentObject.setRows(n.getCollectionOfObjectValues(WorkbookTableRow::createFromDiscriminatorValue)); });
-            this.put("showBandedColumns", (n) -> { currentObject.setShowBandedColumns(n.getBooleanValue()); });
-            this.put("showBandedRows", (n) -> { currentObject.setShowBandedRows(n.getBooleanValue()); });
-            this.put("showFilterButton", (n) -> { currentObject.setShowFilterButton(n.getBooleanValue()); });
-            this.put("showHeaders", (n) -> { currentObject.setShowHeaders(n.getBooleanValue()); });
-            this.put("showTotals", (n) -> { currentObject.setShowTotals(n.getBooleanValue()); });
-            this.put("sort", (n) -> { currentObject.setSort(n.getObjectValue(WorkbookTableSort::createFromDiscriminatorValue)); });
-            this.put("style", (n) -> { currentObject.setStyle(n.getStringValue()); });
-            this.put("worksheet", (n) -> { currentObject.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("columns", (n) -> { this.setColumns(n.getCollectionOfObjectValues(WorkbookTableColumn::createFromDiscriminatorValue)); });
+        deserializerMap.put("highlightFirstColumn", (n) -> { this.setHighlightFirstColumn(n.getBooleanValue()); });
+        deserializerMap.put("highlightLastColumn", (n) -> { this.setHighlightLastColumn(n.getBooleanValue()); });
+        deserializerMap.put("legacyId", (n) -> { this.setLegacyId(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("rows", (n) -> { this.setRows(n.getCollectionOfObjectValues(WorkbookTableRow::createFromDiscriminatorValue)); });
+        deserializerMap.put("showBandedColumns", (n) -> { this.setShowBandedColumns(n.getBooleanValue()); });
+        deserializerMap.put("showBandedRows", (n) -> { this.setShowBandedRows(n.getBooleanValue()); });
+        deserializerMap.put("showFilterButton", (n) -> { this.setShowFilterButton(n.getBooleanValue()); });
+        deserializerMap.put("showHeaders", (n) -> { this.setShowHeaders(n.getBooleanValue()); });
+        deserializerMap.put("showTotals", (n) -> { this.setShowTotals(n.getBooleanValue()); });
+        deserializerMap.put("sort", (n) -> { this.setSort(n.getObjectValue(WorkbookTableSort::createFromDiscriminatorValue)); });
+        deserializerMap.put("style", (n) -> { this.setStyle(n.getStringValue()); });
+        deserializerMap.put("worksheet", (n) -> { this.setWorksheet(n.getObjectValue(WorkbookWorksheet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the highlightFirstColumn property value. Indicates whether the first column contains special formatting.
@@ -196,6 +195,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -219,6 +219,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the columns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColumns(@javax.annotation.Nullable final java.util.List<WorkbookTableColumn> value) {
         this._columns = value;
     }
@@ -227,6 +228,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the highlightFirstColumn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHighlightFirstColumn(@javax.annotation.Nullable final Boolean value) {
         this._highlightFirstColumn = value;
     }
@@ -235,6 +237,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the highlightLastColumn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHighlightLastColumn(@javax.annotation.Nullable final Boolean value) {
         this._highlightLastColumn = value;
     }
@@ -243,6 +246,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the legacyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLegacyId(@javax.annotation.Nullable final String value) {
         this._legacyId = value;
     }
@@ -251,6 +255,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -259,6 +264,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the rows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRows(@javax.annotation.Nullable final java.util.List<WorkbookTableRow> value) {
         this._rows = value;
     }
@@ -267,6 +273,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the showBandedColumns property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowBandedColumns(@javax.annotation.Nullable final Boolean value) {
         this._showBandedColumns = value;
     }
@@ -275,6 +282,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the showBandedRows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowBandedRows(@javax.annotation.Nullable final Boolean value) {
         this._showBandedRows = value;
     }
@@ -283,6 +291,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the showFilterButton property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowFilterButton(@javax.annotation.Nullable final Boolean value) {
         this._showFilterButton = value;
     }
@@ -291,6 +300,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the showHeaders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowHeaders(@javax.annotation.Nullable final Boolean value) {
         this._showHeaders = value;
     }
@@ -299,6 +309,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the showTotals property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowTotals(@javax.annotation.Nullable final Boolean value) {
         this._showTotals = value;
     }
@@ -307,6 +318,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the sort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSort(@javax.annotation.Nullable final WorkbookTableSort value) {
         this._sort = value;
     }
@@ -315,6 +327,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the style property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStyle(@javax.annotation.Nullable final String value) {
         this._style = value;
     }
@@ -323,6 +336,7 @@ public class WorkbookTable extends Entity implements Parsable {
      * @param value Value to set for the worksheet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorksheet(@javax.annotation.Nullable final WorkbookWorksheet value) {
         this._worksheet = value;
     }

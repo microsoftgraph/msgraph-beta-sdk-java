@@ -30,9 +30,9 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
      * Instantiates a new deviceManagementSettingComparison and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementSettingComparison() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceManagementSettingComparison");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -90,16 +90,15 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementSettingComparison currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("comparisonResult", (n) -> { currentObject.setComparisonResult(n.getEnumValue(DeviceManagementComparisonResult.class)); });
-            this.put("currentValueJson", (n) -> { currentObject.setCurrentValueJson(n.getStringValue()); });
-            this.put("definitionId", (n) -> { currentObject.setDefinitionId(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("newValueJson", (n) -> { currentObject.setNewValueJson(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("comparisonResult", (n) -> { this.setComparisonResult(n.getEnumValue(DeviceManagementComparisonResult.class)); });
+        deserializerMap.put("currentValueJson", (n) -> { this.setCurrentValueJson(n.getStringValue()); });
+        deserializerMap.put("definitionId", (n) -> { this.setDefinitionId(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("newValueJson", (n) -> { this.setNewValueJson(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The setting ID
@@ -130,6 +129,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("comparisonResult", this.getComparisonResult());
@@ -146,6 +146,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -154,6 +155,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
      * @param value Value to set for the comparisonResult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComparisonResult(@javax.annotation.Nullable final DeviceManagementComparisonResult value) {
         this._comparisonResult = value;
     }
@@ -162,6 +164,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
      * @param value Value to set for the currentValueJson property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrentValueJson(@javax.annotation.Nullable final String value) {
         this._currentValueJson = value;
     }
@@ -170,6 +173,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
      * @param value Value to set for the definitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitionId(@javax.annotation.Nullable final String value) {
         this._definitionId = value;
     }
@@ -178,6 +182,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -186,6 +191,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -194,6 +200,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
      * @param value Value to set for the newValueJson property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNewValueJson(@javax.annotation.Nullable final String value) {
         this._newValueJson = value;
     }
@@ -202,6 +209,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

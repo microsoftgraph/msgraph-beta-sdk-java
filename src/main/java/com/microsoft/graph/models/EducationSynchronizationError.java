@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class EducationSynchronizationError extends Entity implements Parsable {
     /** Represents the sync entity (school, section, student, teacher). */
     private String _entryType;
@@ -26,9 +26,9 @@ public class EducationSynchronizationError extends Entity implements Parsable {
      * Instantiates a new educationSynchronizationError and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationSynchronizationError() {
         super();
-        this.setOdataType("#microsoft.graph.educationSynchronizationError");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,15 +70,14 @@ public class EducationSynchronizationError extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationSynchronizationError currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("entryType", (n) -> { currentObject.setEntryType(n.getStringValue()); });
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
-            this.put("errorMessage", (n) -> { currentObject.setErrorMessage(n.getStringValue()); });
-            this.put("joiningValue", (n) -> { currentObject.setJoiningValue(n.getStringValue()); });
-            this.put("recordedDateTime", (n) -> { currentObject.setRecordedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("reportableIdentifier", (n) -> { currentObject.setReportableIdentifier(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("entryType", (n) -> { this.setEntryType(n.getStringValue()); });
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getStringValue()); });
+        deserializerMap.put("errorMessage", (n) -> { this.setErrorMessage(n.getStringValue()); });
+        deserializerMap.put("joiningValue", (n) -> { this.setJoiningValue(n.getStringValue()); });
+        deserializerMap.put("recordedDateTime", (n) -> { this.setRecordedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("reportableIdentifier", (n) -> { this.setReportableIdentifier(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the joiningValue property value. The unique identifier for the entry.
@@ -109,6 +108,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -124,6 +124,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
      * @param value Value to set for the entryType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEntryType(@javax.annotation.Nullable final String value) {
         this._entryType = value;
     }
@@ -132,6 +133,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final String value) {
         this._errorCode = value;
     }
@@ -140,6 +142,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
      * @param value Value to set for the errorMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorMessage(@javax.annotation.Nullable final String value) {
         this._errorMessage = value;
     }
@@ -148,6 +151,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
      * @param value Value to set for the joiningValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoiningValue(@javax.annotation.Nullable final String value) {
         this._joiningValue = value;
     }
@@ -156,6 +160,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
      * @param value Value to set for the recordedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecordedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._recordedDateTime = value;
     }
@@ -164,6 +169,7 @@ public class EducationSynchronizationError extends Entity implements Parsable {
      * @param value Value to set for the reportableIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportableIdentifier(@javax.annotation.Nullable final String value) {
         this._reportableIdentifier = value;
     }

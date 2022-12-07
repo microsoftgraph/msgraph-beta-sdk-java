@@ -29,9 +29,9 @@ public class Media implements AdditionalDataHolder, Parsable {
      * Instantiates a new media and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Media() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.callRecords.media");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -89,16 +89,15 @@ public class Media implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Media currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("calleeDevice", (n) -> { currentObject.setCalleeDevice(n.getObjectValue(DeviceInfo::createFromDiscriminatorValue)); });
-            this.put("calleeNetwork", (n) -> { currentObject.setCalleeNetwork(n.getObjectValue(NetworkInfo::createFromDiscriminatorValue)); });
-            this.put("callerDevice", (n) -> { currentObject.setCallerDevice(n.getObjectValue(DeviceInfo::createFromDiscriminatorValue)); });
-            this.put("callerNetwork", (n) -> { currentObject.setCallerNetwork(n.getObjectValue(NetworkInfo::createFromDiscriminatorValue)); });
-            this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("streams", (n) -> { currentObject.setStreams(n.getCollectionOfObjectValues(MediaStream::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("calleeDevice", (n) -> { this.setCalleeDevice(n.getObjectValue(DeviceInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("calleeNetwork", (n) -> { this.setCalleeNetwork(n.getObjectValue(NetworkInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("callerDevice", (n) -> { this.setCallerDevice(n.getObjectValue(DeviceInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("callerNetwork", (n) -> { this.setCallerNetwork(n.getObjectValue(NetworkInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("streams", (n) -> { this.setStreams(n.getCollectionOfObjectValues(MediaStream::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the label property value. How the media was identified during media negotiation stage.
@@ -129,6 +128,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("calleeDevice", this.getCalleeDevice());
@@ -145,6 +145,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +154,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the calleeDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalleeDevice(@javax.annotation.Nullable final DeviceInfo value) {
         this._calleeDevice = value;
     }
@@ -161,6 +163,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the calleeNetwork property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalleeNetwork(@javax.annotation.Nullable final NetworkInfo value) {
         this._calleeNetwork = value;
     }
@@ -169,6 +172,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the callerDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallerDevice(@javax.annotation.Nullable final DeviceInfo value) {
         this._callerDevice = value;
     }
@@ -177,6 +181,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the callerNetwork property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallerNetwork(@javax.annotation.Nullable final NetworkInfo value) {
         this._callerNetwork = value;
     }
@@ -185,6 +190,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the label property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabel(@javax.annotation.Nullable final String value) {
         this._label = value;
     }
@@ -193,6 +199,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -201,6 +208,7 @@ public class Media implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the streams property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStreams(@javax.annotation.Nullable final java.util.List<MediaStream> value) {
         this._streams = value;
     }

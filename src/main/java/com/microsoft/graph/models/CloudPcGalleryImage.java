@@ -37,9 +37,9 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      * Instantiates a new CloudPcGalleryImage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcGalleryImage() {
         super();
-        this.setOdataType("#microsoft.graph.cloudPcGalleryImage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -81,21 +81,20 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcGalleryImage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("endDate", (n) -> { currentObject.setEndDate(n.getLocalDateValue()); });
-            this.put("expirationDate", (n) -> { currentObject.setExpirationDate(n.getLocalDateValue()); });
-            this.put("offer", (n) -> { currentObject.setOffer(n.getStringValue()); });
-            this.put("offerDisplayName", (n) -> { currentObject.setOfferDisplayName(n.getStringValue()); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
-            this.put("recommendedSku", (n) -> { currentObject.setRecommendedSku(n.getStringValue()); });
-            this.put("sizeInGB", (n) -> { currentObject.setSizeInGB(n.getIntegerValue()); });
-            this.put("sku", (n) -> { currentObject.setSku(n.getStringValue()); });
-            this.put("skuDisplayName", (n) -> { currentObject.setSkuDisplayName(n.getStringValue()); });
-            this.put("startDate", (n) -> { currentObject.setStartDate(n.getLocalDateValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CloudPcGalleryImageStatus.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("endDate", (n) -> { this.setEndDate(n.getLocalDateValue()); });
+        deserializerMap.put("expirationDate", (n) -> { this.setExpirationDate(n.getLocalDateValue()); });
+        deserializerMap.put("offer", (n) -> { this.setOffer(n.getStringValue()); });
+        deserializerMap.put("offerDisplayName", (n) -> { this.setOfferDisplayName(n.getStringValue()); });
+        deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
+        deserializerMap.put("recommendedSku", (n) -> { this.setRecommendedSku(n.getStringValue()); });
+        deserializerMap.put("sizeInGB", (n) -> { this.setSizeInGB(n.getIntegerValue()); });
+        deserializerMap.put("sku", (n) -> { this.setSku(n.getStringValue()); });
+        deserializerMap.put("skuDisplayName", (n) -> { this.setSkuDisplayName(n.getStringValue()); });
+        deserializerMap.put("startDate", (n) -> { this.setStartDate(n.getLocalDateValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPcGalleryImageStatus.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the offer property value. The offer name of the gallery image. This value will be passed to Azure to get the image resource. Read-only.
@@ -174,6 +173,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -195,6 +195,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -203,6 +204,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      * @param value Value to set for the endDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDate(@javax.annotation.Nullable final LocalDate value) {
         this._endDate = value;
     }
@@ -211,6 +213,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      * @param value Value to set for the expirationDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDate(@javax.annotation.Nullable final LocalDate value) {
         this._expirationDate = value;
     }
@@ -219,6 +222,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      * @param value Value to set for the offer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOffer(@javax.annotation.Nullable final String value) {
         this._offer = value;
     }
@@ -227,6 +231,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      * @param value Value to set for the offerDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOfferDisplayName(@javax.annotation.Nullable final String value) {
         this._offerDisplayName = value;
     }
@@ -235,6 +240,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
         this._publisher = value;
     }
@@ -243,6 +249,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      * @param value Value to set for the recommendedSku property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendedSku(@javax.annotation.Nullable final String value) {
         this._recommendedSku = value;
     }
@@ -251,6 +258,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      * @param value Value to set for the sizeInGB property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSizeInGB(@javax.annotation.Nullable final Integer value) {
         this._sizeInGB = value;
     }
@@ -259,6 +267,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      * @param value Value to set for the sku property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSku(@javax.annotation.Nullable final String value) {
         this._sku = value;
     }
@@ -267,6 +276,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      * @param value Value to set for the skuDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkuDisplayName(@javax.annotation.Nullable final String value) {
         this._skuDisplayName = value;
     }
@@ -275,6 +285,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      * @param value Value to set for the startDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDate(@javax.annotation.Nullable final LocalDate value) {
         this._startDate = value;
     }
@@ -283,6 +294,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final CloudPcGalleryImageStatus value) {
         this._status = value;
     }

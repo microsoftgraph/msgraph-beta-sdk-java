@@ -27,9 +27,9 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * Instantiates a new informationalUrl and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InformationalUrl() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.informationalUrl");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,15 +55,14 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final InformationalUrl currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("logoUrl", (n) -> { currentObject.setLogoUrl(n.getStringValue()); });
-            this.put("marketingUrl", (n) -> { currentObject.setMarketingUrl(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("privacyStatementUrl", (n) -> { currentObject.setPrivacyStatementUrl(n.getStringValue()); });
-            this.put("supportUrl", (n) -> { currentObject.setSupportUrl(n.getStringValue()); });
-            this.put("termsOfServiceUrl", (n) -> { currentObject.setTermsOfServiceUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("logoUrl", (n) -> { this.setLogoUrl(n.getStringValue()); });
+        deserializerMap.put("marketingUrl", (n) -> { this.setMarketingUrl(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("privacyStatementUrl", (n) -> { this.setPrivacyStatementUrl(n.getStringValue()); });
+        deserializerMap.put("supportUrl", (n) -> { this.setSupportUrl(n.getStringValue()); });
+        deserializerMap.put("termsOfServiceUrl", (n) -> { this.setTermsOfServiceUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the logoUrl property value. CDN URL to the application's logo, Read-only.
@@ -118,6 +117,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("logoUrl", this.getLogoUrl());
@@ -133,6 +133,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +142,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the logoUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogoUrl(@javax.annotation.Nullable final String value) {
         this._logoUrl = value;
     }
@@ -149,6 +151,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the marketingUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMarketingUrl(@javax.annotation.Nullable final String value) {
         this._marketingUrl = value;
     }
@@ -157,6 +160,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -165,6 +169,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the privacyStatementUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyStatementUrl(@javax.annotation.Nullable final String value) {
         this._privacyStatementUrl = value;
     }
@@ -173,6 +178,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the supportUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportUrl(@javax.annotation.Nullable final String value) {
         this._supportUrl = value;
     }
@@ -181,6 +187,7 @@ public class InformationalUrl implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the termsOfServiceUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTermsOfServiceUrl(@javax.annotation.Nullable final String value) {
         this._termsOfServiceUrl = value;
     }

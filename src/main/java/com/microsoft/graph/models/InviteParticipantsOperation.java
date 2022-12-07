@@ -14,9 +14,9 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
      * Instantiates a new InviteParticipantsOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InviteParticipantsOperation() {
         super();
-        this.setOdataType("#microsoft.graph.inviteParticipantsOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,10 +34,9 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final InviteParticipantsOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("participants", (n) -> { currentObject.setParticipants(n.getCollectionOfObjectValues(InvitationParticipantInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("participants", (n) -> { this.setParticipants(n.getCollectionOfObjectValues(InvitationParticipantInfo::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the participants property value. The participants to invite.
@@ -52,6 +51,7 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +62,7 @@ public class InviteParticipantsOperation extends CommsOperation implements Parsa
      * @param value Value to set for the participants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParticipants(@javax.annotation.Nullable final java.util.List<InvitationParticipantInfo> value) {
         this._participants = value;
     }

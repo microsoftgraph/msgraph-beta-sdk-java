@@ -21,7 +21,7 @@ public class Device extends DirectoryObject implements Parsable {
     private OffsetDateTime _complianceExpirationDateTime;
     /** User-defined property set by Intune to automatically add devices to groups and simplify managing devices. */
     private String _deviceCategory;
-    /** Identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith). */
+    /** Unique Identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Also Supports $filter (eq, ne, not, startsWith). */
     private String _deviceId;
     /** For internal use only. Set to null. */
     private String _deviceMetadata;
@@ -73,7 +73,7 @@ public class Device extends DirectoryObject implements Parsable {
     private String _operatingSystem;
     /** Operating system version of the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values). */
     private String _operatingSystemVersion;
-    /** For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections). */
+    /** For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0. */
     private java.util.List<String> _physicalIds;
     /** Platform of device. Only returned if user signs in with a Microsoft account as part of Project Rome. Only returned if user signs in with a Microsoft account as part of Project Rome. */
     private String _platform;
@@ -87,7 +87,7 @@ public class Device extends DirectoryObject implements Parsable {
     private OffsetDateTime _registrationDateTime;
     /** Device is online or offline. Only returned if user signs in with a Microsoft account as part of Project Rome. */
     private String _status;
-    /** List of labels applied to the device by the system. Supports $filter (eq when counting empty collections). */
+    /** List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0). */
     private java.util.List<String> _systemLabels;
     /** Groups and administrative units that this device is a member of. This operation is transitive. Supports $expand. */
     private java.util.List<DirectoryObject> _transitiveMemberOf;
@@ -96,9 +96,10 @@ public class Device extends DirectoryObject implements Parsable {
     /** Represents the usage rights a device has been granted. */
     private java.util.List<UsageRight> _usageRights;
     /**
-     * Instantiates a new Device and sets the default values.
+     * Instantiates a new device and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Device() {
         super();
         this.setOdataType("#microsoft.graph.device");
@@ -106,7 +107,7 @@ public class Device extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Device
+     * @return a device
      */
     @javax.annotation.Nonnull
     public static Device createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -162,7 +163,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this._deviceCategory;
     }
     /**
-     * Gets the deviceId property value. Identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+     * Gets the deviceId property value. Unique Identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Also Supports $filter (eq, ne, not, startsWith).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -247,52 +248,51 @@ public class Device extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Device currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
-            this.put("alternativeSecurityIds", (n) -> { currentObject.setAlternativeSecurityIds(n.getCollectionOfObjectValues(AlternativeSecurityId::createFromDiscriminatorValue)); });
-            this.put("approximateLastSignInDateTime", (n) -> { currentObject.setApproximateLastSignInDateTime(n.getOffsetDateTimeValue()); });
-            this.put("commands", (n) -> { currentObject.setCommands(n.getCollectionOfObjectValues(Command::createFromDiscriminatorValue)); });
-            this.put("complianceExpirationDateTime", (n) -> { currentObject.setComplianceExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deviceCategory", (n) -> { currentObject.setDeviceCategory(n.getStringValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("deviceMetadata", (n) -> { currentObject.setDeviceMetadata(n.getStringValue()); });
-            this.put("deviceOwnership", (n) -> { currentObject.setDeviceOwnership(n.getStringValue()); });
-            this.put("deviceVersion", (n) -> { currentObject.setDeviceVersion(n.getIntegerValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("domainName", (n) -> { currentObject.setDomainName(n.getStringValue()); });
-            this.put("enrollmentProfileName", (n) -> { currentObject.setEnrollmentProfileName(n.getStringValue()); });
-            this.put("enrollmentType", (n) -> { currentObject.setEnrollmentType(n.getStringValue()); });
-            this.put("extensionAttributes", (n) -> { currentObject.setExtensionAttributes(n.getObjectValue(OnPremisesExtensionAttributes::createFromDiscriminatorValue)); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("hostnames", (n) -> { currentObject.setHostnames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isCompliant", (n) -> { currentObject.setIsCompliant(n.getBooleanValue()); });
-            this.put("isManaged", (n) -> { currentObject.setIsManaged(n.getBooleanValue()); });
-            this.put("isManagementRestricted", (n) -> { currentObject.setIsManagementRestricted(n.getBooleanValue()); });
-            this.put("isRooted", (n) -> { currentObject.setIsRooted(n.getBooleanValue()); });
-            this.put("kind", (n) -> { currentObject.setKind(n.getStringValue()); });
-            this.put("managementType", (n) -> { currentObject.setManagementType(n.getStringValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("mdmAppId", (n) -> { currentObject.setMdmAppId(n.getStringValue()); });
-            this.put("memberOf", (n) -> { currentObject.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("onPremisesLastSyncDateTime", (n) -> { currentObject.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("onPremisesSyncEnabled", (n) -> { currentObject.setOnPremisesSyncEnabled(n.getBooleanValue()); });
-            this.put("operatingSystem", (n) -> { currentObject.setOperatingSystem(n.getStringValue()); });
-            this.put("operatingSystemVersion", (n) -> { currentObject.setOperatingSystemVersion(n.getStringValue()); });
-            this.put("physicalIds", (n) -> { currentObject.setPhysicalIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("platform", (n) -> { currentObject.setPlatform(n.getStringValue()); });
-            this.put("profileType", (n) -> { currentObject.setProfileType(n.getStringValue()); });
-            this.put("registeredOwners", (n) -> { currentObject.setRegisteredOwners(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("registeredUsers", (n) -> { currentObject.setRegisteredUsers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("registrationDateTime", (n) -> { currentObject.setRegistrationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-            this.put("systemLabels", (n) -> { currentObject.setSystemLabels(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("transitiveMemberOf", (n) -> { currentObject.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("trustType", (n) -> { currentObject.setTrustType(n.getStringValue()); });
-            this.put("usageRights", (n) -> { currentObject.setUsageRights(n.getCollectionOfObjectValues(UsageRight::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountEnabled", (n) -> { this.setAccountEnabled(n.getBooleanValue()); });
+        deserializerMap.put("alternativeSecurityIds", (n) -> { this.setAlternativeSecurityIds(n.getCollectionOfObjectValues(AlternativeSecurityId::createFromDiscriminatorValue)); });
+        deserializerMap.put("approximateLastSignInDateTime", (n) -> { this.setApproximateLastSignInDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("commands", (n) -> { this.setCommands(n.getCollectionOfObjectValues(Command::createFromDiscriminatorValue)); });
+        deserializerMap.put("complianceExpirationDateTime", (n) -> { this.setComplianceExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceCategory", (n) -> { this.setDeviceCategory(n.getStringValue()); });
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("deviceMetadata", (n) -> { this.setDeviceMetadata(n.getStringValue()); });
+        deserializerMap.put("deviceOwnership", (n) -> { this.setDeviceOwnership(n.getStringValue()); });
+        deserializerMap.put("deviceVersion", (n) -> { this.setDeviceVersion(n.getIntegerValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("domainName", (n) -> { this.setDomainName(n.getStringValue()); });
+        deserializerMap.put("enrollmentProfileName", (n) -> { this.setEnrollmentProfileName(n.getStringValue()); });
+        deserializerMap.put("enrollmentType", (n) -> { this.setEnrollmentType(n.getStringValue()); });
+        deserializerMap.put("extensionAttributes", (n) -> { this.setExtensionAttributes(n.getObjectValue(OnPremisesExtensionAttributes::createFromDiscriminatorValue)); });
+        deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("hostnames", (n) -> { this.setHostnames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isCompliant", (n) -> { this.setIsCompliant(n.getBooleanValue()); });
+        deserializerMap.put("isManaged", (n) -> { this.setIsManaged(n.getBooleanValue()); });
+        deserializerMap.put("isManagementRestricted", (n) -> { this.setIsManagementRestricted(n.getBooleanValue()); });
+        deserializerMap.put("isRooted", (n) -> { this.setIsRooted(n.getBooleanValue()); });
+        deserializerMap.put("kind", (n) -> { this.setKind(n.getStringValue()); });
+        deserializerMap.put("managementType", (n) -> { this.setManagementType(n.getStringValue()); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("mdmAppId", (n) -> { this.setMdmAppId(n.getStringValue()); });
+        deserializerMap.put("memberOf", (n) -> { this.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("onPremisesLastSyncDateTime", (n) -> { this.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("onPremisesSyncEnabled", (n) -> { this.setOnPremisesSyncEnabled(n.getBooleanValue()); });
+        deserializerMap.put("operatingSystem", (n) -> { this.setOperatingSystem(n.getStringValue()); });
+        deserializerMap.put("operatingSystemVersion", (n) -> { this.setOperatingSystemVersion(n.getStringValue()); });
+        deserializerMap.put("physicalIds", (n) -> { this.setPhysicalIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getStringValue()); });
+        deserializerMap.put("profileType", (n) -> { this.setProfileType(n.getStringValue()); });
+        deserializerMap.put("registeredOwners", (n) -> { this.setRegisteredOwners(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("registeredUsers", (n) -> { this.setRegisteredUsers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("registrationDateTime", (n) -> { this.setRegistrationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        deserializerMap.put("systemLabels", (n) -> { this.setSystemLabels(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("transitiveMemberOf", (n) -> { this.setTransitiveMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("trustType", (n) -> { this.setTrustType(n.getStringValue()); });
+        deserializerMap.put("usageRights", (n) -> { this.setUsageRights(n.getCollectionOfObjectValues(UsageRight::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the hostnames property value. List of hostNames for the device.
@@ -423,7 +423,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this._operatingSystemVersion;
     }
     /**
-     * Gets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
+     * Gets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -479,7 +479,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this._status;
     }
     /**
-     * Gets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (eq when counting empty collections).
+     * Gets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0).
      * @return a string
      */
     @javax.annotation.Nullable
@@ -515,6 +515,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -567,6 +568,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the accountEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountEnabled(@javax.annotation.Nullable final Boolean value) {
         this._accountEnabled = value;
     }
@@ -575,6 +577,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the alternativeSecurityIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlternativeSecurityIds(@javax.annotation.Nullable final java.util.List<AlternativeSecurityId> value) {
         this._alternativeSecurityIds = value;
     }
@@ -583,6 +586,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the approximateLastSignInDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApproximateLastSignInDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._approximateLastSignInDateTime = value;
     }
@@ -591,6 +595,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the commands property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCommands(@javax.annotation.Nullable final java.util.List<Command> value) {
         this._commands = value;
     }
@@ -599,6 +604,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the complianceExpirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._complianceExpirationDateTime = value;
     }
@@ -607,14 +613,16 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCategory(@javax.annotation.Nullable final String value) {
         this._deviceCategory = value;
     }
     /**
-     * Sets the deviceId property value. Identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+     * Sets the deviceId property value. Unique Identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Also Supports $filter (eq, ne, not, startsWith).
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -623,6 +631,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceMetadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceMetadata(@javax.annotation.Nullable final String value) {
         this._deviceMetadata = value;
     }
@@ -631,6 +640,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceOwnership property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceOwnership(@javax.annotation.Nullable final String value) {
         this._deviceOwnership = value;
     }
@@ -639,6 +649,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the deviceVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceVersion(@javax.annotation.Nullable final Integer value) {
         this._deviceVersion = value;
     }
@@ -647,6 +658,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -655,6 +667,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the domainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainName(@javax.annotation.Nullable final String value) {
         this._domainName = value;
     }
@@ -663,6 +676,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the enrollmentProfileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentProfileName(@javax.annotation.Nullable final String value) {
         this._enrollmentProfileName = value;
     }
@@ -671,6 +685,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the enrollmentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrollmentType(@javax.annotation.Nullable final String value) {
         this._enrollmentType = value;
     }
@@ -679,6 +694,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the extensionAttributes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionAttributes(@javax.annotation.Nullable final OnPremisesExtensionAttributes value) {
         this._extensionAttributes = value;
     }
@@ -687,6 +703,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
         this._extensions = value;
     }
@@ -695,6 +712,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the hostnames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHostnames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._hostnames = value;
     }
@@ -703,6 +721,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the isCompliant property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCompliant(@javax.annotation.Nullable final Boolean value) {
         this._isCompliant = value;
     }
@@ -711,6 +730,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the isManaged property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsManaged(@javax.annotation.Nullable final Boolean value) {
         this._isManaged = value;
     }
@@ -719,6 +739,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the isManagementRestricted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsManagementRestricted(@javax.annotation.Nullable final Boolean value) {
         this._isManagementRestricted = value;
     }
@@ -727,6 +748,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the isRooted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRooted(@javax.annotation.Nullable final Boolean value) {
         this._isRooted = value;
     }
@@ -735,6 +757,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the kind property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKind(@javax.annotation.Nullable final String value) {
         this._kind = value;
     }
@@ -743,6 +766,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the managementType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementType(@javax.annotation.Nullable final String value) {
         this._managementType = value;
     }
@@ -751,6 +775,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
         this._manufacturer = value;
     }
@@ -759,6 +784,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the mdmAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMdmAppId(@javax.annotation.Nullable final String value) {
         this._mdmAppId = value;
     }
@@ -767,6 +793,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the memberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._memberOf = value;
     }
@@ -775,6 +802,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
         this._model = value;
     }
@@ -783,6 +811,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -791,6 +820,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesLastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._onPremisesLastSyncDateTime = value;
     }
@@ -799,6 +829,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the onPremisesSyncEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSyncEnabled(@javax.annotation.Nullable final Boolean value) {
         this._onPremisesSyncEnabled = value;
     }
@@ -807,6 +838,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the operatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatingSystem(@javax.annotation.Nullable final String value) {
         this._operatingSystem = value;
     }
@@ -815,14 +847,16 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the operatingSystemVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatingSystemVersion(@javax.annotation.Nullable final String value) {
         this._operatingSystemVersion = value;
     }
     /**
-     * Sets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
+     * Sets the physicalIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0.
      * @param value Value to set for the physicalIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhysicalIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._physicalIds = value;
     }
@@ -831,6 +865,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the platform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final String value) {
         this._platform = value;
     }
@@ -839,6 +874,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the profileType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProfileType(@javax.annotation.Nullable final String value) {
         this._profileType = value;
     }
@@ -847,6 +883,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the registeredOwners property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegisteredOwners(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._registeredOwners = value;
     }
@@ -855,6 +892,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the registeredUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegisteredUsers(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._registeredUsers = value;
     }
@@ -863,6 +901,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the registrationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistrationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._registrationDateTime = value;
     }
@@ -871,14 +910,16 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }
     /**
-     * Sets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (eq when counting empty collections).
+     * Sets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0).
      * @param value Value to set for the systemLabels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemLabels(@javax.annotation.Nullable final java.util.List<String> value) {
         this._systemLabels = value;
     }
@@ -887,6 +928,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the transitiveMemberOf property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTransitiveMemberOf(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._transitiveMemberOf = value;
     }
@@ -895,6 +937,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the trustType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrustType(@javax.annotation.Nullable final String value) {
         this._trustType = value;
     }
@@ -903,6 +946,7 @@ public class Device extends DirectoryObject implements Parsable {
      * @param value Value to set for the usageRights property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsageRights(@javax.annotation.Nullable final java.util.List<UsageRight> value) {
         this._usageRights = value;
     }

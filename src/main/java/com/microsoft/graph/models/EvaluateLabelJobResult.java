@@ -23,9 +23,9 @@ public class EvaluateLabelJobResult implements AdditionalDataHolder, Parsable {
      * Instantiates a new evaluateLabelJobResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EvaluateLabelJobResult() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.evaluateLabelJobResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,13 +51,12 @@ public class EvaluateLabelJobResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EvaluateLabelJobResult currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("responsiblePolicy", (n) -> { currentObject.setResponsiblePolicy(n.getObjectValue(ResponsiblePolicy::createFromDiscriminatorValue)); });
-            this.put("responsibleSensitiveTypes", (n) -> { currentObject.setResponsibleSensitiveTypes(n.getCollectionOfObjectValues(ResponsibleSensitiveType::createFromDiscriminatorValue)); });
-            this.put("sensitivityLabel", (n) -> { currentObject.setSensitivityLabel(n.getObjectValue(MatchingLabel::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("responsiblePolicy", (n) -> { this.setResponsiblePolicy(n.getObjectValue(ResponsiblePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("responsibleSensitiveTypes", (n) -> { this.setResponsibleSensitiveTypes(n.getCollectionOfObjectValues(ResponsibleSensitiveType::createFromDiscriminatorValue)); });
+        deserializerMap.put("sensitivityLabel", (n) -> { this.setSensitivityLabel(n.getObjectValue(MatchingLabel::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -96,6 +95,7 @@ public class EvaluateLabelJobResult implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -109,6 +109,7 @@ public class EvaluateLabelJobResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +118,7 @@ public class EvaluateLabelJobResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -125,6 +127,7 @@ public class EvaluateLabelJobResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the responsiblePolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResponsiblePolicy(@javax.annotation.Nullable final ResponsiblePolicy value) {
         this._responsiblePolicy = value;
     }
@@ -133,6 +136,7 @@ public class EvaluateLabelJobResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the responsibleSensitiveTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResponsibleSensitiveTypes(@javax.annotation.Nullable final java.util.List<ResponsibleSensitiveType> value) {
         this._responsibleSensitiveTypes = value;
     }
@@ -141,6 +145,7 @@ public class EvaluateLabelJobResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sensitivityLabel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitivityLabel(@javax.annotation.Nullable final MatchingLabel value) {
         this._sensitivityLabel = value;
     }

@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class TaxGroup extends Entity implements Parsable {
     /** The code property */
     private String _code;
@@ -22,9 +22,9 @@ public class TaxGroup extends Entity implements Parsable {
      * Instantiates a new taxGroup and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TaxGroup() {
         super();
-        this.setOdataType("#microsoft.graph.taxGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,13 +58,12 @@ public class TaxGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TaxGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("taxType", (n) -> { currentObject.setTaxType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("taxType", (n) -> { this.setTaxType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -87,6 +86,7 @@ public class TaxGroup extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -100,6 +100,7 @@ public class TaxGroup extends Entity implements Parsable {
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final String value) {
         this._code = value;
     }
@@ -108,6 +109,7 @@ public class TaxGroup extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -116,6 +118,7 @@ public class TaxGroup extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -124,6 +127,7 @@ public class TaxGroup extends Entity implements Parsable {
      * @param value Value to set for the taxType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaxType(@javax.annotation.Nullable final String value) {
         this._taxType = value;
     }

@@ -14,9 +14,9 @@ public class DeviceManagementCollectionSettingDefinition extends DeviceManagemen
      * Instantiates a new DeviceManagementCollectionSettingDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementCollectionSettingDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementCollectionSettingDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,16 +42,16 @@ public class DeviceManagementCollectionSettingDefinition extends DeviceManagemen
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementCollectionSettingDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("elementDefinitionId", (n) -> { currentObject.setElementDefinitionId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("elementDefinitionId", (n) -> { this.setElementDefinitionId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +62,7 @@ public class DeviceManagementCollectionSettingDefinition extends DeviceManagemen
      * @param value Value to set for the elementDefinitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setElementDefinitionId(@javax.annotation.Nullable final String value) {
         this._elementDefinitionId = value;
     }

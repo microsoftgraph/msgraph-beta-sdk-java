@@ -18,6 +18,7 @@ public class RemoveGroupPostRequestBody implements AdditionalDataHolder, Parsabl
      * Instantiates a new removeGroupPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RemoveGroupPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,10 +46,9 @@ public class RemoveGroupPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RemoveGroupPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("groupId", (n) -> { currentObject.setGroupId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("groupId", (n) -> { this.setGroupId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupId property value. The groupId property
@@ -63,6 +63,7 @@ public class RemoveGroupPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("groupId", this.getGroupId());
@@ -73,6 +74,7 @@ public class RemoveGroupPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +83,7 @@ public class RemoveGroupPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the groupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupId(@javax.annotation.Nullable final String value) {
         this._groupId = value;
     }

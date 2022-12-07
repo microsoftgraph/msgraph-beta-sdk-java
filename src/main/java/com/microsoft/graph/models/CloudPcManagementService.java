@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum CloudPcManagementService implements ValuedEnum {
     Windows365("windows365"),
     DevBox("devBox"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    RpaBox("rpaBox");
     public final String value;
     CloudPcManagementService(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum CloudPcManagementService implements ValuedEnum {
             case "windows365": return Windows365;
             case "devBox": return DevBox;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "rpaBox": return RpaBox;
             default: return null;
         }
     }

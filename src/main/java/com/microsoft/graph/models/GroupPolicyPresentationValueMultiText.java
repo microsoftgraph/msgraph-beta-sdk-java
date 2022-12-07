@@ -14,9 +14,9 @@ public class GroupPolicyPresentationValueMultiText extends GroupPolicyPresentati
      * Instantiates a new GroupPolicyPresentationValueMultiText and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationValueMultiText() {
         super();
-        this.setOdataType("#microsoft.graph.groupPolicyPresentationValueMultiText");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,10 +34,9 @@ public class GroupPolicyPresentationValueMultiText extends GroupPolicyPresentati
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyPresentationValueMultiText currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("values", (n) -> { currentObject.setValues(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("values", (n) -> { this.setValues(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the values property value. A collection of non-empty strings for the associated presentation.
@@ -52,6 +51,7 @@ public class GroupPolicyPresentationValueMultiText extends GroupPolicyPresentati
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +62,7 @@ public class GroupPolicyPresentationValueMultiText extends GroupPolicyPresentati
      * @param value Value to set for the values property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final java.util.List<String> value) {
         this._values = value;
     }

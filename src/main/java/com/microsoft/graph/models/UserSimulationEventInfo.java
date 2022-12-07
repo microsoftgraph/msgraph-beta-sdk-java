@@ -28,9 +28,9 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new userSimulationEventInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserSimulationEventInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.userSimulationEventInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -80,15 +80,14 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserSimulationEventInfo currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("browser", (n) -> { currentObject.setBrowser(n.getStringValue()); });
-            this.put("eventDateTime", (n) -> { currentObject.setEventDateTime(n.getOffsetDateTimeValue()); });
-            this.put("eventName", (n) -> { currentObject.setEventName(n.getStringValue()); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("osPlatformDeviceDetails", (n) -> { currentObject.setOsPlatformDeviceDetails(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("browser", (n) -> { this.setBrowser(n.getStringValue()); });
+        deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("eventName", (n) -> { this.setEventName(n.getStringValue()); });
+        deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("osPlatformDeviceDetails", (n) -> { this.setOsPlatformDeviceDetails(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the ipAddress property value. IP address from where the simulation event was initiated by a user in an attack simulation and training campaign.
@@ -119,6 +118,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("browser", this.getBrowser());
@@ -134,6 +134,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +143,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the browser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrowser(@javax.annotation.Nullable final String value) {
         this._browser = value;
     }
@@ -150,6 +152,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the eventDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._eventDateTime = value;
     }
@@ -158,6 +161,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the eventName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEventName(@javax.annotation.Nullable final String value) {
         this._eventName = value;
     }
@@ -166,6 +170,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
         this._ipAddress = value;
     }
@@ -174,6 +179,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -182,6 +188,7 @@ public class UserSimulationEventInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the osPlatformDeviceDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsPlatformDeviceDetails(@javax.annotation.Nullable final String value) {
         this._osPlatformDeviceDetails = value;
     }

@@ -11,23 +11,23 @@ import java.util.Objects;
 public class TaskReportSummary implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The failedTasks property */
+    /** The number of failed tasks in a report. */
     private Integer _failedTasks;
     /** The OdataType property */
     private String _odataType;
-    /** The successfulTasks property */
+    /** The total number of successful tasks in a report. */
     private Integer _successfulTasks;
-    /** The totalTasks property */
+    /** The total number of tasks in a report. */
     private Integer _totalTasks;
-    /** The unprocessedTasks property */
+    /** The number of unprocessed tasks in a report. */
     private Integer _unprocessedTasks;
     /**
      * Instantiates a new taskReportSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TaskReportSummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.identityGovernance.taskReportSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,7 +48,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the failedTasks property value. The failedTasks property
+     * Gets the failedTasks property value. The number of failed tasks in a report.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -61,14 +61,13 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TaskReportSummary currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("failedTasks", (n) -> { currentObject.setFailedTasks(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("successfulTasks", (n) -> { currentObject.setSuccessfulTasks(n.getIntegerValue()); });
-            this.put("totalTasks", (n) -> { currentObject.setTotalTasks(n.getIntegerValue()); });
-            this.put("unprocessedTasks", (n) -> { currentObject.setUnprocessedTasks(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("failedTasks", (n) -> { this.setFailedTasks(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("successfulTasks", (n) -> { this.setSuccessfulTasks(n.getIntegerValue()); });
+        deserializerMap.put("totalTasks", (n) -> { this.setTotalTasks(n.getIntegerValue()); });
+        deserializerMap.put("unprocessedTasks", (n) -> { this.setUnprocessedTasks(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -79,7 +78,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the successfulTasks property value. The successfulTasks property
+     * Gets the successfulTasks property value. The total number of successful tasks in a report.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -87,7 +86,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
         return this._successfulTasks;
     }
     /**
-     * Gets the totalTasks property value. The totalTasks property
+     * Gets the totalTasks property value. The total number of tasks in a report.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -95,7 +94,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
         return this._totalTasks;
     }
     /**
-     * Gets the unprocessedTasks property value. The unprocessedTasks property
+     * Gets the unprocessedTasks property value. The number of unprocessed tasks in a report.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -107,6 +106,7 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("failedTasks", this.getFailedTasks());
@@ -121,14 +121,16 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
     /**
-     * Sets the failedTasks property value. The failedTasks property
+     * Sets the failedTasks property value. The number of failed tasks in a report.
      * @param value Value to set for the failedTasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedTasks(@javax.annotation.Nullable final Integer value) {
         this._failedTasks = value;
     }
@@ -137,30 +139,34 @@ public class TaskReportSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
     /**
-     * Sets the successfulTasks property value. The successfulTasks property
+     * Sets the successfulTasks property value. The total number of successful tasks in a report.
      * @param value Value to set for the successfulTasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessfulTasks(@javax.annotation.Nullable final Integer value) {
         this._successfulTasks = value;
     }
     /**
-     * Sets the totalTasks property value. The totalTasks property
+     * Sets the totalTasks property value. The total number of tasks in a report.
      * @param value Value to set for the totalTasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalTasks(@javax.annotation.Nullable final Integer value) {
         this._totalTasks = value;
     }
     /**
-     * Sets the unprocessedTasks property value. The unprocessedTasks property
+     * Sets the unprocessedTasks property value. The number of unprocessed tasks in a report.
      * @param value Value to set for the unprocessedTasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnprocessedTasks(@javax.annotation.Nullable final Integer value) {
         this._unprocessedTasks = value;
     }

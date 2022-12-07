@@ -25,9 +25,9 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
      * Instantiates a new UserRegistrationMethodSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserRegistrationMethodSummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.userRegistrationMethodSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,14 +53,13 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserRegistrationMethodSummary currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("totalUserCount", (n) -> { currentObject.setTotalUserCount(n.getLongValue()); });
-            this.put("userRegistrationMethodCounts", (n) -> { currentObject.setUserRegistrationMethodCounts(n.getCollectionOfObjectValues(UserRegistrationMethodCount::createFromDiscriminatorValue)); });
-            this.put("userRoles", (n) -> { currentObject.setUserRoles(n.getEnumValue(IncludedUserRoles.class)); });
-            this.put("userTypes", (n) -> { currentObject.setUserTypes(n.getEnumValue(IncludedUserTypes.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("totalUserCount", (n) -> { this.setTotalUserCount(n.getLongValue()); });
+        deserializerMap.put("userRegistrationMethodCounts", (n) -> { this.setUserRegistrationMethodCounts(n.getCollectionOfObjectValues(UserRegistrationMethodCount::createFromDiscriminatorValue)); });
+        deserializerMap.put("userRoles", (n) -> { this.setUserRoles(n.getEnumValue(IncludedUserRoles.class)); });
+        deserializerMap.put("userTypes", (n) -> { this.setUserTypes(n.getEnumValue(IncludedUserTypes.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,6 +106,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -121,6 +121,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +130,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -137,6 +139,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
      * @param value Value to set for the totalUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalUserCount(@javax.annotation.Nullable final Long value) {
         this._totalUserCount = value;
     }
@@ -145,6 +148,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
      * @param value Value to set for the userRegistrationMethodCounts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRegistrationMethodCounts(@javax.annotation.Nullable final java.util.List<UserRegistrationMethodCount> value) {
         this._userRegistrationMethodCounts = value;
     }
@@ -153,6 +157,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
      * @param value Value to set for the userRoles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserRoles(@javax.annotation.Nullable final IncludedUserRoles value) {
         this._userRoles = value;
     }
@@ -161,6 +166,7 @@ public class UserRegistrationMethodSummary implements AdditionalDataHolder, Pars
      * @param value Value to set for the userTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserTypes(@javax.annotation.Nullable final IncludedUserTypes value) {
         this._userTypes = value;
     }

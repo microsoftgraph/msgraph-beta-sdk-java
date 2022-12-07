@@ -26,9 +26,9 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
      * Instantiates a new deviceManagementIntentDeviceState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementIntentDeviceState() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementIntentDeviceState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,15 +62,14 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementIntentDeviceState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceDisplayName", (n) -> { currentObject.setDeviceDisplayName(n.getStringValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("lastReportedDateTime", (n) -> { currentObject.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ComplianceStatus.class)); });
-            this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceDisplayName", (n) -> { this.setDeviceDisplayName(n.getStringValue()); });
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("lastReportedDateTime", (n) -> { this.setLastReportedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ComplianceStatus.class)); });
+        deserializerMap.put("userName", (n) -> { this.setUserName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastReportedDateTime property value. Last modified date time of an intent report
@@ -109,6 +108,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -124,6 +124,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
      * @param value Value to set for the deviceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceDisplayName(@javax.annotation.Nullable final String value) {
         this._deviceDisplayName = value;
     }
@@ -132,6 +133,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -140,6 +142,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
      * @param value Value to set for the lastReportedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastReportedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastReportedDateTime = value;
     }
@@ -148,6 +151,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ComplianceStatus value) {
         this._state = value;
     }
@@ -156,6 +160,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
         this._userName = value;
     }
@@ -164,6 +169,7 @@ public class DeviceManagementIntentDeviceState extends Entity implements Parsabl
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

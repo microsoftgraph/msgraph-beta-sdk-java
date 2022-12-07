@@ -27,9 +27,9 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      * Instantiates a new thumbnail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Thumbnail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.thumbnail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,15 +63,14 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Thumbnail currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("height", (n) -> { currentObject.setHeight(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sourceItemId", (n) -> { currentObject.setSourceItemId(n.getStringValue()); });
-            this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
-            this.put("width", (n) -> { currentObject.setWidth(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("height", (n) -> { this.setHeight(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sourceItemId", (n) -> { this.setSourceItemId(n.getStringValue()); });
+        deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
+        deserializerMap.put("width", (n) -> { this.setWidth(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the height property value. The height of the thumbnail, in pixels.
@@ -118,6 +117,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("content", this.getContent());
@@ -133,6 +133,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +142,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
         this._content = value;
     }
@@ -149,6 +151,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the height property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHeight(@javax.annotation.Nullable final Integer value) {
         this._height = value;
     }
@@ -157,6 +160,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -165,6 +169,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sourceItemId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceItemId(@javax.annotation.Nullable final String value) {
         this._sourceItemId = value;
     }
@@ -173,6 +178,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the url property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrl(@javax.annotation.Nullable final String value) {
         this._url = value;
     }
@@ -181,6 +187,7 @@ public class Thumbnail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the width property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWidth(@javax.annotation.Nullable final Integer value) {
         this._width = value;
     }

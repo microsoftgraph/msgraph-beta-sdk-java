@@ -23,6 +23,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
      * Instantiates a new getStaffAvailabilityPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetStaffAvailabilityPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -58,12 +59,11 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GetStaffAvailabilityPostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("staffIds", (n) -> { currentObject.setStaffIds(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("staffIds", (n) -> { this.setStaffIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the staffIds property value. The staffIds property
@@ -86,6 +86,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("endDateTime", this.getEndDateTime());
@@ -98,6 +99,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +108,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._endDateTime = value;
     }
@@ -114,6 +117,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the staffIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStaffIds(@javax.annotation.Nullable final java.util.List<String> value) {
         this._staffIds = value;
     }
@@ -122,6 +126,7 @@ public class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
         this._startDateTime = value;
     }

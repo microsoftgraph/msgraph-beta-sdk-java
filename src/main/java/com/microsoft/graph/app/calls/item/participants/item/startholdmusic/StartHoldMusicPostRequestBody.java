@@ -21,6 +21,7 @@ public class StartHoldMusicPostRequestBody implements AdditionalDataHolder, Pars
      * Instantiates a new startHoldMusicPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public StartHoldMusicPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -64,17 +65,17 @@ public class StartHoldMusicPostRequestBody implements AdditionalDataHolder, Pars
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final StartHoldMusicPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("clientContext", (n) -> { currentObject.setClientContext(n.getStringValue()); });
-            this.put("customPrompt", (n) -> { currentObject.setCustomPrompt(n.getObjectValue(Prompt::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("clientContext", (n) -> { this.setClientContext(n.getStringValue()); });
+        deserializerMap.put("customPrompt", (n) -> { this.setCustomPrompt(n.getObjectValue(Prompt::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("clientContext", this.getClientContext());
@@ -86,6 +87,7 @@ public class StartHoldMusicPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -94,6 +96,7 @@ public class StartHoldMusicPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the clientContext property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientContext(@javax.annotation.Nullable final String value) {
         this._clientContext = value;
     }
@@ -102,6 +105,7 @@ public class StartHoldMusicPostRequestBody implements AdditionalDataHolder, Pars
      * @param value Value to set for the customPrompt property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomPrompt(@javax.annotation.Nullable final Prompt value) {
         this._customPrompt = value;
     }

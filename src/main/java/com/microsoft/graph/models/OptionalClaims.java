@@ -23,9 +23,9 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      * Instantiates a new optionalClaims and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OptionalClaims() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.optionalClaims");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,13 +59,12 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OptionalClaims currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("accessToken", (n) -> { currentObject.setAccessToken(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
-            this.put("idToken", (n) -> { currentObject.setIdToken(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("saml2Token", (n) -> { currentObject.setSaml2Token(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("accessToken", (n) -> { this.setAccessToken(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
+        deserializerMap.put("idToken", (n) -> { this.setIdToken(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("saml2Token", (n) -> { this.setSaml2Token(n.getCollectionOfObjectValues(OptionalClaim::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the idToken property value. The optional claims returned in the JWT ID token.
@@ -96,6 +95,7 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("accessToken", this.getAccessToken());
@@ -109,6 +109,7 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the accessToken property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessToken(@javax.annotation.Nullable final java.util.List<OptionalClaim> value) {
         this._accessToken = value;
     }
@@ -117,6 +118,7 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -125,6 +127,7 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the idToken property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdToken(@javax.annotation.Nullable final java.util.List<OptionalClaim> value) {
         this._idToken = value;
     }
@@ -133,6 +136,7 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +145,7 @@ public class OptionalClaims implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the saml2Token property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSaml2Token(@javax.annotation.Nullable final java.util.List<OptionalClaim> value) {
         this._saml2Token = value;
     }

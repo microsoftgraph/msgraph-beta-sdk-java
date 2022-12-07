@@ -24,9 +24,9 @@ public class DomainState implements AdditionalDataHolder, Parsable {
      * Instantiates a new domainState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DomainState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.domainState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,13 +52,12 @@ public class DomainState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DomainState currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("lastActionDateTime", (n) -> { currentObject.setLastActionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("operation", (n) -> { currentObject.setOperation(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("lastActionDateTime", (n) -> { this.setLastActionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operation", (n) -> { this.setOperation(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastActionDateTime property value. Timestamp for when the last activity occurred. The value is updated when an operation is scheduled, the asynchronous task starts, and when the operation completes.
@@ -97,6 +96,7 @@ public class DomainState implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("lastActionDateTime", this.getLastActionDateTime());
@@ -110,6 +110,7 @@ public class DomainState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +119,7 @@ public class DomainState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastActionDateTime = value;
     }
@@ -126,6 +128,7 @@ public class DomainState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -134,6 +137,7 @@ public class DomainState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the operation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperation(@javax.annotation.Nullable final String value) {
         this._operation = value;
     }
@@ -142,6 +146,7 @@ public class DomainState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }

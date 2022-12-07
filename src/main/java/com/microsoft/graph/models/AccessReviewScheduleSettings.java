@@ -44,9 +44,9 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * Instantiates a new accessReviewScheduleSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewScheduleSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessReviewScheduleSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -112,23 +112,22 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewScheduleSettings currentObject = this;
-        return new HashMap<>(14) {{
-            this.put("applyActions", (n) -> { currentObject.setApplyActions(n.getCollectionOfObjectValues(AccessReviewApplyAction::createFromDiscriminatorValue)); });
-            this.put("autoApplyDecisionsEnabled", (n) -> { currentObject.setAutoApplyDecisionsEnabled(n.getBooleanValue()); });
-            this.put("decisionHistoriesForReviewersEnabled", (n) -> { currentObject.setDecisionHistoriesForReviewersEnabled(n.getBooleanValue()); });
-            this.put("defaultDecision", (n) -> { currentObject.setDefaultDecision(n.getStringValue()); });
-            this.put("defaultDecisionEnabled", (n) -> { currentObject.setDefaultDecisionEnabled(n.getBooleanValue()); });
-            this.put("instanceDurationInDays", (n) -> { currentObject.setInstanceDurationInDays(n.getIntegerValue()); });
-            this.put("justificationRequiredOnApproval", (n) -> { currentObject.setJustificationRequiredOnApproval(n.getBooleanValue()); });
-            this.put("mailNotificationsEnabled", (n) -> { currentObject.setMailNotificationsEnabled(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recommendationInsightSettings", (n) -> { currentObject.setRecommendationInsightSettings(n.getCollectionOfObjectValues(AccessReviewRecommendationInsightSetting::createFromDiscriminatorValue)); });
-            this.put("recommendationLookBackDuration", (n) -> { currentObject.setRecommendationLookBackDuration(n.getPeriodValue()); });
-            this.put("recommendationsEnabled", (n) -> { currentObject.setRecommendationsEnabled(n.getBooleanValue()); });
-            this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
-            this.put("reminderNotificationsEnabled", (n) -> { currentObject.setReminderNotificationsEnabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(14);
+        deserializerMap.put("applyActions", (n) -> { this.setApplyActions(n.getCollectionOfObjectValues(AccessReviewApplyAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("autoApplyDecisionsEnabled", (n) -> { this.setAutoApplyDecisionsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("decisionHistoriesForReviewersEnabled", (n) -> { this.setDecisionHistoriesForReviewersEnabled(n.getBooleanValue()); });
+        deserializerMap.put("defaultDecision", (n) -> { this.setDefaultDecision(n.getStringValue()); });
+        deserializerMap.put("defaultDecisionEnabled", (n) -> { this.setDefaultDecisionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("instanceDurationInDays", (n) -> { this.setInstanceDurationInDays(n.getIntegerValue()); });
+        deserializerMap.put("justificationRequiredOnApproval", (n) -> { this.setJustificationRequiredOnApproval(n.getBooleanValue()); });
+        deserializerMap.put("mailNotificationsEnabled", (n) -> { this.setMailNotificationsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recommendationInsightSettings", (n) -> { this.setRecommendationInsightSettings(n.getCollectionOfObjectValues(AccessReviewRecommendationInsightSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("recommendationLookBackDuration", (n) -> { this.setRecommendationLookBackDuration(n.getPeriodValue()); });
+        deserializerMap.put("recommendationsEnabled", (n) -> { this.setRecommendationsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("recurrence", (n) -> { this.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
+        deserializerMap.put("reminderNotificationsEnabled", (n) -> { this.setReminderNotificationsEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the instanceDurationInDays property value. Duration of each recurrence of review (accessReviewInstance) in number of days. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its durationInDays setting will be used instead of the value of this property.
@@ -207,6 +206,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("applyActions", this.getApplyActions());
@@ -230,6 +230,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -238,6 +239,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the applyActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplyActions(@javax.annotation.Nullable final java.util.List<AccessReviewApplyAction> value) {
         this._applyActions = value;
     }
@@ -246,6 +248,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the autoApplyDecisionsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoApplyDecisionsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._autoApplyDecisionsEnabled = value;
     }
@@ -254,6 +257,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the decisionHistoriesForReviewersEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecisionHistoriesForReviewersEnabled(@javax.annotation.Nullable final Boolean value) {
         this._decisionHistoriesForReviewersEnabled = value;
     }
@@ -262,6 +266,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the defaultDecision property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultDecision(@javax.annotation.Nullable final String value) {
         this._defaultDecision = value;
     }
@@ -270,6 +275,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the defaultDecisionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultDecisionEnabled(@javax.annotation.Nullable final Boolean value) {
         this._defaultDecisionEnabled = value;
     }
@@ -278,6 +284,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the instanceDurationInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstanceDurationInDays(@javax.annotation.Nullable final Integer value) {
         this._instanceDurationInDays = value;
     }
@@ -286,6 +293,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the justificationRequiredOnApproval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJustificationRequiredOnApproval(@javax.annotation.Nullable final Boolean value) {
         this._justificationRequiredOnApproval = value;
     }
@@ -294,6 +302,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the mailNotificationsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailNotificationsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._mailNotificationsEnabled = value;
     }
@@ -302,6 +311,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -310,6 +320,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the recommendationInsightSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendationInsightSettings(@javax.annotation.Nullable final java.util.List<AccessReviewRecommendationInsightSetting> value) {
         this._recommendationInsightSettings = value;
     }
@@ -318,6 +329,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the recommendationLookBackDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendationLookBackDuration(@javax.annotation.Nullable final Period value) {
         this._recommendationLookBackDuration = value;
     }
@@ -326,6 +338,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the recommendationsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendationsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._recommendationsEnabled = value;
     }
@@ -334,6 +347,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the recurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrence(@javax.annotation.Nullable final PatternedRecurrence value) {
         this._recurrence = value;
     }
@@ -342,6 +356,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Parsa
      * @param value Value to set for the reminderNotificationsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReminderNotificationsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._reminderNotificationsEnabled = value;
     }

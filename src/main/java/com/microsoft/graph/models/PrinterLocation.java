@@ -55,9 +55,9 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * Instantiates a new printerLocation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrinterLocation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.printerLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -115,29 +115,28 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrinterLocation currentObject = this;
-        return new HashMap<>(20) {{
-            this.put("altitudeInMeters", (n) -> { currentObject.setAltitudeInMeters(n.getIntegerValue()); });
-            this.put("building", (n) -> { currentObject.setBuilding(n.getStringValue()); });
-            this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
-            this.put("countryOrRegion", (n) -> { currentObject.setCountryOrRegion(n.getStringValue()); });
-            this.put("floor", (n) -> { currentObject.setFloor(n.getStringValue()); });
-            this.put("floorDescription", (n) -> { currentObject.setFloorDescription(n.getStringValue()); });
-            this.put("floorNumber", (n) -> { currentObject.setFloorNumber(n.getIntegerValue()); });
-            this.put("latitude", (n) -> { currentObject.setLatitude(n.getDoubleValue()); });
-            this.put("longitude", (n) -> { currentObject.setLongitude(n.getDoubleValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("organization", (n) -> { currentObject.setOrganization(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("postalCode", (n) -> { currentObject.setPostalCode(n.getStringValue()); });
-            this.put("roomDescription", (n) -> { currentObject.setRoomDescription(n.getStringValue()); });
-            this.put("roomName", (n) -> { currentObject.setRoomName(n.getStringValue()); });
-            this.put("roomNumber", (n) -> { currentObject.setRoomNumber(n.getIntegerValue()); });
-            this.put("site", (n) -> { currentObject.setSite(n.getStringValue()); });
-            this.put("stateOrProvince", (n) -> { currentObject.setStateOrProvince(n.getStringValue()); });
-            this.put("streetAddress", (n) -> { currentObject.setStreetAddress(n.getStringValue()); });
-            this.put("subdivision", (n) -> { currentObject.setSubdivision(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("subunit", (n) -> { currentObject.setSubunit(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(20);
+        deserializerMap.put("altitudeInMeters", (n) -> { this.setAltitudeInMeters(n.getIntegerValue()); });
+        deserializerMap.put("building", (n) -> { this.setBuilding(n.getStringValue()); });
+        deserializerMap.put("city", (n) -> { this.setCity(n.getStringValue()); });
+        deserializerMap.put("countryOrRegion", (n) -> { this.setCountryOrRegion(n.getStringValue()); });
+        deserializerMap.put("floor", (n) -> { this.setFloor(n.getStringValue()); });
+        deserializerMap.put("floorDescription", (n) -> { this.setFloorDescription(n.getStringValue()); });
+        deserializerMap.put("floorNumber", (n) -> { this.setFloorNumber(n.getIntegerValue()); });
+        deserializerMap.put("latitude", (n) -> { this.setLatitude(n.getDoubleValue()); });
+        deserializerMap.put("longitude", (n) -> { this.setLongitude(n.getDoubleValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("organization", (n) -> { this.setOrganization(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("postalCode", (n) -> { this.setPostalCode(n.getStringValue()); });
+        deserializerMap.put("roomDescription", (n) -> { this.setRoomDescription(n.getStringValue()); });
+        deserializerMap.put("roomName", (n) -> { this.setRoomName(n.getStringValue()); });
+        deserializerMap.put("roomNumber", (n) -> { this.setRoomNumber(n.getIntegerValue()); });
+        deserializerMap.put("site", (n) -> { this.setSite(n.getStringValue()); });
+        deserializerMap.put("stateOrProvince", (n) -> { this.setStateOrProvince(n.getStringValue()); });
+        deserializerMap.put("streetAddress", (n) -> { this.setStreetAddress(n.getStringValue()); });
+        deserializerMap.put("subdivision", (n) -> { this.setSubdivision(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("subunit", (n) -> { this.setSubunit(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the floor property value. The floor that the printer is located on. Only numerical values are supported right now.
@@ -272,6 +271,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("altitudeInMeters", this.getAltitudeInMeters());
@@ -301,6 +301,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -309,6 +310,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the altitudeInMeters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAltitudeInMeters(@javax.annotation.Nullable final Integer value) {
         this._altitudeInMeters = value;
     }
@@ -317,6 +319,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the building property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBuilding(@javax.annotation.Nullable final String value) {
         this._building = value;
     }
@@ -325,6 +328,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the city property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCity(@javax.annotation.Nullable final String value) {
         this._city = value;
     }
@@ -333,6 +337,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the countryOrRegion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountryOrRegion(@javax.annotation.Nullable final String value) {
         this._countryOrRegion = value;
     }
@@ -341,6 +346,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the floor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFloor(@javax.annotation.Nullable final String value) {
         this._floor = value;
     }
@@ -349,6 +355,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the floorDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFloorDescription(@javax.annotation.Nullable final String value) {
         this._floorDescription = value;
     }
@@ -357,6 +364,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the floorNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFloorNumber(@javax.annotation.Nullable final Integer value) {
         this._floorNumber = value;
     }
@@ -365,6 +373,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the latitude property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLatitude(@javax.annotation.Nullable final Double value) {
         this._latitude = value;
     }
@@ -373,6 +382,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the longitude property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLongitude(@javax.annotation.Nullable final Double value) {
         this._longitude = value;
     }
@@ -381,6 +391,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -389,6 +400,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the organization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganization(@javax.annotation.Nullable final java.util.List<String> value) {
         this._organization = value;
     }
@@ -397,6 +409,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the postalCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostalCode(@javax.annotation.Nullable final String value) {
         this._postalCode = value;
     }
@@ -405,6 +418,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the roomDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoomDescription(@javax.annotation.Nullable final String value) {
         this._roomDescription = value;
     }
@@ -413,6 +427,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the roomName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoomName(@javax.annotation.Nullable final String value) {
         this._roomName = value;
     }
@@ -421,6 +436,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the roomNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoomNumber(@javax.annotation.Nullable final Integer value) {
         this._roomNumber = value;
     }
@@ -429,6 +445,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the site property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSite(@javax.annotation.Nullable final String value) {
         this._site = value;
     }
@@ -437,6 +454,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the stateOrProvince property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStateOrProvince(@javax.annotation.Nullable final String value) {
         this._stateOrProvince = value;
     }
@@ -445,6 +463,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the streetAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStreetAddress(@javax.annotation.Nullable final String value) {
         this._streetAddress = value;
     }
@@ -453,6 +472,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the subdivision property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubdivision(@javax.annotation.Nullable final java.util.List<String> value) {
         this._subdivision = value;
     }
@@ -461,6 +481,7 @@ public class PrinterLocation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the subunit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubunit(@javax.annotation.Nullable final java.util.List<String> value) {
         this._subunit = value;
     }

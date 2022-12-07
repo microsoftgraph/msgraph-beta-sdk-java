@@ -25,9 +25,9 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable 
      * Instantiates a new cloudPcSourceDeviceImage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcSourceDeviceImage() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.cloudPcSourceDeviceImage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,14 +61,13 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcSourceDeviceImage currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("subscriptionDisplayName", (n) -> { currentObject.setSubscriptionDisplayName(n.getStringValue()); });
-            this.put("subscriptionId", (n) -> { currentObject.setSubscriptionId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("subscriptionDisplayName", (n) -> { this.setSubscriptionDisplayName(n.getStringValue()); });
+        deserializerMap.put("subscriptionId", (n) -> { this.setSubscriptionId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The ID of the source image.
@@ -107,6 +106,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -121,6 +121,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +130,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -137,6 +139,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
         this._id = value;
     }
@@ -145,6 +148,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -153,6 +157,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the subscriptionDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptionDisplayName(@javax.annotation.Nullable final String value) {
         this._subscriptionDisplayName = value;
     }
@@ -161,6 +166,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the subscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptionId(@javax.annotation.Nullable final String value) {
         this._subscriptionId = value;
     }

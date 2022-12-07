@@ -90,9 +90,9 @@ public class EducationUser extends Entity implements Parsable {
      * Instantiates a new educationUser and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationUser() {
         super();
-        this.setOdataType("#microsoft.graph.educationUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -198,47 +198,46 @@ public class EducationUser extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationUser currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accountEnabled", (n) -> { currentObject.setAccountEnabled(n.getBooleanValue()); });
-            this.put("assignedLicenses", (n) -> { currentObject.setAssignedLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
-            this.put("assignedPlans", (n) -> { currentObject.setAssignedPlans(n.getCollectionOfObjectValues(AssignedPlan::createFromDiscriminatorValue)); });
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(EducationAssignment::createFromDiscriminatorValue)); });
-            this.put("businessPhones", (n) -> { currentObject.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("classes", (n) -> { currentObject.setClasses(n.getCollectionOfObjectValues(EducationClass::createFromDiscriminatorValue)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("department", (n) -> { currentObject.setDepartment(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("externalSource", (n) -> { currentObject.setExternalSource(n.getEnumValue(EducationExternalSource.class)); });
-            this.put("externalSourceDetail", (n) -> { currentObject.setExternalSourceDetail(n.getStringValue()); });
-            this.put("givenName", (n) -> { currentObject.setGivenName(n.getStringValue()); });
-            this.put("mail", (n) -> { currentObject.setMail(n.getStringValue()); });
-            this.put("mailingAddress", (n) -> { currentObject.setMailingAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
-            this.put("middleName", (n) -> { currentObject.setMiddleName(n.getStringValue()); });
-            this.put("mobilePhone", (n) -> { currentObject.setMobilePhone(n.getStringValue()); });
-            this.put("officeLocation", (n) -> { currentObject.setOfficeLocation(n.getStringValue()); });
-            this.put("onPremisesInfo", (n) -> { currentObject.setOnPremisesInfo(n.getObjectValue(EducationOnPremisesInfo::createFromDiscriminatorValue)); });
-            this.put("passwordPolicies", (n) -> { currentObject.setPasswordPolicies(n.getStringValue()); });
-            this.put("passwordProfile", (n) -> { currentObject.setPasswordProfile(n.getObjectValue(PasswordProfile::createFromDiscriminatorValue)); });
-            this.put("preferredLanguage", (n) -> { currentObject.setPreferredLanguage(n.getStringValue()); });
-            this.put("primaryRole", (n) -> { currentObject.setPrimaryRole(n.getEnumValue(EducationUserRole.class)); });
-            this.put("provisionedPlans", (n) -> { currentObject.setProvisionedPlans(n.getCollectionOfObjectValues(ProvisionedPlan::createFromDiscriminatorValue)); });
-            this.put("refreshTokensValidFromDateTime", (n) -> { currentObject.setRefreshTokensValidFromDateTime(n.getOffsetDateTimeValue()); });
-            this.put("relatedContacts", (n) -> { currentObject.setRelatedContacts(n.getCollectionOfObjectValues(RelatedContact::createFromDiscriminatorValue)); });
-            this.put("residenceAddress", (n) -> { currentObject.setResidenceAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("rubrics", (n) -> { currentObject.setRubrics(n.getCollectionOfObjectValues(EducationRubric::createFromDiscriminatorValue)); });
-            this.put("schools", (n) -> { currentObject.setSchools(n.getCollectionOfObjectValues(EducationSchool::createFromDiscriminatorValue)); });
-            this.put("showInAddressList", (n) -> { currentObject.setShowInAddressList(n.getBooleanValue()); });
-            this.put("student", (n) -> { currentObject.setStudent(n.getObjectValue(EducationStudent::createFromDiscriminatorValue)); });
-            this.put("surname", (n) -> { currentObject.setSurname(n.getStringValue()); });
-            this.put("taughtClasses", (n) -> { currentObject.setTaughtClasses(n.getCollectionOfObjectValues(EducationClass::createFromDiscriminatorValue)); });
-            this.put("teacher", (n) -> { currentObject.setTeacher(n.getObjectValue(EducationTeacher::createFromDiscriminatorValue)); });
-            this.put("usageLocation", (n) -> { currentObject.setUsageLocation(n.getStringValue()); });
-            this.put("user", (n) -> { currentObject.setUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("userType", (n) -> { currentObject.setUserType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountEnabled", (n) -> { this.setAccountEnabled(n.getBooleanValue()); });
+        deserializerMap.put("assignedLicenses", (n) -> { this.setAssignedLicenses(n.getCollectionOfObjectValues(AssignedLicense::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignedPlans", (n) -> { this.setAssignedPlans(n.getCollectionOfObjectValues(AssignedPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(EducationAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("businessPhones", (n) -> { this.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("classes", (n) -> { this.setClasses(n.getCollectionOfObjectValues(EducationClass::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("department", (n) -> { this.setDepartment(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("externalSource", (n) -> { this.setExternalSource(n.getEnumValue(EducationExternalSource.class)); });
+        deserializerMap.put("externalSourceDetail", (n) -> { this.setExternalSourceDetail(n.getStringValue()); });
+        deserializerMap.put("givenName", (n) -> { this.setGivenName(n.getStringValue()); });
+        deserializerMap.put("mail", (n) -> { this.setMail(n.getStringValue()); });
+        deserializerMap.put("mailingAddress", (n) -> { this.setMailingAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("mailNickname", (n) -> { this.setMailNickname(n.getStringValue()); });
+        deserializerMap.put("middleName", (n) -> { this.setMiddleName(n.getStringValue()); });
+        deserializerMap.put("mobilePhone", (n) -> { this.setMobilePhone(n.getStringValue()); });
+        deserializerMap.put("officeLocation", (n) -> { this.setOfficeLocation(n.getStringValue()); });
+        deserializerMap.put("onPremisesInfo", (n) -> { this.setOnPremisesInfo(n.getObjectValue(EducationOnPremisesInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("passwordPolicies", (n) -> { this.setPasswordPolicies(n.getStringValue()); });
+        deserializerMap.put("passwordProfile", (n) -> { this.setPasswordProfile(n.getObjectValue(PasswordProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("preferredLanguage", (n) -> { this.setPreferredLanguage(n.getStringValue()); });
+        deserializerMap.put("primaryRole", (n) -> { this.setPrimaryRole(n.getEnumValue(EducationUserRole.class)); });
+        deserializerMap.put("provisionedPlans", (n) -> { this.setProvisionedPlans(n.getCollectionOfObjectValues(ProvisionedPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("refreshTokensValidFromDateTime", (n) -> { this.setRefreshTokensValidFromDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("relatedContacts", (n) -> { this.setRelatedContacts(n.getCollectionOfObjectValues(RelatedContact::createFromDiscriminatorValue)); });
+        deserializerMap.put("residenceAddress", (n) -> { this.setResidenceAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("rubrics", (n) -> { this.setRubrics(n.getCollectionOfObjectValues(EducationRubric::createFromDiscriminatorValue)); });
+        deserializerMap.put("schools", (n) -> { this.setSchools(n.getCollectionOfObjectValues(EducationSchool::createFromDiscriminatorValue)); });
+        deserializerMap.put("showInAddressList", (n) -> { this.setShowInAddressList(n.getBooleanValue()); });
+        deserializerMap.put("student", (n) -> { this.setStudent(n.getObjectValue(EducationStudent::createFromDiscriminatorValue)); });
+        deserializerMap.put("surname", (n) -> { this.setSurname(n.getStringValue()); });
+        deserializerMap.put("taughtClasses", (n) -> { this.setTaughtClasses(n.getCollectionOfObjectValues(EducationClass::createFromDiscriminatorValue)); });
+        deserializerMap.put("teacher", (n) -> { this.setTeacher(n.getObjectValue(EducationTeacher::createFromDiscriminatorValue)); });
+        deserializerMap.put("usageLocation", (n) -> { this.setUsageLocation(n.getStringValue()); });
+        deserializerMap.put("user", (n) -> { this.setUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("userType", (n) -> { this.setUserType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the givenName property value. The given name (first name) of the user. Supports /$filter.
@@ -461,6 +460,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -508,6 +508,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the accountEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountEnabled(@javax.annotation.Nullable final Boolean value) {
         this._accountEnabled = value;
     }
@@ -516,6 +517,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the assignedLicenses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedLicenses(@javax.annotation.Nullable final java.util.List<AssignedLicense> value) {
         this._assignedLicenses = value;
     }
@@ -524,6 +526,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the assignedPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedPlans(@javax.annotation.Nullable final java.util.List<AssignedPlan> value) {
         this._assignedPlans = value;
     }
@@ -532,6 +535,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<EducationAssignment> value) {
         this._assignments = value;
     }
@@ -540,6 +544,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the businessPhones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBusinessPhones(@javax.annotation.Nullable final java.util.List<String> value) {
         this._businessPhones = value;
     }
@@ -548,6 +553,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the classes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClasses(@javax.annotation.Nullable final java.util.List<EducationClass> value) {
         this._classes = value;
     }
@@ -556,6 +562,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -564,6 +571,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the department property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDepartment(@javax.annotation.Nullable final String value) {
         this._department = value;
     }
@@ -572,6 +580,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -580,6 +589,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the externalSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalSource(@javax.annotation.Nullable final EducationExternalSource value) {
         this._externalSource = value;
     }
@@ -588,6 +598,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the externalSourceDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalSourceDetail(@javax.annotation.Nullable final String value) {
         this._externalSourceDetail = value;
     }
@@ -596,6 +607,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the givenName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGivenName(@javax.annotation.Nullable final String value) {
         this._givenName = value;
     }
@@ -604,6 +616,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the mail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMail(@javax.annotation.Nullable final String value) {
         this._mail = value;
     }
@@ -612,6 +625,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the mailingAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailingAddress(@javax.annotation.Nullable final PhysicalAddress value) {
         this._mailingAddress = value;
     }
@@ -620,6 +634,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the mailNickname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailNickname(@javax.annotation.Nullable final String value) {
         this._mailNickname = value;
     }
@@ -628,6 +643,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the middleName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMiddleName(@javax.annotation.Nullable final String value) {
         this._middleName = value;
     }
@@ -636,6 +652,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the mobilePhone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobilePhone(@javax.annotation.Nullable final String value) {
         this._mobilePhone = value;
     }
@@ -644,6 +661,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the officeLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOfficeLocation(@javax.annotation.Nullable final String value) {
         this._officeLocation = value;
     }
@@ -652,6 +670,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the onPremisesInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesInfo(@javax.annotation.Nullable final EducationOnPremisesInfo value) {
         this._onPremisesInfo = value;
     }
@@ -660,6 +679,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the passwordPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPolicies(@javax.annotation.Nullable final String value) {
         this._passwordPolicies = value;
     }
@@ -668,6 +688,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the passwordProfile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordProfile(@javax.annotation.Nullable final PasswordProfile value) {
         this._passwordProfile = value;
     }
@@ -676,6 +697,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the preferredLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredLanguage(@javax.annotation.Nullable final String value) {
         this._preferredLanguage = value;
     }
@@ -684,6 +706,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the primaryRole property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrimaryRole(@javax.annotation.Nullable final EducationUserRole value) {
         this._primaryRole = value;
     }
@@ -692,6 +715,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the provisionedPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisionedPlans(@javax.annotation.Nullable final java.util.List<ProvisionedPlan> value) {
         this._provisionedPlans = value;
     }
@@ -700,6 +724,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the refreshTokensValidFromDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRefreshTokensValidFromDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._refreshTokensValidFromDateTime = value;
     }
@@ -708,6 +733,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the relatedContacts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRelatedContacts(@javax.annotation.Nullable final java.util.List<RelatedContact> value) {
         this._relatedContacts = value;
     }
@@ -716,6 +742,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the residenceAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResidenceAddress(@javax.annotation.Nullable final PhysicalAddress value) {
         this._residenceAddress = value;
     }
@@ -724,6 +751,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the rubrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRubrics(@javax.annotation.Nullable final java.util.List<EducationRubric> value) {
         this._rubrics = value;
     }
@@ -732,6 +760,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the schools property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchools(@javax.annotation.Nullable final java.util.List<EducationSchool> value) {
         this._schools = value;
     }
@@ -740,6 +769,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the showInAddressList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShowInAddressList(@javax.annotation.Nullable final Boolean value) {
         this._showInAddressList = value;
     }
@@ -748,6 +778,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the student property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStudent(@javax.annotation.Nullable final EducationStudent value) {
         this._student = value;
     }
@@ -756,6 +787,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the surname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSurname(@javax.annotation.Nullable final String value) {
         this._surname = value;
     }
@@ -764,6 +796,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the taughtClasses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaughtClasses(@javax.annotation.Nullable final java.util.List<EducationClass> value) {
         this._taughtClasses = value;
     }
@@ -772,6 +805,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the teacher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeacher(@javax.annotation.Nullable final EducationTeacher value) {
         this._teacher = value;
     }
@@ -780,6 +814,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the usageLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsageLocation(@javax.annotation.Nullable final String value) {
         this._usageLocation = value;
     }
@@ -788,6 +823,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the user property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUser(@javax.annotation.Nullable final User value) {
         this._user = value;
     }
@@ -796,6 +832,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }
@@ -804,6 +841,7 @@ public class EducationUser extends Entity implements Parsable {
      * @param value Value to set for the userType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserType(@javax.annotation.Nullable final String value) {
         this._userType = value;
     }

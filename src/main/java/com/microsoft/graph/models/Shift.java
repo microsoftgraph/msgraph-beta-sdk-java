@@ -12,16 +12,17 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
     private ShiftItem _draftShift;
     /** The isStagedForDeletion property */
     private Boolean _isStagedForDeletion;
-    /** ID of the scheduling group the shift is part of. Required. */
+    /** The schedulingGroupId property */
     private String _schedulingGroupId;
-    /** The shared version of this shift that is viewable by both employees and managers. Required. */
+    /** The sharedShift property */
     private ShiftItem _sharedShift;
-    /** ID of the user assigned to the shift. Required. */
+    /** The userId property */
     private String _userId;
     /**
      * Instantiates a new Shift and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Shift() {
         super();
         this.setOdataType("#microsoft.graph.shift");
@@ -50,14 +51,13 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Shift currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("draftShift", (n) -> { currentObject.setDraftShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
-            this.put("isStagedForDeletion", (n) -> { currentObject.setIsStagedForDeletion(n.getBooleanValue()); });
-            this.put("schedulingGroupId", (n) -> { currentObject.setSchedulingGroupId(n.getStringValue()); });
-            this.put("sharedShift", (n) -> { currentObject.setSharedShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("draftShift", (n) -> { this.setDraftShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("isStagedForDeletion", (n) -> { this.setIsStagedForDeletion(n.getBooleanValue()); });
+        deserializerMap.put("schedulingGroupId", (n) -> { this.setSchedulingGroupId(n.getStringValue()); });
+        deserializerMap.put("sharedShift", (n) -> { this.setSharedShift(n.getObjectValue(ShiftItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isStagedForDeletion property value. The isStagedForDeletion property
@@ -68,7 +68,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         return this._isStagedForDeletion;
     }
     /**
-     * Gets the schedulingGroupId property value. ID of the scheduling group the shift is part of. Required.
+     * Gets the schedulingGroupId property value. The schedulingGroupId property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -76,7 +76,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         return this._schedulingGroupId;
     }
     /**
-     * Gets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Required.
+     * Gets the sharedShift property value. The sharedShift property
      * @return a shiftItem
      */
     @javax.annotation.Nullable
@@ -84,7 +84,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
         return this._sharedShift;
     }
     /**
-     * Gets the userId property value. ID of the user assigned to the shift. Required.
+     * Gets the userId property value. The userId property
      * @return a string
      */
     @javax.annotation.Nullable
@@ -96,6 +96,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +111,7 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the draftShift property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDraftShift(@javax.annotation.Nullable final ShiftItem value) {
         this._draftShift = value;
     }
@@ -118,30 +120,34 @@ public class Shift extends ChangeTrackedEntity implements Parsable {
      * @param value Value to set for the isStagedForDeletion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsStagedForDeletion(@javax.annotation.Nullable final Boolean value) {
         this._isStagedForDeletion = value;
     }
     /**
-     * Sets the schedulingGroupId property value. ID of the scheduling group the shift is part of. Required.
+     * Sets the schedulingGroupId property value. The schedulingGroupId property
      * @param value Value to set for the schedulingGroupId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedulingGroupId(@javax.annotation.Nullable final String value) {
         this._schedulingGroupId = value;
     }
     /**
-     * Sets the sharedShift property value. The shared version of this shift that is viewable by both employees and managers. Required.
+     * Sets the sharedShift property value. The sharedShift property
      * @param value Value to set for the sharedShift property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedShift(@javax.annotation.Nullable final ShiftItem value) {
         this._sharedShift = value;
     }
     /**
-     * Sets the userId property value. ID of the user assigned to the shift. Required.
+     * Sets the userId property value. The userId property
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

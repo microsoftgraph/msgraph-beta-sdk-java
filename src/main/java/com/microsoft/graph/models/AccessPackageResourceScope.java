@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class AccessPackageResourceScope extends Entity implements Parsable {
     /** The accessPackageResource property */
     private AccessPackageResource _accessPackageResource;
@@ -29,9 +29,9 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * Instantiates a new accessPackageResourceScope and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageResourceScope() {
         super();
-        this.setOdataType("#microsoft.graph.accessPackageResourceScope");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -73,17 +73,16 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessPackageResourceScope currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessPackageResource", (n) -> { currentObject.setAccessPackageResource(n.getObjectValue(AccessPackageResource::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isRootScope", (n) -> { currentObject.setIsRootScope(n.getBooleanValue()); });
-            this.put("originId", (n) -> { currentObject.setOriginId(n.getStringValue()); });
-            this.put("originSystem", (n) -> { currentObject.setOriginSystem(n.getStringValue()); });
-            this.put("roleOriginId", (n) -> { currentObject.setRoleOriginId(n.getStringValue()); });
-            this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackageResource", (n) -> { this.setAccessPackageResource(n.getObjectValue(AccessPackageResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isRootScope", (n) -> { this.setIsRootScope(n.getBooleanValue()); });
+        deserializerMap.put("originId", (n) -> { this.setOriginId(n.getStringValue()); });
+        deserializerMap.put("originSystem", (n) -> { this.setOriginSystem(n.getStringValue()); });
+        deserializerMap.put("roleOriginId", (n) -> { this.setRoleOriginId(n.getStringValue()); });
+        deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isRootScope property value. True if the scopes are arranged in a hierarchy and this is the top or root scope of the resource.
@@ -130,6 +129,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -147,6 +147,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResource(@javax.annotation.Nullable final AccessPackageResource value) {
         this._accessPackageResource = value;
     }
@@ -155,6 +156,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -163,6 +165,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -171,6 +174,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * @param value Value to set for the isRootScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRootScope(@javax.annotation.Nullable final Boolean value) {
         this._isRootScope = value;
     }
@@ -179,6 +183,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * @param value Value to set for the originId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginId(@javax.annotation.Nullable final String value) {
         this._originId = value;
     }
@@ -187,6 +192,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * @param value Value to set for the originSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginSystem(@javax.annotation.Nullable final String value) {
         this._originSystem = value;
     }
@@ -195,6 +201,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * @param value Value to set for the roleOriginId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleOriginId(@javax.annotation.Nullable final String value) {
         this._roleOriginId = value;
     }
@@ -203,6 +210,7 @@ public class AccessPackageResourceScope extends Entity implements Parsable {
      * @param value Value to set for the url property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrl(@javax.annotation.Nullable final String value) {
         this._url = value;
     }

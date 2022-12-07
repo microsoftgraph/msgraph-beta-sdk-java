@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class AuthenticationListener extends Entity implements Parsable {
     /** The priority of the listener. Determines the order of evaluation when an event has multiple listeners. The priority is evaluated from low to high. */
     private Integer _priority;
@@ -18,9 +18,9 @@ public class AuthenticationListener extends Entity implements Parsable {
      * Instantiates a new authenticationListener and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthenticationListener() {
         super();
-        this.setOdataType("#microsoft.graph.authenticationListener");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,11 +45,10 @@ public class AuthenticationListener extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthenticationListener currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("sourceFilter", (n) -> { currentObject.setSourceFilter(n.getObjectValue(AuthenticationSourceFilter::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("sourceFilter", (n) -> { this.setSourceFilter(n.getObjectValue(AuthenticationSourceFilter::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the priority property value. The priority of the listener. Determines the order of evaluation when an event has multiple listeners. The priority is evaluated from low to high.
@@ -72,6 +71,7 @@ public class AuthenticationListener extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -83,6 +83,7 @@ public class AuthenticationListener extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }
@@ -91,6 +92,7 @@ public class AuthenticationListener extends Entity implements Parsable {
      * @param value Value to set for the sourceFilter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceFilter(@javax.annotation.Nullable final AuthenticationSourceFilter value) {
         this._sourceFilter = value;
     }

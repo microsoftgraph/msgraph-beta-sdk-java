@@ -26,9 +26,9 @@ public class AccessReviewStage extends Entity implements Parsable {
      * Instantiates a new accessReviewStage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewStage() {
         super();
-        this.setOdataType("#microsoft.graph.accessReviewStage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,15 +70,14 @@ public class AccessReviewStage extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewStage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("decisions", (n) -> { currentObject.setDecisions(n.getCollectionOfObjectValues(AccessReviewInstanceDecisionItem::createFromDiscriminatorValue)); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("fallbackReviewers", (n) -> { currentObject.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
-            this.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("decisions", (n) -> { this.setDecisions(n.getCollectionOfObjectValues(AccessReviewInstanceDecisionItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("fallbackReviewers", (n) -> { this.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("reviewers", (n) -> { this.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the reviewers property value. This collection of access review scopes is used to define who the reviewers are. For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API.
@@ -109,6 +108,7 @@ public class AccessReviewStage extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -124,6 +124,7 @@ public class AccessReviewStage extends Entity implements Parsable {
      * @param value Value to set for the decisions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecisions(@javax.annotation.Nullable final java.util.List<AccessReviewInstanceDecisionItem> value) {
         this._decisions = value;
     }
@@ -132,6 +133,7 @@ public class AccessReviewStage extends Entity implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._endDateTime = value;
     }
@@ -140,6 +142,7 @@ public class AccessReviewStage extends Entity implements Parsable {
      * @param value Value to set for the fallbackReviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFallbackReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this._fallbackReviewers = value;
     }
@@ -148,6 +151,7 @@ public class AccessReviewStage extends Entity implements Parsable {
      * @param value Value to set for the reviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this._reviewers = value;
     }
@@ -156,6 +160,7 @@ public class AccessReviewStage extends Entity implements Parsable {
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._startDateTime = value;
     }
@@ -164,6 +169,7 @@ public class AccessReviewStage extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }

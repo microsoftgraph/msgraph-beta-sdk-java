@@ -24,6 +24,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * Instantiates a new AndroidManagedStoreAppConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidManagedStoreAppConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidManagedStoreAppConfiguration");
@@ -60,15 +61,14 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidManagedStoreAppConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appSupportsOemConfig", (n) -> { currentObject.setAppSupportsOemConfig(n.getBooleanValue()); });
-            this.put("connectedAppsEnabled", (n) -> { currentObject.setConnectedAppsEnabled(n.getBooleanValue()); });
-            this.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
-            this.put("payloadJson", (n) -> { currentObject.setPayloadJson(n.getStringValue()); });
-            this.put("permissionActions", (n) -> { currentObject.setPermissionActions(n.getCollectionOfObjectValues(AndroidPermissionAction::createFromDiscriminatorValue)); });
-            this.put("profileApplicability", (n) -> { currentObject.setProfileApplicability(n.getEnumValue(AndroidProfileApplicability.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appSupportsOemConfig", (n) -> { this.setAppSupportsOemConfig(n.getBooleanValue()); });
+        deserializerMap.put("connectedAppsEnabled", (n) -> { this.setConnectedAppsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("packageId", (n) -> { this.setPackageId(n.getStringValue()); });
+        deserializerMap.put("payloadJson", (n) -> { this.setPayloadJson(n.getStringValue()); });
+        deserializerMap.put("permissionActions", (n) -> { this.setPermissionActions(n.getCollectionOfObjectValues(AndroidPermissionAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("profileApplicability", (n) -> { this.setProfileApplicability(n.getEnumValue(AndroidProfileApplicability.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the packageId property value. Android Enterprise app configuration package id.
@@ -107,6 +107,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +123,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * @param value Value to set for the appSupportsOemConfig property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppSupportsOemConfig(@javax.annotation.Nullable final Boolean value) {
         this._appSupportsOemConfig = value;
     }
@@ -130,6 +132,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * @param value Value to set for the connectedAppsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectedAppsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._connectedAppsEnabled = value;
     }
@@ -138,6 +141,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * @param value Value to set for the packageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackageId(@javax.annotation.Nullable final String value) {
         this._packageId = value;
     }
@@ -146,6 +150,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * @param value Value to set for the payloadJson property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayloadJson(@javax.annotation.Nullable final String value) {
         this._payloadJson = value;
     }
@@ -154,6 +159,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * @param value Value to set for the permissionActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionActions(@javax.annotation.Nullable final java.util.List<AndroidPermissionAction> value) {
         this._permissionActions = value;
     }
@@ -162,6 +168,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      * @param value Value to set for the profileApplicability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProfileApplicability(@javax.annotation.Nullable final AndroidProfileApplicability value) {
         this._profileApplicability = value;
     }

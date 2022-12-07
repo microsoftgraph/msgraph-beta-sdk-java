@@ -52,7 +52,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     private Boolean _passwordRequireActiveDirectoryComplexity;
     /** Gets or sets a description of the password complexity requirements. */
     private String _passwordRequirementsDescription;
-    /** Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later. */
+    /** Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers dont respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later. */
     private java.util.List<String> _preferredKDCs;
     /** Gets or sets the case-sensitive realm name for this profile. */
     private String _realm;
@@ -66,12 +66,13 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
     private String _usernameLabelCustom;
     /** Gets or sets the principle user name to use for this profile. The realm name does not need to be included. */
     private String _userPrincipalName;
-    /** When set to True, the user isn’t prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. Available for devices running macOS versions 11 and later. */
+    /** When set to True, the user isnt prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. Available for devices running macOS versions 11 and later. */
     private Boolean _userSetupDelayed;
     /**
      * Instantiates a new MacOSKerberosSingleSignOnExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSKerberosSingleSignOnExtension() {
         super();
         this.setOdataType("#microsoft.graph.macOSKerberosSingleSignOnExtension");
@@ -156,39 +157,38 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSKerberosSingleSignOnExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeDirectorySiteCode", (n) -> { currentObject.setActiveDirectorySiteCode(n.getStringValue()); });
-            this.put("blockActiveDirectorySiteAutoDiscovery", (n) -> { currentObject.setBlockActiveDirectorySiteAutoDiscovery(n.getBooleanValue()); });
-            this.put("blockAutomaticLogin", (n) -> { currentObject.setBlockAutomaticLogin(n.getBooleanValue()); });
-            this.put("cacheName", (n) -> { currentObject.setCacheName(n.getStringValue()); });
-            this.put("credentialBundleIdAccessControlList", (n) -> { currentObject.setCredentialBundleIdAccessControlList(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("credentialsCacheMonitored", (n) -> { currentObject.setCredentialsCacheMonitored(n.getBooleanValue()); });
-            this.put("domainRealms", (n) -> { currentObject.setDomainRealms(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("domains", (n) -> { currentObject.setDomains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("isDefaultRealm", (n) -> { currentObject.setIsDefaultRealm(n.getBooleanValue()); });
-            this.put("kerberosAppsInBundleIdACLIncluded", (n) -> { currentObject.setKerberosAppsInBundleIdACLIncluded(n.getBooleanValue()); });
-            this.put("managedAppsInBundleIdACLIncluded", (n) -> { currentObject.setManagedAppsInBundleIdACLIncluded(n.getBooleanValue()); });
-            this.put("modeCredentialUsed", (n) -> { currentObject.setModeCredentialUsed(n.getStringValue()); });
-            this.put("passwordBlockModification", (n) -> { currentObject.setPasswordBlockModification(n.getBooleanValue()); });
-            this.put("passwordChangeUrl", (n) -> { currentObject.setPasswordChangeUrl(n.getStringValue()); });
-            this.put("passwordEnableLocalSync", (n) -> { currentObject.setPasswordEnableLocalSync(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordExpirationNotificationDays", (n) -> { currentObject.setPasswordExpirationNotificationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumAgeDays", (n) -> { currentObject.setPasswordMinimumAgeDays(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequireActiveDirectoryComplexity", (n) -> { currentObject.setPasswordRequireActiveDirectoryComplexity(n.getBooleanValue()); });
-            this.put("passwordRequirementsDescription", (n) -> { currentObject.setPasswordRequirementsDescription(n.getStringValue()); });
-            this.put("preferredKDCs", (n) -> { currentObject.setPreferredKDCs(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("realm", (n) -> { currentObject.setRealm(n.getStringValue()); });
-            this.put("requireUserPresence", (n) -> { currentObject.setRequireUserPresence(n.getBooleanValue()); });
-            this.put("signInHelpText", (n) -> { currentObject.setSignInHelpText(n.getStringValue()); });
-            this.put("tlsForLDAPRequired", (n) -> { currentObject.setTlsForLDAPRequired(n.getBooleanValue()); });
-            this.put("usernameLabelCustom", (n) -> { currentObject.setUsernameLabelCustom(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-            this.put("userSetupDelayed", (n) -> { currentObject.setUserSetupDelayed(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeDirectorySiteCode", (n) -> { this.setActiveDirectorySiteCode(n.getStringValue()); });
+        deserializerMap.put("blockActiveDirectorySiteAutoDiscovery", (n) -> { this.setBlockActiveDirectorySiteAutoDiscovery(n.getBooleanValue()); });
+        deserializerMap.put("blockAutomaticLogin", (n) -> { this.setBlockAutomaticLogin(n.getBooleanValue()); });
+        deserializerMap.put("cacheName", (n) -> { this.setCacheName(n.getStringValue()); });
+        deserializerMap.put("credentialBundleIdAccessControlList", (n) -> { this.setCredentialBundleIdAccessControlList(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("credentialsCacheMonitored", (n) -> { this.setCredentialsCacheMonitored(n.getBooleanValue()); });
+        deserializerMap.put("domainRealms", (n) -> { this.setDomainRealms(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("domains", (n) -> { this.setDomains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("isDefaultRealm", (n) -> { this.setIsDefaultRealm(n.getBooleanValue()); });
+        deserializerMap.put("kerberosAppsInBundleIdACLIncluded", (n) -> { this.setKerberosAppsInBundleIdACLIncluded(n.getBooleanValue()); });
+        deserializerMap.put("managedAppsInBundleIdACLIncluded", (n) -> { this.setManagedAppsInBundleIdACLIncluded(n.getBooleanValue()); });
+        deserializerMap.put("modeCredentialUsed", (n) -> { this.setModeCredentialUsed(n.getStringValue()); });
+        deserializerMap.put("passwordBlockModification", (n) -> { this.setPasswordBlockModification(n.getBooleanValue()); });
+        deserializerMap.put("passwordChangeUrl", (n) -> { this.setPasswordChangeUrl(n.getStringValue()); });
+        deserializerMap.put("passwordEnableLocalSync", (n) -> { this.setPasswordEnableLocalSync(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { this.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordExpirationNotificationDays", (n) -> { this.setPasswordExpirationNotificationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumAgeDays", (n) -> { this.setPasswordMinimumAgeDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { this.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { this.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequireActiveDirectoryComplexity", (n) -> { this.setPasswordRequireActiveDirectoryComplexity(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequirementsDescription", (n) -> { this.setPasswordRequirementsDescription(n.getStringValue()); });
+        deserializerMap.put("preferredKDCs", (n) -> { this.setPreferredKDCs(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("realm", (n) -> { this.setRealm(n.getStringValue()); });
+        deserializerMap.put("requireUserPresence", (n) -> { this.setRequireUserPresence(n.getBooleanValue()); });
+        deserializerMap.put("signInHelpText", (n) -> { this.setSignInHelpText(n.getStringValue()); });
+        deserializerMap.put("tlsForLDAPRequired", (n) -> { this.setTlsForLDAPRequired(n.getBooleanValue()); });
+        deserializerMap.put("usernameLabelCustom", (n) -> { this.setUsernameLabelCustom(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        deserializerMap.put("userSetupDelayed", (n) -> { this.setUserSetupDelayed(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefaultRealm property value. When true, this profile's realm will be selected as the default. Necessary if multiple Kerberos-type profiles are configured.
@@ -303,7 +303,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
         return this._passwordRequirementsDescription;
     }
     /**
-     * Gets the preferredKDCs property value. Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.
+     * Gets the preferredKDCs property value. Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers dont respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -359,7 +359,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
         return this._userPrincipalName;
     }
     /**
-     * Gets the userSetupDelayed property value. When set to True, the user isn’t prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. Available for devices running macOS versions 11 and later.
+     * Gets the userSetupDelayed property value. When set to True, the user isnt prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. Available for devices running macOS versions 11 and later.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -371,6 +371,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -410,6 +411,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the activeDirectorySiteCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveDirectorySiteCode(@javax.annotation.Nullable final String value) {
         this._activeDirectorySiteCode = value;
     }
@@ -418,6 +420,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the blockActiveDirectorySiteAutoDiscovery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockActiveDirectorySiteAutoDiscovery(@javax.annotation.Nullable final Boolean value) {
         this._blockActiveDirectorySiteAutoDiscovery = value;
     }
@@ -426,6 +429,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the blockAutomaticLogin property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockAutomaticLogin(@javax.annotation.Nullable final Boolean value) {
         this._blockAutomaticLogin = value;
     }
@@ -434,6 +438,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the cacheName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCacheName(@javax.annotation.Nullable final String value) {
         this._cacheName = value;
     }
@@ -442,6 +447,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the credentialBundleIdAccessControlList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCredentialBundleIdAccessControlList(@javax.annotation.Nullable final java.util.List<String> value) {
         this._credentialBundleIdAccessControlList = value;
     }
@@ -450,6 +456,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the credentialsCacheMonitored property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCredentialsCacheMonitored(@javax.annotation.Nullable final Boolean value) {
         this._credentialsCacheMonitored = value;
     }
@@ -458,6 +465,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the domainRealms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainRealms(@javax.annotation.Nullable final java.util.List<String> value) {
         this._domainRealms = value;
     }
@@ -466,6 +474,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the domains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._domains = value;
     }
@@ -474,6 +483,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the isDefaultRealm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefaultRealm(@javax.annotation.Nullable final Boolean value) {
         this._isDefaultRealm = value;
     }
@@ -482,6 +492,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the kerberosAppsInBundleIdACLIncluded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKerberosAppsInBundleIdACLIncluded(@javax.annotation.Nullable final Boolean value) {
         this._kerberosAppsInBundleIdACLIncluded = value;
     }
@@ -490,6 +501,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the managedAppsInBundleIdACLIncluded property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedAppsInBundleIdACLIncluded(@javax.annotation.Nullable final Boolean value) {
         this._managedAppsInBundleIdACLIncluded = value;
     }
@@ -498,6 +510,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the modeCredentialUsed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModeCredentialUsed(@javax.annotation.Nullable final String value) {
         this._modeCredentialUsed = value;
     }
@@ -506,6 +519,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the passwordBlockModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockModification(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockModification = value;
     }
@@ -514,6 +528,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the passwordChangeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordChangeUrl(@javax.annotation.Nullable final String value) {
         this._passwordChangeUrl = value;
     }
@@ -522,6 +537,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the passwordEnableLocalSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordEnableLocalSync(@javax.annotation.Nullable final Boolean value) {
         this._passwordEnableLocalSync = value;
     }
@@ -530,6 +546,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -538,6 +555,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the passwordExpirationNotificationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationNotificationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationNotificationDays = value;
     }
@@ -546,6 +564,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the passwordMinimumAgeDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumAgeDays(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumAgeDays = value;
     }
@@ -554,6 +573,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -562,6 +582,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordBlockCount = value;
     }
@@ -570,6 +591,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the passwordRequireActiveDirectoryComplexity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequireActiveDirectoryComplexity(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequireActiveDirectoryComplexity = value;
     }
@@ -578,14 +600,16 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the passwordRequirementsDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequirementsDescription(@javax.annotation.Nullable final String value) {
         this._passwordRequirementsDescription = value;
     }
     /**
-     * Sets the preferredKDCs property value. Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don’t respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.
+     * Sets the preferredKDCs property value. Add creates an ordered list of preferred Key Distribution Centers (KDCs) to use for Kerberos traffic. This list is used when the servers are not discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers dont respond, then the device uses DNS discovery. Delete removes an existing list, and devices use DNS discovery. Available for devices running macOS versions 12 and later.
      * @param value Value to set for the preferredKDCs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredKDCs(@javax.annotation.Nullable final java.util.List<String> value) {
         this._preferredKDCs = value;
     }
@@ -594,6 +618,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the realm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRealm(@javax.annotation.Nullable final String value) {
         this._realm = value;
     }
@@ -602,6 +627,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the requireUserPresence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireUserPresence(@javax.annotation.Nullable final Boolean value) {
         this._requireUserPresence = value;
     }
@@ -610,6 +636,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the signInHelpText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInHelpText(@javax.annotation.Nullable final String value) {
         this._signInHelpText = value;
     }
@@ -618,6 +645,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the tlsForLDAPRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTlsForLDAPRequired(@javax.annotation.Nullable final Boolean value) {
         this._tlsForLDAPRequired = value;
     }
@@ -626,6 +654,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the usernameLabelCustom property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsernameLabelCustom(@javax.annotation.Nullable final String value) {
         this._usernameLabelCustom = value;
     }
@@ -634,14 +663,16 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }
     /**
-     * Sets the userSetupDelayed property value. When set to True, the user isn’t prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. Available for devices running macOS versions 11 and later.
+     * Sets the userSetupDelayed property value. When set to True, the user isnt prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. Available for devices running macOS versions 11 and later.
      * @param value Value to set for the userSetupDelayed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserSetupDelayed(@javax.annotation.Nullable final Boolean value) {
         this._userSetupDelayed = value;
     }

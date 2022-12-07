@@ -10,12 +10,13 @@ import java.util.Objects;
 public class AccessPackageTextInputQuestion extends AccessPackageQuestion implements Parsable {
     /** Indicates whether the answer will be in single or multiple line format. */
     private Boolean _isSingleLineQuestion;
-    /** The regexPattern property */
+    /** This is the regex pattern that the corresponding text answer must follow. */
     private String _regexPattern;
     /**
      * Instantiates a new AccessPackageTextInputQuestion and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageTextInputQuestion() {
         super();
         this.setOdataType("#microsoft.graph.accessPackageTextInputQuestion");
@@ -36,11 +37,10 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessPackageTextInputQuestion currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("isSingleLineQuestion", (n) -> { currentObject.setIsSingleLineQuestion(n.getBooleanValue()); });
-            this.put("regexPattern", (n) -> { currentObject.setRegexPattern(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isSingleLineQuestion", (n) -> { this.setIsSingleLineQuestion(n.getBooleanValue()); });
+        deserializerMap.put("regexPattern", (n) -> { this.setRegexPattern(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isSingleLineQuestion property value. Indicates whether the answer will be in single or multiple line format.
@@ -51,7 +51,7 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
         return this._isSingleLineQuestion;
     }
     /**
-     * Gets the regexPattern property value. The regexPattern property
+     * Gets the regexPattern property value. This is the regex pattern that the corresponding text answer must follow.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -63,6 +63,7 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,14 +75,16 @@ public class AccessPackageTextInputQuestion extends AccessPackageQuestion implem
      * @param value Value to set for the isSingleLineQuestion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSingleLineQuestion(@javax.annotation.Nullable final Boolean value) {
         this._isSingleLineQuestion = value;
     }
     /**
-     * Sets the regexPattern property value. The regexPattern property
+     * Sets the regexPattern property value. This is the regex pattern that the corresponding text answer must follow.
      * @param value Value to set for the regexPattern property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegexPattern(@javax.annotation.Nullable final String value) {
         this._regexPattern = value;
     }

@@ -28,9 +28,9 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * Instantiates a new vpnDnsRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VpnDnsRule() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.vpnDnsRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,15 +64,14 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final VpnDnsRule currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("autoTrigger", (n) -> { currentObject.setAutoTrigger(n.getBooleanValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("persistent", (n) -> { currentObject.setPersistent(n.getBooleanValue()); });
-            this.put("proxyServerUri", (n) -> { currentObject.setProxyServerUri(n.getStringValue()); });
-            this.put("servers", (n) -> { currentObject.setServers(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("autoTrigger", (n) -> { this.setAutoTrigger(n.getBooleanValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("persistent", (n) -> { this.setPersistent(n.getBooleanValue()); });
+        deserializerMap.put("proxyServerUri", (n) -> { this.setProxyServerUri(n.getStringValue()); });
+        deserializerMap.put("servers", (n) -> { this.setServers(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. Name.
@@ -119,6 +118,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("autoTrigger", this.getAutoTrigger());
@@ -134,6 +134,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +143,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the autoTrigger property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAutoTrigger(@javax.annotation.Nullable final Boolean value) {
         this._autoTrigger = value;
     }
@@ -150,6 +152,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -158,6 +161,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -166,6 +170,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the persistent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersistent(@javax.annotation.Nullable final Boolean value) {
         this._persistent = value;
     }
@@ -174,6 +179,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the proxyServerUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyServerUri(@javax.annotation.Nullable final String value) {
         this._proxyServerUri = value;
     }
@@ -182,6 +188,7 @@ public class VpnDnsRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the servers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._servers = value;
     }

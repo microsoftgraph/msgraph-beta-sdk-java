@@ -36,6 +36,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      * Instantiates a new WindowsInformationProtectionPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsInformationProtectionPolicy() {
         super();
         this.setOdataType("#microsoft.graph.windowsInformationProtectionPolicy");
@@ -64,21 +65,20 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsInformationProtectionPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("daysWithoutContactBeforeUnenroll", (n) -> { currentObject.setDaysWithoutContactBeforeUnenroll(n.getIntegerValue()); });
-            this.put("mdmEnrollmentUrl", (n) -> { currentObject.setMdmEnrollmentUrl(n.getStringValue()); });
-            this.put("minutesOfInactivityBeforeDeviceLock", (n) -> { currentObject.setMinutesOfInactivityBeforeDeviceLock(n.getIntegerValue()); });
-            this.put("numberOfPastPinsRemembered", (n) -> { currentObject.setNumberOfPastPinsRemembered(n.getIntegerValue()); });
-            this.put("passwordMaximumAttemptCount", (n) -> { currentObject.setPasswordMaximumAttemptCount(n.getIntegerValue()); });
-            this.put("pinExpirationDays", (n) -> { currentObject.setPinExpirationDays(n.getIntegerValue()); });
-            this.put("pinLowercaseLetters", (n) -> { currentObject.setPinLowercaseLetters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements.class)); });
-            this.put("pinMinimumLength", (n) -> { currentObject.setPinMinimumLength(n.getIntegerValue()); });
-            this.put("pinSpecialCharacters", (n) -> { currentObject.setPinSpecialCharacters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements.class)); });
-            this.put("pinUppercaseLetters", (n) -> { currentObject.setPinUppercaseLetters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements.class)); });
-            this.put("revokeOnMdmHandoffDisabled", (n) -> { currentObject.setRevokeOnMdmHandoffDisabled(n.getBooleanValue()); });
-            this.put("windowsHelloForBusinessBlocked", (n) -> { currentObject.setWindowsHelloForBusinessBlocked(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("daysWithoutContactBeforeUnenroll", (n) -> { this.setDaysWithoutContactBeforeUnenroll(n.getIntegerValue()); });
+        deserializerMap.put("mdmEnrollmentUrl", (n) -> { this.setMdmEnrollmentUrl(n.getStringValue()); });
+        deserializerMap.put("minutesOfInactivityBeforeDeviceLock", (n) -> { this.setMinutesOfInactivityBeforeDeviceLock(n.getIntegerValue()); });
+        deserializerMap.put("numberOfPastPinsRemembered", (n) -> { this.setNumberOfPastPinsRemembered(n.getIntegerValue()); });
+        deserializerMap.put("passwordMaximumAttemptCount", (n) -> { this.setPasswordMaximumAttemptCount(n.getIntegerValue()); });
+        deserializerMap.put("pinExpirationDays", (n) -> { this.setPinExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("pinLowercaseLetters", (n) -> { this.setPinLowercaseLetters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements.class)); });
+        deserializerMap.put("pinMinimumLength", (n) -> { this.setPinMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("pinSpecialCharacters", (n) -> { this.setPinSpecialCharacters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements.class)); });
+        deserializerMap.put("pinUppercaseLetters", (n) -> { this.setPinUppercaseLetters(n.getEnumValue(WindowsInformationProtectionPinCharacterRequirements.class)); });
+        deserializerMap.put("revokeOnMdmHandoffDisabled", (n) -> { this.setRevokeOnMdmHandoffDisabled(n.getBooleanValue()); });
+        deserializerMap.put("windowsHelloForBusinessBlocked", (n) -> { this.setWindowsHelloForBusinessBlocked(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mdmEnrollmentUrl property value. Enrollment url for the MDM
@@ -173,6 +173,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -194,6 +195,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      * @param value Value to set for the daysWithoutContactBeforeUnenroll property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDaysWithoutContactBeforeUnenroll(@javax.annotation.Nullable final Integer value) {
         this._daysWithoutContactBeforeUnenroll = value;
     }
@@ -202,6 +204,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      * @param value Value to set for the mdmEnrollmentUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMdmEnrollmentUrl(@javax.annotation.Nullable final String value) {
         this._mdmEnrollmentUrl = value;
     }
@@ -210,6 +213,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      * @param value Value to set for the minutesOfInactivityBeforeDeviceLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinutesOfInactivityBeforeDeviceLock(@javax.annotation.Nullable final Integer value) {
         this._minutesOfInactivityBeforeDeviceLock = value;
     }
@@ -218,6 +222,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      * @param value Value to set for the numberOfPastPinsRemembered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfPastPinsRemembered(@javax.annotation.Nullable final Integer value) {
         this._numberOfPastPinsRemembered = value;
     }
@@ -226,6 +231,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      * @param value Value to set for the passwordMaximumAttemptCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMaximumAttemptCount(@javax.annotation.Nullable final Integer value) {
         this._passwordMaximumAttemptCount = value;
     }
@@ -234,6 +240,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      * @param value Value to set for the pinExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._pinExpirationDays = value;
     }
@@ -242,6 +249,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      * @param value Value to set for the pinLowercaseLetters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinLowercaseLetters(@javax.annotation.Nullable final WindowsInformationProtectionPinCharacterRequirements value) {
         this._pinLowercaseLetters = value;
     }
@@ -250,6 +258,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      * @param value Value to set for the pinMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._pinMinimumLength = value;
     }
@@ -258,6 +267,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      * @param value Value to set for the pinSpecialCharacters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinSpecialCharacters(@javax.annotation.Nullable final WindowsInformationProtectionPinCharacterRequirements value) {
         this._pinSpecialCharacters = value;
     }
@@ -266,6 +276,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      * @param value Value to set for the pinUppercaseLetters property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPinUppercaseLetters(@javax.annotation.Nullable final WindowsInformationProtectionPinCharacterRequirements value) {
         this._pinUppercaseLetters = value;
     }
@@ -274,6 +285,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      * @param value Value to set for the revokeOnMdmHandoffDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRevokeOnMdmHandoffDisabled(@javax.annotation.Nullable final Boolean value) {
         this._revokeOnMdmHandoffDisabled = value;
     }
@@ -282,6 +294,7 @@ public class WindowsInformationProtectionPolicy extends WindowsInformationProtec
      * @param value Value to set for the windowsHelloForBusinessBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsHelloForBusinessBlocked(@javax.annotation.Nullable final Boolean value) {
         this._windowsHelloForBusinessBlocked = value;
     }

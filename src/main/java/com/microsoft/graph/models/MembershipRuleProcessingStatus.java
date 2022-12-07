@@ -24,9 +24,9 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * Instantiates a new membershipRuleProcessingStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MembershipRuleProcessingStatus() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.membershipRuleProcessingStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,13 +60,12 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MembershipRuleProcessingStatus currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("errorMessage", (n) -> { currentObject.setErrorMessage(n.getStringValue()); });
-            this.put("lastMembershipUpdated", (n) -> { currentObject.setLastMembershipUpdated(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(MembershipRuleProcessingStatusDetails.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("errorMessage", (n) -> { this.setErrorMessage(n.getStringValue()); });
+        deserializerMap.put("lastMembershipUpdated", (n) -> { this.setLastMembershipUpdated(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(MembershipRuleProcessingStatusDetails.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastMembershipUpdated property value. Most recent date and time when membership of a dynamic group was updated.  Optional. Read-only.
@@ -97,6 +96,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("errorMessage", this.getErrorMessage());
@@ -110,6 +110,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -118,6 +119,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the errorMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorMessage(@javax.annotation.Nullable final String value) {
         this._errorMessage = value;
     }
@@ -126,6 +128,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the lastMembershipUpdated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastMembershipUpdated(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastMembershipUpdated = value;
     }
@@ -134,6 +137,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -142,6 +146,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Par
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final MembershipRuleProcessingStatusDetails value) {
         this._status = value;
     }

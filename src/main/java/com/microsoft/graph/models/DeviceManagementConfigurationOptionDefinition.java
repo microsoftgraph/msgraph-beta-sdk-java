@@ -33,9 +33,9 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * Instantiates a new deviceManagementConfigurationOptionDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationOptionDefinition() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceManagementConfigurationOptionDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -93,18 +93,17 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationOptionDefinition currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("dependedOnBy", (n) -> { currentObject.setDependedOnBy(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDependedOnBy::createFromDiscriminatorValue)); });
-            this.put("dependentOn", (n) -> { currentObject.setDependentOn(n.getCollectionOfObjectValues(DeviceManagementConfigurationDependentOn::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("helpText", (n) -> { currentObject.setHelpText(n.getStringValue()); });
-            this.put("itemId", (n) -> { currentObject.setItemId(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("optionValue", (n) -> { currentObject.setOptionValue(n.getObjectValue(DeviceManagementConfigurationSettingValue::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("dependedOnBy", (n) -> { this.setDependedOnBy(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDependedOnBy::createFromDiscriminatorValue)); });
+        deserializerMap.put("dependentOn", (n) -> { this.setDependentOn(n.getCollectionOfObjectValues(DeviceManagementConfigurationDependentOn::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("helpText", (n) -> { this.setHelpText(n.getStringValue()); });
+        deserializerMap.put("itemId", (n) -> { this.setItemId(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("optionValue", (n) -> { this.setOptionValue(n.getObjectValue(DeviceManagementConfigurationSettingValue::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the helpText property value. Help text of the option
@@ -151,6 +150,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("dependedOnBy", this.getDependedOnBy());
@@ -169,6 +169,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -177,6 +178,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * @param value Value to set for the dependedOnBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDependedOnBy(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDependedOnBy> value) {
         this._dependedOnBy = value;
     }
@@ -185,6 +187,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * @param value Value to set for the dependentOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDependentOn(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationDependentOn> value) {
         this._dependentOn = value;
     }
@@ -193,6 +196,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -201,6 +205,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -209,6 +214,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * @param value Value to set for the helpText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHelpText(@javax.annotation.Nullable final String value) {
         this._helpText = value;
     }
@@ -217,6 +223,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * @param value Value to set for the itemId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItemId(@javax.annotation.Nullable final String value) {
         this._itemId = value;
     }
@@ -225,6 +232,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -233,6 +241,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -241,6 +250,7 @@ public class DeviceManagementConfigurationOptionDefinition implements Additional
      * @param value Value to set for the optionValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOptionValue(@javax.annotation.Nullable final DeviceManagementConfigurationSettingValue value) {
         this._optionValue = value;
     }

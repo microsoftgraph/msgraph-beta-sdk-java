@@ -44,9 +44,9 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * Instantiates a new deviceCompliancePolicySettingState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceCompliancePolicySettingState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceCompliancePolicySettingState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -96,23 +96,22 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceCompliancePolicySettingState currentObject = this;
-        return new HashMap<>(14) {{
-            this.put("currentValue", (n) -> { currentObject.setCurrentValue(n.getStringValue()); });
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getLongValue()); });
-            this.put("errorDescription", (n) -> { currentObject.setErrorDescription(n.getStringValue()); });
-            this.put("instanceDisplayName", (n) -> { currentObject.setInstanceDisplayName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("setting", (n) -> { currentObject.setSetting(n.getStringValue()); });
-            this.put("settingInstanceId", (n) -> { currentObject.setSettingInstanceId(n.getStringValue()); });
-            this.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
-            this.put("sources", (n) -> { currentObject.setSources(n.getCollectionOfObjectValues(SettingSource::createFromDiscriminatorValue)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ComplianceStatus.class)); });
-            this.put("userEmail", (n) -> { currentObject.setUserEmail(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(14);
+        deserializerMap.put("currentValue", (n) -> { this.setCurrentValue(n.getStringValue()); });
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getLongValue()); });
+        deserializerMap.put("errorDescription", (n) -> { this.setErrorDescription(n.getStringValue()); });
+        deserializerMap.put("instanceDisplayName", (n) -> { this.setInstanceDisplayName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("setting", (n) -> { this.setSetting(n.getStringValue()); });
+        deserializerMap.put("settingInstanceId", (n) -> { this.setSettingInstanceId(n.getStringValue()); });
+        deserializerMap.put("settingName", (n) -> { this.setSettingName(n.getStringValue()); });
+        deserializerMap.put("sources", (n) -> { this.setSources(n.getCollectionOfObjectValues(SettingSource::createFromDiscriminatorValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ComplianceStatus.class)); });
+        deserializerMap.put("userEmail", (n) -> { this.setUserEmail(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        deserializerMap.put("userName", (n) -> { this.setUserName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the instanceDisplayName property value. Name of setting instance that is being reported.
@@ -207,6 +206,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("currentValue", this.getCurrentValue());
@@ -230,6 +230,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -238,6 +239,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * @param value Value to set for the currentValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrentValue(@javax.annotation.Nullable final String value) {
         this._currentValue = value;
     }
@@ -246,6 +248,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final Long value) {
         this._errorCode = value;
     }
@@ -254,6 +257,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * @param value Value to set for the errorDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorDescription(@javax.annotation.Nullable final String value) {
         this._errorDescription = value;
     }
@@ -262,6 +266,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * @param value Value to set for the instanceDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInstanceDisplayName(@javax.annotation.Nullable final String value) {
         this._instanceDisplayName = value;
     }
@@ -270,6 +275,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -278,6 +284,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * @param value Value to set for the setting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSetting(@javax.annotation.Nullable final String value) {
         this._setting = value;
     }
@@ -286,6 +293,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * @param value Value to set for the settingInstanceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingInstanceId(@javax.annotation.Nullable final String value) {
         this._settingInstanceId = value;
     }
@@ -294,6 +302,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * @param value Value to set for the settingName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingName(@javax.annotation.Nullable final String value) {
         this._settingName = value;
     }
@@ -302,6 +311,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * @param value Value to set for the sources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSources(@javax.annotation.Nullable final java.util.List<SettingSource> value) {
         this._sources = value;
     }
@@ -310,6 +320,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ComplianceStatus value) {
         this._state = value;
     }
@@ -318,6 +329,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * @param value Value to set for the userEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserEmail(@javax.annotation.Nullable final String value) {
         this._userEmail = value;
     }
@@ -326,6 +338,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -334,6 +347,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
         this._userName = value;
     }
@@ -342,6 +356,7 @@ public class DeviceCompliancePolicySettingState implements AdditionalDataHolder,
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

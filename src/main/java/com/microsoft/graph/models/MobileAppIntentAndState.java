@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** MobileApp Intent and Install State for a given device. */
 public class MobileAppIntentAndState extends Entity implements Parsable {
     /** Device identifier created or collected by Intune. */
     private String _managedDeviceIdentifier;
@@ -15,17 +16,17 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
     /** Identifier for the user that tried to enroll the device. */
     private String _userId;
     /**
-     * Instantiates a new MobileAppIntentAndState and sets the default values.
+     * Instantiates a new mobileAppIntentAndState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppIntentAndState() {
         super();
-        this.setOdataType("#microsoft.graph.mobileAppIntentAndState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a MobileAppIntentAndState
+     * @return a mobileAppIntentAndState
      */
     @javax.annotation.Nonnull
     public static MobileAppIntentAndState createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -38,12 +39,11 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MobileAppIntentAndState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("managedDeviceIdentifier", (n) -> { currentObject.setManagedDeviceIdentifier(n.getStringValue()); });
-            this.put("mobileAppList", (n) -> { currentObject.setMobileAppList(n.getCollectionOfObjectValues(MobileAppIntentAndStateDetail::createFromDiscriminatorValue)); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("managedDeviceIdentifier", (n) -> { this.setManagedDeviceIdentifier(n.getStringValue()); });
+        deserializerMap.put("mobileAppList", (n) -> { this.setMobileAppList(n.getCollectionOfObjectValues(MobileAppIntentAndStateDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedDeviceIdentifier property value. Device identifier created or collected by Intune.
@@ -74,6 +74,7 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +87,7 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceIdentifier(@javax.annotation.Nullable final String value) {
         this._managedDeviceIdentifier = value;
     }
@@ -94,6 +96,7 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
      * @param value Value to set for the mobileAppList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileAppList(@javax.annotation.Nullable final java.util.List<MobileAppIntentAndStateDetail> value) {
         this._mobileAppList = value;
     }
@@ -102,6 +105,7 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }

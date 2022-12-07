@@ -27,9 +27,9 @@ public class DetectedApp extends Entity implements Parsable {
      * Instantiates a new detectedApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DetectedApp() {
         super();
-        this.setOdataType("#microsoft.graph.detectedApp");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,16 +63,15 @@ public class DetectedApp extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DetectedApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceCount", (n) -> { currentObject.setDeviceCount(n.getIntegerValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("managedDevices", (n) -> { currentObject.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
-            this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(DetectedAppPlatformType.class)); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
-            this.put("sizeInByte", (n) -> { currentObject.setSizeInByte(n.getLongValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("managedDevices", (n) -> { this.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(DetectedAppPlatformType.class)); });
+        deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
+        deserializerMap.put("sizeInByte", (n) -> { this.setSizeInByte(n.getLongValue()); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedDevices property value. The devices that have the discovered application installed
@@ -119,6 +118,7 @@ public class DetectedApp extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +135,7 @@ public class DetectedApp extends Entity implements Parsable {
      * @param value Value to set for the deviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._deviceCount = value;
     }
@@ -143,6 +144,7 @@ public class DetectedApp extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -151,6 +153,7 @@ public class DetectedApp extends Entity implements Parsable {
      * @param value Value to set for the managedDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDevices(@javax.annotation.Nullable final java.util.List<ManagedDevice> value) {
         this._managedDevices = value;
     }
@@ -159,6 +162,7 @@ public class DetectedApp extends Entity implements Parsable {
      * @param value Value to set for the platform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final DetectedAppPlatformType value) {
         this._platform = value;
     }
@@ -167,6 +171,7 @@ public class DetectedApp extends Entity implements Parsable {
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
         this._publisher = value;
     }
@@ -175,6 +180,7 @@ public class DetectedApp extends Entity implements Parsable {
      * @param value Value to set for the sizeInByte property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSizeInByte(@javax.annotation.Nullable final Long value) {
         this._sizeInByte = value;
     }
@@ -183,6 +189,7 @@ public class DetectedApp extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

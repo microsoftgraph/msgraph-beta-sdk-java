@@ -22,9 +22,9 @@ public class MeetingInfo implements AdditionalDataHolder, Parsable {
      * Instantiates a new meetingInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MeetingInfo() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.meetingInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -67,11 +67,10 @@ public class MeetingInfo implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MeetingInfo currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("allowConversationWithoutHost", (n) -> { currentObject.setAllowConversationWithoutHost(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("allowConversationWithoutHost", (n) -> { this.setAllowConversationWithoutHost(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -86,6 +85,7 @@ public class MeetingInfo implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("allowConversationWithoutHost", this.getAllowConversationWithoutHost());
@@ -97,6 +97,7 @@ public class MeetingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class MeetingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowConversationWithoutHost property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowConversationWithoutHost(@javax.annotation.Nullable final Boolean value) {
         this._allowConversationWithoutHost = value;
     }
@@ -113,6 +115,7 @@ public class MeetingInfo implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

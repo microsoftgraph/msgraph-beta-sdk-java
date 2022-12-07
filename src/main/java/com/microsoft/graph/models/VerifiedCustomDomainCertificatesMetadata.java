@@ -28,9 +28,9 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
      * Instantiates a new verifiedCustomDomainCertificatesMetadata and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VerifiedCustomDomainCertificatesMetadata() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.verifiedCustomDomainCertificatesMetadata");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -64,15 +64,14 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final VerifiedCustomDomainCertificatesMetadata currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("expiryDate", (n) -> { currentObject.setExpiryDate(n.getOffsetDateTimeValue()); });
-            this.put("issueDate", (n) -> { currentObject.setIssueDate(n.getOffsetDateTimeValue()); });
-            this.put("issuerName", (n) -> { currentObject.setIssuerName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("subjectName", (n) -> { currentObject.setSubjectName(n.getStringValue()); });
-            this.put("thumbprint", (n) -> { currentObject.setThumbprint(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("expiryDate", (n) -> { this.setExpiryDate(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("issueDate", (n) -> { this.setIssueDate(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("issuerName", (n) -> { this.setIssuerName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("subjectName", (n) -> { this.setSubjectName(n.getStringValue()); });
+        deserializerMap.put("thumbprint", (n) -> { this.setThumbprint(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the issueDate property value. The issue date of the custom domain. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -119,6 +118,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("expiryDate", this.getExpiryDate());
@@ -134,6 +134,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -142,6 +143,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
      * @param value Value to set for the expiryDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpiryDate(@javax.annotation.Nullable final OffsetDateTime value) {
         this._expiryDate = value;
     }
@@ -150,6 +152,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
      * @param value Value to set for the issueDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssueDate(@javax.annotation.Nullable final OffsetDateTime value) {
         this._issueDate = value;
     }
@@ -158,6 +161,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
      * @param value Value to set for the issuerName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuerName(@javax.annotation.Nullable final String value) {
         this._issuerName = value;
     }
@@ -166,6 +170,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -174,6 +179,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
      * @param value Value to set for the subjectName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectName(@javax.annotation.Nullable final String value) {
         this._subjectName = value;
     }
@@ -182,6 +188,7 @@ public class VerifiedCustomDomainCertificatesMetadata implements AdditionalDataH
      * @param value Value to set for the thumbprint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbprint(@javax.annotation.Nullable final String value) {
         this._thumbprint = value;
     }

@@ -20,9 +20,9 @@ public class OnenoteOperation extends Operation implements Parsable {
      * Instantiates a new OnenoteOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnenoteOperation() {
         super();
-        this.setOdataType("#microsoft.graph.onenoteOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,13 +48,12 @@ public class OnenoteOperation extends Operation implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnenoteOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("error", (n) -> { currentObject.setError(n.getObjectValue(OnenoteOperationError::createFromDiscriminatorValue)); });
-            this.put("percentComplete", (n) -> { currentObject.setPercentComplete(n.getStringValue()); });
-            this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
-            this.put("resourceLocation", (n) -> { currentObject.setResourceLocation(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(OnenoteOperationError::createFromDiscriminatorValue)); });
+        deserializerMap.put("percentComplete", (n) -> { this.setPercentComplete(n.getStringValue()); });
+        deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
+        deserializerMap.put("resourceLocation", (n) -> { this.setResourceLocation(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the percentComplete property value. The operation percent complete if the operation is still in running status.
@@ -85,6 +84,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +98,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final OnenoteOperationError value) {
         this._error = value;
     }
@@ -106,6 +107,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      * @param value Value to set for the percentComplete property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPercentComplete(@javax.annotation.Nullable final String value) {
         this._percentComplete = value;
     }
@@ -114,6 +116,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      * @param value Value to set for the resourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceId(@javax.annotation.Nullable final String value) {
         this._resourceId = value;
     }
@@ -122,6 +125,7 @@ public class OnenoteOperation extends Operation implements Parsable {
      * @param value Value to set for the resourceLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceLocation(@javax.annotation.Nullable final String value) {
         this._resourceLocation = value;
     }

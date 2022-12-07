@@ -21,9 +21,9 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * Instantiates a new EducationAssignmentDefaults and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationAssignmentDefaults() {
         super();
-        this.setOdataType("#microsoft.graph.educationAssignmentDefaults");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,13 +65,12 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationAssignmentDefaults currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("addedStudentAction", (n) -> { currentObject.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction.class)); });
-            this.put("addToCalendarAction", (n) -> { currentObject.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions.class)); });
-            this.put("dueTime", (n) -> { currentObject.setDueTime(n.getLocalTimeValue()); });
-            this.put("notificationChannelUrl", (n) -> { currentObject.setNotificationChannelUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("addedStudentAction", (n) -> { this.setAddedStudentAction(n.getEnumValue(EducationAddedStudentAction.class)); });
+        deserializerMap.put("addToCalendarAction", (n) -> { this.setAddToCalendarAction(n.getEnumValue(EducationAddToCalendarOptions.class)); });
+        deserializerMap.put("dueTime", (n) -> { this.setDueTime(n.getLocalTimeValue()); });
+        deserializerMap.put("notificationChannelUrl", (n) -> { this.setNotificationChannelUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the notificationChannelUrl property value. Default Teams channel to which notifications will be sent. Default value is null.
@@ -86,6 +85,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +99,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * @param value Value to set for the addedStudentAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddedStudentAction(@javax.annotation.Nullable final EducationAddedStudentAction value) {
         this._addedStudentAction = value;
     }
@@ -107,6 +108,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * @param value Value to set for the addToCalendarAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddToCalendarAction(@javax.annotation.Nullable final EducationAddToCalendarOptions value) {
         this._addToCalendarAction = value;
     }
@@ -115,6 +117,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * @param value Value to set for the dueTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDueTime(@javax.annotation.Nullable final LocalTime value) {
         this._dueTime = value;
     }
@@ -123,6 +126,7 @@ public class EducationAssignmentDefaults extends Entity implements Parsable {
      * @param value Value to set for the notificationChannelUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationChannelUrl(@javax.annotation.Nullable final String value) {
         this._notificationChannelUrl = value;
     }

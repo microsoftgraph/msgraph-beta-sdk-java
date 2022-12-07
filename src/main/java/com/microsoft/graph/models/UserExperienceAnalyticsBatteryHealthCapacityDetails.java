@@ -20,17 +20,17 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
     /** Recorded date time of this capacity details instance. */
     private OffsetDateTime _lastRefreshedDateTime;
     /**
-     * Instantiates a new UserExperienceAnalyticsBatteryHealthCapacityDetails and sets the default values.
+     * Instantiates a new userExperienceAnalyticsBatteryHealthCapacityDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsBatteryHealthCapacityDetails() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsBatteryHealthCapacityDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsBatteryHealthCapacityDetails
+     * @return a userExperienceAnalyticsBatteryHealthCapacityDetails
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsBatteryHealthCapacityDetails createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -75,14 +75,13 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsBatteryHealthCapacityDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeDevices", (n) -> { currentObject.setActiveDevices(n.getIntegerValue()); });
-            this.put("batteryCapacityFair", (n) -> { currentObject.setBatteryCapacityFair(n.getIntegerValue()); });
-            this.put("batteryCapacityGood", (n) -> { currentObject.setBatteryCapacityGood(n.getIntegerValue()); });
-            this.put("batteryCapacityPoor", (n) -> { currentObject.setBatteryCapacityPoor(n.getIntegerValue()); });
-            this.put("lastRefreshedDateTime", (n) -> { currentObject.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeDevices", (n) -> { this.setActiveDevices(n.getIntegerValue()); });
+        deserializerMap.put("batteryCapacityFair", (n) -> { this.setBatteryCapacityFair(n.getIntegerValue()); });
+        deserializerMap.put("batteryCapacityGood", (n) -> { this.setBatteryCapacityGood(n.getIntegerValue()); });
+        deserializerMap.put("batteryCapacityPoor", (n) -> { this.setBatteryCapacityPoor(n.getIntegerValue()); });
+        deserializerMap.put("lastRefreshedDateTime", (n) -> { this.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastRefreshedDateTime property value. Recorded date time of this capacity details instance.
@@ -97,6 +96,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,6 +111,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
      * @param value Value to set for the activeDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveDevices(@javax.annotation.Nullable final Integer value) {
         this._activeDevices = value;
     }
@@ -119,6 +120,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
      * @param value Value to set for the batteryCapacityFair property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBatteryCapacityFair(@javax.annotation.Nullable final Integer value) {
         this._batteryCapacityFair = value;
     }
@@ -127,6 +129,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
      * @param value Value to set for the batteryCapacityGood property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBatteryCapacityGood(@javax.annotation.Nullable final Integer value) {
         this._batteryCapacityGood = value;
     }
@@ -135,6 +138,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
      * @param value Value to set for the batteryCapacityPoor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBatteryCapacityPoor(@javax.annotation.Nullable final Integer value) {
         this._batteryCapacityPoor = value;
     }
@@ -143,6 +147,7 @@ public class UserExperienceAnalyticsBatteryHealthCapacityDetails extends Entity 
      * @param value Value to set for the lastRefreshedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastRefreshedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastRefreshedDateTime = value;
     }

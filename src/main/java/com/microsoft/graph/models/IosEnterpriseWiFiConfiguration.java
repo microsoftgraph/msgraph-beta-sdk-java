@@ -34,6 +34,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * Instantiates a new IosEnterpriseWiFiConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosEnterpriseWiFiConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosEnterpriseWiFiConfiguration");
@@ -86,20 +87,19 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosEnterpriseWiFiConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authenticationMethod", (n) -> { currentObject.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod.class)); });
-            this.put("derivedCredentialSettings", (n) -> { currentObject.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
-            this.put("eapFastConfiguration", (n) -> { currentObject.setEapFastConfiguration(n.getEnumValue(EapFastConfiguration.class)); });
-            this.put("eapType", (n) -> { currentObject.setEapType(n.getEnumValue(EapType.class)); });
-            this.put("identityCertificateForClientAuthentication", (n) -> { currentObject.setIdentityCertificateForClientAuthentication(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
-            this.put("innerAuthenticationProtocolForEapTtls", (n) -> { currentObject.setInnerAuthenticationProtocolForEapTtls(n.getEnumValue(NonEapAuthenticationMethodForEapTtlsType.class)); });
-            this.put("outerIdentityPrivacyTemporaryValue", (n) -> { currentObject.setOuterIdentityPrivacyTemporaryValue(n.getStringValue()); });
-            this.put("passwordFormatString", (n) -> { currentObject.setPasswordFormatString(n.getStringValue()); });
-            this.put("rootCertificatesForServerValidation", (n) -> { currentObject.setRootCertificatesForServerValidation(n.getCollectionOfObjectValues(IosTrustedRootCertificate::createFromDiscriminatorValue)); });
-            this.put("trustedServerCertificateNames", (n) -> { currentObject.setTrustedServerCertificateNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("usernameFormatString", (n) -> { currentObject.setUsernameFormatString(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod.class)); });
+        deserializerMap.put("derivedCredentialSettings", (n) -> { this.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("eapFastConfiguration", (n) -> { this.setEapFastConfiguration(n.getEnumValue(EapFastConfiguration.class)); });
+        deserializerMap.put("eapType", (n) -> { this.setEapType(n.getEnumValue(EapType.class)); });
+        deserializerMap.put("identityCertificateForClientAuthentication", (n) -> { this.setIdentityCertificateForClientAuthentication(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("innerAuthenticationProtocolForEapTtls", (n) -> { this.setInnerAuthenticationProtocolForEapTtls(n.getEnumValue(NonEapAuthenticationMethodForEapTtlsType.class)); });
+        deserializerMap.put("outerIdentityPrivacyTemporaryValue", (n) -> { this.setOuterIdentityPrivacyTemporaryValue(n.getStringValue()); });
+        deserializerMap.put("passwordFormatString", (n) -> { this.setPasswordFormatString(n.getStringValue()); });
+        deserializerMap.put("rootCertificatesForServerValidation", (n) -> { this.setRootCertificatesForServerValidation(n.getCollectionOfObjectValues(IosTrustedRootCertificate::createFromDiscriminatorValue)); });
+        deserializerMap.put("trustedServerCertificateNames", (n) -> { this.setTrustedServerCertificateNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("usernameFormatString", (n) -> { this.setUsernameFormatString(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the identityCertificateForClientAuthentication property value. Identity Certificate for client authentication when EAP Type is configured to EAP-TLS, EAP-TTLS (with Certificate Authentication), or PEAP (with Certificate Authentication).
@@ -162,6 +162,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -182,6 +183,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the authenticationMethod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethod(@javax.annotation.Nullable final WiFiAuthenticationMethod value) {
         this._authenticationMethod = value;
     }
@@ -190,6 +192,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the derivedCredentialSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDerivedCredentialSettings(@javax.annotation.Nullable final DeviceManagementDerivedCredentialSettings value) {
         this._derivedCredentialSettings = value;
     }
@@ -198,6 +201,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the eapFastConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEapFastConfiguration(@javax.annotation.Nullable final EapFastConfiguration value) {
         this._eapFastConfiguration = value;
     }
@@ -206,6 +210,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the eapType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEapType(@javax.annotation.Nullable final EapType value) {
         this._eapType = value;
     }
@@ -214,6 +219,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the identityCertificateForClientAuthentication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final IosCertificateProfileBase value) {
         this._identityCertificateForClientAuthentication = value;
     }
@@ -222,6 +228,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the innerAuthenticationProtocolForEapTtls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInnerAuthenticationProtocolForEapTtls(@javax.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
         this._innerAuthenticationProtocolForEapTtls = value;
     }
@@ -230,6 +237,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the outerIdentityPrivacyTemporaryValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOuterIdentityPrivacyTemporaryValue(@javax.annotation.Nullable final String value) {
         this._outerIdentityPrivacyTemporaryValue = value;
     }
@@ -238,6 +246,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the passwordFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordFormatString(@javax.annotation.Nullable final String value) {
         this._passwordFormatString = value;
     }
@@ -246,6 +255,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the rootCertificatesForServerValidation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootCertificatesForServerValidation(@javax.annotation.Nullable final java.util.List<IosTrustedRootCertificate> value) {
         this._rootCertificatesForServerValidation = value;
     }
@@ -254,6 +264,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the trustedServerCertificateNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrustedServerCertificateNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._trustedServerCertificateNames = value;
     }
@@ -262,6 +273,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
      * @param value Value to set for the usernameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsernameFormatString(@javax.annotation.Nullable final String value) {
         this._usernameFormatString = value;
     }

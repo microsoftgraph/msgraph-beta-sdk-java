@@ -18,6 +18,7 @@ public class UploadCertificatePostRequestBody implements AdditionalDataHolder, P
      * Instantiates a new uploadCertificatePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UploadCertificatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,10 +46,9 @@ public class UploadCertificatePostRequestBody implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UploadCertificatePostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("key", (n) -> { currentObject.setKey(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("key", (n) -> { this.setKey(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the key property value. The key property
@@ -63,6 +63,7 @@ public class UploadCertificatePostRequestBody implements AdditionalDataHolder, P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("key", this.getKey());
@@ -73,6 +74,7 @@ public class UploadCertificatePostRequestBody implements AdditionalDataHolder, P
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +83,7 @@ public class UploadCertificatePostRequestBody implements AdditionalDataHolder, P
      * @param value Value to set for the key property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKey(@javax.annotation.Nullable final String value) {
         this._key = value;
     }

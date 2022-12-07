@@ -26,6 +26,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
      * Instantiates a new MacOSExtensionsConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSExtensionsConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSExtensionsConfiguration");
@@ -46,16 +47,15 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSExtensionsConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("kernelExtensionAllowedTeamIdentifiers", (n) -> { currentObject.setKernelExtensionAllowedTeamIdentifiers(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("kernelExtensionOverridesAllowed", (n) -> { currentObject.setKernelExtensionOverridesAllowed(n.getBooleanValue()); });
-            this.put("kernelExtensionsAllowed", (n) -> { currentObject.setKernelExtensionsAllowed(n.getCollectionOfObjectValues(MacOSKernelExtension::createFromDiscriminatorValue)); });
-            this.put("systemExtensionsAllowed", (n) -> { currentObject.setSystemExtensionsAllowed(n.getCollectionOfObjectValues(MacOSSystemExtension::createFromDiscriminatorValue)); });
-            this.put("systemExtensionsAllowedTeamIdentifiers", (n) -> { currentObject.setSystemExtensionsAllowedTeamIdentifiers(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("systemExtensionsAllowedTypes", (n) -> { currentObject.setSystemExtensionsAllowedTypes(n.getCollectionOfObjectValues(MacOSSystemExtensionTypeMapping::createFromDiscriminatorValue)); });
-            this.put("systemExtensionsBlockOverride", (n) -> { currentObject.setSystemExtensionsBlockOverride(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("kernelExtensionAllowedTeamIdentifiers", (n) -> { this.setKernelExtensionAllowedTeamIdentifiers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("kernelExtensionOverridesAllowed", (n) -> { this.setKernelExtensionOverridesAllowed(n.getBooleanValue()); });
+        deserializerMap.put("kernelExtensionsAllowed", (n) -> { this.setKernelExtensionsAllowed(n.getCollectionOfObjectValues(MacOSKernelExtension::createFromDiscriminatorValue)); });
+        deserializerMap.put("systemExtensionsAllowed", (n) -> { this.setSystemExtensionsAllowed(n.getCollectionOfObjectValues(MacOSSystemExtension::createFromDiscriminatorValue)); });
+        deserializerMap.put("systemExtensionsAllowedTeamIdentifiers", (n) -> { this.setSystemExtensionsAllowedTeamIdentifiers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("systemExtensionsAllowedTypes", (n) -> { this.setSystemExtensionsAllowedTypes(n.getCollectionOfObjectValues(MacOSSystemExtensionTypeMapping::createFromDiscriminatorValue)); });
+        deserializerMap.put("systemExtensionsBlockOverride", (n) -> { this.setSystemExtensionsBlockOverride(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the kernelExtensionAllowedTeamIdentifiers property value. All kernel extensions validly signed by the team identifiers in this list will be allowed to load.
@@ -118,6 +118,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +135,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
      * @param value Value to set for the kernelExtensionAllowedTeamIdentifiers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKernelExtensionAllowedTeamIdentifiers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._kernelExtensionAllowedTeamIdentifiers = value;
     }
@@ -142,6 +144,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
      * @param value Value to set for the kernelExtensionOverridesAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKernelExtensionOverridesAllowed(@javax.annotation.Nullable final Boolean value) {
         this._kernelExtensionOverridesAllowed = value;
     }
@@ -150,6 +153,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
      * @param value Value to set for the kernelExtensionsAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKernelExtensionsAllowed(@javax.annotation.Nullable final java.util.List<MacOSKernelExtension> value) {
         this._kernelExtensionsAllowed = value;
     }
@@ -158,6 +162,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
      * @param value Value to set for the systemExtensionsAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemExtensionsAllowed(@javax.annotation.Nullable final java.util.List<MacOSSystemExtension> value) {
         this._systemExtensionsAllowed = value;
     }
@@ -166,6 +171,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
      * @param value Value to set for the systemExtensionsAllowedTeamIdentifiers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemExtensionsAllowedTeamIdentifiers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._systemExtensionsAllowedTeamIdentifiers = value;
     }
@@ -174,6 +180,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
      * @param value Value to set for the systemExtensionsAllowedTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemExtensionsAllowedTypes(@javax.annotation.Nullable final java.util.List<MacOSSystemExtensionTypeMapping> value) {
         this._systemExtensionsAllowedTypes = value;
     }
@@ -182,6 +189,7 @@ public class MacOSExtensionsConfiguration extends DeviceConfiguration implements
      * @param value Value to set for the systemExtensionsBlockOverride property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemExtensionsBlockOverride(@javax.annotation.Nullable final Boolean value) {
         this._systemExtensionsBlockOverride = value;
     }

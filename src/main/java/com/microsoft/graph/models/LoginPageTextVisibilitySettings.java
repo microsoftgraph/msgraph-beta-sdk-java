@@ -29,9 +29,9 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      * Instantiates a new loginPageTextVisibilitySettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LoginPageTextVisibilitySettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.loginPageTextVisibilitySettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,16 +57,15 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LoginPageTextVisibilitySettings currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("hideAccountResetCredentials", (n) -> { currentObject.setHideAccountResetCredentials(n.getBooleanValue()); });
-            this.put("hideCannotAccessYourAccount", (n) -> { currentObject.setHideCannotAccessYourAccount(n.getBooleanValue()); });
-            this.put("hideForgotMyPassword", (n) -> { currentObject.setHideForgotMyPassword(n.getBooleanValue()); });
-            this.put("hidePrivacyAndCookies", (n) -> { currentObject.setHidePrivacyAndCookies(n.getBooleanValue()); });
-            this.put("hideResetItNow", (n) -> { currentObject.setHideResetItNow(n.getBooleanValue()); });
-            this.put("hideTermsOfUse", (n) -> { currentObject.setHideTermsOfUse(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("hideAccountResetCredentials", (n) -> { this.setHideAccountResetCredentials(n.getBooleanValue()); });
+        deserializerMap.put("hideCannotAccessYourAccount", (n) -> { this.setHideCannotAccessYourAccount(n.getBooleanValue()); });
+        deserializerMap.put("hideForgotMyPassword", (n) -> { this.setHideForgotMyPassword(n.getBooleanValue()); });
+        deserializerMap.put("hidePrivacyAndCookies", (n) -> { this.setHidePrivacyAndCookies(n.getBooleanValue()); });
+        deserializerMap.put("hideResetItNow", (n) -> { this.setHideResetItNow(n.getBooleanValue()); });
+        deserializerMap.put("hideTermsOfUse", (n) -> { this.setHideTermsOfUse(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hideAccountResetCredentials property value. Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
@@ -129,6 +128,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("hideAccountResetCredentials", this.getHideAccountResetCredentials());
@@ -145,6 +145,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +154,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      * @param value Value to set for the hideAccountResetCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideAccountResetCredentials(@javax.annotation.Nullable final Boolean value) {
         this._hideAccountResetCredentials = value;
     }
@@ -161,6 +163,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      * @param value Value to set for the hideCannotAccessYourAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideCannotAccessYourAccount(@javax.annotation.Nullable final Boolean value) {
         this._hideCannotAccessYourAccount = value;
     }
@@ -169,6 +172,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      * @param value Value to set for the hideForgotMyPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideForgotMyPassword(@javax.annotation.Nullable final Boolean value) {
         this._hideForgotMyPassword = value;
     }
@@ -177,6 +181,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      * @param value Value to set for the hidePrivacyAndCookies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHidePrivacyAndCookies(@javax.annotation.Nullable final Boolean value) {
         this._hidePrivacyAndCookies = value;
     }
@@ -185,6 +190,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      * @param value Value to set for the hideResetItNow property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideResetItNow(@javax.annotation.Nullable final Boolean value) {
         this._hideResetItNow = value;
     }
@@ -193,6 +199,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      * @param value Value to set for the hideTermsOfUse property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideTermsOfUse(@javax.annotation.Nullable final Boolean value) {
         this._hideTermsOfUse = value;
     }
@@ -201,6 +208,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

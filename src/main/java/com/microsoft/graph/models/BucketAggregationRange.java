@@ -21,9 +21,9 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
      * Instantiates a new bucketAggregationRange and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BucketAggregationRange() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.bucketAggregationRange");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,12 +49,11 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BucketAggregationRange currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("from", (n) -> { currentObject.setFrom(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("to", (n) -> { currentObject.setTo(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("from", (n) -> { this.setFrom(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("to", (n) -> { this.setTo(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the from property value. Defines the lower bound from which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.
@@ -85,6 +84,7 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("from", this.getFrom());
@@ -97,6 +97,7 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the from property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFrom(@javax.annotation.Nullable final String value) {
         this._from = value;
     }
@@ -113,6 +115,7 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +124,7 @@ public class BucketAggregationRange implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the to property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTo(@javax.annotation.Nullable final String value) {
         this._to = value;
     }

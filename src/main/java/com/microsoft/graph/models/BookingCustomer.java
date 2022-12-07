@@ -16,9 +16,9 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      * Instantiates a new BookingCustomer and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BookingCustomer() {
         super();
-        this.setOdataType("#microsoft.graph.bookingCustomer");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,11 +44,10 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BookingCustomer currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("addresses", (n) -> { currentObject.setAddresses(n.getCollectionOfObjectValues(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("phones", (n) -> { currentObject.setPhones(n.getCollectionOfObjectValues(Phone::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("addresses", (n) -> { this.setAddresses(n.getCollectionOfObjectValues(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("phones", (n) -> { this.setPhones(n.getCollectionOfObjectValues(Phone::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the phones property value. Phone numbers associated with the customer, including home, business and mobile numbers.
@@ -63,6 +62,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +74,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      * @param value Value to set for the addresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddresses(@javax.annotation.Nullable final java.util.List<PhysicalAddress> value) {
         this._addresses = value;
     }
@@ -82,6 +83,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
      * @param value Value to set for the phones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhones(@javax.annotation.Nullable final java.util.List<Phone> value) {
         this._phones = value;
     }

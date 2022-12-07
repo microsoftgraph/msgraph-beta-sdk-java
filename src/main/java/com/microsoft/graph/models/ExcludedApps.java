@@ -48,9 +48,9 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * Instantiates a new excludedApps and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExcludedApps() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.excludedApps");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -100,25 +100,24 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExcludedApps currentObject = this;
-        return new HashMap<>(16) {{
-            this.put("access", (n) -> { currentObject.setAccess(n.getBooleanValue()); });
-            this.put("bing", (n) -> { currentObject.setBing(n.getBooleanValue()); });
-            this.put("excel", (n) -> { currentObject.setExcel(n.getBooleanValue()); });
-            this.put("groove", (n) -> { currentObject.setGroove(n.getBooleanValue()); });
-            this.put("infoPath", (n) -> { currentObject.setInfoPath(n.getBooleanValue()); });
-            this.put("lync", (n) -> { currentObject.setLync(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("oneDrive", (n) -> { currentObject.setOneDrive(n.getBooleanValue()); });
-            this.put("oneNote", (n) -> { currentObject.setOneNote(n.getBooleanValue()); });
-            this.put("outlook", (n) -> { currentObject.setOutlook(n.getBooleanValue()); });
-            this.put("powerPoint", (n) -> { currentObject.setPowerPoint(n.getBooleanValue()); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getBooleanValue()); });
-            this.put("sharePointDesigner", (n) -> { currentObject.setSharePointDesigner(n.getBooleanValue()); });
-            this.put("teams", (n) -> { currentObject.setTeams(n.getBooleanValue()); });
-            this.put("visio", (n) -> { currentObject.setVisio(n.getBooleanValue()); });
-            this.put("word", (n) -> { currentObject.setWord(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(16);
+        deserializerMap.put("access", (n) -> { this.setAccess(n.getBooleanValue()); });
+        deserializerMap.put("bing", (n) -> { this.setBing(n.getBooleanValue()); });
+        deserializerMap.put("excel", (n) -> { this.setExcel(n.getBooleanValue()); });
+        deserializerMap.put("groove", (n) -> { this.setGroove(n.getBooleanValue()); });
+        deserializerMap.put("infoPath", (n) -> { this.setInfoPath(n.getBooleanValue()); });
+        deserializerMap.put("lync", (n) -> { this.setLync(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("oneDrive", (n) -> { this.setOneDrive(n.getBooleanValue()); });
+        deserializerMap.put("oneNote", (n) -> { this.setOneNote(n.getBooleanValue()); });
+        deserializerMap.put("outlook", (n) -> { this.setOutlook(n.getBooleanValue()); });
+        deserializerMap.put("powerPoint", (n) -> { this.setPowerPoint(n.getBooleanValue()); });
+        deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getBooleanValue()); });
+        deserializerMap.put("sharePointDesigner", (n) -> { this.setSharePointDesigner(n.getBooleanValue()); });
+        deserializerMap.put("teams", (n) -> { this.setTeams(n.getBooleanValue()); });
+        deserializerMap.put("visio", (n) -> { this.setVisio(n.getBooleanValue()); });
+        deserializerMap.put("word", (n) -> { this.setWord(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groove property value. The value for if MS Office OneDrive for Business - Groove should be excluded or not.
@@ -229,6 +228,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("access", this.getAccess());
@@ -254,6 +254,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the access property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccess(@javax.annotation.Nullable final Boolean value) {
         this._access = value;
     }
@@ -262,6 +263,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -270,6 +272,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the bing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBing(@javax.annotation.Nullable final Boolean value) {
         this._bing = value;
     }
@@ -278,6 +281,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the excel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcel(@javax.annotation.Nullable final Boolean value) {
         this._excel = value;
     }
@@ -286,6 +290,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the groove property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroove(@javax.annotation.Nullable final Boolean value) {
         this._groove = value;
     }
@@ -294,6 +299,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the infoPath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInfoPath(@javax.annotation.Nullable final Boolean value) {
         this._infoPath = value;
     }
@@ -302,6 +308,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLync(@javax.annotation.Nullable final Boolean value) {
         this._lync = value;
     }
@@ -310,6 +317,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -318,6 +326,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the oneDrive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOneDrive(@javax.annotation.Nullable final Boolean value) {
         this._oneDrive = value;
     }
@@ -326,6 +335,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the oneNote property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOneNote(@javax.annotation.Nullable final Boolean value) {
         this._oneNote = value;
     }
@@ -334,6 +344,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the outlook property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutlook(@javax.annotation.Nullable final Boolean value) {
         this._outlook = value;
     }
@@ -342,6 +353,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the powerPoint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPowerPoint(@javax.annotation.Nullable final Boolean value) {
         this._powerPoint = value;
     }
@@ -350,6 +362,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final Boolean value) {
         this._publisher = value;
     }
@@ -358,6 +371,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sharePointDesigner property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharePointDesigner(@javax.annotation.Nullable final Boolean value) {
         this._sharePointDesigner = value;
     }
@@ -366,6 +380,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the teams property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeams(@javax.annotation.Nullable final Boolean value) {
         this._teams = value;
     }
@@ -374,6 +389,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the visio property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVisio(@javax.annotation.Nullable final Boolean value) {
         this._visio = value;
     }
@@ -382,6 +398,7 @@ public class ExcludedApps implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the word property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWord(@javax.annotation.Nullable final Boolean value) {
         this._word = value;
     }

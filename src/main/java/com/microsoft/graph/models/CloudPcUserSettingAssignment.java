@@ -18,9 +18,9 @@ public class CloudPcUserSettingAssignment extends Entity implements Parsable {
      * Instantiates a new cloudPcUserSettingAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcUserSettingAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.cloudPcUserSettingAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,11 +46,10 @@ public class CloudPcUserSettingAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcUserSettingAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(CloudPcManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(CloudPcManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the target property value. The assignment target for the user setting. Currently, the only target supported for this user setting is a user group. For details, see cloudPcManagementGroupAssignmentTarget.
@@ -65,6 +64,7 @@ public class CloudPcUserSettingAssignment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -76,6 +76,7 @@ public class CloudPcUserSettingAssignment extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -84,6 +85,7 @@ public class CloudPcUserSettingAssignment extends Entity implements Parsable {
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final CloudPcManagementAssignmentTarget value) {
         this._target = value;
     }

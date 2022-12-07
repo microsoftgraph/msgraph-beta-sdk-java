@@ -24,6 +24,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
      * Instantiates a new Win32LobAppFileSystemRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Win32LobAppFileSystemRule() {
         super();
         this.setOdataType("#microsoft.graph.win32LobAppFileSystemRule");
@@ -60,15 +61,14 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Win32LobAppFileSystemRule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("check32BitOn64System", (n) -> { currentObject.setCheck32BitOn64System(n.getBooleanValue()); });
-            this.put("comparisonValue", (n) -> { currentObject.setComparisonValue(n.getStringValue()); });
-            this.put("fileOrFolderName", (n) -> { currentObject.setFileOrFolderName(n.getStringValue()); });
-            this.put("operationType", (n) -> { currentObject.setOperationType(n.getEnumValue(Win32LobAppFileSystemOperationType.class)); });
-            this.put("operator", (n) -> { currentObject.setOperator(n.getEnumValue(Win32LobAppRuleOperator.class)); });
-            this.put("path", (n) -> { currentObject.setPath(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("check32BitOn64System", (n) -> { this.setCheck32BitOn64System(n.getBooleanValue()); });
+        deserializerMap.put("comparisonValue", (n) -> { this.setComparisonValue(n.getStringValue()); });
+        deserializerMap.put("fileOrFolderName", (n) -> { this.setFileOrFolderName(n.getStringValue()); });
+        deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getEnumValue(Win32LobAppFileSystemOperationType.class)); });
+        deserializerMap.put("operator", (n) -> { this.setOperator(n.getEnumValue(Win32LobAppRuleOperator.class)); });
+        deserializerMap.put("path", (n) -> { this.setPath(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileOrFolderName property value. The file or folder name to look up.
@@ -107,6 +107,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +123,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
      * @param value Value to set for the check32BitOn64System property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCheck32BitOn64System(@javax.annotation.Nullable final Boolean value) {
         this._check32BitOn64System = value;
     }
@@ -130,6 +132,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
      * @param value Value to set for the comparisonValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComparisonValue(@javax.annotation.Nullable final String value) {
         this._comparisonValue = value;
     }
@@ -138,6 +141,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
      * @param value Value to set for the fileOrFolderName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileOrFolderName(@javax.annotation.Nullable final String value) {
         this._fileOrFolderName = value;
     }
@@ -146,6 +150,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
      * @param value Value to set for the operationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperationType(@javax.annotation.Nullable final Win32LobAppFileSystemOperationType value) {
         this._operationType = value;
     }
@@ -154,6 +159,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
      * @param value Value to set for the operator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperator(@javax.annotation.Nullable final Win32LobAppRuleOperator value) {
         this._operator = value;
     }
@@ -162,6 +168,7 @@ public class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsab
      * @param value Value to set for the path property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPath(@javax.annotation.Nullable final String value) {
         this._path = value;
     }

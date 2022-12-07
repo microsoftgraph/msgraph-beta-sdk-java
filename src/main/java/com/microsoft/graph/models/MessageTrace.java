@@ -29,9 +29,9 @@ public class MessageTrace extends Entity implements Parsable {
      * Instantiates a new MessageTrace and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MessageTrace() {
         super();
-        this.setOdataType("#microsoft.graph.messageTrace");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,17 +57,16 @@ public class MessageTrace extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MessageTrace currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("destinationIPAddress", (n) -> { currentObject.setDestinationIPAddress(n.getStringValue()); });
-            this.put("messageId", (n) -> { currentObject.setMessageId(n.getStringValue()); });
-            this.put("receivedDateTime", (n) -> { currentObject.setReceivedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("recipients", (n) -> { currentObject.setRecipients(n.getCollectionOfObjectValues(MessageRecipient::createFromDiscriminatorValue)); });
-            this.put("senderEmail", (n) -> { currentObject.setSenderEmail(n.getStringValue()); });
-            this.put("size", (n) -> { currentObject.setSize(n.getIntegerValue()); });
-            this.put("sourceIPAddress", (n) -> { currentObject.setSourceIPAddress(n.getStringValue()); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("destinationIPAddress", (n) -> { this.setDestinationIPAddress(n.getStringValue()); });
+        deserializerMap.put("messageId", (n) -> { this.setMessageId(n.getStringValue()); });
+        deserializerMap.put("receivedDateTime", (n) -> { this.setReceivedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("recipients", (n) -> { this.setRecipients(n.getCollectionOfObjectValues(MessageRecipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("senderEmail", (n) -> { this.setSenderEmail(n.getStringValue()); });
+        deserializerMap.put("size", (n) -> { this.setSize(n.getIntegerValue()); });
+        deserializerMap.put("sourceIPAddress", (n) -> { this.setSourceIPAddress(n.getStringValue()); });
+        deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the messageId property value. The messageId property
@@ -130,6 +129,7 @@ public class MessageTrace extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -147,6 +147,7 @@ public class MessageTrace extends Entity implements Parsable {
      * @param value Value to set for the destinationIPAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDestinationIPAddress(@javax.annotation.Nullable final String value) {
         this._destinationIPAddress = value;
     }
@@ -155,6 +156,7 @@ public class MessageTrace extends Entity implements Parsable {
      * @param value Value to set for the messageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessageId(@javax.annotation.Nullable final String value) {
         this._messageId = value;
     }
@@ -163,6 +165,7 @@ public class MessageTrace extends Entity implements Parsable {
      * @param value Value to set for the receivedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReceivedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._receivedDateTime = value;
     }
@@ -171,6 +174,7 @@ public class MessageTrace extends Entity implements Parsable {
      * @param value Value to set for the recipients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipients(@javax.annotation.Nullable final java.util.List<MessageRecipient> value) {
         this._recipients = value;
     }
@@ -179,6 +183,7 @@ public class MessageTrace extends Entity implements Parsable {
      * @param value Value to set for the senderEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSenderEmail(@javax.annotation.Nullable final String value) {
         this._senderEmail = value;
     }
@@ -187,6 +192,7 @@ public class MessageTrace extends Entity implements Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Integer value) {
         this._size = value;
     }
@@ -195,6 +201,7 @@ public class MessageTrace extends Entity implements Parsable {
      * @param value Value to set for the sourceIPAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceIPAddress(@javax.annotation.Nullable final String value) {
         this._sourceIPAddress = value;
     }
@@ -203,6 +210,7 @@ public class MessageTrace extends Entity implements Parsable {
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
         this._subject = value;
     }

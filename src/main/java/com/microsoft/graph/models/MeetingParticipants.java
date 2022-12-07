@@ -25,9 +25,9 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
      * Instantiates a new meetingParticipants and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MeetingParticipants() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.meetingParticipants");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,14 +69,13 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MeetingParticipants currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("attendees", (n) -> { currentObject.setAttendees(n.getCollectionOfObjectValues(MeetingParticipantInfo::createFromDiscriminatorValue)); });
-            this.put("contributors", (n) -> { currentObject.setContributors(n.getCollectionOfObjectValues(MeetingParticipantInfo::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("organizer", (n) -> { currentObject.setOrganizer(n.getObjectValue(MeetingParticipantInfo::createFromDiscriminatorValue)); });
-            this.put("producers", (n) -> { currentObject.setProducers(n.getCollectionOfObjectValues(MeetingParticipantInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("attendees", (n) -> { this.setAttendees(n.getCollectionOfObjectValues(MeetingParticipantInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("contributors", (n) -> { this.setContributors(n.getCollectionOfObjectValues(MeetingParticipantInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("organizer", (n) -> { this.setOrganizer(n.getObjectValue(MeetingParticipantInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("producers", (n) -> { this.setProducers(n.getCollectionOfObjectValues(MeetingParticipantInfo::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,6 +106,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("attendees", this.getAttendees());
@@ -121,6 +121,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +130,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the attendees property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttendees(@javax.annotation.Nullable final java.util.List<MeetingParticipantInfo> value) {
         this._attendees = value;
     }
@@ -137,6 +139,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the contributors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContributors(@javax.annotation.Nullable final java.util.List<MeetingParticipantInfo> value) {
         this._contributors = value;
     }
@@ -145,6 +148,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -153,6 +157,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the organizer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizer(@javax.annotation.Nullable final MeetingParticipantInfo value) {
         this._organizer = value;
     }
@@ -161,6 +166,7 @@ public class MeetingParticipants implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the producers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProducers(@javax.annotation.Nullable final java.util.List<MeetingParticipantInfo> value) {
         this._producers = value;
     }

@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of approvalWorkflowProvider entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class ApprovalWorkflowProvider extends Entity implements Parsable {
     /** The businessFlows property */
     private java.util.List<BusinessFlow> _businessFlows;
@@ -21,9 +21,9 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
      * Instantiates a new approvalWorkflowProvider and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ApprovalWorkflowProvider() {
         super();
-        this.setOdataType("#microsoft.graph.approvalWorkflowProvider");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -65,13 +65,12 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ApprovalWorkflowProvider currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("businessFlows", (n) -> { currentObject.setBusinessFlows(n.getCollectionOfObjectValues(BusinessFlow::createFromDiscriminatorValue)); });
-            this.put("businessFlowsWithRequestsAwaitingMyDecision", (n) -> { currentObject.setBusinessFlowsWithRequestsAwaitingMyDecision(n.getCollectionOfObjectValues(BusinessFlow::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("policyTemplates", (n) -> { currentObject.setPolicyTemplates(n.getCollectionOfObjectValues(GovernancePolicyTemplate::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("businessFlows", (n) -> { this.setBusinessFlows(n.getCollectionOfObjectValues(BusinessFlow::createFromDiscriminatorValue)); });
+        deserializerMap.put("businessFlowsWithRequestsAwaitingMyDecision", (n) -> { this.setBusinessFlowsWithRequestsAwaitingMyDecision(n.getCollectionOfObjectValues(BusinessFlow::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("policyTemplates", (n) -> { this.setPolicyTemplates(n.getCollectionOfObjectValues(GovernancePolicyTemplate::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the policyTemplates property value. The policyTemplates property
@@ -86,6 +85,7 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +99,7 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
      * @param value Value to set for the businessFlows property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBusinessFlows(@javax.annotation.Nullable final java.util.List<BusinessFlow> value) {
         this._businessFlows = value;
     }
@@ -107,6 +108,7 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
      * @param value Value to set for the businessFlowsWithRequestsAwaitingMyDecision property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBusinessFlowsWithRequestsAwaitingMyDecision(@javax.annotation.Nullable final java.util.List<BusinessFlow> value) {
         this._businessFlowsWithRequestsAwaitingMyDecision = value;
     }
@@ -115,6 +117,7 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -123,6 +126,7 @@ public class ApprovalWorkflowProvider extends Entity implements Parsable {
      * @param value Value to set for the policyTemplates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyTemplates(@javax.annotation.Nullable final java.util.List<GovernancePolicyTemplate> value) {
         this._policyTemplates = value;
     }

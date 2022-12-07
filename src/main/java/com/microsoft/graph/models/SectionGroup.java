@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable {
     /** The notebook that contains the section group. Read-only. */
     private Notebook _parentNotebook;
@@ -25,6 +25,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * Instantiates a new sectionGroup and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SectionGroup() {
         super();
         this.setOdataType("#microsoft.graph.sectionGroup");
@@ -45,15 +46,14 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SectionGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("parentNotebook", (n) -> { currentObject.setParentNotebook(n.getObjectValue(Notebook::createFromDiscriminatorValue)); });
-            this.put("parentSectionGroup", (n) -> { currentObject.setParentSectionGroup(n.getObjectValue(SectionGroup::createFromDiscriminatorValue)); });
-            this.put("sectionGroups", (n) -> { currentObject.setSectionGroups(n.getCollectionOfObjectValues(SectionGroup::createFromDiscriminatorValue)); });
-            this.put("sectionGroupsUrl", (n) -> { currentObject.setSectionGroupsUrl(n.getStringValue()); });
-            this.put("sections", (n) -> { currentObject.setSections(n.getCollectionOfObjectValues(OnenoteSection::createFromDiscriminatorValue)); });
-            this.put("sectionsUrl", (n) -> { currentObject.setSectionsUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("parentNotebook", (n) -> { this.setParentNotebook(n.getObjectValue(Notebook::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentSectionGroup", (n) -> { this.setParentSectionGroup(n.getObjectValue(SectionGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("sectionGroups", (n) -> { this.setSectionGroups(n.getCollectionOfObjectValues(SectionGroup::createFromDiscriminatorValue)); });
+        deserializerMap.put("sectionGroupsUrl", (n) -> { this.setSectionGroupsUrl(n.getStringValue()); });
+        deserializerMap.put("sections", (n) -> { this.setSections(n.getCollectionOfObjectValues(OnenoteSection::createFromDiscriminatorValue)); });
+        deserializerMap.put("sectionsUrl", (n) -> { this.setSectionsUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the parentNotebook property value. The notebook that contains the section group. Read-only.
@@ -108,6 +108,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +124,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * @param value Value to set for the parentNotebook property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentNotebook(@javax.annotation.Nullable final Notebook value) {
         this._parentNotebook = value;
     }
@@ -131,6 +133,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * @param value Value to set for the parentSectionGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentSectionGroup(@javax.annotation.Nullable final SectionGroup value) {
         this._parentSectionGroup = value;
     }
@@ -139,6 +142,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * @param value Value to set for the sectionGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSectionGroups(@javax.annotation.Nullable final java.util.List<SectionGroup> value) {
         this._sectionGroups = value;
     }
@@ -147,6 +151,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * @param value Value to set for the sectionGroupsUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSectionGroupsUrl(@javax.annotation.Nullable final String value) {
         this._sectionGroupsUrl = value;
     }
@@ -155,6 +160,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * @param value Value to set for the sections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSections(@javax.annotation.Nullable final java.util.List<OnenoteSection> value) {
         this._sections = value;
     }
@@ -163,6 +169,7 @@ public class SectionGroup extends OnenoteEntityHierarchyModel implements Parsabl
      * @param value Value to set for the sectionsUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSectionsUrl(@javax.annotation.Nullable final String value) {
         this._sectionsUrl = value;
     }

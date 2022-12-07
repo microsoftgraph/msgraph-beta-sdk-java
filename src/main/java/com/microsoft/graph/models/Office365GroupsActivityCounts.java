@@ -27,9 +27,9 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
      * Instantiates a new Office365GroupsActivityCounts and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Office365GroupsActivityCounts() {
         super();
-        this.setOdataType("#microsoft.graph.office365GroupsActivityCounts");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,16 +55,15 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Office365GroupsActivityCounts currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("exchangeEmailsReceived", (n) -> { currentObject.setExchangeEmailsReceived(n.getLongValue()); });
-            this.put("reportDate", (n) -> { currentObject.setReportDate(n.getLocalDateValue()); });
-            this.put("reportPeriod", (n) -> { currentObject.setReportPeriod(n.getStringValue()); });
-            this.put("reportRefreshDate", (n) -> { currentObject.setReportRefreshDate(n.getLocalDateValue()); });
-            this.put("yammerMessagesLiked", (n) -> { currentObject.setYammerMessagesLiked(n.getLongValue()); });
-            this.put("yammerMessagesPosted", (n) -> { currentObject.setYammerMessagesPosted(n.getLongValue()); });
-            this.put("yammerMessagesRead", (n) -> { currentObject.setYammerMessagesRead(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("exchangeEmailsReceived", (n) -> { this.setExchangeEmailsReceived(n.getLongValue()); });
+        deserializerMap.put("reportDate", (n) -> { this.setReportDate(n.getLocalDateValue()); });
+        deserializerMap.put("reportPeriod", (n) -> { this.setReportPeriod(n.getStringValue()); });
+        deserializerMap.put("reportRefreshDate", (n) -> { this.setReportRefreshDate(n.getLocalDateValue()); });
+        deserializerMap.put("yammerMessagesLiked", (n) -> { this.setYammerMessagesLiked(n.getLongValue()); });
+        deserializerMap.put("yammerMessagesPosted", (n) -> { this.setYammerMessagesPosted(n.getLongValue()); });
+        deserializerMap.put("yammerMessagesRead", (n) -> { this.setYammerMessagesRead(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the reportDate property value. The date on which a number of emails were sent to a group mailbox or a number of messages were posted, read, or liked in a Yammer group
@@ -119,6 +118,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,6 +135,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
      * @param value Value to set for the exchangeEmailsReceived property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchangeEmailsReceived(@javax.annotation.Nullable final Long value) {
         this._exchangeEmailsReceived = value;
     }
@@ -143,6 +144,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
      * @param value Value to set for the reportDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportDate(@javax.annotation.Nullable final LocalDate value) {
         this._reportDate = value;
     }
@@ -151,6 +153,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
      * @param value Value to set for the reportPeriod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportPeriod(@javax.annotation.Nullable final String value) {
         this._reportPeriod = value;
     }
@@ -159,6 +162,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
      * @param value Value to set for the reportRefreshDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportRefreshDate(@javax.annotation.Nullable final LocalDate value) {
         this._reportRefreshDate = value;
     }
@@ -167,6 +171,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
      * @param value Value to set for the yammerMessagesLiked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setYammerMessagesLiked(@javax.annotation.Nullable final Long value) {
         this._yammerMessagesLiked = value;
     }
@@ -175,6 +180,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
      * @param value Value to set for the yammerMessagesPosted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setYammerMessagesPosted(@javax.annotation.Nullable final Long value) {
         this._yammerMessagesPosted = value;
     }
@@ -183,6 +189,7 @@ public class Office365GroupsActivityCounts extends Entity implements Parsable {
      * @param value Value to set for the yammerMessagesRead property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setYammerMessagesRead(@javax.annotation.Nullable final Long value) {
         this._yammerMessagesRead = value;
     }

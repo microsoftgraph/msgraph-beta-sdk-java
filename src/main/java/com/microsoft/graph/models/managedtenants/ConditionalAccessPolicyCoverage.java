@@ -9,7 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class ConditionalAccessPolicyCoverage extends Entity implements Parsable {
     /** The state for the conditional access policy. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required. Read-only. */
     private String _conditionalAccessPolicyState;
@@ -23,9 +23,9 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * Instantiates a new conditionalAccessPolicyCoverage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConditionalAccessPolicyCoverage() {
         super();
-        this.setOdataType("#microsoft.graph.managedTenants.conditionalAccessPolicyCoverage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,13 +51,12 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConditionalAccessPolicyCoverage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("conditionalAccessPolicyState", (n) -> { currentObject.setConditionalAccessPolicyState(n.getStringValue()); });
-            this.put("latestPolicyModifiedDateTime", (n) -> { currentObject.setLatestPolicyModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("requiresDeviceCompliance", (n) -> { currentObject.setRequiresDeviceCompliance(n.getBooleanValue()); });
-            this.put("tenantDisplayName", (n) -> { currentObject.setTenantDisplayName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("conditionalAccessPolicyState", (n) -> { this.setConditionalAccessPolicyState(n.getStringValue()); });
+        deserializerMap.put("latestPolicyModifiedDateTime", (n) -> { this.setLatestPolicyModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("requiresDeviceCompliance", (n) -> { this.setRequiresDeviceCompliance(n.getBooleanValue()); });
+        deserializerMap.put("tenantDisplayName", (n) -> { this.setTenantDisplayName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the latestPolicyModifiedDateTime property value. The date and time the conditional access policy was last modified. Required. Read-only.
@@ -88,6 +87,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -101,6 +101,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * @param value Value to set for the conditionalAccessPolicyState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionalAccessPolicyState(@javax.annotation.Nullable final String value) {
         this._conditionalAccessPolicyState = value;
     }
@@ -109,6 +110,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * @param value Value to set for the latestPolicyModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLatestPolicyModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._latestPolicyModifiedDateTime = value;
     }
@@ -117,6 +119,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * @param value Value to set for the requiresDeviceCompliance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiresDeviceCompliance(@javax.annotation.Nullable final Boolean value) {
         this._requiresDeviceCompliance = value;
     }
@@ -125,6 +128,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
         this._tenantDisplayName = value;
     }

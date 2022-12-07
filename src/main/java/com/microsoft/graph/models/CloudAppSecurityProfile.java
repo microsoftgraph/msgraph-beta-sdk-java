@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class CloudAppSecurityProfile extends Entity implements Parsable {
     /** The azureSubscriptionId property */
     private String _azureSubscriptionId;
@@ -44,17 +45,17 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
     /** The vendorInformation property */
     private SecurityVendorInformation _vendorInformation;
     /**
-     * Instantiates a new CloudAppSecurityProfile and sets the default values.
+     * Instantiates a new cloudAppSecurityProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudAppSecurityProfile() {
         super();
-        this.setOdataType("#microsoft.graph.cloudAppSecurityProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a CloudAppSecurityProfile
+     * @return a cloudAppSecurityProfile
      */
     @javax.annotation.Nonnull
     public static CloudAppSecurityProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -107,26 +108,25 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudAppSecurityProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("azureSubscriptionId", (n) -> { currentObject.setAzureSubscriptionId(n.getStringValue()); });
-            this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deploymentPackageUrl", (n) -> { currentObject.setDeploymentPackageUrl(n.getStringValue()); });
-            this.put("destinationServiceName", (n) -> { currentObject.setDestinationServiceName(n.getStringValue()); });
-            this.put("isSigned", (n) -> { currentObject.setIsSigned(n.getBooleanValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("manifest", (n) -> { currentObject.setManifest(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("permissionsRequired", (n) -> { currentObject.setPermissionsRequired(n.getEnumValue(ApplicationPermissionsRequired.class)); });
-            this.put("platform", (n) -> { currentObject.setPlatform(n.getStringValue()); });
-            this.put("policyName", (n) -> { currentObject.setPolicyName(n.getStringValue()); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
-            this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-            this.put("vendorInformation", (n) -> { currentObject.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("azureSubscriptionId", (n) -> { this.setAzureSubscriptionId(n.getStringValue()); });
+        deserializerMap.put("azureTenantId", (n) -> { this.setAzureTenantId(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deploymentPackageUrl", (n) -> { this.setDeploymentPackageUrl(n.getStringValue()); });
+        deserializerMap.put("destinationServiceName", (n) -> { this.setDestinationServiceName(n.getStringValue()); });
+        deserializerMap.put("isSigned", (n) -> { this.setIsSigned(n.getBooleanValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("manifest", (n) -> { this.setManifest(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("permissionsRequired", (n) -> { this.setPermissionsRequired(n.getEnumValue(ApplicationPermissionsRequired.class)); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getStringValue()); });
+        deserializerMap.put("policyName", (n) -> { this.setPolicyName(n.getStringValue()); });
+        deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
+        deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getStringValue()); });
+        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        deserializerMap.put("vendorInformation", (n) -> { this.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isSigned property value. The isSigned property
@@ -229,6 +229,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -255,6 +256,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the azureSubscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureSubscriptionId(@javax.annotation.Nullable final String value) {
         this._azureSubscriptionId = value;
     }
@@ -263,6 +265,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
         this._azureTenantId = value;
     }
@@ -271,6 +274,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -279,6 +283,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the deploymentPackageUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeploymentPackageUrl(@javax.annotation.Nullable final String value) {
         this._deploymentPackageUrl = value;
     }
@@ -287,6 +292,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the destinationServiceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDestinationServiceName(@javax.annotation.Nullable final String value) {
         this._destinationServiceName = value;
     }
@@ -295,6 +301,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the isSigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSigned(@javax.annotation.Nullable final Boolean value) {
         this._isSigned = value;
     }
@@ -303,6 +310,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -311,6 +319,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the manifest property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManifest(@javax.annotation.Nullable final String value) {
         this._manifest = value;
     }
@@ -319,6 +328,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -327,6 +337,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the permissionsRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionsRequired(@javax.annotation.Nullable final ApplicationPermissionsRequired value) {
         this._permissionsRequired = value;
     }
@@ -335,6 +346,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the platform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final String value) {
         this._platform = value;
     }
@@ -343,6 +355,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the policyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyName(@javax.annotation.Nullable final String value) {
         this._policyName = value;
     }
@@ -351,6 +364,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
         this._publisher = value;
     }
@@ -359,6 +373,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the riskScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
         this._riskScore = value;
     }
@@ -367,6 +382,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
         this._tags = value;
     }
@@ -375,6 +391,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
         this._type = value;
     }
@@ -383,6 +400,7 @@ public class CloudAppSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
         this._vendorInformation = value;
     }

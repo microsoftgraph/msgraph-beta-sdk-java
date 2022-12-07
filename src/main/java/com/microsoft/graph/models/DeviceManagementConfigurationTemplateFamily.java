@@ -21,8 +21,16 @@ public enum DeviceManagementConfigurationTemplateFamily implements ValuedEnum {
     EndpointSecurityAccountProtection("endpointSecurityAccountProtection"),
     /** Template Family for ApplicationControl that helps mitigate security threats by restricting the applications that users can run and the code that runs in the System Core (kernel) */
     EndpointSecurityApplicationControl("endpointSecurityApplicationControl"),
+    /** Template Family for EPM Elevation Rules */
+    EndpointSecurityEndpointPrivilegeManagement("endpointSecurityEndpointPrivilegeManagement"),
+    /** Template Family for EnrollmentConfiguration */
+    EnrollmentConfiguration("enrollmentConfiguration"),
+    /** Template Family for QuietTimeIndicates Template Family for all the Apps QuietTime policies and templates */
+    AppQuietTime("appQuietTime"),
     /** Template Family for Baseline */
-    Baseline("baseline");
+    Baseline("baseline"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceManagementConfigurationTemplateFamily(final String value) {
         this.value = value;
@@ -41,7 +49,11 @@ public enum DeviceManagementConfigurationTemplateFamily implements ValuedEnum {
             case "endpointSecurityAttackSurfaceReduction": return EndpointSecurityAttackSurfaceReduction;
             case "endpointSecurityAccountProtection": return EndpointSecurityAccountProtection;
             case "endpointSecurityApplicationControl": return EndpointSecurityApplicationControl;
+            case "endpointSecurityEndpointPrivilegeManagement": return EndpointSecurityEndpointPrivilegeManagement;
+            case "enrollmentConfiguration": return EnrollmentConfiguration;
+            case "appQuietTime": return AppQuietTime;
             case "baseline": return Baseline;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

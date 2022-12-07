@@ -18,6 +18,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      * Instantiates a new ConversationMemberRoleUpdatedEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConversationMemberRoleUpdatedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.conversationMemberRoleUpdatedEventMessageDetail");
@@ -54,12 +55,11 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConversationMemberRoleUpdatedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("conversationMemberRoles", (n) -> { currentObject.setConversationMemberRoles(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("conversationMemberUser", (n) -> { currentObject.setConversationMemberUser(n.getObjectValue(TeamworkUserIdentity::createFromDiscriminatorValue)); });
-            this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("conversationMemberRoles", (n) -> { this.setConversationMemberRoles(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("conversationMemberUser", (n) -> { this.setConversationMemberUser(n.getObjectValue(TeamworkUserIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the initiator property value. Initiator of the event.
@@ -74,6 +74,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +87,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      * @param value Value to set for the conversationMemberRoles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConversationMemberRoles(@javax.annotation.Nullable final java.util.List<String> value) {
         this._conversationMemberRoles = value;
     }
@@ -94,6 +96,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      * @param value Value to set for the conversationMemberUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConversationMemberUser(@javax.annotation.Nullable final TeamworkUserIdentity value) {
         this._conversationMemberUser = value;
     }
@@ -102,6 +105,7 @@ public class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessag
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
         this._initiator = value;
     }

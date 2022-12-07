@@ -10,6 +10,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class PurchaseInvoice extends Entity implements Parsable {
     /** The buyFromAddress property */
     private PostalAddressType _buyFromAddress;
@@ -70,17 +71,17 @@ public class PurchaseInvoice extends Entity implements Parsable {
     /** The vendorNumber property */
     private String _vendorNumber;
     /**
-     * Instantiates a new PurchaseInvoice and sets the default values.
+     * Instantiates a new purchaseInvoice and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PurchaseInvoice() {
         super();
-        this.setOdataType("#microsoft.graph.purchaseInvoice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a PurchaseInvoice
+     * @return a purchaseInvoice
      */
     @javax.annotation.Nonnull
     public static PurchaseInvoice createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -149,38 +150,37 @@ public class PurchaseInvoice extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PurchaseInvoice currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("buyFromAddress", (n) -> { currentObject.setBuyFromAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
-            this.put("currency", (n) -> { currentObject.setCurrency(n.getObjectValue(Currency::createFromDiscriminatorValue)); });
-            this.put("currencyCode", (n) -> { currentObject.setCurrencyCode(n.getStringValue()); });
-            this.put("currencyId", (n) -> { currentObject.setCurrencyId(n.getStringValue()); });
-            this.put("discountAmount", (n) -> { currentObject.setDiscountAmount(n.getBigDecimalValue()); });
-            this.put("discountAppliedBeforeTax", (n) -> { currentObject.setDiscountAppliedBeforeTax(n.getBooleanValue()); });
-            this.put("dueDate", (n) -> { currentObject.setDueDate(n.getLocalDateValue()); });
-            this.put("invoiceDate", (n) -> { currentObject.setInvoiceDate(n.getLocalDateValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
-            this.put("payToAddress", (n) -> { currentObject.setPayToAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
-            this.put("payToContact", (n) -> { currentObject.setPayToContact(n.getStringValue()); });
-            this.put("payToName", (n) -> { currentObject.setPayToName(n.getStringValue()); });
-            this.put("payToVendorId", (n) -> { currentObject.setPayToVendorId(n.getStringValue()); });
-            this.put("payToVendorNumber", (n) -> { currentObject.setPayToVendorNumber(n.getStringValue()); });
-            this.put("pricesIncludeTax", (n) -> { currentObject.setPricesIncludeTax(n.getBooleanValue()); });
-            this.put("purchaseInvoiceLines", (n) -> { currentObject.setPurchaseInvoiceLines(n.getCollectionOfObjectValues(PurchaseInvoiceLine::createFromDiscriminatorValue)); });
-            this.put("shipToAddress", (n) -> { currentObject.setShipToAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
-            this.put("shipToContact", (n) -> { currentObject.setShipToContact(n.getStringValue()); });
-            this.put("shipToName", (n) -> { currentObject.setShipToName(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-            this.put("totalAmountExcludingTax", (n) -> { currentObject.setTotalAmountExcludingTax(n.getBigDecimalValue()); });
-            this.put("totalAmountIncludingTax", (n) -> { currentObject.setTotalAmountIncludingTax(n.getBigDecimalValue()); });
-            this.put("totalTaxAmount", (n) -> { currentObject.setTotalTaxAmount(n.getBigDecimalValue()); });
-            this.put("vendor", (n) -> { currentObject.setVendor(n.getObjectValue(Vendor::createFromDiscriminatorValue)); });
-            this.put("vendorId", (n) -> { currentObject.setVendorId(n.getStringValue()); });
-            this.put("vendorInvoiceNumber", (n) -> { currentObject.setVendorInvoiceNumber(n.getStringValue()); });
-            this.put("vendorName", (n) -> { currentObject.setVendorName(n.getStringValue()); });
-            this.put("vendorNumber", (n) -> { currentObject.setVendorNumber(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("buyFromAddress", (n) -> { this.setBuyFromAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
+        deserializerMap.put("currency", (n) -> { this.setCurrency(n.getObjectValue(Currency::createFromDiscriminatorValue)); });
+        deserializerMap.put("currencyCode", (n) -> { this.setCurrencyCode(n.getStringValue()); });
+        deserializerMap.put("currencyId", (n) -> { this.setCurrencyId(n.getStringValue()); });
+        deserializerMap.put("discountAmount", (n) -> { this.setDiscountAmount(n.getBigDecimalValue()); });
+        deserializerMap.put("discountAppliedBeforeTax", (n) -> { this.setDiscountAppliedBeforeTax(n.getBooleanValue()); });
+        deserializerMap.put("dueDate", (n) -> { this.setDueDate(n.getLocalDateValue()); });
+        deserializerMap.put("invoiceDate", (n) -> { this.setInvoiceDate(n.getLocalDateValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("number", (n) -> { this.setNumber(n.getStringValue()); });
+        deserializerMap.put("payToAddress", (n) -> { this.setPayToAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
+        deserializerMap.put("payToContact", (n) -> { this.setPayToContact(n.getStringValue()); });
+        deserializerMap.put("payToName", (n) -> { this.setPayToName(n.getStringValue()); });
+        deserializerMap.put("payToVendorId", (n) -> { this.setPayToVendorId(n.getStringValue()); });
+        deserializerMap.put("payToVendorNumber", (n) -> { this.setPayToVendorNumber(n.getStringValue()); });
+        deserializerMap.put("pricesIncludeTax", (n) -> { this.setPricesIncludeTax(n.getBooleanValue()); });
+        deserializerMap.put("purchaseInvoiceLines", (n) -> { this.setPurchaseInvoiceLines(n.getCollectionOfObjectValues(PurchaseInvoiceLine::createFromDiscriminatorValue)); });
+        deserializerMap.put("shipToAddress", (n) -> { this.setShipToAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
+        deserializerMap.put("shipToContact", (n) -> { this.setShipToContact(n.getStringValue()); });
+        deserializerMap.put("shipToName", (n) -> { this.setShipToName(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        deserializerMap.put("totalAmountExcludingTax", (n) -> { this.setTotalAmountExcludingTax(n.getBigDecimalValue()); });
+        deserializerMap.put("totalAmountIncludingTax", (n) -> { this.setTotalAmountIncludingTax(n.getBigDecimalValue()); });
+        deserializerMap.put("totalTaxAmount", (n) -> { this.setTotalTaxAmount(n.getBigDecimalValue()); });
+        deserializerMap.put("vendor", (n) -> { this.setVendor(n.getObjectValue(Vendor::createFromDiscriminatorValue)); });
+        deserializerMap.put("vendorId", (n) -> { this.setVendorId(n.getStringValue()); });
+        deserializerMap.put("vendorInvoiceNumber", (n) -> { this.setVendorInvoiceNumber(n.getStringValue()); });
+        deserializerMap.put("vendorName", (n) -> { this.setVendorName(n.getStringValue()); });
+        deserializerMap.put("vendorNumber", (n) -> { this.setVendorNumber(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the invoiceDate property value. The invoiceDate property
@@ -363,6 +363,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -401,6 +402,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the buyFromAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBuyFromAddress(@javax.annotation.Nullable final PostalAddressType value) {
         this._buyFromAddress = value;
     }
@@ -409,6 +411,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the currency property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrency(@javax.annotation.Nullable final Currency value) {
         this._currency = value;
     }
@@ -417,6 +420,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the currencyCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrencyCode(@javax.annotation.Nullable final String value) {
         this._currencyCode = value;
     }
@@ -425,6 +429,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the currencyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrencyId(@javax.annotation.Nullable final String value) {
         this._currencyId = value;
     }
@@ -433,6 +438,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the discountAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscountAmount(@javax.annotation.Nullable final BigDecimal value) {
         this._discountAmount = value;
     }
@@ -441,6 +447,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the discountAppliedBeforeTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiscountAppliedBeforeTax(@javax.annotation.Nullable final Boolean value) {
         this._discountAppliedBeforeTax = value;
     }
@@ -449,6 +456,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the dueDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDueDate(@javax.annotation.Nullable final LocalDate value) {
         this._dueDate = value;
     }
@@ -457,6 +465,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the invoiceDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvoiceDate(@javax.annotation.Nullable final LocalDate value) {
         this._invoiceDate = value;
     }
@@ -465,6 +474,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -473,6 +483,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the number property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumber(@javax.annotation.Nullable final String value) {
         this._number = value;
     }
@@ -481,6 +492,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the payToAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayToAddress(@javax.annotation.Nullable final PostalAddressType value) {
         this._payToAddress = value;
     }
@@ -489,6 +501,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the payToContact property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayToContact(@javax.annotation.Nullable final String value) {
         this._payToContact = value;
     }
@@ -497,6 +510,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the payToName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayToName(@javax.annotation.Nullable final String value) {
         this._payToName = value;
     }
@@ -505,6 +519,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the payToVendorId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayToVendorId(@javax.annotation.Nullable final String value) {
         this._payToVendorId = value;
     }
@@ -513,6 +528,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the payToVendorNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayToVendorNumber(@javax.annotation.Nullable final String value) {
         this._payToVendorNumber = value;
     }
@@ -521,6 +537,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the pricesIncludeTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPricesIncludeTax(@javax.annotation.Nullable final Boolean value) {
         this._pricesIncludeTax = value;
     }
@@ -529,6 +546,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the purchaseInvoiceLines property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPurchaseInvoiceLines(@javax.annotation.Nullable final java.util.List<PurchaseInvoiceLine> value) {
         this._purchaseInvoiceLines = value;
     }
@@ -537,6 +555,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the shipToAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShipToAddress(@javax.annotation.Nullable final PostalAddressType value) {
         this._shipToAddress = value;
     }
@@ -545,6 +564,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the shipToContact property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShipToContact(@javax.annotation.Nullable final String value) {
         this._shipToContact = value;
     }
@@ -553,6 +573,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the shipToName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShipToName(@javax.annotation.Nullable final String value) {
         this._shipToName = value;
     }
@@ -561,6 +582,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
         this._status = value;
     }
@@ -569,6 +591,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the totalAmountExcludingTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalAmountExcludingTax(@javax.annotation.Nullable final BigDecimal value) {
         this._totalAmountExcludingTax = value;
     }
@@ -577,6 +600,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the totalAmountIncludingTax property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalAmountIncludingTax(@javax.annotation.Nullable final BigDecimal value) {
         this._totalAmountIncludingTax = value;
     }
@@ -585,6 +609,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the totalTaxAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalTaxAmount(@javax.annotation.Nullable final BigDecimal value) {
         this._totalTaxAmount = value;
     }
@@ -593,6 +618,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the vendor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendor(@javax.annotation.Nullable final Vendor value) {
         this._vendor = value;
     }
@@ -601,6 +627,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the vendorId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorId(@javax.annotation.Nullable final String value) {
         this._vendorId = value;
     }
@@ -609,6 +636,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the vendorInvoiceNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorInvoiceNumber(@javax.annotation.Nullable final String value) {
         this._vendorInvoiceNumber = value;
     }
@@ -617,6 +645,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the vendorName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorName(@javax.annotation.Nullable final String value) {
         this._vendorName = value;
     }
@@ -625,6 +654,7 @@ public class PurchaseInvoice extends Entity implements Parsable {
      * @param value Value to set for the vendorNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorNumber(@javax.annotation.Nullable final String value) {
         this._vendorNumber = value;
     }

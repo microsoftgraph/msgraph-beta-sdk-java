@@ -16,6 +16,7 @@ public class WindowsKioskAzureADUser extends WindowsKioskUser implements Parsabl
      * Instantiates a new WindowsKioskAzureADUser and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsKioskAzureADUser() {
         super();
         this.setOdataType("#microsoft.graph.windowsKioskAzureADUser");
@@ -36,11 +37,10 @@ public class WindowsKioskAzureADUser extends WindowsKioskUser implements Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsKioskAzureADUser currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the userId property value. The ID of the AzureAD user that will be locked to this kiosk configuration
@@ -63,6 +63,7 @@ public class WindowsKioskAzureADUser extends WindowsKioskUser implements Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +75,7 @@ public class WindowsKioskAzureADUser extends WindowsKioskUser implements Parsabl
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
         this._userId = value;
     }
@@ -82,6 +84,7 @@ public class WindowsKioskAzureADUser extends WindowsKioskUser implements Parsabl
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

@@ -21,9 +21,9 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
      * Instantiates a new DeviceManagementConfigurationSimpleSettingDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSimpleSettingDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSimpleSettingDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -72,13 +72,12 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationSimpleSettingDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getObjectValue(DeviceManagementConfigurationSettingValue::createFromDiscriminatorValue)); });
-            this.put("dependedOnBy", (n) -> { currentObject.setDependedOnBy(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDependedOnBy::createFromDiscriminatorValue)); });
-            this.put("dependentOn", (n) -> { currentObject.setDependentOn(n.getCollectionOfObjectValues(DeviceManagementConfigurationDependentOn::createFromDiscriminatorValue)); });
-            this.put("valueDefinition", (n) -> { currentObject.setValueDefinition(n.getObjectValue(DeviceManagementConfigurationSettingValueDefinition::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getObjectValue(DeviceManagementConfigurationSettingValue::createFromDiscriminatorValue)); });
+        deserializerMap.put("dependedOnBy", (n) -> { this.setDependedOnBy(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingDependedOnBy::createFromDiscriminatorValue)); });
+        deserializerMap.put("dependentOn", (n) -> { this.setDependentOn(n.getCollectionOfObjectValues(DeviceManagementConfigurationDependentOn::createFromDiscriminatorValue)); });
+        deserializerMap.put("valueDefinition", (n) -> { this.setValueDefinition(n.getObjectValue(DeviceManagementConfigurationSettingValueDefinition::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the valueDefinition property value. Definition of the value for this setting
@@ -93,6 +92,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -106,6 +106,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final DeviceManagementConfigurationSettingValue value) {
         this._defaultValue = value;
     }
@@ -114,6 +115,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
      * @param value Value to set for the dependedOnBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDependedOnBy(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationSettingDependedOnBy> value) {
         this._dependedOnBy = value;
     }
@@ -122,6 +124,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
      * @param value Value to set for the dependentOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDependentOn(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationDependentOn> value) {
         this._dependentOn = value;
     }
@@ -130,6 +133,7 @@ public class DeviceManagementConfigurationSimpleSettingDefinition extends Device
      * @param value Value to set for the valueDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValueDefinition(@javax.annotation.Nullable final DeviceManagementConfigurationSettingValueDefinition value) {
         this._valueDefinition = value;
     }

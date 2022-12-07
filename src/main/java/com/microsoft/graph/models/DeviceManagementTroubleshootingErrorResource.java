@@ -22,9 +22,9 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
      * Instantiates a new deviceManagementTroubleshootingErrorResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementTroubleshootingErrorResource() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceManagementTroubleshootingErrorResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +50,11 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementTroubleshootingErrorResource currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("link", (n) -> { currentObject.setLink(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("link", (n) -> { this.setLink(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("text", (n) -> { this.setText(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the link property value. The link to the web resource. Can contain any of the following formatters: {{UPN}}, {{DeviceGUID}}, {{UserGUID}}
@@ -86,6 +85,7 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("link", this.getLink());
@@ -98,6 +98,7 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +107,7 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
      * @param value Value to set for the link property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLink(@javax.annotation.Nullable final String value) {
         this._link = value;
     }
@@ -114,6 +116,7 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -122,6 +125,7 @@ public class DeviceManagementTroubleshootingErrorResource implements AdditionalD
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final String value) {
         this._text = value;
     }

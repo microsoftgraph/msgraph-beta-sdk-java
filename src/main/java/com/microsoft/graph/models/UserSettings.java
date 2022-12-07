@@ -21,17 +21,17 @@ public class UserSettings extends Entity implements Parsable {
     /** The shift preferences for the user. */
     private ShiftPreferences _shiftPreferences;
     /**
-     * Instantiates a new UserSettings and sets the default values.
+     * Instantiates a new userSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserSettings() {
         super();
-        this.setOdataType("#microsoft.graph.userSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserSettings
+     * @return a userSettings
      */
     @javax.annotation.Nonnull
     public static UserSettings createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -68,15 +68,14 @@ public class UserSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contactMergeSuggestions", (n) -> { currentObject.setContactMergeSuggestions(n.getObjectValue(ContactMergeSuggestions::createFromDiscriminatorValue)); });
-            this.put("contributionToContentDiscoveryAsOrganizationDisabled", (n) -> { currentObject.setContributionToContentDiscoveryAsOrganizationDisabled(n.getBooleanValue()); });
-            this.put("contributionToContentDiscoveryDisabled", (n) -> { currentObject.setContributionToContentDiscoveryDisabled(n.getBooleanValue()); });
-            this.put("itemInsights", (n) -> { currentObject.setItemInsights(n.getObjectValue(UserInsightsSettings::createFromDiscriminatorValue)); });
-            this.put("regionalAndLanguageSettings", (n) -> { currentObject.setRegionalAndLanguageSettings(n.getObjectValue(RegionalAndLanguageSettings::createFromDiscriminatorValue)); });
-            this.put("shiftPreferences", (n) -> { currentObject.setShiftPreferences(n.getObjectValue(ShiftPreferences::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contactMergeSuggestions", (n) -> { this.setContactMergeSuggestions(n.getObjectValue(ContactMergeSuggestions::createFromDiscriminatorValue)); });
+        deserializerMap.put("contributionToContentDiscoveryAsOrganizationDisabled", (n) -> { this.setContributionToContentDiscoveryAsOrganizationDisabled(n.getBooleanValue()); });
+        deserializerMap.put("contributionToContentDiscoveryDisabled", (n) -> { this.setContributionToContentDiscoveryDisabled(n.getBooleanValue()); });
+        deserializerMap.put("itemInsights", (n) -> { this.setItemInsights(n.getObjectValue(UserInsightsSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("regionalAndLanguageSettings", (n) -> { this.setRegionalAndLanguageSettings(n.getObjectValue(RegionalAndLanguageSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("shiftPreferences", (n) -> { this.setShiftPreferences(n.getObjectValue(ShiftPreferences::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the itemInsights property value. The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
@@ -107,6 +106,7 @@ public class UserSettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +122,7 @@ public class UserSettings extends Entity implements Parsable {
      * @param value Value to set for the contactMergeSuggestions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContactMergeSuggestions(@javax.annotation.Nullable final ContactMergeSuggestions value) {
         this._contactMergeSuggestions = value;
     }
@@ -130,6 +131,7 @@ public class UserSettings extends Entity implements Parsable {
      * @param value Value to set for the contributionToContentDiscoveryAsOrganizationDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContributionToContentDiscoveryAsOrganizationDisabled(@javax.annotation.Nullable final Boolean value) {
         this._contributionToContentDiscoveryAsOrganizationDisabled = value;
     }
@@ -138,6 +140,7 @@ public class UserSettings extends Entity implements Parsable {
      * @param value Value to set for the contributionToContentDiscoveryDisabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContributionToContentDiscoveryDisabled(@javax.annotation.Nullable final Boolean value) {
         this._contributionToContentDiscoveryDisabled = value;
     }
@@ -146,6 +149,7 @@ public class UserSettings extends Entity implements Parsable {
      * @param value Value to set for the itemInsights property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItemInsights(@javax.annotation.Nullable final UserInsightsSettings value) {
         this._itemInsights = value;
     }
@@ -154,6 +158,7 @@ public class UserSettings extends Entity implements Parsable {
      * @param value Value to set for the regionalAndLanguageSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegionalAndLanguageSettings(@javax.annotation.Nullable final RegionalAndLanguageSettings value) {
         this._regionalAndLanguageSettings = value;
     }
@@ -162,6 +167,7 @@ public class UserSettings extends Entity implements Parsable {
      * @param value Value to set for the shiftPreferences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShiftPreferences(@javax.annotation.Nullable final ShiftPreferences value) {
         this._shiftPreferences = value;
     }

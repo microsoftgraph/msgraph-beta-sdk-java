@@ -18,6 +18,7 @@ public class GetExpiringVppTokenCountWithExpiringBeforeDateTimeResponse implemen
      * Instantiates a new getExpiringVppTokenCountWithExpiringBeforeDateTimeResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetExpiringVppTokenCountWithExpiringBeforeDateTimeResponse() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -45,10 +46,9 @@ public class GetExpiringVppTokenCountWithExpiringBeforeDateTimeResponse implemen
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GetExpiringVppTokenCountWithExpiringBeforeDateTimeResponse currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("value", (n) -> { currentObject.setValue(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("value", (n) -> { this.setValue(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the value property value. The value property
@@ -63,6 +63,7 @@ public class GetExpiringVppTokenCountWithExpiringBeforeDateTimeResponse implemen
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("value", this.getValue());
@@ -73,6 +74,7 @@ public class GetExpiringVppTokenCountWithExpiringBeforeDateTimeResponse implemen
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +83,7 @@ public class GetExpiringVppTokenCountWithExpiringBeforeDateTimeResponse implemen
      * @param value Value to set for the value property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValue(@javax.annotation.Nullable final Integer value) {
         this._value = value;
     }

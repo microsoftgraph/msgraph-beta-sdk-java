@@ -27,9 +27,9 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * Instantiates a new personNamePronounciation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PersonNamePronounciation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.personNamePronounciation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,15 +63,14 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PersonNamePronounciation currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("first", (n) -> { currentObject.setFirst(n.getStringValue()); });
-            this.put("last", (n) -> { currentObject.setLast(n.getStringValue()); });
-            this.put("maiden", (n) -> { currentObject.setMaiden(n.getStringValue()); });
-            this.put("middle", (n) -> { currentObject.setMiddle(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("first", (n) -> { this.setFirst(n.getStringValue()); });
+        deserializerMap.put("last", (n) -> { this.setLast(n.getStringValue()); });
+        deserializerMap.put("maiden", (n) -> { this.setMaiden(n.getStringValue()); });
+        deserializerMap.put("middle", (n) -> { this.setMiddle(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the first property value. The first property
@@ -118,6 +117,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -133,6 +133,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -141,6 +142,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -149,6 +151,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the first property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirst(@javax.annotation.Nullable final String value) {
         this._first = value;
     }
@@ -157,6 +160,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the last property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLast(@javax.annotation.Nullable final String value) {
         this._last = value;
     }
@@ -165,6 +169,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the maiden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaiden(@javax.annotation.Nullable final String value) {
         this._maiden = value;
     }
@@ -173,6 +178,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the middle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMiddle(@javax.annotation.Nullable final String value) {
         this._middle = value;
     }
@@ -181,6 +187,7 @@ public class PersonNamePronounciation implements AdditionalDataHolder, Parsable 
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

@@ -19,7 +19,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _appManagementMSIAllowUserControlOverInstall;
     /** This policy setting directs Windows Installer to use elevated permissions when it installs any program on the system. */
     private Boolean _appManagementMSIAlwaysInstallWithElevatedPrivileges;
-    /** List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.​ */
+    /** List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon. */
     private java.util.List<String> _appManagementPackageFamilyNamesToLaunchAfterLogOn;
     /** State Management Setting. */
     private StateManagementSetting _appsAllowTrustedAppsSideloading;
@@ -79,7 +79,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Integer _defenderCloudExtendedTimeoutInSeconds;
     /** Number of days before deleting quarantined malware. Valid values 0 to 90 */
     private Integer _defenderDaysBeforeDeletingQuarantinedMalware;
-    /** Gets or sets Defender’s actions to take on detected Malware per threat level. */
+    /** Gets or sets Defenders actions to take on detected Malware per threat level. */
     private DefenderDetectedMalwareActions _defenderDetectedMalwareActions;
     /** When blocked, catch-up scans for scheduled full scans will be turned off. */
     private Boolean _defenderDisableCatchupFullScan;
@@ -91,7 +91,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private java.util.List<String> _defenderFilesAndFoldersToExclude;
     /** Possible values for monitoring file activity. */
     private DefenderMonitorFileActivity _defenderMonitorFileActivity;
-    /** Gets or sets Defender’s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit. */
+    /** Gets or sets Defenders action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit. */
     private DefenderPotentiallyUnwantedAppAction _defenderPotentiallyUnwantedAppAction;
     /** Possible values of Defender PUA Protection */
     private DefenderProtectionType _defenderPotentiallyUnwantedAppActionSetting;
@@ -309,7 +309,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _microsoftAccountBlockSettingsSync;
     /** Values for the SignInAssistantSettings. */
     private SignInAssistantOptions _microsoftAccountSignInAssistantSettings;
-    /** If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM. */
+    /** If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account thats enrolled into MDM. */
     private Boolean _networkProxyApplySettingsDeviceWide;
     /** Address to the proxy auto-config (PAC) script you want to use. */
     private String _networkProxyAutomaticConfigurationUrl;
@@ -381,7 +381,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _privacyBlockInputPersonalization;
     /** Blocks the shared experiences/discovery of recently used resources in task switcher etc. */
     private Boolean _privacyBlockPublishUserActivities;
-    /** This policy prevents the privacy experience from launching during user logon for new and upgraded users.​ */
+    /** This policy prevents the privacy experience from launching during user logon for new and upgraded users. */
     private Boolean _privacyDisableLaunchExperience;
     /** Indicates whether or not to Block the user from reset protection mode. */
     private Boolean _resetProtectionModeBlocked;
@@ -407,7 +407,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _searchDisableUseLocation;
     /** Specifies minimum amount of hard drive space on the same drive as the index location before indexing stops. */
     private Boolean _searchEnableAutomaticIndexSizeManangement;
-    /** Indicates whether or not to block remote queries of this computer’s index. */
+    /** Indicates whether or not to block remote queries of this computers index. */
     private Boolean _searchEnableRemoteQueries;
     /** Specify whether to allow automatic device encryption during OOBE when the device is Azure AD joined (desktop only). */
     private Boolean _securityBlockAzureADJoinedDevicesAutoEncryption;
@@ -553,7 +553,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
     private Boolean _windowsSpotlightBlocked;
     /** Block suggestions from Microsoft that show after each OS clean install, upgrade or in an on-going basis to introduce users to what is new or changed */
     private Boolean _windowsSpotlightBlockOnActionCenter;
-    /** Block personalized content in Windows spotlight based on user’s device usage. */
+    /** Block personalized content in Windows spotlight based on users device usage. */
     private Boolean _windowsSpotlightBlockTailoredExperiences;
     /** Block third party content delivered via Windows Spotlight */
     private Boolean _windowsSpotlightBlockThirdPartyNotifications;
@@ -579,6 +579,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * Instantiates a new Windows10GeneralConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10GeneralConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10GeneralConfiguration");
@@ -634,7 +635,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._appManagementMSIAlwaysInstallWithElevatedPrivileges;
     }
     /**
-     * Gets the appManagementPackageFamilyNamesToLaunchAfterLogOn property value. List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.​
+     * Gets the appManagementPackageFamilyNamesToLaunchAfterLogOn property value. List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.
      * @return a string
      */
     @javax.annotation.Nullable
@@ -874,7 +875,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._defenderDaysBeforeDeletingQuarantinedMalware;
     }
     /**
-     * Gets the defenderDetectedMalwareActions property value. Gets or sets Defender’s actions to take on detected Malware per threat level.
+     * Gets the defenderDetectedMalwareActions property value. Gets or sets Defenders actions to take on detected Malware per threat level.
      * @return a defenderDetectedMalwareActions
      */
     @javax.annotation.Nullable
@@ -922,7 +923,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._defenderMonitorFileActivity;
     }
     /**
-     * Gets the defenderPotentiallyUnwantedAppAction property value. Gets or sets Defender’s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
+     * Gets the defenderPotentiallyUnwantedAppAction property value. Gets or sets Defenders action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
      * @return a defenderPotentiallyUnwantedAppAction
      */
     @javax.annotation.Nullable
@@ -1639,292 +1640,291 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10GeneralConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accountsBlockAddingNonMicrosoftAccountEmail", (n) -> { currentObject.setAccountsBlockAddingNonMicrosoftAccountEmail(n.getBooleanValue()); });
-            this.put("activateAppsWithVoice", (n) -> { currentObject.setActivateAppsWithVoice(n.getEnumValue(Enablement.class)); });
-            this.put("antiTheftModeBlocked", (n) -> { currentObject.setAntiTheftModeBlocked(n.getBooleanValue()); });
-            this.put("appManagementMSIAllowUserControlOverInstall", (n) -> { currentObject.setAppManagementMSIAllowUserControlOverInstall(n.getBooleanValue()); });
-            this.put("appManagementMSIAlwaysInstallWithElevatedPrivileges", (n) -> { currentObject.setAppManagementMSIAlwaysInstallWithElevatedPrivileges(n.getBooleanValue()); });
-            this.put("appManagementPackageFamilyNamesToLaunchAfterLogOn", (n) -> { currentObject.setAppManagementPackageFamilyNamesToLaunchAfterLogOn(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("appsAllowTrustedAppsSideloading", (n) -> { currentObject.setAppsAllowTrustedAppsSideloading(n.getEnumValue(StateManagementSetting.class)); });
-            this.put("appsBlockWindowsStoreOriginatedApps", (n) -> { currentObject.setAppsBlockWindowsStoreOriginatedApps(n.getBooleanValue()); });
-            this.put("authenticationAllowSecondaryDevice", (n) -> { currentObject.setAuthenticationAllowSecondaryDevice(n.getBooleanValue()); });
-            this.put("authenticationPreferredAzureADTenantDomainName", (n) -> { currentObject.setAuthenticationPreferredAzureADTenantDomainName(n.getStringValue()); });
-            this.put("authenticationWebSignIn", (n) -> { currentObject.setAuthenticationWebSignIn(n.getEnumValue(Enablement.class)); });
-            this.put("bluetoothAllowedServices", (n) -> { currentObject.setBluetoothAllowedServices(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("bluetoothBlockAdvertising", (n) -> { currentObject.setBluetoothBlockAdvertising(n.getBooleanValue()); });
-            this.put("bluetoothBlockDiscoverableMode", (n) -> { currentObject.setBluetoothBlockDiscoverableMode(n.getBooleanValue()); });
-            this.put("bluetoothBlocked", (n) -> { currentObject.setBluetoothBlocked(n.getBooleanValue()); });
-            this.put("bluetoothBlockPrePairing", (n) -> { currentObject.setBluetoothBlockPrePairing(n.getBooleanValue()); });
-            this.put("bluetoothBlockPromptedProximalConnections", (n) -> { currentObject.setBluetoothBlockPromptedProximalConnections(n.getBooleanValue()); });
-            this.put("cameraBlocked", (n) -> { currentObject.setCameraBlocked(n.getBooleanValue()); });
-            this.put("cellularBlockDataWhenRoaming", (n) -> { currentObject.setCellularBlockDataWhenRoaming(n.getBooleanValue()); });
-            this.put("cellularBlockVpn", (n) -> { currentObject.setCellularBlockVpn(n.getBooleanValue()); });
-            this.put("cellularBlockVpnWhenRoaming", (n) -> { currentObject.setCellularBlockVpnWhenRoaming(n.getBooleanValue()); });
-            this.put("cellularData", (n) -> { currentObject.setCellularData(n.getEnumValue(ConfigurationUsage.class)); });
-            this.put("certificatesBlockManualRootCertificateInstallation", (n) -> { currentObject.setCertificatesBlockManualRootCertificateInstallation(n.getBooleanValue()); });
-            this.put("configureTimeZone", (n) -> { currentObject.setConfigureTimeZone(n.getStringValue()); });
-            this.put("connectedDevicesServiceBlocked", (n) -> { currentObject.setConnectedDevicesServiceBlocked(n.getBooleanValue()); });
-            this.put("copyPasteBlocked", (n) -> { currentObject.setCopyPasteBlocked(n.getBooleanValue()); });
-            this.put("cortanaBlocked", (n) -> { currentObject.setCortanaBlocked(n.getBooleanValue()); });
-            this.put("cryptographyAllowFipsAlgorithmPolicy", (n) -> { currentObject.setCryptographyAllowFipsAlgorithmPolicy(n.getBooleanValue()); });
-            this.put("dataProtectionBlockDirectMemoryAccess", (n) -> { currentObject.setDataProtectionBlockDirectMemoryAccess(n.getBooleanValue()); });
-            this.put("defenderBlockEndUserAccess", (n) -> { currentObject.setDefenderBlockEndUserAccess(n.getBooleanValue()); });
-            this.put("defenderBlockOnAccessProtection", (n) -> { currentObject.setDefenderBlockOnAccessProtection(n.getBooleanValue()); });
-            this.put("defenderCloudBlockLevel", (n) -> { currentObject.setDefenderCloudBlockLevel(n.getEnumValue(DefenderCloudBlockLevelType.class)); });
-            this.put("defenderCloudExtendedTimeout", (n) -> { currentObject.setDefenderCloudExtendedTimeout(n.getIntegerValue()); });
-            this.put("defenderCloudExtendedTimeoutInSeconds", (n) -> { currentObject.setDefenderCloudExtendedTimeoutInSeconds(n.getIntegerValue()); });
-            this.put("defenderDaysBeforeDeletingQuarantinedMalware", (n) -> { currentObject.setDefenderDaysBeforeDeletingQuarantinedMalware(n.getIntegerValue()); });
-            this.put("defenderDetectedMalwareActions", (n) -> { currentObject.setDefenderDetectedMalwareActions(n.getObjectValue(DefenderDetectedMalwareActions::createFromDiscriminatorValue)); });
-            this.put("defenderDisableCatchupFullScan", (n) -> { currentObject.setDefenderDisableCatchupFullScan(n.getBooleanValue()); });
-            this.put("defenderDisableCatchupQuickScan", (n) -> { currentObject.setDefenderDisableCatchupQuickScan(n.getBooleanValue()); });
-            this.put("defenderFileExtensionsToExclude", (n) -> { currentObject.setDefenderFileExtensionsToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderFilesAndFoldersToExclude", (n) -> { currentObject.setDefenderFilesAndFoldersToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderMonitorFileActivity", (n) -> { currentObject.setDefenderMonitorFileActivity(n.getEnumValue(DefenderMonitorFileActivity.class)); });
-            this.put("defenderPotentiallyUnwantedAppAction", (n) -> { currentObject.setDefenderPotentiallyUnwantedAppAction(n.getEnumValue(DefenderPotentiallyUnwantedAppAction.class)); });
-            this.put("defenderPotentiallyUnwantedAppActionSetting", (n) -> { currentObject.setDefenderPotentiallyUnwantedAppActionSetting(n.getEnumValue(DefenderProtectionType.class)); });
-            this.put("defenderProcessesToExclude", (n) -> { currentObject.setDefenderProcessesToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("defenderPromptForSampleSubmission", (n) -> { currentObject.setDefenderPromptForSampleSubmission(n.getEnumValue(DefenderPromptForSampleSubmission.class)); });
-            this.put("defenderRequireBehaviorMonitoring", (n) -> { currentObject.setDefenderRequireBehaviorMonitoring(n.getBooleanValue()); });
-            this.put("defenderRequireCloudProtection", (n) -> { currentObject.setDefenderRequireCloudProtection(n.getBooleanValue()); });
-            this.put("defenderRequireNetworkInspectionSystem", (n) -> { currentObject.setDefenderRequireNetworkInspectionSystem(n.getBooleanValue()); });
-            this.put("defenderRequireRealTimeMonitoring", (n) -> { currentObject.setDefenderRequireRealTimeMonitoring(n.getBooleanValue()); });
-            this.put("defenderScanArchiveFiles", (n) -> { currentObject.setDefenderScanArchiveFiles(n.getBooleanValue()); });
-            this.put("defenderScanDownloads", (n) -> { currentObject.setDefenderScanDownloads(n.getBooleanValue()); });
-            this.put("defenderScanIncomingMail", (n) -> { currentObject.setDefenderScanIncomingMail(n.getBooleanValue()); });
-            this.put("defenderScanMappedNetworkDrivesDuringFullScan", (n) -> { currentObject.setDefenderScanMappedNetworkDrivesDuringFullScan(n.getBooleanValue()); });
-            this.put("defenderScanMaxCpu", (n) -> { currentObject.setDefenderScanMaxCpu(n.getIntegerValue()); });
-            this.put("defenderScanNetworkFiles", (n) -> { currentObject.setDefenderScanNetworkFiles(n.getBooleanValue()); });
-            this.put("defenderScanRemovableDrivesDuringFullScan", (n) -> { currentObject.setDefenderScanRemovableDrivesDuringFullScan(n.getBooleanValue()); });
-            this.put("defenderScanScriptsLoadedInInternetExplorer", (n) -> { currentObject.setDefenderScanScriptsLoadedInInternetExplorer(n.getBooleanValue()); });
-            this.put("defenderScanType", (n) -> { currentObject.setDefenderScanType(n.getEnumValue(DefenderScanType.class)); });
-            this.put("defenderScheduledQuickScanTime", (n) -> { currentObject.setDefenderScheduledQuickScanTime(n.getLocalTimeValue()); });
-            this.put("defenderScheduledScanTime", (n) -> { currentObject.setDefenderScheduledScanTime(n.getLocalTimeValue()); });
-            this.put("defenderScheduleScanEnableLowCpuPriority", (n) -> { currentObject.setDefenderScheduleScanEnableLowCpuPriority(n.getBooleanValue()); });
-            this.put("defenderSignatureUpdateIntervalInHours", (n) -> { currentObject.setDefenderSignatureUpdateIntervalInHours(n.getIntegerValue()); });
-            this.put("defenderSubmitSamplesConsentType", (n) -> { currentObject.setDefenderSubmitSamplesConsentType(n.getEnumValue(DefenderSubmitSamplesConsentType.class)); });
-            this.put("defenderSystemScanSchedule", (n) -> { currentObject.setDefenderSystemScanSchedule(n.getEnumValue(WeeklySchedule.class)); });
-            this.put("developerUnlockSetting", (n) -> { currentObject.setDeveloperUnlockSetting(n.getEnumValue(StateManagementSetting.class)); });
-            this.put("deviceManagementBlockFactoryResetOnMobile", (n) -> { currentObject.setDeviceManagementBlockFactoryResetOnMobile(n.getBooleanValue()); });
-            this.put("deviceManagementBlockManualUnenroll", (n) -> { currentObject.setDeviceManagementBlockManualUnenroll(n.getBooleanValue()); });
-            this.put("diagnosticsDataSubmissionMode", (n) -> { currentObject.setDiagnosticsDataSubmissionMode(n.getEnumValue(DiagnosticDataSubmissionMode.class)); });
-            this.put("displayAppListWithGdiDPIScalingTurnedOff", (n) -> { currentObject.setDisplayAppListWithGdiDPIScalingTurnedOff(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("displayAppListWithGdiDPIScalingTurnedOn", (n) -> { currentObject.setDisplayAppListWithGdiDPIScalingTurnedOn(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("edgeAllowStartPagesModification", (n) -> { currentObject.setEdgeAllowStartPagesModification(n.getBooleanValue()); });
-            this.put("edgeBlockAccessToAboutFlags", (n) -> { currentObject.setEdgeBlockAccessToAboutFlags(n.getBooleanValue()); });
-            this.put("edgeBlockAddressBarDropdown", (n) -> { currentObject.setEdgeBlockAddressBarDropdown(n.getBooleanValue()); });
-            this.put("edgeBlockAutofill", (n) -> { currentObject.setEdgeBlockAutofill(n.getBooleanValue()); });
-            this.put("edgeBlockCompatibilityList", (n) -> { currentObject.setEdgeBlockCompatibilityList(n.getBooleanValue()); });
-            this.put("edgeBlockDeveloperTools", (n) -> { currentObject.setEdgeBlockDeveloperTools(n.getBooleanValue()); });
-            this.put("edgeBlocked", (n) -> { currentObject.setEdgeBlocked(n.getBooleanValue()); });
-            this.put("edgeBlockEditFavorites", (n) -> { currentObject.setEdgeBlockEditFavorites(n.getBooleanValue()); });
-            this.put("edgeBlockExtensions", (n) -> { currentObject.setEdgeBlockExtensions(n.getBooleanValue()); });
-            this.put("edgeBlockFullScreenMode", (n) -> { currentObject.setEdgeBlockFullScreenMode(n.getBooleanValue()); });
-            this.put("edgeBlockInPrivateBrowsing", (n) -> { currentObject.setEdgeBlockInPrivateBrowsing(n.getBooleanValue()); });
-            this.put("edgeBlockJavaScript", (n) -> { currentObject.setEdgeBlockJavaScript(n.getBooleanValue()); });
-            this.put("edgeBlockLiveTileDataCollection", (n) -> { currentObject.setEdgeBlockLiveTileDataCollection(n.getBooleanValue()); });
-            this.put("edgeBlockPasswordManager", (n) -> { currentObject.setEdgeBlockPasswordManager(n.getBooleanValue()); });
-            this.put("edgeBlockPopups", (n) -> { currentObject.setEdgeBlockPopups(n.getBooleanValue()); });
-            this.put("edgeBlockPrelaunch", (n) -> { currentObject.setEdgeBlockPrelaunch(n.getBooleanValue()); });
-            this.put("edgeBlockPrinting", (n) -> { currentObject.setEdgeBlockPrinting(n.getBooleanValue()); });
-            this.put("edgeBlockSavingHistory", (n) -> { currentObject.setEdgeBlockSavingHistory(n.getBooleanValue()); });
-            this.put("edgeBlockSearchEngineCustomization", (n) -> { currentObject.setEdgeBlockSearchEngineCustomization(n.getBooleanValue()); });
-            this.put("edgeBlockSearchSuggestions", (n) -> { currentObject.setEdgeBlockSearchSuggestions(n.getBooleanValue()); });
-            this.put("edgeBlockSendingDoNotTrackHeader", (n) -> { currentObject.setEdgeBlockSendingDoNotTrackHeader(n.getBooleanValue()); });
-            this.put("edgeBlockSendingIntranetTrafficToInternetExplorer", (n) -> { currentObject.setEdgeBlockSendingIntranetTrafficToInternetExplorer(n.getBooleanValue()); });
-            this.put("edgeBlockSideloadingExtensions", (n) -> { currentObject.setEdgeBlockSideloadingExtensions(n.getBooleanValue()); });
-            this.put("edgeBlockTabPreloading", (n) -> { currentObject.setEdgeBlockTabPreloading(n.getBooleanValue()); });
-            this.put("edgeBlockWebContentOnNewTabPage", (n) -> { currentObject.setEdgeBlockWebContentOnNewTabPage(n.getBooleanValue()); });
-            this.put("edgeClearBrowsingDataOnExit", (n) -> { currentObject.setEdgeClearBrowsingDataOnExit(n.getBooleanValue()); });
-            this.put("edgeCookiePolicy", (n) -> { currentObject.setEdgeCookiePolicy(n.getEnumValue(EdgeCookiePolicy.class)); });
-            this.put("edgeDisableFirstRunPage", (n) -> { currentObject.setEdgeDisableFirstRunPage(n.getBooleanValue()); });
-            this.put("edgeEnterpriseModeSiteListLocation", (n) -> { currentObject.setEdgeEnterpriseModeSiteListLocation(n.getStringValue()); });
-            this.put("edgeFavoritesBarVisibility", (n) -> { currentObject.setEdgeFavoritesBarVisibility(n.getEnumValue(VisibilitySetting.class)); });
-            this.put("edgeFavoritesListLocation", (n) -> { currentObject.setEdgeFavoritesListLocation(n.getStringValue()); });
-            this.put("edgeFirstRunUrl", (n) -> { currentObject.setEdgeFirstRunUrl(n.getStringValue()); });
-            this.put("edgeHomeButtonConfiguration", (n) -> { currentObject.setEdgeHomeButtonConfiguration(n.getObjectValue(EdgeHomeButtonConfiguration::createFromDiscriminatorValue)); });
-            this.put("edgeHomeButtonConfigurationEnabled", (n) -> { currentObject.setEdgeHomeButtonConfigurationEnabled(n.getBooleanValue()); });
-            this.put("edgeHomepageUrls", (n) -> { currentObject.setEdgeHomepageUrls(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("edgeKioskModeRestriction", (n) -> { currentObject.setEdgeKioskModeRestriction(n.getEnumValue(EdgeKioskModeRestrictionType.class)); });
-            this.put("edgeKioskResetAfterIdleTimeInMinutes", (n) -> { currentObject.setEdgeKioskResetAfterIdleTimeInMinutes(n.getIntegerValue()); });
-            this.put("edgeNewTabPageURL", (n) -> { currentObject.setEdgeNewTabPageURL(n.getStringValue()); });
-            this.put("edgeOpensWith", (n) -> { currentObject.setEdgeOpensWith(n.getEnumValue(EdgeOpenOptions.class)); });
-            this.put("edgePreventCertificateErrorOverride", (n) -> { currentObject.setEdgePreventCertificateErrorOverride(n.getBooleanValue()); });
-            this.put("edgeRequiredExtensionPackageFamilyNames", (n) -> { currentObject.setEdgeRequiredExtensionPackageFamilyNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("edgeRequireSmartScreen", (n) -> { currentObject.setEdgeRequireSmartScreen(n.getBooleanValue()); });
-            this.put("edgeSearchEngine", (n) -> { currentObject.setEdgeSearchEngine(n.getObjectValue(EdgeSearchEngineBase::createFromDiscriminatorValue)); });
-            this.put("edgeSendIntranetTrafficToInternetExplorer", (n) -> { currentObject.setEdgeSendIntranetTrafficToInternetExplorer(n.getBooleanValue()); });
-            this.put("edgeShowMessageWhenOpeningInternetExplorerSites", (n) -> { currentObject.setEdgeShowMessageWhenOpeningInternetExplorerSites(n.getEnumValue(InternetExplorerMessageSetting.class)); });
-            this.put("edgeSyncFavoritesWithInternetExplorer", (n) -> { currentObject.setEdgeSyncFavoritesWithInternetExplorer(n.getBooleanValue()); });
-            this.put("edgeTelemetryForMicrosoft365Analytics", (n) -> { currentObject.setEdgeTelemetryForMicrosoft365Analytics(n.getEnumValue(EdgeTelemetryMode.class)); });
-            this.put("enableAutomaticRedeployment", (n) -> { currentObject.setEnableAutomaticRedeployment(n.getBooleanValue()); });
-            this.put("energySaverOnBatteryThresholdPercentage", (n) -> { currentObject.setEnergySaverOnBatteryThresholdPercentage(n.getIntegerValue()); });
-            this.put("energySaverPluggedInThresholdPercentage", (n) -> { currentObject.setEnergySaverPluggedInThresholdPercentage(n.getIntegerValue()); });
-            this.put("enterpriseCloudPrintDiscoveryEndPoint", (n) -> { currentObject.setEnterpriseCloudPrintDiscoveryEndPoint(n.getStringValue()); });
-            this.put("enterpriseCloudPrintDiscoveryMaxLimit", (n) -> { currentObject.setEnterpriseCloudPrintDiscoveryMaxLimit(n.getIntegerValue()); });
-            this.put("enterpriseCloudPrintMopriaDiscoveryResourceIdentifier", (n) -> { currentObject.setEnterpriseCloudPrintMopriaDiscoveryResourceIdentifier(n.getStringValue()); });
-            this.put("enterpriseCloudPrintOAuthAuthority", (n) -> { currentObject.setEnterpriseCloudPrintOAuthAuthority(n.getStringValue()); });
-            this.put("enterpriseCloudPrintOAuthClientIdentifier", (n) -> { currentObject.setEnterpriseCloudPrintOAuthClientIdentifier(n.getStringValue()); });
-            this.put("enterpriseCloudPrintResourceIdentifier", (n) -> { currentObject.setEnterpriseCloudPrintResourceIdentifier(n.getStringValue()); });
-            this.put("experienceBlockDeviceDiscovery", (n) -> { currentObject.setExperienceBlockDeviceDiscovery(n.getBooleanValue()); });
-            this.put("experienceBlockErrorDialogWhenNoSIM", (n) -> { currentObject.setExperienceBlockErrorDialogWhenNoSIM(n.getBooleanValue()); });
-            this.put("experienceBlockTaskSwitcher", (n) -> { currentObject.setExperienceBlockTaskSwitcher(n.getBooleanValue()); });
-            this.put("experienceDoNotSyncBrowserSettings", (n) -> { currentObject.setExperienceDoNotSyncBrowserSettings(n.getEnumValue(BrowserSyncSetting.class)); });
-            this.put("findMyFiles", (n) -> { currentObject.setFindMyFiles(n.getEnumValue(Enablement.class)); });
-            this.put("gameDvrBlocked", (n) -> { currentObject.setGameDvrBlocked(n.getBooleanValue()); });
-            this.put("inkWorkspaceAccess", (n) -> { currentObject.setInkWorkspaceAccess(n.getEnumValue(InkAccessSetting.class)); });
-            this.put("inkWorkspaceAccessState", (n) -> { currentObject.setInkWorkspaceAccessState(n.getEnumValue(StateManagementSetting.class)); });
-            this.put("inkWorkspaceBlockSuggestedApps", (n) -> { currentObject.setInkWorkspaceBlockSuggestedApps(n.getBooleanValue()); });
-            this.put("internetSharingBlocked", (n) -> { currentObject.setInternetSharingBlocked(n.getBooleanValue()); });
-            this.put("locationServicesBlocked", (n) -> { currentObject.setLocationServicesBlocked(n.getBooleanValue()); });
-            this.put("lockScreenActivateAppsWithVoice", (n) -> { currentObject.setLockScreenActivateAppsWithVoice(n.getEnumValue(Enablement.class)); });
-            this.put("lockScreenAllowTimeoutConfiguration", (n) -> { currentObject.setLockScreenAllowTimeoutConfiguration(n.getBooleanValue()); });
-            this.put("lockScreenBlockActionCenterNotifications", (n) -> { currentObject.setLockScreenBlockActionCenterNotifications(n.getBooleanValue()); });
-            this.put("lockScreenBlockCortana", (n) -> { currentObject.setLockScreenBlockCortana(n.getBooleanValue()); });
-            this.put("lockScreenBlockToastNotifications", (n) -> { currentObject.setLockScreenBlockToastNotifications(n.getBooleanValue()); });
-            this.put("lockScreenTimeoutInSeconds", (n) -> { currentObject.setLockScreenTimeoutInSeconds(n.getIntegerValue()); });
-            this.put("logonBlockFastUserSwitching", (n) -> { currentObject.setLogonBlockFastUserSwitching(n.getBooleanValue()); });
-            this.put("messagingBlockMMS", (n) -> { currentObject.setMessagingBlockMMS(n.getBooleanValue()); });
-            this.put("messagingBlockRichCommunicationServices", (n) -> { currentObject.setMessagingBlockRichCommunicationServices(n.getBooleanValue()); });
-            this.put("messagingBlockSync", (n) -> { currentObject.setMessagingBlockSync(n.getBooleanValue()); });
-            this.put("microsoftAccountBlocked", (n) -> { currentObject.setMicrosoftAccountBlocked(n.getBooleanValue()); });
-            this.put("microsoftAccountBlockSettingsSync", (n) -> { currentObject.setMicrosoftAccountBlockSettingsSync(n.getBooleanValue()); });
-            this.put("microsoftAccountSignInAssistantSettings", (n) -> { currentObject.setMicrosoftAccountSignInAssistantSettings(n.getEnumValue(SignInAssistantOptions.class)); });
-            this.put("networkProxyApplySettingsDeviceWide", (n) -> { currentObject.setNetworkProxyApplySettingsDeviceWide(n.getBooleanValue()); });
-            this.put("networkProxyAutomaticConfigurationUrl", (n) -> { currentObject.setNetworkProxyAutomaticConfigurationUrl(n.getStringValue()); });
-            this.put("networkProxyDisableAutoDetect", (n) -> { currentObject.setNetworkProxyDisableAutoDetect(n.getBooleanValue()); });
-            this.put("networkProxyServer", (n) -> { currentObject.setNetworkProxyServer(n.getObjectValue(Windows10NetworkProxyServer::createFromDiscriminatorValue)); });
-            this.put("nfcBlocked", (n) -> { currentObject.setNfcBlocked(n.getBooleanValue()); });
-            this.put("oneDriveDisableFileSync", (n) -> { currentObject.setOneDriveDisableFileSync(n.getBooleanValue()); });
-            this.put("passwordBlockSimple", (n) -> { currentObject.setPasswordBlockSimple(n.getBooleanValue()); });
-            this.put("passwordExpirationDays", (n) -> { currentObject.setPasswordExpirationDays(n.getIntegerValue()); });
-            this.put("passwordMinimumAgeInDays", (n) -> { currentObject.setPasswordMinimumAgeInDays(n.getIntegerValue()); });
-            this.put("passwordMinimumCharacterSetCount", (n) -> { currentObject.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
-            this.put("passwordMinimumLength", (n) -> { currentObject.setPasswordMinimumLength(n.getIntegerValue()); });
-            this.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-            this.put("passwordPreviousPasswordBlockCount", (n) -> { currentObject.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
-            this.put("passwordRequired", (n) -> { currentObject.setPasswordRequired(n.getBooleanValue()); });
-            this.put("passwordRequiredType", (n) -> { currentObject.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
-            this.put("passwordRequireWhenResumeFromIdleState", (n) -> { currentObject.setPasswordRequireWhenResumeFromIdleState(n.getBooleanValue()); });
-            this.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { currentObject.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
-            this.put("personalizationDesktopImageUrl", (n) -> { currentObject.setPersonalizationDesktopImageUrl(n.getStringValue()); });
-            this.put("personalizationLockScreenImageUrl", (n) -> { currentObject.setPersonalizationLockScreenImageUrl(n.getStringValue()); });
-            this.put("powerButtonActionOnBattery", (n) -> { currentObject.setPowerButtonActionOnBattery(n.getEnumValue(PowerActionType.class)); });
-            this.put("powerButtonActionPluggedIn", (n) -> { currentObject.setPowerButtonActionPluggedIn(n.getEnumValue(PowerActionType.class)); });
-            this.put("powerHybridSleepOnBattery", (n) -> { currentObject.setPowerHybridSleepOnBattery(n.getEnumValue(Enablement.class)); });
-            this.put("powerHybridSleepPluggedIn", (n) -> { currentObject.setPowerHybridSleepPluggedIn(n.getEnumValue(Enablement.class)); });
-            this.put("powerLidCloseActionOnBattery", (n) -> { currentObject.setPowerLidCloseActionOnBattery(n.getEnumValue(PowerActionType.class)); });
-            this.put("powerLidCloseActionPluggedIn", (n) -> { currentObject.setPowerLidCloseActionPluggedIn(n.getEnumValue(PowerActionType.class)); });
-            this.put("powerSleepButtonActionOnBattery", (n) -> { currentObject.setPowerSleepButtonActionOnBattery(n.getEnumValue(PowerActionType.class)); });
-            this.put("powerSleepButtonActionPluggedIn", (n) -> { currentObject.setPowerSleepButtonActionPluggedIn(n.getEnumValue(PowerActionType.class)); });
-            this.put("printerBlockAddition", (n) -> { currentObject.setPrinterBlockAddition(n.getBooleanValue()); });
-            this.put("printerDefaultName", (n) -> { currentObject.setPrinterDefaultName(n.getStringValue()); });
-            this.put("printerNames", (n) -> { currentObject.setPrinterNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("privacyAccessControls", (n) -> { currentObject.setPrivacyAccessControls(n.getCollectionOfObjectValues(WindowsPrivacyDataAccessControlItem::createFromDiscriminatorValue)); });
-            this.put("privacyAdvertisingId", (n) -> { currentObject.setPrivacyAdvertisingId(n.getEnumValue(StateManagementSetting.class)); });
-            this.put("privacyAutoAcceptPairingAndConsentPrompts", (n) -> { currentObject.setPrivacyAutoAcceptPairingAndConsentPrompts(n.getBooleanValue()); });
-            this.put("privacyBlockActivityFeed", (n) -> { currentObject.setPrivacyBlockActivityFeed(n.getBooleanValue()); });
-            this.put("privacyBlockInputPersonalization", (n) -> { currentObject.setPrivacyBlockInputPersonalization(n.getBooleanValue()); });
-            this.put("privacyBlockPublishUserActivities", (n) -> { currentObject.setPrivacyBlockPublishUserActivities(n.getBooleanValue()); });
-            this.put("privacyDisableLaunchExperience", (n) -> { currentObject.setPrivacyDisableLaunchExperience(n.getBooleanValue()); });
-            this.put("resetProtectionModeBlocked", (n) -> { currentObject.setResetProtectionModeBlocked(n.getBooleanValue()); });
-            this.put("safeSearchFilter", (n) -> { currentObject.setSafeSearchFilter(n.getEnumValue(SafeSearchFilterType.class)); });
-            this.put("screenCaptureBlocked", (n) -> { currentObject.setScreenCaptureBlocked(n.getBooleanValue()); });
-            this.put("searchBlockDiacritics", (n) -> { currentObject.setSearchBlockDiacritics(n.getBooleanValue()); });
-            this.put("searchBlockWebResults", (n) -> { currentObject.setSearchBlockWebResults(n.getBooleanValue()); });
-            this.put("searchDisableAutoLanguageDetection", (n) -> { currentObject.setSearchDisableAutoLanguageDetection(n.getBooleanValue()); });
-            this.put("searchDisableIndexerBackoff", (n) -> { currentObject.setSearchDisableIndexerBackoff(n.getBooleanValue()); });
-            this.put("searchDisableIndexingEncryptedItems", (n) -> { currentObject.setSearchDisableIndexingEncryptedItems(n.getBooleanValue()); });
-            this.put("searchDisableIndexingRemovableDrive", (n) -> { currentObject.setSearchDisableIndexingRemovableDrive(n.getBooleanValue()); });
-            this.put("searchDisableLocation", (n) -> { currentObject.setSearchDisableLocation(n.getBooleanValue()); });
-            this.put("searchDisableUseLocation", (n) -> { currentObject.setSearchDisableUseLocation(n.getBooleanValue()); });
-            this.put("searchEnableAutomaticIndexSizeManangement", (n) -> { currentObject.setSearchEnableAutomaticIndexSizeManangement(n.getBooleanValue()); });
-            this.put("searchEnableRemoteQueries", (n) -> { currentObject.setSearchEnableRemoteQueries(n.getBooleanValue()); });
-            this.put("securityBlockAzureADJoinedDevicesAutoEncryption", (n) -> { currentObject.setSecurityBlockAzureADJoinedDevicesAutoEncryption(n.getBooleanValue()); });
-            this.put("settingsBlockAccountsPage", (n) -> { currentObject.setSettingsBlockAccountsPage(n.getBooleanValue()); });
-            this.put("settingsBlockAddProvisioningPackage", (n) -> { currentObject.setSettingsBlockAddProvisioningPackage(n.getBooleanValue()); });
-            this.put("settingsBlockAppsPage", (n) -> { currentObject.setSettingsBlockAppsPage(n.getBooleanValue()); });
-            this.put("settingsBlockChangeLanguage", (n) -> { currentObject.setSettingsBlockChangeLanguage(n.getBooleanValue()); });
-            this.put("settingsBlockChangePowerSleep", (n) -> { currentObject.setSettingsBlockChangePowerSleep(n.getBooleanValue()); });
-            this.put("settingsBlockChangeRegion", (n) -> { currentObject.setSettingsBlockChangeRegion(n.getBooleanValue()); });
-            this.put("settingsBlockChangeSystemTime", (n) -> { currentObject.setSettingsBlockChangeSystemTime(n.getBooleanValue()); });
-            this.put("settingsBlockDevicesPage", (n) -> { currentObject.setSettingsBlockDevicesPage(n.getBooleanValue()); });
-            this.put("settingsBlockEaseOfAccessPage", (n) -> { currentObject.setSettingsBlockEaseOfAccessPage(n.getBooleanValue()); });
-            this.put("settingsBlockEditDeviceName", (n) -> { currentObject.setSettingsBlockEditDeviceName(n.getBooleanValue()); });
-            this.put("settingsBlockGamingPage", (n) -> { currentObject.setSettingsBlockGamingPage(n.getBooleanValue()); });
-            this.put("settingsBlockNetworkInternetPage", (n) -> { currentObject.setSettingsBlockNetworkInternetPage(n.getBooleanValue()); });
-            this.put("settingsBlockPersonalizationPage", (n) -> { currentObject.setSettingsBlockPersonalizationPage(n.getBooleanValue()); });
-            this.put("settingsBlockPrivacyPage", (n) -> { currentObject.setSettingsBlockPrivacyPage(n.getBooleanValue()); });
-            this.put("settingsBlockRemoveProvisioningPackage", (n) -> { currentObject.setSettingsBlockRemoveProvisioningPackage(n.getBooleanValue()); });
-            this.put("settingsBlockSettingsApp", (n) -> { currentObject.setSettingsBlockSettingsApp(n.getBooleanValue()); });
-            this.put("settingsBlockSystemPage", (n) -> { currentObject.setSettingsBlockSystemPage(n.getBooleanValue()); });
-            this.put("settingsBlockTimeLanguagePage", (n) -> { currentObject.setSettingsBlockTimeLanguagePage(n.getBooleanValue()); });
-            this.put("settingsBlockUpdateSecurityPage", (n) -> { currentObject.setSettingsBlockUpdateSecurityPage(n.getBooleanValue()); });
-            this.put("sharedUserAppDataAllowed", (n) -> { currentObject.setSharedUserAppDataAllowed(n.getBooleanValue()); });
-            this.put("smartScreenAppInstallControl", (n) -> { currentObject.setSmartScreenAppInstallControl(n.getEnumValue(AppInstallControlType.class)); });
-            this.put("smartScreenBlockPromptOverride", (n) -> { currentObject.setSmartScreenBlockPromptOverride(n.getBooleanValue()); });
-            this.put("smartScreenBlockPromptOverrideForFiles", (n) -> { currentObject.setSmartScreenBlockPromptOverrideForFiles(n.getBooleanValue()); });
-            this.put("smartScreenEnableAppInstallControl", (n) -> { currentObject.setSmartScreenEnableAppInstallControl(n.getBooleanValue()); });
-            this.put("startBlockUnpinningAppsFromTaskbar", (n) -> { currentObject.setStartBlockUnpinningAppsFromTaskbar(n.getBooleanValue()); });
-            this.put("startMenuAppListVisibility", (n) -> { currentObject.setStartMenuAppListVisibility(n.getEnumValue(WindowsStartMenuAppListVisibilityType.class)); });
-            this.put("startMenuHideChangeAccountSettings", (n) -> { currentObject.setStartMenuHideChangeAccountSettings(n.getBooleanValue()); });
-            this.put("startMenuHideFrequentlyUsedApps", (n) -> { currentObject.setStartMenuHideFrequentlyUsedApps(n.getBooleanValue()); });
-            this.put("startMenuHideHibernate", (n) -> { currentObject.setStartMenuHideHibernate(n.getBooleanValue()); });
-            this.put("startMenuHideLock", (n) -> { currentObject.setStartMenuHideLock(n.getBooleanValue()); });
-            this.put("startMenuHidePowerButton", (n) -> { currentObject.setStartMenuHidePowerButton(n.getBooleanValue()); });
-            this.put("startMenuHideRecentJumpLists", (n) -> { currentObject.setStartMenuHideRecentJumpLists(n.getBooleanValue()); });
-            this.put("startMenuHideRecentlyAddedApps", (n) -> { currentObject.setStartMenuHideRecentlyAddedApps(n.getBooleanValue()); });
-            this.put("startMenuHideRestartOptions", (n) -> { currentObject.setStartMenuHideRestartOptions(n.getBooleanValue()); });
-            this.put("startMenuHideShutDown", (n) -> { currentObject.setStartMenuHideShutDown(n.getBooleanValue()); });
-            this.put("startMenuHideSignOut", (n) -> { currentObject.setStartMenuHideSignOut(n.getBooleanValue()); });
-            this.put("startMenuHideSleep", (n) -> { currentObject.setStartMenuHideSleep(n.getBooleanValue()); });
-            this.put("startMenuHideSwitchAccount", (n) -> { currentObject.setStartMenuHideSwitchAccount(n.getBooleanValue()); });
-            this.put("startMenuHideUserTile", (n) -> { currentObject.setStartMenuHideUserTile(n.getBooleanValue()); });
-            this.put("startMenuLayoutEdgeAssetsXml", (n) -> { currentObject.setStartMenuLayoutEdgeAssetsXml(n.getByteArrayValue()); });
-            this.put("startMenuLayoutXml", (n) -> { currentObject.setStartMenuLayoutXml(n.getByteArrayValue()); });
-            this.put("startMenuMode", (n) -> { currentObject.setStartMenuMode(n.getEnumValue(WindowsStartMenuModeType.class)); });
-            this.put("startMenuPinnedFolderDocuments", (n) -> { currentObject.setStartMenuPinnedFolderDocuments(n.getEnumValue(VisibilitySetting.class)); });
-            this.put("startMenuPinnedFolderDownloads", (n) -> { currentObject.setStartMenuPinnedFolderDownloads(n.getEnumValue(VisibilitySetting.class)); });
-            this.put("startMenuPinnedFolderFileExplorer", (n) -> { currentObject.setStartMenuPinnedFolderFileExplorer(n.getEnumValue(VisibilitySetting.class)); });
-            this.put("startMenuPinnedFolderHomeGroup", (n) -> { currentObject.setStartMenuPinnedFolderHomeGroup(n.getEnumValue(VisibilitySetting.class)); });
-            this.put("startMenuPinnedFolderMusic", (n) -> { currentObject.setStartMenuPinnedFolderMusic(n.getEnumValue(VisibilitySetting.class)); });
-            this.put("startMenuPinnedFolderNetwork", (n) -> { currentObject.setStartMenuPinnedFolderNetwork(n.getEnumValue(VisibilitySetting.class)); });
-            this.put("startMenuPinnedFolderPersonalFolder", (n) -> { currentObject.setStartMenuPinnedFolderPersonalFolder(n.getEnumValue(VisibilitySetting.class)); });
-            this.put("startMenuPinnedFolderPictures", (n) -> { currentObject.setStartMenuPinnedFolderPictures(n.getEnumValue(VisibilitySetting.class)); });
-            this.put("startMenuPinnedFolderSettings", (n) -> { currentObject.setStartMenuPinnedFolderSettings(n.getEnumValue(VisibilitySetting.class)); });
-            this.put("startMenuPinnedFolderVideos", (n) -> { currentObject.setStartMenuPinnedFolderVideos(n.getEnumValue(VisibilitySetting.class)); });
-            this.put("storageBlockRemovableStorage", (n) -> { currentObject.setStorageBlockRemovableStorage(n.getBooleanValue()); });
-            this.put("storageRequireMobileDeviceEncryption", (n) -> { currentObject.setStorageRequireMobileDeviceEncryption(n.getBooleanValue()); });
-            this.put("storageRestrictAppDataToSystemVolume", (n) -> { currentObject.setStorageRestrictAppDataToSystemVolume(n.getBooleanValue()); });
-            this.put("storageRestrictAppInstallToSystemVolume", (n) -> { currentObject.setStorageRestrictAppInstallToSystemVolume(n.getBooleanValue()); });
-            this.put("systemTelemetryProxyServer", (n) -> { currentObject.setSystemTelemetryProxyServer(n.getStringValue()); });
-            this.put("taskManagerBlockEndTask", (n) -> { currentObject.setTaskManagerBlockEndTask(n.getBooleanValue()); });
-            this.put("tenantLockdownRequireNetworkDuringOutOfBoxExperience", (n) -> { currentObject.setTenantLockdownRequireNetworkDuringOutOfBoxExperience(n.getBooleanValue()); });
-            this.put("uninstallBuiltInApps", (n) -> { currentObject.setUninstallBuiltInApps(n.getBooleanValue()); });
-            this.put("usbBlocked", (n) -> { currentObject.setUsbBlocked(n.getBooleanValue()); });
-            this.put("voiceRecordingBlocked", (n) -> { currentObject.setVoiceRecordingBlocked(n.getBooleanValue()); });
-            this.put("webRtcBlockLocalhostIpAddress", (n) -> { currentObject.setWebRtcBlockLocalhostIpAddress(n.getBooleanValue()); });
-            this.put("wiFiBlockAutomaticConnectHotspots", (n) -> { currentObject.setWiFiBlockAutomaticConnectHotspots(n.getBooleanValue()); });
-            this.put("wiFiBlocked", (n) -> { currentObject.setWiFiBlocked(n.getBooleanValue()); });
-            this.put("wiFiBlockManualConfiguration", (n) -> { currentObject.setWiFiBlockManualConfiguration(n.getBooleanValue()); });
-            this.put("wiFiScanInterval", (n) -> { currentObject.setWiFiScanInterval(n.getIntegerValue()); });
-            this.put("windows10AppsForceUpdateSchedule", (n) -> { currentObject.setWindows10AppsForceUpdateSchedule(n.getObjectValue(Windows10AppsForceUpdateSchedule::createFromDiscriminatorValue)); });
-            this.put("windowsSpotlightBlockConsumerSpecificFeatures", (n) -> { currentObject.setWindowsSpotlightBlockConsumerSpecificFeatures(n.getBooleanValue()); });
-            this.put("windowsSpotlightBlocked", (n) -> { currentObject.setWindowsSpotlightBlocked(n.getBooleanValue()); });
-            this.put("windowsSpotlightBlockOnActionCenter", (n) -> { currentObject.setWindowsSpotlightBlockOnActionCenter(n.getBooleanValue()); });
-            this.put("windowsSpotlightBlockTailoredExperiences", (n) -> { currentObject.setWindowsSpotlightBlockTailoredExperiences(n.getBooleanValue()); });
-            this.put("windowsSpotlightBlockThirdPartyNotifications", (n) -> { currentObject.setWindowsSpotlightBlockThirdPartyNotifications(n.getBooleanValue()); });
-            this.put("windowsSpotlightBlockWelcomeExperience", (n) -> { currentObject.setWindowsSpotlightBlockWelcomeExperience(n.getBooleanValue()); });
-            this.put("windowsSpotlightBlockWindowsTips", (n) -> { currentObject.setWindowsSpotlightBlockWindowsTips(n.getBooleanValue()); });
-            this.put("windowsSpotlightConfigureOnLockScreen", (n) -> { currentObject.setWindowsSpotlightConfigureOnLockScreen(n.getEnumValue(WindowsSpotlightEnablementSettings.class)); });
-            this.put("windowsStoreBlockAutoUpdate", (n) -> { currentObject.setWindowsStoreBlockAutoUpdate(n.getBooleanValue()); });
-            this.put("windowsStoreBlocked", (n) -> { currentObject.setWindowsStoreBlocked(n.getBooleanValue()); });
-            this.put("windowsStoreEnablePrivateStoreOnly", (n) -> { currentObject.setWindowsStoreEnablePrivateStoreOnly(n.getBooleanValue()); });
-            this.put("wirelessDisplayBlockProjectionToThisDevice", (n) -> { currentObject.setWirelessDisplayBlockProjectionToThisDevice(n.getBooleanValue()); });
-            this.put("wirelessDisplayBlockUserInputFromReceiver", (n) -> { currentObject.setWirelessDisplayBlockUserInputFromReceiver(n.getBooleanValue()); });
-            this.put("wirelessDisplayRequirePinForPairing", (n) -> { currentObject.setWirelessDisplayRequirePinForPairing(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountsBlockAddingNonMicrosoftAccountEmail", (n) -> { this.setAccountsBlockAddingNonMicrosoftAccountEmail(n.getBooleanValue()); });
+        deserializerMap.put("activateAppsWithVoice", (n) -> { this.setActivateAppsWithVoice(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("antiTheftModeBlocked", (n) -> { this.setAntiTheftModeBlocked(n.getBooleanValue()); });
+        deserializerMap.put("appManagementMSIAllowUserControlOverInstall", (n) -> { this.setAppManagementMSIAllowUserControlOverInstall(n.getBooleanValue()); });
+        deserializerMap.put("appManagementMSIAlwaysInstallWithElevatedPrivileges", (n) -> { this.setAppManagementMSIAlwaysInstallWithElevatedPrivileges(n.getBooleanValue()); });
+        deserializerMap.put("appManagementPackageFamilyNamesToLaunchAfterLogOn", (n) -> { this.setAppManagementPackageFamilyNamesToLaunchAfterLogOn(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("appsAllowTrustedAppsSideloading", (n) -> { this.setAppsAllowTrustedAppsSideloading(n.getEnumValue(StateManagementSetting.class)); });
+        deserializerMap.put("appsBlockWindowsStoreOriginatedApps", (n) -> { this.setAppsBlockWindowsStoreOriginatedApps(n.getBooleanValue()); });
+        deserializerMap.put("authenticationAllowSecondaryDevice", (n) -> { this.setAuthenticationAllowSecondaryDevice(n.getBooleanValue()); });
+        deserializerMap.put("authenticationPreferredAzureADTenantDomainName", (n) -> { this.setAuthenticationPreferredAzureADTenantDomainName(n.getStringValue()); });
+        deserializerMap.put("authenticationWebSignIn", (n) -> { this.setAuthenticationWebSignIn(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("bluetoothAllowedServices", (n) -> { this.setBluetoothAllowedServices(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("bluetoothBlockAdvertising", (n) -> { this.setBluetoothBlockAdvertising(n.getBooleanValue()); });
+        deserializerMap.put("bluetoothBlockDiscoverableMode", (n) -> { this.setBluetoothBlockDiscoverableMode(n.getBooleanValue()); });
+        deserializerMap.put("bluetoothBlocked", (n) -> { this.setBluetoothBlocked(n.getBooleanValue()); });
+        deserializerMap.put("bluetoothBlockPrePairing", (n) -> { this.setBluetoothBlockPrePairing(n.getBooleanValue()); });
+        deserializerMap.put("bluetoothBlockPromptedProximalConnections", (n) -> { this.setBluetoothBlockPromptedProximalConnections(n.getBooleanValue()); });
+        deserializerMap.put("cameraBlocked", (n) -> { this.setCameraBlocked(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockDataWhenRoaming", (n) -> { this.setCellularBlockDataWhenRoaming(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockVpn", (n) -> { this.setCellularBlockVpn(n.getBooleanValue()); });
+        deserializerMap.put("cellularBlockVpnWhenRoaming", (n) -> { this.setCellularBlockVpnWhenRoaming(n.getBooleanValue()); });
+        deserializerMap.put("cellularData", (n) -> { this.setCellularData(n.getEnumValue(ConfigurationUsage.class)); });
+        deserializerMap.put("certificatesBlockManualRootCertificateInstallation", (n) -> { this.setCertificatesBlockManualRootCertificateInstallation(n.getBooleanValue()); });
+        deserializerMap.put("configureTimeZone", (n) -> { this.setConfigureTimeZone(n.getStringValue()); });
+        deserializerMap.put("connectedDevicesServiceBlocked", (n) -> { this.setConnectedDevicesServiceBlocked(n.getBooleanValue()); });
+        deserializerMap.put("copyPasteBlocked", (n) -> { this.setCopyPasteBlocked(n.getBooleanValue()); });
+        deserializerMap.put("cortanaBlocked", (n) -> { this.setCortanaBlocked(n.getBooleanValue()); });
+        deserializerMap.put("cryptographyAllowFipsAlgorithmPolicy", (n) -> { this.setCryptographyAllowFipsAlgorithmPolicy(n.getBooleanValue()); });
+        deserializerMap.put("dataProtectionBlockDirectMemoryAccess", (n) -> { this.setDataProtectionBlockDirectMemoryAccess(n.getBooleanValue()); });
+        deserializerMap.put("defenderBlockEndUserAccess", (n) -> { this.setDefenderBlockEndUserAccess(n.getBooleanValue()); });
+        deserializerMap.put("defenderBlockOnAccessProtection", (n) -> { this.setDefenderBlockOnAccessProtection(n.getBooleanValue()); });
+        deserializerMap.put("defenderCloudBlockLevel", (n) -> { this.setDefenderCloudBlockLevel(n.getEnumValue(DefenderCloudBlockLevelType.class)); });
+        deserializerMap.put("defenderCloudExtendedTimeout", (n) -> { this.setDefenderCloudExtendedTimeout(n.getIntegerValue()); });
+        deserializerMap.put("defenderCloudExtendedTimeoutInSeconds", (n) -> { this.setDefenderCloudExtendedTimeoutInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("defenderDaysBeforeDeletingQuarantinedMalware", (n) -> { this.setDefenderDaysBeforeDeletingQuarantinedMalware(n.getIntegerValue()); });
+        deserializerMap.put("defenderDetectedMalwareActions", (n) -> { this.setDefenderDetectedMalwareActions(n.getObjectValue(DefenderDetectedMalwareActions::createFromDiscriminatorValue)); });
+        deserializerMap.put("defenderDisableCatchupFullScan", (n) -> { this.setDefenderDisableCatchupFullScan(n.getBooleanValue()); });
+        deserializerMap.put("defenderDisableCatchupQuickScan", (n) -> { this.setDefenderDisableCatchupQuickScan(n.getBooleanValue()); });
+        deserializerMap.put("defenderFileExtensionsToExclude", (n) -> { this.setDefenderFileExtensionsToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderFilesAndFoldersToExclude", (n) -> { this.setDefenderFilesAndFoldersToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderMonitorFileActivity", (n) -> { this.setDefenderMonitorFileActivity(n.getEnumValue(DefenderMonitorFileActivity.class)); });
+        deserializerMap.put("defenderPotentiallyUnwantedAppAction", (n) -> { this.setDefenderPotentiallyUnwantedAppAction(n.getEnumValue(DefenderPotentiallyUnwantedAppAction.class)); });
+        deserializerMap.put("defenderPotentiallyUnwantedAppActionSetting", (n) -> { this.setDefenderPotentiallyUnwantedAppActionSetting(n.getEnumValue(DefenderProtectionType.class)); });
+        deserializerMap.put("defenderProcessesToExclude", (n) -> { this.setDefenderProcessesToExclude(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("defenderPromptForSampleSubmission", (n) -> { this.setDefenderPromptForSampleSubmission(n.getEnumValue(DefenderPromptForSampleSubmission.class)); });
+        deserializerMap.put("defenderRequireBehaviorMonitoring", (n) -> { this.setDefenderRequireBehaviorMonitoring(n.getBooleanValue()); });
+        deserializerMap.put("defenderRequireCloudProtection", (n) -> { this.setDefenderRequireCloudProtection(n.getBooleanValue()); });
+        deserializerMap.put("defenderRequireNetworkInspectionSystem", (n) -> { this.setDefenderRequireNetworkInspectionSystem(n.getBooleanValue()); });
+        deserializerMap.put("defenderRequireRealTimeMonitoring", (n) -> { this.setDefenderRequireRealTimeMonitoring(n.getBooleanValue()); });
+        deserializerMap.put("defenderScanArchiveFiles", (n) -> { this.setDefenderScanArchiveFiles(n.getBooleanValue()); });
+        deserializerMap.put("defenderScanDownloads", (n) -> { this.setDefenderScanDownloads(n.getBooleanValue()); });
+        deserializerMap.put("defenderScanIncomingMail", (n) -> { this.setDefenderScanIncomingMail(n.getBooleanValue()); });
+        deserializerMap.put("defenderScanMappedNetworkDrivesDuringFullScan", (n) -> { this.setDefenderScanMappedNetworkDrivesDuringFullScan(n.getBooleanValue()); });
+        deserializerMap.put("defenderScanMaxCpu", (n) -> { this.setDefenderScanMaxCpu(n.getIntegerValue()); });
+        deserializerMap.put("defenderScanNetworkFiles", (n) -> { this.setDefenderScanNetworkFiles(n.getBooleanValue()); });
+        deserializerMap.put("defenderScanRemovableDrivesDuringFullScan", (n) -> { this.setDefenderScanRemovableDrivesDuringFullScan(n.getBooleanValue()); });
+        deserializerMap.put("defenderScanScriptsLoadedInInternetExplorer", (n) -> { this.setDefenderScanScriptsLoadedInInternetExplorer(n.getBooleanValue()); });
+        deserializerMap.put("defenderScanType", (n) -> { this.setDefenderScanType(n.getEnumValue(DefenderScanType.class)); });
+        deserializerMap.put("defenderScheduledQuickScanTime", (n) -> { this.setDefenderScheduledQuickScanTime(n.getLocalTimeValue()); });
+        deserializerMap.put("defenderScheduledScanTime", (n) -> { this.setDefenderScheduledScanTime(n.getLocalTimeValue()); });
+        deserializerMap.put("defenderScheduleScanEnableLowCpuPriority", (n) -> { this.setDefenderScheduleScanEnableLowCpuPriority(n.getBooleanValue()); });
+        deserializerMap.put("defenderSignatureUpdateIntervalInHours", (n) -> { this.setDefenderSignatureUpdateIntervalInHours(n.getIntegerValue()); });
+        deserializerMap.put("defenderSubmitSamplesConsentType", (n) -> { this.setDefenderSubmitSamplesConsentType(n.getEnumValue(DefenderSubmitSamplesConsentType.class)); });
+        deserializerMap.put("defenderSystemScanSchedule", (n) -> { this.setDefenderSystemScanSchedule(n.getEnumValue(WeeklySchedule.class)); });
+        deserializerMap.put("developerUnlockSetting", (n) -> { this.setDeveloperUnlockSetting(n.getEnumValue(StateManagementSetting.class)); });
+        deserializerMap.put("deviceManagementBlockFactoryResetOnMobile", (n) -> { this.setDeviceManagementBlockFactoryResetOnMobile(n.getBooleanValue()); });
+        deserializerMap.put("deviceManagementBlockManualUnenroll", (n) -> { this.setDeviceManagementBlockManualUnenroll(n.getBooleanValue()); });
+        deserializerMap.put("diagnosticsDataSubmissionMode", (n) -> { this.setDiagnosticsDataSubmissionMode(n.getEnumValue(DiagnosticDataSubmissionMode.class)); });
+        deserializerMap.put("displayAppListWithGdiDPIScalingTurnedOff", (n) -> { this.setDisplayAppListWithGdiDPIScalingTurnedOff(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("displayAppListWithGdiDPIScalingTurnedOn", (n) -> { this.setDisplayAppListWithGdiDPIScalingTurnedOn(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("edgeAllowStartPagesModification", (n) -> { this.setEdgeAllowStartPagesModification(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockAccessToAboutFlags", (n) -> { this.setEdgeBlockAccessToAboutFlags(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockAddressBarDropdown", (n) -> { this.setEdgeBlockAddressBarDropdown(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockAutofill", (n) -> { this.setEdgeBlockAutofill(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockCompatibilityList", (n) -> { this.setEdgeBlockCompatibilityList(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockDeveloperTools", (n) -> { this.setEdgeBlockDeveloperTools(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlocked", (n) -> { this.setEdgeBlocked(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockEditFavorites", (n) -> { this.setEdgeBlockEditFavorites(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockExtensions", (n) -> { this.setEdgeBlockExtensions(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockFullScreenMode", (n) -> { this.setEdgeBlockFullScreenMode(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockInPrivateBrowsing", (n) -> { this.setEdgeBlockInPrivateBrowsing(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockJavaScript", (n) -> { this.setEdgeBlockJavaScript(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockLiveTileDataCollection", (n) -> { this.setEdgeBlockLiveTileDataCollection(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockPasswordManager", (n) -> { this.setEdgeBlockPasswordManager(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockPopups", (n) -> { this.setEdgeBlockPopups(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockPrelaunch", (n) -> { this.setEdgeBlockPrelaunch(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockPrinting", (n) -> { this.setEdgeBlockPrinting(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockSavingHistory", (n) -> { this.setEdgeBlockSavingHistory(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockSearchEngineCustomization", (n) -> { this.setEdgeBlockSearchEngineCustomization(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockSearchSuggestions", (n) -> { this.setEdgeBlockSearchSuggestions(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockSendingDoNotTrackHeader", (n) -> { this.setEdgeBlockSendingDoNotTrackHeader(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockSendingIntranetTrafficToInternetExplorer", (n) -> { this.setEdgeBlockSendingIntranetTrafficToInternetExplorer(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockSideloadingExtensions", (n) -> { this.setEdgeBlockSideloadingExtensions(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockTabPreloading", (n) -> { this.setEdgeBlockTabPreloading(n.getBooleanValue()); });
+        deserializerMap.put("edgeBlockWebContentOnNewTabPage", (n) -> { this.setEdgeBlockWebContentOnNewTabPage(n.getBooleanValue()); });
+        deserializerMap.put("edgeClearBrowsingDataOnExit", (n) -> { this.setEdgeClearBrowsingDataOnExit(n.getBooleanValue()); });
+        deserializerMap.put("edgeCookiePolicy", (n) -> { this.setEdgeCookiePolicy(n.getEnumValue(EdgeCookiePolicy.class)); });
+        deserializerMap.put("edgeDisableFirstRunPage", (n) -> { this.setEdgeDisableFirstRunPage(n.getBooleanValue()); });
+        deserializerMap.put("edgeEnterpriseModeSiteListLocation", (n) -> { this.setEdgeEnterpriseModeSiteListLocation(n.getStringValue()); });
+        deserializerMap.put("edgeFavoritesBarVisibility", (n) -> { this.setEdgeFavoritesBarVisibility(n.getEnumValue(VisibilitySetting.class)); });
+        deserializerMap.put("edgeFavoritesListLocation", (n) -> { this.setEdgeFavoritesListLocation(n.getStringValue()); });
+        deserializerMap.put("edgeFirstRunUrl", (n) -> { this.setEdgeFirstRunUrl(n.getStringValue()); });
+        deserializerMap.put("edgeHomeButtonConfiguration", (n) -> { this.setEdgeHomeButtonConfiguration(n.getObjectValue(EdgeHomeButtonConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("edgeHomeButtonConfigurationEnabled", (n) -> { this.setEdgeHomeButtonConfigurationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("edgeHomepageUrls", (n) -> { this.setEdgeHomepageUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("edgeKioskModeRestriction", (n) -> { this.setEdgeKioskModeRestriction(n.getEnumValue(EdgeKioskModeRestrictionType.class)); });
+        deserializerMap.put("edgeKioskResetAfterIdleTimeInMinutes", (n) -> { this.setEdgeKioskResetAfterIdleTimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("edgeNewTabPageURL", (n) -> { this.setEdgeNewTabPageURL(n.getStringValue()); });
+        deserializerMap.put("edgeOpensWith", (n) -> { this.setEdgeOpensWith(n.getEnumValue(EdgeOpenOptions.class)); });
+        deserializerMap.put("edgePreventCertificateErrorOverride", (n) -> { this.setEdgePreventCertificateErrorOverride(n.getBooleanValue()); });
+        deserializerMap.put("edgeRequiredExtensionPackageFamilyNames", (n) -> { this.setEdgeRequiredExtensionPackageFamilyNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("edgeRequireSmartScreen", (n) -> { this.setEdgeRequireSmartScreen(n.getBooleanValue()); });
+        deserializerMap.put("edgeSearchEngine", (n) -> { this.setEdgeSearchEngine(n.getObjectValue(EdgeSearchEngineBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("edgeSendIntranetTrafficToInternetExplorer", (n) -> { this.setEdgeSendIntranetTrafficToInternetExplorer(n.getBooleanValue()); });
+        deserializerMap.put("edgeShowMessageWhenOpeningInternetExplorerSites", (n) -> { this.setEdgeShowMessageWhenOpeningInternetExplorerSites(n.getEnumValue(InternetExplorerMessageSetting.class)); });
+        deserializerMap.put("edgeSyncFavoritesWithInternetExplorer", (n) -> { this.setEdgeSyncFavoritesWithInternetExplorer(n.getBooleanValue()); });
+        deserializerMap.put("edgeTelemetryForMicrosoft365Analytics", (n) -> { this.setEdgeTelemetryForMicrosoft365Analytics(n.getEnumValue(EdgeTelemetryMode.class)); });
+        deserializerMap.put("enableAutomaticRedeployment", (n) -> { this.setEnableAutomaticRedeployment(n.getBooleanValue()); });
+        deserializerMap.put("energySaverOnBatteryThresholdPercentage", (n) -> { this.setEnergySaverOnBatteryThresholdPercentage(n.getIntegerValue()); });
+        deserializerMap.put("energySaverPluggedInThresholdPercentage", (n) -> { this.setEnergySaverPluggedInThresholdPercentage(n.getIntegerValue()); });
+        deserializerMap.put("enterpriseCloudPrintDiscoveryEndPoint", (n) -> { this.setEnterpriseCloudPrintDiscoveryEndPoint(n.getStringValue()); });
+        deserializerMap.put("enterpriseCloudPrintDiscoveryMaxLimit", (n) -> { this.setEnterpriseCloudPrintDiscoveryMaxLimit(n.getIntegerValue()); });
+        deserializerMap.put("enterpriseCloudPrintMopriaDiscoveryResourceIdentifier", (n) -> { this.setEnterpriseCloudPrintMopriaDiscoveryResourceIdentifier(n.getStringValue()); });
+        deserializerMap.put("enterpriseCloudPrintOAuthAuthority", (n) -> { this.setEnterpriseCloudPrintOAuthAuthority(n.getStringValue()); });
+        deserializerMap.put("enterpriseCloudPrintOAuthClientIdentifier", (n) -> { this.setEnterpriseCloudPrintOAuthClientIdentifier(n.getStringValue()); });
+        deserializerMap.put("enterpriseCloudPrintResourceIdentifier", (n) -> { this.setEnterpriseCloudPrintResourceIdentifier(n.getStringValue()); });
+        deserializerMap.put("experienceBlockDeviceDiscovery", (n) -> { this.setExperienceBlockDeviceDiscovery(n.getBooleanValue()); });
+        deserializerMap.put("experienceBlockErrorDialogWhenNoSIM", (n) -> { this.setExperienceBlockErrorDialogWhenNoSIM(n.getBooleanValue()); });
+        deserializerMap.put("experienceBlockTaskSwitcher", (n) -> { this.setExperienceBlockTaskSwitcher(n.getBooleanValue()); });
+        deserializerMap.put("experienceDoNotSyncBrowserSettings", (n) -> { this.setExperienceDoNotSyncBrowserSettings(n.getEnumValue(BrowserSyncSetting.class)); });
+        deserializerMap.put("findMyFiles", (n) -> { this.setFindMyFiles(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("gameDvrBlocked", (n) -> { this.setGameDvrBlocked(n.getBooleanValue()); });
+        deserializerMap.put("inkWorkspaceAccess", (n) -> { this.setInkWorkspaceAccess(n.getEnumValue(InkAccessSetting.class)); });
+        deserializerMap.put("inkWorkspaceAccessState", (n) -> { this.setInkWorkspaceAccessState(n.getEnumValue(StateManagementSetting.class)); });
+        deserializerMap.put("inkWorkspaceBlockSuggestedApps", (n) -> { this.setInkWorkspaceBlockSuggestedApps(n.getBooleanValue()); });
+        deserializerMap.put("internetSharingBlocked", (n) -> { this.setInternetSharingBlocked(n.getBooleanValue()); });
+        deserializerMap.put("locationServicesBlocked", (n) -> { this.setLocationServicesBlocked(n.getBooleanValue()); });
+        deserializerMap.put("lockScreenActivateAppsWithVoice", (n) -> { this.setLockScreenActivateAppsWithVoice(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("lockScreenAllowTimeoutConfiguration", (n) -> { this.setLockScreenAllowTimeoutConfiguration(n.getBooleanValue()); });
+        deserializerMap.put("lockScreenBlockActionCenterNotifications", (n) -> { this.setLockScreenBlockActionCenterNotifications(n.getBooleanValue()); });
+        deserializerMap.put("lockScreenBlockCortana", (n) -> { this.setLockScreenBlockCortana(n.getBooleanValue()); });
+        deserializerMap.put("lockScreenBlockToastNotifications", (n) -> { this.setLockScreenBlockToastNotifications(n.getBooleanValue()); });
+        deserializerMap.put("lockScreenTimeoutInSeconds", (n) -> { this.setLockScreenTimeoutInSeconds(n.getIntegerValue()); });
+        deserializerMap.put("logonBlockFastUserSwitching", (n) -> { this.setLogonBlockFastUserSwitching(n.getBooleanValue()); });
+        deserializerMap.put("messagingBlockMMS", (n) -> { this.setMessagingBlockMMS(n.getBooleanValue()); });
+        deserializerMap.put("messagingBlockRichCommunicationServices", (n) -> { this.setMessagingBlockRichCommunicationServices(n.getBooleanValue()); });
+        deserializerMap.put("messagingBlockSync", (n) -> { this.setMessagingBlockSync(n.getBooleanValue()); });
+        deserializerMap.put("microsoftAccountBlocked", (n) -> { this.setMicrosoftAccountBlocked(n.getBooleanValue()); });
+        deserializerMap.put("microsoftAccountBlockSettingsSync", (n) -> { this.setMicrosoftAccountBlockSettingsSync(n.getBooleanValue()); });
+        deserializerMap.put("microsoftAccountSignInAssistantSettings", (n) -> { this.setMicrosoftAccountSignInAssistantSettings(n.getEnumValue(SignInAssistantOptions.class)); });
+        deserializerMap.put("networkProxyApplySettingsDeviceWide", (n) -> { this.setNetworkProxyApplySettingsDeviceWide(n.getBooleanValue()); });
+        deserializerMap.put("networkProxyAutomaticConfigurationUrl", (n) -> { this.setNetworkProxyAutomaticConfigurationUrl(n.getStringValue()); });
+        deserializerMap.put("networkProxyDisableAutoDetect", (n) -> { this.setNetworkProxyDisableAutoDetect(n.getBooleanValue()); });
+        deserializerMap.put("networkProxyServer", (n) -> { this.setNetworkProxyServer(n.getObjectValue(Windows10NetworkProxyServer::createFromDiscriminatorValue)); });
+        deserializerMap.put("nfcBlocked", (n) -> { this.setNfcBlocked(n.getBooleanValue()); });
+        deserializerMap.put("oneDriveDisableFileSync", (n) -> { this.setOneDriveDisableFileSync(n.getBooleanValue()); });
+        deserializerMap.put("passwordBlockSimple", (n) -> { this.setPasswordBlockSimple(n.getBooleanValue()); });
+        deserializerMap.put("passwordExpirationDays", (n) -> { this.setPasswordExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumAgeInDays", (n) -> { this.setPasswordMinimumAgeInDays(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumCharacterSetCount", (n) -> { this.setPasswordMinimumCharacterSetCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinimumLength", (n) -> { this.setPasswordMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passwordMinutesOfInactivityBeforeScreenTimeout", (n) -> { this.setPasswordMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
+        deserializerMap.put("passwordPreviousPasswordBlockCount", (n) -> { this.setPasswordPreviousPasswordBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passwordRequired", (n) -> { this.setPasswordRequired(n.getBooleanValue()); });
+        deserializerMap.put("passwordRequiredType", (n) -> { this.setPasswordRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
+        deserializerMap.put("passwordRequireWhenResumeFromIdleState", (n) -> { this.setPasswordRequireWhenResumeFromIdleState(n.getBooleanValue()); });
+        deserializerMap.put("passwordSignInFailureCountBeforeFactoryReset", (n) -> { this.setPasswordSignInFailureCountBeforeFactoryReset(n.getIntegerValue()); });
+        deserializerMap.put("personalizationDesktopImageUrl", (n) -> { this.setPersonalizationDesktopImageUrl(n.getStringValue()); });
+        deserializerMap.put("personalizationLockScreenImageUrl", (n) -> { this.setPersonalizationLockScreenImageUrl(n.getStringValue()); });
+        deserializerMap.put("powerButtonActionOnBattery", (n) -> { this.setPowerButtonActionOnBattery(n.getEnumValue(PowerActionType.class)); });
+        deserializerMap.put("powerButtonActionPluggedIn", (n) -> { this.setPowerButtonActionPluggedIn(n.getEnumValue(PowerActionType.class)); });
+        deserializerMap.put("powerHybridSleepOnBattery", (n) -> { this.setPowerHybridSleepOnBattery(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("powerHybridSleepPluggedIn", (n) -> { this.setPowerHybridSleepPluggedIn(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("powerLidCloseActionOnBattery", (n) -> { this.setPowerLidCloseActionOnBattery(n.getEnumValue(PowerActionType.class)); });
+        deserializerMap.put("powerLidCloseActionPluggedIn", (n) -> { this.setPowerLidCloseActionPluggedIn(n.getEnumValue(PowerActionType.class)); });
+        deserializerMap.put("powerSleepButtonActionOnBattery", (n) -> { this.setPowerSleepButtonActionOnBattery(n.getEnumValue(PowerActionType.class)); });
+        deserializerMap.put("powerSleepButtonActionPluggedIn", (n) -> { this.setPowerSleepButtonActionPluggedIn(n.getEnumValue(PowerActionType.class)); });
+        deserializerMap.put("printerBlockAddition", (n) -> { this.setPrinterBlockAddition(n.getBooleanValue()); });
+        deserializerMap.put("printerDefaultName", (n) -> { this.setPrinterDefaultName(n.getStringValue()); });
+        deserializerMap.put("printerNames", (n) -> { this.setPrinterNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("privacyAccessControls", (n) -> { this.setPrivacyAccessControls(n.getCollectionOfObjectValues(WindowsPrivacyDataAccessControlItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("privacyAdvertisingId", (n) -> { this.setPrivacyAdvertisingId(n.getEnumValue(StateManagementSetting.class)); });
+        deserializerMap.put("privacyAutoAcceptPairingAndConsentPrompts", (n) -> { this.setPrivacyAutoAcceptPairingAndConsentPrompts(n.getBooleanValue()); });
+        deserializerMap.put("privacyBlockActivityFeed", (n) -> { this.setPrivacyBlockActivityFeed(n.getBooleanValue()); });
+        deserializerMap.put("privacyBlockInputPersonalization", (n) -> { this.setPrivacyBlockInputPersonalization(n.getBooleanValue()); });
+        deserializerMap.put("privacyBlockPublishUserActivities", (n) -> { this.setPrivacyBlockPublishUserActivities(n.getBooleanValue()); });
+        deserializerMap.put("privacyDisableLaunchExperience", (n) -> { this.setPrivacyDisableLaunchExperience(n.getBooleanValue()); });
+        deserializerMap.put("resetProtectionModeBlocked", (n) -> { this.setResetProtectionModeBlocked(n.getBooleanValue()); });
+        deserializerMap.put("safeSearchFilter", (n) -> { this.setSafeSearchFilter(n.getEnumValue(SafeSearchFilterType.class)); });
+        deserializerMap.put("screenCaptureBlocked", (n) -> { this.setScreenCaptureBlocked(n.getBooleanValue()); });
+        deserializerMap.put("searchBlockDiacritics", (n) -> { this.setSearchBlockDiacritics(n.getBooleanValue()); });
+        deserializerMap.put("searchBlockWebResults", (n) -> { this.setSearchBlockWebResults(n.getBooleanValue()); });
+        deserializerMap.put("searchDisableAutoLanguageDetection", (n) -> { this.setSearchDisableAutoLanguageDetection(n.getBooleanValue()); });
+        deserializerMap.put("searchDisableIndexerBackoff", (n) -> { this.setSearchDisableIndexerBackoff(n.getBooleanValue()); });
+        deserializerMap.put("searchDisableIndexingEncryptedItems", (n) -> { this.setSearchDisableIndexingEncryptedItems(n.getBooleanValue()); });
+        deserializerMap.put("searchDisableIndexingRemovableDrive", (n) -> { this.setSearchDisableIndexingRemovableDrive(n.getBooleanValue()); });
+        deserializerMap.put("searchDisableLocation", (n) -> { this.setSearchDisableLocation(n.getBooleanValue()); });
+        deserializerMap.put("searchDisableUseLocation", (n) -> { this.setSearchDisableUseLocation(n.getBooleanValue()); });
+        deserializerMap.put("searchEnableAutomaticIndexSizeManangement", (n) -> { this.setSearchEnableAutomaticIndexSizeManangement(n.getBooleanValue()); });
+        deserializerMap.put("searchEnableRemoteQueries", (n) -> { this.setSearchEnableRemoteQueries(n.getBooleanValue()); });
+        deserializerMap.put("securityBlockAzureADJoinedDevicesAutoEncryption", (n) -> { this.setSecurityBlockAzureADJoinedDevicesAutoEncryption(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockAccountsPage", (n) -> { this.setSettingsBlockAccountsPage(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockAddProvisioningPackage", (n) -> { this.setSettingsBlockAddProvisioningPackage(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockAppsPage", (n) -> { this.setSettingsBlockAppsPage(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockChangeLanguage", (n) -> { this.setSettingsBlockChangeLanguage(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockChangePowerSleep", (n) -> { this.setSettingsBlockChangePowerSleep(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockChangeRegion", (n) -> { this.setSettingsBlockChangeRegion(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockChangeSystemTime", (n) -> { this.setSettingsBlockChangeSystemTime(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockDevicesPage", (n) -> { this.setSettingsBlockDevicesPage(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockEaseOfAccessPage", (n) -> { this.setSettingsBlockEaseOfAccessPage(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockEditDeviceName", (n) -> { this.setSettingsBlockEditDeviceName(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockGamingPage", (n) -> { this.setSettingsBlockGamingPage(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockNetworkInternetPage", (n) -> { this.setSettingsBlockNetworkInternetPage(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockPersonalizationPage", (n) -> { this.setSettingsBlockPersonalizationPage(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockPrivacyPage", (n) -> { this.setSettingsBlockPrivacyPage(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockRemoveProvisioningPackage", (n) -> { this.setSettingsBlockRemoveProvisioningPackage(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockSettingsApp", (n) -> { this.setSettingsBlockSettingsApp(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockSystemPage", (n) -> { this.setSettingsBlockSystemPage(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockTimeLanguagePage", (n) -> { this.setSettingsBlockTimeLanguagePage(n.getBooleanValue()); });
+        deserializerMap.put("settingsBlockUpdateSecurityPage", (n) -> { this.setSettingsBlockUpdateSecurityPage(n.getBooleanValue()); });
+        deserializerMap.put("sharedUserAppDataAllowed", (n) -> { this.setSharedUserAppDataAllowed(n.getBooleanValue()); });
+        deserializerMap.put("smartScreenAppInstallControl", (n) -> { this.setSmartScreenAppInstallControl(n.getEnumValue(AppInstallControlType.class)); });
+        deserializerMap.put("smartScreenBlockPromptOverride", (n) -> { this.setSmartScreenBlockPromptOverride(n.getBooleanValue()); });
+        deserializerMap.put("smartScreenBlockPromptOverrideForFiles", (n) -> { this.setSmartScreenBlockPromptOverrideForFiles(n.getBooleanValue()); });
+        deserializerMap.put("smartScreenEnableAppInstallControl", (n) -> { this.setSmartScreenEnableAppInstallControl(n.getBooleanValue()); });
+        deserializerMap.put("startBlockUnpinningAppsFromTaskbar", (n) -> { this.setStartBlockUnpinningAppsFromTaskbar(n.getBooleanValue()); });
+        deserializerMap.put("startMenuAppListVisibility", (n) -> { this.setStartMenuAppListVisibility(n.getEnumValue(WindowsStartMenuAppListVisibilityType.class)); });
+        deserializerMap.put("startMenuHideChangeAccountSettings", (n) -> { this.setStartMenuHideChangeAccountSettings(n.getBooleanValue()); });
+        deserializerMap.put("startMenuHideFrequentlyUsedApps", (n) -> { this.setStartMenuHideFrequentlyUsedApps(n.getBooleanValue()); });
+        deserializerMap.put("startMenuHideHibernate", (n) -> { this.setStartMenuHideHibernate(n.getBooleanValue()); });
+        deserializerMap.put("startMenuHideLock", (n) -> { this.setStartMenuHideLock(n.getBooleanValue()); });
+        deserializerMap.put("startMenuHidePowerButton", (n) -> { this.setStartMenuHidePowerButton(n.getBooleanValue()); });
+        deserializerMap.put("startMenuHideRecentJumpLists", (n) -> { this.setStartMenuHideRecentJumpLists(n.getBooleanValue()); });
+        deserializerMap.put("startMenuHideRecentlyAddedApps", (n) -> { this.setStartMenuHideRecentlyAddedApps(n.getBooleanValue()); });
+        deserializerMap.put("startMenuHideRestartOptions", (n) -> { this.setStartMenuHideRestartOptions(n.getBooleanValue()); });
+        deserializerMap.put("startMenuHideShutDown", (n) -> { this.setStartMenuHideShutDown(n.getBooleanValue()); });
+        deserializerMap.put("startMenuHideSignOut", (n) -> { this.setStartMenuHideSignOut(n.getBooleanValue()); });
+        deserializerMap.put("startMenuHideSleep", (n) -> { this.setStartMenuHideSleep(n.getBooleanValue()); });
+        deserializerMap.put("startMenuHideSwitchAccount", (n) -> { this.setStartMenuHideSwitchAccount(n.getBooleanValue()); });
+        deserializerMap.put("startMenuHideUserTile", (n) -> { this.setStartMenuHideUserTile(n.getBooleanValue()); });
+        deserializerMap.put("startMenuLayoutEdgeAssetsXml", (n) -> { this.setStartMenuLayoutEdgeAssetsXml(n.getByteArrayValue()); });
+        deserializerMap.put("startMenuLayoutXml", (n) -> { this.setStartMenuLayoutXml(n.getByteArrayValue()); });
+        deserializerMap.put("startMenuMode", (n) -> { this.setStartMenuMode(n.getEnumValue(WindowsStartMenuModeType.class)); });
+        deserializerMap.put("startMenuPinnedFolderDocuments", (n) -> { this.setStartMenuPinnedFolderDocuments(n.getEnumValue(VisibilitySetting.class)); });
+        deserializerMap.put("startMenuPinnedFolderDownloads", (n) -> { this.setStartMenuPinnedFolderDownloads(n.getEnumValue(VisibilitySetting.class)); });
+        deserializerMap.put("startMenuPinnedFolderFileExplorer", (n) -> { this.setStartMenuPinnedFolderFileExplorer(n.getEnumValue(VisibilitySetting.class)); });
+        deserializerMap.put("startMenuPinnedFolderHomeGroup", (n) -> { this.setStartMenuPinnedFolderHomeGroup(n.getEnumValue(VisibilitySetting.class)); });
+        deserializerMap.put("startMenuPinnedFolderMusic", (n) -> { this.setStartMenuPinnedFolderMusic(n.getEnumValue(VisibilitySetting.class)); });
+        deserializerMap.put("startMenuPinnedFolderNetwork", (n) -> { this.setStartMenuPinnedFolderNetwork(n.getEnumValue(VisibilitySetting.class)); });
+        deserializerMap.put("startMenuPinnedFolderPersonalFolder", (n) -> { this.setStartMenuPinnedFolderPersonalFolder(n.getEnumValue(VisibilitySetting.class)); });
+        deserializerMap.put("startMenuPinnedFolderPictures", (n) -> { this.setStartMenuPinnedFolderPictures(n.getEnumValue(VisibilitySetting.class)); });
+        deserializerMap.put("startMenuPinnedFolderSettings", (n) -> { this.setStartMenuPinnedFolderSettings(n.getEnumValue(VisibilitySetting.class)); });
+        deserializerMap.put("startMenuPinnedFolderVideos", (n) -> { this.setStartMenuPinnedFolderVideos(n.getEnumValue(VisibilitySetting.class)); });
+        deserializerMap.put("storageBlockRemovableStorage", (n) -> { this.setStorageBlockRemovableStorage(n.getBooleanValue()); });
+        deserializerMap.put("storageRequireMobileDeviceEncryption", (n) -> { this.setStorageRequireMobileDeviceEncryption(n.getBooleanValue()); });
+        deserializerMap.put("storageRestrictAppDataToSystemVolume", (n) -> { this.setStorageRestrictAppDataToSystemVolume(n.getBooleanValue()); });
+        deserializerMap.put("storageRestrictAppInstallToSystemVolume", (n) -> { this.setStorageRestrictAppInstallToSystemVolume(n.getBooleanValue()); });
+        deserializerMap.put("systemTelemetryProxyServer", (n) -> { this.setSystemTelemetryProxyServer(n.getStringValue()); });
+        deserializerMap.put("taskManagerBlockEndTask", (n) -> { this.setTaskManagerBlockEndTask(n.getBooleanValue()); });
+        deserializerMap.put("tenantLockdownRequireNetworkDuringOutOfBoxExperience", (n) -> { this.setTenantLockdownRequireNetworkDuringOutOfBoxExperience(n.getBooleanValue()); });
+        deserializerMap.put("uninstallBuiltInApps", (n) -> { this.setUninstallBuiltInApps(n.getBooleanValue()); });
+        deserializerMap.put("usbBlocked", (n) -> { this.setUsbBlocked(n.getBooleanValue()); });
+        deserializerMap.put("voiceRecordingBlocked", (n) -> { this.setVoiceRecordingBlocked(n.getBooleanValue()); });
+        deserializerMap.put("webRtcBlockLocalhostIpAddress", (n) -> { this.setWebRtcBlockLocalhostIpAddress(n.getBooleanValue()); });
+        deserializerMap.put("wiFiBlockAutomaticConnectHotspots", (n) -> { this.setWiFiBlockAutomaticConnectHotspots(n.getBooleanValue()); });
+        deserializerMap.put("wiFiBlocked", (n) -> { this.setWiFiBlocked(n.getBooleanValue()); });
+        deserializerMap.put("wiFiBlockManualConfiguration", (n) -> { this.setWiFiBlockManualConfiguration(n.getBooleanValue()); });
+        deserializerMap.put("wiFiScanInterval", (n) -> { this.setWiFiScanInterval(n.getIntegerValue()); });
+        deserializerMap.put("windows10AppsForceUpdateSchedule", (n) -> { this.setWindows10AppsForceUpdateSchedule(n.getObjectValue(Windows10AppsForceUpdateSchedule::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsSpotlightBlockConsumerSpecificFeatures", (n) -> { this.setWindowsSpotlightBlockConsumerSpecificFeatures(n.getBooleanValue()); });
+        deserializerMap.put("windowsSpotlightBlocked", (n) -> { this.setWindowsSpotlightBlocked(n.getBooleanValue()); });
+        deserializerMap.put("windowsSpotlightBlockOnActionCenter", (n) -> { this.setWindowsSpotlightBlockOnActionCenter(n.getBooleanValue()); });
+        deserializerMap.put("windowsSpotlightBlockTailoredExperiences", (n) -> { this.setWindowsSpotlightBlockTailoredExperiences(n.getBooleanValue()); });
+        deserializerMap.put("windowsSpotlightBlockThirdPartyNotifications", (n) -> { this.setWindowsSpotlightBlockThirdPartyNotifications(n.getBooleanValue()); });
+        deserializerMap.put("windowsSpotlightBlockWelcomeExperience", (n) -> { this.setWindowsSpotlightBlockWelcomeExperience(n.getBooleanValue()); });
+        deserializerMap.put("windowsSpotlightBlockWindowsTips", (n) -> { this.setWindowsSpotlightBlockWindowsTips(n.getBooleanValue()); });
+        deserializerMap.put("windowsSpotlightConfigureOnLockScreen", (n) -> { this.setWindowsSpotlightConfigureOnLockScreen(n.getEnumValue(WindowsSpotlightEnablementSettings.class)); });
+        deserializerMap.put("windowsStoreBlockAutoUpdate", (n) -> { this.setWindowsStoreBlockAutoUpdate(n.getBooleanValue()); });
+        deserializerMap.put("windowsStoreBlocked", (n) -> { this.setWindowsStoreBlocked(n.getBooleanValue()); });
+        deserializerMap.put("windowsStoreEnablePrivateStoreOnly", (n) -> { this.setWindowsStoreEnablePrivateStoreOnly(n.getBooleanValue()); });
+        deserializerMap.put("wirelessDisplayBlockProjectionToThisDevice", (n) -> { this.setWirelessDisplayBlockProjectionToThisDevice(n.getBooleanValue()); });
+        deserializerMap.put("wirelessDisplayBlockUserInputFromReceiver", (n) -> { this.setWirelessDisplayBlockUserInputFromReceiver(n.getBooleanValue()); });
+        deserializerMap.put("wirelessDisplayRequirePinForPairing", (n) -> { this.setWirelessDisplayRequirePinForPairing(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the findMyFiles property value. Possible values of a property
@@ -2087,7 +2087,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._microsoftAccountSignInAssistantSettings;
     }
     /**
-     * Gets the networkProxyApplySettingsDeviceWide property value. If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM.
+     * Gets the networkProxyApplySettingsDeviceWide property value. If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account thats enrolled into MDM.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -2375,7 +2375,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._privacyBlockPublishUserActivities;
     }
     /**
-     * Gets the privacyDisableLaunchExperience property value. This policy prevents the privacy experience from launching during user logon for new and upgraded users.​
+     * Gets the privacyDisableLaunchExperience property value. This policy prevents the privacy experience from launching during user logon for new and upgraded users.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -2479,7 +2479,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._searchEnableAutomaticIndexSizeManangement;
     }
     /**
-     * Gets the searchEnableRemoteQueries property value. Indicates whether or not to block remote queries of this computer’s index.
+     * Gets the searchEnableRemoteQueries property value. Indicates whether or not to block remote queries of this computers index.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -3063,7 +3063,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this._windowsSpotlightBlockOnActionCenter;
     }
     /**
-     * Gets the windowsSpotlightBlockTailoredExperiences property value. Block personalized content in Windows spotlight based on user’s device usage.
+     * Gets the windowsSpotlightBlockTailoredExperiences property value. Block personalized content in Windows spotlight based on users device usage.
      * @return a boolean
      */
     @javax.annotation.Nullable
@@ -3155,6 +3155,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -3447,6 +3448,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the accountsBlockAddingNonMicrosoftAccountEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountsBlockAddingNonMicrosoftAccountEmail(@javax.annotation.Nullable final Boolean value) {
         this._accountsBlockAddingNonMicrosoftAccountEmail = value;
     }
@@ -3455,6 +3457,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the activateAppsWithVoice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivateAppsWithVoice(@javax.annotation.Nullable final Enablement value) {
         this._activateAppsWithVoice = value;
     }
@@ -3463,6 +3466,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the antiTheftModeBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAntiTheftModeBlocked(@javax.annotation.Nullable final Boolean value) {
         this._antiTheftModeBlocked = value;
     }
@@ -3471,6 +3475,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appManagementMSIAllowUserControlOverInstall property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppManagementMSIAllowUserControlOverInstall(@javax.annotation.Nullable final Boolean value) {
         this._appManagementMSIAllowUserControlOverInstall = value;
     }
@@ -3479,14 +3484,16 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appManagementMSIAlwaysInstallWithElevatedPrivileges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppManagementMSIAlwaysInstallWithElevatedPrivileges(@javax.annotation.Nullable final Boolean value) {
         this._appManagementMSIAlwaysInstallWithElevatedPrivileges = value;
     }
     /**
-     * Sets the appManagementPackageFamilyNamesToLaunchAfterLogOn property value. List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.​
+     * Sets the appManagementPackageFamilyNamesToLaunchAfterLogOn property value. List of semi-colon delimited Package Family Names of Windows apps. Listed Windows apps are to be launched after logon.
      * @param value Value to set for the appManagementPackageFamilyNamesToLaunchAfterLogOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppManagementPackageFamilyNamesToLaunchAfterLogOn(@javax.annotation.Nullable final java.util.List<String> value) {
         this._appManagementPackageFamilyNamesToLaunchAfterLogOn = value;
     }
@@ -3495,6 +3502,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appsAllowTrustedAppsSideloading property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsAllowTrustedAppsSideloading(@javax.annotation.Nullable final StateManagementSetting value) {
         this._appsAllowTrustedAppsSideloading = value;
     }
@@ -3503,6 +3511,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the appsBlockWindowsStoreOriginatedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppsBlockWindowsStoreOriginatedApps(@javax.annotation.Nullable final Boolean value) {
         this._appsBlockWindowsStoreOriginatedApps = value;
     }
@@ -3511,6 +3520,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the authenticationAllowSecondaryDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationAllowSecondaryDevice(@javax.annotation.Nullable final Boolean value) {
         this._authenticationAllowSecondaryDevice = value;
     }
@@ -3519,6 +3529,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the authenticationPreferredAzureADTenantDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationPreferredAzureADTenantDomainName(@javax.annotation.Nullable final String value) {
         this._authenticationPreferredAzureADTenantDomainName = value;
     }
@@ -3527,6 +3538,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the authenticationWebSignIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationWebSignIn(@javax.annotation.Nullable final Enablement value) {
         this._authenticationWebSignIn = value;
     }
@@ -3535,6 +3547,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the bluetoothAllowedServices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBluetoothAllowedServices(@javax.annotation.Nullable final java.util.List<String> value) {
         this._bluetoothAllowedServices = value;
     }
@@ -3543,6 +3556,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the bluetoothBlockAdvertising property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBluetoothBlockAdvertising(@javax.annotation.Nullable final Boolean value) {
         this._bluetoothBlockAdvertising = value;
     }
@@ -3551,6 +3565,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the bluetoothBlockDiscoverableMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBluetoothBlockDiscoverableMode(@javax.annotation.Nullable final Boolean value) {
         this._bluetoothBlockDiscoverableMode = value;
     }
@@ -3559,6 +3574,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the bluetoothBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBluetoothBlocked(@javax.annotation.Nullable final Boolean value) {
         this._bluetoothBlocked = value;
     }
@@ -3567,6 +3583,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the bluetoothBlockPrePairing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBluetoothBlockPrePairing(@javax.annotation.Nullable final Boolean value) {
         this._bluetoothBlockPrePairing = value;
     }
@@ -3575,6 +3592,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the bluetoothBlockPromptedProximalConnections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBluetoothBlockPromptedProximalConnections(@javax.annotation.Nullable final Boolean value) {
         this._bluetoothBlockPromptedProximalConnections = value;
     }
@@ -3583,6 +3601,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cameraBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCameraBlocked(@javax.annotation.Nullable final Boolean value) {
         this._cameraBlocked = value;
     }
@@ -3591,6 +3610,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockDataWhenRoaming property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockDataWhenRoaming(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockDataWhenRoaming = value;
     }
@@ -3599,6 +3619,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockVpn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockVpn(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockVpn = value;
     }
@@ -3607,6 +3628,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularBlockVpnWhenRoaming property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularBlockVpnWhenRoaming(@javax.annotation.Nullable final Boolean value) {
         this._cellularBlockVpnWhenRoaming = value;
     }
@@ -3615,6 +3637,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cellularData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCellularData(@javax.annotation.Nullable final ConfigurationUsage value) {
         this._cellularData = value;
     }
@@ -3623,6 +3646,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the certificatesBlockManualRootCertificateInstallation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificatesBlockManualRootCertificateInstallation(@javax.annotation.Nullable final Boolean value) {
         this._certificatesBlockManualRootCertificateInstallation = value;
     }
@@ -3631,6 +3655,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the configureTimeZone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigureTimeZone(@javax.annotation.Nullable final String value) {
         this._configureTimeZone = value;
     }
@@ -3639,6 +3664,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the connectedDevicesServiceBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectedDevicesServiceBlocked(@javax.annotation.Nullable final Boolean value) {
         this._connectedDevicesServiceBlocked = value;
     }
@@ -3647,6 +3673,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the copyPasteBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCopyPasteBlocked(@javax.annotation.Nullable final Boolean value) {
         this._copyPasteBlocked = value;
     }
@@ -3655,6 +3682,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cortanaBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCortanaBlocked(@javax.annotation.Nullable final Boolean value) {
         this._cortanaBlocked = value;
     }
@@ -3663,6 +3691,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the cryptographyAllowFipsAlgorithmPolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCryptographyAllowFipsAlgorithmPolicy(@javax.annotation.Nullable final Boolean value) {
         this._cryptographyAllowFipsAlgorithmPolicy = value;
     }
@@ -3671,6 +3700,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the dataProtectionBlockDirectMemoryAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataProtectionBlockDirectMemoryAccess(@javax.annotation.Nullable final Boolean value) {
         this._dataProtectionBlockDirectMemoryAccess = value;
     }
@@ -3679,6 +3709,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderBlockEndUserAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderBlockEndUserAccess(@javax.annotation.Nullable final Boolean value) {
         this._defenderBlockEndUserAccess = value;
     }
@@ -3687,6 +3718,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderBlockOnAccessProtection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderBlockOnAccessProtection(@javax.annotation.Nullable final Boolean value) {
         this._defenderBlockOnAccessProtection = value;
     }
@@ -3695,6 +3727,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderCloudBlockLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderCloudBlockLevel(@javax.annotation.Nullable final DefenderCloudBlockLevelType value) {
         this._defenderCloudBlockLevel = value;
     }
@@ -3703,6 +3736,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderCloudExtendedTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderCloudExtendedTimeout(@javax.annotation.Nullable final Integer value) {
         this._defenderCloudExtendedTimeout = value;
     }
@@ -3711,6 +3745,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderCloudExtendedTimeoutInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderCloudExtendedTimeoutInSeconds(@javax.annotation.Nullable final Integer value) {
         this._defenderCloudExtendedTimeoutInSeconds = value;
     }
@@ -3719,14 +3754,16 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderDaysBeforeDeletingQuarantinedMalware property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDaysBeforeDeletingQuarantinedMalware(@javax.annotation.Nullable final Integer value) {
         this._defenderDaysBeforeDeletingQuarantinedMalware = value;
     }
     /**
-     * Sets the defenderDetectedMalwareActions property value. Gets or sets Defender’s actions to take on detected Malware per threat level.
+     * Sets the defenderDetectedMalwareActions property value. Gets or sets Defenders actions to take on detected Malware per threat level.
      * @param value Value to set for the defenderDetectedMalwareActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDetectedMalwareActions(@javax.annotation.Nullable final DefenderDetectedMalwareActions value) {
         this._defenderDetectedMalwareActions = value;
     }
@@ -3735,6 +3772,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderDisableCatchupFullScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableCatchupFullScan(@javax.annotation.Nullable final Boolean value) {
         this._defenderDisableCatchupFullScan = value;
     }
@@ -3743,6 +3781,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderDisableCatchupQuickScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderDisableCatchupQuickScan(@javax.annotation.Nullable final Boolean value) {
         this._defenderDisableCatchupQuickScan = value;
     }
@@ -3751,6 +3790,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderFileExtensionsToExclude property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderFileExtensionsToExclude(@javax.annotation.Nullable final java.util.List<String> value) {
         this._defenderFileExtensionsToExclude = value;
     }
@@ -3759,6 +3799,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderFilesAndFoldersToExclude property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderFilesAndFoldersToExclude(@javax.annotation.Nullable final java.util.List<String> value) {
         this._defenderFilesAndFoldersToExclude = value;
     }
@@ -3767,14 +3808,16 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderMonitorFileActivity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderMonitorFileActivity(@javax.annotation.Nullable final DefenderMonitorFileActivity value) {
         this._defenderMonitorFileActivity = value;
     }
     /**
-     * Sets the defenderPotentiallyUnwantedAppAction property value. Gets or sets Defender’s action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
+     * Sets the defenderPotentiallyUnwantedAppAction property value. Gets or sets Defenders action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
      * @param value Value to set for the defenderPotentiallyUnwantedAppAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderPotentiallyUnwantedAppAction(@javax.annotation.Nullable final DefenderPotentiallyUnwantedAppAction value) {
         this._defenderPotentiallyUnwantedAppAction = value;
     }
@@ -3783,6 +3826,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderPotentiallyUnwantedAppActionSetting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderPotentiallyUnwantedAppActionSetting(@javax.annotation.Nullable final DefenderProtectionType value) {
         this._defenderPotentiallyUnwantedAppActionSetting = value;
     }
@@ -3791,6 +3835,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderProcessesToExclude property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderProcessesToExclude(@javax.annotation.Nullable final java.util.List<String> value) {
         this._defenderProcessesToExclude = value;
     }
@@ -3799,6 +3844,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderPromptForSampleSubmission property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderPromptForSampleSubmission(@javax.annotation.Nullable final DefenderPromptForSampleSubmission value) {
         this._defenderPromptForSampleSubmission = value;
     }
@@ -3807,6 +3853,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderRequireBehaviorMonitoring property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderRequireBehaviorMonitoring(@javax.annotation.Nullable final Boolean value) {
         this._defenderRequireBehaviorMonitoring = value;
     }
@@ -3815,6 +3862,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderRequireCloudProtection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderRequireCloudProtection(@javax.annotation.Nullable final Boolean value) {
         this._defenderRequireCloudProtection = value;
     }
@@ -3823,6 +3871,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderRequireNetworkInspectionSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderRequireNetworkInspectionSystem(@javax.annotation.Nullable final Boolean value) {
         this._defenderRequireNetworkInspectionSystem = value;
     }
@@ -3831,6 +3880,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderRequireRealTimeMonitoring property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderRequireRealTimeMonitoring(@javax.annotation.Nullable final Boolean value) {
         this._defenderRequireRealTimeMonitoring = value;
     }
@@ -3839,6 +3889,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderScanArchiveFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScanArchiveFiles(@javax.annotation.Nullable final Boolean value) {
         this._defenderScanArchiveFiles = value;
     }
@@ -3847,6 +3898,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderScanDownloads property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScanDownloads(@javax.annotation.Nullable final Boolean value) {
         this._defenderScanDownloads = value;
     }
@@ -3855,6 +3907,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderScanIncomingMail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScanIncomingMail(@javax.annotation.Nullable final Boolean value) {
         this._defenderScanIncomingMail = value;
     }
@@ -3863,6 +3916,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderScanMappedNetworkDrivesDuringFullScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScanMappedNetworkDrivesDuringFullScan(@javax.annotation.Nullable final Boolean value) {
         this._defenderScanMappedNetworkDrivesDuringFullScan = value;
     }
@@ -3871,6 +3925,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderScanMaxCpu property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScanMaxCpu(@javax.annotation.Nullable final Integer value) {
         this._defenderScanMaxCpu = value;
     }
@@ -3879,6 +3934,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderScanNetworkFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScanNetworkFiles(@javax.annotation.Nullable final Boolean value) {
         this._defenderScanNetworkFiles = value;
     }
@@ -3887,6 +3943,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderScanRemovableDrivesDuringFullScan property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScanRemovableDrivesDuringFullScan(@javax.annotation.Nullable final Boolean value) {
         this._defenderScanRemovableDrivesDuringFullScan = value;
     }
@@ -3895,6 +3952,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderScanScriptsLoadedInInternetExplorer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScanScriptsLoadedInInternetExplorer(@javax.annotation.Nullable final Boolean value) {
         this._defenderScanScriptsLoadedInInternetExplorer = value;
     }
@@ -3903,6 +3961,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderScanType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScanType(@javax.annotation.Nullable final DefenderScanType value) {
         this._defenderScanType = value;
     }
@@ -3911,6 +3970,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderScheduledQuickScanTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScheduledQuickScanTime(@javax.annotation.Nullable final LocalTime value) {
         this._defenderScheduledQuickScanTime = value;
     }
@@ -3919,6 +3979,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderScheduledScanTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScheduledScanTime(@javax.annotation.Nullable final LocalTime value) {
         this._defenderScheduledScanTime = value;
     }
@@ -3927,6 +3988,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderScheduleScanEnableLowCpuPriority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderScheduleScanEnableLowCpuPriority(@javax.annotation.Nullable final Boolean value) {
         this._defenderScheduleScanEnableLowCpuPriority = value;
     }
@@ -3935,6 +3997,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderSignatureUpdateIntervalInHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSignatureUpdateIntervalInHours(@javax.annotation.Nullable final Integer value) {
         this._defenderSignatureUpdateIntervalInHours = value;
     }
@@ -3943,6 +4006,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderSubmitSamplesConsentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSubmitSamplesConsentType(@javax.annotation.Nullable final DefenderSubmitSamplesConsentType value) {
         this._defenderSubmitSamplesConsentType = value;
     }
@@ -3951,6 +4015,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the defenderSystemScanSchedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefenderSystemScanSchedule(@javax.annotation.Nullable final WeeklySchedule value) {
         this._defenderSystemScanSchedule = value;
     }
@@ -3959,6 +4024,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the developerUnlockSetting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeveloperUnlockSetting(@javax.annotation.Nullable final StateManagementSetting value) {
         this._developerUnlockSetting = value;
     }
@@ -3967,6 +4033,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the deviceManagementBlockFactoryResetOnMobile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceManagementBlockFactoryResetOnMobile(@javax.annotation.Nullable final Boolean value) {
         this._deviceManagementBlockFactoryResetOnMobile = value;
     }
@@ -3975,6 +4042,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the deviceManagementBlockManualUnenroll property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceManagementBlockManualUnenroll(@javax.annotation.Nullable final Boolean value) {
         this._deviceManagementBlockManualUnenroll = value;
     }
@@ -3983,6 +4051,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the diagnosticsDataSubmissionMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDiagnosticsDataSubmissionMode(@javax.annotation.Nullable final DiagnosticDataSubmissionMode value) {
         this._diagnosticsDataSubmissionMode = value;
     }
@@ -3991,6 +4060,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the displayAppListWithGdiDPIScalingTurnedOff property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayAppListWithGdiDPIScalingTurnedOff(@javax.annotation.Nullable final java.util.List<String> value) {
         this._displayAppListWithGdiDPIScalingTurnedOff = value;
     }
@@ -3999,6 +4069,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the displayAppListWithGdiDPIScalingTurnedOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayAppListWithGdiDPIScalingTurnedOn(@javax.annotation.Nullable final java.util.List<String> value) {
         this._displayAppListWithGdiDPIScalingTurnedOn = value;
     }
@@ -4007,6 +4078,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeAllowStartPagesModification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeAllowStartPagesModification(@javax.annotation.Nullable final Boolean value) {
         this._edgeAllowStartPagesModification = value;
     }
@@ -4015,6 +4087,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockAccessToAboutFlags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockAccessToAboutFlags(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockAccessToAboutFlags = value;
     }
@@ -4023,6 +4096,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockAddressBarDropdown property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockAddressBarDropdown(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockAddressBarDropdown = value;
     }
@@ -4031,6 +4105,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockAutofill property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockAutofill(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockAutofill = value;
     }
@@ -4039,6 +4114,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockCompatibilityList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockCompatibilityList(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockCompatibilityList = value;
     }
@@ -4047,6 +4123,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockDeveloperTools property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockDeveloperTools(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockDeveloperTools = value;
     }
@@ -4055,6 +4132,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlocked(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlocked = value;
     }
@@ -4063,6 +4141,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockEditFavorites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockEditFavorites(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockEditFavorites = value;
     }
@@ -4071,6 +4150,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockExtensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockExtensions(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockExtensions = value;
     }
@@ -4079,6 +4159,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockFullScreenMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockFullScreenMode(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockFullScreenMode = value;
     }
@@ -4087,6 +4168,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockInPrivateBrowsing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockInPrivateBrowsing(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockInPrivateBrowsing = value;
     }
@@ -4095,6 +4177,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockJavaScript property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockJavaScript(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockJavaScript = value;
     }
@@ -4103,6 +4186,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockLiveTileDataCollection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockLiveTileDataCollection(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockLiveTileDataCollection = value;
     }
@@ -4111,6 +4195,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockPasswordManager property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockPasswordManager(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockPasswordManager = value;
     }
@@ -4119,6 +4204,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockPopups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockPopups(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockPopups = value;
     }
@@ -4127,6 +4213,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockPrelaunch property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockPrelaunch(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockPrelaunch = value;
     }
@@ -4135,6 +4222,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockPrinting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockPrinting(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockPrinting = value;
     }
@@ -4143,6 +4231,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockSavingHistory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockSavingHistory(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockSavingHistory = value;
     }
@@ -4151,6 +4240,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockSearchEngineCustomization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockSearchEngineCustomization(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockSearchEngineCustomization = value;
     }
@@ -4159,6 +4249,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockSearchSuggestions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockSearchSuggestions(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockSearchSuggestions = value;
     }
@@ -4167,6 +4258,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockSendingDoNotTrackHeader property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockSendingDoNotTrackHeader(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockSendingDoNotTrackHeader = value;
     }
@@ -4175,6 +4267,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockSendingIntranetTrafficToInternetExplorer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockSendingIntranetTrafficToInternetExplorer(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockSendingIntranetTrafficToInternetExplorer = value;
     }
@@ -4183,6 +4276,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockSideloadingExtensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockSideloadingExtensions(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockSideloadingExtensions = value;
     }
@@ -4191,6 +4285,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockTabPreloading property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockTabPreloading(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockTabPreloading = value;
     }
@@ -4199,6 +4294,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeBlockWebContentOnNewTabPage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeBlockWebContentOnNewTabPage(@javax.annotation.Nullable final Boolean value) {
         this._edgeBlockWebContentOnNewTabPage = value;
     }
@@ -4207,6 +4303,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeClearBrowsingDataOnExit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeClearBrowsingDataOnExit(@javax.annotation.Nullable final Boolean value) {
         this._edgeClearBrowsingDataOnExit = value;
     }
@@ -4215,6 +4312,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeCookiePolicy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeCookiePolicy(@javax.annotation.Nullable final EdgeCookiePolicy value) {
         this._edgeCookiePolicy = value;
     }
@@ -4223,6 +4321,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeDisableFirstRunPage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeDisableFirstRunPage(@javax.annotation.Nullable final Boolean value) {
         this._edgeDisableFirstRunPage = value;
     }
@@ -4231,6 +4330,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeEnterpriseModeSiteListLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeEnterpriseModeSiteListLocation(@javax.annotation.Nullable final String value) {
         this._edgeEnterpriseModeSiteListLocation = value;
     }
@@ -4239,6 +4339,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeFavoritesBarVisibility property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeFavoritesBarVisibility(@javax.annotation.Nullable final VisibilitySetting value) {
         this._edgeFavoritesBarVisibility = value;
     }
@@ -4247,6 +4348,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeFavoritesListLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeFavoritesListLocation(@javax.annotation.Nullable final String value) {
         this._edgeFavoritesListLocation = value;
     }
@@ -4255,6 +4357,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeFirstRunUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeFirstRunUrl(@javax.annotation.Nullable final String value) {
         this._edgeFirstRunUrl = value;
     }
@@ -4263,6 +4366,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeHomeButtonConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeHomeButtonConfiguration(@javax.annotation.Nullable final EdgeHomeButtonConfiguration value) {
         this._edgeHomeButtonConfiguration = value;
     }
@@ -4271,6 +4375,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeHomeButtonConfigurationEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeHomeButtonConfigurationEnabled(@javax.annotation.Nullable final Boolean value) {
         this._edgeHomeButtonConfigurationEnabled = value;
     }
@@ -4279,6 +4384,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeHomepageUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeHomepageUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._edgeHomepageUrls = value;
     }
@@ -4287,6 +4393,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeKioskModeRestriction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeKioskModeRestriction(@javax.annotation.Nullable final EdgeKioskModeRestrictionType value) {
         this._edgeKioskModeRestriction = value;
     }
@@ -4295,6 +4402,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeKioskResetAfterIdleTimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeKioskResetAfterIdleTimeInMinutes(@javax.annotation.Nullable final Integer value) {
         this._edgeKioskResetAfterIdleTimeInMinutes = value;
     }
@@ -4303,6 +4411,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeNewTabPageURL property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeNewTabPageURL(@javax.annotation.Nullable final String value) {
         this._edgeNewTabPageURL = value;
     }
@@ -4311,6 +4420,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeOpensWith property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeOpensWith(@javax.annotation.Nullable final EdgeOpenOptions value) {
         this._edgeOpensWith = value;
     }
@@ -4319,6 +4429,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgePreventCertificateErrorOverride property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgePreventCertificateErrorOverride(@javax.annotation.Nullable final Boolean value) {
         this._edgePreventCertificateErrorOverride = value;
     }
@@ -4327,6 +4438,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeRequiredExtensionPackageFamilyNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeRequiredExtensionPackageFamilyNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._edgeRequiredExtensionPackageFamilyNames = value;
     }
@@ -4335,6 +4447,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeRequireSmartScreen property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeRequireSmartScreen(@javax.annotation.Nullable final Boolean value) {
         this._edgeRequireSmartScreen = value;
     }
@@ -4343,6 +4456,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeSearchEngine property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeSearchEngine(@javax.annotation.Nullable final EdgeSearchEngineBase value) {
         this._edgeSearchEngine = value;
     }
@@ -4351,6 +4465,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeSendIntranetTrafficToInternetExplorer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeSendIntranetTrafficToInternetExplorer(@javax.annotation.Nullable final Boolean value) {
         this._edgeSendIntranetTrafficToInternetExplorer = value;
     }
@@ -4359,6 +4474,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeShowMessageWhenOpeningInternetExplorerSites property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeShowMessageWhenOpeningInternetExplorerSites(@javax.annotation.Nullable final InternetExplorerMessageSetting value) {
         this._edgeShowMessageWhenOpeningInternetExplorerSites = value;
     }
@@ -4367,6 +4483,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeSyncFavoritesWithInternetExplorer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeSyncFavoritesWithInternetExplorer(@javax.annotation.Nullable final Boolean value) {
         this._edgeSyncFavoritesWithInternetExplorer = value;
     }
@@ -4375,6 +4492,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the edgeTelemetryForMicrosoft365Analytics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeTelemetryForMicrosoft365Analytics(@javax.annotation.Nullable final EdgeTelemetryMode value) {
         this._edgeTelemetryForMicrosoft365Analytics = value;
     }
@@ -4383,6 +4501,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the enableAutomaticRedeployment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnableAutomaticRedeployment(@javax.annotation.Nullable final Boolean value) {
         this._enableAutomaticRedeployment = value;
     }
@@ -4391,6 +4510,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the energySaverOnBatteryThresholdPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnergySaverOnBatteryThresholdPercentage(@javax.annotation.Nullable final Integer value) {
         this._energySaverOnBatteryThresholdPercentage = value;
     }
@@ -4399,6 +4519,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the energySaverPluggedInThresholdPercentage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnergySaverPluggedInThresholdPercentage(@javax.annotation.Nullable final Integer value) {
         this._energySaverPluggedInThresholdPercentage = value;
     }
@@ -4407,6 +4528,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the enterpriseCloudPrintDiscoveryEndPoint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseCloudPrintDiscoveryEndPoint(@javax.annotation.Nullable final String value) {
         this._enterpriseCloudPrintDiscoveryEndPoint = value;
     }
@@ -4415,6 +4537,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the enterpriseCloudPrintDiscoveryMaxLimit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseCloudPrintDiscoveryMaxLimit(@javax.annotation.Nullable final Integer value) {
         this._enterpriseCloudPrintDiscoveryMaxLimit = value;
     }
@@ -4423,6 +4546,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the enterpriseCloudPrintMopriaDiscoveryResourceIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseCloudPrintMopriaDiscoveryResourceIdentifier(@javax.annotation.Nullable final String value) {
         this._enterpriseCloudPrintMopriaDiscoveryResourceIdentifier = value;
     }
@@ -4431,6 +4555,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the enterpriseCloudPrintOAuthAuthority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseCloudPrintOAuthAuthority(@javax.annotation.Nullable final String value) {
         this._enterpriseCloudPrintOAuthAuthority = value;
     }
@@ -4439,6 +4564,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the enterpriseCloudPrintOAuthClientIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseCloudPrintOAuthClientIdentifier(@javax.annotation.Nullable final String value) {
         this._enterpriseCloudPrintOAuthClientIdentifier = value;
     }
@@ -4447,6 +4573,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the enterpriseCloudPrintResourceIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnterpriseCloudPrintResourceIdentifier(@javax.annotation.Nullable final String value) {
         this._enterpriseCloudPrintResourceIdentifier = value;
     }
@@ -4455,6 +4582,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the experienceBlockDeviceDiscovery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExperienceBlockDeviceDiscovery(@javax.annotation.Nullable final Boolean value) {
         this._experienceBlockDeviceDiscovery = value;
     }
@@ -4463,6 +4591,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the experienceBlockErrorDialogWhenNoSIM property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExperienceBlockErrorDialogWhenNoSIM(@javax.annotation.Nullable final Boolean value) {
         this._experienceBlockErrorDialogWhenNoSIM = value;
     }
@@ -4471,6 +4600,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the experienceBlockTaskSwitcher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExperienceBlockTaskSwitcher(@javax.annotation.Nullable final Boolean value) {
         this._experienceBlockTaskSwitcher = value;
     }
@@ -4479,6 +4609,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the experienceDoNotSyncBrowserSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExperienceDoNotSyncBrowserSettings(@javax.annotation.Nullable final BrowserSyncSetting value) {
         this._experienceDoNotSyncBrowserSettings = value;
     }
@@ -4487,6 +4618,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the findMyFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFindMyFiles(@javax.annotation.Nullable final Enablement value) {
         this._findMyFiles = value;
     }
@@ -4495,6 +4627,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the gameDvrBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGameDvrBlocked(@javax.annotation.Nullable final Boolean value) {
         this._gameDvrBlocked = value;
     }
@@ -4503,6 +4636,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the inkWorkspaceAccess property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInkWorkspaceAccess(@javax.annotation.Nullable final InkAccessSetting value) {
         this._inkWorkspaceAccess = value;
     }
@@ -4511,6 +4645,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the inkWorkspaceAccessState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInkWorkspaceAccessState(@javax.annotation.Nullable final StateManagementSetting value) {
         this._inkWorkspaceAccessState = value;
     }
@@ -4519,6 +4654,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the inkWorkspaceBlockSuggestedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInkWorkspaceBlockSuggestedApps(@javax.annotation.Nullable final Boolean value) {
         this._inkWorkspaceBlockSuggestedApps = value;
     }
@@ -4527,6 +4663,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the internetSharingBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInternetSharingBlocked(@javax.annotation.Nullable final Boolean value) {
         this._internetSharingBlocked = value;
     }
@@ -4535,6 +4672,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the locationServicesBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocationServicesBlocked(@javax.annotation.Nullable final Boolean value) {
         this._locationServicesBlocked = value;
     }
@@ -4543,6 +4681,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the lockScreenActivateAppsWithVoice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLockScreenActivateAppsWithVoice(@javax.annotation.Nullable final Enablement value) {
         this._lockScreenActivateAppsWithVoice = value;
     }
@@ -4551,6 +4690,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the lockScreenAllowTimeoutConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLockScreenAllowTimeoutConfiguration(@javax.annotation.Nullable final Boolean value) {
         this._lockScreenAllowTimeoutConfiguration = value;
     }
@@ -4559,6 +4699,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the lockScreenBlockActionCenterNotifications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLockScreenBlockActionCenterNotifications(@javax.annotation.Nullable final Boolean value) {
         this._lockScreenBlockActionCenterNotifications = value;
     }
@@ -4567,6 +4708,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the lockScreenBlockCortana property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLockScreenBlockCortana(@javax.annotation.Nullable final Boolean value) {
         this._lockScreenBlockCortana = value;
     }
@@ -4575,6 +4717,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the lockScreenBlockToastNotifications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLockScreenBlockToastNotifications(@javax.annotation.Nullable final Boolean value) {
         this._lockScreenBlockToastNotifications = value;
     }
@@ -4583,6 +4726,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the lockScreenTimeoutInSeconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLockScreenTimeoutInSeconds(@javax.annotation.Nullable final Integer value) {
         this._lockScreenTimeoutInSeconds = value;
     }
@@ -4591,6 +4735,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the logonBlockFastUserSwitching property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogonBlockFastUserSwitching(@javax.annotation.Nullable final Boolean value) {
         this._logonBlockFastUserSwitching = value;
     }
@@ -4599,6 +4744,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the messagingBlockMMS property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessagingBlockMMS(@javax.annotation.Nullable final Boolean value) {
         this._messagingBlockMMS = value;
     }
@@ -4607,6 +4753,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the messagingBlockRichCommunicationServices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessagingBlockRichCommunicationServices(@javax.annotation.Nullable final Boolean value) {
         this._messagingBlockRichCommunicationServices = value;
     }
@@ -4615,6 +4762,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the messagingBlockSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessagingBlockSync(@javax.annotation.Nullable final Boolean value) {
         this._messagingBlockSync = value;
     }
@@ -4623,6 +4771,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the microsoftAccountBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftAccountBlocked(@javax.annotation.Nullable final Boolean value) {
         this._microsoftAccountBlocked = value;
     }
@@ -4631,6 +4780,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the microsoftAccountBlockSettingsSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftAccountBlockSettingsSync(@javax.annotation.Nullable final Boolean value) {
         this._microsoftAccountBlockSettingsSync = value;
     }
@@ -4639,14 +4789,16 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the microsoftAccountSignInAssistantSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftAccountSignInAssistantSettings(@javax.annotation.Nullable final SignInAssistantOptions value) {
         this._microsoftAccountSignInAssistantSettings = value;
     }
     /**
-     * Sets the networkProxyApplySettingsDeviceWide property value. If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account that’s enrolled into MDM.
+     * Sets the networkProxyApplySettingsDeviceWide property value. If set, proxy settings will be applied to all processes and accounts in the device. Otherwise, it will be applied to the user account thats enrolled into MDM.
      * @param value Value to set for the networkProxyApplySettingsDeviceWide property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkProxyApplySettingsDeviceWide(@javax.annotation.Nullable final Boolean value) {
         this._networkProxyApplySettingsDeviceWide = value;
     }
@@ -4655,6 +4807,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the networkProxyAutomaticConfigurationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkProxyAutomaticConfigurationUrl(@javax.annotation.Nullable final String value) {
         this._networkProxyAutomaticConfigurationUrl = value;
     }
@@ -4663,6 +4816,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the networkProxyDisableAutoDetect property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkProxyDisableAutoDetect(@javax.annotation.Nullable final Boolean value) {
         this._networkProxyDisableAutoDetect = value;
     }
@@ -4671,6 +4825,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the networkProxyServer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkProxyServer(@javax.annotation.Nullable final Windows10NetworkProxyServer value) {
         this._networkProxyServer = value;
     }
@@ -4679,6 +4834,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the nfcBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNfcBlocked(@javax.annotation.Nullable final Boolean value) {
         this._nfcBlocked = value;
     }
@@ -4687,6 +4843,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the oneDriveDisableFileSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOneDriveDisableFileSync(@javax.annotation.Nullable final Boolean value) {
         this._oneDriveDisableFileSync = value;
     }
@@ -4695,6 +4852,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordBlockSimple property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordBlockSimple(@javax.annotation.Nullable final Boolean value) {
         this._passwordBlockSimple = value;
     }
@@ -4703,6 +4861,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordExpirationDays(@javax.annotation.Nullable final Integer value) {
         this._passwordExpirationDays = value;
     }
@@ -4711,6 +4870,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordMinimumAgeInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumAgeInDays(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumAgeInDays = value;
     }
@@ -4719,6 +4879,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordMinimumCharacterSetCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumCharacterSetCount = value;
     }
@@ -4727,6 +4888,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinimumLength(@javax.annotation.Nullable final Integer value) {
         this._passwordMinimumLength = value;
     }
@@ -4735,6 +4897,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
         this._passwordMinutesOfInactivityBeforeScreenTimeout = value;
     }
@@ -4743,6 +4906,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordPreviousPasswordBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordPreviousPasswordBlockCount(@javax.annotation.Nullable final Integer value) {
         this._passwordPreviousPasswordBlockCount = value;
     }
@@ -4751,6 +4915,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequired(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequired = value;
     }
@@ -4759,6 +4924,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
         this._passwordRequiredType = value;
     }
@@ -4767,6 +4933,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordRequireWhenResumeFromIdleState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordRequireWhenResumeFromIdleState(@javax.annotation.Nullable final Boolean value) {
         this._passwordRequireWhenResumeFromIdleState = value;
     }
@@ -4775,6 +4942,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasswordSignInFailureCountBeforeFactoryReset(@javax.annotation.Nullable final Integer value) {
         this._passwordSignInFailureCountBeforeFactoryReset = value;
     }
@@ -4783,6 +4951,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the personalizationDesktopImageUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersonalizationDesktopImageUrl(@javax.annotation.Nullable final String value) {
         this._personalizationDesktopImageUrl = value;
     }
@@ -4791,6 +4960,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the personalizationLockScreenImageUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersonalizationLockScreenImageUrl(@javax.annotation.Nullable final String value) {
         this._personalizationLockScreenImageUrl = value;
     }
@@ -4799,6 +4969,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the powerButtonActionOnBattery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPowerButtonActionOnBattery(@javax.annotation.Nullable final PowerActionType value) {
         this._powerButtonActionOnBattery = value;
     }
@@ -4807,6 +4978,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the powerButtonActionPluggedIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPowerButtonActionPluggedIn(@javax.annotation.Nullable final PowerActionType value) {
         this._powerButtonActionPluggedIn = value;
     }
@@ -4815,6 +4987,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the powerHybridSleepOnBattery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPowerHybridSleepOnBattery(@javax.annotation.Nullable final Enablement value) {
         this._powerHybridSleepOnBattery = value;
     }
@@ -4823,6 +4996,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the powerHybridSleepPluggedIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPowerHybridSleepPluggedIn(@javax.annotation.Nullable final Enablement value) {
         this._powerHybridSleepPluggedIn = value;
     }
@@ -4831,6 +5005,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the powerLidCloseActionOnBattery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPowerLidCloseActionOnBattery(@javax.annotation.Nullable final PowerActionType value) {
         this._powerLidCloseActionOnBattery = value;
     }
@@ -4839,6 +5014,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the powerLidCloseActionPluggedIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPowerLidCloseActionPluggedIn(@javax.annotation.Nullable final PowerActionType value) {
         this._powerLidCloseActionPluggedIn = value;
     }
@@ -4847,6 +5023,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the powerSleepButtonActionOnBattery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPowerSleepButtonActionOnBattery(@javax.annotation.Nullable final PowerActionType value) {
         this._powerSleepButtonActionOnBattery = value;
     }
@@ -4855,6 +5032,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the powerSleepButtonActionPluggedIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPowerSleepButtonActionPluggedIn(@javax.annotation.Nullable final PowerActionType value) {
         this._powerSleepButtonActionPluggedIn = value;
     }
@@ -4863,6 +5041,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the printerBlockAddition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrinterBlockAddition(@javax.annotation.Nullable final Boolean value) {
         this._printerBlockAddition = value;
     }
@@ -4871,6 +5050,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the printerDefaultName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrinterDefaultName(@javax.annotation.Nullable final String value) {
         this._printerDefaultName = value;
     }
@@ -4879,6 +5059,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the printerNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrinterNames(@javax.annotation.Nullable final java.util.List<String> value) {
         this._printerNames = value;
     }
@@ -4887,6 +5068,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the privacyAccessControls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyAccessControls(@javax.annotation.Nullable final java.util.List<WindowsPrivacyDataAccessControlItem> value) {
         this._privacyAccessControls = value;
     }
@@ -4895,6 +5077,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the privacyAdvertisingId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyAdvertisingId(@javax.annotation.Nullable final StateManagementSetting value) {
         this._privacyAdvertisingId = value;
     }
@@ -4903,6 +5086,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the privacyAutoAcceptPairingAndConsentPrompts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyAutoAcceptPairingAndConsentPrompts(@javax.annotation.Nullable final Boolean value) {
         this._privacyAutoAcceptPairingAndConsentPrompts = value;
     }
@@ -4911,6 +5095,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the privacyBlockActivityFeed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyBlockActivityFeed(@javax.annotation.Nullable final Boolean value) {
         this._privacyBlockActivityFeed = value;
     }
@@ -4919,6 +5104,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the privacyBlockInputPersonalization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyBlockInputPersonalization(@javax.annotation.Nullable final Boolean value) {
         this._privacyBlockInputPersonalization = value;
     }
@@ -4927,14 +5113,16 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the privacyBlockPublishUserActivities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyBlockPublishUserActivities(@javax.annotation.Nullable final Boolean value) {
         this._privacyBlockPublishUserActivities = value;
     }
     /**
-     * Sets the privacyDisableLaunchExperience property value. This policy prevents the privacy experience from launching during user logon for new and upgraded users.​
+     * Sets the privacyDisableLaunchExperience property value. This policy prevents the privacy experience from launching during user logon for new and upgraded users.
      * @param value Value to set for the privacyDisableLaunchExperience property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyDisableLaunchExperience(@javax.annotation.Nullable final Boolean value) {
         this._privacyDisableLaunchExperience = value;
     }
@@ -4943,6 +5131,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the resetProtectionModeBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResetProtectionModeBlocked(@javax.annotation.Nullable final Boolean value) {
         this._resetProtectionModeBlocked = value;
     }
@@ -4951,6 +5140,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the safeSearchFilter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSafeSearchFilter(@javax.annotation.Nullable final SafeSearchFilterType value) {
         this._safeSearchFilter = value;
     }
@@ -4959,6 +5149,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the screenCaptureBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScreenCaptureBlocked(@javax.annotation.Nullable final Boolean value) {
         this._screenCaptureBlocked = value;
     }
@@ -4967,6 +5158,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the searchBlockDiacritics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearchBlockDiacritics(@javax.annotation.Nullable final Boolean value) {
         this._searchBlockDiacritics = value;
     }
@@ -4975,6 +5167,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the searchBlockWebResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearchBlockWebResults(@javax.annotation.Nullable final Boolean value) {
         this._searchBlockWebResults = value;
     }
@@ -4983,6 +5176,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the searchDisableAutoLanguageDetection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearchDisableAutoLanguageDetection(@javax.annotation.Nullable final Boolean value) {
         this._searchDisableAutoLanguageDetection = value;
     }
@@ -4991,6 +5185,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the searchDisableIndexerBackoff property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearchDisableIndexerBackoff(@javax.annotation.Nullable final Boolean value) {
         this._searchDisableIndexerBackoff = value;
     }
@@ -4999,6 +5194,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the searchDisableIndexingEncryptedItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearchDisableIndexingEncryptedItems(@javax.annotation.Nullable final Boolean value) {
         this._searchDisableIndexingEncryptedItems = value;
     }
@@ -5007,6 +5203,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the searchDisableIndexingRemovableDrive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearchDisableIndexingRemovableDrive(@javax.annotation.Nullable final Boolean value) {
         this._searchDisableIndexingRemovableDrive = value;
     }
@@ -5015,6 +5212,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the searchDisableLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearchDisableLocation(@javax.annotation.Nullable final Boolean value) {
         this._searchDisableLocation = value;
     }
@@ -5023,6 +5221,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the searchDisableUseLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearchDisableUseLocation(@javax.annotation.Nullable final Boolean value) {
         this._searchDisableUseLocation = value;
     }
@@ -5031,14 +5230,16 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the searchEnableAutomaticIndexSizeManangement property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearchEnableAutomaticIndexSizeManangement(@javax.annotation.Nullable final Boolean value) {
         this._searchEnableAutomaticIndexSizeManangement = value;
     }
     /**
-     * Sets the searchEnableRemoteQueries property value. Indicates whether or not to block remote queries of this computer’s index.
+     * Sets the searchEnableRemoteQueries property value. Indicates whether or not to block remote queries of this computers index.
      * @param value Value to set for the searchEnableRemoteQueries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearchEnableRemoteQueries(@javax.annotation.Nullable final Boolean value) {
         this._searchEnableRemoteQueries = value;
     }
@@ -5047,6 +5248,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the securityBlockAzureADJoinedDevicesAutoEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityBlockAzureADJoinedDevicesAutoEncryption(@javax.annotation.Nullable final Boolean value) {
         this._securityBlockAzureADJoinedDevicesAutoEncryption = value;
     }
@@ -5055,6 +5257,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockAccountsPage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockAccountsPage(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockAccountsPage = value;
     }
@@ -5063,6 +5266,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockAddProvisioningPackage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockAddProvisioningPackage(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockAddProvisioningPackage = value;
     }
@@ -5071,6 +5275,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockAppsPage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockAppsPage(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockAppsPage = value;
     }
@@ -5079,6 +5284,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockChangeLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockChangeLanguage(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockChangeLanguage = value;
     }
@@ -5087,6 +5293,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockChangePowerSleep property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockChangePowerSleep(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockChangePowerSleep = value;
     }
@@ -5095,6 +5302,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockChangeRegion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockChangeRegion(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockChangeRegion = value;
     }
@@ -5103,6 +5311,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockChangeSystemTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockChangeSystemTime(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockChangeSystemTime = value;
     }
@@ -5111,6 +5320,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockDevicesPage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockDevicesPage(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockDevicesPage = value;
     }
@@ -5119,6 +5329,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockEaseOfAccessPage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockEaseOfAccessPage(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockEaseOfAccessPage = value;
     }
@@ -5127,6 +5338,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockEditDeviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockEditDeviceName(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockEditDeviceName = value;
     }
@@ -5135,6 +5347,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockGamingPage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockGamingPage(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockGamingPage = value;
     }
@@ -5143,6 +5356,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockNetworkInternetPage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockNetworkInternetPage(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockNetworkInternetPage = value;
     }
@@ -5151,6 +5365,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockPersonalizationPage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockPersonalizationPage(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockPersonalizationPage = value;
     }
@@ -5159,6 +5374,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockPrivacyPage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockPrivacyPage(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockPrivacyPage = value;
     }
@@ -5167,6 +5383,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockRemoveProvisioningPackage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockRemoveProvisioningPackage(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockRemoveProvisioningPackage = value;
     }
@@ -5175,6 +5392,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockSettingsApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockSettingsApp(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockSettingsApp = value;
     }
@@ -5183,6 +5401,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockSystemPage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockSystemPage(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockSystemPage = value;
     }
@@ -5191,6 +5410,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockTimeLanguagePage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockTimeLanguagePage(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockTimeLanguagePage = value;
     }
@@ -5199,6 +5419,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the settingsBlockUpdateSecurityPage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingsBlockUpdateSecurityPage(@javax.annotation.Nullable final Boolean value) {
         this._settingsBlockUpdateSecurityPage = value;
     }
@@ -5207,6 +5428,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the sharedUserAppDataAllowed property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedUserAppDataAllowed(@javax.annotation.Nullable final Boolean value) {
         this._sharedUserAppDataAllowed = value;
     }
@@ -5215,6 +5437,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the smartScreenAppInstallControl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmartScreenAppInstallControl(@javax.annotation.Nullable final AppInstallControlType value) {
         this._smartScreenAppInstallControl = value;
     }
@@ -5223,6 +5446,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the smartScreenBlockPromptOverride property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmartScreenBlockPromptOverride(@javax.annotation.Nullable final Boolean value) {
         this._smartScreenBlockPromptOverride = value;
     }
@@ -5231,6 +5455,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the smartScreenBlockPromptOverrideForFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmartScreenBlockPromptOverrideForFiles(@javax.annotation.Nullable final Boolean value) {
         this._smartScreenBlockPromptOverrideForFiles = value;
     }
@@ -5239,6 +5464,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the smartScreenEnableAppInstallControl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSmartScreenEnableAppInstallControl(@javax.annotation.Nullable final Boolean value) {
         this._smartScreenEnableAppInstallControl = value;
     }
@@ -5247,6 +5473,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startBlockUnpinningAppsFromTaskbar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartBlockUnpinningAppsFromTaskbar(@javax.annotation.Nullable final Boolean value) {
         this._startBlockUnpinningAppsFromTaskbar = value;
     }
@@ -5255,6 +5482,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuAppListVisibility property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuAppListVisibility(@javax.annotation.Nullable final WindowsStartMenuAppListVisibilityType value) {
         this._startMenuAppListVisibility = value;
     }
@@ -5263,6 +5491,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuHideChangeAccountSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuHideChangeAccountSettings(@javax.annotation.Nullable final Boolean value) {
         this._startMenuHideChangeAccountSettings = value;
     }
@@ -5271,6 +5500,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuHideFrequentlyUsedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuHideFrequentlyUsedApps(@javax.annotation.Nullable final Boolean value) {
         this._startMenuHideFrequentlyUsedApps = value;
     }
@@ -5279,6 +5509,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuHideHibernate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuHideHibernate(@javax.annotation.Nullable final Boolean value) {
         this._startMenuHideHibernate = value;
     }
@@ -5287,6 +5518,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuHideLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuHideLock(@javax.annotation.Nullable final Boolean value) {
         this._startMenuHideLock = value;
     }
@@ -5295,6 +5527,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuHidePowerButton property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuHidePowerButton(@javax.annotation.Nullable final Boolean value) {
         this._startMenuHidePowerButton = value;
     }
@@ -5303,6 +5536,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuHideRecentJumpLists property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuHideRecentJumpLists(@javax.annotation.Nullable final Boolean value) {
         this._startMenuHideRecentJumpLists = value;
     }
@@ -5311,6 +5545,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuHideRecentlyAddedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuHideRecentlyAddedApps(@javax.annotation.Nullable final Boolean value) {
         this._startMenuHideRecentlyAddedApps = value;
     }
@@ -5319,6 +5554,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuHideRestartOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuHideRestartOptions(@javax.annotation.Nullable final Boolean value) {
         this._startMenuHideRestartOptions = value;
     }
@@ -5327,6 +5563,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuHideShutDown property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuHideShutDown(@javax.annotation.Nullable final Boolean value) {
         this._startMenuHideShutDown = value;
     }
@@ -5335,6 +5572,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuHideSignOut property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuHideSignOut(@javax.annotation.Nullable final Boolean value) {
         this._startMenuHideSignOut = value;
     }
@@ -5343,6 +5581,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuHideSleep property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuHideSleep(@javax.annotation.Nullable final Boolean value) {
         this._startMenuHideSleep = value;
     }
@@ -5351,6 +5590,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuHideSwitchAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuHideSwitchAccount(@javax.annotation.Nullable final Boolean value) {
         this._startMenuHideSwitchAccount = value;
     }
@@ -5359,6 +5599,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuHideUserTile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuHideUserTile(@javax.annotation.Nullable final Boolean value) {
         this._startMenuHideUserTile = value;
     }
@@ -5367,6 +5608,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuLayoutEdgeAssetsXml property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuLayoutEdgeAssetsXml(@javax.annotation.Nullable final byte[] value) {
         this._startMenuLayoutEdgeAssetsXml = value;
     }
@@ -5375,6 +5617,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuLayoutXml property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuLayoutXml(@javax.annotation.Nullable final byte[] value) {
         this._startMenuLayoutXml = value;
     }
@@ -5383,6 +5626,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuMode(@javax.annotation.Nullable final WindowsStartMenuModeType value) {
         this._startMenuMode = value;
     }
@@ -5391,6 +5635,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuPinnedFolderDocuments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuPinnedFolderDocuments(@javax.annotation.Nullable final VisibilitySetting value) {
         this._startMenuPinnedFolderDocuments = value;
     }
@@ -5399,6 +5644,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuPinnedFolderDownloads property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuPinnedFolderDownloads(@javax.annotation.Nullable final VisibilitySetting value) {
         this._startMenuPinnedFolderDownloads = value;
     }
@@ -5407,6 +5653,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuPinnedFolderFileExplorer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuPinnedFolderFileExplorer(@javax.annotation.Nullable final VisibilitySetting value) {
         this._startMenuPinnedFolderFileExplorer = value;
     }
@@ -5415,6 +5662,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuPinnedFolderHomeGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuPinnedFolderHomeGroup(@javax.annotation.Nullable final VisibilitySetting value) {
         this._startMenuPinnedFolderHomeGroup = value;
     }
@@ -5423,6 +5671,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuPinnedFolderMusic property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuPinnedFolderMusic(@javax.annotation.Nullable final VisibilitySetting value) {
         this._startMenuPinnedFolderMusic = value;
     }
@@ -5431,6 +5680,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuPinnedFolderNetwork property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuPinnedFolderNetwork(@javax.annotation.Nullable final VisibilitySetting value) {
         this._startMenuPinnedFolderNetwork = value;
     }
@@ -5439,6 +5689,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuPinnedFolderPersonalFolder property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuPinnedFolderPersonalFolder(@javax.annotation.Nullable final VisibilitySetting value) {
         this._startMenuPinnedFolderPersonalFolder = value;
     }
@@ -5447,6 +5698,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuPinnedFolderPictures property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuPinnedFolderPictures(@javax.annotation.Nullable final VisibilitySetting value) {
         this._startMenuPinnedFolderPictures = value;
     }
@@ -5455,6 +5707,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuPinnedFolderSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuPinnedFolderSettings(@javax.annotation.Nullable final VisibilitySetting value) {
         this._startMenuPinnedFolderSettings = value;
     }
@@ -5463,6 +5716,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the startMenuPinnedFolderVideos property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartMenuPinnedFolderVideos(@javax.annotation.Nullable final VisibilitySetting value) {
         this._startMenuPinnedFolderVideos = value;
     }
@@ -5471,6 +5725,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the storageBlockRemovableStorage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageBlockRemovableStorage(@javax.annotation.Nullable final Boolean value) {
         this._storageBlockRemovableStorage = value;
     }
@@ -5479,6 +5734,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the storageRequireMobileDeviceEncryption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRequireMobileDeviceEncryption(@javax.annotation.Nullable final Boolean value) {
         this._storageRequireMobileDeviceEncryption = value;
     }
@@ -5487,6 +5743,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the storageRestrictAppDataToSystemVolume property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRestrictAppDataToSystemVolume(@javax.annotation.Nullable final Boolean value) {
         this._storageRestrictAppDataToSystemVolume = value;
     }
@@ -5495,6 +5752,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the storageRestrictAppInstallToSystemVolume property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageRestrictAppInstallToSystemVolume(@javax.annotation.Nullable final Boolean value) {
         this._storageRestrictAppInstallToSystemVolume = value;
     }
@@ -5503,6 +5761,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the systemTelemetryProxyServer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSystemTelemetryProxyServer(@javax.annotation.Nullable final String value) {
         this._systemTelemetryProxyServer = value;
     }
@@ -5511,6 +5770,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the taskManagerBlockEndTask property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaskManagerBlockEndTask(@javax.annotation.Nullable final Boolean value) {
         this._taskManagerBlockEndTask = value;
     }
@@ -5519,6 +5779,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the tenantLockdownRequireNetworkDuringOutOfBoxExperience property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantLockdownRequireNetworkDuringOutOfBoxExperience(@javax.annotation.Nullable final Boolean value) {
         this._tenantLockdownRequireNetworkDuringOutOfBoxExperience = value;
     }
@@ -5527,6 +5788,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the uninstallBuiltInApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUninstallBuiltInApps(@javax.annotation.Nullable final Boolean value) {
         this._uninstallBuiltInApps = value;
     }
@@ -5535,6 +5797,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the usbBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsbBlocked(@javax.annotation.Nullable final Boolean value) {
         this._usbBlocked = value;
     }
@@ -5543,6 +5806,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the voiceRecordingBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVoiceRecordingBlocked(@javax.annotation.Nullable final Boolean value) {
         this._voiceRecordingBlocked = value;
     }
@@ -5551,6 +5815,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the webRtcBlockLocalhostIpAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebRtcBlockLocalhostIpAddress(@javax.annotation.Nullable final Boolean value) {
         this._webRtcBlockLocalhostIpAddress = value;
     }
@@ -5559,6 +5824,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the wiFiBlockAutomaticConnectHotspots property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWiFiBlockAutomaticConnectHotspots(@javax.annotation.Nullable final Boolean value) {
         this._wiFiBlockAutomaticConnectHotspots = value;
     }
@@ -5567,6 +5833,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the wiFiBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWiFiBlocked(@javax.annotation.Nullable final Boolean value) {
         this._wiFiBlocked = value;
     }
@@ -5575,6 +5842,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the wiFiBlockManualConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWiFiBlockManualConfiguration(@javax.annotation.Nullable final Boolean value) {
         this._wiFiBlockManualConfiguration = value;
     }
@@ -5583,6 +5851,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the wiFiScanInterval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWiFiScanInterval(@javax.annotation.Nullable final Integer value) {
         this._wiFiScanInterval = value;
     }
@@ -5591,6 +5860,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the windows10AppsForceUpdateSchedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindows10AppsForceUpdateSchedule(@javax.annotation.Nullable final Windows10AppsForceUpdateSchedule value) {
         this._windows10AppsForceUpdateSchedule = value;
     }
@@ -5599,6 +5869,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the windowsSpotlightBlockConsumerSpecificFeatures property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsSpotlightBlockConsumerSpecificFeatures(@javax.annotation.Nullable final Boolean value) {
         this._windowsSpotlightBlockConsumerSpecificFeatures = value;
     }
@@ -5607,6 +5878,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the windowsSpotlightBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsSpotlightBlocked(@javax.annotation.Nullable final Boolean value) {
         this._windowsSpotlightBlocked = value;
     }
@@ -5615,14 +5887,16 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the windowsSpotlightBlockOnActionCenter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsSpotlightBlockOnActionCenter(@javax.annotation.Nullable final Boolean value) {
         this._windowsSpotlightBlockOnActionCenter = value;
     }
     /**
-     * Sets the windowsSpotlightBlockTailoredExperiences property value. Block personalized content in Windows spotlight based on user’s device usage.
+     * Sets the windowsSpotlightBlockTailoredExperiences property value. Block personalized content in Windows spotlight based on users device usage.
      * @param value Value to set for the windowsSpotlightBlockTailoredExperiences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsSpotlightBlockTailoredExperiences(@javax.annotation.Nullable final Boolean value) {
         this._windowsSpotlightBlockTailoredExperiences = value;
     }
@@ -5631,6 +5905,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the windowsSpotlightBlockThirdPartyNotifications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsSpotlightBlockThirdPartyNotifications(@javax.annotation.Nullable final Boolean value) {
         this._windowsSpotlightBlockThirdPartyNotifications = value;
     }
@@ -5639,6 +5914,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the windowsSpotlightBlockWelcomeExperience property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsSpotlightBlockWelcomeExperience(@javax.annotation.Nullable final Boolean value) {
         this._windowsSpotlightBlockWelcomeExperience = value;
     }
@@ -5647,6 +5923,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the windowsSpotlightBlockWindowsTips property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsSpotlightBlockWindowsTips(@javax.annotation.Nullable final Boolean value) {
         this._windowsSpotlightBlockWindowsTips = value;
     }
@@ -5655,6 +5932,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the windowsSpotlightConfigureOnLockScreen property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsSpotlightConfigureOnLockScreen(@javax.annotation.Nullable final WindowsSpotlightEnablementSettings value) {
         this._windowsSpotlightConfigureOnLockScreen = value;
     }
@@ -5663,6 +5941,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the windowsStoreBlockAutoUpdate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsStoreBlockAutoUpdate(@javax.annotation.Nullable final Boolean value) {
         this._windowsStoreBlockAutoUpdate = value;
     }
@@ -5671,6 +5950,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the windowsStoreBlocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsStoreBlocked(@javax.annotation.Nullable final Boolean value) {
         this._windowsStoreBlocked = value;
     }
@@ -5679,6 +5959,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the windowsStoreEnablePrivateStoreOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsStoreEnablePrivateStoreOnly(@javax.annotation.Nullable final Boolean value) {
         this._windowsStoreEnablePrivateStoreOnly = value;
     }
@@ -5687,6 +5968,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the wirelessDisplayBlockProjectionToThisDevice property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWirelessDisplayBlockProjectionToThisDevice(@javax.annotation.Nullable final Boolean value) {
         this._wirelessDisplayBlockProjectionToThisDevice = value;
     }
@@ -5695,6 +5977,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the wirelessDisplayBlockUserInputFromReceiver property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWirelessDisplayBlockUserInputFromReceiver(@javax.annotation.Nullable final Boolean value) {
         this._wirelessDisplayBlockUserInputFromReceiver = value;
     }
@@ -5703,6 +5986,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
      * @param value Value to set for the wirelessDisplayRequirePinForPairing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWirelessDisplayRequirePinForPairing(@javax.annotation.Nullable final Boolean value) {
         this._wirelessDisplayRequirePinForPairing = value;
     }

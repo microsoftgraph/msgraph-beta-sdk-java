@@ -16,6 +16,7 @@ public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase imple
      * Instantiates a new IosWebContentFilterAutoFilter and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosWebContentFilterAutoFilter() {
         super();
         this.setOdataType("#microsoft.graph.iosWebContentFilterAutoFilter");
@@ -52,17 +53,17 @@ public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase imple
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosWebContentFilterAutoFilter currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedUrls", (n) -> { currentObject.setAllowedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("blockedUrls", (n) -> { currentObject.setBlockedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedUrls", (n) -> { this.setAllowedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("blockedUrls", (n) -> { this.setBlockedUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +75,7 @@ public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase imple
      * @param value Value to set for the allowedUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedUrls = value;
     }
@@ -82,6 +84,7 @@ public class IosWebContentFilterAutoFilter extends IosWebContentFilterBase imple
      * @param value Value to set for the blockedUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlockedUrls(@javax.annotation.Nullable final java.util.List<String> value) {
         this._blockedUrls = value;
     }

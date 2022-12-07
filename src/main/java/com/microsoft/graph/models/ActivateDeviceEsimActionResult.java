@@ -14,9 +14,9 @@ public class ActivateDeviceEsimActionResult extends DeviceActionResult implement
      * Instantiates a new ActivateDeviceEsimActionResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ActivateDeviceEsimActionResult() {
         super();
-        this.setOdataType("#microsoft.graph.activateDeviceEsimActionResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,16 +42,16 @@ public class ActivateDeviceEsimActionResult extends DeviceActionResult implement
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ActivateDeviceEsimActionResult currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("carrierUrl", (n) -> { currentObject.setCarrierUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("carrierUrl", (n) -> { this.setCarrierUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +62,7 @@ public class ActivateDeviceEsimActionResult extends DeviceActionResult implement
      * @param value Value to set for the carrierUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCarrierUrl(@javax.annotation.Nullable final String value) {
         this._carrierUrl = value;
     }

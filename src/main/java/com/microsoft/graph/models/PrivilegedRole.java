@@ -20,9 +20,9 @@ public class PrivilegedRole extends Entity implements Parsable {
      * Instantiates a new privilegedRole and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrivilegedRole() {
         super();
-        this.setOdataType("#microsoft.graph.privilegedRole");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,13 +48,12 @@ public class PrivilegedRole extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrivilegedRole currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(PrivilegedRoleAssignment::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(PrivilegedRoleSettings::createFromDiscriminatorValue)); });
-            this.put("summary", (n) -> { currentObject.setSummary(n.getObjectValue(PrivilegedRoleSummary::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(PrivilegedRoleAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(PrivilegedRoleSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("summary", (n) -> { this.setSummary(n.getObjectValue(PrivilegedRoleSummary::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. Role name.
@@ -85,6 +84,7 @@ public class PrivilegedRole extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +98,7 @@ public class PrivilegedRole extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<PrivilegedRoleAssignment> value) {
         this._assignments = value;
     }
@@ -106,6 +107,7 @@ public class PrivilegedRole extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -114,6 +116,7 @@ public class PrivilegedRole extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final PrivilegedRoleSettings value) {
         this._settings = value;
     }
@@ -122,6 +125,7 @@ public class PrivilegedRole extends Entity implements Parsable {
      * @param value Value to set for the summary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSummary(@javax.annotation.Nullable final PrivilegedRoleSummary value) {
         this._summary = value;
     }

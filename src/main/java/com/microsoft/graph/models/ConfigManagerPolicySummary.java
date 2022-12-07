@@ -30,9 +30,9 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * Instantiates a new configManagerPolicySummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConfigManagerPolicySummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.configManagerPolicySummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -82,16 +82,15 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConfigManagerPolicySummary currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("compliantDeviceCount", (n) -> { currentObject.setCompliantDeviceCount(n.getIntegerValue()); });
-            this.put("enforcedDeviceCount", (n) -> { currentObject.setEnforcedDeviceCount(n.getIntegerValue()); });
-            this.put("failedDeviceCount", (n) -> { currentObject.setFailedDeviceCount(n.getIntegerValue()); });
-            this.put("nonCompliantDeviceCount", (n) -> { currentObject.setNonCompliantDeviceCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("pendingDeviceCount", (n) -> { currentObject.setPendingDeviceCount(n.getIntegerValue()); });
-            this.put("targetedDeviceCount", (n) -> { currentObject.setTargetedDeviceCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("compliantDeviceCount", (n) -> { this.setCompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("enforcedDeviceCount", (n) -> { this.setEnforcedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("failedDeviceCount", (n) -> { this.setFailedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("nonCompliantDeviceCount", (n) -> { this.setNonCompliantDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("pendingDeviceCount", (n) -> { this.setPendingDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("targetedDeviceCount", (n) -> { this.setTargetedDeviceCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the nonCompliantDeviceCount property value. The number of devices evaluated to be noncompliant by the policy.
@@ -130,6 +129,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("compliantDeviceCount", this.getCompliantDeviceCount());
@@ -146,6 +146,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -154,6 +155,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the compliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._compliantDeviceCount = value;
     }
@@ -162,6 +164,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the enforcedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnforcedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._enforcedDeviceCount = value;
     }
@@ -170,6 +173,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the failedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._failedDeviceCount = value;
     }
@@ -178,6 +182,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the nonCompliantDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNonCompliantDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._nonCompliantDeviceCount = value;
     }
@@ -186,6 +191,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -194,6 +200,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the pendingDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPendingDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._pendingDeviceCount = value;
     }
@@ -202,6 +209,7 @@ public class ConfigManagerPolicySummary implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the targetedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._targetedDeviceCount = value;
     }

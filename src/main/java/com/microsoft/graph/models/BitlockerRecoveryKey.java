@@ -22,9 +22,9 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * Instantiates a new bitlockerRecoveryKey and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public BitlockerRecoveryKey() {
         super();
-        this.setOdataType("#microsoft.graph.bitlockerRecoveryKey");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,13 +58,12 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final BitlockerRecoveryKey currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("key", (n) -> { currentObject.setKey(n.getStringValue()); });
-            this.put("volumeType", (n) -> { currentObject.setVolumeType(n.getEnumValue(VolumeType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("key", (n) -> { this.setKey(n.getStringValue()); });
+        deserializerMap.put("volumeType", (n) -> { this.setVolumeType(n.getEnumValue(VolumeType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the key property value. The BitLocker recovery key.
@@ -87,6 +86,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -100,6 +100,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -108,6 +109,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
         this._deviceId = value;
     }
@@ -116,6 +118,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * @param value Value to set for the key property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKey(@javax.annotation.Nullable final String value) {
         this._key = value;
     }
@@ -124,6 +127,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
      * @param value Value to set for the volumeType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVolumeType(@javax.annotation.Nullable final VolumeType value) {
         this._volumeType = value;
     }

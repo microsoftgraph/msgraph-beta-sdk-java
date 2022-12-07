@@ -25,9 +25,9 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
      * Instantiates a new azureAdJoinPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AzureAdJoinPolicy() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.azureAdJoinPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,14 +77,13 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AzureAdJoinPolicy currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("allowedGroups", (n) -> { currentObject.setAllowedGroups(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("allowedUsers", (n) -> { currentObject.setAllowedUsers(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getEnumValue(PolicyScope.class)); });
-            this.put("isAdminConfigurable", (n) -> { currentObject.setIsAdminConfigurable(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("allowedGroups", (n) -> { this.setAllowedGroups(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("allowedUsers", (n) -> { this.setAllowedUsers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getEnumValue(PolicyScope.class)); });
+        deserializerMap.put("isAdminConfigurable", (n) -> { this.setIsAdminConfigurable(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isAdminConfigurable property value. Specifies whether this policy scope is configurable by the admin. The default value is false. When an admin has enabled Intune (MEM) to manage devices, this property is set to false and appliesTo defaults to 1 (meaning all).
@@ -107,6 +106,7 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("allowedGroups", this.getAllowedGroups());
@@ -121,6 +121,7 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -129,6 +130,7 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowedGroups property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedGroups(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedGroups = value;
     }
@@ -137,6 +139,7 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the allowedUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedUsers(@javax.annotation.Nullable final java.util.List<String> value) {
         this._allowedUsers = value;
     }
@@ -145,6 +148,7 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the appliesTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliesTo(@javax.annotation.Nullable final PolicyScope value) {
         this._appliesTo = value;
     }
@@ -153,6 +157,7 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isAdminConfigurable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAdminConfigurable(@javax.annotation.Nullable final Boolean value) {
         this._isAdminConfigurable = value;
     }
@@ -161,6 +166,7 @@ public class AzureAdJoinPolicy implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }

@@ -21,9 +21,9 @@ public class OnenotePagePreview implements AdditionalDataHolder, Parsable {
      * Instantiates a new onenotePagePreview and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnenotePagePreview() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.onenotePagePreview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,12 +49,11 @@ public class OnenotePagePreview implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnenotePagePreview currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("links", (n) -> { currentObject.setLinks(n.getObjectValue(OnenotePagePreviewLinks::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("previewText", (n) -> { currentObject.setPreviewText(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("links", (n) -> { this.setLinks(n.getObjectValue(OnenotePagePreviewLinks::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("previewText", (n) -> { this.setPreviewText(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the links property value. The links property
@@ -85,6 +84,7 @@ public class OnenotePagePreview implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("links", this.getLinks());
@@ -97,6 +97,7 @@ public class OnenotePagePreview implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class OnenotePagePreview implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the links property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLinks(@javax.annotation.Nullable final OnenotePagePreviewLinks value) {
         this._links = value;
     }
@@ -113,6 +115,7 @@ public class OnenotePagePreview implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +124,7 @@ public class OnenotePagePreview implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the previewText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreviewText(@javax.annotation.Nullable final String value) {
         this._previewText = value;
     }

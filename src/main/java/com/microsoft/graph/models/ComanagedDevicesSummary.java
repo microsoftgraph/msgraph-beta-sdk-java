@@ -36,9 +36,9 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      * Instantiates a new comanagedDevicesSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ComanagedDevicesSummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.comanagedDevicesSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -88,19 +88,18 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ComanagedDevicesSummary currentObject = this;
-        return new HashMap<>(10) {{
-            this.put("compliancePolicyCount", (n) -> { currentObject.setCompliancePolicyCount(n.getIntegerValue()); });
-            this.put("configurationSettingsCount", (n) -> { currentObject.setConfigurationSettingsCount(n.getIntegerValue()); });
-            this.put("endpointProtectionCount", (n) -> { currentObject.setEndpointProtectionCount(n.getIntegerValue()); });
-            this.put("inventoryCount", (n) -> { currentObject.setInventoryCount(n.getIntegerValue()); });
-            this.put("modernAppsCount", (n) -> { currentObject.setModernAppsCount(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("officeAppsCount", (n) -> { currentObject.setOfficeAppsCount(n.getIntegerValue()); });
-            this.put("resourceAccessCount", (n) -> { currentObject.setResourceAccessCount(n.getIntegerValue()); });
-            this.put("totalComanagedCount", (n) -> { currentObject.setTotalComanagedCount(n.getIntegerValue()); });
-            this.put("windowsUpdateForBusinessCount", (n) -> { currentObject.setWindowsUpdateForBusinessCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(10);
+        deserializerMap.put("compliancePolicyCount", (n) -> { this.setCompliancePolicyCount(n.getIntegerValue()); });
+        deserializerMap.put("configurationSettingsCount", (n) -> { this.setConfigurationSettingsCount(n.getIntegerValue()); });
+        deserializerMap.put("endpointProtectionCount", (n) -> { this.setEndpointProtectionCount(n.getIntegerValue()); });
+        deserializerMap.put("inventoryCount", (n) -> { this.setInventoryCount(n.getIntegerValue()); });
+        deserializerMap.put("modernAppsCount", (n) -> { this.setModernAppsCount(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("officeAppsCount", (n) -> { this.setOfficeAppsCount(n.getIntegerValue()); });
+        deserializerMap.put("resourceAccessCount", (n) -> { this.setResourceAccessCount(n.getIntegerValue()); });
+        deserializerMap.put("totalComanagedCount", (n) -> { this.setTotalComanagedCount(n.getIntegerValue()); });
+        deserializerMap.put("windowsUpdateForBusinessCount", (n) -> { this.setWindowsUpdateForBusinessCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the inventoryCount property value. Number of devices with Inventory swung-over. This property is read-only.
@@ -163,18 +162,10 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeIntegerValue("compliancePolicyCount", this.getCompliancePolicyCount());
-        writer.writeIntegerValue("configurationSettingsCount", this.getConfigurationSettingsCount());
-        writer.writeIntegerValue("endpointProtectionCount", this.getEndpointProtectionCount());
-        writer.writeIntegerValue("inventoryCount", this.getInventoryCount());
-        writer.writeIntegerValue("modernAppsCount", this.getModernAppsCount());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeIntegerValue("officeAppsCount", this.getOfficeAppsCount());
-        writer.writeIntegerValue("resourceAccessCount", this.getResourceAccessCount());
-        writer.writeIntegerValue("totalComanagedCount", this.getTotalComanagedCount());
-        writer.writeIntegerValue("windowsUpdateForBusinessCount", this.getWindowsUpdateForBusinessCount());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -182,6 +173,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -190,6 +182,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the compliancePolicyCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliancePolicyCount(@javax.annotation.Nullable final Integer value) {
         this._compliancePolicyCount = value;
     }
@@ -198,6 +191,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the configurationSettingsCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationSettingsCount(@javax.annotation.Nullable final Integer value) {
         this._configurationSettingsCount = value;
     }
@@ -206,6 +200,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the endpointProtectionCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndpointProtectionCount(@javax.annotation.Nullable final Integer value) {
         this._endpointProtectionCount = value;
     }
@@ -214,6 +209,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the inventoryCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInventoryCount(@javax.annotation.Nullable final Integer value) {
         this._inventoryCount = value;
     }
@@ -222,6 +218,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the modernAppsCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModernAppsCount(@javax.annotation.Nullable final Integer value) {
         this._modernAppsCount = value;
     }
@@ -230,6 +227,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -238,6 +236,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the officeAppsCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOfficeAppsCount(@javax.annotation.Nullable final Integer value) {
         this._officeAppsCount = value;
     }
@@ -246,6 +245,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the resourceAccessCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceAccessCount(@javax.annotation.Nullable final Integer value) {
         this._resourceAccessCount = value;
     }
@@ -254,6 +254,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the totalComanagedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalComanagedCount(@javax.annotation.Nullable final Integer value) {
         this._totalComanagedCount = value;
     }
@@ -262,6 +263,7 @@ public class ComanagedDevicesSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the windowsUpdateForBusinessCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsUpdateForBusinessCount(@javax.annotation.Nullable final Integer value) {
         this._windowsUpdateForBusinessCount = value;
     }

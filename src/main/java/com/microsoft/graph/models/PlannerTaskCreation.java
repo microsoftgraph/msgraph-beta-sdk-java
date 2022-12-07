@@ -1,5 +1,7 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.PlannerExternalTaskSource;
+import com.microsoft.graph.models.PlannerTeamsPublicationInfo;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -11,6 +13,8 @@ import java.util.Objects;
 public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
+    /** The creationSourceKind property */
+    private PlannerCreationSourceKind _creationSourceKind;
     /** The OdataType property */
     private String _odataType;
     /** Information about the publication process that created this task. null value indicates that the task was not created by a publication process. */
@@ -19,9 +23,9 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
      * Instantiates a new plannerTaskCreation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerTaskCreation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.plannerTaskCreation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,6 +35,14 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
     @javax.annotation.Nonnull
     public static PlannerTaskCreation createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.plannerExternalTaskSource": return new PlannerExternalTaskSource();
+                case "#microsoft.graph.plannerTeamsPublicationInfo": return new PlannerTeamsPublicationInfo();
+            }
+        }
         return new PlannerTaskCreation();
     }
     /**
@@ -42,16 +54,24 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
+     * Gets the creationSourceKind property value. The creationSourceKind property
+     * @return a plannerCreationSourceKind
+     */
+    @javax.annotation.Nullable
+    public PlannerCreationSourceKind getCreationSourceKind() {
+        return this._creationSourceKind;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerTaskCreation currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("teamsPublicationInfo", (n) -> { currentObject.setTeamsPublicationInfo(n.getObjectValue(PlannerTeamsPublicationInfo::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("creationSourceKind", (n) -> { this.setCreationSourceKind(n.getEnumValue(PlannerCreationSourceKind.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("teamsPublicationInfo", (n) -> { this.setTeamsPublicationInfo(n.getObjectValue(PlannerTeamsPublicationInfo::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -74,8 +94,10 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("creationSourceKind", this.getCreationSourceKind());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("teamsPublicationInfo", this.getTeamsPublicationInfo());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -85,14 +107,25 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
+    }
+    /**
+     * Sets the creationSourceKind property value. The creationSourceKind property
+     * @param value Value to set for the creationSourceKind property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCreationSourceKind(@javax.annotation.Nullable final PlannerCreationSourceKind value) {
+        this._creationSourceKind = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -101,6 +134,7 @@ public class PlannerTaskCreation implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the teamsPublicationInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsPublicationInfo(@javax.annotation.Nullable final PlannerTeamsPublicationInfo value) {
         this._teamsPublicationInfo = value;
     }

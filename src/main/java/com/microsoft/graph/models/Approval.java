@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class Approval extends Entity implements Parsable {
     /** The steps property */
     private java.util.List<ApprovalStep> _steps;
@@ -14,9 +15,9 @@ public class Approval extends Entity implements Parsable {
      * Instantiates a new approval and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Approval() {
         super();
-        this.setOdataType("#microsoft.graph.approval");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,10 +35,9 @@ public class Approval extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Approval currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("steps", (n) -> { currentObject.setSteps(n.getCollectionOfObjectValues(ApprovalStep::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("steps", (n) -> { this.setSteps(n.getCollectionOfObjectValues(ApprovalStep::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the steps property value. The steps property
@@ -52,6 +52,7 @@ public class Approval extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class Approval extends Entity implements Parsable {
      * @param value Value to set for the steps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSteps(@javax.annotation.Nullable final java.util.List<ApprovalStep> value) {
         this._steps = value;
     }

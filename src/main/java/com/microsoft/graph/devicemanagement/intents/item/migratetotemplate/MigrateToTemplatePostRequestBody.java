@@ -20,6 +20,7 @@ public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, P
      * Instantiates a new migrateToTemplatePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MigrateToTemplatePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -47,11 +48,10 @@ public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MigrateToTemplatePostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("newTemplateId", (n) -> { currentObject.setNewTemplateId(n.getStringValue()); });
-            this.put("preserveCustomValues", (n) -> { currentObject.setPreserveCustomValues(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("newTemplateId", (n) -> { this.setNewTemplateId(n.getStringValue()); });
+        deserializerMap.put("preserveCustomValues", (n) -> { this.setPreserveCustomValues(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the newTemplateId property value. The newTemplateId property
@@ -74,6 +74,7 @@ public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("newTemplateId", this.getNewTemplateId());
@@ -85,6 +86,7 @@ public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, P
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +95,7 @@ public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, P
      * @param value Value to set for the newTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNewTemplateId(@javax.annotation.Nullable final String value) {
         this._newTemplateId = value;
     }
@@ -101,6 +104,7 @@ public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, P
      * @param value Value to set for the preserveCustomValues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreserveCustomValues(@javax.annotation.Nullable final Boolean value) {
         this._preserveCustomValues = value;
     }

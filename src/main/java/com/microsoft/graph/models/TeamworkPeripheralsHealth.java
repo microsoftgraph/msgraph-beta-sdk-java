@@ -29,9 +29,9 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
      * Instantiates a new teamworkPeripheralsHealth and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkPeripheralsHealth() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamworkPeripheralsHealth");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -81,16 +81,15 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamworkPeripheralsHealth currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("communicationSpeakerHealth", (n) -> { currentObject.setCommunicationSpeakerHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
-            this.put("contentCameraHealth", (n) -> { currentObject.setContentCameraHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
-            this.put("displayHealthCollection", (n) -> { currentObject.setDisplayHealthCollection(n.getCollectionOfObjectValues(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
-            this.put("microphoneHealth", (n) -> { currentObject.setMicrophoneHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("roomCameraHealth", (n) -> { currentObject.setRoomCameraHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
-            this.put("speakerHealth", (n) -> { currentObject.setSpeakerHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(7);
+        deserializerMap.put("communicationSpeakerHealth", (n) -> { this.setCommunicationSpeakerHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentCameraHealth", (n) -> { this.setContentCameraHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayHealthCollection", (n) -> { this.setDisplayHealthCollection(n.getCollectionOfObjectValues(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
+        deserializerMap.put("microphoneHealth", (n) -> { this.setMicrophoneHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("roomCameraHealth", (n) -> { this.setRoomCameraHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
+        deserializerMap.put("speakerHealth", (n) -> { this.setSpeakerHealth(n.getObjectValue(TeamworkPeripheralHealth::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the microphoneHealth property value. The health details about the microphone.
@@ -129,6 +128,7 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("communicationSpeakerHealth", this.getCommunicationSpeakerHealth());
@@ -145,6 +145,7 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -153,6 +154,7 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
      * @param value Value to set for the communicationSpeakerHealth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCommunicationSpeakerHealth(@javax.annotation.Nullable final TeamworkPeripheralHealth value) {
         this._communicationSpeakerHealth = value;
     }
@@ -161,6 +163,7 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
      * @param value Value to set for the contentCameraHealth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentCameraHealth(@javax.annotation.Nullable final TeamworkPeripheralHealth value) {
         this._contentCameraHealth = value;
     }
@@ -169,6 +172,7 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
      * @param value Value to set for the displayHealthCollection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayHealthCollection(@javax.annotation.Nullable final java.util.List<TeamworkPeripheralHealth> value) {
         this._displayHealthCollection = value;
     }
@@ -177,6 +181,7 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
      * @param value Value to set for the microphoneHealth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrophoneHealth(@javax.annotation.Nullable final TeamworkPeripheralHealth value) {
         this._microphoneHealth = value;
     }
@@ -185,6 +190,7 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -193,6 +199,7 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
      * @param value Value to set for the roomCameraHealth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoomCameraHealth(@javax.annotation.Nullable final TeamworkPeripheralHealth value) {
         this._roomCameraHealth = value;
     }
@@ -201,6 +208,7 @@ public class TeamworkPeripheralsHealth implements AdditionalDataHolder, Parsable
      * @param value Value to set for the speakerHealth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSpeakerHealth(@javax.annotation.Nullable final TeamworkPeripheralHealth value) {
         this._speakerHealth = value;
     }

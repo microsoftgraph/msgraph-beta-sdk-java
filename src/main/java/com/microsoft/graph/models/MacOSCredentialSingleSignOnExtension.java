@@ -22,6 +22,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
      * Instantiates a new MacOSCredentialSingleSignOnExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSCredentialSingleSignOnExtension() {
         super();
         this.setOdataType("#microsoft.graph.macOSCredentialSingleSignOnExtension");
@@ -66,14 +67,13 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSCredentialSingleSignOnExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("configurations", (n) -> { currentObject.setConfigurations(n.getCollectionOfObjectValues(KeyTypedValuePair::createFromDiscriminatorValue)); });
-            this.put("domains", (n) -> { currentObject.setDomains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("extensionIdentifier", (n) -> { currentObject.setExtensionIdentifier(n.getStringValue()); });
-            this.put("realm", (n) -> { currentObject.setRealm(n.getStringValue()); });
-            this.put("teamIdentifier", (n) -> { currentObject.setTeamIdentifier(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("configurations", (n) -> { this.setConfigurations(n.getCollectionOfObjectValues(KeyTypedValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("domains", (n) -> { this.setDomains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("extensionIdentifier", (n) -> { this.setExtensionIdentifier(n.getStringValue()); });
+        deserializerMap.put("realm", (n) -> { this.setRealm(n.getStringValue()); });
+        deserializerMap.put("teamIdentifier", (n) -> { this.setTeamIdentifier(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the realm property value. Gets or sets the case-sensitive realm name for this profile.
@@ -96,6 +96,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +111,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
      * @param value Value to set for the configurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurations(@javax.annotation.Nullable final java.util.List<KeyTypedValuePair> value) {
         this._configurations = value;
     }
@@ -118,6 +120,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
      * @param value Value to set for the domains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._domains = value;
     }
@@ -126,6 +129,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
      * @param value Value to set for the extensionIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionIdentifier(@javax.annotation.Nullable final String value) {
         this._extensionIdentifier = value;
     }
@@ -134,6 +138,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
      * @param value Value to set for the realm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRealm(@javax.annotation.Nullable final String value) {
         this._realm = value;
     }
@@ -142,6 +147,7 @@ public class MacOSCredentialSingleSignOnExtension extends MacOSSingleSignOnExten
      * @param value Value to set for the teamIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamIdentifier(@javax.annotation.Nullable final String value) {
         this._teamIdentifier = value;
     }

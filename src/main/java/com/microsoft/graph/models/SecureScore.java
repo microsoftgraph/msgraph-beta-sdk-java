@@ -8,6 +8,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class SecureScore extends Entity implements Parsable {
     /** Active user count of the given tenant. */
     private Integer _activeUserCount;
@@ -30,17 +31,17 @@ public class SecureScore extends Entity implements Parsable {
     /** The vendorInformation property */
     private SecurityVendorInformation _vendorInformation;
     /**
-     * Instantiates a new SecureScore and sets the default values.
+     * Instantiates a new secureScore and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SecureScore() {
         super();
-        this.setOdataType("#microsoft.graph.secureScore");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a SecureScore
+     * @return a secureScore
      */
     @javax.annotation.Nonnull
     public static SecureScore createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -109,19 +110,18 @@ public class SecureScore extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SecureScore currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeUserCount", (n) -> { currentObject.setActiveUserCount(n.getIntegerValue()); });
-            this.put("averageComparativeScores", (n) -> { currentObject.setAverageComparativeScores(n.getCollectionOfObjectValues(AverageComparativeScore::createFromDiscriminatorValue)); });
-            this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
-            this.put("controlScores", (n) -> { currentObject.setControlScores(n.getCollectionOfObjectValues(ControlScore::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("currentScore", (n) -> { currentObject.setCurrentScore(n.getDoubleValue()); });
-            this.put("enabledServices", (n) -> { currentObject.setEnabledServices(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("licensedUserCount", (n) -> { currentObject.setLicensedUserCount(n.getIntegerValue()); });
-            this.put("maxScore", (n) -> { currentObject.setMaxScore(n.getDoubleValue()); });
-            this.put("vendorInformation", (n) -> { currentObject.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeUserCount", (n) -> { this.setActiveUserCount(n.getIntegerValue()); });
+        deserializerMap.put("averageComparativeScores", (n) -> { this.setAverageComparativeScores(n.getCollectionOfObjectValues(AverageComparativeScore::createFromDiscriminatorValue)); });
+        deserializerMap.put("azureTenantId", (n) -> { this.setAzureTenantId(n.getStringValue()); });
+        deserializerMap.put("controlScores", (n) -> { this.setControlScores(n.getCollectionOfObjectValues(ControlScore::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("currentScore", (n) -> { this.setCurrentScore(n.getDoubleValue()); });
+        deserializerMap.put("enabledServices", (n) -> { this.setEnabledServices(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("licensedUserCount", (n) -> { this.setLicensedUserCount(n.getIntegerValue()); });
+        deserializerMap.put("maxScore", (n) -> { this.setMaxScore(n.getDoubleValue()); });
+        deserializerMap.put("vendorInformation", (n) -> { this.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the licensedUserCount property value. Licensed user count of the given tenant.
@@ -152,6 +152,7 @@ public class SecureScore extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -171,6 +172,7 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the activeUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveUserCount(@javax.annotation.Nullable final Integer value) {
         this._activeUserCount = value;
     }
@@ -179,6 +181,7 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the averageComparativeScores property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAverageComparativeScores(@javax.annotation.Nullable final java.util.List<AverageComparativeScore> value) {
         this._averageComparativeScores = value;
     }
@@ -187,6 +190,7 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
         this._azureTenantId = value;
     }
@@ -195,6 +199,7 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the controlScores property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setControlScores(@javax.annotation.Nullable final java.util.List<ControlScore> value) {
         this._controlScores = value;
     }
@@ -203,6 +208,7 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -211,6 +217,7 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the currentScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCurrentScore(@javax.annotation.Nullable final Double value) {
         this._currentScore = value;
     }
@@ -219,6 +226,7 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the enabledServices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabledServices(@javax.annotation.Nullable final java.util.List<String> value) {
         this._enabledServices = value;
     }
@@ -227,6 +235,7 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the licensedUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLicensedUserCount(@javax.annotation.Nullable final Integer value) {
         this._licensedUserCount = value;
     }
@@ -235,6 +244,7 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the maxScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxScore(@javax.annotation.Nullable final Double value) {
         this._maxScore = value;
     }
@@ -243,6 +253,7 @@ public class SecureScore extends Entity implements Parsable {
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
         this._vendorInformation = value;
     }

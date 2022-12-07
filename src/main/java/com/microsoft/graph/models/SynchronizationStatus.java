@@ -42,9 +42,9 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * Instantiates a new synchronizationStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SynchronizationStatus() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.synchronizationStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -94,22 +94,21 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SynchronizationStatus currentObject = this;
-        return new HashMap<>(13) {{
-            this.put("code", (n) -> { currentObject.setCode(n.getEnumValue(SynchronizationStatusCode.class)); });
-            this.put("countSuccessiveCompleteFailures", (n) -> { currentObject.setCountSuccessiveCompleteFailures(n.getLongValue()); });
-            this.put("escrowsPruned", (n) -> { currentObject.setEscrowsPruned(n.getBooleanValue()); });
-            this.put("lastExecution", (n) -> { currentObject.setLastExecution(n.getObjectValue(SynchronizationTaskExecution::createFromDiscriminatorValue)); });
-            this.put("lastSuccessfulExecution", (n) -> { currentObject.setLastSuccessfulExecution(n.getObjectValue(SynchronizationTaskExecution::createFromDiscriminatorValue)); });
-            this.put("lastSuccessfulExecutionWithExports", (n) -> { currentObject.setLastSuccessfulExecutionWithExports(n.getObjectValue(SynchronizationTaskExecution::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("progress", (n) -> { currentObject.setProgress(n.getCollectionOfObjectValues(SynchronizationProgress::createFromDiscriminatorValue)); });
-            this.put("quarantine", (n) -> { currentObject.setQuarantine(n.getObjectValue(SynchronizationQuarantine::createFromDiscriminatorValue)); });
-            this.put("steadyStateFirstAchievedTime", (n) -> { currentObject.setSteadyStateFirstAchievedTime(n.getOffsetDateTimeValue()); });
-            this.put("steadyStateLastAchievedTime", (n) -> { currentObject.setSteadyStateLastAchievedTime(n.getOffsetDateTimeValue()); });
-            this.put("synchronizedEntryCountByType", (n) -> { currentObject.setSynchronizedEntryCountByType(n.getCollectionOfObjectValues(StringKeyLongValuePair::createFromDiscriminatorValue)); });
-            this.put("troubleshootingUrl", (n) -> { currentObject.setTroubleshootingUrl(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(13);
+        deserializerMap.put("code", (n) -> { this.setCode(n.getEnumValue(SynchronizationStatusCode.class)); });
+        deserializerMap.put("countSuccessiveCompleteFailures", (n) -> { this.setCountSuccessiveCompleteFailures(n.getLongValue()); });
+        deserializerMap.put("escrowsPruned", (n) -> { this.setEscrowsPruned(n.getBooleanValue()); });
+        deserializerMap.put("lastExecution", (n) -> { this.setLastExecution(n.getObjectValue(SynchronizationTaskExecution::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastSuccessfulExecution", (n) -> { this.setLastSuccessfulExecution(n.getObjectValue(SynchronizationTaskExecution::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastSuccessfulExecutionWithExports", (n) -> { this.setLastSuccessfulExecutionWithExports(n.getObjectValue(SynchronizationTaskExecution::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("progress", (n) -> { this.setProgress(n.getCollectionOfObjectValues(SynchronizationProgress::createFromDiscriminatorValue)); });
+        deserializerMap.put("quarantine", (n) -> { this.setQuarantine(n.getObjectValue(SynchronizationQuarantine::createFromDiscriminatorValue)); });
+        deserializerMap.put("steadyStateFirstAchievedTime", (n) -> { this.setSteadyStateFirstAchievedTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("steadyStateLastAchievedTime", (n) -> { this.setSteadyStateLastAchievedTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("synchronizedEntryCountByType", (n) -> { this.setSynchronizedEntryCountByType(n.getCollectionOfObjectValues(StringKeyLongValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("troubleshootingUrl", (n) -> { this.setTroubleshootingUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastExecution property value. Details of the last execution of the job.
@@ -196,6 +195,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("code", this.getCode());
@@ -218,6 +218,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -226,6 +227,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final SynchronizationStatusCode value) {
         this._code = value;
     }
@@ -234,6 +236,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the countSuccessiveCompleteFailures property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountSuccessiveCompleteFailures(@javax.annotation.Nullable final Long value) {
         this._countSuccessiveCompleteFailures = value;
     }
@@ -242,6 +245,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the escrowsPruned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEscrowsPruned(@javax.annotation.Nullable final Boolean value) {
         this._escrowsPruned = value;
     }
@@ -250,6 +254,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastExecution property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastExecution(@javax.annotation.Nullable final SynchronizationTaskExecution value) {
         this._lastExecution = value;
     }
@@ -258,6 +263,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastSuccessfulExecution property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSuccessfulExecution(@javax.annotation.Nullable final SynchronizationTaskExecution value) {
         this._lastSuccessfulExecution = value;
     }
@@ -266,6 +272,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the lastSuccessfulExecutionWithExports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSuccessfulExecutionWithExports(@javax.annotation.Nullable final SynchronizationTaskExecution value) {
         this._lastSuccessfulExecutionWithExports = value;
     }
@@ -274,6 +281,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -282,6 +290,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the progress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProgress(@javax.annotation.Nullable final java.util.List<SynchronizationProgress> value) {
         this._progress = value;
     }
@@ -290,6 +299,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the quarantine property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQuarantine(@javax.annotation.Nullable final SynchronizationQuarantine value) {
         this._quarantine = value;
     }
@@ -298,6 +308,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the steadyStateFirstAchievedTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSteadyStateFirstAchievedTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._steadyStateFirstAchievedTime = value;
     }
@@ -306,6 +317,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the steadyStateLastAchievedTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSteadyStateLastAchievedTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._steadyStateLastAchievedTime = value;
     }
@@ -314,6 +326,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the synchronizedEntryCountByType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSynchronizedEntryCountByType(@javax.annotation.Nullable final java.util.List<StringKeyLongValuePair> value) {
         this._synchronizedEntryCountByType = value;
     }
@@ -322,6 +335,7 @@ public class SynchronizationStatus implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the troubleshootingUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTroubleshootingUrl(@javax.annotation.Nullable final String value) {
         this._troubleshootingUrl = value;
     }

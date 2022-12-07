@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the extractSensitivityLabels method. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public enum SensitivityLabelAssignmentMethod implements ValuedEnum {
     Standard("standard"),
     Privileged("privileged"),

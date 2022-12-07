@@ -18,9 +18,9 @@ public class AccessReviewPolicy extends Entity implements Parsable {
      * Instantiates a new accessReviewPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.accessReviewPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,12 +54,11 @@ public class AccessReviewPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isGroupOwnerManagementEnabled", (n) -> { currentObject.setIsGroupOwnerManagementEnabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isGroupOwnerManagementEnabled", (n) -> { this.setIsGroupOwnerManagementEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isGroupOwnerManagementEnabled property value. If true, group owners can create and manage access reviews on groups they own.
@@ -74,6 +73,7 @@ public class AccessReviewPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +86,7 @@ public class AccessReviewPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -94,6 +95,7 @@ public class AccessReviewPolicy extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -102,6 +104,7 @@ public class AccessReviewPolicy extends Entity implements Parsable {
      * @param value Value to set for the isGroupOwnerManagementEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsGroupOwnerManagementEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isGroupOwnerManagementEnabled = value;
     }

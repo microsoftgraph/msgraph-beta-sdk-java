@@ -22,9 +22,9 @@ public class VirtualAppointment extends Entity implements Parsable {
      * Instantiates a new virtualAppointment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VirtualAppointment() {
         super();
-        this.setOdataType("#microsoft.graph.virtualAppointment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -74,14 +74,13 @@ public class VirtualAppointment extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final VirtualAppointment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appointmentClientJoinWebUrl", (n) -> { currentObject.setAppointmentClientJoinWebUrl(n.getStringValue()); });
-            this.put("appointmentClients", (n) -> { currentObject.setAppointmentClients(n.getCollectionOfObjectValues(VirtualAppointmentUser::createFromDiscriminatorValue)); });
-            this.put("externalAppointmentId", (n) -> { currentObject.setExternalAppointmentId(n.getStringValue()); });
-            this.put("externalAppointmentUrl", (n) -> { currentObject.setExternalAppointmentUrl(n.getStringValue()); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(VirtualAppointmentSettings::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appointmentClientJoinWebUrl", (n) -> { this.setAppointmentClientJoinWebUrl(n.getStringValue()); });
+        deserializerMap.put("appointmentClients", (n) -> { this.setAppointmentClients(n.getCollectionOfObjectValues(VirtualAppointmentUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalAppointmentId", (n) -> { this.setExternalAppointmentId(n.getStringValue()); });
+        deserializerMap.put("externalAppointmentUrl", (n) -> { this.setExternalAppointmentUrl(n.getStringValue()); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(VirtualAppointmentSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the settings property value. The settings associated with the virtual appointment resource. Optional.
@@ -96,6 +95,7 @@ public class VirtualAppointment extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,6 +110,7 @@ public class VirtualAppointment extends Entity implements Parsable {
      * @param value Value to set for the appointmentClientJoinWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppointmentClientJoinWebUrl(@javax.annotation.Nullable final String value) {
         this._appointmentClientJoinWebUrl = value;
     }
@@ -118,6 +119,7 @@ public class VirtualAppointment extends Entity implements Parsable {
      * @param value Value to set for the appointmentClients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppointmentClients(@javax.annotation.Nullable final java.util.List<VirtualAppointmentUser> value) {
         this._appointmentClients = value;
     }
@@ -126,6 +128,7 @@ public class VirtualAppointment extends Entity implements Parsable {
      * @param value Value to set for the externalAppointmentId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalAppointmentId(@javax.annotation.Nullable final String value) {
         this._externalAppointmentId = value;
     }
@@ -134,6 +137,7 @@ public class VirtualAppointment extends Entity implements Parsable {
      * @param value Value to set for the externalAppointmentUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalAppointmentUrl(@javax.annotation.Nullable final String value) {
         this._externalAppointmentUrl = value;
     }
@@ -142,6 +146,7 @@ public class VirtualAppointment extends Entity implements Parsable {
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final VirtualAppointmentSettings value) {
         this._settings = value;
     }

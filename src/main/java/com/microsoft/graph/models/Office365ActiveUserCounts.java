@@ -33,9 +33,9 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * Instantiates a new Office365ActiveUserCounts and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Office365ActiveUserCounts() {
         super();
-        this.setOdataType("#microsoft.graph.office365ActiveUserCounts");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,19 +61,18 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Office365ActiveUserCounts currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("exchange", (n) -> { currentObject.setExchange(n.getLongValue()); });
-            this.put("office365", (n) -> { currentObject.setOffice365(n.getLongValue()); });
-            this.put("oneDrive", (n) -> { currentObject.setOneDrive(n.getLongValue()); });
-            this.put("reportDate", (n) -> { currentObject.setReportDate(n.getLocalDateValue()); });
-            this.put("reportPeriod", (n) -> { currentObject.setReportPeriod(n.getStringValue()); });
-            this.put("reportRefreshDate", (n) -> { currentObject.setReportRefreshDate(n.getLocalDateValue()); });
-            this.put("sharePoint", (n) -> { currentObject.setSharePoint(n.getLongValue()); });
-            this.put("skypeForBusiness", (n) -> { currentObject.setSkypeForBusiness(n.getLongValue()); });
-            this.put("teams", (n) -> { currentObject.setTeams(n.getLongValue()); });
-            this.put("yammer", (n) -> { currentObject.setYammer(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("exchange", (n) -> { this.setExchange(n.getLongValue()); });
+        deserializerMap.put("office365", (n) -> { this.setOffice365(n.getLongValue()); });
+        deserializerMap.put("oneDrive", (n) -> { this.setOneDrive(n.getLongValue()); });
+        deserializerMap.put("reportDate", (n) -> { this.setReportDate(n.getLocalDateValue()); });
+        deserializerMap.put("reportPeriod", (n) -> { this.setReportPeriod(n.getStringValue()); });
+        deserializerMap.put("reportRefreshDate", (n) -> { this.setReportRefreshDate(n.getLocalDateValue()); });
+        deserializerMap.put("sharePoint", (n) -> { this.setSharePoint(n.getLongValue()); });
+        deserializerMap.put("skypeForBusiness", (n) -> { this.setSkypeForBusiness(n.getLongValue()); });
+        deserializerMap.put("teams", (n) -> { this.setTeams(n.getLongValue()); });
+        deserializerMap.put("yammer", (n) -> { this.setYammer(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the office365 property value. The number of active users in Microsoft 365. This number includes all the active users in Exchange, OneDrive, SharePoint, Skype For Business, Yammer, and Microsoft Teams. You can find the definition of active user for each product in the respective property description.
@@ -152,6 +151,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -171,6 +171,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * @param value Value to set for the exchange property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExchange(@javax.annotation.Nullable final Long value) {
         this._exchange = value;
     }
@@ -179,6 +180,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * @param value Value to set for the office365 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOffice365(@javax.annotation.Nullable final Long value) {
         this._office365 = value;
     }
@@ -187,6 +189,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * @param value Value to set for the oneDrive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOneDrive(@javax.annotation.Nullable final Long value) {
         this._oneDrive = value;
     }
@@ -195,6 +198,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * @param value Value to set for the reportDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportDate(@javax.annotation.Nullable final LocalDate value) {
         this._reportDate = value;
     }
@@ -203,6 +207,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * @param value Value to set for the reportPeriod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportPeriod(@javax.annotation.Nullable final String value) {
         this._reportPeriod = value;
     }
@@ -211,6 +216,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * @param value Value to set for the reportRefreshDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportRefreshDate(@javax.annotation.Nullable final LocalDate value) {
         this._reportRefreshDate = value;
     }
@@ -219,6 +225,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * @param value Value to set for the sharePoint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharePoint(@javax.annotation.Nullable final Long value) {
         this._sharePoint = value;
     }
@@ -227,6 +234,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * @param value Value to set for the skypeForBusiness property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkypeForBusiness(@javax.annotation.Nullable final Long value) {
         this._skypeForBusiness = value;
     }
@@ -235,6 +243,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * @param value Value to set for the teams property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeams(@javax.annotation.Nullable final Long value) {
         this._teams = value;
     }
@@ -243,6 +252,7 @@ public class Office365ActiveUserCounts extends Entity implements Parsable {
      * @param value Value to set for the yammer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setYammer(@javax.annotation.Nullable final Long value) {
         this._yammer = value;
     }

@@ -33,9 +33,9 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
      * Instantiates a new fileDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FileDetails() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.security.fileDetails");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,18 +61,17 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final FileDetails currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
-            this.put("filePath", (n) -> { currentObject.setFilePath(n.getStringValue()); });
-            this.put("filePublisher", (n) -> { currentObject.setFilePublisher(n.getStringValue()); });
-            this.put("fileSize", (n) -> { currentObject.setFileSize(n.getLongValue()); });
-            this.put("issuer", (n) -> { currentObject.setIssuer(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("sha1", (n) -> { currentObject.setSha1(n.getStringValue()); });
-            this.put("sha256", (n) -> { currentObject.setSha256(n.getStringValue()); });
-            this.put("signer", (n) -> { currentObject.setSigner(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("fileName", (n) -> { this.setFileName(n.getStringValue()); });
+        deserializerMap.put("filePath", (n) -> { this.setFilePath(n.getStringValue()); });
+        deserializerMap.put("filePublisher", (n) -> { this.setFilePublisher(n.getStringValue()); });
+        deserializerMap.put("fileSize", (n) -> { this.setFileSize(n.getLongValue()); });
+        deserializerMap.put("issuer", (n) -> { this.setIssuer(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sha1", (n) -> { this.setSha1(n.getStringValue()); });
+        deserializerMap.put("sha256", (n) -> { this.setSha256(n.getStringValue()); });
+        deserializerMap.put("signer", (n) -> { this.setSigner(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileName property value. The name of the file.
@@ -151,6 +150,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("fileName", this.getFileName());
@@ -169,6 +169,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -177,6 +178,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the fileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileName(@javax.annotation.Nullable final String value) {
         this._fileName = value;
     }
@@ -185,6 +187,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the filePath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilePath(@javax.annotation.Nullable final String value) {
         this._filePath = value;
     }
@@ -193,6 +196,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the filePublisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilePublisher(@javax.annotation.Nullable final String value) {
         this._filePublisher = value;
     }
@@ -201,6 +205,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the fileSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileSize(@javax.annotation.Nullable final Long value) {
         this._fileSize = value;
     }
@@ -209,6 +214,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the issuer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIssuer(@javax.annotation.Nullable final String value) {
         this._issuer = value;
     }
@@ -217,6 +223,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -225,6 +232,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sha1 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSha1(@javax.annotation.Nullable final String value) {
         this._sha1 = value;
     }
@@ -233,6 +241,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sha256 property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSha256(@javax.annotation.Nullable final String value) {
         this._sha256 = value;
     }
@@ -241,6 +250,7 @@ public class FileDetails implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the signer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSigner(@javax.annotation.Nullable final String value) {
         this._signer = value;
     }

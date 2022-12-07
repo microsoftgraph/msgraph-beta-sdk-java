@@ -21,6 +21,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      * Instantiates a new PasswordlessMicrosoftAuthenticatorAuthenticationMethod and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.passwordlessMicrosoftAuthenticatorAuthenticationMethod");
@@ -73,19 +74,19 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PasswordlessMicrosoftAuthenticatorAuthenticationMethod currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("creationDateTime", (n) -> { currentObject.setCreationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("device", (n) -> { currentObject.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("creationDateTime", (n) -> { this.setCreationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("device", (n) -> { this.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +100,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -107,6 +109,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      * @param value Value to set for the creationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._creationDateTime = value;
     }
@@ -115,6 +118,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      * @param value Value to set for the device property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevice(@javax.annotation.Nullable final Device value) {
         this._device = value;
     }
@@ -123,6 +127,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }

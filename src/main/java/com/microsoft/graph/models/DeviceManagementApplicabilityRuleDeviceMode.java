@@ -23,9 +23,9 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
      * Instantiates a new deviceManagementApplicabilityRuleDeviceMode and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementApplicabilityRuleDeviceMode() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceManagementApplicabilityRuleDeviceMode");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,13 +59,12 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementApplicabilityRuleDeviceMode currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("deviceMode", (n) -> { currentObject.setDeviceMode(n.getEnumValue(Windows10DeviceModeType.class)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("ruleType", (n) -> { currentObject.setRuleType(n.getEnumValue(DeviceManagementApplicabilityRuleType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(4);
+        deserializerMap.put("deviceMode", (n) -> { this.setDeviceMode(n.getEnumValue(Windows10DeviceModeType.class)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("ruleType", (n) -> { this.setRuleType(n.getEnumValue(DeviceManagementApplicabilityRuleType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. Name for object.
@@ -96,6 +95,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("deviceMode", this.getDeviceMode());
@@ -109,6 +109,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -117,6 +118,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
      * @param value Value to set for the deviceMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceMode(@javax.annotation.Nullable final Windows10DeviceModeType value) {
         this._deviceMode = value;
     }
@@ -125,6 +127,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -133,6 +136,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -141,6 +145,7 @@ public class DeviceManagementApplicabilityRuleDeviceMode implements AdditionalDa
      * @param value Value to set for the ruleType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRuleType(@javax.annotation.Nullable final DeviceManagementApplicabilityRuleType value) {
         this._ruleType = value;
     }

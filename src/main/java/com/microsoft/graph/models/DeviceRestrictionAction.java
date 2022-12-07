@@ -13,14 +13,14 @@ public class DeviceRestrictionAction extends DlpActionInfo implements Parsable {
     /** The restrictionAction property */
     private RestrictionAction _restrictionAction;
     /** The triggers property */
-    private java.util.List<String> _triggers;
+    private java.util.List<RestrictionTrigger> _triggers;
     /**
      * Instantiates a new DeviceRestrictionAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceRestrictionAction() {
         super();
-        this.setOdataType("#microsoft.graph.deviceRestrictionAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -38,12 +38,11 @@ public class DeviceRestrictionAction extends DlpActionInfo implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceRestrictionAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("message", (n) -> { currentObject.setMessage(n.getStringValue()); });
-            this.put("restrictionAction", (n) -> { currentObject.setRestrictionAction(n.getEnumValue(RestrictionAction.class)); });
-            this.put("triggers", (n) -> { currentObject.setTriggers(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("message", (n) -> { this.setMessage(n.getStringValue()); });
+        deserializerMap.put("restrictionAction", (n) -> { this.setRestrictionAction(n.getEnumValue(RestrictionAction.class)); });
+        deserializerMap.put("triggers", (n) -> { this.setTriggers(n.getCollectionOfEnumValues(RestrictionTrigger.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the message property value. The message property
@@ -63,10 +62,10 @@ public class DeviceRestrictionAction extends DlpActionInfo implements Parsable {
     }
     /**
      * Gets the triggers property value. The triggers property
-     * @return a string
+     * @return a restrictionTrigger
      */
     @javax.annotation.Nullable
-    public java.util.List<String> getTriggers() {
+    public java.util.List<RestrictionTrigger> getTriggers() {
         return this._triggers;
     }
     /**
@@ -74,18 +73,20 @@ public class DeviceRestrictionAction extends DlpActionInfo implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("message", this.getMessage());
         writer.writeEnumValue("restrictionAction", this.getRestrictionAction());
-        writer.writeCollectionOfPrimitiveValues("triggers", this.getTriggers());
+        writer.writeCollectionOfEnumValues("triggers", this.getTriggers());
     }
     /**
      * Sets the message property value. The message property
      * @param value Value to set for the message property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessage(@javax.annotation.Nullable final String value) {
         this._message = value;
     }
@@ -94,6 +95,7 @@ public class DeviceRestrictionAction extends DlpActionInfo implements Parsable {
      * @param value Value to set for the restrictionAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestrictionAction(@javax.annotation.Nullable final RestrictionAction value) {
         this._restrictionAction = value;
     }
@@ -102,7 +104,8 @@ public class DeviceRestrictionAction extends DlpActionInfo implements Parsable {
      * @param value Value to set for the triggers property.
      * @return a void
      */
-    public void setTriggers(@javax.annotation.Nullable final java.util.List<String> value) {
+    @javax.annotation.Nonnull
+    public void setTriggers(@javax.annotation.Nullable final java.util.List<RestrictionTrigger> value) {
         this._triggers = value;
     }
 }

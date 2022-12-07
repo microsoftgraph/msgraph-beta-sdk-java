@@ -7,7 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class FeatureRolloutPolicy extends Entity implements Parsable {
     /** Nullable. Specifies a list of directoryObjects that feature is enabled for. */
     private java.util.List<DirectoryObject> _appliesTo;
@@ -25,9 +25,9 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * Instantiates a new featureRolloutPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FeatureRolloutPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.featureRolloutPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -77,15 +77,14 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final FeatureRolloutPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("feature", (n) -> { currentObject.setFeature(n.getEnumValue(StagedFeatureName.class)); });
-            this.put("isAppliedToOrganization", (n) -> { currentObject.setIsAppliedToOrganization(n.getBooleanValue()); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("feature", (n) -> { this.setFeature(n.getEnumValue(StagedFeatureName.class)); });
+        deserializerMap.put("isAppliedToOrganization", (n) -> { this.setIsAppliedToOrganization(n.getBooleanValue()); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isAppliedToOrganization property value. Indicates whether this feature rollout policy should be applied to the entire organization.
@@ -108,6 +107,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,6 +123,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * @param value Value to set for the appliesTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliesTo(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this._appliesTo = value;
     }
@@ -131,6 +132,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -139,6 +141,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -147,6 +150,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * @param value Value to set for the feature property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeature(@javax.annotation.Nullable final StagedFeatureName value) {
         this._feature = value;
     }
@@ -155,6 +159,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * @param value Value to set for the isAppliedToOrganization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAppliedToOrganization(@javax.annotation.Nullable final Boolean value) {
         this._isAppliedToOrganization = value;
     }
@@ -163,6 +168,7 @@ public class FeatureRolloutPolicy extends Entity implements Parsable {
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
         this._isEnabled = value;
     }

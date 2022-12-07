@@ -20,6 +20,7 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
      * Instantiates a new GroupPolicyPresentationComboBox and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentationComboBox() {
         super();
         this.setOdataType("#microsoft.graph.groupPolicyPresentationComboBox");
@@ -48,13 +49,12 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyPresentationComboBox currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultValue", (n) -> { currentObject.setDefaultValue(n.getStringValue()); });
-            this.put("maxLength", (n) -> { currentObject.setMaxLength(n.getLongValue()); });
-            this.put("required", (n) -> { currentObject.setRequired(n.getBooleanValue()); });
-            this.put("suggestions", (n) -> { currentObject.setSuggestions(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getStringValue()); });
+        deserializerMap.put("maxLength", (n) -> { this.setMaxLength(n.getLongValue()); });
+        deserializerMap.put("required", (n) -> { this.setRequired(n.getBooleanValue()); });
+        deserializerMap.put("suggestions", (n) -> { this.setSuggestions(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the maxLength property value. An unsigned integer that specifies the maximum number of text characters for the parameter. The default value is 1023.
@@ -85,6 +85,7 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,6 +99,7 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
      * @param value Value to set for the defaultValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultValue(@javax.annotation.Nullable final String value) {
         this._defaultValue = value;
     }
@@ -106,6 +108,7 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
      * @param value Value to set for the maxLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaxLength(@javax.annotation.Nullable final Long value) {
         this._maxLength = value;
     }
@@ -114,6 +117,7 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
      * @param value Value to set for the required property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequired(@javax.annotation.Nullable final Boolean value) {
         this._required = value;
     }
@@ -122,6 +126,7 @@ public class GroupPolicyPresentationComboBox extends GroupPolicyUploadedPresenta
      * @param value Value to set for the suggestions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuggestions(@javax.annotation.Nullable final java.util.List<String> value) {
         this._suggestions = value;
     }

@@ -48,9 +48,9 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * Instantiates a new groupPolicyDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.groupPolicyDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -116,26 +116,25 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("category", (n) -> { currentObject.setCategory(n.getObjectValue(GroupPolicyCategory::createFromDiscriminatorValue)); });
-            this.put("categoryPath", (n) -> { currentObject.setCategoryPath(n.getStringValue()); });
-            this.put("classType", (n) -> { currentObject.setClassType(n.getEnumValue(GroupPolicyDefinitionClassType.class)); });
-            this.put("definitionFile", (n) -> { currentObject.setDefinitionFile(n.getObjectValue(GroupPolicyDefinitionFile::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("explainText", (n) -> { currentObject.setExplainText(n.getStringValue()); });
-            this.put("groupPolicyCategoryId", (n) -> { currentObject.setGroupPolicyCategoryId(n.getStringValue()); });
-            this.put("hasRelatedDefinitions", (n) -> { currentObject.setHasRelatedDefinitions(n.getBooleanValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("minDeviceCspVersion", (n) -> { currentObject.setMinDeviceCspVersion(n.getStringValue()); });
-            this.put("minUserCspVersion", (n) -> { currentObject.setMinUserCspVersion(n.getStringValue()); });
-            this.put("nextVersionDefinition", (n) -> { currentObject.setNextVersionDefinition(n.getObjectValue(GroupPolicyDefinition::createFromDiscriminatorValue)); });
-            this.put("policyType", (n) -> { currentObject.setPolicyType(n.getEnumValue(GroupPolicyType.class)); });
-            this.put("presentations", (n) -> { currentObject.setPresentations(n.getCollectionOfObjectValues(GroupPolicyPresentation::createFromDiscriminatorValue)); });
-            this.put("previousVersionDefinition", (n) -> { currentObject.setPreviousVersionDefinition(n.getObjectValue(GroupPolicyDefinition::createFromDiscriminatorValue)); });
-            this.put("supportedOn", (n) -> { currentObject.setSupportedOn(n.getStringValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getObjectValue(GroupPolicyCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("categoryPath", (n) -> { this.setCategoryPath(n.getStringValue()); });
+        deserializerMap.put("classType", (n) -> { this.setClassType(n.getEnumValue(GroupPolicyDefinitionClassType.class)); });
+        deserializerMap.put("definitionFile", (n) -> { this.setDefinitionFile(n.getObjectValue(GroupPolicyDefinitionFile::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("explainText", (n) -> { this.setExplainText(n.getStringValue()); });
+        deserializerMap.put("groupPolicyCategoryId", (n) -> { this.setGroupPolicyCategoryId(n.getStringValue()); });
+        deserializerMap.put("hasRelatedDefinitions", (n) -> { this.setHasRelatedDefinitions(n.getBooleanValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("minDeviceCspVersion", (n) -> { this.setMinDeviceCspVersion(n.getStringValue()); });
+        deserializerMap.put("minUserCspVersion", (n) -> { this.setMinUserCspVersion(n.getStringValue()); });
+        deserializerMap.put("nextVersionDefinition", (n) -> { this.setNextVersionDefinition(n.getObjectValue(GroupPolicyDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("policyType", (n) -> { this.setPolicyType(n.getEnumValue(GroupPolicyType.class)); });
+        deserializerMap.put("presentations", (n) -> { this.setPresentations(n.getCollectionOfObjectValues(GroupPolicyPresentation::createFromDiscriminatorValue)); });
+        deserializerMap.put("previousVersionDefinition", (n) -> { this.setPreviousVersionDefinition(n.getObjectValue(GroupPolicyDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("supportedOn", (n) -> { this.setSupportedOn(n.getStringValue()); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the groupPolicyCategoryId property value. The category id of the parent category
@@ -230,6 +229,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -256,6 +256,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final GroupPolicyCategory value) {
         this._category = value;
     }
@@ -264,6 +265,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the categoryPath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategoryPath(@javax.annotation.Nullable final String value) {
         this._categoryPath = value;
     }
@@ -272,6 +274,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the classType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClassType(@javax.annotation.Nullable final GroupPolicyDefinitionClassType value) {
         this._classType = value;
     }
@@ -280,6 +283,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the definitionFile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitionFile(@javax.annotation.Nullable final GroupPolicyDefinitionFile value) {
         this._definitionFile = value;
     }
@@ -288,6 +292,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -296,6 +301,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the explainText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExplainText(@javax.annotation.Nullable final String value) {
         this._explainText = value;
     }
@@ -304,6 +310,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the groupPolicyCategoryId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupPolicyCategoryId(@javax.annotation.Nullable final String value) {
         this._groupPolicyCategoryId = value;
     }
@@ -312,6 +319,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the hasRelatedDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasRelatedDefinitions(@javax.annotation.Nullable final Boolean value) {
         this._hasRelatedDefinitions = value;
     }
@@ -320,6 +328,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -328,6 +337,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the minDeviceCspVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinDeviceCspVersion(@javax.annotation.Nullable final String value) {
         this._minDeviceCspVersion = value;
     }
@@ -336,6 +346,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the minUserCspVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinUserCspVersion(@javax.annotation.Nullable final String value) {
         this._minUserCspVersion = value;
     }
@@ -344,6 +355,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the nextVersionDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNextVersionDefinition(@javax.annotation.Nullable final GroupPolicyDefinition value) {
         this._nextVersionDefinition = value;
     }
@@ -352,6 +364,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the policyType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyType(@javax.annotation.Nullable final GroupPolicyType value) {
         this._policyType = value;
     }
@@ -360,6 +373,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the presentations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPresentations(@javax.annotation.Nullable final java.util.List<GroupPolicyPresentation> value) {
         this._presentations = value;
     }
@@ -368,6 +382,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the previousVersionDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreviousVersionDefinition(@javax.annotation.Nullable final GroupPolicyDefinition value) {
         this._previousVersionDefinition = value;
     }
@@ -376,6 +391,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the supportedOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedOn(@javax.annotation.Nullable final String value) {
         this._supportedOn = value;
     }
@@ -384,6 +400,7 @@ public class GroupPolicyDefinition extends Entity implements Parsable {
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
         this._version = value;
     }

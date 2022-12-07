@@ -1,5 +1,6 @@
 package com.microsoft.graph.models;
 
+import com.microsoft.graph.models.BusinessScenarioTask;
 import com.microsoft.graph.models.PlannerAssignedToTaskBoardTaskFormat;
 import com.microsoft.graph.models.PlannerBucket;
 import com.microsoft.graph.models.PlannerBucketTaskBoardTaskFormat;
@@ -16,15 +17,15 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class PlannerDelta extends Entity implements Parsable {
     /**
      * Instantiates a new plannerDelta and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerDelta() {
         super();
-        this.setOdataType("#microsoft.graph.plannerDelta");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -38,6 +39,7 @@ public class PlannerDelta extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.businessScenarioTask": return new BusinessScenarioTask();
                 case "#microsoft.graph.plannerAssignedToTaskBoardTaskFormat": return new PlannerAssignedToTaskBoardTaskFormat();
                 case "#microsoft.graph.plannerBucket": return new PlannerBucket();
                 case "#microsoft.graph.plannerBucketTaskBoardTaskFormat": return new PlannerBucketTaskBoardTaskFormat();
@@ -57,15 +59,15 @@ public class PlannerDelta extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerDelta currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

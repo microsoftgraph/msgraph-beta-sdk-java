@@ -18,6 +18,7 @@ public class SignDigestPostRequestBody implements AdditionalDataHolder, Parsable
      * Instantiates a new signDigestPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SignDigestPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -53,16 +54,16 @@ public class SignDigestPostRequestBody implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SignDigestPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("digest", (n) -> { currentObject.setDigest(n.getByteArrayValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("digest", (n) -> { this.setDigest(n.getByteArrayValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("digest", this.getDigest());
@@ -73,6 +74,7 @@ public class SignDigestPostRequestBody implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -81,6 +83,7 @@ public class SignDigestPostRequestBody implements AdditionalDataHolder, Parsable
      * @param value Value to set for the digest property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDigest(@javax.annotation.Nullable final byte[] value) {
         this._digest = value;
     }

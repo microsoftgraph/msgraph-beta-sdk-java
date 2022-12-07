@@ -7,8 +7,10 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Provides operations to manage the collection of accessReview entities. */
 public class PlannerBucket extends PlannerDelta implements Parsable {
+    /** The creationSource property */
+    private PlannerBucketCreation _creationSource;
     /** Name of the bucket. */
     private String _name;
     /** Hint used to order items of this type in a list view. The format is defined as outlined here. */
@@ -21,9 +23,9 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
      * Instantiates a new plannerBucket and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerBucket() {
         super();
-        this.setOdataType("#microsoft.graph.plannerBucket");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,18 +38,26 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
         return new PlannerBucket();
     }
     /**
+     * Gets the creationSource property value. The creationSource property
+     * @return a plannerBucketCreation
+     */
+    @javax.annotation.Nullable
+    public PlannerBucketCreation getCreationSource() {
+        return this._creationSource;
+    }
+    /**
      * The deserialization information for the current model
      * @return a Map<String, Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerBucket currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("orderHint", (n) -> { currentObject.setOrderHint(n.getStringValue()); });
-            this.put("planId", (n) -> { currentObject.setPlanId(n.getStringValue()); });
-            this.put("tasks", (n) -> { currentObject.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("creationSource", (n) -> { this.setCreationSource(n.getObjectValue(PlannerBucketCreation::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("orderHint", (n) -> { this.setOrderHint(n.getStringValue()); });
+        deserializerMap.put("planId", (n) -> { this.setPlanId(n.getStringValue()); });
+        deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the name property value. Name of the bucket.
@@ -86,19 +96,31 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("creationSource", this.getCreationSource());
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("orderHint", this.getOrderHint());
         writer.writeStringValue("planId", this.getPlanId());
         writer.writeCollectionOfObjectValues("tasks", this.getTasks());
     }
     /**
+     * Sets the creationSource property value. The creationSource property
+     * @param value Value to set for the creationSource property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCreationSource(@javax.annotation.Nullable final PlannerBucketCreation value) {
+        this._creationSource = value;
+    }
+    /**
      * Sets the name property value. Name of the bucket.
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -107,6 +129,7 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
      * @param value Value to set for the orderHint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrderHint(@javax.annotation.Nullable final String value) {
         this._orderHint = value;
     }
@@ -115,6 +138,7 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
      * @param value Value to set for the planId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlanId(@javax.annotation.Nullable final String value) {
         this._planId = value;
     }
@@ -123,6 +147,7 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
      * @param value Value to set for the tasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTasks(@javax.annotation.Nullable final java.util.List<PlannerTask> value) {
         this._tasks = value;
     }

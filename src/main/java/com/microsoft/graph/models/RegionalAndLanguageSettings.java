@@ -26,9 +26,9 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      * Instantiates a new regionalAndLanguageSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RegionalAndLanguageSettings() {
         super();
-        this.setOdataType("#microsoft.graph.regionalAndLanguageSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -86,16 +86,15 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RegionalAndLanguageSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authoringLanguages", (n) -> { currentObject.setAuthoringLanguages(n.getCollectionOfObjectValues(LocaleInfo::createFromDiscriminatorValue)); });
-            this.put("defaultDisplayLanguage", (n) -> { currentObject.setDefaultDisplayLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
-            this.put("defaultRegionalFormat", (n) -> { currentObject.setDefaultRegionalFormat(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
-            this.put("defaultSpeechInputLanguage", (n) -> { currentObject.setDefaultSpeechInputLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
-            this.put("defaultTranslationLanguage", (n) -> { currentObject.setDefaultTranslationLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
-            this.put("regionalFormatOverrides", (n) -> { currentObject.setRegionalFormatOverrides(n.getObjectValue(RegionalFormatOverrides::createFromDiscriminatorValue)); });
-            this.put("translationPreferences", (n) -> { currentObject.setTranslationPreferences(n.getObjectValue(TranslationPreferences::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authoringLanguages", (n) -> { this.setAuthoringLanguages(n.getCollectionOfObjectValues(LocaleInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultDisplayLanguage", (n) -> { this.setDefaultDisplayLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultRegionalFormat", (n) -> { this.setDefaultRegionalFormat(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultSpeechInputLanguage", (n) -> { this.setDefaultSpeechInputLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultTranslationLanguage", (n) -> { this.setDefaultTranslationLanguage(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("regionalFormatOverrides", (n) -> { this.setRegionalFormatOverrides(n.getObjectValue(RegionalFormatOverrides::createFromDiscriminatorValue)); });
+        deserializerMap.put("translationPreferences", (n) -> { this.setTranslationPreferences(n.getObjectValue(TranslationPreferences::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the regionalFormatOverrides property value. Allows a user to override their defaultRegionalFormat with field specific formats.Returned by default.
@@ -118,6 +117,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +134,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      * @param value Value to set for the authoringLanguages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthoringLanguages(@javax.annotation.Nullable final java.util.List<LocaleInfo> value) {
         this._authoringLanguages = value;
     }
@@ -142,6 +143,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      * @param value Value to set for the defaultDisplayLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultDisplayLanguage(@javax.annotation.Nullable final LocaleInfo value) {
         this._defaultDisplayLanguage = value;
     }
@@ -150,6 +152,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      * @param value Value to set for the defaultRegionalFormat property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultRegionalFormat(@javax.annotation.Nullable final LocaleInfo value) {
         this._defaultRegionalFormat = value;
     }
@@ -158,6 +161,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      * @param value Value to set for the defaultSpeechInputLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultSpeechInputLanguage(@javax.annotation.Nullable final LocaleInfo value) {
         this._defaultSpeechInputLanguage = value;
     }
@@ -166,6 +170,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      * @param value Value to set for the defaultTranslationLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultTranslationLanguage(@javax.annotation.Nullable final LocaleInfo value) {
         this._defaultTranslationLanguage = value;
     }
@@ -174,6 +179,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      * @param value Value to set for the regionalFormatOverrides property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegionalFormatOverrides(@javax.annotation.Nullable final RegionalFormatOverrides value) {
         this._regionalFormatOverrides = value;
     }
@@ -182,6 +188,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
      * @param value Value to set for the translationPreferences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTranslationPreferences(@javax.annotation.Nullable final TranslationPreferences value) {
         this._translationPreferences = value;
     }

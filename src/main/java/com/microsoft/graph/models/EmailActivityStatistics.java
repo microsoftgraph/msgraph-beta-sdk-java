@@ -19,6 +19,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements Parsa
      * Instantiates a new EmailActivityStatistics and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EmailActivityStatistics() {
         super();
         this.setOdataType("#microsoft.graph.emailActivityStatistics");
@@ -47,12 +48,11 @@ public class EmailActivityStatistics extends ActivityStatistics implements Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EmailActivityStatistics currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("afterHours", (n) -> { currentObject.setAfterHours(n.getPeriodValue()); });
-            this.put("readEmail", (n) -> { currentObject.setReadEmail(n.getPeriodValue()); });
-            this.put("sentEmail", (n) -> { currentObject.setSentEmail(n.getPeriodValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("afterHours", (n) -> { this.setAfterHours(n.getPeriodValue()); });
+        deserializerMap.put("readEmail", (n) -> { this.setReadEmail(n.getPeriodValue()); });
+        deserializerMap.put("sentEmail", (n) -> { this.setSentEmail(n.getPeriodValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the readEmail property value. Total hours spent reading email. The value is represented in ISO 8601 format for durations.
@@ -75,6 +75,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,6 +88,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements Parsa
      * @param value Value to set for the afterHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAfterHours(@javax.annotation.Nullable final Period value) {
         this._afterHours = value;
     }
@@ -95,6 +97,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements Parsa
      * @param value Value to set for the readEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReadEmail(@javax.annotation.Nullable final Period value) {
         this._readEmail = value;
     }
@@ -103,6 +106,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements Parsa
      * @param value Value to set for the sentEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentEmail(@javax.annotation.Nullable final Period value) {
         this._sentEmail = value;
     }

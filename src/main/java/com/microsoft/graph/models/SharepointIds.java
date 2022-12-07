@@ -31,9 +31,9 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * Instantiates a new sharepointIds and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SharepointIds() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.sharepointIds");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -59,17 +59,16 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SharepointIds currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("listId", (n) -> { currentObject.setListId(n.getStringValue()); });
-            this.put("listItemId", (n) -> { currentObject.setListItemId(n.getStringValue()); });
-            this.put("listItemUniqueId", (n) -> { currentObject.setListItemUniqueId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("siteId", (n) -> { currentObject.setSiteId(n.getStringValue()); });
-            this.put("siteUrl", (n) -> { currentObject.setSiteUrl(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("webId", (n) -> { currentObject.setWebId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(8);
+        deserializerMap.put("listId", (n) -> { this.setListId(n.getStringValue()); });
+        deserializerMap.put("listItemId", (n) -> { this.setListItemId(n.getStringValue()); });
+        deserializerMap.put("listItemUniqueId", (n) -> { this.setListItemUniqueId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("siteId", (n) -> { this.setSiteId(n.getStringValue()); });
+        deserializerMap.put("siteUrl", (n) -> { this.setSiteUrl(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("webId", (n) -> { this.setWebId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the listId property value. The unique identifier (guid) for the item's list in SharePoint.
@@ -140,6 +139,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("listId", this.getListId());
@@ -157,6 +157,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -165,6 +166,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the listId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setListId(@javax.annotation.Nullable final String value) {
         this._listId = value;
     }
@@ -173,6 +175,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the listItemId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setListItemId(@javax.annotation.Nullable final String value) {
         this._listItemId = value;
     }
@@ -181,6 +184,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the listItemUniqueId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setListItemUniqueId(@javax.annotation.Nullable final String value) {
         this._listItemUniqueId = value;
     }
@@ -189,6 +193,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -197,6 +202,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the siteId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteId(@javax.annotation.Nullable final String value) {
         this._siteId = value;
     }
@@ -205,6 +211,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the siteUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteUrl(@javax.annotation.Nullable final String value) {
         this._siteUrl = value;
     }
@@ -213,6 +220,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
         this._tenantId = value;
     }
@@ -221,6 +229,7 @@ public class SharepointIds implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the webId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebId(@javax.annotation.Nullable final String value) {
         this._webId = value;
     }

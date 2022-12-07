@@ -21,9 +21,9 @@ public class Image implements AdditionalDataHolder, Parsable {
      * Instantiates a new image and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Image() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.image");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,12 +49,11 @@ public class Image implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Image currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("height", (n) -> { currentObject.setHeight(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("width", (n) -> { currentObject.setWidth(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("height", (n) -> { this.setHeight(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("width", (n) -> { this.setWidth(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the height property value. Optional. Height of the image, in pixels. Read-only.
@@ -85,6 +84,7 @@ public class Image implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("height", this.getHeight());
@@ -97,6 +97,7 @@ public class Image implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -105,6 +106,7 @@ public class Image implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the height property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHeight(@javax.annotation.Nullable final Integer value) {
         this._height = value;
     }
@@ -113,6 +115,7 @@ public class Image implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -121,6 +124,7 @@ public class Image implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the width property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWidth(@javax.annotation.Nullable final Integer value) {
         this._width = value;
     }

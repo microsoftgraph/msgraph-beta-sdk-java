@@ -10,6 +10,8 @@ import java.util.Objects;
 public class CloudPcSupportedRegion extends Entity implements Parsable {
     /** The name for the supported region. Read-only. */
     private String _displayName;
+    /** The regionGroup property */
+    private CloudPcRegionGroup _regionGroup;
     /** The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only. */
     private CloudPcSupportedRegionStatus _regionStatus;
     /** The supportedSolution property */
@@ -18,9 +20,9 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * Instantiates a new CloudPcSupportedRegion and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcSupportedRegion() {
         super();
-        this.setOdataType("#microsoft.graph.cloudPcSupportedRegion");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,12 +48,20 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcSupportedRegion currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("regionStatus", (n) -> { currentObject.setRegionStatus(n.getEnumValue(CloudPcSupportedRegionStatus.class)); });
-            this.put("supportedSolution", (n) -> { currentObject.setSupportedSolution(n.getEnumValue(CloudPcManagementService.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("regionGroup", (n) -> { this.setRegionGroup(n.getEnumValue(CloudPcRegionGroup.class)); });
+        deserializerMap.put("regionStatus", (n) -> { this.setRegionStatus(n.getEnumValue(CloudPcSupportedRegionStatus.class)); });
+        deserializerMap.put("supportedSolution", (n) -> { this.setSupportedSolution(n.getEnumValue(CloudPcManagementService.class)); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the regionGroup property value. The regionGroup property
+     * @return a cloudPcRegionGroup
+     */
+    @javax.annotation.Nullable
+    public CloudPcRegionGroup getRegionGroup() {
+        return this._regionGroup;
     }
     /**
      * Gets the regionStatus property value. The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
@@ -74,10 +84,12 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeEnumValue("regionGroup", this.getRegionGroup());
         writer.writeEnumValue("regionStatus", this.getRegionStatus());
         writer.writeEnumValue("supportedSolution", this.getSupportedSolution());
     }
@@ -86,14 +98,25 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
+    }
+    /**
+     * Sets the regionGroup property value. The regionGroup property
+     * @param value Value to set for the regionGroup property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setRegionGroup(@javax.annotation.Nullable final CloudPcRegionGroup value) {
+        this._regionGroup = value;
     }
     /**
      * Sets the regionStatus property value. The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
      * @param value Value to set for the regionStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegionStatus(@javax.annotation.Nullable final CloudPcSupportedRegionStatus value) {
         this._regionStatus = value;
     }
@@ -102,6 +125,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      * @param value Value to set for the supportedSolution property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportedSolution(@javax.annotation.Nullable final CloudPcManagementService value) {
         this._supportedSolution = value;
     }

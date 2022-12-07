@@ -34,6 +34,7 @@ public class GetAppsInstallSummaryReportPostRequestBody implements AdditionalDat
      * Instantiates a new getAppsInstallSummaryReportPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetAppsInstallSummaryReportPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -61,18 +62,17 @@ public class GetAppsInstallSummaryReportPostRequestBody implements AdditionalDat
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GetAppsInstallSummaryReportPostRequestBody currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("filter", (n) -> { currentObject.setFilter(n.getStringValue()); });
-            this.put("groupBy", (n) -> { currentObject.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("orderBy", (n) -> { currentObject.setOrderBy(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("search", (n) -> { currentObject.setSearch(n.getStringValue()); });
-            this.put("select", (n) -> { currentObject.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("sessionId", (n) -> { currentObject.setSessionId(n.getStringValue()); });
-            this.put("skip", (n) -> { currentObject.setSkip(n.getIntegerValue()); });
-            this.put("top", (n) -> { currentObject.setTop(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(9);
+        deserializerMap.put("filter", (n) -> { this.setFilter(n.getStringValue()); });
+        deserializerMap.put("groupBy", (n) -> { this.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("orderBy", (n) -> { this.setOrderBy(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("search", (n) -> { this.setSearch(n.getStringValue()); });
+        deserializerMap.put("select", (n) -> { this.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("sessionId", (n) -> { this.setSessionId(n.getStringValue()); });
+        deserializerMap.put("skip", (n) -> { this.setSkip(n.getIntegerValue()); });
+        deserializerMap.put("top", (n) -> { this.setTop(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the filter property value. The filter property
@@ -151,6 +151,7 @@ public class GetAppsInstallSummaryReportPostRequestBody implements AdditionalDat
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("filter", this.getFilter());
@@ -169,6 +170,7 @@ public class GetAppsInstallSummaryReportPostRequestBody implements AdditionalDat
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -177,6 +179,7 @@ public class GetAppsInstallSummaryReportPostRequestBody implements AdditionalDat
      * @param value Value to set for the filter property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFilter(@javax.annotation.Nullable final String value) {
         this._filter = value;
     }
@@ -185,6 +188,7 @@ public class GetAppsInstallSummaryReportPostRequestBody implements AdditionalDat
      * @param value Value to set for the groupBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupBy(@javax.annotation.Nullable final java.util.List<String> value) {
         this._groupBy = value;
     }
@@ -193,6 +197,7 @@ public class GetAppsInstallSummaryReportPostRequestBody implements AdditionalDat
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -201,6 +206,7 @@ public class GetAppsInstallSummaryReportPostRequestBody implements AdditionalDat
      * @param value Value to set for the orderBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrderBy(@javax.annotation.Nullable final java.util.List<String> value) {
         this._orderBy = value;
     }
@@ -209,6 +215,7 @@ public class GetAppsInstallSummaryReportPostRequestBody implements AdditionalDat
      * @param value Value to set for the search property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSearch(@javax.annotation.Nullable final String value) {
         this._search = value;
     }
@@ -217,6 +224,7 @@ public class GetAppsInstallSummaryReportPostRequestBody implements AdditionalDat
      * @param value Value to set for the select property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSelect(@javax.annotation.Nullable final java.util.List<String> value) {
         this._select = value;
     }
@@ -225,6 +233,7 @@ public class GetAppsInstallSummaryReportPostRequestBody implements AdditionalDat
      * @param value Value to set for the sessionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessionId(@javax.annotation.Nullable final String value) {
         this._sessionId = value;
     }
@@ -233,6 +242,7 @@ public class GetAppsInstallSummaryReportPostRequestBody implements AdditionalDat
      * @param value Value to set for the skip property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSkip(@javax.annotation.Nullable final Integer value) {
         this._skip = value;
     }
@@ -241,6 +251,7 @@ public class GetAppsInstallSummaryReportPostRequestBody implements AdditionalDat
      * @param value Value to set for the top property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTop(@javax.annotation.Nullable final Integer value) {
         this._top = value;
     }

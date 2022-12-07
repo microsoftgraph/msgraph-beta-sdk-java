@@ -19,6 +19,7 @@ public class SetCloudPcReviewStatusPostRequestBody implements AdditionalDataHold
      * Instantiates a new setCloudPcReviewStatusPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SetCloudPcReviewStatusPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -46,10 +47,9 @@ public class SetCloudPcReviewStatusPostRequestBody implements AdditionalDataHold
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SetCloudPcReviewStatusPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("reviewStatus", (n) -> { currentObject.setReviewStatus(n.getObjectValue(CloudPcReviewStatus::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("reviewStatus", (n) -> { this.setReviewStatus(n.getObjectValue(CloudPcReviewStatus::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the reviewStatus property value. The reviewStatus property
@@ -64,6 +64,7 @@ public class SetCloudPcReviewStatusPostRequestBody implements AdditionalDataHold
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("reviewStatus", this.getReviewStatus());
@@ -74,6 +75,7 @@ public class SetCloudPcReviewStatusPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +84,7 @@ public class SetCloudPcReviewStatusPostRequestBody implements AdditionalDataHold
      * @param value Value to set for the reviewStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewStatus(@javax.annotation.Nullable final CloudPcReviewStatus value) {
         this._reviewStatus = value;
     }

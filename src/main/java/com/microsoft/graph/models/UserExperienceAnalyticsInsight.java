@@ -26,9 +26,9 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      * Instantiates a new userExperienceAnalyticsInsight and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsInsight() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsInsight");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,14 +54,13 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsInsight currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("insightId", (n) -> { currentObject.setInsightId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("severity", (n) -> { currentObject.setSeverity(n.getEnumValue(UserExperienceAnalyticsInsightSeverity.class)); });
-            this.put("userExperienceAnalyticsMetricId", (n) -> { currentObject.setUserExperienceAnalyticsMetricId(n.getStringValue()); });
-            this.put("values", (n) -> { currentObject.setValues(n.getCollectionOfObjectValues(UserExperienceAnalyticsInsightValue::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(5);
+        deserializerMap.put("insightId", (n) -> { this.setInsightId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(UserExperienceAnalyticsInsightSeverity.class)); });
+        deserializerMap.put("userExperienceAnalyticsMetricId", (n) -> { this.setUserExperienceAnalyticsMetricId(n.getStringValue()); });
+        deserializerMap.put("values", (n) -> { this.setValues(n.getCollectionOfObjectValues(UserExperienceAnalyticsInsightValue::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the insightId property value. The unique identifier of the user experience analytics insight.
@@ -108,6 +107,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("insightId", this.getInsightId());
@@ -122,6 +122,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -130,6 +131,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      * @param value Value to set for the insightId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInsightId(@javax.annotation.Nullable final String value) {
         this._insightId = value;
     }
@@ -138,6 +140,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -146,6 +149,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      * @param value Value to set for the severity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSeverity(@javax.annotation.Nullable final UserExperienceAnalyticsInsightSeverity value) {
         this._severity = value;
     }
@@ -154,6 +158,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      * @param value Value to set for the userExperienceAnalyticsMetricId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserExperienceAnalyticsMetricId(@javax.annotation.Nullable final String value) {
         this._userExperienceAnalyticsMetricId = value;
     }
@@ -162,6 +167,7 @@ public class UserExperienceAnalyticsInsight implements AdditionalDataHolder, Par
      * @param value Value to set for the values property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValues(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsInsightValue> value) {
         this._values = value;
     }

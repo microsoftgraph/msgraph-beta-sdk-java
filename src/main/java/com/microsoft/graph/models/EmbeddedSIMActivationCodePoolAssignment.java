@@ -15,9 +15,9 @@ public class EmbeddedSIMActivationCodePoolAssignment extends Entity implements P
      * Instantiates a new embeddedSIMActivationCodePoolAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EmbeddedSIMActivationCodePoolAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.embeddedSIMActivationCodePoolAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,10 +35,9 @@ public class EmbeddedSIMActivationCodePoolAssignment extends Entity implements P
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EmbeddedSIMActivationCodePoolAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(DeviceAndAppManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the target property value. Base type for assignment targets.
@@ -53,6 +52,7 @@ public class EmbeddedSIMActivationCodePoolAssignment extends Entity implements P
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,6 +63,7 @@ public class EmbeddedSIMActivationCodePoolAssignment extends Entity implements P
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final DeviceAndAppManagementAssignmentTarget value) {
         this._target = value;
     }

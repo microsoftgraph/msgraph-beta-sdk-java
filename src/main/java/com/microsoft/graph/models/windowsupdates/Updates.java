@@ -21,9 +21,9 @@ public class Updates extends Entity implements Parsable {
      * Instantiates a new updates and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Updates() {
         super();
-        this.setOdataType("#microsoft.graph.windowsUpdates.updates");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,13 +57,12 @@ public class Updates extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Updates currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("catalog", (n) -> { currentObject.setCatalog(n.getObjectValue(Catalog::createFromDiscriminatorValue)); });
-            this.put("deployments", (n) -> { currentObject.setDeployments(n.getCollectionOfObjectValues(Deployment::createFromDiscriminatorValue)); });
-            this.put("resourceConnections", (n) -> { currentObject.setResourceConnections(n.getCollectionOfObjectValues(ResourceConnection::createFromDiscriminatorValue)); });
-            this.put("updatableAssets", (n) -> { currentObject.setUpdatableAssets(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("catalog", (n) -> { this.setCatalog(n.getObjectValue(Catalog::createFromDiscriminatorValue)); });
+        deserializerMap.put("deployments", (n) -> { this.setDeployments(n.getCollectionOfObjectValues(Deployment::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceConnections", (n) -> { this.setResourceConnections(n.getCollectionOfObjectValues(ResourceConnection::createFromDiscriminatorValue)); });
+        deserializerMap.put("updatableAssets", (n) -> { this.setUpdatableAssets(n.getCollectionOfObjectValues(UpdatableAsset::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the resourceConnections property value. Service connections to external resources such as analytics workspaces.
@@ -86,6 +85,7 @@ public class Updates extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,6 +99,7 @@ public class Updates extends Entity implements Parsable {
      * @param value Value to set for the catalog property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCatalog(@javax.annotation.Nullable final Catalog value) {
         this._catalog = value;
     }
@@ -107,6 +108,7 @@ public class Updates extends Entity implements Parsable {
      * @param value Value to set for the deployments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployments(@javax.annotation.Nullable final java.util.List<Deployment> value) {
         this._deployments = value;
     }
@@ -115,6 +117,7 @@ public class Updates extends Entity implements Parsable {
      * @param value Value to set for the resourceConnections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceConnections(@javax.annotation.Nullable final java.util.List<ResourceConnection> value) {
         this._resourceConnections = value;
     }
@@ -123,6 +126,7 @@ public class Updates extends Entity implements Parsable {
      * @param value Value to set for the updatableAssets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdatableAssets(@javax.annotation.Nullable final java.util.List<UpdatableAsset> value) {
         this._updatableAssets = value;
     }

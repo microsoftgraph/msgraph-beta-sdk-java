@@ -77,9 +77,9 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * Instantiates a new messageRulePredicates and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MessageRulePredicates() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.messageRulePredicates");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -129,40 +129,39 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MessageRulePredicates currentObject = this;
-        return new HashMap<>(31) {{
-            this.put("bodyContains", (n) -> { currentObject.setBodyContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("bodyOrSubjectContains", (n) -> { currentObject.setBodyOrSubjectContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("fromAddresses", (n) -> { currentObject.setFromAddresses(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
-            this.put("headerContains", (n) -> { currentObject.setHeaderContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
-            this.put("isApprovalRequest", (n) -> { currentObject.setIsApprovalRequest(n.getBooleanValue()); });
-            this.put("isAutomaticForward", (n) -> { currentObject.setIsAutomaticForward(n.getBooleanValue()); });
-            this.put("isAutomaticReply", (n) -> { currentObject.setIsAutomaticReply(n.getBooleanValue()); });
-            this.put("isEncrypted", (n) -> { currentObject.setIsEncrypted(n.getBooleanValue()); });
-            this.put("isMeetingRequest", (n) -> { currentObject.setIsMeetingRequest(n.getBooleanValue()); });
-            this.put("isMeetingResponse", (n) -> { currentObject.setIsMeetingResponse(n.getBooleanValue()); });
-            this.put("isNonDeliveryReport", (n) -> { currentObject.setIsNonDeliveryReport(n.getBooleanValue()); });
-            this.put("isPermissionControlled", (n) -> { currentObject.setIsPermissionControlled(n.getBooleanValue()); });
-            this.put("isReadReceipt", (n) -> { currentObject.setIsReadReceipt(n.getBooleanValue()); });
-            this.put("isSigned", (n) -> { currentObject.setIsSigned(n.getBooleanValue()); });
-            this.put("isVoicemail", (n) -> { currentObject.setIsVoicemail(n.getBooleanValue()); });
-            this.put("messageActionFlag", (n) -> { currentObject.setMessageActionFlag(n.getEnumValue(MessageActionFlag.class)); });
-            this.put("notSentToMe", (n) -> { currentObject.setNotSentToMe(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recipientContains", (n) -> { currentObject.setRecipientContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("senderContains", (n) -> { currentObject.setSenderContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("sensitivity", (n) -> { currentObject.setSensitivity(n.getEnumValue(Sensitivity.class)); });
-            this.put("sentCcMe", (n) -> { currentObject.setSentCcMe(n.getBooleanValue()); });
-            this.put("sentOnlyToMe", (n) -> { currentObject.setSentOnlyToMe(n.getBooleanValue()); });
-            this.put("sentToAddresses", (n) -> { currentObject.setSentToAddresses(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("sentToMe", (n) -> { currentObject.setSentToMe(n.getBooleanValue()); });
-            this.put("sentToOrCcMe", (n) -> { currentObject.setSentToOrCcMe(n.getBooleanValue()); });
-            this.put("subjectContains", (n) -> { currentObject.setSubjectContains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("withinSizeRange", (n) -> { currentObject.setWithinSizeRange(n.getObjectValue(SizeRange::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(31);
+        deserializerMap.put("bodyContains", (n) -> { this.setBodyContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("bodyOrSubjectContains", (n) -> { this.setBodyOrSubjectContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("fromAddresses", (n) -> { this.setFromAddresses(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
+        deserializerMap.put("headerContains", (n) -> { this.setHeaderContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(Importance.class)); });
+        deserializerMap.put("isApprovalRequest", (n) -> { this.setIsApprovalRequest(n.getBooleanValue()); });
+        deserializerMap.put("isAutomaticForward", (n) -> { this.setIsAutomaticForward(n.getBooleanValue()); });
+        deserializerMap.put("isAutomaticReply", (n) -> { this.setIsAutomaticReply(n.getBooleanValue()); });
+        deserializerMap.put("isEncrypted", (n) -> { this.setIsEncrypted(n.getBooleanValue()); });
+        deserializerMap.put("isMeetingRequest", (n) -> { this.setIsMeetingRequest(n.getBooleanValue()); });
+        deserializerMap.put("isMeetingResponse", (n) -> { this.setIsMeetingResponse(n.getBooleanValue()); });
+        deserializerMap.put("isNonDeliveryReport", (n) -> { this.setIsNonDeliveryReport(n.getBooleanValue()); });
+        deserializerMap.put("isPermissionControlled", (n) -> { this.setIsPermissionControlled(n.getBooleanValue()); });
+        deserializerMap.put("isReadReceipt", (n) -> { this.setIsReadReceipt(n.getBooleanValue()); });
+        deserializerMap.put("isSigned", (n) -> { this.setIsSigned(n.getBooleanValue()); });
+        deserializerMap.put("isVoicemail", (n) -> { this.setIsVoicemail(n.getBooleanValue()); });
+        deserializerMap.put("messageActionFlag", (n) -> { this.setMessageActionFlag(n.getEnumValue(MessageActionFlag.class)); });
+        deserializerMap.put("notSentToMe", (n) -> { this.setNotSentToMe(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recipientContains", (n) -> { this.setRecipientContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("senderContains", (n) -> { this.setSenderContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("sensitivity", (n) -> { this.setSensitivity(n.getEnumValue(Sensitivity.class)); });
+        deserializerMap.put("sentCcMe", (n) -> { this.setSentCcMe(n.getBooleanValue()); });
+        deserializerMap.put("sentOnlyToMe", (n) -> { this.setSentOnlyToMe(n.getBooleanValue()); });
+        deserializerMap.put("sentToAddresses", (n) -> { this.setSentToAddresses(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("sentToMe", (n) -> { this.setSentToMe(n.getBooleanValue()); });
+        deserializerMap.put("sentToOrCcMe", (n) -> { this.setSentToOrCcMe(n.getBooleanValue()); });
+        deserializerMap.put("subjectContains", (n) -> { this.setSubjectContains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("withinSizeRange", (n) -> { this.setWithinSizeRange(n.getObjectValue(SizeRange::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the fromAddresses property value. Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply.
@@ -393,6 +392,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("bodyContains", this.getBodyContains());
@@ -433,6 +433,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -441,6 +442,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the bodyContains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBodyContains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._bodyContains = value;
     }
@@ -449,6 +451,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the bodyOrSubjectContains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBodyOrSubjectContains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._bodyOrSubjectContains = value;
     }
@@ -457,6 +460,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
         this._categories = value;
     }
@@ -465,6 +469,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the fromAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFromAddresses(@javax.annotation.Nullable final java.util.List<Recipient> value) {
         this._fromAddresses = value;
     }
@@ -473,6 +478,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
         this._hasAttachments = value;
     }
@@ -481,6 +487,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the headerContains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHeaderContains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._headerContains = value;
     }
@@ -489,6 +496,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the importance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportance(@javax.annotation.Nullable final Importance value) {
         this._importance = value;
     }
@@ -497,6 +505,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isApprovalRequest property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsApprovalRequest(@javax.annotation.Nullable final Boolean value) {
         this._isApprovalRequest = value;
     }
@@ -505,6 +514,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isAutomaticForward property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAutomaticForward(@javax.annotation.Nullable final Boolean value) {
         this._isAutomaticForward = value;
     }
@@ -513,6 +523,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isAutomaticReply property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAutomaticReply(@javax.annotation.Nullable final Boolean value) {
         this._isAutomaticReply = value;
     }
@@ -521,6 +532,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isEncrypted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEncrypted(@javax.annotation.Nullable final Boolean value) {
         this._isEncrypted = value;
     }
@@ -529,6 +541,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isMeetingRequest property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMeetingRequest(@javax.annotation.Nullable final Boolean value) {
         this._isMeetingRequest = value;
     }
@@ -537,6 +550,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isMeetingResponse property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMeetingResponse(@javax.annotation.Nullable final Boolean value) {
         this._isMeetingResponse = value;
     }
@@ -545,6 +559,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isNonDeliveryReport property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsNonDeliveryReport(@javax.annotation.Nullable final Boolean value) {
         this._isNonDeliveryReport = value;
     }
@@ -553,6 +568,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isPermissionControlled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPermissionControlled(@javax.annotation.Nullable final Boolean value) {
         this._isPermissionControlled = value;
     }
@@ -561,6 +577,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isReadReceipt property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsReadReceipt(@javax.annotation.Nullable final Boolean value) {
         this._isReadReceipt = value;
     }
@@ -569,6 +586,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isSigned property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSigned(@javax.annotation.Nullable final Boolean value) {
         this._isSigned = value;
     }
@@ -577,6 +595,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the isVoicemail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsVoicemail(@javax.annotation.Nullable final Boolean value) {
         this._isVoicemail = value;
     }
@@ -585,6 +604,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the messageActionFlag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMessageActionFlag(@javax.annotation.Nullable final MessageActionFlag value) {
         this._messageActionFlag = value;
     }
@@ -593,6 +613,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the notSentToMe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotSentToMe(@javax.annotation.Nullable final Boolean value) {
         this._notSentToMe = value;
     }
@@ -601,6 +622,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -609,6 +631,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the recipientContains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipientContains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._recipientContains = value;
     }
@@ -617,6 +640,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the senderContains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSenderContains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._senderContains = value;
     }
@@ -625,6 +649,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sensitivity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSensitivity(@javax.annotation.Nullable final Sensitivity value) {
         this._sensitivity = value;
     }
@@ -633,6 +658,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sentCcMe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentCcMe(@javax.annotation.Nullable final Boolean value) {
         this._sentCcMe = value;
     }
@@ -641,6 +667,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sentOnlyToMe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentOnlyToMe(@javax.annotation.Nullable final Boolean value) {
         this._sentOnlyToMe = value;
     }
@@ -649,6 +676,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sentToAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentToAddresses(@javax.annotation.Nullable final java.util.List<Recipient> value) {
         this._sentToAddresses = value;
     }
@@ -657,6 +685,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sentToMe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentToMe(@javax.annotation.Nullable final Boolean value) {
         this._sentToMe = value;
     }
@@ -665,6 +694,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the sentToOrCcMe property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentToOrCcMe(@javax.annotation.Nullable final Boolean value) {
         this._sentToOrCcMe = value;
     }
@@ -673,6 +703,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the subjectContains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectContains(@javax.annotation.Nullable final java.util.List<String> value) {
         this._subjectContains = value;
     }
@@ -681,6 +712,7 @@ public class MessageRulePredicates implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the withinSizeRange property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWithinSizeRange(@javax.annotation.Nullable final SizeRange value) {
         this._withinSizeRange = value;
     }

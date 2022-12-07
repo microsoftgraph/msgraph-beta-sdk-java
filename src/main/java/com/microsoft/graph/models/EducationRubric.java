@@ -28,17 +28,17 @@ public class EducationRubric extends Entity implements Parsable {
     /** The collection of qualities making up this rubric. */
     private java.util.List<RubricQuality> _qualities;
     /**
-     * Instantiates a new EducationRubric and sets the default values.
+     * Instantiates a new educationRubric and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationRubric() {
         super();
-        this.setOdataType("#microsoft.graph.educationRubric");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a EducationRubric
+     * @return a educationRubric
      */
     @javax.annotation.Nonnull
     public static EducationRubric createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -83,18 +83,17 @@ public class EducationRubric extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationRubric currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("grading", (n) -> { currentObject.setGrading(n.getObjectValue(EducationAssignmentGradeType::createFromDiscriminatorValue)); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("levels", (n) -> { currentObject.setLevels(n.getCollectionOfObjectValues(RubricLevel::createFromDiscriminatorValue)); });
-            this.put("qualities", (n) -> { currentObject.setQualities(n.getCollectionOfObjectValues(RubricQuality::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("grading", (n) -> { this.setGrading(n.getObjectValue(EducationAssignmentGradeType::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("levels", (n) -> { this.setLevels(n.getCollectionOfObjectValues(RubricLevel::createFromDiscriminatorValue)); });
+        deserializerMap.put("qualities", (n) -> { this.setQualities(n.getCollectionOfObjectValues(RubricQuality::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the grading property value. The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
@@ -141,16 +140,13 @@ public class EducationRubric extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeObjectValue("createdBy", this.getCreatedBy());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("grading", this.getGrading());
-        writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
-        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfObjectValues("levels", this.getLevels());
         writer.writeCollectionOfObjectValues("qualities", this.getQualities());
     }
@@ -159,6 +155,7 @@ public class EducationRubric extends Entity implements Parsable {
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._createdBy = value;
     }
@@ -167,6 +164,7 @@ public class EducationRubric extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._createdDateTime = value;
     }
@@ -175,6 +173,7 @@ public class EducationRubric extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final EducationItemBody value) {
         this._description = value;
     }
@@ -183,6 +182,7 @@ public class EducationRubric extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -191,6 +191,7 @@ public class EducationRubric extends Entity implements Parsable {
      * @param value Value to set for the grading property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGrading(@javax.annotation.Nullable final EducationAssignmentGradeType value) {
         this._grading = value;
     }
@@ -199,6 +200,7 @@ public class EducationRubric extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
         this._lastModifiedBy = value;
     }
@@ -207,6 +209,7 @@ public class EducationRubric extends Entity implements Parsable {
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._lastModifiedDateTime = value;
     }
@@ -215,6 +218,7 @@ public class EducationRubric extends Entity implements Parsable {
      * @param value Value to set for the levels property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLevels(@javax.annotation.Nullable final java.util.List<RubricLevel> value) {
         this._levels = value;
     }
@@ -223,6 +227,7 @@ public class EducationRubric extends Entity implements Parsable {
      * @param value Value to set for the qualities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQualities(@javax.annotation.Nullable final java.util.List<RubricQuality> value) {
         this._qualities = value;
     }

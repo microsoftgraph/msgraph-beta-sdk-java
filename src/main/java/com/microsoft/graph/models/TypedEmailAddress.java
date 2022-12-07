@@ -16,6 +16,7 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
      * Instantiates a new TypedEmailAddress and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TypedEmailAddress() {
         super();
         this.setOdataType("#microsoft.graph.typedEmailAddress");
@@ -36,11 +37,10 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TypedEmailAddress currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("otherLabel", (n) -> { currentObject.setOtherLabel(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(EmailType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("otherLabel", (n) -> { this.setOtherLabel(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(EmailType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the otherLabel property value. To specify a custom type of email address, set type to other, and assign otherLabel to a custom string. For example, you may use a specific email address for your volunteer activities. Set type to other, and set otherLabel to a custom string such as Volunteer work.
@@ -63,6 +63,7 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +75,7 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
      * @param value Value to set for the otherLabel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOtherLabel(@javax.annotation.Nullable final String value) {
         this._otherLabel = value;
     }
@@ -82,6 +84,7 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final EmailType value) {
         this._type = value;
     }

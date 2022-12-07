@@ -11,25 +11,25 @@ import java.util.Objects;
 public class UserSummary implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
     private Map<String, Object> _additionalData;
-    /** The failedTasks property */
+    /** The number of failed tasks for users in a user summary. */
     private Integer _failedTasks;
-    /** The failedUsers property */
+    /** The number of failed users in a user summary. */
     private Integer _failedUsers;
     /** The OdataType property */
     private String _odataType;
-    /** The successfulUsers property */
+    /** The number of successful users in a user summary. */
     private Integer _successfulUsers;
-    /** The totalTasks property */
+    /** The total tasks of users in a user summary. */
     private Integer _totalTasks;
-    /** The totalUsers property */
+    /** The total number of users in a user summary */
     private Integer _totalUsers;
     /**
      * Instantiates a new userSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserSummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.identityGovernance.userSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,7 +50,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
         return this._additionalData;
     }
     /**
-     * Gets the failedTasks property value. The failedTasks property
+     * Gets the failedTasks property value. The number of failed tasks for users in a user summary.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -58,7 +58,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
         return this._failedTasks;
     }
     /**
-     * Gets the failedUsers property value. The failedUsers property
+     * Gets the failedUsers property value. The number of failed users in a user summary.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -71,15 +71,14 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserSummary currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("failedTasks", (n) -> { currentObject.setFailedTasks(n.getIntegerValue()); });
-            this.put("failedUsers", (n) -> { currentObject.setFailedUsers(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("successfulUsers", (n) -> { currentObject.setSuccessfulUsers(n.getIntegerValue()); });
-            this.put("totalTasks", (n) -> { currentObject.setTotalTasks(n.getIntegerValue()); });
-            this.put("totalUsers", (n) -> { currentObject.setTotalUsers(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(6);
+        deserializerMap.put("failedTasks", (n) -> { this.setFailedTasks(n.getIntegerValue()); });
+        deserializerMap.put("failedUsers", (n) -> { this.setFailedUsers(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("successfulUsers", (n) -> { this.setSuccessfulUsers(n.getIntegerValue()); });
+        deserializerMap.put("totalTasks", (n) -> { this.setTotalTasks(n.getIntegerValue()); });
+        deserializerMap.put("totalUsers", (n) -> { this.setTotalUsers(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -90,7 +89,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
         return this._odataType;
     }
     /**
-     * Gets the successfulUsers property value. The successfulUsers property
+     * Gets the successfulUsers property value. The number of successful users in a user summary.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -98,7 +97,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
         return this._successfulUsers;
     }
     /**
-     * Gets the totalTasks property value. The totalTasks property
+     * Gets the totalTasks property value. The total tasks of users in a user summary.
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -106,7 +105,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
         return this._totalTasks;
     }
     /**
-     * Gets the totalUsers property value. The totalUsers property
+     * Gets the totalUsers property value. The total number of users in a user summary
      * @return a integer
      */
     @javax.annotation.Nullable
@@ -118,6 +117,7 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("failedTasks", this.getFailedTasks());
@@ -133,22 +133,25 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
     /**
-     * Sets the failedTasks property value. The failedTasks property
+     * Sets the failedTasks property value. The number of failed tasks for users in a user summary.
      * @param value Value to set for the failedTasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedTasks(@javax.annotation.Nullable final Integer value) {
         this._failedTasks = value;
     }
     /**
-     * Sets the failedUsers property value. The failedUsers property
+     * Sets the failedUsers property value. The number of failed users in a user summary.
      * @param value Value to set for the failedUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedUsers(@javax.annotation.Nullable final Integer value) {
         this._failedUsers = value;
     }
@@ -157,30 +160,34 @@ public class UserSummary implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
     /**
-     * Sets the successfulUsers property value. The successfulUsers property
+     * Sets the successfulUsers property value. The number of successful users in a user summary.
      * @param value Value to set for the successfulUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessfulUsers(@javax.annotation.Nullable final Integer value) {
         this._successfulUsers = value;
     }
     /**
-     * Sets the totalTasks property value. The totalTasks property
+     * Sets the totalTasks property value. The total tasks of users in a user summary.
      * @param value Value to set for the totalTasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalTasks(@javax.annotation.Nullable final Integer value) {
         this._totalTasks = value;
     }
     /**
-     * Sets the totalUsers property value. The totalUsers property
+     * Sets the totalUsers property value. The total number of users in a user summary
      * @param value Value to set for the totalUsers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalUsers(@javax.annotation.Nullable final Integer value) {
         this._totalUsers = value;
     }

@@ -16,6 +16,7 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
      * Instantiates a new WindowsMicrosoftEdgeApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsMicrosoftEdgeApp() {
         super();
         this.setOdataType("#microsoft.graph.windowsMicrosoftEdgeApp");
@@ -52,17 +53,17 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsMicrosoftEdgeApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("channel", (n) -> { currentObject.setChannel(n.getEnumValue(MicrosoftEdgeChannel.class)); });
-            this.put("displayLanguageLocale", (n) -> { currentObject.setDisplayLanguageLocale(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("channel", (n) -> { this.setChannel(n.getEnumValue(MicrosoftEdgeChannel.class)); });
+        deserializerMap.put("displayLanguageLocale", (n) -> { this.setDisplayLanguageLocale(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +75,7 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
      * @param value Value to set for the channel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChannel(@javax.annotation.Nullable final MicrosoftEdgeChannel value) {
         this._channel = value;
     }
@@ -82,6 +84,7 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
      * @param value Value to set for the displayLanguageLocale property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayLanguageLocale(@javax.annotation.Nullable final String value) {
         this._displayLanguageLocale = value;
     }

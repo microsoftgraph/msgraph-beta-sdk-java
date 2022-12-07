@@ -30,9 +30,9 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      * Instantiates a new OfficeClientConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OfficeClientConfiguration() {
         super();
-        this.setOdataType("#microsoft.graph.officeClientConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -90,17 +90,16 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OfficeClientConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(OfficeClientConfigurationAssignment::createFromDiscriminatorValue)); });
-            this.put("checkinStatuses", (n) -> { currentObject.setCheckinStatuses(n.getCollectionOfObjectValues(OfficeClientCheckinStatus::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("policyPayload", (n) -> { currentObject.setPolicyPayload(n.getByteArrayValue()); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("userCheckinSummary", (n) -> { currentObject.setUserCheckinSummary(n.getObjectValue(OfficeUserCheckinSummary::createFromDiscriminatorValue)); });
-            this.put("userPreferencePayload", (n) -> { currentObject.setUserPreferencePayload(n.getByteArrayValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(OfficeClientConfigurationAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("checkinStatuses", (n) -> { this.setCheckinStatuses(n.getCollectionOfObjectValues(OfficeClientCheckinStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("policyPayload", (n) -> { this.setPolicyPayload(n.getByteArrayValue()); });
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("userCheckinSummary", (n) -> { this.setUserCheckinSummary(n.getObjectValue(OfficeUserCheckinSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("userPreferencePayload", (n) -> { this.setUserPreferencePayload(n.getByteArrayValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the policyPayload property value. Policy settings JSON string in binary format, these values cannot be changed by the user.
@@ -139,6 +138,7 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -156,6 +156,7 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<OfficeClientConfigurationAssignment> value) {
         this._assignments = value;
     }
@@ -164,6 +165,7 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      * @param value Value to set for the checkinStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCheckinStatuses(@javax.annotation.Nullable final java.util.List<OfficeClientCheckinStatus> value) {
         this._checkinStatuses = value;
     }
@@ -172,6 +174,7 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }
@@ -180,6 +183,7 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -188,6 +192,7 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      * @param value Value to set for the policyPayload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyPayload(@javax.annotation.Nullable final byte[] value) {
         this._policyPayload = value;
     }
@@ -196,6 +201,7 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
         this._priority = value;
     }
@@ -204,6 +210,7 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      * @param value Value to set for the userCheckinSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserCheckinSummary(@javax.annotation.Nullable final OfficeUserCheckinSummary value) {
         this._userCheckinSummary = value;
     }
@@ -212,6 +219,7 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      * @param value Value to set for the userPreferencePayload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPreferencePayload(@javax.annotation.Nullable final byte[] value) {
         this._userPreferencePayload = value;
     }

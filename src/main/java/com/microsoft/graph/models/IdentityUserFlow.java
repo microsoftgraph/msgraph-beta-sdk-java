@@ -18,9 +18,9 @@ public class IdentityUserFlow extends Entity implements Parsable {
      * Instantiates a new identityUserFlow and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IdentityUserFlow() {
         super();
-        this.setOdataType("#microsoft.graph.identityUserFlow");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,11 +46,10 @@ public class IdentityUserFlow extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IdentityUserFlow currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("userFlowType", (n) -> { currentObject.setUserFlowType(n.getEnumValue(UserFlowType.class)); });
-            this.put("userFlowTypeVersion", (n) -> { currentObject.setUserFlowTypeVersion(n.getFloatValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("userFlowType", (n) -> { this.setUserFlowType(n.getEnumValue(UserFlowType.class)); });
+        deserializerMap.put("userFlowTypeVersion", (n) -> { this.setUserFlowTypeVersion(n.getFloatValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the userFlowType property value. The userFlowType property
@@ -73,6 +72,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -84,6 +84,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
      * @param value Value to set for the userFlowType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserFlowType(@javax.annotation.Nullable final UserFlowType value) {
         this._userFlowType = value;
     }
@@ -92,6 +93,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
      * @param value Value to set for the userFlowTypeVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserFlowTypeVersion(@javax.annotation.Nullable final Float value) {
         this._userFlowTypeVersion = value;
     }

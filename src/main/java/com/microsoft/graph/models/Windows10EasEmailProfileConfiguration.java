@@ -30,6 +30,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * Instantiates a new Windows10EasEmailProfileConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10EasEmailProfileConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10EasEmailProfileConfiguration");
@@ -82,18 +83,17 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10EasEmailProfileConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accountName", (n) -> { currentObject.setAccountName(n.getStringValue()); });
-            this.put("durationOfEmailToSync", (n) -> { currentObject.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration.class)); });
-            this.put("emailAddressSource", (n) -> { currentObject.setEmailAddressSource(n.getEnumValue(UserEmailSource.class)); });
-            this.put("emailSyncSchedule", (n) -> { currentObject.setEmailSyncSchedule(n.getEnumValue(EmailSyncSchedule.class)); });
-            this.put("hostName", (n) -> { currentObject.setHostName(n.getStringValue()); });
-            this.put("requireSsl", (n) -> { currentObject.setRequireSsl(n.getBooleanValue()); });
-            this.put("syncCalendar", (n) -> { currentObject.setSyncCalendar(n.getBooleanValue()); });
-            this.put("syncContacts", (n) -> { currentObject.setSyncContacts(n.getBooleanValue()); });
-            this.put("syncTasks", (n) -> { currentObject.setSyncTasks(n.getBooleanValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountName", (n) -> { this.setAccountName(n.getStringValue()); });
+        deserializerMap.put("durationOfEmailToSync", (n) -> { this.setDurationOfEmailToSync(n.getEnumValue(EmailSyncDuration.class)); });
+        deserializerMap.put("emailAddressSource", (n) -> { this.setEmailAddressSource(n.getEnumValue(UserEmailSource.class)); });
+        deserializerMap.put("emailSyncSchedule", (n) -> { this.setEmailSyncSchedule(n.getEnumValue(EmailSyncSchedule.class)); });
+        deserializerMap.put("hostName", (n) -> { this.setHostName(n.getStringValue()); });
+        deserializerMap.put("requireSsl", (n) -> { this.setRequireSsl(n.getBooleanValue()); });
+        deserializerMap.put("syncCalendar", (n) -> { this.setSyncCalendar(n.getBooleanValue()); });
+        deserializerMap.put("syncContacts", (n) -> { this.setSyncContacts(n.getBooleanValue()); });
+        deserializerMap.put("syncTasks", (n) -> { this.setSyncTasks(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hostName property value. Exchange location that (URL) that the native mail app connects to.
@@ -140,6 +140,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -158,6 +159,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * @param value Value to set for the accountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountName(@javax.annotation.Nullable final String value) {
         this._accountName = value;
     }
@@ -166,6 +168,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * @param value Value to set for the durationOfEmailToSync property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationOfEmailToSync(@javax.annotation.Nullable final EmailSyncDuration value) {
         this._durationOfEmailToSync = value;
     }
@@ -174,6 +177,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * @param value Value to set for the emailAddressSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddressSource(@javax.annotation.Nullable final UserEmailSource value) {
         this._emailAddressSource = value;
     }
@@ -182,6 +186,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * @param value Value to set for the emailSyncSchedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailSyncSchedule(@javax.annotation.Nullable final EmailSyncSchedule value) {
         this._emailSyncSchedule = value;
     }
@@ -190,6 +195,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * @param value Value to set for the hostName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHostName(@javax.annotation.Nullable final String value) {
         this._hostName = value;
     }
@@ -198,6 +204,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * @param value Value to set for the requireSsl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequireSsl(@javax.annotation.Nullable final Boolean value) {
         this._requireSsl = value;
     }
@@ -206,6 +213,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * @param value Value to set for the syncCalendar property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSyncCalendar(@javax.annotation.Nullable final Boolean value) {
         this._syncCalendar = value;
     }
@@ -214,6 +222,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * @param value Value to set for the syncContacts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSyncContacts(@javax.annotation.Nullable final Boolean value) {
         this._syncContacts = value;
     }
@@ -222,6 +231,7 @@ public class Windows10EasEmailProfileConfiguration extends EasEmailProfileConfig
      * @param value Value to set for the syncTasks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSyncTasks(@javax.annotation.Nullable final Boolean value) {
         this._syncTasks = value;
     }

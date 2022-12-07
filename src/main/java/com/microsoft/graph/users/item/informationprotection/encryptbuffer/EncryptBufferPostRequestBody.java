@@ -20,6 +20,7 @@ public class EncryptBufferPostRequestBody implements AdditionalDataHolder, Parsa
      * Instantiates a new encryptBufferPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EncryptBufferPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -55,11 +56,10 @@ public class EncryptBufferPostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EncryptBufferPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("buffer", (n) -> { currentObject.setBuffer(n.getByteArrayValue()); });
-            this.put("labelId", (n) -> { currentObject.setLabelId(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(2);
+        deserializerMap.put("buffer", (n) -> { this.setBuffer(n.getByteArrayValue()); });
+        deserializerMap.put("labelId", (n) -> { this.setLabelId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the labelId property value. The labelId property
@@ -74,6 +74,7 @@ public class EncryptBufferPostRequestBody implements AdditionalDataHolder, Parsa
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("buffer", this.getBuffer());
@@ -85,6 +86,7 @@ public class EncryptBufferPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -93,6 +95,7 @@ public class EncryptBufferPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the buffer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBuffer(@javax.annotation.Nullable final byte[] value) {
         this._buffer = value;
     }
@@ -101,6 +104,7 @@ public class EncryptBufferPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the labelId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabelId(@javax.annotation.Nullable final String value) {
         this._labelId = value;
     }

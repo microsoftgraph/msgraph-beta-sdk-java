@@ -26,9 +26,9 @@ public class Workbook extends Entity implements Parsable {
      * Instantiates a new workbook and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Workbook() {
         super();
-        this.setOdataType("#microsoft.graph.workbook");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,16 +62,15 @@ public class Workbook extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Workbook currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("application", (n) -> { currentObject.setApplication(n.getObjectValue(WorkbookApplication::createFromDiscriminatorValue)); });
-            this.put("comments", (n) -> { currentObject.setComments(n.getCollectionOfObjectValues(WorkbookComment::createFromDiscriminatorValue)); });
-            this.put("functions", (n) -> { currentObject.setFunctions(n.getObjectValue(WorkbookFunctions::createFromDiscriminatorValue)); });
-            this.put("names", (n) -> { currentObject.setNames(n.getCollectionOfObjectValues(WorkbookNamedItem::createFromDiscriminatorValue)); });
-            this.put("operations", (n) -> { currentObject.setOperations(n.getCollectionOfObjectValues(WorkbookOperation::createFromDiscriminatorValue)); });
-            this.put("tables", (n) -> { currentObject.setTables(n.getCollectionOfObjectValues(WorkbookTable::createFromDiscriminatorValue)); });
-            this.put("worksheets", (n) -> { currentObject.setWorksheets(n.getCollectionOfObjectValues(WorkbookWorksheet::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("application", (n) -> { this.setApplication(n.getObjectValue(WorkbookApplication::createFromDiscriminatorValue)); });
+        deserializerMap.put("comments", (n) -> { this.setComments(n.getCollectionOfObjectValues(WorkbookComment::createFromDiscriminatorValue)); });
+        deserializerMap.put("functions", (n) -> { this.setFunctions(n.getObjectValue(WorkbookFunctions::createFromDiscriminatorValue)); });
+        deserializerMap.put("names", (n) -> { this.setNames(n.getCollectionOfObjectValues(WorkbookNamedItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(WorkbookOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("tables", (n) -> { this.setTables(n.getCollectionOfObjectValues(WorkbookTable::createFromDiscriminatorValue)); });
+        deserializerMap.put("worksheets", (n) -> { this.setWorksheets(n.getCollectionOfObjectValues(WorkbookWorksheet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the functions property value. The functions property
@@ -118,6 +117,7 @@ public class Workbook extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +134,7 @@ public class Workbook extends Entity implements Parsable {
      * @param value Value to set for the application property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplication(@javax.annotation.Nullable final WorkbookApplication value) {
         this._application = value;
     }
@@ -142,6 +143,7 @@ public class Workbook extends Entity implements Parsable {
      * @param value Value to set for the comments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComments(@javax.annotation.Nullable final java.util.List<WorkbookComment> value) {
         this._comments = value;
     }
@@ -150,6 +152,7 @@ public class Workbook extends Entity implements Parsable {
      * @param value Value to set for the functions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFunctions(@javax.annotation.Nullable final WorkbookFunctions value) {
         this._functions = value;
     }
@@ -158,6 +161,7 @@ public class Workbook extends Entity implements Parsable {
      * @param value Value to set for the names property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNames(@javax.annotation.Nullable final java.util.List<WorkbookNamedItem> value) {
         this._names = value;
     }
@@ -166,6 +170,7 @@ public class Workbook extends Entity implements Parsable {
      * @param value Value to set for the operations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperations(@javax.annotation.Nullable final java.util.List<WorkbookOperation> value) {
         this._operations = value;
     }
@@ -174,6 +179,7 @@ public class Workbook extends Entity implements Parsable {
      * @param value Value to set for the tables property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTables(@javax.annotation.Nullable final java.util.List<WorkbookTable> value) {
         this._tables = value;
     }
@@ -182,6 +188,7 @@ public class Workbook extends Entity implements Parsable {
      * @param value Value to set for the worksheets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorksheets(@javax.annotation.Nullable final java.util.List<WorkbookWorksheet> value) {
         this._worksheets = value;
     }

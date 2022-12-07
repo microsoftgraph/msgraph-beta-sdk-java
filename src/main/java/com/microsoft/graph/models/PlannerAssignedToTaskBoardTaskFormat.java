@@ -16,9 +16,9 @@ public class PlannerAssignedToTaskBoardTaskFormat extends PlannerDelta implement
      * Instantiates a new plannerAssignedToTaskBoardTaskFormat and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerAssignedToTaskBoardTaskFormat() {
         super();
-        this.setOdataType("#microsoft.graph.plannerAssignedToTaskBoardTaskFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,11 +36,10 @@ public class PlannerAssignedToTaskBoardTaskFormat extends PlannerDelta implement
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerAssignedToTaskBoardTaskFormat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("orderHintsByAssignee", (n) -> { currentObject.setOrderHintsByAssignee(n.getObjectValue(PlannerOrderHintsByAssignee::createFromDiscriminatorValue)); });
-            this.put("unassignedOrderHint", (n) -> { currentObject.setUnassignedOrderHint(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("orderHintsByAssignee", (n) -> { this.setOrderHintsByAssignee(n.getObjectValue(PlannerOrderHintsByAssignee::createFromDiscriminatorValue)); });
+        deserializerMap.put("unassignedOrderHint", (n) -> { this.setUnassignedOrderHint(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the orderHintsByAssignee property value. Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.
@@ -63,6 +62,7 @@ public class PlannerAssignedToTaskBoardTaskFormat extends PlannerDelta implement
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,6 +74,7 @@ public class PlannerAssignedToTaskBoardTaskFormat extends PlannerDelta implement
      * @param value Value to set for the orderHintsByAssignee property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrderHintsByAssignee(@javax.annotation.Nullable final PlannerOrderHintsByAssignee value) {
         this._orderHintsByAssignee = value;
     }
@@ -82,6 +83,7 @@ public class PlannerAssignedToTaskBoardTaskFormat extends PlannerDelta implement
      * @param value Value to set for the unassignedOrderHint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnassignedOrderHint(@javax.annotation.Nullable final String value) {
         this._unassignedOrderHint = value;
     }

@@ -14,6 +14,7 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
      * Instantiates a new AccessReviewInstanceDecisionItemAzureRoleResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewInstanceDecisionItemAzureRoleResource() {
         super();
         this.setOdataType("#microsoft.graph.accessReviewInstanceDecisionItemAzureRoleResource");
@@ -34,10 +35,9 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewInstanceDecisionItemAzureRoleResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("scope", (n) -> { currentObject.setScope(n.getObjectValue(AccessReviewInstanceDecisionItemResource::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getObjectValue(AccessReviewInstanceDecisionItemResource::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the scope property value. Details of the scope this role is associated with.
@@ -52,6 +52,7 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class AccessReviewInstanceDecisionItemAzureRoleResource extends AccessRev
      * @param value Value to set for the scope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final AccessReviewInstanceDecisionItemResource value) {
         this._scope = value;
     }

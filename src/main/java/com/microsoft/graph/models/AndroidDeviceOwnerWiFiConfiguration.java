@@ -37,6 +37,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      * Instantiates a new AndroidDeviceOwnerWiFiConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerWiFiConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerWiFiConfiguration");
@@ -80,21 +81,20 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidDeviceOwnerWiFiConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("connectAutomatically", (n) -> { currentObject.setConnectAutomatically(n.getBooleanValue()); });
-            this.put("connectWhenNetworkNameIsHidden", (n) -> { currentObject.setConnectWhenNetworkNameIsHidden(n.getBooleanValue()); });
-            this.put("networkName", (n) -> { currentObject.setNetworkName(n.getStringValue()); });
-            this.put("preSharedKey", (n) -> { currentObject.setPreSharedKey(n.getStringValue()); });
-            this.put("preSharedKeyIsSet", (n) -> { currentObject.setPreSharedKeyIsSet(n.getBooleanValue()); });
-            this.put("proxyAutomaticConfigurationUrl", (n) -> { currentObject.setProxyAutomaticConfigurationUrl(n.getStringValue()); });
-            this.put("proxyExclusionList", (n) -> { currentObject.setProxyExclusionList(n.getStringValue()); });
-            this.put("proxyManualAddress", (n) -> { currentObject.setProxyManualAddress(n.getStringValue()); });
-            this.put("proxyManualPort", (n) -> { currentObject.setProxyManualPort(n.getIntegerValue()); });
-            this.put("proxySettings", (n) -> { currentObject.setProxySettings(n.getEnumValue(WiFiProxySetting.class)); });
-            this.put("ssid", (n) -> { currentObject.setSsid(n.getStringValue()); });
-            this.put("wiFiSecurityType", (n) -> { currentObject.setWiFiSecurityType(n.getEnumValue(AndroidDeviceOwnerWiFiSecurityType.class)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("connectAutomatically", (n) -> { this.setConnectAutomatically(n.getBooleanValue()); });
+        deserializerMap.put("connectWhenNetworkNameIsHidden", (n) -> { this.setConnectWhenNetworkNameIsHidden(n.getBooleanValue()); });
+        deserializerMap.put("networkName", (n) -> { this.setNetworkName(n.getStringValue()); });
+        deserializerMap.put("preSharedKey", (n) -> { this.setPreSharedKey(n.getStringValue()); });
+        deserializerMap.put("preSharedKeyIsSet", (n) -> { this.setPreSharedKeyIsSet(n.getBooleanValue()); });
+        deserializerMap.put("proxyAutomaticConfigurationUrl", (n) -> { this.setProxyAutomaticConfigurationUrl(n.getStringValue()); });
+        deserializerMap.put("proxyExclusionList", (n) -> { this.setProxyExclusionList(n.getStringValue()); });
+        deserializerMap.put("proxyManualAddress", (n) -> { this.setProxyManualAddress(n.getStringValue()); });
+        deserializerMap.put("proxyManualPort", (n) -> { this.setProxyManualPort(n.getIntegerValue()); });
+        deserializerMap.put("proxySettings", (n) -> { this.setProxySettings(n.getEnumValue(WiFiProxySetting.class)); });
+        deserializerMap.put("ssid", (n) -> { this.setSsid(n.getStringValue()); });
+        deserializerMap.put("wiFiSecurityType", (n) -> { this.setWiFiSecurityType(n.getEnumValue(AndroidDeviceOwnerWiFiSecurityType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the networkName property value. Network Name
@@ -181,6 +181,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -202,6 +203,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the connectAutomatically property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectAutomatically(@javax.annotation.Nullable final Boolean value) {
         this._connectAutomatically = value;
     }
@@ -210,6 +212,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the connectWhenNetworkNameIsHidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnectWhenNetworkNameIsHidden(@javax.annotation.Nullable final Boolean value) {
         this._connectWhenNetworkNameIsHidden = value;
     }
@@ -218,6 +221,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the networkName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkName(@javax.annotation.Nullable final String value) {
         this._networkName = value;
     }
@@ -226,6 +230,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the preSharedKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreSharedKey(@javax.annotation.Nullable final String value) {
         this._preSharedKey = value;
     }
@@ -234,6 +239,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the preSharedKeyIsSet property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreSharedKeyIsSet(@javax.annotation.Nullable final Boolean value) {
         this._preSharedKeyIsSet = value;
     }
@@ -242,6 +248,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the proxyAutomaticConfigurationUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyAutomaticConfigurationUrl(@javax.annotation.Nullable final String value) {
         this._proxyAutomaticConfigurationUrl = value;
     }
@@ -250,6 +257,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the proxyExclusionList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyExclusionList(@javax.annotation.Nullable final String value) {
         this._proxyExclusionList = value;
     }
@@ -258,6 +266,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the proxyManualAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyManualAddress(@javax.annotation.Nullable final String value) {
         this._proxyManualAddress = value;
     }
@@ -266,6 +275,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the proxyManualPort property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxyManualPort(@javax.annotation.Nullable final Integer value) {
         this._proxyManualPort = value;
     }
@@ -274,6 +284,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the proxySettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProxySettings(@javax.annotation.Nullable final WiFiProxySetting value) {
         this._proxySettings = value;
     }
@@ -282,6 +293,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the ssid property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSsid(@javax.annotation.Nullable final String value) {
         this._ssid = value;
     }
@@ -290,6 +302,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
      * @param value Value to set for the wiFiSecurityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWiFiSecurityType(@javax.annotation.Nullable final AndroidDeviceOwnerWiFiSecurityType value) {
         this._wiFiSecurityType = value;
     }

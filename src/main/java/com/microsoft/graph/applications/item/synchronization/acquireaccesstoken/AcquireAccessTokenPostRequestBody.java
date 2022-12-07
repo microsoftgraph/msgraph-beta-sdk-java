@@ -19,6 +19,7 @@ public class AcquireAccessTokenPostRequestBody implements AdditionalDataHolder, 
      * Instantiates a new acquireAccessTokenPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AcquireAccessTokenPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -54,16 +55,16 @@ public class AcquireAccessTokenPostRequestBody implements AdditionalDataHolder, 
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AcquireAccessTokenPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("credentials", (n) -> { currentObject.setCredentials(n.getCollectionOfObjectValues(SynchronizationSecretKeyStringValuePair::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(1);
+        deserializerMap.put("credentials", (n) -> { this.setCredentials(n.getCollectionOfObjectValues(SynchronizationSecretKeyStringValuePair::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("credentials", this.getCredentials());
@@ -74,6 +75,7 @@ public class AcquireAccessTokenPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -82,6 +84,7 @@ public class AcquireAccessTokenPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the credentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCredentials(@javax.annotation.Nullable final java.util.List<SynchronizationSecretKeyStringValuePair> value) {
         this._credentials = value;
     }

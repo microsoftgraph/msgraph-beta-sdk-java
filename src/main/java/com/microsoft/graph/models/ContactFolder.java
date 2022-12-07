@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of accessReview entities. */
 public class ContactFolder extends Entity implements Parsable {
     /** The collection of child folders in the folder. Navigation property. Read-only. Nullable. */
     private java.util.List<ContactFolder> _childFolders;
@@ -23,17 +24,17 @@ public class ContactFolder extends Entity implements Parsable {
     /** The name of the folder if the folder is a recognized folder. Currently contacts is the only recognized contacts folder. */
     private String _wellKnownName;
     /**
-     * Instantiates a new ContactFolder and sets the default values.
+     * Instantiates a new contactFolder and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ContactFolder() {
         super();
-        this.setOdataType("#microsoft.graph.contactFolder");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ContactFolder
+     * @return a contactFolder
      */
     @javax.annotation.Nonnull
     public static ContactFolder createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -70,16 +71,15 @@ public class ContactFolder extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ContactFolder currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("childFolders", (n) -> { currentObject.setChildFolders(n.getCollectionOfObjectValues(ContactFolder::createFromDiscriminatorValue)); });
-            this.put("contacts", (n) -> { currentObject.setContacts(n.getCollectionOfObjectValues(Contact::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("parentFolderId", (n) -> { currentObject.setParentFolderId(n.getStringValue()); });
-            this.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("wellKnownName", (n) -> { currentObject.setWellKnownName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("childFolders", (n) -> { this.setChildFolders(n.getCollectionOfObjectValues(ContactFolder::createFromDiscriminatorValue)); });
+        deserializerMap.put("contacts", (n) -> { this.setContacts(n.getCollectionOfObjectValues(Contact::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("multiValueExtendedProperties", (n) -> { this.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentFolderId", (n) -> { this.setParentFolderId(n.getStringValue()); });
+        deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("wellKnownName", (n) -> { this.setWellKnownName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the contactFolder. Read-only. Nullable.
@@ -118,6 +118,7 @@ public class ContactFolder extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -134,6 +135,7 @@ public class ContactFolder extends Entity implements Parsable {
      * @param value Value to set for the childFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChildFolders(@javax.annotation.Nullable final java.util.List<ContactFolder> value) {
         this._childFolders = value;
     }
@@ -142,6 +144,7 @@ public class ContactFolder extends Entity implements Parsable {
      * @param value Value to set for the contacts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContacts(@javax.annotation.Nullable final java.util.List<Contact> value) {
         this._contacts = value;
     }
@@ -150,6 +153,7 @@ public class ContactFolder extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
         this._displayName = value;
     }
@@ -158,6 +162,7 @@ public class ContactFolder extends Entity implements Parsable {
      * @param value Value to set for the multiValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this._multiValueExtendedProperties = value;
     }
@@ -166,6 +171,7 @@ public class ContactFolder extends Entity implements Parsable {
      * @param value Value to set for the parentFolderId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentFolderId(@javax.annotation.Nullable final String value) {
         this._parentFolderId = value;
     }
@@ -174,6 +180,7 @@ public class ContactFolder extends Entity implements Parsable {
      * @param value Value to set for the singleValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
         this._singleValueExtendedProperties = value;
     }
@@ -182,6 +189,7 @@ public class ContactFolder extends Entity implements Parsable {
      * @param value Value to set for the wellKnownName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWellKnownName(@javax.annotation.Nullable final String value) {
         this._wellKnownName = value;
     }

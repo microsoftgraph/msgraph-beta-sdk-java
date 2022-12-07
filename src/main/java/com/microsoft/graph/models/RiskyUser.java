@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/** Provides operations to manage the collection of activityStatistics entities. */
 public class RiskyUser extends Entity implements Parsable {
     /** The history property */
     private java.util.List<RiskyUserHistoryItem> _history;
@@ -29,17 +30,17 @@ public class RiskyUser extends Entity implements Parsable {
     /** Risky user principal name. */
     private String _userPrincipalName;
     /**
-     * Instantiates a new RiskyUser and sets the default values.
+     * Instantiates a new riskyUser and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RiskyUser() {
         super();
-        this.setOdataType("#microsoft.graph.riskyUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a RiskyUser
+     * @return a riskyUser
      */
     @javax.annotation.Nonnull
     public static RiskyUser createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -59,18 +60,17 @@ public class RiskyUser extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RiskyUser currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("history", (n) -> { currentObject.setHistory(n.getCollectionOfObjectValues(RiskyUserHistoryItem::createFromDiscriminatorValue)); });
-            this.put("isDeleted", (n) -> { currentObject.setIsDeleted(n.getBooleanValue()); });
-            this.put("isProcessing", (n) -> { currentObject.setIsProcessing(n.getBooleanValue()); });
-            this.put("riskDetail", (n) -> { currentObject.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
-            this.put("riskLastUpdatedDateTime", (n) -> { currentObject.setRiskLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("riskLevel", (n) -> { currentObject.setRiskLevel(n.getEnumValue(RiskLevel.class)); });
-            this.put("riskState", (n) -> { currentObject.setRiskState(n.getEnumValue(RiskState.class)); });
-            this.put("userDisplayName", (n) -> { currentObject.setUserDisplayName(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("history", (n) -> { this.setHistory(n.getCollectionOfObjectValues(RiskyUserHistoryItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("isDeleted", (n) -> { this.setIsDeleted(n.getBooleanValue()); });
+        deserializerMap.put("isProcessing", (n) -> { this.setIsProcessing(n.getBooleanValue()); });
+        deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail.class)); });
+        deserializerMap.put("riskLastUpdatedDateTime", (n) -> { this.setRiskLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskLevel.class)); });
+        deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState.class)); });
+        deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the history property value. The history property
@@ -149,6 +149,7 @@ public class RiskyUser extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -167,6 +168,7 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the history property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHistory(@javax.annotation.Nullable final java.util.List<RiskyUserHistoryItem> value) {
         this._history = value;
     }
@@ -175,6 +177,7 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the isDeleted property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDeleted(@javax.annotation.Nullable final Boolean value) {
         this._isDeleted = value;
     }
@@ -183,6 +186,7 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the isProcessing property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsProcessing(@javax.annotation.Nullable final Boolean value) {
         this._isProcessing = value;
     }
@@ -191,6 +195,7 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the riskDetail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskDetail(@javax.annotation.Nullable final RiskDetail value) {
         this._riskDetail = value;
     }
@@ -199,6 +204,7 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the riskLastUpdatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._riskLastUpdatedDateTime = value;
     }
@@ -207,6 +213,7 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the riskLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskLevel(@javax.annotation.Nullable final RiskLevel value) {
         this._riskLevel = value;
     }
@@ -215,6 +222,7 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the riskState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskState(@javax.annotation.Nullable final RiskState value) {
         this._riskState = value;
     }
@@ -223,6 +231,7 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the userDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDisplayName(@javax.annotation.Nullable final String value) {
         this._userDisplayName = value;
     }
@@ -231,6 +240,7 @@ public class RiskyUser extends Entity implements Parsable {
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
         this._userPrincipalName = value;
     }

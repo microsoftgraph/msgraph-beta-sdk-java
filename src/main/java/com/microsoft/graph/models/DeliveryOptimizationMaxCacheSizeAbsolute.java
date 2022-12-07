@@ -14,6 +14,7 @@ public class DeliveryOptimizationMaxCacheSizeAbsolute extends DeliveryOptimizati
      * Instantiates a new DeliveryOptimizationMaxCacheSizeAbsolute and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeliveryOptimizationMaxCacheSizeAbsolute() {
         super();
         this.setOdataType("#microsoft.graph.deliveryOptimizationMaxCacheSizeAbsolute");
@@ -34,10 +35,9 @@ public class DeliveryOptimizationMaxCacheSizeAbsolute extends DeliveryOptimizati
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeliveryOptimizationMaxCacheSizeAbsolute currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("maximumCacheSizeInGigabytes", (n) -> { currentObject.setMaximumCacheSizeInGigabytes(n.getLongValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("maximumCacheSizeInGigabytes", (n) -> { this.setMaximumCacheSizeInGigabytes(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the maximumCacheSizeInGigabytes property value. Specifies the maximum size in GB of Delivery Optimization cache. Valid values 0 to 4294967295
@@ -52,6 +52,7 @@ public class DeliveryOptimizationMaxCacheSizeAbsolute extends DeliveryOptimizati
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,6 +63,7 @@ public class DeliveryOptimizationMaxCacheSizeAbsolute extends DeliveryOptimizati
      * @param value Value to set for the maximumCacheSizeInGigabytes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumCacheSizeInGigabytes(@javax.annotation.Nullable final Long value) {
         this._maximumCacheSizeInGigabytes = value;
     }

@@ -15,17 +15,17 @@ public class Presence extends Entity implements Parsable {
     /** The out of office settings for a user. */
     private OutOfOfficeSettings _outOfOfficeSettings;
     /**
-     * Instantiates a new Presence and sets the default values.
+     * Instantiates a new presence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Presence() {
         super();
-        this.setOdataType("#microsoft.graph.presence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Presence
+     * @return a presence
      */
     @javax.annotation.Nonnull
     public static Presence createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -54,12 +54,11 @@ public class Presence extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Presence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getStringValue()); });
-            this.put("availability", (n) -> { currentObject.setAvailability(n.getStringValue()); });
-            this.put("outOfOfficeSettings", (n) -> { currentObject.setOutOfOfficeSettings(n.getObjectValue(OutOfOfficeSettings::createFromDiscriminatorValue)); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getStringValue()); });
+        deserializerMap.put("availability", (n) -> { this.setAvailability(n.getStringValue()); });
+        deserializerMap.put("outOfOfficeSettings", (n) -> { this.setOutOfOfficeSettings(n.getObjectValue(OutOfOfficeSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the outOfOfficeSettings property value. The out of office settings for a user.
@@ -74,6 +73,7 @@ public class Presence extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,6 +86,7 @@ public class Presence extends Entity implements Parsable {
      * @param value Value to set for the activity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final String value) {
         this._activity = value;
     }
@@ -94,6 +95,7 @@ public class Presence extends Entity implements Parsable {
      * @param value Value to set for the availability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAvailability(@javax.annotation.Nullable final String value) {
         this._availability = value;
     }
@@ -102,6 +104,7 @@ public class Presence extends Entity implements Parsable {
      * @param value Value to set for the outOfOfficeSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutOfOfficeSettings(@javax.annotation.Nullable final OutOfOfficeSettings value) {
         this._outOfOfficeSettings = value;
     }

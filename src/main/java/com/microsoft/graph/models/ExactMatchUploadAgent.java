@@ -17,9 +17,9 @@ public class ExactMatchUploadAgent extends Entity implements Parsable {
      * Instantiates a new exactMatchUploadAgent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExactMatchUploadAgent() {
         super();
-        this.setOdataType("#microsoft.graph.exactMatchUploadAgent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,17 +53,17 @@ public class ExactMatchUploadAgent extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExactMatchUploadAgent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("creationDateTime", (n) -> { currentObject.setCreationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("creationDateTime", (n) -> { this.setCreationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,6 +75,7 @@ public class ExactMatchUploadAgent extends Entity implements Parsable {
      * @param value Value to set for the creationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
         this._creationDateTime = value;
     }
@@ -83,6 +84,7 @@ public class ExactMatchUploadAgent extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
         this._description = value;
     }

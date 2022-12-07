@@ -24,9 +24,9 @@ public class WorkbookChartFont extends Entity implements Parsable {
      * Instantiates a new workbookChartFont and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChartFont() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartFont");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -60,15 +60,14 @@ public class WorkbookChartFont extends Entity implements Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChartFont currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("bold", (n) -> { currentObject.setBold(n.getBooleanValue()); });
-            this.put("color", (n) -> { currentObject.setColor(n.getStringValue()); });
-            this.put("italic", (n) -> { currentObject.setItalic(n.getBooleanValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("size", (n) -> { currentObject.setSize(n.getDoubleValue()); });
-            this.put("underline", (n) -> { currentObject.setUnderline(n.getStringValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("bold", (n) -> { this.setBold(n.getBooleanValue()); });
+        deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
+        deserializerMap.put("italic", (n) -> { this.setItalic(n.getBooleanValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("size", (n) -> { this.setSize(n.getDoubleValue()); });
+        deserializerMap.put("underline", (n) -> { this.setUnderline(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the italic property value. Represents the italic status of the font.
@@ -107,6 +106,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,6 +122,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      * @param value Value to set for the bold property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBold(@javax.annotation.Nullable final Boolean value) {
         this._bold = value;
     }
@@ -130,6 +131,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      * @param value Value to set for the color property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColor(@javax.annotation.Nullable final String value) {
         this._color = value;
     }
@@ -138,6 +140,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      * @param value Value to set for the italic property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setItalic(@javax.annotation.Nullable final Boolean value) {
         this._italic = value;
     }
@@ -146,6 +149,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
         this._name = value;
     }
@@ -154,6 +158,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Double value) {
         this._size = value;
     }
@@ -162,6 +167,7 @@ public class WorkbookChartFont extends Entity implements Parsable {
      * @param value Value to set for the underline property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnderline(@javax.annotation.Nullable final String value) {
         this._underline = value;
     }

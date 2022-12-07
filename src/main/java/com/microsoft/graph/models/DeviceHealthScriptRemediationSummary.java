@@ -22,9 +22,9 @@ public class DeviceHealthScriptRemediationSummary implements AdditionalDataHolde
      * Instantiates a new deviceHealthScriptRemediationSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceHealthScriptRemediationSummary() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceHealthScriptRemediationSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,12 +50,11 @@ public class DeviceHealthScriptRemediationSummary implements AdditionalDataHolde
      */
     @javax.annotation.Nonnull
     public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceHealthScriptRemediationSummary currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("remediatedDeviceCount", (n) -> { currentObject.setRemediatedDeviceCount(n.getIntegerValue()); });
-            this.put("scriptCount", (n) -> { currentObject.setScriptCount(n.getIntegerValue()); });
-        }};
+        final HashMap<String, Consumer<ParseNode>> deserializerMap = new HashMap<String, Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("remediatedDeviceCount", (n) -> { this.setRemediatedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("scriptCount", (n) -> { this.setScriptCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -86,6 +85,7 @@ public class DeviceHealthScriptRemediationSummary implements AdditionalDataHolde
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -98,6 +98,7 @@ public class DeviceHealthScriptRemediationSummary implements AdditionalDataHolde
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
         this._additionalData = value;
     }
@@ -106,6 +107,7 @@ public class DeviceHealthScriptRemediationSummary implements AdditionalDataHolde
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
         this._odataType = value;
     }
@@ -114,6 +116,7 @@ public class DeviceHealthScriptRemediationSummary implements AdditionalDataHolde
      * @param value Value to set for the remediatedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediatedDeviceCount(@javax.annotation.Nullable final Integer value) {
         this._remediatedDeviceCount = value;
     }
@@ -122,6 +125,7 @@ public class DeviceHealthScriptRemediationSummary implements AdditionalDataHolde
      * @param value Value to set for the scriptCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScriptCount(@javax.annotation.Nullable final Integer value) {
         this._scriptCount = value;
     }
