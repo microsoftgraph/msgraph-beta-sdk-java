@@ -42,7 +42,7 @@ public class AuthenticationAppPolicyDetails implements IJsonBackedObject {
 
     /**
      * The Admin Configuration.
-     * 
+     * The admin configuration of the policy on the user's authentication app. For a policy that does not impact the success/failure of the authentication, the evaluation defaults to notApplicable. The possible values are: notApplicable, enabled, disabled, unknownFutureValue.
      */
     @SerializedName(value = "adminConfiguration", alternate = {"AdminConfiguration"})
     @Expose
@@ -51,7 +51,7 @@ public class AuthenticationAppPolicyDetails implements IJsonBackedObject {
 
     /**
      * The Authentication Evaluation.
-     * 
+     * Evaluates the success/failure of the authentication based on the admin configuration of the policy on the user's client authentication app. The possible values are: success, failure, unknownFutureValue.
      */
     @SerializedName(value = "authenticationEvaluation", alternate = {"AuthenticationEvaluation"})
     @Expose
@@ -60,7 +60,7 @@ public class AuthenticationAppPolicyDetails implements IJsonBackedObject {
 
     /**
      * The Policy Name.
-     * 
+     * The name of the policy enforced on the user's authentication app.
      */
     @SerializedName(value = "policyName", alternate = {"PolicyName"})
     @Expose
@@ -69,7 +69,7 @@ public class AuthenticationAppPolicyDetails implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Refers to whether the policy executed as expected on the user's client authentication app. The possible values are: unknown, appLockOutOfDate, appLockEnabled, appLockDisabled, appContextOutOfDate, appContextShown, appContextNotShown, locationContextOutOfDate, locationContextShown, locationContextNotShown, numberMatchOutOfDate, numberMatchCorrectNumberEntered, numberMatchIncorrectNumberEntered, numberMatchDeny, tamperResistantHardwareOutOfDate, tamperResistantHardwareUsed, tamperResistantHardwareNotUsed, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

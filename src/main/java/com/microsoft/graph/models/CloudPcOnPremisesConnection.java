@@ -173,6 +173,15 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 	@Nullable
     public String virtualNetworkId;
 
+    /**
+     * The Virtual Network Location.
+     * 
+     */
+    @SerializedName(value = "virtualNetworkLocation", alternate = {"VirtualNetworkLocation"})
+    @Expose
+	@Nullable
+    public String virtualNetworkLocation;
+
 
     /**
      * Sets the raw JSON object

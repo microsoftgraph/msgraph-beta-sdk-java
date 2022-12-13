@@ -42,12 +42,21 @@ public class Property implements IJsonBackedObject {
 
     /**
      * The Aliases.
-     * A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, ', ', &amp;lt;, &amp;gt;, `, ^. Optional.
+     * A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string might not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, ', ', &amp;lt;, &amp;gt;, `, ^. Optional.
      */
     @SerializedName(value = "aliases", alternate = {"Aliases"})
     @Expose
 	@Nullable
     public java.util.List<String> aliases;
+
+    /**
+     * The Is Exact Match Required.
+     * Specifies if the property will be matched exactly for queries. Exact matching can only be set to true for non-searchable properties of type string or stringCollection. Optional.
+     */
+    @SerializedName(value = "isExactMatchRequired", alternate = {"IsExactMatchRequired"})
+    @Expose
+	@Nullable
+    public Boolean isExactMatchRequired;
 
     /**
      * The Is Queryable.
@@ -96,7 +105,7 @@ public class Property implements IJsonBackedObject {
 
     /**
      * The Name.
-     * The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, ', ', &amp;lt;, &amp;gt;, `, ^.  Required.
+     * The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, the property name may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, ', ', &amp;lt;, &amp;gt;, `, ^.  Required.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose

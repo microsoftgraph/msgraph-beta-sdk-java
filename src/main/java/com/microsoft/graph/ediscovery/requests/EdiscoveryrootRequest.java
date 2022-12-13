@@ -20,7 +20,9 @@ import com.microsoft.graph.http.HttpMethod;
 
 /**
  * The class for the Ediscoveryroot Request.
+ * @deprecated The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.
  */
+@Deprecated
 public class EdiscoveryrootRequest extends BaseRequest<Ediscoveryroot> {
 	
     /**

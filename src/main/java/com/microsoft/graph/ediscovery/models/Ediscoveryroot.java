@@ -23,7 +23,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Ediscoveryroot.
+ * @deprecated The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.
  */
+@Deprecated
 public class Ediscoveryroot extends Entity implements IJsonBackedObject {
 
 

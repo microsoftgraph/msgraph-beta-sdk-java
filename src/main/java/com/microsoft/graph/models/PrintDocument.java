@@ -54,6 +54,15 @@ public class PrintDocument extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Downloaded Date Time.
+     * 
+     */
+    @SerializedName(value = "downloadedDateTime", alternate = {"DownloadedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime downloadedDateTime;
+
+    /**
      * The Size.
      * The document's size in bytes. Read-only.
      */
@@ -61,6 +70,15 @@ public class PrintDocument extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Long size;
+
+    /**
+     * The Uploaded Date Time.
+     * 
+     */
+    @SerializedName(value = "uploadedDateTime", alternate = {"UploadedDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime uploadedDateTime;
 
 
     /**

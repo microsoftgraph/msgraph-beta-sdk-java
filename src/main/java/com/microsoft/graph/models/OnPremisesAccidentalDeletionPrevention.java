@@ -40,7 +40,7 @@ public class OnPremisesAccidentalDeletionPrevention implements IJsonBackedObject
 
     /**
      * The Alert Threshold.
-     * 
+     * Threshold value which triggers accidental deletion prevention. The threshold is either an absolute number of objects or a percentage number of objects.
      */
     @SerializedName(value = "alertThreshold", alternate = {"AlertThreshold"})
     @Expose
@@ -49,7 +49,7 @@ public class OnPremisesAccidentalDeletionPrevention implements IJsonBackedObject
 
     /**
      * The Synchronization Prevention Type.
-     * 
+     * The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage.
      */
     @SerializedName(value = "synchronizationPreventionType", alternate = {"SynchronizationPreventionType"})
     @Expose

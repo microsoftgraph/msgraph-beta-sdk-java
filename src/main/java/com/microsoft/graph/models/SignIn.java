@@ -90,7 +90,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Authentication App Device Details.
-     * 
+     * Provides details about the app and device used during an Azure AD authentication step.
      */
     @SerializedName(value = "authenticationAppDeviceDetails", alternate = {"AuthenticationAppDeviceDetails"})
     @Expose
@@ -99,7 +99,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Authentication App Policy Evaluation Details.
-     * 
+     * Provides details of the Azure AD policies applied to a user and client authentication app during an authentication step.
      */
     @SerializedName(value = "authenticationAppPolicyEvaluationDetails", alternate = {"AuthenticationAppPolicyEvaluationDetails"})
     @Expose

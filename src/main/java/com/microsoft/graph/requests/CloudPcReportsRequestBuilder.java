@@ -8,6 +8,7 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CloudPcReports;
+import com.microsoft.graph.models.CloudPcReportName;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -16,6 +17,7 @@ import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
 import com.microsoft.graph.models.CloudPcReportsGetDailyAggregatedRemoteConnectionReportsParameterSet;
 import com.microsoft.graph.models.CloudPcReportsGetRemoteConnectionHistoricalReportsParameterSet;
+import com.microsoft.graph.models.CloudPcReportsGetSharedUseLicenseUsageReportParameterSet;
 import com.microsoft.graph.models.CloudPcReportsGetTotalAggregatedRemoteConnectionReportsParameterSet;
 import com.microsoft.graph.models.CloudPcReportsGetRealTimeRemoteConnectionLatencyParameterSet;
 import com.microsoft.graph.models.CloudPcReportsGetRealTimeRemoteConnectionStatusParameterSet;
@@ -100,6 +102,16 @@ public class CloudPcReportsRequestBuilder extends BaseRequestBuilder<CloudPcRepo
     @Nonnull
     public CloudPcReportsGetRemoteConnectionHistoricalReportsRequestBuilder getRemoteConnectionHistoricalReports(@Nonnull final CloudPcReportsGetRemoteConnectionHistoricalReportsParameterSet parameters) {
         return new CloudPcReportsGetRemoteConnectionHistoricalReportsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getRemoteConnectionHistoricalReports"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public CloudPcReportsGetSharedUseLicenseUsageReportRequestBuilder getSharedUseLicenseUsageReport(@Nonnull final CloudPcReportsGetSharedUseLicenseUsageReportParameterSet parameters) {
+        return new CloudPcReportsGetSharedUseLicenseUsageReportRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getSharedUseLicenseUsageReport"), getClient(), null, parameters);
     }
 
     /**
