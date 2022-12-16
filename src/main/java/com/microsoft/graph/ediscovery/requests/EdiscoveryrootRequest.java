@@ -172,4 +172,3 @@ public class EdiscoveryrootRequest extends BaseRequest<Ediscoveryroot> {
      }
 
 }
-
