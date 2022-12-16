@@ -79,6 +79,15 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
     public CloudPcDomainJoinConfiguration domainJoinConfiguration;
 
     /**
+     * The Enable Single Sign On.
+     * 
+     */
+    @SerializedName(value = "enableSingleSignOn", alternate = {"EnableSingleSignOn"})
+    @Expose
+	@Nullable
+    public Boolean enableSingleSignOn;
+
+    /**
      * The Grace Period In Hours.
      * The number of hours to wait before reprovisioning/deprovisioning happens. Read-only.
      */

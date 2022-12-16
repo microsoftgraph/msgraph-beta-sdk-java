@@ -38,6 +38,15 @@ public class CloudPcOrganizationSettings extends Entity implements IJsonBackedOb
     public Boolean enableMEMAutoEnroll;
 
     /**
+     * The Enable Single Sign On.
+     * 
+     */
+    @SerializedName(value = "enableSingleSignOn", alternate = {"EnableSingleSignOn"})
+    @Expose
+	@Nullable
+    public Boolean enableSingleSignOn;
+
+    /**
      * The Os Version.
      * The version of the operating system (OS) to provision on Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue.
      */

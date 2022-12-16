@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ChannelMembershipType;
 import com.microsoft.graph.models.ChannelModerationSettings;
+import com.microsoft.graph.models.ChannelSummary;
 import com.microsoft.graph.models.DriveItem;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ConversationMemberCollectionPage;
@@ -53,7 +54,7 @@ public class Channel extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * Channel name as it will appear to the user in Microsoft Teams.
+     * Channel name as it will appear to the user in Microsoft Teams. The maximum length is 50 characters.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -95,6 +96,15 @@ public class Channel extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public ChannelModerationSettings moderationSettings;
+
+    /**
+     * The Summary.
+     * 
+     */
+    @SerializedName(value = "summary", alternate = {"Summary"})
+    @Expose
+	@Nullable
+    public ChannelSummary summary;
 
     /**
      * The Tenant Id.

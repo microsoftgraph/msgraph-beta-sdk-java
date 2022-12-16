@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.PlannerCreationSourceKind;
 import com.microsoft.graph.models.PlannerTeamsPublicationInfo;
 
 
@@ -39,8 +40,17 @@ public class PlannerTaskCreation implements IJsonBackedObject {
     }
 
     /**
+     * The Creation Source Kind.
+     * Specifies what kind of creation source the task is created with. The possible values are: external, publication and unknownFutureValue.
+     */
+    @SerializedName(value = "creationSourceKind", alternate = {"CreationSourceKind"})
+    @Expose
+	@Nullable
+    public PlannerCreationSourceKind creationSourceKind;
+
+    /**
      * The Teams Publication Info.
-     * Information about the publication process that created this task. null value indicates that the task was not created by a publication process.
+     * Information about the publication process that created this task. This field is deprecated and clients should move to using the new inheritance model.
      */
     @SerializedName(value = "teamsPublicationInfo", alternate = {"TeamsPublicationInfo"})
     @Expose

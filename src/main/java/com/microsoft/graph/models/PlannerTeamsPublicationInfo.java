@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.PlannerTaskCreation;
 
 
 import com.google.gson.JsonObject;
@@ -21,21 +22,8 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Planner Teams Publication Info.
  */
-public class PlannerTeamsPublicationInfo implements IJsonBackedObject {
+public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements IJsonBackedObject {
 
-    /** the OData type of the object as returned by the service */
-    @SerializedName("@odata.type")
-    @Expose
-    @Nullable
-    public String oDataType;
-
-    private transient AdditionalDataManager additionalDataManager = new AdditionalDataManager(this);
-
-    @Override
-    @Nonnull
-    public final AdditionalDataManager additionalDataManager() {
-        return additionalDataManager;
-    }
 
     /**
      * The Last Modified Date Time.

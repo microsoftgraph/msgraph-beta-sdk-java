@@ -112,7 +112,7 @@ public class Directory extends Entity implements IJsonBackedObject {
 
     /**
      * The On Premises Synchronization.
-     * 
+     * A container for on-premises directory synchronization functionalities that are available for the organization.
      */
     @SerializedName(value = "onPremisesSynchronization", alternate = {"OnPremisesSynchronization"})
     @Expose

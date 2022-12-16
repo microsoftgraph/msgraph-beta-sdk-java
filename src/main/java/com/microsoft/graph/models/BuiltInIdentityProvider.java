@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.IdentityProviderState;
 import com.microsoft.graph.models.IdentityProviderBase;
 
 
@@ -33,6 +34,15 @@ public class BuiltInIdentityProvider extends IdentityProviderBase implements IJs
     @Expose
 	@Nullable
     public String identityProviderType;
+
+    /**
+     * The State.
+     * 
+     */
+    @SerializedName(value = "state", alternate = {"State"})
+    @Expose
+	@Nullable
+    public IdentityProviderState state;
 
 
     /**
