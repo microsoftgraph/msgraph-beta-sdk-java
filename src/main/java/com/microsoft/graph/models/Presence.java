@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.OutOfOfficeSettings;
+import com.microsoft.graph.models.PresenceStatusMessage;
 import com.microsoft.graph.models.Entity;
 
 
@@ -52,6 +53,15 @@ public class Presence extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public OutOfOfficeSettings outOfOfficeSettings;
+
+    /**
+     * The Status Message.
+     * 
+     */
+    @SerializedName(value = "statusMessage", alternate = {"StatusMessage"})
+    @Expose
+	@Nullable
+    public PresenceStatusMessage statusMessage;
 
 
     /**

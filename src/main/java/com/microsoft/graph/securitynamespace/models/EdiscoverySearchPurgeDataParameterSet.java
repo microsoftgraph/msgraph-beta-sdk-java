@@ -5,7 +5,9 @@
 
 package com.microsoft.graph.security.models;
 
-
+import com.microsoft.graph.security.models.PurgeType;
+import com.microsoft.graph.security.models.PurgeAreas;
+import java.util.EnumSet;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import javax.annotation.Nonnull;
@@ -20,6 +22,24 @@ import java.util.ArrayList;
  * The class for the Ediscovery Search Purge Data Parameter Set.
  */
 public class EdiscoverySearchPurgeDataParameterSet {
+    /**
+     * The purge Type.
+     * 
+     */
+    @SerializedName(value = "purgeType", alternate = {"PurgeType"})
+    @Expose
+	@Nullable
+    public PurgeType purgeType;
+
+    /**
+     * The purge Areas.
+     * 
+     */
+    @SerializedName(value = "purgeAreas", alternate = {"PurgeAreas"})
+    @Expose
+	@Nullable
+    public EnumSet<PurgeAreas> purgeAreas;
+
 
     /**
      * Instiaciates a new EdiscoverySearchPurgeDataParameterSet
@@ -30,6 +50,8 @@ public class EdiscoverySearchPurgeDataParameterSet {
      * @param builder builder bearing the parameters to initialize from
      */
     protected EdiscoverySearchPurgeDataParameterSet(@Nonnull final EdiscoverySearchPurgeDataParameterSetBuilder builder) {
+        this.purgeType = builder.purgeType;
+        this.purgeAreas = builder.purgeAreas;
     }
     /**
      * Gets a new builder for the body
@@ -43,6 +65,36 @@ public class EdiscoverySearchPurgeDataParameterSet {
      * Fluent builder for the EdiscoverySearchPurgeDataParameterSet
      */
     public static final class EdiscoverySearchPurgeDataParameterSetBuilder {
+        /**
+         * The purgeType parameter value
+         */
+        @Nullable
+        protected PurgeType purgeType;
+        /**
+         * Sets the PurgeType
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public EdiscoverySearchPurgeDataParameterSetBuilder withPurgeType(@Nullable final PurgeType val) {
+            this.purgeType = val;
+            return this;
+        }
+        /**
+         * The purgeAreas parameter value
+         */
+        @Nullable
+        protected EnumSet<PurgeAreas> purgeAreas;
+        /**
+         * Sets the PurgeAreas
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public EdiscoverySearchPurgeDataParameterSetBuilder withPurgeAreas(@Nullable final EnumSet<PurgeAreas> val) {
+            this.purgeAreas = val;
+            return this;
+        }
         /**
          * Instanciates a new EdiscoverySearchPurgeDataParameterSetBuilder
          */
@@ -64,6 +116,12 @@ public class EdiscoverySearchPurgeDataParameterSet {
     @Nonnull
     public java.util.List<com.microsoft.graph.options.FunctionOption> getFunctionOptions() {
         final ArrayList<com.microsoft.graph.options.FunctionOption> result = new ArrayList<>();
+        if(this.purgeType != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("purgeType", purgeType));
+        }
+        if(this.purgeAreas != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("purgeAreas", purgeAreas));
+        }
         return result;
     }
 }

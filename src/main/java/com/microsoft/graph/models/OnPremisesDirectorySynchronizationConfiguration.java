@@ -40,7 +40,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements IJsonBac
 
     /**
      * The Accidental Deletion Prevention.
-     * 
+     * Contains the accidental deletion prevention configuration for a tenant.
      */
     @SerializedName(value = "accidentalDeletionPrevention", alternate = {"AccidentalDeletionPrevention"})
     @Expose
@@ -49,7 +49,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements IJsonBac
 
     /**
      * The Customer Requested Synchronization Interval.
-     * 
+     * Interval of time that the customer requested the sync client waits between sync cycles.
      */
     @SerializedName(value = "customerRequestedSynchronizationInterval", alternate = {"CustomerRequestedSynchronizationInterval"})
     @Expose
@@ -58,7 +58,7 @@ public class OnPremisesDirectorySynchronizationConfiguration implements IJsonBac
 
     /**
      * The Synchronization Interval.
-     * 
+     * Interval of time the sync client should honor between sync cycles
      */
     @SerializedName(value = "synchronizationInterval", alternate = {"SynchronizationInterval"})
     @Expose

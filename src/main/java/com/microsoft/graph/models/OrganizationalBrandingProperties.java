@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.LoginPageLayoutConfiguration;
 import com.microsoft.graph.models.LoginPageTextVisibilitySettings;
 import com.microsoft.graph.models.Entity;
 
@@ -91,6 +92,15 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
     public String customCannotAccessYourAccountUrl;
 
     /**
+     * The Custom CSSRelative Url.
+     * A relative URL for the customCSS property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
+     */
+    @SerializedName(value = "customCSSRelativeUrl", alternate = {"CustomCSSRelativeUrl"})
+    @Expose
+	@Nullable
+    public String customCSSRelativeUrl;
+
+    /**
      * The Custom Forgot My Password Text.
      * A string to replace the default 'Forgot my password' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters.
      */
@@ -161,6 +171,24 @@ public class OrganizationalBrandingProperties extends Entity implements IJsonBac
     @Expose
 	@Nullable
     public String headerBackgroundColor;
+
+    /**
+     * The Header Logo Relative Url.
+     * A relative URL for the headerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only.
+     */
+    @SerializedName(value = "headerLogoRelativeUrl", alternate = {"HeaderLogoRelativeUrl"})
+    @Expose
+	@Nullable
+    public String headerLogoRelativeUrl;
+
+    /**
+     * The Login Page Layout Configuration.
+     * Represents the layout configuration to be displayed on the login page for a tenant.
+     */
+    @SerializedName(value = "loginPageLayoutConfiguration", alternate = {"LoginPageLayoutConfiguration"})
+    @Expose
+	@Nullable
+    public LoginPageLayoutConfiguration loginPageLayoutConfiguration;
 
     /**
      * The Login Page Text Visibility Settings.

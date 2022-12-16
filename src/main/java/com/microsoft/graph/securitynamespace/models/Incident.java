@@ -69,6 +69,15 @@ public class Incident extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime createdDateTime;
 
     /**
+     * The Custom Tags.
+     * Array of custom tags associated with an incident.
+     */
+    @SerializedName(value = "customTags", alternate = {"CustomTags"})
+    @Expose
+	@Nullable
+    public java.util.List<String> customTags;
+
+    /**
      * The Determination.
      * Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      */
@@ -130,15 +139,6 @@ public class Incident extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public IncidentStatus status;
-
-    /**
-     * The Tags.
-     * Array of custom tags associated with an incident.
-     */
-    @SerializedName(value = "tags", alternate = {"Tags"})
-    @Expose
-	@Nullable
-    public java.util.List<String> tags;
 
     /**
      * The Tenant Id.

@@ -32,26 +32,6 @@ public enum EvidenceRemediationStatus
     */
     NOT_FOUND,
     /**
-    * active
-    */
-    ACTIVE,
-    /**
-    * pending Approval
-    */
-    PENDING_APPROVAL,
-    /**
-    * declined
-    */
-    DECLINED,
-    /**
-    * not Remediated
-    */
-    NOT_REMEDIATED,
-    /**
-    * running
-    */
-    RUNNING,
-    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,

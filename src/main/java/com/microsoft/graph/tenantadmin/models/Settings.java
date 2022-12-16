@@ -284,7 +284,7 @@ public class Settings extends Entity implements IJsonBackedObject {
 
     /**
      * The Tenant Default Timezone.
-     * The default timezone of a tenant for newly created sites.
+     * The default timezone of a tenant for newly created sites. For a list of possible values, see SPRegionalSettings.TimeZones property.
      */
     @SerializedName(value = "tenantDefaultTimezone", alternate = {"TenantDefaultTimezone"})
     @Expose

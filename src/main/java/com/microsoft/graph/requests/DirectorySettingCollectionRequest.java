@@ -77,18 +77,6 @@ public class DirectorySettingCollectionRequest extends BaseEntityCollectionReque
     }
 
     /**
-     * Sets the filter clause for the request
-     *
-     * @param value the filter clause
-     * @return the updated request
-     */
-    @Nonnull
-    public DirectorySettingCollectionRequest filter(@Nonnull final String value) {
-        addFilterOption(value);
-        return this;
-    }
-
-    /**
      * Sets the order by clause for the request
      *
      * @param value the order by clause
