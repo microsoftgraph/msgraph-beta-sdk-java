@@ -11,6 +11,78 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+## [0.61.0] - 2022-12-16
+
+### Added
+ 
+- ManagedTenant Namespace:
+- ManagementTemplateCollectionTenantSummary model and related requests
+- ManagementTemplateStepTenantSummary model and related requests.
+- Main Graph Namespace:
+- ActionCapability model. 
+- ChannelSummary model. 
+- ChatMessageActions model. 
+- ChatMessageHistoryItem model. 
+- CloudPcPartnerAgent models. 
+- CloudPcProvisioningType model. 
+- CloudPcRegionGroup model. 
+- CloudPcRemoteActionCapability model. 
+- CloudPcRemoteActionName model. 
+- IdentityProviderState model. 
+- LayoutTemplateType model. 
+- LoginPageLayoutConfiguration model. 
+- MetaDataKey models. 
+- OnPremisesAccidentalDeletionPrevention model. 
+- PageLayoutType model. 
+- PagePromotionType model. 
+- PresenceStatusMessage model. 
+- ReactionsFacet model. 
+- SectionEmphasisType model. 
+- SegmentConfiguration models. 
+- ServerProcessedContent model. 
+- ShiftWorkCloudPcAccessState model. 
+- TitleArea models. 
+- UserExperienceAnalyticsDeviceScopeSummary model. 
+- WebPartData model. 
+- WebPartPosition model. 
+- ApplicationSegment, WebApplicationSegment, IpApplicationSegment models and related request. 
+- AzureCommunicationServicesUserConversationMember model and related requests. 
+- BrowserSharedCookie models and related requests. 
+- BrowserSite models and related requests. 
+- BusinessScenario models and related requests. 
+- CanvasLayout model and related requests. 
+- CloudPCGetShiftWorkCloudPcAccessState models and related requests.
+- CloudPCGetSupportedCloudPcRemoteActions models and related requests. 
+- CloudPcReportsGetSharedUseLicenseUsageReport models and related requests. 
+- CloudPCRetryPartnerAgentInstallation models and related requests. 
+- CorsConfiguration_v2 models and related requests. 
+- DeviceManagementConfigurationPolicyReorder models and related requests. 
+- DeviceManagementPartnerTerminate models and related requests. 
+- DeviceManagementReportsGetEncryptionReportForDevices models and related requests. 
+- DeviceManagementReportsGetMobileApplicationManagementAppConfigurationReport models and related requests. 
+- DeviceManagementUserExperienceAnalyticsSummarizedDeviceScopes models and related requests. 
+- HorizontalSection models and related requests. 
+- InternetExplorerMode model and related requests. 
+- MacOSMicrosoftDefenderApp model and related requests. 
+- ManagedDeviceEndRemoteHelpSession models and related requests. 
+- ManagedDeviceInitiateMobileDeviceManagementKeyRecovery models and related requests. 
+- OnPremisesDirectorySynchronization models and related requests. 
+- Planner models and related requests.  
+- PresenceSetStatusMessage models and related requests. 
+- ReportRootGetTeamsTeamCounts models and related requests. 
+- SitePageGetWebPartsByPosition models and related requests. 
+- StandardWebPart model and related requests. 
+- Edge model and related requests. 
+- TextWebPart model and related requests. 
+- VerticalSection model and related requests. 
+- WebPartGetPositionOfWebPart models and related requests. 
+
+### Changed
+
+- Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
+- Models and requests referencing the newly added models and requests have been updated to reflect the added models/requests.
+- Models and requests referencing the newly removed models and requests have been updated to reflect the removed models/requests.
+
 ## [0.60.0] - 2022-11-09
 
 ### Added
@@ -37,7 +109,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
-- Models and requests referencing the newly added models and requests have been updated to reflect the removed models/requests.
+- Models and requests referencing the newly added models and requests have been updated to reflect the added models/requests.
 - Removed OrganizationalMessage models and related requests. 
 - Removed DeviceManagement requests and models related to OrganizationalMessage. 
 - Removed UserExperienceAnalyticsRegressionSummary models and related requests. 
@@ -63,7 +135,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
-- Models and requests referencing the newly added models and requests have been updated to reflect the removed models/requests.
+- Models and requests referencing the newly added models and requests have been updated to reflect the added models/requests.
 - Added lots of models and requests to the ManagedTenant namespace. 
 
 ## [0.58.0] - 2022-10-12
@@ -98,7 +170,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
-- Models and requests referencing the newly added models and requests have been updated to reflect the removed models/requests.
+- Models and requests referencing the newly added models and requests have been updated to reflect the added models/requests.
 
 ## [0.57.0] - 2022-09-22
 
@@ -113,7 +185,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
-- Models and requests referencing the newly added models and requests have been updated to reflect the removed models/requests. 
+- Models and requests referencing the newly added models and requests have been updated to reflect the added models/requests. 
 - Removed MeetingChatMode model. 
 
 ## [0.56.0] - 2022-09-15
@@ -144,7 +216,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Updated beta models and request builders generated using Typewriter, based on latest Beta-Metadata.
-- Models and requests referencing the newly added models and requests have been updated to reflect the removed models/requests. 
+- Models and requests referencing the newly added models and requests have been updated to reflect the added models/requests. 
 - Removed ConnectionQuota requests from the ExternalConnectors namespace. 
 - Removed AzureADFeatureUsage models and related requests.
 - Removed AzureADLicenseUsage models and realted requests.  
