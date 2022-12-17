@@ -62,6 +62,24 @@ public class Office365GroupsActivityCounts extends Entity implements IJsonBacked
     public com.microsoft.graph.core.DateOnly reportRefreshDate;
 
     /**
+     * The Teams Channel Messages.
+     * 
+     */
+    @SerializedName(value = "teamsChannelMessages", alternate = {"TeamsChannelMessages"})
+    @Expose
+	@Nullable
+    public Long teamsChannelMessages;
+
+    /**
+     * The Teams Meetings Organized.
+     * 
+     */
+    @SerializedName(value = "teamsMeetingsOrganized", alternate = {"TeamsMeetingsOrganized"})
+    @Expose
+	@Nullable
+    public Long teamsMeetingsOrganized;
+
+    /**
      * The Yammer Messages Liked.
      * The number of messages liked in Yammer groups.
      */

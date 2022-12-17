@@ -24,6 +24,10 @@ public enum CloudPcManagementService
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * rpa Box
+    */
+    RPA_BOX,
+    /**
     * For CloudPcManagementService values that were not expected from the service
     */
     UNEXPECTED_VALUE

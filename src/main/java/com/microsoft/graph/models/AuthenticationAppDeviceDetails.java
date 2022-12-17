@@ -39,7 +39,7 @@ public class AuthenticationAppDeviceDetails implements IJsonBackedObject {
 
     /**
      * The App Version.
-     * 
+     * The version of the client authentication app used during the authentication step.
      */
     @SerializedName(value = "appVersion", alternate = {"AppVersion"})
     @Expose
@@ -48,7 +48,7 @@ public class AuthenticationAppDeviceDetails implements IJsonBackedObject {
 
     /**
      * The Client App.
-     * 
+     * The name of the client authentication app used during the authentication step.
      */
     @SerializedName(value = "clientApp", alternate = {"ClientApp"})
     @Expose
@@ -57,7 +57,7 @@ public class AuthenticationAppDeviceDetails implements IJsonBackedObject {
 
     /**
      * The Device Id.
-     * 
+     * ID of the device used during the authentication step.
      */
     @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
@@ -66,7 +66,7 @@ public class AuthenticationAppDeviceDetails implements IJsonBackedObject {
 
     /**
      * The Operating System.
-     * 
+     * The operating system running on the device used for the authentication step.
      */
     @SerializedName(value = "operatingSystem", alternate = {"OperatingSystem"})
     @Expose

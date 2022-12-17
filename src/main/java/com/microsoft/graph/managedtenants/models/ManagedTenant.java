@@ -31,8 +31,10 @@ import com.microsoft.graph.managedtenants.requests.ManagementActionCollectionPag
 import com.microsoft.graph.managedtenants.requests.ManagementActionTenantDeploymentStatusCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementIntentCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionTenantSummaryCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepTenantSummaryCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionPage;
 import com.microsoft.graph.managedtenants.requests.MyRoleCollectionPage;
 import com.microsoft.graph.managedtenants.requests.TenantGroupCollectionPage;
@@ -248,6 +250,15 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionPage managementTemplateCollections;
 
     /**
+     * The Management Template Collection Tenant Summaries.
+     * 
+     */
+    @SerializedName(value = "managementTemplateCollectionTenantSummaries", alternate = {"ManagementTemplateCollectionTenantSummaries"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionTenantSummaryCollectionPage managementTemplateCollectionTenantSummaries;
+
+    /**
      * The Management Templates.
      * The collection of baseline management templates across managed tenants.
      */
@@ -264,6 +275,15 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionPage managementTemplateSteps;
+
+    /**
+     * The Management Template Step Tenant Summaries.
+     * 
+     */
+    @SerializedName(value = "managementTemplateStepTenantSummaries", alternate = {"ManagementTemplateStepTenantSummaries"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepTenantSummaryCollectionPage managementTemplateStepTenantSummaries;
 
     /**
      * The Management Template Step Versions.
@@ -440,12 +460,20 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
             managementTemplateCollections = serializer.deserializeObject(json.get("managementTemplateCollections"), com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionPage.class);
         }
 
+        if (json.has("managementTemplateCollectionTenantSummaries")) {
+            managementTemplateCollectionTenantSummaries = serializer.deserializeObject(json.get("managementTemplateCollectionTenantSummaries"), com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionTenantSummaryCollectionPage.class);
+        }
+
         if (json.has("managementTemplates")) {
             managementTemplates = serializer.deserializeObject(json.get("managementTemplates"), com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionPage.class);
         }
 
         if (json.has("managementTemplateSteps")) {
             managementTemplateSteps = serializer.deserializeObject(json.get("managementTemplateSteps"), com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionPage.class);
+        }
+
+        if (json.has("managementTemplateStepTenantSummaries")) {
+            managementTemplateStepTenantSummaries = serializer.deserializeObject(json.get("managementTemplateStepTenantSummaries"), com.microsoft.graph.managedtenants.requests.ManagementTemplateStepTenantSummaryCollectionPage.class);
         }
 
         if (json.has("managementTemplateStepVersions")) {

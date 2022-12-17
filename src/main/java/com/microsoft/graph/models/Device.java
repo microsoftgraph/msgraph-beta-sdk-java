@@ -78,7 +78,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Device Id.
-     * Identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).
+     * Unique Identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Also Supports $filter (eq, ne, not, startsWith).
      */
     @SerializedName(value = "deviceId", alternate = {"DeviceId"})
     @Expose
@@ -258,7 +258,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Physical Ids.
-     * For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, and counting empty collections).
+     * For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0.
      */
     @SerializedName(value = "physicalIds", alternate = {"PhysicalIds"})
     @Expose
@@ -285,7 +285,7 @@ public class Device extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The System Labels.
-     * List of labels applied to the device by the system. Supports $filter (eq when counting empty collections).
+     * List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0).
      */
     @SerializedName(value = "systemLabels", alternate = {"SystemLabels"})
     @Expose

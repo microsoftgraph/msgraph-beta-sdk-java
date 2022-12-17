@@ -48,7 +48,7 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
 
     /**
      * The Is Email Notification Enabled.
-     * 
+     * True indicates that a staff member will be notified via email when a booking assigned to them is created or changed.
      */
     @SerializedName(value = "isEmailNotificationEnabled", alternate = {"IsEmailNotificationEnabled"})
     @Expose
@@ -57,7 +57,7 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
 
     /**
      * The Role.
-     * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest, unknownFutureValue, scheduler and member. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: scheduler, member. Required.
+     * The role of the staff member in the business. Possible values are: guest, administrator, viewer, externalGuest, unknownFutureValue, scheduler, teamMember. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: scheduler, teamMember. Required.
      */
     @SerializedName(value = "role", alternate = {"Role"})
     @Expose

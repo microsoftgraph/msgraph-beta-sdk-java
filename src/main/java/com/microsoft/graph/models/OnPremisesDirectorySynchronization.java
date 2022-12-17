@@ -29,7 +29,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements IJsonB
 
     /**
      * The Configuration.
-     * 
+     * Consists of configurations that can be fine-tuned and impact the on-premises directory synchronization process for a tenant.
      */
     @SerializedName(value = "configuration", alternate = {"Configuration"})
     @Expose
@@ -38,7 +38,7 @@ public class OnPremisesDirectorySynchronization extends Entity implements IJsonB
 
     /**
      * The Features.
-     * 
+     * Consists of directory synchronization features that can be enabled or disabled.
      */
     @SerializedName(value = "features", alternate = {"Features"})
     @Expose

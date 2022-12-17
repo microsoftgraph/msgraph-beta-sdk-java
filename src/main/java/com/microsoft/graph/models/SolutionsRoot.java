@@ -8,6 +8,8 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.requests.BusinessScenarioCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -37,6 +39,15 @@ public class SolutionsRoot implements IJsonBackedObject {
         return additionalDataManager;
     }
 
+    /**
+     * The Business Scenarios.
+     * 
+     */
+    @SerializedName(value = "businessScenarios", alternate = {"BusinessScenarios"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.BusinessScenarioCollectionPage businessScenarios;
+
 
     /**
      * Sets the raw JSON object
@@ -46,5 +57,9 @@ public class SolutionsRoot implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("businessScenarios")) {
+            businessScenarios = serializer.deserializeObject(json.get("businessScenarios"), com.microsoft.graph.requests.BusinessScenarioCollectionPage.class);
+        }
     }
 }

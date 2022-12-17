@@ -41,7 +41,9 @@ public class Compliance implements IJsonBackedObject {
     /**
      * The Ediscovery.
      * 
+     * @deprecated The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.
      */
+    @Deprecated
     @SerializedName(value = "ediscovery", alternate = {"Ediscovery"})
     @Expose
 	@Nullable

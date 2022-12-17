@@ -10,9 +10,14 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ContentTypeInfo;
+import com.microsoft.graph.models.PageLayoutType;
+import com.microsoft.graph.models.PagePromotionType;
 import com.microsoft.graph.models.PublicationFacet;
-import com.microsoft.graph.models.WebPart;
+import com.microsoft.graph.models.ReactionsFacet;
+import com.microsoft.graph.models.TitleArea;
+import com.microsoft.graph.models.CanvasLayout;
 import com.microsoft.graph.models.BaseItem;
+import com.microsoft.graph.requests.WebPartCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -31,7 +36,7 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
 
     /**
      * The Content Type.
-     * The content type of the page.
+     * Inherited from baseItem.
      */
     @SerializedName(value = "contentType", alternate = {"ContentType"})
     @Expose
@@ -39,17 +44,26 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
     public ContentTypeInfo contentType;
 
     /**
-     * The Page Layout Type.
-     * 
+     * The Page Layout.
+     * The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue.
      */
-    @SerializedName(value = "pageLayoutType", alternate = {"PageLayoutType"})
+    @SerializedName(value = "pageLayout", alternate = {"PageLayout"})
     @Expose
 	@Nullable
-    public String pageLayoutType;
+    public PageLayoutType pageLayout;
+
+    /**
+     * The Promotion Kind.
+     * Indicates the promotion kind of the sitePage. The possible values are: microsoftReserved, page, newsPost, unknownFutureValue.
+     */
+    @SerializedName(value = "promotionKind", alternate = {"PromotionKind"})
+    @Expose
+	@Nullable
+    public PagePromotionType promotionKind;
 
     /**
      * The Publishing State.
-     * 
+     * The publishing status and the MM.mm version of the page.
      */
     @SerializedName(value = "publishingState", alternate = {"PublishingState"})
     @Expose
@@ -57,8 +71,44 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
     public PublicationFacet publishingState;
 
     /**
+     * The Reactions.
+     * Reactions information for the page.
+     */
+    @SerializedName(value = "reactions", alternate = {"Reactions"})
+    @Expose
+	@Nullable
+    public ReactionsFacet reactions;
+
+    /**
+     * The Show Comments.
+     * Determines whether or not to show comments at the bottom of the page.
+     */
+    @SerializedName(value = "showComments", alternate = {"ShowComments"})
+    @Expose
+	@Nullable
+    public Boolean showComments;
+
+    /**
+     * The Show Recommended Pages.
+     * Determines whether or not to show recommended pages at the bottom of the page.
+     */
+    @SerializedName(value = "showRecommendedPages", alternate = {"ShowRecommendedPages"})
+    @Expose
+	@Nullable
+    public Boolean showRecommendedPages;
+
+    /**
+     * The Thumbnail Web Url.
+     * Url of the sitePage's thumbnail image
+     */
+    @SerializedName(value = "thumbnailWebUrl", alternate = {"ThumbnailWebUrl"})
+    @Expose
+	@Nullable
+    public String thumbnailWebUrl;
+
+    /**
      * The Title.
-     * 
+     * Title of the sitePage.
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose
@@ -66,13 +116,31 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
     public String title;
 
     /**
+     * The Title Area.
+     * Title area on the SharePoint page.
+     */
+    @SerializedName(value = "titleArea", alternate = {"TitleArea"})
+    @Expose
+	@Nullable
+    public TitleArea titleArea;
+
+    /**
+     * The Canvas Layout.
+     * Indicates the layout of the content in a given SharePoint page, including horizontal sections and vertical section
+     */
+    @SerializedName(value = "canvasLayout", alternate = {"CanvasLayout"})
+    @Expose
+	@Nullable
+    public CanvasLayout canvasLayout;
+
+    /**
      * The Web Parts.
-     * 
+     * Collection of webparts on the SharePoint page
      */
     @SerializedName(value = "webParts", alternate = {"WebParts"})
     @Expose
 	@Nullable
-    public java.util.List<WebPart> webParts;
+    public com.microsoft.graph.requests.WebPartCollectionPage webParts;
 
 
     /**
@@ -83,5 +151,9 @@ public class SitePage extends BaseItem implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("webParts")) {
+            webParts = serializer.deserializeObject(json.get("webParts"), com.microsoft.graph.requests.WebPartCollectionPage.class);
+        }
     }
 }

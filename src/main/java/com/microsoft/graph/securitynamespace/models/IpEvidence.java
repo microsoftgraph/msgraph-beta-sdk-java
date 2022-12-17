@@ -26,6 +26,15 @@ public class IpEvidence extends AlertEvidence implements IJsonBackedObject {
 
 
     /**
+     * The Country Letter Code.
+     * 
+     */
+    @SerializedName(value = "countryLetterCode", alternate = {"CountryLetterCode"})
+    @Expose
+	@Nullable
+    public String countryLetterCode;
+
+    /**
      * The Ip Address.
      * The value of the IP Address, can be either in V4 address or V6 address format.
      */

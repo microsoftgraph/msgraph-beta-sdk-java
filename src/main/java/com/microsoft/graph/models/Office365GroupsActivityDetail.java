@@ -170,6 +170,24 @@ public class Office365GroupsActivityDetail extends Entity implements IJsonBacked
     public Long sharePointTotalFileCount;
 
     /**
+     * The Teams Channel Messages Count.
+     * 
+     */
+    @SerializedName(value = "teamsChannelMessagesCount", alternate = {"TeamsChannelMessagesCount"})
+    @Expose
+	@Nullable
+    public Long teamsChannelMessagesCount;
+
+    /**
+     * The Teams Meetings Organized Count.
+     * 
+     */
+    @SerializedName(value = "teamsMeetingsOrganizedCount", alternate = {"TeamsMeetingsOrganizedCount"})
+    @Expose
+	@Nullable
+    public Long teamsMeetingsOrganizedCount;
+
+    /**
      * The Yammer Liked Message Count.
      * The number of messages liked in Yammer groups.
      */
