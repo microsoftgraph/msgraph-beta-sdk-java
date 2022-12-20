@@ -52,7 +52,7 @@ public class AlertEvidence implements IJsonBackedObject {
 
     /**
      * The Remediation Status.
-     * Status of the remediation action taken. The possible values are: none, remediated, prevented, blocked, notFound, active, pendingApproval, declined, notRemediated, running, unknownFutureValue.
+     * Status of the remediation action taken. The possible values are: none, remediated, prevented, blocked, notFound, unknownFutureValue.
      */
     @SerializedName(value = "remediationStatus", alternate = {"RemediationStatus"})
     @Expose
