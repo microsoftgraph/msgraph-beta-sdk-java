@@ -68,7 +68,7 @@ public class AlertRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Is System Rule.
-     * Indicates whether the rule is a system rule. If true, the rule is a system rule; otherwise, the rule is a custom defined rule and can be edited. System rules are built-in and only
+     * Indicates whether the rule is a system rule. If true, the rule is a system rule; otherwise, the rule is a custom defined rule and can be edited. System rules are built-in and only a few properties can be edited.
      */
     @SerializedName(value = "isSystemRule", alternate = {"IsSystemRule"})
     @Expose
@@ -77,7 +77,7 @@ public class AlertRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Notification Channels.
-     * 
+     * The notification channels of the rule selected by the user.
      */
     @SerializedName(value = "notificationChannels", alternate = {"NotificationChannels"})
     @Expose
@@ -86,7 +86,7 @@ public class AlertRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Severity.
-     * 
+     * The severity of the rule. The possible values are: unknown, informational, warning, critical, unknownFutureValue.
      */
     @SerializedName(value = "severity", alternate = {"Severity"})
     @Expose
@@ -95,7 +95,7 @@ public class AlertRule extends Entity implements IJsonBackedObject {
 
     /**
      * The Threshold.
-     * 
+     * The conditions to send alerts. For example, send alert when provisioning has failed for greater than or equal to 6 Cloud PCs.
      */
     @SerializedName(value = "threshold", alternate = {"Threshold"})
     @Expose
