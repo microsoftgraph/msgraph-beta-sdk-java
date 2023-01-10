@@ -70,7 +70,7 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Custom Tags.
-     * 
+     * Array of custom tags associated with an incident.
      */
     @SerializedName(value = "customTags", alternate = {"CustomTags"})
     @Expose

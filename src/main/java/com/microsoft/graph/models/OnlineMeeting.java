@@ -177,7 +177,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Join Meeting Id Settings.
-     * Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode.
+     * Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings cannot be modified. To make any changes to this property, the meeting needs to be canceled and a new one needs to be created.
      */
     @SerializedName(value = "joinMeetingIdSettings", alternate = {"JoinMeetingIdSettings"})
     @Expose

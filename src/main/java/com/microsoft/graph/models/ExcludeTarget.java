@@ -40,7 +40,7 @@ public class ExcludeTarget implements IJsonBackedObject {
 
     /**
      * The Id.
-     * The object identifier of an Azure AD user or group.
+     * The object identifier of an Azure AD group.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -49,7 +49,7 @@ public class ExcludeTarget implements IJsonBackedObject {
 
     /**
      * The Target Type.
-     * The type of the authentication method target. Possible values are: user, group, unknownFutureValue.
+     * The type of the authentication method target. Possible values are: group and unknownFutureValue.
      */
     @SerializedName(value = "targetType", alternate = {"TargetType"})
     @Expose

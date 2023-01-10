@@ -66,7 +66,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Reconfirmation In Days.
-     * 
+     * Days before the user will be asked to reconfirm their method.
      */
     @SerializedName(value = "reconfirmationInDays", alternate = {"ReconfirmationInDays"})
     @Expose
