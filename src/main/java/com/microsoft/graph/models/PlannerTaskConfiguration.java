@@ -28,7 +28,7 @@ public class PlannerTaskConfiguration extends Entity implements IJsonBackedObjec
 
     /**
      * The Edit Policy.
-     * 
+     * Policy configuration for tasks created for the businessScenario when they are being changed outside of the scenario.
      */
     @SerializedName(value = "editPolicy", alternate = {"EditPolicy"})
     @Expose

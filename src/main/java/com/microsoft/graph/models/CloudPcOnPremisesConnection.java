@@ -103,7 +103,7 @@ public class CloudPcOnPremisesConnection extends Entity implements IJsonBackedOb
 
     /**
      * The Managed By.
-     * Specifies which services manage the Azure network connection. Possible values are: windows365, devBox, unknownFutureValue. Read-only.
+     * Specifies which services manage the Azure network connection. Possible values are: windows365, devBox, rpaBox, unknownFutureValue. Read-only.
      */
     @SerializedName(value = "managedBy", alternate = {"ManagedBy"})
     @Expose

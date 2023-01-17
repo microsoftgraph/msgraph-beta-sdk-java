@@ -112,6 +112,15 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements IJson
     public Integer enrollmentTokenUsageCount;
 
     /**
+     * The Is Teams Device Profile.
+     * Boolean indicating if this profile is an Android AOSP for Teams device profile.
+     */
+    @SerializedName(value = "isTeamsDeviceProfile", alternate = {"IsTeamsDeviceProfile"})
+    @Expose
+	@Nullable
+    public Boolean isTeamsDeviceProfile;
+
+    /**
      * The Last Modified Date Time.
      * Date time the enrollment profile was last modified.
      */

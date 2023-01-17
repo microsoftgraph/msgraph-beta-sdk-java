@@ -30,7 +30,7 @@ public class BusinessScenario extends Entity implements IJsonBackedObject {
 
     /**
      * The Created By.
-     * 
+     * The identity of the user who created the scenario.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -39,7 +39,7 @@ public class BusinessScenario extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time when the scenario was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -48,7 +48,7 @@ public class BusinessScenario extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Display name of the scenario.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -57,7 +57,7 @@ public class BusinessScenario extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * The identity of the user who last modified the scenario.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -66,7 +66,7 @@ public class BusinessScenario extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The date and time when the scenario was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -75,7 +75,7 @@ public class BusinessScenario extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner App Ids.
-     * 
+     * Identifiers of applications that are authorized to work with this scenario.
      */
     @SerializedName(value = "ownerAppIds", alternate = {"OwnerAppIds"})
     @Expose
@@ -84,7 +84,7 @@ public class BusinessScenario extends Entity implements IJsonBackedObject {
 
     /**
      * The Unique Name.
-     * 
+     * Unique name of the scenario. To avoid conflicts, the recommended value for the unique name is a reverse domain name format, owned by the author of the scenario. For example, a scenario authored by Contoso.com would have a unique name that starts with com.contoso.
      */
     @SerializedName(value = "uniqueName", alternate = {"UniqueName"})
     @Expose
@@ -93,7 +93,7 @@ public class BusinessScenario extends Entity implements IJsonBackedObject {
 
     /**
      * The Planner.
-     * 
+     * Planner content related to the scenario.
      */
     @SerializedName(value = "planner", alternate = {"Planner"})
     @Expose

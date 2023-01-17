@@ -78,7 +78,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
 
     /**
      * The Managed Device Count.
-     * The number of vulnerable devices.
+     * The number of vulnerable devices. Valid values 0 to 65536
      */
     @SerializedName(value = "managedDeviceCount", alternate = {"ManagedDeviceCount"})
     @Expose

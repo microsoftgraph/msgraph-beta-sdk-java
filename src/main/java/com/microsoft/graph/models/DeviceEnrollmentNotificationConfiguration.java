@@ -67,7 +67,7 @@ public class DeviceEnrollmentNotificationConfiguration extends DeviceEnrollmentC
 
     /**
      * The Platform Type.
-     * Platform type of the Enrollment Notification. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, mac.
+     * Platform type of the Enrollment Notification. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, mac, linux, unknownFutureValue.
      */
     @SerializedName(value = "platformType", alternate = {"PlatformType"})
     @Expose

@@ -64,15 +64,6 @@ public class IosLobApp extends MobileLobApp implements IJsonBackedObject {
     public java.time.OffsetDateTime expirationDateTime;
 
     /**
-     * The Identity Version.
-     * The identity version. This property is being deprecated in 2211(November 2022)
-     */
-    @SerializedName(value = "identityVersion", alternate = {"IdentityVersion"})
-    @Expose
-	@Nullable
-    public String identityVersion;
-
-    /**
      * The Minimum Supported Operating System.
      * The value for the minimum applicable operating system.
      */

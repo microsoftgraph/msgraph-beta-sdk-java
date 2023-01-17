@@ -10,6 +10,8 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.AttackSimulationOperationCollectionPage;
+import com.microsoft.graph.requests.PayloadCollectionPage;
 import com.microsoft.graph.requests.SimulationAutomationCollectionPage;
 import com.microsoft.graph.requests.SimulationCollectionPage;
 
@@ -27,6 +29,24 @@ import javax.annotation.Nonnull;
  */
 public class AttackSimulationRoot extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Operations.
+     * 
+     */
+    @SerializedName(value = "operations", alternate = {"Operations"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.AttackSimulationOperationCollectionPage operations;
+
+    /**
+     * The Payloads.
+     * 
+     */
+    @SerializedName(value = "payloads", alternate = {"Payloads"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.PayloadCollectionPage payloads;
 
     /**
      * The Simulation Automations.
@@ -55,6 +75,14 @@ public class AttackSimulationRoot extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("operations")) {
+            operations = serializer.deserializeObject(json.get("operations"), com.microsoft.graph.requests.AttackSimulationOperationCollectionPage.class);
+        }
+
+        if (json.has("payloads")) {
+            payloads = serializer.deserializeObject(json.get("payloads"), com.microsoft.graph.requests.PayloadCollectionPage.class);
+        }
 
         if (json.has("simulationAutomations")) {
             simulationAutomations = serializer.deserializeObject(json.get("simulationAutomations"), com.microsoft.graph.requests.SimulationAutomationCollectionPage.class);

@@ -29,7 +29,7 @@ public class BusinessScenarioTask extends PlannerTask implements IJsonBackedObje
 
     /**
      * The Business Scenario Properties.
-     * 
+     * Scenario-specific properties of the task. externalObjectId and externalBucketId properties must be specified when creating a task.
      */
     @SerializedName(value = "businessScenarioProperties", alternate = {"BusinessScenarioProperties"})
     @Expose
@@ -38,7 +38,7 @@ public class BusinessScenarioTask extends PlannerTask implements IJsonBackedObje
 
     /**
      * The Target.
-     * 
+     * Target of the task that specifies where the task should be placed. Must be specified when creating a task.
      */
     @SerializedName(value = "target", alternate = {"Target"})
     @Expose

@@ -41,7 +41,7 @@ public class PlannerTaskRoleBasedRule implements IJsonBackedObject {
 
     /**
      * The Default Rule.
-     * 
+     * Default rule that applies when a property or action-specific rule is not provided. Possible values are: Allow, Block
      */
     @SerializedName(value = "defaultRule", alternate = {"DefaultRule"})
     @Expose
@@ -50,7 +50,7 @@ public class PlannerTaskRoleBasedRule implements IJsonBackedObject {
 
     /**
      * The Property Rule.
-     * 
+     * Rules for specific properties and actions.
      */
     @SerializedName(value = "propertyRule", alternate = {"PropertyRule"})
     @Expose
@@ -59,7 +59,7 @@ public class PlannerTaskRoleBasedRule implements IJsonBackedObject {
 
     /**
      * The Role.
-     * 
+     * The role these rules apply to.
      */
     @SerializedName(value = "role", alternate = {"Role"})
     @Expose

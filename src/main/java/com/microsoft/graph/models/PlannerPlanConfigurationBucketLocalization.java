@@ -39,7 +39,7 @@ public class PlannerPlanConfigurationBucketLocalization implements IJsonBackedOb
 
     /**
      * The External Bucket Id.
-     * 
+     * Application-specified identifier of the bucket.
      */
     @SerializedName(value = "externalBucketId", alternate = {"ExternalBucketId"})
     @Expose
@@ -48,7 +48,7 @@ public class PlannerPlanConfigurationBucketLocalization implements IJsonBackedOb
 
     /**
      * The Name.
-     * 
+     * Name of the bucket.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose

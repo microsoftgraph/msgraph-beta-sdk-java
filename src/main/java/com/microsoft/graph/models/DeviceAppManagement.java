@@ -21,7 +21,6 @@ import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationCollectio
 import com.microsoft.graph.requests.MobileAppCollectionPage;
 import com.microsoft.graph.requests.ManagedEBookCollectionPage;
 import com.microsoft.graph.requests.PolicySetCollectionPage;
-import com.microsoft.graph.requests.SideLoadingKeyCollectionPage;
 import com.microsoft.graph.requests.VppTokenCollectionPage;
 import com.microsoft.graph.requests.AndroidManagedAppProtectionCollectionPage;
 import com.microsoft.graph.requests.DefaultManagedAppProtectionCollectionPage;
@@ -178,15 +177,6 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.PolicySetCollectionPage policySets;
-
-    /**
-     * The Side Loading Keys.
-     * Side Loading Keys that are required for the Windows 8 and 8.1 Apps installation.
-     */
-    @SerializedName(value = "sideLoadingKeys", alternate = {"SideLoadingKeys"})
-    @Expose
-	@Nullable
-    public com.microsoft.graph.requests.SideLoadingKeyCollectionPage sideLoadingKeys;
 
     /**
      * The Vpp Tokens.
@@ -372,10 +362,6 @@ public class DeviceAppManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("policySets")) {
             policySets = serializer.deserializeObject(json.get("policySets"), com.microsoft.graph.requests.PolicySetCollectionPage.class);
-        }
-
-        if (json.has("sideLoadingKeys")) {
-            sideLoadingKeys = serializer.deserializeObject(json.get("sideLoadingKeys"), com.microsoft.graph.requests.SideLoadingKeyCollectionPage.class);
         }
 
         if (json.has("vppTokens")) {

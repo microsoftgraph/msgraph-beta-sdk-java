@@ -81,7 +81,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Activation Lock Bypass Code.
-     * Code that allows the Activation Lock on a device to be bypassed. This property is read-only.
+     * The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. Individual GET call with select query options is needed to retrieve actual values. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      */
     @SerializedName(value = "activationLockBypassCode", alternate = {"ActivationLockBypassCode"})
     @Expose
@@ -333,7 +333,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Ethernet Mac Address.
-     * Ethernet MAC. This property is read-only.
+     * Ethernet MAC. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
      */
     @SerializedName(value = "ethernetMacAddress", alternate = {"EthernetMacAddress"})
     @Expose
@@ -684,7 +684,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Number.
-     * Device sku number, see also: https://learn.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
+     * Device sku number, see also: https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
      */
     @SerializedName(value = "skuNumber", alternate = {"SkuNumber"})
     @Expose
