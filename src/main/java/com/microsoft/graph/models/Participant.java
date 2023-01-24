@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ParticipantInfo;
 import com.microsoft.graph.models.MediaStream;
 import com.microsoft.graph.models.RecordingInfo;
+import com.microsoft.graph.models.OnlineMeetingRestricted;
 import com.microsoft.graph.models.Entity;
 
 
@@ -91,6 +92,15 @@ public class Participant extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public RecordingInfo recordingInfo;
+
+    /**
+     * The Restricted Experience.
+     * 
+     */
+    @SerializedName(value = "restrictedExperience", alternate = {"RestrictedExperience"})
+    @Expose
+	@Nullable
+    public OnlineMeetingRestricted restrictedExperience;
 
 
     /**

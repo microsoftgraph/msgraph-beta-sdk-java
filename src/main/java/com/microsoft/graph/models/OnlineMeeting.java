@@ -19,6 +19,7 @@ import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.JoinMeetingIdSettings;
 import com.microsoft.graph.models.LobbyBypassSettings;
 import com.microsoft.graph.models.MeetingParticipants;
+import com.microsoft.graph.models.WatermarkProtectionValues;
 import com.microsoft.graph.models.VirtualAppointment;
 import com.microsoft.graph.models.MeetingAttendanceReport;
 import com.microsoft.graph.models.MeetingRegistration;
@@ -177,7 +178,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Join Meeting Id Settings.
-     * Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode.
+     * Specifies the joinMeetingId, the meeting passcode, and the requirement for the passcode. Once an onlineMeeting is created, the joinMeetingIdSettings cannot be modified. To make any changes to this property, the meeting needs to be canceled and a new one needs to be created.
      */
     @SerializedName(value = "joinMeetingIdSettings", alternate = {"JoinMeetingIdSettings"})
     @Expose
@@ -255,6 +256,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String videoTeleconferenceId;
+
+    /**
+     * The Watermark Protection.
+     * 
+     */
+    @SerializedName(value = "watermarkProtection", alternate = {"WatermarkProtection"})
+    @Expose
+	@Nullable
+    public WatermarkProtectionValues watermarkProtection;
 
     /**
      * The Virtual Appointment.

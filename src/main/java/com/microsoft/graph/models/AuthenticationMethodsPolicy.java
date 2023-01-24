@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AuthenticationMethodsPolicyMigrationState;
 import com.microsoft.graph.models.RegistrationEnforcement;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionPage;
@@ -56,6 +57,15 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
     public java.time.OffsetDateTime lastModifiedDateTime;
 
     /**
+     * The Policy Migration State.
+     * The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authenication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
+     */
+    @SerializedName(value = "policyMigrationState", alternate = {"PolicyMigrationState"})
+    @Expose
+	@Nullable
+    public AuthenticationMethodsPolicyMigrationState policyMigrationState;
+
+    /**
      * The Policy Version.
      * The version of the policy in use.
      */
@@ -66,7 +76,7 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
 
     /**
      * The Reconfirmation In Days.
-     * 
+     * Days before the user will be asked to reconfirm their method.
      */
     @SerializedName(value = "reconfirmationInDays", alternate = {"ReconfirmationInDays"})
     @Expose

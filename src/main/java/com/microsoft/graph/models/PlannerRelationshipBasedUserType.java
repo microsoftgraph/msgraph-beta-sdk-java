@@ -28,7 +28,7 @@ public class PlannerRelationshipBasedUserType extends PlannerTaskConfigurationRo
 
     /**
      * The Role.
-     * 
+     * Identifies the relationship of the caller to the task. The possible values are: defaultRules, groupOwners, groupMembers, taskAssignees, applications, unknownFutureValue.
      */
     @SerializedName(value = "role", alternate = {"Role"})
     @Expose

@@ -40,7 +40,7 @@ public class PlannerRuleOverride implements IJsonBackedObject {
 
     /**
      * The Name.
-     * 
+     * Name of the override. Allowed override values will be dependent on the property affected by the rule.
      */
     @SerializedName(value = "name", alternate = {"Name"})
     @Expose
@@ -49,7 +49,7 @@ public class PlannerRuleOverride implements IJsonBackedObject {
 
     /**
      * The Rules.
-     * 
+     * Overridden rules. These are used as rules for the override instead of the default rules.
      */
     @SerializedName(value = "rules", alternate = {"Rules"})
     @Expose

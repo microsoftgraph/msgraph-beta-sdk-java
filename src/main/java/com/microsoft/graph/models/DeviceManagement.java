@@ -115,6 +115,7 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryC
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventsCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsImpactingProcessCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionPage;
@@ -1236,6 +1237,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage userExperienceAnalyticsDevicesWithoutCloudIdentity;
 
     /**
+     * The User Experience Analytics Device Timeline Events.
+     * The user experience analytics device events entity contains NRT device timeline events details.
+     */
+    @SerializedName(value = "userExperienceAnalyticsDeviceTimelineEvents", alternate = {"UserExperienceAnalyticsDeviceTimelineEvents"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventsCollectionPage userExperienceAnalyticsDeviceTimelineEvents;
+
+    /**
      * The User Experience Analytics Impacting Process.
      * User experience analytics impacting process
      */
@@ -2089,6 +2099,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("userExperienceAnalyticsDevicesWithoutCloudIdentity")) {
             userExperienceAnalyticsDevicesWithoutCloudIdentity = serializer.deserializeObject(json.get("userExperienceAnalyticsDevicesWithoutCloudIdentity"), com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage.class);
+        }
+
+        if (json.has("userExperienceAnalyticsDeviceTimelineEvents")) {
+            userExperienceAnalyticsDeviceTimelineEvents = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceTimelineEvents"), com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventsCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsImpactingProcess")) {

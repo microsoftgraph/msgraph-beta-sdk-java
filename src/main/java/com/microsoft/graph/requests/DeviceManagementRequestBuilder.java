@@ -1876,6 +1876,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDevicesWithoutCloudIdentity") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the UserExperienceAnalyticsDeviceTimelineEvents collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventsCollectionRequestBuilder userExperienceAnalyticsDeviceTimelineEvents() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceTimelineEvents"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the UserExperienceAnalyticsDeviceTimelineEvents item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventsRequestBuilder userExperienceAnalyticsDeviceTimelineEvents(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventsRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceTimelineEvents") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the UserExperienceAnalyticsImpactingProcess collection
      *
      * @return the collection request builder

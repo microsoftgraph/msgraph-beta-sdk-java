@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.EnrollmentProfile;
 
 
@@ -78,6 +79,15 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
     @Expose
 	@Nullable
     public Boolean displayToneSetupDisabled;
+
+    /**
+     * The Enabled Skip Keys.
+     * enabledSkipKeys contains all the enabled skip keys as strings
+     */
+    @SerializedName(value = "enabledSkipKeys", alternate = {"EnabledSkipKeys"})
+    @Expose
+	@Nullable
+    public java.util.List<String> enabledSkipKeys;
 
     /**
      * The Is Default.
@@ -153,7 +163,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements IJson
 
     /**
      * The Supervised Mode Enabled.
-     * Supervised mode, True to enable, false otherwise. See https://learn.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
+     * Supervised mode, True to enable, false otherwise. See https://learn.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
      */
     @SerializedName(value = "supervisedModeEnabled", alternate = {"SupervisedModeEnabled"})
     @Expose

@@ -57,6 +57,46 @@ public class AttackSimulationRootRequestBuilder extends BaseRequestBuilder<Attac
 
 
     /**
+     *  Gets a request builder for the AttackSimulationOperation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AttackSimulationOperationCollectionRequestBuilder operations() {
+        return new com.microsoft.graph.requests.AttackSimulationOperationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("operations"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AttackSimulationOperation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.AttackSimulationOperationRequestBuilder operations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.AttackSimulationOperationRequestBuilder(getRequestUrlWithAdditionalSegment("operations") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the Payload collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PayloadCollectionRequestBuilder payloads() {
+        return new com.microsoft.graph.requests.PayloadCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("payloads"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Payload item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PayloadRequestBuilder payloads(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PayloadRequestBuilder(getRequestUrlWithAdditionalSegment("payloads") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the SimulationAutomation collection
      *
      * @return the collection request builder

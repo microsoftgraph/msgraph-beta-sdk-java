@@ -96,6 +96,16 @@ public class SiteGetByPathRequestBuilder extends BaseFunctionRequestBuilder<Site
     }
 
     /**
+     * Gets the request builder for InformationProtection
+     *
+     * @return the InformationProtectionRequestBuilder instance
+     */
+    @Nonnull
+    public InformationProtectionRequestBuilder informationProtection() {
+        return new InformationProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("informationProtection"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for ItemAnalytics
      *
      * @return the ItemAnalyticsWithReferenceRequestBuilder instance

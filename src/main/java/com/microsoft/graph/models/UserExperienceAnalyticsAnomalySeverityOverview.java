@@ -39,7 +39,7 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements IJsonBack
 
     /**
      * The High Severity Anomaly Count.
-     * The number of high severity anomalies which have been detected. Valid values -2147483648 to 2147483647
+     * Indicates count of high severity anomalies which have been detected. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "highSeverityAnomalyCount", alternate = {"HighSeverityAnomalyCount"})
     @Expose
@@ -48,7 +48,7 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements IJsonBack
 
     /**
      * The Informational Severity Anomaly Count.
-     * The number of informational severity anomalies which have been detected. Valid values -2147483648 to 2147483647
+     * Indicates count of informational severity anomalies which have been detected. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "informationalSeverityAnomalyCount", alternate = {"InformationalSeverityAnomalyCount"})
     @Expose
@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements IJsonBack
 
     /**
      * The Low Severity Anomaly Count.
-     * The number of low severity anomalies which have been detected. Valid values -2147483648 to 2147483647
+     * Indicates count of low severity anomalies which have been detected. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "lowSeverityAnomalyCount", alternate = {"LowSeverityAnomalyCount"})
     @Expose
@@ -66,7 +66,7 @@ public class UserExperienceAnalyticsAnomalySeverityOverview implements IJsonBack
 
     /**
      * The Medium Severity Anomaly Count.
-     * The number of medium severity anomalies which have been detected. Valid values -2147483648 to 2147483647
+     * Indicates count of medium severity anomalies which have been detected. Valid values -2147483648 to 2147483647
      */
     @SerializedName(value = "mediumSeverityAnomalyCount", alternate = {"MediumSeverityAnomalyCount"})
     @Expose

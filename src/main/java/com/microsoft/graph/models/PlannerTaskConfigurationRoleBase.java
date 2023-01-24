@@ -40,7 +40,7 @@ public class PlannerTaskConfigurationRoleBase implements IJsonBackedObject {
 
     /**
      * The Role Kind.
-     * 
+     * Type of the role. The possible values are: relationship, unknownFutureValue.
      */
     @SerializedName(value = "roleKind", alternate = {"RoleKind"})
     @Expose

@@ -247,6 +247,26 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder<VirtualEnd
         return new com.microsoft.graph.requests.CloudPcServicePlanRequestBuilder(getRequestUrlWithAdditionalSegment("servicePlans") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the CloudPcSharedUseServicePlan collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CloudPcSharedUseServicePlanCollectionRequestBuilder sharedUseServicePlans() {
+        return new com.microsoft.graph.requests.CloudPcSharedUseServicePlanCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sharedUseServicePlans"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CloudPcSharedUseServicePlan item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CloudPcSharedUseServicePlanRequestBuilder sharedUseServicePlans(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CloudPcSharedUseServicePlanRequestBuilder(getRequestUrlWithAdditionalSegment("sharedUseServicePlans") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the CloudPcSnapshot collection
      *
      * @return the collection request builder

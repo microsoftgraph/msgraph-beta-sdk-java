@@ -31,7 +31,7 @@ public class PlannerPlanConfiguration extends Entity implements IJsonBackedObjec
 
     /**
      * The Buckets.
-     * 
+     * List the buckets that should be created in the plan.
      */
     @SerializedName(value = "buckets", alternate = {"Buckets"})
     @Expose
@@ -40,7 +40,7 @@ public class PlannerPlanConfiguration extends Entity implements IJsonBackedObjec
 
     /**
      * The Created By.
-     * 
+     * The identity of the creator of the plan configuration.
      */
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
@@ -49,7 +49,7 @@ public class PlannerPlanConfiguration extends Entity implements IJsonBackedObjec
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time when the plan configuration was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -58,7 +58,7 @@ public class PlannerPlanConfiguration extends Entity implements IJsonBackedObjec
 
     /**
      * The Default Language.
-     * 
+     * The language code for the default language to be used for the names of the objects created for the plan.
      */
     @SerializedName(value = "defaultLanguage", alternate = {"DefaultLanguage"})
     @Expose
@@ -67,7 +67,7 @@ public class PlannerPlanConfiguration extends Entity implements IJsonBackedObjec
 
     /**
      * The Last Modified By.
-     * 
+     * The identity of the user who last modified the plan configuration.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -76,7 +76,7 @@ public class PlannerPlanConfiguration extends Entity implements IJsonBackedObjec
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The date and time when the plan configuration was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -85,7 +85,7 @@ public class PlannerPlanConfiguration extends Entity implements IJsonBackedObjec
 
     /**
      * The Localizations.
-     * 
+     * Localized names for the plan configuration.
      */
     @SerializedName(value = "localizations", alternate = {"Localizations"})
     @Expose

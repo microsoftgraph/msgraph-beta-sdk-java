@@ -29,7 +29,7 @@ public class PlannerPlanConfigurationLocalization extends Entity implements IJso
 
     /**
      * The Buckets.
-     * 
+     * Localized names for configured buckets in the plan configuration.
      */
     @SerializedName(value = "buckets", alternate = {"Buckets"})
     @Expose
@@ -38,7 +38,7 @@ public class PlannerPlanConfigurationLocalization extends Entity implements IJso
 
     /**
      * The Language Tag.
-     * 
+     * The language code associated with the localized names in this object.
      */
     @SerializedName(value = "languageTag", alternate = {"LanguageTag"})
     @Expose
@@ -47,7 +47,7 @@ public class PlannerPlanConfigurationLocalization extends Entity implements IJso
 
     /**
      * The Plan Title.
-     * 
+     * Localized title of the plan.
      */
     @SerializedName(value = "planTitle", alternate = {"PlanTitle"})
     @Expose

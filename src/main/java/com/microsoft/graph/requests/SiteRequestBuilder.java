@@ -83,6 +83,16 @@ public class SiteRequestBuilder extends BaseRequestBuilder<Site> {
     }
 
     /**
+     * Gets the request builder for InformationProtection
+     *
+     * @return the InformationProtectionRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.InformationProtectionRequestBuilder informationProtection() {
+        return new com.microsoft.graph.requests.InformationProtectionRequestBuilder(getRequestUrlWithAdditionalSegment("informationProtection"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for ItemAnalytics
      *
      * @return the ItemAnalyticsWithReferenceRequestBuilder instance

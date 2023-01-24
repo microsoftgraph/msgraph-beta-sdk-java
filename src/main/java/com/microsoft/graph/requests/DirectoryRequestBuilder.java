@@ -57,24 +57,24 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder<Directory> {
 
 
     /**
-     *  Gets a request builder for the RecommendationResource collection
+     *  Gets a request builder for the ImpactedResource collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.RecommendationResourceCollectionRequestBuilder impactedResources() {
-        return new com.microsoft.graph.requests.RecommendationResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("impactedResources"), getClient(), null);
+    public com.microsoft.graph.requests.ImpactedResourceCollectionRequestBuilder impactedResources() {
+        return new com.microsoft.graph.requests.ImpactedResourceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("impactedResources"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the RecommendationResource item
+     * Gets a request builder for the ImpactedResource item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.RecommendationResourceRequestBuilder impactedResources(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.RecommendationResourceRequestBuilder(getRequestUrlWithAdditionalSegment("impactedResources") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.ImpactedResourceRequestBuilder impactedResources(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ImpactedResourceRequestBuilder(getRequestUrlWithAdditionalSegment("impactedResources") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the Recommendation collection

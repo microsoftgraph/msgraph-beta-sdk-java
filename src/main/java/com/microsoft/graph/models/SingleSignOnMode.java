@@ -32,6 +32,10 @@ public enum SingleSignOnMode
     */
     AAD_HEADER_BASED,
     /**
+    * o Auth Token
+    */
+    O_AUTH_TOKEN,
+    /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,

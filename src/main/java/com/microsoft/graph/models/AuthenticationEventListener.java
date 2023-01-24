@@ -8,9 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AuthenticationConditions;
-import com.microsoft.graph.models.KeyValuePair;
 import com.microsoft.graph.models.Entity;
 
 
@@ -54,15 +52,6 @@ public class AuthenticationEventListener extends Entity implements IJsonBackedOb
     @Expose
 	@Nullable
     public Integer priority;
-
-    /**
-     * The Tags.
-     * 
-     */
-    @SerializedName(value = "tags", alternate = {"Tags"})
-    @Expose
-	@Nullable
-    public java.util.List<KeyValuePair> tags;
 
 
     /**

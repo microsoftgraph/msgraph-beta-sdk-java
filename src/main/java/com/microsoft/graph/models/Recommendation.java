@@ -8,13 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.ActionStep;
-import com.microsoft.graph.models.RecommendationCategory;
-import com.microsoft.graph.models.RecommendationPriority;
-import com.microsoft.graph.models.RecommendationStatus;
-import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.RecommendationResourceCollectionPage;
+import com.microsoft.graph.models.RecommendationBase;
 
 
 import com.google.gson.JsonObject;
@@ -28,143 +22,8 @@ import javax.annotation.Nonnull;
 /**
  * The class for the Recommendation.
  */
-public class Recommendation extends Entity implements IJsonBackedObject {
+public class Recommendation extends RecommendationBase implements IJsonBackedObject {
 
-
-    /**
-     * The Action Steps.
-     * 
-     */
-    @SerializedName(value = "actionSteps", alternate = {"ActionSteps"})
-    @Expose
-	@Nullable
-    public java.util.List<ActionStep> actionSteps;
-
-    /**
-     * The Benefits.
-     * 
-     */
-    @SerializedName(value = "benefits", alternate = {"Benefits"})
-    @Expose
-	@Nullable
-    public String benefits;
-
-    /**
-     * The Category.
-     * 
-     */
-    @SerializedName(value = "category", alternate = {"Category"})
-    @Expose
-	@Nullable
-    public RecommendationCategory category;
-
-    /**
-     * The Created Date Time.
-     * 
-     */
-    @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime createdDateTime;
-
-    /**
-     * The Display Name.
-     * 
-     */
-    @SerializedName(value = "displayName", alternate = {"DisplayName"})
-    @Expose
-	@Nullable
-    public String displayName;
-
-    /**
-     * The Impact Start Date Time.
-     * 
-     */
-    @SerializedName(value = "impactStartDateTime", alternate = {"ImpactStartDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime impactStartDateTime;
-
-    /**
-     * The Impact Type.
-     * 
-     */
-    @SerializedName(value = "impactType", alternate = {"ImpactType"})
-    @Expose
-	@Nullable
-    public String impactType;
-
-    /**
-     * The Insights.
-     * 
-     */
-    @SerializedName(value = "insights", alternate = {"Insights"})
-    @Expose
-	@Nullable
-    public String insights;
-
-    /**
-     * The Last Checked Date Time.
-     * 
-     */
-    @SerializedName(value = "lastCheckedDateTime", alternate = {"LastCheckedDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime lastCheckedDateTime;
-
-    /**
-     * The Last Modified By.
-     * 
-     */
-    @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
-    @Expose
-	@Nullable
-    public String lastModifiedBy;
-
-    /**
-     * The Last Modified Date Time.
-     * 
-     */
-    @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime lastModifiedDateTime;
-
-    /**
-     * The Postpone Until Date Time.
-     * 
-     */
-    @SerializedName(value = "postponeUntilDateTime", alternate = {"PostponeUntilDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime postponeUntilDateTime;
-
-    /**
-     * The Priority.
-     * 
-     */
-    @SerializedName(value = "priority", alternate = {"Priority"})
-    @Expose
-	@Nullable
-    public RecommendationPriority priority;
-
-    /**
-     * The Status.
-     * 
-     */
-    @SerializedName(value = "status", alternate = {"Status"})
-    @Expose
-	@Nullable
-    public RecommendationStatus status;
-
-    /**
-     * The Impacted Resources.
-     * 
-     */
-    @SerializedName(value = "impactedResources", alternate = {"ImpactedResources"})
-    @Expose
-	@Nullable
-    public com.microsoft.graph.requests.RecommendationResourceCollectionPage impactedResources;
 
 
     /**
@@ -175,9 +34,5 @@ public class Recommendation extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
-
-        if (json.has("impactedResources")) {
-            impactedResources = serializer.deserializeObject(json.get("impactedResources"), com.microsoft.graph.requests.RecommendationResourceCollectionPage.class);
-        }
     }
 }

@@ -8,9 +8,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.InboundOutboundPolicyConfiguration;
 import com.microsoft.graph.models.CrossTenantAccessPolicyB2BSetting;
 import com.microsoft.graph.models.CrossTenantAccessPolicyInboundTrust;
 import com.microsoft.graph.models.CrossTenantAccessPolicyTenantRestrictions;
+import com.microsoft.graph.models.CrossTenantIdentitySyncPolicyPartner;
 
 
 import com.google.gson.JsonObject;
@@ -39,6 +41,15 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Automatic User Consent Settings.
+     * Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties will be null and inherit from the default settings, which is always false.
+     */
+    @SerializedName(value = "automaticUserConsentSettings", alternate = {"AutomaticUserConsentSettings"})
+    @Expose
+	@Nullable
+    public InboundOutboundPolicyConfiguration automaticUserConsentSettings;
 
     /**
      * The B2b Collaboration Inbound.
@@ -111,6 +122,17 @@ public class CrossTenantAccessPolicyConfigurationPartner implements IJsonBackedO
     @Expose
 	@Nullable
     public CrossTenantAccessPolicyTenantRestrictions tenantRestrictions;
+
+    /**
+     * The Identity Synchronization.
+     * Defines the cross-tenant policy for synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multi-tenant organization by automating creating, updating, and deleting users from one tenant to another.
+     * @deprecated 
+     */
+    @Deprecated
+    @SerializedName(value = "identitySynchronization", alternate = {"IdentitySynchronization"})
+    @Expose
+	@Nullable
+    public CrossTenantIdentitySyncPolicyPartner identitySynchronization;
 
 
     /**

@@ -56,4 +56,14 @@ public class SimulationRequestBuilder extends BaseRequestBuilder<Simulation> {
     }
 
 
+
+    /**
+     * Gets the request builder for Payload
+     *
+     * @return the PayloadWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PayloadWithReferenceRequestBuilder payload() {
+        return new com.microsoft.graph.requests.PayloadWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("payload"), getClient(), null);
+    }
 }

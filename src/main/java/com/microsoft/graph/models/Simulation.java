@@ -11,9 +11,11 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.SimulationAttackTechnique;
 import com.microsoft.graph.models.SimulationAttackType;
 import com.microsoft.graph.models.EmailIdentity;
+import com.microsoft.graph.models.AccountTargetContent;
 import com.microsoft.graph.models.PayloadDeliveryPlatform;
 import com.microsoft.graph.models.SimulationReport;
 import com.microsoft.graph.models.SimulationStatus;
+import com.microsoft.graph.models.Payload;
 import com.microsoft.graph.models.Entity;
 
 
@@ -104,6 +106,33 @@ public class Simulation extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
+     * The Duration In Days.
+     * Simulation duration in days.
+     */
+    @SerializedName(value = "durationInDays", alternate = {"DurationInDays"})
+    @Expose
+	@Nullable
+    public Integer durationInDays;
+
+    /**
+     * The Excluded Account Target.
+     * Users excluded from the simulation.
+     */
+    @SerializedName(value = "excludedAccountTarget", alternate = {"ExcludedAccountTarget"})
+    @Expose
+	@Nullable
+    public AccountTargetContent excludedAccountTarget;
+
+    /**
+     * The Included Account Target.
+     * Users targeted in the simulation.
+     */
+    @SerializedName(value = "includedAccountTarget", alternate = {"IncludedAccountTarget"})
+    @Expose
+	@Nullable
+    public AccountTargetContent includedAccountTarget;
+
+    /**
      * The Is Automated.
      * Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
      */
@@ -165,6 +194,15 @@ public class Simulation extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public SimulationStatus status;
+
+    /**
+     * The Payload.
+     * The payload associated with a simulation during its creation.
+     */
+    @SerializedName(value = "payload", alternate = {"Payload"})
+    @Expose
+	@Nullable
+    public Payload payload;
 
 
     /**

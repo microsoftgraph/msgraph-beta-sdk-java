@@ -267,26 +267,6 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder<Device
         return new com.microsoft.graph.requests.PolicySetRequestBuilder(getRequestUrlWithAdditionalSegment("policySets") + "/" + id, getClient(), null);
     }
     /**
-     *  Gets a request builder for the SideLoadingKey collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.SideLoadingKeyCollectionRequestBuilder sideLoadingKeys() {
-        return new com.microsoft.graph.requests.SideLoadingKeyCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("sideLoadingKeys"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the SideLoadingKey item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.SideLoadingKeyRequestBuilder sideLoadingKeys(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.SideLoadingKeyRequestBuilder(getRequestUrlWithAdditionalSegment("sideLoadingKeys") + "/" + id, getClient(), null);
-    }
-    /**
      *  Gets a request builder for the VppToken collection
      *
      * @return the collection request builder

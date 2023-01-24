@@ -40,6 +40,14 @@ public enum EnrollmentRestrictionPlatformType
     */
     MAC,
     /**
+    * linux
+    */
+    LINUX,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For EnrollmentRestrictionPlatformType values that were not expected from the service
     */
     UNEXPECTED_VALUE

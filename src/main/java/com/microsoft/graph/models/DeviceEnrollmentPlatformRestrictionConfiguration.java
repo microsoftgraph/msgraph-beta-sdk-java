@@ -38,7 +38,7 @@ public class DeviceEnrollmentPlatformRestrictionConfiguration extends DeviceEnro
 
     /**
      * The Platform Type.
-     * Type of platform for which this restriction applies. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, mac.
+     * Type of platform for which this restriction applies. Possible values are: allPlatforms, ios, windows, windowsPhone, android, androidForWork, mac, linux, unknownFutureValue.
      */
     @SerializedName(value = "platformType", alternate = {"PlatformType"})
     @Expose
