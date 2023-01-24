@@ -31,7 +31,7 @@ public class BusinessScenarioPlanner extends Entity implements IJsonBackedObject
 
     /**
      * The Plan Configuration.
-     * 
+     * The configuration of Planner plans that will be created for the scenario.
      */
     @SerializedName(value = "planConfiguration", alternate = {"PlanConfiguration"})
     @Expose
@@ -40,7 +40,7 @@ public class BusinessScenarioPlanner extends Entity implements IJsonBackedObject
 
     /**
      * The Task Configuration.
-     * 
+     * The configuration of Planner tasks that will be created for the scenario.
      */
     @SerializedName(value = "taskConfiguration", alternate = {"TaskConfiguration"})
     @Expose
@@ -49,7 +49,7 @@ public class BusinessScenarioPlanner extends Entity implements IJsonBackedObject
 
     /**
      * The Tasks.
-     * 
+     * The Planner tasks for the scenario.
      */
     @SerializedName(value = "tasks", alternate = {"Tasks"})
     @Expose

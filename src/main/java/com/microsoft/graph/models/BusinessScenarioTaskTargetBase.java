@@ -40,7 +40,7 @@ public class BusinessScenarioTaskTargetBase implements IJsonBackedObject {
 
     /**
      * The Task Target Kind.
-     * 
+     * Represents the kind of the target. The possible values are: group, unknownFutureValue.
      */
     @SerializedName(value = "taskTargetKind", alternate = {"TaskTargetKind"})
     @Expose

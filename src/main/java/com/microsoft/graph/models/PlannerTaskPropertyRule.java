@@ -29,7 +29,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
 
     /**
      * The Applied Categories.
-     * 
+     * Rules and restrictions for applied categories. This value does not currently support overrides. Accepted values for the default rule and individual overrides are allow, block.
      */
     @SerializedName(value = "appliedCategories", alternate = {"AppliedCategories"})
     @Expose
@@ -38,7 +38,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
 
     /**
      * The Assignments.
-     * 
+     * Rules and restrictions for assignments. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, addSelf, addOther, remove, removeSelf, removeOther, block.
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose
@@ -47,7 +47,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
 
     /**
      * The Check Lists.
-     * 
+     * Rules and restrictions for checklist. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, remove, update, check, reorder, block.
      */
     @SerializedName(value = "checkLists", alternate = {"CheckLists"})
     @Expose
@@ -56,7 +56,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
 
     /**
      * The Delete.
-     * 
+     * Rules and restrictions for deleting the task. Accepted values are allow and block.
      */
     @SerializedName(value = "delete", alternate = {"Delete"})
     @Expose
@@ -65,7 +65,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
 
     /**
      * The Due Date.
-     * 
+     * Rules and restrictions for changing the due date of the task. Accepted values are allow and block.
      */
     @SerializedName(value = "dueDate", alternate = {"DueDate"})
     @Expose
@@ -74,7 +74,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
 
     /**
      * The Move.
-     * 
+     * Rules and restrictions for moving the task between buckets or plans. Accepted values are allow, moveBetweenPlans, moveBetweenBuckets, and block.
      */
     @SerializedName(value = "move", alternate = {"Move"})
     @Expose
@@ -83,7 +83,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
 
     /**
      * The Notes.
-     * 
+     * Rules and restrictions for changing the notes of the task. Accepted values are allow and block.
      */
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
@@ -92,7 +92,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
 
     /**
      * The Order.
-     * 
+     * Rules and restrictions for changing the order of the task. Accepted values are allow and block.
      */
     @SerializedName(value = "order", alternate = {"Order"})
     @Expose
@@ -101,7 +101,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
 
     /**
      * The Percent Complete.
-     * 
+     * Rules and restrictions for changing the completion percentage of the task. Accepted values are allow, setToComplete, setToNotStarted, setToInProgress, and block.
      */
     @SerializedName(value = "percentComplete", alternate = {"PercentComplete"})
     @Expose
@@ -110,7 +110,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
 
     /**
      * The Preview Type.
-     * 
+     * Rules and restrictions for changing the preview type of the task. Accepted values are allow and block.
      */
     @SerializedName(value = "previewType", alternate = {"PreviewType"})
     @Expose
@@ -119,7 +119,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
 
     /**
      * The Priority.
-     * 
+     * Rules and restrictions for changing the priority of the task. Accepted values are allow and block.
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
@@ -128,7 +128,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
 
     /**
      * The References.
-     * 
+     * Rules and restrictions for references. Allowed overrides are userCreated and applicationCreated. Accepted values for the default rule and individual overrides are allow, add, remove, block.
      */
     @SerializedName(value = "references", alternate = {"References"})
     @Expose
@@ -137,7 +137,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
 
     /**
      * The Start Date.
-     * 
+     * Rules and restrictions for changing the start date of the task. Accepted values are allow and block.
      */
     @SerializedName(value = "startDate", alternate = {"StartDate"})
     @Expose
@@ -146,7 +146,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements IJso
 
     /**
      * The Title.
-     * 
+     * Rules and restrictions for changing the title of the task. Accepted values are allow and block.
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose

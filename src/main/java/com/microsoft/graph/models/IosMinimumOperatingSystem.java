@@ -39,7 +39,7 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V10_0.
-     * Version 10.0 or later.
+     * When TRUE, only Version 10.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v10_0", alternate = {"V10_0"})
     @Expose
@@ -48,7 +48,7 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V11_0.
-     * Version 11.0 or later.
+     * When TRUE, only Version 11.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v11_0", alternate = {"V11_0"})
     @Expose
@@ -57,7 +57,7 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V12_0.
-     * Version 12.0 or later.
+     * When TRUE, only Version 12.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v12_0", alternate = {"V12_0"})
     @Expose
@@ -66,7 +66,7 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V13_0.
-     * Version 13.0 or later.
+     * When TRUE, only Version 13.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v13_0", alternate = {"V13_0"})
     @Expose
@@ -75,7 +75,7 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V14_0.
-     * Version 14.0 or later.
+     * When TRUE, only Version 14.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v14_0", alternate = {"V14_0"})
     @Expose
@@ -84,7 +84,7 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V15_0.
-     * Version 15.0 or later.
+     * When TRUE, only Version 15.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v15_0", alternate = {"V15_0"})
     @Expose
@@ -93,7 +93,7 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V8_0.
-     * Version 8.0 or later.
+     * When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v8_0", alternate = {"V8_0"})
     @Expose
@@ -102,7 +102,7 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
 
     /**
      * The V9_0.
-     * Version 9.0 or later.
+     * When TRUE, only Version 9.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */
     @SerializedName(value = "v9_0", alternate = {"V9_0"})
     @Expose

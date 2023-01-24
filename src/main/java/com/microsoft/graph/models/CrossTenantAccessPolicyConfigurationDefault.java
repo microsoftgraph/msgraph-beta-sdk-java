@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.InboundOutboundPolicyConfiguration;
 import com.microsoft.graph.models.CrossTenantAccessPolicyB2BSetting;
 import com.microsoft.graph.models.CrossTenantAccessPolicyInboundTrust;
 import com.microsoft.graph.models.CrossTenantAccessPolicyTenantRestrictions;
@@ -27,6 +28,15 @@ import javax.annotation.Nonnull;
  */
 public class CrossTenantAccessPolicyConfigurationDefault extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Automatic User Consent Settings.
+     * Determines the default configuration for automatic user consent settings. inboundAllowed and outboundAllowed will always be false and cannot be updated in the default configuration. Read only.
+     */
+    @SerializedName(value = "automaticUserConsentSettings", alternate = {"AutomaticUserConsentSettings"})
+    @Expose
+	@Nullable
+    public InboundOutboundPolicyConfiguration automaticUserConsentSettings;
 
     /**
      * The B2b Collaboration Inbound.

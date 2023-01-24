@@ -41,7 +41,7 @@ public class CloudPcRemoteActionCapability implements IJsonBackedObject {
 
     /**
      * The Action Capability.
-     * 
+     * Indicates the state of the supported action capability to perform a Cloud PC remote action. Possible values are: enabled, disabled. Default value is enabled.
      */
     @SerializedName(value = "actionCapability", alternate = {"ActionCapability"})
     @Expose
@@ -50,7 +50,7 @@ public class CloudPcRemoteActionCapability implements IJsonBackedObject {
 
     /**
      * The Action Name.
-     * 
+     * The name of the supported Cloud PC remote action. Possible values are: unknown, restart, rename, restore, resize, reprovision, troubleShoot, changeUserAccountType, placeUnderReview. Default value is unknown.
      */
     @SerializedName(value = "actionName", alternate = {"ActionName"})
     @Expose

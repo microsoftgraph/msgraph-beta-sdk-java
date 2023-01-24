@@ -28,6 +28,10 @@ public enum EligibilityFilteringEnabledEntities
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * time Off Reason
+    */
+    TIME_OFF_REASON,
+    /**
     * For EligibilityFilteringEnabledEntities values that were not expected from the service
     */
     UNEXPECTED_VALUE

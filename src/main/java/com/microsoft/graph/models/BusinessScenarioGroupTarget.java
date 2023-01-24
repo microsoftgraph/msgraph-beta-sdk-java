@@ -27,7 +27,7 @@ public class BusinessScenarioGroupTarget extends BusinessScenarioTaskTargetBase 
 
     /**
      * The Group Id.
-     * 
+     * The unique identifier for the group.
      */
     @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose

@@ -39,7 +39,7 @@ public class PlannerPlanConfigurationBucketDefinition implements IJsonBackedObje
 
     /**
      * The External Bucket Id.
-     * 
+     * Application-specified identifier of the bucket.
      */
     @SerializedName(value = "externalBucketId", alternate = {"ExternalBucketId"})
     @Expose

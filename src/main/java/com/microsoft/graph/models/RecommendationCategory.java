@@ -12,29 +12,17 @@ package com.microsoft.graph.models;
 public enum RecommendationCategory
 {
     /**
-    * usage And Compliance
+    * identity Best Practice
     */
-    USAGE_AND_COMPLIANCE,
+    IDENTITY_BEST_PRACTICE,
     /**
-    * security
+    * identity Secure Score
     */
-    SECURITY,
+    IDENTITY_SECURE_SCORE,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
-    /**
-    * productivity
-    */
-    PRODUCTIVITY,
-    /**
-    * health
-    */
-    HEALTH,
-    /**
-    * configuration
-    */
-    CONFIGURATION,
     /**
     * For RecommendationCategory values that were not expected from the service
     */

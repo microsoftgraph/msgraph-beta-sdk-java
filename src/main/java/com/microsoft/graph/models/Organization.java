@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AssignedPlan;
 import com.microsoft.graph.models.DirectorySizeQuota;
+import com.microsoft.graph.models.PartnerTenantType;
 import com.microsoft.graph.models.PrivacyProfile;
 import com.microsoft.graph.models.ProvisionedPlan;
 import com.microsoft.graph.models.VerifiedDomain;
@@ -153,6 +154,15 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean onPremisesSyncEnabled;
+
+    /**
+     * The Partner Tenant Type.
+     * 
+     */
+    @SerializedName(value = "partnerTenantType", alternate = {"PartnerTenantType"})
+    @Expose
+	@Nullable
+    public PartnerTenantType partnerTenantType;
 
     /**
      * The Postal Code.

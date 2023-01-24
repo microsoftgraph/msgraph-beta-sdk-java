@@ -27,7 +27,7 @@ public class BusinessScenarioPlanReference extends Entity implements IJsonBacked
 
     /**
      * The Title.
-     * 
+     * The title property of the plannerPlan.
      */
     @SerializedName(value = "title", alternate = {"Title"})
     @Expose

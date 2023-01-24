@@ -16,9 +16,9 @@ public enum SectionEmphasisType
     */
     NONE,
     /**
-    * netural
+    * neutral
     */
-    NETURAL,
+    NEUTRAL,
     /**
     * soft
     */

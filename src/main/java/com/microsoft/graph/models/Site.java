@@ -14,6 +14,7 @@ import com.microsoft.graph.models.Root;
 import com.microsoft.graph.models.SiteSettings;
 import com.microsoft.graph.models.SharepointIds;
 import com.microsoft.graph.models.SiteCollection;
+import com.microsoft.graph.models.InformationProtection;
 import com.microsoft.graph.models.ItemAnalytics;
 import com.microsoft.graph.models.Drive;
 import com.microsoft.graph.termstore.models.Store;
@@ -95,6 +96,15 @@ public class Site extends BaseItem implements IJsonBackedObject {
     @Expose
 	@Nullable
     public SiteCollection siteCollection;
+
+    /**
+     * The Information Protection.
+     * 
+     */
+    @SerializedName(value = "informationProtection", alternate = {"InformationProtection"})
+    @Expose
+	@Nullable
+    public InformationProtection informationProtection;
 
     /**
      * The Analytics.

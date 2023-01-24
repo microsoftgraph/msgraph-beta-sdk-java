@@ -40,7 +40,7 @@ public class PlannerPropertyRule implements IJsonBackedObject {
 
     /**
      * The Rule Kind.
-     * 
+     * Identifies which type of property rules is represented by this instance. The possible values are: taskRule, bucketRule, planRule, unknownFutureValue.
      */
     @SerializedName(value = "ruleKind", alternate = {"RuleKind"})
     @Expose

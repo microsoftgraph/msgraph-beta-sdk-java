@@ -41,7 +41,7 @@ public class PlannerFieldRules implements IJsonBackedObject {
 
     /**
      * The Default Rules.
-     * 
+     * The default rules that apply if no override matches to the current data.
      */
     @SerializedName(value = "defaultRules", alternate = {"DefaultRules"})
     @Expose
@@ -50,7 +50,7 @@ public class PlannerFieldRules implements IJsonBackedObject {
 
     /**
      * The Overrides.
-     * 
+     * Overrides that specify different rules for specific data associated with the field.
      */
     @SerializedName(value = "overrides", alternate = {"Overrides"})
     @Expose

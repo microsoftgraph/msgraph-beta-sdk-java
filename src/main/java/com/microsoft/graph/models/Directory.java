@@ -10,7 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.RecommendationResourceCollectionPage;
+import com.microsoft.graph.requests.ImpactedResourceCollectionPage;
 import com.microsoft.graph.requests.RecommendationCollectionPage;
 import com.microsoft.graph.requests.AdministrativeUnitCollectionPage;
 import com.microsoft.graph.requests.AttributeSetCollectionPage;
@@ -45,7 +45,7 @@ public class Directory extends Entity implements IJsonBackedObject {
     @SerializedName(value = "impactedResources", alternate = {"ImpactedResources"})
     @Expose
 	@Nullable
-    public com.microsoft.graph.requests.RecommendationResourceCollectionPage impactedResources;
+    public com.microsoft.graph.requests.ImpactedResourceCollectionPage impactedResources;
 
     /**
      * The Recommendations.
@@ -159,7 +159,7 @@ public class Directory extends Entity implements IJsonBackedObject {
 
 
         if (json.has("impactedResources")) {
-            impactedResources = serializer.deserializeObject(json.get("impactedResources"), com.microsoft.graph.requests.RecommendationResourceCollectionPage.class);
+            impactedResources = serializer.deserializeObject(json.get("impactedResources"), com.microsoft.graph.requests.ImpactedResourceCollectionPage.class);
         }
 
         if (json.has("recommendations")) {

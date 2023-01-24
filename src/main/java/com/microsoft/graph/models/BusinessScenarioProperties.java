@@ -39,7 +39,7 @@ public class BusinessScenarioProperties implements IJsonBackedObject {
 
     /**
      * The External Bucket Id.
-     * 
+     * The identifier for the bucketDefinition configured in the plannerPlanConfiguration for the scenario. The task will be placed in the corresponding plannerBucket in the target plan. Required.
      */
     @SerializedName(value = "externalBucketId", alternate = {"ExternalBucketId"})
     @Expose
@@ -48,7 +48,7 @@ public class BusinessScenarioProperties implements IJsonBackedObject {
 
     /**
      * The External Context Id.
-     * 
+     * The identifier for the context of the task. Context is an application controlled value, and tasks can be queried by their externalContextId. Optional.
      */
     @SerializedName(value = "externalContextId", alternate = {"ExternalContextId"})
     @Expose
@@ -57,7 +57,7 @@ public class BusinessScenarioProperties implements IJsonBackedObject {
 
     /**
      * The External Object Id.
-     * 
+     * Application-specific identifier for the task. Every task for the same scenario must have a unique identifier specified for this property. Required.
      */
     @SerializedName(value = "externalObjectId", alternate = {"ExternalObjectId"})
     @Expose
@@ -66,7 +66,7 @@ public class BusinessScenarioProperties implements IJsonBackedObject {
 
     /**
      * The External Object Version.
-     * 
+     * Application-specific version of the task. Optional.
      */
     @SerializedName(value = "externalObjectVersion", alternate = {"ExternalObjectVersion"})
     @Expose
@@ -75,7 +75,7 @@ public class BusinessScenarioProperties implements IJsonBackedObject {
 
     /**
      * The Web Url.
-     * 
+     * The URL to the application-specific experience for this task. Optional.
      */
     @SerializedName(value = "webUrl", alternate = {"WebUrl"})
     @Expose

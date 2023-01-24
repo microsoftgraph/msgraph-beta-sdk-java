@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.BookingStaffMembershipStatus;
 import com.microsoft.graph.models.BookingStaffRole;
 import com.microsoft.graph.models.BookingWorkHours;
 import com.microsoft.graph.models.BookingPerson;
@@ -54,6 +55,15 @@ public class BookingStaffMember extends BookingPerson implements IJsonBackedObje
     @Expose
 	@Nullable
     public Boolean isEmailNotificationEnabled;
+
+    /**
+     * The Membership Status.
+     * 
+     */
+    @SerializedName(value = "membershipStatus", alternate = {"MembershipStatus"})
+    @Expose
+	@Nullable
+    public BookingStaffMembershipStatus membershipStatus;
 
     /**
      * The Role.

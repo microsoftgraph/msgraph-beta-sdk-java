@@ -96,7 +96,7 @@ public class PortalNotification implements IJsonBackedObject {
 
     /**
      * The Is Portal Notification Sent.
-     * If true, the portal notification has already been sent for the user; otherwise, the portal notification hasn't been sent yet.
+     * true if the portal notification has already been sent to the user; false otherwise.
      */
     @SerializedName(value = "isPortalNotificationSent", alternate = {"IsPortalNotificationSent"})
     @Expose
