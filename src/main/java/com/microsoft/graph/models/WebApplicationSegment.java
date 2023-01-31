@@ -29,7 +29,7 @@ public class WebApplicationSegment extends ApplicationSegment implements IJsonBa
 
     /**
      * The Alternate Url.
-     * 
+     * If you're configuring a traffic manager in front of multiple App Proxy application segments, this property contains the user-friendly URL that will point to the traffic manager.
      */
     @SerializedName(value = "alternateUrl", alternate = {"AlternateUrl"})
     @Expose
@@ -38,7 +38,7 @@ public class WebApplicationSegment extends ApplicationSegment implements IJsonBa
 
     /**
      * The External Url.
-     * 
+     * The published external URL for the application segment; for example, https://intranet.contoso.com/.
      */
     @SerializedName(value = "externalUrl", alternate = {"ExternalUrl"})
     @Expose
@@ -47,7 +47,7 @@ public class WebApplicationSegment extends ApplicationSegment implements IJsonBa
 
     /**
      * The Internal Url.
-     * 
+     * The internal URL of the application segment; for example, https://intranet/.
      */
     @SerializedName(value = "internalUrl", alternate = {"InternalUrl"})
     @Expose
@@ -56,7 +56,7 @@ public class WebApplicationSegment extends ApplicationSegment implements IJsonBa
 
     /**
      * The Cors Configurations.
-     * 
+     * A collection of CORS Rule definitions for a particular application segment.
      */
     @SerializedName(value = "corsConfigurations", alternate = {"CorsConfigurations"})
     @Expose

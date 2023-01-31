@@ -157,7 +157,7 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Partner Tenant Type.
-     * 
+     * The type of partnership this tenant has with Microsoft. The possible values are: microsoftSupport, syndicatePartner, breadthPartner, breadthPartnerDelegatedAdmin, resellerPartnerDelegatedAdmin, valueAddedResellerPartnerDelegatedAdmin, unknownFutureValue. Nullable. For more information about the possible types, see partnerTenantType values.
      */
     @SerializedName(value = "partnerTenantType", alternate = {"PartnerTenantType"})
     @Expose

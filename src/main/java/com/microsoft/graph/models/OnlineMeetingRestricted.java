@@ -46,7 +46,7 @@ public class OnlineMeetingRestricted implements IJsonBackedObject {
     @SerializedName(value = "contentSharingDisabled", alternate = {"ContentSharingDisabled"})
     @Expose
 	@Nullable
-    public OnlineMeetingContentSharingDisabledReason contentSharingDisabled;
+    public EnumSet<OnlineMeetingContentSharingDisabledReason> contentSharingDisabled;
 
     /**
      * The Video Disabled.
@@ -55,7 +55,7 @@ public class OnlineMeetingRestricted implements IJsonBackedObject {
     @SerializedName(value = "videoDisabled", alternate = {"VideoDisabled"})
     @Expose
 	@Nullable
-    public OnlineMeetingVideoDisabledReason videoDisabled;
+    public EnumSet<OnlineMeetingVideoDisabledReason> videoDisabled;
 
 
     /**

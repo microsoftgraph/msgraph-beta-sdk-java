@@ -1977,16 +1977,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the Drive
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.DriveRequestBuilder drive() {
-        return new com.microsoft.graph.requests.DriveRequestBuilder(getServiceRoot() + "/drive", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
      * @return the Store
      */
     @Nonnull
