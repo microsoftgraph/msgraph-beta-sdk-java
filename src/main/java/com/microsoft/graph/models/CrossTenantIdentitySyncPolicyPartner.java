@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.CrossTenantUserSyncInbound;
 
 
 import com.google.gson.JsonObject;
@@ -54,6 +55,15 @@ public class CrossTenantIdentitySyncPolicyPartner implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String tenantId;
+
+    /**
+     * The User Sync Inbound.
+     * Defines whether users can be synchronized from the partner tenant. Key.
+     */
+    @SerializedName(value = "userSyncInbound", alternate = {"UserSyncInbound"})
+    @Expose
+	@Nullable
+    public CrossTenantUserSyncInbound userSyncInbound;
 
 
     /**

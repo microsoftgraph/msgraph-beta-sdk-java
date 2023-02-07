@@ -41,7 +41,7 @@ public class AppliedAuthenticationEventListener implements IJsonBackedObject {
 
     /**
      * The Event Type.
-     * 
+     * The type of authentication event that triggered the custom extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue.
      */
     @SerializedName(value = "eventType", alternate = {"EventType"})
     @Expose
@@ -50,7 +50,7 @@ public class AppliedAuthenticationEventListener implements IJsonBackedObject {
 
     /**
      * The Executed Listener Id.
-     * 
+     * ID of the Event Listener that was executed.
      */
     @SerializedName(value = "executedListenerId", alternate = {"ExecutedListenerId"})
     @Expose
@@ -59,7 +59,7 @@ public class AppliedAuthenticationEventListener implements IJsonBackedObject {
 
     /**
      * The Handler Result.
-     * 
+     * The result from the listening client, such as an Azure Logic App and Azure Functions, of this authentication event.
      */
     @SerializedName(value = "handlerResult", alternate = {"HandlerResult"})
     @Expose

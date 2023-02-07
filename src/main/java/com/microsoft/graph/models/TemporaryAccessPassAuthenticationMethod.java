@@ -35,15 +35,6 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     public java.time.OffsetDateTime createdDateTime;
 
     /**
-     * The Is Usable.
-     * The state of the authentication method that indicates whether it's currently usable by the user.
-     */
-    @SerializedName(value = "isUsable", alternate = {"IsUsable"})
-    @Expose
-	@Nullable
-    public Boolean isUsable;
-
-    /**
      * The Is Usable Once.
      * Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime.
      */
@@ -60,15 +51,6 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     @Expose
 	@Nullable
     public Integer lifetimeInMinutes;
-
-    /**
-     * The Method Usability Reason.
-     * Details about the usability state (isUsable). Reasons can include: EnabledByPolicy, DisabledByPolicy, Expired, NotYetValid, OneTimeUsed.
-     */
-    @SerializedName(value = "methodUsabilityReason", alternate = {"MethodUsabilityReason"})
-    @Expose
-	@Nullable
-    public String methodUsabilityReason;
 
     /**
      * The Start Date Time.

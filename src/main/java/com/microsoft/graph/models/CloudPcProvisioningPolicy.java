@@ -72,11 +72,22 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
     /**
      * The Domain Join Configuration.
      * Specifies how Cloud PCs will join Azure Active Directory.
+     * @deprecated The domainJoinConfiguration is deprecated and will stop returning data on June 30, 2023. Please use the new domainJoinConfigurations instead.
      */
+    @Deprecated
     @SerializedName(value = "domainJoinConfiguration", alternate = {"DomainJoinConfiguration"})
     @Expose
 	@Nullable
     public CloudPcDomainJoinConfiguration domainJoinConfiguration;
+
+    /**
+     * The Domain Join Configurations.
+     * 
+     */
+    @SerializedName(value = "domainJoinConfigurations", alternate = {"DomainJoinConfigurations"})
+    @Expose
+	@Nullable
+    public java.util.List<CloudPcDomainJoinConfiguration> domainJoinConfigurations;
 
     /**
      * The Enable Single Sign On.
@@ -134,7 +145,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Managed By.
-     * Specifies which services manage the Azure network connection. Possible values are: windows365, devBox, rpaBox, unknownFutureValue. Read-only.
+     * Specifies which services manage the Azure network connection. Possible values are: windows365, devBox, unknownFutureValue, rpaBox. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: rpaBox. Read-only.
      */
     @SerializedName(value = "managedBy", alternate = {"ManagedBy"})
     @Expose

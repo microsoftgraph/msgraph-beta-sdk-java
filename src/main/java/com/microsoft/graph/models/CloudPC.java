@@ -57,7 +57,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Disk Encryption State.
-     * 
+     * The disk encryption applied to the Cloud PC. Possible values: notAvailable, notEncrypted, encryptedUsingPlatformManagedKey, encryptedUsingCustomerManagedKey, and unknownFutureValue.
      */
     @SerializedName(value = "diskEncryptionState", alternate = {"DiskEncryptionState"})
     @Expose

@@ -27,7 +27,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
 
     /**
      * The Callout Date Time.
-     * 
+     * When the API transaction was initiated, the date and time information uses ISO 8601 format and is always in UTC time. Example: midnight on Jan 1, 2014, is reported as 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "calloutDateTime", alternate = {"CalloutDateTime"})
     @Expose
@@ -36,7 +36,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
 
     /**
      * The Custom Extension Id.
-     * 
+     * Identifier of the custom extension that was called.
      */
     @SerializedName(value = "customExtensionId", alternate = {"CustomExtensionId"})
     @Expose
@@ -45,7 +45,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
 
     /**
      * The Error Code.
-     * 
+     * Error code that was returned when the last API attempt failed.
      */
     @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
     @Expose
@@ -54,7 +54,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
 
     /**
      * The Http Status.
-     * 
+     * The HTTP status code that was returned by the target API endpoint after the last API attempt.
      */
     @SerializedName(value = "httpStatus", alternate = {"HttpStatus"})
     @Expose
@@ -63,7 +63,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
 
     /**
      * The Number Of Attempts.
-     * 
+     * The number of API calls to the customer's API.
      */
     @SerializedName(value = "numberOfAttempts", alternate = {"NumberOfAttempts"})
     @Expose

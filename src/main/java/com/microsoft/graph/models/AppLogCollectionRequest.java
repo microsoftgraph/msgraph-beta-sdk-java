@@ -29,7 +29,7 @@ public class AppLogCollectionRequest extends Entity implements IJsonBackedObject
 
     /**
      * The Completed Date Time.
-     * Time at which the upload log request reached a terminal state
+     * Time at which the upload log request reached a completed state if not completed yet NULL will be returned.
      */
     @SerializedName(value = "completedDateTime", alternate = {"CompletedDateTime"})
     @Expose
@@ -47,7 +47,7 @@ public class AppLogCollectionRequest extends Entity implements IJsonBackedObject
 
     /**
      * The Error Message.
-     * Error message if any during the upload process
+     * Indicates error message if any during the upload process.
      */
     @SerializedName(value = "errorMessage", alternate = {"ErrorMessage"})
     @Expose
@@ -56,7 +56,7 @@ public class AppLogCollectionRequest extends Entity implements IJsonBackedObject
 
     /**
      * The Status.
-     * Log upload status. Possible values are: pending, completed, failed.
+     * Indicates the status for the app log collection request if it is pending, completed or failed, Default is pending. Possible values are: pending, completed, failed, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose

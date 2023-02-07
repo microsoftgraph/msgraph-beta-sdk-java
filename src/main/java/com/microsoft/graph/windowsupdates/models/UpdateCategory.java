@@ -24,6 +24,10 @@ public enum UpdateCategory
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * driver
+    */
+    DRIVER,
+    /**
     * For UpdateCategory values that were not expected from the service
     */
     UNEXPECTED_VALUE

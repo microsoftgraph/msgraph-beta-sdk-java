@@ -28,7 +28,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements IJsonBa
 
     /**
      * The Identity Name.
-     * The Identity Name.
+     * The Identity Name. This property is deprecated starting in February 2023 (Release 2302).
      */
     @SerializedName(value = "identityName", alternate = {"IdentityName"})
     @Expose
@@ -37,7 +37,7 @@ public class ManagedAndroidLobApp extends ManagedMobileLobApp implements IJsonBa
 
     /**
      * The Identity Version.
-     * The identity version.
+     * The identity version. This property is deprecated starting in February 2023 (Release 2302).
      */
     @SerializedName(value = "identityVersion", alternate = {"IdentityVersion"})
     @Expose

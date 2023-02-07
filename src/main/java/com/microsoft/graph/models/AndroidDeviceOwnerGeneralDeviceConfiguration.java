@@ -657,6 +657,24 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     public Boolean kioskModeWiFiConfigurationEnabled;
 
     /**
+     * The Locate Device Lost Mode Enabled.
+     * Indicates whether or not LocateDevice for devices with lost mode (COBO, COPE) is enabled.
+     */
+    @SerializedName(value = "locateDeviceLostModeEnabled", alternate = {"LocateDeviceLostModeEnabled"})
+    @Expose
+	@Nullable
+    public Boolean locateDeviceLostModeEnabled;
+
+    /**
+     * The Locate Device Userless Disabled.
+     * Indicates whether or not LocateDevice for userless (COSU) devices is disabled.
+     */
+    @SerializedName(value = "locateDeviceUserlessDisabled", alternate = {"LocateDeviceUserlessDisabled"})
+    @Expose
+	@Nullable
+    public Boolean locateDeviceUserlessDisabled;
+
+    /**
      * The Microphone Force Mute.
      * Indicates whether or not to block unmuting the microphone on the device.
      */

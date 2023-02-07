@@ -30,7 +30,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Added Date Time.
-     * 
+     * The date and time when the impactedResource object was initially associated with the recommendation.
      */
     @SerializedName(value = "addedDateTime", alternate = {"AddedDateTime"})
     @Expose
@@ -39,7 +39,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Additional Details.
-     * 
+     * Additional information unique to the impactedResource to help contextualize the recommendation.
      */
     @SerializedName(value = "additionalDetails", alternate = {"AdditionalDetails"})
     @Expose
@@ -48,7 +48,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Api Url.
-     * 
+     * The URL link to the corresponding Azure AD resource.
      */
     @SerializedName(value = "apiUrl", alternate = {"ApiUrl"})
     @Expose
@@ -57,7 +57,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Friendly name of the Azure AD resource.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -66,7 +66,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * Name of the user or service that last updated the status.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -75,7 +75,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The date and time when the status was last updated.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -84,7 +84,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner.
-     * 
+     * The user responsible for maintaining the resource.
      */
     @SerializedName(value = "owner", alternate = {"Owner"})
     @Expose
@@ -93,7 +93,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Portal Url.
-     * 
+     * The URL link to the corresponding Azure AD portal page of the resource.
      */
     @SerializedName(value = "portalUrl", alternate = {"PortalUrl"})
     @Expose
@@ -102,7 +102,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Postpone Until Date Time.
-     * 
+     * The future date and time when the status of a postponed impactedResource will be active again.
      */
     @SerializedName(value = "postponeUntilDateTime", alternate = {"PostponeUntilDateTime"})
     @Expose
@@ -111,7 +111,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Rank.
-     * 
+     * Indicates the importance of the resource. A resource with a rank equal to 1 is of the highest importance.
      */
     @SerializedName(value = "rank", alternate = {"Rank"})
     @Expose
@@ -120,7 +120,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Recommendation Id.
-     * 
+     * The unique identifier of the recommendation that the resource is associated with.
      */
     @SerializedName(value = "recommendationId", alternate = {"RecommendationId"})
     @Expose
@@ -129,7 +129,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Resource Type.
-     * 
+     * Indicates the type of Azure AD resource. Examples include user, application.
      */
     @SerializedName(value = "resourceType", alternate = {"ResourceType"})
     @Expose
@@ -138,7 +138,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Indicates whether a resource needs to be addressed. The possible values are: active, completedBySystem, completedByUser, dismissed, postponed, unknownFutureValue. By default, a recommendation's status is set to active when the recommendation is first generated. Status is set to completedBySystem when our service detects that a resource which was once active no longer applies.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -147,7 +147,7 @@ public class ImpactedResource extends Entity implements IJsonBackedObject {
 
     /**
      * The Subject Id.
-     * 
+     * The related unique identifier, depending on the resourceType. For example, this property is set to the applicationId if the resourceType is an application.
      */
     @SerializedName(value = "subjectId", alternate = {"SubjectId"})
     @Expose
