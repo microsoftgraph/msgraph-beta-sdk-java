@@ -24,7 +24,9 @@ import com.microsoft.graph.requests.AuthenticationStrengthPolicyFindByMethodMode
 
 /**
  * The class for the Authentication Strength Policy Find By Method Mode Collection Page.
+ * @deprecated The findByMethodMode function is deprecated. Please use OData filter query instead.
  */
+@Deprecated
 public class AuthenticationStrengthPolicyFindByMethodModeCollectionPage extends BaseCollectionPage<AuthenticationStrengthPolicy, AuthenticationStrengthPolicyFindByMethodModeCollectionRequestBuilder> {
 
     /**

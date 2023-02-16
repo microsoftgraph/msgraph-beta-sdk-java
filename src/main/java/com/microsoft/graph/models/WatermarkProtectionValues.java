@@ -39,7 +39,7 @@ public class WatermarkProtectionValues implements IJsonBackedObject {
 
     /**
      * The Is Enabled For Content Sharing.
-     * 
+     * Indicates whether to apply a watermark to any shared content.
      */
     @SerializedName(value = "isEnabledForContentSharing", alternate = {"IsEnabledForContentSharing"})
     @Expose
@@ -48,7 +48,7 @@ public class WatermarkProtectionValues implements IJsonBackedObject {
 
     /**
      * The Is Enabled For Video.
-     * 
+     * Indicates whether to apply a watermark to everyone's video feed.
      */
     @SerializedName(value = "isEnabledForVideo", alternate = {"IsEnabledForVideo"})
     @Expose

@@ -98,12 +98,12 @@ public class AdminRequestBuilder extends BaseRequestBuilder<Admin> {
     }
 
     /**
-     * Gets the request builder for Windows
+     * Gets the request builder for AdminWindows
      *
-     * @return the WindowsRequestBuilder instance
+     * @return the AdminWindowsRequestBuilder instance
      */
     @Nonnull
-    public com.microsoft.graph.windowsupdates.requests.WindowsRequestBuilder windows() {
-        return new com.microsoft.graph.windowsupdates.requests.WindowsRequestBuilder(getRequestUrlWithAdditionalSegment("windows"), getClient(), null);
+    public com.microsoft.graph.requests.AdminWindowsRequestBuilder windows() {
+        return new com.microsoft.graph.requests.AdminWindowsRequestBuilder(getRequestUrlWithAdditionalSegment("windows"), getClient(), null);
     }
 }

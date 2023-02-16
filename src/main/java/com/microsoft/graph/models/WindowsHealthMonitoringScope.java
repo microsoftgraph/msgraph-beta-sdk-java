@@ -28,6 +28,10 @@ public enum WindowsHealthMonitoringScope
     */
     WINDOWS_UPDATES,
     /**
+    * privilege Management
+    */
+    PRIVILEGE_MANAGEMENT,
+    /**
     * For WindowsHealthMonitoringScope values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -104,6 +104,46 @@ public enum ConditionalAccessRule
     */
     ALL_DEVICE_STATES,
     /**
+    * anonymized IPAddress
+    */
+    ANONYMIZED_IP_ADDRESS,
+    /**
+    * unfamiliar Features
+    */
+    UNFAMILIAR_FEATURES,
+    /**
+    * nation State IPAddress
+    */
+    NATION_STATE_IP_ADDRESS,
+    /**
+    * real Time Threat Intelligence
+    */
+    REAL_TIME_THREAT_INTELLIGENCE,
+    /**
+    * internal Guest
+    */
+    INTERNAL_GUEST,
+    /**
+    * b2b Collaboration Guest
+    */
+    B2B_COLLABORATION_GUEST,
+    /**
+    * b2b Collaboration Member
+    */
+    B2B_COLLABORATION_MEMBER,
+    /**
+    * b2b Direct Connect User
+    */
+    B2B_DIRECT_CONNECT_USER,
+    /**
+    * other External User
+    */
+    OTHER_EXTERNAL_USER,
+    /**
+    * service Provider
+    */
+    SERVICE_PROVIDER,
+    /**
     * For ConditionalAccessRule values that were not expected from the service
     */
     UNEXPECTED_VALUE

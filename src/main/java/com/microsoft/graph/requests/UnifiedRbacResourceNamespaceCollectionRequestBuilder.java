@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.RbacApplication;
+import com.microsoft.graph.models.UnifiedRbacApplication;
 import com.microsoft.graph.models.UnifiedRbacResourceNamespace;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -29,7 +29,7 @@ import com.microsoft.graph.models.UnifiedRbacResourceNamespaceImportResourceActi
 public class UnifiedRbacResourceNamespaceCollectionRequestBuilder extends BaseCollectionRequestBuilder<UnifiedRbacResourceNamespace, UnifiedRbacResourceNamespaceRequestBuilder, UnifiedRbacResourceNamespaceCollectionResponse, UnifiedRbacResourceNamespaceCollectionPage, UnifiedRbacResourceNamespaceCollectionRequest> {
 
     /**
-     * The request builder for this collection of RbacApplication
+     * The request builder for this collection of UnifiedRbacApplication
      *
      * @param requestUrl     the request URL
      * @param client         the service client

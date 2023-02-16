@@ -60,6 +60,10 @@ public enum EntityType
     */
     CHAT_MESSAGE,
     /**
+    * qna
+    */
+    QNA,
+    /**
     * For EntityType values that were not expected from the service
     */
     UNEXPECTED_VALUE

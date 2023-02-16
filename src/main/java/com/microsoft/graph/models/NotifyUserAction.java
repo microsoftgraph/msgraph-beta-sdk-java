@@ -9,7 +9,6 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.models.OverrideOption;
 import com.microsoft.graph.models.DlpActionInfo;
 
 
@@ -44,15 +43,6 @@ public class NotifyUserAction extends DlpActionInfo implements IJsonBackedObject
     @Expose
 	@Nullable
     public String emailText;
-
-    /**
-     * The Override Option.
-     * 
-     */
-    @SerializedName(value = "overrideOption", alternate = {"OverrideOption"})
-    @Expose
-	@Nullable
-    public OverrideOption overrideOption;
 
     /**
      * The Policy Tip.

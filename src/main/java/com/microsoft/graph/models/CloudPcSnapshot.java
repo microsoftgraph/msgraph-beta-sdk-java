@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.CloudPcSnapshotType;
 import com.microsoft.graph.models.CloudPcSnapshotStatus;
 import com.microsoft.graph.models.Entity;
 
@@ -45,6 +46,15 @@ public class CloudPcSnapshot extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime createdDateTime;
 
     /**
+     * The Expiration Date Time.
+     * 
+     */
+    @SerializedName(value = "expirationDateTime", alternate = {"ExpirationDateTime"})
+    @Expose
+	@Nullable
+    public java.time.OffsetDateTime expirationDateTime;
+
+    /**
      * The Last Restored Date Time.
      * The date and time at which the snapshot was last used to restore the Cloud PC device. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
@@ -52,6 +62,15 @@ public class CloudPcSnapshot extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime lastRestoredDateTime;
+
+    /**
+     * The Snapshot Type.
+     * 
+     */
+    @SerializedName(value = "snapshotType", alternate = {"SnapshotType"})
+    @Expose
+	@Nullable
+    public CloudPcSnapshotType snapshotType;
 
     /**
      * The Status.

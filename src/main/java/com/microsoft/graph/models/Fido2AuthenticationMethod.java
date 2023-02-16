@@ -64,17 +64,6 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements I
     public java.time.OffsetDateTime createdDateTime;
 
     /**
-     * The Creation Date Time.
-     * 
-     * @deprecated The creationDateTime property is deprecated and will stop returning data on December 31, 2020. Please use the createdDateTime property.
-     */
-    @Deprecated
-    @SerializedName(value = "creationDateTime", alternate = {"CreationDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime creationDateTime;
-
-    /**
      * The Display Name.
      * The display name of the key as given by the user.
      */

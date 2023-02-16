@@ -8,7 +8,6 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.models.SearchQueryString;
 
 
 import com.google.gson.JsonObject;
@@ -55,17 +54,6 @@ public class SearchQuery implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String queryTemplate;
-
-    /**
-     * The Query_string.
-     * 
-     * @deprecated The query_string will be removed on December 31, 2022. Please use the queryString instead.
-     */
-    @Deprecated
-    @SerializedName(value = "query_string", alternate = {"Query_string"})
-    @Expose
-	@Nullable
-    public SearchQueryString query_string;
 
 
     /**

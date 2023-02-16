@@ -13,6 +13,7 @@ import com.microsoft.graph.models.PlannerAssignments;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.PlannerTaskCreation;
 import com.microsoft.graph.models.PlannerPreviewType;
+import com.microsoft.graph.models.PlannerTaskRecurrence;
 import com.microsoft.graph.models.PlannerAssignedToTaskBoardTaskFormat;
 import com.microsoft.graph.models.PlannerBucketTaskBoardTaskFormat;
 import com.microsoft.graph.models.PlannerTaskDetails;
@@ -204,6 +205,15 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Integer priority;
+
+    /**
+     * The Recurrence.
+     * 
+     */
+    @SerializedName(value = "recurrence", alternate = {"Recurrence"})
+    @Expose
+	@Nullable
+    public PlannerTaskRecurrence recurrence;
 
     /**
      * The Reference Count.

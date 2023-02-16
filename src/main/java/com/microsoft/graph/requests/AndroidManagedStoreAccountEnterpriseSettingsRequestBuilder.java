@@ -14,6 +14,7 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
+import com.microsoft.graph.models.AndroidManagedStoreAccountEnterpriseSettingsAddAppsParameterSet;
 import com.microsoft.graph.models.AndroidManagedStoreAccountEnterpriseSettingsApproveAppsParameterSet;
 import com.microsoft.graph.models.AndroidManagedStoreAccountEnterpriseSettingsCompleteSignupParameterSet;
 import com.microsoft.graph.models.AndroidManagedStoreAccountEnterpriseSettingsCreateGooglePlayWebTokenParameterSet;
@@ -61,6 +62,16 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
     }
 
 
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public AndroidManagedStoreAccountEnterpriseSettingsAddAppsRequestBuilder addApps(@Nonnull final AndroidManagedStoreAccountEnterpriseSettingsAddAppsParameterSet parameters) {
+        return new AndroidManagedStoreAccountEnterpriseSettingsAddAppsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.addApps"), getClient(), null, parameters);
+    }
 
     /**
      * Gets a builder to execute the method

@@ -27,7 +27,7 @@ public class CloudPcSharedUseServicePlan extends Entity implements IJsonBackedOb
 
     /**
      * The Display Name.
-     * 
+     * The display name of the shared-use service plan.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -36,7 +36,7 @@ public class CloudPcSharedUseServicePlan extends Entity implements IJsonBackedOb
 
     /**
      * The Total Count.
-     * 
+     * Total number of shared-use service plans purchased by the customer.
      */
     @SerializedName(value = "totalCount", alternate = {"TotalCount"})
     @Expose
@@ -45,7 +45,7 @@ public class CloudPcSharedUseServicePlan extends Entity implements IJsonBackedOb
 
     /**
      * The Used Count.
-     * 
+     * The number of service plans that the account uses.
      */
     @SerializedName(value = "usedCount", alternate = {"UsedCount"})
     @Expose

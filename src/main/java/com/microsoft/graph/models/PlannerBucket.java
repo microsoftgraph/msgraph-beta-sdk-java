@@ -48,7 +48,7 @@ public class PlannerBucket extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Order Hint.
-     * Hint used to order items of this type in a list view. The format is defined as outlined here.
+     * Hint used to order items of this type in a list view. For details about the supported format, see Using order hints in Planner.
      */
     @SerializedName(value = "orderHint", alternate = {"OrderHint"})
     @Expose

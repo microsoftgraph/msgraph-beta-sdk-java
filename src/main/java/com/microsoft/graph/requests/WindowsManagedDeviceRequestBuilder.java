@@ -42,6 +42,7 @@ import com.microsoft.graph.models.ManagedDeviceCreateDeviceLogCollectionRequestP
 import com.microsoft.graph.models.ManagedDeviceDeleteUserFromSharedAppleDeviceParameterSet;
 import com.microsoft.graph.models.ManagedDeviceDeprovisionParameterSet;
 import com.microsoft.graph.models.ManagedDeviceEnableLostModeParameterSet;
+import com.microsoft.graph.models.ManagedDeviceInitiateOnDemandProactiveRemediationParameterSet;
 import com.microsoft.graph.models.ManagedDevicePlayLostModeSoundParameterSet;
 import com.microsoft.graph.models.ManagedDeviceSendCustomNotificationToCompanyPortalParameterSet;
 import com.microsoft.graph.models.ManagedDeviceSetDeviceNameParameterSet;
@@ -224,6 +225,26 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder<Windo
     @Nonnull
     public com.microsoft.graph.requests.DeviceCategoryRequestBuilder deviceCategory() {
         return new com.microsoft.graph.requests.DeviceCategoryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCategory"), getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DeviceHealthScriptPolicyState collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceHealthScriptPolicyStateCollectionWithReferencesRequestBuilder deviceHealthScriptStates() {
+        return new com.microsoft.graph.requests.DeviceHealthScriptPolicyStateCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("deviceHealthScriptStates"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeviceHealthScriptPolicyState item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceHealthScriptPolicyStateWithReferenceRequestBuilder deviceHealthScriptStates(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceHealthScriptPolicyStateWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("deviceHealthScriptStates") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the DeviceLogCollectionResponse collection
@@ -428,6 +449,16 @@ public class WindowsManagedDeviceRequestBuilder extends BaseRequestBuilder<Windo
     @Nonnull
     public ManagedDeviceInitiateMobileDeviceManagementKeyRecoveryRequestBuilder initiateMobileDeviceManagementKeyRecovery() {
         return new ManagedDeviceInitiateMobileDeviceManagementKeyRecoveryRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.initiateMobileDeviceManagementKeyRecovery"), getClient(), null);
+    }
+
+    /**
+     * Perform On Demand Proactive Remediation
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ManagedDeviceInitiateOnDemandProactiveRemediationRequestBuilder initiateOnDemandProactiveRemediation(@Nonnull final ManagedDeviceInitiateOnDemandProactiveRemediationParameterSet parameters) {
+        return new ManagedDeviceInitiateOnDemandProactiveRemediationRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.initiateOnDemandProactiveRemediation"), getClient(), null, parameters);
     }
 
     /**
