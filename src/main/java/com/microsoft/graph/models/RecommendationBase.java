@@ -35,7 +35,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Action Steps.
-     * 
+     * List of actions to take to complete a recommendation.
      */
     @SerializedName(value = "actionSteps", alternate = {"ActionSteps"})
     @Expose
@@ -44,7 +44,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Benefits.
-     * 
+     * An explanation of why completing the recommendation will benefit you. Corresponds to the Value section of a recommendation shown in the Azure AD portal.
      */
     @SerializedName(value = "benefits", alternate = {"Benefits"})
     @Expose
@@ -53,7 +53,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Category.
-     * 
+     * Indicates the category of intelligent guidance that the recommendation falls under. The possible values are: identityBestPractice, identitySecureScore, unknownFutureValue.
      */
     @SerializedName(value = "category", alternate = {"Category"})
     @Expose
@@ -62,7 +62,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * 
+     * The date and time when the recommendation was detected as applicable to your directory.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -71,7 +71,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Current Score.
-     * 
+     * The number of points the tenant has attained. Only applies to recommendations with category set to identitySecureScore.
      */
     @SerializedName(value = "currentScore", alternate = {"CurrentScore"})
     @Expose
@@ -80,7 +80,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The title of the recommendation.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -89,7 +89,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Feature Areas.
-     * 
+     * The directory feature that the recommendation is related to.
      */
     @SerializedName(value = "featureAreas", alternate = {"FeatureAreas"})
     @Expose
@@ -98,7 +98,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Impact Start Date Time.
-     * 
+     * The future date and time when a recommendation should be completed.
      */
     @SerializedName(value = "impactStartDateTime", alternate = {"ImpactStartDateTime"})
     @Expose
@@ -107,7 +107,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Impact Type.
-     * 
+     * Indicates the scope of impact of a recommendation. Tenant level indicates that the recommendation impacts the whole tenant. Other possible values include users, applications.
      */
     @SerializedName(value = "impactType", alternate = {"ImpactType"})
     @Expose
@@ -116,7 +116,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Insights.
-     * 
+     * Describes why a recommendation uniquely applies to your directory. Corresponds to the Description section of a recommendation shown in the Azure AD portal.
      */
     @SerializedName(value = "insights", alternate = {"Insights"})
     @Expose
@@ -125,7 +125,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Checked Date Time.
-     * 
+     * The most recent date and time a recommendation was deemed applicable to your directory.
      */
     @SerializedName(value = "lastCheckedDateTime", alternate = {"LastCheckedDateTime"})
     @Expose
@@ -134,7 +134,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified By.
-     * 
+     * Name of the user who last updated the status of the recommendation.
      */
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
@@ -143,7 +143,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * 
+     * The date and time the status of a recommendation was last updated.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -152,7 +152,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Max Score.
-     * 
+     * The maximum number of points attainable. Only applies to recommendations with category set to identitySecureScore.
      */
     @SerializedName(value = "maxScore", alternate = {"MaxScore"})
     @Expose
@@ -161,7 +161,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Postpone Until Date Time.
-     * 
+     * The future date and time when the status of a postponed recommendation will be active again.
      */
     @SerializedName(value = "postponeUntilDateTime", alternate = {"PostponeUntilDateTime"})
     @Expose
@@ -170,7 +170,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Priority.
-     * 
+     * Indicates the time sensitivity for a recommendation to be completed. Microsoft auto assigns this value. The possible values are: low, medium, high.
      */
     @SerializedName(value = "priority", alternate = {"Priority"})
     @Expose
@@ -179,7 +179,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Recommendation Type.
-     * 
+     * Friendly shortname to identify the recommendation. The possible values are: adfsAppsMigration, enableDesktopSSO, enablePHS, enableProvisioning, switchFromPerUserMFA, tenantMFA, thirdPartyApps, turnOffPerUserMFA, useAuthenticatorApp, useMyApps, staleApps, staleAppCreds, applicationCredentialExpiry, servicePrincipalKeyExpiry, adminMFAV2, blockLegacyAuthentication, integratedApps, mfaRegistrationV2, pwagePolicyNew, passwordHashSync, oneAdmin, roleOverlap, selfServicePasswordReset, signinRiskPolicy, userRiskPolicy, verifyAppPublisher, privateLinkForAAD, appRoleAssignmentsGroups, appRoleAssignmentsUsers, managedIdentity, overprivilegedApps, unknownFutureValue.
      */
     @SerializedName(value = "recommendationType", alternate = {"RecommendationType"})
     @Expose
@@ -188,7 +188,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Remediation Impact.
-     * 
+     * Description of the impact on users of the remediation. Only applies to recommendations with category set to identitySecureScore.
      */
     @SerializedName(value = "remediationImpact", alternate = {"RemediationImpact"})
     @Expose
@@ -197,7 +197,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * 
+     * Indicates the status of the recommendation based on user or system action. The possible values are: active, completedBySystem, completedByUser, dismissed, postponed, unknownFutureValue. By default, a recommendation's status is set to active when the recommendation is first generated. Status is set to completedBySystem when our service detects that a recommendation which was previously active no longer applies.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
@@ -206,7 +206,7 @@ public class RecommendationBase extends Entity implements IJsonBackedObject {
 
     /**
      * The Impacted Resources.
-     * 
+     * The list of directory objects associated with the recommendation.
      */
     @SerializedName(value = "impactedResources", alternate = {"ImpactedResources"})
     @Expose

@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.RbacApplication;
 import com.microsoft.graph.models.RbacApplicationMultiple;
+import com.microsoft.graph.models.UnifiedRbacApplication;
 
 
 import com.google.gson.JsonObject;
@@ -56,6 +57,15 @@ public class RoleManagement implements IJsonBackedObject {
     @Expose
 	@Nullable
     public RbacApplicationMultiple cloudPC;
+
+    /**
+     * The Exchange.
+     * 
+     */
+    @SerializedName(value = "exchange", alternate = {"Exchange"})
+    @Expose
+	@Nullable
+    public UnifiedRbacApplication exchange;
 
     /**
      * The Entitlement Management.

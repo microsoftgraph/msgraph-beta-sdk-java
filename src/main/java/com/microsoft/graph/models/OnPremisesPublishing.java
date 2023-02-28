@@ -173,7 +173,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
 
     /**
      * The On Premises Application Segments.
-     * Represents the application segment collection for an on-premises wildcard application.
+     * 
      * @deprecated The onPremisesApplicationSegment type is deprecated and will being used on June 01, 2023. Please use the new applicationSegment type.
      */
     @Deprecated
@@ -184,7 +184,7 @@ public class OnPremisesPublishing implements IJsonBackedObject {
 
     /**
      * The Segments Configuration.
-     * 
+     * Represents the collection of application segments for an on-premises wildcard application that's published through Azure AD Application Proxy.
      */
     @SerializedName(value = "segmentsConfiguration", alternate = {"SegmentsConfiguration"})
     @Expose

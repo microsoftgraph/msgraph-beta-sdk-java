@@ -40,7 +40,7 @@ public class AppLogCollectionDownloadDetails implements IJsonBackedObject {
 
     /**
      * The App Log Decryption Algorithm.
-     * DecryptionAlgorithm for Content. Possible values are: aes256.
+     * Decryption algorithm for Content. Default is ASE256. Possible values are: aes256, unknownFutureValue.
      */
     @SerializedName(value = "appLogDecryptionAlgorithm", alternate = {"AppLogDecryptionAlgorithm"})
     @Expose
@@ -49,7 +49,7 @@ public class AppLogCollectionDownloadDetails implements IJsonBackedObject {
 
     /**
      * The Decryption Key.
-     * DecryptionKey as string
+     * Decryption key that used to decrypt the log.
      */
     @SerializedName(value = "decryptionKey", alternate = {"DecryptionKey"})
     @Expose
@@ -58,7 +58,7 @@ public class AppLogCollectionDownloadDetails implements IJsonBackedObject {
 
     /**
      * The Download Url.
-     * Download SAS Url for completed AppLogUploadRequest
+     * Download SAS (Shared Access Signature) Url for completed app log request.
      */
     @SerializedName(value = "downloadUrl", alternate = {"DownloadUrl"})
     @Expose

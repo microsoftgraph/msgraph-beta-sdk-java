@@ -47,7 +47,7 @@ public class WindowsHealthMonitoringConfiguration extends DeviceConfiguration im
 
     /**
      * The Config Device Health Monitoring Scope.
-     * Specifies set of events collected from the device where health monitoring is enabled. Possible values are: undefined, healthMonitoring, bootPerformance, windowsUpdates.
+     * Specifies set of events collected from the device where health monitoring is enabled. Possible values are: undefined, healthMonitoring, bootPerformance, windowsUpdates, privilegeManagement.
      */
     @SerializedName(value = "configDeviceHealthMonitoringScope", alternate = {"ConfigDeviceHealthMonitoringScope"})
     @Expose

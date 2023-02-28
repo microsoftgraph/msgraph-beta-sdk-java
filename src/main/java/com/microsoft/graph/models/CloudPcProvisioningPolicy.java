@@ -72,15 +72,26 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
     /**
      * The Domain Join Configuration.
      * Specifies how Cloud PCs will join Azure Active Directory.
+     * @deprecated The domainJoinConfiguration is deprecated and will stop returning data on June 30, 2023. Please use the new domainJoinConfigurations instead.
      */
+    @Deprecated
     @SerializedName(value = "domainJoinConfiguration", alternate = {"DomainJoinConfiguration"})
     @Expose
 	@Nullable
     public CloudPcDomainJoinConfiguration domainJoinConfiguration;
 
     /**
-     * The Enable Single Sign On.
+     * The Domain Join Configurations.
      * 
+     */
+    @SerializedName(value = "domainJoinConfigurations", alternate = {"DomainJoinConfigurations"})
+    @Expose
+	@Nullable
+    public java.util.List<CloudPcDomainJoinConfiguration> domainJoinConfigurations;
+
+    /**
+     * The Enable Single Sign On.
+     * True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Azure Active Directory (Azure AD) with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
      */
     @SerializedName(value = "enableSingleSignOn", alternate = {"EnableSingleSignOn"})
     @Expose
@@ -134,7 +145,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Managed By.
-     * Specifies which services manage the Azure network connection. Possible values are: windows365, devBox, rpaBox, unknownFutureValue. Read-only.
+     * Specifies which services manage the Azure network connection. Possible values are: windows365, devBox, unknownFutureValue, rpaBox. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: rpaBox. Read-only.
      */
     @SerializedName(value = "managedBy", alternate = {"ManagedBy"})
     @Expose
@@ -161,7 +172,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Provisioning Type.
-     * 
+     * Specifies the type of license used when provisioning Cloud PCs using this policy. By default, the license type is dedicated if the provisioningType isn't specified when you create the cloudPcProvisioningPolicy. You can't change this property after the cloudPcProvisioningPolicy was created. Possible values are: dedicated, shared, unknownFutureValue.
      */
     @SerializedName(value = "provisioningType", alternate = {"ProvisioningType"})
     @Expose
@@ -179,7 +190,7 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
 
     /**
      * The Assignments.
-     * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship.
+     * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. For an example about how to get the assignments relationship, see Get cloudPcProvisioningPolicy.
      */
     @SerializedName(value = "assignments", alternate = {"Assignments"})
     @Expose

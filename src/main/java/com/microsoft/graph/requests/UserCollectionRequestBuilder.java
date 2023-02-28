@@ -43,6 +43,7 @@ import com.microsoft.graph.requests.UserGetManagedAppBlockedUsersCollectionReque
 import com.microsoft.graph.requests.DirectoryObjectValidatePropertiesRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectGetByIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectGetUserOwnedObjectsRequestBuilder;
+import com.microsoft.graph.requests.DirectoryObjectDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -144,6 +145,15 @@ public class UserCollectionRequestBuilder extends BaseCollectionRequestBuilder<U
     @Nonnull
     public DirectoryObjectGetUserOwnedObjectsRequestBuilder getUserOwnedObjects(@Nonnull final DirectoryObjectGetUserOwnedObjectsParameterSet parameters) {
         return new DirectoryObjectGetUserOwnedObjectsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getUserOwnedObjects"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public DirectoryObjectDeltaCollectionRequestBuilder delta() {
+        return new DirectoryObjectDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
     /**

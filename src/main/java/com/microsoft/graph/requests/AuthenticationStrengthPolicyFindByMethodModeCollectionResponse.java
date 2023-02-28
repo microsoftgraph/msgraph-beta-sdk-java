@@ -15,6 +15,8 @@ import com.microsoft.graph.http.BaseCollectionResponse;
 
 /**
  * The class for the Authentication Strength Policy Find By Method Mode Collection Response.
+ * @deprecated The findByMethodMode function is deprecated. Please use OData filter query instead.
  */
+@Deprecated
 public class AuthenticationStrengthPolicyFindByMethodModeCollectionResponse extends BaseCollectionResponse<AuthenticationStrengthPolicy> {
 }

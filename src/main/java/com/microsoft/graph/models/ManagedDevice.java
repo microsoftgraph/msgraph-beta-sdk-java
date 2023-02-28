@@ -43,6 +43,7 @@ import com.microsoft.graph.requests.DeviceConfigurationStateCollectionPage;
 import com.microsoft.graph.requests.ManagedDeviceMobileAppConfigurationStateCollectionPage;
 import com.microsoft.graph.requests.SecurityBaselineStateCollectionPage;
 import com.microsoft.graph.requests.DetectedAppCollectionPage;
+import com.microsoft.graph.requests.DeviceHealthScriptPolicyStateCollectionPage;
 import com.microsoft.graph.requests.DeviceLogCollectionResponseCollectionPage;
 import com.microsoft.graph.requests.UserCollectionPage;
 
@@ -333,7 +334,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Ethernet Mac Address.
-     * Ethernet MAC. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Indicates Ethernet MAC Address of the device. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
      */
     @SerializedName(value = "ethernetMacAddress", alternate = {"EthernetMacAddress"})
     @Expose
@@ -684,7 +685,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Sku Number.
-     * Device sku number, see also: https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
+     * Device sku number, see also: https://learn.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
      */
     @SerializedName(value = "skuNumber", alternate = {"SkuNumber"})
     @Expose
@@ -852,6 +853,13 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     public DeviceCategory deviceCategory;
 
     /**
+     * The Device Health Script States.
+     * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
+     */
+	@Nullable
+    public com.microsoft.graph.requests.DeviceHealthScriptPolicyStateCollectionPage deviceHealthScriptStates;
+
+    /**
      * The Log Collection Requests.
      * List of log collection requests
      */
@@ -908,6 +916,10 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
         if (json.has("detectedApps")) {
             detectedApps = serializer.deserializeObject(json.get("detectedApps"), com.microsoft.graph.requests.DetectedAppCollectionPage.class);
+        }
+
+        if (json.has("deviceHealthScriptStates")) {
+            deviceHealthScriptStates = serializer.deserializeObject(json.get("deviceHealthScriptStates"), com.microsoft.graph.requests.DeviceHealthScriptPolicyStateCollectionPage.class);
         }
 
         if (json.has("logCollectionRequests")) {

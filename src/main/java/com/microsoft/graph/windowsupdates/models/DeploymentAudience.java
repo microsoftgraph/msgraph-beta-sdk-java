@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.windowsupdates.models.ApplicableContent;
 import com.microsoft.graph.models.Entity;
 
 
@@ -25,6 +26,15 @@ import javax.annotation.Nonnull;
  */
 public class DeploymentAudience extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Applicable Content.
+     * Content eligible to deploy to devices in the audience. Not nullable. Read-only.
+     */
+    @SerializedName(value = "applicableContent", alternate = {"ApplicableContent"})
+    @Expose
+	@Nullable
+    public java.util.List<ApplicableContent> applicableContent;
 
     /**
      * The Exclusions.

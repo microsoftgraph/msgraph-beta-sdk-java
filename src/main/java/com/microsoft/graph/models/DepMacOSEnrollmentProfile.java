@@ -98,42 +98,6 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     public Boolean iCloudStorageDisabled;
 
     /**
-     * The Is Local Primary Account.
-     * Indicates whether the profile is a local account
-     */
-    @SerializedName(value = "isLocalPrimaryAccount", alternate = {"IsLocalPrimaryAccount"})
-    @Expose
-	@Nullable
-    public Boolean isLocalPrimaryAccount;
-
-    /**
-     * The Is Primary User.
-     * Indicates whether the profile is a primary user
-     */
-    @SerializedName(value = "isPrimaryUser", alternate = {"IsPrimaryUser"})
-    @Expose
-	@Nullable
-    public Boolean isPrimaryUser;
-
-    /**
-     * The Lock Primary Account Info.
-     * Indicates whether the primary account information will be locked
-     */
-    @SerializedName(value = "lockPrimaryAccountInfo", alternate = {"LockPrimaryAccountInfo"})
-    @Expose
-	@Nullable
-    public Boolean lockPrimaryAccountInfo;
-
-    /**
-     * The Managed Local User Short Name.
-     * Indicates whether or not this is the short name of the local account to manage
-     */
-    @SerializedName(value = "managedLocalUserShortName", alternate = {"ManagedLocalUserShortName"})
-    @Expose
-	@Nullable
-    public Boolean managedLocalUserShortName;
-
-    /**
      * The Pass Code Disabled.
      * Indicates if Passcode setup pane is disabled
      */
@@ -141,15 +105,6 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     @Expose
 	@Nullable
     public Boolean passCodeDisabled;
-
-    /**
-     * The Prefill Account Info.
-     * Indicates whether the user will prefill their account info
-     */
-    @SerializedName(value = "prefillAccountInfo", alternate = {"PrefillAccountInfo"})
-    @Expose
-	@Nullable
-    public Boolean prefillAccountInfo;
 
     /**
      * The Primary Account Full Name.
@@ -170,24 +125,6 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     public String primaryAccountUserName;
 
     /**
-     * The Primary User.
-     * Indicates who the primary user of the profile is
-     */
-    @SerializedName(value = "primaryUser", alternate = {"PrimaryUser"})
-    @Expose
-	@Nullable
-    public String primaryUser;
-
-    /**
-     * The Primary User Full Name.
-     * Indicates who the primary user of the profile is
-     */
-    @SerializedName(value = "primaryUserFullName", alternate = {"PrimaryUserFullName"})
-    @Expose
-	@Nullable
-    public String primaryUserFullName;
-
-    /**
      * The Registration Disabled.
      * Indicates if registration is disabled
      */
@@ -195,15 +132,6 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
     @Expose
 	@Nullable
     public Boolean registrationDisabled;
-
-    /**
-     * The Request Requires Network Tether.
-     * Indicates if the device is network-tethered to run the command
-     */
-    @SerializedName(value = "requestRequiresNetworkTether", alternate = {"RequestRequiresNetworkTether"})
-    @Expose
-	@Nullable
-    public Boolean requestRequiresNetworkTether;
 
     /**
      * The Set Primary Setup Account As Regular User.

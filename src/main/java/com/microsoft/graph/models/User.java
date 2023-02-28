@@ -206,7 +206,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Custom Security Attributes.
-     * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith).
+     * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). Filter value is case sensitive.
      */
     @SerializedName(value = "customSecurityAttributes", alternate = {"CustomSecurityAttributes"})
     @Expose

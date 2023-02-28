@@ -26,6 +26,15 @@ public class TeamsAppSettings extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Allow User Requests For App Access.
+     * Indicates whether Teams users are allowed to request admins access to certain Teams apps.
+     */
+    @SerializedName(value = "allowUserRequestsForAppAccess", alternate = {"AllowUserRequestsForAppAccess"})
+    @Expose
+	@Nullable
+    public Boolean allowUserRequestsForAppAccess;
+
+    /**
      * The Is Chat Resource Specific Consent Enabled.
      * Indicates whether resource-specific consent for chats/meetings has been enabled for the tenant. If true, Teams apps that are allowed in the tenant and require resource-specific permissions can be installed inside chats and meetings. If false, the installation of any Teams app that requires resource-specific permissions in a chat or a meeting will be blocked.
      */

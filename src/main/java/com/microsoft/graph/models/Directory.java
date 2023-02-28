@@ -49,7 +49,7 @@ public class Directory extends Entity implements IJsonBackedObject {
 
     /**
      * The Recommendations.
-     * 
+     * List of recommended improvements to improve tenant posture.
      */
     @SerializedName(value = "recommendations", alternate = {"Recommendations"})
     @Expose

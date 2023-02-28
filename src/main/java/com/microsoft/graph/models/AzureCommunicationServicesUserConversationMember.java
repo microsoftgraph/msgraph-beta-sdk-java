@@ -27,7 +27,7 @@ public class AzureCommunicationServicesUserConversationMember extends Conversati
 
     /**
      * The Azure Communication Services Id.
-     * 
+     * Azure Communication Services ID of the user.
      */
     @SerializedName(value = "azureCommunicationServicesId", alternate = {"AzureCommunicationServicesId"})
     @Expose
