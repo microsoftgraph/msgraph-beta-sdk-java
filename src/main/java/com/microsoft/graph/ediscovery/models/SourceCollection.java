@@ -14,7 +14,7 @@ import com.microsoft.graph.ediscovery.models.DataSourceScopes;
 import com.microsoft.graph.ediscovery.models.AddToReviewSetOperation;
 import com.microsoft.graph.ediscovery.models.EstimateStatisticsOperation;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionPage;
+import com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -126,7 +126,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
      * Custodian sources that are included in the sourceCollection.
      */
 	@Nullable
-    public com.microsoft.graph.ediscovery.requests.DataSourceCollectionPage custodianSources;
+    public com.microsoft.graph.ediscovery.requests.DataSourceCollectionWithReferencesPage custodianSources;
 
     /**
      * The Last Estimate Statistics Operation.
@@ -142,7 +142,7 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
      * noncustodialDataSource sources that are included in the sourceCollection
      */
 	@Nullable
-    public com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionPage noncustodialSources;
+    public com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionWithReferencesPage noncustodialSources;
 
 
     /**
@@ -159,11 +159,11 @@ public class SourceCollection extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("custodianSources")) {
-            custodianSources = serializer.deserializeObject(json.get("custodianSources"), com.microsoft.graph.ediscovery.requests.DataSourceCollectionPage.class);
+            custodianSources = serializer.deserializeObject(json.get("custodianSources"), com.microsoft.graph.ediscovery.requests.DataSourceCollectionWithReferencesPage.class);
         }
 
         if (json.has("noncustodialSources")) {
-            noncustodialSources = serializer.deserializeObject(json.get("noncustodialSources"), com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionPage.class);
+            noncustodialSources = serializer.deserializeObject(json.get("noncustodialSources"), com.microsoft.graph.ediscovery.requests.NoncustodialDataSourceCollectionWithReferencesPage.class);
         }
     }
 }

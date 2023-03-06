@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.AppLogUploadState;
 import com.microsoft.graph.models.Entity;
 
 
@@ -98,13 +99,22 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
     public Double size;
 
     /**
+     * The Size In KB.
+     * The size of the logs in KB. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    @SerializedName(value = "sizeInKB", alternate = {"SizeInKB"})
+    @Expose
+	@Nullable
+    public Double sizeInKB;
+
+    /**
      * The Status.
      * The status of the log collection request
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
 	@Nullable
-    public String status;
+    public AppLogUploadState status;
 
 
     /**

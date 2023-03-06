@@ -12,8 +12,8 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.ConnectorGroupType;
 import com.microsoft.graph.models.ConnectorGroupRegion;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.ApplicationCollectionPage;
-import com.microsoft.graph.requests.ConnectorCollectionPage;
+import com.microsoft.graph.requests.ApplicationCollectionWithReferencesPage;
+import com.microsoft.graph.requests.ConnectorCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -71,14 +71,14 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.ApplicationCollectionPage applications;
+    public com.microsoft.graph.requests.ApplicationCollectionWithReferencesPage applications;
 
     /**
      * The Members.
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.ConnectorCollectionPage members;
+    public com.microsoft.graph.requests.ConnectorCollectionWithReferencesPage members;
 
 
     /**
@@ -91,11 +91,11 @@ public class ConnectorGroup extends Entity implements IJsonBackedObject {
 
 
         if (json.has("applications")) {
-            applications = serializer.deserializeObject(json.get("applications"), com.microsoft.graph.requests.ApplicationCollectionPage.class);
+            applications = serializer.deserializeObject(json.get("applications"), com.microsoft.graph.requests.ApplicationCollectionWithReferencesPage.class);
         }
 
         if (json.has("members")) {
-            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.requests.ConnectorCollectionPage.class);
+            members = serializer.deserializeObject(json.get("members"), com.microsoft.graph.requests.ConnectorCollectionWithReferencesPage.class);
         }
     }
 }

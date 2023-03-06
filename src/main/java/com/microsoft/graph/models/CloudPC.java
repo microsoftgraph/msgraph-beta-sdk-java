@@ -57,7 +57,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Disk Encryption State.
-     * 
+     * The disk encryption applied to the Cloud PC. Possible values: notAvailable, notEncrypted, encryptedUsingPlatformManagedKey, encryptedUsingCustomerManagedKey, and unknownFutureValue.
      */
     @SerializedName(value = "diskEncryptionState", alternate = {"DiskEncryptionState"})
     @Expose
@@ -183,7 +183,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Provisioning Type.
-     * 
+     * The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue. Default value is dedicated.
      */
     @SerializedName(value = "provisioningType", alternate = {"ProvisioningType"})
     @Expose

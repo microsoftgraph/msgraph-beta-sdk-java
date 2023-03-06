@@ -8,6 +8,8 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.security.models.ExportFileMetadata;
 import com.microsoft.graph.security.models.ExportOptions;
 import com.microsoft.graph.security.models.ExportFileStructure;
 import com.microsoft.graph.security.models.EdiscoveryReviewSet;
@@ -32,7 +34,9 @@ public class EdiscoveryExportOperation extends CaseOperation implements IJsonBac
     /**
      * The Azure Blob Container.
      * The name of the Azure storage location where the export will be stored. This only applies to exports stored in your own Azure storage location.
+     * @deprecated The azureBlobContainer will be deprecated on April 30, 2023.
      */
+    @Deprecated
     @SerializedName(value = "azureBlobContainer", alternate = {"AzureBlobContainer"})
     @Expose
 	@Nullable
@@ -41,7 +45,9 @@ public class EdiscoveryExportOperation extends CaseOperation implements IJsonBac
     /**
      * The Azure Blob Token.
      * The SAS token for the Azure storage location.  This only applies to exports stored in your own Azure storage location.
+     * @deprecated The azureBlobToken will be deprecated on April 30, 2023.
      */
+    @Deprecated
     @SerializedName(value = "azureBlobToken", alternate = {"AzureBlobToken"})
     @Expose
 	@Nullable
@@ -55,6 +61,15 @@ public class EdiscoveryExportOperation extends CaseOperation implements IJsonBac
     @Expose
 	@Nullable
     public String description;
+
+    /**
+     * The Export File Metadata.
+     * 
+     */
+    @SerializedName(value = "exportFileMetadata", alternate = {"ExportFileMetadata"})
+    @Expose
+	@Nullable
+    public java.util.List<ExportFileMetadata> exportFileMetadata;
 
     /**
      * The Export Options.
@@ -77,7 +92,9 @@ public class EdiscoveryExportOperation extends CaseOperation implements IJsonBac
     /**
      * The Output Folder Id.
      * 
+     * @deprecated The outputFolderId will be deprecated on April 30, 2023.
      */
+    @Deprecated
     @SerializedName(value = "outputFolderId", alternate = {"OutputFolderId"})
     @Expose
 	@Nullable

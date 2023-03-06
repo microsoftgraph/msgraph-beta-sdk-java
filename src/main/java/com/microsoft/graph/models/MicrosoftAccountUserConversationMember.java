@@ -27,7 +27,7 @@ public class MicrosoftAccountUserConversationMember extends ConversationMember i
 
     /**
      * The User Id.
-     * ID of the user.
+     * Microsoft Account ID of the user.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

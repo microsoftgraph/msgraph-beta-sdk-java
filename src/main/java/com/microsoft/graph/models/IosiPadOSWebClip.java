@@ -27,7 +27,7 @@ public class IosiPadOSWebClip extends MobileApp implements IJsonBackedObject {
 
     /**
      * The App Url.
-     * The web app URL.
+     * Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com'
      */
     @SerializedName(value = "appUrl", alternate = {"AppUrl"})
     @Expose
@@ -36,7 +36,7 @@ public class IosiPadOSWebClip extends MobileApp implements IJsonBackedObject {
 
     /**
      * The Use Managed Browser.
-     * Whether or not to use managed browser. When true, the app will be required to be opened in an Intune-protected browser. When false, the app will not be required to be opened in an Intune-protected browser.
+     * Whether or not to use managed browser. When TRUE, the app will be required to be opened in Microsoft Edge. When FALSE, the app will not be required to be opened in Microsoft Edge. By default, this property is set to FALSE.
      */
     @SerializedName(value = "useManagedBrowser", alternate = {"UseManagedBrowser"})
     @Expose

@@ -142,7 +142,7 @@ public class VirtualEndpoint extends Entity implements IJsonBackedObject {
 
     /**
      * The Shared Use Service Plans.
-     * 
+     * Cloud PC shared-use service plans.
      */
     @SerializedName(value = "sharedUseServicePlans", alternate = {"SharedUseServicePlans"})
     @Expose

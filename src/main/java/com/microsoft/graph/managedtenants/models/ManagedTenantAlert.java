@@ -15,9 +15,9 @@ import com.microsoft.graph.managedtenants.models.AlertSeverity;
 import com.microsoft.graph.managedtenants.models.AlertStatus;
 import com.microsoft.graph.managedtenants.models.ManagedTenantAlertRule;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.managedtenants.requests.ManagedTenantAlertLogCollectionPage;
-import com.microsoft.graph.managedtenants.requests.ManagedTenantApiNotificationCollectionPage;
-import com.microsoft.graph.managedtenants.requests.ManagedTenantEmailNotificationCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagedTenantAlertLogCollectionWithReferencesPage;
+import com.microsoft.graph.managedtenants.requests.ManagedTenantApiNotificationCollectionWithReferencesPage;
+import com.microsoft.graph.managedtenants.requests.ManagedTenantEmailNotificationCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -174,7 +174,7 @@ public class ManagedTenantAlert extends Entity implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertLogCollectionPage alertLogs;
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertLogCollectionWithReferencesPage alertLogs;
 
     /**
      * The Alert Rule.
@@ -190,14 +190,14 @@ public class ManagedTenantAlert extends Entity implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public com.microsoft.graph.managedtenants.requests.ManagedTenantApiNotificationCollectionPage apiNotifications;
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantApiNotificationCollectionWithReferencesPage apiNotifications;
 
     /**
      * The Email Notifications.
      * 
      */
 	@Nullable
-    public com.microsoft.graph.managedtenants.requests.ManagedTenantEmailNotificationCollectionPage emailNotifications;
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantEmailNotificationCollectionWithReferencesPage emailNotifications;
 
 
     /**
@@ -210,15 +210,15 @@ public class ManagedTenantAlert extends Entity implements IJsonBackedObject {
 
 
         if (json.has("alertLogs")) {
-            alertLogs = serializer.deserializeObject(json.get("alertLogs"), com.microsoft.graph.managedtenants.requests.ManagedTenantAlertLogCollectionPage.class);
+            alertLogs = serializer.deserializeObject(json.get("alertLogs"), com.microsoft.graph.managedtenants.requests.ManagedTenantAlertLogCollectionWithReferencesPage.class);
         }
 
         if (json.has("apiNotifications")) {
-            apiNotifications = serializer.deserializeObject(json.get("apiNotifications"), com.microsoft.graph.managedtenants.requests.ManagedTenantApiNotificationCollectionPage.class);
+            apiNotifications = serializer.deserializeObject(json.get("apiNotifications"), com.microsoft.graph.managedtenants.requests.ManagedTenantApiNotificationCollectionWithReferencesPage.class);
         }
 
         if (json.has("emailNotifications")) {
-            emailNotifications = serializer.deserializeObject(json.get("emailNotifications"), com.microsoft.graph.managedtenants.requests.ManagedTenantEmailNotificationCollectionPage.class);
+            emailNotifications = serializer.deserializeObject(json.get("emailNotifications"), com.microsoft.graph.managedtenants.requests.ManagedTenantEmailNotificationCollectionWithReferencesPage.class);
         }
     }
 }

@@ -40,6 +40,10 @@ public enum WindowsAutopilotDeploymentState
     */
     DISABLED,
     /**
+    * success On Retry
+    */
+    SUCCESS_ON_RETRY,
+    /**
     * For WindowsAutopilotDeploymentState values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.KeyValuePair;
 import com.microsoft.graph.models.ManagedAppPolicy;
+import com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -36,6 +37,13 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements IJsonBa
 	@Nullable
     public java.util.List<KeyValuePair> customSettings;
 
+    /**
+     * The Settings.
+     * List of settings contained in this App Configuration policy
+     */
+	@Nullable
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionWithReferencesPage settings;
+
 
     /**
      * Sets the raw JSON object
@@ -45,5 +53,9 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements IJsonBa
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("settings")) {
+            settings = serializer.deserializeObject(json.get("settings"), com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionWithReferencesPage.class);
+        }
     }
 }

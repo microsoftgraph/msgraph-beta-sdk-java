@@ -13,7 +13,7 @@ import com.microsoft.graph.models.MimeContent;
 import com.microsoft.graph.models.EBookInstallSummary;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ManagedEBookAssignmentCollectionPage;
-import com.microsoft.graph.requests.ManagedEBookCategoryCollectionPage;
+import com.microsoft.graph.requests.ManagedEBookCategoryCollectionWithReferencesPage;
 import com.microsoft.graph.requests.DeviceInstallStateCollectionPage;
 import com.microsoft.graph.requests.UserInstallStateSummaryCollectionPage;
 
@@ -127,7 +127,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
      * The list of categories for this eBook.
      */
 	@Nullable
-    public com.microsoft.graph.requests.ManagedEBookCategoryCollectionPage categories;
+    public com.microsoft.graph.requests.ManagedEBookCategoryCollectionWithReferencesPage categories;
 
     /**
      * The Device States.
@@ -171,7 +171,7 @@ public class ManagedEBook extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("categories")) {
-            categories = serializer.deserializeObject(json.get("categories"), com.microsoft.graph.requests.ManagedEBookCategoryCollectionPage.class);
+            categories = serializer.deserializeObject(json.get("categories"), com.microsoft.graph.requests.ManagedEBookCategoryCollectionWithReferencesPage.class);
         }
 
         if (json.has("deviceStates")) {

@@ -19,6 +19,7 @@ import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.JoinMeetingIdSettings;
 import com.microsoft.graph.models.LobbyBypassSettings;
 import com.microsoft.graph.models.MeetingParticipants;
+import com.microsoft.graph.models.MeetingChatHistoryDefaultMode;
 import com.microsoft.graph.models.WatermarkProtectionValues;
 import com.microsoft.graph.models.VirtualAppointment;
 import com.microsoft.graph.models.MeetingAttendanceReport;
@@ -67,6 +68,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public OnlineMeetingPresenters allowedPresenters;
+
+    /**
+     * The Allow Participants To Change Name.
+     * 
+     */
+    @SerializedName(value = "allowParticipantsToChangeName", alternate = {"AllowParticipantsToChangeName"})
+    @Expose
+	@Nullable
+    public Boolean allowParticipantsToChangeName;
 
     /**
      * The Allow Teamwork Reactions.
@@ -231,6 +241,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public Boolean recordAutomatically;
 
     /**
+     * The Share Meeting Chat History Default.
+     * 
+     */
+    @SerializedName(value = "shareMeetingChatHistoryDefault", alternate = {"ShareMeetingChatHistoryDefault"})
+    @Expose
+	@Nullable
+    public MeetingChatHistoryDefaultMode shareMeetingChatHistoryDefault;
+
+    /**
      * The Start Date Time.
      * The meeting start time in UTC.
      */
@@ -259,7 +278,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Watermark Protection.
-     * 
+     * Specifies whether a watermark applies for different entities.
      */
     @SerializedName(value = "watermarkProtection", alternate = {"WatermarkProtection"})
     @Expose

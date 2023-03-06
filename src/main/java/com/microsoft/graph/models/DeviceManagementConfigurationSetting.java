@@ -11,7 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceManagementConfigurationSettingInstance;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage;
+import com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -42,7 +42,7 @@ public class DeviceManagementConfigurationSetting extends Entity implements IJso
      * List of related Setting Definitions. This property is read-only.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage settingDefinitions;
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesPage settingDefinitions;
 
 
     /**
@@ -55,7 +55,7 @@ public class DeviceManagementConfigurationSetting extends Entity implements IJso
 
 
         if (json.has("settingDefinitions")) {
-            settingDefinitions = serializer.deserializeObject(json.get("settingDefinitions"), com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage.class);
+            settingDefinitions = serializer.deserializeObject(json.get("settingDefinitions"), com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionWithReferencesPage.class);
         }
     }
 }

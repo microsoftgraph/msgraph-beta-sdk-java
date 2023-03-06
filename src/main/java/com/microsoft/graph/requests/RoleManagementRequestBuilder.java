@@ -78,6 +78,16 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder<RoleManagem
     }
 
     /**
+     * Gets the request builder for UnifiedRbacApplication
+     *
+     * @return the UnifiedRbacApplicationRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UnifiedRbacApplicationRequestBuilder exchange() {
+        return new com.microsoft.graph.requests.UnifiedRbacApplicationRequestBuilder(getRequestUrlWithAdditionalSegment("exchange"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for RbacApplication
      *
      * @return the RbacApplicationRequestBuilder instance

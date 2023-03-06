@@ -15,8 +15,8 @@ import com.microsoft.graph.managedtenants.models.TemplateParameter;
 import com.microsoft.graph.managedtenants.models.ManagementProvider;
 import com.microsoft.graph.managedtenants.models.WorkloadAction;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionPage;
-import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionWithReferencesPage;
+import com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -164,14 +164,14 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionPage managementTemplateCollections;
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionWithReferencesPage managementTemplateCollections;
 
     /**
      * The Management Template Steps.
      * 
      */
 	@Nullable
-    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionPage managementTemplateSteps;
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionWithReferencesPage managementTemplateSteps;
 
 
     /**
@@ -184,11 +184,11 @@ public class ManagementTemplate extends Entity implements IJsonBackedObject {
 
 
         if (json.has("managementTemplateCollections")) {
-            managementTemplateCollections = serializer.deserializeObject(json.get("managementTemplateCollections"), com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionPage.class);
+            managementTemplateCollections = serializer.deserializeObject(json.get("managementTemplateCollections"), com.microsoft.graph.managedtenants.requests.ManagementTemplateCollectionObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("managementTemplateSteps")) {
-            managementTemplateSteps = serializer.deserializeObject(json.get("managementTemplateSteps"), com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionPage.class);
+            managementTemplateSteps = serializer.deserializeObject(json.get("managementTemplateSteps"), com.microsoft.graph.managedtenants.requests.ManagementTemplateStepCollectionWithReferencesPage.class);
         }
     }
 }

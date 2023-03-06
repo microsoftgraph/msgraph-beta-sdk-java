@@ -32,6 +32,10 @@ public enum RemediationState
     */
     SCRIPT_ERROR,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For RemediationState values that were not expected from the service
     */
     UNEXPECTED_VALUE

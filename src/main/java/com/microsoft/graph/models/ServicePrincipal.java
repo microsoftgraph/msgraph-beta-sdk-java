@@ -21,15 +21,15 @@ import com.microsoft.graph.models.SamlSingleSignOnSettings;
 import com.microsoft.graph.models.VerifiedPublisher;
 import com.microsoft.graph.models.Synchronization;
 import com.microsoft.graph.models.DirectoryObject;
-import com.microsoft.graph.requests.AppManagementPolicyCollectionPage;
-import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage;
+import com.microsoft.graph.requests.AppManagementPolicyCollectionWithReferencesPage;
+import com.microsoft.graph.requests.ClaimsMappingPolicyCollectionWithReferencesPage;
 import com.microsoft.graph.requests.DelegatedPermissionClassificationCollectionPage;
 import com.microsoft.graph.requests.FederatedIdentityCredentialCollectionPage;
-import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage;
+import com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionWithReferencesPage;
 import com.microsoft.graph.requests.LicenseDetailsCollectionPage;
-import com.microsoft.graph.requests.OAuth2PermissionGrantCollectionPage;
-import com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage;
-import com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage;
+import com.microsoft.graph.requests.OAuth2PermissionGrantCollectionWithReferencesPage;
+import com.microsoft.graph.requests.TokenIssuancePolicyCollectionWithReferencesPage;
+import com.microsoft.graph.requests.TokenLifetimePolicyCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -147,7 +147,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
     /**
      * The Custom Security Attributes.
-     * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith).
+     * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). Filter value is case sensitive.
      */
     @SerializedName(value = "customSecurityAttributes", alternate = {"CustomSecurityAttributes"})
     @Expose
@@ -393,7 +393,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The appManagementPolicy applied to this service principal.
      */
 	@Nullable
-    public com.microsoft.graph.requests.AppManagementPolicyCollectionPage appManagementPolicies;
+    public com.microsoft.graph.requests.AppManagementPolicyCollectionWithReferencesPage appManagementPolicies;
 
     /**
      * The App Role Assigned To.
@@ -418,14 +418,14 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The claimsMappingPolicies assigned to this service principal. Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage claimsMappingPolicies;
+    public com.microsoft.graph.requests.ClaimsMappingPolicyCollectionWithReferencesPage claimsMappingPolicies;
 
     /**
      * The Created Objects.
      * Directory objects created by this service principal. Read-only. Nullable.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage createdObjects;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage createdObjects;
 
     /**
      * The Delegated Permission Classifications.
@@ -459,7 +459,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage homeRealmDiscoveryPolicies;
+    public com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionWithReferencesPage homeRealmDiscoveryPolicies;
 
     /**
      * The License Details.
@@ -475,49 +475,49 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
      * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage memberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage memberOf;
 
     /**
      * The Oauth2Permission Grants.
      * Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable.
      */
 	@Nullable
-    public com.microsoft.graph.requests.OAuth2PermissionGrantCollectionPage oauth2PermissionGrants;
+    public com.microsoft.graph.requests.OAuth2PermissionGrantCollectionWithReferencesPage oauth2PermissionGrants;
 
     /**
      * The Owned Objects.
      * Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage ownedObjects;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage ownedObjects;
 
     /**
      * The Owners.
      * Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.  Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage owners;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage owners;
 
     /**
      * The Token Issuance Policies.
      * The tokenIssuancePolicies assigned to this service principal. Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage tokenIssuancePolicies;
+    public com.microsoft.graph.requests.TokenIssuancePolicyCollectionWithReferencesPage tokenIssuancePolicies;
 
     /**
      * The Token Lifetime Policies.
      * The tokenLifetimePolicies assigned to this service principal. Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage tokenLifetimePolicies;
+    public com.microsoft.graph.requests.TokenLifetimePolicyCollectionWithReferencesPage tokenLifetimePolicies;
 
     /**
      * The Transitive Member Of.
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveMemberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage transitiveMemberOf;
 
     /**
      * The Synchronization.
@@ -539,7 +539,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
 
 
         if (json.has("appManagementPolicies")) {
-            appManagementPolicies = serializer.deserializeObject(json.get("appManagementPolicies"), com.microsoft.graph.requests.AppManagementPolicyCollectionPage.class);
+            appManagementPolicies = serializer.deserializeObject(json.get("appManagementPolicies"), com.microsoft.graph.requests.AppManagementPolicyCollectionWithReferencesPage.class);
         }
 
         if (json.has("appRoleAssignedTo")) {
@@ -551,11 +551,11 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
         }
 
         if (json.has("claimsMappingPolicies")) {
-            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies"), com.microsoft.graph.requests.ClaimsMappingPolicyCollectionPage.class);
+            claimsMappingPolicies = serializer.deserializeObject(json.get("claimsMappingPolicies"), com.microsoft.graph.requests.ClaimsMappingPolicyCollectionWithReferencesPage.class);
         }
 
         if (json.has("createdObjects")) {
-            createdObjects = serializer.deserializeObject(json.get("createdObjects"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            createdObjects = serializer.deserializeObject(json.get("createdObjects"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("delegatedPermissionClassifications")) {
@@ -571,7 +571,7 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
         }
 
         if (json.has("homeRealmDiscoveryPolicies")) {
-            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies"), com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionPage.class);
+            homeRealmDiscoveryPolicies = serializer.deserializeObject(json.get("homeRealmDiscoveryPolicies"), com.microsoft.graph.requests.HomeRealmDiscoveryPolicyCollectionWithReferencesPage.class);
         }
 
         if (json.has("licenseDetails")) {
@@ -579,31 +579,31 @@ public class ServicePrincipal extends DirectoryObject implements IJsonBackedObje
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("oauth2PermissionGrants")) {
-            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants"), com.microsoft.graph.requests.OAuth2PermissionGrantCollectionPage.class);
+            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants"), com.microsoft.graph.requests.OAuth2PermissionGrantCollectionWithReferencesPage.class);
         }
 
         if (json.has("ownedObjects")) {
-            ownedObjects = serializer.deserializeObject(json.get("ownedObjects"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            ownedObjects = serializer.deserializeObject(json.get("ownedObjects"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            owners = serializer.deserializeObject(json.get("owners"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("tokenIssuancePolicies")) {
-            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies"), com.microsoft.graph.requests.TokenIssuancePolicyCollectionPage.class);
+            tokenIssuancePolicies = serializer.deserializeObject(json.get("tokenIssuancePolicies"), com.microsoft.graph.requests.TokenIssuancePolicyCollectionWithReferencesPage.class);
         }
 
         if (json.has("tokenLifetimePolicies")) {
-            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), com.microsoft.graph.requests.TokenLifetimePolicyCollectionPage.class);
+            tokenLifetimePolicies = serializer.deserializeObject(json.get("tokenLifetimePolicies"), com.microsoft.graph.requests.TokenLifetimePolicyCollectionWithReferencesPage.class);
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
     }
 }

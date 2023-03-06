@@ -11,7 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.managedtenants.models.AlertRuleDefinitionTemplate;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -87,7 +87,7 @@ public class ManagedTenantAlertRuleDefinition extends Entity implements IJsonBac
      * 
      */
 	@Nullable
-    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleCollectionPage alertRules;
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleCollectionWithReferencesPage alertRules;
 
 
     /**
@@ -100,7 +100,7 @@ public class ManagedTenantAlertRuleDefinition extends Entity implements IJsonBac
 
 
         if (json.has("alertRules")) {
-            alertRules = serializer.deserializeObject(json.get("alertRules"), com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleCollectionPage.class);
+            alertRules = serializer.deserializeObject(json.get("alertRules"), com.microsoft.graph.managedtenants.requests.ManagedTenantAlertRuleCollectionWithReferencesPage.class);
         }
     }
 }

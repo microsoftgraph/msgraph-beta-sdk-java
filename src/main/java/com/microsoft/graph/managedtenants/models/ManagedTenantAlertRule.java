@@ -15,7 +15,7 @@ import com.microsoft.graph.managedtenants.models.NotificationTarget;
 import com.microsoft.graph.managedtenants.models.TenantInfo;
 import com.microsoft.graph.managedtenants.models.ManagedTenantAlertRuleDefinition;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.managedtenants.requests.ManagedTenantAlertCollectionPage;
+import com.microsoft.graph.managedtenants.requests.ManagedTenantAlertCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -154,7 +154,7 @@ public class ManagedTenantAlertRule extends Entity implements IJsonBackedObject 
      * 
      */
 	@Nullable
-    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertCollectionPage alerts;
+    public com.microsoft.graph.managedtenants.requests.ManagedTenantAlertCollectionWithReferencesPage alerts;
 
     /**
      * The Rule Definition.
@@ -176,7 +176,7 @@ public class ManagedTenantAlertRule extends Entity implements IJsonBackedObject 
 
 
         if (json.has("alerts")) {
-            alerts = serializer.deserializeObject(json.get("alerts"), com.microsoft.graph.managedtenants.requests.ManagedTenantAlertCollectionPage.class);
+            alerts = serializer.deserializeObject(json.get("alerts"), com.microsoft.graph.managedtenants.requests.ManagedTenantAlertCollectionWithReferencesPage.class);
         }
     }
 }

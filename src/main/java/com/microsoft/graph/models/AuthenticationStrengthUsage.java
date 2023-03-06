@@ -43,14 +43,14 @@ public class AuthenticationStrengthUsage implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.ConditionalAccessPolicyCollectionPage mfa;
+    public com.microsoft.graph.requests.ConditionalAccessPolicyCollectionWithReferencesPage mfa;
 
     /**
      * The None.
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.ConditionalAccessPolicyCollectionPage none;
+    public com.microsoft.graph.requests.ConditionalAccessPolicyCollectionWithReferencesPage none;
 
 
     /**

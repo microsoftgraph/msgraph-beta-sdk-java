@@ -27,7 +27,7 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.TeamsAppInstallationCollectionPage;
 import com.microsoft.graph.requests.ConversationMemberCollectionPage;
 import com.microsoft.graph.requests.TeamsAsyncOperationCollectionPage;
-import com.microsoft.graph.requests.UserCollectionPage;
+import com.microsoft.graph.requests.UserCollectionWithReferencesPage;
 import com.microsoft.graph.requests.ResourceSpecificPermissionGrantCollectionPage;
 import com.microsoft.graph.requests.TeamworkTagCollectionPage;
 
@@ -204,7 +204,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * List of channels either hosted in or shared with the team (incoming channels).
      */
 	@Nullable
-    public com.microsoft.graph.requests.ChannelCollectionPage allChannels;
+    public com.microsoft.graph.requests.ChannelCollectionWithReferencesPage allChannels;
 
     /**
      * The Channels.
@@ -229,7 +229,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * List of channels shared with the team.
      */
 	@Nullable
-    public com.microsoft.graph.requests.ChannelCollectionPage incomingChannels;
+    public com.microsoft.graph.requests.ChannelCollectionWithReferencesPage incomingChannels;
 
     /**
      * The Installed Apps.
@@ -263,7 +263,7 @@ public class Team extends Entity implements IJsonBackedObject {
      * The list of this team's owners. Currently, when creating a team using application permissions, exactly one owner must be specified. When using user delegated permissions, no owner can be specified (the current user is the owner). Owner must be specified as an object ID (GUID), not a UPN.
      */
 	@Nullable
-    public com.microsoft.graph.requests.UserCollectionPage owners;
+    public com.microsoft.graph.requests.UserCollectionWithReferencesPage owners;
 
     /**
      * The Permission Grants.
@@ -312,7 +312,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
     /**
      * The Template Definition.
-     * 
+     * Generic representation of a team template definition for a team with a specific structure and configuration.
      */
     @SerializedName(value = "templateDefinition", alternate = {"TemplateDefinition"})
     @Expose
@@ -339,7 +339,7 @@ public class Team extends Entity implements IJsonBackedObject {
 
 
         if (json.has("allChannels")) {
-            allChannels = serializer.deserializeObject(json.get("allChannels"), com.microsoft.graph.requests.ChannelCollectionPage.class);
+            allChannels = serializer.deserializeObject(json.get("allChannels"), com.microsoft.graph.requests.ChannelCollectionWithReferencesPage.class);
         }
 
         if (json.has("channels")) {
@@ -347,7 +347,7 @@ public class Team extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("incomingChannels")) {
-            incomingChannels = serializer.deserializeObject(json.get("incomingChannels"), com.microsoft.graph.requests.ChannelCollectionPage.class);
+            incomingChannels = serializer.deserializeObject(json.get("incomingChannels"), com.microsoft.graph.requests.ChannelCollectionWithReferencesPage.class);
         }
 
         if (json.has("installedApps")) {
@@ -363,7 +363,7 @@ public class Team extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("owners")) {
-            owners = serializer.deserializeObject(json.get("owners"), com.microsoft.graph.requests.UserCollectionPage.class);
+            owners = serializer.deserializeObject(json.get("owners"), com.microsoft.graph.requests.UserCollectionWithReferencesPage.class);
         }
 
         if (json.has("permissionGrants")) {

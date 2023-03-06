@@ -11,7 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.PlannerRosterMemberCollectionPage;
-import com.microsoft.graph.requests.PlannerPlanCollectionPage;
+import com.microsoft.graph.requests.PlannerPlanCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -42,7 +42,7 @@ public class PlannerRoster extends Entity implements IJsonBackedObject {
      * Retrieves the plans contained by the plannerRoster.
      */
 	@Nullable
-    public com.microsoft.graph.requests.PlannerPlanCollectionPage plans;
+    public com.microsoft.graph.requests.PlannerPlanCollectionWithReferencesPage plans;
 
 
     /**
@@ -59,7 +59,7 @@ public class PlannerRoster extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("plans")) {
-            plans = serializer.deserializeObject(json.get("plans"), com.microsoft.graph.requests.PlannerPlanCollectionPage.class);
+            plans = serializer.deserializeObject(json.get("plans"), com.microsoft.graph.requests.PlannerPlanCollectionWithReferencesPage.class);
         }
     }
 }

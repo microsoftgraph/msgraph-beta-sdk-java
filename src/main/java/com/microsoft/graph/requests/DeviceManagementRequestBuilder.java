@@ -275,6 +275,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
     public com.microsoft.graph.requests.TermsAndConditionsRequestBuilder termsAndConditions(@Nonnull final String id) {
         return new com.microsoft.graph.requests.TermsAndConditionsRequestBuilder(getRequestUrlWithAdditionalSegment("termsAndConditions") + "/" + id, getClient(), null);
     }
+    /**
+     *  Gets a request builder for the ServiceNowConnection collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ServiceNowConnectionCollectionRequestBuilder serviceNowConnections() {
+        return new com.microsoft.graph.requests.ServiceNowConnectionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("serviceNowConnections"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the ServiceNowConnection item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ServiceNowConnectionRequestBuilder serviceNowConnections(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ServiceNowConnectionRequestBuilder(getRequestUrlWithAdditionalSegment("serviceNowConnections") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets the request builder for AdvancedThreatProtectionOnboardingStateSummary
@@ -1876,24 +1896,24 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDevicesWithoutCloudIdentity") + "/" + id, getClient(), null);
     }
     /**
-     *  Gets a request builder for the UserExperienceAnalyticsDeviceTimelineEvents collection
+     *  Gets a request builder for the UserExperienceAnalyticsDeviceTimelineEvent collection
      *
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventsCollectionRequestBuilder userExperienceAnalyticsDeviceTimelineEvents() {
-        return new com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceTimelineEvents"), getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventCollectionRequestBuilder userExperienceAnalyticsDeviceTimelineEvent() {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceTimelineEvent"), getClient(), null);
     }
 
     /**
-     * Gets a request builder for the UserExperienceAnalyticsDeviceTimelineEvents item
+     * Gets a request builder for the UserExperienceAnalyticsDeviceTimelineEvent item
      *
      * @return the request builder
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventsRequestBuilder userExperienceAnalyticsDeviceTimelineEvents(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventsRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceTimelineEvents") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventRequestBuilder userExperienceAnalyticsDeviceTimelineEvent(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventRequestBuilder(getRequestUrlWithAdditionalSegment("userExperienceAnalyticsDeviceTimelineEvent") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the UserExperienceAnalyticsImpactingProcess collection

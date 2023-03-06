@@ -45,7 +45,7 @@ import com.microsoft.graph.models.Todo;
 import com.microsoft.graph.requests.CloudPCCollectionPage;
 import com.microsoft.graph.requests.UsageRightCollectionPage;
 import com.microsoft.graph.requests.LicenseDetailsCollectionPage;
-import com.microsoft.graph.requests.OAuth2PermissionGrantCollectionPage;
+import com.microsoft.graph.requests.OAuth2PermissionGrantCollectionWithReferencesPage;
 import com.microsoft.graph.requests.ScopedRoleMembershipCollectionPage;
 import com.microsoft.graph.requests.CalendarGroupCollectionPage;
 import com.microsoft.graph.requests.ContactFolderCollectionPage;
@@ -53,16 +53,16 @@ import com.microsoft.graph.requests.ContactCollectionPage;
 import com.microsoft.graph.requests.MailFolderCollectionPage;
 import com.microsoft.graph.requests.MessageCollectionPage;
 import com.microsoft.graph.requests.PersonCollectionPage;
-import com.microsoft.graph.requests.SiteCollectionPage;
+import com.microsoft.graph.requests.SiteCollectionWithReferencesPage;
 import com.microsoft.graph.requests.ExtensionCollectionPage;
 import com.microsoft.graph.requests.AppConsentRequestCollectionPage;
 import com.microsoft.graph.requests.ApprovalCollectionPage;
 import com.microsoft.graph.requests.AccessReviewInstanceCollectionPage;
-import com.microsoft.graph.requests.AgreementAcceptanceCollectionPage;
+import com.microsoft.graph.requests.AgreementAcceptanceCollectionWithReferencesPage;
 import com.microsoft.graph.requests.DeviceEnrollmentConfigurationCollectionPage;
 import com.microsoft.graph.requests.ManagedDeviceCollectionPage;
-import com.microsoft.graph.requests.ManagedAppRegistrationCollectionPage;
-import com.microsoft.graph.requests.WindowsInformationProtectionDeviceRegistrationCollectionPage;
+import com.microsoft.graph.requests.ManagedAppRegistrationCollectionWithReferencesPage;
+import com.microsoft.graph.requests.WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage;
 import com.microsoft.graph.requests.DeviceManagementTroubleshootingEventCollectionPage;
 import com.microsoft.graph.requests.MobileAppIntentAndStateCollectionPage;
 import com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage;
@@ -70,7 +70,7 @@ import com.microsoft.graph.requests.NotificationCollectionPage;
 import com.microsoft.graph.requests.UserActivityCollectionPage;
 import com.microsoft.graph.requests.OnlineMeetingCollectionPage;
 import com.microsoft.graph.requests.ChatCollectionPage;
-import com.microsoft.graph.requests.TeamCollectionPage;
+import com.microsoft.graph.requests.TeamCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -206,7 +206,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Custom Security Attributes.
-     * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith).
+     * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). Filter value is case sensitive.
      */
     @SerializedName(value = "customSecurityAttributes", alternate = {"CustomSecurityAttributes"})
     @Expose
@@ -260,7 +260,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Employee Leave Date Time.
-     * The date and time when the user left or will leave the organization. To read or write this property, the calling app must be assigned the User-LifeCycleInfo.Read.All or User-LifeCycleInfo.ReadWrite.All permissions respectively. To read this property in delegated scenarios, the admin needs one of the following Azure AD roles: Lifecycle Workflows Administrator, Global Reader, or Global Admin. To write this property in delegated scenarios, the admin needs the Global Administrator Azure AD role. Supports $filter (eq, ne, not , ge, le, in). For more information, see Configure the employeeLeaveDateTime property for a user.
+     * The date and time when the user left or will leave the organization. To read this property, the calling app must be assigned the User-LifeCycleInfo.Read.All permission. To write this property, the calling app must be assigned the User.Read.All and User-LifeCycleInfo.ReadWrite.All permissions. To read this property in delegated scenarios, the admin needs one of the following Azure AD roles: Lifecycle Workflows Administrator, Global Reader, or Global Administrator. To write this property in delegated scenarios, the admin needs the Global Administrator role. Supports $filter (eq, ne, not , ge, le, in). For more information, see Configure the employeeLeaveDateTime property for a user.
      */
     @SerializedName(value = "employeeLeaveDateTime", alternate = {"EmployeeLeaveDateTime"})
     @Expose
@@ -848,7 +848,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.ServicePrincipalCollectionPage appRoleAssignedResources;
+    public com.microsoft.graph.requests.ServicePrincipalCollectionWithReferencesPage appRoleAssignedResources;
 
     /**
      * The App Role Assignments.
@@ -864,14 +864,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * Directory objects that were created by the user. Read-only. Nullable.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage createdObjects;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage createdObjects;
 
     /**
      * The Direct Reports.
      * The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage directReports;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage directReports;
 
     /**
      * The License Details.
@@ -896,35 +896,35 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The groups, directory roles and administrative units that the user is a member of. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage memberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage memberOf;
 
     /**
      * The Oauth2Permission Grants.
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.OAuth2PermissionGrantCollectionPage oauth2PermissionGrants;
+    public com.microsoft.graph.requests.OAuth2PermissionGrantCollectionWithReferencesPage oauth2PermissionGrants;
 
     /**
      * The Owned Devices.
      * Devices that are owned by the user. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage ownedDevices;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage ownedDevices;
 
     /**
      * The Owned Objects.
      * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage ownedObjects;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage ownedObjects;
 
     /**
      * The Registered Devices.
      * Devices that are registered for the user. Read-only. Nullable. Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage registeredDevices;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage registeredDevices;
 
     /**
      * The Scoped Role Member Of.
@@ -940,14 +940,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveMemberOf;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage transitiveMemberOf;
 
     /**
      * The Transitive Reports.
      * The transitive reports for a user. Read-only.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage transitiveReports;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage transitiveReports;
 
     /**
      * The Calendar.
@@ -1089,7 +1089,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.SiteCollectionPage followedSites;
+    public com.microsoft.graph.requests.SiteCollectionWithReferencesPage followedSites;
 
     /**
      * The Extensions.
@@ -1132,7 +1132,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The user's terms of use acceptance statuses. Read-only. Nullable.
      */
 	@Nullable
-    public com.microsoft.graph.requests.AgreementAcceptanceCollectionPage agreementAcceptances;
+    public com.microsoft.graph.requests.AgreementAcceptanceCollectionWithReferencesPage agreementAcceptances;
 
     /**
      * The Security.
@@ -1166,14 +1166,14 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * Zero or more managed app registrations that belong to the user.
      */
 	@Nullable
-    public com.microsoft.graph.requests.ManagedAppRegistrationCollectionPage managedAppRegistrations;
+    public com.microsoft.graph.requests.ManagedAppRegistrationCollectionWithReferencesPage managedAppRegistrations;
 
     /**
      * The Windows Information Protection Device Registrations.
      * Zero or more WIP device registrations that belong to the user.
      */
 	@Nullable
-    public com.microsoft.graph.requests.WindowsInformationProtectionDeviceRegistrationCollectionPage windowsInformationProtectionDeviceRegistrations;
+    public com.microsoft.graph.requests.WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage windowsInformationProtectionDeviceRegistrations;
 
     /**
      * The Device Management Troubleshooting Events.
@@ -1333,7 +1333,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
      * The Microsoft Teams teams that the user is a member of. Read-only. Nullable.
      */
 	@Nullable
-    public com.microsoft.graph.requests.TeamCollectionPage joinedTeams;
+    public com.microsoft.graph.requests.TeamCollectionWithReferencesPage joinedTeams;
 
     /**
      * The Teamwork.
@@ -1372,7 +1372,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
         }
 
         if (json.has("appRoleAssignedResources")) {
-            appRoleAssignedResources = serializer.deserializeObject(json.get("appRoleAssignedResources"), com.microsoft.graph.requests.ServicePrincipalCollectionPage.class);
+            appRoleAssignedResources = serializer.deserializeObject(json.get("appRoleAssignedResources"), com.microsoft.graph.requests.ServicePrincipalCollectionWithReferencesPage.class);
         }
 
         if (json.has("appRoleAssignments")) {
@@ -1380,11 +1380,11 @@ public class User extends DirectoryObject implements IJsonBackedObject {
         }
 
         if (json.has("createdObjects")) {
-            createdObjects = serializer.deserializeObject(json.get("createdObjects"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            createdObjects = serializer.deserializeObject(json.get("createdObjects"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("directReports")) {
-            directReports = serializer.deserializeObject(json.get("directReports"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            directReports = serializer.deserializeObject(json.get("directReports"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("licenseDetails")) {
@@ -1392,23 +1392,23 @@ public class User extends DirectoryObject implements IJsonBackedObject {
         }
 
         if (json.has("memberOf")) {
-            memberOf = serializer.deserializeObject(json.get("memberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            memberOf = serializer.deserializeObject(json.get("memberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("oauth2PermissionGrants")) {
-            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants"), com.microsoft.graph.requests.OAuth2PermissionGrantCollectionPage.class);
+            oauth2PermissionGrants = serializer.deserializeObject(json.get("oauth2PermissionGrants"), com.microsoft.graph.requests.OAuth2PermissionGrantCollectionWithReferencesPage.class);
         }
 
         if (json.has("ownedDevices")) {
-            ownedDevices = serializer.deserializeObject(json.get("ownedDevices"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            ownedDevices = serializer.deserializeObject(json.get("ownedDevices"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("ownedObjects")) {
-            ownedObjects = serializer.deserializeObject(json.get("ownedObjects"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            ownedObjects = serializer.deserializeObject(json.get("ownedObjects"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("registeredDevices")) {
-            registeredDevices = serializer.deserializeObject(json.get("registeredDevices"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            registeredDevices = serializer.deserializeObject(json.get("registeredDevices"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("scopedRoleMemberOf")) {
@@ -1416,11 +1416,11 @@ public class User extends DirectoryObject implements IJsonBackedObject {
         }
 
         if (json.has("transitiveMemberOf")) {
-            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            transitiveMemberOf = serializer.deserializeObject(json.get("transitiveMemberOf"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("transitiveReports")) {
-            transitiveReports = serializer.deserializeObject(json.get("transitiveReports"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            transitiveReports = serializer.deserializeObject(json.get("transitiveReports"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("calendarGroups")) {
@@ -1468,7 +1468,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
         }
 
         if (json.has("followedSites")) {
-            followedSites = serializer.deserializeObject(json.get("followedSites"), com.microsoft.graph.requests.SiteCollectionPage.class);
+            followedSites = serializer.deserializeObject(json.get("followedSites"), com.microsoft.graph.requests.SiteCollectionWithReferencesPage.class);
         }
 
         if (json.has("extensions")) {
@@ -1488,7 +1488,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
         }
 
         if (json.has("agreementAcceptances")) {
-            agreementAcceptances = serializer.deserializeObject(json.get("agreementAcceptances"), com.microsoft.graph.requests.AgreementAcceptanceCollectionPage.class);
+            agreementAcceptances = serializer.deserializeObject(json.get("agreementAcceptances"), com.microsoft.graph.requests.AgreementAcceptanceCollectionWithReferencesPage.class);
         }
 
         if (json.has("deviceEnrollmentConfigurations")) {
@@ -1500,11 +1500,11 @@ public class User extends DirectoryObject implements IJsonBackedObject {
         }
 
         if (json.has("managedAppRegistrations")) {
-            managedAppRegistrations = serializer.deserializeObject(json.get("managedAppRegistrations"), com.microsoft.graph.requests.ManagedAppRegistrationCollectionPage.class);
+            managedAppRegistrations = serializer.deserializeObject(json.get("managedAppRegistrations"), com.microsoft.graph.requests.ManagedAppRegistrationCollectionWithReferencesPage.class);
         }
 
         if (json.has("windowsInformationProtectionDeviceRegistrations")) {
-            windowsInformationProtectionDeviceRegistrations = serializer.deserializeObject(json.get("windowsInformationProtectionDeviceRegistrations"), com.microsoft.graph.requests.WindowsInformationProtectionDeviceRegistrationCollectionPage.class);
+            windowsInformationProtectionDeviceRegistrations = serializer.deserializeObject(json.get("windowsInformationProtectionDeviceRegistrations"), com.microsoft.graph.requests.WindowsInformationProtectionDeviceRegistrationCollectionWithReferencesPage.class);
         }
 
         if (json.has("deviceManagementTroubleshootingEvents")) {
@@ -1544,7 +1544,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
         }
 
         if (json.has("joinedTeams")) {
-            joinedTeams = serializer.deserializeObject(json.get("joinedTeams"), com.microsoft.graph.requests.TeamCollectionPage.class);
+            joinedTeams = serializer.deserializeObject(json.get("joinedTeams"), com.microsoft.graph.requests.TeamCollectionWithReferencesPage.class);
         }
     }
 }

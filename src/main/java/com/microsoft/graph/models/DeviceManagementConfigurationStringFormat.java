@@ -72,6 +72,14 @@ public enum DeviceManagementConfigurationStringFormat
     */
     SURFACE_HUB,
     /**
+    * bash Script
+    */
+    BASH_SCRIPT,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For DeviceManagementConfigurationStringFormat values that were not expected from the service
     */
     UNEXPECTED_VALUE

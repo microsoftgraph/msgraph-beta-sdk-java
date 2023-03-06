@@ -134,7 +134,7 @@ public class ManagementTemplateStep extends Entity implements IJsonBackedObject 
      * 
      */
 	@Nullable
-    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionPage versions;
+    public com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionWithReferencesPage versions;
 
 
     /**
@@ -147,7 +147,7 @@ public class ManagementTemplateStep extends Entity implements IJsonBackedObject 
 
 
         if (json.has("versions")) {
-            versions = serializer.deserializeObject(json.get("versions"), com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionPage.class);
+            versions = serializer.deserializeObject(json.get("versions"), com.microsoft.graph.managedtenants.requests.ManagementTemplateStepVersionCollectionWithReferencesPage.class);
         }
     }
 }

@@ -105,14 +105,14 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
      * Read-only collection referencing the directory objects that are scope of the assignment. Provided so that callers can get the directory objects using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage directoryScopes;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage directoryScopes;
 
     /**
      * The Principals.
      * Read-only collection referencing the assigned principals. Provided so that callers can get the principals using $expand at the same time as getting the role assignment. Read-only.  Supports $expand.
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage principals;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage principals;
 
     /**
      * The Role Definition.
@@ -138,11 +138,11 @@ public class UnifiedRoleAssignmentMultiple extends Entity implements IJsonBacked
         }
 
         if (json.has("directoryScopes")) {
-            directoryScopes = serializer.deserializeObject(json.get("directoryScopes"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            directoryScopes = serializer.deserializeObject(json.get("directoryScopes"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
 
         if (json.has("principals")) {
-            principals = serializer.deserializeObject(json.get("principals"), com.microsoft.graph.requests.DirectoryObjectCollectionPage.class);
+            principals = serializer.deserializeObject(json.get("principals"), com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage.class);
         }
     }
 }
