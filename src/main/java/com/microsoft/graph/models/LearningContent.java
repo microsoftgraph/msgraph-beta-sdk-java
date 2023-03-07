@@ -55,7 +55,7 @@ public class LearningContent extends Entity implements IJsonBackedObject {
 
     /**
      * The Created Date Time.
-     * The date when the learning content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
+     * The date and time when the learning content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -100,7 +100,7 @@ public class LearningContent extends Entity implements IJsonBackedObject {
 
     /**
      * The Is Active.
-     * Indicates whether the content is active or not. Inactive content will not show up in the UI. The default value is true. Optional.
+     * Indicates whether the content is active or not. Inactive content doesn't show up in the UI. The default value is true. Optional.
      */
     @SerializedName(value = "isActive", alternate = {"IsActive"})
     @Expose
@@ -136,7 +136,7 @@ public class LearningContent extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * The date when the learning content was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
+     * The date and time when the learning content was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose

@@ -67,7 +67,7 @@ public class AttributeMappingParameterSchema implements IJsonBackedObject {
 
     /**
      * The Type.
-     * Possible values are: Boolean, Binary, Reference, Integer, String. Default is String.
+     * The possible values are: String, Integer, Reference, Binary, Boolean, DateTime. Default is String.
      */
     @SerializedName(value = "type", alternate = {"Type"})
     @Expose

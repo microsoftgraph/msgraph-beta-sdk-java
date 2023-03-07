@@ -35,17 +35,6 @@ public class PasswordAuthenticationMethod extends AuthenticationMethod implement
     public java.time.OffsetDateTime createdDateTime;
 
     /**
-     * The Creation Date Time.
-     * 
-     * @deprecated The creationDateTime property is deprecated and will stop returning data on December 31, 2020. Please use the createdDateTime property.
-     */
-    @Deprecated
-    @SerializedName(value = "creationDateTime", alternate = {"CreationDateTime"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime creationDateTime;
-
-    /**
      * The Password.
      * For security, the password is always returned as null from a LIST or GET operation.
      */

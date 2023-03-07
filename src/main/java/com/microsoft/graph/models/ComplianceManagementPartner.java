@@ -109,24 +109,6 @@ public class ComplianceManagementPartner extends Entity implements IJsonBackedOb
 	@Nullable
     public DeviceManagementPartnerTenantState partnerState;
 
-    /**
-     * The Windows Enrollment Assignments.
-     * User groups which enroll Windows devices through partner.
-     */
-    @SerializedName(value = "windowsEnrollmentAssignments", alternate = {"WindowsEnrollmentAssignments"})
-    @Expose
-	@Nullable
-    public java.util.List<ComplianceManagementPartnerAssignment> windowsEnrollmentAssignments;
-
-    /**
-     * The Windows Onboarded.
-     * Partner onboarded for Windows devices.
-     */
-    @SerializedName(value = "windowsOnboarded", alternate = {"WindowsOnboarded"})
-    @Expose
-	@Nullable
-    public Boolean windowsOnboarded;
-
 
     /**
      * Sets the raw JSON object

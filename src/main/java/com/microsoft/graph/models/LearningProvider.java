@@ -37,15 +37,6 @@ public class LearningProvider extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Is Enabled.
-     * The state of the provider. Optional.
-     */
-    @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
-    @Expose
-	@Nullable
-    public Boolean isEnabled;
-
-    /**
      * The Login Web Url.
      * Authentication URL to access the courses for the provider. Optional.
      */
@@ -56,7 +47,7 @@ public class LearningProvider extends Entity implements IJsonBackedObject {
 
     /**
      * The Long Logo Web Url For Dark Theme.
-     * The long logo URL for the dark mode, which needs to be a publicly accessible image. This image would be saved to the Blob storage of Viva Learning for rendering within the Viva Learning app. Required.
+     * The long logo URL for the dark mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
      */
     @SerializedName(value = "longLogoWebUrlForDarkTheme", alternate = {"LongLogoWebUrlForDarkTheme"})
     @Expose
@@ -65,7 +56,7 @@ public class LearningProvider extends Entity implements IJsonBackedObject {
 
     /**
      * The Long Logo Web Url For Light Theme.
-     * The long logo URL for the light mode, which needs to be a publicly accessible image. This image would be saved to the Blob storage of Viva Learning for rendering  within the Viva Learning app. Required.
+     * The long logo URL for the light mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering  within the Viva Learning app. Required.
      */
     @SerializedName(value = "longLogoWebUrlForLightTheme", alternate = {"LongLogoWebUrlForLightTheme"})
     @Expose
@@ -74,7 +65,7 @@ public class LearningProvider extends Entity implements IJsonBackedObject {
 
     /**
      * The Square Logo Web Url For Dark Theme.
-     * The square logo URL for the dark mode, which needs to be a publicly accessible image. This image would be saved to the Blob storage of Viva Learning for rendering within the Viva Learning app. Required.
+     * The square logo URL for the dark mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
      */
     @SerializedName(value = "squareLogoWebUrlForDarkTheme", alternate = {"SquareLogoWebUrlForDarkTheme"})
     @Expose
@@ -83,7 +74,7 @@ public class LearningProvider extends Entity implements IJsonBackedObject {
 
     /**
      * The Square Logo Web Url For Light Theme.
-     * The square logo URL for the light mode, which needs to be a publicly accessible image. This image would be saved to the Blob storage of Viva Learning for rendering within the Viva Learning app. Required.
+     * The square logo URL for the light mode that needs to be a publicly accessible image. This image would be saved to the blob storage of Viva Learning for rendering within the Viva Learning app. Required.
      */
     @SerializedName(value = "squareLogoWebUrlForLightTheme", alternate = {"SquareLogoWebUrlForLightTheme"})
     @Expose

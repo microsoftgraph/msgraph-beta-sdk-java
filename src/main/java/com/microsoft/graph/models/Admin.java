@@ -12,7 +12,7 @@ import com.microsoft.graph.models.Edge;
 import com.microsoft.graph.tenantadmin.models.Sharepoint;
 import com.microsoft.graph.models.ServiceAnnouncement;
 import com.microsoft.graph.models.AdminReportSettings;
-import com.microsoft.graph.windowsupdates.models.Windows;
+import com.microsoft.graph.models.AdminWindows;
 
 
 import com.google.gson.JsonObject;
@@ -80,12 +80,12 @@ public class Admin implements IJsonBackedObject {
 
     /**
      * The Windows.
-     * A container for all Windows Update for Business deployment service functionality. Read-only.
+     * A container for all Windows administrator functionalities. Read-only.
      */
     @SerializedName(value = "windows", alternate = {"Windows"})
     @Expose
 	@Nullable
-    public Windows windows;
+    public AdminWindows windows;
 
 
     /**

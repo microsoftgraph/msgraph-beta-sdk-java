@@ -36,13 +36,13 @@ public enum DeviceLicensingStatus
     */
     DEVICE_IDENTITY_VERIFICATION_FAILED,
     /**
-    * verifying Mirosoft Account Identity
+    * verifying Microsoft Account Identity
     */
-    VERIFYING_MIROSOFT_ACCOUNT_IDENTITY,
+    VERIFYING_MICROSOFT_ACCOUNT_IDENTITY,
     /**
-    * mirosoft Account Verification Failed
+    * microsoft Account Verification Failed
     */
-    MIROSOFT_ACCOUNT_VERIFICATION_FAILED,
+    MICROSOFT_ACCOUNT_VERIFICATION_FAILED,
     /**
     * acquiring Device License
     */

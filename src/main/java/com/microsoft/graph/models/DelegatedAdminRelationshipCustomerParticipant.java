@@ -39,7 +39,7 @@ public class DelegatedAdminRelationshipCustomerParticipant implements IJsonBacke
 
     /**
      * The Display Name.
-     * The display name of the customer tenant as set by Azure AD. Read only
+     * The display name of the customer tenant as set by Azure AD. Read-only
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose

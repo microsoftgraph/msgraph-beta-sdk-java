@@ -40,7 +40,7 @@ public class SearchHit implements IJsonBackedObject {
 
     /**
      * The Content Source.
-     * The name of the content source which the externalItem is part of .
+     * The name of the content source that the externalItem is part of.
      */
     @SerializedName(value = "contentSource", alternate = {"ContentSource"})
     @Expose
@@ -58,7 +58,7 @@ public class SearchHit implements IJsonBackedObject {
 
     /**
      * The Is Collapsed.
-     * 
+     * Indicates whether the current result is collapses when the collapseProperties property is used.
      */
     @SerializedName(value = "isCollapsed", alternate = {"IsCollapsed"})
     @Expose

@@ -13,6 +13,7 @@ import com.microsoft.graph.models.PlannerPlanContainer;
 import com.microsoft.graph.models.PlannerPlanContextCollection;
 import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.graph.models.PlannerPlanCreation;
+import com.microsoft.graph.models.PlannerSharedWithContainer;
 import com.microsoft.graph.models.PlannerPlanDetails;
 import com.microsoft.graph.models.PlannerDelta;
 import com.microsoft.graph.requests.PlannerBucketCollectionPage;
@@ -88,6 +89,15 @@ public class PlannerPlan extends PlannerDelta implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String owner;
+
+    /**
+     * The Shared With Containers.
+     * 
+     */
+    @SerializedName(value = "sharedWithContainers", alternate = {"SharedWithContainers"})
+    @Expose
+	@Nullable
+    public java.util.List<PlannerSharedWithContainer> sharedWithContainers;
 
     /**
      * The Title.
