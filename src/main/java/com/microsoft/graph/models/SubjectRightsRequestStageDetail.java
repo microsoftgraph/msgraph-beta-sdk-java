@@ -51,7 +51,7 @@ public class SubjectRightsRequestStageDetail implements IJsonBackedObject {
 
     /**
      * The Stage.
-     * The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
+     * The stage of the subject rights request. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue, approval.
      */
     @SerializedName(value = "stage", alternate = {"Stage"})
     @Expose

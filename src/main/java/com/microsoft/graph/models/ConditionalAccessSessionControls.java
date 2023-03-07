@@ -12,6 +12,7 @@ import com.microsoft.graph.models.ApplicationEnforcedRestrictionsSessionControl;
 import com.microsoft.graph.models.CloudAppSecuritySessionControl;
 import com.microsoft.graph.models.ContinuousAccessEvaluationSessionControl;
 import com.microsoft.graph.models.PersistentBrowserSessionControl;
+import com.microsoft.graph.models.SecureSignInSessionControl;
 import com.microsoft.graph.models.SignInFrequencySessionControl;
 
 
@@ -86,6 +87,15 @@ public class ConditionalAccessSessionControls implements IJsonBackedObject {
     @Expose
 	@Nullable
     public PersistentBrowserSessionControl persistentBrowser;
+
+    /**
+     * The Secure Sign In Session.
+     * 
+     */
+    @SerializedName(value = "secureSignInSession", alternate = {"SecureSignInSession"})
+    @Expose
+	@Nullable
+    public SecureSignInSessionControl secureSignInSession;
 
     /**
      * The Sign In Frequency.

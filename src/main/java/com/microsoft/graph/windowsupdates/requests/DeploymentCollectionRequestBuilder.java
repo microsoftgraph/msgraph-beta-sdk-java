@@ -7,7 +7,7 @@ package com.microsoft.graph.windowsupdates.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.windowsupdates.models.Updates;
+import com.microsoft.graph.windowsupdates.models.ContentApproval;
 import com.microsoft.graph.windowsupdates.models.Deployment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +28,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class DeploymentCollectionRequestBuilder extends BaseCollectionRequestBuilder<Deployment, DeploymentRequestBuilder, DeploymentCollectionResponse, DeploymentCollectionPage, DeploymentCollectionRequest> {
 
     /**
-     * The request builder for this collection of Updates
+     * The request builder for this collection of ContentApproval
      *
      * @param requestUrl     the request URL
      * @param client         the service client

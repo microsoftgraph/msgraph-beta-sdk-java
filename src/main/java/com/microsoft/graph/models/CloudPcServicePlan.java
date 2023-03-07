@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.CloudPcManagementService;
 import com.microsoft.graph.models.CloudPcServicePlanType;
 import com.microsoft.graph.models.Entity;
 
@@ -52,6 +53,15 @@ public class CloudPcServicePlan extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Integer storageInGB;
+
+    /**
+     * The Supported Solution.
+     * 
+     */
+    @SerializedName(value = "supportedSolution", alternate = {"SupportedSolution"})
+    @Expose
+	@Nullable
+    public EnumSet<CloudPcManagementService> supportedSolution;
 
     /**
      * The Type.

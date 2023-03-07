@@ -63,6 +63,16 @@ public class ConditionalAccessRootRequestBuilder extends BaseRequestBuilder<Cond
      * @return the AuthenticationStrengthRootRequestBuilder instance
      */
     @Nonnull
+    public com.microsoft.graph.requests.AuthenticationStrengthRootRequestBuilder authenticationStrength() {
+        return new com.microsoft.graph.requests.AuthenticationStrengthRootRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationStrength"), getClient(), null);
+    }
+
+    /**
+     * Gets the request builder for AuthenticationStrengthRoot
+     *
+     * @return the AuthenticationStrengthRootRequestBuilder instance
+     */
+    @Nonnull
     public com.microsoft.graph.requests.AuthenticationStrengthRootRequestBuilder authenticationStrengths() {
         return new com.microsoft.graph.requests.AuthenticationStrengthRootRequestBuilder(getRequestUrlWithAdditionalSegment("authenticationStrengths"), getClient(), null);
     }

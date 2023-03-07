@@ -49,7 +49,7 @@ public class DeviceLogCollectionRequest implements IJsonBackedObject {
 
     /**
      * The Template Type.
-     * The template type that is sent with the collection request. Possible values are: predefined.
+     * Indicates The template type that is sent with the collection request. defaule is Predefined. Possible values are: predefined, unknownFutureValue.
      */
     @SerializedName(value = "templateType", alternate = {"TemplateType"})
     @Expose

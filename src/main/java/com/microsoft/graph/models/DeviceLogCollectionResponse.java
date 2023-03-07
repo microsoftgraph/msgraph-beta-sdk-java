@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.AppLogUploadState;
 import com.microsoft.graph.models.Entity;
 
 
@@ -27,7 +28,7 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
 
     /**
      * The Enrolled By User.
-     * The User Principal Name (UPN) of the user that enrolled the device
+     * The User Principal Name (UPN) of the user that enrolled the device.
      */
     @SerializedName(value = "enrolledByUser", alternate = {"EnrolledByUser"})
     @Expose
@@ -45,7 +46,7 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
 
     /**
      * The Expiration Date Time UTC.
-     * The DateTime of the expiration of the logs
+     * The DateTime of the expiration of the logs.
      */
     @SerializedName(value = "expirationDateTimeUTC", alternate = {"ExpirationDateTimeUTC"})
     @Expose
@@ -54,7 +55,7 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
 
     /**
      * The Initiated By User Principal Name.
-     * The UPN for who initiated the request
+     * The UPN for who initiated the request.
      */
     @SerializedName(value = "initiatedByUserPrincipalName", alternate = {"InitiatedByUserPrincipalName"})
     @Expose
@@ -63,7 +64,7 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
 
     /**
      * The Managed Device Id.
-     * The device Id
+     * Indicates Intune device unique identifier.
      */
     @SerializedName(value = "managedDeviceId", alternate = {"ManagedDeviceId"})
     @Expose
@@ -72,7 +73,7 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
 
     /**
      * The Received Date Time UTC.
-     * The DateTime the request was received
+     * The DateTime the request was received.
      */
     @SerializedName(value = "receivedDateTimeUTC", alternate = {"ReceivedDateTimeUTC"})
     @Expose
@@ -81,7 +82,7 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
 
     /**
      * The Requested Date Time UTC.
-     * The DateTime of the request
+     * The DateTime of the request.
      */
     @SerializedName(value = "requestedDateTimeUTC", alternate = {"RequestedDateTimeUTC"})
     @Expose
@@ -98,13 +99,22 @@ public class DeviceLogCollectionResponse extends Entity implements IJsonBackedOb
     public Double size;
 
     /**
+     * The Size In KB.
+     * The size of the logs in KB. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+     */
+    @SerializedName(value = "sizeInKB", alternate = {"SizeInKB"})
+    @Expose
+	@Nullable
+    public Double sizeInKB;
+
+    /**
      * The Status.
-     * The status of the log collection request
+     * Indicates the status for the app log collection request if it is pending, completed or failed, Default is pending. Possible values are: pending, completed, failed, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
 	@Nullable
-    public String status;
+    public AppLogUploadState status;
 
 
     /**

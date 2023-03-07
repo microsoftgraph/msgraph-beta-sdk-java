@@ -16,6 +16,10 @@ public enum DeviceLogCollectionTemplateType
     */
     PREDEFINED,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For DeviceLogCollectionTemplateType values that were not expected from the service
     */
     UNEXPECTED_VALUE

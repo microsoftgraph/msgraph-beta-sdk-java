@@ -24,6 +24,18 @@ public enum AppleUserInitiatedEnrollmentType
     */
     USER,
     /**
+    * account Driven User Enrollment
+    */
+    ACCOUNT_DRIVEN_USER_ENROLLMENT,
+    /**
+    * web Device Enrollment
+    */
+    WEB_DEVICE_ENROLLMENT,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For AppleUserInitiatedEnrollmentType values that were not expected from the service
     */
     UNEXPECTED_VALUE

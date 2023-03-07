@@ -80,7 +80,9 @@ public class EdiscoveryExportOperationRequestBuilder extends BaseRequestBuilder<
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     * @deprecated The getDownloadUrl endpoint will be deprecated on April 30, 2023. Please use exportFilesMetadata API instead.
      */
+    @Deprecated
     @Nonnull
     public EdiscoveryExportOperationGetDownloadUrlRequestBuilder getDownloadUrl() {
         return new EdiscoveryExportOperationGetDownloadUrlRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.security.getDownloadUrl"), getClient(), null);

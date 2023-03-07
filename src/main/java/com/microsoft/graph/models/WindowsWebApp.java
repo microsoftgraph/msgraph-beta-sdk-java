@@ -27,7 +27,7 @@ public class WindowsWebApp extends MobileApp implements IJsonBackedObject {
 
     /**
      * The App Url.
-     * The web app URL.
+     * Indicates the Windows web app URL. Example: 'https://www.contoso.com'
      */
     @SerializedName(value = "appUrl", alternate = {"AppUrl"})
     @Expose

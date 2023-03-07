@@ -53,6 +53,9 @@ import com.microsoft.graph.models.ReportRootGetEmailAppUsageAppsUserCountsParame
 import com.microsoft.graph.models.ReportRootGetEmailAppUsageUserCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetEmailAppUsageUserDetailParameterSet;
 import com.microsoft.graph.models.ReportRootGetEmailAppUsageVersionsUserCountsParameterSet;
+import com.microsoft.graph.models.ReportRootGetFormsUserActivityCountsParameterSet;
+import com.microsoft.graph.models.ReportRootGetFormsUserActivityUserCountsParameterSet;
+import com.microsoft.graph.models.ReportRootGetFormsUserActivityUserDetailParameterSet;
 import com.microsoft.graph.models.ReportRootGetM365AppPlatformUserCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetM365AppUserCountsParameterSet;
 import com.microsoft.graph.models.ReportRootGetM365AppUserDetailParameterSet;
@@ -653,6 +656,36 @@ public class ReportRootRequestBuilder extends BaseRequestBuilder<ReportRoot> {
     @Nonnull
     public ReportRootGetEmailAppUsageVersionsUserCountsRequestBuilder getEmailAppUsageVersionsUserCounts(@Nonnull final ReportRootGetEmailAppUsageVersionsUserCountsParameterSet parameters) {
         return new ReportRootGetEmailAppUsageVersionsUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getEmailAppUsageVersionsUserCounts"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ReportRootGetFormsUserActivityCountsRequestBuilder getFormsUserActivityCounts(@Nonnull final ReportRootGetFormsUserActivityCountsParameterSet parameters) {
+        return new ReportRootGetFormsUserActivityCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getFormsUserActivityCounts"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ReportRootGetFormsUserActivityUserCountsRequestBuilder getFormsUserActivityUserCounts(@Nonnull final ReportRootGetFormsUserActivityUserCountsParameterSet parameters) {
+        return new ReportRootGetFormsUserActivityUserCountsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getFormsUserActivityUserCounts"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public ReportRootGetFormsUserActivityUserDetailRequestBuilder getFormsUserActivityUserDetail(@Nonnull final ReportRootGetFormsUserActivityUserDetailParameterSet parameters) {
+        return new ReportRootGetFormsUserActivityUserDetailRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getFormsUserActivityUserDetail"), getClient(), null, parameters);
     }
 
     /**
