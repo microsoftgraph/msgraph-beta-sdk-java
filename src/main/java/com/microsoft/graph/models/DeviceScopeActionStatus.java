@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the triggerDeviceScopeAction method. */
+/** Indicates the status of the attempted device scope action */
 public enum DeviceScopeActionStatus implements ValuedEnum {
     /** Indicates the device scope action failed to trigger. */
     Failed("failed"),

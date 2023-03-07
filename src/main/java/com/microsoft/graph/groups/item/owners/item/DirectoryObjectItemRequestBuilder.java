@@ -1,69 +1,72 @@
 package com.microsoft.graph.groups.item.owners.item;
 
-import com.microsoft.graph.groups.item.owners.item.application.ApplicationRequestBuilder;
-import com.microsoft.graph.groups.item.owners.item.device.DeviceRequestBuilder;
-import com.microsoft.graph.groups.item.owners.item.group.GroupRequestBuilder;
-import com.microsoft.graph.groups.item.owners.item.orgcontact.OrgContactRequestBuilder;
+import com.microsoft.graph.groups.item.owners.item.graphapplication.GraphApplicationRequestBuilder;
+import com.microsoft.graph.groups.item.owners.item.graphdevice.GraphDeviceRequestBuilder;
+import com.microsoft.graph.groups.item.owners.item.graphgroup.GraphGroupRequestBuilder;
+import com.microsoft.graph.groups.item.owners.item.graphorgcontact.GraphOrgContactRequestBuilder;
+import com.microsoft.graph.groups.item.owners.item.graphserviceprincipal.GraphServicePrincipalRequestBuilder;
+import com.microsoft.graph.groups.item.owners.item.graphuser.GraphUserRequestBuilder;
 import com.microsoft.graph.groups.item.owners.item.ref.RefRequestBuilder;
-import com.microsoft.graph.groups.item.owners.item.serviceprincipal.ServicePrincipalRequestBuilder;
-import com.microsoft.graph.groups.item.owners.item.user.UserRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
-/** Builds and executes requests for operations under /groups/{group-id}/owners/{directoryObject-id} */
+/**
+ * Builds and executes requests for operations under /groups/{group-id}/owners/{directoryObject-id}
+ */
 public class DirectoryObjectItemRequestBuilder {
-    /** The application property */
+    /** Casts the previous resource to application. */
     @javax.annotation.Nonnull
-    public ApplicationRequestBuilder application() {
-        return new ApplicationRequestBuilder(pathParameters, requestAdapter);
+    public GraphApplicationRequestBuilder graphApplication() {
+        return new GraphApplicationRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The device property */
+    /** Casts the previous resource to device. */
     @javax.annotation.Nonnull
-    public DeviceRequestBuilder device() {
-        return new DeviceRequestBuilder(pathParameters, requestAdapter);
+    public GraphDeviceRequestBuilder graphDevice() {
+        return new GraphDeviceRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The group property */
+    /** Casts the previous resource to group. */
     @javax.annotation.Nonnull
-    public GroupRequestBuilder group() {
-        return new GroupRequestBuilder(pathParameters, requestAdapter);
+    public GraphGroupRequestBuilder graphGroup() {
+        return new GraphGroupRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The orgContact property */
+    /** Casts the previous resource to orgContact. */
     @javax.annotation.Nonnull
-    public OrgContactRequestBuilder orgContact() {
-        return new OrgContactRequestBuilder(pathParameters, requestAdapter);
+    public GraphOrgContactRequestBuilder graphOrgContact() {
+        return new GraphOrgContactRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Casts the previous resource to servicePrincipal. */
+    @javax.annotation.Nonnull
+    public GraphServicePrincipalRequestBuilder graphServicePrincipal() {
+        return new GraphServicePrincipalRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Casts the previous resource to user. */
+    @javax.annotation.Nonnull
+    public GraphUserRequestBuilder graphUser() {
+        return new GraphUserRequestBuilder(pathParameters, requestAdapter);
     }
     /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
-    /** The Ref property */
+    private HashMap<String, Object> pathParameters;
+    /** Provides operations to manage the collection of group entities. */
     @javax.annotation.Nonnull
     public RefRequestBuilder ref() {
         return new RefRequestBuilder(pathParameters, requestAdapter);
     }
     /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The servicePrincipal property */
-    @javax.annotation.Nonnull
-    public ServicePrincipalRequestBuilder servicePrincipal() {
-        return new ServicePrincipalRequestBuilder(pathParameters, requestAdapter);
-    }
+    private RequestAdapter requestAdapter;
     /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
-    /** The user property */
-    @javax.annotation.Nonnull
-    public UserRequestBuilder user() {
-        return new UserRequestBuilder(pathParameters, requestAdapter);
-    }
+    private String urlTemplate;
     /**
      * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectoryObjectItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         Objects.requireNonNull(pathParameters);
         Objects.requireNonNull(requestAdapter);
         this.urlTemplate = "{+baseurl}/groups/{group%2Did}/owners/{directoryObject%2Did}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;
     }
@@ -73,9 +76,10 @@ public class DirectoryObjectItemRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectoryObjectItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
         this.urlTemplate = "{+baseurl}/groups/{group%2Did}/owners/{directoryObject%2Did}";
-        var urlTplParams = new HashMap<String, Object>();
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
         urlTplParams.put("request-raw-url", rawUrl);
         this.pathParameters = urlTplParams;
         this.requestAdapter = requestAdapter;

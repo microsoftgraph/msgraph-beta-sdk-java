@@ -4,26 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SigningResult implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The signature property */
-    private byte[] _signature;
+    private byte[] signature;
     /** The signingKeyId property */
-    private String _signingKeyId;
+    private String signingKeyId;
     /**
      * Instantiates a new signingResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SigningResult() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.signingResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,20 +40,19 @@ public class SigningResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SigningResult currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("signature", (n) -> { currentObject.setSignature(n.getByteArrayValue()); });
-            this.put("signingKeyId", (n) -> { currentObject.setSigningKeyId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("signature", (n) -> { this.setSignature(n.getByteArrayValue()); });
+        deserializerMap.put("signingKeyId", (n) -> { this.setSigningKeyId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -62,7 +60,7 @@ public class SigningResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the signature property value. The signature property
@@ -70,7 +68,7 @@ public class SigningResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public byte[] getSignature() {
-        return this._signature;
+        return this.signature;
     }
     /**
      * Gets the signingKeyId property value. The signingKeyId property
@@ -78,13 +76,14 @@ public class SigningResult implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSigningKeyId() {
-        return this._signingKeyId;
+        return this.signingKeyId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -97,31 +96,35 @@ public class SigningResult implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the signature property value. The signature property
      * @param value Value to set for the signature property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignature(@javax.annotation.Nullable final byte[] value) {
-        this._signature = value;
+        this.signature = value;
     }
     /**
      * Sets the signingKeyId property value. The signingKeyId property
      * @param value Value to set for the signingKeyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSigningKeyId(@javax.annotation.Nullable final String value) {
-        this._signingKeyId = value;
+        this.signingKeyId = value;
     }
 }

@@ -3,16 +3,16 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the validateComplianceScript method. */
+/** Data types for rules. */
 public enum DataType implements ValuedEnum {
     /** None data type. */
     None("none"),
     /** Boolean data type. */
-    Boolean_escaped("boolean_escaped"),
+    BooleanEscaped("booleanEscaped"),
     /** Int64 data type. */
     Int64("int64"),
     /** Double data type. */
-    Double_escaped("double_escaped"),
+    DoubleEscaped("doubleEscaped"),
     /** String data type. */
     String("string"),
     /** DateTime data type. */
@@ -46,9 +46,9 @@ public enum DataType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "none": return None;
-            case "boolean": return Boolean_escaped;
+            case "boolean": return BooleanEscaped;
             case "int64": return Int64;
-            case "double": return Double_escaped;
+            case "double": return DoubleEscaped;
             case "string": return String;
             case "dateTime": return DateTime;
             case "version": return Version;

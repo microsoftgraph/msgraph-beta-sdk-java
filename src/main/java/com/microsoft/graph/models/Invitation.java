@@ -3,38 +3,37 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Invitation extends Entity implements Parsable {
     /** The user created as part of the invitation creation. Read-Only */
-    private User _invitedUser;
+    private User invitedUser;
     /** The display name of the user being invited. */
-    private String _invitedUserDisplayName;
+    private String invitedUserDisplayName;
     /** The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (` */
-    private String _invitedUserEmailAddress;
+    private String invitedUserEmailAddress;
     /** Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list. */
-    private InvitedUserMessageInfo _invitedUserMessageInfo;
+    private InvitedUserMessageInfo invitedUserMessageInfo;
     /** The userType of the user being invited. By default, this is Guest. You can invite as Member if you're are company administrator. The default is false. */
-    private String _invitedUserType;
+    private String invitedUserType;
     /** The URL the user can use to redeem their invitation. Read-only. */
-    private String _inviteRedeemUrl;
+    private String inviteRedeemUrl;
     /** The URL user should be redirected to once the invitation is redeemed. Required. */
-    private String _inviteRedirectUrl;
+    private String inviteRedirectUrl;
     /** Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user (Preview). */
-    private Boolean _resetRedemption;
+    private Boolean resetRedemption;
     /** Indicates whether an email should be sent to the user being invited. The default is false. */
-    private Boolean _sendInvitationMessage;
+    private Boolean sendInvitationMessage;
     /** The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error */
-    private String _status;
+    private String status;
     /**
      * Instantiates a new Invitation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Invitation() {
         super();
-        this.setOdataType("#microsoft.graph.invitation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,23 +47,22 @@ public class Invitation extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Invitation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("invitedUser", (n) -> { currentObject.setInvitedUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
-            this.put("invitedUserDisplayName", (n) -> { currentObject.setInvitedUserDisplayName(n.getStringValue()); });
-            this.put("invitedUserEmailAddress", (n) -> { currentObject.setInvitedUserEmailAddress(n.getStringValue()); });
-            this.put("invitedUserMessageInfo", (n) -> { currentObject.setInvitedUserMessageInfo(n.getObjectValue(InvitedUserMessageInfo::createFromDiscriminatorValue)); });
-            this.put("invitedUserType", (n) -> { currentObject.setInvitedUserType(n.getStringValue()); });
-            this.put("inviteRedeemUrl", (n) -> { currentObject.setInviteRedeemUrl(n.getStringValue()); });
-            this.put("inviteRedirectUrl", (n) -> { currentObject.setInviteRedirectUrl(n.getStringValue()); });
-            this.put("resetRedemption", (n) -> { currentObject.setResetRedemption(n.getBooleanValue()); });
-            this.put("sendInvitationMessage", (n) -> { currentObject.setSendInvitationMessage(n.getBooleanValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("invitedUser", (n) -> { this.setInvitedUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("invitedUserDisplayName", (n) -> { this.setInvitedUserDisplayName(n.getStringValue()); });
+        deserializerMap.put("invitedUserEmailAddress", (n) -> { this.setInvitedUserEmailAddress(n.getStringValue()); });
+        deserializerMap.put("invitedUserMessageInfo", (n) -> { this.setInvitedUserMessageInfo(n.getObjectValue(InvitedUserMessageInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("invitedUserType", (n) -> { this.setInvitedUserType(n.getStringValue()); });
+        deserializerMap.put("inviteRedeemUrl", (n) -> { this.setInviteRedeemUrl(n.getStringValue()); });
+        deserializerMap.put("inviteRedirectUrl", (n) -> { this.setInviteRedirectUrl(n.getStringValue()); });
+        deserializerMap.put("resetRedemption", (n) -> { this.setResetRedemption(n.getBooleanValue()); });
+        deserializerMap.put("sendInvitationMessage", (n) -> { this.setSendInvitationMessage(n.getBooleanValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the invitedUser property value. The user created as part of the invitation creation. Read-Only
@@ -72,7 +70,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public User getInvitedUser() {
-        return this._invitedUser;
+        return this.invitedUser;
     }
     /**
      * Gets the invitedUserDisplayName property value. The display name of the user being invited.
@@ -80,7 +78,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInvitedUserDisplayName() {
-        return this._invitedUserDisplayName;
+        return this.invitedUserDisplayName;
     }
     /**
      * Gets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
@@ -88,7 +86,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInvitedUserEmailAddress() {
-        return this._invitedUserEmailAddress;
+        return this.invitedUserEmailAddress;
     }
     /**
      * Gets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
@@ -96,7 +94,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public InvitedUserMessageInfo getInvitedUserMessageInfo() {
-        return this._invitedUserMessageInfo;
+        return this.invitedUserMessageInfo;
     }
     /**
      * Gets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're are company administrator. The default is false.
@@ -104,7 +102,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInvitedUserType() {
-        return this._invitedUserType;
+        return this.invitedUserType;
     }
     /**
      * Gets the inviteRedeemUrl property value. The URL the user can use to redeem their invitation. Read-only.
@@ -112,7 +110,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInviteRedeemUrl() {
-        return this._inviteRedeemUrl;
+        return this.inviteRedeemUrl;
     }
     /**
      * Gets the inviteRedirectUrl property value. The URL user should be redirected to once the invitation is redeemed. Required.
@@ -120,7 +118,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInviteRedirectUrl() {
-        return this._inviteRedirectUrl;
+        return this.inviteRedirectUrl;
     }
     /**
      * Gets the resetRedemption property value. Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user (Preview).
@@ -128,7 +126,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getResetRedemption() {
-        return this._resetRedemption;
+        return this.resetRedemption;
     }
     /**
      * Gets the sendInvitationMessage property value. Indicates whether an email should be sent to the user being invited. The default is false.
@@ -136,7 +134,7 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getSendInvitationMessage() {
-        return this._sendInvitationMessage;
+        return this.sendInvitationMessage;
     }
     /**
      * Gets the status property value. The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error
@@ -144,13 +142,14 @@ public class Invitation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -170,79 +169,89 @@ public class Invitation extends Entity implements Parsable {
      * @param value Value to set for the invitedUser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitedUser(@javax.annotation.Nullable final User value) {
-        this._invitedUser = value;
+        this.invitedUser = value;
     }
     /**
      * Sets the invitedUserDisplayName property value. The display name of the user being invited.
      * @param value Value to set for the invitedUserDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitedUserDisplayName(@javax.annotation.Nullable final String value) {
-        this._invitedUserDisplayName = value;
+        this.invitedUserDisplayName = value;
     }
     /**
      * Sets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)At sign (@)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Hyphen (-)Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (`
      * @param value Value to set for the invitedUserEmailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitedUserEmailAddress(@javax.annotation.Nullable final String value) {
-        this._invitedUserEmailAddress = value;
+        this.invitedUserEmailAddress = value;
     }
     /**
      * Sets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
      * @param value Value to set for the invitedUserMessageInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitedUserMessageInfo(@javax.annotation.Nullable final InvitedUserMessageInfo value) {
-        this._invitedUserMessageInfo = value;
+        this.invitedUserMessageInfo = value;
     }
     /**
      * Sets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you're are company administrator. The default is false.
      * @param value Value to set for the invitedUserType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInvitedUserType(@javax.annotation.Nullable final String value) {
-        this._invitedUserType = value;
+        this.invitedUserType = value;
     }
     /**
      * Sets the inviteRedeemUrl property value. The URL the user can use to redeem their invitation. Read-only.
      * @param value Value to set for the inviteRedeemUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInviteRedeemUrl(@javax.annotation.Nullable final String value) {
-        this._inviteRedeemUrl = value;
+        this.inviteRedeemUrl = value;
     }
     /**
      * Sets the inviteRedirectUrl property value. The URL user should be redirected to once the invitation is redeemed. Required.
      * @param value Value to set for the inviteRedirectUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInviteRedirectUrl(@javax.annotation.Nullable final String value) {
-        this._inviteRedirectUrl = value;
+        this.inviteRedirectUrl = value;
     }
     /**
      * Sets the resetRedemption property value. Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user (Preview).
      * @param value Value to set for the resetRedemption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResetRedemption(@javax.annotation.Nullable final Boolean value) {
-        this._resetRedemption = value;
+        this.resetRedemption = value;
     }
     /**
      * Sets the sendInvitationMessage property value. Indicates whether an email should be sent to the user being invited. The default is false.
      * @param value Value to set for the sendInvitationMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSendInvitationMessage(@javax.annotation.Nullable final Boolean value) {
-        this._sendInvitationMessage = value;
+        this.sendInvitationMessage = value;
     }
     /**
      * Sets the status property value. The status of the invitation. Possible values: PendingAcceptance, Completed, InProgress, and Error
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
-        this._status = value;
+        this.status = value;
     }
 }

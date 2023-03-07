@@ -3,21 +3,21 @@ package com.microsoft.graph.models.windowsupdates;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OperationalInsightsConnection extends ResourceConnection implements Parsable {
     /** The name of the Azure resource group that contains the Log Analytics workspace. */
-    private String _azureResourceGroupName;
+    private String azureResourceGroupName;
     /** The Azure subscription ID that contains the Log Analytics workspace. */
-    private String _azureSubscriptionId;
+    private String azureSubscriptionId;
     /** The name of the Log Analytics workspace. */
-    private String _workspaceName;
+    private String workspaceName;
     /**
      * Instantiates a new OperationalInsightsConnection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OperationalInsightsConnection() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.operationalInsightsConnection");
@@ -38,7 +38,7 @@ public class OperationalInsightsConnection extends ResourceConnection implements
      */
     @javax.annotation.Nullable
     public String getAzureResourceGroupName() {
-        return this._azureResourceGroupName;
+        return this.azureResourceGroupName;
     }
     /**
      * Gets the azureSubscriptionId property value. The Azure subscription ID that contains the Log Analytics workspace.
@@ -46,20 +46,19 @@ public class OperationalInsightsConnection extends ResourceConnection implements
      */
     @javax.annotation.Nullable
     public String getAzureSubscriptionId() {
-        return this._azureSubscriptionId;
+        return this.azureSubscriptionId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OperationalInsightsConnection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("azureResourceGroupName", (n) -> { currentObject.setAzureResourceGroupName(n.getStringValue()); });
-            this.put("azureSubscriptionId", (n) -> { currentObject.setAzureSubscriptionId(n.getStringValue()); });
-            this.put("workspaceName", (n) -> { currentObject.setWorkspaceName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("azureResourceGroupName", (n) -> { this.setAzureResourceGroupName(n.getStringValue()); });
+        deserializerMap.put("azureSubscriptionId", (n) -> { this.setAzureSubscriptionId(n.getStringValue()); });
+        deserializerMap.put("workspaceName", (n) -> { this.setWorkspaceName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the workspaceName property value. The name of the Log Analytics workspace.
@@ -67,13 +66,14 @@ public class OperationalInsightsConnection extends ResourceConnection implements
      */
     @javax.annotation.Nullable
     public String getWorkspaceName() {
-        return this._workspaceName;
+        return this.workspaceName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +86,26 @@ public class OperationalInsightsConnection extends ResourceConnection implements
      * @param value Value to set for the azureResourceGroupName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureResourceGroupName(@javax.annotation.Nullable final String value) {
-        this._azureResourceGroupName = value;
+        this.azureResourceGroupName = value;
     }
     /**
      * Sets the azureSubscriptionId property value. The Azure subscription ID that contains the Log Analytics workspace.
      * @param value Value to set for the azureSubscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureSubscriptionId(@javax.annotation.Nullable final String value) {
-        this._azureSubscriptionId = value;
+        this.azureSubscriptionId = value;
     }
     /**
      * Sets the workspaceName property value. The name of the Log Analytics workspace.
      * @param value Value to set for the workspaceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkspaceName(@javax.annotation.Nullable final String value) {
-        this._workspaceName = value;
+        this.workspaceName = value;
     }
 }

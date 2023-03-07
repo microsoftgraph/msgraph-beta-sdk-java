@@ -3,17 +3,17 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizationGroupIdSource implements Parsable {
     /** Possible values for the DeliveryOptimizationGroupIdOptionsType setting. */
-    private DeliveryOptimizationGroupIdOptionsType _groupIdSourceOption;
+    private DeliveryOptimizationGroupIdOptionsType groupIdSourceOption;
     /**
      * Instantiates a new DeliveryOptimizationGroupIdSourceOptions and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeliveryOptimizationGroupIdSourceOptions() {
         super();
         this.setOdataType("#microsoft.graph.deliveryOptimizationGroupIdSourceOptions");
@@ -30,14 +30,13 @@ public class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizati
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeliveryOptimizationGroupIdSourceOptions currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("groupIdSourceOption", (n) -> { currentObject.setGroupIdSourceOption(n.getEnumValue(DeliveryOptimizationGroupIdOptionsType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("groupIdSourceOption", (n) -> { this.setGroupIdSourceOption(n.getEnumValue(DeliveryOptimizationGroupIdOptionsType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the groupIdSourceOption property value. Possible values for the DeliveryOptimizationGroupIdOptionsType setting.
@@ -45,13 +44,14 @@ public class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizati
      */
     @javax.annotation.Nullable
     public DeliveryOptimizationGroupIdOptionsType getGroupIdSourceOption() {
-        return this._groupIdSourceOption;
+        return this.groupIdSourceOption;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +62,8 @@ public class DeliveryOptimizationGroupIdSourceOptions extends DeliveryOptimizati
      * @param value Value to set for the groupIdSourceOption property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGroupIdSourceOption(@javax.annotation.Nullable final DeliveryOptimizationGroupIdOptionsType value) {
-        this._groupIdSourceOption = value;
+        this.groupIdSourceOption = value;
     }
 }

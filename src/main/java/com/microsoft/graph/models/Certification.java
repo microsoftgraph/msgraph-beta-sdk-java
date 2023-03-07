@@ -5,32 +5,31 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Certification implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** URL that shows certification details for the application. */
-    private String _certificationDetailsUrl;
+    private String certificationDetailsUrl;
     /** The timestamp when the current certification for the application will expire. */
-    private OffsetDateTime _certificationExpirationDateTime;
+    private OffsetDateTime certificationExpirationDateTime;
     /** Indicates whether the application is certified by Microsoft. */
-    private Boolean _isCertifiedByMicrosoft;
+    private Boolean isCertifiedByMicrosoft;
     /** Indicates whether the application has been self-attested by the application developer or the publisher. */
-    private Boolean _isPublisherAttested;
+    private Boolean isPublisherAttested;
     /** The timestamp when the certification for the application was most recently added or updated. */
-    private OffsetDateTime _lastCertificationDateTime;
+    private OffsetDateTime lastCertificationDateTime;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new certification and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Certification() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.certification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,7 +47,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the certificationDetailsUrl property value. URL that shows certification details for the application.
@@ -56,7 +55,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCertificationDetailsUrl() {
-        return this._certificationDetailsUrl;
+        return this.certificationDetailsUrl;
     }
     /**
      * Gets the certificationExpirationDateTime property value. The timestamp when the current certification for the application will expire.
@@ -64,23 +63,22 @@ public class Certification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCertificationExpirationDateTime() {
-        return this._certificationExpirationDateTime;
+        return this.certificationExpirationDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Certification currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("certificationDetailsUrl", (n) -> { currentObject.setCertificationDetailsUrl(n.getStringValue()); });
-            this.put("certificationExpirationDateTime", (n) -> { currentObject.setCertificationExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("isCertifiedByMicrosoft", (n) -> { currentObject.setIsCertifiedByMicrosoft(n.getBooleanValue()); });
-            this.put("isPublisherAttested", (n) -> { currentObject.setIsPublisherAttested(n.getBooleanValue()); });
-            this.put("lastCertificationDateTime", (n) -> { currentObject.setLastCertificationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("certificationDetailsUrl", (n) -> { this.setCertificationDetailsUrl(n.getStringValue()); });
+        deserializerMap.put("certificationExpirationDateTime", (n) -> { this.setCertificationExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("isCertifiedByMicrosoft", (n) -> { this.setIsCertifiedByMicrosoft(n.getBooleanValue()); });
+        deserializerMap.put("isPublisherAttested", (n) -> { this.setIsPublisherAttested(n.getBooleanValue()); });
+        deserializerMap.put("lastCertificationDateTime", (n) -> { this.setLastCertificationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isCertifiedByMicrosoft property value. Indicates whether the application is certified by Microsoft.
@@ -88,7 +86,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsCertifiedByMicrosoft() {
-        return this._isCertifiedByMicrosoft;
+        return this.isCertifiedByMicrosoft;
     }
     /**
      * Gets the isPublisherAttested property value. Indicates whether the application has been self-attested by the application developer or the publisher.
@@ -96,7 +94,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsPublisherAttested() {
-        return this._isPublisherAttested;
+        return this.isPublisherAttested;
     }
     /**
      * Gets the lastCertificationDateTime property value. The timestamp when the certification for the application was most recently added or updated.
@@ -104,7 +102,7 @@ public class Certification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastCertificationDateTime() {
-        return this._lastCertificationDateTime;
+        return this.lastCertificationDateTime;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -112,18 +110,17 @@ public class Certification implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("certificationDetailsUrl", this.getCertificationDetailsUrl());
         writer.writeOffsetDateTimeValue("certificationExpirationDateTime", this.getCertificationExpirationDateTime());
-        writer.writeBooleanValue("isCertifiedByMicrosoft", this.getIsCertifiedByMicrosoft());
         writer.writeBooleanValue("isPublisherAttested", this.getIsPublisherAttested());
         writer.writeOffsetDateTimeValue("lastCertificationDateTime", this.getLastCertificationDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -134,55 +131,62 @@ public class Certification implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the certificationDetailsUrl property value. URL that shows certification details for the application.
      * @param value Value to set for the certificationDetailsUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationDetailsUrl(@javax.annotation.Nullable final String value) {
-        this._certificationDetailsUrl = value;
+        this.certificationDetailsUrl = value;
     }
     /**
      * Sets the certificationExpirationDateTime property value. The timestamp when the current certification for the application will expire.
      * @param value Value to set for the certificationExpirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._certificationExpirationDateTime = value;
+        this.certificationExpirationDateTime = value;
     }
     /**
      * Sets the isCertifiedByMicrosoft property value. Indicates whether the application is certified by Microsoft.
      * @param value Value to set for the isCertifiedByMicrosoft property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsCertifiedByMicrosoft(@javax.annotation.Nullable final Boolean value) {
-        this._isCertifiedByMicrosoft = value;
+        this.isCertifiedByMicrosoft = value;
     }
     /**
      * Sets the isPublisherAttested property value. Indicates whether the application has been self-attested by the application developer or the publisher.
      * @param value Value to set for the isPublisherAttested property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPublisherAttested(@javax.annotation.Nullable final Boolean value) {
-        this._isPublisherAttested = value;
+        this.isPublisherAttested = value;
     }
     /**
      * Sets the lastCertificationDateTime property value. The timestamp when the certification for the application was most recently added or updated.
      * @param value Value to set for the lastCertificationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastCertificationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastCertificationDateTime = value;
+        this.lastCertificationDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

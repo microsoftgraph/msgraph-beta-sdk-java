@@ -3,20 +3,19 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserEvidence extends AlertEvidence implements Parsable {
     /** The user account details. */
-    private UserAccount _userAccount;
+    private UserAccount userAccount;
     /**
      * Instantiates a new UserEvidence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserEvidence() {
         super();
-        this.setOdataType("#microsoft.graph.security.userEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +29,13 @@ public class UserEvidence extends AlertEvidence implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("userAccount", (n) -> { currentObject.setUserAccount(n.getObjectValue(UserAccount::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("userAccount", (n) -> { this.setUserAccount(n.getObjectValue(UserAccount::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the userAccount property value. The user account details.
@@ -45,13 +43,14 @@ public class UserEvidence extends AlertEvidence implements Parsable {
      */
     @javax.annotation.Nullable
     public UserAccount getUserAccount() {
-        return this._userAccount;
+        return this.userAccount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +61,8 @@ public class UserEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the userAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAccount(@javax.annotation.Nullable final UserAccount value) {
-        this._userAccount = value;
+        this.userAccount = value;
     }
 }

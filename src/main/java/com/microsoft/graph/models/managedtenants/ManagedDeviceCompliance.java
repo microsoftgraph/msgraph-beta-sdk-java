@@ -5,47 +5,45 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ManagedDeviceCompliance extends Entity implements Parsable {
     /** Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager. Optional. Read-only. */
-    private String _complianceStatus;
+    private String complianceStatus;
     /** Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.  Optional. Read-only. */
-    private String _deviceType;
+    private String deviceType;
     /** The date and time when the grace period will expire. Optional. Read-only. */
-    private OffsetDateTime _inGracePeriodUntilDateTime;
+    private OffsetDateTime inGracePeriodUntilDateTime;
     /** Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only. */
-    private OffsetDateTime _lastRefreshedDateTime;
+    private OffsetDateTime lastRefreshedDateTime;
     /** The date and time that the device last completed a successful sync with Microsoft Endpoint Manager. Optional. Read-only. */
-    private OffsetDateTime _lastSyncDateTime;
+    private OffsetDateTime lastSyncDateTime;
     /** The identifier for the managed device in Microsoft Endpoint Manager. Optional. Read-only. */
-    private String _managedDeviceId;
+    private String managedDeviceId;
     /** The display name for the managed device. Optional. Read-only. */
-    private String _managedDeviceName;
+    private String managedDeviceName;
     /** The manufacture for the device. Optional. Read-only. */
-    private String _manufacturer;
+    private String manufacturer;
     /** The model for the device. Optional. Read-only. */
-    private String _model;
+    private String model;
     /** The description of the operating system for the managed device. Optional. Read-only. */
-    private String _osDescription;
+    private String osDescription;
     /** The version of the operating system for the managed device. Optional. Read-only. */
-    private String _osVersion;
+    private String osVersion;
     /** The type of owner for the managed device. Optional. Read-only. */
-    private String _ownerType;
+    private String ownerType;
     /** The display name for the managed tenant. Optional. Read-only. */
-    private String _tenantDisplayName;
+    private String tenantDisplayName;
     /** The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only. */
-    private String _tenantId;
+    private String tenantId;
     /**
      * Instantiates a new managedDeviceCompliance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedDeviceCompliance() {
         super();
-        this.setOdataType("#microsoft.graph.managedTenants.managedDeviceCompliance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,7 +61,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getComplianceStatus() {
-        return this._complianceStatus;
+        return this.complianceStatus;
     }
     /**
      * Gets the deviceType property value. Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.  Optional. Read-only.
@@ -71,31 +69,30 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceType() {
-        return this._deviceType;
+        return this.deviceType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedDeviceCompliance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("complianceStatus", (n) -> { currentObject.setComplianceStatus(n.getStringValue()); });
-            this.put("deviceType", (n) -> { currentObject.setDeviceType(n.getStringValue()); });
-            this.put("inGracePeriodUntilDateTime", (n) -> { currentObject.setInGracePeriodUntilDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastRefreshedDateTime", (n) -> { currentObject.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastSyncDateTime", (n) -> { currentObject.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-            this.put("managedDeviceName", (n) -> { currentObject.setManagedDeviceName(n.getStringValue()); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("osDescription", (n) -> { currentObject.setOsDescription(n.getStringValue()); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
-            this.put("ownerType", (n) -> { currentObject.setOwnerType(n.getStringValue()); });
-            this.put("tenantDisplayName", (n) -> { currentObject.setTenantDisplayName(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("complianceStatus", (n) -> { this.setComplianceStatus(n.getStringValue()); });
+        deserializerMap.put("deviceType", (n) -> { this.setDeviceType(n.getStringValue()); });
+        deserializerMap.put("inGracePeriodUntilDateTime", (n) -> { this.setInGracePeriodUntilDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastRefreshedDateTime", (n) -> { this.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
+        deserializerMap.put("managedDeviceName", (n) -> { this.setManagedDeviceName(n.getStringValue()); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("osDescription", (n) -> { this.setOsDescription(n.getStringValue()); });
+        deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getStringValue()); });
+        deserializerMap.put("ownerType", (n) -> { this.setOwnerType(n.getStringValue()); });
+        deserializerMap.put("tenantDisplayName", (n) -> { this.setTenantDisplayName(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the inGracePeriodUntilDateTime property value. The date and time when the grace period will expire. Optional. Read-only.
@@ -103,7 +100,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getInGracePeriodUntilDateTime() {
-        return this._inGracePeriodUntilDateTime;
+        return this.inGracePeriodUntilDateTime;
     }
     /**
      * Gets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
@@ -111,7 +108,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {
-        return this._lastRefreshedDateTime;
+        return this.lastRefreshedDateTime;
     }
     /**
      * Gets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Microsoft Endpoint Manager. Optional. Read-only.
@@ -119,7 +116,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastSyncDateTime() {
-        return this._lastSyncDateTime;
+        return this.lastSyncDateTime;
     }
     /**
      * Gets the managedDeviceId property value. The identifier for the managed device in Microsoft Endpoint Manager. Optional. Read-only.
@@ -127,7 +124,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getManagedDeviceId() {
-        return this._managedDeviceId;
+        return this.managedDeviceId;
     }
     /**
      * Gets the managedDeviceName property value. The display name for the managed device. Optional. Read-only.
@@ -135,7 +132,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getManagedDeviceName() {
-        return this._managedDeviceName;
+        return this.managedDeviceName;
     }
     /**
      * Gets the manufacturer property value. The manufacture for the device. Optional. Read-only.
@@ -143,7 +140,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getManufacturer() {
-        return this._manufacturer;
+        return this.manufacturer;
     }
     /**
      * Gets the model property value. The model for the device. Optional. Read-only.
@@ -151,7 +148,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getModel() {
-        return this._model;
+        return this.model;
     }
     /**
      * Gets the osDescription property value. The description of the operating system for the managed device. Optional. Read-only.
@@ -159,7 +156,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOsDescription() {
-        return this._osDescription;
+        return this.osDescription;
     }
     /**
      * Gets the osVersion property value. The version of the operating system for the managed device. Optional. Read-only.
@@ -167,7 +164,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOsVersion() {
-        return this._osVersion;
+        return this.osVersion;
     }
     /**
      * Gets the ownerType property value. The type of owner for the managed device. Optional. Read-only.
@@ -175,7 +172,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOwnerType() {
-        return this._ownerType;
+        return this.ownerType;
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
@@ -183,7 +180,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantDisplayName() {
-        return this._tenantDisplayName;
+        return this.tenantDisplayName;
     }
     /**
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
@@ -191,13 +188,14 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -221,111 +219,125 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
      * @param value Value to set for the complianceStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComplianceStatus(@javax.annotation.Nullable final String value) {
-        this._complianceStatus = value;
+        this.complianceStatus = value;
     }
     /**
      * Sets the deviceType property value. Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.  Optional. Read-only.
      * @param value Value to set for the deviceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceType(@javax.annotation.Nullable final String value) {
-        this._deviceType = value;
+        this.deviceType = value;
     }
     /**
      * Sets the inGracePeriodUntilDateTime property value. The date and time when the grace period will expire. Optional. Read-only.
      * @param value Value to set for the inGracePeriodUntilDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInGracePeriodUntilDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._inGracePeriodUntilDateTime = value;
+        this.inGracePeriodUntilDateTime = value;
     }
     /**
      * Sets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
      * @param value Value to set for the lastRefreshedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastRefreshedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastRefreshedDateTime = value;
+        this.lastRefreshedDateTime = value;
     }
     /**
      * Sets the lastSyncDateTime property value. The date and time that the device last completed a successful sync with Microsoft Endpoint Manager. Optional. Read-only.
      * @param value Value to set for the lastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastSyncDateTime = value;
+        this.lastSyncDateTime = value;
     }
     /**
      * Sets the managedDeviceId property value. The identifier for the managed device in Microsoft Endpoint Manager. Optional. Read-only.
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
-        this._managedDeviceId = value;
+        this.managedDeviceId = value;
     }
     /**
      * Sets the managedDeviceName property value. The display name for the managed device. Optional. Read-only.
      * @param value Value to set for the managedDeviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceName(@javax.annotation.Nullable final String value) {
-        this._managedDeviceName = value;
+        this.managedDeviceName = value;
     }
     /**
      * Sets the manufacturer property value. The manufacture for the device. Optional. Read-only.
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
-        this._manufacturer = value;
+        this.manufacturer = value;
     }
     /**
      * Sets the model property value. The model for the device. Optional. Read-only.
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
-        this._model = value;
+        this.model = value;
     }
     /**
      * Sets the osDescription property value. The description of the operating system for the managed device. Optional. Read-only.
      * @param value Value to set for the osDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsDescription(@javax.annotation.Nullable final String value) {
-        this._osDescription = value;
+        this.osDescription = value;
     }
     /**
      * Sets the osVersion property value. The version of the operating system for the managed device. Optional. Read-only.
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
-        this._osVersion = value;
+        this.osVersion = value;
     }
     /**
      * Sets the ownerType property value. The type of owner for the managed device. Optional. Read-only.
      * @param value Value to set for the ownerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnerType(@javax.annotation.Nullable final String value) {
-        this._ownerType = value;
+        this.ownerType = value;
     }
     /**
      * Sets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
-        this._tenantDisplayName = value;
+        this.tenantDisplayName = value;
     }
     /**
      * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
 }

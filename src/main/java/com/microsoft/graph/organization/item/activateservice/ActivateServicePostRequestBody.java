@@ -4,24 +4,24 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the activateService method. */
+import java.util.UUID;
 public class ActivateServicePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The service property */
-    private String _service;
+    private String service;
     /** The servicePlanId property */
-    private String _servicePlanId;
+    private UUID servicePlanId;
     /** The skuId property */
-    private String _skuId;
+    private UUID skuId;
     /**
      * Instantiates a new activateServicePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ActivateServicePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,20 +41,19 @@ public class ActivateServicePostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ActivateServicePostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("service", (n) -> { currentObject.setService(n.getStringValue()); });
-            this.put("servicePlanId", (n) -> { currentObject.setServicePlanId(n.getStringValue()); });
-            this.put("skuId", (n) -> { currentObject.setSkuId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("service", (n) -> { this.setService(n.getStringValue()); });
+        deserializerMap.put("servicePlanId", (n) -> { this.setServicePlanId(n.getUUIDValue()); });
+        deserializerMap.put("skuId", (n) -> { this.setSkuId(n.getUUIDValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the service property value. The service property
@@ -62,34 +61,35 @@ public class ActivateServicePostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public String getService() {
-        return this._service;
+        return this.service;
     }
     /**
      * Gets the servicePlanId property value. The servicePlanId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getServicePlanId() {
-        return this._servicePlanId;
+    public UUID getServicePlanId() {
+        return this.servicePlanId;
     }
     /**
      * Gets the skuId property value. The skuId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getSkuId() {
-        return this._skuId;
+    public UUID getSkuId() {
+        return this.skuId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("service", this.getService());
-        writer.writeStringValue("servicePlanId", this.getServicePlanId());
-        writer.writeStringValue("skuId", this.getSkuId());
+        writer.writeUUIDValue("servicePlanId", this.getServicePlanId());
+        writer.writeUUIDValue("skuId", this.getSkuId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -97,31 +97,35 @@ public class ActivateServicePostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the service property value. The service property
      * @param value Value to set for the service property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setService(@javax.annotation.Nullable final String value) {
-        this._service = value;
+        this.service = value;
     }
     /**
      * Sets the servicePlanId property value. The servicePlanId property
      * @param value Value to set for the servicePlanId property.
      * @return a void
      */
-    public void setServicePlanId(@javax.annotation.Nullable final String value) {
-        this._servicePlanId = value;
+    @javax.annotation.Nonnull
+    public void setServicePlanId(@javax.annotation.Nullable final UUID value) {
+        this.servicePlanId = value;
     }
     /**
      * Sets the skuId property value. The skuId property
      * @param value Value to set for the skuId property.
      * @return a void
      */
-    public void setSkuId(@javax.annotation.Nullable final String value) {
-        this._skuId = value;
+    @javax.annotation.Nonnull
+    public void setSkuId(@javax.annotation.Nullable final UUID value) {
+        this.skuId = value;
     }
 }

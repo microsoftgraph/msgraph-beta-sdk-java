@@ -4,47 +4,45 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     /** The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable. Supports $expand. */
-    private AccessPackage _accessPackage;
+    private AccessPackage accessPackage;
     /** For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.  Supports $expand. */
-    private AccessPackageAssignment _accessPackageAssignment;
+    private AccessPackageAssignment accessPackageAssignment;
     /** Answers provided by the requestor to accessPackageQuestions asked of them at the time of request. */
-    private java.util.List<AccessPackageAnswer> _answers;
+    private java.util.List<AccessPackageAnswer> answers;
     /** The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
-    private OffsetDateTime _completedDate;
+    private OffsetDateTime completedDate;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** A collection of custom workflow extension instances being run on an assignment request. Read-only. */
-    private java.util.List<CustomExtensionHandlerInstance> _customExtensionHandlerInstances;
+    private java.util.List<CustomExtensionHandlerInstance> customExtensionHandlerInstances;
     /** The expirationDateTime property */
-    private OffsetDateTime _expirationDateTime;
+    private OffsetDateTime expirationDateTime;
     /** True if the request is not to be processed for assignment. */
-    private Boolean _isValidationOnly;
+    private Boolean isValidationOnly;
     /** The requestor's supplied justification. */
-    private String _justification;
+    private String justification;
     /** The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand. */
-    private AccessPackageSubject _requestor;
+    private AccessPackageSubject requestor;
     /** One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, DeliveryFailed, Submitted or Scheduled. Read-only. */
-    private String _requestState;
+    private String requestState;
     /** More information on the request processing status. Read-only. */
-    private String _requestStatus;
-    /** One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only. */
-    private String _requestType;
+    private String requestStatus;
+    /** One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd, UserUpdate or UserRemove. Read-only. */
+    private String requestType;
     /** The range of dates that access is to be assigned to the requestor. Read-only. */
-    private RequestSchedule _schedule;
+    private RequestSchedule schedule;
     /**
      * Instantiates a new accessPackageAssignmentRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageAssignmentRequest() {
         super();
-        this.setOdataType("#microsoft.graph.accessPackageAssignmentRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,7 +60,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackage getAccessPackage() {
-        return this._accessPackage;
+        return this.accessPackage;
     }
     /**
      * Gets the accessPackageAssignment property value. For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.  Supports $expand.
@@ -70,7 +68,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageAssignment getAccessPackageAssignment() {
-        return this._accessPackageAssignment;
+        return this.accessPackageAssignment;
     }
     /**
      * Gets the answers property value. Answers provided by the requestor to accessPackageQuestions asked of them at the time of request.
@@ -78,7 +76,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AccessPackageAnswer> getAnswers() {
-        return this._answers;
+        return this.answers;
     }
     /**
      * Gets the completedDate property value. The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -86,7 +84,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCompletedDate() {
-        return this._completedDate;
+        return this.completedDate;
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -94,7 +92,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the customExtensionHandlerInstances property value. A collection of custom workflow extension instances being run on an assignment request. Read-only.
@@ -102,7 +100,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CustomExtensionHandlerInstance> getCustomExtensionHandlerInstances() {
-        return this._customExtensionHandlerInstances;
+        return this.customExtensionHandlerInstances;
     }
     /**
      * Gets the expirationDateTime property value. The expirationDateTime property
@@ -110,31 +108,30 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this._expirationDateTime;
+        return this.expirationDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessPackageAssignmentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessPackage", (n) -> { currentObject.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
-            this.put("accessPackageAssignment", (n) -> { currentObject.setAccessPackageAssignment(n.getObjectValue(AccessPackageAssignment::createFromDiscriminatorValue)); });
-            this.put("answers", (n) -> { currentObject.setAnswers(n.getCollectionOfObjectValues(AccessPackageAnswer::createFromDiscriminatorValue)); });
-            this.put("completedDate", (n) -> { currentObject.setCompletedDate(n.getOffsetDateTimeValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("customExtensionHandlerInstances", (n) -> { currentObject.setCustomExtensionHandlerInstances(n.getCollectionOfObjectValues(CustomExtensionHandlerInstance::createFromDiscriminatorValue)); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("isValidationOnly", (n) -> { currentObject.setIsValidationOnly(n.getBooleanValue()); });
-            this.put("justification", (n) -> { currentObject.setJustification(n.getStringValue()); });
-            this.put("requestor", (n) -> { currentObject.setRequestor(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
-            this.put("requestState", (n) -> { currentObject.setRequestState(n.getStringValue()); });
-            this.put("requestStatus", (n) -> { currentObject.setRequestStatus(n.getStringValue()); });
-            this.put("requestType", (n) -> { currentObject.setRequestType(n.getStringValue()); });
-            this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackage", (n) -> { this.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageAssignment", (n) -> { this.setAccessPackageAssignment(n.getObjectValue(AccessPackageAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("answers", (n) -> { this.setAnswers(n.getCollectionOfObjectValues(AccessPackageAnswer::createFromDiscriminatorValue)); });
+        deserializerMap.put("completedDate", (n) -> { this.setCompletedDate(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("customExtensionHandlerInstances", (n) -> { this.setCustomExtensionHandlerInstances(n.getCollectionOfObjectValues(CustomExtensionHandlerInstance::createFromDiscriminatorValue)); });
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("isValidationOnly", (n) -> { this.setIsValidationOnly(n.getBooleanValue()); });
+        deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
+        deserializerMap.put("requestor", (n) -> { this.setRequestor(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
+        deserializerMap.put("requestState", (n) -> { this.setRequestState(n.getStringValue()); });
+        deserializerMap.put("requestStatus", (n) -> { this.setRequestStatus(n.getStringValue()); });
+        deserializerMap.put("requestType", (n) -> { this.setRequestType(n.getStringValue()); });
+        deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isValidationOnly property value. True if the request is not to be processed for assignment.
@@ -142,7 +139,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsValidationOnly() {
-        return this._isValidationOnly;
+        return this.isValidationOnly;
     }
     /**
      * Gets the justification property value. The requestor's supplied justification.
@@ -150,7 +147,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getJustification() {
-        return this._justification;
+        return this.justification;
     }
     /**
      * Gets the requestor property value. The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
@@ -158,7 +155,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageSubject getRequestor() {
-        return this._requestor;
+        return this.requestor;
     }
     /**
      * Gets the requestState property value. One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, DeliveryFailed, Submitted or Scheduled. Read-only.
@@ -166,7 +163,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRequestState() {
-        return this._requestState;
+        return this.requestState;
     }
     /**
      * Gets the requestStatus property value. More information on the request processing status. Read-only.
@@ -174,15 +171,15 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRequestStatus() {
-        return this._requestStatus;
+        return this.requestStatus;
     }
     /**
-     * Gets the requestType property value. One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+     * Gets the requestType property value. One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd, UserUpdate or UserRemove. Read-only.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getRequestType() {
-        return this._requestType;
+        return this.requestType;
     }
     /**
      * Gets the schedule property value. The range of dates that access is to be assigned to the requestor. Read-only.
@@ -190,13 +187,14 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RequestSchedule getSchedule() {
-        return this._schedule;
+        return this.schedule;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -220,111 +218,125 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      * @param value Value to set for the accessPackage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackage(@javax.annotation.Nullable final AccessPackage value) {
-        this._accessPackage = value;
+        this.accessPackage = value;
     }
     /**
      * Sets the accessPackageAssignment property value. For a requestType of UserAdd or AdminAdd, this is an access package assignment requested to be created.  For a requestType of UserRemove, AdminRemove or SystemRemove, this has the id property of an existing assignment to be removed.  Supports $expand.
      * @param value Value to set for the accessPackageAssignment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageAssignment(@javax.annotation.Nullable final AccessPackageAssignment value) {
-        this._accessPackageAssignment = value;
+        this.accessPackageAssignment = value;
     }
     /**
      * Sets the answers property value. Answers provided by the requestor to accessPackageQuestions asked of them at the time of request.
      * @param value Value to set for the answers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAnswers(@javax.annotation.Nullable final java.util.List<AccessPackageAnswer> value) {
-        this._answers = value;
+        this.answers = value;
     }
     /**
      * Sets the completedDate property value. The date of the end of processing, either successful or failure, of a request. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the completedDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedDate(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._completedDate = value;
+        this.completedDate = value;
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the customExtensionHandlerInstances property value. A collection of custom workflow extension instances being run on an assignment request. Read-only.
      * @param value Value to set for the customExtensionHandlerInstances property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomExtensionHandlerInstances(@javax.annotation.Nullable final java.util.List<CustomExtensionHandlerInstance> value) {
-        this._customExtensionHandlerInstances = value;
+        this.customExtensionHandlerInstances = value;
     }
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expirationDateTime = value;
+        this.expirationDateTime = value;
     }
     /**
      * Sets the isValidationOnly property value. True if the request is not to be processed for assignment.
      * @param value Value to set for the isValidationOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsValidationOnly(@javax.annotation.Nullable final Boolean value) {
-        this._isValidationOnly = value;
+        this.isValidationOnly = value;
     }
     /**
      * Sets the justification property value. The requestor's supplied justification.
      * @param value Value to set for the justification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJustification(@javax.annotation.Nullable final String value) {
-        this._justification = value;
+        this.justification = value;
     }
     /**
      * Sets the requestor property value. The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the requestor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestor(@javax.annotation.Nullable final AccessPackageSubject value) {
-        this._requestor = value;
+        this.requestor = value;
     }
     /**
      * Sets the requestState property value. One of PendingApproval, Canceled,  Denied, Delivering, Delivered, PartiallyDelivered, DeliveryFailed, Submitted or Scheduled. Read-only.
      * @param value Value to set for the requestState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestState(@javax.annotation.Nullable final String value) {
-        this._requestState = value;
+        this.requestState = value;
     }
     /**
      * Sets the requestStatus property value. More information on the request processing status. Read-only.
      * @param value Value to set for the requestStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestStatus(@javax.annotation.Nullable final String value) {
-        this._requestStatus = value;
+        this.requestStatus = value;
     }
     /**
-     * Sets the requestType property value. One of UserAdd, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd or UserRemove. Read-only.
+     * Sets the requestType property value. One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove or SystemRemove. A request from the user themselves would have requestType of UserAdd, UserUpdate or UserRemove. Read-only.
      * @param value Value to set for the requestType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestType(@javax.annotation.Nullable final String value) {
-        this._requestType = value;
+        this.requestType = value;
     }
     /**
      * Sets the schedule property value. The range of dates that access is to be assigned to the requestor. Read-only.
      * @param value Value to set for the schedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedule(@javax.annotation.Nullable final RequestSchedule value) {
-        this._schedule = value;
+        this.schedule = value;
     }
 }

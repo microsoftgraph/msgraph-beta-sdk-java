@@ -3,21 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpointConfiguration implements Parsable {
     /** The name of the logic app. */
-    private String _logicAppWorkflowName;
+    private String logicAppWorkflowName;
     /** The Azure resource group name for the logic app. */
-    private String _resourceGroupName;
+    private String resourceGroupName;
     /** Identifier of the Azure subscription for the logic app. */
-    private String _subscriptionId;
+    private String subscriptionId;
     /**
      * Instantiates a new LogicAppTriggerEndpointConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LogicAppTriggerEndpointConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.logicAppTriggerEndpointConfiguration");
@@ -34,16 +34,15 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LogicAppTriggerEndpointConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("logicAppWorkflowName", (n) -> { currentObject.setLogicAppWorkflowName(n.getStringValue()); });
-            this.put("resourceGroupName", (n) -> { currentObject.setResourceGroupName(n.getStringValue()); });
-            this.put("subscriptionId", (n) -> { currentObject.setSubscriptionId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("logicAppWorkflowName", (n) -> { this.setLogicAppWorkflowName(n.getStringValue()); });
+        deserializerMap.put("resourceGroupName", (n) -> { this.setResourceGroupName(n.getStringValue()); });
+        deserializerMap.put("subscriptionId", (n) -> { this.setSubscriptionId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the logicAppWorkflowName property value. The name of the logic app.
@@ -51,7 +50,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      */
     @javax.annotation.Nullable
     public String getLogicAppWorkflowName() {
-        return this._logicAppWorkflowName;
+        return this.logicAppWorkflowName;
     }
     /**
      * Gets the resourceGroupName property value. The Azure resource group name for the logic app.
@@ -59,7 +58,7 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      */
     @javax.annotation.Nullable
     public String getResourceGroupName() {
-        return this._resourceGroupName;
+        return this.resourceGroupName;
     }
     /**
      * Gets the subscriptionId property value. Identifier of the Azure subscription for the logic app.
@@ -67,13 +66,14 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      */
     @javax.annotation.Nullable
     public String getSubscriptionId() {
-        return this._subscriptionId;
+        return this.subscriptionId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +86,26 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
      * @param value Value to set for the logicAppWorkflowName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLogicAppWorkflowName(@javax.annotation.Nullable final String value) {
-        this._logicAppWorkflowName = value;
+        this.logicAppWorkflowName = value;
     }
     /**
      * Sets the resourceGroupName property value. The Azure resource group name for the logic app.
      * @param value Value to set for the resourceGroupName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceGroupName(@javax.annotation.Nullable final String value) {
-        this._resourceGroupName = value;
+        this.resourceGroupName = value;
     }
     /**
      * Sets the subscriptionId property value. Identifier of the Azure subscription for the logic app.
      * @param value Value to set for the subscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubscriptionId(@javax.annotation.Nullable final String value) {
-        this._subscriptionId = value;
+        this.subscriptionId = value;
     }
 }

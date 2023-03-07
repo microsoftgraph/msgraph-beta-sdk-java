@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Wi-Fi authentication method. */
 public enum WiFiAuthenticationMethod implements ValuedEnum {
     /** Use an identity certificate for authentication. */
     Certificate("certificate"),

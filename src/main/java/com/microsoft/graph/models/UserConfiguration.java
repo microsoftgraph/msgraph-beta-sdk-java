@@ -3,21 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class UserConfiguration extends Entity implements Parsable {
     /** The binaryData property */
-    private byte[] _binaryData;
+    private byte[] binaryData;
     /**
      * Instantiates a new userConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserConfiguration() {
         super();
-        this.setOdataType("#microsoft.graph.userConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,24 +33,24 @@ public class UserConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public byte[] getBinaryData() {
-        return this._binaryData;
+        return this.binaryData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("binaryData", (n) -> { currentObject.setBinaryData(n.getByteArrayValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("binaryData", (n) -> { this.setBinaryData(n.getByteArrayValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,7 +61,8 @@ public class UserConfiguration extends Entity implements Parsable {
      * @param value Value to set for the binaryData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBinaryData(@javax.annotation.Nullable final byte[] value) {
-        this._binaryData = value;
+        this.binaryData = value;
     }
 }

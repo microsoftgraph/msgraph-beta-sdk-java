@@ -3,27 +3,28 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Windows Information Protection AppLocker File */
+/**
+ * Windows Information Protection AppLocker File
+ */
 public class WindowsInformationProtectionAppLockerFile extends Entity implements Parsable {
     /** The friendly name */
-    private String _displayName;
+    private String displayName;
     /** File as a byte array */
-    private byte[] _file;
+    private byte[] file;
     /** SHA256 hash of the file */
-    private String _fileHash;
+    private String fileHash;
     /** Version of the entity. */
-    private String _version;
+    private String version;
     /**
      * Instantiates a new windowsInformationProtectionAppLockerFile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsInformationProtectionAppLockerFile() {
         super();
-        this.setOdataType("#microsoft.graph.windowsInformationProtectionAppLockerFile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,21 +42,20 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsInformationProtectionAppLockerFile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("file", (n) -> { currentObject.setFile(n.getByteArrayValue()); });
-            this.put("fileHash", (n) -> { currentObject.setFileHash(n.getStringValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("file", (n) -> { this.setFile(n.getByteArrayValue()); });
+        deserializerMap.put("fileHash", (n) -> { this.setFileHash(n.getStringValue()); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the file property value. File as a byte array
@@ -63,7 +63,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      */
     @javax.annotation.Nullable
     public byte[] getFile() {
-        return this._file;
+        return this.file;
     }
     /**
      * Gets the fileHash property value. SHA256 hash of the file
@@ -71,7 +71,7 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      */
     @javax.annotation.Nullable
     public String getFileHash() {
-        return this._fileHash;
+        return this.fileHash;
     }
     /**
      * Gets the version property value. Version of the entity.
@@ -79,13 +79,14 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,31 +100,35 @@ public class WindowsInformationProtectionAppLockerFile extends Entity implements
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the file property value. File as a byte array
      * @param value Value to set for the file property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFile(@javax.annotation.Nullable final byte[] value) {
-        this._file = value;
+        this.file = value;
     }
     /**
      * Sets the fileHash property value. SHA256 hash of the file
      * @param value Value to set for the fileHash property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileHash(@javax.annotation.Nullable final String value) {
-        this._fileHash = value;
+        this.fileHash = value;
     }
     /**
      * Sets the version property value. Version of the entity.
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

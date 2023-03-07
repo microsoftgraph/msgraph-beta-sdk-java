@@ -3,63 +3,63 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration implements Parsable {
     /** Possible values of a property */
-    private Enablement _advancedThreatProtectionAutomaticSampleSubmission;
+    private Enablement advancedThreatProtectionAutomaticSampleSubmission;
     /** Possible values of a property */
-    private Enablement _advancedThreatProtectionCloudDelivered;
+    private Enablement advancedThreatProtectionCloudDelivered;
     /** Possible values of a property */
-    private Enablement _advancedThreatProtectionDiagnosticDataCollection;
+    private Enablement advancedThreatProtectionDiagnosticDataCollection;
     /** A list of file extensions to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS. */
-    private java.util.List<String> _advancedThreatProtectionExcludedExtensions;
+    private java.util.List<String> advancedThreatProtectionExcludedExtensions;
     /** A list of paths to files to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS. */
-    private java.util.List<String> _advancedThreatProtectionExcludedFiles;
+    private java.util.List<String> advancedThreatProtectionExcludedFiles;
     /** A list of paths to folders to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS. */
-    private java.util.List<String> _advancedThreatProtectionExcludedFolders;
+    private java.util.List<String> advancedThreatProtectionExcludedFolders;
     /** A list of process names to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS. */
-    private java.util.List<String> _advancedThreatProtectionExcludedProcesses;
+    private java.util.List<String> advancedThreatProtectionExcludedProcesses;
     /** Possible values of a property */
-    private Enablement _advancedThreatProtectionRealTime;
+    private Enablement advancedThreatProtectionRealTime;
     /** Optional. If set to true, the user can defer the enabling of FileVault until they sign out. */
-    private Boolean _fileVaultAllowDeferralUntilSignOut;
+    private Boolean fileVaultAllowDeferralUntilSignOut;
     /** Optional. When using the Defer option, if set to true, the user is not prompted to enable FileVault at sign-out. */
-    private Boolean _fileVaultDisablePromptAtSignOut;
+    private Boolean fileVaultDisablePromptAtSignOut;
     /** Whether FileVault should be enabled or not. */
-    private Boolean _fileVaultEnabled;
+    private Boolean fileVaultEnabled;
     /** Optional. A hidden personal recovery key does not appear on the user's screen during FileVault encryption, reducing the risk of it ending up in the wrong hands. */
-    private Boolean _fileVaultHidePersonalRecoveryKey;
+    private Boolean fileVaultHidePersonalRecoveryKey;
     /** Required if selected recovery key type(s) include InstitutionalRecoveryKey. The DER Encoded certificate file used to set an institutional recovery key. */
-    private byte[] _fileVaultInstitutionalRecoveryKeyCertificate;
+    private byte[] fileVaultInstitutionalRecoveryKeyCertificate;
     /** File name of the institutional recovery key certificate to display in UI. (.der). */
-    private String _fileVaultInstitutionalRecoveryKeyCertificateFileName;
+    private String fileVaultInstitutionalRecoveryKeyCertificateFileName;
     /** Optional. When using the Defer option, this is the maximum number of times the user can ignore prompts to enable FileVault before FileVault will be required for the user to sign in. If set to -1, it will always prompt to enable FileVault until FileVault is enabled, though it will allow the user to bypass enabling FileVault. Setting this to 0 will disable the feature. */
-    private Integer _fileVaultNumberOfTimesUserCanIgnore;
+    private Integer fileVaultNumberOfTimesUserCanIgnore;
     /** Required if selected recovery key type(s) include PersonalRecoveryKey. A short message displayed to the user that explains how they can retrieve their personal recovery key. */
-    private String _fileVaultPersonalRecoveryKeyHelpMessage;
+    private String fileVaultPersonalRecoveryKeyHelpMessage;
     /** Optional. If selected recovery key type(s) include PersonalRecoveryKey, the frequency to rotate that key, in months. */
-    private Integer _fileVaultPersonalRecoveryKeyRotationInMonths;
+    private Integer fileVaultPersonalRecoveryKeyRotationInMonths;
     /** Recovery key types for macOS FileVault */
-    private MacOSFileVaultRecoveryKeyTypes _fileVaultSelectedRecoveryKeyTypes;
+    private MacOSFileVaultRecoveryKeyTypes fileVaultSelectedRecoveryKeyTypes;
     /** List of applications with firewall settings. Firewall settings for applications not on this list are determined by the user. This collection can contain a maximum of 500 elements. */
-    private java.util.List<MacOSFirewallApplication> _firewallApplications;
+    private java.util.List<MacOSFirewallApplication> firewallApplications;
     /** Corresponds to the 'Block all incoming connections' option. */
-    private Boolean _firewallBlockAllIncoming;
+    private Boolean firewallBlockAllIncoming;
     /** Whether the firewall should be enabled or not. */
-    private Boolean _firewallEnabled;
+    private Boolean firewallEnabled;
     /** Corresponds to 'Enable stealth mode.' */
-    private Boolean _firewallEnableStealthMode;
+    private Boolean firewallEnableStealthMode;
     /** App source options for macOS Gatekeeper. */
-    private MacOSGatekeeperAppSources _gatekeeperAllowedAppSource;
+    private MacOSGatekeeperAppSources gatekeeperAllowedAppSource;
     /** If set to true, the user override for Gatekeeper will be disabled. */
-    private Boolean _gatekeeperBlockOverride;
+    private Boolean gatekeeperBlockOverride;
     /**
      * Instantiates a new MacOSEndpointProtectionConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSEndpointProtectionConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSEndpointProtectionConfiguration");
@@ -80,7 +80,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public Enablement getAdvancedThreatProtectionAutomaticSampleSubmission() {
-        return this._advancedThreatProtectionAutomaticSampleSubmission;
+        return this.advancedThreatProtectionAutomaticSampleSubmission;
     }
     /**
      * Gets the advancedThreatProtectionCloudDelivered property value. Possible values of a property
@@ -88,7 +88,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public Enablement getAdvancedThreatProtectionCloudDelivered() {
-        return this._advancedThreatProtectionCloudDelivered;
+        return this.advancedThreatProtectionCloudDelivered;
     }
     /**
      * Gets the advancedThreatProtectionDiagnosticDataCollection property value. Possible values of a property
@@ -96,7 +96,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public Enablement getAdvancedThreatProtectionDiagnosticDataCollection() {
-        return this._advancedThreatProtectionDiagnosticDataCollection;
+        return this.advancedThreatProtectionDiagnosticDataCollection;
     }
     /**
      * Gets the advancedThreatProtectionExcludedExtensions property value. A list of file extensions to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
@@ -104,7 +104,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAdvancedThreatProtectionExcludedExtensions() {
-        return this._advancedThreatProtectionExcludedExtensions;
+        return this.advancedThreatProtectionExcludedExtensions;
     }
     /**
      * Gets the advancedThreatProtectionExcludedFiles property value. A list of paths to files to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
@@ -112,7 +112,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAdvancedThreatProtectionExcludedFiles() {
-        return this._advancedThreatProtectionExcludedFiles;
+        return this.advancedThreatProtectionExcludedFiles;
     }
     /**
      * Gets the advancedThreatProtectionExcludedFolders property value. A list of paths to folders to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
@@ -120,7 +120,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAdvancedThreatProtectionExcludedFolders() {
-        return this._advancedThreatProtectionExcludedFolders;
+        return this.advancedThreatProtectionExcludedFolders;
     }
     /**
      * Gets the advancedThreatProtectionExcludedProcesses property value. A list of process names to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
@@ -128,7 +128,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public java.util.List<String> getAdvancedThreatProtectionExcludedProcesses() {
-        return this._advancedThreatProtectionExcludedProcesses;
+        return this.advancedThreatProtectionExcludedProcesses;
     }
     /**
      * Gets the advancedThreatProtectionRealTime property value. Possible values of a property
@@ -136,41 +136,40 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public Enablement getAdvancedThreatProtectionRealTime() {
-        return this._advancedThreatProtectionRealTime;
+        return this.advancedThreatProtectionRealTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSEndpointProtectionConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("advancedThreatProtectionAutomaticSampleSubmission", (n) -> { currentObject.setAdvancedThreatProtectionAutomaticSampleSubmission(n.getEnumValue(Enablement.class)); });
-            this.put("advancedThreatProtectionCloudDelivered", (n) -> { currentObject.setAdvancedThreatProtectionCloudDelivered(n.getEnumValue(Enablement.class)); });
-            this.put("advancedThreatProtectionDiagnosticDataCollection", (n) -> { currentObject.setAdvancedThreatProtectionDiagnosticDataCollection(n.getEnumValue(Enablement.class)); });
-            this.put("advancedThreatProtectionExcludedExtensions", (n) -> { currentObject.setAdvancedThreatProtectionExcludedExtensions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("advancedThreatProtectionExcludedFiles", (n) -> { currentObject.setAdvancedThreatProtectionExcludedFiles(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("advancedThreatProtectionExcludedFolders", (n) -> { currentObject.setAdvancedThreatProtectionExcludedFolders(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("advancedThreatProtectionExcludedProcesses", (n) -> { currentObject.setAdvancedThreatProtectionExcludedProcesses(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("advancedThreatProtectionRealTime", (n) -> { currentObject.setAdvancedThreatProtectionRealTime(n.getEnumValue(Enablement.class)); });
-            this.put("fileVaultAllowDeferralUntilSignOut", (n) -> { currentObject.setFileVaultAllowDeferralUntilSignOut(n.getBooleanValue()); });
-            this.put("fileVaultDisablePromptAtSignOut", (n) -> { currentObject.setFileVaultDisablePromptAtSignOut(n.getBooleanValue()); });
-            this.put("fileVaultEnabled", (n) -> { currentObject.setFileVaultEnabled(n.getBooleanValue()); });
-            this.put("fileVaultHidePersonalRecoveryKey", (n) -> { currentObject.setFileVaultHidePersonalRecoveryKey(n.getBooleanValue()); });
-            this.put("fileVaultInstitutionalRecoveryKeyCertificate", (n) -> { currentObject.setFileVaultInstitutionalRecoveryKeyCertificate(n.getByteArrayValue()); });
-            this.put("fileVaultInstitutionalRecoveryKeyCertificateFileName", (n) -> { currentObject.setFileVaultInstitutionalRecoveryKeyCertificateFileName(n.getStringValue()); });
-            this.put("fileVaultNumberOfTimesUserCanIgnore", (n) -> { currentObject.setFileVaultNumberOfTimesUserCanIgnore(n.getIntegerValue()); });
-            this.put("fileVaultPersonalRecoveryKeyHelpMessage", (n) -> { currentObject.setFileVaultPersonalRecoveryKeyHelpMessage(n.getStringValue()); });
-            this.put("fileVaultPersonalRecoveryKeyRotationInMonths", (n) -> { currentObject.setFileVaultPersonalRecoveryKeyRotationInMonths(n.getIntegerValue()); });
-            this.put("fileVaultSelectedRecoveryKeyTypes", (n) -> { currentObject.setFileVaultSelectedRecoveryKeyTypes(n.getEnumValue(MacOSFileVaultRecoveryKeyTypes.class)); });
-            this.put("firewallApplications", (n) -> { currentObject.setFirewallApplications(n.getCollectionOfObjectValues(MacOSFirewallApplication::createFromDiscriminatorValue)); });
-            this.put("firewallBlockAllIncoming", (n) -> { currentObject.setFirewallBlockAllIncoming(n.getBooleanValue()); });
-            this.put("firewallEnabled", (n) -> { currentObject.setFirewallEnabled(n.getBooleanValue()); });
-            this.put("firewallEnableStealthMode", (n) -> { currentObject.setFirewallEnableStealthMode(n.getBooleanValue()); });
-            this.put("gatekeeperAllowedAppSource", (n) -> { currentObject.setGatekeeperAllowedAppSource(n.getEnumValue(MacOSGatekeeperAppSources.class)); });
-            this.put("gatekeeperBlockOverride", (n) -> { currentObject.setGatekeeperBlockOverride(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("advancedThreatProtectionAutomaticSampleSubmission", (n) -> { this.setAdvancedThreatProtectionAutomaticSampleSubmission(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("advancedThreatProtectionCloudDelivered", (n) -> { this.setAdvancedThreatProtectionCloudDelivered(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("advancedThreatProtectionDiagnosticDataCollection", (n) -> { this.setAdvancedThreatProtectionDiagnosticDataCollection(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("advancedThreatProtectionExcludedExtensions", (n) -> { this.setAdvancedThreatProtectionExcludedExtensions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("advancedThreatProtectionExcludedFiles", (n) -> { this.setAdvancedThreatProtectionExcludedFiles(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("advancedThreatProtectionExcludedFolders", (n) -> { this.setAdvancedThreatProtectionExcludedFolders(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("advancedThreatProtectionExcludedProcesses", (n) -> { this.setAdvancedThreatProtectionExcludedProcesses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("advancedThreatProtectionRealTime", (n) -> { this.setAdvancedThreatProtectionRealTime(n.getEnumValue(Enablement.class)); });
+        deserializerMap.put("fileVaultAllowDeferralUntilSignOut", (n) -> { this.setFileVaultAllowDeferralUntilSignOut(n.getBooleanValue()); });
+        deserializerMap.put("fileVaultDisablePromptAtSignOut", (n) -> { this.setFileVaultDisablePromptAtSignOut(n.getBooleanValue()); });
+        deserializerMap.put("fileVaultEnabled", (n) -> { this.setFileVaultEnabled(n.getBooleanValue()); });
+        deserializerMap.put("fileVaultHidePersonalRecoveryKey", (n) -> { this.setFileVaultHidePersonalRecoveryKey(n.getBooleanValue()); });
+        deserializerMap.put("fileVaultInstitutionalRecoveryKeyCertificate", (n) -> { this.setFileVaultInstitutionalRecoveryKeyCertificate(n.getByteArrayValue()); });
+        deserializerMap.put("fileVaultInstitutionalRecoveryKeyCertificateFileName", (n) -> { this.setFileVaultInstitutionalRecoveryKeyCertificateFileName(n.getStringValue()); });
+        deserializerMap.put("fileVaultNumberOfTimesUserCanIgnore", (n) -> { this.setFileVaultNumberOfTimesUserCanIgnore(n.getIntegerValue()); });
+        deserializerMap.put("fileVaultPersonalRecoveryKeyHelpMessage", (n) -> { this.setFileVaultPersonalRecoveryKeyHelpMessage(n.getStringValue()); });
+        deserializerMap.put("fileVaultPersonalRecoveryKeyRotationInMonths", (n) -> { this.setFileVaultPersonalRecoveryKeyRotationInMonths(n.getIntegerValue()); });
+        deserializerMap.put("fileVaultSelectedRecoveryKeyTypes", (n) -> { this.setFileVaultSelectedRecoveryKeyTypes(n.getEnumValue(MacOSFileVaultRecoveryKeyTypes.class)); });
+        deserializerMap.put("firewallApplications", (n) -> { this.setFirewallApplications(n.getCollectionOfObjectValues(MacOSFirewallApplication::createFromDiscriminatorValue)); });
+        deserializerMap.put("firewallBlockAllIncoming", (n) -> { this.setFirewallBlockAllIncoming(n.getBooleanValue()); });
+        deserializerMap.put("firewallEnabled", (n) -> { this.setFirewallEnabled(n.getBooleanValue()); });
+        deserializerMap.put("firewallEnableStealthMode", (n) -> { this.setFirewallEnableStealthMode(n.getBooleanValue()); });
+        deserializerMap.put("gatekeeperAllowedAppSource", (n) -> { this.setGatekeeperAllowedAppSource(n.getEnumValue(MacOSGatekeeperAppSources.class)); });
+        deserializerMap.put("gatekeeperBlockOverride", (n) -> { this.setGatekeeperBlockOverride(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileVaultAllowDeferralUntilSignOut property value. Optional. If set to true, the user can defer the enabling of FileVault until they sign out.
@@ -178,7 +177,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public Boolean getFileVaultAllowDeferralUntilSignOut() {
-        return this._fileVaultAllowDeferralUntilSignOut;
+        return this.fileVaultAllowDeferralUntilSignOut;
     }
     /**
      * Gets the fileVaultDisablePromptAtSignOut property value. Optional. When using the Defer option, if set to true, the user is not prompted to enable FileVault at sign-out.
@@ -186,7 +185,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public Boolean getFileVaultDisablePromptAtSignOut() {
-        return this._fileVaultDisablePromptAtSignOut;
+        return this.fileVaultDisablePromptAtSignOut;
     }
     /**
      * Gets the fileVaultEnabled property value. Whether FileVault should be enabled or not.
@@ -194,7 +193,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public Boolean getFileVaultEnabled() {
-        return this._fileVaultEnabled;
+        return this.fileVaultEnabled;
     }
     /**
      * Gets the fileVaultHidePersonalRecoveryKey property value. Optional. A hidden personal recovery key does not appear on the user's screen during FileVault encryption, reducing the risk of it ending up in the wrong hands.
@@ -202,7 +201,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public Boolean getFileVaultHidePersonalRecoveryKey() {
-        return this._fileVaultHidePersonalRecoveryKey;
+        return this.fileVaultHidePersonalRecoveryKey;
     }
     /**
      * Gets the fileVaultInstitutionalRecoveryKeyCertificate property value. Required if selected recovery key type(s) include InstitutionalRecoveryKey. The DER Encoded certificate file used to set an institutional recovery key.
@@ -210,7 +209,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public byte[] getFileVaultInstitutionalRecoveryKeyCertificate() {
-        return this._fileVaultInstitutionalRecoveryKeyCertificate;
+        return this.fileVaultInstitutionalRecoveryKeyCertificate;
     }
     /**
      * Gets the fileVaultInstitutionalRecoveryKeyCertificateFileName property value. File name of the institutional recovery key certificate to display in UI. (.der).
@@ -218,7 +217,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public String getFileVaultInstitutionalRecoveryKeyCertificateFileName() {
-        return this._fileVaultInstitutionalRecoveryKeyCertificateFileName;
+        return this.fileVaultInstitutionalRecoveryKeyCertificateFileName;
     }
     /**
      * Gets the fileVaultNumberOfTimesUserCanIgnore property value. Optional. When using the Defer option, this is the maximum number of times the user can ignore prompts to enable FileVault before FileVault will be required for the user to sign in. If set to -1, it will always prompt to enable FileVault until FileVault is enabled, though it will allow the user to bypass enabling FileVault. Setting this to 0 will disable the feature.
@@ -226,7 +225,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public Integer getFileVaultNumberOfTimesUserCanIgnore() {
-        return this._fileVaultNumberOfTimesUserCanIgnore;
+        return this.fileVaultNumberOfTimesUserCanIgnore;
     }
     /**
      * Gets the fileVaultPersonalRecoveryKeyHelpMessage property value. Required if selected recovery key type(s) include PersonalRecoveryKey. A short message displayed to the user that explains how they can retrieve their personal recovery key.
@@ -234,7 +233,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public String getFileVaultPersonalRecoveryKeyHelpMessage() {
-        return this._fileVaultPersonalRecoveryKeyHelpMessage;
+        return this.fileVaultPersonalRecoveryKeyHelpMessage;
     }
     /**
      * Gets the fileVaultPersonalRecoveryKeyRotationInMonths property value. Optional. If selected recovery key type(s) include PersonalRecoveryKey, the frequency to rotate that key, in months.
@@ -242,7 +241,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public Integer getFileVaultPersonalRecoveryKeyRotationInMonths() {
-        return this._fileVaultPersonalRecoveryKeyRotationInMonths;
+        return this.fileVaultPersonalRecoveryKeyRotationInMonths;
     }
     /**
      * Gets the fileVaultSelectedRecoveryKeyTypes property value. Recovery key types for macOS FileVault
@@ -250,7 +249,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public MacOSFileVaultRecoveryKeyTypes getFileVaultSelectedRecoveryKeyTypes() {
-        return this._fileVaultSelectedRecoveryKeyTypes;
+        return this.fileVaultSelectedRecoveryKeyTypes;
     }
     /**
      * Gets the firewallApplications property value. List of applications with firewall settings. Firewall settings for applications not on this list are determined by the user. This collection can contain a maximum of 500 elements.
@@ -258,7 +257,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public java.util.List<MacOSFirewallApplication> getFirewallApplications() {
-        return this._firewallApplications;
+        return this.firewallApplications;
     }
     /**
      * Gets the firewallBlockAllIncoming property value. Corresponds to the 'Block all incoming connections' option.
@@ -266,7 +265,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public Boolean getFirewallBlockAllIncoming() {
-        return this._firewallBlockAllIncoming;
+        return this.firewallBlockAllIncoming;
     }
     /**
      * Gets the firewallEnabled property value. Whether the firewall should be enabled or not.
@@ -274,7 +273,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public Boolean getFirewallEnabled() {
-        return this._firewallEnabled;
+        return this.firewallEnabled;
     }
     /**
      * Gets the firewallEnableStealthMode property value. Corresponds to 'Enable stealth mode.'
@@ -282,7 +281,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public Boolean getFirewallEnableStealthMode() {
-        return this._firewallEnableStealthMode;
+        return this.firewallEnableStealthMode;
     }
     /**
      * Gets the gatekeeperAllowedAppSource property value. App source options for macOS Gatekeeper.
@@ -290,7 +289,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public MacOSGatekeeperAppSources getGatekeeperAllowedAppSource() {
-        return this._gatekeeperAllowedAppSource;
+        return this.gatekeeperAllowedAppSource;
     }
     /**
      * Gets the gatekeeperBlockOverride property value. If set to true, the user override for Gatekeeper will be disabled.
@@ -298,13 +297,14 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public Boolean getGatekeeperBlockOverride() {
-        return this._gatekeeperBlockOverride;
+        return this.gatekeeperBlockOverride;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -338,191 +338,215 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
      * @param value Value to set for the advancedThreatProtectionAutomaticSampleSubmission property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionAutomaticSampleSubmission(@javax.annotation.Nullable final Enablement value) {
-        this._advancedThreatProtectionAutomaticSampleSubmission = value;
+        this.advancedThreatProtectionAutomaticSampleSubmission = value;
     }
     /**
      * Sets the advancedThreatProtectionCloudDelivered property value. Possible values of a property
      * @param value Value to set for the advancedThreatProtectionCloudDelivered property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionCloudDelivered(@javax.annotation.Nullable final Enablement value) {
-        this._advancedThreatProtectionCloudDelivered = value;
+        this.advancedThreatProtectionCloudDelivered = value;
     }
     /**
      * Sets the advancedThreatProtectionDiagnosticDataCollection property value. Possible values of a property
      * @param value Value to set for the advancedThreatProtectionDiagnosticDataCollection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionDiagnosticDataCollection(@javax.annotation.Nullable final Enablement value) {
-        this._advancedThreatProtectionDiagnosticDataCollection = value;
+        this.advancedThreatProtectionDiagnosticDataCollection = value;
     }
     /**
      * Sets the advancedThreatProtectionExcludedExtensions property value. A list of file extensions to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
      * @param value Value to set for the advancedThreatProtectionExcludedExtensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionExcludedExtensions(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._advancedThreatProtectionExcludedExtensions = value;
+        this.advancedThreatProtectionExcludedExtensions = value;
     }
     /**
      * Sets the advancedThreatProtectionExcludedFiles property value. A list of paths to files to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
      * @param value Value to set for the advancedThreatProtectionExcludedFiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionExcludedFiles(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._advancedThreatProtectionExcludedFiles = value;
+        this.advancedThreatProtectionExcludedFiles = value;
     }
     /**
      * Sets the advancedThreatProtectionExcludedFolders property value. A list of paths to folders to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
      * @param value Value to set for the advancedThreatProtectionExcludedFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionExcludedFolders(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._advancedThreatProtectionExcludedFolders = value;
+        this.advancedThreatProtectionExcludedFolders = value;
     }
     /**
      * Sets the advancedThreatProtectionExcludedProcesses property value. A list of process names to exclude from antivirus scanning for Microsoft Defender Advanced Threat Protection on macOS.
      * @param value Value to set for the advancedThreatProtectionExcludedProcesses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionExcludedProcesses(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._advancedThreatProtectionExcludedProcesses = value;
+        this.advancedThreatProtectionExcludedProcesses = value;
     }
     /**
      * Sets the advancedThreatProtectionRealTime property value. Possible values of a property
      * @param value Value to set for the advancedThreatProtectionRealTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionRealTime(@javax.annotation.Nullable final Enablement value) {
-        this._advancedThreatProtectionRealTime = value;
+        this.advancedThreatProtectionRealTime = value;
     }
     /**
      * Sets the fileVaultAllowDeferralUntilSignOut property value. Optional. If set to true, the user can defer the enabling of FileVault until they sign out.
      * @param value Value to set for the fileVaultAllowDeferralUntilSignOut property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultAllowDeferralUntilSignOut(@javax.annotation.Nullable final Boolean value) {
-        this._fileVaultAllowDeferralUntilSignOut = value;
+        this.fileVaultAllowDeferralUntilSignOut = value;
     }
     /**
      * Sets the fileVaultDisablePromptAtSignOut property value. Optional. When using the Defer option, if set to true, the user is not prompted to enable FileVault at sign-out.
      * @param value Value to set for the fileVaultDisablePromptAtSignOut property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultDisablePromptAtSignOut(@javax.annotation.Nullable final Boolean value) {
-        this._fileVaultDisablePromptAtSignOut = value;
+        this.fileVaultDisablePromptAtSignOut = value;
     }
     /**
      * Sets the fileVaultEnabled property value. Whether FileVault should be enabled or not.
      * @param value Value to set for the fileVaultEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._fileVaultEnabled = value;
+        this.fileVaultEnabled = value;
     }
     /**
      * Sets the fileVaultHidePersonalRecoveryKey property value. Optional. A hidden personal recovery key does not appear on the user's screen during FileVault encryption, reducing the risk of it ending up in the wrong hands.
      * @param value Value to set for the fileVaultHidePersonalRecoveryKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultHidePersonalRecoveryKey(@javax.annotation.Nullable final Boolean value) {
-        this._fileVaultHidePersonalRecoveryKey = value;
+        this.fileVaultHidePersonalRecoveryKey = value;
     }
     /**
      * Sets the fileVaultInstitutionalRecoveryKeyCertificate property value. Required if selected recovery key type(s) include InstitutionalRecoveryKey. The DER Encoded certificate file used to set an institutional recovery key.
      * @param value Value to set for the fileVaultInstitutionalRecoveryKeyCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultInstitutionalRecoveryKeyCertificate(@javax.annotation.Nullable final byte[] value) {
-        this._fileVaultInstitutionalRecoveryKeyCertificate = value;
+        this.fileVaultInstitutionalRecoveryKeyCertificate = value;
     }
     /**
      * Sets the fileVaultInstitutionalRecoveryKeyCertificateFileName property value. File name of the institutional recovery key certificate to display in UI. (.der).
      * @param value Value to set for the fileVaultInstitutionalRecoveryKeyCertificateFileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultInstitutionalRecoveryKeyCertificateFileName(@javax.annotation.Nullable final String value) {
-        this._fileVaultInstitutionalRecoveryKeyCertificateFileName = value;
+        this.fileVaultInstitutionalRecoveryKeyCertificateFileName = value;
     }
     /**
      * Sets the fileVaultNumberOfTimesUserCanIgnore property value. Optional. When using the Defer option, this is the maximum number of times the user can ignore prompts to enable FileVault before FileVault will be required for the user to sign in. If set to -1, it will always prompt to enable FileVault until FileVault is enabled, though it will allow the user to bypass enabling FileVault. Setting this to 0 will disable the feature.
      * @param value Value to set for the fileVaultNumberOfTimesUserCanIgnore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultNumberOfTimesUserCanIgnore(@javax.annotation.Nullable final Integer value) {
-        this._fileVaultNumberOfTimesUserCanIgnore = value;
+        this.fileVaultNumberOfTimesUserCanIgnore = value;
     }
     /**
      * Sets the fileVaultPersonalRecoveryKeyHelpMessage property value. Required if selected recovery key type(s) include PersonalRecoveryKey. A short message displayed to the user that explains how they can retrieve their personal recovery key.
      * @param value Value to set for the fileVaultPersonalRecoveryKeyHelpMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultPersonalRecoveryKeyHelpMessage(@javax.annotation.Nullable final String value) {
-        this._fileVaultPersonalRecoveryKeyHelpMessage = value;
+        this.fileVaultPersonalRecoveryKeyHelpMessage = value;
     }
     /**
      * Sets the fileVaultPersonalRecoveryKeyRotationInMonths property value. Optional. If selected recovery key type(s) include PersonalRecoveryKey, the frequency to rotate that key, in months.
      * @param value Value to set for the fileVaultPersonalRecoveryKeyRotationInMonths property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultPersonalRecoveryKeyRotationInMonths(@javax.annotation.Nullable final Integer value) {
-        this._fileVaultPersonalRecoveryKeyRotationInMonths = value;
+        this.fileVaultPersonalRecoveryKeyRotationInMonths = value;
     }
     /**
      * Sets the fileVaultSelectedRecoveryKeyTypes property value. Recovery key types for macOS FileVault
      * @param value Value to set for the fileVaultSelectedRecoveryKeyTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileVaultSelectedRecoveryKeyTypes(@javax.annotation.Nullable final MacOSFileVaultRecoveryKeyTypes value) {
-        this._fileVaultSelectedRecoveryKeyTypes = value;
+        this.fileVaultSelectedRecoveryKeyTypes = value;
     }
     /**
      * Sets the firewallApplications property value. List of applications with firewall settings. Firewall settings for applications not on this list are determined by the user. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the firewallApplications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallApplications(@javax.annotation.Nullable final java.util.List<MacOSFirewallApplication> value) {
-        this._firewallApplications = value;
+        this.firewallApplications = value;
     }
     /**
      * Sets the firewallBlockAllIncoming property value. Corresponds to the 'Block all incoming connections' option.
      * @param value Value to set for the firewallBlockAllIncoming property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallBlockAllIncoming(@javax.annotation.Nullable final Boolean value) {
-        this._firewallBlockAllIncoming = value;
+        this.firewallBlockAllIncoming = value;
     }
     /**
      * Sets the firewallEnabled property value. Whether the firewall should be enabled or not.
      * @param value Value to set for the firewallEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._firewallEnabled = value;
+        this.firewallEnabled = value;
     }
     /**
      * Sets the firewallEnableStealthMode property value. Corresponds to 'Enable stealth mode.'
      * @param value Value to set for the firewallEnableStealthMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirewallEnableStealthMode(@javax.annotation.Nullable final Boolean value) {
-        this._firewallEnableStealthMode = value;
+        this.firewallEnableStealthMode = value;
     }
     /**
      * Sets the gatekeeperAllowedAppSource property value. App source options for macOS Gatekeeper.
      * @param value Value to set for the gatekeeperAllowedAppSource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGatekeeperAllowedAppSource(@javax.annotation.Nullable final MacOSGatekeeperAppSources value) {
-        this._gatekeeperAllowedAppSource = value;
+        this.gatekeeperAllowedAppSource = value;
     }
     /**
      * Sets the gatekeeperBlockOverride property value. If set to true, the user override for Gatekeeper will be disabled.
      * @param value Value to set for the gatekeeperBlockOverride property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGatekeeperBlockOverride(@javax.annotation.Nullable final Boolean value) {
-        this._gatekeeperBlockOverride = value;
+        this.gatekeeperBlockOverride = value;
     }
 }

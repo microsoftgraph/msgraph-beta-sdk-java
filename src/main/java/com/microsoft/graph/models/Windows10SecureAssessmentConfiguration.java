@@ -3,31 +3,34 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the secureAssessment resource.
+ */
 public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration implements Parsable {
     /** Indicates whether or not to allow the app from printing during the test. */
-    private Boolean _allowPrinting;
+    private Boolean allowPrinting;
     /** Indicates whether or not to allow screen capture capability during a test. */
-    private Boolean _allowScreenCapture;
+    private Boolean allowScreenCapture;
     /** Indicates whether or not to allow text suggestions during the test. */
-    private Boolean _allowTextSuggestion;
+    private Boolean allowTextSuggestion;
     /** Specifies the application user model ID of the assessment app launched when a user signs in to a secure assessment with a local guest account. Important notice: this property must be set with localGuestAccountName in order to make the local guest account sign-in experience work properly for secure assessments. */
-    private String _assessmentAppUserModelId;
+    private String assessmentAppUserModelId;
     /** The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username). */
-    private String _configurationAccount;
+    private String configurationAccount;
     /** Type of accounts that are allowed for Windows10SecureAssessment ConfigurationAccount. */
-    private SecureAssessmentAccountType _configurationAccountType;
+    private SecureAssessmentAccountType configurationAccountType;
     /** Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/). */
-    private String _launchUri;
+    private String launchUri;
     /** Specifies the display text for the local guest account shown on the sign-in screen. Typically is the name of an assessment. When the user clicks the local guest account on the sign-in screen, an assessment app is launched with a specified assessment URL. Secure assessments can only be configured with local guest account sign-in on devices running Windows 10, version 1903 or later. Important notice: this property must be set with assessmentAppUserModelID in order to make the local guest account sign-in experience work properly for secure assessments. */
-    private String _localGuestAccountName;
+    private String localGuestAccountName;
     /**
-     * Instantiates a new Windows10SecureAssessmentConfiguration and sets the default values.
+     * Instantiates a new windows10SecureAssessmentConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10SecureAssessmentConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windows10SecureAssessmentConfiguration");
@@ -35,7 +38,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Windows10SecureAssessmentConfiguration
+     * @return a windows10SecureAssessmentConfiguration
      */
     @javax.annotation.Nonnull
     public static Windows10SecureAssessmentConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -48,7 +51,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nullable
     public Boolean getAllowPrinting() {
-        return this._allowPrinting;
+        return this.allowPrinting;
     }
     /**
      * Gets the allowScreenCapture property value. Indicates whether or not to allow screen capture capability during a test.
@@ -56,7 +59,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nullable
     public Boolean getAllowScreenCapture() {
-        return this._allowScreenCapture;
+        return this.allowScreenCapture;
     }
     /**
      * Gets the allowTextSuggestion property value. Indicates whether or not to allow text suggestions during the test.
@@ -64,7 +67,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nullable
     public Boolean getAllowTextSuggestion() {
-        return this._allowTextSuggestion;
+        return this.allowTextSuggestion;
     }
     /**
      * Gets the assessmentAppUserModelId property value. Specifies the application user model ID of the assessment app launched when a user signs in to a secure assessment with a local guest account. Important notice: this property must be set with localGuestAccountName in order to make the local guest account sign-in experience work properly for secure assessments.
@@ -72,7 +75,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nullable
     public String getAssessmentAppUserModelId() {
-        return this._assessmentAppUserModelId;
+        return this.assessmentAppUserModelId;
     }
     /**
      * Gets the configurationAccount property value. The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
@@ -80,7 +83,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nullable
     public String getConfigurationAccount() {
-        return this._configurationAccount;
+        return this.configurationAccount;
     }
     /**
      * Gets the configurationAccountType property value. Type of accounts that are allowed for Windows10SecureAssessment ConfigurationAccount.
@@ -88,25 +91,24 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nullable
     public SecureAssessmentAccountType getConfigurationAccountType() {
-        return this._configurationAccountType;
+        return this.configurationAccountType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10SecureAssessmentConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowPrinting", (n) -> { currentObject.setAllowPrinting(n.getBooleanValue()); });
-            this.put("allowScreenCapture", (n) -> { currentObject.setAllowScreenCapture(n.getBooleanValue()); });
-            this.put("allowTextSuggestion", (n) -> { currentObject.setAllowTextSuggestion(n.getBooleanValue()); });
-            this.put("assessmentAppUserModelId", (n) -> { currentObject.setAssessmentAppUserModelId(n.getStringValue()); });
-            this.put("configurationAccount", (n) -> { currentObject.setConfigurationAccount(n.getStringValue()); });
-            this.put("configurationAccountType", (n) -> { currentObject.setConfigurationAccountType(n.getEnumValue(SecureAssessmentAccountType.class)); });
-            this.put("launchUri", (n) -> { currentObject.setLaunchUri(n.getStringValue()); });
-            this.put("localGuestAccountName", (n) -> { currentObject.setLocalGuestAccountName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowPrinting", (n) -> { this.setAllowPrinting(n.getBooleanValue()); });
+        deserializerMap.put("allowScreenCapture", (n) -> { this.setAllowScreenCapture(n.getBooleanValue()); });
+        deserializerMap.put("allowTextSuggestion", (n) -> { this.setAllowTextSuggestion(n.getBooleanValue()); });
+        deserializerMap.put("assessmentAppUserModelId", (n) -> { this.setAssessmentAppUserModelId(n.getStringValue()); });
+        deserializerMap.put("configurationAccount", (n) -> { this.setConfigurationAccount(n.getStringValue()); });
+        deserializerMap.put("configurationAccountType", (n) -> { this.setConfigurationAccountType(n.getEnumValue(SecureAssessmentAccountType.class)); });
+        deserializerMap.put("launchUri", (n) -> { this.setLaunchUri(n.getStringValue()); });
+        deserializerMap.put("localGuestAccountName", (n) -> { this.setLocalGuestAccountName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the launchUri property value. Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
@@ -114,7 +116,7 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nullable
     public String getLaunchUri() {
-        return this._launchUri;
+        return this.launchUri;
     }
     /**
      * Gets the localGuestAccountName property value. Specifies the display text for the local guest account shown on the sign-in screen. Typically is the name of an assessment. When the user clicks the local guest account on the sign-in screen, an assessment app is launched with a specified assessment URL. Secure assessments can only be configured with local guest account sign-in on devices running Windows 10, version 1903 or later. Important notice: this property must be set with assessmentAppUserModelID in order to make the local guest account sign-in experience work properly for secure assessments.
@@ -122,13 +124,14 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      */
     @javax.annotation.Nullable
     public String getLocalGuestAccountName() {
-        return this._localGuestAccountName;
+        return this.localGuestAccountName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,63 +149,71 @@ public class Windows10SecureAssessmentConfiguration extends DeviceConfiguration 
      * @param value Value to set for the allowPrinting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowPrinting(@javax.annotation.Nullable final Boolean value) {
-        this._allowPrinting = value;
+        this.allowPrinting = value;
     }
     /**
      * Sets the allowScreenCapture property value. Indicates whether or not to allow screen capture capability during a test.
      * @param value Value to set for the allowScreenCapture property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowScreenCapture(@javax.annotation.Nullable final Boolean value) {
-        this._allowScreenCapture = value;
+        this.allowScreenCapture = value;
     }
     /**
      * Sets the allowTextSuggestion property value. Indicates whether or not to allow text suggestions during the test.
      * @param value Value to set for the allowTextSuggestion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowTextSuggestion(@javax.annotation.Nullable final Boolean value) {
-        this._allowTextSuggestion = value;
+        this.allowTextSuggestion = value;
     }
     /**
      * Sets the assessmentAppUserModelId property value. Specifies the application user model ID of the assessment app launched when a user signs in to a secure assessment with a local guest account. Important notice: this property must be set with localGuestAccountName in order to make the local guest account sign-in experience work properly for secure assessments.
      * @param value Value to set for the assessmentAppUserModelId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssessmentAppUserModelId(@javax.annotation.Nullable final String value) {
-        this._assessmentAppUserModelId = value;
+        this.assessmentAppUserModelId = value;
     }
     /**
      * Sets the configurationAccount property value. The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
      * @param value Value to set for the configurationAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationAccount(@javax.annotation.Nullable final String value) {
-        this._configurationAccount = value;
+        this.configurationAccount = value;
     }
     /**
      * Sets the configurationAccountType property value. Type of accounts that are allowed for Windows10SecureAssessment ConfigurationAccount.
      * @param value Value to set for the configurationAccountType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationAccountType(@javax.annotation.Nullable final SecureAssessmentAccountType value) {
-        this._configurationAccountType = value;
+        this.configurationAccountType = value;
     }
     /**
      * Sets the launchUri property value. Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
      * @param value Value to set for the launchUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLaunchUri(@javax.annotation.Nullable final String value) {
-        this._launchUri = value;
+        this.launchUri = value;
     }
     /**
      * Sets the localGuestAccountName property value. Specifies the display text for the local guest account shown on the sign-in screen. Typically is the name of an assessment. When the user clicks the local guest account on the sign-in screen, an assessment app is launched with a specified assessment URL. Secure assessments can only be configured with local guest account sign-in on devices running Windows 10, version 1903 or later. Important notice: this property must be set with assessmentAppUserModelID in order to make the local guest account sign-in experience work properly for secure assessments.
      * @param value Value to set for the localGuestAccountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalGuestAccountName(@javax.annotation.Nullable final String value) {
-        this._localGuestAccountName = value;
+        this.localGuestAccountName = value;
     }
 }

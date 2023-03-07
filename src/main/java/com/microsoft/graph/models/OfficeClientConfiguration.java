@@ -1,43 +1,40 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.WindowsOfficeClientConfiguration;
-import com.microsoft.graph.models.WindowsOfficeClientSecurityConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OfficeClientConfiguration extends Entity implements Parsable {
     /** The list of group assignments for the policy. */
-    private java.util.List<OfficeClientConfigurationAssignment> _assignments;
+    private java.util.List<OfficeClientConfigurationAssignment> assignments;
     /** List of office Client check-in status. */
-    private java.util.List<OfficeClientCheckinStatus> _checkinStatuses;
+    private java.util.List<OfficeClientCheckinStatus> checkinStatuses;
     /** Not yet documented */
-    private String _description;
+    private String description;
     /** Admin provided description of the office client configuration policy. */
-    private String _displayName;
+    private String displayName;
     /** Policy settings JSON string in binary format, these values cannot be changed by the user. */
-    private byte[] _policyPayload;
+    private byte[] policyPayload;
     /** Priority value should be unique value for each policy under a tenant and will be used for conflict resolution, lower values mean priority is high. */
-    private Integer _priority;
+    private Integer priority;
     /** User check-in summary for the policy. */
-    private OfficeUserCheckinSummary _userCheckinSummary;
+    private OfficeUserCheckinSummary userCheckinSummary;
     /** Preference settings JSON string in binary format, these values can be overridden by the user. */
-    private byte[] _userPreferencePayload;
+    private byte[] userPreferencePayload;
     /**
-     * Instantiates a new OfficeClientConfiguration and sets the default values.
+     * Instantiates a new officeClientConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OfficeClientConfiguration() {
         super();
-        this.setOdataType("#microsoft.graph.officeClientConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a OfficeClientConfiguration
+     * @return a officeClientConfiguration
      */
     @javax.annotation.Nonnull
     public static OfficeClientConfiguration createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -58,7 +55,7 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<OfficeClientConfigurationAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the checkinStatuses property value. List of office Client check-in status.
@@ -66,7 +63,7 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<OfficeClientCheckinStatus> getCheckinStatuses() {
-        return this._checkinStatuses;
+        return this.checkinStatuses;
     }
     /**
      * Gets the description property value. Not yet documented
@@ -74,7 +71,7 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Admin provided description of the office client configuration policy.
@@ -82,25 +79,24 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OfficeClientConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(OfficeClientConfigurationAssignment::createFromDiscriminatorValue)); });
-            this.put("checkinStatuses", (n) -> { currentObject.setCheckinStatuses(n.getCollectionOfObjectValues(OfficeClientCheckinStatus::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("policyPayload", (n) -> { currentObject.setPolicyPayload(n.getByteArrayValue()); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("userCheckinSummary", (n) -> { currentObject.setUserCheckinSummary(n.getObjectValue(OfficeUserCheckinSummary::createFromDiscriminatorValue)); });
-            this.put("userPreferencePayload", (n) -> { currentObject.setUserPreferencePayload(n.getByteArrayValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(OfficeClientConfigurationAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("checkinStatuses", (n) -> { this.setCheckinStatuses(n.getCollectionOfObjectValues(OfficeClientCheckinStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("policyPayload", (n) -> { this.setPolicyPayload(n.getByteArrayValue()); });
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("userCheckinSummary", (n) -> { this.setUserCheckinSummary(n.getObjectValue(OfficeUserCheckinSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("userPreferencePayload", (n) -> { this.setUserPreferencePayload(n.getByteArrayValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the policyPayload property value. Policy settings JSON string in binary format, these values cannot be changed by the user.
@@ -108,7 +104,7 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public byte[] getPolicyPayload() {
-        return this._policyPayload;
+        return this.policyPayload;
     }
     /**
      * Gets the priority property value. Priority value should be unique value for each policy under a tenant and will be used for conflict resolution, lower values mean priority is high.
@@ -116,7 +112,7 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getPriority() {
-        return this._priority;
+        return this.priority;
     }
     /**
      * Gets the userCheckinSummary property value. User check-in summary for the policy.
@@ -124,7 +120,7 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OfficeUserCheckinSummary getUserCheckinSummary() {
-        return this._userCheckinSummary;
+        return this.userCheckinSummary;
     }
     /**
      * Gets the userPreferencePayload property value. Preference settings JSON string in binary format, these values can be overridden by the user.
@@ -132,13 +128,14 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public byte[] getUserPreferencePayload() {
-        return this._userPreferencePayload;
+        return this.userPreferencePayload;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -156,63 +153,71 @@ public class OfficeClientConfiguration extends Entity implements Parsable {
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<OfficeClientConfigurationAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the checkinStatuses property value. List of office Client check-in status.
      * @param value Value to set for the checkinStatuses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCheckinStatuses(@javax.annotation.Nullable final java.util.List<OfficeClientCheckinStatus> value) {
-        this._checkinStatuses = value;
+        this.checkinStatuses = value;
     }
     /**
      * Sets the description property value. Not yet documented
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Admin provided description of the office client configuration policy.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the policyPayload property value. Policy settings JSON string in binary format, these values cannot be changed by the user.
      * @param value Value to set for the policyPayload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyPayload(@javax.annotation.Nullable final byte[] value) {
-        this._policyPayload = value;
+        this.policyPayload = value;
     }
     /**
      * Sets the priority property value. Priority value should be unique value for each policy under a tenant and will be used for conflict resolution, lower values mean priority is high.
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
-        this._priority = value;
+        this.priority = value;
     }
     /**
      * Sets the userCheckinSummary property value. User check-in summary for the policy.
      * @param value Value to set for the userCheckinSummary property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserCheckinSummary(@javax.annotation.Nullable final OfficeUserCheckinSummary value) {
-        this._userCheckinSummary = value;
+        this.userCheckinSummary = value;
     }
     /**
      * Sets the userPreferencePayload property value. Preference settings JSON string in binary format, these values can be overridden by the user.
      * @param value Value to set for the userPreferencePayload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPreferencePayload(@javax.annotation.Nullable final byte[] value) {
-        this._userPreferencePayload = value;
+        this.userPreferencePayload = value;
     }
 }

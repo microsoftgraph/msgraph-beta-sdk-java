@@ -3,19 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable {
     /** The content property */
-    private byte[] _content;
+    private byte[] content;
     /** The contentUrl property */
-    private String _contentUrl;
+    private String contentUrl;
     /**
      * Instantiates a new OnenoteResource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OnenoteResource() {
         super();
         this.setOdataType("#microsoft.graph.onenoteResource");
@@ -36,7 +36,7 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
      */
     @javax.annotation.Nullable
     public byte[] getContent() {
-        return this._content;
+        return this.content;
     }
     /**
      * Gets the contentUrl property value. The contentUrl property
@@ -44,25 +44,25 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
      */
     @javax.annotation.Nullable
     public String getContentUrl() {
-        return this._contentUrl;
+        return this.contentUrl;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OnenoteResource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("contentUrl", (n) -> { currentObject.setContentUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("contentUrl", (n) -> { this.setContentUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +74,17 @@ public class OnenoteResource extends OnenoteEntityBaseModel implements Parsable 
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
-        this._content = value;
+        this.content = value;
     }
     /**
      * Sets the contentUrl property value. The contentUrl property
      * @param value Value to set for the contentUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentUrl(@javax.annotation.Nullable final String value) {
-        this._contentUrl = value;
+        this.contentUrl = value;
     }
 }

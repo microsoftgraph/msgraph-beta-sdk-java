@@ -3,21 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MacOSCustomAppConfiguration extends DeviceConfiguration implements Parsable {
     /** Bundle id for targeting. */
-    private String _bundleId;
+    private String bundleId;
     /** Configuration xml. (UTF8 encoded byte array) */
-    private byte[] _configurationXml;
+    private byte[] configurationXml;
     /** Configuration file name (.plist */
-    private String _fileName;
+    private String fileName;
     /**
      * Instantiates a new MacOSCustomAppConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSCustomAppConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.macOSCustomAppConfiguration");
@@ -38,7 +38,7 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      */
     @javax.annotation.Nullable
     public String getBundleId() {
-        return this._bundleId;
+        return this.bundleId;
     }
     /**
      * Gets the configurationXml property value. Configuration xml. (UTF8 encoded byte array)
@@ -46,20 +46,19 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      */
     @javax.annotation.Nullable
     public byte[] getConfigurationXml() {
-        return this._configurationXml;
+        return this.configurationXml;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSCustomAppConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("bundleId", (n) -> { currentObject.setBundleId(n.getStringValue()); });
-            this.put("configurationXml", (n) -> { currentObject.setConfigurationXml(n.getByteArrayValue()); });
-            this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("bundleId", (n) -> { this.setBundleId(n.getStringValue()); });
+        deserializerMap.put("configurationXml", (n) -> { this.setConfigurationXml(n.getByteArrayValue()); });
+        deserializerMap.put("fileName", (n) -> { this.setFileName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileName property value. Configuration file name (.plist
@@ -67,13 +66,14 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      */
     @javax.annotation.Nullable
     public String getFileName() {
-        return this._fileName;
+        return this.fileName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +86,26 @@ public class MacOSCustomAppConfiguration extends DeviceConfiguration implements 
      * @param value Value to set for the bundleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBundleId(@javax.annotation.Nullable final String value) {
-        this._bundleId = value;
+        this.bundleId = value;
     }
     /**
      * Sets the configurationXml property value. Configuration xml. (UTF8 encoded byte array)
      * @param value Value to set for the configurationXml property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurationXml(@javax.annotation.Nullable final byte[] value) {
-        this._configurationXml = value;
+        this.configurationXml = value;
     }
     /**
      * Sets the fileName property value. Configuration file name (.plist
      * @param value Value to set for the fileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileName(@javax.annotation.Nullable final String value) {
-        this._fileName = value;
+        this.fileName = value;
     }
 }

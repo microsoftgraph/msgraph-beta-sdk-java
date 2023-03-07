@@ -3,21 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AppManagementPolicy extends PolicyBase implements Parsable {
     /** The appliesTo property */
-    private java.util.List<DirectoryObject> _appliesTo;
+    private java.util.List<DirectoryObject> appliesTo;
     /** The isEnabled property */
-    private Boolean _isEnabled;
+    private Boolean isEnabled;
     /** The restrictions property */
-    private AppManagementConfiguration _restrictions;
+    private AppManagementConfiguration restrictions;
     /**
      * Instantiates a new AppManagementPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppManagementPolicy() {
         super();
         this.setOdataType("#microsoft.graph.appManagementPolicy");
@@ -38,20 +38,19 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getAppliesTo() {
-        return this._appliesTo;
+        return this.appliesTo;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AppManagementPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appliesTo", (n) -> { currentObject.setAppliesTo(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("restrictions", (n) -> { currentObject.setRestrictions(n.getObjectValue(AppManagementConfiguration::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appliesTo", (n) -> { this.setAppliesTo(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("restrictions", (n) -> { this.setRestrictions(n.getObjectValue(AppManagementConfiguration::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabled property value. The isEnabled property
@@ -59,7 +58,7 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsEnabled() {
-        return this._isEnabled;
+        return this.isEnabled;
     }
     /**
      * Gets the restrictions property value. The restrictions property
@@ -67,13 +66,14 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      */
     @javax.annotation.Nullable
     public AppManagementConfiguration getRestrictions() {
-        return this._restrictions;
+        return this.restrictions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +86,26 @@ public class AppManagementPolicy extends PolicyBase implements Parsable {
      * @param value Value to set for the appliesTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppliesTo(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._appliesTo = value;
+        this.appliesTo = value;
     }
     /**
      * Sets the isEnabled property value. The isEnabled property
      * @param value Value to set for the isEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isEnabled = value;
+        this.isEnabled = value;
     }
     /**
      * Sets the restrictions property value. The restrictions property
      * @param value Value to set for the restrictions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestrictions(@javax.annotation.Nullable final AppManagementConfiguration value) {
-        this._restrictions = value;
+        this.restrictions = value;
     }
 }

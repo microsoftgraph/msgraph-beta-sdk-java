@@ -4,71 +4,75 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Organization extends DirectoryObject implements Parsable {
     /** The collection of service plans associated with the tenant. Not nullable. */
-    private java.util.List<AssignedPlan> _assignedPlans;
+    private java.util.List<AssignedPlan> assignedPlans;
     /** Resource to manage the default branding for the organization. Nullable. */
-    private OrganizationalBranding _branding;
+    private OrganizationalBranding branding;
     /** Telephone number for the organization. Although this is a string collection, only one number can be set for this property. */
-    private java.util.List<String> _businessPhones;
+    private java.util.List<String> businessPhones;
     /** Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection. */
-    private java.util.List<CertificateBasedAuthConfiguration> _certificateBasedAuthConfiguration;
+    private java.util.List<CertificateBasedAuthConfiguration> certificateBasedAuthConfiguration;
     /** Certificate connector setting. */
-    private CertificateConnectorSetting _certificateConnectorSetting;
+    private CertificateConnectorSetting certificateConnectorSetting;
     /** City name of the address for the organization. */
-    private String _city;
+    private String city;
     /** Country/region name of the address for the organization. */
-    private String _country;
+    private String country;
     /** Country or region abbreviation for the organization in ISO 3166-2 format. */
-    private String _countryLetterCode;
+    private String countryLetterCode;
     /** Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
+    /** Two-letter ISO 3166 country code indicating the default service usage location of an organization. */
+    private String defaultUsageLocation;
     /** The directory size quota information of an organization. */
-    private DirectorySizeQuota _directorySizeQuota;
+    private DirectorySizeQuota directorySizeQuota;
     /** The display name for the tenant. */
-    private String _displayName;
+    private String displayName;
     /** The collection of open extensions defined for the organization resource. Nullable. */
-    private java.util.List<Extension> _extensions;
+    private java.util.List<Extension> extensions;
     /** true if organization is Multi-Geo enabled; false if organization is not Multi-Geo enabled; null (default). Read-only. For more information, see OneDrive Online Multi-Geo. */
-    private Boolean _isMultipleDataLocationsForServicesEnabled;
+    private Boolean isMultipleDataLocationsForServicesEnabled;
     /** Not nullable. */
-    private java.util.List<String> _marketingNotificationEmails;
+    private java.util.List<String> marketingNotificationEmails;
     /** Mobile device management authority. */
-    private MdmAuthority _mobileDeviceManagementAuthority;
+    private MdmAuthority mobileDeviceManagementAuthority;
     /** The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _onPremisesLastSyncDateTime;
+    private OffsetDateTime onPremisesLastSyncDateTime;
     /** true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null if this object has never been synced from an on-premises directory (default). */
-    private Boolean _onPremisesSyncEnabled;
+    private Boolean onPremisesSyncEnabled;
+    /** The type of partnership this tenant has with Microsoft. The possible values are: microsoftSupport, syndicatePartner, breadthPartner, breadthPartnerDelegatedAdmin, resellerPartnerDelegatedAdmin, valueAddedResellerPartnerDelegatedAdmin, unknownFutureValue. Nullable. For more information about the possible types, see partnerTenantType values. */
+    private PartnerTenantType partnerTenantType;
     /** Postal code of the address for the organization. */
-    private String _postalCode;
+    private String postalCode;
     /** The preferred language for the organization. Should follow ISO 639-1 Code; for example en. */
-    private String _preferredLanguage;
+    private String preferredLanguage;
     /** The privacy profile of an organization. */
-    private PrivacyProfile _privacyProfile;
+    private PrivacyProfile privacyProfile;
     /** Not nullable. */
-    private java.util.List<ProvisionedPlan> _provisionedPlans;
+    private java.util.List<ProvisionedPlan> provisionedPlans;
     /** The securityComplianceNotificationMails property */
-    private java.util.List<String> _securityComplianceNotificationMails;
+    private java.util.List<String> securityComplianceNotificationMails;
     /** The securityComplianceNotificationPhones property */
-    private java.util.List<String> _securityComplianceNotificationPhones;
+    private java.util.List<String> securityComplianceNotificationPhones;
     /** Retrieve the properties and relationships of organizationSettings object. Nullable. */
-    private OrganizationSettings _settings;
+    private OrganizationSettings settings;
     /** State name of the address for the organization. */
-    private String _state;
+    private String state;
     /** Street name of the address for organization. */
-    private String _street;
+    private String street;
     /** Not nullable. */
-    private java.util.List<String> _technicalNotificationMails;
+    private java.util.List<String> technicalNotificationMails;
     /** The collection of domains associated with this tenant. Not nullable. */
-    private java.util.List<VerifiedDomain> _verifiedDomains;
+    private java.util.List<VerifiedDomain> verifiedDomains;
     /**
-     * Instantiates a new Organization and sets the default values.
+     * Instantiates a new organization and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Organization() {
         super();
         this.setOdataType("#microsoft.graph.organization");
@@ -76,7 +80,7 @@ public class Organization extends DirectoryObject implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Organization
+     * @return a organization
      */
     @javax.annotation.Nonnull
     public static Organization createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -89,7 +93,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AssignedPlan> getAssignedPlans() {
-        return this._assignedPlans;
+        return this.assignedPlans;
     }
     /**
      * Gets the branding property value. Resource to manage the default branding for the organization. Nullable.
@@ -97,7 +101,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OrganizationalBranding getBranding() {
-        return this._branding;
+        return this.branding;
     }
     /**
      * Gets the businessPhones property value. Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
@@ -105,7 +109,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getBusinessPhones() {
-        return this._businessPhones;
+        return this.businessPhones;
     }
     /**
      * Gets the certificateBasedAuthConfiguration property value. Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
@@ -113,7 +117,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CertificateBasedAuthConfiguration> getCertificateBasedAuthConfiguration() {
-        return this._certificateBasedAuthConfiguration;
+        return this.certificateBasedAuthConfiguration;
     }
     /**
      * Gets the certificateConnectorSetting property value. Certificate connector setting.
@@ -121,7 +125,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public CertificateConnectorSetting getCertificateConnectorSetting() {
-        return this._certificateConnectorSetting;
+        return this.certificateConnectorSetting;
     }
     /**
      * Gets the city property value. City name of the address for the organization.
@@ -129,7 +133,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCity() {
-        return this._city;
+        return this.city;
     }
     /**
      * Gets the country property value. Country/region name of the address for the organization.
@@ -137,7 +141,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCountry() {
-        return this._country;
+        return this.country;
     }
     /**
      * Gets the countryLetterCode property value. Country or region abbreviation for the organization in ISO 3166-2 format.
@@ -145,7 +149,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCountryLetterCode() {
-        return this._countryLetterCode;
+        return this.countryLetterCode;
     }
     /**
      * Gets the createdDateTime property value. Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -153,7 +157,15 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
+    }
+    /**
+     * Gets the defaultUsageLocation property value. Two-letter ISO 3166 country code indicating the default service usage location of an organization.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getDefaultUsageLocation() {
+        return this.defaultUsageLocation;
     }
     /**
      * Gets the directorySizeQuota property value. The directory size quota information of an organization.
@@ -161,7 +173,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public DirectorySizeQuota getDirectorySizeQuota() {
-        return this._directorySizeQuota;
+        return this.directorySizeQuota;
     }
     /**
      * Gets the displayName property value. The display name for the tenant.
@@ -169,7 +181,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the organization resource. Nullable.
@@ -177,45 +189,46 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
-        return this._extensions;
+        return this.extensions;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Organization currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignedPlans", (n) -> { currentObject.setAssignedPlans(n.getCollectionOfObjectValues(AssignedPlan::createFromDiscriminatorValue)); });
-            this.put("branding", (n) -> { currentObject.setBranding(n.getObjectValue(OrganizationalBranding::createFromDiscriminatorValue)); });
-            this.put("businessPhones", (n) -> { currentObject.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("certificateBasedAuthConfiguration", (n) -> { currentObject.setCertificateBasedAuthConfiguration(n.getCollectionOfObjectValues(CertificateBasedAuthConfiguration::createFromDiscriminatorValue)); });
-            this.put("certificateConnectorSetting", (n) -> { currentObject.setCertificateConnectorSetting(n.getObjectValue(CertificateConnectorSetting::createFromDiscriminatorValue)); });
-            this.put("city", (n) -> { currentObject.setCity(n.getStringValue()); });
-            this.put("country", (n) -> { currentObject.setCountry(n.getStringValue()); });
-            this.put("countryLetterCode", (n) -> { currentObject.setCountryLetterCode(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("directorySizeQuota", (n) -> { currentObject.setDirectorySizeQuota(n.getObjectValue(DirectorySizeQuota::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("isMultipleDataLocationsForServicesEnabled", (n) -> { currentObject.setIsMultipleDataLocationsForServicesEnabled(n.getBooleanValue()); });
-            this.put("marketingNotificationEmails", (n) -> { currentObject.setMarketingNotificationEmails(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("mobileDeviceManagementAuthority", (n) -> { currentObject.setMobileDeviceManagementAuthority(n.getEnumValue(MdmAuthority.class)); });
-            this.put("onPremisesLastSyncDateTime", (n) -> { currentObject.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
-            this.put("onPremisesSyncEnabled", (n) -> { currentObject.setOnPremisesSyncEnabled(n.getBooleanValue()); });
-            this.put("postalCode", (n) -> { currentObject.setPostalCode(n.getStringValue()); });
-            this.put("preferredLanguage", (n) -> { currentObject.setPreferredLanguage(n.getStringValue()); });
-            this.put("privacyProfile", (n) -> { currentObject.setPrivacyProfile(n.getObjectValue(PrivacyProfile::createFromDiscriminatorValue)); });
-            this.put("provisionedPlans", (n) -> { currentObject.setProvisionedPlans(n.getCollectionOfObjectValues(ProvisionedPlan::createFromDiscriminatorValue)); });
-            this.put("securityComplianceNotificationMails", (n) -> { currentObject.setSecurityComplianceNotificationMails(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("securityComplianceNotificationPhones", (n) -> { currentObject.setSecurityComplianceNotificationPhones(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(OrganizationSettings::createFromDiscriminatorValue)); });
-            this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
-            this.put("street", (n) -> { currentObject.setStreet(n.getStringValue()); });
-            this.put("technicalNotificationMails", (n) -> { currentObject.setTechnicalNotificationMails(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("verifiedDomains", (n) -> { currentObject.setVerifiedDomains(n.getCollectionOfObjectValues(VerifiedDomain::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignedPlans", (n) -> { this.setAssignedPlans(n.getCollectionOfObjectValues(AssignedPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("branding", (n) -> { this.setBranding(n.getObjectValue(OrganizationalBranding::createFromDiscriminatorValue)); });
+        deserializerMap.put("businessPhones", (n) -> { this.setBusinessPhones(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("certificateBasedAuthConfiguration", (n) -> { this.setCertificateBasedAuthConfiguration(n.getCollectionOfObjectValues(CertificateBasedAuthConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("certificateConnectorSetting", (n) -> { this.setCertificateConnectorSetting(n.getObjectValue(CertificateConnectorSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("city", (n) -> { this.setCity(n.getStringValue()); });
+        deserializerMap.put("country", (n) -> { this.setCountry(n.getStringValue()); });
+        deserializerMap.put("countryLetterCode", (n) -> { this.setCountryLetterCode(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("defaultUsageLocation", (n) -> { this.setDefaultUsageLocation(n.getStringValue()); });
+        deserializerMap.put("directorySizeQuota", (n) -> { this.setDirectorySizeQuota(n.getObjectValue(DirectorySizeQuota::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("isMultipleDataLocationsForServicesEnabled", (n) -> { this.setIsMultipleDataLocationsForServicesEnabled(n.getBooleanValue()); });
+        deserializerMap.put("marketingNotificationEmails", (n) -> { this.setMarketingNotificationEmails(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("mobileDeviceManagementAuthority", (n) -> { this.setMobileDeviceManagementAuthority(n.getEnumValue(MdmAuthority.class)); });
+        deserializerMap.put("onPremisesLastSyncDateTime", (n) -> { this.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("onPremisesSyncEnabled", (n) -> { this.setOnPremisesSyncEnabled(n.getBooleanValue()); });
+        deserializerMap.put("partnerTenantType", (n) -> { this.setPartnerTenantType(n.getEnumValue(PartnerTenantType.class)); });
+        deserializerMap.put("postalCode", (n) -> { this.setPostalCode(n.getStringValue()); });
+        deserializerMap.put("preferredLanguage", (n) -> { this.setPreferredLanguage(n.getStringValue()); });
+        deserializerMap.put("privacyProfile", (n) -> { this.setPrivacyProfile(n.getObjectValue(PrivacyProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("provisionedPlans", (n) -> { this.setProvisionedPlans(n.getCollectionOfObjectValues(ProvisionedPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("securityComplianceNotificationMails", (n) -> { this.setSecurityComplianceNotificationMails(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("securityComplianceNotificationPhones", (n) -> { this.setSecurityComplianceNotificationPhones(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(OrganizationSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
+        deserializerMap.put("street", (n) -> { this.setStreet(n.getStringValue()); });
+        deserializerMap.put("technicalNotificationMails", (n) -> { this.setTechnicalNotificationMails(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("verifiedDomains", (n) -> { this.setVerifiedDomains(n.getCollectionOfObjectValues(VerifiedDomain::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isMultipleDataLocationsForServicesEnabled property value. true if organization is Multi-Geo enabled; false if organization is not Multi-Geo enabled; null (default). Read-only. For more information, see OneDrive Online Multi-Geo.
@@ -223,7 +236,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsMultipleDataLocationsForServicesEnabled() {
-        return this._isMultipleDataLocationsForServicesEnabled;
+        return this.isMultipleDataLocationsForServicesEnabled;
     }
     /**
      * Gets the marketingNotificationEmails property value. Not nullable.
@@ -231,7 +244,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getMarketingNotificationEmails() {
-        return this._marketingNotificationEmails;
+        return this.marketingNotificationEmails;
     }
     /**
      * Gets the mobileDeviceManagementAuthority property value. Mobile device management authority.
@@ -239,7 +252,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public MdmAuthority getMobileDeviceManagementAuthority() {
-        return this._mobileDeviceManagementAuthority;
+        return this.mobileDeviceManagementAuthority;
     }
     /**
      * Gets the onPremisesLastSyncDateTime property value. The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -247,7 +260,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getOnPremisesLastSyncDateTime() {
-        return this._onPremisesLastSyncDateTime;
+        return this.onPremisesLastSyncDateTime;
     }
     /**
      * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null if this object has never been synced from an on-premises directory (default).
@@ -255,7 +268,15 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getOnPremisesSyncEnabled() {
-        return this._onPremisesSyncEnabled;
+        return this.onPremisesSyncEnabled;
+    }
+    /**
+     * Gets the partnerTenantType property value. The type of partnership this tenant has with Microsoft. The possible values are: microsoftSupport, syndicatePartner, breadthPartner, breadthPartnerDelegatedAdmin, resellerPartnerDelegatedAdmin, valueAddedResellerPartnerDelegatedAdmin, unknownFutureValue. Nullable. For more information about the possible types, see partnerTenantType values.
+     * @return a partnerTenantType
+     */
+    @javax.annotation.Nullable
+    public PartnerTenantType getPartnerTenantType() {
+        return this.partnerTenantType;
     }
     /**
      * Gets the postalCode property value. Postal code of the address for the organization.
@@ -263,7 +284,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPostalCode() {
-        return this._postalCode;
+        return this.postalCode;
     }
     /**
      * Gets the preferredLanguage property value. The preferred language for the organization. Should follow ISO 639-1 Code; for example en.
@@ -271,7 +292,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPreferredLanguage() {
-        return this._preferredLanguage;
+        return this.preferredLanguage;
     }
     /**
      * Gets the privacyProfile property value. The privacy profile of an organization.
@@ -279,7 +300,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public PrivacyProfile getPrivacyProfile() {
-        return this._privacyProfile;
+        return this.privacyProfile;
     }
     /**
      * Gets the provisionedPlans property value. Not nullable.
@@ -287,7 +308,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ProvisionedPlan> getProvisionedPlans() {
-        return this._provisionedPlans;
+        return this.provisionedPlans;
     }
     /**
      * Gets the securityComplianceNotificationMails property value. The securityComplianceNotificationMails property
@@ -295,7 +316,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSecurityComplianceNotificationMails() {
-        return this._securityComplianceNotificationMails;
+        return this.securityComplianceNotificationMails;
     }
     /**
      * Gets the securityComplianceNotificationPhones property value. The securityComplianceNotificationPhones property
@@ -303,7 +324,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getSecurityComplianceNotificationPhones() {
-        return this._securityComplianceNotificationPhones;
+        return this.securityComplianceNotificationPhones;
     }
     /**
      * Gets the settings property value. Retrieve the properties and relationships of organizationSettings object. Nullable.
@@ -311,7 +332,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public OrganizationSettings getSettings() {
-        return this._settings;
+        return this.settings;
     }
     /**
      * Gets the state property value. State name of the address for the organization.
@@ -319,7 +340,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Gets the street property value. Street name of the address for organization.
@@ -327,7 +348,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStreet() {
-        return this._street;
+        return this.street;
     }
     /**
      * Gets the technicalNotificationMails property value. Not nullable.
@@ -335,7 +356,7 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getTechnicalNotificationMails() {
-        return this._technicalNotificationMails;
+        return this.technicalNotificationMails;
     }
     /**
      * Gets the verifiedDomains property value. The collection of domains associated with this tenant. Not nullable.
@@ -343,13 +364,14 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<VerifiedDomain> getVerifiedDomains() {
-        return this._verifiedDomains;
+        return this.verifiedDomains;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -362,6 +384,7 @@ public class Organization extends DirectoryObject implements Parsable {
         writer.writeStringValue("country", this.getCountry());
         writer.writeStringValue("countryLetterCode", this.getCountryLetterCode());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeStringValue("defaultUsageLocation", this.getDefaultUsageLocation());
         writer.writeObjectValue("directorySizeQuota", this.getDirectorySizeQuota());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("extensions", this.getExtensions());
@@ -370,6 +393,7 @@ public class Organization extends DirectoryObject implements Parsable {
         writer.writeEnumValue("mobileDeviceManagementAuthority", this.getMobileDeviceManagementAuthority());
         writer.writeOffsetDateTimeValue("onPremisesLastSyncDateTime", this.getOnPremisesLastSyncDateTime());
         writer.writeBooleanValue("onPremisesSyncEnabled", this.getOnPremisesSyncEnabled());
+        writer.writeEnumValue("partnerTenantType", this.getPartnerTenantType());
         writer.writeStringValue("postalCode", this.getPostalCode());
         writer.writeStringValue("preferredLanguage", this.getPreferredLanguage());
         writer.writeObjectValue("privacyProfile", this.getPrivacyProfile());
@@ -387,223 +411,269 @@ public class Organization extends DirectoryObject implements Parsable {
      * @param value Value to set for the assignedPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedPlans(@javax.annotation.Nullable final java.util.List<AssignedPlan> value) {
-        this._assignedPlans = value;
+        this.assignedPlans = value;
     }
     /**
      * Sets the branding property value. Resource to manage the default branding for the organization. Nullable.
      * @param value Value to set for the branding property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBranding(@javax.annotation.Nullable final OrganizationalBranding value) {
-        this._branding = value;
+        this.branding = value;
     }
     /**
      * Sets the businessPhones property value. Telephone number for the organization. Although this is a string collection, only one number can be set for this property.
      * @param value Value to set for the businessPhones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBusinessPhones(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._businessPhones = value;
+        this.businessPhones = value;
     }
     /**
      * Sets the certificateBasedAuthConfiguration property value. Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      * @param value Value to set for the certificateBasedAuthConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateBasedAuthConfiguration(@javax.annotation.Nullable final java.util.List<CertificateBasedAuthConfiguration> value) {
-        this._certificateBasedAuthConfiguration = value;
+        this.certificateBasedAuthConfiguration = value;
     }
     /**
      * Sets the certificateConnectorSetting property value. Certificate connector setting.
      * @param value Value to set for the certificateConnectorSetting property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateConnectorSetting(@javax.annotation.Nullable final CertificateConnectorSetting value) {
-        this._certificateConnectorSetting = value;
+        this.certificateConnectorSetting = value;
     }
     /**
      * Sets the city property value. City name of the address for the organization.
      * @param value Value to set for the city property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCity(@javax.annotation.Nullable final String value) {
-        this._city = value;
+        this.city = value;
     }
     /**
      * Sets the country property value. Country/region name of the address for the organization.
      * @param value Value to set for the country property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountry(@javax.annotation.Nullable final String value) {
-        this._country = value;
+        this.country = value;
     }
     /**
      * Sets the countryLetterCode property value. Country or region abbreviation for the organization in ISO 3166-2 format.
      * @param value Value to set for the countryLetterCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountryLetterCode(@javax.annotation.Nullable final String value) {
-        this._countryLetterCode = value;
+        this.countryLetterCode = value;
     }
     /**
      * Sets the createdDateTime property value. Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
+    }
+    /**
+     * Sets the defaultUsageLocation property value. Two-letter ISO 3166 country code indicating the default service usage location of an organization.
+     * @param value Value to set for the defaultUsageLocation property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDefaultUsageLocation(@javax.annotation.Nullable final String value) {
+        this.defaultUsageLocation = value;
     }
     /**
      * Sets the directorySizeQuota property value. The directory size quota information of an organization.
      * @param value Value to set for the directorySizeQuota property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDirectorySizeQuota(@javax.annotation.Nullable final DirectorySizeQuota value) {
-        this._directorySizeQuota = value;
+        this.directorySizeQuota = value;
     }
     /**
      * Sets the displayName property value. The display name for the tenant.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the organization resource. Nullable.
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
-        this._extensions = value;
+        this.extensions = value;
     }
     /**
      * Sets the isMultipleDataLocationsForServicesEnabled property value. true if organization is Multi-Geo enabled; false if organization is not Multi-Geo enabled; null (default). Read-only. For more information, see OneDrive Online Multi-Geo.
      * @param value Value to set for the isMultipleDataLocationsForServicesEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMultipleDataLocationsForServicesEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isMultipleDataLocationsForServicesEnabled = value;
+        this.isMultipleDataLocationsForServicesEnabled = value;
     }
     /**
      * Sets the marketingNotificationEmails property value. Not nullable.
      * @param value Value to set for the marketingNotificationEmails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMarketingNotificationEmails(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._marketingNotificationEmails = value;
+        this.marketingNotificationEmails = value;
     }
     /**
      * Sets the mobileDeviceManagementAuthority property value. Mobile device management authority.
      * @param value Value to set for the mobileDeviceManagementAuthority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileDeviceManagementAuthority(@javax.annotation.Nullable final MdmAuthority value) {
-        this._mobileDeviceManagementAuthority = value;
+        this.mobileDeviceManagementAuthority = value;
     }
     /**
      * Sets the onPremisesLastSyncDateTime property value. The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the onPremisesLastSyncDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesLastSyncDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._onPremisesLastSyncDateTime = value;
+        this.onPremisesLastSyncDateTime = value;
     }
     /**
      * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null if this object has never been synced from an on-premises directory (default).
      * @param value Value to set for the onPremisesSyncEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesSyncEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._onPremisesSyncEnabled = value;
+        this.onPremisesSyncEnabled = value;
+    }
+    /**
+     * Sets the partnerTenantType property value. The type of partnership this tenant has with Microsoft. The possible values are: microsoftSupport, syndicatePartner, breadthPartner, breadthPartnerDelegatedAdmin, resellerPartnerDelegatedAdmin, valueAddedResellerPartnerDelegatedAdmin, unknownFutureValue. Nullable. For more information about the possible types, see partnerTenantType values.
+     * @param value Value to set for the partnerTenantType property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPartnerTenantType(@javax.annotation.Nullable final PartnerTenantType value) {
+        this.partnerTenantType = value;
     }
     /**
      * Sets the postalCode property value. Postal code of the address for the organization.
      * @param value Value to set for the postalCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostalCode(@javax.annotation.Nullable final String value) {
-        this._postalCode = value;
+        this.postalCode = value;
     }
     /**
      * Sets the preferredLanguage property value. The preferred language for the organization. Should follow ISO 639-1 Code; for example en.
      * @param value Value to set for the preferredLanguage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPreferredLanguage(@javax.annotation.Nullable final String value) {
-        this._preferredLanguage = value;
+        this.preferredLanguage = value;
     }
     /**
      * Sets the privacyProfile property value. The privacy profile of an organization.
      * @param value Value to set for the privacyProfile property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrivacyProfile(@javax.annotation.Nullable final PrivacyProfile value) {
-        this._privacyProfile = value;
+        this.privacyProfile = value;
     }
     /**
      * Sets the provisionedPlans property value. Not nullable.
      * @param value Value to set for the provisionedPlans property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisionedPlans(@javax.annotation.Nullable final java.util.List<ProvisionedPlan> value) {
-        this._provisionedPlans = value;
+        this.provisionedPlans = value;
     }
     /**
      * Sets the securityComplianceNotificationMails property value. The securityComplianceNotificationMails property
      * @param value Value to set for the securityComplianceNotificationMails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityComplianceNotificationMails(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._securityComplianceNotificationMails = value;
+        this.securityComplianceNotificationMails = value;
     }
     /**
      * Sets the securityComplianceNotificationPhones property value. The securityComplianceNotificationPhones property
      * @param value Value to set for the securityComplianceNotificationPhones property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityComplianceNotificationPhones(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._securityComplianceNotificationPhones = value;
+        this.securityComplianceNotificationPhones = value;
     }
     /**
      * Sets the settings property value. Retrieve the properties and relationships of organizationSettings object. Nullable.
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final OrganizationSettings value) {
-        this._settings = value;
+        this.settings = value;
     }
     /**
      * Sets the state property value. State name of the address for the organization.
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final String value) {
-        this._state = value;
+        this.state = value;
     }
     /**
      * Sets the street property value. Street name of the address for organization.
      * @param value Value to set for the street property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStreet(@javax.annotation.Nullable final String value) {
-        this._street = value;
+        this.street = value;
     }
     /**
      * Sets the technicalNotificationMails property value. Not nullable.
      * @param value Value to set for the technicalNotificationMails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTechnicalNotificationMails(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._technicalNotificationMails = value;
+        this.technicalNotificationMails = value;
     }
     /**
      * Sets the verifiedDomains property value. The collection of domains associated with this tenant. Not nullable.
      * @param value Value to set for the verifiedDomains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVerifiedDomains(@javax.annotation.Nullable final java.util.List<VerifiedDomain> value) {
-        this._verifiedDomains = value;
+        this.verifiedDomains = value;
     }
 }

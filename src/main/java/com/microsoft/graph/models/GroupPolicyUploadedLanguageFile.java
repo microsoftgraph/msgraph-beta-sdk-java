@@ -5,33 +5,34 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The entity represents an ADML (Administrative Template language) XML file uploaded by Administrator. */
+/**
+ * The entity represents an ADML (Administrative Template language) XML file uploaded by Administrator.
+ */
 public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The contents of the uploaded ADML file. */
-    private byte[] _content;
+    private byte[] content;
     /** The file name of the uploaded ADML file. */
-    private String _fileName;
+    private String fileName;
     /** Key of the entity. */
-    private String _id;
+    private String id;
     /** The language code of the uploaded ADML file. */
-    private String _languageCode;
+    private String languageCode;
     /** The date and time the entity was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new groupPolicyUploadedLanguageFile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyUploadedLanguageFile() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.groupPolicyUploadedLanguageFile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,7 +50,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the content property value. The contents of the uploaded ADML file.
@@ -57,23 +58,22 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public byte[] getContent() {
-        return this._content;
+        return this.content;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyUploadedLanguageFile currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("content", (n) -> { currentObject.setContent(n.getByteArrayValue()); });
-            this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("languageCode", (n) -> { currentObject.setLanguageCode(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
+        deserializerMap.put("fileName", (n) -> { this.setFileName(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("languageCode", (n) -> { this.setLanguageCode(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileName property value. The file name of the uploaded ADML file.
@@ -81,7 +81,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public String getFileName() {
-        return this._fileName;
+        return this.fileName;
     }
     /**
      * Gets the id property value. Key of the entity.
@@ -89,7 +89,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public String getId() {
-        return this._id;
+        return this.id;
     }
     /**
      * Gets the languageCode property value. The language code of the uploaded ADML file.
@@ -97,7 +97,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public String getLanguageCode() {
-        return this._languageCode;
+        return this.languageCode;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
@@ -105,7 +105,7 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -113,13 +113,14 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("content", this.getContent());
@@ -135,55 +136,62 @@ public class GroupPolicyUploadedLanguageFile implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the content property value. The contents of the uploaded ADML file.
      * @param value Value to set for the content property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContent(@javax.annotation.Nullable final byte[] value) {
-        this._content = value;
+        this.content = value;
     }
     /**
      * Sets the fileName property value. The file name of the uploaded ADML file.
      * @param value Value to set for the fileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileName(@javax.annotation.Nullable final String value) {
-        this._fileName = value;
+        this.fileName = value;
     }
     /**
      * Sets the id property value. Key of the entity.
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+        this.id = value;
     }
     /**
      * Sets the languageCode property value. The language code of the uploaded ADML file.
      * @param value Value to set for the languageCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguageCode(@javax.annotation.Nullable final String value) {
-        this._languageCode = value;
+        this.languageCode = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the entity was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

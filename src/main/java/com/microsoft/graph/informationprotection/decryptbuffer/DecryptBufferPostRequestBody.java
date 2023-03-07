@@ -4,22 +4,21 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the decryptBuffer method. */
 public class DecryptBufferPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The encryptedBuffer property */
-    private byte[] _encryptedBuffer;
+    private byte[] encryptedBuffer;
     /** The publishingLicense property */
-    private byte[] _publishingLicense;
+    private byte[] publishingLicense;
     /**
      * Instantiates a new decryptBufferPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DecryptBufferPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -39,7 +38,7 @@ public class DecryptBufferPostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the encryptedBuffer property value. The encryptedBuffer property
@@ -47,19 +46,18 @@ public class DecryptBufferPostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public byte[] getEncryptedBuffer() {
-        return this._encryptedBuffer;
+        return this.encryptedBuffer;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DecryptBufferPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("encryptedBuffer", (n) -> { currentObject.setEncryptedBuffer(n.getByteArrayValue()); });
-            this.put("publishingLicense", (n) -> { currentObject.setPublishingLicense(n.getByteArrayValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        deserializerMap.put("encryptedBuffer", (n) -> { this.setEncryptedBuffer(n.getByteArrayValue()); });
+        deserializerMap.put("publishingLicense", (n) -> { this.setPublishingLicense(n.getByteArrayValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the publishingLicense property value. The publishingLicense property
@@ -67,13 +65,14 @@ public class DecryptBufferPostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public byte[] getPublishingLicense() {
-        return this._publishingLicense;
+        return this.publishingLicense;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("encryptedBuffer", this.getEncryptedBuffer());
@@ -85,23 +84,26 @@ public class DecryptBufferPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the encryptedBuffer property value. The encryptedBuffer property
      * @param value Value to set for the encryptedBuffer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptedBuffer(@javax.annotation.Nullable final byte[] value) {
-        this._encryptedBuffer = value;
+        this.encryptedBuffer = value;
     }
     /**
      * Sets the publishingLicense property value. The publishingLicense property
      * @param value Value to set for the publishingLicense property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishingLicense(@javax.annotation.Nullable final byte[] value) {
-        this._publishingLicense = value;
+        this.publishingLicense = value;
     }
 }

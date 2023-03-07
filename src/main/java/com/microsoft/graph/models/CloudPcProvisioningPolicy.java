@@ -3,48 +3,53 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     /** The URL of the alternate resource that links to this provisioning policy. Read-only. */
-    private String _alternateResourceUrl;
-    /** A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship. */
-    private java.util.List<CloudPcProvisioningPolicyAssignment> _assignments;
+    private String alternateResourceUrl;
+    /** A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. For an example about how to get the assignments relationship, see Get cloudPcProvisioningPolicy. */
+    private java.util.List<CloudPcProvisioningPolicyAssignment> assignments;
     /** The display name of the Cloud PC group that the Cloud PCs reside in. Read-only. */
-    private String _cloudPcGroupDisplayName;
+    private String cloudPcGroupDisplayName;
     /** The provisioning policy description. */
-    private String _description;
+    private String description;
     /** The display name for the provisioning policy. */
-    private String _displayName;
+    private String displayName;
     /** Specifies how Cloud PCs will join Azure Active Directory. */
-    private CloudPcDomainJoinConfiguration _domainJoinConfiguration;
+    private CloudPcDomainJoinConfiguration domainJoinConfiguration;
+    /** The domainJoinConfigurations property */
+    private java.util.List<CloudPcDomainJoinConfiguration> domainJoinConfigurations;
+    /** True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Azure Active Directory (Azure AD) with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional. */
+    private Boolean enableSingleSignOn;
     /** The number of hours to wait before reprovisioning/deprovisioning happens. Read-only. */
-    private Integer _gracePeriodInHours;
-    /** The display name for the OS image you’re provisioning. */
-    private String _imageDisplayName;
+    private Integer gracePeriodInHours;
+    /** The display name for the OS image youre provisioning. */
+    private String imageDisplayName;
     /** The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisher_offer_sku}. Supported values for each of the parameters are as follows:publisher: Microsoftwindowsdesktop. offer: windows-ent-cpc. sku: 21h1-ent-cpc-m365, 21h1-ent-cpc-os, 20h2-ent-cpc-m365, 20h2-ent-cpc-os, 20h1-ent-cpc-m365, 20h1-ent-cpc-os, 19h2-ent-cpc-m365 and 19h2-ent-cpc-os. */
-    private String _imageId;
+    private String imageId;
     /** The imageType property */
-    private CloudPcProvisioningPolicyImageType _imageType;
+    private CloudPcProvisioningPolicyImageType imageType;
     /** Indicates whether the local admin option is enabled. If the local admin option is enabled, the end user can be an admin of the Cloud PC device. Read-only. */
-    private Boolean _localAdminEnabled;
+    private Boolean localAdminEnabled;
     /** The managedBy property */
-    private CloudPcManagementService _managedBy;
+    private CloudPcManagementService managedBy;
     /** The specific settings for the Microsoft Managed Desktop, which enables customers to get a managed device experience for the Cloud PC. Before you can enable Microsoft Managed Desktop, an admin must configure it. */
-    private MicrosoftManagedDesktop _microsoftManagedDesktop;
-    /** The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the Cloud PC service. */
-    private String _onPremisesConnectionId;
+    private MicrosoftManagedDesktop microsoftManagedDesktop;
+    /** The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network thats validated by the Cloud PC service. */
+    private String onPremisesConnectionId;
+    /** Specifies the type of license used when provisioning Cloud PCs using this policy. By default, the license type is dedicated if the provisioningType isn't specified when you create the cloudPcProvisioningPolicy. You can't change this property after the cloudPcProvisioningPolicy was created. Possible values are: dedicated, shared, unknownFutureValue. */
+    private CloudPcProvisioningType provisioningType;
     /** Specific Windows settings to configure while creating Cloud PCs for this provisioning policy. */
-    private CloudPcWindowsSettings _windowsSettings;
+    private CloudPcWindowsSettings windowsSettings;
     /**
      * Instantiates a new CloudPcProvisioningPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcProvisioningPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.cloudPcProvisioningPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,15 +67,15 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAlternateResourceUrl() {
-        return this._alternateResourceUrl;
+        return this.alternateResourceUrl;
     }
     /**
-     * Gets the assignments property value. A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship.
+     * Gets the assignments property value. A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. For an example about how to get the assignments relationship, see Get cloudPcProvisioningPolicy.
      * @return a cloudPcProvisioningPolicyAssignment
      */
     @javax.annotation.Nullable
     public java.util.List<CloudPcProvisioningPolicyAssignment> getAssignments() {
-        return this._assignments;
+        return this.assignments;
     }
     /**
      * Gets the cloudPcGroupDisplayName property value. The display name of the Cloud PC group that the Cloud PCs reside in. Read-only.
@@ -78,7 +83,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCloudPcGroupDisplayName() {
-        return this._cloudPcGroupDisplayName;
+        return this.cloudPcGroupDisplayName;
     }
     /**
      * Gets the description property value. The provisioning policy description.
@@ -86,7 +91,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The display name for the provisioning policy.
@@ -94,7 +99,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the domainJoinConfiguration property value. Specifies how Cloud PCs will join Azure Active Directory.
@@ -102,32 +107,50 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CloudPcDomainJoinConfiguration getDomainJoinConfiguration() {
-        return this._domainJoinConfiguration;
+        return this.domainJoinConfiguration;
+    }
+    /**
+     * Gets the domainJoinConfigurations property value. The domainJoinConfigurations property
+     * @return a cloudPcDomainJoinConfiguration
+     */
+    @javax.annotation.Nullable
+    public java.util.List<CloudPcDomainJoinConfiguration> getDomainJoinConfigurations() {
+        return this.domainJoinConfigurations;
+    }
+    /**
+     * Gets the enableSingleSignOn property value. True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Azure Active Directory (Azure AD) with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getEnableSingleSignOn() {
+        return this.enableSingleSignOn;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcProvisioningPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("alternateResourceUrl", (n) -> { currentObject.setAlternateResourceUrl(n.getStringValue()); });
-            this.put("assignments", (n) -> { currentObject.setAssignments(n.getCollectionOfObjectValues(CloudPcProvisioningPolicyAssignment::createFromDiscriminatorValue)); });
-            this.put("cloudPcGroupDisplayName", (n) -> { currentObject.setCloudPcGroupDisplayName(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("domainJoinConfiguration", (n) -> { currentObject.setDomainJoinConfiguration(n.getObjectValue(CloudPcDomainJoinConfiguration::createFromDiscriminatorValue)); });
-            this.put("gracePeriodInHours", (n) -> { currentObject.setGracePeriodInHours(n.getIntegerValue()); });
-            this.put("imageDisplayName", (n) -> { currentObject.setImageDisplayName(n.getStringValue()); });
-            this.put("imageId", (n) -> { currentObject.setImageId(n.getStringValue()); });
-            this.put("imageType", (n) -> { currentObject.setImageType(n.getEnumValue(CloudPcProvisioningPolicyImageType.class)); });
-            this.put("localAdminEnabled", (n) -> { currentObject.setLocalAdminEnabled(n.getBooleanValue()); });
-            this.put("managedBy", (n) -> { currentObject.setManagedBy(n.getEnumValue(CloudPcManagementService.class)); });
-            this.put("microsoftManagedDesktop", (n) -> { currentObject.setMicrosoftManagedDesktop(n.getObjectValue(MicrosoftManagedDesktop::createFromDiscriminatorValue)); });
-            this.put("onPremisesConnectionId", (n) -> { currentObject.setOnPremisesConnectionId(n.getStringValue()); });
-            this.put("windowsSettings", (n) -> { currentObject.setWindowsSettings(n.getObjectValue(CloudPcWindowsSettings::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("alternateResourceUrl", (n) -> { this.setAlternateResourceUrl(n.getStringValue()); });
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(CloudPcProvisioningPolicyAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudPcGroupDisplayName", (n) -> { this.setCloudPcGroupDisplayName(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("domainJoinConfiguration", (n) -> { this.setDomainJoinConfiguration(n.getObjectValue(CloudPcDomainJoinConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("domainJoinConfigurations", (n) -> { this.setDomainJoinConfigurations(n.getCollectionOfObjectValues(CloudPcDomainJoinConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("enableSingleSignOn", (n) -> { this.setEnableSingleSignOn(n.getBooleanValue()); });
+        deserializerMap.put("gracePeriodInHours", (n) -> { this.setGracePeriodInHours(n.getIntegerValue()); });
+        deserializerMap.put("imageDisplayName", (n) -> { this.setImageDisplayName(n.getStringValue()); });
+        deserializerMap.put("imageId", (n) -> { this.setImageId(n.getStringValue()); });
+        deserializerMap.put("imageType", (n) -> { this.setImageType(n.getEnumValue(CloudPcProvisioningPolicyImageType.class)); });
+        deserializerMap.put("localAdminEnabled", (n) -> { this.setLocalAdminEnabled(n.getBooleanValue()); });
+        deserializerMap.put("managedBy", (n) -> { this.setManagedBy(n.getEnumValue(CloudPcManagementService.class)); });
+        deserializerMap.put("microsoftManagedDesktop", (n) -> { this.setMicrosoftManagedDesktop(n.getObjectValue(MicrosoftManagedDesktop::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesConnectionId", (n) -> { this.setOnPremisesConnectionId(n.getStringValue()); });
+        deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcProvisioningType.class)); });
+        deserializerMap.put("windowsSettings", (n) -> { this.setWindowsSettings(n.getObjectValue(CloudPcWindowsSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the gracePeriodInHours property value. The number of hours to wait before reprovisioning/deprovisioning happens. Read-only.
@@ -135,15 +158,15 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getGracePeriodInHours() {
-        return this._gracePeriodInHours;
+        return this.gracePeriodInHours;
     }
     /**
-     * Gets the imageDisplayName property value. The display name for the OS image you’re provisioning.
+     * Gets the imageDisplayName property value. The display name for the OS image youre provisioning.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getImageDisplayName() {
-        return this._imageDisplayName;
+        return this.imageDisplayName;
     }
     /**
      * Gets the imageId property value. The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisher_offer_sku}. Supported values for each of the parameters are as follows:publisher: Microsoftwindowsdesktop. offer: windows-ent-cpc. sku: 21h1-ent-cpc-m365, 21h1-ent-cpc-os, 20h2-ent-cpc-m365, 20h2-ent-cpc-os, 20h1-ent-cpc-m365, 20h1-ent-cpc-os, 19h2-ent-cpc-m365 and 19h2-ent-cpc-os.
@@ -151,7 +174,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getImageId() {
-        return this._imageId;
+        return this.imageId;
     }
     /**
      * Gets the imageType property value. The imageType property
@@ -159,7 +182,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CloudPcProvisioningPolicyImageType getImageType() {
-        return this._imageType;
+        return this.imageType;
     }
     /**
      * Gets the localAdminEnabled property value. Indicates whether the local admin option is enabled. If the local admin option is enabled, the end user can be an admin of the Cloud PC device. Read-only.
@@ -167,7 +190,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getLocalAdminEnabled() {
-        return this._localAdminEnabled;
+        return this.localAdminEnabled;
     }
     /**
      * Gets the managedBy property value. The managedBy property
@@ -175,7 +198,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CloudPcManagementService getManagedBy() {
-        return this._managedBy;
+        return this.managedBy;
     }
     /**
      * Gets the microsoftManagedDesktop property value. The specific settings for the Microsoft Managed Desktop, which enables customers to get a managed device experience for the Cloud PC. Before you can enable Microsoft Managed Desktop, an admin must configure it.
@@ -183,15 +206,23 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public MicrosoftManagedDesktop getMicrosoftManagedDesktop() {
-        return this._microsoftManagedDesktop;
+        return this.microsoftManagedDesktop;
     }
     /**
-     * Gets the onPremisesConnectionId property value. The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the Cloud PC service.
+     * Gets the onPremisesConnectionId property value. The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network thats validated by the Cloud PC service.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getOnPremisesConnectionId() {
-        return this._onPremisesConnectionId;
+        return this.onPremisesConnectionId;
+    }
+    /**
+     * Gets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs using this policy. By default, the license type is dedicated if the provisioningType isn't specified when you create the cloudPcProvisioningPolicy. You can't change this property after the cloudPcProvisioningPolicy was created. Possible values are: dedicated, shared, unknownFutureValue.
+     * @return a cloudPcProvisioningType
+     */
+    @javax.annotation.Nullable
+    public CloudPcProvisioningType getProvisioningType() {
+        return this.provisioningType;
     }
     /**
      * Gets the windowsSettings property value. Specific Windows settings to configure while creating Cloud PCs for this provisioning policy.
@@ -199,13 +230,14 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CloudPcWindowsSettings getWindowsSettings() {
-        return this._windowsSettings;
+        return this.windowsSettings;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -215,6 +247,8 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("domainJoinConfiguration", this.getDomainJoinConfiguration());
+        writer.writeCollectionOfObjectValues("domainJoinConfigurations", this.getDomainJoinConfigurations());
+        writer.writeBooleanValue("enableSingleSignOn", this.getEnableSingleSignOn());
         writer.writeIntegerValue("gracePeriodInHours", this.getGracePeriodInHours());
         writer.writeStringValue("imageDisplayName", this.getImageDisplayName());
         writer.writeStringValue("imageId", this.getImageId());
@@ -223,6 +257,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         writer.writeEnumValue("managedBy", this.getManagedBy());
         writer.writeObjectValue("microsoftManagedDesktop", this.getMicrosoftManagedDesktop());
         writer.writeStringValue("onPremisesConnectionId", this.getOnPremisesConnectionId());
+        writer.writeEnumValue("provisioningType", this.getProvisioningType());
         writer.writeObjectValue("windowsSettings", this.getWindowsSettings());
     }
     /**
@@ -230,119 +265,161 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      * @param value Value to set for the alternateResourceUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAlternateResourceUrl(@javax.annotation.Nullable final String value) {
-        this._alternateResourceUrl = value;
+        this.alternateResourceUrl = value;
     }
     /**
-     * Sets the assignments property value. A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship.
+     * Sets the assignments property value. A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. For an example about how to get the assignments relationship, see Get cloudPcProvisioningPolicy.
      * @param value Value to set for the assignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignments(@javax.annotation.Nullable final java.util.List<CloudPcProvisioningPolicyAssignment> value) {
-        this._assignments = value;
+        this.assignments = value;
     }
     /**
      * Sets the cloudPcGroupDisplayName property value. The display name of the Cloud PC group that the Cloud PCs reside in. Read-only.
      * @param value Value to set for the cloudPcGroupDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudPcGroupDisplayName(@javax.annotation.Nullable final String value) {
-        this._cloudPcGroupDisplayName = value;
+        this.cloudPcGroupDisplayName = value;
     }
     /**
      * Sets the description property value. The provisioning policy description.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The display name for the provisioning policy.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the domainJoinConfiguration property value. Specifies how Cloud PCs will join Azure Active Directory.
      * @param value Value to set for the domainJoinConfiguration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainJoinConfiguration(@javax.annotation.Nullable final CloudPcDomainJoinConfiguration value) {
-        this._domainJoinConfiguration = value;
+        this.domainJoinConfiguration = value;
+    }
+    /**
+     * Sets the domainJoinConfigurations property value. The domainJoinConfigurations property
+     * @param value Value to set for the domainJoinConfigurations property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setDomainJoinConfigurations(@javax.annotation.Nullable final java.util.List<CloudPcDomainJoinConfiguration> value) {
+        this.domainJoinConfigurations = value;
+    }
+    /**
+     * Sets the enableSingleSignOn property value. True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Azure Active Directory (Azure AD) with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
+     * @param value Value to set for the enableSingleSignOn property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setEnableSingleSignOn(@javax.annotation.Nullable final Boolean value) {
+        this.enableSingleSignOn = value;
     }
     /**
      * Sets the gracePeriodInHours property value. The number of hours to wait before reprovisioning/deprovisioning happens. Read-only.
      * @param value Value to set for the gracePeriodInHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGracePeriodInHours(@javax.annotation.Nullable final Integer value) {
-        this._gracePeriodInHours = value;
+        this.gracePeriodInHours = value;
     }
     /**
-     * Sets the imageDisplayName property value. The display name for the OS image you’re provisioning.
+     * Sets the imageDisplayName property value. The display name for the OS image youre provisioning.
      * @param value Value to set for the imageDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImageDisplayName(@javax.annotation.Nullable final String value) {
-        this._imageDisplayName = value;
+        this.imageDisplayName = value;
     }
     /**
      * Sets the imageId property value. The ID of the OS image you want to provision on Cloud PCs. The format for a gallery type image is: {publisher_offer_sku}. Supported values for each of the parameters are as follows:publisher: Microsoftwindowsdesktop. offer: windows-ent-cpc. sku: 21h1-ent-cpc-m365, 21h1-ent-cpc-os, 20h2-ent-cpc-m365, 20h2-ent-cpc-os, 20h1-ent-cpc-m365, 20h1-ent-cpc-os, 19h2-ent-cpc-m365 and 19h2-ent-cpc-os.
      * @param value Value to set for the imageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImageId(@javax.annotation.Nullable final String value) {
-        this._imageId = value;
+        this.imageId = value;
     }
     /**
      * Sets the imageType property value. The imageType property
      * @param value Value to set for the imageType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImageType(@javax.annotation.Nullable final CloudPcProvisioningPolicyImageType value) {
-        this._imageType = value;
+        this.imageType = value;
     }
     /**
      * Sets the localAdminEnabled property value. Indicates whether the local admin option is enabled. If the local admin option is enabled, the end user can be an admin of the Cloud PC device. Read-only.
      * @param value Value to set for the localAdminEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalAdminEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._localAdminEnabled = value;
+        this.localAdminEnabled = value;
     }
     /**
      * Sets the managedBy property value. The managedBy property
      * @param value Value to set for the managedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedBy(@javax.annotation.Nullable final CloudPcManagementService value) {
-        this._managedBy = value;
+        this.managedBy = value;
     }
     /**
      * Sets the microsoftManagedDesktop property value. The specific settings for the Microsoft Managed Desktop, which enables customers to get a managed device experience for the Cloud PC. Before you can enable Microsoft Managed Desktop, an admin must configure it.
      * @param value Value to set for the microsoftManagedDesktop property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMicrosoftManagedDesktop(@javax.annotation.Nullable final MicrosoftManagedDesktop value) {
-        this._microsoftManagedDesktop = value;
+        this.microsoftManagedDesktop = value;
     }
     /**
-     * Sets the onPremisesConnectionId property value. The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network that’s validated by the Cloud PC service.
+     * Sets the onPremisesConnectionId property value. The ID of the cloudPcOnPremisesConnection. To ensure that Cloud PCs have network connectivity and that they domain join, choose a connection with a virtual network thats validated by the Cloud PC service.
      * @param value Value to set for the onPremisesConnectionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnPremisesConnectionId(@javax.annotation.Nullable final String value) {
-        this._onPremisesConnectionId = value;
+        this.onPremisesConnectionId = value;
+    }
+    /**
+     * Sets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs using this policy. By default, the license type is dedicated if the provisioningType isn't specified when you create the cloudPcProvisioningPolicy. You can't change this property after the cloudPcProvisioningPolicy was created. Possible values are: dedicated, shared, unknownFutureValue.
+     * @param value Value to set for the provisioningType property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setProvisioningType(@javax.annotation.Nullable final CloudPcProvisioningType value) {
+        this.provisioningType = value;
     }
     /**
      * Sets the windowsSettings property value. Specific Windows settings to configure while creating Cloud PCs for this provisioning policy.
      * @param value Value to set for the windowsSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsSettings(@javax.annotation.Nullable final CloudPcWindowsSettings value) {
-        this._windowsSettings = value;
+        this.windowsSettings = value;
     }
 }

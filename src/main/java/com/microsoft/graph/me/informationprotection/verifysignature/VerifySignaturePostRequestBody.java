@@ -4,24 +4,23 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the verifySignature method. */
 public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The digest property */
-    private byte[] _digest;
+    private byte[] digest;
     /** The signature property */
-    private byte[] _signature;
+    private byte[] signature;
     /** The signingKeyId property */
-    private String _signingKeyId;
+    private String signingKeyId;
     /**
      * Instantiates a new verifySignaturePostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VerifySignaturePostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -41,7 +40,7 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the digest property value. The digest property
@@ -49,20 +48,19 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public byte[] getDigest() {
-        return this._digest;
+        return this.digest;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final VerifySignaturePostRequestBody currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("digest", (n) -> { currentObject.setDigest(n.getByteArrayValue()); });
-            this.put("signature", (n) -> { currentObject.setSignature(n.getByteArrayValue()); });
-            this.put("signingKeyId", (n) -> { currentObject.setSigningKeyId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("digest", (n) -> { this.setDigest(n.getByteArrayValue()); });
+        deserializerMap.put("signature", (n) -> { this.setSignature(n.getByteArrayValue()); });
+        deserializerMap.put("signingKeyId", (n) -> { this.setSigningKeyId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the signature property value. The signature property
@@ -70,7 +68,7 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public byte[] getSignature() {
-        return this._signature;
+        return this.signature;
     }
     /**
      * Gets the signingKeyId property value. The signingKeyId property
@@ -78,13 +76,14 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
      */
     @javax.annotation.Nullable
     public String getSigningKeyId() {
-        return this._signingKeyId;
+        return this.signingKeyId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeByteArrayValue("digest", this.getDigest());
@@ -97,31 +96,35 @@ public class VerifySignaturePostRequestBody implements AdditionalDataHolder, Par
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the digest property value. The digest property
      * @param value Value to set for the digest property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDigest(@javax.annotation.Nullable final byte[] value) {
-        this._digest = value;
+        this.digest = value;
     }
     /**
      * Sets the signature property value. The signature property
      * @param value Value to set for the signature property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignature(@javax.annotation.Nullable final byte[] value) {
-        this._signature = value;
+        this.signature = value;
     }
     /**
      * Sets the signingKeyId property value. The signingKeyId property
      * @param value Value to set for the signingKeyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSigningKeyId(@javax.annotation.Nullable final String value) {
-        this._signingKeyId = value;
+        this.signingKeyId = value;
     }
 }

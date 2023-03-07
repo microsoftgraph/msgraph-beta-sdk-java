@@ -3,31 +3,29 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class TeamworkTag extends Entity implements Parsable {
     /** Tag description as it will appear to the user in Microsoft Teams. */
-    private String _description;
+    private String description;
     /** Tag name as it will appear to the user in Microsoft Teams. */
-    private String _displayName;
+    private String displayName;
     /** The number of users assigned to the tag. */
-    private Integer _memberCount;
+    private Integer memberCount;
     /** Users assigned to the tag. */
-    private java.util.List<TeamworkTagMember> _members;
+    private java.util.List<TeamworkTagMember> members;
     /** The type of tag. Default is standard. */
-    private TeamworkTagType _tagType;
+    private TeamworkTagType tagType;
     /** ID of the team in which the tag is defined. */
-    private String _teamId;
+    private String teamId;
     /**
      * Instantiates a new teamworkTag and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkTag() {
         super();
-        this.setOdataType("#microsoft.graph.teamworkTag");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +43,7 @@ public class TeamworkTag extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Tag name as it will appear to the user in Microsoft Teams.
@@ -53,23 +51,22 @@ public class TeamworkTag extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamworkTag currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("memberCount", (n) -> { currentObject.setMemberCount(n.getIntegerValue()); });
-            this.put("members", (n) -> { currentObject.setMembers(n.getCollectionOfObjectValues(TeamworkTagMember::createFromDiscriminatorValue)); });
-            this.put("tagType", (n) -> { currentObject.setTagType(n.getEnumValue(TeamworkTagType.class)); });
-            this.put("teamId", (n) -> { currentObject.setTeamId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("memberCount", (n) -> { this.setMemberCount(n.getIntegerValue()); });
+        deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(TeamworkTagMember::createFromDiscriminatorValue)); });
+        deserializerMap.put("tagType", (n) -> { this.setTagType(n.getEnumValue(TeamworkTagType.class)); });
+        deserializerMap.put("teamId", (n) -> { this.setTeamId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the memberCount property value. The number of users assigned to the tag.
@@ -77,7 +74,7 @@ public class TeamworkTag extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getMemberCount() {
-        return this._memberCount;
+        return this.memberCount;
     }
     /**
      * Gets the members property value. Users assigned to the tag.
@@ -85,7 +82,7 @@ public class TeamworkTag extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TeamworkTagMember> getMembers() {
-        return this._members;
+        return this.members;
     }
     /**
      * Gets the tagType property value. The type of tag. Default is standard.
@@ -93,7 +90,7 @@ public class TeamworkTag extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamworkTagType getTagType() {
-        return this._tagType;
+        return this.tagType;
     }
     /**
      * Gets the teamId property value. ID of the team in which the tag is defined.
@@ -101,13 +98,14 @@ public class TeamworkTag extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTeamId() {
-        return this._teamId;
+        return this.teamId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,47 +121,53 @@ public class TeamworkTag extends Entity implements Parsable {
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Tag name as it will appear to the user in Microsoft Teams.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the memberCount property value. The number of users assigned to the tag.
      * @param value Value to set for the memberCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberCount(@javax.annotation.Nullable final Integer value) {
-        this._memberCount = value;
+        this.memberCount = value;
     }
     /**
      * Sets the members property value. Users assigned to the tag.
      * @param value Value to set for the members property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMembers(@javax.annotation.Nullable final java.util.List<TeamworkTagMember> value) {
-        this._members = value;
+        this.members = value;
     }
     /**
      * Sets the tagType property value. The type of tag. Default is standard.
      * @param value Value to set for the tagType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTagType(@javax.annotation.Nullable final TeamworkTagType value) {
-        this._tagType = value;
+        this.tagType = value;
     }
     /**
      * Sets the teamId property value. ID of the team in which the tag is defined.
      * @param value Value to set for the teamId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamId(@javax.annotation.Nullable final String value) {
-        this._teamId = value;
+        this.teamId = value;
     }
 }

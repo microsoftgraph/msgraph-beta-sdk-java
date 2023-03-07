@@ -3,19 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DlpWindowsDevicesNotification extends DlpNotification implements Parsable {
     /** The contentName property */
-    private String _contentName;
+    private String contentName;
     /** The lastModfiedBy property */
-    private String _lastModfiedBy;
+    private String lastModfiedBy;
     /**
      * Instantiates a new DlpWindowsDevicesNotification and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DlpWindowsDevicesNotification() {
         super();
         this.setOdataType("#microsoft.graph.dlpWindowsDevicesNotification");
@@ -36,19 +36,18 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
      */
     @javax.annotation.Nullable
     public String getContentName() {
-        return this._contentName;
+        return this.contentName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DlpWindowsDevicesNotification currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contentName", (n) -> { currentObject.setContentName(n.getStringValue()); });
-            this.put("lastModfiedBy", (n) -> { currentObject.setLastModfiedBy(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contentName", (n) -> { this.setContentName(n.getStringValue()); });
+        deserializerMap.put("lastModfiedBy", (n) -> { this.setLastModfiedBy(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModfiedBy property value. The lastModfiedBy property
@@ -56,13 +55,14 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
      */
     @javax.annotation.Nullable
     public String getLastModfiedBy() {
-        return this._lastModfiedBy;
+        return this.lastModfiedBy;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +74,17 @@ public class DlpWindowsDevicesNotification extends DlpNotification implements Pa
      * @param value Value to set for the contentName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentName(@javax.annotation.Nullable final String value) {
-        this._contentName = value;
+        this.contentName = value;
     }
     /**
      * Sets the lastModfiedBy property value. The lastModfiedBy property
      * @param value Value to set for the lastModfiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModfiedBy(@javax.annotation.Nullable final String value) {
-        this._lastModfiedBy = value;
+        this.lastModfiedBy = value;
     }
 }

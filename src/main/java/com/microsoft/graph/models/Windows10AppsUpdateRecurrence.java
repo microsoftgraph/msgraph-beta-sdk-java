@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Possible values for App update on Windows10 recurrence. */
 public enum Windows10AppsUpdateRecurrence implements ValuedEnum {
     /** Default value, specifies a single occurence. */
     None("none"),

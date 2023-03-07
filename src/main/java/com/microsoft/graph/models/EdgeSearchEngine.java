@@ -3,17 +3,17 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
     /** Allows IT admind to set a predefined default search engine for MDM-Controlled devices */
-    private EdgeSearchEngineType _edgeSearchEngineType;
+    private EdgeSearchEngineType edgeSearchEngineType;
     /**
      * Instantiates a new EdgeSearchEngine and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EdgeSearchEngine() {
         super();
         this.setOdataType("#microsoft.graph.edgeSearchEngine");
@@ -34,24 +34,24 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
      */
     @javax.annotation.Nullable
     public EdgeSearchEngineType getEdgeSearchEngineType() {
-        return this._edgeSearchEngineType;
+        return this.edgeSearchEngineType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EdgeSearchEngine currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("edgeSearchEngineType", (n) -> { currentObject.setEdgeSearchEngineType(n.getEnumValue(EdgeSearchEngineType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("edgeSearchEngineType", (n) -> { this.setEdgeSearchEngineType(n.getEnumValue(EdgeSearchEngineType.class)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +62,8 @@ public class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable {
      * @param value Value to set for the edgeSearchEngineType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEdgeSearchEngineType(@javax.annotation.Nullable final EdgeSearchEngineType value) {
-        this._edgeSearchEngineType = value;
+        this.edgeSearchEngineType = value;
     }
 }

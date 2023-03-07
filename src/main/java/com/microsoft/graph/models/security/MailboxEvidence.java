@@ -3,24 +3,23 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MailboxEvidence extends AlertEvidence implements Parsable {
     /** The name associated with the mailbox. */
-    private String _displayName;
+    private String displayName;
     /** The primary email address of the mailbox. */
-    private String _primaryAddress;
+    private String primaryAddress;
     /** The user account of the mailbox. */
-    private UserAccount _userAccount;
+    private UserAccount userAccount;
     /**
      * Instantiates a new MailboxEvidence and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MailboxEvidence() {
         super();
-        this.setOdataType("#microsoft.graph.security.mailboxEvidence");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -38,20 +37,19 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MailboxEvidence currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("primaryAddress", (n) -> { currentObject.setPrimaryAddress(n.getStringValue()); });
-            this.put("userAccount", (n) -> { currentObject.setUserAccount(n.getObjectValue(UserAccount::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("primaryAddress", (n) -> { this.setPrimaryAddress(n.getStringValue()); });
+        deserializerMap.put("userAccount", (n) -> { this.setUserAccount(n.getObjectValue(UserAccount::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the primaryAddress property value. The primary email address of the mailbox.
@@ -59,7 +57,7 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPrimaryAddress() {
-        return this._primaryAddress;
+        return this.primaryAddress;
     }
     /**
      * Gets the userAccount property value. The user account of the mailbox.
@@ -67,13 +65,14 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
      */
     @javax.annotation.Nullable
     public UserAccount getUserAccount() {
-        return this._userAccount;
+        return this.userAccount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +85,26 @@ public class MailboxEvidence extends AlertEvidence implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the primaryAddress property value. The primary email address of the mailbox.
      * @param value Value to set for the primaryAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrimaryAddress(@javax.annotation.Nullable final String value) {
-        this._primaryAddress = value;
+        this.primaryAddress = value;
     }
     /**
      * Sets the userAccount property value. The user account of the mailbox.
      * @param value Value to set for the userAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserAccount(@javax.annotation.Nullable final UserAccount value) {
-        this._userAccount = value;
+        this.userAccount = value;
     }
 }

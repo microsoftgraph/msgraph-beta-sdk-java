@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the getOemWarranty method. */
+/** Models and Manufactures meatadata for managed devices in the account */
 public enum WarrantyType implements ValuedEnum {
     /** Unknown warranty type */
     Unknown("unknown"),
