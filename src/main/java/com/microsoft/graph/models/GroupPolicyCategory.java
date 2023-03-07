@@ -13,7 +13,7 @@ import com.microsoft.graph.models.IngestionSource;
 import com.microsoft.graph.models.GroupPolicyDefinitionFile;
 import com.microsoft.graph.models.GroupPolicyCategory;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.GroupPolicyDefinitionCollectionPage;
+import com.microsoft.graph.requests.GroupPolicyDefinitionCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -71,7 +71,7 @@ public class GroupPolicyCategory extends Entity implements IJsonBackedObject {
      * The children categories
      */
 	@Nullable
-    public com.microsoft.graph.requests.GroupPolicyCategoryCollectionPage children;
+    public com.microsoft.graph.requests.GroupPolicyCategoryCollectionWithReferencesPage children;
 
     /**
      * The Definition File.
@@ -87,7 +87,7 @@ public class GroupPolicyCategory extends Entity implements IJsonBackedObject {
      * The immediate GroupPolicyDefinition children of the category
      */
 	@Nullable
-    public com.microsoft.graph.requests.GroupPolicyDefinitionCollectionPage definitions;
+    public com.microsoft.graph.requests.GroupPolicyDefinitionCollectionWithReferencesPage definitions;
 
     /**
      * The Parent.
@@ -109,11 +109,11 @@ public class GroupPolicyCategory extends Entity implements IJsonBackedObject {
 
 
         if (json.has("children")) {
-            children = serializer.deserializeObject(json.get("children"), com.microsoft.graph.requests.GroupPolicyCategoryCollectionPage.class);
+            children = serializer.deserializeObject(json.get("children"), com.microsoft.graph.requests.GroupPolicyCategoryCollectionWithReferencesPage.class);
         }
 
         if (json.has("definitions")) {
-            definitions = serializer.deserializeObject(json.get("definitions"), com.microsoft.graph.requests.GroupPolicyDefinitionCollectionPage.class);
+            definitions = serializer.deserializeObject(json.get("definitions"), com.microsoft.graph.requests.GroupPolicyDefinitionCollectionWithReferencesPage.class);
         }
     }
 }

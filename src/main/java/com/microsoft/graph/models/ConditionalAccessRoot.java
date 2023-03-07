@@ -32,9 +32,20 @@ public class ConditionalAccessRoot extends Entity implements IJsonBackedObject {
 
 
     /**
+     * The Authentication Strength.
+     * 
+     */
+    @SerializedName(value = "authenticationStrength", alternate = {"AuthenticationStrength"})
+    @Expose
+	@Nullable
+    public AuthenticationStrengthRoot authenticationStrength;
+
+    /**
      * The Authentication Strengths.
      * Defines the authentication strength policies, valid authentication method combinations, and authentication method mode details that can be required by a conditional access policy .
+     * @deprecated The 'authenticationStrengths' segment is deprecated. Please use 'authenticationStrength' instead.
      */
+    @Deprecated
     @SerializedName(value = "authenticationStrengths", alternate = {"AuthenticationStrengths"})
     @Expose
 	@Nullable

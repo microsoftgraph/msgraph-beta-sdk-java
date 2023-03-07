@@ -21,7 +21,6 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.SynchronizationJobCollectionRequestBuilder;
 import com.microsoft.graph.requests.SynchronizationJobRequestBuilder;
 import com.microsoft.graph.requests.SynchronizationJobCollectionRequest;
-import com.microsoft.graph.requests.SynchronizationJobValidateCredentialsRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -47,16 +46,6 @@ public class SynchronizationJobCollectionRequestBuilder extends BaseCollectionRe
     }
 
 
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     * @param parameters the parameters for the service method
-     */
-    @Nonnull
-    public SynchronizationJobValidateCredentialsRequestBuilder validateCredentials(@Nonnull final SynchronizationJobValidateCredentialsParameterSet parameters) {
-        return new SynchronizationJobValidateCredentialsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validateCredentials"), getClient(), null, parameters);
-    }
 
     /**
      * Gets the raw count request for the collection

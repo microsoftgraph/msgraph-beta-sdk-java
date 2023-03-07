@@ -12,7 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PrivilegedRoleSettings;
 import com.microsoft.graph.models.PrivilegedRoleSummary;
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.requests.PrivilegedRoleAssignmentCollectionPage;
+import com.microsoft.graph.requests.PrivilegedRoleAssignmentCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -43,7 +43,7 @@ public class PrivilegedRole extends Entity implements IJsonBackedObject {
      * The assignments for this role. Read-only. Nullable.
      */
 	@Nullable
-    public com.microsoft.graph.requests.PrivilegedRoleAssignmentCollectionPage assignments;
+    public com.microsoft.graph.requests.PrivilegedRoleAssignmentCollectionWithReferencesPage assignments;
 
     /**
      * The Settings.
@@ -74,7 +74,7 @@ public class PrivilegedRole extends Entity implements IJsonBackedObject {
 
 
         if (json.has("assignments")) {
-            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.PrivilegedRoleAssignmentCollectionPage.class);
+            assignments = serializer.deserializeObject(json.get("assignments"), com.microsoft.graph.requests.PrivilegedRoleAssignmentCollectionWithReferencesPage.class);
         }
     }
 }

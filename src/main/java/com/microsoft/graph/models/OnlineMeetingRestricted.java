@@ -41,21 +41,21 @@ public class OnlineMeetingRestricted implements IJsonBackedObject {
 
     /**
      * The Content Sharing Disabled.
-     * 
+     * Specifies the reason why shared content from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
      */
     @SerializedName(value = "contentSharingDisabled", alternate = {"ContentSharingDisabled"})
     @Expose
 	@Nullable
-    public OnlineMeetingContentSharingDisabledReason contentSharingDisabled;
+    public EnumSet<OnlineMeetingContentSharingDisabledReason> contentSharingDisabled;
 
     /**
      * The Video Disabled.
-     * 
+     * Specifies the reason why video from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
      */
     @SerializedName(value = "videoDisabled", alternate = {"VideoDisabled"})
     @Expose
 	@Nullable
-    public OnlineMeetingVideoDisabledReason videoDisabled;
+    public EnumSet<OnlineMeetingVideoDisabledReason> videoDisabled;
 
 
     /**

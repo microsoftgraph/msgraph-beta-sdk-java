@@ -14,7 +14,7 @@ import com.microsoft.graph.models.MobileAppPublishingState;
 import com.microsoft.graph.models.MobileAppInstallSummary;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.MobileAppAssignmentCollectionPage;
-import com.microsoft.graph.requests.MobileAppCategoryCollectionPage;
+import com.microsoft.graph.requests.MobileAppCategoryCollectionWithReferencesPage;
 import com.microsoft.graph.requests.MobileAppInstallStatusCollectionPage;
 import com.microsoft.graph.requests.MobileAppRelationshipCollectionPage;
 import com.microsoft.graph.requests.UserAppInstallStatusCollectionPage;
@@ -219,7 +219,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
      * The list of categories for this app.
      */
 	@Nullable
-    public com.microsoft.graph.requests.MobileAppCategoryCollectionPage categories;
+    public com.microsoft.graph.requests.MobileAppCategoryCollectionWithReferencesPage categories;
 
     /**
      * The Device Statuses.
@@ -272,7 +272,7 @@ public class MobileApp extends Entity implements IJsonBackedObject {
         }
 
         if (json.has("categories")) {
-            categories = serializer.deserializeObject(json.get("categories"), com.microsoft.graph.requests.MobileAppCategoryCollectionPage.class);
+            categories = serializer.deserializeObject(json.get("categories"), com.microsoft.graph.requests.MobileAppCategoryCollectionWithReferencesPage.class);
         }
 
         if (json.has("deviceStatuses")) {

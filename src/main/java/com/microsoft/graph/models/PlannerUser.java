@@ -62,7 +62,7 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
      * Read-only. Nullable. Returns the plannerPlans that the user marked as favorites.
      */
 	@Nullable
-    public com.microsoft.graph.requests.PlannerPlanCollectionPage favoritePlans;
+    public com.microsoft.graph.requests.PlannerPlanCollectionWithReferencesPage favoritePlans;
 
     /**
      * The Plans.
@@ -78,14 +78,14 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
      * Read-only. Nullable. Returns the plannerPlans that have been recently viewed by the user in apps that support recent plans.
      */
 	@Nullable
-    public com.microsoft.graph.requests.PlannerPlanCollectionPage recentPlans;
+    public com.microsoft.graph.requests.PlannerPlanCollectionWithReferencesPage recentPlans;
 
     /**
      * The Roster Plans.
      * Read-only. Nullable. Returns the plannerPlans contained by the plannerRosters the user is a member.
      */
 	@Nullable
-    public com.microsoft.graph.requests.PlannerPlanCollectionPage rosterPlans;
+    public com.microsoft.graph.requests.PlannerPlanCollectionWithReferencesPage rosterPlans;
 
     /**
      * The Tasks.
@@ -111,7 +111,7 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
         }
 
         if (json.has("favoritePlans")) {
-            favoritePlans = serializer.deserializeObject(json.get("favoritePlans"), com.microsoft.graph.requests.PlannerPlanCollectionPage.class);
+            favoritePlans = serializer.deserializeObject(json.get("favoritePlans"), com.microsoft.graph.requests.PlannerPlanCollectionWithReferencesPage.class);
         }
 
         if (json.has("plans")) {
@@ -119,11 +119,11 @@ public class PlannerUser extends PlannerDelta implements IJsonBackedObject {
         }
 
         if (json.has("recentPlans")) {
-            recentPlans = serializer.deserializeObject(json.get("recentPlans"), com.microsoft.graph.requests.PlannerPlanCollectionPage.class);
+            recentPlans = serializer.deserializeObject(json.get("recentPlans"), com.microsoft.graph.requests.PlannerPlanCollectionWithReferencesPage.class);
         }
 
         if (json.has("rosterPlans")) {
-            rosterPlans = serializer.deserializeObject(json.get("rosterPlans"), com.microsoft.graph.requests.PlannerPlanCollectionPage.class);
+            rosterPlans = serializer.deserializeObject(json.get("rosterPlans"), com.microsoft.graph.requests.PlannerPlanCollectionWithReferencesPage.class);
         }
 
         if (json.has("tasks")) {

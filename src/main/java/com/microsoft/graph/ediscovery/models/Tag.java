@@ -79,7 +79,7 @@ public class Tag extends Entity implements IJsonBackedObject {
      * Returns the tags that are a child of a tag.
      */
 	@Nullable
-    public com.microsoft.graph.ediscovery.requests.TagCollectionPage childTags;
+    public com.microsoft.graph.ediscovery.requests.TagCollectionWithReferencesPage childTags;
 
     /**
      * The Parent.
@@ -101,7 +101,7 @@ public class Tag extends Entity implements IJsonBackedObject {
 
 
         if (json.has("childTags")) {
-            childTags = serializer.deserializeObject(json.get("childTags"), com.microsoft.graph.ediscovery.requests.TagCollectionPage.class);
+            childTags = serializer.deserializeObject(json.get("childTags"), com.microsoft.graph.ediscovery.requests.TagCollectionWithReferencesPage.class);
         }
     }
 }

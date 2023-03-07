@@ -28,6 +28,10 @@ public enum PlannerContainerType
     */
     PROJECT,
     /**
+    * drive Item
+    */
+    DRIVE_ITEM,
+    /**
     * For PlannerContainerType values that were not expected from the service
     */
     UNEXPECTED_VALUE

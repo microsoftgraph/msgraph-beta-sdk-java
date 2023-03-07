@@ -10,7 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.DeviceConfiguration;
-import com.microsoft.graph.requests.DeviceConfigurationCollectionPage;
+import com.microsoft.graph.requests.DeviceConfigurationCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -68,7 +68,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * Reference to device configurations required for network connectivity
      */
 	@Nullable
-    public com.microsoft.graph.requests.DeviceConfigurationCollectionPage networkAccessConfigurations;
+    public com.microsoft.graph.requests.DeviceConfigurationCollectionWithReferencesPage networkAccessConfigurations;
 
 
     /**
@@ -81,7 +81,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
 
 
         if (json.has("networkAccessConfigurations")) {
-            networkAccessConfigurations = serializer.deserializeObject(json.get("networkAccessConfigurations"), com.microsoft.graph.requests.DeviceConfigurationCollectionPage.class);
+            networkAccessConfigurations = serializer.deserializeObject(json.get("networkAccessConfigurations"), com.microsoft.graph.requests.DeviceConfigurationCollectionWithReferencesPage.class);
         }
     }
 }

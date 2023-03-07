@@ -9,7 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
-import com.microsoft.graph.requests.DirectoryObjectCollectionPage;
+import com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -89,7 +89,7 @@ public class UnifiedRoleManagementPolicyRuleTarget implements IJsonBackedObject 
      * 
      */
 	@Nullable
-    public com.microsoft.graph.requests.DirectoryObjectCollectionPage targetObjects;
+    public com.microsoft.graph.requests.DirectoryObjectCollectionWithReferencesPage targetObjects;
 
 
     /**

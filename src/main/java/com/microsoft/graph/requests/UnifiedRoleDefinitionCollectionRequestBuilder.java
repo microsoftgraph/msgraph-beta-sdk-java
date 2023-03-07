@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.RbacApplication;
+import com.microsoft.graph.models.UnifiedRbacApplication;
 import com.microsoft.graph.models.UnifiedRoleDefinition;
 import com.microsoft.graph.models.DirectoryObject;
 import java.util.Arrays;
@@ -30,7 +30,7 @@ import com.microsoft.graph.models.UnifiedRoleDefinitionAssignedPrincipalsParamet
 public class UnifiedRoleDefinitionCollectionRequestBuilder extends BaseCollectionRequestBuilder<UnifiedRoleDefinition, UnifiedRoleDefinitionRequestBuilder, UnifiedRoleDefinitionCollectionResponse, UnifiedRoleDefinitionCollectionPage, UnifiedRoleDefinitionCollectionRequest> {
 
     /**
-     * The request builder for this collection of RbacApplication
+     * The request builder for this collection of UnifiedRbacApplication
      *
      * @param requestUrl     the request URL
      * @param client         the service client

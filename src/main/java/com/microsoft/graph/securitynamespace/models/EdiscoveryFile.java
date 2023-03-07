@@ -11,7 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.security.models.EdiscoveryCustodian;
 import com.microsoft.graph.security.models.File;
-import com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionPage;
+import com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -42,7 +42,7 @@ public class EdiscoveryFile extends File implements IJsonBackedObject {
      * Tags associated with the file.
      */
 	@Nullable
-    public com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionPage tags;
+    public com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionWithReferencesPage tags;
 
 
     /**
@@ -55,7 +55,7 @@ public class EdiscoveryFile extends File implements IJsonBackedObject {
 
 
         if (json.has("tags")) {
-            tags = serializer.deserializeObject(json.get("tags"), com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionPage.class);
+            tags = serializer.deserializeObject(json.get("tags"), com.microsoft.graph.security.requests.EdiscoveryReviewTagCollectionWithReferencesPage.class);
         }
     }
 }

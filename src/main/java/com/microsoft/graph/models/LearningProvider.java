@@ -37,15 +37,6 @@ public class LearningProvider extends Entity implements IJsonBackedObject {
     public String displayName;
 
     /**
-     * The Is Enabled.
-     * The state of the provider. Optional.
-     */
-    @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
-    @Expose
-	@Nullable
-    public Boolean isEnabled;
-
-    /**
      * The Login Web Url.
      * Authentication URL to access the courses for the provider. Optional.
      */

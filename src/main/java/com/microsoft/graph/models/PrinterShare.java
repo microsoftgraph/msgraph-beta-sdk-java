@@ -12,8 +12,8 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PrinterShareViewpoint;
 import com.microsoft.graph.models.Printer;
 import com.microsoft.graph.models.PrinterBase;
-import com.microsoft.graph.requests.GroupCollectionPage;
-import com.microsoft.graph.requests.UserCollectionPage;
+import com.microsoft.graph.requests.GroupCollectionWithReferencesPage;
+import com.microsoft.graph.requests.UserCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -62,14 +62,14 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
      * The groups whose users have access to print using the printer.
      */
 	@Nullable
-    public com.microsoft.graph.requests.GroupCollectionPage allowedGroups;
+    public com.microsoft.graph.requests.GroupCollectionWithReferencesPage allowedGroups;
 
     /**
      * The Allowed Users.
      * The users who have access to print using the printer.
      */
 	@Nullable
-    public com.microsoft.graph.requests.UserCollectionPage allowedUsers;
+    public com.microsoft.graph.requests.UserCollectionWithReferencesPage allowedUsers;
 
     /**
      * The Printer.
@@ -91,11 +91,11 @@ public class PrinterShare extends PrinterBase implements IJsonBackedObject {
 
 
         if (json.has("allowedGroups")) {
-            allowedGroups = serializer.deserializeObject(json.get("allowedGroups"), com.microsoft.graph.requests.GroupCollectionPage.class);
+            allowedGroups = serializer.deserializeObject(json.get("allowedGroups"), com.microsoft.graph.requests.GroupCollectionWithReferencesPage.class);
         }
 
         if (json.has("allowedUsers")) {
-            allowedUsers = serializer.deserializeObject(json.get("allowedUsers"), com.microsoft.graph.requests.UserCollectionPage.class);
+            allowedUsers = serializer.deserializeObject(json.get("allowedUsers"), com.microsoft.graph.requests.UserCollectionWithReferencesPage.class);
         }
     }
 }

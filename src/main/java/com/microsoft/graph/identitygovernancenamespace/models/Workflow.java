@@ -10,7 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.identitygovernance.models.WorkflowBase;
-import com.microsoft.graph.requests.UserCollectionPage;
+import com.microsoft.graph.requests.UserCollectionWithReferencesPage;
 import com.microsoft.graph.identitygovernance.requests.RunCollectionPage;
 import com.microsoft.graph.identitygovernance.requests.TaskReportCollectionPage;
 import com.microsoft.graph.identitygovernance.requests.UserProcessingResultCollectionPage;
@@ -72,7 +72,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
      * The unique identifier of the Azure AD identity that last modified the workflow object.
      */
 	@Nullable
-    public com.microsoft.graph.requests.UserCollectionPage executionScope;
+    public com.microsoft.graph.requests.UserCollectionWithReferencesPage executionScope;
 
     /**
      * The Runs.
@@ -121,7 +121,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
 
         if (json.has("executionScope")) {
-            executionScope = serializer.deserializeObject(json.get("executionScope"), com.microsoft.graph.requests.UserCollectionPage.class);
+            executionScope = serializer.deserializeObject(json.get("executionScope"), com.microsoft.graph.requests.UserCollectionWithReferencesPage.class);
         }
 
         if (json.has("runs")) {

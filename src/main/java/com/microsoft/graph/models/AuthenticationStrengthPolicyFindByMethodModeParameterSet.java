@@ -20,7 +20,9 @@ import java.util.ArrayList;
 
 /**
  * The class for the Authentication Strength Policy Find By Method Mode Parameter Set.
+ * @deprecated The findByMethodMode function is deprecated. Please use OData filter query instead.
  */
+@Deprecated
 public class AuthenticationStrengthPolicyFindByMethodModeParameterSet {
     /**
      * The authentication Method Modes.

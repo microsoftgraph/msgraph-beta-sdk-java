@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.RbacApplication;
+import com.microsoft.graph.models.UnifiedRbacApplication;
 import com.microsoft.graph.models.UnifiedRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +28,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class UnifiedRoleAssignmentCollectionRequestBuilder extends BaseCollectionRequestBuilder<UnifiedRoleAssignment, UnifiedRoleAssignmentRequestBuilder, UnifiedRoleAssignmentCollectionResponse, UnifiedRoleAssignmentCollectionPage, UnifiedRoleAssignmentCollectionRequest> {
 
     /**
-     * The request builder for this collection of RbacApplication
+     * The request builder for this collection of UnifiedRbacApplication
      *
      * @param requestUrl     the request URL
      * @param client         the service client

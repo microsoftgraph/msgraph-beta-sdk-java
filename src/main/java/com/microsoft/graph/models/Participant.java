@@ -95,7 +95,7 @@ public class Participant extends Entity implements IJsonBackedObject {
 
     /**
      * The Restricted Experience.
-     * 
+     * Indicates the reason or reasons why media content from this participant is restricted.
      */
     @SerializedName(value = "restrictedExperience", alternate = {"RestrictedExperience"})
     @Expose

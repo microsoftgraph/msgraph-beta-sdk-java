@@ -226,7 +226,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
      * Specify root certificates for server validation. This collection can contain a maximum of 500 elements.
      */
 	@Nullable
-    public com.microsoft.graph.requests.Windows81TrustedRootCertificateCollectionPage rootCertificatesForServerValidation;
+    public com.microsoft.graph.requests.Windows81TrustedRootCertificateCollectionWithReferencesPage rootCertificatesForServerValidation;
 
     /**
      * The Secondary Identity Certificate For Client Authentication.
@@ -257,7 +257,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
 
 
         if (json.has("rootCertificatesForServerValidation")) {
-            rootCertificatesForServerValidation = serializer.deserializeObject(json.get("rootCertificatesForServerValidation"), com.microsoft.graph.requests.Windows81TrustedRootCertificateCollectionPage.class);
+            rootCertificatesForServerValidation = serializer.deserializeObject(json.get("rootCertificatesForServerValidation"), com.microsoft.graph.requests.Windows81TrustedRootCertificateCollectionWithReferencesPage.class);
         }
     }
 }

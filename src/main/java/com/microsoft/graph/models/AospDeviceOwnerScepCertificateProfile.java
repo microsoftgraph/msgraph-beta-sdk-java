@@ -15,7 +15,7 @@ import com.microsoft.graph.models.HashAlgorithms;
 import com.microsoft.graph.models.KeySize;
 import com.microsoft.graph.models.KeyUsages;
 import com.microsoft.graph.models.AospDeviceOwnerCertificateProfileBase;
-import com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage;
+import com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionWithReferencesPage;
 
 
 import com.google.gson.JsonObject;
@@ -109,7 +109,7 @@ public class AospDeviceOwnerScepCertificateProfile extends AospDeviceOwnerCertif
      * Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      */
 	@Nullable
-    public com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage managedDeviceCertificateStates;
+    public com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionWithReferencesPage managedDeviceCertificateStates;
 
 
     /**
@@ -122,7 +122,7 @@ public class AospDeviceOwnerScepCertificateProfile extends AospDeviceOwnerCertif
 
 
         if (json.has("managedDeviceCertificateStates")) {
-            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates"), com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionPage.class);
+            managedDeviceCertificateStates = serializer.deserializeObject(json.get("managedDeviceCertificateStates"), com.microsoft.graph.requests.ManagedDeviceCertificateStateCollectionWithReferencesPage.class);
         }
     }
 }

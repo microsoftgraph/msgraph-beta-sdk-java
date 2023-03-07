@@ -7,7 +7,7 @@ package com.microsoft.graph.windowsupdates.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.windowsupdates.models.Updates;
+import com.microsoft.graph.windowsupdates.models.UpdatableAssetGroup;
 import com.microsoft.graph.windowsupdates.models.UpdatableAsset;
 import com.microsoft.graph.windowsupdates.models.UpdateCategory;
 import java.util.Arrays;
@@ -41,7 +41,7 @@ import com.microsoft.graph.windowsupdates.models.UpdatableAssetUnenrollAssetsByI
 public class UpdatableAssetCollectionRequestBuilder extends BaseCollectionRequestBuilder<UpdatableAsset, UpdatableAssetRequestBuilder, UpdatableAssetCollectionResponse, UpdatableAssetCollectionPage, UpdatableAssetCollectionRequest> {
 
     /**
-     * The request builder for this collection of Updates
+     * The request builder for this collection of UpdatableAssetGroup
      *
      * @param requestUrl     the request URL
      * @param client         the service client

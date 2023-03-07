@@ -11,6 +11,7 @@ import com.microsoft.graph.models.DeviceManagementIntent;
 import com.microsoft.graph.models.DeviceManagementIntentAssignment;
 import com.microsoft.graph.models.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.DeviceManagementSettingComparison;
+import com.microsoft.graph.models.DeviceManagementIntentCustomizedSetting;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;

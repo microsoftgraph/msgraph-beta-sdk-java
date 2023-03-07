@@ -39,7 +39,7 @@ public class ActionUrl implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * Brief title for the page that the links directs to.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class ActionUrl implements IJsonBackedObject {
 
     /**
      * The Url.
-     * 
+     * The URL to the documentation or Azure portal page.
      */
     @SerializedName(value = "url", alternate = {"Url"})
     @Expose

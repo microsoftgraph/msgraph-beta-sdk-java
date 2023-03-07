@@ -18,7 +18,9 @@ import com.microsoft.graph.core.IBaseClient;
 
 /**
  * The class for the Ediscovery Export Operation Get Download Url Request.
+ * @deprecated The getDownloadUrl endpoint will be deprecated on April 30, 2023. Please use exportFilesMetadata API instead.
  */
+@Deprecated
 public class EdiscoveryExportOperationGetDownloadUrlRequest extends BaseRequest<String> {
     /**
      * The request for this EdiscoveryExportOperationGetDownloadUrl

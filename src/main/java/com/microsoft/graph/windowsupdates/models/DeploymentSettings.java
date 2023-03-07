@@ -8,9 +8,11 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.windowsupdates.models.ContentApplicabilitySettings;
+import com.microsoft.graph.windowsupdates.models.ExpediteSettings;
 import com.microsoft.graph.windowsupdates.models.MonitoringSettings;
-import com.microsoft.graph.windowsupdates.models.RolloutSettings;
-import com.microsoft.graph.windowsupdates.models.SafeguardSettings;
+import com.microsoft.graph.windowsupdates.models.ScheduleSettings;
+import com.microsoft.graph.windowsupdates.models.UserExperienceSettings;
 
 
 import com.google.gson.JsonObject;
@@ -41,8 +43,26 @@ public class DeploymentSettings implements IJsonBackedObject {
     }
 
     /**
+     * The Content Applicability.
+     * Settings for governing whether content is applicable to a device.
+     */
+    @SerializedName(value = "contentApplicability", alternate = {"ContentApplicability"})
+    @Expose
+	@Nullable
+    public ContentApplicabilitySettings contentApplicability;
+
+    /**
+     * The Expedite.
+     * Settings for governing whether updates should be expedited.
+     */
+    @SerializedName(value = "expedite", alternate = {"Expedite"})
+    @Expose
+	@Nullable
+    public ExpediteSettings expedite;
+
+    /**
      * The Monitoring.
-     * Settings governing conditions to monitor and automated actions to take.
+     * Settings for governing conditions to monitor and automated actions to take.
      */
     @SerializedName(value = "monitoring", alternate = {"Monitoring"})
     @Expose
@@ -50,22 +70,22 @@ public class DeploymentSettings implements IJsonBackedObject {
     public MonitoringSettings monitoring;
 
     /**
-     * The Rollout.
-     * Settings governing how the content is rolled out.
+     * The Schedule.
+     * Settings for governing how and when the content is rolled out.
      */
-    @SerializedName(value = "rollout", alternate = {"Rollout"})
+    @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
 	@Nullable
-    public RolloutSettings rollout;
+    public ScheduleSettings schedule;
 
     /**
-     * The Safeguard.
-     * Settings governing safeguard holds on offering content.
+     * The User Experience.
+     * Settings for governing end user update experience.
      */
-    @SerializedName(value = "safeguard", alternate = {"Safeguard"})
+    @SerializedName(value = "userExperience", alternate = {"UserExperience"})
     @Expose
 	@Nullable
-    public SafeguardSettings safeguard;
+    public UserExperienceSettings userExperience;
 
 
     /**
