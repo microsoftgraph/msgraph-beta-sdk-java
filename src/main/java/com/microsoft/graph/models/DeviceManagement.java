@@ -20,6 +20,7 @@ import com.microsoft.graph.models.DeviceManagementSubscriptionState;
 import com.microsoft.graph.models.UserExperienceAnalyticsAnomalySeverityOverview;
 import com.microsoft.graph.models.UserExperienceAnalyticsSettings;
 import com.microsoft.graph.models.WindowsMalwareOverview;
+import com.microsoft.graph.models.ConnectorStatusDetails;
 import com.microsoft.graph.devicemanagement.models.Monitoring;
 import com.microsoft.graph.models.VirtualEndpoint;
 import com.microsoft.graph.models.AndroidForWorkSettings;
@@ -53,6 +54,7 @@ import com.microsoft.graph.requests.AuditEventCollectionPage;
 import com.microsoft.graph.requests.DeviceAndAppManagementAssignmentFilterCollectionPage;
 import com.microsoft.graph.requests.ChromeOSOnboardingSettingsCollectionPage;
 import com.microsoft.graph.requests.TermsAndConditionsCollectionPage;
+import com.microsoft.graph.requests.ServiceNowConnectionCollectionPage;
 import com.microsoft.graph.requests.CartToClassAssociationCollectionPage;
 import com.microsoft.graph.requests.DeviceCompliancePolicyCollectionPage;
 import com.microsoft.graph.requests.DeviceCompliancePolicySettingStateSummaryCollectionPage;
@@ -115,7 +117,7 @@ import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupHistoryC
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceStartupProcessPerformanceCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage;
-import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventsCollectionPage;
+import com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsImpactingProcessCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsModelScoresCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsNotAutopilotReadyDeviceCollectionPage;
@@ -346,6 +348,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public WindowsMalwareOverview windowsMalwareOverview;
 
     /**
+     * The Connector Status.
+     * The list of connector status for the tenant.
+     */
+    @SerializedName(value = "connectorStatus", alternate = {"ConnectorStatus"})
+    @Expose
+	@Nullable
+    public java.util.List<ConnectorStatusDetails> connectorStatus;
+
+    /**
      * The Monitoring.
      * 
      */
@@ -452,6 +463,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.TermsAndConditionsCollectionPage termsAndConditions;
+
+    /**
+     * The Service Now Connections.
+     * A list of ServiceNowConnections
+     */
+    @SerializedName(value = "serviceNowConnections", alternate = {"ServiceNowConnections"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.ServiceNowConnectionCollectionPage serviceNowConnections;
 
     /**
      * The Advanced Threat Protection Onboarding State Summary.
@@ -1237,13 +1257,13 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage userExperienceAnalyticsDevicesWithoutCloudIdentity;
 
     /**
-     * The User Experience Analytics Device Timeline Events.
-     * The user experience analytics device events entity contains NRT device timeline events details.
+     * The User Experience Analytics Device Timeline Event.
+     * The user experience analytics device events entity contains NRT device timeline event details.
      */
-    @SerializedName(value = "userExperienceAnalyticsDeviceTimelineEvents", alternate = {"UserExperienceAnalyticsDeviceTimelineEvents"})
+    @SerializedName(value = "userExperienceAnalyticsDeviceTimelineEvent", alternate = {"UserExperienceAnalyticsDeviceTimelineEvent"})
     @Expose
 	@Nullable
-    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventsCollectionPage userExperienceAnalyticsDeviceTimelineEvents;
+    public com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventCollectionPage userExperienceAnalyticsDeviceTimelineEvent;
 
     /**
      * The User Experience Analytics Impacting Process.
@@ -1809,6 +1829,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             termsAndConditions = serializer.deserializeObject(json.get("termsAndConditions"), com.microsoft.graph.requests.TermsAndConditionsCollectionPage.class);
         }
 
+        if (json.has("serviceNowConnections")) {
+            serviceNowConnections = serializer.deserializeObject(json.get("serviceNowConnections"), com.microsoft.graph.requests.ServiceNowConnectionCollectionPage.class);
+        }
+
         if (json.has("cartToClassAssociations")) {
             cartToClassAssociations = serializer.deserializeObject(json.get("cartToClassAssociations"), com.microsoft.graph.requests.CartToClassAssociationCollectionPage.class);
         }
@@ -2101,8 +2125,8 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
             userExperienceAnalyticsDevicesWithoutCloudIdentity = serializer.deserializeObject(json.get("userExperienceAnalyticsDevicesWithoutCloudIdentity"), com.microsoft.graph.requests.UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionPage.class);
         }
 
-        if (json.has("userExperienceAnalyticsDeviceTimelineEvents")) {
-            userExperienceAnalyticsDeviceTimelineEvents = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceTimelineEvents"), com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventsCollectionPage.class);
+        if (json.has("userExperienceAnalyticsDeviceTimelineEvent")) {
+            userExperienceAnalyticsDeviceTimelineEvent = serializer.deserializeObject(json.get("userExperienceAnalyticsDeviceTimelineEvent"), com.microsoft.graph.requests.UserExperienceAnalyticsDeviceTimelineEventCollectionPage.class);
         }
 
         if (json.has("userExperienceAnalyticsImpactingProcess")) {

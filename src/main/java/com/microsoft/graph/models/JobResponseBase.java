@@ -89,6 +89,15 @@ public class JobResponseBase extends Entity implements IJsonBackedObject {
 	@Nullable
     public String type;
 
+    /**
+     * The User Id.
+     * 
+     */
+    @SerializedName(value = "userId", alternate = {"UserId"})
+    @Expose
+	@Nullable
+    public String userId;
+
 
     /**
      * Sets the raw JSON object

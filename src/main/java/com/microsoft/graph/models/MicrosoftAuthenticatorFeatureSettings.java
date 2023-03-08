@@ -39,6 +39,15 @@ public class MicrosoftAuthenticatorFeatureSettings implements IJsonBackedObject 
     }
 
     /**
+     * The Companion App Allowed State.
+     * 
+     */
+    @SerializedName(value = "companionAppAllowedState", alternate = {"CompanionAppAllowedState"})
+    @Expose
+	@Nullable
+    public AuthenticationMethodFeatureConfiguration companionAppAllowedState;
+
+    /**
      * The Display App Information Required State.
      * Determines whether the user's Authenticator app will show them the client app they are signing into.
      */

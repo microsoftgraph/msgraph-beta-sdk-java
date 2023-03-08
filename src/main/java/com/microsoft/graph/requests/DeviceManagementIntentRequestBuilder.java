@@ -11,6 +11,7 @@ import com.microsoft.graph.models.DeviceManagementIntent;
 import com.microsoft.graph.models.DeviceManagementIntentAssignment;
 import com.microsoft.graph.models.DeviceManagementSettingInstance;
 import com.microsoft.graph.models.DeviceManagementSettingComparison;
+import com.microsoft.graph.models.DeviceManagementIntentCustomizedSetting;
 import java.util.Arrays;
 import java.util.EnumSet;
 import javax.annotation.Nullable;
@@ -253,5 +254,14 @@ public class DeviceManagementIntentRequestBuilder extends BaseRequestBuilder<Dev
     @Nonnull
     public DeviceManagementIntentCompareCollectionRequestBuilder compare(@Nonnull final DeviceManagementIntentCompareParameterSet parameters) {
         return new DeviceManagementIntentCompareCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.compare"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public DeviceManagementIntentGetCustomizedSettingsCollectionRequestBuilder getCustomizedSettings() {
+        return new DeviceManagementIntentGetCustomizedSettingsCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getCustomizedSettings"), getClient(), null);
     }
 }

@@ -30,7 +30,7 @@ public class DirectoryDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Discoverabilities.
-     * Read only value indicating what type of discovery the app supports. Possible values are: AttributeDataTypes, AttributeNames, AttributeReadOnly, None, ReferenceAttributes, UnknownFutureValue.
+     * Read-only value indicating what type of discovery the app supports. The possible values are: None, AttributeNames, AttributeDataTypes, AttributeReadOnly, ReferenceAttributes, UnknownFutureValue. This is a multi-valued object.
      */
     @SerializedName(value = "discoverabilities", alternate = {"Discoverabilities"})
     @Expose
@@ -66,7 +66,7 @@ public class DirectoryDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Read Only.
-     * 
+     * Whether this object is read-only.
      */
     @SerializedName(value = "readOnly", alternate = {"ReadOnly"})
     @Expose

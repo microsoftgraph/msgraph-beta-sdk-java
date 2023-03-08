@@ -81,7 +81,7 @@ public class SignIn extends Entity implements IJsonBackedObject {
 
     /**
      * The Applied Event Listeners.
-     * 
+     * Detailed information about the listeners, such as Azure Logic Apps and Azure Functions, that were triggered by the corresponding events in the sign-in event.
      */
     @SerializedName(value = "appliedEventListeners", alternate = {"AppliedEventListeners"})
     @Expose

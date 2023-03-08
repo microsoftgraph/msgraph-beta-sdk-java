@@ -256,6 +256,20 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
     public SubjectRightsRequestType type;
 
     /**
+     * The Approvers.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.UserCollectionPage approvers;
+
+    /**
+     * The Collaborators.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.UserCollectionPage collaborators;
+
+    /**
      * The Notes.
      * List of notes associated with the request.
      */
@@ -282,6 +296,14 @@ public class SubjectRightsRequest extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("approvers")) {
+            approvers = serializer.deserializeObject(json.get("approvers"), com.microsoft.graph.requests.UserCollectionPage.class);
+        }
+
+        if (json.has("collaborators")) {
+            collaborators = serializer.deserializeObject(json.get("collaborators"), com.microsoft.graph.requests.UserCollectionPage.class);
+        }
 
         if (json.has("notes")) {
             notes = serializer.deserializeObject(json.get("notes"), com.microsoft.graph.requests.AuthoredNoteCollectionPage.class);

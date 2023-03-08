@@ -27,7 +27,7 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
 
     /**
      * The Group Id.
-     * The id of the assignment's target group
+     * The ID of the target group for the assignment.
      */
     @SerializedName(value = "groupId", alternate = {"GroupId"})
     @Expose
@@ -36,7 +36,7 @@ public class CloudPcManagementGroupAssignmentTarget extends CloudPcManagementAss
 
     /**
      * The Service Plan Id.
-     * 
+     * The unique identifier for the service plan that indicates which size of the Cloud PC to provision for the user. Use a null value, when the provisioningType is dedicated.
      */
     @SerializedName(value = "servicePlanId", alternate = {"ServicePlanId"})
     @Expose

@@ -15,7 +15,6 @@ import javax.annotation.Nullable;
 import javax.annotation.Nonnull;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.BaseRequestBuilder;
-import com.microsoft.graph.models.OrganizationActivateServiceParameterSet;
 import com.microsoft.graph.models.DirectoryObjectCheckMemberGroupsParameterSet;
 import com.microsoft.graph.models.DirectoryObjectCheckMemberObjectsParameterSet;
 import com.microsoft.graph.models.DirectoryObjectGetMemberGroupsParameterSet;
@@ -121,18 +120,6 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder<Organization>
     @Nonnull
     public com.microsoft.graph.requests.OrganizationSettingsRequestBuilder settings() {
         return new com.microsoft.graph.requests.OrganizationSettingsRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     * @param parameters the parameters for the service method
-     * @deprecated The activateService API will be deprecated and will stop returning data on Oct-15, 2022
-     */
-    @Deprecated
-    @Nonnull
-    public OrganizationActivateServiceRequestBuilder activateService(@Nonnull final OrganizationActivateServiceParameterSet parameters) {
-        return new OrganizationActivateServiceRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.activateService"), getClient(), null, parameters);
     }
 
     /**

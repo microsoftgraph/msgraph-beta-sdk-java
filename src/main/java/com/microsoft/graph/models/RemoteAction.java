@@ -128,6 +128,14 @@ public enum RemoteAction
     */
     INITIATE_MOBILE_DEVICE_MANAGEMENT_KEY_RECOVERY,
     /**
+    * initiate On Demand Proactive Remediation
+    */
+    INITIATE_ON_DEMAND_PROACTIVE_REMEDIATION,
+    /**
+    * rotate Local Admin Password
+    */
+    ROTATE_LOCAL_ADMIN_PASSWORD,
+    /**
     * For RemoteAction values that were not expected from the service
     */
     UNEXPECTED_VALUE

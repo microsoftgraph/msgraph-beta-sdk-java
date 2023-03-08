@@ -251,6 +251,15 @@ public class Alert extends Entity implements IJsonBackedObject {
     public AlertStatus status;
 
     /**
+     * The System Tags.
+     * 
+     */
+    @SerializedName(value = "systemTags", alternate = {"SystemTags"})
+    @Expose
+	@Nullable
+    public java.util.List<String> systemTags;
+
+    /**
      * The Tenant Id.
      * The Azure Active Directory tenant the alert was created in.
      */

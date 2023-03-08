@@ -7,7 +7,7 @@ package com.microsoft.graph.windowsupdates.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.windowsupdates.models.Updates;
+import com.microsoft.graph.models.AdminWindowsUpdates;
 import com.microsoft.graph.windowsupdates.models.ResourceConnection;
 import java.util.Arrays;
 import java.util.EnumSet;

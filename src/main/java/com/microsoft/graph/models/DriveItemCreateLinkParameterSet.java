@@ -84,6 +84,15 @@ public class DriveItemCreateLinkParameterSet {
 	@Nullable
     public Boolean retainInheritedPermissions;
 
+    /**
+     * The send Notification.
+     * 
+     */
+    @SerializedName(value = "sendNotification", alternate = {"SendNotification"})
+    @Expose
+	@Nullable
+    public Boolean sendNotification;
+
 
     /**
      * Instiaciates a new DriveItemCreateLinkParameterSet
@@ -101,6 +110,7 @@ public class DriveItemCreateLinkParameterSet {
         this.message = builder.message;
         this.recipients = builder.recipients;
         this.retainInheritedPermissions = builder.retainInheritedPermissions;
+        this.sendNotification = builder.sendNotification;
     }
     /**
      * Gets a new builder for the body
@@ -220,6 +230,21 @@ public class DriveItemCreateLinkParameterSet {
             return this;
         }
         /**
+         * The sendNotification parameter value
+         */
+        @Nullable
+        protected Boolean sendNotification;
+        /**
+         * Sets the SendNotification
+         * @param val the value to set it to
+         * @return the current builder object
+         */
+        @Nonnull
+        public DriveItemCreateLinkParameterSetBuilder withSendNotification(@Nullable final Boolean val) {
+            this.sendNotification = val;
+            return this;
+        }
+        /**
          * Instanciates a new DriveItemCreateLinkParameterSetBuilder
          */
         @Nullable
@@ -260,6 +285,9 @@ public class DriveItemCreateLinkParameterSet {
         }
         if(this.retainInheritedPermissions != null) {
             result.add(new com.microsoft.graph.options.FunctionOption("retainInheritedPermissions", retainInheritedPermissions));
+        }
+        if(this.sendNotification != null) {
+            result.add(new com.microsoft.graph.options.FunctionOption("sendNotification", sendNotification));
         }
         return result;
     }

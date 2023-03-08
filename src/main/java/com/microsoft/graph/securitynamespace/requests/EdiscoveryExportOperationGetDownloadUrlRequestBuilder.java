@@ -17,7 +17,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Ediscovery Export Operation Get Download Url Request Builder.
+ * @deprecated The getDownloadUrl endpoint will be deprecated on April 30, 2023. Please use exportFilesMetadata API instead.
  */
+@Deprecated
 public class EdiscoveryExportOperationGetDownloadUrlRequestBuilder extends BaseFunctionRequestBuilder<String> {
 
     /**

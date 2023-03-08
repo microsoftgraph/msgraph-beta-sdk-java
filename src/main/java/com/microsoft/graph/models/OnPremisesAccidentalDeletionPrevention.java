@@ -49,7 +49,7 @@ public class OnPremisesAccidentalDeletionPrevention implements IJsonBackedObject
 
     /**
      * The Synchronization Prevention Type.
-     * The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage.
+     * The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage, unknownFutureValue.
      */
     @SerializedName(value = "synchronizationPreventionType", alternate = {"SynchronizationPreventionType"})
     @Expose

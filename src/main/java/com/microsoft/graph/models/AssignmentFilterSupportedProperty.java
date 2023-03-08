@@ -86,7 +86,7 @@ public class AssignmentFilterSupportedProperty implements IJsonBackedObject {
 
     /**
      * The Supported Values.
-     * List of all supported values for this propery, empty if everything is supported.
+     * List of all supported values for this property, empty if everything is supported.
      */
     @SerializedName(value = "supportedValues", alternate = {"SupportedValues"})
     @Expose

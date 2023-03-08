@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.OnlineMeetingPresenters;
+import com.microsoft.graph.models.MeetingChatMode;
 import com.microsoft.graph.models.OnlineMeetingRole;
 import com.microsoft.graph.models.AudioConferencing;
 import com.microsoft.graph.models.BroadcastMeetingSettings;
@@ -19,6 +20,7 @@ import com.microsoft.graph.models.ItemBody;
 import com.microsoft.graph.models.JoinMeetingIdSettings;
 import com.microsoft.graph.models.LobbyBypassSettings;
 import com.microsoft.graph.models.MeetingParticipants;
+import com.microsoft.graph.models.MeetingChatHistoryDefaultMode;
 import com.microsoft.graph.models.WatermarkProtectionValues;
 import com.microsoft.graph.models.VirtualAppointment;
 import com.microsoft.graph.models.MeetingAttendanceReport;
@@ -67,6 +69,24 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public OnlineMeetingPresenters allowedPresenters;
+
+    /**
+     * The Allow Meeting Chat.
+     * Specifies the mode of meeting chat.
+     */
+    @SerializedName(value = "allowMeetingChat", alternate = {"AllowMeetingChat"})
+    @Expose
+	@Nullable
+    public MeetingChatMode allowMeetingChat;
+
+    /**
+     * The Allow Participants To Change Name.
+     * Specifies if participants are allowed to rename themselves in an instance of the meeting.
+     */
+    @SerializedName(value = "allowParticipantsToChangeName", alternate = {"AllowParticipantsToChangeName"})
+    @Expose
+	@Nullable
+    public Boolean allowParticipantsToChangeName;
 
     /**
      * The Allow Teamwork Reactions.
@@ -231,6 +251,15 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
     public Boolean recordAutomatically;
 
     /**
+     * The Share Meeting Chat History Default.
+     * 
+     */
+    @SerializedName(value = "shareMeetingChatHistoryDefault", alternate = {"ShareMeetingChatHistoryDefault"})
+    @Expose
+	@Nullable
+    public MeetingChatHistoryDefaultMode shareMeetingChatHistoryDefault;
+
+    /**
      * The Start Date Time.
      * The meeting start time in UTC.
      */
@@ -259,7 +288,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Watermark Protection.
-     * 
+     * Specifies whether a watermark applies for different entities.
      */
     @SerializedName(value = "watermarkProtection", alternate = {"WatermarkProtection"})
     @Expose

@@ -133,6 +133,15 @@ public class IntuneBrand implements IJsonBackedObject {
     public Boolean disableClientTelemetry;
 
     /**
+     * The Disable Device Category Selection.
+     * Boolean that indicates if Device Category Selection will be shown in Company Portal
+     */
+    @SerializedName(value = "disableDeviceCategorySelection", alternate = {"DisableDeviceCategorySelection"})
+    @Expose
+	@Nullable
+    public Boolean disableDeviceCategorySelection;
+
+    /**
      * The Display Name.
      * Company/organization name that is displayed to end users.
      */

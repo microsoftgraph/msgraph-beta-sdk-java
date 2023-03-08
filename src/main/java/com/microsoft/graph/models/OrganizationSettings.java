@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MicrosoftApplicationDataAccessSettings;
 import com.microsoft.graph.models.InsightsSettings;
+import com.microsoft.graph.models.PronounsSettings;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.ProfileCardPropertyCollectionPage;
 
@@ -73,6 +74,15 @@ public class OrganizationSettings extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.ProfileCardPropertyCollectionPage profileCardProperties;
+
+    /**
+     * The Pronouns.
+     * Represents administrator settings that manage the support of pronouns in an organization.
+     */
+    @SerializedName(value = "pronouns", alternate = {"Pronouns"})
+    @Expose
+	@Nullable
+    public PronounsSettings pronouns;
 
 
     /**

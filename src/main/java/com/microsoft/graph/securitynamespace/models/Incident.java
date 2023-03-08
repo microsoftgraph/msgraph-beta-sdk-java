@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.security.models.AlertClassification;
 import com.microsoft.graph.security.models.AlertComment;
 import com.microsoft.graph.security.models.AlertDetermination;
+import com.microsoft.graph.security.models.RecommendedHuntingQuery;
 import com.microsoft.graph.security.models.AlertSeverity;
 import com.microsoft.graph.security.models.IncidentStatus;
 import com.microsoft.graph.models.Entity;
@@ -78,6 +79,15 @@ public class Incident extends Entity implements IJsonBackedObject {
     public java.util.List<String> customTags;
 
     /**
+     * The Description.
+     * 
+     */
+    @SerializedName(value = "description", alternate = {"Description"})
+    @Expose
+	@Nullable
+    public String description;
+
+    /**
      * The Determination.
      * Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
      */
@@ -114,6 +124,24 @@ public class Incident extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime lastUpdateDateTime;
 
     /**
+     * The Recommended Actions.
+     * 
+     */
+    @SerializedName(value = "recommendedActions", alternate = {"RecommendedActions"})
+    @Expose
+	@Nullable
+    public String recommendedActions;
+
+    /**
+     * The Recommended Hunting Queries.
+     * 
+     */
+    @SerializedName(value = "recommendedHuntingQueries", alternate = {"RecommendedHuntingQueries"})
+    @Expose
+	@Nullable
+    public java.util.List<RecommendedHuntingQuery> recommendedHuntingQueries;
+
+    /**
      * The Redirect Incident Id.
      * Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
      */
@@ -133,12 +161,21 @@ public class Incident extends Entity implements IJsonBackedObject {
 
     /**
      * The Status.
-     * The status of the incident. Possible values are: active, resolved, redirected, unknownFutureValue.
+     * The status of the incident. Possible values are: active, resolved, inProgress, redirected, unknownFutureValue.
      */
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
 	@Nullable
     public IncidentStatus status;
+
+    /**
+     * The System Tags.
+     * 
+     */
+    @SerializedName(value = "systemTags", alternate = {"SystemTags"})
+    @Expose
+	@Nullable
+    public java.util.List<String> systemTags;
 
     /**
      * The Tenant Id.

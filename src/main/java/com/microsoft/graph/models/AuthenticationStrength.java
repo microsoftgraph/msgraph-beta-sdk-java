@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.AuthenticationStrengthResult;
 
 
 import com.google.gson.JsonObject;
@@ -45,6 +46,15 @@ public class AuthenticationStrength implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String authenticationStrengthId;
+
+    /**
+     * The Authentication Strength Result.
+     * 
+     */
+    @SerializedName(value = "authenticationStrengthResult", alternate = {"AuthenticationStrengthResult"})
+    @Expose
+	@Nullable
+    public AuthenticationStrengthResult authenticationStrengthResult;
 
     /**
      * The Display Name.

@@ -40,7 +40,7 @@ public class ActionStep implements IJsonBackedObject {
 
     /**
      * The Action Url.
-     * 
+     * A link to the documentation or Azure portal page that is associated with the action step.
      */
     @SerializedName(value = "actionUrl", alternate = {"ActionUrl"})
     @Expose
@@ -49,7 +49,7 @@ public class ActionStep implements IJsonBackedObject {
 
     /**
      * The Step Number.
-     * 
+     * Indicates the position for this action in the order of the collection of actions to be taken.
      */
     @SerializedName(value = "stepNumber", alternate = {"StepNumber"})
     @Expose
@@ -58,7 +58,7 @@ public class ActionStep implements IJsonBackedObject {
 
     /**
      * The Text.
-     * 
+     * Friendly description of the action to take.
      */
     @SerializedName(value = "text", alternate = {"Text"})
     @Expose

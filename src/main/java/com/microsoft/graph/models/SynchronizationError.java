@@ -39,7 +39,7 @@ public class SynchronizationError implements IJsonBackedObject {
 
     /**
      * The Code.
-     * 
+     * The error code.
      */
     @SerializedName(value = "code", alternate = {"Code"})
     @Expose
@@ -48,7 +48,7 @@ public class SynchronizationError implements IJsonBackedObject {
 
     /**
      * The Message.
-     * 
+     * The error message.
      */
     @SerializedName(value = "message", alternate = {"Message"})
     @Expose
@@ -57,7 +57,7 @@ public class SynchronizationError implements IJsonBackedObject {
 
     /**
      * The Tenant Actionable.
-     * 
+     * The action to take to resolve the error.
      */
     @SerializedName(value = "tenantActionable", alternate = {"TenantActionable"})
     @Expose

@@ -116,4 +116,14 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder<Identit
     public com.microsoft.graph.requests.PrivilegedAccessRootRequestBuilder privilegedAccess() {
         return new com.microsoft.graph.requests.PrivilegedAccessRootRequestBuilder(getRequestUrlWithAdditionalSegment("privilegedAccess"), getClient(), null);
     }
+
+    /**
+     * Gets the request builder for RoleManagementAlert
+     *
+     * @return the RoleManagementAlertRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.RoleManagementAlertRequestBuilder roleManagementAlerts() {
+        return new com.microsoft.graph.requests.RoleManagementAlertRequestBuilder(getRequestUrlWithAdditionalSegment("roleManagementAlerts"), getClient(), null);
+    }
 }
