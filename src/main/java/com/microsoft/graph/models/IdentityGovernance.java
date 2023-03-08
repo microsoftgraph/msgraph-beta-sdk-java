@@ -14,6 +14,7 @@ import com.microsoft.graph.models.AppConsentApprovalRoute;
 import com.microsoft.graph.models.TermsOfUseContainer;
 import com.microsoft.graph.models.EntitlementManagement;
 import com.microsoft.graph.models.PrivilegedAccessRoot;
+import com.microsoft.graph.models.RoleManagementAlert;
 
 
 import com.google.gson.JsonObject;
@@ -96,6 +97,15 @@ public class IdentityGovernance implements IJsonBackedObject {
     @Expose
 	@Nullable
     public PrivilegedAccessRoot privilegedAccess;
+
+    /**
+     * The Role Management Alerts.
+     * 
+     */
+    @SerializedName(value = "roleManagementAlerts", alternate = {"RoleManagementAlerts"})
+    @Expose
+	@Nullable
+    public RoleManagementAlert roleManagementAlerts;
 
 
     /**

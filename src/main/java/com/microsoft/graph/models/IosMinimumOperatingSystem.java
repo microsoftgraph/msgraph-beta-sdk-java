@@ -92,6 +92,15 @@ public class IosMinimumOperatingSystem implements IJsonBackedObject {
     public Boolean v15_0;
 
     /**
+     * The V16_0.
+     * When TRUE, only Version 16.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     */
+    @SerializedName(value = "v16_0", alternate = {"V16_0"})
+    @Expose
+	@Nullable
+    public Boolean v16_0;
+
+    /**
      * The V8_0.
      * When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
      */

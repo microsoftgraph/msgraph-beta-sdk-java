@@ -63,7 +63,7 @@ public class Office365GroupsActivityCounts extends Entity implements IJsonBacked
 
     /**
      * The Teams Channel Messages.
-     * 
+     * The number of channel messages in Teams team.
      */
     @SerializedName(value = "teamsChannelMessages", alternate = {"TeamsChannelMessages"})
     @Expose
@@ -72,7 +72,7 @@ public class Office365GroupsActivityCounts extends Entity implements IJsonBacked
 
     /**
      * The Teams Meetings Organized.
-     * 
+     * The number of meetings organized in Teams team.
      */
     @SerializedName(value = "teamsMeetingsOrganized", alternate = {"TeamsMeetingsOrganized"})
     @Expose

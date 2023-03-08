@@ -9,9 +9,9 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.windowsupdates.models.DeploymentStateValue;
 import com.microsoft.graph.windowsupdates.models.DeploymentStateReason;
 import com.microsoft.graph.windowsupdates.models.RequestedDeploymentStateValue;
-import com.microsoft.graph.windowsupdates.models.DeploymentStateValue;
 
 
 import com.google.gson.JsonObject;
@@ -42,6 +42,15 @@ public class DeploymentState implements IJsonBackedObject {
     }
 
     /**
+     * The Effective Value.
+     * Specifies the state of the deployment. Supports a subset of the values for deploymentStateValue. Possible values are: scheduled, offering, paused, unknownFutureValue. Read-only.
+     */
+    @SerializedName(value = "effectiveValue", alternate = {"EffectiveValue"})
+    @Expose
+	@Nullable
+    public DeploymentStateValue effectiveValue;
+
+    /**
      * The Reasons.
      * Specifies the reasons the deployment has its state value. Read-only.
      */
@@ -58,15 +67,6 @@ public class DeploymentState implements IJsonBackedObject {
     @Expose
 	@Nullable
     public RequestedDeploymentStateValue requestedValue;
-
-    /**
-     * The Value.
-     * Specifies the state of the deployment. Supports a subset of the values for deploymentStateValue. Possible values are: scheduled, offering, paused, unknownFutureValue. Read-only.
-     */
-    @SerializedName(value = "value", alternate = {"Value"})
-    @Expose
-	@Nullable
-    public DeploymentStateValue value;
 
 
     /**

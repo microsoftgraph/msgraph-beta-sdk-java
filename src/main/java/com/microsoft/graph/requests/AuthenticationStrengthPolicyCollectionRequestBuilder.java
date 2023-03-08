@@ -51,7 +51,9 @@ public class AuthenticationStrengthPolicyCollectionRequestBuilder extends BaseCo
      * Gets a builder to execute the method
      * @return the request builder collection
      * @param parameters the parameters for the service method
+     * @deprecated The findByMethodMode function is deprecated. Please use OData filter query instead.
      */
+    @Deprecated
     @Nonnull
     public AuthenticationStrengthPolicyFindByMethodModeCollectionRequestBuilder findByMethodMode(@Nonnull final AuthenticationStrengthPolicyFindByMethodModeParameterSet parameters) {
         return new AuthenticationStrengthPolicyFindByMethodModeCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.findByMethodMode"), getClient(), null, parameters);

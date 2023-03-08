@@ -58,7 +58,7 @@ public class SynchronizationSchedule implements IJsonBackedObject {
 
     /**
      * The State.
-     * Possible values are: Active, Disabled.
+     * The possible values are: Active, Disabled, Paused.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose

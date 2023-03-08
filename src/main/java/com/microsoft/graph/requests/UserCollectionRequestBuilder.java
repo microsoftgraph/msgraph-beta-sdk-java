@@ -46,7 +46,6 @@ import com.microsoft.graph.requests.DirectoryObjectGetUserOwnedObjectsRequestBui
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
-import com.microsoft.graph.models.UserActivateServicePlanParameterSet;
 import com.microsoft.graph.models.UserAssignLicenseParameterSet;
 import com.microsoft.graph.models.UserChangePasswordParameterSet;
 import com.microsoft.graph.models.UserFindMeetingTimesParameterSet;

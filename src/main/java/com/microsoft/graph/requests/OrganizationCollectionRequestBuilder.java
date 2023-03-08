@@ -20,10 +20,10 @@ import com.microsoft.graph.requests.OrganizationCollectionRequest;
 import com.microsoft.graph.requests.DirectoryObjectValidatePropertiesRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectGetByIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectGetUserOwnedObjectsRequestBuilder;
+import com.microsoft.graph.requests.DirectoryObjectDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
-import com.microsoft.graph.models.OrganizationActivateServiceParameterSet;
 import com.microsoft.graph.models.DirectoryObjectValidatePropertiesParameterSet;
 import com.microsoft.graph.models.DirectoryObjectCheckMemberGroupsParameterSet;
 import com.microsoft.graph.models.DirectoryObjectCheckMemberObjectsParameterSet;
@@ -79,6 +79,15 @@ public class OrganizationCollectionRequestBuilder extends BaseCollectionRequestB
     @Nonnull
     public DirectoryObjectGetUserOwnedObjectsRequestBuilder getUserOwnedObjects(@Nonnull final DirectoryObjectGetUserOwnedObjectsParameterSet parameters) {
         return new DirectoryObjectGetUserOwnedObjectsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getUserOwnedObjects"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public DirectoryObjectDeltaCollectionRequestBuilder delta() {
+        return new DirectoryObjectDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
     /**

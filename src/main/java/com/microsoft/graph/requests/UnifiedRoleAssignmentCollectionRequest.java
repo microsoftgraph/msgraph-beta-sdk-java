@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.RbacApplication;
+import com.microsoft.graph.models.UnifiedRbacApplication;
 import com.microsoft.graph.models.UnifiedRoleAssignment;
 import java.util.Arrays;
 import java.util.EnumSet;

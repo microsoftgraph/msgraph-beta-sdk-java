@@ -16,6 +16,10 @@ public enum AppLogDecryptionAlgorithm
     */
     AES256,
     /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For AppLogDecryptionAlgorithm values that were not expected from the service
     */
     UNEXPECTED_VALUE

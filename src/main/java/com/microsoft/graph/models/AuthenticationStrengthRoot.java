@@ -39,6 +39,15 @@ public class AuthenticationStrengthRoot extends Entity implements IJsonBackedObj
     public java.util.List<EnumSet<AuthenticationMethodModes>> authenticationCombinations;
 
     /**
+     * The Combinations.
+     * 
+     */
+    @SerializedName(value = "combinations", alternate = {"Combinations"})
+    @Expose
+	@Nullable
+    public java.util.List<EnumSet<AuthenticationMethodModes>> combinations;
+
+    /**
      * The Authentication Method Modes.
      * Names and descriptions of all valid authentication method modes in the system.
      */

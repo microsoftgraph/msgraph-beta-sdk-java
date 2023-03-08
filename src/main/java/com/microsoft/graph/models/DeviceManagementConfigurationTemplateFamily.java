@@ -64,6 +64,10 @@ public enum DeviceManagementConfigurationTemplateFamily
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * device Configuration Scripts
+    */
+    DEVICE_CONFIGURATION_SCRIPTS,
+    /**
     * For DeviceManagementConfigurationTemplateFamily values that were not expected from the service
     */
     UNEXPECTED_VALUE

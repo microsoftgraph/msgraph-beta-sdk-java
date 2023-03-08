@@ -50,7 +50,7 @@ public class AppleUserInitiatedEnrollmentProfile extends Entity implements IJson
 
     /**
      * The Default Enrollment Type.
-     * The default profile enrollment type. Possible values are: unknown, device, user.
+     * The default profile enrollment type. Possible values are: unknown, device, user, accountDrivenUserEnrollment, webDeviceEnrollment, unknownFutureValue.
      */
     @SerializedName(value = "defaultEnrollmentType", alternate = {"DefaultEnrollmentType"})
     @Expose

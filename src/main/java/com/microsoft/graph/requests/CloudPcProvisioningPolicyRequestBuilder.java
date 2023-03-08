@@ -82,6 +82,15 @@ public class CloudPcProvisioningPolicyRequestBuilder extends BaseRequestBuilder<
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     */
+    @Nonnull
+    public CloudPcProvisioningPolicyApplyRequestBuilder apply() {
+        return new CloudPcProvisioningPolicyApplyRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.apply"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
      * @param parameters the parameters for the service method
      */
     @Nonnull

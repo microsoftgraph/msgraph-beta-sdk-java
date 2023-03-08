@@ -58,6 +58,26 @@ public class ManagedAppConfigurationRequestBuilder extends BaseRequestBuilder<Ma
     }
 
 
+    /**
+     *  Gets a request builder for the DeviceManagementConfigurationSetting collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionWithReferencesRequestBuilder settings() {
+        return new com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeviceManagementConfigurationSetting item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingWithReferenceRequestBuilder settings(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementConfigurationSettingWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
+    }
 
     /**
      * Gets a builder to execute the method

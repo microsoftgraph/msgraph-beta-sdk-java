@@ -75,7 +75,7 @@ public class CloudPcExportJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Report Name.
-     * The report name. The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, unknownFutureValue.
+     * The report name. The possible values are: remoteConnectionHistoricalReports, dailyAggregatedRemoteConnectionReports, totalAggregatedRemoteConnectionReports, sharedUseLicenseUsageReport, sharedUseLicenseUsageRealTimeReport, or unknownFutureValue.
      */
     @SerializedName(value = "reportName", alternate = {"ReportName"})
     @Expose

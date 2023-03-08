@@ -93,15 +93,6 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
     public String singleTenantAppId;
 
     /**
-     * The When Partner Devices Will Be Marked As Non Compliant.
-     * DateTime in UTC when PartnerDevices will be marked as NonCompliant. This will become obselete soon.
-     */
-    @SerializedName(value = "whenPartnerDevicesWillBeMarkedAsNonCompliant", alternate = {"WhenPartnerDevicesWillBeMarkedAsNonCompliant"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime whenPartnerDevicesWillBeMarkedAsNonCompliant;
-
-    /**
      * The When Partner Devices Will Be Marked As Non Compliant Date Time.
      * DateTime in UTC when PartnerDevices will be marked as NonCompliant
      */
@@ -109,15 +100,6 @@ public class DeviceManagementPartner extends Entity implements IJsonBackedObject
     @Expose
 	@Nullable
     public java.time.OffsetDateTime whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime;
-
-    /**
-     * The When Partner Devices Will Be Removed.
-     * DateTime in UTC when PartnerDevices will be removed. This will become obselete soon.
-     */
-    @SerializedName(value = "whenPartnerDevicesWillBeRemoved", alternate = {"WhenPartnerDevicesWillBeRemoved"})
-    @Expose
-	@Nullable
-    public java.time.OffsetDateTime whenPartnerDevicesWillBeRemoved;
 
     /**
      * The When Partner Devices Will Be Removed Date Time.

@@ -78,7 +78,7 @@ public class PrintJob extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name of the print job.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
