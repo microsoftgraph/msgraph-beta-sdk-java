@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.MicrosoftAuthenticatorAuthenticationMethodClientAppName;
 import com.microsoft.graph.models.Device;
 import com.microsoft.graph.models.AuthenticationMethod;
 
@@ -25,6 +26,15 @@ import javax.annotation.Nonnull;
  */
 public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod implements IJsonBackedObject {
 
+
+    /**
+     * The Client App Name.
+     * The app that the user has registered to use to approve push notifications. The possible values are: microsoftAuthenticator, outlookMobile, unknownFutureValue.
+     */
+    @SerializedName(value = "clientAppName", alternate = {"ClientAppName"})
+    @Expose
+	@Nullable
+    public MicrosoftAuthenticatorAuthenticationMethodClientAppName clientAppName;
 
     /**
      * The Created Date Time.

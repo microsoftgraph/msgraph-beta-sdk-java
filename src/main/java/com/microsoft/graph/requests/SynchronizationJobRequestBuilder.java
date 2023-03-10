@@ -79,8 +79,8 @@ public class SynchronizationJobRequestBuilder extends BaseRequestBuilder<Synchro
      * @return the request builder
      */
     @Nonnull
-    public SynchronizationJobPauseRequestBuilder pause() {
-        return new SynchronizationJobPauseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pause"), getClient(), null);
+    public SynchronizationJobStartRequestBuilder start() {
+        return new SynchronizationJobStartRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.start"), getClient(), null);
     }
 
     /**
@@ -88,8 +88,17 @@ public class SynchronizationJobRequestBuilder extends BaseRequestBuilder<Synchro
      * @return the request builder
      */
     @Nonnull
-    public SynchronizationJobStartRequestBuilder start() {
-        return new SynchronizationJobStartRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.start"), getClient(), null);
+    public SynchronizationJobStopRequestBuilder stop() {
+        return new SynchronizationJobStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public SynchronizationJobPauseRequestBuilder pause() {
+        return new SynchronizationJobPauseRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.pause"), getClient(), null);
     }
 
     /**
@@ -110,15 +119,6 @@ public class SynchronizationJobRequestBuilder extends BaseRequestBuilder<Synchro
     @Nonnull
     public SynchronizationJobRestartRequestBuilder restart(@Nonnull final SynchronizationJobRestartParameterSet parameters) {
         return new SynchronizationJobRestartRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restart"), getClient(), null, parameters);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder
-     */
-    @Nonnull
-    public SynchronizationJobStopRequestBuilder stop() {
-        return new SynchronizationJobStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
     }
 
     /**
