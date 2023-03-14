@@ -40,7 +40,7 @@ public class MicrosoftAuthenticatorFeatureSettings implements IJsonBackedObject 
 
     /**
      * The Companion App Allowed State.
-     * 
+     * Determines whether users will be able to approve push notifications on other Microsoft applications such as Outlook Mobile.
      */
     @SerializedName(value = "companionAppAllowedState", alternate = {"CompanionAppAllowedState"})
     @Expose

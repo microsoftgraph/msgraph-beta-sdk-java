@@ -55,6 +55,24 @@ public class CloudPcLaunchInfo implements IJsonBackedObject {
 	@Nullable
     public String cloudPcLaunchUrl;
 
+    /**
+     * The Windows365Switch Compatible.
+     * Indicates whether the Cloud PC supports switch functionality. If the value is true, it supports switch functionality; otherwise,  false.
+     */
+    @SerializedName(value = "windows365SwitchCompatible", alternate = {"Windows365SwitchCompatible"})
+    @Expose
+	@Nullable
+    public Boolean windows365SwitchCompatible;
+
+    /**
+     * The Windows365Switch Not Compatible Reason.
+     * Indicates the reason the Cloud PC doesn't support switch. CPCOsVersionNotMeetRequirement indicates that the user needs to update their Cloud PC operation system version. CPCHardwareNotMeetRequirement indicates that the Cloud PC needs more CPU or RAM to support the functionality.
+     */
+    @SerializedName(value = "windows365SwitchNotCompatibleReason", alternate = {"Windows365SwitchNotCompatibleReason"})
+    @Expose
+	@Nullable
+    public String windows365SwitchNotCompatibleReason;
+
 
     /**
      * Sets the raw JSON object

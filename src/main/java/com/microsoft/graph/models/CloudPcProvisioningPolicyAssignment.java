@@ -8,8 +8,10 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CloudPcManagementAssignmentTarget;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.UserCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -35,6 +37,13 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements IJson
 	@Nullable
     public CloudPcManagementAssignmentTarget target;
 
+    /**
+     * The Assigned Users.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.UserCollectionPage assignedUsers;
+
 
     /**
      * Sets the raw JSON object
@@ -44,5 +53,9 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements IJson
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("assignedUsers")) {
+            assignedUsers = serializer.deserializeObject(json.get("assignedUsers"), com.microsoft.graph.requests.UserCollectionPage.class);
+        }
     }
 }

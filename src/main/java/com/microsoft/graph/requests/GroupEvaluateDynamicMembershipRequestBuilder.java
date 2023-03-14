@@ -45,6 +45,18 @@ public class GroupEvaluateDynamicMembershipRequestBuilder extends BaseActionRequ
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }
+    /**
+     * The request builder for this GroupEvaluateDynamicMembership
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param parameters     the parameters for the service method
+     */
+    public GroupEvaluateDynamicMembershipRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final GroupEvaluateDynamicMembershipParameterSet parameters) {
+        super(requestUrl, client, requestOptions);
+        this.body = parameters;
+    }
 
     /**
      * Creates the GroupEvaluateDynamicMembershipRequest

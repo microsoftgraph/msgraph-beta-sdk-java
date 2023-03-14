@@ -52,6 +52,15 @@ public class CloudPcProvisioningPolicy extends Entity implements IJsonBackedObje
     public String cloudPcGroupDisplayName;
 
     /**
+     * The Cloud Pc Naming Template.
+     * 
+     */
+    @SerializedName(value = "cloudPcNamingTemplate", alternate = {"CloudPcNamingTemplate"})
+    @Expose
+	@Nullable
+    public String cloudPcNamingTemplate;
+
+    /**
      * The Description.
      * The provisioning policy description.
      */

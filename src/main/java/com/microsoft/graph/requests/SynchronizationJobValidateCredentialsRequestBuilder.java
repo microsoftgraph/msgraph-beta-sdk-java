@@ -45,6 +45,18 @@ public class SynchronizationJobValidateCredentialsRequestBuilder extends BaseAct
         super(requestUrl, client, requestOptions);
         this.body = parameters;
     }
+    /**
+     * The request builder for this SynchronizationJobValidateCredentials
+     *
+     * @param requestUrl     the request URL
+     * @param client         the service client
+     * @param requestOptions the options for this request
+     * @param parameters     the parameters for the service method
+     */
+    public SynchronizationJobValidateCredentialsRequestBuilder(@Nonnull final String requestUrl, @Nonnull final IBaseClient<?> client, @Nullable final java.util.List<? extends com.microsoft.graph.options.Option> requestOptions, @Nonnull final SynchronizationJobValidateCredentialsParameterSet parameters) {
+        super(requestUrl, client, requestOptions);
+        this.body = parameters;
+    }
 
     /**
      * Creates the SynchronizationJobValidateCredentialsRequest

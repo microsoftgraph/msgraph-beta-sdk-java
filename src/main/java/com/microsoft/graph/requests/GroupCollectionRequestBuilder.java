@@ -20,7 +20,9 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.GroupCollectionRequestBuilder;
 import com.microsoft.graph.requests.GroupRequestBuilder;
 import com.microsoft.graph.requests.GroupCollectionRequest;
+import com.microsoft.graph.requests.GroupEvaluateDynamicMembershipRequestBuilder;
 import com.microsoft.graph.requests.GroupDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.DirectoryObjectValidatePropertiesRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectGetByIdsCollectionRequestBuilder;
 import com.microsoft.graph.requests.DirectoryObjectGetUserOwnedObjectsRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
@@ -58,11 +60,31 @@ public class GroupCollectionRequestBuilder extends BaseCollectionRequestBuilder<
 
     /**
      * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public GroupEvaluateDynamicMembershipRequestBuilder evaluateDynamicMembership(@Nonnull final GroupEvaluateDynamicMembershipParameterSet parameters) {
+        return new GroupEvaluateDynamicMembershipRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.evaluateDynamicMembership"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
      * @return the request builder collection
      */
     @Nonnull
     public GroupDeltaCollectionRequestBuilder delta() {
         return new GroupDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public DirectoryObjectValidatePropertiesRequestBuilder validateProperties(@Nonnull final DirectoryObjectValidatePropertiesParameterSet parameters) {
+        return new DirectoryObjectValidatePropertiesRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.validateProperties"), getClient(), null, parameters);
     }
 
     /**
