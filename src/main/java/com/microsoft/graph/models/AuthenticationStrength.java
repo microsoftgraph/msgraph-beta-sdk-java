@@ -49,7 +49,7 @@ public class AuthenticationStrength implements IJsonBackedObject {
 
     /**
      * The Authentication Strength Result.
-     * 
+     * The result of the authentication strength. The possible values are: notSet, skippedForProofUp, satisfied, singleChallengeRequired, multipleChallengesRequired, singleRegistrationRequired, multipleRegistrationsRequired, cannotSatisfyDueToCombinationConfiguration, cannotSatisfy, unknownFutureValue.
      */
     @SerializedName(value = "authenticationStrengthResult", alternate = {"AuthenticationStrengthResult"})
     @Expose

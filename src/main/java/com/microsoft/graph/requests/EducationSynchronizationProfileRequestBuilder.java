@@ -90,6 +90,15 @@ public class EducationSynchronizationProfileRequestBuilder extends BaseRequestBu
 
     /**
      * Gets a builder to execute the method
+     * @return the request builder collection
+     */
+    @Nonnull
+    public EducationSynchronizationProfileStartCollectionRequestBuilder start() {
+        return new EducationSynchronizationProfileStartCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.start"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
      * @return the request builder
      */
     @Nonnull
@@ -113,15 +122,6 @@ public class EducationSynchronizationProfileRequestBuilder extends BaseRequestBu
     @Nonnull
     public EducationSynchronizationProfileResumeRequestBuilder resume() {
         return new EducationSynchronizationProfileResumeRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.resume"), getClient(), null);
-    }
-
-    /**
-     * Gets a builder to execute the method
-     * @return the request builder collection
-     */
-    @Nonnull
-    public EducationSynchronizationProfileStartCollectionRequestBuilder start() {
-        return new EducationSynchronizationProfileStartCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.start"), getClient(), null);
     }
 
     /**

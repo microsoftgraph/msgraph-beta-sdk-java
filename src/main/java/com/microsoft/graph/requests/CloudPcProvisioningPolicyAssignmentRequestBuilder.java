@@ -56,4 +56,24 @@ public class CloudPcProvisioningPolicyAssignmentRequestBuilder extends BaseReque
     }
 
 
+    /**
+     *  Gets a request builder for the User collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder assignedUsers() {
+        return new com.microsoft.graph.requests.UserCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("assignedUsers"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the User item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder assignedUsers(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("assignedUsers") + "/" + id, getClient(), null);
+    }
 }
