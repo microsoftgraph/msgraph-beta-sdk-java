@@ -3,9 +3,8 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the evaluateApplication method. */
 public enum ContentFormat implements ValuedEnum {
-    Default_escaped("default_escaped"),
+    DefaultEscaped("defaultEscaped"),
     Email("email");
     public final String value;
     ContentFormat(final String value) {
@@ -17,7 +16,7 @@ public enum ContentFormat implements ValuedEnum {
     public static ContentFormat forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "default": return Default_escaped;
+            case "default": return DefaultEscaped;
             case "email": return Email;
             default: return null;
         }

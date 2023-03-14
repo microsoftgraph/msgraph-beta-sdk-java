@@ -3,22 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary extends Entity implements Parsable {
     /** Number of Devices that have successfully deployed this WindowsDefenderApplicationControl supplemental policy. */
-    private Integer _deployedDeviceCount;
+    private Integer deployedDeviceCount;
     /** Number of Devices that have failed to deploy this WindowsDefenderApplicationControl supplemental policy. */
-    private Integer _failedDeviceCount;
+    private Integer failedDeviceCount;
     /**
      * Instantiates a new windowsDefenderApplicationControlSupplementalPolicyDeploymentSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary() {
         super();
-        this.setOdataType("#microsoft.graph.windowsDefenderApplicationControlSupplementalPolicyDeploymentSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,7 +35,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      */
     @javax.annotation.Nullable
     public Integer getDeployedDeviceCount() {
-        return this._deployedDeviceCount;
+        return this.deployedDeviceCount;
     }
     /**
      * Gets the failedDeviceCount property value. Number of Devices that have failed to deploy this WindowsDefenderApplicationControl supplemental policy.
@@ -44,25 +43,25 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      */
     @javax.annotation.Nullable
     public Integer getFailedDeviceCount() {
-        return this._failedDeviceCount;
+        return this.failedDeviceCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deployedDeviceCount", (n) -> { currentObject.setDeployedDeviceCount(n.getIntegerValue()); });
-            this.put("failedDeviceCount", (n) -> { currentObject.setFailedDeviceCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deployedDeviceCount", (n) -> { this.setDeployedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("failedDeviceCount", (n) -> { this.setFailedDeviceCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +73,17 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
      * @param value Value to set for the deployedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployedDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._deployedDeviceCount = value;
+        this.deployedDeviceCount = value;
     }
     /**
      * Sets the failedDeviceCount property value. Number of Devices that have failed to deploy this WindowsDefenderApplicationControl supplemental policy.
      * @param value Value to set for the failedDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._failedDeviceCount = value;
+        this.failedDeviceCount = value;
     }
 }

@@ -3,12 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Update behavior options for macOS software updates. */
 public enum MacOSSoftwareUpdateBehavior implements ValuedEnum {
     /** Not configured. */
     NotConfigured("notConfigured"),
     /** Download and/or install the software update, depending on the current device state. */
-    Default_escaped("default_escaped"),
+    DefaultEscaped("defaultEscaped"),
     /** Download the software update without installing it. */
     DownloadOnly("downloadOnly"),
     /** Install an already downloaded software update. */
@@ -28,7 +28,7 @@ public enum MacOSSoftwareUpdateBehavior implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notConfigured": return NotConfigured;
-            case "default": return Default_escaped;
+            case "default": return DefaultEscaped;
             case "downloadOnly": return DownloadOnly;
             case "installASAP": return InstallASAP;
             case "notifyOnly": return NotifyOnly;

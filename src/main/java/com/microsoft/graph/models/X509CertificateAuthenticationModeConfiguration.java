@@ -4,26 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class X509CertificateAuthenticationModeConfiguration implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode. */
-    private java.util.List<X509CertificateRule> _rules;
+    private java.util.List<X509CertificateRule> rules;
     /** The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue. */
-    private X509CertificateAuthenticationMode _x509CertificateAuthenticationDefaultMode;
+    private X509CertificateAuthenticationMode x509CertificateAuthenticationDefaultMode;
     /**
      * Instantiates a new x509CertificateAuthenticationModeConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public X509CertificateAuthenticationModeConfiguration() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.x509CertificateAuthenticationModeConfiguration");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,20 +40,19 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final X509CertificateAuthenticationModeConfiguration currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("rules", (n) -> { currentObject.setRules(n.getCollectionOfObjectValues(X509CertificateRule::createFromDiscriminatorValue)); });
-            this.put("x509CertificateAuthenticationDefaultMode", (n) -> { currentObject.setX509CertificateAuthenticationDefaultMode(n.getEnumValue(X509CertificateAuthenticationMode.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("rules", (n) -> { this.setRules(n.getCollectionOfObjectValues(X509CertificateRule::createFromDiscriminatorValue)); });
+        deserializerMap.put("x509CertificateAuthenticationDefaultMode", (n) -> { this.setX509CertificateAuthenticationDefaultMode(n.getEnumValue(X509CertificateAuthenticationMode.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -62,7 +60,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the rules property value. Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
@@ -70,7 +68,7 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      */
     @javax.annotation.Nullable
     public java.util.List<X509CertificateRule> getRules() {
-        return this._rules;
+        return this.rules;
     }
     /**
      * Gets the x509CertificateAuthenticationDefaultMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
@@ -78,13 +76,14 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      */
     @javax.annotation.Nullable
     public X509CertificateAuthenticationMode getX509CertificateAuthenticationDefaultMode() {
-        return this._x509CertificateAuthenticationDefaultMode;
+        return this.x509CertificateAuthenticationDefaultMode;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -97,31 +96,35 @@ public class X509CertificateAuthenticationModeConfiguration implements Additiona
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the rules property value. Rules are configured in addition to the authentication mode to bind a specific x509CertificateRuleType to an x509CertificateAuthenticationMode. For example, bind the policyOID with identifier 1.32.132.343 to x509CertificateMultiFactor authentication mode.
      * @param value Value to set for the rules property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRules(@javax.annotation.Nullable final java.util.List<X509CertificateRule> value) {
-        this._rules = value;
+        this.rules = value;
     }
     /**
      * Sets the x509CertificateAuthenticationDefaultMode property value. The type of strong authentication mode. The possible values are: x509CertificateSingleFactor, x509CertificateMultiFactor, unknownFutureValue.
      * @param value Value to set for the x509CertificateAuthenticationDefaultMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setX509CertificateAuthenticationDefaultMode(@javax.annotation.Nullable final X509CertificateAuthenticationMode value) {
-        this._x509CertificateAuthenticationDefaultMode = value;
+        this.x509CertificateAuthenticationDefaultMode = value;
     }
 }

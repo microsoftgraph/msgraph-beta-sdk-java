@@ -3,27 +3,30 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Contains properties and inherited properties for Windows Mobile MSI Line Of Business apps.
+ */
 public class WindowsMobileMSI extends MobileLobApp implements Parsable {
     /** The command line. */
-    private String _commandLine;
+    private String commandLine;
     /** The identity version. */
-    private String _identityVersion;
+    private String identityVersion;
     /** A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature. */
-    private Boolean _ignoreVersionDetection;
+    private Boolean ignoreVersionDetection;
     /** The product code. */
-    private String _productCode;
+    private String productCode;
     /** The product version of Windows Mobile MSI Line of Business (LoB) app. */
-    private String _productVersion;
+    private String productVersion;
     /** Indicates whether to install a dual-mode MSI in the device context. If true, app will be installed for all users. If false, app will be installed per-user. If null, service will use the MSI package's default install context. In case of dual-mode MSI, this default will be per-user.  Cannot be set for non-dual-mode apps.  Cannot be changed after initial creation of the application. */
-    private Boolean _useDeviceContext;
+    private Boolean useDeviceContext;
     /**
-     * Instantiates a new WindowsMobileMSI and sets the default values.
+     * Instantiates a new windowsMobileMSI and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsMobileMSI() {
         super();
         this.setOdataType("#microsoft.graph.windowsMobileMSI");
@@ -31,7 +34,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a WindowsMobileMSI
+     * @return a windowsMobileMSI
      */
     @javax.annotation.Nonnull
     public static WindowsMobileMSI createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -44,23 +47,22 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCommandLine() {
-        return this._commandLine;
+        return this.commandLine;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsMobileMSI currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("commandLine", (n) -> { currentObject.setCommandLine(n.getStringValue()); });
-            this.put("identityVersion", (n) -> { currentObject.setIdentityVersion(n.getStringValue()); });
-            this.put("ignoreVersionDetection", (n) -> { currentObject.setIgnoreVersionDetection(n.getBooleanValue()); });
-            this.put("productCode", (n) -> { currentObject.setProductCode(n.getStringValue()); });
-            this.put("productVersion", (n) -> { currentObject.setProductVersion(n.getStringValue()); });
-            this.put("useDeviceContext", (n) -> { currentObject.setUseDeviceContext(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("commandLine", (n) -> { this.setCommandLine(n.getStringValue()); });
+        deserializerMap.put("identityVersion", (n) -> { this.setIdentityVersion(n.getStringValue()); });
+        deserializerMap.put("ignoreVersionDetection", (n) -> { this.setIgnoreVersionDetection(n.getBooleanValue()); });
+        deserializerMap.put("productCode", (n) -> { this.setProductCode(n.getStringValue()); });
+        deserializerMap.put("productVersion", (n) -> { this.setProductVersion(n.getStringValue()); });
+        deserializerMap.put("useDeviceContext", (n) -> { this.setUseDeviceContext(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the identityVersion property value. The identity version.
@@ -68,7 +70,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getIdentityVersion() {
-        return this._identityVersion;
+        return this.identityVersion;
     }
     /**
      * Gets the ignoreVersionDetection property value. A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
@@ -76,7 +78,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIgnoreVersionDetection() {
-        return this._ignoreVersionDetection;
+        return this.ignoreVersionDetection;
     }
     /**
      * Gets the productCode property value. The product code.
@@ -84,7 +86,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getProductCode() {
-        return this._productCode;
+        return this.productCode;
     }
     /**
      * Gets the productVersion property value. The product version of Windows Mobile MSI Line of Business (LoB) app.
@@ -92,7 +94,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getProductVersion() {
-        return this._productVersion;
+        return this.productVersion;
     }
     /**
      * Gets the useDeviceContext property value. Indicates whether to install a dual-mode MSI in the device context. If true, app will be installed for all users. If false, app will be installed per-user. If null, service will use the MSI package's default install context. In case of dual-mode MSI, this default will be per-user.  Cannot be set for non-dual-mode apps.  Cannot be changed after initial creation of the application.
@@ -100,13 +102,14 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getUseDeviceContext() {
-        return this._useDeviceContext;
+        return this.useDeviceContext;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,47 +125,53 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
      * @param value Value to set for the commandLine property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCommandLine(@javax.annotation.Nullable final String value) {
-        this._commandLine = value;
+        this.commandLine = value;
     }
     /**
      * Sets the identityVersion property value. The identity version.
      * @param value Value to set for the identityVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityVersion(@javax.annotation.Nullable final String value) {
-        this._identityVersion = value;
+        this.identityVersion = value;
     }
     /**
      * Sets the ignoreVersionDetection property value. A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
      * @param value Value to set for the ignoreVersionDetection property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIgnoreVersionDetection(@javax.annotation.Nullable final Boolean value) {
-        this._ignoreVersionDetection = value;
+        this.ignoreVersionDetection = value;
     }
     /**
      * Sets the productCode property value. The product code.
      * @param value Value to set for the productCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductCode(@javax.annotation.Nullable final String value) {
-        this._productCode = value;
+        this.productCode = value;
     }
     /**
      * Sets the productVersion property value. The product version of Windows Mobile MSI Line of Business (LoB) app.
      * @param value Value to set for the productVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductVersion(@javax.annotation.Nullable final String value) {
-        this._productVersion = value;
+        this.productVersion = value;
     }
     /**
      * Sets the useDeviceContext property value. Indicates whether to install a dual-mode MSI in the device context. If true, app will be installed for all users. If false, app will be installed per-user. If null, service will use the MSI package's default install context. In case of dual-mode MSI, this default will be per-user.  Cannot be set for non-dual-mode apps.  Cannot be changed after initial creation of the application.
      * @param value Value to set for the useDeviceContext property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseDeviceContext(@javax.annotation.Nullable final Boolean value) {
-        this._useDeviceContext = value;
+        this.useDeviceContext = value;
     }
 }

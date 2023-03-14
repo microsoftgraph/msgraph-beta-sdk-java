@@ -3,11 +3,10 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum TeamTemplateAudience implements ValuedEnum {
     Organization("organization"),
     User("user"),
-    Public_escaped("public_escaped"),
+    PublicEscaped("publicEscaped"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     TeamTemplateAudience(final String value) {
@@ -21,7 +20,7 @@ public enum TeamTemplateAudience implements ValuedEnum {
         switch(searchValue) {
             case "organization": return Organization;
             case "user": return User;
-            case "public": return Public_escaped;
+            case "public": return PublicEscaped;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

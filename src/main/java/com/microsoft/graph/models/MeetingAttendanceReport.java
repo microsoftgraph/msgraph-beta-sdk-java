@@ -4,27 +4,25 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class MeetingAttendanceReport extends Entity implements Parsable {
     /** List of attendance records of an attendance report. Read-only. */
-    private java.util.List<AttendanceRecord> _attendanceRecords;
+    private java.util.List<AttendanceRecord> attendanceRecords;
     /** UTC time when the meeting ended. Read-only. */
-    private OffsetDateTime _meetingEndDateTime;
+    private OffsetDateTime meetingEndDateTime;
     /** UTC time when the meeting started. Read-only. */
-    private OffsetDateTime _meetingStartDateTime;
+    private OffsetDateTime meetingStartDateTime;
     /** Total number of participants. Read-only. */
-    private Integer _totalParticipantCount;
+    private Integer totalParticipantCount;
     /**
      * Instantiates a new meetingAttendanceReport and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MeetingAttendanceReport() {
         super();
-        this.setOdataType("#microsoft.graph.meetingAttendanceReport");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,21 +40,20 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AttendanceRecord> getAttendanceRecords() {
-        return this._attendanceRecords;
+        return this.attendanceRecords;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MeetingAttendanceReport currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("attendanceRecords", (n) -> { currentObject.setAttendanceRecords(n.getCollectionOfObjectValues(AttendanceRecord::createFromDiscriminatorValue)); });
-            this.put("meetingEndDateTime", (n) -> { currentObject.setMeetingEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("meetingStartDateTime", (n) -> { currentObject.setMeetingStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("totalParticipantCount", (n) -> { currentObject.setTotalParticipantCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("attendanceRecords", (n) -> { this.setAttendanceRecords(n.getCollectionOfObjectValues(AttendanceRecord::createFromDiscriminatorValue)); });
+        deserializerMap.put("meetingEndDateTime", (n) -> { this.setMeetingEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("meetingStartDateTime", (n) -> { this.setMeetingStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("totalParticipantCount", (n) -> { this.setTotalParticipantCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the meetingEndDateTime property value. UTC time when the meeting ended. Read-only.
@@ -64,7 +61,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getMeetingEndDateTime() {
-        return this._meetingEndDateTime;
+        return this.meetingEndDateTime;
     }
     /**
      * Gets the meetingStartDateTime property value. UTC time when the meeting started. Read-only.
@@ -72,7 +69,7 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getMeetingStartDateTime() {
-        return this._meetingStartDateTime;
+        return this.meetingStartDateTime;
     }
     /**
      * Gets the totalParticipantCount property value. Total number of participants. Read-only.
@@ -80,13 +77,14 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getTotalParticipantCount() {
-        return this._totalParticipantCount;
+        return this.totalParticipantCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -100,31 +98,35 @@ public class MeetingAttendanceReport extends Entity implements Parsable {
      * @param value Value to set for the attendanceRecords property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttendanceRecords(@javax.annotation.Nullable final java.util.List<AttendanceRecord> value) {
-        this._attendanceRecords = value;
+        this.attendanceRecords = value;
     }
     /**
      * Sets the meetingEndDateTime property value. UTC time when the meeting ended. Read-only.
      * @param value Value to set for the meetingEndDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeetingEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._meetingEndDateTime = value;
+        this.meetingEndDateTime = value;
     }
     /**
      * Sets the meetingStartDateTime property value. UTC time when the meeting started. Read-only.
      * @param value Value to set for the meetingStartDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeetingStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._meetingStartDateTime = value;
+        this.meetingStartDateTime = value;
     }
     /**
      * Sets the totalParticipantCount property value. Total number of participants. Read-only.
      * @param value Value to set for the totalParticipantCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalParticipantCount(@javax.annotation.Nullable final Integer value) {
-        this._totalParticipantCount = value;
+        this.totalParticipantCount = value;
     }
 }

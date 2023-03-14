@@ -3,11 +3,10 @@ package com.microsoft.graph.models.managedtenants;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum ManagementParameterValueType implements ValuedEnum {
     String("string"),
     Integer("integer"),
-    Boolean_escaped("boolean_escaped"),
+    BooleanEscaped("booleanEscaped"),
     Guid("guid"),
     StringCollection("stringCollection"),
     IntegerCollection("integerCollection"),
@@ -26,7 +25,7 @@ public enum ManagementParameterValueType implements ValuedEnum {
         switch(searchValue) {
             case "string": return String;
             case "integer": return Integer;
-            case "boolean": return Boolean_escaped;
+            case "boolean": return BooleanEscaped;
             case "guid": return Guid;
             case "stringCollection": return StringCollection;
             case "integerCollection": return IntegerCollection;

@@ -3,19 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidForWorkTrustedRootCertificate extends DeviceConfiguration implements Parsable {
     /** File name to display in UI. */
-    private String _certFileName;
+    private String certFileName;
     /** Trusted Root Certificate */
-    private byte[] _trustedRootCertificate;
+    private byte[] trustedRootCertificate;
     /**
      * Instantiates a new androidForWorkTrustedRootCertificate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidForWorkTrustedRootCertificate() {
         super();
         this.setOdataType("#microsoft.graph.androidForWorkTrustedRootCertificate");
@@ -36,33 +36,33 @@ public class AndroidForWorkTrustedRootCertificate extends DeviceConfiguration im
      */
     @javax.annotation.Nullable
     public String getCertFileName() {
-        return this._certFileName;
+        return this.certFileName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidForWorkTrustedRootCertificate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certFileName", (n) -> { currentObject.setCertFileName(n.getStringValue()); });
-            this.put("trustedRootCertificate", (n) -> { currentObject.setTrustedRootCertificate(n.getByteArrayValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certFileName", (n) -> { this.setCertFileName(n.getStringValue()); });
+        deserializerMap.put("trustedRootCertificate", (n) -> { this.setTrustedRootCertificate(n.getByteArrayValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the trustedRootCertificate property value. Trusted Root Certificate
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getTrustedRootCertificate() {
-        return this._trustedRootCertificate;
+        return this.trustedRootCertificate;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +74,17 @@ public class AndroidForWorkTrustedRootCertificate extends DeviceConfiguration im
      * @param value Value to set for the certFileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertFileName(@javax.annotation.Nullable final String value) {
-        this._certFileName = value;
+        this.certFileName = value;
     }
     /**
      * Sets the trustedRootCertificate property value. Trusted Root Certificate
      * @param value Value to set for the trustedRootCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTrustedRootCertificate(@javax.annotation.Nullable final byte[] value) {
-        this._trustedRootCertificate = value;
+        this.trustedRootCertificate = value;
     }
 }

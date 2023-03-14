@@ -4,26 +4,26 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the validateProperties method. */
+import java.util.UUID;
 public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The displayName property */
-    private String _displayName;
+    private String displayName;
     /** The entityType property */
-    private String _entityType;
+    private String entityType;
     /** The mailNickname property */
-    private String _mailNickname;
+    private String mailNickname;
     /** The onBehalfOfUserId property */
-    private String _onBehalfOfUserId;
+    private UUID onBehalfOfUserId;
     /**
      * Instantiates a new validatePropertiesPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ValidatePropertiesPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -43,7 +43,7 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the displayName property value. The displayName property
@@ -51,7 +51,7 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the entityType property value. The entityType property
@@ -59,21 +59,20 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
      */
     @javax.annotation.Nullable
     public String getEntityType() {
-        return this._entityType;
+        return this.entityType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ValidatePropertiesPostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("entityType", (n) -> { currentObject.setEntityType(n.getStringValue()); });
-            this.put("mailNickname", (n) -> { currentObject.setMailNickname(n.getStringValue()); });
-            this.put("onBehalfOfUserId", (n) -> { currentObject.setOnBehalfOfUserId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("entityType", (n) -> { this.setEntityType(n.getStringValue()); });
+        deserializerMap.put("mailNickname", (n) -> { this.setMailNickname(n.getStringValue()); });
+        deserializerMap.put("onBehalfOfUserId", (n) -> { this.setOnBehalfOfUserId(n.getUUIDValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the mailNickname property value. The mailNickname property
@@ -81,27 +80,28 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
      */
     @javax.annotation.Nullable
     public String getMailNickname() {
-        return this._mailNickname;
+        return this.mailNickname;
     }
     /**
      * Gets the onBehalfOfUserId property value. The onBehalfOfUserId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getOnBehalfOfUserId() {
-        return this._onBehalfOfUserId;
+    public UUID getOnBehalfOfUserId() {
+        return this.onBehalfOfUserId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("entityType", this.getEntityType());
         writer.writeStringValue("mailNickname", this.getMailNickname());
-        writer.writeStringValue("onBehalfOfUserId", this.getOnBehalfOfUserId());
+        writer.writeUUIDValue("onBehalfOfUserId", this.getOnBehalfOfUserId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -109,39 +109,44 @@ public class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, 
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the entityType property value. The entityType property
      * @param value Value to set for the entityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEntityType(@javax.annotation.Nullable final String value) {
-        this._entityType = value;
+        this.entityType = value;
     }
     /**
      * Sets the mailNickname property value. The mailNickname property
      * @param value Value to set for the mailNickname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailNickname(@javax.annotation.Nullable final String value) {
-        this._mailNickname = value;
+        this.mailNickname = value;
     }
     /**
      * Sets the onBehalfOfUserId property value. The onBehalfOfUserId property
      * @param value Value to set for the onBehalfOfUserId property.
      * @return a void
      */
-    public void setOnBehalfOfUserId(@javax.annotation.Nullable final String value) {
-        this._onBehalfOfUserId = value;
+    @javax.annotation.Nonnull
+    public void setOnBehalfOfUserId(@javax.annotation.Nullable final UUID value) {
+        this.onBehalfOfUserId = value;
     }
 }

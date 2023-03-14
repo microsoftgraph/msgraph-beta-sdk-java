@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Specifies the routing policy for a VPN traffic rule. */
 public enum VpnTrafficRuleRoutingPolicyType implements ValuedEnum {
     /** No routing policy specified. */
     None("none"),

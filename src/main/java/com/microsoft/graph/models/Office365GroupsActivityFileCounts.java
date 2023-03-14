@@ -4,28 +4,27 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalDate;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Office365GroupsActivityFileCounts extends Entity implements Parsable {
     /** The number of files that were viewed, edited, shared, or synced in the group's SharePoint document library. */
-    private Long _active;
+    private Long active;
     /** The date on which a number of files were active in the group's SharePoint site. */
-    private LocalDate _reportDate;
+    private LocalDate reportDate;
     /** The number of days the report covers. */
-    private String _reportPeriod;
+    private String reportPeriod;
     /** The latest date of the content. */
-    private LocalDate _reportRefreshDate;
+    private LocalDate reportRefreshDate;
     /** The total number of files in the group's SharePoint document library. */
-    private Long _total;
+    private Long total;
     /**
      * Instantiates a new Office365GroupsActivityFileCounts and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Office365GroupsActivityFileCounts() {
         super();
-        this.setOdataType("#microsoft.graph.office365GroupsActivityFileCounts");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,22 +42,21 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public Long getActive() {
-        return this._active;
+        return this.active;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Office365GroupsActivityFileCounts currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("active", (n) -> { currentObject.setActive(n.getLongValue()); });
-            this.put("reportDate", (n) -> { currentObject.setReportDate(n.getLocalDateValue()); });
-            this.put("reportPeriod", (n) -> { currentObject.setReportPeriod(n.getStringValue()); });
-            this.put("reportRefreshDate", (n) -> { currentObject.setReportRefreshDate(n.getLocalDateValue()); });
-            this.put("total", (n) -> { currentObject.setTotal(n.getLongValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("active", (n) -> { this.setActive(n.getLongValue()); });
+        deserializerMap.put("reportDate", (n) -> { this.setReportDate(n.getLocalDateValue()); });
+        deserializerMap.put("reportPeriod", (n) -> { this.setReportPeriod(n.getStringValue()); });
+        deserializerMap.put("reportRefreshDate", (n) -> { this.setReportRefreshDate(n.getLocalDateValue()); });
+        deserializerMap.put("total", (n) -> { this.setTotal(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the reportDate property value. The date on which a number of files were active in the group's SharePoint site.
@@ -66,7 +64,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public LocalDate getReportDate() {
-        return this._reportDate;
+        return this.reportDate;
     }
     /**
      * Gets the reportPeriod property value. The number of days the report covers.
@@ -74,7 +72,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public String getReportPeriod() {
-        return this._reportPeriod;
+        return this.reportPeriod;
     }
     /**
      * Gets the reportRefreshDate property value. The latest date of the content.
@@ -82,7 +80,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public LocalDate getReportRefreshDate() {
-        return this._reportRefreshDate;
+        return this.reportRefreshDate;
     }
     /**
      * Gets the total property value. The total number of files in the group's SharePoint document library.
@@ -90,13 +88,14 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public Long getTotal() {
-        return this._total;
+        return this.total;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,39 +110,44 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
      * @param value Value to set for the active property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActive(@javax.annotation.Nullable final Long value) {
-        this._active = value;
+        this.active = value;
     }
     /**
      * Sets the reportDate property value. The date on which a number of files were active in the group's SharePoint site.
      * @param value Value to set for the reportDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportDate(@javax.annotation.Nullable final LocalDate value) {
-        this._reportDate = value;
+        this.reportDate = value;
     }
     /**
      * Sets the reportPeriod property value. The number of days the report covers.
      * @param value Value to set for the reportPeriod property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportPeriod(@javax.annotation.Nullable final String value) {
-        this._reportPeriod = value;
+        this.reportPeriod = value;
     }
     /**
      * Sets the reportRefreshDate property value. The latest date of the content.
      * @param value Value to set for the reportRefreshDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReportRefreshDate(@javax.annotation.Nullable final LocalDate value) {
-        this._reportRefreshDate = value;
+        this.reportRefreshDate = value;
     }
     /**
      * Sets the total property value. The total number of files in the group's SharePoint document library.
      * @param value Value to set for the total property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotal(@javax.annotation.Nullable final Long value) {
-        this._total = value;
+        this.total = value;
     }
 }

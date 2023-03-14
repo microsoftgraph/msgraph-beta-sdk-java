@@ -4,70 +4,73 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class SubjectRightsRequest extends Entity implements Parsable {
+    /** The approvers property */
+    private java.util.List<User> approvers;
     /** Identity that the request is assigned to. */
-    private Identity _assignedTo;
+    private Identity assignedTo;
     /** The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _closedDateTime;
+    private OffsetDateTime closedDateTime;
+    /** The collaborators property */
+    private java.util.List<User> collaborators;
     /** KQL based content query that should be used for search. This property is defined only for APIs accessed using the /security query path and not the /privacy query path. */
-    private String _contentQuery;
+    private String contentQuery;
     /** Identity information for the entity that created the request. */
-    private IdentitySet _createdBy;
+    private IdentitySet createdBy;
     /** The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Information about the data subject. */
-    private DataSubject _dataSubject;
+    private DataSubject dataSubject;
     /** The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue. */
-    private DataSubjectType _dataSubjectType;
+    private DataSubjectType dataSubjectType;
     /** Description for the request. */
-    private String _description;
+    private String description;
     /** The name of the request. */
-    private String _displayName;
+    private String displayName;
     /** The external ID for the request that is immutable after creation and is used for tracking the request for the external system. This property is defined only for APIs accessed using the /security query path and not the /privacy query path. */
-    private String _externalId;
+    private String externalId;
     /** Collection of history change events. */
-    private java.util.List<SubjectRightsRequestHistory> _history;
+    private java.util.List<SubjectRightsRequestHistory> history;
     /** Include all versions of the documents. By default, the current copies of the documents will be returned. If SharePoint sites have versioning enabled, including all versions will include the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path. */
-    private Boolean _includeAllVersions;
+    private Boolean includeAllVersions;
     /** Include content authored by the data subject. This property is defined only for APIs accessed using the /security query path and not the /privacy query path. */
-    private Boolean _includeAuthoredContent;
+    private Boolean includeAuthoredContent;
     /** Insight about the request. */
-    private SubjectRightsRequestDetail _insight;
+    private SubjectRightsRequestDetail insight;
     /** The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _internalDueDateTime;
+    private OffsetDateTime internalDueDateTime;
     /** Identity information for the entity that last modified the request. */
-    private IdentitySet _lastModifiedBy;
+    private IdentitySet lastModifiedBy;
     /** The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The mailboxlocations property */
-    private SubjectRightsRequestMailboxLocation _mailboxlocations;
+    private SubjectRightsRequestMailboxLocation mailboxlocations;
     /** List of notes associated with the request. */
-    private java.util.List<AuthoredNote> _notes;
+    private java.util.List<AuthoredNote> notes;
     /** Pause the request after estimate has finished. By default, the data estimate will run and then pause, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path. */
-    private Boolean _pauseAfterEstimate;
+    private Boolean pauseAfterEstimate;
     /** List of regulations that this request will fulfill. */
-    private java.util.List<String> _regulations;
+    private java.util.List<String> regulations;
     /** The sitelocations property */
-    private SubjectRightsRequestSiteLocation _sitelocations;
+    private SubjectRightsRequestSiteLocation sitelocations;
     /** Information about the different stages for the request. */
-    private java.util.List<SubjectRightsRequestStageDetail> _stages;
+    private java.util.List<SubjectRightsRequestStageDetail> stages;
     /** The status of the request. Possible values are: active, closed, unknownFutureValue. */
-    private SubjectRightsRequestStatus _status;
+    private SubjectRightsRequestStatus status;
     /** Information about the Microsoft Teams team that was created for the request. */
-    private Team _team;
+    private Team team;
     /** The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue. */
-    private SubjectRightsRequestType _type;
+    private SubjectRightsRequestType type;
     /**
      * Instantiates a new SubjectRightsRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public SubjectRightsRequest() {
         super();
-        this.setOdataType("#microsoft.graph.subjectRightsRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -80,12 +83,20 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         return new SubjectRightsRequest();
     }
     /**
+     * Gets the approvers property value. The approvers property
+     * @return a user
+     */
+    @javax.annotation.Nullable
+    public java.util.List<User> getApprovers() {
+        return this.approvers;
+    }
+    /**
      * Gets the assignedTo property value. Identity that the request is assigned to.
      * @return a identity
      */
     @javax.annotation.Nullable
     public Identity getAssignedTo() {
-        return this._assignedTo;
+        return this.assignedTo;
     }
     /**
      * Gets the closedDateTime property value. The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -93,7 +104,15 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getClosedDateTime() {
-        return this._closedDateTime;
+        return this.closedDateTime;
+    }
+    /**
+     * Gets the collaborators property value. The collaborators property
+     * @return a user
+     */
+    @javax.annotation.Nullable
+    public java.util.List<User> getCollaborators() {
+        return this.collaborators;
     }
     /**
      * Gets the contentQuery property value. KQL based content query that should be used for search. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
@@ -101,7 +120,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getContentQuery() {
-        return this._contentQuery;
+        return this.contentQuery;
     }
     /**
      * Gets the createdBy property value. Identity information for the entity that created the request.
@@ -109,7 +128,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdDateTime property value. The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -117,7 +136,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the dataSubject property value. Information about the data subject.
@@ -125,7 +144,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DataSubject getDataSubject() {
-        return this._dataSubject;
+        return this.dataSubject;
     }
     /**
      * Gets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
@@ -133,7 +152,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DataSubjectType getDataSubjectType() {
-        return this._dataSubjectType;
+        return this.dataSubjectType;
     }
     /**
      * Gets the description property value. Description for the request.
@@ -141,7 +160,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The name of the request.
@@ -149,7 +168,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the externalId property value. The external ID for the request that is immutable after creation and is used for tracking the request for the external system. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
@@ -157,43 +176,44 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getExternalId() {
-        return this._externalId;
+        return this.externalId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final SubjectRightsRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignedTo", (n) -> { currentObject.setAssignedTo(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
-            this.put("closedDateTime", (n) -> { currentObject.setClosedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("contentQuery", (n) -> { currentObject.setContentQuery(n.getStringValue()); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("dataSubject", (n) -> { currentObject.setDataSubject(n.getObjectValue(DataSubject::createFromDiscriminatorValue)); });
-            this.put("dataSubjectType", (n) -> { currentObject.setDataSubjectType(n.getEnumValue(DataSubjectType.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
-            this.put("history", (n) -> { currentObject.setHistory(n.getCollectionOfObjectValues(SubjectRightsRequestHistory::createFromDiscriminatorValue)); });
-            this.put("includeAllVersions", (n) -> { currentObject.setIncludeAllVersions(n.getBooleanValue()); });
-            this.put("includeAuthoredContent", (n) -> { currentObject.setIncludeAuthoredContent(n.getBooleanValue()); });
-            this.put("insight", (n) -> { currentObject.setInsight(n.getObjectValue(SubjectRightsRequestDetail::createFromDiscriminatorValue)); });
-            this.put("internalDueDateTime", (n) -> { currentObject.setInternalDueDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("mailboxlocations", (n) -> { currentObject.setMailboxlocations(n.getObjectValue(SubjectRightsRequestMailboxLocation::createFromDiscriminatorValue)); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getCollectionOfObjectValues(AuthoredNote::createFromDiscriminatorValue)); });
-            this.put("pauseAfterEstimate", (n) -> { currentObject.setPauseAfterEstimate(n.getBooleanValue()); });
-            this.put("regulations", (n) -> { currentObject.setRegulations(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("sitelocations", (n) -> { currentObject.setSitelocations(n.getObjectValue(SubjectRightsRequestSiteLocation::createFromDiscriminatorValue)); });
-            this.put("stages", (n) -> { currentObject.setStages(n.getCollectionOfObjectValues(SubjectRightsRequestStageDetail::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(SubjectRightsRequestStatus.class)); });
-            this.put("team", (n) -> { currentObject.setTeam(n.getObjectValue(Team::createFromDiscriminatorValue)); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(SubjectRightsRequestType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("approvers", (n) -> { this.setApprovers(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
+        deserializerMap.put("closedDateTime", (n) -> { this.setClosedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("collaborators", (n) -> { this.setCollaborators(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentQuery", (n) -> { this.setContentQuery(n.getStringValue()); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("dataSubject", (n) -> { this.setDataSubject(n.getObjectValue(DataSubject::createFromDiscriminatorValue)); });
+        deserializerMap.put("dataSubjectType", (n) -> { this.setDataSubjectType(n.getEnumValue(DataSubjectType.class)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
+        deserializerMap.put("history", (n) -> { this.setHistory(n.getCollectionOfObjectValues(SubjectRightsRequestHistory::createFromDiscriminatorValue)); });
+        deserializerMap.put("includeAllVersions", (n) -> { this.setIncludeAllVersions(n.getBooleanValue()); });
+        deserializerMap.put("includeAuthoredContent", (n) -> { this.setIncludeAuthoredContent(n.getBooleanValue()); });
+        deserializerMap.put("insight", (n) -> { this.setInsight(n.getObjectValue(SubjectRightsRequestDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("internalDueDateTime", (n) -> { this.setInternalDueDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("mailboxlocations", (n) -> { this.setMailboxlocations(n.getObjectValue(SubjectRightsRequestMailboxLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("notes", (n) -> { this.setNotes(n.getCollectionOfObjectValues(AuthoredNote::createFromDiscriminatorValue)); });
+        deserializerMap.put("pauseAfterEstimate", (n) -> { this.setPauseAfterEstimate(n.getBooleanValue()); });
+        deserializerMap.put("regulations", (n) -> { this.setRegulations(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("sitelocations", (n) -> { this.setSitelocations(n.getObjectValue(SubjectRightsRequestSiteLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("stages", (n) -> { this.setStages(n.getCollectionOfObjectValues(SubjectRightsRequestStageDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(SubjectRightsRequestStatus.class)); });
+        deserializerMap.put("team", (n) -> { this.setTeam(n.getObjectValue(Team::createFromDiscriminatorValue)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(SubjectRightsRequestType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the history property value. Collection of history change events.
@@ -201,7 +221,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SubjectRightsRequestHistory> getHistory() {
-        return this._history;
+        return this.history;
     }
     /**
      * Gets the includeAllVersions property value. Include all versions of the documents. By default, the current copies of the documents will be returned. If SharePoint sites have versioning enabled, including all versions will include the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
@@ -209,7 +229,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIncludeAllVersions() {
-        return this._includeAllVersions;
+        return this.includeAllVersions;
     }
     /**
      * Gets the includeAuthoredContent property value. Include content authored by the data subject. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
@@ -217,7 +237,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIncludeAuthoredContent() {
-        return this._includeAuthoredContent;
+        return this.includeAuthoredContent;
     }
     /**
      * Gets the insight property value. Insight about the request.
@@ -225,7 +245,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SubjectRightsRequestDetail getInsight() {
-        return this._insight;
+        return this.insight;
     }
     /**
      * Gets the internalDueDateTime property value. The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -233,7 +253,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getInternalDueDateTime() {
-        return this._internalDueDateTime;
+        return this.internalDueDateTime;
     }
     /**
      * Gets the lastModifiedBy property value. Identity information for the entity that last modified the request.
@@ -241,7 +261,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this._lastModifiedBy;
+        return this.lastModifiedBy;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -249,7 +269,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the mailboxlocations property value. The mailboxlocations property
@@ -257,7 +277,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SubjectRightsRequestMailboxLocation getMailboxlocations() {
-        return this._mailboxlocations;
+        return this.mailboxlocations;
     }
     /**
      * Gets the notes property value. List of notes associated with the request.
@@ -265,7 +285,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AuthoredNote> getNotes() {
-        return this._notes;
+        return this.notes;
     }
     /**
      * Gets the pauseAfterEstimate property value. Pause the request after estimate has finished. By default, the data estimate will run and then pause, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
@@ -273,7 +293,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getPauseAfterEstimate() {
-        return this._pauseAfterEstimate;
+        return this.pauseAfterEstimate;
     }
     /**
      * Gets the regulations property value. List of regulations that this request will fulfill.
@@ -281,7 +301,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getRegulations() {
-        return this._regulations;
+        return this.regulations;
     }
     /**
      * Gets the sitelocations property value. The sitelocations property
@@ -289,7 +309,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SubjectRightsRequestSiteLocation getSitelocations() {
-        return this._sitelocations;
+        return this.sitelocations;
     }
     /**
      * Gets the stages property value. Information about the different stages for the request.
@@ -297,7 +317,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SubjectRightsRequestStageDetail> getStages() {
-        return this._stages;
+        return this.stages;
     }
     /**
      * Gets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
@@ -305,7 +325,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SubjectRightsRequestStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the team property value. Information about the Microsoft Teams team that was created for the request.
@@ -313,7 +333,7 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Team getTeam() {
-        return this._team;
+        return this.team;
     }
     /**
      * Gets the type property value. The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
@@ -321,18 +341,21 @@ public class SubjectRightsRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SubjectRightsRequestType getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("approvers", this.getApprovers());
         writer.writeObjectValue("assignedTo", this.getAssignedTo());
         writer.writeOffsetDateTimeValue("closedDateTime", this.getClosedDateTime());
+        writer.writeCollectionOfObjectValues("collaborators", this.getCollaborators());
         writer.writeStringValue("contentQuery", this.getContentQuery());
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -359,211 +382,255 @@ public class SubjectRightsRequest extends Entity implements Parsable {
         writer.writeEnumValue("type", this.getType());
     }
     /**
+     * Sets the approvers property value. The approvers property
+     * @param value Value to set for the approvers property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setApprovers(@javax.annotation.Nullable final java.util.List<User> value) {
+        this.approvers = value;
+    }
+    /**
      * Sets the assignedTo property value. Identity that the request is assigned to.
      * @param value Value to set for the assignedTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignedTo(@javax.annotation.Nullable final Identity value) {
-        this._assignedTo = value;
+        this.assignedTo = value;
     }
     /**
      * Sets the closedDateTime property value. The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the closedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClosedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._closedDateTime = value;
+        this.closedDateTime = value;
+    }
+    /**
+     * Sets the collaborators property value. The collaborators property
+     * @param value Value to set for the collaborators property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCollaborators(@javax.annotation.Nullable final java.util.List<User> value) {
+        this.collaborators = value;
     }
     /**
      * Sets the contentQuery property value. KQL based content query that should be used for search. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param value Value to set for the contentQuery property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentQuery(@javax.annotation.Nullable final String value) {
-        this._contentQuery = value;
+        this.contentQuery = value;
     }
     /**
      * Sets the createdBy property value. Identity information for the entity that created the request.
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the dataSubject property value. Information about the data subject.
      * @param value Value to set for the dataSubject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataSubject(@javax.annotation.Nullable final DataSubject value) {
-        this._dataSubject = value;
+        this.dataSubject = value;
     }
     /**
      * Sets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
      * @param value Value to set for the dataSubjectType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDataSubjectType(@javax.annotation.Nullable final DataSubjectType value) {
-        this._dataSubjectType = value;
+        this.dataSubjectType = value;
     }
     /**
      * Sets the description property value. Description for the request.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the request.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the externalId property value. The external ID for the request that is immutable after creation and is used for tracking the request for the external system. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param value Value to set for the externalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
-        this._externalId = value;
+        this.externalId = value;
     }
     /**
      * Sets the history property value. Collection of history change events.
      * @param value Value to set for the history property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHistory(@javax.annotation.Nullable final java.util.List<SubjectRightsRequestHistory> value) {
-        this._history = value;
+        this.history = value;
     }
     /**
      * Sets the includeAllVersions property value. Include all versions of the documents. By default, the current copies of the documents will be returned. If SharePoint sites have versioning enabled, including all versions will include the historical copies of the documents. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param value Value to set for the includeAllVersions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeAllVersions(@javax.annotation.Nullable final Boolean value) {
-        this._includeAllVersions = value;
+        this.includeAllVersions = value;
     }
     /**
      * Sets the includeAuthoredContent property value. Include content authored by the data subject. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param value Value to set for the includeAuthoredContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeAuthoredContent(@javax.annotation.Nullable final Boolean value) {
-        this._includeAuthoredContent = value;
+        this.includeAuthoredContent = value;
     }
     /**
      * Sets the insight property value. Insight about the request.
      * @param value Value to set for the insight property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInsight(@javax.annotation.Nullable final SubjectRightsRequestDetail value) {
-        this._insight = value;
+        this.insight = value;
     }
     /**
      * Sets the internalDueDateTime property value. The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the internalDueDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInternalDueDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._internalDueDateTime = value;
+        this.internalDueDateTime = value;
     }
     /**
      * Sets the lastModifiedBy property value. Identity information for the entity that last modified the request.
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._lastModifiedBy = value;
+        this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the mailboxlocations property value. The mailboxlocations property
      * @param value Value to set for the mailboxlocations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMailboxlocations(@javax.annotation.Nullable final SubjectRightsRequestMailboxLocation value) {
-        this._mailboxlocations = value;
+        this.mailboxlocations = value;
     }
     /**
      * Sets the notes property value. List of notes associated with the request.
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final java.util.List<AuthoredNote> value) {
-        this._notes = value;
+        this.notes = value;
     }
     /**
      * Sets the pauseAfterEstimate property value. Pause the request after estimate has finished. By default, the data estimate will run and then pause, allowing you to preview results and then select the option to retrieve data in the UI. You can set this property to false if you want it to perform the estimate and then automatically begin with the retrieval of the content. This property is defined only for APIs accessed using the /security query path and not the /privacy query path.
      * @param value Value to set for the pauseAfterEstimate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPauseAfterEstimate(@javax.annotation.Nullable final Boolean value) {
-        this._pauseAfterEstimate = value;
+        this.pauseAfterEstimate = value;
     }
     /**
      * Sets the regulations property value. List of regulations that this request will fulfill.
      * @param value Value to set for the regulations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegulations(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._regulations = value;
+        this.regulations = value;
     }
     /**
      * Sets the sitelocations property value. The sitelocations property
      * @param value Value to set for the sitelocations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSitelocations(@javax.annotation.Nullable final SubjectRightsRequestSiteLocation value) {
-        this._sitelocations = value;
+        this.sitelocations = value;
     }
     /**
      * Sets the stages property value. Information about the different stages for the request.
      * @param value Value to set for the stages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStages(@javax.annotation.Nullable final java.util.List<SubjectRightsRequestStageDetail> value) {
-        this._stages = value;
+        this.stages = value;
     }
     /**
      * Sets the status property value. The status of the request. Possible values are: active, closed, unknownFutureValue.
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final SubjectRightsRequestStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the team property value. Information about the Microsoft Teams team that was created for the request.
      * @param value Value to set for the team property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeam(@javax.annotation.Nullable final Team value) {
-        this._team = value;
+        this.team = value;
     }
     /**
      * Sets the type property value. The type of the request. Possible values are: export, delete, access, tagForAction, unknownFutureValue.
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final SubjectRightsRequestType value) {
-        this._type = value;
+        this.type = value;
     }
 }

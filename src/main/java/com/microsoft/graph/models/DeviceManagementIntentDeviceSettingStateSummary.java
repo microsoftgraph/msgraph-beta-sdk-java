@@ -3,33 +3,34 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Entity that represents device setting state summary for an intent */
+/**
+ * Entity that represents device setting state summary for an intent
+ */
 public class DeviceManagementIntentDeviceSettingStateSummary extends Entity implements Parsable {
     /** Number of compliant devices */
-    private Integer _compliantCount;
+    private Integer compliantCount;
     /** Number of devices in conflict */
-    private Integer _conflictCount;
+    private Integer conflictCount;
     /** Number of error devices */
-    private Integer _errorCount;
+    private Integer errorCount;
     /** Number of non compliant devices */
-    private Integer _nonCompliantCount;
+    private Integer nonCompliantCount;
     /** Number of not applicable devices */
-    private Integer _notApplicableCount;
+    private Integer notApplicableCount;
     /** Number of remediated devices */
-    private Integer _remediatedCount;
+    private Integer remediatedCount;
     /** Name of a setting */
-    private String _settingName;
+    private String settingName;
     /**
      * Instantiates a new deviceManagementIntentDeviceSettingStateSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementIntentDeviceSettingStateSummary() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementIntentDeviceSettingStateSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +48,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      */
     @javax.annotation.Nullable
     public Integer getCompliantCount() {
-        return this._compliantCount;
+        return this.compliantCount;
     }
     /**
      * Gets the conflictCount property value. Number of devices in conflict
@@ -55,7 +56,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      */
     @javax.annotation.Nullable
     public Integer getConflictCount() {
-        return this._conflictCount;
+        return this.conflictCount;
     }
     /**
      * Gets the errorCount property value. Number of error devices
@@ -63,24 +64,23 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      */
     @javax.annotation.Nullable
     public Integer getErrorCount() {
-        return this._errorCount;
+        return this.errorCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementIntentDeviceSettingStateSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("compliantCount", (n) -> { currentObject.setCompliantCount(n.getIntegerValue()); });
-            this.put("conflictCount", (n) -> { currentObject.setConflictCount(n.getIntegerValue()); });
-            this.put("errorCount", (n) -> { currentObject.setErrorCount(n.getIntegerValue()); });
-            this.put("nonCompliantCount", (n) -> { currentObject.setNonCompliantCount(n.getIntegerValue()); });
-            this.put("notApplicableCount", (n) -> { currentObject.setNotApplicableCount(n.getIntegerValue()); });
-            this.put("remediatedCount", (n) -> { currentObject.setRemediatedCount(n.getIntegerValue()); });
-            this.put("settingName", (n) -> { currentObject.setSettingName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("compliantCount", (n) -> { this.setCompliantCount(n.getIntegerValue()); });
+        deserializerMap.put("conflictCount", (n) -> { this.setConflictCount(n.getIntegerValue()); });
+        deserializerMap.put("errorCount", (n) -> { this.setErrorCount(n.getIntegerValue()); });
+        deserializerMap.put("nonCompliantCount", (n) -> { this.setNonCompliantCount(n.getIntegerValue()); });
+        deserializerMap.put("notApplicableCount", (n) -> { this.setNotApplicableCount(n.getIntegerValue()); });
+        deserializerMap.put("remediatedCount", (n) -> { this.setRemediatedCount(n.getIntegerValue()); });
+        deserializerMap.put("settingName", (n) -> { this.setSettingName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the nonCompliantCount property value. Number of non compliant devices
@@ -88,7 +88,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      */
     @javax.annotation.Nullable
     public Integer getNonCompliantCount() {
-        return this._nonCompliantCount;
+        return this.nonCompliantCount;
     }
     /**
      * Gets the notApplicableCount property value. Number of not applicable devices
@@ -96,7 +96,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      */
     @javax.annotation.Nullable
     public Integer getNotApplicableCount() {
-        return this._notApplicableCount;
+        return this.notApplicableCount;
     }
     /**
      * Gets the remediatedCount property value. Number of remediated devices
@@ -104,7 +104,7 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      */
     @javax.annotation.Nullable
     public Integer getRemediatedCount() {
-        return this._remediatedCount;
+        return this.remediatedCount;
     }
     /**
      * Gets the settingName property value. Name of a setting
@@ -112,13 +112,14 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      */
     @javax.annotation.Nullable
     public String getSettingName() {
-        return this._settingName;
+        return this.settingName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,55 +136,62 @@ public class DeviceManagementIntentDeviceSettingStateSummary extends Entity impl
      * @param value Value to set for the compliantCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliantCount(@javax.annotation.Nullable final Integer value) {
-        this._compliantCount = value;
+        this.compliantCount = value;
     }
     /**
      * Sets the conflictCount property value. Number of devices in conflict
      * @param value Value to set for the conflictCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConflictCount(@javax.annotation.Nullable final Integer value) {
-        this._conflictCount = value;
+        this.conflictCount = value;
     }
     /**
      * Sets the errorCount property value. Number of error devices
      * @param value Value to set for the errorCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCount(@javax.annotation.Nullable final Integer value) {
-        this._errorCount = value;
+        this.errorCount = value;
     }
     /**
      * Sets the nonCompliantCount property value. Number of non compliant devices
      * @param value Value to set for the nonCompliantCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNonCompliantCount(@javax.annotation.Nullable final Integer value) {
-        this._nonCompliantCount = value;
+        this.nonCompliantCount = value;
     }
     /**
      * Sets the notApplicableCount property value. Number of not applicable devices
      * @param value Value to set for the notApplicableCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotApplicableCount(@javax.annotation.Nullable final Integer value) {
-        this._notApplicableCount = value;
+        this.notApplicableCount = value;
     }
     /**
      * Sets the remediatedCount property value. Number of remediated devices
      * @param value Value to set for the remediatedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemediatedCount(@javax.annotation.Nullable final Integer value) {
-        this._remediatedCount = value;
+        this.remediatedCount = value;
     }
     /**
      * Sets the settingName property value. Name of a setting
      * @param value Value to set for the settingName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingName(@javax.annotation.Nullable final String value) {
-        this._settingName = value;
+        this.settingName = value;
     }
 }

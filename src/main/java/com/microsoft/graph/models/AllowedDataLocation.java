@@ -3,27 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of allowedDataLocation entities. */
 public class AllowedDataLocation extends Entity implements Parsable {
     /** The appId property */
-    private String _appId;
+    private String appId;
     /** The domain property */
-    private String _domain;
+    private String domain;
     /** The isDefault property */
-    private Boolean _isDefault;
+    private Boolean isDefault;
     /** The location property */
-    private String _location;
+    private String location;
     /**
      * Instantiates a new allowedDataLocation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AllowedDataLocation() {
         super();
-        this.setOdataType("#microsoft.graph.allowedDataLocation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +39,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppId() {
-        return this._appId;
+        return this.appId;
     }
     /**
      * Gets the domain property value. The domain property
@@ -49,21 +47,20 @@ public class AllowedDataLocation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDomain() {
-        return this._domain;
+        return this.domain;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AllowedDataLocation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("domain", (n) -> { currentObject.setDomain(n.getStringValue()); });
-            this.put("isDefault", (n) -> { currentObject.setIsDefault(n.getBooleanValue()); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
+        deserializerMap.put("domain", (n) -> { this.setDomain(n.getStringValue()); });
+        deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("location", (n) -> { this.setLocation(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isDefault property value. The isDefault property
@@ -71,7 +68,7 @@ public class AllowedDataLocation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsDefault() {
-        return this._isDefault;
+        return this.isDefault;
     }
     /**
      * Gets the location property value. The location property
@@ -79,13 +76,14 @@ public class AllowedDataLocation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLocation() {
-        return this._location;
+        return this.location;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,31 +97,35 @@ public class AllowedDataLocation extends Entity implements Parsable {
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
-        this._appId = value;
+        this.appId = value;
     }
     /**
      * Sets the domain property value. The domain property
      * @param value Value to set for the domain property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomain(@javax.annotation.Nullable final String value) {
-        this._domain = value;
+        this.domain = value;
     }
     /**
      * Sets the isDefault property value. The isDefault property
      * @param value Value to set for the isDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefault(@javax.annotation.Nullable final Boolean value) {
-        this._isDefault = value;
+        this.isDefault = value;
     }
     /**
      * Sets the location property value. The location property
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final String value) {
-        this._location = value;
+        this.location = value;
     }
 }

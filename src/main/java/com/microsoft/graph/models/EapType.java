@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Extensible Authentication Protocol (EAP) configuration types. */
 public enum EapType implements ValuedEnum {
     /** EAP-Transport Layer Security (EAP-TLS). */
     EapTls("eapTls"),

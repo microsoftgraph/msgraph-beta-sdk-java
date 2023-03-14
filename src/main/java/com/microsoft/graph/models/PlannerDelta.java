@@ -1,30 +1,19 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.PlannerAssignedToTaskBoardTaskFormat;
-import com.microsoft.graph.models.PlannerBucket;
-import com.microsoft.graph.models.PlannerBucketTaskBoardTaskFormat;
-import com.microsoft.graph.models.PlannerPlan;
-import com.microsoft.graph.models.PlannerPlanDetails;
-import com.microsoft.graph.models.PlannerProgressTaskBoardTaskFormat;
-import com.microsoft.graph.models.PlannerTask;
-import com.microsoft.graph.models.PlannerTaskDetails;
-import com.microsoft.graph.models.PlannerUser;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class PlannerDelta extends Entity implements Parsable {
     /**
      * Instantiates a new plannerDelta and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerDelta() {
         super();
-        this.setOdataType("#microsoft.graph.plannerDelta");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -38,6 +27,7 @@ public class PlannerDelta extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.businessScenarioTask": return new BusinessScenarioTask();
                 case "#microsoft.graph.plannerAssignedToTaskBoardTaskFormat": return new PlannerAssignedToTaskBoardTaskFormat();
                 case "#microsoft.graph.plannerBucket": return new PlannerBucket();
                 case "#microsoft.graph.plannerBucketTaskBoardTaskFormat": return new PlannerBucketTaskBoardTaskFormat();
@@ -53,19 +43,19 @@ public class PlannerDelta extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerDelta currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

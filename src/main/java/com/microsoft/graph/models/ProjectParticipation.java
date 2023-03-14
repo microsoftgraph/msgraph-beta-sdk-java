@@ -3,31 +3,31 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProjectParticipation extends ItemFacet implements Parsable {
     /** Contains categories a user has associated with the project (for example, digital transformation, oil rig). */
-    private java.util.List<String> _categories;
+    private java.util.List<String> categories;
     /** Contains detailed information about the client the project was for. */
-    private CompanyDetail _client;
+    private CompanyDetail client;
     /** Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove. */
-    private java.util.List<String> _collaborationTags;
+    private java.util.List<String> collaborationTags;
     /** Lists people that also worked on the project. */
-    private java.util.List<RelatedPerson> _colleagues;
+    private java.util.List<RelatedPerson> colleagues;
     /** Contains detail about the user's role on the project. */
-    private PositionDetail _detail;
+    private PositionDetail detail;
     /** Contains a friendly name for the project. */
-    private String _displayName;
+    private String displayName;
     /** The Person or people who sponsored the project. */
-    private java.util.List<RelatedPerson> _sponsors;
+    private java.util.List<RelatedPerson> sponsors;
     /** The thumbnailUrl property */
-    private String _thumbnailUrl;
+    private String thumbnailUrl;
     /**
      * Instantiates a new ProjectParticipation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProjectParticipation() {
         super();
         this.setOdataType("#microsoft.graph.projectParticipation");
@@ -48,7 +48,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getCategories() {
-        return this._categories;
+        return this.categories;
     }
     /**
      * Gets the client property value. Contains detailed information about the client the project was for.
@@ -56,7 +56,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public CompanyDetail getClient() {
-        return this._client;
+        return this.client;
     }
     /**
      * Gets the collaborationTags property value. Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
@@ -64,7 +64,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getCollaborationTags() {
-        return this._collaborationTags;
+        return this.collaborationTags;
     }
     /**
      * Gets the colleagues property value. Lists people that also worked on the project.
@@ -72,7 +72,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<RelatedPerson> getColleagues() {
-        return this._colleagues;
+        return this.colleagues;
     }
     /**
      * Gets the detail property value. Contains detail about the user's role on the project.
@@ -80,7 +80,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public PositionDetail getDetail() {
-        return this._detail;
+        return this.detail;
     }
     /**
      * Gets the displayName property value. Contains a friendly name for the project.
@@ -88,25 +88,24 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ProjectParticipation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("categories", (n) -> { currentObject.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("client", (n) -> { currentObject.setClient(n.getObjectValue(CompanyDetail::createFromDiscriminatorValue)); });
-            this.put("collaborationTags", (n) -> { currentObject.setCollaborationTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("colleagues", (n) -> { currentObject.setColleagues(n.getCollectionOfObjectValues(RelatedPerson::createFromDiscriminatorValue)); });
-            this.put("detail", (n) -> { currentObject.setDetail(n.getObjectValue(PositionDetail::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("sponsors", (n) -> { currentObject.setSponsors(n.getCollectionOfObjectValues(RelatedPerson::createFromDiscriminatorValue)); });
-            this.put("thumbnailUrl", (n) -> { currentObject.setThumbnailUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("client", (n) -> { this.setClient(n.getObjectValue(CompanyDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("collaborationTags", (n) -> { this.setCollaborationTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("colleagues", (n) -> { this.setColleagues(n.getCollectionOfObjectValues(RelatedPerson::createFromDiscriminatorValue)); });
+        deserializerMap.put("detail", (n) -> { this.setDetail(n.getObjectValue(PositionDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("sponsors", (n) -> { this.setSponsors(n.getCollectionOfObjectValues(RelatedPerson::createFromDiscriminatorValue)); });
+        deserializerMap.put("thumbnailUrl", (n) -> { this.setThumbnailUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the sponsors property value. The Person or people who sponsored the project.
@@ -114,7 +113,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<RelatedPerson> getSponsors() {
-        return this._sponsors;
+        return this.sponsors;
     }
     /**
      * Gets the thumbnailUrl property value. The thumbnailUrl property
@@ -122,13 +121,14 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getThumbnailUrl() {
-        return this._thumbnailUrl;
+        return this.thumbnailUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,63 +146,71 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
      * @param value Value to set for the categories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategories(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._categories = value;
+        this.categories = value;
     }
     /**
      * Sets the client property value. Contains detailed information about the client the project was for.
      * @param value Value to set for the client property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClient(@javax.annotation.Nullable final CompanyDetail value) {
-        this._client = value;
+        this.client = value;
     }
     /**
      * Sets the collaborationTags property value. Contains experience scenario tags a user has associated with the interest. Allowed values in the collection are: askMeAbout, ableToMentor, wantsToLearn, wantsToImprove.
      * @param value Value to set for the collaborationTags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCollaborationTags(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._collaborationTags = value;
+        this.collaborationTags = value;
     }
     /**
      * Sets the colleagues property value. Lists people that also worked on the project.
      * @param value Value to set for the colleagues property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColleagues(@javax.annotation.Nullable final java.util.List<RelatedPerson> value) {
-        this._colleagues = value;
+        this.colleagues = value;
     }
     /**
      * Sets the detail property value. Contains detail about the user's role on the project.
      * @param value Value to set for the detail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetail(@javax.annotation.Nullable final PositionDetail value) {
-        this._detail = value;
+        this.detail = value;
     }
     /**
      * Sets the displayName property value. Contains a friendly name for the project.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the sponsors property value. The Person or people who sponsored the project.
      * @param value Value to set for the sponsors property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSponsors(@javax.annotation.Nullable final java.util.List<RelatedPerson> value) {
-        this._sponsors = value;
+        this.sponsors = value;
     }
     /**
      * Sets the thumbnailUrl property value. The thumbnailUrl property
      * @param value Value to set for the thumbnailUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbnailUrl(@javax.annotation.Nullable final String value) {
-        this._thumbnailUrl = value;
+        this.thumbnailUrl = value;
     }
 }

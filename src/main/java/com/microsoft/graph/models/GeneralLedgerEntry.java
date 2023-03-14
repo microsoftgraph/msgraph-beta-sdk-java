@@ -6,43 +6,43 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class GeneralLedgerEntry extends Entity implements Parsable {
     /** The account property */
-    private Account _account;
+    private Account account;
     /** The accountId property */
-    private String _accountId;
+    private UUID accountId;
     /** The accountNumber property */
-    private String _accountNumber;
+    private String accountNumber;
     /** The creditAmount property */
-    private BigDecimal _creditAmount;
+    private BigDecimal creditAmount;
     /** The debitAmount property */
-    private BigDecimal _debitAmount;
+    private BigDecimal debitAmount;
     /** The description property */
-    private String _description;
+    private String description;
     /** The documentNumber property */
-    private String _documentNumber;
+    private String documentNumber;
     /** The documentType property */
-    private String _documentType;
+    private String documentType;
     /** The lastModifiedDateTime property */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The postingDate property */
-    private LocalDate _postingDate;
+    private LocalDate postingDate;
     /**
-     * Instantiates a new GeneralLedgerEntry and sets the default values.
+     * Instantiates a new generalLedgerEntry and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GeneralLedgerEntry() {
         super();
-        this.setOdataType("#microsoft.graph.generalLedgerEntry");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a GeneralLedgerEntry
+     * @return a generalLedgerEntry
      */
     @javax.annotation.Nonnull
     public static GeneralLedgerEntry createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -55,15 +55,15 @@ public class GeneralLedgerEntry extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Account getAccount() {
-        return this._account;
+        return this.account;
     }
     /**
      * Gets the accountId property value. The accountId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getAccountId() {
-        return this._accountId;
+    public UUID getAccountId() {
+        return this.accountId;
     }
     /**
      * Gets the accountNumber property value. The accountNumber property
@@ -71,7 +71,7 @@ public class GeneralLedgerEntry extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAccountNumber() {
-        return this._accountNumber;
+        return this.accountNumber;
     }
     /**
      * Gets the creditAmount property value. The creditAmount property
@@ -79,7 +79,7 @@ public class GeneralLedgerEntry extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getCreditAmount() {
-        return this._creditAmount;
+        return this.creditAmount;
     }
     /**
      * Gets the debitAmount property value. The debitAmount property
@@ -87,7 +87,7 @@ public class GeneralLedgerEntry extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getDebitAmount() {
-        return this._debitAmount;
+        return this.debitAmount;
     }
     /**
      * Gets the description property value. The description property
@@ -95,7 +95,7 @@ public class GeneralLedgerEntry extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the documentNumber property value. The documentNumber property
@@ -103,7 +103,7 @@ public class GeneralLedgerEntry extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDocumentNumber() {
-        return this._documentNumber;
+        return this.documentNumber;
     }
     /**
      * Gets the documentType property value. The documentType property
@@ -111,27 +111,26 @@ public class GeneralLedgerEntry extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDocumentType() {
-        return this._documentType;
+        return this.documentType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GeneralLedgerEntry currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("account", (n) -> { currentObject.setAccount(n.getObjectValue(Account::createFromDiscriminatorValue)); });
-            this.put("accountId", (n) -> { currentObject.setAccountId(n.getStringValue()); });
-            this.put("accountNumber", (n) -> { currentObject.setAccountNumber(n.getStringValue()); });
-            this.put("creditAmount", (n) -> { currentObject.setCreditAmount(n.getBigDecimalValue()); });
-            this.put("debitAmount", (n) -> { currentObject.setDebitAmount(n.getBigDecimalValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("documentNumber", (n) -> { currentObject.setDocumentNumber(n.getStringValue()); });
-            this.put("documentType", (n) -> { currentObject.setDocumentType(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("postingDate", (n) -> { currentObject.setPostingDate(n.getLocalDateValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("account", (n) -> { this.setAccount(n.getObjectValue(Account::createFromDiscriminatorValue)); });
+        deserializerMap.put("accountId", (n) -> { this.setAccountId(n.getUUIDValue()); });
+        deserializerMap.put("accountNumber", (n) -> { this.setAccountNumber(n.getStringValue()); });
+        deserializerMap.put("creditAmount", (n) -> { this.setCreditAmount(n.getBigDecimalValue()); });
+        deserializerMap.put("debitAmount", (n) -> { this.setDebitAmount(n.getBigDecimalValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("documentNumber", (n) -> { this.setDocumentNumber(n.getStringValue()); });
+        deserializerMap.put("documentType", (n) -> { this.setDocumentType(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("postingDate", (n) -> { this.setPostingDate(n.getLocalDateValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -139,7 +138,7 @@ public class GeneralLedgerEntry extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the postingDate property value. The postingDate property
@@ -147,18 +146,19 @@ public class GeneralLedgerEntry extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getPostingDate() {
-        return this._postingDate;
+        return this.postingDate;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("account", this.getAccount());
-        writer.writeStringValue("accountId", this.getAccountId());
+        writer.writeUUIDValue("accountId", this.getAccountId());
         writer.writeStringValue("accountNumber", this.getAccountNumber());
         writer.writeBigDecimalValue("creditAmount", this.getCreditAmount());
         writer.writeBigDecimalValue("debitAmount", this.getDebitAmount());
@@ -173,79 +173,89 @@ public class GeneralLedgerEntry extends Entity implements Parsable {
      * @param value Value to set for the account property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccount(@javax.annotation.Nullable final Account value) {
-        this._account = value;
+        this.account = value;
     }
     /**
      * Sets the accountId property value. The accountId property
      * @param value Value to set for the accountId property.
      * @return a void
      */
-    public void setAccountId(@javax.annotation.Nullable final String value) {
-        this._accountId = value;
+    @javax.annotation.Nonnull
+    public void setAccountId(@javax.annotation.Nullable final UUID value) {
+        this.accountId = value;
     }
     /**
      * Sets the accountNumber property value. The accountNumber property
      * @param value Value to set for the accountNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountNumber(@javax.annotation.Nullable final String value) {
-        this._accountNumber = value;
+        this.accountNumber = value;
     }
     /**
      * Sets the creditAmount property value. The creditAmount property
      * @param value Value to set for the creditAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreditAmount(@javax.annotation.Nullable final BigDecimal value) {
-        this._creditAmount = value;
+        this.creditAmount = value;
     }
     /**
      * Sets the debitAmount property value. The debitAmount property
      * @param value Value to set for the debitAmount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDebitAmount(@javax.annotation.Nullable final BigDecimal value) {
-        this._debitAmount = value;
+        this.debitAmount = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the documentNumber property value. The documentNumber property
      * @param value Value to set for the documentNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDocumentNumber(@javax.annotation.Nullable final String value) {
-        this._documentNumber = value;
+        this.documentNumber = value;
     }
     /**
      * Sets the documentType property value. The documentType property
      * @param value Value to set for the documentType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDocumentType(@javax.annotation.Nullable final String value) {
-        this._documentType = value;
+        this.documentType = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the postingDate property value. The postingDate property
      * @param value Value to set for the postingDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostingDate(@javax.annotation.Nullable final LocalDate value) {
-        this._postingDate = value;
+        this.postingDate = value;
     }
 }

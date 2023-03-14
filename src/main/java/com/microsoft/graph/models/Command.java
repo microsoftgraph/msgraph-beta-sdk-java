@@ -3,37 +3,35 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class Command extends Entity implements Parsable {
     /** The appServiceName property */
-    private String _appServiceName;
+    private String appServiceName;
     /** The error property */
-    private String _error;
+    private String error;
     /** The packageFamilyName property */
-    private String _packageFamilyName;
+    private String packageFamilyName;
     /** The payload property */
-    private PayloadRequest _payload;
+    private PayloadRequest payload;
     /** The permissionTicket property */
-    private String _permissionTicket;
+    private String permissionTicket;
     /** The postBackUri property */
-    private String _postBackUri;
+    private String postBackUri;
     /** The responsepayload property */
-    private PayloadResponse _responsepayload;
+    private PayloadResponse responsepayload;
     /** The status property */
-    private String _status;
+    private String status;
     /** The type property */
-    private String _type;
+    private String type;
     /**
      * Instantiates a new command and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Command() {
         super();
-        this.setOdataType("#microsoft.graph.command");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -51,7 +49,7 @@ public class Command extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppServiceName() {
-        return this._appServiceName;
+        return this.appServiceName;
     }
     /**
      * Gets the error property value. The error property
@@ -59,26 +57,25 @@ public class Command extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getError() {
-        return this._error;
+        return this.error;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Command currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appServiceName", (n) -> { currentObject.setAppServiceName(n.getStringValue()); });
-            this.put("error", (n) -> { currentObject.setError(n.getStringValue()); });
-            this.put("packageFamilyName", (n) -> { currentObject.setPackageFamilyName(n.getStringValue()); });
-            this.put("payload", (n) -> { currentObject.setPayload(n.getObjectValue(PayloadRequest::createFromDiscriminatorValue)); });
-            this.put("permissionTicket", (n) -> { currentObject.setPermissionTicket(n.getStringValue()); });
-            this.put("postBackUri", (n) -> { currentObject.setPostBackUri(n.getStringValue()); });
-            this.put("responsepayload", (n) -> { currentObject.setResponsepayload(n.getObjectValue(PayloadResponse::createFromDiscriminatorValue)); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appServiceName", (n) -> { this.setAppServiceName(n.getStringValue()); });
+        deserializerMap.put("error", (n) -> { this.setError(n.getStringValue()); });
+        deserializerMap.put("packageFamilyName", (n) -> { this.setPackageFamilyName(n.getStringValue()); });
+        deserializerMap.put("payload", (n) -> { this.setPayload(n.getObjectValue(PayloadRequest::createFromDiscriminatorValue)); });
+        deserializerMap.put("permissionTicket", (n) -> { this.setPermissionTicket(n.getStringValue()); });
+        deserializerMap.put("postBackUri", (n) -> { this.setPostBackUri(n.getStringValue()); });
+        deserializerMap.put("responsepayload", (n) -> { this.setResponsepayload(n.getObjectValue(PayloadResponse::createFromDiscriminatorValue)); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the packageFamilyName property value. The packageFamilyName property
@@ -86,7 +83,7 @@ public class Command extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPackageFamilyName() {
-        return this._packageFamilyName;
+        return this.packageFamilyName;
     }
     /**
      * Gets the payload property value. The payload property
@@ -94,7 +91,7 @@ public class Command extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PayloadRequest getPayload() {
-        return this._payload;
+        return this.payload;
     }
     /**
      * Gets the permissionTicket property value. The permissionTicket property
@@ -102,7 +99,7 @@ public class Command extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPermissionTicket() {
-        return this._permissionTicket;
+        return this.permissionTicket;
     }
     /**
      * Gets the postBackUri property value. The postBackUri property
@@ -110,7 +107,7 @@ public class Command extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPostBackUri() {
-        return this._postBackUri;
+        return this.postBackUri;
     }
     /**
      * Gets the responsepayload property value. The responsepayload property
@@ -118,7 +115,7 @@ public class Command extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PayloadResponse getResponsepayload() {
-        return this._responsepayload;
+        return this.responsepayload;
     }
     /**
      * Gets the status property value. The status property
@@ -126,7 +123,7 @@ public class Command extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the type property value. The type property
@@ -134,13 +131,14 @@ public class Command extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -159,71 +157,80 @@ public class Command extends Entity implements Parsable {
      * @param value Value to set for the appServiceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppServiceName(@javax.annotation.Nullable final String value) {
-        this._appServiceName = value;
+        this.appServiceName = value;
     }
     /**
      * Sets the error property value. The error property
      * @param value Value to set for the error property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setError(@javax.annotation.Nullable final String value) {
-        this._error = value;
+        this.error = value;
     }
     /**
      * Sets the packageFamilyName property value. The packageFamilyName property
      * @param value Value to set for the packageFamilyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackageFamilyName(@javax.annotation.Nullable final String value) {
-        this._packageFamilyName = value;
+        this.packageFamilyName = value;
     }
     /**
      * Sets the payload property value. The payload property
      * @param value Value to set for the payload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPayload(@javax.annotation.Nullable final PayloadRequest value) {
-        this._payload = value;
+        this.payload = value;
     }
     /**
      * Sets the permissionTicket property value. The permissionTicket property
      * @param value Value to set for the permissionTicket property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPermissionTicket(@javax.annotation.Nullable final String value) {
-        this._permissionTicket = value;
+        this.permissionTicket = value;
     }
     /**
      * Sets the postBackUri property value. The postBackUri property
      * @param value Value to set for the postBackUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPostBackUri(@javax.annotation.Nullable final String value) {
-        this._postBackUri = value;
+        this.postBackUri = value;
     }
     /**
      * Sets the responsepayload property value. The responsepayload property
      * @param value Value to set for the responsepayload property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResponsepayload(@javax.annotation.Nullable final PayloadResponse value) {
-        this._responsepayload = value;
+        this.responsepayload = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+        this.type = value;
     }
 }

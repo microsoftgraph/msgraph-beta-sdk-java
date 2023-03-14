@@ -1,26 +1,24 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.ManagedAndroidLobApp;
-import com.microsoft.graph.models.ManagedAndroidStoreApp;
-import com.microsoft.graph.models.ManagedIOSLobApp;
-import com.microsoft.graph.models.ManagedIOSStoreApp;
-import com.microsoft.graph.models.ManagedMobileLobApp;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Abstract class that contains properties and inherited properties for apps that you can manage with an Intune app protection policy.
+ */
 public class ManagedApp extends MobileApp implements Parsable {
     /** A managed (MAM) application's availability. */
-    private ManagedAppAvailability _appAvailability;
+    private ManagedAppAvailability appAvailability;
     /** The Application's version. */
-    private String _version;
+    private String version;
     /**
-     * Instantiates a new ManagedApp and sets the default values.
+     * Instantiates a new managedApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedApp() {
         super();
         this.setOdataType("#microsoft.graph.managedApp");
@@ -28,7 +26,7 @@ public class ManagedApp extends MobileApp implements Parsable {
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a ManagedApp
+     * @return a managedApp
      */
     @javax.annotation.Nonnull
     public static ManagedApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -52,19 +50,18 @@ public class ManagedApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public ManagedAppAvailability getAppAvailability() {
-        return this._appAvailability;
+        return this.appAvailability;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appAvailability", (n) -> { currentObject.setAppAvailability(n.getEnumValue(ManagedAppAvailability.class)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appAvailability", (n) -> { this.setAppAvailability(n.getEnumValue(ManagedAppAvailability.class)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the version property value. The Application's version.
@@ -72,13 +69,14 @@ public class ManagedApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -90,15 +88,17 @@ public class ManagedApp extends MobileApp implements Parsable {
      * @param value Value to set for the appAvailability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppAvailability(@javax.annotation.Nullable final ManagedAppAvailability value) {
-        this._appAvailability = value;
+        this.appAvailability = value;
     }
     /**
      * Sets the version property value. The Application's version.
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

@@ -3,31 +3,31 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollmentConfiguration implements Parsable {
     /** Android for work restrictions based on platform, platform operating system version, and device ownership */
-    private DeviceEnrollmentPlatformRestriction _androidForWorkRestriction;
+    private DeviceEnrollmentPlatformRestriction androidForWorkRestriction;
     /** Android restrictions based on platform, platform operating system version, and device ownership */
-    private DeviceEnrollmentPlatformRestriction _androidRestriction;
+    private DeviceEnrollmentPlatformRestriction androidRestriction;
     /** Ios restrictions based on platform, platform operating system version, and device ownership */
-    private DeviceEnrollmentPlatformRestriction _iosRestriction;
+    private DeviceEnrollmentPlatformRestriction iosRestriction;
     /** Mac restrictions based on platform, platform operating system version, and device ownership */
-    private DeviceEnrollmentPlatformRestriction _macOSRestriction;
+    private DeviceEnrollmentPlatformRestriction macOSRestriction;
     /** Mac restrictions based on platform, platform operating system version, and device ownership */
-    private DeviceEnrollmentPlatformRestriction _macRestriction;
+    private DeviceEnrollmentPlatformRestriction macRestriction;
     /** Windows Home Sku restrictions based on platform, platform operating system version, and device ownership */
-    private DeviceEnrollmentPlatformRestriction _windowsHomeSkuRestriction;
+    private DeviceEnrollmentPlatformRestriction windowsHomeSkuRestriction;
     /** Windows mobile restrictions based on platform, platform operating system version, and device ownership */
-    private DeviceEnrollmentPlatformRestriction _windowsMobileRestriction;
+    private DeviceEnrollmentPlatformRestriction windowsMobileRestriction;
     /** Windows restrictions based on platform, platform operating system version, and device ownership */
-    private DeviceEnrollmentPlatformRestriction _windowsRestriction;
+    private DeviceEnrollmentPlatformRestriction windowsRestriction;
     /**
      * Instantiates a new DeviceEnrollmentPlatformRestrictionsConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceEnrollmentPlatformRestrictionsConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.deviceEnrollmentPlatformRestrictionsConfiguration");
@@ -48,7 +48,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      */
     @javax.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction getAndroidForWorkRestriction() {
-        return this._androidForWorkRestriction;
+        return this.androidForWorkRestriction;
     }
     /**
      * Gets the androidRestriction property value. Android restrictions based on platform, platform operating system version, and device ownership
@@ -56,25 +56,24 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      */
     @javax.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction getAndroidRestriction() {
-        return this._androidRestriction;
+        return this.androidRestriction;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceEnrollmentPlatformRestrictionsConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("androidForWorkRestriction", (n) -> { currentObject.setAndroidForWorkRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
-            this.put("androidRestriction", (n) -> { currentObject.setAndroidRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
-            this.put("iosRestriction", (n) -> { currentObject.setIosRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
-            this.put("macOSRestriction", (n) -> { currentObject.setMacOSRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
-            this.put("macRestriction", (n) -> { currentObject.setMacRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
-            this.put("windowsHomeSkuRestriction", (n) -> { currentObject.setWindowsHomeSkuRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
-            this.put("windowsMobileRestriction", (n) -> { currentObject.setWindowsMobileRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
-            this.put("windowsRestriction", (n) -> { currentObject.setWindowsRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("androidForWorkRestriction", (n) -> { this.setAndroidForWorkRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
+        deserializerMap.put("androidRestriction", (n) -> { this.setAndroidRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
+        deserializerMap.put("iosRestriction", (n) -> { this.setIosRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
+        deserializerMap.put("macOSRestriction", (n) -> { this.setMacOSRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
+        deserializerMap.put("macRestriction", (n) -> { this.setMacRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsHomeSkuRestriction", (n) -> { this.setWindowsHomeSkuRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsMobileRestriction", (n) -> { this.setWindowsMobileRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
+        deserializerMap.put("windowsRestriction", (n) -> { this.setWindowsRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the iosRestriction property value. Ios restrictions based on platform, platform operating system version, and device ownership
@@ -82,7 +81,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      */
     @javax.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction getIosRestriction() {
-        return this._iosRestriction;
+        return this.iosRestriction;
     }
     /**
      * Gets the macOSRestriction property value. Mac restrictions based on platform, platform operating system version, and device ownership
@@ -90,7 +89,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      */
     @javax.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction getMacOSRestriction() {
-        return this._macOSRestriction;
+        return this.macOSRestriction;
     }
     /**
      * Gets the macRestriction property value. Mac restrictions based on platform, platform operating system version, and device ownership
@@ -98,7 +97,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      */
     @javax.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction getMacRestriction() {
-        return this._macRestriction;
+        return this.macRestriction;
     }
     /**
      * Gets the windowsHomeSkuRestriction property value. Windows Home Sku restrictions based on platform, platform operating system version, and device ownership
@@ -106,7 +105,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      */
     @javax.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction getWindowsHomeSkuRestriction() {
-        return this._windowsHomeSkuRestriction;
+        return this.windowsHomeSkuRestriction;
     }
     /**
      * Gets the windowsMobileRestriction property value. Windows mobile restrictions based on platform, platform operating system version, and device ownership
@@ -114,7 +113,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      */
     @javax.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction getWindowsMobileRestriction() {
-        return this._windowsMobileRestriction;
+        return this.windowsMobileRestriction;
     }
     /**
      * Gets the windowsRestriction property value. Windows restrictions based on platform, platform operating system version, and device ownership
@@ -122,13 +121,14 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      */
     @javax.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction getWindowsRestriction() {
-        return this._windowsRestriction;
+        return this.windowsRestriction;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,63 +146,71 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      * @param value Value to set for the androidForWorkRestriction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidForWorkRestriction(@javax.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
-        this._androidForWorkRestriction = value;
+        this.androidForWorkRestriction = value;
     }
     /**
      * Sets the androidRestriction property value. Android restrictions based on platform, platform operating system version, and device ownership
      * @param value Value to set for the androidRestriction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAndroidRestriction(@javax.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
-        this._androidRestriction = value;
+        this.androidRestriction = value;
     }
     /**
      * Sets the iosRestriction property value. Ios restrictions based on platform, platform operating system version, and device ownership
      * @param value Value to set for the iosRestriction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosRestriction(@javax.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
-        this._iosRestriction = value;
+        this.iosRestriction = value;
     }
     /**
      * Sets the macOSRestriction property value. Mac restrictions based on platform, platform operating system version, and device ownership
      * @param value Value to set for the macOSRestriction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacOSRestriction(@javax.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
-        this._macOSRestriction = value;
+        this.macOSRestriction = value;
     }
     /**
      * Sets the macRestriction property value. Mac restrictions based on platform, platform operating system version, and device ownership
      * @param value Value to set for the macRestriction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacRestriction(@javax.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
-        this._macRestriction = value;
+        this.macRestriction = value;
     }
     /**
      * Sets the windowsHomeSkuRestriction property value. Windows Home Sku restrictions based on platform, platform operating system version, and device ownership
      * @param value Value to set for the windowsHomeSkuRestriction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsHomeSkuRestriction(@javax.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
-        this._windowsHomeSkuRestriction = value;
+        this.windowsHomeSkuRestriction = value;
     }
     /**
      * Sets the windowsMobileRestriction property value. Windows mobile restrictions based on platform, platform operating system version, and device ownership
      * @param value Value to set for the windowsMobileRestriction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsMobileRestriction(@javax.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
-        this._windowsMobileRestriction = value;
+        this.windowsMobileRestriction = value;
     }
     /**
      * Sets the windowsRestriction property value. Windows restrictions based on platform, platform operating system version, and device ownership
      * @param value Value to set for the windowsRestriction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWindowsRestriction(@javax.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
-        this._windowsRestriction = value;
+        this.windowsRestriction = value;
     }
 }

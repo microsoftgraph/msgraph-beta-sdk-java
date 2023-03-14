@@ -3,19 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CommunicationsApplicationIdentity extends Identity implements Parsable {
     /** First party Microsoft application presenting this identity. */
-    private String _applicationType;
+    private String applicationType;
     /** True if the participant would not like to be shown in other participants' rosters. */
-    private Boolean _hidden;
+    private Boolean hidden;
     /**
      * Instantiates a new CommunicationsApplicationIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CommunicationsApplicationIdentity() {
         super();
         this.setOdataType("#microsoft.graph.communicationsApplicationIdentity");
@@ -36,19 +36,18 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
      */
     @javax.annotation.Nullable
     public String getApplicationType() {
-        return this._applicationType;
+        return this.applicationType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CommunicationsApplicationIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("applicationType", (n) -> { currentObject.setApplicationType(n.getStringValue()); });
-            this.put("hidden", (n) -> { currentObject.setHidden(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("applicationType", (n) -> { this.setApplicationType(n.getStringValue()); });
+        deserializerMap.put("hidden", (n) -> { this.setHidden(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hidden property value. True if the participant would not like to be shown in other participants' rosters.
@@ -56,13 +55,14 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getHidden() {
-        return this._hidden;
+        return this.hidden;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +74,17 @@ public class CommunicationsApplicationIdentity extends Identity implements Parsa
      * @param value Value to set for the applicationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationType(@javax.annotation.Nullable final String value) {
-        this._applicationType = value;
+        this.applicationType = value;
     }
     /**
      * Sets the hidden property value. True if the participant would not like to be shown in other participants' rosters.
      * @param value Value to set for the hidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHidden(@javax.annotation.Nullable final Boolean value) {
-        this._hidden = value;
+        this.hidden = value;
     }
 }

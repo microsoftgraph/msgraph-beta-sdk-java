@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the getCloudPcReviewStatus method. */
 public enum CloudPcUserAccessLevel implements ValuedEnum {
     Unrestricted("unrestricted"),
     Restricted("restricted"),
