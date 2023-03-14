@@ -38,7 +38,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
 
     /**
      * The Format.
-     * Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
+     * Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub.
      */
     @SerializedName(value = "format", alternate = {"Format"})
     @Expose
@@ -65,7 +65,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
 
     /**
      * The Maximum Length.
-     * Maximum length of string. Valid values 0 to 87516
+     * Maximum length of string
      */
     @SerializedName(value = "maximumLength", alternate = {"MaximumLength"})
     @Expose
@@ -74,7 +74,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
 
     /**
      * The Minimum Length.
-     * Minimum length of string. Valid values 0 to 87516
+     * Minimum length of string
      */
     @SerializedName(value = "minimumLength", alternate = {"MinimumLength"})
     @Expose

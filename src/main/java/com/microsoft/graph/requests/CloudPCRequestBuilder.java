@@ -139,6 +139,24 @@ public class CloudPCRequestBuilder extends BaseRequestBuilder<CloudPC> {
      * @return the request builder
      */
     @Nonnull
+    public CloudPCStartRequestBuilder start() {
+        return new CloudPCStartRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.start"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public CloudPCStopRequestBuilder stop() {
+        return new CloudPCStopRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.stop"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
     public CloudPCTroubleshootRequestBuilder troubleshoot() {
         return new CloudPCTroubleshootRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.troubleshoot"), getClient(), null);
     }
