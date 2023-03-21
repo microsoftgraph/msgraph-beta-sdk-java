@@ -3,20 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable {
     /** Value used when configuring the text property at the DNS host. */
-    private String _text;
+    private String text;
     /**
      * Instantiates a new DomainDnsTxtRecord and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DomainDnsTxtRecord() {
         super();
-        this.setOdataType("#microsoft.graph.domainDnsTxtRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +29,13 @@ public class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DomainDnsTxtRecord currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("text", (n) -> { this.setText(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the text property value. Value used when configuring the text property at the DNS host.
@@ -45,13 +43,14 @@ public class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable {
      */
     @javax.annotation.Nullable
     public String getText() {
-        return this._text;
+        return this.text;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +61,8 @@ public class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable {
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final String value) {
-        this._text = value;
+        this.text = value;
     }
 }

@@ -3,17 +3,17 @@ package com.microsoft.graph.models.windowsupdates;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implements Parsable {
     /** The version of the feature update. Read-only. */
-    private String _version;
+    private String version;
     /**
      * Instantiates a new FeatureUpdateCatalogEntry and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FeatureUpdateCatalogEntry() {
         super();
         this.setOdataType("#microsoft.graph.windowsUpdates.featureUpdateCatalogEntry");
@@ -30,14 +30,13 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final FeatureUpdateCatalogEntry currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the version property value. The version of the feature update. Read-only.
@@ -45,13 +44,14 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +62,8 @@ public class FeatureUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

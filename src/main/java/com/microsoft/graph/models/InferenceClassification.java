@@ -3,20 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class InferenceClassification extends Entity implements Parsable {
     /** A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable. */
-    private java.util.List<InferenceClassificationOverride> _overrides;
+    private java.util.List<InferenceClassificationOverride> overrides;
     /**
      * Instantiates a new InferenceClassification and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public InferenceClassification() {
         super();
-        this.setOdataType("#microsoft.graph.inferenceClassification");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +29,13 @@ public class InferenceClassification extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final InferenceClassification currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("overrides", (n) -> { currentObject.setOverrides(n.getCollectionOfObjectValues(InferenceClassificationOverride::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("overrides", (n) -> { this.setOverrides(n.getCollectionOfObjectValues(InferenceClassificationOverride::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the overrides property value. A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
@@ -45,13 +43,14 @@ public class InferenceClassification extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<InferenceClassificationOverride> getOverrides() {
-        return this._overrides;
+        return this.overrides;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +61,8 @@ public class InferenceClassification extends Entity implements Parsable {
      * @param value Value to set for the overrides property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOverrides(@javax.annotation.Nullable final java.util.List<InferenceClassificationOverride> value) {
-        this._overrides = value;
+        this.overrides = value;
     }
 }

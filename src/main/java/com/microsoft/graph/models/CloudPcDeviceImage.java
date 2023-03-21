@@ -5,38 +5,37 @@ import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudPcDeviceImage extends Entity implements Parsable {
     /** The image's display name. */
-    private String _displayName;
+    private String displayName;
     /** The date the image became unavailable. */
-    private LocalDate _expirationDate;
+    private LocalDate expirationDate;
     /** The data and time that the image was last modified. The time is shown in ISO 8601 format and  Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The image's operating system. For example: Windows 10 Enterprise. */
-    private String _operatingSystem;
+    private String operatingSystem;
     /** The image's OS build version. For example: 1909. */
-    private String _osBuildNumber;
+    private String osBuildNumber;
     /** The OS status of this image. Possible values are: supported, supportedWithWarning, unknownFutureValue. */
-    private CloudPcDeviceImageOsStatus _osStatus;
+    private CloudPcDeviceImageOsStatus osStatus;
     /** The ID of the source image resource on Azure. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'. */
-    private String _sourceImageResourceId;
+    private String sourceImageResourceId;
     /** The status of the image on Cloud PC. Possible values are: pending, ready, failed. */
-    private CloudPcDeviceImageStatus _status;
+    private CloudPcDeviceImageStatus status;
     /** The details of the image's status, which indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, and sourceImageNotGeneralized. */
-    private CloudPcDeviceImageStatusDetails _statusDetails;
+    private CloudPcDeviceImageStatusDetails statusDetails;
     /** The image version. For example: 0.0.1, 1.5.13. */
-    private String _version;
+    private String version;
     /**
      * Instantiates a new CloudPcDeviceImage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcDeviceImage() {
         super();
-        this.setOdataType("#microsoft.graph.cloudPcDeviceImage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,7 +53,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the expirationDate property value. The date the image became unavailable.
@@ -62,27 +61,26 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getExpirationDate() {
-        return this._expirationDate;
+        return this.expirationDate;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcDeviceImage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("expirationDate", (n) -> { currentObject.setExpirationDate(n.getLocalDateValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("operatingSystem", (n) -> { currentObject.setOperatingSystem(n.getStringValue()); });
-            this.put("osBuildNumber", (n) -> { currentObject.setOsBuildNumber(n.getStringValue()); });
-            this.put("osStatus", (n) -> { currentObject.setOsStatus(n.getEnumValue(CloudPcDeviceImageOsStatus.class)); });
-            this.put("sourceImageResourceId", (n) -> { currentObject.setSourceImageResourceId(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(CloudPcDeviceImageStatus.class)); });
-            this.put("statusDetails", (n) -> { currentObject.setStatusDetails(n.getEnumValue(CloudPcDeviceImageStatusDetails.class)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("expirationDate", (n) -> { this.setExpirationDate(n.getLocalDateValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("operatingSystem", (n) -> { this.setOperatingSystem(n.getStringValue()); });
+        deserializerMap.put("osBuildNumber", (n) -> { this.setOsBuildNumber(n.getStringValue()); });
+        deserializerMap.put("osStatus", (n) -> { this.setOsStatus(n.getEnumValue(CloudPcDeviceImageOsStatus.class)); });
+        deserializerMap.put("sourceImageResourceId", (n) -> { this.setSourceImageResourceId(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPcDeviceImageStatus.class)); });
+        deserializerMap.put("statusDetails", (n) -> { this.setStatusDetails(n.getEnumValue(CloudPcDeviceImageStatusDetails.class)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The data and time that the image was last modified. The time is shown in ISO 8601 format and  Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
@@ -90,7 +88,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the operatingSystem property value. The image's operating system. For example: Windows 10 Enterprise.
@@ -98,7 +96,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOperatingSystem() {
-        return this._operatingSystem;
+        return this.operatingSystem;
     }
     /**
      * Gets the osBuildNumber property value. The image's OS build version. For example: 1909.
@@ -106,7 +104,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOsBuildNumber() {
-        return this._osBuildNumber;
+        return this.osBuildNumber;
     }
     /**
      * Gets the osStatus property value. The OS status of this image. Possible values are: supported, supportedWithWarning, unknownFutureValue.
@@ -114,7 +112,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CloudPcDeviceImageOsStatus getOsStatus() {
-        return this._osStatus;
+        return this.osStatus;
     }
     /**
      * Gets the sourceImageResourceId property value. The ID of the source image resource on Azure. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'.
@@ -122,7 +120,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSourceImageResourceId() {
-        return this._sourceImageResourceId;
+        return this.sourceImageResourceId;
     }
     /**
      * Gets the status property value. The status of the image on Cloud PC. Possible values are: pending, ready, failed.
@@ -130,7 +128,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CloudPcDeviceImageStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the statusDetails property value. The details of the image's status, which indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, and sourceImageNotGeneralized.
@@ -138,7 +136,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CloudPcDeviceImageStatusDetails getStatusDetails() {
-        return this._statusDetails;
+        return this.statusDetails;
     }
     /**
      * Gets the version property value. The image version. For example: 0.0.1, 1.5.13.
@@ -146,13 +144,14 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -172,79 +171,89 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the expirationDate property value. The date the image became unavailable.
      * @param value Value to set for the expirationDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDate(@javax.annotation.Nullable final LocalDate value) {
-        this._expirationDate = value;
+        this.expirationDate = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The data and time that the image was last modified. The time is shown in ISO 8601 format and  Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the operatingSystem property value. The image's operating system. For example: Windows 10 Enterprise.
      * @param value Value to set for the operatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOperatingSystem(@javax.annotation.Nullable final String value) {
-        this._operatingSystem = value;
+        this.operatingSystem = value;
     }
     /**
      * Sets the osBuildNumber property value. The image's OS build version. For example: 1909.
      * @param value Value to set for the osBuildNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsBuildNumber(@javax.annotation.Nullable final String value) {
-        this._osBuildNumber = value;
+        this.osBuildNumber = value;
     }
     /**
      * Sets the osStatus property value. The OS status of this image. Possible values are: supported, supportedWithWarning, unknownFutureValue.
      * @param value Value to set for the osStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsStatus(@javax.annotation.Nullable final CloudPcDeviceImageOsStatus value) {
-        this._osStatus = value;
+        this.osStatus = value;
     }
     /**
      * Sets the sourceImageResourceId property value. The ID of the source image resource on Azure. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'.
      * @param value Value to set for the sourceImageResourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceImageResourceId(@javax.annotation.Nullable final String value) {
-        this._sourceImageResourceId = value;
+        this.sourceImageResourceId = value;
     }
     /**
      * Sets the status property value. The status of the image on Cloud PC. Possible values are: pending, ready, failed.
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final CloudPcDeviceImageStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the statusDetails property value. The details of the image's status, which indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, and sourceImageNotGeneralized.
      * @param value Value to set for the statusDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatusDetails(@javax.annotation.Nullable final CloudPcDeviceImageStatusDetails value) {
-        this._statusDetails = value;
+        this.statusDetails = value;
     }
     /**
      * Sets the version property value. The image version. For example: 0.0.1, 1.5.13.
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

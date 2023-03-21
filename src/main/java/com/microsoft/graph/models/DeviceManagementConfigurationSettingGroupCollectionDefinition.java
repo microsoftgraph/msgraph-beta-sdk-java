@@ -3,22 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementConfigurationSettingGroupCollectionDefinition extends DeviceManagementConfigurationSettingGroupDefinition implements Parsable {
-    /** Maximum number of setting group count in the collection. Valid values 1 to 100 */
-    private Integer _maximumCount;
-    /** Minimum number of setting group count in the collection. Valid values 1 to 100 */
-    private Integer _minimumCount;
+    /** Maximum number of setting group count in the collection */
+    private Integer maximumCount;
+    /** Minimum number of setting group count in the collection */
+    private Integer minimumCount;
     /**
      * Instantiates a new DeviceManagementConfigurationSettingGroupCollectionDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingGroupCollectionDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSettingGroupCollectionDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,37 +31,37 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationSettingGroupCollectionDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("maximumCount", (n) -> { currentObject.setMaximumCount(n.getIntegerValue()); });
-            this.put("minimumCount", (n) -> { currentObject.setMinimumCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("maximumCount", (n) -> { this.setMaximumCount(n.getIntegerValue()); });
+        deserializerMap.put("minimumCount", (n) -> { this.setMinimumCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the maximumCount property value. Maximum number of setting group count in the collection. Valid values 1 to 100
+     * Gets the maximumCount property value. Maximum number of setting group count in the collection
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getMaximumCount() {
-        return this._maximumCount;
+        return this.maximumCount;
     }
     /**
-     * Gets the minimumCount property value. Minimum number of setting group count in the collection. Valid values 1 to 100
+     * Gets the minimumCount property value. Minimum number of setting group count in the collection
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getMinimumCount() {
-        return this._minimumCount;
+        return this.minimumCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -70,19 +69,21 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
         writer.writeIntegerValue("minimumCount", this.getMinimumCount());
     }
     /**
-     * Sets the maximumCount property value. Maximum number of setting group count in the collection. Valid values 1 to 100
+     * Sets the maximumCount property value. Maximum number of setting group count in the collection
      * @param value Value to set for the maximumCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumCount(@javax.annotation.Nullable final Integer value) {
-        this._maximumCount = value;
+        this.maximumCount = value;
     }
     /**
-     * Sets the minimumCount property value. Minimum number of setting group count in the collection. Valid values 1 to 100
+     * Sets the minimumCount property value. Minimum number of setting group count in the collection
      * @param value Value to set for the minimumCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumCount(@javax.annotation.Nullable final Integer value) {
-        this._minimumCount = value;
+        this.minimumCount = value;
     }
 }

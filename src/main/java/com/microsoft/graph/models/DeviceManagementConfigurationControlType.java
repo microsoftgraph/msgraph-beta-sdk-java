@@ -3,10 +3,10 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Setting control type representation in the UX */
 public enum DeviceManagementConfigurationControlType implements ValuedEnum {
-    /** Don’t override default */
-    Default_escaped("default_escaped"),
+    /** Dont override default */
+    DefaultEscaped("defaultEscaped"),
     /** Display Choice in dropdown */
     Dropdown("dropdown"),
     /** Display text input in small text input */
@@ -29,7 +29,7 @@ public enum DeviceManagementConfigurationControlType implements ValuedEnum {
     public static DeviceManagementConfigurationControlType forValue(@javax.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "default": return Default_escaped;
+            case "default": return DefaultEscaped;
             case "dropdown": return Dropdown;
             case "smallTextBox": return SmallTextBox;
             case "largeTextBox": return LargeTextBox;

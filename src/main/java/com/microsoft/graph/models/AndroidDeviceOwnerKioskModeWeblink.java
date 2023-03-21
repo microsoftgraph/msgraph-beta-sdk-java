@@ -3,19 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskModeFolderItem implements Parsable {
     /** Display name for weblink */
-    private String _label;
+    private String label;
     /** Link for weblink */
-    private String _link;
+    private String link;
     /**
      * Instantiates a new AndroidDeviceOwnerKioskModeWeblink and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerKioskModeWeblink() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerKioskModeWeblink");
@@ -32,15 +32,14 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidDeviceOwnerKioskModeWeblink currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
-            this.put("link", (n) -> { currentObject.setLink(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
+        deserializerMap.put("link", (n) -> { this.setLink(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the label property value. Display name for weblink
@@ -48,7 +47,7 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
      */
     @javax.annotation.Nullable
     public String getLabel() {
-        return this._label;
+        return this.label;
     }
     /**
      * Gets the link property value. Link for weblink
@@ -56,13 +55,14 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
      */
     @javax.annotation.Nullable
     public String getLink() {
-        return this._link;
+        return this.link;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +74,17 @@ public class AndroidDeviceOwnerKioskModeWeblink extends AndroidDeviceOwnerKioskM
      * @param value Value to set for the label property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabel(@javax.annotation.Nullable final String value) {
-        this._label = value;
+        this.label = value;
     }
     /**
      * Sets the link property value. Link for weblink
      * @param value Value to set for the link property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLink(@javax.annotation.Nullable final String value) {
-        this._link = value;
+        this.link = value;
     }
 }

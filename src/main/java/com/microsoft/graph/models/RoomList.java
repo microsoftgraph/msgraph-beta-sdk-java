@@ -3,21 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RoomList extends Place implements Parsable {
     /** The email address of the room list. */
-    private String _emailAddress;
+    private String emailAddress;
     /** The rooms property */
-    private java.util.List<Room> _rooms;
+    private java.util.List<Room> rooms;
     /** The workspaces property */
-    private java.util.List<Workspace> _workspaces;
+    private java.util.List<Workspace> workspaces;
     /**
      * Instantiates a new RoomList and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RoomList() {
         super();
         this.setOdataType("#microsoft.graph.roomList");
@@ -38,20 +38,19 @@ public class RoomList extends Place implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEmailAddress() {
-        return this._emailAddress;
+        return this.emailAddress;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RoomList currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("emailAddress", (n) -> { currentObject.setEmailAddress(n.getStringValue()); });
-            this.put("rooms", (n) -> { currentObject.setRooms(n.getCollectionOfObjectValues(Room::createFromDiscriminatorValue)); });
-            this.put("workspaces", (n) -> { currentObject.setWorkspaces(n.getCollectionOfObjectValues(Workspace::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
+        deserializerMap.put("rooms", (n) -> { this.setRooms(n.getCollectionOfObjectValues(Room::createFromDiscriminatorValue)); });
+        deserializerMap.put("workspaces", (n) -> { this.setWorkspaces(n.getCollectionOfObjectValues(Workspace::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the rooms property value. The rooms property
@@ -59,7 +58,7 @@ public class RoomList extends Place implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Room> getRooms() {
-        return this._rooms;
+        return this.rooms;
     }
     /**
      * Gets the workspaces property value. The workspaces property
@@ -67,13 +66,14 @@ public class RoomList extends Place implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Workspace> getWorkspaces() {
-        return this._workspaces;
+        return this.workspaces;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +86,26 @@ public class RoomList extends Place implements Parsable {
      * @param value Value to set for the emailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailAddress(@javax.annotation.Nullable final String value) {
-        this._emailAddress = value;
+        this.emailAddress = value;
     }
     /**
      * Sets the rooms property value. The rooms property
      * @param value Value to set for the rooms property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRooms(@javax.annotation.Nullable final java.util.List<Room> value) {
-        this._rooms = value;
+        this.rooms = value;
     }
     /**
      * Sets the workspaces property value. The workspaces property
      * @param value Value to set for the workspaces property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkspaces(@javax.annotation.Nullable final java.util.List<Workspace> value) {
-        this._workspaces = value;
+        this.workspaces = value;
     }
 }

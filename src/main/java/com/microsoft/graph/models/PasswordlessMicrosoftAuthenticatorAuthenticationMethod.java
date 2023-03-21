@@ -4,23 +4,23 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod implements Parsable {
     /** The createdDateTime property */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The timestamp when this method was registered to the user. */
-    private OffsetDateTime _creationDateTime;
+    private OffsetDateTime creationDateTime;
     /** The device property */
-    private Device _device;
+    private Device device;
     /** The display name of the mobile device as given by the user. */
-    private String _displayName;
+    private String displayName;
     /**
      * Instantiates a new PasswordlessMicrosoftAuthenticatorAuthenticationMethod and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PasswordlessMicrosoftAuthenticatorAuthenticationMethod() {
         super();
         this.setOdataType("#microsoft.graph.passwordlessMicrosoftAuthenticatorAuthenticationMethod");
@@ -41,7 +41,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the creationDateTime property value. The timestamp when this method was registered to the user.
@@ -49,7 +49,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreationDateTime() {
-        return this._creationDateTime;
+        return this.creationDateTime;
     }
     /**
      * Gets the device property value. The device property
@@ -57,7 +57,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      */
     @javax.annotation.Nullable
     public Device getDevice() {
-        return this._device;
+        return this.device;
     }
     /**
      * Gets the displayName property value. The display name of the mobile device as given by the user.
@@ -65,27 +65,27 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PasswordlessMicrosoftAuthenticatorAuthenticationMethod currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("creationDateTime", (n) -> { currentObject.setCreationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("device", (n) -> { currentObject.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("creationDateTime", (n) -> { this.setCreationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("device", (n) -> { this.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,31 +99,35 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the creationDateTime property value. The timestamp when this method was registered to the user.
      * @param value Value to set for the creationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._creationDateTime = value;
+        this.creationDateTime = value;
     }
     /**
      * Sets the device property value. The device property
      * @param value Value to set for the device property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDevice(@javax.annotation.Nullable final Device value) {
-        this._device = value;
+        this.device = value;
     }
     /**
      * Sets the displayName property value. The display name of the mobile device as given by the user.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
 }

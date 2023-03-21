@@ -1,0 +1,183 @@
+package com.microsoft.graph.external.industrydata.runs.item;
+
+import com.microsoft.graph.external.industrydata.runs.item.activities.ActivitiesRequestBuilder;
+import com.microsoft.graph.external.industrydata.runs.item.activities.item.IndustryDataRunActivityItemRequestBuilder;
+import com.microsoft.graph.external.industrydata.runs.item.industrydatagetstatistics.IndustryDataGetStatisticsRequestBuilder;
+import com.microsoft.graph.models.industrydata.IndustryDataRun;
+import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.kiota.HttpMethod;
+import com.microsoft.kiota.QueryParameter;
+import com.microsoft.kiota.RequestAdapter;
+import com.microsoft.kiota.RequestHeaders;
+import com.microsoft.kiota.RequestInformation;
+import com.microsoft.kiota.RequestOption;
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParsableFactory;
+import java.net.URISyntaxException;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+/**
+ * Provides operations to manage the runs property of the microsoft.graph.industryData.industryDataRoot entity.
+ */
+public class IndustryDataRunItemRequestBuilder {
+    /** Provides operations to manage the activities property of the microsoft.graph.industryData.industryDataRun entity. */
+    @javax.annotation.Nonnull
+    public ActivitiesRequestBuilder activities() {
+        return new ActivitiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Provides operations to call the getStatistics method. */
+    @javax.annotation.Nonnull
+    public IndustryDataGetStatisticsRequestBuilder industryDataGetStatistics() {
+        return new IndustryDataGetStatisticsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /** Path parameters for the request */
+    private HashMap<String, Object> pathParameters;
+    /** The request adapter to use to execute the requests. */
+    private RequestAdapter requestAdapter;
+    /** Url template to use to build the URL for the current request builder */
+    private String urlTemplate;
+    /**
+     * Provides operations to manage the activities property of the microsoft.graph.industryData.industryDataRun entity.
+     * @param id Unique identifier of the item
+     * @return a IndustryDataRunActivityItemRequestBuilder
+     */
+    @javax.annotation.Nonnull
+    public IndustryDataRunActivityItemRequestBuilder activities(@javax.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        urlTplParams.put("industryDataRunActivity%2Did", id);
+        return new IndustryDataRunActivityItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Instantiates a new IndustryDataRunItemRequestBuilder and sets the default values.
+     * @param pathParameters Path parameters for the request
+     * @param requestAdapter The request adapter to use to execute the requests.
+     * @return a void
+     */
+    @javax.annotation.Nullable
+    public IndustryDataRunItemRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+        Objects.requireNonNull(pathParameters);
+        Objects.requireNonNull(requestAdapter);
+        this.urlTemplate = "{+baseurl}/external/industryData/runs/{industryDataRun%2Did}{?%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(pathParameters);
+        this.pathParameters = urlTplParams;
+        this.requestAdapter = requestAdapter;
+    }
+    /**
+     * Instantiates a new IndustryDataRunItemRequestBuilder and sets the default values.
+     * @param rawUrl The raw URL to use for the request builder.
+     * @param requestAdapter The request adapter to use to execute the requests.
+     * @return a void
+     */
+    @javax.annotation.Nullable
+    public IndustryDataRunItemRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
+        this.urlTemplate = "{+baseurl}/external/industryData/runs/{industryDataRun%2Did}{?%24select,%24expand}";
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>();
+        urlTplParams.put("request-raw-url", rawUrl);
+        this.pathParameters = urlTplParams;
+        this.requestAdapter = requestAdapter;
+    }
+    /**
+     * Set of ephemeral runs which present the point-in-time that diagnostic state of activities performed by the system. Read-only.
+     * @return a CompletableFuture of industryDataRun
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<IndustryDataRun> get() {
+        try {
+            final RequestInformation requestInfo = toGetRequestInformation(null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, IndustryDataRun::createFromDiscriminatorValue, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<IndustryDataRun> executionException = new java.util.concurrent.CompletableFuture<IndustryDataRun>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Set of ephemeral runs which present the point-in-time that diagnostic state of activities performed by the system. Read-only.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a CompletableFuture of industryDataRun
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<IndustryDataRun> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+        try {
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, IndustryDataRun::createFromDiscriminatorValue, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<IndustryDataRun> executionException = new java.util.concurrent.CompletableFuture<IndustryDataRun>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Set of ephemeral runs which present the point-in-time that diagnostic state of activities performed by the system. Read-only.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
+    }
+    /**
+     * Set of ephemeral runs which present the point-in-time that diagnostic state of activities performed by the system. Read-only.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        if (requestConfiguration != null) {
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Set of ephemeral runs which present the point-in-time that diagnostic state of activities performed by the system. Read-only.
+     */
+    public class GetQueryParameters {
+        /** Expand related entities */
+        @QueryParameter(name = "%24expand")
+        @javax.annotation.Nullable
+        public String[] expand;
+        /** Select properties to be returned */
+        @QueryParameter(name = "%24select")
+        @javax.annotation.Nullable
+        public String[] select;
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class GetRequestConfiguration {
+        /** Request headers */
+        @javax.annotation.Nullable
+        public RequestHeaders headers = new RequestHeaders();
+        /** Request options */
+        @javax.annotation.Nullable
+        public java.util.List<RequestOption> options = Collections.emptyList();
+        /** Request query parameters */
+        @javax.annotation.Nullable
+        public GetQueryParameters queryParameters = new GetQueryParameters();
+        /**
+         * Instantiates a new GetRequestConfiguration and sets the default values.
+         * @return a void
+         */
+        @javax.annotation.Nullable
+        public GetRequestConfiguration() {
+        }
+    }
+}

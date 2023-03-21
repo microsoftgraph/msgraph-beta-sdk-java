@@ -3,22 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CloudPcForensicStorageAccount extends Entity implements Parsable {
     /** The ID of the storage account. */
-    private String _storageAccountId;
+    private String storageAccountId;
     /** The name of the storage account. */
-    private String _storageAccountName;
+    private String storageAccountName;
     /**
      * Instantiates a new cloudPcForensicStorageAccount and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcForensicStorageAccount() {
         super();
-        this.setOdataType("#microsoft.graph.cloudPcForensicStorageAccount");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,15 +31,14 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcForensicStorageAccount currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("storageAccountId", (n) -> { currentObject.setStorageAccountId(n.getStringValue()); });
-            this.put("storageAccountName", (n) -> { currentObject.setStorageAccountName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("storageAccountId", (n) -> { this.setStorageAccountId(n.getStringValue()); });
+        deserializerMap.put("storageAccountName", (n) -> { this.setStorageAccountName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the storageAccountId property value. The ID of the storage account.
@@ -48,7 +46,7 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStorageAccountId() {
-        return this._storageAccountId;
+        return this.storageAccountId;
     }
     /**
      * Gets the storageAccountName property value. The name of the storage account.
@@ -56,13 +54,14 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStorageAccountName() {
-        return this._storageAccountName;
+        return this.storageAccountName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +73,17 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
      * @param value Value to set for the storageAccountId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageAccountId(@javax.annotation.Nullable final String value) {
-        this._storageAccountId = value;
+        this.storageAccountId = value;
     }
     /**
      * Sets the storageAccountName property value. The name of the storage account.
      * @param value Value to set for the storageAccountName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStorageAccountName(@javax.annotation.Nullable final String value) {
-        this._storageAccountName = value;
+        this.storageAccountName = value;
     }
 }

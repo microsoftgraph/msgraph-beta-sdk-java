@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum ConditionalAccessRule implements ValuedEnum {
     AllApps("allApps"),
     FirstPartyApps("firstPartyApps"),
@@ -27,7 +26,18 @@ public enum ConditionalAccessRule implements ValuedEnum {
     DeviceState("deviceState"),
     UnknownFutureValue("unknownFutureValue"),
     DeviceFilterIncludeRuleNotMatched("deviceFilterIncludeRuleNotMatched"),
-    AllDeviceStates("allDeviceStates");
+    AllDeviceStates("allDeviceStates"),
+    AnonymizedIPAddress("anonymizedIPAddress"),
+    UnfamiliarFeatures("unfamiliarFeatures"),
+    NationStateIPAddress("nationStateIPAddress"),
+    RealTimeThreatIntelligence("realTimeThreatIntelligence"),
+    InternalGuest("internalGuest"),
+    B2bCollaborationGuest("b2bCollaborationGuest"),
+    B2bCollaborationMember("b2bCollaborationMember"),
+    B2bDirectConnectUser("b2bDirectConnectUser"),
+    OtherExternalUser("otherExternalUser"),
+    ServiceProvider("serviceProvider"),
+    MicrosoftAdminPortals("microsoftAdminPortals");
     public final String value;
     ConditionalAccessRule(final String value) {
         this.value = value;
@@ -61,6 +71,17 @@ public enum ConditionalAccessRule implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "deviceFilterIncludeRuleNotMatched": return DeviceFilterIncludeRuleNotMatched;
             case "allDeviceStates": return AllDeviceStates;
+            case "anonymizedIPAddress": return AnonymizedIPAddress;
+            case "unfamiliarFeatures": return UnfamiliarFeatures;
+            case "nationStateIPAddress": return NationStateIPAddress;
+            case "realTimeThreatIntelligence": return RealTimeThreatIntelligence;
+            case "internalGuest": return InternalGuest;
+            case "b2bCollaborationGuest": return B2bCollaborationGuest;
+            case "b2bCollaborationMember": return B2bCollaborationMember;
+            case "b2bDirectConnectUser": return B2bDirectConnectUser;
+            case "otherExternalUser": return OtherExternalUser;
+            case "serviceProvider": return ServiceProvider;
+            case "microsoftAdminPortals": return MicrosoftAdminPortals;
             default: return null;
         }
     }

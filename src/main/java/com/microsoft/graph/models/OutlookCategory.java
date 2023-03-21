@@ -3,23 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class OutlookCategory extends Entity implements Parsable {
     /** A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. See the note below. */
-    private CategoryColor _color;
+    private CategoryColor color;
     /** A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only. */
-    private String _displayName;
+    private String displayName;
     /**
      * Instantiates a new outlookCategory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OutlookCategory() {
         super();
-        this.setOdataType("#microsoft.graph.outlookCategory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,7 +35,7 @@ public class OutlookCategory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public CategoryColor getColor() {
-        return this._color;
+        return this.color;
     }
     /**
      * Gets the displayName property value. A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only.
@@ -45,25 +43,25 @@ public class OutlookCategory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OutlookCategory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("color", (n) -> { currentObject.setColor(n.getEnumValue(CategoryColor.class)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("color", (n) -> { this.setColor(n.getEnumValue(CategoryColor.class)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,15 +73,17 @@ public class OutlookCategory extends Entity implements Parsable {
      * @param value Value to set for the color property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColor(@javax.annotation.Nullable final CategoryColor value) {
-        this._color = value;
+        this.color = value;
     }
     /**
      * Sets the displayName property value. A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
 }

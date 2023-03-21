@@ -4,19 +4,19 @@ import com.microsoft.graph.models.IdentitySet;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ParticipantEndpoint extends Endpoint implements Parsable {
     /** The feedback provided by the user of this endpoint about the quality of the session. */
-    private UserFeedback _feedback;
+    private UserFeedback feedback;
     /** Identity associated with the endpoint. */
-    private IdentitySet _identity;
+    private IdentitySet identity;
     /**
      * Instantiates a new ParticipantEndpoint and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ParticipantEndpoint() {
         super();
         this.setOdataType("#microsoft.graph.callRecords.participantEndpoint");
@@ -37,19 +37,18 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
      */
     @javax.annotation.Nullable
     public UserFeedback getFeedback() {
-        return this._feedback;
+        return this.feedback;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ParticipantEndpoint currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("feedback", (n) -> { currentObject.setFeedback(n.getObjectValue(UserFeedback::createFromDiscriminatorValue)); });
-            this.put("identity", (n) -> { currentObject.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("feedback", (n) -> { this.setFeedback(n.getObjectValue(UserFeedback::createFromDiscriminatorValue)); });
+        deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the identity property value. Identity associated with the endpoint.
@@ -57,13 +56,14 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getIdentity() {
-        return this._identity;
+        return this.identity;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -75,15 +75,17 @@ public class ParticipantEndpoint extends Endpoint implements Parsable {
      * @param value Value to set for the feedback property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeedback(@javax.annotation.Nullable final UserFeedback value) {
-        this._feedback = value;
+        this.feedback = value;
     }
     /**
      * Sets the identity property value. Identity associated with the endpoint.
      * @param value Value to set for the identity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentity(@javax.annotation.Nullable final IdentitySet value) {
-        this._identity = value;
+        this.identity = value;
     }
 }

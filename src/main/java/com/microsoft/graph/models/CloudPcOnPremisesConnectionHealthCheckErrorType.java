@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnum {
     DnsCheckFqdnNotFound("dnsCheckFqdnNotFound"),
     DnsCheckNameWithInvalidCharacter("dnsCheckNameWithInvalidCharacter"),
@@ -58,6 +57,8 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
     PermissionCheckNoResourceGroupNetworkContributorRole("permissionCheckNoResourceGroupNetworkContributorRole"),
     PermissionCheckTransientServiceError("permissionCheckTransientServiceError"),
     PermissionCheckUnknownError("permissionCheckUnknownError"),
+    UdpConnectivityCheckStunUrlNotAllowListed("udpConnectivityCheckStunUrlNotAllowListed"),
+    UdpConnectivityCheckUnknownError("udpConnectivityCheckUnknownError"),
     InternalServerErrorDeploymentCanceled("internalServerErrorDeploymentCanceled"),
     InternalServerErrorAllocateResourceFailed("internalServerErrorAllocateResourceFailed"),
     InternalServerErrorVMDeploymentTimeout("internalServerErrorVMDeploymentTimeout"),
@@ -127,6 +128,8 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
             case "permissionCheckNoResourceGroupNetworkContributorRole": return PermissionCheckNoResourceGroupNetworkContributorRole;
             case "permissionCheckTransientServiceError": return PermissionCheckTransientServiceError;
             case "permissionCheckUnknownError": return PermissionCheckUnknownError;
+            case "udpConnectivityCheckStunUrlNotAllowListed": return UdpConnectivityCheckStunUrlNotAllowListed;
+            case "udpConnectivityCheckUnknownError": return UdpConnectivityCheckUnknownError;
             case "internalServerErrorDeploymentCanceled": return InternalServerErrorDeploymentCanceled;
             case "internalServerErrorAllocateResourceFailed": return InternalServerErrorAllocateResourceFailed;
             case "internalServerErrorVMDeploymentTimeout": return InternalServerErrorVMDeploymentTimeout;

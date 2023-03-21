@@ -4,38 +4,37 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserExperienceAnalyticsBaseline extends Entity implements Parsable {
     /** The user experience analytics app health metrics. */
-    private UserExperienceAnalyticsCategory _appHealthMetrics;
+    private UserExperienceAnalyticsCategory appHealthMetrics;
     /** The user experience analytics battery health metrics. */
-    private UserExperienceAnalyticsCategory _batteryHealthMetrics;
+    private UserExperienceAnalyticsCategory batteryHealthMetrics;
     /** The user experience analytics best practices metrics. */
-    private UserExperienceAnalyticsCategory _bestPracticesMetrics;
+    private UserExperienceAnalyticsCategory bestPracticesMetrics;
     /** The date the custom baseline was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The user experience analytics device boot performance metrics. */
-    private UserExperienceAnalyticsCategory _deviceBootPerformanceMetrics;
+    private UserExperienceAnalyticsCategory deviceBootPerformanceMetrics;
     /** The name of the user experience analytics baseline. */
-    private String _displayName;
+    private String displayName;
     /** Signifies if the current baseline is the commercial median baseline or a custom baseline. */
-    private Boolean _isBuiltIn;
+    private Boolean isBuiltIn;
     /** The user experience analytics reboot analytics metrics. */
-    private UserExperienceAnalyticsCategory _rebootAnalyticsMetrics;
+    private UserExperienceAnalyticsCategory rebootAnalyticsMetrics;
     /** The user experience analytics resource performance metrics. */
-    private UserExperienceAnalyticsCategory _resourcePerformanceMetrics;
+    private UserExperienceAnalyticsCategory resourcePerformanceMetrics;
     /** The user experience analytics work from anywhere metrics. */
-    private UserExperienceAnalyticsCategory _workFromAnywhereMetrics;
+    private UserExperienceAnalyticsCategory workFromAnywhereMetrics;
     /**
      * Instantiates a new UserExperienceAnalyticsBaseline and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsBaseline() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsBaseline");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +52,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public UserExperienceAnalyticsCategory getAppHealthMetrics() {
-        return this._appHealthMetrics;
+        return this.appHealthMetrics;
     }
     /**
      * Gets the batteryHealthMetrics property value. The user experience analytics battery health metrics.
@@ -61,7 +60,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public UserExperienceAnalyticsCategory getBatteryHealthMetrics() {
-        return this._batteryHealthMetrics;
+        return this.batteryHealthMetrics;
     }
     /**
      * Gets the bestPracticesMetrics property value. The user experience analytics best practices metrics.
@@ -69,7 +68,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public UserExperienceAnalyticsCategory getBestPracticesMetrics() {
-        return this._bestPracticesMetrics;
+        return this.bestPracticesMetrics;
     }
     /**
      * Gets the createdDateTime property value. The date the custom baseline was created.
@@ -77,7 +76,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the deviceBootPerformanceMetrics property value. The user experience analytics device boot performance metrics.
@@ -85,7 +84,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public UserExperienceAnalyticsCategory getDeviceBootPerformanceMetrics() {
-        return this._deviceBootPerformanceMetrics;
+        return this.deviceBootPerformanceMetrics;
     }
     /**
      * Gets the displayName property value. The name of the user experience analytics baseline.
@@ -93,27 +92,26 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsBaseline currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appHealthMetrics", (n) -> { currentObject.setAppHealthMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
-            this.put("batteryHealthMetrics", (n) -> { currentObject.setBatteryHealthMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
-            this.put("bestPracticesMetrics", (n) -> { currentObject.setBestPracticesMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("deviceBootPerformanceMetrics", (n) -> { currentObject.setDeviceBootPerformanceMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isBuiltIn", (n) -> { currentObject.setIsBuiltIn(n.getBooleanValue()); });
-            this.put("rebootAnalyticsMetrics", (n) -> { currentObject.setRebootAnalyticsMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
-            this.put("resourcePerformanceMetrics", (n) -> { currentObject.setResourcePerformanceMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
-            this.put("workFromAnywhereMetrics", (n) -> { currentObject.setWorkFromAnywhereMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appHealthMetrics", (n) -> { this.setAppHealthMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("batteryHealthMetrics", (n) -> { this.setBatteryHealthMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("bestPracticesMetrics", (n) -> { this.setBestPracticesMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("deviceBootPerformanceMetrics", (n) -> { this.setDeviceBootPerformanceMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isBuiltIn", (n) -> { this.setIsBuiltIn(n.getBooleanValue()); });
+        deserializerMap.put("rebootAnalyticsMetrics", (n) -> { this.setRebootAnalyticsMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourcePerformanceMetrics", (n) -> { this.setResourcePerformanceMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("workFromAnywhereMetrics", (n) -> { this.setWorkFromAnywhereMetrics(n.getObjectValue(UserExperienceAnalyticsCategory::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isBuiltIn property value. Signifies if the current baseline is the commercial median baseline or a custom baseline.
@@ -121,7 +119,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getIsBuiltIn() {
-        return this._isBuiltIn;
+        return this.isBuiltIn;
     }
     /**
      * Gets the rebootAnalyticsMetrics property value. The user experience analytics reboot analytics metrics.
@@ -129,7 +127,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public UserExperienceAnalyticsCategory getRebootAnalyticsMetrics() {
-        return this._rebootAnalyticsMetrics;
+        return this.rebootAnalyticsMetrics;
     }
     /**
      * Gets the resourcePerformanceMetrics property value. The user experience analytics resource performance metrics.
@@ -137,7 +135,7 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public UserExperienceAnalyticsCategory getResourcePerformanceMetrics() {
-        return this._resourcePerformanceMetrics;
+        return this.resourcePerformanceMetrics;
     }
     /**
      * Gets the workFromAnywhereMetrics property value. The user experience analytics work from anywhere metrics.
@@ -145,13 +143,14 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public UserExperienceAnalyticsCategory getWorkFromAnywhereMetrics() {
-        return this._workFromAnywhereMetrics;
+        return this.workFromAnywhereMetrics;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -171,79 +170,89 @@ public class UserExperienceAnalyticsBaseline extends Entity implements Parsable 
      * @param value Value to set for the appHealthMetrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppHealthMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
-        this._appHealthMetrics = value;
+        this.appHealthMetrics = value;
     }
     /**
      * Sets the batteryHealthMetrics property value. The user experience analytics battery health metrics.
      * @param value Value to set for the batteryHealthMetrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBatteryHealthMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
-        this._batteryHealthMetrics = value;
+        this.batteryHealthMetrics = value;
     }
     /**
      * Sets the bestPracticesMetrics property value. The user experience analytics best practices metrics.
      * @param value Value to set for the bestPracticesMetrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBestPracticesMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
-        this._bestPracticesMetrics = value;
+        this.bestPracticesMetrics = value;
     }
     /**
      * Sets the createdDateTime property value. The date the custom baseline was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the deviceBootPerformanceMetrics property value. The user experience analytics device boot performance metrics.
      * @param value Value to set for the deviceBootPerformanceMetrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceBootPerformanceMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
-        this._deviceBootPerformanceMetrics = value;
+        this.deviceBootPerformanceMetrics = value;
     }
     /**
      * Sets the displayName property value. The name of the user experience analytics baseline.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the isBuiltIn property value. Signifies if the current baseline is the commercial median baseline or a custom baseline.
      * @param value Value to set for the isBuiltIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsBuiltIn(@javax.annotation.Nullable final Boolean value) {
-        this._isBuiltIn = value;
+        this.isBuiltIn = value;
     }
     /**
      * Sets the rebootAnalyticsMetrics property value. The user experience analytics reboot analytics metrics.
      * @param value Value to set for the rebootAnalyticsMetrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRebootAnalyticsMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
-        this._rebootAnalyticsMetrics = value;
+        this.rebootAnalyticsMetrics = value;
     }
     /**
      * Sets the resourcePerformanceMetrics property value. The user experience analytics resource performance metrics.
      * @param value Value to set for the resourcePerformanceMetrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourcePerformanceMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
-        this._resourcePerformanceMetrics = value;
+        this.resourcePerformanceMetrics = value;
     }
     /**
      * Sets the workFromAnywhereMetrics property value. The user experience analytics work from anywhere metrics.
      * @param value Value to set for the workFromAnywhereMetrics property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkFromAnywhereMetrics(@javax.annotation.Nullable final UserExperienceAnalyticsCategory value) {
-        this._workFromAnywhereMetrics = value;
+        this.workFromAnywhereMetrics = value;
     }
 }

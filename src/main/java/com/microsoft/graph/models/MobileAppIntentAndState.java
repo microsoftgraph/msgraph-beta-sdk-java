@@ -3,24 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MobileAppIntentAndState extends Entity implements Parsable {
     /** Device identifier created or collected by Intune. */
-    private String _managedDeviceIdentifier;
+    private String managedDeviceIdentifier;
     /** The list of payload intents and states for the tenant. */
-    private java.util.List<MobileAppIntentAndStateDetail> _mobileAppList;
+    private java.util.List<MobileAppIntentAndStateDetail> mobileAppList;
     /** Identifier for the user that tried to enroll the device. */
-    private String _userId;
+    private String userId;
     /**
      * Instantiates a new MobileAppIntentAndState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileAppIntentAndState() {
         super();
-        this.setOdataType("#microsoft.graph.mobileAppIntentAndState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,16 +33,15 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MobileAppIntentAndState currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("managedDeviceIdentifier", (n) -> { currentObject.setManagedDeviceIdentifier(n.getStringValue()); });
-            this.put("mobileAppList", (n) -> { currentObject.setMobileAppList(n.getCollectionOfObjectValues(MobileAppIntentAndStateDetail::createFromDiscriminatorValue)); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("managedDeviceIdentifier", (n) -> { this.setManagedDeviceIdentifier(n.getStringValue()); });
+        deserializerMap.put("mobileAppList", (n) -> { this.setMobileAppList(n.getCollectionOfObjectValues(MobileAppIntentAndStateDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedDeviceIdentifier property value. Device identifier created or collected by Intune.
@@ -51,7 +49,7 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getManagedDeviceIdentifier() {
-        return this._managedDeviceIdentifier;
+        return this.managedDeviceIdentifier;
     }
     /**
      * Gets the mobileAppList property value. The list of payload intents and states for the tenant.
@@ -59,7 +57,7 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MobileAppIntentAndStateDetail> getMobileAppList() {
-        return this._mobileAppList;
+        return this.mobileAppList;
     }
     /**
      * Gets the userId property value. Identifier for the user that tried to enroll the device.
@@ -67,13 +65,14 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +85,26 @@ public class MobileAppIntentAndState extends Entity implements Parsable {
      * @param value Value to set for the managedDeviceIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceIdentifier(@javax.annotation.Nullable final String value) {
-        this._managedDeviceIdentifier = value;
+        this.managedDeviceIdentifier = value;
     }
     /**
      * Sets the mobileAppList property value. The list of payload intents and states for the tenant.
      * @param value Value to set for the mobileAppList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobileAppList(@javax.annotation.Nullable final java.util.List<MobileAppIntentAndStateDetail> value) {
-        this._mobileAppList = value;
+        this.mobileAppList = value;
     }
     /**
      * Sets the userId property value. Identifier for the user that tried to enroll the device.
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }

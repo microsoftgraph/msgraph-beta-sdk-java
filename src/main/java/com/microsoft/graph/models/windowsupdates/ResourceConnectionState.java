@@ -3,7 +3,6 @@ package com.microsoft.graph.models.windowsupdates;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
 public enum ResourceConnectionState implements ValuedEnum {
     Connected("connected"),
     NotAuthorized("notAuthorized"),

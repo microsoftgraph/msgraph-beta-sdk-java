@@ -3,20 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implements Parsable {
     /** The work from anywhere metric devices. */
-    private java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> _metricDevices;
+    private java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> metricDevices;
     /**
      * Instantiates a new UserExperienceAnalyticsWorkFromAnywhereMetric and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsWorkFromAnywhereMetric() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsWorkFromAnywhereMetric");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +29,13 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implem
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsWorkFromAnywhereMetric currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("metricDevices", (n) -> { currentObject.setMetricDevices(n.getCollectionOfObjectValues(UserExperienceAnalyticsWorkFromAnywhereDevice::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("metricDevices", (n) -> { this.setMetricDevices(n.getCollectionOfObjectValues(UserExperienceAnalyticsWorkFromAnywhereDevice::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the metricDevices property value. The work from anywhere metric devices.
@@ -45,13 +43,14 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implem
      */
     @javax.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> getMetricDevices() {
-        return this._metricDevices;
+        return this.metricDevices;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +61,8 @@ public class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity implem
      * @param value Value to set for the metricDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetricDevices(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsWorkFromAnywhereDevice> value) {
-        this._metricDevices = value;
+        this.metricDevices = value;
     }
 }

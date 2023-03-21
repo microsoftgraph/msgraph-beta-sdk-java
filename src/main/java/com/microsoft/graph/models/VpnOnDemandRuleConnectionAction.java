@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** VPN On-Demand Rule Connection Action. */
 public enum VpnOnDemandRuleConnectionAction implements ValuedEnum {
     /** Connect. */
     Connect("connect"),

@@ -4,30 +4,29 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Account extends Entity implements Parsable {
     /** The blocked property */
-    private Boolean _blocked;
+    private Boolean blocked;
     /** The category property */
-    private String _category;
+    private String category;
     /** The displayName property */
-    private String _displayName;
+    private String displayName;
     /** The lastModifiedDateTime property */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The number property */
-    private String _number;
+    private String number;
     /** The subCategory property */
-    private String _subCategory;
+    private String subCategory;
     /**
      * Instantiates a new Account and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Account() {
         super();
-        this.setOdataType("#microsoft.graph.account");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +44,7 @@ public class Account extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getBlocked() {
-        return this._blocked;
+        return this.blocked;
     }
     /**
      * Gets the category property value. The category property
@@ -53,7 +52,7 @@ public class Account extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCategory() {
-        return this._category;
+        return this.category;
     }
     /**
      * Gets the displayName property value. The displayName property
@@ -61,23 +60,22 @@ public class Account extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Account currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("blocked", (n) -> { currentObject.setBlocked(n.getBooleanValue()); });
-            this.put("category", (n) -> { currentObject.setCategory(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
-            this.put("subCategory", (n) -> { currentObject.setSubCategory(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("blocked", (n) -> { this.setBlocked(n.getBooleanValue()); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("number", (n) -> { this.setNumber(n.getStringValue()); });
+        deserializerMap.put("subCategory", (n) -> { this.setSubCategory(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -85,7 +83,7 @@ public class Account extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the number property value. The number property
@@ -93,7 +91,7 @@ public class Account extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getNumber() {
-        return this._number;
+        return this.number;
     }
     /**
      * Gets the subCategory property value. The subCategory property
@@ -101,13 +99,14 @@ public class Account extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSubCategory() {
-        return this._subCategory;
+        return this.subCategory;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,47 +122,53 @@ public class Account extends Entity implements Parsable {
      * @param value Value to set for the blocked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBlocked(@javax.annotation.Nullable final Boolean value) {
-        this._blocked = value;
+        this.blocked = value;
     }
     /**
      * Sets the category property value. The category property
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final String value) {
-        this._category = value;
+        this.category = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumber(@javax.annotation.Nullable final String value) {
-        this._number = value;
+        this.number = value;
     }
     /**
      * Sets the subCategory property value. The subCategory property
      * @param value Value to set for the subCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubCategory(@javax.annotation.Nullable final String value) {
-        this._subCategory = value;
+        this.subCategory = value;
     }
 }

@@ -3,20 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DirectoryRoleAccessReviewPolicy extends Entity implements Parsable {
     /** The settings property */
-    private AccessReviewScheduleSettings _settings;
+    private AccessReviewScheduleSettings settings;
     /**
      * Instantiates a new DirectoryRoleAccessReviewPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DirectoryRoleAccessReviewPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.directoryRoleAccessReviewPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +29,13 @@ public class DirectoryRoleAccessReviewPolicy extends Entity implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DirectoryRoleAccessReviewPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("settings", (n) -> { currentObject.setSettings(n.getObjectValue(AccessReviewScheduleSettings::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(AccessReviewScheduleSettings::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the settings property value. The settings property
@@ -45,13 +43,14 @@ public class DirectoryRoleAccessReviewPolicy extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public AccessReviewScheduleSettings getSettings() {
-        return this._settings;
+        return this.settings;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +61,8 @@ public class DirectoryRoleAccessReviewPolicy extends Entity implements Parsable 
      * @param value Value to set for the settings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettings(@javax.annotation.Nullable final AccessReviewScheduleSettings value) {
-        this._settings = value;
+        this.settings = value;
     }
 }

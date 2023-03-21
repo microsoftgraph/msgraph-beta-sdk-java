@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** The administrator intent for the assignment of the profile. */
 public enum DeviceConfigAssignmentIntent implements ValuedEnum {
     /** Ensure that the configuration profile is applied to the devices in the assignment. */
     Apply("apply"),
