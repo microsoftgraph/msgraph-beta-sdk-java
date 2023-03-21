@@ -8,7 +8,9 @@ package com.microsoft.graph.models;
 
 /**
  * The Enum Access Package Custom Extension Handler Status.
+ * @deprecated 
 */
+@Deprecated
 public enum AccessPackageCustomExtensionHandlerStatus
 {
     /**

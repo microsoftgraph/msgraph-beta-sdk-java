@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.Authentication;
+import com.microsoft.graph.industrydata.models.IndustryDataRoot;
 import com.microsoft.graph.models.LongRunningOperation;
 import java.util.Arrays;
 import java.util.EnumSet;
