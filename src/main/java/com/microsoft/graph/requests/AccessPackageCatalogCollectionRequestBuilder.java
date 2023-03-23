@@ -44,7 +44,9 @@ public class AccessPackageCatalogCollectionRequestBuilder extends BaseCollection
     /**
      * Gets a builder to execute the method
      * @return the request builder collection
+     * @deprecated 
      */
+    @Deprecated
     @Nonnull
     public AccessPackageCatalogSearchCollectionRequestBuilder search() {
         return new AccessPackageCatalogSearchCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.Search"), getClient(), null);

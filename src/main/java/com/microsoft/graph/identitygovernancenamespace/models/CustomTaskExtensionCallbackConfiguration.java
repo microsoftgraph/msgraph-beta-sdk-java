@@ -8,7 +8,9 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.CustomExtensionCallbackConfiguration;
+import com.microsoft.graph.requests.ApplicationCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -24,6 +26,13 @@ import javax.annotation.Nonnull;
  */
 public class CustomTaskExtensionCallbackConfiguration extends CustomExtensionCallbackConfiguration implements IJsonBackedObject {
 
+
+    /**
+     * The Authorized Apps.
+     * 
+     */
+	@Nullable
+    public com.microsoft.graph.requests.ApplicationCollectionPage authorizedApps;
 
 
     /**

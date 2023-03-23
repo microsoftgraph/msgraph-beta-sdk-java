@@ -56,6 +56,16 @@ public class ExternalRequestBuilder extends BaseRequestBuilder<External> {
     }
 
 
+
+    /**
+     * Gets the request builder for IndustryDataRoot
+     *
+     * @return the IndustryDataRootRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.industrydata.requests.IndustryDataRootRequestBuilder industryData() {
+        return new com.microsoft.graph.industrydata.requests.IndustryDataRootRequestBuilder(getRequestUrlWithAdditionalSegment("industryData"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the ExternalConnection collection
      *

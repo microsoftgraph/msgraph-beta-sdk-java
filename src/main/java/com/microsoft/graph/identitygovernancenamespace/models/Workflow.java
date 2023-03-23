@@ -76,7 +76,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The Runs.
-     * 
+     * Workflow runs.
      */
     @SerializedName(value = "runs", alternate = {"Runs"})
     @Expose
@@ -94,7 +94,7 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
 
     /**
      * The User Processing Results.
-     * 
+     * Per-user workflow execution results.
      */
     @SerializedName(value = "userProcessingResults", alternate = {"UserProcessingResults"})
     @Expose

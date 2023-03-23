@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.AllowedRolePrincipalTypes;
 import com.microsoft.graph.models.UnifiedRolePermission;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.UnifiedRoleDefinitionCollectionPage;
@@ -27,6 +28,15 @@ import javax.annotation.Nonnull;
  */
 public class UnifiedRoleDefinition extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Allowed Principal Types.
+     * 
+     */
+    @SerializedName(value = "allowedPrincipalTypes", alternate = {"AllowedPrincipalTypes"})
+    @Expose
+	@Nullable
+    public EnumSet<AllowedRolePrincipalTypes> allowedPrincipalTypes;
 
     /**
      * The Description.

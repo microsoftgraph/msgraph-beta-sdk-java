@@ -33,7 +33,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements IJsonBac
 
     /**
      * The Azure Blob Container.
-     * The name of the Azure storage location where the export will be stored. This only applies to exports stored in your own Azure storage location.
+     * 
      * @deprecated The azureBlobContainer will be deprecated on April 30, 2023.
      */
     @Deprecated
@@ -44,7 +44,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements IJsonBac
 
     /**
      * The Azure Blob Token.
-     * The SAS token for the Azure storage location.  This only applies to exports stored in your own Azure storage location.
+     * 
      * @deprecated The azureBlobToken will be deprecated on April 30, 2023.
      */
     @Deprecated
@@ -73,7 +73,7 @@ public class EdiscoveryExportOperation extends CaseOperation implements IJsonBac
 
     /**
      * The Export Options.
-     * The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
+     * The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags. The fileInfo member is deprecated and will stop returning data on April 30th, 2023. Going forward, the summary and load file are always included.
      */
     @SerializedName(value = "exportOptions", alternate = {"ExportOptions"})
     @Expose

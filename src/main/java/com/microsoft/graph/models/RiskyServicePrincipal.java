@@ -33,7 +33,9 @@ public class RiskyServicePrincipal extends Entity implements IJsonBackedObject {
     /**
      * The Account Enabled.
      * true if the service principal account is enabled; otherwise, false.
+     * @deprecated The accountEnabled field will soon be deprecated on 2023-07-12. Please use isEnabled instead.
      */
+    @Deprecated
     @SerializedName(value = "accountEnabled", alternate = {"AccountEnabled"})
     @Expose
 	@Nullable
@@ -56,6 +58,15 @@ public class RiskyServicePrincipal extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String displayName;
+
+    /**
+     * The Is Enabled.
+     * 
+     */
+    @SerializedName(value = "isEnabled", alternate = {"IsEnabled"})
+    @Expose
+	@Nullable
+    public Boolean isEnabled;
 
     /**
      * The Is Processing.

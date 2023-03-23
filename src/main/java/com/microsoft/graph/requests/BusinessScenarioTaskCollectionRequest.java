@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.BusinessScenarioPlanner;
 import com.microsoft.graph.models.BusinessScenarioTask;
+import com.microsoft.graph.models.PlannerTask;
 import com.microsoft.graph.models.PlannerDelta;
 import java.util.Arrays;
 import java.util.EnumSet;

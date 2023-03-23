@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.PlannerTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.PlannerTaskRequestBuilder;
 import com.microsoft.graph.requests.PlannerTaskCollectionRequest;
-import com.microsoft.graph.requests.PlannerDeltaDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.PlannerTaskDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -47,8 +47,8 @@ public class PlannerTaskCollectionRequestBuilder extends BaseCollectionRequestBu
      * @return the request builder collection
      */
     @Nonnull
-    public PlannerDeltaDeltaCollectionRequestBuilder delta() {
-        return new PlannerDeltaDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    public PlannerTaskDeltaCollectionRequestBuilder delta() {
+        return new PlannerTaskDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
     /**

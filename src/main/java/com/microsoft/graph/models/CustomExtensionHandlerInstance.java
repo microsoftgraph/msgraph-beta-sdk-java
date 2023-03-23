@@ -69,7 +69,9 @@ public class CustomExtensionHandlerInstance implements IJsonBackedObject {
     /**
      * The Status.
      * Status of the request to run the access package custom extension workflow that is associated with the logic app. The possible values are: requestSent, requestReceived, unknownFutureValue.
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "status", alternate = {"Status"})
     @Expose
 	@Nullable
