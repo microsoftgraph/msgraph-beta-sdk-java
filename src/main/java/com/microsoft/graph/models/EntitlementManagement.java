@@ -52,7 +52,9 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
     /**
      * The Access Package Assignment Policies.
      * Represents the policy that governs which subjects can request or be assigned an access package via an access package assignment.
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "accessPackageAssignmentPolicies", alternate = {"AccessPackageAssignmentPolicies"})
     @Expose
 	@Nullable
@@ -61,7 +63,9 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
     /**
      * The Access Package Assignment Requests.
      * Represents access package assignment requests created by or on behalf of a user.
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "accessPackageAssignmentRequests", alternate = {"AccessPackageAssignmentRequests"})
     @Expose
 	@Nullable
@@ -88,7 +92,9 @@ public class EntitlementManagement extends Entity implements IJsonBackedObject {
     /**
      * The Access Package Catalogs.
      * A container of access packages.
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "accessPackageCatalogs", alternate = {"AccessPackageCatalogs"})
     @Expose
 	@Nullable

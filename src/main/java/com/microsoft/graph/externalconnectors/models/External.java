@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.industrydata.models.IndustryDataRoot;
 import com.microsoft.graph.externalconnectors.requests.ExternalConnectionCollectionPage;
 
 
@@ -38,6 +39,15 @@ public class External implements IJsonBackedObject {
     public final AdditionalDataManager additionalDataManager() {
         return additionalDataManager;
     }
+
+    /**
+     * The Industry Data.
+     * 
+     */
+    @SerializedName(value = "industryData", alternate = {"IndustryData"})
+    @Expose
+	@Nullable
+    public IndustryDataRoot industryData;
 
     /**
      * The Connections.

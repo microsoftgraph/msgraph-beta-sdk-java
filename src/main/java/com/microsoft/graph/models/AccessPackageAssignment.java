@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.CustomExtensionCalloutInstance;
 import com.microsoft.graph.models.RequestSchedule;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.AccessPackageAssignmentPolicy;
@@ -78,6 +79,15 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
     public String catalogId;
 
     /**
+     * The Custom Extension Callout Instances.
+     * Information about all the custom extension calls that were made during the access package assignment workflow.
+     */
+    @SerializedName(value = "customExtensionCalloutInstances", alternate = {"CustomExtensionCalloutInstances"})
+    @Expose
+	@Nullable
+    public java.util.List<CustomExtensionCalloutInstance> customExtensionCalloutInstances;
+
+    /**
      * The Expired Date Time.
      * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      */
@@ -125,7 +135,9 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
     /**
      * The Access Package Assignment Policy.
      * Read-only. Nullable. Supports $filter (eq) on the id property
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "accessPackageAssignmentPolicy", alternate = {"AccessPackageAssignmentPolicy"})
     @Expose
 	@Nullable
@@ -134,7 +146,9 @@ public class AccessPackageAssignment extends Entity implements IJsonBackedObject
     /**
      * The Access Package Assignment Requests.
      * 
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "accessPackageAssignmentRequests", alternate = {"AccessPackageAssignmentRequests"})
     @Expose
 	@Nullable

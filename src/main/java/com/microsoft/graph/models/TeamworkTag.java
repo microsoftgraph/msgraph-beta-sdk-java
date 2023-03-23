@@ -30,7 +30,7 @@ public class TeamworkTag extends Entity implements IJsonBackedObject {
 
     /**
      * The Description.
-     * Tag description as it will appear to the user in Microsoft Teams.
+     * Tag description as it will appear to the user in Microsoft Teams. A teamworkTag can't have more than 200 teamworkTagMembers.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose

@@ -9,6 +9,7 @@ import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.BusinessScenarioPlanner;
 import com.microsoft.graph.models.BusinessScenarioTask;
+import com.microsoft.graph.models.PlannerTask;
 import com.microsoft.graph.models.PlannerDelta;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -18,7 +19,7 @@ import javax.annotation.Nonnull;
 import com.microsoft.graph.requests.BusinessScenarioTaskCollectionRequestBuilder;
 import com.microsoft.graph.requests.BusinessScenarioTaskRequestBuilder;
 import com.microsoft.graph.requests.BusinessScenarioTaskCollectionRequest;
-import com.microsoft.graph.requests.PlannerDeltaDeltaCollectionRequestBuilder;
+import com.microsoft.graph.requests.PlannerTaskDeltaCollectionRequestBuilder;
 import com.microsoft.graph.http.BaseCollectionRequestBuilder;
 import com.microsoft.graph.core.IBaseClient;
 import com.microsoft.graph.http.PrimitiveRequestBuilder;
@@ -47,8 +48,8 @@ public class BusinessScenarioTaskCollectionRequestBuilder extends BaseCollection
      * @return the request builder collection
      */
     @Nonnull
-    public PlannerDeltaDeltaCollectionRequestBuilder delta() {
-        return new PlannerDeltaDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
+    public PlannerTaskDeltaCollectionRequestBuilder delta() {
+        return new PlannerTaskDeltaCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.delta"), getClient(), null);
     }
 
     /**

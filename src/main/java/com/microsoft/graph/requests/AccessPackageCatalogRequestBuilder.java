@@ -57,6 +57,26 @@ public class AccessPackageCatalogRequestBuilder extends BaseRequestBuilder<Acces
 
 
     /**
+     *  Gets a request builder for the CustomCalloutExtension collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CustomCalloutExtensionCollectionRequestBuilder accessPackageCustomWorkflowExtensions() {
+        return new com.microsoft.graph.requests.CustomCalloutExtensionCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageCustomWorkflowExtensions"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the CustomCalloutExtension item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.CustomCalloutExtensionRequestBuilder accessPackageCustomWorkflowExtensions(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.CustomCalloutExtensionRequestBuilder(getRequestUrlWithAdditionalSegment("accessPackageCustomWorkflowExtensions") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the AccessPackageResourceRole collection
      *
      * @return the collection request builder

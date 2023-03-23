@@ -75,7 +75,7 @@ public class RunSummary implements IJsonBackedObject {
 
     /**
      * The Total Tasks.
-     * 
+     * The total number of tasks processed by a workflow.
      */
     @SerializedName(value = "totalTasks", alternate = {"TotalTasks"})
     @Expose
@@ -84,7 +84,7 @@ public class RunSummary implements IJsonBackedObject {
 
     /**
      * The Total Users.
-     * 
+     * The total number of users processed by a workflow.
      */
     @SerializedName(value = "totalUsers", alternate = {"TotalUsers"})
     @Expose

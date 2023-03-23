@@ -114,7 +114,9 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
     /**
      * The Access Package Assignment Policies.
      * Read-only. Nullable. Supports $expand.
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "accessPackageAssignmentPolicies", alternate = {"AccessPackageAssignmentPolicies"})
     @Expose
 	@Nullable
@@ -123,7 +125,9 @@ public class AccessPackage extends Entity implements IJsonBackedObject {
     /**
      * The Access Package Catalog.
      * 
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "accessPackageCatalog", alternate = {"AccessPackageCatalog"})
     @Expose
 	@Nullable

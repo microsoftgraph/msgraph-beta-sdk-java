@@ -17,6 +17,7 @@ import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.AccessPackageCatalog;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.CustomExtensionHandlerCollectionPage;
+import com.microsoft.graph.requests.CustomExtensionStageSettingCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -171,7 +172,9 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
     /**
      * The Access Package Catalog.
      * 
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "accessPackageCatalog", alternate = {"AccessPackageCatalog"})
     @Expose
 	@Nullable
@@ -180,11 +183,22 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
     /**
      * The Custom Extension Handlers.
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "customExtensionHandlers", alternate = {"CustomExtensionHandlers"})
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.CustomExtensionHandlerCollectionPage customExtensionHandlers;
+
+    /**
+     * The Custom Extension Stage Settings.
+     * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
+     */
+    @SerializedName(value = "customExtensionStageSettings", alternate = {"CustomExtensionStageSettings"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.CustomExtensionStageSettingCollectionPage customExtensionStageSettings;
 
 
     /**
@@ -198,6 +212,10 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
 
         if (json.has("customExtensionHandlers")) {
             customExtensionHandlers = serializer.deserializeObject(json.get("customExtensionHandlers"), com.microsoft.graph.requests.CustomExtensionHandlerCollectionPage.class);
+        }
+
+        if (json.has("customExtensionStageSettings")) {
+            customExtensionStageSettings = serializer.deserializeObject(json.get("customExtensionStageSettings"), com.microsoft.graph.requests.CustomExtensionStageSettingCollectionPage.class);
         }
     }
 }

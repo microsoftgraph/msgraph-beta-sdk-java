@@ -48,7 +48,7 @@ public class CloudPC extends Entity implements IJsonBackedObject {
 
     /**
      * The Connectivity Result.
-     * The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC is able to be connected or not.
+     * The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC can be connected.
      */
     @SerializedName(value = "connectivityResult", alternate = {"ConnectivityResult"})
     @Expose
