@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
+import com.microsoft.graph.requests.CustomCalloutExtensionCollectionPage;
 import com.microsoft.graph.requests.AccessPackageResourceRoleCollectionPage;
 import com.microsoft.graph.requests.AccessPackageResourceCollectionPage;
 import com.microsoft.graph.requests.AccessPackageResourceScopeCollectionPage;
@@ -113,6 +114,15 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
     public java.time.OffsetDateTime modifiedDateTime;
 
     /**
+     * The Access Package Custom Workflow Extensions.
+     * The attributes of a logic app, which can be called at various stages of an access package request and assignment cycle.
+     */
+    @SerializedName(value = "accessPackageCustomWorkflowExtensions", alternate = {"AccessPackageCustomWorkflowExtensions"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.CustomCalloutExtensionCollectionPage accessPackageCustomWorkflowExtensions;
+
+    /**
      * The Access Package Resource Roles.
      * The roles in each resource in a catalog. Read-only.
      */
@@ -151,7 +161,9 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
     /**
      * The Custom Access Package Workflow Extensions.
      * 
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "customAccessPackageWorkflowExtensions", alternate = {"CustomAccessPackageWorkflowExtensions"})
     @Expose
 	@Nullable
@@ -166,6 +178,10 @@ public class AccessPackageCatalog extends Entity implements IJsonBackedObject {
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
+
+        if (json.has("accessPackageCustomWorkflowExtensions")) {
+            accessPackageCustomWorkflowExtensions = serializer.deserializeObject(json.get("accessPackageCustomWorkflowExtensions"), com.microsoft.graph.requests.CustomCalloutExtensionCollectionPage.class);
+        }
 
         if (json.has("accessPackageResourceRoles")) {
             accessPackageResourceRoles = serializer.deserializeObject(json.get("accessPackageResourceRoles"), com.microsoft.graph.requests.AccessPackageResourceRoleCollectionPage.class);

@@ -39,7 +39,7 @@ public class DeviceManagementConfigurationSetting extends Entity implements IJso
 
     /**
      * The Setting Definitions.
-     * List of related Setting Definitions. This property is read-only.
+     * List of related Setting Definitions
      */
 	@Nullable
     public com.microsoft.graph.requests.DeviceManagementConfigurationSettingDefinitionCollectionPage settingDefinitions;

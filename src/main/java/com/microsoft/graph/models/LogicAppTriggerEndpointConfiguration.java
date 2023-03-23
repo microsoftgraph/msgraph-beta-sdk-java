@@ -52,6 +52,15 @@ public class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpoin
 	@Nullable
     public String subscriptionId;
 
+    /**
+     * The Url.
+     * The URL to the logic app endpoint that will be triggered. Only required for app-only token scenarios where app is creating a customCalloutExtension without a signed-in user.
+     */
+    @SerializedName(value = "url", alternate = {"Url"})
+    @Expose
+	@Nullable
+    public String url;
+
 
     /**
      * Sets the raw JSON object

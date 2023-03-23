@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.ConnectorGroup;
+import com.microsoft.graph.identitygovernance.models.CustomTaskExtensionCallbackConfiguration;
 import com.microsoft.graph.models.Application;
 import com.microsoft.graph.models.KeyCredential;
 import com.microsoft.graph.models.PasswordCredential;
@@ -28,7 +28,7 @@ import com.microsoft.graph.core.IBaseClient;
 public class ApplicationCollectionWithReferencesRequestBuilder extends BaseCollectionWithReferencesRequestBuilder<Application, ApplicationWithReferenceRequest, ApplicationReferenceRequestBuilder, ApplicationWithReferenceRequestBuilder, ApplicationCollectionResponse, ApplicationCollectionWithReferencesPage, ApplicationCollectionReferenceRequest, ApplicationCollectionReferenceRequestBuilder> {
 
     /**
-     * The request builder for this collection of ConnectorGroup
+     * The request builder for this collection of CustomTaskExtensionCallbackConfiguration
      *
      * @param requestUrl     the request URL
      * @param client         the service client

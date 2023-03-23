@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessPackageAnswer;
+import com.microsoft.graph.models.CustomExtensionCalloutInstance;
 import com.microsoft.graph.models.CustomExtensionHandlerInstance;
 import com.microsoft.graph.models.RequestSchedule;
 import com.microsoft.graph.models.AccessPackage;
@@ -60,9 +61,20 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
     public java.time.OffsetDateTime createdDateTime;
 
     /**
+     * The Custom Extension Callout Instances.
+     * Information about all the custom extension calls that were made during the access package assignment request workflow.
+     */
+    @SerializedName(value = "customExtensionCalloutInstances", alternate = {"CustomExtensionCalloutInstances"})
+    @Expose
+	@Nullable
+    public java.util.List<CustomExtensionCalloutInstance> customExtensionCalloutInstances;
+
+    /**
      * The Custom Extension Handler Instances.
      * A collection of custom workflow extension instances being run on an assignment request. Read-only.
+     * @deprecated 
      */
+    @Deprecated
     @SerializedName(value = "customExtensionHandlerInstances", alternate = {"CustomExtensionHandlerInstances"})
     @Expose
 	@Nullable
