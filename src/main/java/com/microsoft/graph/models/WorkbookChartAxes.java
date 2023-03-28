@@ -3,24 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartAxes extends Entity implements Parsable {
     /** Represents the category axis in a chart. Read-only. */
-    private WorkbookChartAxis _categoryAxis;
+    private WorkbookChartAxis categoryAxis;
     /** Represents the series axis of a 3-dimensional chart. Read-only. */
-    private WorkbookChartAxis _seriesAxis;
+    private WorkbookChartAxis seriesAxis;
     /** Represents the value axis in an axis. Read-only. */
-    private WorkbookChartAxis _valueAxis;
+    private WorkbookChartAxis valueAxis;
     /**
      * Instantiates a new workbookChartAxes and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChartAxes() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartAxes");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -38,20 +37,19 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartAxis getCategoryAxis() {
-        return this._categoryAxis;
+        return this.categoryAxis;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChartAxes currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("categoryAxis", (n) -> { currentObject.setCategoryAxis(n.getObjectValue(WorkbookChartAxis::createFromDiscriminatorValue)); });
-            this.put("seriesAxis", (n) -> { currentObject.setSeriesAxis(n.getObjectValue(WorkbookChartAxis::createFromDiscriminatorValue)); });
-            this.put("valueAxis", (n) -> { currentObject.setValueAxis(n.getObjectValue(WorkbookChartAxis::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("categoryAxis", (n) -> { this.setCategoryAxis(n.getObjectValue(WorkbookChartAxis::createFromDiscriminatorValue)); });
+        deserializerMap.put("seriesAxis", (n) -> { this.setSeriesAxis(n.getObjectValue(WorkbookChartAxis::createFromDiscriminatorValue)); });
+        deserializerMap.put("valueAxis", (n) -> { this.setValueAxis(n.getObjectValue(WorkbookChartAxis::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the seriesAxis property value. Represents the series axis of a 3-dimensional chart. Read-only.
@@ -59,7 +57,7 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartAxis getSeriesAxis() {
-        return this._seriesAxis;
+        return this.seriesAxis;
     }
     /**
      * Gets the valueAxis property value. Represents the value axis in an axis. Read-only.
@@ -67,13 +65,14 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartAxis getValueAxis() {
-        return this._valueAxis;
+        return this.valueAxis;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +85,26 @@ public class WorkbookChartAxes extends Entity implements Parsable {
      * @param value Value to set for the categoryAxis property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategoryAxis(@javax.annotation.Nullable final WorkbookChartAxis value) {
-        this._categoryAxis = value;
+        this.categoryAxis = value;
     }
     /**
      * Sets the seriesAxis property value. Represents the series axis of a 3-dimensional chart. Read-only.
      * @param value Value to set for the seriesAxis property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSeriesAxis(@javax.annotation.Nullable final WorkbookChartAxis value) {
-        this._seriesAxis = value;
+        this.seriesAxis = value;
     }
     /**
      * Sets the valueAxis property value. Represents the value axis in an axis. Read-only.
      * @param value Value to set for the valueAxis property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setValueAxis(@javax.annotation.Nullable final WorkbookChartAxis value) {
-        this._valueAxis = value;
+        this.valueAxis = value;
     }
 }

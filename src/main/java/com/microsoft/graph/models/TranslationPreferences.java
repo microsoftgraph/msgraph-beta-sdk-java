@@ -4,28 +4,27 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TranslationPreferences implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Translation override behavior for languages, if any.Returned by default. */
-    private java.util.List<TranslationLanguageOverride> _languageOverrides;
+    private java.util.List<TranslationLanguageOverride> languageOverrides;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The user's preferred translation behavior.Returned by default. Not nullable. */
-    private TranslationBehavior _translationBehavior;
+    private TranslationBehavior translationBehavior;
     /** The list of languages the user does not need translated. This is computed from the authoringLanguages collection in regionalAndLanguageSettings, and the languageOverrides collection in translationPreferences. The list specifies neutral culture values that include the language code without any country or region association. For example, it would specify 'fr' for the neutral French culture, but not 'fr-FR' for the French culture in France. Returned by default. Read only. */
-    private java.util.List<String> _untranslatedLanguages;
+    private java.util.List<String> untranslatedLanguages;
     /**
      * Instantiates a new translationPreferences and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TranslationPreferences() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.translationPreferences");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,21 +42,20 @@ public class TranslationPreferences implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TranslationPreferences currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("languageOverrides", (n) -> { currentObject.setLanguageOverrides(n.getCollectionOfObjectValues(TranslationLanguageOverride::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("translationBehavior", (n) -> { currentObject.setTranslationBehavior(n.getEnumValue(TranslationBehavior.class)); });
-            this.put("untranslatedLanguages", (n) -> { currentObject.setUntranslatedLanguages(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("languageOverrides", (n) -> { this.setLanguageOverrides(n.getCollectionOfObjectValues(TranslationLanguageOverride::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("translationBehavior", (n) -> { this.setTranslationBehavior(n.getEnumValue(TranslationBehavior.class)); });
+        deserializerMap.put("untranslatedLanguages", (n) -> { this.setUntranslatedLanguages(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the languageOverrides property value. Translation override behavior for languages, if any.Returned by default.
@@ -65,7 +63,7 @@ public class TranslationPreferences implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<TranslationLanguageOverride> getLanguageOverrides() {
-        return this._languageOverrides;
+        return this.languageOverrides;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -73,7 +71,7 @@ public class TranslationPreferences implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the translationBehavior property value. The user's preferred translation behavior.Returned by default. Not nullable.
@@ -81,7 +79,7 @@ public class TranslationPreferences implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public TranslationBehavior getTranslationBehavior() {
-        return this._translationBehavior;
+        return this.translationBehavior;
     }
     /**
      * Gets the untranslatedLanguages property value. The list of languages the user does not need translated. This is computed from the authoringLanguages collection in regionalAndLanguageSettings, and the languageOverrides collection in translationPreferences. The list specifies neutral culture values that include the language code without any country or region association. For example, it would specify 'fr' for the neutral French culture, but not 'fr-FR' for the French culture in France. Returned by default. Read only.
@@ -89,13 +87,14 @@ public class TranslationPreferences implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getUntranslatedLanguages() {
-        return this._untranslatedLanguages;
+        return this.untranslatedLanguages;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("languageOverrides", this.getLanguageOverrides());
@@ -109,39 +108,44 @@ public class TranslationPreferences implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the languageOverrides property value. Translation override behavior for languages, if any.Returned by default.
      * @param value Value to set for the languageOverrides property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguageOverrides(@javax.annotation.Nullable final java.util.List<TranslationLanguageOverride> value) {
-        this._languageOverrides = value;
+        this.languageOverrides = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the translationBehavior property value. The user's preferred translation behavior.Returned by default. Not nullable.
      * @param value Value to set for the translationBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTranslationBehavior(@javax.annotation.Nullable final TranslationBehavior value) {
-        this._translationBehavior = value;
+        this.translationBehavior = value;
     }
     /**
      * Sets the untranslatedLanguages property value. The list of languages the user does not need translated. This is computed from the authoringLanguages collection in regionalAndLanguageSettings, and the languageOverrides collection in translationPreferences. The list specifies neutral culture values that include the language code without any country or region association. For example, it would specify 'fr' for the neutral French culture, but not 'fr-FR' for the French culture in France. Returned by default. Read only.
      * @param value Value to set for the untranslatedLanguages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUntranslatedLanguages(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._untranslatedLanguages = value;
+        this.untranslatedLanguages = value;
     }
 }

@@ -4,43 +4,44 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** VPN Traffic Rule definition. */
+/**
+ * VPN Traffic Rule definition.
+ */
 public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** App identifier, if this traffic rule is triggered by an app. */
-    private String _appId;
+    private String appId;
     /** Indicates the type of app that a VPN traffic rule is associated with. */
-    private VpnTrafficRuleAppType _appType;
+    private VpnTrafficRuleAppType appType;
     /** Claims associated with this traffic rule. */
-    private String _claims;
+    private String claims;
     /** Local address range. This collection can contain a maximum of 500 elements. */
-    private java.util.List<IPv4Range> _localAddressRanges;
+    private java.util.List<IPv4Range> localAddressRanges;
     /** Local port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements. */
-    private java.util.List<NumberRange> _localPortRanges;
+    private java.util.List<NumberRange> localPortRanges;
     /** Name. */
-    private String _name;
+    private String name;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Protocols (0-255). Valid values 0 to 255 */
-    private Integer _protocols;
+    private Integer protocols;
     /** Remote address range. This collection can contain a maximum of 500 elements. */
-    private java.util.List<IPv4Range> _remoteAddressRanges;
+    private java.util.List<IPv4Range> remoteAddressRanges;
     /** Remote port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements. */
-    private java.util.List<NumberRange> _remotePortRanges;
+    private java.util.List<NumberRange> remotePortRanges;
     /** Specifies the routing policy for a VPN traffic rule. */
-    private VpnTrafficRuleRoutingPolicyType _routingPolicyType;
+    private VpnTrafficRuleRoutingPolicyType routingPolicyType;
     /**
      * Instantiates a new vpnTrafficRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public VpnTrafficRule() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.vpnTrafficRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -58,7 +59,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the appId property value. App identifier, if this traffic rule is triggered by an app.
@@ -66,7 +67,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getAppId() {
-        return this._appId;
+        return this.appId;
     }
     /**
      * Gets the appType property value. Indicates the type of app that a VPN traffic rule is associated with.
@@ -74,7 +75,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public VpnTrafficRuleAppType getAppType() {
-        return this._appType;
+        return this.appType;
     }
     /**
      * Gets the claims property value. Claims associated with this traffic rule.
@@ -82,28 +83,27 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getClaims() {
-        return this._claims;
+        return this.claims;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final VpnTrafficRule currentObject = this;
-        return new HashMap<>(11) {{
-            this.put("appId", (n) -> { currentObject.setAppId(n.getStringValue()); });
-            this.put("appType", (n) -> { currentObject.setAppType(n.getEnumValue(VpnTrafficRuleAppType.class)); });
-            this.put("claims", (n) -> { currentObject.setClaims(n.getStringValue()); });
-            this.put("localAddressRanges", (n) -> { currentObject.setLocalAddressRanges(n.getCollectionOfObjectValues(IPv4Range::createFromDiscriminatorValue)); });
-            this.put("localPortRanges", (n) -> { currentObject.setLocalPortRanges(n.getCollectionOfObjectValues(NumberRange::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("protocols", (n) -> { currentObject.setProtocols(n.getIntegerValue()); });
-            this.put("remoteAddressRanges", (n) -> { currentObject.setRemoteAddressRanges(n.getCollectionOfObjectValues(IPv4Range::createFromDiscriminatorValue)); });
-            this.put("remotePortRanges", (n) -> { currentObject.setRemotePortRanges(n.getCollectionOfObjectValues(NumberRange::createFromDiscriminatorValue)); });
-            this.put("routingPolicyType", (n) -> { currentObject.setRoutingPolicyType(n.getEnumValue(VpnTrafficRuleRoutingPolicyType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
+        deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
+        deserializerMap.put("appType", (n) -> { this.setAppType(n.getEnumValue(VpnTrafficRuleAppType.class)); });
+        deserializerMap.put("claims", (n) -> { this.setClaims(n.getStringValue()); });
+        deserializerMap.put("localAddressRanges", (n) -> { this.setLocalAddressRanges(n.getCollectionOfObjectValues(IPv4Range::createFromDiscriminatorValue)); });
+        deserializerMap.put("localPortRanges", (n) -> { this.setLocalPortRanges(n.getCollectionOfObjectValues(NumberRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("protocols", (n) -> { this.setProtocols(n.getIntegerValue()); });
+        deserializerMap.put("remoteAddressRanges", (n) -> { this.setRemoteAddressRanges(n.getCollectionOfObjectValues(IPv4Range::createFromDiscriminatorValue)); });
+        deserializerMap.put("remotePortRanges", (n) -> { this.setRemotePortRanges(n.getCollectionOfObjectValues(NumberRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("routingPolicyType", (n) -> { this.setRoutingPolicyType(n.getEnumValue(VpnTrafficRuleRoutingPolicyType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the localAddressRanges property value. Local address range. This collection can contain a maximum of 500 elements.
@@ -111,7 +111,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<IPv4Range> getLocalAddressRanges() {
-        return this._localAddressRanges;
+        return this.localAddressRanges;
     }
     /**
      * Gets the localPortRanges property value. Local port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
@@ -119,7 +119,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<NumberRange> getLocalPortRanges() {
-        return this._localPortRanges;
+        return this.localPortRanges;
     }
     /**
      * Gets the name property value. Name.
@@ -127,7 +127,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -135,7 +135,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the protocols property value. Protocols (0-255). Valid values 0 to 255
@@ -143,7 +143,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getProtocols() {
-        return this._protocols;
+        return this.protocols;
     }
     /**
      * Gets the remoteAddressRanges property value. Remote address range. This collection can contain a maximum of 500 elements.
@@ -151,7 +151,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<IPv4Range> getRemoteAddressRanges() {
-        return this._remoteAddressRanges;
+        return this.remoteAddressRanges;
     }
     /**
      * Gets the remotePortRanges property value. Remote port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
@@ -159,7 +159,7 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<NumberRange> getRemotePortRanges() {
-        return this._remotePortRanges;
+        return this.remotePortRanges;
     }
     /**
      * Gets the routingPolicyType property value. Specifies the routing policy for a VPN traffic rule.
@@ -167,13 +167,14 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public VpnTrafficRuleRoutingPolicyType getRoutingPolicyType() {
-        return this._routingPolicyType;
+        return this.routingPolicyType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appId", this.getAppId());
@@ -194,95 +195,107 @@ public class VpnTrafficRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the appId property value. App identifier, if this traffic rule is triggered by an app.
      * @param value Value to set for the appId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppId(@javax.annotation.Nullable final String value) {
-        this._appId = value;
+        this.appId = value;
     }
     /**
      * Sets the appType property value. Indicates the type of app that a VPN traffic rule is associated with.
      * @param value Value to set for the appType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppType(@javax.annotation.Nullable final VpnTrafficRuleAppType value) {
-        this._appType = value;
+        this.appType = value;
     }
     /**
      * Sets the claims property value. Claims associated with this traffic rule.
      * @param value Value to set for the claims property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClaims(@javax.annotation.Nullable final String value) {
-        this._claims = value;
+        this.claims = value;
     }
     /**
      * Sets the localAddressRanges property value. Local address range. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the localAddressRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalAddressRanges(@javax.annotation.Nullable final java.util.List<IPv4Range> value) {
-        this._localAddressRanges = value;
+        this.localAddressRanges = value;
     }
     /**
      * Sets the localPortRanges property value. Local port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
      * @param value Value to set for the localPortRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalPortRanges(@javax.annotation.Nullable final java.util.List<NumberRange> value) {
-        this._localPortRanges = value;
+        this.localPortRanges = value;
     }
     /**
      * Sets the name property value. Name.
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the protocols property value. Protocols (0-255). Valid values 0 to 255
      * @param value Value to set for the protocols property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProtocols(@javax.annotation.Nullable final Integer value) {
-        this._protocols = value;
+        this.protocols = value;
     }
     /**
      * Sets the remoteAddressRanges property value. Remote address range. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the remoteAddressRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemoteAddressRanges(@javax.annotation.Nullable final java.util.List<IPv4Range> value) {
-        this._remoteAddressRanges = value;
+        this.remoteAddressRanges = value;
     }
     /**
      * Sets the remotePortRanges property value. Remote port range can be set only when protocol is either TCP or UDP (6 or 17). This collection can contain a maximum of 500 elements.
      * @param value Value to set for the remotePortRanges property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRemotePortRanges(@javax.annotation.Nullable final java.util.List<NumberRange> value) {
-        this._remotePortRanges = value;
+        this.remotePortRanges = value;
     }
     /**
      * Sets the routingPolicyType property value. Specifies the routing policy for a VPN traffic rule.
      * @param value Value to set for the routingPolicyType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoutingPolicyType(@javax.annotation.Nullable final VpnTrafficRuleRoutingPolicyType value) {
-        this._routingPolicyType = value;
+        this.routingPolicyType = value;
     }
 }

@@ -1,29 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.OnTokenIssuanceStartListener;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationEventListener extends Entity implements Parsable {
     /** The authenticationEventsFlowId property */
-    private String _authenticationEventsFlowId;
+    private String authenticationEventsFlowId;
     /** The conditions property */
-    private AuthenticationConditions _conditions;
+    private AuthenticationConditions conditions;
     /** The priority property */
-    private Integer _priority;
-    /** The tags property */
-    private java.util.List<KeyValuePair> _tags;
+    private Integer priority;
     /**
      * Instantiates a new AuthenticationEventListener and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthenticationEventListener() {
         super();
-        this.setOdataType("#microsoft.graph.authenticationEventListener");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,7 +44,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAuthenticationEventsFlowId() {
-        return this._authenticationEventsFlowId;
+        return this.authenticationEventsFlowId;
     }
     /**
      * Gets the conditions property value. The conditions property
@@ -56,21 +52,19 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AuthenticationConditions getConditions() {
-        return this._conditions;
+        return this.conditions;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthenticationEventListener currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authenticationEventsFlowId", (n) -> { currentObject.setAuthenticationEventsFlowId(n.getStringValue()); });
-            this.put("conditions", (n) -> { currentObject.setConditions(n.getObjectValue(AuthenticationConditions::createFromDiscriminatorValue)); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationEventsFlowId", (n) -> { this.setAuthenticationEventsFlowId(n.getStringValue()); });
+        deserializerMap.put("conditions", (n) -> { this.setConditions(n.getObjectValue(AuthenticationConditions::createFromDiscriminatorValue)); });
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the priority property value. The priority property
@@ -78,59 +72,46 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getPriority() {
-        return this._priority;
-    }
-    /**
-     * Gets the tags property value. The tags property
-     * @return a keyValuePair
-     */
-    @javax.annotation.Nullable
-    public java.util.List<KeyValuePair> getTags() {
-        return this._tags;
+        return this.priority;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("authenticationEventsFlowId", this.getAuthenticationEventsFlowId());
         writer.writeObjectValue("conditions", this.getConditions());
         writer.writeIntegerValue("priority", this.getPriority());
-        writer.writeCollectionOfObjectValues("tags", this.getTags());
     }
     /**
      * Sets the authenticationEventsFlowId property value. The authenticationEventsFlowId property
      * @param value Value to set for the authenticationEventsFlowId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationEventsFlowId(@javax.annotation.Nullable final String value) {
-        this._authenticationEventsFlowId = value;
+        this.authenticationEventsFlowId = value;
     }
     /**
      * Sets the conditions property value. The conditions property
      * @param value Value to set for the conditions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditions(@javax.annotation.Nullable final AuthenticationConditions value) {
-        this._conditions = value;
+        this.conditions = value;
     }
     /**
      * Sets the priority property value. The priority property
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
-        this._priority = value;
-    }
-    /**
-     * Sets the tags property value. The tags property
-     * @param value Value to set for the tags property.
-     * @return a void
-     */
-    public void setTags(@javax.annotation.Nullable final java.util.List<KeyValuePair> value) {
-        this._tags = value;
+        this.priority = value;
     }
 }

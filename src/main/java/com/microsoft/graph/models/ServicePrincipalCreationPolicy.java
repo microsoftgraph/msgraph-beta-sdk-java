@@ -3,21 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsable {
     /** The excludes property */
-    private java.util.List<ServicePrincipalCreationConditionSet> _excludes;
+    private java.util.List<ServicePrincipalCreationConditionSet> excludes;
     /** The includes property */
-    private java.util.List<ServicePrincipalCreationConditionSet> _includes;
+    private java.util.List<ServicePrincipalCreationConditionSet> includes;
     /** The isBuiltIn property */
-    private Boolean _isBuiltIn;
+    private Boolean isBuiltIn;
     /**
      * Instantiates a new ServicePrincipalCreationPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServicePrincipalCreationPolicy() {
         super();
         this.setOdataType("#microsoft.graph.servicePrincipalCreationPolicy");
@@ -38,20 +38,19 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
      */
     @javax.annotation.Nullable
     public java.util.List<ServicePrincipalCreationConditionSet> getExcludes() {
-        return this._excludes;
+        return this.excludes;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ServicePrincipalCreationPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("excludes", (n) -> { currentObject.setExcludes(n.getCollectionOfObjectValues(ServicePrincipalCreationConditionSet::createFromDiscriminatorValue)); });
-            this.put("includes", (n) -> { currentObject.setIncludes(n.getCollectionOfObjectValues(ServicePrincipalCreationConditionSet::createFromDiscriminatorValue)); });
-            this.put("isBuiltIn", (n) -> { currentObject.setIsBuiltIn(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("excludes", (n) -> { this.setExcludes(n.getCollectionOfObjectValues(ServicePrincipalCreationConditionSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("includes", (n) -> { this.setIncludes(n.getCollectionOfObjectValues(ServicePrincipalCreationConditionSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("isBuiltIn", (n) -> { this.setIsBuiltIn(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the includes property value. The includes property
@@ -59,7 +58,7 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
      */
     @javax.annotation.Nullable
     public java.util.List<ServicePrincipalCreationConditionSet> getIncludes() {
-        return this._includes;
+        return this.includes;
     }
     /**
      * Gets the isBuiltIn property value. The isBuiltIn property
@@ -67,13 +66,14 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
      */
     @javax.annotation.Nullable
     public Boolean getIsBuiltIn() {
-        return this._isBuiltIn;
+        return this.isBuiltIn;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +86,26 @@ public class ServicePrincipalCreationPolicy extends PolicyBase implements Parsab
      * @param value Value to set for the excludes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludes(@javax.annotation.Nullable final java.util.List<ServicePrincipalCreationConditionSet> value) {
-        this._excludes = value;
+        this.excludes = value;
     }
     /**
      * Sets the includes property value. The includes property
      * @param value Value to set for the includes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludes(@javax.annotation.Nullable final java.util.List<ServicePrincipalCreationConditionSet> value) {
-        this._includes = value;
+        this.includes = value;
     }
     /**
      * Sets the isBuiltIn property value. The isBuiltIn property
      * @param value Value to set for the isBuiltIn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsBuiltIn(@javax.annotation.Nullable final Boolean value) {
-        this._isBuiltIn = value;
+        this.isBuiltIn = value;
     }
 }

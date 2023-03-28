@@ -4,33 +4,32 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+import java.util.UUID;
 public class CustomerPaymentJournal extends Entity implements Parsable {
     /** The account property */
-    private Account _account;
+    private Account account;
     /** The balancingAccountId property */
-    private String _balancingAccountId;
+    private UUID balancingAccountId;
     /** The balancingAccountNumber property */
-    private String _balancingAccountNumber;
+    private String balancingAccountNumber;
     /** The code property */
-    private String _code;
+    private String code;
     /** The customerPayments property */
-    private java.util.List<CustomerPayment> _customerPayments;
+    private java.util.List<CustomerPayment> customerPayments;
     /** The displayName property */
-    private String _displayName;
+    private String displayName;
     /** The lastModifiedDateTime property */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /**
      * Instantiates a new customerPaymentJournal and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CustomerPaymentJournal() {
         super();
-        this.setOdataType("#microsoft.graph.customerPaymentJournal");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -48,15 +47,15 @@ public class CustomerPaymentJournal extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Account getAccount() {
-        return this._account;
+        return this.account;
     }
     /**
      * Gets the balancingAccountId property value. The balancingAccountId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getBalancingAccountId() {
-        return this._balancingAccountId;
+    public UUID getBalancingAccountId() {
+        return this.balancingAccountId;
     }
     /**
      * Gets the balancingAccountNumber property value. The balancingAccountNumber property
@@ -64,7 +63,7 @@ public class CustomerPaymentJournal extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getBalancingAccountNumber() {
-        return this._balancingAccountNumber;
+        return this.balancingAccountNumber;
     }
     /**
      * Gets the code property value. The code property
@@ -72,7 +71,7 @@ public class CustomerPaymentJournal extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCode() {
-        return this._code;
+        return this.code;
     }
     /**
      * Gets the customerPayments property value. The customerPayments property
@@ -80,7 +79,7 @@ public class CustomerPaymentJournal extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CustomerPayment> getCustomerPayments() {
-        return this._customerPayments;
+        return this.customerPayments;
     }
     /**
      * Gets the displayName property value. The displayName property
@@ -88,24 +87,23 @@ public class CustomerPaymentJournal extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CustomerPaymentJournal currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("account", (n) -> { currentObject.setAccount(n.getObjectValue(Account::createFromDiscriminatorValue)); });
-            this.put("balancingAccountId", (n) -> { currentObject.setBalancingAccountId(n.getStringValue()); });
-            this.put("balancingAccountNumber", (n) -> { currentObject.setBalancingAccountNumber(n.getStringValue()); });
-            this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
-            this.put("customerPayments", (n) -> { currentObject.setCustomerPayments(n.getCollectionOfObjectValues(CustomerPayment::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("account", (n) -> { this.setAccount(n.getObjectValue(Account::createFromDiscriminatorValue)); });
+        deserializerMap.put("balancingAccountId", (n) -> { this.setBalancingAccountId(n.getUUIDValue()); });
+        deserializerMap.put("balancingAccountNumber", (n) -> { this.setBalancingAccountNumber(n.getStringValue()); });
+        deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
+        deserializerMap.put("customerPayments", (n) -> { this.setCustomerPayments(n.getCollectionOfObjectValues(CustomerPayment::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -113,18 +111,19 @@ public class CustomerPaymentJournal extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("account", this.getAccount());
-        writer.writeStringValue("balancingAccountId", this.getBalancingAccountId());
+        writer.writeUUIDValue("balancingAccountId", this.getBalancingAccountId());
         writer.writeStringValue("balancingAccountNumber", this.getBalancingAccountNumber());
         writer.writeStringValue("code", this.getCode());
         writer.writeCollectionOfObjectValues("customerPayments", this.getCustomerPayments());
@@ -136,55 +135,62 @@ public class CustomerPaymentJournal extends Entity implements Parsable {
      * @param value Value to set for the account property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccount(@javax.annotation.Nullable final Account value) {
-        this._account = value;
+        this.account = value;
     }
     /**
      * Sets the balancingAccountId property value. The balancingAccountId property
      * @param value Value to set for the balancingAccountId property.
      * @return a void
      */
-    public void setBalancingAccountId(@javax.annotation.Nullable final String value) {
-        this._balancingAccountId = value;
+    @javax.annotation.Nonnull
+    public void setBalancingAccountId(@javax.annotation.Nullable final UUID value) {
+        this.balancingAccountId = value;
     }
     /**
      * Sets the balancingAccountNumber property value. The balancingAccountNumber property
      * @param value Value to set for the balancingAccountNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBalancingAccountNumber(@javax.annotation.Nullable final String value) {
-        this._balancingAccountNumber = value;
+        this.balancingAccountNumber = value;
     }
     /**
      * Sets the code property value. The code property
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final String value) {
-        this._code = value;
+        this.code = value;
     }
     /**
      * Sets the customerPayments property value. The customerPayments property
      * @param value Value to set for the customerPayments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomerPayments(@javax.annotation.Nullable final java.util.List<CustomerPayment> value) {
-        this._customerPayments = value;
+        this.customerPayments = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
 }

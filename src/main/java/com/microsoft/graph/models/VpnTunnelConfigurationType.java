@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** The type of tunnels that will be present to the VPN client for configuration */
 public enum VpnTunnelConfigurationType implements ValuedEnum {
     /** WiFi and Cellular Tunnels */
     WifiAndCellular("wifiAndCellular"),

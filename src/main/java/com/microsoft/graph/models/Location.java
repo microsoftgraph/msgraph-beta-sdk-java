@@ -1,42 +1,40 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.LocationConstraintItem;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Location implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The street address of the location. */
-    private PhysicalAddress _address;
+    private PhysicalAddress address;
     /** The geographic coordinates and elevation of the location. */
-    private OutlookGeoCoordinates _coordinates;
+    private OutlookGeoCoordinates coordinates;
     /** The name associated with the location. */
-    private String _displayName;
+    private String displayName;
     /** Optional email address of the location. */
-    private String _locationEmailAddress;
+    private String locationEmailAddress;
     /** The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only. */
-    private LocationType _locationType;
+    private LocationType locationType;
     /** Optional URI representing the location. */
-    private String _locationUri;
+    private String locationUri;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** For internal use only. */
-    private String _uniqueId;
+    private String uniqueId;
     /** For internal use only. */
-    private LocationUniqueIdType _uniqueIdType;
+    private LocationUniqueIdType uniqueIdType;
     /**
      * Instantiates a new location and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Location() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.location");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,7 +59,7 @@ public class Location implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the address property value. The street address of the location.
@@ -69,7 +67,7 @@ public class Location implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public PhysicalAddress getAddress() {
-        return this._address;
+        return this.address;
     }
     /**
      * Gets the coordinates property value. The geographic coordinates and elevation of the location.
@@ -77,7 +75,7 @@ public class Location implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OutlookGeoCoordinates getCoordinates() {
-        return this._coordinates;
+        return this.coordinates;
     }
     /**
      * Gets the displayName property value. The name associated with the location.
@@ -85,26 +83,25 @@ public class Location implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Location currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
-            this.put("coordinates", (n) -> { currentObject.setCoordinates(n.getObjectValue(OutlookGeoCoordinates::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("locationEmailAddress", (n) -> { currentObject.setLocationEmailAddress(n.getStringValue()); });
-            this.put("locationType", (n) -> { currentObject.setLocationType(n.getEnumValue(LocationType.class)); });
-            this.put("locationUri", (n) -> { currentObject.setLocationUri(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("uniqueId", (n) -> { currentObject.setUniqueId(n.getStringValue()); });
-            this.put("uniqueIdType", (n) -> { currentObject.setUniqueIdType(n.getEnumValue(LocationUniqueIdType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("coordinates", (n) -> { this.setCoordinates(n.getObjectValue(OutlookGeoCoordinates::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("locationEmailAddress", (n) -> { this.setLocationEmailAddress(n.getStringValue()); });
+        deserializerMap.put("locationType", (n) -> { this.setLocationType(n.getEnumValue(LocationType.class)); });
+        deserializerMap.put("locationUri", (n) -> { this.setLocationUri(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("uniqueId", (n) -> { this.setUniqueId(n.getStringValue()); });
+        deserializerMap.put("uniqueIdType", (n) -> { this.setUniqueIdType(n.getEnumValue(LocationUniqueIdType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the locationEmailAddress property value. Optional email address of the location.
@@ -112,7 +109,7 @@ public class Location implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getLocationEmailAddress() {
-        return this._locationEmailAddress;
+        return this.locationEmailAddress;
     }
     /**
      * Gets the locationType property value. The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
@@ -120,7 +117,7 @@ public class Location implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public LocationType getLocationType() {
-        return this._locationType;
+        return this.locationType;
     }
     /**
      * Gets the locationUri property value. Optional URI representing the location.
@@ -128,7 +125,7 @@ public class Location implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getLocationUri() {
-        return this._locationUri;
+        return this.locationUri;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -136,7 +133,7 @@ public class Location implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the uniqueId property value. For internal use only.
@@ -144,7 +141,7 @@ public class Location implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getUniqueId() {
-        return this._uniqueId;
+        return this.uniqueId;
     }
     /**
      * Gets the uniqueIdType property value. For internal use only.
@@ -152,13 +149,14 @@ public class Location implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public LocationUniqueIdType getUniqueIdType() {
-        return this._uniqueIdType;
+        return this.uniqueIdType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("address", this.getAddress());
@@ -177,79 +175,89 @@ public class Location implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the address property value. The street address of the location.
      * @param value Value to set for the address property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddress(@javax.annotation.Nullable final PhysicalAddress value) {
-        this._address = value;
+        this.address = value;
     }
     /**
      * Sets the coordinates property value. The geographic coordinates and elevation of the location.
      * @param value Value to set for the coordinates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCoordinates(@javax.annotation.Nullable final OutlookGeoCoordinates value) {
-        this._coordinates = value;
+        this.coordinates = value;
     }
     /**
      * Sets the displayName property value. The name associated with the location.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the locationEmailAddress property value. Optional email address of the location.
      * @param value Value to set for the locationEmailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocationEmailAddress(@javax.annotation.Nullable final String value) {
-        this._locationEmailAddress = value;
+        this.locationEmailAddress = value;
     }
     /**
      * Sets the locationType property value. The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
      * @param value Value to set for the locationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocationType(@javax.annotation.Nullable final LocationType value) {
-        this._locationType = value;
+        this.locationType = value;
     }
     /**
      * Sets the locationUri property value. Optional URI representing the location.
      * @param value Value to set for the locationUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocationUri(@javax.annotation.Nullable final String value) {
-        this._locationUri = value;
+        this.locationUri = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the uniqueId property value. For internal use only.
      * @param value Value to set for the uniqueId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUniqueId(@javax.annotation.Nullable final String value) {
-        this._uniqueId = value;
+        this.uniqueId = value;
     }
     /**
      * Sets the uniqueIdType property value. For internal use only.
      * @param value Value to set for the uniqueIdType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUniqueIdType(@javax.annotation.Nullable final LocationUniqueIdType value) {
-        this._uniqueIdType = value;
+        this.uniqueIdType = value;
     }
 }

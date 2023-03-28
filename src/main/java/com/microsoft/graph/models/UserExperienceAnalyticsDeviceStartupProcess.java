@@ -3,33 +3,35 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * The user experience analytics device startup process details.
+ */
 public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implements Parsable {
     /** The user experience analytics device id. */
-    private String _managedDeviceId;
+    private String managedDeviceId;
     /** User experience analytics device startup process name. */
-    private String _processName;
+    private String processName;
     /** The user experience analytics device startup process product name. */
-    private String _productName;
+    private String productName;
     /** The User experience analytics device startup process publisher. */
-    private String _publisher;
+    private String publisher;
     /** User experience analytics device startup process impact in milliseconds. */
-    private Integer _startupImpactInMs;
+    private Integer startupImpactInMs;
     /**
-     * Instantiates a new UserExperienceAnalyticsDeviceStartupProcess and sets the default values.
+     * Instantiates a new userExperienceAnalyticsDeviceStartupProcess and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsDeviceStartupProcess() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsDeviceStartupProcess");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a UserExperienceAnalyticsDeviceStartupProcess
+     * @return a userExperienceAnalyticsDeviceStartupProcess
      */
     @javax.annotation.Nonnull
     public static UserExperienceAnalyticsDeviceStartupProcess createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -38,18 +40,17 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsDeviceStartupProcess currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("managedDeviceId", (n) -> { currentObject.setManagedDeviceId(n.getStringValue()); });
-            this.put("processName", (n) -> { currentObject.setProcessName(n.getStringValue()); });
-            this.put("productName", (n) -> { currentObject.setProductName(n.getStringValue()); });
-            this.put("publisher", (n) -> { currentObject.setPublisher(n.getStringValue()); });
-            this.put("startupImpactInMs", (n) -> { currentObject.setStartupImpactInMs(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
+        deserializerMap.put("processName", (n) -> { this.setProcessName(n.getStringValue()); });
+        deserializerMap.put("productName", (n) -> { this.setProductName(n.getStringValue()); });
+        deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
+        deserializerMap.put("startupImpactInMs", (n) -> { this.setStartupImpactInMs(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedDeviceId property value. The user experience analytics device id.
@@ -57,7 +58,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      */
     @javax.annotation.Nullable
     public String getManagedDeviceId() {
-        return this._managedDeviceId;
+        return this.managedDeviceId;
     }
     /**
      * Gets the processName property value. User experience analytics device startup process name.
@@ -65,7 +66,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      */
     @javax.annotation.Nullable
     public String getProcessName() {
-        return this._processName;
+        return this.processName;
     }
     /**
      * Gets the productName property value. The user experience analytics device startup process product name.
@@ -73,7 +74,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      */
     @javax.annotation.Nullable
     public String getProductName() {
-        return this._productName;
+        return this.productName;
     }
     /**
      * Gets the publisher property value. The User experience analytics device startup process publisher.
@@ -81,7 +82,7 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      */
     @javax.annotation.Nullable
     public String getPublisher() {
-        return this._publisher;
+        return this.publisher;
     }
     /**
      * Gets the startupImpactInMs property value. User experience analytics device startup process impact in milliseconds.
@@ -89,13 +90,14 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      */
     @javax.annotation.Nullable
     public Integer getStartupImpactInMs() {
-        return this._startupImpactInMs;
+        return this.startupImpactInMs;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,39 +112,44 @@ public class UserExperienceAnalyticsDeviceStartupProcess extends Entity implemen
      * @param value Value to set for the managedDeviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceId(@javax.annotation.Nullable final String value) {
-        this._managedDeviceId = value;
+        this.managedDeviceId = value;
     }
     /**
      * Sets the processName property value. User experience analytics device startup process name.
      * @param value Value to set for the processName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProcessName(@javax.annotation.Nullable final String value) {
-        this._processName = value;
+        this.processName = value;
     }
     /**
      * Sets the productName property value. The user experience analytics device startup process product name.
      * @param value Value to set for the productName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProductName(@javax.annotation.Nullable final String value) {
-        this._productName = value;
+        this.productName = value;
     }
     /**
      * Sets the publisher property value. The User experience analytics device startup process publisher.
      * @param value Value to set for the publisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublisher(@javax.annotation.Nullable final String value) {
-        this._publisher = value;
+        this.publisher = value;
     }
     /**
      * Sets the startupImpactInMs property value. User experience analytics device startup process impact in milliseconds.
      * @param value Value to set for the startupImpactInMs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartupImpactInMs(@javax.annotation.Nullable final Integer value) {
-        this._startupImpactInMs = value;
+        this.startupImpactInMs = value;
     }
 }

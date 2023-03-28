@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Criteria which defines the type of device this access rule will apply to */
 public enum DeviceManagementExchangeAccessRuleType implements ValuedEnum {
     /** Family of devices */
     Family("family"),

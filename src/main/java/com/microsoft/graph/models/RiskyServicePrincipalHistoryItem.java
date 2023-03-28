@@ -3,25 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal implements Parsable {
     /** The activity related to service principal risk level change. */
-    private RiskServicePrincipalActivity _activity;
+    private RiskServicePrincipalActivity activity;
     /** The identifier of the actor of the operation. */
-    private String _initiatedBy;
+    private String initiatedBy;
     /** The identifier of the service principal. */
-    private String _servicePrincipalId;
+    private String servicePrincipalId;
     /**
      * Instantiates a new riskyServicePrincipalHistoryItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RiskyServicePrincipalHistoryItem() {
         super();
-        this.setOdataType("#microsoft.graph.riskyServicePrincipalHistoryItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -39,20 +37,19 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      */
     @javax.annotation.Nullable
     public RiskServicePrincipalActivity getActivity() {
-        return this._activity;
+        return this.activity;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RiskyServicePrincipalHistoryItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getObjectValue(RiskServicePrincipalActivity::createFromDiscriminatorValue)); });
-            this.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getStringValue()); });
-            this.put("servicePrincipalId", (n) -> { currentObject.setServicePrincipalId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getObjectValue(RiskServicePrincipalActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("initiatedBy", (n) -> { this.setInitiatedBy(n.getStringValue()); });
+        deserializerMap.put("servicePrincipalId", (n) -> { this.setServicePrincipalId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the initiatedBy property value. The identifier of the actor of the operation.
@@ -60,7 +57,7 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      */
     @javax.annotation.Nullable
     public String getInitiatedBy() {
-        return this._initiatedBy;
+        return this.initiatedBy;
     }
     /**
      * Gets the servicePrincipalId property value. The identifier of the service principal.
@@ -68,13 +65,14 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      */
     @javax.annotation.Nullable
     public String getServicePrincipalId() {
-        return this._servicePrincipalId;
+        return this.servicePrincipalId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,23 +85,26 @@ public class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal impl
      * @param value Value to set for the activity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final RiskServicePrincipalActivity value) {
-        this._activity = value;
+        this.activity = value;
     }
     /**
      * Sets the initiatedBy property value. The identifier of the actor of the operation.
      * @param value Value to set for the initiatedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatedBy(@javax.annotation.Nullable final String value) {
-        this._initiatedBy = value;
+        this.initiatedBy = value;
     }
     /**
      * Sets the servicePrincipalId property value. The identifier of the service principal.
      * @param value Value to set for the servicePrincipalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipalId(@javax.annotation.Nullable final String value) {
-        this._servicePrincipalId = value;
+        this.servicePrincipalId = value;
     }
 }

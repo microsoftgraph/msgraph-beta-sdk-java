@@ -4,26 +4,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** A reason for not returning any meeting suggestions. Possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions. */
-    private String _emptySuggestionsReason;
+    private String emptySuggestionsReason;
     /** An array of meeting suggestions. */
-    private java.util.List<MeetingTimeSuggestion> _meetingTimeSuggestions;
+    private java.util.List<MeetingTimeSuggestion> meetingTimeSuggestions;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new meetingTimeSuggestionsResult and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MeetingTimeSuggestionsResult() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.meetingTimeSuggestionsResult");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +40,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the emptySuggestionsReason property value. A reason for not returning any meeting suggestions. Possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions.
@@ -49,20 +48,19 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getEmptySuggestionsReason() {
-        return this._emptySuggestionsReason;
+        return this.emptySuggestionsReason;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MeetingTimeSuggestionsResult currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("emptySuggestionsReason", (n) -> { currentObject.setEmptySuggestionsReason(n.getStringValue()); });
-            this.put("meetingTimeSuggestions", (n) -> { currentObject.setMeetingTimeSuggestions(n.getCollectionOfObjectValues(MeetingTimeSuggestion::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("emptySuggestionsReason", (n) -> { this.setEmptySuggestionsReason(n.getStringValue()); });
+        deserializerMap.put("meetingTimeSuggestions", (n) -> { this.setMeetingTimeSuggestions(n.getCollectionOfObjectValues(MeetingTimeSuggestion::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the meetingTimeSuggestions property value. An array of meeting suggestions.
@@ -70,7 +68,7 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public java.util.List<MeetingTimeSuggestion> getMeetingTimeSuggestions() {
-        return this._meetingTimeSuggestions;
+        return this.meetingTimeSuggestions;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -78,13 +76,14 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("emptySuggestionsReason", this.getEmptySuggestionsReason());
@@ -97,31 +96,35 @@ public class MeetingTimeSuggestionsResult implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the emptySuggestionsReason property value. A reason for not returning any meeting suggestions. Possible values are: attendeesUnavailable, attendeesUnavailableOrUnknown, locationsUnavailable, organizerUnavailable, or unknown. This property is an empty string if the meetingTimeSuggestions property does include any meeting suggestions.
      * @param value Value to set for the emptySuggestionsReason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmptySuggestionsReason(@javax.annotation.Nullable final String value) {
-        this._emptySuggestionsReason = value;
+        this.emptySuggestionsReason = value;
     }
     /**
      * Sets the meetingTimeSuggestions property value. An array of meeting suggestions.
      * @param value Value to set for the meetingTimeSuggestions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeetingTimeSuggestions(@javax.annotation.Nullable final java.util.List<MeetingTimeSuggestion> value) {
-        this._meetingTimeSuggestions = value;
+        this.meetingTimeSuggestions = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

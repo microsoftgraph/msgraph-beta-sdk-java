@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Options available for enrollment flow customization */
 public enum EnrollmentAvailabilityOptions implements ValuedEnum {
     /** Device enrollment flow is shown to the end user with guided enrollment prompts */
     AvailableWithPrompts("availableWithPrompts"),

@@ -3,19 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserConsentRequest extends Request implements Parsable {
     /** Approval decisions associated with a request. */
-    private Approval _approval;
+    private Approval approval;
     /** The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby. */
-    private String _reason;
+    private String reason;
     /**
      * Instantiates a new UserConsentRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserConsentRequest() {
         super();
         this.setOdataType("#microsoft.graph.userConsentRequest");
@@ -36,19 +36,18 @@ public class UserConsentRequest extends Request implements Parsable {
      */
     @javax.annotation.Nullable
     public Approval getApproval() {
-        return this._approval;
+        return this.approval;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserConsentRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("approval", (n) -> { currentObject.setApproval(n.getObjectValue(Approval::createFromDiscriminatorValue)); });
-            this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("approval", (n) -> { this.setApproval(n.getObjectValue(Approval::createFromDiscriminatorValue)); });
+        deserializerMap.put("reason", (n) -> { this.setReason(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the reason property value. The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
@@ -56,13 +55,14 @@ public class UserConsentRequest extends Request implements Parsable {
      */
     @javax.annotation.Nullable
     public String getReason() {
-        return this._reason;
+        return this.reason;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +74,17 @@ public class UserConsentRequest extends Request implements Parsable {
      * @param value Value to set for the approval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApproval(@javax.annotation.Nullable final Approval value) {
-        this._approval = value;
+        this.approval = value;
     }
     /**
      * Sets the reason property value. The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
      * @param value Value to set for the reason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReason(@javax.annotation.Nullable final String value) {
-        this._reason = value;
+        this.reason = value;
     }
 }

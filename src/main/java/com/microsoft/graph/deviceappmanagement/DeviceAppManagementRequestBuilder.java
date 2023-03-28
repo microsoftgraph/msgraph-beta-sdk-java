@@ -32,8 +32,6 @@ import com.microsoft.graph.deviceappmanagement.mobileapps.item.MobileAppItemRequ
 import com.microsoft.graph.deviceappmanagement.mobileapps.MobileAppsRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.policysets.item.PolicySetItemRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.policysets.PolicySetsRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.sideloadingkeys.item.SideLoadingKeyItemRequestBuilder;
-import com.microsoft.graph.deviceappmanagement.sideloadingkeys.SideLoadingKeysRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.symanteccodesigningcertificate.SymantecCodeSigningCertificateRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.syncmicrosoftstoreforbusinessapps.SyncMicrosoftStoreForBusinessAppsRequestBuilder;
 import com.microsoft.graph.deviceappmanagement.targetedmanagedappconfigurations.item.TargetedManagedAppConfigurationItemRequestBuilder;
@@ -53,172 +51,163 @@ import com.microsoft.graph.deviceappmanagement.windowsmanagedappprotections.Wind
 import com.microsoft.graph.deviceappmanagement.windowsmanagementapp.WindowsManagementAppRequestBuilder;
 import com.microsoft.graph.models.DeviceAppManagement;
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.kiota.BaseRequestBuilder;
+import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the deviceAppManagement singleton. */
-public class DeviceAppManagementRequestBuilder {
-    /** The androidManagedAppProtections property */
+/**
+ * Provides operations to manage the deviceAppManagement singleton.
+ */
+public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
+    /** Provides operations to manage the androidManagedAppProtections property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public AndroidManagedAppProtectionsRequestBuilder androidManagedAppProtections() {
         return new AndroidManagedAppProtectionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The defaultManagedAppProtections property */
+    /** Provides operations to manage the defaultManagedAppProtections property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public DefaultManagedAppProtectionsRequestBuilder defaultManagedAppProtections() {
         return new DefaultManagedAppProtectionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The deviceAppManagementTasks property */
+    /** Provides operations to manage the deviceAppManagementTasks property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public DeviceAppManagementTasksRequestBuilder deviceAppManagementTasks() {
         return new DeviceAppManagementTasksRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The enterpriseCodeSigningCertificates property */
+    /** Provides operations to manage the enterpriseCodeSigningCertificates property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public EnterpriseCodeSigningCertificatesRequestBuilder enterpriseCodeSigningCertificates() {
         return new EnterpriseCodeSigningCertificatesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The iosLobAppProvisioningConfigurations property */
+    /** Provides operations to manage the iosLobAppProvisioningConfigurations property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public IosLobAppProvisioningConfigurationsRequestBuilder iosLobAppProvisioningConfigurations() {
         return new IosLobAppProvisioningConfigurationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The iosManagedAppProtections property */
+    /** Provides operations to manage the iosManagedAppProtections property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public IosManagedAppProtectionsRequestBuilder iosManagedAppProtections() {
         return new IosManagedAppProtectionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managedAppPolicies property */
+    /** Provides operations to manage the managedAppPolicies property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public ManagedAppPoliciesRequestBuilder managedAppPolicies() {
         return new ManagedAppPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managedAppRegistrations property */
+    /** Provides operations to manage the managedAppRegistrations property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public ManagedAppRegistrationsRequestBuilder managedAppRegistrations() {
         return new ManagedAppRegistrationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managedAppStatuses property */
+    /** Provides operations to manage the managedAppStatuses property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public ManagedAppStatusesRequestBuilder managedAppStatuses() {
         return new ManagedAppStatusesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managedEBookCategories property */
+    /** Provides operations to manage the managedEBookCategories property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public ManagedEBookCategoriesRequestBuilder managedEBookCategories() {
         return new ManagedEBookCategoriesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The managedEBooks property */
+    /** Provides operations to manage the managedEBooks property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public ManagedEBooksRequestBuilder managedEBooks() {
         return new ManagedEBooksRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The mdmWindowsInformationProtectionPolicies property */
+    /** Provides operations to manage the mdmWindowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public MdmWindowsInformationProtectionPoliciesRequestBuilder mdmWindowsInformationProtectionPolicies() {
         return new MdmWindowsInformationProtectionPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The mobileAppCategories property */
+    /** Provides operations to manage the mobileAppCategories property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public MobileAppCategoriesRequestBuilder mobileAppCategories() {
         return new MobileAppCategoriesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The mobileAppConfigurations property */
+    /** Provides operations to manage the mobileAppConfigurations property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public MobileAppConfigurationsRequestBuilder mobileAppConfigurations() {
         return new MobileAppConfigurationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The mobileApps property */
+    /** Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public MobileAppsRequestBuilder mobileApps() {
         return new MobileAppsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
-    /** The policySets property */
+    /** Provides operations to manage the policySets property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public PolicySetsRequestBuilder policySets() {
         return new PolicySetsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The sideLoadingKeys property */
-    @javax.annotation.Nonnull
-    public SideLoadingKeysRequestBuilder sideLoadingKeys() {
-        return new SideLoadingKeysRequestBuilder(pathParameters, requestAdapter);
-    }
-    /** The symantecCodeSigningCertificate property */
+    /** Provides operations to manage the symantecCodeSigningCertificate property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public SymantecCodeSigningCertificateRequestBuilder symantecCodeSigningCertificate() {
         return new SymantecCodeSigningCertificateRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The syncMicrosoftStoreForBusinessApps property */
+    /** Provides operations to call the syncMicrosoftStoreForBusinessApps method. */
     @javax.annotation.Nonnull
     public SyncMicrosoftStoreForBusinessAppsRequestBuilder syncMicrosoftStoreForBusinessApps() {
         return new SyncMicrosoftStoreForBusinessAppsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The targetedManagedAppConfigurations property */
+    /** Provides operations to manage the targetedManagedAppConfigurations property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public TargetedManagedAppConfigurationsRequestBuilder targetedManagedAppConfigurations() {
         return new TargetedManagedAppConfigurationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
-    /** The vppTokens property */
+    /** Provides operations to manage the vppTokens property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public VppTokensRequestBuilder vppTokens() {
         return new VppTokensRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The wdacSupplementalPolicies property */
+    /** Provides operations to manage the wdacSupplementalPolicies property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public WdacSupplementalPoliciesRequestBuilder wdacSupplementalPolicies() {
         return new WdacSupplementalPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The windowsInformationProtectionDeviceRegistrations property */
+    /** Provides operations to manage the windowsInformationProtectionDeviceRegistrations property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public WindowsInformationProtectionDeviceRegistrationsRequestBuilder windowsInformationProtectionDeviceRegistrations() {
         return new WindowsInformationProtectionDeviceRegistrationsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The windowsInformationProtectionPolicies property */
+    /** Provides operations to manage the windowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public WindowsInformationProtectionPoliciesRequestBuilder windowsInformationProtectionPolicies() {
         return new WindowsInformationProtectionPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The windowsInformationProtectionWipeActions property */
+    /** Provides operations to manage the windowsInformationProtectionWipeActions property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public WindowsInformationProtectionWipeActionsRequestBuilder windowsInformationProtectionWipeActions() {
         return new WindowsInformationProtectionWipeActionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The windowsManagedAppProtections property */
+    /** Provides operations to manage the windowsManagedAppProtections property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public WindowsManagedAppProtectionsRequestBuilder windowsManagedAppProtections() {
         return new WindowsManagedAppProtectionsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The windowsManagementApp property */
+    /** Provides operations to manage the windowsManagementApp property of the microsoft.graph.deviceAppManagement entity. */
     @javax.annotation.Nonnull
     public WindowsManagementAppRequestBuilder windowsManagementApp() {
         return new WindowsManagementAppRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.androidManagedAppProtections.item collection
+     * Provides operations to manage the androidManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a AndroidManagedAppProtectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public AndroidManagedAppProtectionItemRequestBuilder androidManagedAppProtections(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("androidManagedAppProtection%2Did", id);
         return new AndroidManagedAppProtectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -228,13 +217,9 @@ public class DeviceAppManagementRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceAppManagementRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        Objects.requireNonNull(pathParameters);
-        Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/deviceAppManagement{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
+        super(requestAdapter, "{+baseurl}/deviceAppManagement{?%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new DeviceAppManagementRequestBuilder and sets the default values.
@@ -242,108 +227,43 @@ public class DeviceAppManagementRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceAppManagementRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/deviceAppManagement{?%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
-        urlTplParams.put("request-raw-url", rawUrl);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
+        super(requestAdapter, "{+baseurl}/deviceAppManagement{?%24select,%24expand}", rawUrl);
     }
     /**
-     * Get deviceAppManagement
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation() throws URISyntaxException {
-        return createGetRequestInformation(null);
-    }
-    /**
-     * Get deviceAppManagement
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<DeviceAppManagementRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final DeviceAppManagementRequestBuilderGetRequestConfiguration requestConfig = new DeviceAppManagementRequestBuilderGetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Update deviceAppManagement
-     * @param body 
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final DeviceAppManagement body) throws URISyntaxException {
-        return createPatchRequestInformation(body, null);
-    }
-    /**
-     * Update deviceAppManagement
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPatchRequestInformation(@javax.annotation.Nonnull final DeviceAppManagement body, @javax.annotation.Nullable final java.util.function.Consumer<DeviceAppManagementRequestBuilderPatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.PATCH;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final DeviceAppManagementRequestBuilderPatchRequestConfiguration requestConfig = new DeviceAppManagementRequestBuilderPatchRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.defaultManagedAppProtections.item collection
+     * Provides operations to manage the defaultManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a DefaultManagedAppProtectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DefaultManagedAppProtectionItemRequestBuilder defaultManagedAppProtections(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("defaultManagedAppProtection%2Did", id);
         return new DefaultManagedAppProtectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.deviceAppManagementTasks.item collection
+     * Provides operations to manage the deviceAppManagementTasks property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a DeviceAppManagementTaskItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public DeviceAppManagementTaskItemRequestBuilder deviceAppManagementTasks(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceAppManagementTask%2Did", id);
         return new DeviceAppManagementTaskItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.enterpriseCodeSigningCertificates.item collection
+     * Provides operations to manage the enterpriseCodeSigningCertificates property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a EnterpriseCodeSigningCertificateItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public EnterpriseCodeSigningCertificateItemRequestBuilder enterpriseCodeSigningCertificates(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("enterpriseCodeSigningCertificate%2Did", id);
         return new EnterpriseCodeSigningCertificateItemRequestBuilder(urlTplParams, requestAdapter);
     }
@@ -351,16 +271,18 @@ public class DeviceAppManagementRequestBuilder {
      * Get deviceAppManagement
      * @return a CompletableFuture of deviceAppManagement
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<DeviceAppManagement> get() {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DeviceAppManagement::createFromDiscriminatorValue, null, errorMapping);
+            final RequestInformation requestInfo = toGetRequestInformation(null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceAppManagement::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<DeviceAppManagement> executionException = new java.util.concurrent.CompletableFuture<DeviceAppManagement>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
@@ -368,333 +290,353 @@ public class DeviceAppManagementRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of deviceAppManagement
      */
-    public java.util.concurrent.CompletableFuture<DeviceAppManagement> get(@javax.annotation.Nullable final java.util.function.Consumer<DeviceAppManagementRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAppManagement> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DeviceAppManagement::createFromDiscriminatorValue, null, errorMapping);
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceAppManagement::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<DeviceAppManagement> executionException = new java.util.concurrent.CompletableFuture<DeviceAppManagement>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
-     * Get deviceAppManagement
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of deviceAppManagement
-     */
-    public java.util.concurrent.CompletableFuture<DeviceAppManagement> get(@javax.annotation.Nullable final java.util.function.Consumer<DeviceAppManagementRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, DeviceAppManagement::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.iosLobAppProvisioningConfigurations.item collection
+     * Provides operations to manage the iosLobAppProvisioningConfigurations property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a IosLobAppProvisioningConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IosLobAppProvisioningConfigurationItemRequestBuilder iosLobAppProvisioningConfigurations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("iosLobAppProvisioningConfiguration%2Did", id);
         return new IosLobAppProvisioningConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.iosManagedAppProtections.item collection
+     * Provides operations to manage the iosManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a IosManagedAppProtectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public IosManagedAppProtectionItemRequestBuilder iosManagedAppProtections(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("iosManagedAppProtection%2Did", id);
         return new IosManagedAppProtectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedAppPolicies.item collection
+     * Provides operations to manage the managedAppPolicies property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a ManagedAppPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedAppPolicyItemRequestBuilder managedAppPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedAppPolicy%2Did", id);
         return new ManagedAppPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedAppRegistrations.item collection
+     * Provides operations to manage the managedAppRegistrations property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a ManagedAppRegistrationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedAppRegistrationItemRequestBuilder managedAppRegistrations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedAppRegistration%2Did", id);
         return new ManagedAppRegistrationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedAppStatuses.item collection
+     * Provides operations to manage the managedAppStatuses property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a ManagedAppStatusItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedAppStatusItemRequestBuilder managedAppStatuses(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedAppStatus%2Did", id);
         return new ManagedAppStatusItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedEBookCategories.item collection
+     * Provides operations to manage the managedEBookCategories property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a ManagedEBookCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedEBookCategoryItemRequestBuilder managedEBookCategories(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedEBookCategory%2Did", id);
         return new ManagedEBookCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.managedEBooks.item collection
+     * Provides operations to manage the managedEBooks property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a ManagedEBookItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedEBookItemRequestBuilder managedEBooks(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedEBook%2Did", id);
         return new ManagedEBookItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mdmWindowsInformationProtectionPolicies.item collection
+     * Provides operations to manage the mdmWindowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a MdmWindowsInformationProtectionPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MdmWindowsInformationProtectionPolicyItemRequestBuilder mdmWindowsInformationProtectionPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("mdmWindowsInformationProtectionPolicy%2Did", id);
         return new MdmWindowsInformationProtectionPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileAppCategories.item collection
+     * Provides operations to manage the mobileAppCategories property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a MobileAppCategoryItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MobileAppCategoryItemRequestBuilder mobileAppCategories(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("mobileAppCategory%2Did", id);
         return new MobileAppCategoryItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileAppConfigurations.item collection
+     * Provides operations to manage the mobileAppConfigurations property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a ManagedDeviceMobileAppConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public ManagedDeviceMobileAppConfigurationItemRequestBuilder mobileAppConfigurations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("managedDeviceMobileAppConfiguration%2Did", id);
         return new ManagedDeviceMobileAppConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.mobileApps.item collection
+     * Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a MobileAppItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public MobileAppItemRequestBuilder mobileApps(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("mobileApp%2Did", id);
         return new MobileAppItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Update deviceAppManagement
-     * @param body 
-     * @return a CompletableFuture of void
+     * @param body The request body
+     * @return a CompletableFuture of deviceAppManagement
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DeviceAppManagement body) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAppManagement> patch(@javax.annotation.Nonnull final DeviceAppManagement body) {
         try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
+            final RequestInformation requestInfo = toPatchRequestInformation(body, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceAppManagement::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<DeviceAppManagement> executionException = new java.util.concurrent.CompletableFuture<DeviceAppManagement>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
      * Update deviceAppManagement
-     * @param body 
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of void
+     * @return a CompletableFuture of deviceAppManagement
      */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DeviceAppManagement body, @javax.annotation.Nullable final java.util.function.Consumer<DeviceAppManagementRequestBuilderPatchRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Update deviceAppManagement
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of void
-     */
-    public java.util.concurrent.CompletableFuture<Void> patch(@javax.annotation.Nonnull final DeviceAppManagement body, @javax.annotation.Nullable final java.util.function.Consumer<DeviceAppManagementRequestBuilderPatchRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<DeviceAppManagement> patch(@javax.annotation.Nonnull final DeviceAppManagement body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
-            final RequestInformation requestInfo = createPatchRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, Void.class, responseHandler, errorMapping);
+            final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, DeviceAppManagement::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<DeviceAppManagement> executionException = new java.util.concurrent.CompletableFuture<DeviceAppManagement>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.policySets.item collection
+     * Provides operations to manage the policySets property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a PolicySetItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public PolicySetItemRequestBuilder policySets(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("policySet%2Did", id);
         return new PolicySetItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.sideLoadingKeys.item collection
-     * @param id Unique identifier of the item
-     * @return a SideLoadingKeyItemRequestBuilder
-     */
-    @javax.annotation.Nonnull
-    public SideLoadingKeyItemRequestBuilder sideLoadingKeys(@javax.annotation.Nonnull final String id) {
-        Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("sideLoadingKey%2Did", id);
-        return new SideLoadingKeyItemRequestBuilder(urlTplParams, requestAdapter);
-    }
-    /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.targetedManagedAppConfigurations.item collection
+     * Provides operations to manage the targetedManagedAppConfigurations property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a TargetedManagedAppConfigurationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public TargetedManagedAppConfigurationItemRequestBuilder targetedManagedAppConfigurations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("targetedManagedAppConfiguration%2Did", id);
         return new TargetedManagedAppConfigurationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.vppTokens.item collection
+     * Get deviceAppManagement
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
+    }
+    /**
+     * Get deviceAppManagement
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        if (requestConfiguration != null) {
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Update deviceAppManagement
+     * @param body The request body
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final DeviceAppManagement body) throws URISyntaxException {
+        return toPatchRequestInformation(body, null);
+    }
+    /**
+     * Update deviceAppManagement
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPatchRequestInformation(@javax.annotation.Nonnull final DeviceAppManagement body, @javax.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.PATCH;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        if (requestConfiguration != null) {
+            final PatchRequestConfiguration requestConfig = new PatchRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Provides operations to manage the vppTokens property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a VppTokenItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public VppTokenItemRequestBuilder vppTokens(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("vppToken%2Did", id);
         return new VppTokenItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.wdacSupplementalPolicies.item collection
+     * Provides operations to manage the wdacSupplementalPolicies property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilder wdacSupplementalPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsDefenderApplicationControlSupplementalPolicy%2Did", id);
         return new WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.windowsInformationProtectionDeviceRegistrations.item collection
+     * Provides operations to manage the windowsInformationProtectionDeviceRegistrations property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a WindowsInformationProtectionDeviceRegistrationItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsInformationProtectionDeviceRegistrationItemRequestBuilder windowsInformationProtectionDeviceRegistrations(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsInformationProtectionDeviceRegistration%2Did", id);
         return new WindowsInformationProtectionDeviceRegistrationItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.windowsInformationProtectionPolicies.item collection
+     * Provides operations to manage the windowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a WindowsInformationProtectionPolicyItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsInformationProtectionPolicyItemRequestBuilder windowsInformationProtectionPolicies(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsInformationProtectionPolicy%2Did", id);
         return new WindowsInformationProtectionPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.windowsInformationProtectionWipeActions.item collection
+     * Provides operations to manage the windowsInformationProtectionWipeActions property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a WindowsInformationProtectionWipeActionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsInformationProtectionWipeActionItemRequestBuilder windowsInformationProtectionWipeActions(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsInformationProtectionWipeAction%2Did", id);
         return new WindowsInformationProtectionWipeActionItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
-     * Gets an item from the com.Microsoft.Graph.deviceAppManagement.windowsManagedAppProtections.item collection
+     * Provides operations to manage the windowsManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
      * @param id Unique identifier of the item
      * @return a WindowsManagedAppProtectionItemRequestBuilder
      */
     @javax.annotation.Nonnull
     public WindowsManagedAppProtectionItemRequestBuilder windowsManagedAppProtections(@javax.annotation.Nonnull final String id) {
         Objects.requireNonNull(id);
-        var urlTplParams = new HashMap<String, Object>(this.pathParameters);
+        final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsManagedAppProtection%2Did", id);
         return new WindowsManagedAppProtectionItemRequestBuilder(urlTplParams, requestAdapter);
     }
-    /** Get deviceAppManagement */
-    public class DeviceAppManagementRequestBuilderGetQueryParameters {
+    /**
+     * Get deviceAppManagement
+     */
+    public class GetQueryParameters {
         /** Expand related entities */
         @QueryParameter(name = "%24expand")
         @javax.annotation.Nullable
@@ -704,37 +646,17 @@ public class DeviceAppManagementRequestBuilder {
         @javax.annotation.Nullable
         public String[] select;
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class DeviceAppManagementRequestBuilderGetRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class GetRequestConfiguration extends BaseRequestConfiguration {
         /** Request query parameters */
         @javax.annotation.Nullable
-        public DeviceAppManagementRequestBuilderGetQueryParameters queryParameters = new DeviceAppManagementRequestBuilderGetQueryParameters();
-        /**
-         * Instantiates a new deviceAppManagementRequestBuilderGetRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        public DeviceAppManagementRequestBuilderGetRequestConfiguration() {
-        }
+        public GetQueryParameters queryParameters = new GetQueryParameters();
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class DeviceAppManagementRequestBuilderPatchRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new deviceAppManagementRequestBuilderPatchRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        public DeviceAppManagementRequestBuilderPatchRequestConfiguration() {
-        }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }

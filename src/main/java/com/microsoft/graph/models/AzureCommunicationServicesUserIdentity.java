@@ -3,17 +3,17 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AzureCommunicationServicesUserIdentity extends Identity implements Parsable {
     /** The Azure Communication Services resource ID associated with the user. */
-    private String _azureCommunicationServicesResourceId;
+    private String azureCommunicationServicesResourceId;
     /**
      * Instantiates a new AzureCommunicationServicesUserIdentity and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AzureCommunicationServicesUserIdentity() {
         super();
         this.setOdataType("#microsoft.graph.azureCommunicationServicesUserIdentity");
@@ -34,24 +34,24 @@ public class AzureCommunicationServicesUserIdentity extends Identity implements 
      */
     @javax.annotation.Nullable
     public String getAzureCommunicationServicesResourceId() {
-        return this._azureCommunicationServicesResourceId;
+        return this.azureCommunicationServicesResourceId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AzureCommunicationServicesUserIdentity currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("azureCommunicationServicesResourceId", (n) -> { currentObject.setAzureCommunicationServicesResourceId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("azureCommunicationServicesResourceId", (n) -> { this.setAzureCommunicationServicesResourceId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +62,8 @@ public class AzureCommunicationServicesUserIdentity extends Identity implements 
      * @param value Value to set for the azureCommunicationServicesResourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureCommunicationServicesResourceId(@javax.annotation.Nullable final String value) {
-        this._azureCommunicationServicesResourceId = value;
+        this.azureCommunicationServicesResourceId = value;
     }
 }

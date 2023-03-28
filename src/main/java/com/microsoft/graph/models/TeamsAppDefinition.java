@@ -4,45 +4,45 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class TeamsAppDefinition extends Entity implements Parsable {
-    /** A collection of scopes where the Teams app can be installed. Possible values are:team — Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat  — Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal — Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data. */
-    private TeamsAppInstallationScopes _allowedInstallationScopes;
+    /** A collection of scopes where the Teams app can be installed. Possible values are:team  Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat   Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal  Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data. */
+    private TeamsAppInstallationScopes allowedInstallationScopes;
+    /** The authorization property */
+    private TeamsAppAuthorization authorization;
     /** The WebApplicationInfo.Id from the Teams app manifest. */
-    private String _azureADAppId;
+    private String azureADAppId;
     /** The details of the bot specified in the Teams app manifest. */
-    private TeamworkBot _bot;
+    private TeamworkBot bot;
     /** The color version of the Teams app's icon. */
-    private TeamsAppIcon _colorIcon;
+    private TeamsAppIcon colorIcon;
     /** The createdBy property */
-    private IdentitySet _createdBy;
+    private IdentitySet createdBy;
     /** The description property */
-    private String _description;
+    private String description;
     /** The name of the app provided by the app developer. */
-    private String _displayName;
+    private String displayName;
     /** The lastModifiedDateTime property */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The outline version of the Teams app's icon. */
-    private TeamsAppIcon _outlineIcon;
-    /** The published status of a specific version of a Teams app. Possible values are:submitted — The specific version of the Teams app has been submitted and is under review. published  — The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin. */
-    private TeamsAppPublishingState _publishingState;
+    private TeamsAppIcon outlineIcon;
+    /** The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin. */
+    private TeamsAppPublishingState publishingState;
     /** The shortdescription property */
-    private String _shortdescription;
+    private String shortdescription;
     /** The ID from the Teams app manifest. */
-    private String _teamsAppId;
+    private String teamsAppId;
     /** The version number of the application. */
-    private String _version;
+    private String version;
     /**
      * Instantiates a new teamsAppDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamsAppDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.teamsAppDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,12 +55,20 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         return new TeamsAppDefinition();
     }
     /**
-     * Gets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:team — Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat  — Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal — Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
+     * Gets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:team  Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat   Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal  Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
      * @return a teamsAppInstallationScopes
      */
     @javax.annotation.Nullable
     public TeamsAppInstallationScopes getAllowedInstallationScopes() {
-        return this._allowedInstallationScopes;
+        return this.allowedInstallationScopes;
+    }
+    /**
+     * Gets the authorization property value. The authorization property
+     * @return a teamsAppAuthorization
+     */
+    @javax.annotation.Nullable
+    public TeamsAppAuthorization getAuthorization() {
+        return this.authorization;
     }
     /**
      * Gets the azureADAppId property value. The WebApplicationInfo.Id from the Teams app manifest.
@@ -68,7 +76,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAzureADAppId() {
-        return this._azureADAppId;
+        return this.azureADAppId;
     }
     /**
      * Gets the bot property value. The details of the bot specified in the Teams app manifest.
@@ -76,7 +84,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamworkBot getBot() {
-        return this._bot;
+        return this.bot;
     }
     /**
      * Gets the colorIcon property value. The color version of the Teams app's icon.
@@ -84,7 +92,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamsAppIcon getColorIcon() {
-        return this._colorIcon;
+        return this.colorIcon;
     }
     /**
      * Gets the createdBy property value. The createdBy property
@@ -92,7 +100,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the description property value. The description property
@@ -100,7 +108,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The name of the app provided by the app developer.
@@ -108,30 +116,30 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamsAppDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedInstallationScopes", (n) -> { currentObject.setAllowedInstallationScopes(n.getEnumValue(TeamsAppInstallationScopes.class)); });
-            this.put("azureADAppId", (n) -> { currentObject.setAzureADAppId(n.getStringValue()); });
-            this.put("bot", (n) -> { currentObject.setBot(n.getObjectValue(TeamworkBot::createFromDiscriminatorValue)); });
-            this.put("colorIcon", (n) -> { currentObject.setColorIcon(n.getObjectValue(TeamsAppIcon::createFromDiscriminatorValue)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("outlineIcon", (n) -> { currentObject.setOutlineIcon(n.getObjectValue(TeamsAppIcon::createFromDiscriminatorValue)); });
-            this.put("publishingState", (n) -> { currentObject.setPublishingState(n.getEnumValue(TeamsAppPublishingState.class)); });
-            this.put("shortdescription", (n) -> { currentObject.setShortdescription(n.getStringValue()); });
-            this.put("teamsAppId", (n) -> { currentObject.setTeamsAppId(n.getStringValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedInstallationScopes", (n) -> { this.setAllowedInstallationScopes(n.getEnumValue(TeamsAppInstallationScopes.class)); });
+        deserializerMap.put("authorization", (n) -> { this.setAuthorization(n.getObjectValue(TeamsAppAuthorization::createFromDiscriminatorValue)); });
+        deserializerMap.put("azureADAppId", (n) -> { this.setAzureADAppId(n.getStringValue()); });
+        deserializerMap.put("bot", (n) -> { this.setBot(n.getObjectValue(TeamworkBot::createFromDiscriminatorValue)); });
+        deserializerMap.put("colorIcon", (n) -> { this.setColorIcon(n.getObjectValue(TeamsAppIcon::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("outlineIcon", (n) -> { this.setOutlineIcon(n.getObjectValue(TeamsAppIcon::createFromDiscriminatorValue)); });
+        deserializerMap.put("publishingState", (n) -> { this.setPublishingState(n.getEnumValue(TeamsAppPublishingState.class)); });
+        deserializerMap.put("shortdescription", (n) -> { this.setShortdescription(n.getStringValue()); });
+        deserializerMap.put("teamsAppId", (n) -> { this.setTeamsAppId(n.getStringValue()); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -139,7 +147,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the outlineIcon property value. The outline version of the Teams app's icon.
@@ -147,15 +155,15 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public TeamsAppIcon getOutlineIcon() {
-        return this._outlineIcon;
+        return this.outlineIcon;
     }
     /**
-     * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted — The specific version of the Teams app has been submitted and is under review. published  — The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin.
+     * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
      * @return a teamsAppPublishingState
      */
     @javax.annotation.Nullable
     public TeamsAppPublishingState getPublishingState() {
-        return this._publishingState;
+        return this.publishingState;
     }
     /**
      * Gets the shortdescription property value. The shortdescription property
@@ -163,7 +171,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getShortdescription() {
-        return this._shortdescription;
+        return this.shortdescription;
     }
     /**
      * Gets the teamsAppId property value. The ID from the Teams app manifest.
@@ -171,7 +179,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTeamsAppId() {
-        return this._teamsAppId;
+        return this.teamsAppId;
     }
     /**
      * Gets the version property value. The version number of the application.
@@ -179,17 +187,19 @@ public class TeamsAppDefinition extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("allowedInstallationScopes", this.getAllowedInstallationScopes());
+        writer.writeObjectValue("authorization", this.getAuthorization());
         writer.writeStringValue("azureADAppId", this.getAzureADAppId());
         writer.writeObjectValue("bot", this.getBot());
         writer.writeObjectValue("colorIcon", this.getColorIcon());
@@ -204,107 +214,129 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:team — Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat  — Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal — Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
+     * Sets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:team  Indicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChat   Indicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data.  personal  Indicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
      * @param value Value to set for the allowedInstallationScopes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedInstallationScopes(@javax.annotation.Nullable final TeamsAppInstallationScopes value) {
-        this._allowedInstallationScopes = value;
+        this.allowedInstallationScopes = value;
+    }
+    /**
+     * Sets the authorization property value. The authorization property
+     * @param value Value to set for the authorization property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAuthorization(@javax.annotation.Nullable final TeamsAppAuthorization value) {
+        this.authorization = value;
     }
     /**
      * Sets the azureADAppId property value. The WebApplicationInfo.Id from the Teams app manifest.
      * @param value Value to set for the azureADAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureADAppId(@javax.annotation.Nullable final String value) {
-        this._azureADAppId = value;
+        this.azureADAppId = value;
     }
     /**
      * Sets the bot property value. The details of the bot specified in the Teams app manifest.
      * @param value Value to set for the bot property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBot(@javax.annotation.Nullable final TeamworkBot value) {
-        this._bot = value;
+        this.bot = value;
     }
     /**
      * Sets the colorIcon property value. The color version of the Teams app's icon.
      * @param value Value to set for the colorIcon property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setColorIcon(@javax.annotation.Nullable final TeamsAppIcon value) {
-        this._colorIcon = value;
+        this.colorIcon = value;
     }
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the app provided by the app developer.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the outlineIcon property value. The outline version of the Teams app's icon.
      * @param value Value to set for the outlineIcon property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutlineIcon(@javax.annotation.Nullable final TeamsAppIcon value) {
-        this._outlineIcon = value;
+        this.outlineIcon = value;
     }
     /**
-     * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted — The specific version of the Teams app has been submitted and is under review. published  — The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected — The request to publish the specific version of the Teams app was rejected by the admin.
+     * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submitted  The specific version of the Teams app has been submitted and is under review. published   The request to publish the specific version of the Teams app has been approved by the admin and the app is published.  rejected  The request to publish the specific version of the Teams app was rejected by the admin.
      * @param value Value to set for the publishingState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPublishingState(@javax.annotation.Nullable final TeamsAppPublishingState value) {
-        this._publishingState = value;
+        this.publishingState = value;
     }
     /**
      * Sets the shortdescription property value. The shortdescription property
      * @param value Value to set for the shortdescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setShortdescription(@javax.annotation.Nullable final String value) {
-        this._shortdescription = value;
+        this.shortdescription = value;
     }
     /**
      * Sets the teamsAppId property value. The ID from the Teams app manifest.
      * @param value Value to set for the teamsAppId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamsAppId(@javax.annotation.Nullable final String value) {
-        this._teamsAppId = value;
+        this.teamsAppId = value;
     }
     /**
      * Sets the version property value. The version number of the application.
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

@@ -4,32 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** MAC address. */
-    private java.util.List<String> _macAddresses;
+    private java.util.List<String> macAddresses;
     /** Device manufacturer. */
-    private String _manufacturer;
+    private String manufacturer;
     /** Devie model. */
-    private String _model;
+    private String model;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Device serial number. */
-    private String _serialNumber;
+    private String serialNumber;
     /** The unique identifier for the device. */
-    private String _uniqueId;
+    private String uniqueId;
     /**
      * Instantiates a new teamworkHardwareDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamworkHardwareDetail() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.teamworkHardwareDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,23 +46,22 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamworkHardwareDetail currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("macAddresses", (n) -> { currentObject.setMacAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
-            this.put("uniqueId", (n) -> { currentObject.setUniqueId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("macAddresses", (n) -> { this.setMacAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("serialNumber", (n) -> { this.setSerialNumber(n.getStringValue()); });
+        deserializerMap.put("uniqueId", (n) -> { this.setUniqueId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the macAddresses property value. MAC address.
@@ -71,7 +69,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getMacAddresses() {
-        return this._macAddresses;
+        return this.macAddresses;
     }
     /**
      * Gets the manufacturer property value. Device manufacturer.
@@ -79,7 +77,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getManufacturer() {
-        return this._manufacturer;
+        return this.manufacturer;
     }
     /**
      * Gets the model property value. Devie model.
@@ -87,7 +85,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getModel() {
-        return this._model;
+        return this.model;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -95,7 +93,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the serialNumber property value. Device serial number.
@@ -103,7 +101,7 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSerialNumber() {
-        return this._serialNumber;
+        return this.serialNumber;
     }
     /**
      * Gets the uniqueId property value. The unique identifier for the device.
@@ -111,13 +109,14 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getUniqueId() {
-        return this._uniqueId;
+        return this.uniqueId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("macAddresses", this.getMacAddresses());
@@ -133,55 +132,62 @@ public class TeamworkHardwareDetail implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the macAddresses property value. MAC address.
      * @param value Value to set for the macAddresses property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMacAddresses(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._macAddresses = value;
+        this.macAddresses = value;
     }
     /**
      * Sets the manufacturer property value. Device manufacturer.
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
-        this._manufacturer = value;
+        this.manufacturer = value;
     }
     /**
      * Sets the model property value. Devie model.
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
-        this._model = value;
+        this.model = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the serialNumber property value. Device serial number.
      * @param value Value to set for the serialNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSerialNumber(@javax.annotation.Nullable final String value) {
-        this._serialNumber = value;
+        this.serialNumber = value;
     }
     /**
      * Sets the uniqueId property value. The unique identifier for the device.
      * @param value Value to set for the uniqueId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUniqueId(@javax.annotation.Nullable final String value) {
-        this._uniqueId = value;
+        this.uniqueId = value;
     }
 }

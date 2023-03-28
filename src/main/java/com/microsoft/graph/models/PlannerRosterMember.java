@@ -3,25 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class PlannerRosterMember extends Entity implements Parsable {
     /** Additional roles associated with the PlannerRosterMember, which determines permissions of the member in the plannerRoster. Currently there are no available roles to assign, and every member has full control over the contents of the plannerRoster. */
-    private java.util.List<String> _roles;
+    private java.util.List<String> roles;
     /** Identifier of the tenant the user belongs to. Currently only the users from the same tenant can be added to a plannerRoster. */
-    private String _tenantId;
+    private String tenantId;
     /** Identifier of the user. */
-    private String _userId;
+    private String userId;
     /**
      * Instantiates a new plannerRosterMember and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerRosterMember() {
         super();
-        this.setOdataType("#microsoft.graph.plannerRosterMember");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,16 +33,15 @@ public class PlannerRosterMember extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerRosterMember currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("roles", (n) -> { currentObject.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("roles", (n) -> { this.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the roles property value. Additional roles associated with the PlannerRosterMember, which determines permissions of the member in the plannerRoster. Currently there are no available roles to assign, and every member has full control over the contents of the plannerRoster.
@@ -52,7 +49,7 @@ public class PlannerRosterMember extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getRoles() {
-        return this._roles;
+        return this.roles;
     }
     /**
      * Gets the tenantId property value. Identifier of the tenant the user belongs to. Currently only the users from the same tenant can be added to a plannerRoster.
@@ -60,7 +57,7 @@ public class PlannerRosterMember extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Gets the userId property value. Identifier of the user.
@@ -68,13 +65,14 @@ public class PlannerRosterMember extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -87,23 +85,26 @@ public class PlannerRosterMember extends Entity implements Parsable {
      * @param value Value to set for the roles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoles(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._roles = value;
+        this.roles = value;
     }
     /**
      * Sets the tenantId property value. Identifier of the tenant the user belongs to. Currently only the users from the same tenant can be added to a plannerRoster.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
     /**
      * Sets the userId property value. Identifier of the user.
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }

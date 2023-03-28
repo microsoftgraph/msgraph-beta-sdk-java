@@ -4,31 +4,32 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Bandwidth business hours and percentages type */
+/**
+ * Bandwidth business hours and percentages type
+ */
 public class DeliveryOptimizationBandwidthBusinessHoursLimit implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Specifies the beginning of business hours using a 24-hour clock (0-23). Valid values 0 to 23 */
-    private Integer _bandwidthBeginBusinessHours;
+    private Integer bandwidthBeginBusinessHours;
     /** Specifies the end of business hours using a 24-hour clock (0-23). Valid values 0 to 23 */
-    private Integer _bandwidthEndBusinessHours;
+    private Integer bandwidthEndBusinessHours;
     /** Specifies the percentage of bandwidth to limit during business hours (0-100). Valid values 0 to 100 */
-    private Integer _bandwidthPercentageDuringBusinessHours;
+    private Integer bandwidthPercentageDuringBusinessHours;
     /** Specifies the percentage of bandwidth to limit outsidse business hours (0-100). Valid values 0 to 100 */
-    private Integer _bandwidthPercentageOutsideBusinessHours;
+    private Integer bandwidthPercentageOutsideBusinessHours;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new deliveryOptimizationBandwidthBusinessHoursLimit and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeliveryOptimizationBandwidthBusinessHoursLimit() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deliveryOptimizationBandwidthBusinessHoursLimit");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,7 +47,7 @@ public class DeliveryOptimizationBandwidthBusinessHoursLimit implements Addition
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the bandwidthBeginBusinessHours property value. Specifies the beginning of business hours using a 24-hour clock (0-23). Valid values 0 to 23
@@ -54,7 +55,7 @@ public class DeliveryOptimizationBandwidthBusinessHoursLimit implements Addition
      */
     @javax.annotation.Nullable
     public Integer getBandwidthBeginBusinessHours() {
-        return this._bandwidthBeginBusinessHours;
+        return this.bandwidthBeginBusinessHours;
     }
     /**
      * Gets the bandwidthEndBusinessHours property value. Specifies the end of business hours using a 24-hour clock (0-23). Valid values 0 to 23
@@ -62,7 +63,7 @@ public class DeliveryOptimizationBandwidthBusinessHoursLimit implements Addition
      */
     @javax.annotation.Nullable
     public Integer getBandwidthEndBusinessHours() {
-        return this._bandwidthEndBusinessHours;
+        return this.bandwidthEndBusinessHours;
     }
     /**
      * Gets the bandwidthPercentageDuringBusinessHours property value. Specifies the percentage of bandwidth to limit during business hours (0-100). Valid values 0 to 100
@@ -70,7 +71,7 @@ public class DeliveryOptimizationBandwidthBusinessHoursLimit implements Addition
      */
     @javax.annotation.Nullable
     public Integer getBandwidthPercentageDuringBusinessHours() {
-        return this._bandwidthPercentageDuringBusinessHours;
+        return this.bandwidthPercentageDuringBusinessHours;
     }
     /**
      * Gets the bandwidthPercentageOutsideBusinessHours property value. Specifies the percentage of bandwidth to limit outsidse business hours (0-100). Valid values 0 to 100
@@ -78,22 +79,21 @@ public class DeliveryOptimizationBandwidthBusinessHoursLimit implements Addition
      */
     @javax.annotation.Nullable
     public Integer getBandwidthPercentageOutsideBusinessHours() {
-        return this._bandwidthPercentageOutsideBusinessHours;
+        return this.bandwidthPercentageOutsideBusinessHours;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeliveryOptimizationBandwidthBusinessHoursLimit currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("bandwidthBeginBusinessHours", (n) -> { currentObject.setBandwidthBeginBusinessHours(n.getIntegerValue()); });
-            this.put("bandwidthEndBusinessHours", (n) -> { currentObject.setBandwidthEndBusinessHours(n.getIntegerValue()); });
-            this.put("bandwidthPercentageDuringBusinessHours", (n) -> { currentObject.setBandwidthPercentageDuringBusinessHours(n.getIntegerValue()); });
-            this.put("bandwidthPercentageOutsideBusinessHours", (n) -> { currentObject.setBandwidthPercentageOutsideBusinessHours(n.getIntegerValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("bandwidthBeginBusinessHours", (n) -> { this.setBandwidthBeginBusinessHours(n.getIntegerValue()); });
+        deserializerMap.put("bandwidthEndBusinessHours", (n) -> { this.setBandwidthEndBusinessHours(n.getIntegerValue()); });
+        deserializerMap.put("bandwidthPercentageDuringBusinessHours", (n) -> { this.setBandwidthPercentageDuringBusinessHours(n.getIntegerValue()); });
+        deserializerMap.put("bandwidthPercentageOutsideBusinessHours", (n) -> { this.setBandwidthPercentageOutsideBusinessHours(n.getIntegerValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -101,13 +101,14 @@ public class DeliveryOptimizationBandwidthBusinessHoursLimit implements Addition
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("bandwidthBeginBusinessHours", this.getBandwidthBeginBusinessHours());
@@ -122,47 +123,53 @@ public class DeliveryOptimizationBandwidthBusinessHoursLimit implements Addition
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the bandwidthBeginBusinessHours property value. Specifies the beginning of business hours using a 24-hour clock (0-23). Valid values 0 to 23
      * @param value Value to set for the bandwidthBeginBusinessHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBandwidthBeginBusinessHours(@javax.annotation.Nullable final Integer value) {
-        this._bandwidthBeginBusinessHours = value;
+        this.bandwidthBeginBusinessHours = value;
     }
     /**
      * Sets the bandwidthEndBusinessHours property value. Specifies the end of business hours using a 24-hour clock (0-23). Valid values 0 to 23
      * @param value Value to set for the bandwidthEndBusinessHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBandwidthEndBusinessHours(@javax.annotation.Nullable final Integer value) {
-        this._bandwidthEndBusinessHours = value;
+        this.bandwidthEndBusinessHours = value;
     }
     /**
      * Sets the bandwidthPercentageDuringBusinessHours property value. Specifies the percentage of bandwidth to limit during business hours (0-100). Valid values 0 to 100
      * @param value Value to set for the bandwidthPercentageDuringBusinessHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBandwidthPercentageDuringBusinessHours(@javax.annotation.Nullable final Integer value) {
-        this._bandwidthPercentageDuringBusinessHours = value;
+        this.bandwidthPercentageDuringBusinessHours = value;
     }
     /**
      * Sets the bandwidthPercentageOutsideBusinessHours property value. Specifies the percentage of bandwidth to limit outsidse business hours (0-100). Valid values 0 to 100
      * @param value Value to set for the bandwidthPercentageOutsideBusinessHours property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBandwidthPercentageOutsideBusinessHours(@javax.annotation.Nullable final Integer value) {
-        this._bandwidthPercentageOutsideBusinessHours = value;
+        this.bandwidthPercentageOutsideBusinessHours = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }
