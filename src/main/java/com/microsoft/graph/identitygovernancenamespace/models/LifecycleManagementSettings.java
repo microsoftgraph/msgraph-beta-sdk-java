@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.EmailSettings;
 import com.microsoft.graph.models.Entity;
 
 
@@ -24,6 +25,15 @@ import javax.annotation.Nonnull;
  */
 public class LifecycleManagementSettings extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Email Settings.
+     * Defines the settings for emails sent out from email-specific tasks within workflows. Accepts 2 parameterssenderDomain- Defines the domain of who is sending the email. useCompanyBranding- A boolean value that defines if company branding is to be used with the email.
+     */
+    @SerializedName(value = "emailSettings", alternate = {"EmailSettings"})
+    @Expose
+	@Nullable
+    public EmailSettings emailSettings;
 
     /**
      * The Workflow Schedule Interval In Hours.

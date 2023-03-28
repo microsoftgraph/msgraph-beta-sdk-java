@@ -92,6 +92,7 @@ import com.microsoft.graph.requests.DeviceManagementScriptCollectionPage;
 import com.microsoft.graph.requests.DeviceShellScriptCollectionPage;
 import com.microsoft.graph.requests.MobileAppTroubleshootingEventCollectionPage;
 import com.microsoft.graph.requests.OemWarrantyInformationOnboardingCollectionPage;
+import com.microsoft.graph.requests.PrivilegeManagementElevationCollectionPage;
 import com.microsoft.graph.requests.RemoteActionAuditCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyCollectionPage;
 import com.microsoft.graph.requests.UserExperienceAnalyticsAnomalyDeviceCollectionPage;
@@ -958,6 +959,15 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.OemWarrantyInformationOnboardingCollectionPage oemWarrantyInformationOnboarding;
+
+    /**
+     * The Privilege Management Elevations.
+     * The endpoint privilege management elevation event entity contains elevation details.
+     */
+    @SerializedName(value = "privilegeManagementElevations", alternate = {"PrivilegeManagementElevations"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.requests.PrivilegeManagementElevationCollectionPage privilegeManagementElevations;
 
     /**
      * The Remote Action Audits.
@@ -2011,6 +2021,10 @@ public class DeviceManagement extends Entity implements IJsonBackedObject {
 
         if (json.has("oemWarrantyInformationOnboarding")) {
             oemWarrantyInformationOnboarding = serializer.deserializeObject(json.get("oemWarrantyInformationOnboarding"), com.microsoft.graph.requests.OemWarrantyInformationOnboardingCollectionPage.class);
+        }
+
+        if (json.has("privilegeManagementElevations")) {
+            privilegeManagementElevations = serializer.deserializeObject(json.get("privilegeManagementElevations"), com.microsoft.graph.requests.PrivilegeManagementElevationCollectionPage.class);
         }
 
         if (json.has("remoteActionAudits")) {

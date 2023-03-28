@@ -11,13 +11,16 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceCollectionPage;
+import com.microsoft.graph.managedtenants.requests.AppPerformanceCollectionPage;
 import com.microsoft.graph.managedtenants.requests.AuditEventCollectionPage;
 import com.microsoft.graph.managedtenants.requests.CloudPcConnectionCollectionPage;
 import com.microsoft.graph.managedtenants.requests.CloudPcDeviceCollectionPage;
 import com.microsoft.graph.managedtenants.requests.CloudPcOverviewCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ConditionalAccessPolicyCoverageCollectionPage;
 import com.microsoft.graph.managedtenants.requests.CredentialUserRegistrationsSummaryCollectionPage;
+import com.microsoft.graph.managedtenants.requests.DeviceAppPerformanceCollectionPage;
 import com.microsoft.graph.managedtenants.requests.DeviceCompliancePolicySettingStateSummaryCollectionPage;
+import com.microsoft.graph.managedtenants.requests.DeviceHealthStatusCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagedDeviceComplianceTrendCollectionPage;
 import com.microsoft.graph.managedtenants.requests.ManagedTenantAlertLogCollectionPage;
@@ -68,6 +71,15 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceCollectionPage aggregatedPolicyCompliances;
+
+    /**
+     * The App Performances.
+     * 
+     */
+    @SerializedName(value = "appPerformances", alternate = {"AppPerformances"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.managedtenants.requests.AppPerformanceCollectionPage appPerformances;
 
     /**
      * The Audit Events.
@@ -124,6 +136,15 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     public com.microsoft.graph.managedtenants.requests.CredentialUserRegistrationsSummaryCollectionPage credentialUserRegistrationsSummaries;
 
     /**
+     * The Device App Performances.
+     * 
+     */
+    @SerializedName(value = "deviceAppPerformances", alternate = {"DeviceAppPerformances"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.managedtenants.requests.DeviceAppPerformanceCollectionPage deviceAppPerformances;
+
+    /**
      * The Device Compliance Policy Setting State Summaries.
      * Summary information for device compliance policy setting states across managed tenants.
      */
@@ -131,6 +152,15 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.managedtenants.requests.DeviceCompliancePolicySettingStateSummaryCollectionPage deviceCompliancePolicySettingStateSummaries;
+
+    /**
+     * The Device Health Statuses.
+     * 
+     */
+    @SerializedName(value = "deviceHealthStatuses", alternate = {"DeviceHealthStatuses"})
+    @Expose
+	@Nullable
+    public com.microsoft.graph.managedtenants.requests.DeviceHealthStatusCollectionPage deviceHealthStatuses;
 
     /**
      * The Managed Device Compliances.
@@ -380,6 +410,10 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
             aggregatedPolicyCompliances = serializer.deserializeObject(json.get("aggregatedPolicyCompliances"), com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceCollectionPage.class);
         }
 
+        if (json.has("appPerformances")) {
+            appPerformances = serializer.deserializeObject(json.get("appPerformances"), com.microsoft.graph.managedtenants.requests.AppPerformanceCollectionPage.class);
+        }
+
         if (json.has("auditEvents")) {
             auditEvents = serializer.deserializeObject(json.get("auditEvents"), com.microsoft.graph.managedtenants.requests.AuditEventCollectionPage.class);
         }
@@ -404,8 +438,16 @@ public class ManagedTenant extends Entity implements IJsonBackedObject {
             credentialUserRegistrationsSummaries = serializer.deserializeObject(json.get("credentialUserRegistrationsSummaries"), com.microsoft.graph.managedtenants.requests.CredentialUserRegistrationsSummaryCollectionPage.class);
         }
 
+        if (json.has("deviceAppPerformances")) {
+            deviceAppPerformances = serializer.deserializeObject(json.get("deviceAppPerformances"), com.microsoft.graph.managedtenants.requests.DeviceAppPerformanceCollectionPage.class);
+        }
+
         if (json.has("deviceCompliancePolicySettingStateSummaries")) {
             deviceCompliancePolicySettingStateSummaries = serializer.deserializeObject(json.get("deviceCompliancePolicySettingStateSummaries"), com.microsoft.graph.managedtenants.requests.DeviceCompliancePolicySettingStateSummaryCollectionPage.class);
+        }
+
+        if (json.has("deviceHealthStatuses")) {
+            deviceHealthStatuses = serializer.deserializeObject(json.get("deviceHealthStatuses"), com.microsoft.graph.managedtenants.requests.DeviceHealthStatusCollectionPage.class);
         }
 
         if (json.has("managedDeviceCompliances")) {

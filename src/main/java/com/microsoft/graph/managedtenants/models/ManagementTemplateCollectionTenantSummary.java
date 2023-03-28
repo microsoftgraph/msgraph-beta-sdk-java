@@ -161,6 +161,24 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     public String managementTemplateCollectionId;
 
     /**
+     * The Regressed Steps Count.
+     * 
+     */
+    @SerializedName(value = "regressedStepsCount", alternate = {"RegressedStepsCount"})
+    @Expose
+	@Nullable
+    public Integer regressedStepsCount;
+
+    /**
+     * The Regressed Users Count.
+     * 
+     */
+    @SerializedName(value = "regressedUsersCount", alternate = {"RegressedUsersCount"})
+    @Expose
+	@Nullable
+    public Integer regressedUsersCount;
+
+    /**
      * The Tenant Id.
      * 
      */
@@ -168,6 +186,15 @@ public class ManagementTemplateCollectionTenantSummary extends Entity implements
     @Expose
 	@Nullable
     public String tenantId;
+
+    /**
+     * The Unlicensed Users Count.
+     * 
+     */
+    @SerializedName(value = "unlicensedUsersCount", alternate = {"UnlicensedUsersCount"})
+    @Expose
+	@Nullable
+    public Integer unlicensedUsersCount;
 
 
     /**

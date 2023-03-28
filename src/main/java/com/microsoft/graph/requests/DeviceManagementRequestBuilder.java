@@ -1286,6 +1286,26 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder<DeviceMan
         return new com.microsoft.graph.requests.OemWarrantyInformationOnboardingRequestBuilder(getRequestUrlWithAdditionalSegment("oemWarrantyInformationOnboarding") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the PrivilegeManagementElevation collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PrivilegeManagementElevationCollectionRequestBuilder privilegeManagementElevations() {
+        return new com.microsoft.graph.requests.PrivilegeManagementElevationCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("privilegeManagementElevations"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the PrivilegeManagementElevation item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PrivilegeManagementElevationRequestBuilder privilegeManagementElevations(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.PrivilegeManagementElevationRequestBuilder(getRequestUrlWithAdditionalSegment("privilegeManagementElevations") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the RemoteActionAudit collection
      *
      * @return the collection request builder

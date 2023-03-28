@@ -105,7 +105,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
 
     /**
      * The Technologies.
-     * Technologies for this template. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, linuxMdm, enrollment, endpointPrivilegeManagement, unknownFutureValue.
+     * Technologies for this template. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, edgeMAM, linuxMdm, enrollment, endpointPrivilegeManagement, unknownFutureValue.
      */
     @SerializedName(value = "technologies", alternate = {"Technologies"})
     @Expose
