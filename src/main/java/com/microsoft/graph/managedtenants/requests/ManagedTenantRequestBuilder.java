@@ -77,6 +77,26 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
         return new com.microsoft.graph.managedtenants.requests.AggregatedPolicyComplianceRequestBuilder(getRequestUrlWithAdditionalSegment("aggregatedPolicyCompliances") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the AppPerformance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.AppPerformanceCollectionRequestBuilder appPerformances() {
+        return new com.microsoft.graph.managedtenants.requests.AppPerformanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("appPerformances"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the AppPerformance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.AppPerformanceRequestBuilder appPerformances(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.AppPerformanceRequestBuilder(getRequestUrlWithAdditionalSegment("appPerformances") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the AuditEvent collection
      *
      * @return the collection request builder
@@ -197,6 +217,26 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
         return new com.microsoft.graph.managedtenants.requests.CredentialUserRegistrationsSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("credentialUserRegistrationsSummaries") + "/" + id, getClient(), null);
     }
     /**
+     *  Gets a request builder for the DeviceAppPerformance collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.DeviceAppPerformanceCollectionRequestBuilder deviceAppPerformances() {
+        return new com.microsoft.graph.managedtenants.requests.DeviceAppPerformanceCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceAppPerformances"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeviceAppPerformance item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.DeviceAppPerformanceRequestBuilder deviceAppPerformances(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.DeviceAppPerformanceRequestBuilder(getRequestUrlWithAdditionalSegment("deviceAppPerformances") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the DeviceCompliancePolicySettingStateSummary collection
      *
      * @return the collection request builder
@@ -215,6 +255,26 @@ public class ManagedTenantRequestBuilder extends BaseRequestBuilder<ManagedTenan
     @Nonnull
     public com.microsoft.graph.managedtenants.requests.DeviceCompliancePolicySettingStateSummaryRequestBuilder deviceCompliancePolicySettingStateSummaries(@Nonnull final String id) {
         return new com.microsoft.graph.managedtenants.requests.DeviceCompliancePolicySettingStateSummaryRequestBuilder(getRequestUrlWithAdditionalSegment("deviceCompliancePolicySettingStateSummaries") + "/" + id, getClient(), null);
+    }
+    /**
+     *  Gets a request builder for the DeviceHealthStatus collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.DeviceHealthStatusCollectionRequestBuilder deviceHealthStatuses() {
+        return new com.microsoft.graph.managedtenants.requests.DeviceHealthStatusCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceHealthStatuses"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the DeviceHealthStatus item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.managedtenants.requests.DeviceHealthStatusRequestBuilder deviceHealthStatuses(@Nonnull final String id) {
+        return new com.microsoft.graph.managedtenants.requests.DeviceHealthStatusRequestBuilder(getRequestUrlWithAdditionalSegment("deviceHealthStatuses") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedDeviceCompliance collection

@@ -28,7 +28,7 @@ public class AndroidLobApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Identity Name.
-     * The Identity Name. This property is deprecated starting  in February 2023 (Release 2302).
+     * The Identity Name. This property is being deprecated in 2302(February 2023).
      */
     @SerializedName(value = "identityName", alternate = {"IdentityName"})
     @Expose
@@ -37,7 +37,7 @@ public class AndroidLobApp extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Identity Version.
-     * The identity version. This property is deprecated starting  in February 2023 (Release 2302).
+     * The identity version. This property is being deprecated in 2302(February 2023).
      */
     @SerializedName(value = "identityVersion", alternate = {"IdentityVersion"})
     @Expose

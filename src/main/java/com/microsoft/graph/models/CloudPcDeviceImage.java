@@ -30,7 +30,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * The image's display name.
+     * The display name of the image.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Modified Date Time.
-     * The data and time that the image was last modified. The time is shown in ISO 8601 format and  Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'.
+     * The data and time that the image was last modified. The time is shown in ISO 8601 format and  Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -57,7 +57,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Operating System.
-     * The image's operating system. For example: Windows 10 Enterprise.
+     * The operating system of the image. For example, Windows 10 Enterprise.
      */
     @SerializedName(value = "operatingSystem", alternate = {"OperatingSystem"})
     @Expose
@@ -66,7 +66,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Os Build Number.
-     * The image's OS build version. For example: 1909.
+     * The OS build version of the image. For example, 1909.
      */
     @SerializedName(value = "osBuildNumber", alternate = {"OsBuildNumber"})
     @Expose
@@ -84,7 +84,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Source Image Resource Id.
-     * The ID of the source image resource on Azure. Required format: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'.
+     * The ID of the source image resource on Azure. Required format: /subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}.
      */
     @SerializedName(value = "sourceImageResourceId", alternate = {"SourceImageResourceId"})
     @Expose
@@ -102,7 +102,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Status Details.
-     * The details of the image's status, which indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, and sourceImageNotGeneralized.
+     * The details of the status of the image that indicates why the upload failed, if applicable. Possible values are: internalServerError, sourceImageNotFound, osVersionNotSupported, sourceImageInvalid, and sourceImageNotGeneralized.
      */
     @SerializedName(value = "statusDetails", alternate = {"StatusDetails"})
     @Expose
@@ -111,7 +111,7 @@ public class CloudPcDeviceImage extends Entity implements IJsonBackedObject {
 
     /**
      * The Version.
-     * The image version. For example: 0.0.1, 1.5.13.
+     * The image version. For example, 0.0.1 and 1.5.13.
      */
     @SerializedName(value = "version", alternate = {"Version"})
     @Expose

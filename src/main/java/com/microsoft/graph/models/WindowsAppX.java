@@ -29,7 +29,7 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Applicable Architectures.
-     * The Windows architecture(s) for which this app can run on. Possible values are: none, x86, x64, arm, neutral, arm64.
+     * The Windows architecture(s) on which this app can run. Possible values are: none, x86, x64, arm, neutral; default value is none. Possible values are: none, x86, x64, arm, neutral, arm64.
      */
     @SerializedName(value = "applicableArchitectures", alternate = {"ApplicableArchitectures"})
     @Expose
@@ -38,7 +38,7 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Identity Name.
-     * The Identity Name.
+     * The identity name of the uploaded app package. For example: 'Contoso.DemoApp'.
      */
     @SerializedName(value = "identityName", alternate = {"IdentityName"})
     @Expose
@@ -47,7 +47,7 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Identity Publisher Hash.
-     * The Identity Publisher Hash.
+     * The identity publisher hash of the uploaded app package. This is the hash of the publisher from the manifest. For example: 'AB82CD0XYZ'.
      */
     @SerializedName(value = "identityPublisherHash", alternate = {"IdentityPublisherHash"})
     @Expose
@@ -56,7 +56,7 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Identity Resource Identifier.
-     * The Identity Resource Identifier.
+     * The identity resource identifier of the uploaded app package. For example: 'TestResourceId'.
      */
     @SerializedName(value = "identityResourceIdentifier", alternate = {"IdentityResourceIdentifier"})
     @Expose
@@ -65,7 +65,7 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Identity Version.
-     * The identity version.
+     * The identity version of the uploaded app package. For example: '1.0.0.0'.
      */
     @SerializedName(value = "identityVersion", alternate = {"IdentityVersion"})
     @Expose
@@ -74,7 +74,7 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Is Bundle.
-     * Whether or not the app is a bundle.
+     * When TRUE, indicates that the app is a bundle. When FALSE, indicates that the app is not a bundle. By default, property is set to FALSE.
      */
     @SerializedName(value = "isBundle", alternate = {"IsBundle"})
     @Expose
@@ -83,7 +83,7 @@ public class WindowsAppX extends MobileLobApp implements IJsonBackedObject {
 
     /**
      * The Minimum Supported Operating System.
-     * The value for the minimum applicable operating system.
+     * The value for the minimum applicable operating system. Valid values for a WindowsAppX app include v8_0, v8_1 and v10_0. If the app is a bundle, the minimum supported OS has to be at least v8_1.
      */
     @SerializedName(value = "minimumSupportedOperatingSystem", alternate = {"MinimumSupportedOperatingSystem"})
     @Expose
