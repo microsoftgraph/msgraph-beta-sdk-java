@@ -8,8 +8,10 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AndroidForWorkRequiredPasswordType;
 import com.microsoft.graph.models.AndroidRequiredPasswordComplexity;
+import com.microsoft.graph.models.AndroidWorkProfileAccountUse;
 import com.microsoft.graph.models.AndroidForWorkCrossProfileDataSharingType;
 import com.microsoft.graph.models.AndroidForWorkDefaultAppPermissionPolicyType;
 import com.microsoft.graph.models.DeviceConfiguration;
@@ -28,6 +30,15 @@ import javax.annotation.Nonnull;
  */
 public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguration implements IJsonBackedObject {
 
+
+    /**
+     * The Allowed Google Account Domains.
+     * Determine domains allow-list for accounts that can be added to work profile.
+     */
+    @SerializedName(value = "allowedGoogleAccountDomains", alternate = {"AllowedGoogleAccountDomains"})
+    @Expose
+	@Nullable
+    public java.util.List<String> allowedGoogleAccountDomains;
 
     /**
      * The Password Block Face Unlock.
@@ -154,6 +165,15 @@ public class AndroidForWorkGeneralDeviceConfiguration extends DeviceConfiguratio
     @Expose
 	@Nullable
     public Boolean vpnEnableAlwaysOnLockdownMode;
+
+    /**
+     * The Work Profile Account Use.
+     * Control user's ability to add accounts in work profile including Google accounts. Possible values are: allowAllExceptGoogleAccounts, blockAll, allowAll, unknownFutureValue.
+     */
+    @SerializedName(value = "workProfileAccountUse", alternate = {"WorkProfileAccountUse"})
+    @Expose
+	@Nullable
+    public AndroidWorkProfileAccountUse workProfileAccountUse;
 
     /**
      * The Work Profile Allow Widgets.

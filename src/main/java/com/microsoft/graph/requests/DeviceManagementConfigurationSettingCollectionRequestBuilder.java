@@ -7,7 +7,7 @@ package com.microsoft.graph.requests;
 
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
-import com.microsoft.graph.models.DeviceManagementConfigurationPolicy;
+import com.microsoft.graph.models.ManagedAppConfiguration;
 import com.microsoft.graph.models.DeviceManagementConfigurationSetting;
 import java.util.Arrays;
 import java.util.EnumSet;
@@ -28,7 +28,7 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 public class DeviceManagementConfigurationSettingCollectionRequestBuilder extends BaseCollectionRequestBuilder<DeviceManagementConfigurationSetting, DeviceManagementConfigurationSettingRequestBuilder, DeviceManagementConfigurationSettingCollectionResponse, DeviceManagementConfigurationSettingCollectionPage, DeviceManagementConfigurationSettingCollectionRequest> {
 
     /**
-     * The request builder for this collection of DeviceManagementConfigurationPolicy
+     * The request builder for this collection of ManagedAppConfiguration
      *
      * @param requestUrl     the request URL
      * @param client         the service client

@@ -62,6 +62,15 @@ public class DeviceManagementIntent extends Entity implements IJsonBackedObject 
     public Boolean isAssigned;
 
     /**
+     * The Is Migrating To Configuration Policy.
+     * Signifies whether or not the intent is being migrated to the configurationPolicies endpoint
+     */
+    @SerializedName(value = "isMigratingToConfigurationPolicy", alternate = {"IsMigratingToConfigurationPolicy"})
+    @Expose
+	@Nullable
+    public Boolean isMigratingToConfigurationPolicy;
+
+    /**
      * The Last Modified Date Time.
      * When the intent was last modified
      */

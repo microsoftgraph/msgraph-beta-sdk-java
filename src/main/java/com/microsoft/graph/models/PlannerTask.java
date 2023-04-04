@@ -208,7 +208,7 @@ public class PlannerTask extends PlannerDelta implements IJsonBackedObject {
 
     /**
      * The Recurrence.
-     * 
+     * Defines active or inactive recurrence for the task. null when the recurrence has never been defined for the task.
      */
     @SerializedName(value = "recurrence", alternate = {"Recurrence"})
     @Expose

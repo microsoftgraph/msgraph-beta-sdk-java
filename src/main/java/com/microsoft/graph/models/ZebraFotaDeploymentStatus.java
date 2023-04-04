@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.ZebraFotaErrorCode;
 import com.microsoft.graph.models.ZebraFotaDeploymentState;
 
 
@@ -55,6 +56,15 @@ public class ZebraFotaDeploymentStatus implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.time.OffsetDateTime completeOrCanceledDateTime;
+
+    /**
+     * The Error Code.
+     * An error code indicating the failure reason, when the deployment state is createFailed. Possible values: See zebraFotaErrorCode enum. Possible values are: success, noDevicesFoundInSelectedAadGroups, noIntuneDevicesFoundInSelectedAadGroups, noZebraFotaEnrolledDevicesFoundForCurrentTenant, noZebraFotaEnrolledDevicesFoundInSelectedAadGroups, noZebraFotaDevicesFoundForSelectedDeviceModel, zebraFotaCreateDeploymentRequestFailure, unknownFutureValue.
+     */
+    @SerializedName(value = "errorCode", alternate = {"ErrorCode"})
+    @Expose
+	@Nullable
+    public ZebraFotaErrorCode errorCode;
 
     /**
      * The Last Updated Date Time.

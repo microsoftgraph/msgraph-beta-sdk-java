@@ -103,7 +103,7 @@ public class Directory extends Entity implements IJsonBackedObject {
 
     /**
      * The Inbound Shared User Profiles.
-     * 
+     * A collection of external Azure AD users whose profile data has been shared with the Azure AD tenant. Nullable.
      */
     @SerializedName(value = "inboundSharedUserProfiles", alternate = {"InboundSharedUserProfiles"})
     @Expose

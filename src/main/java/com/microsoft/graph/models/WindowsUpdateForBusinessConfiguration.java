@@ -8,7 +8,6 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
-import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AutomaticUpdateMode;
 import com.microsoft.graph.models.AutoRestartNotificationDismissalMethod;
 import com.microsoft.graph.models.WindowsUpdateType;
@@ -19,7 +18,6 @@ import com.microsoft.graph.models.WindowsUpdateNotificationDisplayOption;
 import com.microsoft.graph.models.WindowsUpdateForBusinessUpdateWeeks;
 import com.microsoft.graph.models.Enablement;
 import com.microsoft.graph.models.DeviceConfiguration;
-import com.microsoft.graph.requests.WindowsUpdateStateCollectionPage;
 
 
 import com.google.gson.JsonObject;
@@ -360,15 +358,6 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
 	@Nullable
     public Enablement userWindowsUpdateScanAccess;
 
-    /**
-     * The Device Update States.
-     * Windows update for business configuration device states. This collection can contain a maximum of 500 elements.
-     */
-    @SerializedName(value = "deviceUpdateStates", alternate = {"DeviceUpdateStates"})
-    @Expose
-	@Nullable
-    public com.microsoft.graph.requests.WindowsUpdateStateCollectionPage deviceUpdateStates;
-
 
     /**
      * Sets the raw JSON object
@@ -378,9 +367,5 @@ public class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration i
      */
     public void setRawObject(@Nonnull final ISerializer serializer, @Nonnull final JsonObject json) {
 
-
-        if (json.has("deviceUpdateStates")) {
-            deviceUpdateStates = serializer.deserializeObject(json.get("deviceUpdateStates"), com.microsoft.graph.requests.WindowsUpdateStateCollectionPage.class);
-        }
     }
 }

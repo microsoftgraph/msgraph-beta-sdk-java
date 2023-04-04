@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.ClassificationRequestContentMetaData;
 import com.microsoft.graph.models.MlClassificationMatchTolerance;
 import com.microsoft.graph.models.SensitiveTypeScope;
 import com.microsoft.graph.models.Entity;
@@ -27,6 +28,15 @@ import javax.annotation.Nonnull;
  */
 public class TextClassificationRequest extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Content Meta Data.
+     * 
+     */
+    @SerializedName(value = "contentMetaData", alternate = {"ContentMetaData"})
+    @Expose
+	@Nullable
+    public ClassificationRequestContentMetaData contentMetaData;
 
     /**
      * The File Extension.

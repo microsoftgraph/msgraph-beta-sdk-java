@@ -52,6 +52,18 @@ public enum DevicePlatformType
     */
     ANDROID_AOSP,
     /**
+    * android Mobile Application Management
+    */
+    ANDROID_MOBILE_APPLICATION_MANAGEMENT,
+    /**
+    * i OSMobile Application Management
+    */
+    I_OS_MOBILE_APPLICATION_MANAGEMENT,
+    /**
+    * unknown Future Value
+    */
+    UNKNOWN_FUTURE_VALUE,
+    /**
     * For DevicePlatformType values that were not expected from the service
     */
     UNEXPECTED_VALUE

@@ -39,7 +39,7 @@ public class EmailSettings implements IJsonBackedObject {
 
     /**
      * The Sender Domain.
-     * Specifies the domain that should be used when sending email notifications. This domain must be verified in order to be used.
+     * Specifies the domain that should be used when sending email notifications. This domain must be verified in order to be used. We recommend that you use a domain that has the appropriate DNS records to facilitate email validation, like SPF, DKIM, DMARC, and MX, because this then complies with the RFC compliance for sending and receiving email. For details, see Learn more about Exchange Online Email Routing.
      */
     @SerializedName(value = "senderDomain", alternate = {"SenderDomain"})
     @Expose

@@ -42,7 +42,7 @@ public class TeamsAppDefinition extends Entity implements IJsonBackedObject {
 
     /**
      * The Authorization.
-     * 
+     * Authorization requirements specified in the Teams app manifest.
      */
     @SerializedName(value = "authorization", alternate = {"Authorization"})
     @Expose
