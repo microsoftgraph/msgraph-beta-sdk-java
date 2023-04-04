@@ -66,4 +66,14 @@ public class CallTranscriptRequestBuilder extends BaseRequestBuilder<CallTranscr
     public CallTranscriptContentStreamRequestBuilder content() {
         return new CallTranscriptContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("content"), getClient(), null);
     }
+
+    /**
+     * Gets the request builder for metadataContent
+     *
+     * @return the CallTranscriptMetadataContentStreamRequestBuilder instance
+     */
+    @Nonnull
+    public CallTranscriptMetadataContentStreamRequestBuilder metadataContent() {
+        return new CallTranscriptMetadataContentStreamRequestBuilder(getRequestUrlWithAdditionalSegment("metadataContent"), getClient(), null);
+    }
 }

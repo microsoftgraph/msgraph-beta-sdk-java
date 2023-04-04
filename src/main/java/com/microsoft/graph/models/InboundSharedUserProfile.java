@@ -39,7 +39,7 @@ public class InboundSharedUserProfile implements IJsonBackedObject {
 
     /**
      * The Display Name.
-     * 
+     * The name displayed in the address book for teh user at the time when the sharing record was created. Read-only.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -48,7 +48,7 @@ public class InboundSharedUserProfile implements IJsonBackedObject {
 
     /**
      * The Home Tenant Id.
-     * 
+     * The home tenant id of the external user. Read-only.
      */
     @SerializedName(value = "homeTenantId", alternate = {"HomeTenantId"})
     @Expose
@@ -57,7 +57,7 @@ public class InboundSharedUserProfile implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * 
+     * The object id of the external user. Read-only.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -66,7 +66,7 @@ public class InboundSharedUserProfile implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * The user principal name (UPN) of the external user. Read-only.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

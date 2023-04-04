@@ -187,26 +187,6 @@ public class WindowsUpdateForBusinessConfigurationRequestBuilder extends BaseReq
     public com.microsoft.graph.requests.DeviceConfigurationUserOverviewRequestBuilder userStatusOverview() {
         return new com.microsoft.graph.requests.DeviceConfigurationUserOverviewRequestBuilder(getRequestUrlWithAdditionalSegment("userStatusOverview"), getClient(), null);
     }
-    /**
-     *  Gets a request builder for the WindowsUpdateState collection
-     *
-     * @return the collection request builder
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.WindowsUpdateStateCollectionRequestBuilder deviceUpdateStates() {
-        return new com.microsoft.graph.requests.WindowsUpdateStateCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("deviceUpdateStates"), getClient(), null);
-    }
-
-    /**
-     * Gets a request builder for the WindowsUpdateState item
-     *
-     * @return the request builder
-     * @param id the item identifier
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.WindowsUpdateStateRequestBuilder deviceUpdateStates(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.WindowsUpdateStateRequestBuilder(getRequestUrlWithAdditionalSegment("deviceUpdateStates") + "/" + id, getClient(), null);
-    }
 
     /**
      * Extend Feature Updates Pause for a Windows Update for Business ring.

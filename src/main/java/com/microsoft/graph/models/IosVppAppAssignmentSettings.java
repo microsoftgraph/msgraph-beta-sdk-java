@@ -35,6 +35,24 @@ public class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings imp
     public Boolean isRemovable;
 
     /**
+     * The Prevent Auto App Update.
+     * When TRUE, indicates that the app should not be automatically updated with the latest version from Apple app store. When FALSE, indicates that the app may be auto updated. By default, this property is set to null which internally is treated as FALSE.
+     */
+    @SerializedName(value = "preventAutoAppUpdate", alternate = {"PreventAutoAppUpdate"})
+    @Expose
+	@Nullable
+    public Boolean preventAutoAppUpdate;
+
+    /**
+     * The Prevent Managed App Backup.
+     * When TRUE, indicates that the app should not be backed up to iCloud. When FALSE, indicates that the app may be backed up to iCloud. By default, this property is set to null which internally is treated as FALSE.
+     */
+    @SerializedName(value = "preventManagedAppBackup", alternate = {"PreventManagedAppBackup"})
+    @Expose
+	@Nullable
+    public Boolean preventManagedAppBackup;
+
+    /**
      * The Uninstall On Device Removal.
      * Whether or not to uninstall the app when device is removed from Intune.
      */

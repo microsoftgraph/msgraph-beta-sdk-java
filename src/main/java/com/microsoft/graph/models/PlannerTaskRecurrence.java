@@ -40,7 +40,7 @@ public class PlannerTaskRecurrence implements IJsonBackedObject {
 
     /**
      * The Next In Series Task Id.
-     * 
+     * The taskId of the next task in this series. This value is assigned at the time the next task in the series is created, and is null prior to that time.
      */
     @SerializedName(value = "nextInSeriesTaskId", alternate = {"NextInSeriesTaskId"})
     @Expose
@@ -49,7 +49,7 @@ public class PlannerTaskRecurrence implements IJsonBackedObject {
 
     /**
      * The Occurrence Id.
-     * 
+     * The 1-based index of this task within the recurrence series. The first task in a series has the value 1, the next task in the series has the value 2, and so on.
      */
     @SerializedName(value = "occurrenceId", alternate = {"OccurrenceId"})
     @Expose
@@ -58,7 +58,7 @@ public class PlannerTaskRecurrence implements IJsonBackedObject {
 
     /**
      * The Previous In Series Task Id.
-     * 
+     * The taskId of the previous task in this series. null for the first task in a series since it has no predecessor. All subsequent tasks in the series have a value that corresponds to their predecessors.
      */
     @SerializedName(value = "previousInSeriesTaskId", alternate = {"PreviousInSeriesTaskId"})
     @Expose
@@ -67,7 +67,7 @@ public class PlannerTaskRecurrence implements IJsonBackedObject {
 
     /**
      * The Recurrence Start Date Time.
-     * 
+     * The date and time when this recurrence series begin. For the first task in a series (occurrenceId = 1) this value is copied from schedule.patternStartDateTime. For subsequent tasks in the series (occurrenceId &amp;gt;= 2) this value is copied from the previous task and never changes; it preserves the start date of the recurring series. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "recurrenceStartDateTime", alternate = {"RecurrenceStartDateTime"})
     @Expose
@@ -76,7 +76,7 @@ public class PlannerTaskRecurrence implements IJsonBackedObject {
 
     /**
      * The Schedule.
-     * 
+     * The schedule for recurrence. Clients define and edit recurrence by specifying the schedule. If nextInSeriesTaskId isn't assigned, clients may terminate the series by assigning null to this property.
      */
     @SerializedName(value = "schedule", alternate = {"Schedule"})
     @Expose
@@ -85,7 +85,7 @@ public class PlannerTaskRecurrence implements IJsonBackedObject {
 
     /**
      * The Series Id.
-     * 
+     * The recurrence series this task belongs to. A GUID-based value that serves as the unique identifier for a series.
      */
     @SerializedName(value = "seriesId", alternate = {"SeriesId"})
     @Expose

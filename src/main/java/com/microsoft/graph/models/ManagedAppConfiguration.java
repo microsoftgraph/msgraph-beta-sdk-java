@@ -41,6 +41,8 @@ public class ManagedAppConfiguration extends ManagedAppPolicy implements IJsonBa
      * The Settings.
      * List of settings contained in this App Configuration policy
      */
+    @SerializedName(value = "settings", alternate = {"Settings"})
+    @Expose
 	@Nullable
     public com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionPage settings;
 

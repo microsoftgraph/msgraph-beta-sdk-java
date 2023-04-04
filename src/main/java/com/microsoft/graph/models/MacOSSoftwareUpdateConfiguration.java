@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.MacOSSoftwareUpdateBehavior;
 import com.microsoft.graph.models.CustomUpdateTimeWindow;
+import com.microsoft.graph.models.MacOSPriority;
 import com.microsoft.graph.models.MacOSSoftwareUpdateScheduleType;
 import com.microsoft.graph.models.DeviceConfiguration;
 
@@ -73,6 +74,24 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
     @Expose
 	@Nullable
     public MacOSSoftwareUpdateBehavior firmwareUpdateBehavior;
+
+    /**
+     * The Max User Deferrals Count.
+     * The maximum number of times the system allows the user to postpone an update before it’s installed. Supported values: 0 - 366. Valid values 0 to 365
+     */
+    @SerializedName(value = "maxUserDeferralsCount", alternate = {"MaxUserDeferralsCount"})
+    @Expose
+	@Nullable
+    public Integer maxUserDeferralsCount;
+
+    /**
+     * The Priority.
+     * The scheduling priority for downloading and preparing the requested update. Default: Low. Possible values: Null, Low, High. Possible values are: low, high, unknownFutureValue.
+     */
+    @SerializedName(value = "priority", alternate = {"Priority"})
+    @Expose
+	@Nullable
+    public MacOSPriority priority;
 
     /**
      * The Update Schedule Type.

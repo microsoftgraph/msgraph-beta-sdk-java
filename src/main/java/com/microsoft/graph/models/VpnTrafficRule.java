@@ -13,6 +13,7 @@ import com.microsoft.graph.models.VpnTrafficRuleAppType;
 import com.microsoft.graph.models.IPv4Range;
 import com.microsoft.graph.models.NumberRange;
 import com.microsoft.graph.models.VpnTrafficRuleRoutingPolicyType;
+import com.microsoft.graph.models.VpnTrafficDirection;
 
 
 import com.google.gson.JsonObject;
@@ -131,6 +132,15 @@ public class VpnTrafficRule implements IJsonBackedObject {
     @Expose
 	@Nullable
     public VpnTrafficRuleRoutingPolicyType routingPolicyType;
+
+    /**
+     * The Vpn Traffic Direction.
+     * Specify whether the rule applies to inbound traffic or outbound traffic. Possible values are: outbound, inbound, unknownFutureValue.
+     */
+    @SerializedName(value = "vpnTrafficDirection", alternate = {"VpnTrafficDirection"})
+    @Expose
+	@Nullable
+    public VpnTrafficDirection vpnTrafficDirection;
 
 
     /**

@@ -69,8 +69,8 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
      * @return the collection request builder
      */
     @Nonnull
-    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionWithReferencesRequestBuilder settings() {
-        return new com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionWithReferencesRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionRequestBuilder settings() {
+        return new com.microsoft.graph.requests.DeviceManagementConfigurationSettingCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("settings"), getClient(), null);
     }
 
     /**
@@ -80,8 +80,8 @@ public class TargetedManagedAppConfigurationRequestBuilder extends BaseRequestBu
      * @param id the item identifier
      */
     @Nonnull
-    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingWithReferenceRequestBuilder settings(@Nonnull final String id) {
-        return new com.microsoft.graph.requests.DeviceManagementConfigurationSettingWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
+    public com.microsoft.graph.requests.DeviceManagementConfigurationSettingRequestBuilder settings(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.DeviceManagementConfigurationSettingRequestBuilder(getRequestUrlWithAdditionalSegment("settings") + "/" + id, getClient(), null);
     }
     /**
      *  Gets a request builder for the ManagedMobileApp collection

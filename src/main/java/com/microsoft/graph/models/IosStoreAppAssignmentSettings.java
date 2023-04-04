@@ -35,6 +35,15 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
     public Boolean isRemovable;
 
     /**
+     * The Prevent Managed App Backup.
+     * When TRUE, indicates that the app should not be backed up to iCloud. When FALSE, indicates that the app may be backed up to iCloud. By default, this property is set to null which internally is treated as FALSE.
+     */
+    @SerializedName(value = "preventManagedAppBackup", alternate = {"PreventManagedAppBackup"})
+    @Expose
+	@Nullable
+    public Boolean preventManagedAppBackup;
+
+    /**
      * The Uninstall On Device Removal.
      * Whether or not to uninstall the app when device is removed from Intune.
      */
