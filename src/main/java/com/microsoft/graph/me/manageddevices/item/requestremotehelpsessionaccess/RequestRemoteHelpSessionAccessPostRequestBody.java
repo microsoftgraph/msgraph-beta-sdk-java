@@ -4,22 +4,21 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the requestRemoteHelpSessionAccess method. */
 public class RequestRemoteHelpSessionAccessPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The pubSubConnectionId property */
-    private String _pubSubConnectionId;
+    private String pubSubConnectionId;
     /** The sessionKey property */
-    private String _sessionKey;
+    private String sessionKey;
     /**
      * Instantiates a new requestRemoteHelpSessionAccessPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RequestRemoteHelpSessionAccessPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -39,19 +38,18 @@ public class RequestRemoteHelpSessionAccessPostRequestBody implements Additional
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RequestRemoteHelpSessionAccessPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("pubSubConnectionId", (n) -> { currentObject.setPubSubConnectionId(n.getStringValue()); });
-            this.put("sessionKey", (n) -> { currentObject.setSessionKey(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        deserializerMap.put("pubSubConnectionId", (n) -> { this.setPubSubConnectionId(n.getStringValue()); });
+        deserializerMap.put("sessionKey", (n) -> { this.setSessionKey(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the pubSubConnectionId property value. The pubSubConnectionId property
@@ -59,7 +57,7 @@ public class RequestRemoteHelpSessionAccessPostRequestBody implements Additional
      */
     @javax.annotation.Nullable
     public String getPubSubConnectionId() {
-        return this._pubSubConnectionId;
+        return this.pubSubConnectionId;
     }
     /**
      * Gets the sessionKey property value. The sessionKey property
@@ -67,13 +65,14 @@ public class RequestRemoteHelpSessionAccessPostRequestBody implements Additional
      */
     @javax.annotation.Nullable
     public String getSessionKey() {
-        return this._sessionKey;
+        return this.sessionKey;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("pubSubConnectionId", this.getPubSubConnectionId());
@@ -85,23 +84,26 @@ public class RequestRemoteHelpSessionAccessPostRequestBody implements Additional
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the pubSubConnectionId property value. The pubSubConnectionId property
      * @param value Value to set for the pubSubConnectionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPubSubConnectionId(@javax.annotation.Nullable final String value) {
-        this._pubSubConnectionId = value;
+        this.pubSubConnectionId = value;
     }
     /**
      * Sets the sessionKey property value. The sessionKey property
      * @param value Value to set for the sessionKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessionKey(@javax.annotation.Nullable final String value) {
-        this._sessionKey = value;
+        this.sessionKey = value;
     }
 }

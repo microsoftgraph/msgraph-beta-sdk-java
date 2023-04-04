@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Windows 10 Application type. */
 public enum Windows10AppType implements ValuedEnum {
     /** Desktop. */
     Desktop("desktop"),

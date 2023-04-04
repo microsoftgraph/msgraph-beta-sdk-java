@@ -4,17 +4,17 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalDate;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSchedule implements Parsable {
     /** The date the script is scheduled to run. This collection can contain a maximum of 20 elements. */
-    private LocalDate _date;
+    private LocalDate date;
     /**
      * Instantiates a new DeviceHealthScriptRunOnceSchedule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceHealthScriptRunOnceSchedule() {
         super();
         this.setOdataType("#microsoft.graph.deviceHealthScriptRunOnceSchedule");
@@ -35,24 +35,24 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
      */
     @javax.annotation.Nullable
     public LocalDate getDate() {
-        return this._date;
+        return this.date;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceHealthScriptRunOnceSchedule currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("date", (n) -> { currentObject.setDate(n.getLocalDateValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("date", (n) -> { this.setDate(n.getLocalDateValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -63,7 +63,8 @@ public class DeviceHealthScriptRunOnceSchedule extends DeviceHealthScriptTimeSch
      * @param value Value to set for the date property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDate(@javax.annotation.Nullable final LocalDate value) {
-        this._date = value;
+        this.date = value;
     }
 }

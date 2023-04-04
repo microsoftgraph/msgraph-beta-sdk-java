@@ -1,42 +1,40 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.GroupPolicyUploadedDefinitionFile;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GroupPolicyDefinitionFile extends Entity implements Parsable {
     /** The group policy definitions associated with the file. */
-    private java.util.List<GroupPolicyDefinition> _definitions;
+    private java.util.List<GroupPolicyDefinition> definitions;
     /** The localized description of the policy settings in the ADMX file. The default value is empty. */
-    private String _description;
+    private String description;
     /** The localized friendly name of the ADMX file. */
-    private String _displayName;
+    private String displayName;
     /** The file name of the ADMX file without the path. For example: edge.admx */
-    private String _fileName;
+    private String fileName;
     /** The supported language codes for the ADMX file. */
-    private java.util.List<String> _languageCodes;
+    private java.util.List<String> languageCodes;
     /** The date and time the entity was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** Type of Group Policy File or Definition. */
-    private GroupPolicyType _policyType;
+    private GroupPolicyType policyType;
     /** The revision version associated with the file. */
-    private String _revision;
+    private String revision;
     /** Specifies the URI used to identify the namespace within the ADMX file. */
-    private String _targetNamespace;
+    private String targetNamespace;
     /** Specifies the logical name that refers to the namespace within the ADMX file. */
-    private String _targetPrefix;
+    private String targetPrefix;
     /**
      * Instantiates a new groupPolicyDefinitionFile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyDefinitionFile() {
         super();
-        this.setOdataType("#microsoft.graph.groupPolicyDefinitionFile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,7 +59,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<GroupPolicyDefinition> getDefinitions() {
-        return this._definitions;
+        return this.definitions;
     }
     /**
      * Gets the description property value. The localized description of the policy settings in the ADMX file. The default value is empty.
@@ -69,7 +67,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The localized friendly name of the ADMX file.
@@ -77,27 +75,26 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyDefinitionFile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("definitions", (n) -> { currentObject.setDefinitions(n.getCollectionOfObjectValues(GroupPolicyDefinition::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
-            this.put("languageCodes", (n) -> { currentObject.setLanguageCodes(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("policyType", (n) -> { currentObject.setPolicyType(n.getEnumValue(GroupPolicyType.class)); });
-            this.put("revision", (n) -> { currentObject.setRevision(n.getStringValue()); });
-            this.put("targetNamespace", (n) -> { currentObject.setTargetNamespace(n.getStringValue()); });
-            this.put("targetPrefix", (n) -> { currentObject.setTargetPrefix(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("definitions", (n) -> { this.setDefinitions(n.getCollectionOfObjectValues(GroupPolicyDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("fileName", (n) -> { this.setFileName(n.getStringValue()); });
+        deserializerMap.put("languageCodes", (n) -> { this.setLanguageCodes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("policyType", (n) -> { this.setPolicyType(n.getEnumValue(GroupPolicyType.class)); });
+        deserializerMap.put("revision", (n) -> { this.setRevision(n.getStringValue()); });
+        deserializerMap.put("targetNamespace", (n) -> { this.setTargetNamespace(n.getStringValue()); });
+        deserializerMap.put("targetPrefix", (n) -> { this.setTargetPrefix(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileName property value. The file name of the ADMX file without the path. For example: edge.admx
@@ -105,7 +102,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getFileName() {
-        return this._fileName;
+        return this.fileName;
     }
     /**
      * Gets the languageCodes property value. The supported language codes for the ADMX file.
@@ -113,7 +110,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getLanguageCodes() {
-        return this._languageCodes;
+        return this.languageCodes;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
@@ -121,7 +118,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the policyType property value. Type of Group Policy File or Definition.
@@ -129,7 +126,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public GroupPolicyType getPolicyType() {
-        return this._policyType;
+        return this.policyType;
     }
     /**
      * Gets the revision property value. The revision version associated with the file.
@@ -137,7 +134,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRevision() {
-        return this._revision;
+        return this.revision;
     }
     /**
      * Gets the targetNamespace property value. Specifies the URI used to identify the namespace within the ADMX file.
@@ -145,7 +142,7 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTargetNamespace() {
-        return this._targetNamespace;
+        return this.targetNamespace;
     }
     /**
      * Gets the targetPrefix property value. Specifies the logical name that refers to the namespace within the ADMX file.
@@ -153,13 +150,14 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTargetPrefix() {
-        return this._targetPrefix;
+        return this.targetPrefix;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -179,79 +177,89 @@ public class GroupPolicyDefinitionFile extends Entity implements Parsable {
      * @param value Value to set for the definitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinitions(@javax.annotation.Nullable final java.util.List<GroupPolicyDefinition> value) {
-        this._definitions = value;
+        this.definitions = value;
     }
     /**
      * Sets the description property value. The localized description of the policy settings in the ADMX file. The default value is empty.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The localized friendly name of the ADMX file.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the fileName property value. The file name of the ADMX file without the path. For example: edge.admx
      * @param value Value to set for the fileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileName(@javax.annotation.Nullable final String value) {
-        this._fileName = value;
+        this.fileName = value;
     }
     /**
      * Sets the languageCodes property value. The supported language codes for the ADMX file.
      * @param value Value to set for the languageCodes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLanguageCodes(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._languageCodes = value;
+        this.languageCodes = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the entity was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the policyType property value. Type of Group Policy File or Definition.
      * @param value Value to set for the policyType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyType(@javax.annotation.Nullable final GroupPolicyType value) {
-        this._policyType = value;
+        this.policyType = value;
     }
     /**
      * Sets the revision property value. The revision version associated with the file.
      * @param value Value to set for the revision property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRevision(@javax.annotation.Nullable final String value) {
-        this._revision = value;
+        this.revision = value;
     }
     /**
      * Sets the targetNamespace property value. Specifies the URI used to identify the namespace within the ADMX file.
      * @param value Value to set for the targetNamespace property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetNamespace(@javax.annotation.Nullable final String value) {
-        this._targetNamespace = value;
+        this.targetNamespace = value;
     }
     /**
      * Sets the targetPrefix property value. Specifies the logical name that refers to the namespace within the ADMX file.
      * @param value Value to set for the targetPrefix property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetPrefix(@javax.annotation.Nullable final String value) {
-        this._targetPrefix = value;
+        this.targetPrefix = value;
     }
 }

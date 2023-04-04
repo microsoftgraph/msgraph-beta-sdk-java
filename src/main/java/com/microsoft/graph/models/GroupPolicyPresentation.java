@@ -1,38 +1,29 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.GroupPolicyPresentationCheckBox;
-import com.microsoft.graph.models.GroupPolicyPresentationComboBox;
-import com.microsoft.graph.models.GroupPolicyPresentationDecimalTextBox;
-import com.microsoft.graph.models.GroupPolicyPresentationDropdownList;
-import com.microsoft.graph.models.GroupPolicyPresentationListBox;
-import com.microsoft.graph.models.GroupPolicyPresentationLongDecimalTextBox;
-import com.microsoft.graph.models.GroupPolicyPresentationMultiTextBox;
-import com.microsoft.graph.models.GroupPolicyPresentationText;
-import com.microsoft.graph.models.GroupPolicyPresentationTextBox;
-import com.microsoft.graph.models.GroupPolicyUploadedPresentation;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** The base entity for the display presentation of any of the additional options in a group policy definition. */
+/**
+ * The base entity for the display presentation of any of the additional options in a group policy definition.
+ */
 public class GroupPolicyPresentation extends Entity implements Parsable {
     /** The group policy definition associated with the presentation. */
-    private GroupPolicyDefinition _definition;
+    private GroupPolicyDefinition definition;
     /** Localized text label for any presentation entity. The default value is empty. */
-    private String _label;
+    private String label;
     /** The date and time the entity was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /**
      * Instantiates a new groupPolicyPresentation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GroupPolicyPresentation() {
         super();
-        this.setOdataType("#microsoft.graph.groupPolicyPresentation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -66,20 +57,19 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public GroupPolicyDefinition getDefinition() {
-        return this._definition;
+        return this.definition;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GroupPolicyPresentation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("definition", (n) -> { currentObject.setDefinition(n.getObjectValue(GroupPolicyDefinition::createFromDiscriminatorValue)); });
-            this.put("label", (n) -> { currentObject.setLabel(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("definition", (n) -> { this.setDefinition(n.getObjectValue(GroupPolicyDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the label property value. Localized text label for any presentation entity. The default value is empty.
@@ -87,7 +77,7 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLabel() {
-        return this._label;
+        return this.label;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
@@ -95,13 +85,14 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -114,23 +105,26 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
      * @param value Value to set for the definition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefinition(@javax.annotation.Nullable final GroupPolicyDefinition value) {
-        this._definition = value;
+        this.definition = value;
     }
     /**
      * Sets the label property value. Localized text label for any presentation entity. The default value is empty.
      * @param value Value to set for the label property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabel(@javax.annotation.Nullable final String value) {
-        this._label = value;
+        this.label = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time the entity was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
 }

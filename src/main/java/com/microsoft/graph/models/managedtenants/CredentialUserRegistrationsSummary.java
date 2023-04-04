@@ -5,41 +5,39 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class CredentialUserRegistrationsSummary extends Entity implements Parsable {
     /** Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only. */
-    private OffsetDateTime _lastRefreshedDateTime;
+    private OffsetDateTime lastRefreshedDateTime;
     /** The number of users that are capable of performing multi-factor authentication or self service password reset. Optional. Read-only. */
-    private Integer _mfaAndSsprCapableUserCount;
+    private Integer mfaAndSsprCapableUserCount;
     /** The state of a conditional access policy that enforces multi-factor authentication. Optional. Read-only. */
-    private String _mfaConditionalAccessPolicyState;
+    private String mfaConditionalAccessPolicyState;
     /** The number of users in the multi-factor authentication exclusion security group (Microsoft 365 Lighthouse - MFA exclusions). Optional. Read-only. */
-    private Integer _mfaExcludedUserCount;
+    private Integer mfaExcludedUserCount;
     /** The number of users registered for multi-factor authentication. Optional. Read-only. */
-    private Integer _mfaRegisteredUserCount;
+    private Integer mfaRegisteredUserCount;
     /** A flag indicating whether Identity Security Defaults is enabled. Optional. Read-only. */
-    private Boolean _securityDefaultsEnabled;
+    private Boolean securityDefaultsEnabled;
     /** The number of users enabled for self service password reset. Optional. Read-only. */
-    private Integer _ssprEnabledUserCount;
+    private Integer ssprEnabledUserCount;
     /** The number of users registered for self service password reset. Optional. Read-only. */
-    private Integer _ssprRegisteredUserCount;
+    private Integer ssprRegisteredUserCount;
     /** The display name for the managed tenant. Required. Read-only. */
-    private String _tenantDisplayName;
+    private String tenantDisplayName;
     /** The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only. */
-    private String _tenantId;
+    private String tenantId;
     /** The total number of users in the given managed tenant. Optional. Read-only. */
-    private Integer _totalUserCount;
+    private Integer totalUserCount;
     /**
      * Instantiates a new credentialUserRegistrationsSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CredentialUserRegistrationsSummary() {
         super();
-        this.setOdataType("#microsoft.graph.managedTenants.credentialUserRegistrationsSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,24 +51,23 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CredentialUserRegistrationsSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("lastRefreshedDateTime", (n) -> { currentObject.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("mfaAndSsprCapableUserCount", (n) -> { currentObject.setMfaAndSsprCapableUserCount(n.getIntegerValue()); });
-            this.put("mfaConditionalAccessPolicyState", (n) -> { currentObject.setMfaConditionalAccessPolicyState(n.getStringValue()); });
-            this.put("mfaExcludedUserCount", (n) -> { currentObject.setMfaExcludedUserCount(n.getIntegerValue()); });
-            this.put("mfaRegisteredUserCount", (n) -> { currentObject.setMfaRegisteredUserCount(n.getIntegerValue()); });
-            this.put("securityDefaultsEnabled", (n) -> { currentObject.setSecurityDefaultsEnabled(n.getBooleanValue()); });
-            this.put("ssprEnabledUserCount", (n) -> { currentObject.setSsprEnabledUserCount(n.getIntegerValue()); });
-            this.put("ssprRegisteredUserCount", (n) -> { currentObject.setSsprRegisteredUserCount(n.getIntegerValue()); });
-            this.put("tenantDisplayName", (n) -> { currentObject.setTenantDisplayName(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-            this.put("totalUserCount", (n) -> { currentObject.setTotalUserCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("lastRefreshedDateTime", (n) -> { this.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("mfaAndSsprCapableUserCount", (n) -> { this.setMfaAndSsprCapableUserCount(n.getIntegerValue()); });
+        deserializerMap.put("mfaConditionalAccessPolicyState", (n) -> { this.setMfaConditionalAccessPolicyState(n.getStringValue()); });
+        deserializerMap.put("mfaExcludedUserCount", (n) -> { this.setMfaExcludedUserCount(n.getIntegerValue()); });
+        deserializerMap.put("mfaRegisteredUserCount", (n) -> { this.setMfaRegisteredUserCount(n.getIntegerValue()); });
+        deserializerMap.put("securityDefaultsEnabled", (n) -> { this.setSecurityDefaultsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("ssprEnabledUserCount", (n) -> { this.setSsprEnabledUserCount(n.getIntegerValue()); });
+        deserializerMap.put("ssprRegisteredUserCount", (n) -> { this.setSsprRegisteredUserCount(n.getIntegerValue()); });
+        deserializerMap.put("tenantDisplayName", (n) -> { this.setTenantDisplayName(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("totalUserCount", (n) -> { this.setTotalUserCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
@@ -78,7 +75,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {
-        return this._lastRefreshedDateTime;
+        return this.lastRefreshedDateTime;
     }
     /**
      * Gets the mfaAndSsprCapableUserCount property value. The number of users that are capable of performing multi-factor authentication or self service password reset. Optional. Read-only.
@@ -86,7 +83,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public Integer getMfaAndSsprCapableUserCount() {
-        return this._mfaAndSsprCapableUserCount;
+        return this.mfaAndSsprCapableUserCount;
     }
     /**
      * Gets the mfaConditionalAccessPolicyState property value. The state of a conditional access policy that enforces multi-factor authentication. Optional. Read-only.
@@ -94,7 +91,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public String getMfaConditionalAccessPolicyState() {
-        return this._mfaConditionalAccessPolicyState;
+        return this.mfaConditionalAccessPolicyState;
     }
     /**
      * Gets the mfaExcludedUserCount property value. The number of users in the multi-factor authentication exclusion security group (Microsoft 365 Lighthouse - MFA exclusions). Optional. Read-only.
@@ -102,7 +99,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public Integer getMfaExcludedUserCount() {
-        return this._mfaExcludedUserCount;
+        return this.mfaExcludedUserCount;
     }
     /**
      * Gets the mfaRegisteredUserCount property value. The number of users registered for multi-factor authentication. Optional. Read-only.
@@ -110,7 +107,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public Integer getMfaRegisteredUserCount() {
-        return this._mfaRegisteredUserCount;
+        return this.mfaRegisteredUserCount;
     }
     /**
      * Gets the securityDefaultsEnabled property value. A flag indicating whether Identity Security Defaults is enabled. Optional. Read-only.
@@ -118,7 +115,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public Boolean getSecurityDefaultsEnabled() {
-        return this._securityDefaultsEnabled;
+        return this.securityDefaultsEnabled;
     }
     /**
      * Gets the ssprEnabledUserCount property value. The number of users enabled for self service password reset. Optional. Read-only.
@@ -126,7 +123,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public Integer getSsprEnabledUserCount() {
-        return this._ssprEnabledUserCount;
+        return this.ssprEnabledUserCount;
     }
     /**
      * Gets the ssprRegisteredUserCount property value. The number of users registered for self service password reset. Optional. Read-only.
@@ -134,7 +131,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public Integer getSsprRegisteredUserCount() {
-        return this._ssprRegisteredUserCount;
+        return this.ssprRegisteredUserCount;
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
@@ -142,7 +139,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public String getTenantDisplayName() {
-        return this._tenantDisplayName;
+        return this.tenantDisplayName;
     }
     /**
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
@@ -150,7 +147,7 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Gets the totalUserCount property value. The total number of users in the given managed tenant. Optional. Read-only.
@@ -158,13 +155,14 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public Integer getTotalUserCount() {
-        return this._totalUserCount;
+        return this.totalUserCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -185,87 +183,98 @@ public class CredentialUserRegistrationsSummary extends Entity implements Parsab
      * @param value Value to set for the lastRefreshedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastRefreshedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastRefreshedDateTime = value;
+        this.lastRefreshedDateTime = value;
     }
     /**
      * Sets the mfaAndSsprCapableUserCount property value. The number of users that are capable of performing multi-factor authentication or self service password reset. Optional. Read-only.
      * @param value Value to set for the mfaAndSsprCapableUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMfaAndSsprCapableUserCount(@javax.annotation.Nullable final Integer value) {
-        this._mfaAndSsprCapableUserCount = value;
+        this.mfaAndSsprCapableUserCount = value;
     }
     /**
      * Sets the mfaConditionalAccessPolicyState property value. The state of a conditional access policy that enforces multi-factor authentication. Optional. Read-only.
      * @param value Value to set for the mfaConditionalAccessPolicyState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMfaConditionalAccessPolicyState(@javax.annotation.Nullable final String value) {
-        this._mfaConditionalAccessPolicyState = value;
+        this.mfaConditionalAccessPolicyState = value;
     }
     /**
      * Sets the mfaExcludedUserCount property value. The number of users in the multi-factor authentication exclusion security group (Microsoft 365 Lighthouse - MFA exclusions). Optional. Read-only.
      * @param value Value to set for the mfaExcludedUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMfaExcludedUserCount(@javax.annotation.Nullable final Integer value) {
-        this._mfaExcludedUserCount = value;
+        this.mfaExcludedUserCount = value;
     }
     /**
      * Sets the mfaRegisteredUserCount property value. The number of users registered for multi-factor authentication. Optional. Read-only.
      * @param value Value to set for the mfaRegisteredUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMfaRegisteredUserCount(@javax.annotation.Nullable final Integer value) {
-        this._mfaRegisteredUserCount = value;
+        this.mfaRegisteredUserCount = value;
     }
     /**
      * Sets the securityDefaultsEnabled property value. A flag indicating whether Identity Security Defaults is enabled. Optional. Read-only.
      * @param value Value to set for the securityDefaultsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityDefaultsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._securityDefaultsEnabled = value;
+        this.securityDefaultsEnabled = value;
     }
     /**
      * Sets the ssprEnabledUserCount property value. The number of users enabled for self service password reset. Optional. Read-only.
      * @param value Value to set for the ssprEnabledUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSsprEnabledUserCount(@javax.annotation.Nullable final Integer value) {
-        this._ssprEnabledUserCount = value;
+        this.ssprEnabledUserCount = value;
     }
     /**
      * Sets the ssprRegisteredUserCount property value. The number of users registered for self service password reset. Optional. Read-only.
      * @param value Value to set for the ssprRegisteredUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSsprRegisteredUserCount(@javax.annotation.Nullable final Integer value) {
-        this._ssprRegisteredUserCount = value;
+        this.ssprRegisteredUserCount = value;
     }
     /**
      * Sets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
-        this._tenantDisplayName = value;
+        this.tenantDisplayName = value;
     }
     /**
      * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Required. Read-only.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
     /**
      * Sets the totalUserCount property value. The total number of users in the given managed tenant. Optional. Read-only.
      * @param value Value to set for the totalUserCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalUserCount(@javax.annotation.Nullable final Integer value) {
-        this._totalUserCount = value;
+        this.totalUserCount = value;
     }
 }

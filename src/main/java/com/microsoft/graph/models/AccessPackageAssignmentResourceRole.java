@@ -3,33 +3,31 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class AccessPackageAssignmentResourceRole extends Entity implements Parsable {
     /** The access package assignments resulting in this role assignment. Read-only. Nullable. */
-    private java.util.List<AccessPackageAssignment> _accessPackageAssignments;
+    private java.util.List<AccessPackageAssignment> accessPackageAssignments;
     /** The accessPackageResourceRole property */
-    private AccessPackageResourceRole _accessPackageResourceRole;
+    private AccessPackageResourceRole accessPackageResourceRole;
     /** The accessPackageResourceScope property */
-    private AccessPackageResourceScope _accessPackageResourceScope;
+    private AccessPackageResourceScope accessPackageResourceScope;
     /** Read-only. Nullable. Supports $filter (eq) on objectId and $expand query parameters. */
-    private AccessPackageSubject _accessPackageSubject;
+    private AccessPackageSubject accessPackageSubject;
     /** A unique identifier relative to the origin system, corresponding to the originId property of the accessPackageResourceRole. */
-    private String _originId;
+    private String originId;
     /** The system where the role assignment is to be created or has been created for an access package assignment, such as SharePointOnline, AadGroup or AadApplication, corresponding to the originSystem property of the accessPackageResourceRole. */
-    private String _originSystem;
+    private String originSystem;
     /** The value is PendingFulfillment when the access package assignment has not yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system. */
-    private String _status;
+    private String status;
     /**
      * Instantiates a new accessPackageAssignmentResourceRole and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageAssignmentResourceRole() {
         super();
-        this.setOdataType("#microsoft.graph.accessPackageAssignmentResourceRole");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +45,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public java.util.List<AccessPackageAssignment> getAccessPackageAssignments() {
-        return this._accessPackageAssignments;
+        return this.accessPackageAssignments;
     }
     /**
      * Gets the accessPackageResourceRole property value. The accessPackageResourceRole property
@@ -55,7 +53,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public AccessPackageResourceRole getAccessPackageResourceRole() {
-        return this._accessPackageResourceRole;
+        return this.accessPackageResourceRole;
     }
     /**
      * Gets the accessPackageResourceScope property value. The accessPackageResourceScope property
@@ -63,7 +61,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public AccessPackageResourceScope getAccessPackageResourceScope() {
-        return this._accessPackageResourceScope;
+        return this.accessPackageResourceScope;
     }
     /**
      * Gets the accessPackageSubject property value. Read-only. Nullable. Supports $filter (eq) on objectId and $expand query parameters.
@@ -71,24 +69,23 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public AccessPackageSubject getAccessPackageSubject() {
-        return this._accessPackageSubject;
+        return this.accessPackageSubject;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessPackageAssignmentResourceRole currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessPackageAssignments", (n) -> { currentObject.setAccessPackageAssignments(n.getCollectionOfObjectValues(AccessPackageAssignment::createFromDiscriminatorValue)); });
-            this.put("accessPackageResourceRole", (n) -> { currentObject.setAccessPackageResourceRole(n.getObjectValue(AccessPackageResourceRole::createFromDiscriminatorValue)); });
-            this.put("accessPackageResourceScope", (n) -> { currentObject.setAccessPackageResourceScope(n.getObjectValue(AccessPackageResourceScope::createFromDiscriminatorValue)); });
-            this.put("accessPackageSubject", (n) -> { currentObject.setAccessPackageSubject(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
-            this.put("originId", (n) -> { currentObject.setOriginId(n.getStringValue()); });
-            this.put("originSystem", (n) -> { currentObject.setOriginSystem(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackageAssignments", (n) -> { this.setAccessPackageAssignments(n.getCollectionOfObjectValues(AccessPackageAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageResourceRole", (n) -> { this.setAccessPackageResourceRole(n.getObjectValue(AccessPackageResourceRole::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageResourceScope", (n) -> { this.setAccessPackageResourceScope(n.getObjectValue(AccessPackageResourceScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("accessPackageSubject", (n) -> { this.setAccessPackageSubject(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
+        deserializerMap.put("originId", (n) -> { this.setOriginId(n.getStringValue()); });
+        deserializerMap.put("originSystem", (n) -> { this.setOriginSystem(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the originId property value. A unique identifier relative to the origin system, corresponding to the originId property of the accessPackageResourceRole.
@@ -96,7 +93,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public String getOriginId() {
-        return this._originId;
+        return this.originId;
     }
     /**
      * Gets the originSystem property value. The system where the role assignment is to be created or has been created for an access package assignment, such as SharePointOnline, AadGroup or AadApplication, corresponding to the originSystem property of the accessPackageResourceRole.
@@ -104,7 +101,7 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public String getOriginSystem() {
-        return this._originSystem;
+        return this.originSystem;
     }
     /**
      * Gets the status property value. The value is PendingFulfillment when the access package assignment has not yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
@@ -112,13 +109,14 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public String getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -135,55 +133,62 @@ public class AccessPackageAssignmentResourceRole extends Entity implements Parsa
      * @param value Value to set for the accessPackageAssignments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageAssignments(@javax.annotation.Nullable final java.util.List<AccessPackageAssignment> value) {
-        this._accessPackageAssignments = value;
+        this.accessPackageAssignments = value;
     }
     /**
      * Sets the accessPackageResourceRole property value. The accessPackageResourceRole property
      * @param value Value to set for the accessPackageResourceRole property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResourceRole(@javax.annotation.Nullable final AccessPackageResourceRole value) {
-        this._accessPackageResourceRole = value;
+        this.accessPackageResourceRole = value;
     }
     /**
      * Sets the accessPackageResourceScope property value. The accessPackageResourceScope property
      * @param value Value to set for the accessPackageResourceScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResourceScope(@javax.annotation.Nullable final AccessPackageResourceScope value) {
-        this._accessPackageResourceScope = value;
+        this.accessPackageResourceScope = value;
     }
     /**
      * Sets the accessPackageSubject property value. Read-only. Nullable. Supports $filter (eq) on objectId and $expand query parameters.
      * @param value Value to set for the accessPackageSubject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageSubject(@javax.annotation.Nullable final AccessPackageSubject value) {
-        this._accessPackageSubject = value;
+        this.accessPackageSubject = value;
     }
     /**
      * Sets the originId property value. A unique identifier relative to the origin system, corresponding to the originId property of the accessPackageResourceRole.
      * @param value Value to set for the originId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginId(@javax.annotation.Nullable final String value) {
-        this._originId = value;
+        this.originId = value;
     }
     /**
      * Sets the originSystem property value. The system where the role assignment is to be created or has been created for an access package assignment, such as SharePointOnline, AadGroup or AadApplication, corresponding to the originSystem property of the accessPackageResourceRole.
      * @param value Value to set for the originSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginSystem(@javax.annotation.Nullable final String value) {
-        this._originSystem = value;
+        this.originSystem = value;
     }
     /**
      * Sets the status property value. The value is PendingFulfillment when the access package assignment has not yet been delivered to the origin system, and Fulfilled when the access package assignment has been delivered to the origin system.
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
-        this._status = value;
+        this.status = value;
     }
 }

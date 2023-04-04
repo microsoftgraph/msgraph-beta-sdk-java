@@ -4,38 +4,37 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ObjectMapping implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Attribute mappings define which attributes to map from the source object into the target object and how they should flow. A number of functions are available to support the transformation of the original source values. */
-    private java.util.List<AttributeMapping> _attributeMappings;
+    private java.util.List<AttributeMapping> attributeMappings;
     /** When true, this object mapping will be processed during synchronization. When false, this object mapping will be skipped. */
-    private Boolean _enabled;
+    private Boolean enabled;
     /** The flowTypes property */
-    private ObjectFlowTypes _flowTypes;
+    private ObjectFlowTypes flowTypes;
     /** Additional extension properties. Unless mentioned explicitly, metadata values should not be changed. */
-    private java.util.List<MetadataEntry> _metadata;
+    private java.util.List<MetadataEntry> metadata;
     /** Human-friendly name of the object mapping. */
-    private String _name;
+    private String name;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US. */
-    private Filter _scope;
+    private Filter scope;
     /** Name of the object in the source directory. Must match the object name from the source directory definition. */
-    private String _sourceObjectName;
+    private String sourceObjectName;
     /** Name of the object in target directory. Must match the object name from the target directory definition. */
-    private String _targetObjectName;
+    private String targetObjectName;
     /**
      * Instantiates a new objectMapping and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ObjectMapping() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.objectMapping");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +52,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the attributeMappings property value. Attribute mappings define which attributes to map from the source object into the target object and how they should flow. A number of functions are available to support the transformation of the original source values.
@@ -61,7 +60,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AttributeMapping> getAttributeMappings() {
-        return this._attributeMappings;
+        return this.attributeMappings;
     }
     /**
      * Gets the enabled property value. When true, this object mapping will be processed during synchronization. When false, this object mapping will be skipped.
@@ -69,26 +68,25 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getEnabled() {
-        return this._enabled;
+        return this.enabled;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ObjectMapping currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("attributeMappings", (n) -> { currentObject.setAttributeMappings(n.getCollectionOfObjectValues(AttributeMapping::createFromDiscriminatorValue)); });
-            this.put("enabled", (n) -> { currentObject.setEnabled(n.getBooleanValue()); });
-            this.put("flowTypes", (n) -> { currentObject.setFlowTypes(n.getEnumValue(ObjectFlowTypes.class)); });
-            this.put("metadata", (n) -> { currentObject.setMetadata(n.getCollectionOfObjectValues(MetadataEntry::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("scope", (n) -> { currentObject.setScope(n.getObjectValue(Filter::createFromDiscriminatorValue)); });
-            this.put("sourceObjectName", (n) -> { currentObject.setSourceObjectName(n.getStringValue()); });
-            this.put("targetObjectName", (n) -> { currentObject.setTargetObjectName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        deserializerMap.put("attributeMappings", (n) -> { this.setAttributeMappings(n.getCollectionOfObjectValues(AttributeMapping::createFromDiscriminatorValue)); });
+        deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
+        deserializerMap.put("flowTypes", (n) -> { this.setFlowTypes(n.getEnumValue(ObjectFlowTypes.class)); });
+        deserializerMap.put("metadata", (n) -> { this.setMetadata(n.getCollectionOfObjectValues(MetadataEntry::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("scope", (n) -> { this.setScope(n.getObjectValue(Filter::createFromDiscriminatorValue)); });
+        deserializerMap.put("sourceObjectName", (n) -> { this.setSourceObjectName(n.getStringValue()); });
+        deserializerMap.put("targetObjectName", (n) -> { this.setTargetObjectName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the flowTypes property value. The flowTypes property
@@ -96,7 +94,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ObjectFlowTypes getFlowTypes() {
-        return this._flowTypes;
+        return this.flowTypes;
     }
     /**
      * Gets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
@@ -104,7 +102,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MetadataEntry> getMetadata() {
-        return this._metadata;
+        return this.metadata;
     }
     /**
      * Gets the name property value. Human-friendly name of the object mapping.
@@ -112,7 +110,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -120,7 +118,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the scope property value. Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US.
@@ -128,7 +126,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Filter getScope() {
-        return this._scope;
+        return this.scope;
     }
     /**
      * Gets the sourceObjectName property value. Name of the object in the source directory. Must match the object name from the source directory definition.
@@ -136,7 +134,7 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getSourceObjectName() {
-        return this._sourceObjectName;
+        return this.sourceObjectName;
     }
     /**
      * Gets the targetObjectName property value. Name of the object in target directory. Must match the object name from the target directory definition.
@@ -144,13 +142,14 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getTargetObjectName() {
-        return this._targetObjectName;
+        return this.targetObjectName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("attributeMappings", this.getAttributeMappings());
@@ -169,79 +168,89 @@ public class ObjectMapping implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the attributeMappings property value. Attribute mappings define which attributes to map from the source object into the target object and how they should flow. A number of functions are available to support the transformation of the original source values.
      * @param value Value to set for the attributeMappings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttributeMappings(@javax.annotation.Nullable final java.util.List<AttributeMapping> value) {
-        this._attributeMappings = value;
+        this.attributeMappings = value;
     }
     /**
      * Sets the enabled property value. When true, this object mapping will be processed during synchronization. When false, this object mapping will be skipped.
      * @param value Value to set for the enabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._enabled = value;
+        this.enabled = value;
     }
     /**
      * Sets the flowTypes property value. The flowTypes property
      * @param value Value to set for the flowTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFlowTypes(@javax.annotation.Nullable final ObjectFlowTypes value) {
-        this._flowTypes = value;
+        this.flowTypes = value;
     }
     /**
      * Sets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
      * @param value Value to set for the metadata property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMetadata(@javax.annotation.Nullable final java.util.List<MetadataEntry> value) {
-        this._metadata = value;
+        this.metadata = value;
     }
     /**
      * Sets the name property value. Human-friendly name of the object mapping.
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the scope property value. Defines a filter to be used when deciding whether a given object should be provisioned. For example, you might want to only provision users that are located in the US.
      * @param value Value to set for the scope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setScope(@javax.annotation.Nullable final Filter value) {
-        this._scope = value;
+        this.scope = value;
     }
     /**
      * Sets the sourceObjectName property value. Name of the object in the source directory. Must match the object name from the source directory definition.
      * @param value Value to set for the sourceObjectName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceObjectName(@javax.annotation.Nullable final String value) {
-        this._sourceObjectName = value;
+        this.sourceObjectName = value;
     }
     /**
      * Sets the targetObjectName property value. Name of the object in target directory. Must match the object name from the target directory definition.
      * @param value Value to set for the targetObjectName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetObjectName(@javax.annotation.Nullable final String value) {
-        this._targetObjectName = value;
+        this.targetObjectName = value;
     }
 }

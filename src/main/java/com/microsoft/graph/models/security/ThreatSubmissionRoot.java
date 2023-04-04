@@ -4,26 +4,25 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ThreatSubmissionRoot extends Entity implements Parsable {
     /** The emailThreats property */
-    private java.util.List<EmailThreatSubmission> _emailThreats;
+    private java.util.List<EmailThreatSubmission> emailThreats;
     /** The emailThreatSubmissionPolicies property */
-    private java.util.List<EmailThreatSubmissionPolicy> _emailThreatSubmissionPolicies;
+    private java.util.List<EmailThreatSubmissionPolicy> emailThreatSubmissionPolicies;
     /** The fileThreats property */
-    private java.util.List<FileThreatSubmission> _fileThreats;
+    private java.util.List<FileThreatSubmission> fileThreats;
     /** The urlThreats property */
-    private java.util.List<UrlThreatSubmission> _urlThreats;
+    private java.util.List<UrlThreatSubmission> urlThreats;
     /**
      * Instantiates a new threatSubmissionRoot and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ThreatSubmissionRoot() {
         super();
-        this.setOdataType("#microsoft.graph.security.threatSubmissionRoot");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +40,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EmailThreatSubmission> getEmailThreats() {
-        return this._emailThreats;
+        return this.emailThreats;
     }
     /**
      * Gets the emailThreatSubmissionPolicies property value. The emailThreatSubmissionPolicies property
@@ -49,21 +48,20 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<EmailThreatSubmissionPolicy> getEmailThreatSubmissionPolicies() {
-        return this._emailThreatSubmissionPolicies;
+        return this.emailThreatSubmissionPolicies;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ThreatSubmissionRoot currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("emailThreats", (n) -> { currentObject.setEmailThreats(n.getCollectionOfObjectValues(EmailThreatSubmission::createFromDiscriminatorValue)); });
-            this.put("emailThreatSubmissionPolicies", (n) -> { currentObject.setEmailThreatSubmissionPolicies(n.getCollectionOfObjectValues(EmailThreatSubmissionPolicy::createFromDiscriminatorValue)); });
-            this.put("fileThreats", (n) -> { currentObject.setFileThreats(n.getCollectionOfObjectValues(FileThreatSubmission::createFromDiscriminatorValue)); });
-            this.put("urlThreats", (n) -> { currentObject.setUrlThreats(n.getCollectionOfObjectValues(UrlThreatSubmission::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("emailThreats", (n) -> { this.setEmailThreats(n.getCollectionOfObjectValues(EmailThreatSubmission::createFromDiscriminatorValue)); });
+        deserializerMap.put("emailThreatSubmissionPolicies", (n) -> { this.setEmailThreatSubmissionPolicies(n.getCollectionOfObjectValues(EmailThreatSubmissionPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("fileThreats", (n) -> { this.setFileThreats(n.getCollectionOfObjectValues(FileThreatSubmission::createFromDiscriminatorValue)); });
+        deserializerMap.put("urlThreats", (n) -> { this.setUrlThreats(n.getCollectionOfObjectValues(UrlThreatSubmission::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the fileThreats property value. The fileThreats property
@@ -71,7 +69,7 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<FileThreatSubmission> getFileThreats() {
-        return this._fileThreats;
+        return this.fileThreats;
     }
     /**
      * Gets the urlThreats property value. The urlThreats property
@@ -79,13 +77,14 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<UrlThreatSubmission> getUrlThreats() {
-        return this._urlThreats;
+        return this.urlThreats;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -99,31 +98,35 @@ public class ThreatSubmissionRoot extends Entity implements Parsable {
      * @param value Value to set for the emailThreats property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailThreats(@javax.annotation.Nullable final java.util.List<EmailThreatSubmission> value) {
-        this._emailThreats = value;
+        this.emailThreats = value;
     }
     /**
      * Sets the emailThreatSubmissionPolicies property value. The emailThreatSubmissionPolicies property
      * @param value Value to set for the emailThreatSubmissionPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmailThreatSubmissionPolicies(@javax.annotation.Nullable final java.util.List<EmailThreatSubmissionPolicy> value) {
-        this._emailThreatSubmissionPolicies = value;
+        this.emailThreatSubmissionPolicies = value;
     }
     /**
      * Sets the fileThreats property value. The fileThreats property
      * @param value Value to set for the fileThreats property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileThreats(@javax.annotation.Nullable final java.util.List<FileThreatSubmission> value) {
-        this._fileThreats = value;
+        this.fileThreats = value;
     }
     /**
      * Sets the urlThreats property value. The urlThreats property
      * @param value Value to set for the urlThreats property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrlThreats(@javax.annotation.Nullable final java.util.List<UrlThreatSubmission> value) {
-        this._urlThreats = value;
+        this.urlThreats = value;
     }
 }

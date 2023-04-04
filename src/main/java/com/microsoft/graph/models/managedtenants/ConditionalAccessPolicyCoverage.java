@@ -5,27 +5,25 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ConditionalAccessPolicyCoverage extends Entity implements Parsable {
     /** The state for the conditional access policy. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required. Read-only. */
-    private String _conditionalAccessPolicyState;
+    private String conditionalAccessPolicyState;
     /** The date and time the conditional access policy was last modified. Required. Read-only. */
-    private OffsetDateTime _latestPolicyModifiedDateTime;
+    private OffsetDateTime latestPolicyModifiedDateTime;
     /** A flag indicating whether the conditional access policy requires device compliance. Required. Read-only. */
-    private Boolean _requiresDeviceCompliance;
+    private Boolean requiresDeviceCompliance;
     /** The display name for the managed tenant. Required. Read-only. */
-    private String _tenantDisplayName;
+    private String tenantDisplayName;
     /**
      * Instantiates a new conditionalAccessPolicyCoverage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConditionalAccessPolicyCoverage() {
         super();
-        this.setOdataType("#microsoft.graph.managedTenants.conditionalAccessPolicyCoverage");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,21 +41,20 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getConditionalAccessPolicyState() {
-        return this._conditionalAccessPolicyState;
+        return this.conditionalAccessPolicyState;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConditionalAccessPolicyCoverage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("conditionalAccessPolicyState", (n) -> { currentObject.setConditionalAccessPolicyState(n.getStringValue()); });
-            this.put("latestPolicyModifiedDateTime", (n) -> { currentObject.setLatestPolicyModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("requiresDeviceCompliance", (n) -> { currentObject.setRequiresDeviceCompliance(n.getBooleanValue()); });
-            this.put("tenantDisplayName", (n) -> { currentObject.setTenantDisplayName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("conditionalAccessPolicyState", (n) -> { this.setConditionalAccessPolicyState(n.getStringValue()); });
+        deserializerMap.put("latestPolicyModifiedDateTime", (n) -> { this.setLatestPolicyModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("requiresDeviceCompliance", (n) -> { this.setRequiresDeviceCompliance(n.getBooleanValue()); });
+        deserializerMap.put("tenantDisplayName", (n) -> { this.setTenantDisplayName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the latestPolicyModifiedDateTime property value. The date and time the conditional access policy was last modified. Required. Read-only.
@@ -65,7 +62,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLatestPolicyModifiedDateTime() {
-        return this._latestPolicyModifiedDateTime;
+        return this.latestPolicyModifiedDateTime;
     }
     /**
      * Gets the requiresDeviceCompliance property value. A flag indicating whether the conditional access policy requires device compliance. Required. Read-only.
@@ -73,7 +70,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public Boolean getRequiresDeviceCompliance() {
-        return this._requiresDeviceCompliance;
+        return this.requiresDeviceCompliance;
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
@@ -81,13 +78,14 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getTenantDisplayName() {
-        return this._tenantDisplayName;
+        return this.tenantDisplayName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -101,31 +99,35 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
      * @param value Value to set for the conditionalAccessPolicyState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionalAccessPolicyState(@javax.annotation.Nullable final String value) {
-        this._conditionalAccessPolicyState = value;
+        this.conditionalAccessPolicyState = value;
     }
     /**
      * Sets the latestPolicyModifiedDateTime property value. The date and time the conditional access policy was last modified. Required. Read-only.
      * @param value Value to set for the latestPolicyModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLatestPolicyModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._latestPolicyModifiedDateTime = value;
+        this.latestPolicyModifiedDateTime = value;
     }
     /**
      * Sets the requiresDeviceCompliance property value. A flag indicating whether the conditional access policy requires device compliance. Required. Read-only.
      * @param value Value to set for the requiresDeviceCompliance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequiresDeviceCompliance(@javax.annotation.Nullable final Boolean value) {
-        this._requiresDeviceCompliance = value;
+        this.requiresDeviceCompliance = value;
     }
     /**
      * Sets the tenantDisplayName property value. The display name for the managed tenant. Required. Read-only.
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
-        this._tenantDisplayName = value;
+        this.tenantDisplayName = value;
     }
 }

@@ -1,38 +1,36 @@
 package com.microsoft.graph.models.security;
 
-import com.microsoft.graph.models.security.EmailContentThreatSubmission;
-import com.microsoft.graph.models.security.EmailUrlThreatSubmission;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EmailThreatSubmission extends ThreatSubmission implements Parsable {
     /** If the email is phishing simulation, this field will not be null. */
-    private AttackSimulationInfo _attackSimulationInfo;
+    private AttackSimulationInfo attackSimulationInfo;
     /** Specifies the internet message id of the email being submitted. This information is present in the email header. */
-    private String _internetMessageId;
+    private String internetMessageId;
     /** The original category of the submission. The possible values are: notJunk, spam, phishing, malware and unkownFutureValue. */
-    private SubmissionCategory _originalCategory;
+    private SubmissionCategory originalCategory;
     /** Specifies the date and time stamp when the email was received. */
-    private OffsetDateTime _receivedDateTime;
+    private OffsetDateTime receivedDateTime;
     /** Specifies the email address (in smtp format) of the recipient who received the email. */
-    private String _recipientEmailAddress;
+    private String recipientEmailAddress;
     /** Specifies the email address of the sender. */
-    private String _sender;
+    private String sender;
     /** Specifies the IP address of the sender. */
-    private String _senderIP;
+    private String senderIP;
     /** Specifies the subject of the email . */
-    private String _subject;
+    private String subject;
     /** It is used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed. */
-    private TenantAllowOrBlockListAction _tenantAllowOrBlockListAction;
+    private TenantAllowOrBlockListAction tenantAllowOrBlockListAction;
     /**
      * Instantiates a new EmailThreatSubmission and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EmailThreatSubmission() {
         super();
         this.setOdataType("#microsoft.graph.security.emailThreatSubmission");
@@ -61,26 +59,25 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      */
     @javax.annotation.Nullable
     public AttackSimulationInfo getAttackSimulationInfo() {
-        return this._attackSimulationInfo;
+        return this.attackSimulationInfo;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EmailThreatSubmission currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("attackSimulationInfo", (n) -> { currentObject.setAttackSimulationInfo(n.getObjectValue(AttackSimulationInfo::createFromDiscriminatorValue)); });
-            this.put("internetMessageId", (n) -> { currentObject.setInternetMessageId(n.getStringValue()); });
-            this.put("originalCategory", (n) -> { currentObject.setOriginalCategory(n.getEnumValue(SubmissionCategory.class)); });
-            this.put("receivedDateTime", (n) -> { currentObject.setReceivedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("recipientEmailAddress", (n) -> { currentObject.setRecipientEmailAddress(n.getStringValue()); });
-            this.put("sender", (n) -> { currentObject.setSender(n.getStringValue()); });
-            this.put("senderIP", (n) -> { currentObject.setSenderIP(n.getStringValue()); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
-            this.put("tenantAllowOrBlockListAction", (n) -> { currentObject.setTenantAllowOrBlockListAction(n.getObjectValue(TenantAllowOrBlockListAction::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("attackSimulationInfo", (n) -> { this.setAttackSimulationInfo(n.getObjectValue(AttackSimulationInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("internetMessageId", (n) -> { this.setInternetMessageId(n.getStringValue()); });
+        deserializerMap.put("originalCategory", (n) -> { this.setOriginalCategory(n.getEnumValue(SubmissionCategory.class)); });
+        deserializerMap.put("receivedDateTime", (n) -> { this.setReceivedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("recipientEmailAddress", (n) -> { this.setRecipientEmailAddress(n.getStringValue()); });
+        deserializerMap.put("sender", (n) -> { this.setSender(n.getStringValue()); });
+        deserializerMap.put("senderIP", (n) -> { this.setSenderIP(n.getStringValue()); });
+        deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
+        deserializerMap.put("tenantAllowOrBlockListAction", (n) -> { this.setTenantAllowOrBlockListAction(n.getObjectValue(TenantAllowOrBlockListAction::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the internetMessageId property value. Specifies the internet message id of the email being submitted. This information is present in the email header.
@@ -88,7 +85,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      */
     @javax.annotation.Nullable
     public String getInternetMessageId() {
-        return this._internetMessageId;
+        return this.internetMessageId;
     }
     /**
      * Gets the originalCategory property value. The original category of the submission. The possible values are: notJunk, spam, phishing, malware and unkownFutureValue.
@@ -96,7 +93,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      */
     @javax.annotation.Nullable
     public SubmissionCategory getOriginalCategory() {
-        return this._originalCategory;
+        return this.originalCategory;
     }
     /**
      * Gets the receivedDateTime property value. Specifies the date and time stamp when the email was received.
@@ -104,7 +101,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      */
     @javax.annotation.Nullable
     public OffsetDateTime getReceivedDateTime() {
-        return this._receivedDateTime;
+        return this.receivedDateTime;
     }
     /**
      * Gets the recipientEmailAddress property value. Specifies the email address (in smtp format) of the recipient who received the email.
@@ -112,7 +109,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      */
     @javax.annotation.Nullable
     public String getRecipientEmailAddress() {
-        return this._recipientEmailAddress;
+        return this.recipientEmailAddress;
     }
     /**
      * Gets the sender property value. Specifies the email address of the sender.
@@ -120,7 +117,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      */
     @javax.annotation.Nullable
     public String getSender() {
-        return this._sender;
+        return this.sender;
     }
     /**
      * Gets the senderIP property value. Specifies the IP address of the sender.
@@ -128,7 +125,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      */
     @javax.annotation.Nullable
     public String getSenderIP() {
-        return this._senderIP;
+        return this.senderIP;
     }
     /**
      * Gets the subject property value. Specifies the subject of the email .
@@ -136,7 +133,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      */
     @javax.annotation.Nullable
     public String getSubject() {
-        return this._subject;
+        return this.subject;
     }
     /**
      * Gets the tenantAllowOrBlockListAction property value. It is used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
@@ -144,13 +141,14 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      */
     @javax.annotation.Nullable
     public TenantAllowOrBlockListAction getTenantAllowOrBlockListAction() {
-        return this._tenantAllowOrBlockListAction;
+        return this.tenantAllowOrBlockListAction;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -169,71 +167,80 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
      * @param value Value to set for the attackSimulationInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttackSimulationInfo(@javax.annotation.Nullable final AttackSimulationInfo value) {
-        this._attackSimulationInfo = value;
+        this.attackSimulationInfo = value;
     }
     /**
      * Sets the internetMessageId property value. Specifies the internet message id of the email being submitted. This information is present in the email header.
      * @param value Value to set for the internetMessageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInternetMessageId(@javax.annotation.Nullable final String value) {
-        this._internetMessageId = value;
+        this.internetMessageId = value;
     }
     /**
      * Sets the originalCategory property value. The original category of the submission. The possible values are: notJunk, spam, phishing, malware and unkownFutureValue.
      * @param value Value to set for the originalCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginalCategory(@javax.annotation.Nullable final SubmissionCategory value) {
-        this._originalCategory = value;
+        this.originalCategory = value;
     }
     /**
      * Sets the receivedDateTime property value. Specifies the date and time stamp when the email was received.
      * @param value Value to set for the receivedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReceivedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._receivedDateTime = value;
+        this.receivedDateTime = value;
     }
     /**
      * Sets the recipientEmailAddress property value. Specifies the email address (in smtp format) of the recipient who received the email.
      * @param value Value to set for the recipientEmailAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecipientEmailAddress(@javax.annotation.Nullable final String value) {
-        this._recipientEmailAddress = value;
+        this.recipientEmailAddress = value;
     }
     /**
      * Sets the sender property value. Specifies the email address of the sender.
      * @param value Value to set for the sender property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSender(@javax.annotation.Nullable final String value) {
-        this._sender = value;
+        this.sender = value;
     }
     /**
      * Sets the senderIP property value. Specifies the IP address of the sender.
      * @param value Value to set for the senderIP property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSenderIP(@javax.annotation.Nullable final String value) {
-        this._senderIP = value;
+        this.senderIP = value;
     }
     /**
      * Sets the subject property value. Specifies the subject of the email .
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
-        this._subject = value;
+        this.subject = value;
     }
     /**
      * Sets the tenantAllowOrBlockListAction property value. It is used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
      * @param value Value to set for the tenantAllowOrBlockListAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantAllowOrBlockListAction(@javax.annotation.Nullable final TenantAllowOrBlockListAction value) {
-        this._tenantAllowOrBlockListAction = value;
+        this.tenantAllowOrBlockListAction = value;
     }
 }

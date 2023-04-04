@@ -4,37 +4,38 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Contains properties for the package information for a Windows line of business app. */
+/**
+ * Contains properties for the package information for a Windows line of business app. Used as property within windowsPhone81AppXBundle object, which is also being deprecated. This complex type will be deprecated in February 2023.
+ */
 public class WindowsPackageInformation implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Contains properties for Windows architecture. */
-    private WindowsArchitecture _applicableArchitecture;
+    private WindowsArchitecture applicableArchitecture;
     /** The Display Name. */
-    private String _displayName;
+    private String displayName;
     /** The Identity Name. */
-    private String _identityName;
+    private String identityName;
     /** The Identity Publisher. */
-    private String _identityPublisher;
+    private String identityPublisher;
     /** The Identity Resource Identifier. */
-    private String _identityResourceIdentifier;
+    private String identityResourceIdentifier;
     /** The Identity Version. */
-    private String _identityVersion;
+    private String identityVersion;
     /** The value for the minimum applicable operating system. */
-    private WindowsMinimumOperatingSystem _minimumSupportedOperatingSystem;
+    private WindowsMinimumOperatingSystem minimumSupportedOperatingSystem;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new windowsPackageInformation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsPackageInformation() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsPackageInformation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +53,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the applicableArchitecture property value. Contains properties for Windows architecture.
@@ -60,7 +61,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public WindowsArchitecture getApplicableArchitecture() {
-        return this._applicableArchitecture;
+        return this.applicableArchitecture;
     }
     /**
      * Gets the displayName property value. The Display Name.
@@ -68,25 +69,24 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsPackageInformation currentObject = this;
-        return new HashMap<>(8) {{
-            this.put("applicableArchitecture", (n) -> { currentObject.setApplicableArchitecture(n.getEnumValue(WindowsArchitecture.class)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("identityName", (n) -> { currentObject.setIdentityName(n.getStringValue()); });
-            this.put("identityPublisher", (n) -> { currentObject.setIdentityPublisher(n.getStringValue()); });
-            this.put("identityResourceIdentifier", (n) -> { currentObject.setIdentityResourceIdentifier(n.getStringValue()); });
-            this.put("identityVersion", (n) -> { currentObject.setIdentityVersion(n.getStringValue()); });
-            this.put("minimumSupportedOperatingSystem", (n) -> { currentObject.setMinimumSupportedOperatingSystem(n.getObjectValue(WindowsMinimumOperatingSystem::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
+        deserializerMap.put("applicableArchitecture", (n) -> { this.setApplicableArchitecture(n.getEnumValue(WindowsArchitecture.class)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("identityName", (n) -> { this.setIdentityName(n.getStringValue()); });
+        deserializerMap.put("identityPublisher", (n) -> { this.setIdentityPublisher(n.getStringValue()); });
+        deserializerMap.put("identityResourceIdentifier", (n) -> { this.setIdentityResourceIdentifier(n.getStringValue()); });
+        deserializerMap.put("identityVersion", (n) -> { this.setIdentityVersion(n.getStringValue()); });
+        deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { this.setMinimumSupportedOperatingSystem(n.getObjectValue(WindowsMinimumOperatingSystem::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the identityName property value. The Identity Name.
@@ -94,7 +94,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getIdentityName() {
-        return this._identityName;
+        return this.identityName;
     }
     /**
      * Gets the identityPublisher property value. The Identity Publisher.
@@ -102,7 +102,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getIdentityPublisher() {
-        return this._identityPublisher;
+        return this.identityPublisher;
     }
     /**
      * Gets the identityResourceIdentifier property value. The Identity Resource Identifier.
@@ -110,7 +110,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getIdentityResourceIdentifier() {
-        return this._identityResourceIdentifier;
+        return this.identityResourceIdentifier;
     }
     /**
      * Gets the identityVersion property value. The Identity Version.
@@ -118,7 +118,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getIdentityVersion() {
-        return this._identityVersion;
+        return this.identityVersion;
     }
     /**
      * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
@@ -126,7 +126,7 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public WindowsMinimumOperatingSystem getMinimumSupportedOperatingSystem() {
-        return this._minimumSupportedOperatingSystem;
+        return this.minimumSupportedOperatingSystem;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -134,13 +134,14 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("applicableArchitecture", this.getApplicableArchitecture());
@@ -158,71 +159,80 @@ public class WindowsPackageInformation implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the applicableArchitecture property value. Contains properties for Windows architecture.
      * @param value Value to set for the applicableArchitecture property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicableArchitecture(@javax.annotation.Nullable final WindowsArchitecture value) {
-        this._applicableArchitecture = value;
+        this.applicableArchitecture = value;
     }
     /**
      * Sets the displayName property value. The Display Name.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the identityName property value. The Identity Name.
      * @param value Value to set for the identityName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityName(@javax.annotation.Nullable final String value) {
-        this._identityName = value;
+        this.identityName = value;
     }
     /**
      * Sets the identityPublisher property value. The Identity Publisher.
      * @param value Value to set for the identityPublisher property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityPublisher(@javax.annotation.Nullable final String value) {
-        this._identityPublisher = value;
+        this.identityPublisher = value;
     }
     /**
      * Sets the identityResourceIdentifier property value. The Identity Resource Identifier.
      * @param value Value to set for the identityResourceIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityResourceIdentifier(@javax.annotation.Nullable final String value) {
-        this._identityResourceIdentifier = value;
+        this.identityResourceIdentifier = value;
     }
     /**
      * Sets the identityVersion property value. The Identity Version.
      * @param value Value to set for the identityVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityVersion(@javax.annotation.Nullable final String value) {
-        this._identityVersion = value;
+        this.identityVersion = value;
     }
     /**
      * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumSupportedOperatingSystem(@javax.annotation.Nullable final WindowsMinimumOperatingSystem value) {
-        this._minimumSupportedOperatingSystem = value;
+        this.minimumSupportedOperatingSystem = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

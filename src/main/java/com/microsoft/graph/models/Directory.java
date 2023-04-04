@@ -3,40 +3,41 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Directory extends Entity implements Parsable {
     /** Conceptual container for user and group directory objects. */
-    private java.util.List<AdministrativeUnit> _administrativeUnits;
+    private java.util.List<AdministrativeUnit> administrativeUnits;
     /** Group of related custom security attribute definitions. */
-    private java.util.List<AttributeSet> _attributeSets;
+    private java.util.List<AttributeSet> attributeSets;
     /** Schema of a custom security attributes (key-value pairs). */
-    private java.util.List<CustomSecurityAttributeDefinition> _customSecurityAttributeDefinitions;
+    private java.util.List<CustomSecurityAttributeDefinition> customSecurityAttributeDefinitions;
     /** The deletedItems property */
-    private java.util.List<DirectoryObject> _deletedItems;
+    private java.util.List<DirectoryObject> deletedItems;
     /** The featureRolloutPolicies property */
-    private java.util.List<FeatureRolloutPolicy> _featureRolloutPolicies;
+    private java.util.List<FeatureRolloutPolicy> featureRolloutPolicies;
     /** Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol. */
-    private java.util.List<IdentityProviderBase> _federationConfigurations;
+    private java.util.List<IdentityProviderBase> federationConfigurations;
     /** The impactedResources property */
-    private java.util.List<RecommendationResource> _impactedResources;
-    /** The inboundSharedUserProfiles property */
-    private java.util.List<InboundSharedUserProfile> _inboundSharedUserProfiles;
+    private java.util.List<ImpactedResource> impactedResources;
+    /** A collection of external Azure AD users whose profile data has been shared with the Azure AD tenant. Nullable. */
+    private java.util.List<InboundSharedUserProfile> inboundSharedUserProfiles;
+    /** A container for on-premises directory synchronization functionalities that are available for the organization. */
+    private java.util.List<OnPremisesDirectorySynchronization> onPremisesSynchronization;
     /** The outboundSharedUserProfiles property */
-    private java.util.List<OutboundSharedUserProfile> _outboundSharedUserProfiles;
-    /** The recommendations property */
-    private java.util.List<Recommendation> _recommendations;
+    private java.util.List<OutboundSharedUserProfile> outboundSharedUserProfiles;
+    /** List of recommended improvements to improve tenant posture. */
+    private java.util.List<Recommendation> recommendations;
     /** The sharedEmailDomains property */
-    private java.util.List<SharedEmailDomain> _sharedEmailDomains;
+    private java.util.List<SharedEmailDomain> sharedEmailDomains;
     /**
      * Instantiates a new Directory and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Directory() {
         super();
-        this.setOdataType("#microsoft.graph.directory");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,7 +55,7 @@ public class Directory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AdministrativeUnit> getAdministrativeUnits() {
-        return this._administrativeUnits;
+        return this.administrativeUnits;
     }
     /**
      * Gets the attributeSets property value. Group of related custom security attribute definitions.
@@ -62,7 +63,7 @@ public class Directory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AttributeSet> getAttributeSets() {
-        return this._attributeSets;
+        return this.attributeSets;
     }
     /**
      * Gets the customSecurityAttributeDefinitions property value. Schema of a custom security attributes (key-value pairs).
@@ -70,7 +71,7 @@ public class Directory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<CustomSecurityAttributeDefinition> getCustomSecurityAttributeDefinitions() {
-        return this._customSecurityAttributeDefinitions;
+        return this.customSecurityAttributeDefinitions;
     }
     /**
      * Gets the deletedItems property value. The deletedItems property
@@ -78,7 +79,7 @@ public class Directory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DirectoryObject> getDeletedItems() {
-        return this._deletedItems;
+        return this.deletedItems;
     }
     /**
      * Gets the featureRolloutPolicies property value. The featureRolloutPolicies property
@@ -86,7 +87,7 @@ public class Directory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<FeatureRolloutPolicy> getFeatureRolloutPolicies() {
-        return this._featureRolloutPolicies;
+        return this.featureRolloutPolicies;
     }
     /**
      * Gets the federationConfigurations property value. Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
@@ -94,44 +95,52 @@ public class Directory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<IdentityProviderBase> getFederationConfigurations() {
-        return this._federationConfigurations;
+        return this.federationConfigurations;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Directory currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("administrativeUnits", (n) -> { currentObject.setAdministrativeUnits(n.getCollectionOfObjectValues(AdministrativeUnit::createFromDiscriminatorValue)); });
-            this.put("attributeSets", (n) -> { currentObject.setAttributeSets(n.getCollectionOfObjectValues(AttributeSet::createFromDiscriminatorValue)); });
-            this.put("customSecurityAttributeDefinitions", (n) -> { currentObject.setCustomSecurityAttributeDefinitions(n.getCollectionOfObjectValues(CustomSecurityAttributeDefinition::createFromDiscriminatorValue)); });
-            this.put("deletedItems", (n) -> { currentObject.setDeletedItems(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
-            this.put("featureRolloutPolicies", (n) -> { currentObject.setFeatureRolloutPolicies(n.getCollectionOfObjectValues(FeatureRolloutPolicy::createFromDiscriminatorValue)); });
-            this.put("federationConfigurations", (n) -> { currentObject.setFederationConfigurations(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
-            this.put("impactedResources", (n) -> { currentObject.setImpactedResources(n.getCollectionOfObjectValues(RecommendationResource::createFromDiscriminatorValue)); });
-            this.put("inboundSharedUserProfiles", (n) -> { currentObject.setInboundSharedUserProfiles(n.getCollectionOfObjectValues(InboundSharedUserProfile::createFromDiscriminatorValue)); });
-            this.put("outboundSharedUserProfiles", (n) -> { currentObject.setOutboundSharedUserProfiles(n.getCollectionOfObjectValues(OutboundSharedUserProfile::createFromDiscriminatorValue)); });
-            this.put("recommendations", (n) -> { currentObject.setRecommendations(n.getCollectionOfObjectValues(Recommendation::createFromDiscriminatorValue)); });
-            this.put("sharedEmailDomains", (n) -> { currentObject.setSharedEmailDomains(n.getCollectionOfObjectValues(SharedEmailDomain::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("administrativeUnits", (n) -> { this.setAdministrativeUnits(n.getCollectionOfObjectValues(AdministrativeUnit::createFromDiscriminatorValue)); });
+        deserializerMap.put("attributeSets", (n) -> { this.setAttributeSets(n.getCollectionOfObjectValues(AttributeSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("customSecurityAttributeDefinitions", (n) -> { this.setCustomSecurityAttributeDefinitions(n.getCollectionOfObjectValues(CustomSecurityAttributeDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("deletedItems", (n) -> { this.setDeletedItems(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
+        deserializerMap.put("featureRolloutPolicies", (n) -> { this.setFeatureRolloutPolicies(n.getCollectionOfObjectValues(FeatureRolloutPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("federationConfigurations", (n) -> { this.setFederationConfigurations(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("impactedResources", (n) -> { this.setImpactedResources(n.getCollectionOfObjectValues(ImpactedResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("inboundSharedUserProfiles", (n) -> { this.setInboundSharedUserProfiles(n.getCollectionOfObjectValues(InboundSharedUserProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesSynchronization", (n) -> { this.setOnPremisesSynchronization(n.getCollectionOfObjectValues(OnPremisesDirectorySynchronization::createFromDiscriminatorValue)); });
+        deserializerMap.put("outboundSharedUserProfiles", (n) -> { this.setOutboundSharedUserProfiles(n.getCollectionOfObjectValues(OutboundSharedUserProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("recommendations", (n) -> { this.setRecommendations(n.getCollectionOfObjectValues(Recommendation::createFromDiscriminatorValue)); });
+        deserializerMap.put("sharedEmailDomains", (n) -> { this.setSharedEmailDomains(n.getCollectionOfObjectValues(SharedEmailDomain::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the impactedResources property value. The impactedResources property
-     * @return a recommendationResource
+     * @return a impactedResource
      */
     @javax.annotation.Nullable
-    public java.util.List<RecommendationResource> getImpactedResources() {
-        return this._impactedResources;
+    public java.util.List<ImpactedResource> getImpactedResources() {
+        return this.impactedResources;
     }
     /**
-     * Gets the inboundSharedUserProfiles property value. The inboundSharedUserProfiles property
+     * Gets the inboundSharedUserProfiles property value. A collection of external Azure AD users whose profile data has been shared with the Azure AD tenant. Nullable.
      * @return a inboundSharedUserProfile
      */
     @javax.annotation.Nullable
     public java.util.List<InboundSharedUserProfile> getInboundSharedUserProfiles() {
-        return this._inboundSharedUserProfiles;
+        return this.inboundSharedUserProfiles;
+    }
+    /**
+     * Gets the onPremisesSynchronization property value. A container for on-premises directory synchronization functionalities that are available for the organization.
+     * @return a onPremisesDirectorySynchronization
+     */
+    @javax.annotation.Nullable
+    public java.util.List<OnPremisesDirectorySynchronization> getOnPremisesSynchronization() {
+        return this.onPremisesSynchronization;
     }
     /**
      * Gets the outboundSharedUserProfiles property value. The outboundSharedUserProfiles property
@@ -139,15 +148,15 @@ public class Directory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<OutboundSharedUserProfile> getOutboundSharedUserProfiles() {
-        return this._outboundSharedUserProfiles;
+        return this.outboundSharedUserProfiles;
     }
     /**
-     * Gets the recommendations property value. The recommendations property
+     * Gets the recommendations property value. List of recommended improvements to improve tenant posture.
      * @return a recommendation
      */
     @javax.annotation.Nullable
     public java.util.List<Recommendation> getRecommendations() {
-        return this._recommendations;
+        return this.recommendations;
     }
     /**
      * Gets the sharedEmailDomains property value. The sharedEmailDomains property
@@ -155,13 +164,14 @@ public class Directory extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SharedEmailDomain> getSharedEmailDomains() {
-        return this._sharedEmailDomains;
+        return this.sharedEmailDomains;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -173,6 +183,7 @@ public class Directory extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("federationConfigurations", this.getFederationConfigurations());
         writer.writeCollectionOfObjectValues("impactedResources", this.getImpactedResources());
         writer.writeCollectionOfObjectValues("inboundSharedUserProfiles", this.getInboundSharedUserProfiles());
+        writer.writeCollectionOfObjectValues("onPremisesSynchronization", this.getOnPremisesSynchronization());
         writer.writeCollectionOfObjectValues("outboundSharedUserProfiles", this.getOutboundSharedUserProfiles());
         writer.writeCollectionOfObjectValues("recommendations", this.getRecommendations());
         writer.writeCollectionOfObjectValues("sharedEmailDomains", this.getSharedEmailDomains());
@@ -182,87 +193,107 @@ public class Directory extends Entity implements Parsable {
      * @param value Value to set for the administrativeUnits property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdministrativeUnits(@javax.annotation.Nullable final java.util.List<AdministrativeUnit> value) {
-        this._administrativeUnits = value;
+        this.administrativeUnits = value;
     }
     /**
      * Sets the attributeSets property value. Group of related custom security attribute definitions.
      * @param value Value to set for the attributeSets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttributeSets(@javax.annotation.Nullable final java.util.List<AttributeSet> value) {
-        this._attributeSets = value;
+        this.attributeSets = value;
     }
     /**
      * Sets the customSecurityAttributeDefinitions property value. Schema of a custom security attributes (key-value pairs).
      * @param value Value to set for the customSecurityAttributeDefinitions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSecurityAttributeDefinitions(@javax.annotation.Nullable final java.util.List<CustomSecurityAttributeDefinition> value) {
-        this._customSecurityAttributeDefinitions = value;
+        this.customSecurityAttributeDefinitions = value;
     }
     /**
      * Sets the deletedItems property value. The deletedItems property
      * @param value Value to set for the deletedItems property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeletedItems(@javax.annotation.Nullable final java.util.List<DirectoryObject> value) {
-        this._deletedItems = value;
+        this.deletedItems = value;
     }
     /**
      * Sets the featureRolloutPolicies property value. The featureRolloutPolicies property
      * @param value Value to set for the featureRolloutPolicies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFeatureRolloutPolicies(@javax.annotation.Nullable final java.util.List<FeatureRolloutPolicy> value) {
-        this._featureRolloutPolicies = value;
+        this.featureRolloutPolicies = value;
     }
     /**
      * Sets the federationConfigurations property value. Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
      * @param value Value to set for the federationConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFederationConfigurations(@javax.annotation.Nullable final java.util.List<IdentityProviderBase> value) {
-        this._federationConfigurations = value;
+        this.federationConfigurations = value;
     }
     /**
      * Sets the impactedResources property value. The impactedResources property
      * @param value Value to set for the impactedResources property.
      * @return a void
      */
-    public void setImpactedResources(@javax.annotation.Nullable final java.util.List<RecommendationResource> value) {
-        this._impactedResources = value;
+    @javax.annotation.Nonnull
+    public void setImpactedResources(@javax.annotation.Nullable final java.util.List<ImpactedResource> value) {
+        this.impactedResources = value;
     }
     /**
-     * Sets the inboundSharedUserProfiles property value. The inboundSharedUserProfiles property
+     * Sets the inboundSharedUserProfiles property value. A collection of external Azure AD users whose profile data has been shared with the Azure AD tenant. Nullable.
      * @param value Value to set for the inboundSharedUserProfiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInboundSharedUserProfiles(@javax.annotation.Nullable final java.util.List<InboundSharedUserProfile> value) {
-        this._inboundSharedUserProfiles = value;
+        this.inboundSharedUserProfiles = value;
+    }
+    /**
+     * Sets the onPremisesSynchronization property value. A container for on-premises directory synchronization functionalities that are available for the organization.
+     * @param value Value to set for the onPremisesSynchronization property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setOnPremisesSynchronization(@javax.annotation.Nullable final java.util.List<OnPremisesDirectorySynchronization> value) {
+        this.onPremisesSynchronization = value;
     }
     /**
      * Sets the outboundSharedUserProfiles property value. The outboundSharedUserProfiles property
      * @param value Value to set for the outboundSharedUserProfiles property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOutboundSharedUserProfiles(@javax.annotation.Nullable final java.util.List<OutboundSharedUserProfile> value) {
-        this._outboundSharedUserProfiles = value;
+        this.outboundSharedUserProfiles = value;
     }
     /**
-     * Sets the recommendations property value. The recommendations property
+     * Sets the recommendations property value. List of recommended improvements to improve tenant posture.
      * @param value Value to set for the recommendations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendations(@javax.annotation.Nullable final java.util.List<Recommendation> value) {
-        this._recommendations = value;
+        this.recommendations = value;
     }
     /**
      * Sets the sharedEmailDomains property value. The sharedEmailDomains property
      * @param value Value to set for the sharedEmailDomains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSharedEmailDomains(@javax.annotation.Nullable final java.util.List<SharedEmailDomain> value) {
-        this._sharedEmailDomains = value;
+        this.sharedEmailDomains = value;
     }
 }

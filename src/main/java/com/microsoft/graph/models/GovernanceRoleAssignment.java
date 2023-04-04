@@ -4,47 +4,45 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class GovernanceRoleAssignment extends Entity implements Parsable {
     /** The state of the assignment. The value can be Eligible for eligible assignment or Active if it is directly assigned Active by administrators, or activated on an eligible assignment by the users. */
-    private String _assignmentState;
+    private String assignmentState;
     /** For a non-permanent role assignment, this is the time when the role assignment will be expired. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _endDateTime;
+    private OffsetDateTime endDateTime;
     /** The external ID the resource that is used to identify the role assignment in the provider. */
-    private String _externalId;
+    private String externalId;
     /** Read-only. If this is an active assignment and created due to activation on an eligible assignment, it represents the object of that eligible assignment; Otherwise, the value is null. */
-    private GovernanceRoleAssignment _linkedEligibleRoleAssignment;
+    private GovernanceRoleAssignment linkedEligibleRoleAssignment;
     /** If this is an active assignment and created due to activation on an eligible assignment, it represents the ID of that eligible assignment; Otherwise, the value is null. */
-    private String _linkedEligibleRoleAssignmentId;
+    private String linkedEligibleRoleAssignmentId;
     /** The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment is not inherited, but comes from the membership of a group assignment), or User (if the role assignment is neither inherited nor from a group assignment). */
-    private String _memberType;
+    private String memberType;
     /** Read-only. The resource associated with the role assignment. */
-    private GovernanceResource _resource;
+    private GovernanceResource resource;
     /** Required. The ID of the resource which the role assignment is associated with. */
-    private String _resourceId;
+    private String resourceId;
     /** Read-only. The role definition associated with the role assignment. */
-    private GovernanceRoleDefinition _roleDefinition;
+    private GovernanceRoleDefinition roleDefinition;
     /** Required. The ID of the role definition which the role assignment is associated with. */
-    private String _roleDefinitionId;
+    private String roleDefinitionId;
     /** The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _startDateTime;
+    private OffsetDateTime startDateTime;
     /** The status property */
-    private String _status;
+    private String status;
     /** Read-only. The subject associated with the role assignment. */
-    private GovernanceSubject _subject;
+    private GovernanceSubject subject;
     /** Required. The ID of the subject which the role assignment is associated with. */
-    private String _subjectId;
+    private String subjectId;
     /**
      * Instantiates a new governanceRoleAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GovernanceRoleAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.governanceRoleAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -62,7 +60,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAssignmentState() {
-        return this._assignmentState;
+        return this.assignmentState;
     }
     /**
      * Gets the endDateTime property value. For a non-permanent role assignment, this is the time when the role assignment will be expired. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -70,7 +68,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * Gets the externalId property value. The external ID the resource that is used to identify the role assignment in the provider.
@@ -78,31 +76,30 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getExternalId() {
-        return this._externalId;
+        return this.externalId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GovernanceRoleAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assignmentState", (n) -> { currentObject.setAssignmentState(n.getStringValue()); });
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getOffsetDateTimeValue()); });
-            this.put("externalId", (n) -> { currentObject.setExternalId(n.getStringValue()); });
-            this.put("linkedEligibleRoleAssignment", (n) -> { currentObject.setLinkedEligibleRoleAssignment(n.getObjectValue(GovernanceRoleAssignment::createFromDiscriminatorValue)); });
-            this.put("linkedEligibleRoleAssignmentId", (n) -> { currentObject.setLinkedEligibleRoleAssignmentId(n.getStringValue()); });
-            this.put("memberType", (n) -> { currentObject.setMemberType(n.getStringValue()); });
-            this.put("resource", (n) -> { currentObject.setResource(n.getObjectValue(GovernanceResource::createFromDiscriminatorValue)); });
-            this.put("resourceId", (n) -> { currentObject.setResourceId(n.getStringValue()); });
-            this.put("roleDefinition", (n) -> { currentObject.setRoleDefinition(n.getObjectValue(GovernanceRoleDefinition::createFromDiscriminatorValue)); });
-            this.put("roleDefinitionId", (n) -> { currentObject.setRoleDefinitionId(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getObjectValue(GovernanceSubject::createFromDiscriminatorValue)); });
-            this.put("subjectId", (n) -> { currentObject.setSubjectId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignmentState", (n) -> { this.setAssignmentState(n.getStringValue()); });
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
+        deserializerMap.put("linkedEligibleRoleAssignment", (n) -> { this.setLinkedEligibleRoleAssignment(n.getObjectValue(GovernanceRoleAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("linkedEligibleRoleAssignmentId", (n) -> { this.setLinkedEligibleRoleAssignmentId(n.getStringValue()); });
+        deserializerMap.put("memberType", (n) -> { this.setMemberType(n.getStringValue()); });
+        deserializerMap.put("resource", (n) -> { this.setResource(n.getObjectValue(GovernanceResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
+        deserializerMap.put("roleDefinition", (n) -> { this.setRoleDefinition(n.getObjectValue(GovernanceRoleDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleDefinitionId", (n) -> { this.setRoleDefinitionId(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        deserializerMap.put("subject", (n) -> { this.setSubject(n.getObjectValue(GovernanceSubject::createFromDiscriminatorValue)); });
+        deserializerMap.put("subjectId", (n) -> { this.setSubjectId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the linkedEligibleRoleAssignment property value. Read-only. If this is an active assignment and created due to activation on an eligible assignment, it represents the object of that eligible assignment; Otherwise, the value is null.
@@ -110,7 +107,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public GovernanceRoleAssignment getLinkedEligibleRoleAssignment() {
-        return this._linkedEligibleRoleAssignment;
+        return this.linkedEligibleRoleAssignment;
     }
     /**
      * Gets the linkedEligibleRoleAssignmentId property value. If this is an active assignment and created due to activation on an eligible assignment, it represents the ID of that eligible assignment; Otherwise, the value is null.
@@ -118,7 +115,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLinkedEligibleRoleAssignmentId() {
-        return this._linkedEligibleRoleAssignmentId;
+        return this.linkedEligibleRoleAssignmentId;
     }
     /**
      * Gets the memberType property value. The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment is not inherited, but comes from the membership of a group assignment), or User (if the role assignment is neither inherited nor from a group assignment).
@@ -126,7 +123,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMemberType() {
-        return this._memberType;
+        return this.memberType;
     }
     /**
      * Gets the resource property value. Read-only. The resource associated with the role assignment.
@@ -134,7 +131,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public GovernanceResource getResource() {
-        return this._resource;
+        return this.resource;
     }
     /**
      * Gets the resourceId property value. Required. The ID of the resource which the role assignment is associated with.
@@ -142,7 +139,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getResourceId() {
-        return this._resourceId;
+        return this.resourceId;
     }
     /**
      * Gets the roleDefinition property value. Read-only. The role definition associated with the role assignment.
@@ -150,7 +147,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public GovernanceRoleDefinition getRoleDefinition() {
-        return this._roleDefinition;
+        return this.roleDefinition;
     }
     /**
      * Gets the roleDefinitionId property value. Required. The ID of the role definition which the role assignment is associated with.
@@ -158,7 +155,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRoleDefinitionId() {
-        return this._roleDefinitionId;
+        return this.roleDefinitionId;
     }
     /**
      * Gets the startDateTime property value. The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -166,7 +163,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Gets the status property value. The status property
@@ -174,7 +171,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the subject property value. Read-only. The subject associated with the role assignment.
@@ -182,7 +179,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public GovernanceSubject getSubject() {
-        return this._subject;
+        return this.subject;
     }
     /**
      * Gets the subjectId property value. Required. The ID of the subject which the role assignment is associated with.
@@ -190,13 +187,14 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSubjectId() {
-        return this._subjectId;
+        return this.subjectId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -220,111 +218,125 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the assignmentState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentState(@javax.annotation.Nullable final String value) {
-        this._assignmentState = value;
+        this.assignmentState = value;
     }
     /**
      * Sets the endDateTime property value. For a non-permanent role assignment, this is the time when the role assignment will be expired. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the externalId property value. The external ID the resource that is used to identify the role assignment in the provider.
      * @param value Value to set for the externalId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExternalId(@javax.annotation.Nullable final String value) {
-        this._externalId = value;
+        this.externalId = value;
     }
     /**
      * Sets the linkedEligibleRoleAssignment property value. Read-only. If this is an active assignment and created due to activation on an eligible assignment, it represents the object of that eligible assignment; Otherwise, the value is null.
      * @param value Value to set for the linkedEligibleRoleAssignment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLinkedEligibleRoleAssignment(@javax.annotation.Nullable final GovernanceRoleAssignment value) {
-        this._linkedEligibleRoleAssignment = value;
+        this.linkedEligibleRoleAssignment = value;
     }
     /**
      * Sets the linkedEligibleRoleAssignmentId property value. If this is an active assignment and created due to activation on an eligible assignment, it represents the ID of that eligible assignment; Otherwise, the value is null.
      * @param value Value to set for the linkedEligibleRoleAssignmentId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLinkedEligibleRoleAssignmentId(@javax.annotation.Nullable final String value) {
-        this._linkedEligibleRoleAssignmentId = value;
+        this.linkedEligibleRoleAssignmentId = value;
     }
     /**
      * Sets the memberType property value. The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment is not inherited, but comes from the membership of a group assignment), or User (if the role assignment is neither inherited nor from a group assignment).
      * @param value Value to set for the memberType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMemberType(@javax.annotation.Nullable final String value) {
-        this._memberType = value;
+        this.memberType = value;
     }
     /**
      * Sets the resource property value. Read-only. The resource associated with the role assignment.
      * @param value Value to set for the resource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResource(@javax.annotation.Nullable final GovernanceResource value) {
-        this._resource = value;
+        this.resource = value;
     }
     /**
      * Sets the resourceId property value. Required. The ID of the resource which the role assignment is associated with.
      * @param value Value to set for the resourceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourceId(@javax.annotation.Nullable final String value) {
-        this._resourceId = value;
+        this.resourceId = value;
     }
     /**
      * Sets the roleDefinition property value. Read-only. The role definition associated with the role assignment.
      * @param value Value to set for the roleDefinition property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinition(@javax.annotation.Nullable final GovernanceRoleDefinition value) {
-        this._roleDefinition = value;
+        this.roleDefinition = value;
     }
     /**
      * Sets the roleDefinitionId property value. Required. The ID of the role definition which the role assignment is associated with.
      * @param value Value to set for the roleDefinitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleDefinitionId(@javax.annotation.Nullable final String value) {
-        this._roleDefinitionId = value;
+        this.roleDefinitionId = value;
     }
     /**
      * Sets the startDateTime property value. The start time of the role assignment. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the subject property value. Read-only. The subject associated with the role assignment.
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final GovernanceSubject value) {
-        this._subject = value;
+        this.subject = value;
     }
     /**
      * Sets the subjectId property value. Required. The ID of the subject which the role assignment is associated with.
      * @param value Value to set for the subjectId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectId(@javax.annotation.Nullable final String value) {
-        this._subjectId = value;
+        this.subjectId = value;
     }
 }

@@ -3,25 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosCredentialSingleSignOnExtension extends IosSingleSignOnExtension implements Parsable {
     /** Gets or sets a list of typed key-value pairs used to configure Credential-type profiles. This collection can contain a maximum of 500 elements. */
-    private java.util.List<KeyTypedValuePair> _configurations;
+    private java.util.List<KeyTypedValuePair> configurations;
     /** Gets or sets a list of hosts or domain names for which the app extension performs SSO. */
-    private java.util.List<String> _domains;
+    private java.util.List<String> domains;
     /** Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs. */
-    private String _extensionIdentifier;
+    private String extensionIdentifier;
     /** Gets or sets the case-sensitive realm name for this profile. */
-    private String _realm;
+    private String realm;
     /** Gets or sets the team ID of the app extension that performs SSO for the specified URLs. */
-    private String _teamIdentifier;
+    private String teamIdentifier;
     /**
      * Instantiates a new IosCredentialSingleSignOnExtension and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosCredentialSingleSignOnExtension() {
         super();
         this.setOdataType("#microsoft.graph.iosCredentialSingleSignOnExtension");
@@ -42,7 +42,7 @@ public class IosCredentialSingleSignOnExtension extends IosSingleSignOnExtension
      */
     @javax.annotation.Nullable
     public java.util.List<KeyTypedValuePair> getConfigurations() {
-        return this._configurations;
+        return this.configurations;
     }
     /**
      * Gets the domains property value. Gets or sets a list of hosts or domain names for which the app extension performs SSO.
@@ -50,7 +50,7 @@ public class IosCredentialSingleSignOnExtension extends IosSingleSignOnExtension
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDomains() {
-        return this._domains;
+        return this.domains;
     }
     /**
      * Gets the extensionIdentifier property value. Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
@@ -58,22 +58,21 @@ public class IosCredentialSingleSignOnExtension extends IosSingleSignOnExtension
      */
     @javax.annotation.Nullable
     public String getExtensionIdentifier() {
-        return this._extensionIdentifier;
+        return this.extensionIdentifier;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosCredentialSingleSignOnExtension currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("configurations", (n) -> { currentObject.setConfigurations(n.getCollectionOfObjectValues(KeyTypedValuePair::createFromDiscriminatorValue)); });
-            this.put("domains", (n) -> { currentObject.setDomains(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("extensionIdentifier", (n) -> { currentObject.setExtensionIdentifier(n.getStringValue()); });
-            this.put("realm", (n) -> { currentObject.setRealm(n.getStringValue()); });
-            this.put("teamIdentifier", (n) -> { currentObject.setTeamIdentifier(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("configurations", (n) -> { this.setConfigurations(n.getCollectionOfObjectValues(KeyTypedValuePair::createFromDiscriminatorValue)); });
+        deserializerMap.put("domains", (n) -> { this.setDomains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("extensionIdentifier", (n) -> { this.setExtensionIdentifier(n.getStringValue()); });
+        deserializerMap.put("realm", (n) -> { this.setRealm(n.getStringValue()); });
+        deserializerMap.put("teamIdentifier", (n) -> { this.setTeamIdentifier(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the realm property value. Gets or sets the case-sensitive realm name for this profile.
@@ -81,7 +80,7 @@ public class IosCredentialSingleSignOnExtension extends IosSingleSignOnExtension
      */
     @javax.annotation.Nullable
     public String getRealm() {
-        return this._realm;
+        return this.realm;
     }
     /**
      * Gets the teamIdentifier property value. Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
@@ -89,13 +88,14 @@ public class IosCredentialSingleSignOnExtension extends IosSingleSignOnExtension
      */
     @javax.annotation.Nullable
     public String getTeamIdentifier() {
-        return this._teamIdentifier;
+        return this.teamIdentifier;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,39 +110,44 @@ public class IosCredentialSingleSignOnExtension extends IosSingleSignOnExtension
      * @param value Value to set for the configurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConfigurations(@javax.annotation.Nullable final java.util.List<KeyTypedValuePair> value) {
-        this._configurations = value;
+        this.configurations = value;
     }
     /**
      * Sets the domains property value. Gets or sets a list of hosts or domain names for which the app extension performs SSO.
      * @param value Value to set for the domains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomains(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._domains = value;
+        this.domains = value;
     }
     /**
      * Sets the extensionIdentifier property value. Gets or sets the bundle ID of the app extension that performs SSO for the specified URLs.
      * @param value Value to set for the extensionIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensionIdentifier(@javax.annotation.Nullable final String value) {
-        this._extensionIdentifier = value;
+        this.extensionIdentifier = value;
     }
     /**
      * Sets the realm property value. Gets or sets the case-sensitive realm name for this profile.
      * @param value Value to set for the realm property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRealm(@javax.annotation.Nullable final String value) {
-        this._realm = value;
+        this.realm = value;
     }
     /**
      * Sets the teamIdentifier property value. Gets or sets the team ID of the app extension that performs SSO for the specified URLs.
      * @param value Value to set for the teamIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeamIdentifier(@javax.annotation.Nullable final String value) {
-        this._teamIdentifier = value;
+        this.teamIdentifier = value;
     }
 }

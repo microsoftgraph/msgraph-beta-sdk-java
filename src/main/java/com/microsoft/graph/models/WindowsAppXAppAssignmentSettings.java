@@ -3,17 +3,17 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
-    /** Whether or not to use device execution context for Windows AppX mobile app. */
-    private Boolean _useDeviceContext;
+    /** When TRUE, indicates that device execution context will be used for the AppX mobile app. When FALSE, indicates that user context will be used for the AppX mobile app. By default, this property is set to FALSE. Once this property has been set to TRUE it cannot be changed. */
+    private Boolean useDeviceContext;
     /**
      * Instantiates a new WindowsAppXAppAssignmentSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsAppXAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.windowsAppXAppAssignmentSettings");
@@ -30,39 +30,40 @@ public class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSetting
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsAppXAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("useDeviceContext", (n) -> { currentObject.setUseDeviceContext(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("useDeviceContext", (n) -> { this.setUseDeviceContext(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the useDeviceContext property value. Whether or not to use device execution context for Windows AppX mobile app.
+     * Gets the useDeviceContext property value. When TRUE, indicates that device execution context will be used for the AppX mobile app. When FALSE, indicates that user context will be used for the AppX mobile app. By default, this property is set to FALSE. Once this property has been set to TRUE it cannot be changed.
      * @return a boolean
      */
     @javax.annotation.Nullable
     public Boolean getUseDeviceContext() {
-        return this._useDeviceContext;
+        return this.useDeviceContext;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("useDeviceContext", this.getUseDeviceContext());
     }
     /**
-     * Sets the useDeviceContext property value. Whether or not to use device execution context for Windows AppX mobile app.
+     * Sets the useDeviceContext property value. When TRUE, indicates that device execution context will be used for the AppX mobile app. When FALSE, indicates that user context will be used for the AppX mobile app. By default, this property is set to FALSE. Once this property has been set to TRUE it cannot be changed.
      * @param value Value to set for the useDeviceContext property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseDeviceContext(@javax.annotation.Nullable final Boolean value) {
-        this._useDeviceContext = value;
+        this.useDeviceContext = value;
     }
 }

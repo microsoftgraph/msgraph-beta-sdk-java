@@ -4,28 +4,27 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ActionStep implements AdditionalDataHolder, Parsable {
-    /** The actionUrl property */
-    private ActionUrl _actionUrl;
+    /** A link to the documentation or Azure portal page that is associated with the action step. */
+    private ActionUrl actionUrl;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
-    /** The stepNumber property */
-    private Long _stepNumber;
-    /** The text property */
-    private String _text;
+    private String odataType;
+    /** Indicates the position for this action in the order of the collection of actions to be taken. */
+    private Long stepNumber;
+    /** Friendly description of the action to take. */
+    private String text;
     /**
      * Instantiates a new actionStep and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ActionStep() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.actionStep");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -38,12 +37,12 @@ public class ActionStep implements AdditionalDataHolder, Parsable {
         return new ActionStep();
     }
     /**
-     * Gets the actionUrl property value. The actionUrl property
+     * Gets the actionUrl property value. A link to the documentation or Azure portal page that is associated with the action step.
      * @return a actionUrl
      */
     @javax.annotation.Nullable
     public ActionUrl getActionUrl() {
-        return this._actionUrl;
+        return this.actionUrl;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -51,21 +50,20 @@ public class ActionStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ActionStep currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("actionUrl", (n) -> { currentObject.setActionUrl(n.getObjectValue(ActionUrl::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("stepNumber", (n) -> { currentObject.setStepNumber(n.getLongValue()); });
-            this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("actionUrl", (n) -> { this.setActionUrl(n.getObjectValue(ActionUrl::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("stepNumber", (n) -> { this.setStepNumber(n.getLongValue()); });
+        deserializerMap.put("text", (n) -> { this.setText(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -73,29 +71,30 @@ public class ActionStep implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
-     * Gets the stepNumber property value. The stepNumber property
+     * Gets the stepNumber property value. Indicates the position for this action in the order of the collection of actions to be taken.
      * @return a int64
      */
     @javax.annotation.Nullable
     public Long getStepNumber() {
-        return this._stepNumber;
+        return this.stepNumber;
     }
     /**
-     * Gets the text property value. The text property
+     * Gets the text property value. Friendly description of the action to take.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getText() {
-        return this._text;
+        return this.text;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("actionUrl", this.getActionUrl());
@@ -105,43 +104,48 @@ public class ActionStep implements AdditionalDataHolder, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the actionUrl property value. The actionUrl property
+     * Sets the actionUrl property value. A link to the documentation or Azure portal page that is associated with the action step.
      * @param value Value to set for the actionUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActionUrl(@javax.annotation.Nullable final ActionUrl value) {
-        this._actionUrl = value;
+        this.actionUrl = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
-     * Sets the stepNumber property value. The stepNumber property
+     * Sets the stepNumber property value. Indicates the position for this action in the order of the collection of actions to be taken.
      * @param value Value to set for the stepNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStepNumber(@javax.annotation.Nullable final Long value) {
-        this._stepNumber = value;
+        this.stepNumber = value;
     }
     /**
-     * Sets the text property value. The text property
+     * Sets the text property value. Friendly description of the action to take.
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final String value) {
-        this._text = value;
+        this.text = value;
     }
 }

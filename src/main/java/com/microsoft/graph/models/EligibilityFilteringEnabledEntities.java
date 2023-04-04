@@ -3,12 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum EligibilityFilteringEnabledEntities implements ValuedEnum {
     None("none"),
     SwapRequest("swapRequest"),
     OfferShiftRequest("offerShiftRequest"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    TimeOffReason("timeOffReason");
     public final String value;
     EligibilityFilteringEnabledEntities(final String value) {
         this.value = value;
@@ -23,6 +23,7 @@ public enum EligibilityFilteringEnabledEntities implements ValuedEnum {
             case "swapRequest": return SwapRequest;
             case "offerShiftRequest": return OfferShiftRequest;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "timeOffReason": return TimeOffReason;
             default: return null;
         }
     }

@@ -1,39 +1,37 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.EventMessageRequest;
-import com.microsoft.graph.models.EventMessageResponse;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EventMessage extends Message implements Parsable {
     /** The end time of the requested meeting. */
-    private DateTimeTimeZone _endDateTime;
+    private DateTimeTimeZone endDateTime;
     /** The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only. */
-    private Event _event;
+    private Event event;
     /** The isAllDay property */
-    private Boolean _isAllDay;
+    private Boolean isAllDay;
     /** The isDelegated property */
-    private Boolean _isDelegated;
+    private Boolean isDelegated;
     /** The isOutOfDate property */
-    private Boolean _isOutOfDate;
+    private Boolean isOutOfDate;
     /** The location property */
-    private Location _location;
+    private Location location;
     /** The meetingMessageType property */
-    private MeetingMessageType _meetingMessageType;
+    private MeetingMessageType meetingMessageType;
     /** The recurrence property */
-    private PatternedRecurrence _recurrence;
+    private PatternedRecurrence recurrence;
     /** The startDateTime property */
-    private DateTimeTimeZone _startDateTime;
+    private DateTimeTimeZone startDateTime;
     /** The type property */
-    private EventType _type;
+    private EventType type;
     /**
      * Instantiates a new EventMessage and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EventMessage() {
         super();
         this.setOdataType("#microsoft.graph.eventMessage");
@@ -62,7 +60,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getEndDateTime() {
-        return this._endDateTime;
+        return this.endDateTime;
     }
     /**
      * Gets the event property value. The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
@@ -70,27 +68,26 @@ public class EventMessage extends Message implements Parsable {
      */
     @javax.annotation.Nullable
     public Event getEvent() {
-        return this._event;
+        return this.event;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EventMessage currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("endDateTime", (n) -> { currentObject.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("event", (n) -> { currentObject.setEvent(n.getObjectValue(Event::createFromDiscriminatorValue)); });
-            this.put("isAllDay", (n) -> { currentObject.setIsAllDay(n.getBooleanValue()); });
-            this.put("isDelegated", (n) -> { currentObject.setIsDelegated(n.getBooleanValue()); });
-            this.put("isOutOfDate", (n) -> { currentObject.setIsOutOfDate(n.getBooleanValue()); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
-            this.put("meetingMessageType", (n) -> { currentObject.setMeetingMessageType(n.getEnumValue(MeetingMessageType.class)); });
-            this.put("recurrence", (n) -> { currentObject.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(EventType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("event", (n) -> { this.setEvent(n.getObjectValue(Event::createFromDiscriminatorValue)); });
+        deserializerMap.put("isAllDay", (n) -> { this.setIsAllDay(n.getBooleanValue()); });
+        deserializerMap.put("isDelegated", (n) -> { this.setIsDelegated(n.getBooleanValue()); });
+        deserializerMap.put("isOutOfDate", (n) -> { this.setIsOutOfDate(n.getBooleanValue()); });
+        deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(Location::createFromDiscriminatorValue)); });
+        deserializerMap.put("meetingMessageType", (n) -> { this.setMeetingMessageType(n.getEnumValue(MeetingMessageType.class)); });
+        deserializerMap.put("recurrence", (n) -> { this.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(EventType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the isAllDay property value. The isAllDay property
@@ -98,7 +95,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsAllDay() {
-        return this._isAllDay;
+        return this.isAllDay;
     }
     /**
      * Gets the isDelegated property value. The isDelegated property
@@ -106,7 +103,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsDelegated() {
-        return this._isDelegated;
+        return this.isDelegated;
     }
     /**
      * Gets the isOutOfDate property value. The isOutOfDate property
@@ -114,7 +111,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsOutOfDate() {
-        return this._isOutOfDate;
+        return this.isOutOfDate;
     }
     /**
      * Gets the location property value. The location property
@@ -122,7 +119,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @javax.annotation.Nullable
     public Location getLocation() {
-        return this._location;
+        return this.location;
     }
     /**
      * Gets the meetingMessageType property value. The meetingMessageType property
@@ -130,7 +127,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @javax.annotation.Nullable
     public MeetingMessageType getMeetingMessageType() {
-        return this._meetingMessageType;
+        return this.meetingMessageType;
     }
     /**
      * Gets the recurrence property value. The recurrence property
@@ -138,7 +135,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @javax.annotation.Nullable
     public PatternedRecurrence getRecurrence() {
-        return this._recurrence;
+        return this.recurrence;
     }
     /**
      * Gets the startDateTime property value. The startDateTime property
@@ -146,7 +143,7 @@ public class EventMessage extends Message implements Parsable {
      */
     @javax.annotation.Nullable
     public DateTimeTimeZone getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Gets the type property value. The type property
@@ -154,13 +151,14 @@ public class EventMessage extends Message implements Parsable {
      */
     @javax.annotation.Nullable
     public EventType getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -180,79 +178,89 @@ public class EventMessage extends Message implements Parsable {
      * @param value Value to set for the endDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEndDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
-        this._endDateTime = value;
+        this.endDateTime = value;
     }
     /**
      * Sets the event property value. The event associated with the event message. The assumption for attendees or room resources is that the Calendar Attendant is set to automatically update the calendar with an event when meeting request event messages arrive. Navigation property.  Read-only.
      * @param value Value to set for the event property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEvent(@javax.annotation.Nullable final Event value) {
-        this._event = value;
+        this.event = value;
     }
     /**
      * Sets the isAllDay property value. The isAllDay property
      * @param value Value to set for the isAllDay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAllDay(@javax.annotation.Nullable final Boolean value) {
-        this._isAllDay = value;
+        this.isAllDay = value;
     }
     /**
      * Sets the isDelegated property value. The isDelegated property
      * @param value Value to set for the isDelegated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDelegated(@javax.annotation.Nullable final Boolean value) {
-        this._isDelegated = value;
+        this.isDelegated = value;
     }
     /**
      * Sets the isOutOfDate property value. The isOutOfDate property
      * @param value Value to set for the isOutOfDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsOutOfDate(@javax.annotation.Nullable final Boolean value) {
-        this._isOutOfDate = value;
+        this.isOutOfDate = value;
     }
     /**
      * Sets the location property value. The location property
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final Location value) {
-        this._location = value;
+        this.location = value;
     }
     /**
      * Sets the meetingMessageType property value. The meetingMessageType property
      * @param value Value to set for the meetingMessageType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMeetingMessageType(@javax.annotation.Nullable final MeetingMessageType value) {
-        this._meetingMessageType = value;
+        this.meetingMessageType = value;
     }
     /**
      * Sets the recurrence property value. The recurrence property
      * @param value Value to set for the recurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecurrence(@javax.annotation.Nullable final PatternedRecurrence value) {
-        this._recurrence = value;
+        this.recurrence = value;
     }
     /**
      * Sets the startDateTime property value. The startDateTime property
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final DateTimeTimeZone value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final EventType value) {
-        this._type = value;
+        this.type = value;
     }
 }
