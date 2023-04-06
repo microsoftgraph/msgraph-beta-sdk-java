@@ -3,20 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EvaluateLabelJobResponse extends JobResponseBase implements Parsable {
     /** The result property */
-    private EvaluateLabelJobResultGroup _result;
+    private EvaluateLabelJobResultGroup result;
     /**
      * Instantiates a new EvaluateLabelJobResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EvaluateLabelJobResponse() {
         super();
-        this.setOdataType("#microsoft.graph.evaluateLabelJobResponse");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +29,13 @@ public class EvaluateLabelJobResponse extends JobResponseBase implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EvaluateLabelJobResponse currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("result", (n) -> { currentObject.setResult(n.getObjectValue(EvaluateLabelJobResultGroup::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("result", (n) -> { this.setResult(n.getObjectValue(EvaluateLabelJobResultGroup::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the result property value. The result property
@@ -45,13 +43,14 @@ public class EvaluateLabelJobResponse extends JobResponseBase implements Parsabl
      */
     @javax.annotation.Nullable
     public EvaluateLabelJobResultGroup getResult() {
-        return this._result;
+        return this.result;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +61,8 @@ public class EvaluateLabelJobResponse extends JobResponseBase implements Parsabl
      * @param value Value to set for the result property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResult(@javax.annotation.Nullable final EvaluateLabelJobResultGroup value) {
-        this._result = value;
+        this.result = value;
     }
 }

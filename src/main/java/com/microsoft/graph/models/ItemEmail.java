@@ -3,21 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ItemEmail extends ItemFacet implements Parsable {
     /** The email address itself. */
-    private String _address;
+    private String address;
     /** The name or label a user has associated with a particular email address. */
-    private String _displayName;
+    private String displayName;
     /** The type property */
-    private EmailType _type;
+    private EmailType type;
     /**
      * Instantiates a new ItemEmail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemEmail() {
         super();
         this.setOdataType("#microsoft.graph.itemEmail");
@@ -38,7 +38,7 @@ public class ItemEmail extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAddress() {
-        return this._address;
+        return this.address;
     }
     /**
      * Gets the displayName property value. The name or label a user has associated with a particular email address.
@@ -46,20 +46,19 @@ public class ItemEmail extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ItemEmail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("address", (n) -> { currentObject.setAddress(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getEnumValue(EmailType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("address", (n) -> { this.setAddress(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(EmailType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the type property value. The type property
@@ -67,13 +66,14 @@ public class ItemEmail extends ItemFacet implements Parsable {
      */
     @javax.annotation.Nullable
     public EmailType getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +86,26 @@ public class ItemEmail extends ItemFacet implements Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddress(@javax.annotation.Nullable final String value) {
-        this._address = value;
+        this.address = value;
     }
     /**
      * Sets the displayName property value. The name or label a user has associated with a particular email address.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the type property value. The type property
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final EmailType value) {
-        this._type = value;
+        this.type = value;
     }
 }

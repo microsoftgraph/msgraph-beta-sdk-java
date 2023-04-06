@@ -4,46 +4,38 @@ import com.microsoft.graph.models.AppManagementPolicy;
 import com.microsoft.graph.models.AppManagementPolicyCollectionResponse;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.policies.appmanagementpolicies.count.CountRequestBuilder;
+import com.microsoft.kiota.BaseRequestBuilder;
+import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the appManagementPolicies property of the microsoft.graph.policyRoot entity. */
-public class AppManagementPoliciesRequestBuilder {
-    /** The Count property */
+/**
+ * Provides operations to manage the appManagementPolicies property of the microsoft.graph.policyRoot entity.
+ */
+public class AppManagementPoliciesRequestBuilder extends BaseRequestBuilder {
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
-    /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
     /**
      * Instantiates a new AppManagementPoliciesRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppManagementPoliciesRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        Objects.requireNonNull(pathParameters);
-        Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/policies/appManagementPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
+        super(requestAdapter, "{+baseurl}/policies/appManagementPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new AppManagementPoliciesRequestBuilder and sets the default values.
@@ -51,184 +43,156 @@ public class AppManagementPoliciesRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppManagementPoliciesRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/policies/appManagementPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
-        urlTplParams.put("request-raw-url", rawUrl);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
+        super(requestAdapter, "{+baseurl}/policies/appManagementPolicies{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation() throws URISyntaxException {
-        return createGetRequestInformation(null);
-    }
-    /**
-     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<AppManagementPoliciesRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final AppManagementPoliciesRequestBuilderGetRequestConfiguration requestConfig = new AppManagementPoliciesRequestBuilderGetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Create new navigation property to appManagementPolicies for policies
-     * @param body 
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final AppManagementPolicy body) throws URISyntaxException {
-        return createPostRequestInformation(body, null);
-    }
-    /**
-     * Create new navigation property to appManagementPolicies for policies
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final AppManagementPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<AppManagementPoliciesRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.POST;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final AppManagementPoliciesRequestBuilderPostRequestConfiguration requestConfig = new AppManagementPoliciesRequestBuilderPostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
+     * Retrieve a list of appManagementPolicy objects.
      * @return a CompletableFuture of AppManagementPolicyCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/appmanagementpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppManagementPolicyCollectionResponse> get() {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, AppManagementPolicyCollectionResponse::createFromDiscriminatorValue, null, errorMapping);
+            final RequestInformation requestInfo = toGetRequestInformation(null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, AppManagementPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<AppManagementPolicyCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<AppManagementPolicyCollectionResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
-     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
+     * Retrieve a list of appManagementPolicy objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of AppManagementPolicyCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/appmanagementpolicy-list?view=graph-rest-1.0">Find more info here</a>
      */
-    public java.util.concurrent.CompletableFuture<AppManagementPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AppManagementPoliciesRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<AppManagementPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, AppManagementPolicyCollectionResponse::createFromDiscriminatorValue, null, errorMapping);
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, AppManagementPolicyCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<AppManagementPolicyCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<AppManagementPolicyCollectionResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
-     * The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of AppManagementPolicyCollectionResponse
-     */
-    public java.util.concurrent.CompletableFuture<AppManagementPolicyCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<AppManagementPoliciesRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, AppManagementPolicyCollectionResponse::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Create new navigation property to appManagementPolicies for policies
-     * @param body 
+     * Create an appManagementPolicy object.
+     * @param body The request body
      * @return a CompletableFuture of appManagementPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/appmanagementpolicy-post?view=graph-rest-1.0">Find more info here</a>
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<AppManagementPolicy> post(@javax.annotation.Nonnull final AppManagementPolicy body) {
         try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, AppManagementPolicy::createFromDiscriminatorValue, null, errorMapping);
+            final RequestInformation requestInfo = toPostRequestInformation(body, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, AppManagementPolicy::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<AppManagementPolicy> executionException = new java.util.concurrent.CompletableFuture<AppManagementPolicy>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
-     * Create new navigation property to appManagementPolicies for policies
-     * @param body 
+     * Create an appManagementPolicy object.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of appManagementPolicy
+     * @see <a href="https://docs.microsoft.com/graph/api/appmanagementpolicy-post?view=graph-rest-1.0">Find more info here</a>
      */
-    public java.util.concurrent.CompletableFuture<AppManagementPolicy> post(@javax.annotation.Nonnull final AppManagementPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<AppManagementPoliciesRequestBuilderPostRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, AppManagementPolicy::createFromDiscriminatorValue, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Create new navigation property to appManagementPolicies for policies
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of appManagementPolicy
-     */
-    public java.util.concurrent.CompletableFuture<AppManagementPolicy> post(@javax.annotation.Nonnull final AppManagementPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<AppManagementPoliciesRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<AppManagementPolicy> post(@javax.annotation.Nonnull final AppManagementPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, AppManagementPolicy::createFromDiscriminatorValue, responseHandler, errorMapping);
+            final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, AppManagementPolicy::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<AppManagementPolicy> executionException = new java.util.concurrent.CompletableFuture<AppManagementPolicy>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
-    /** The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy. */
-    public class AppManagementPoliciesRequestBuilderGetQueryParameters {
+    /**
+     * Retrieve a list of appManagementPolicy objects.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
+    }
+    /**
+     * Retrieve a list of appManagementPolicy objects.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        if (requestConfiguration != null) {
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Create an appManagementPolicy object.
+     * @param body The request body
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final AppManagementPolicy body) throws URISyntaxException {
+        return toPostRequestInformation(body, null);
+    }
+    /**
+     * Create an appManagementPolicy object.
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final AppManagementPolicy body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        if (requestConfiguration != null) {
+            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Retrieve a list of appManagementPolicy objects.
+     */
+    public class GetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
@@ -262,37 +226,17 @@ public class AppManagementPoliciesRequestBuilder {
         @javax.annotation.Nullable
         public Integer top;
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class AppManagementPoliciesRequestBuilderGetRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class GetRequestConfiguration extends BaseRequestConfiguration {
         /** Request query parameters */
         @javax.annotation.Nullable
-        public AppManagementPoliciesRequestBuilderGetQueryParameters queryParameters = new AppManagementPoliciesRequestBuilderGetQueryParameters();
-        /**
-         * Instantiates a new appManagementPoliciesRequestBuilderGetRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        public AppManagementPoliciesRequestBuilderGetRequestConfiguration() {
-        }
+        public GetQueryParameters queryParameters = new GetQueryParameters();
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class AppManagementPoliciesRequestBuilderPostRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new appManagementPoliciesRequestBuilderPostRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        public AppManagementPoliciesRequestBuilderPostRequestConfiguration() {
-        }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

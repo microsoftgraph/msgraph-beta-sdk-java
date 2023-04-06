@@ -1,73 +1,65 @@
 package com.microsoft.graph.admin.windows.updates.updatableassets;
 
 import com.microsoft.graph.admin.windows.updates.updatableassets.count.CountRequestBuilder;
-import com.microsoft.graph.admin.windows.updates.updatableassets.enrollassets.EnrollAssetsRequestBuilder;
-import com.microsoft.graph.admin.windows.updates.updatableassets.enrollassetsbyid.EnrollAssetsByIdRequestBuilder;
-import com.microsoft.graph.admin.windows.updates.updatableassets.unenrollassets.UnenrollAssetsRequestBuilder;
-import com.microsoft.graph.admin.windows.updates.updatableassets.unenrollassetsbyid.UnenrollAssetsByIdRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.updatableassets.windowsupdatesenrollassets.WindowsUpdatesEnrollAssetsRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.updatableassets.windowsupdatesenrollassetsbyid.WindowsUpdatesEnrollAssetsByIdRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.updatableassets.windowsupdatesunenrollassets.WindowsUpdatesUnenrollAssetsRequestBuilder;
+import com.microsoft.graph.admin.windows.updates.updatableassets.windowsupdatesunenrollassetsbyid.WindowsUpdatesUnenrollAssetsByIdRequestBuilder;
 import com.microsoft.graph.models.odataerrors.ODataError;
 import com.microsoft.graph.models.windowsupdates.UpdatableAsset;
 import com.microsoft.graph.models.windowsupdates.UpdatableAssetCollectionResponse;
+import com.microsoft.kiota.BaseRequestBuilder;
+import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the updatableAssets property of the microsoft.graph.windowsUpdates.updates entity. */
-public class UpdatableAssetsRequestBuilder {
-    /** The Count property */
+/**
+ * Provides operations to manage the updatableAssets property of the microsoft.graph.adminWindowsUpdates entity.
+ */
+public class UpdatableAssetsRequestBuilder extends BaseRequestBuilder {
+    /** Provides operations to count the resources in the collection. */
     @javax.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The enrollAssets property */
+    /** Provides operations to call the enrollAssets method. */
     @javax.annotation.Nonnull
-    public EnrollAssetsRequestBuilder enrollAssets() {
-        return new EnrollAssetsRequestBuilder(pathParameters, requestAdapter);
+    public WindowsUpdatesEnrollAssetsRequestBuilder windowsUpdatesEnrollAssets() {
+        return new WindowsUpdatesEnrollAssetsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The enrollAssetsById property */
+    /** Provides operations to call the enrollAssetsById method. */
     @javax.annotation.Nonnull
-    public EnrollAssetsByIdRequestBuilder enrollAssetsById() {
-        return new EnrollAssetsByIdRequestBuilder(pathParameters, requestAdapter);
+    public WindowsUpdatesEnrollAssetsByIdRequestBuilder windowsUpdatesEnrollAssetsById() {
+        return new WindowsUpdatesEnrollAssetsByIdRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
-    /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** The unenrollAssets property */
+    /** Provides operations to call the unenrollAssets method. */
     @javax.annotation.Nonnull
-    public UnenrollAssetsRequestBuilder unenrollAssets() {
-        return new UnenrollAssetsRequestBuilder(pathParameters, requestAdapter);
+    public WindowsUpdatesUnenrollAssetsRequestBuilder windowsUpdatesUnenrollAssets() {
+        return new WindowsUpdatesUnenrollAssetsRequestBuilder(pathParameters, requestAdapter);
     }
-    /** The unenrollAssetsById property */
+    /** Provides operations to call the unenrollAssetsById method. */
     @javax.annotation.Nonnull
-    public UnenrollAssetsByIdRequestBuilder unenrollAssetsById() {
-        return new UnenrollAssetsByIdRequestBuilder(pathParameters, requestAdapter);
+    public WindowsUpdatesUnenrollAssetsByIdRequestBuilder windowsUpdatesUnenrollAssetsById() {
+        return new WindowsUpdatesUnenrollAssetsByIdRequestBuilder(pathParameters, requestAdapter);
     }
-    /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
     /**
      * Instantiates a new UpdatableAssetsRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdatableAssetsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        Objects.requireNonNull(pathParameters);
-        Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/admin/windows/updates/updatableAssets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/updatableAssets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", pathParameters);
     }
     /**
      * Instantiates a new UpdatableAssetsRequestBuilder and sets the default values.
@@ -75,184 +67,156 @@ public class UpdatableAssetsRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdatableAssetsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/admin/windows/updates/updatableAssets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}";
-        var urlTplParams = new HashMap<String, Object>();
-        urlTplParams.put("request-raw-url", rawUrl);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/updatableAssets{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}", rawUrl);
     }
     /**
-     * Assets registered with the deployment service that can receive updates. Read-only.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation() throws URISyntaxException {
-        return createGetRequestInformation(null);
-    }
-    /**
-     * Assets registered with the deployment service that can receive updates. Read-only.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<UpdatableAssetsRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        if (requestConfiguration != null) {
-            final UpdatableAssetsRequestBuilderGetRequestConfiguration requestConfig = new UpdatableAssetsRequestBuilderGetRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addQueryParameters(requestConfig.queryParameters);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Create new navigation property to updatableAssets for admin
-     * @param body 
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UpdatableAsset body) throws URISyntaxException {
-        return createPostRequestInformation(body, null);
-    }
-    /**
-     * Create new navigation property to updatableAssets for admin
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a RequestInformation
-     */
-    @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final UpdatableAsset body, @javax.annotation.Nullable final java.util.function.Consumer<UpdatableAssetsRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.POST;
-        }};
-        requestInfo.urlTemplate = urlTemplate;
-        requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
-        if (requestConfiguration != null) {
-            final UpdatableAssetsRequestBuilderPostRequestConfiguration requestConfig = new UpdatableAssetsRequestBuilderPostRequestConfiguration();
-            requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
-            requestInfo.addRequestOptions(requestConfig.options);
-        }
-        return requestInfo;
-    }
-    /**
-     * Assets registered with the deployment service that can receive updates. Read-only.
+     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns **updatableAsset** resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
      * @return a CompletableFuture of UpdatableAssetCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/adminwindowsupdates-list-updatableassets?view=graph-rest-1.0">Find more info here</a>
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse> get() {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, UpdatableAssetCollectionResponse::createFromDiscriminatorValue, null, errorMapping);
+            final RequestInformation requestInfo = toGetRequestInformation(null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, UpdatableAssetCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
-     * Assets registered with the deployment service that can receive updates. Read-only.
+     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns **updatableAsset** resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of UpdatableAssetCollectionResponse
+     * @see <a href="https://docs.microsoft.com/graph/api/adminwindowsupdates-list-updatableassets?view=graph-rest-1.0">Find more info here</a>
      */
-    public java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<UpdatableAssetsRequestBuilderGetRequestConfiguration> requestConfiguration) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, UpdatableAssetCollectionResponse::createFromDiscriminatorValue, null, errorMapping);
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, UpdatableAssetCollectionResponse::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse> executionException = new java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
-     * Assets registered with the deployment service that can receive updates. Read-only.
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of UpdatableAssetCollectionResponse
-     */
-    public java.util.concurrent.CompletableFuture<UpdatableAssetCollectionResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<UpdatableAssetsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, UpdatableAssetCollectionResponse::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Create new navigation property to updatableAssets for admin
-     * @param body 
+     * Create a new updatableAssetGroup object. The **updatableAssetGroup** resource inherits from updatableAsset.
+     * @param body The request body
      * @return a CompletableFuture of updatableAsset
+     * @see <a href="https://docs.microsoft.com/graph/api/adminwindowsupdates-post-updatableassets-updatableassetgroup?view=graph-rest-1.0">Find more info here</a>
      */
+    @javax.annotation.Nonnull
     public java.util.concurrent.CompletableFuture<UpdatableAsset> post(@javax.annotation.Nonnull final UpdatableAsset body) {
         try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, UpdatableAsset::createFromDiscriminatorValue, null, errorMapping);
+            final RequestInformation requestInfo = toPostRequestInformation(body, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, UpdatableAsset::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<UpdatableAsset> executionException = new java.util.concurrent.CompletableFuture<UpdatableAsset>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
     /**
-     * Create new navigation property to updatableAssets for admin
-     * @param body 
+     * Create a new updatableAssetGroup object. The **updatableAssetGroup** resource inherits from updatableAsset.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a CompletableFuture of updatableAsset
+     * @see <a href="https://docs.microsoft.com/graph/api/adminwindowsupdates-post-updatableassets-updatableassetgroup?view=graph-rest-1.0">Find more info here</a>
      */
-    public java.util.concurrent.CompletableFuture<UpdatableAsset> post(@javax.annotation.Nonnull final UpdatableAsset body, @javax.annotation.Nullable final java.util.function.Consumer<UpdatableAssetsRequestBuilderPostRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, UpdatableAsset::createFromDiscriminatorValue, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Create new navigation property to updatableAssets for admin
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of updatableAsset
-     */
-    public java.util.concurrent.CompletableFuture<UpdatableAsset> post(@javax.annotation.Nonnull final UpdatableAsset body, @javax.annotation.Nullable final java.util.function.Consumer<UpdatableAssetsRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<UpdatableAsset> post(@javax.annotation.Nonnull final UpdatableAsset body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, UpdatableAsset::createFromDiscriminatorValue, responseHandler, errorMapping);
+            final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, UpdatableAsset::createFromDiscriminatorValue, errorMapping);
         } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
+            final java.util.concurrent.CompletableFuture<UpdatableAsset> executionException = new java.util.concurrent.CompletableFuture<UpdatableAsset>();
+            executionException.completeExceptionally(ex);
+            return executionException;
         }
     }
-    /** Assets registered with the deployment service that can receive updates. Read-only. */
-    public class UpdatableAssetsRequestBuilderGetQueryParameters {
+    /**
+     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns **updatableAsset** resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
+    }
+    /**
+     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns **updatableAsset** resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        if (requestConfiguration != null) {
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Create a new updatableAssetGroup object. The **updatableAssetGroup** resource inherits from updatableAsset.
+     * @param body The request body
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final UpdatableAsset body) throws URISyntaxException {
+        return toPostRequestInformation(body, null);
+    }
+    /**
+     * Create a new updatableAssetGroup object. The **updatableAssetGroup** resource inherits from updatableAsset.
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a RequestInformation
+     */
+    @javax.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final UpdatableAsset body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.POST;
+        requestInfo.urlTemplate = urlTemplate;
+        requestInfo.pathParameters = pathParameters;
+        requestInfo.headers.add("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        if (requestConfiguration != null) {
+            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
+            requestConfiguration.accept(requestConfig);
+            requestInfo.headers.putAll(requestConfig.headers);
+            requestInfo.addRequestOptions(requestConfig.options);
+        }
+        return requestInfo;
+    }
+    /**
+     * Get a list of updatableAsset objects and their properties. Listing updatable assets returns **updatableAsset** resources of the following derived types: azureADDevice and updatableAssetGroup. Use list azureADDevice resources or list updatableAssetGroup resources to filter and get resources of only one of the derived types.
+     */
+    public class GetQueryParameters {
         /** Include count of items */
         @QueryParameter(name = "%24count")
         @javax.annotation.Nullable
@@ -286,37 +250,17 @@ public class UpdatableAssetsRequestBuilder {
         @javax.annotation.Nullable
         public Integer top;
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class UpdatableAssetsRequestBuilderGetRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class GetRequestConfiguration extends BaseRequestConfiguration {
         /** Request query parameters */
         @javax.annotation.Nullable
-        public UpdatableAssetsRequestBuilderGetQueryParameters queryParameters = new UpdatableAssetsRequestBuilderGetQueryParameters();
-        /**
-         * Instantiates a new updatableAssetsRequestBuilderGetRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        public UpdatableAssetsRequestBuilderGetRequestConfiguration() {
-        }
+        public GetQueryParameters queryParameters = new GetQueryParameters();
     }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class UpdatableAssetsRequestBuilderPostRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new updatableAssetsRequestBuilderPostRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        public UpdatableAssetsRequestBuilderPostRequestConfiguration() {
-        }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

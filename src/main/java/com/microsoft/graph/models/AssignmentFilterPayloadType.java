@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** Represents the payload type AssignmentFilter is being assigned to. */
 public enum AssignmentFilterPayloadType implements ValuedEnum {
     /** NotSet */
     NotSet("notSet"),

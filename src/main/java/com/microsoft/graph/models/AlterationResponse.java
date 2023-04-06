@@ -4,28 +4,27 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AlterationResponse implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Defines the original user query string. */
-    private String _originalQueryString;
+    private String originalQueryString;
     /** Defines the details of alteration information for the spelling correction. */
-    private SearchAlteration _queryAlteration;
+    private SearchAlteration queryAlteration;
     /** Defines the type of the spelling correction. Possible values are suggestion, modification. */
-    private SearchAlterationType _queryAlterationType;
+    private SearchAlterationType queryAlterationType;
     /**
      * Instantiates a new alterationResponse and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AlterationResponse() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.alterationResponse");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,21 +42,20 @@ public class AlterationResponse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AlterationResponse currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("originalQueryString", (n) -> { currentObject.setOriginalQueryString(n.getStringValue()); });
-            this.put("queryAlteration", (n) -> { currentObject.setQueryAlteration(n.getObjectValue(SearchAlteration::createFromDiscriminatorValue)); });
-            this.put("queryAlterationType", (n) -> { currentObject.setQueryAlterationType(n.getEnumValue(SearchAlterationType.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("originalQueryString", (n) -> { this.setOriginalQueryString(n.getStringValue()); });
+        deserializerMap.put("queryAlteration", (n) -> { this.setQueryAlteration(n.getObjectValue(SearchAlteration::createFromDiscriminatorValue)); });
+        deserializerMap.put("queryAlterationType", (n) -> { this.setQueryAlterationType(n.getEnumValue(SearchAlterationType.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -65,7 +63,7 @@ public class AlterationResponse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the originalQueryString property value. Defines the original user query string.
@@ -73,7 +71,7 @@ public class AlterationResponse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOriginalQueryString() {
-        return this._originalQueryString;
+        return this.originalQueryString;
     }
     /**
      * Gets the queryAlteration property value. Defines the details of alteration information for the spelling correction.
@@ -81,7 +79,7 @@ public class AlterationResponse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public SearchAlteration getQueryAlteration() {
-        return this._queryAlteration;
+        return this.queryAlteration;
     }
     /**
      * Gets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are suggestion, modification.
@@ -89,13 +87,14 @@ public class AlterationResponse implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public SearchAlterationType getQueryAlterationType() {
-        return this._queryAlterationType;
+        return this.queryAlterationType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -109,39 +108,44 @@ public class AlterationResponse implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the originalQueryString property value. Defines the original user query string.
      * @param value Value to set for the originalQueryString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginalQueryString(@javax.annotation.Nullable final String value) {
-        this._originalQueryString = value;
+        this.originalQueryString = value;
     }
     /**
      * Sets the queryAlteration property value. Defines the details of alteration information for the spelling correction.
      * @param value Value to set for the queryAlteration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueryAlteration(@javax.annotation.Nullable final SearchAlteration value) {
-        this._queryAlteration = value;
+        this.queryAlteration = value;
     }
     /**
      * Sets the queryAlterationType property value. Defines the type of the spelling correction. Possible values are suggestion, modification.
      * @param value Value to set for the queryAlterationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQueryAlterationType(@javax.annotation.Nullable final SearchAlterationType value) {
-        this._queryAlterationType = value;
+        this.queryAlterationType = value;
     }
 }

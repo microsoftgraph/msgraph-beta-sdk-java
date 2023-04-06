@@ -3,53 +3,53 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsable {
     /** Device threat protection levels for the Device Threat Protection API. */
-    private DeviceThreatProtectionLevel _advancedThreatProtectionRequiredSecurityLevel;
+    private DeviceThreatProtectionLevel advancedThreatProtectionRequiredSecurityLevel;
     /** Require that devices have enabled device threat protection . */
-    private Boolean _deviceThreatProtectionEnabled;
+    private Boolean deviceThreatProtectionEnabled;
     /** Device threat protection levels for the Device Threat Protection API. */
-    private DeviceThreatProtectionLevel _deviceThreatProtectionRequiredSecurityLevel;
+    private DeviceThreatProtectionLevel deviceThreatProtectionRequiredSecurityLevel;
     /** Indicates whether or not to require a managed email profile. */
-    private Boolean _managedEmailProfileRequired;
+    private Boolean managedEmailProfileRequired;
     /** Maximum IOS build version. */
-    private String _osMaximumBuildVersion;
+    private String osMaximumBuildVersion;
     /** Maximum IOS version. */
-    private String _osMaximumVersion;
+    private String osMaximumVersion;
     /** Minimum IOS build version. */
-    private String _osMinimumBuildVersion;
+    private String osMinimumBuildVersion;
     /** Minimum IOS version. */
-    private String _osMinimumVersion;
+    private String osMinimumVersion;
     /** Indicates whether or not to block simple passcodes. */
-    private Boolean _passcodeBlockSimple;
+    private Boolean passcodeBlockSimple;
     /** Number of days before the passcode expires. Valid values 1 to 65535 */
-    private Integer _passcodeExpirationDays;
+    private Integer passcodeExpirationDays;
     /** The number of character sets required in the password. */
-    private Integer _passcodeMinimumCharacterSetCount;
+    private Integer passcodeMinimumCharacterSetCount;
     /** Minimum length of passcode. Valid values 4 to 14 */
-    private Integer _passcodeMinimumLength;
+    private Integer passcodeMinimumLength;
     /** Minutes of inactivity before a passcode is required. */
-    private Integer _passcodeMinutesOfInactivityBeforeLock;
+    private Integer passcodeMinutesOfInactivityBeforeLock;
     /** Minutes of inactivity before the screen times out. */
-    private Integer _passcodeMinutesOfInactivityBeforeScreenTimeout;
+    private Integer passcodeMinutesOfInactivityBeforeScreenTimeout;
     /** Number of previous passcodes to block. Valid values 1 to 24 */
-    private Integer _passcodePreviousPasscodeBlockCount;
+    private Integer passcodePreviousPasscodeBlockCount;
     /** Indicates whether or not to require a passcode. */
-    private Boolean _passcodeRequired;
+    private Boolean passcodeRequired;
     /** Possible values of required passwords. */
-    private RequiredPasswordType _passcodeRequiredType;
+    private RequiredPasswordType passcodeRequiredType;
     /** Require the device to not have the specified apps installed. This collection can contain a maximum of 100 elements. */
-    private java.util.List<AppListItem> _restrictedApps;
+    private java.util.List<AppListItem> restrictedApps;
     /** Devices must not be jailbroken or rooted. */
-    private Boolean _securityBlockJailbrokenDevices;
+    private Boolean securityBlockJailbrokenDevices;
     /**
      * Instantiates a new IosCompliancePolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosCompliancePolicy() {
         super();
         this.setOdataType("#microsoft.graph.iosCompliancePolicy");
@@ -70,7 +70,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public DeviceThreatProtectionLevel getAdvancedThreatProtectionRequiredSecurityLevel() {
-        return this._advancedThreatProtectionRequiredSecurityLevel;
+        return this.advancedThreatProtectionRequiredSecurityLevel;
     }
     /**
      * Gets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection .
@@ -78,7 +78,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getDeviceThreatProtectionEnabled() {
-        return this._deviceThreatProtectionEnabled;
+        return this.deviceThreatProtectionEnabled;
     }
     /**
      * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
@@ -86,36 +86,35 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public DeviceThreatProtectionLevel getDeviceThreatProtectionRequiredSecurityLevel() {
-        return this._deviceThreatProtectionRequiredSecurityLevel;
+        return this.deviceThreatProtectionRequiredSecurityLevel;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosCompliancePolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("advancedThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setAdvancedThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
-            this.put("deviceThreatProtectionEnabled", (n) -> { currentObject.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
-            this.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { currentObject.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
-            this.put("managedEmailProfileRequired", (n) -> { currentObject.setManagedEmailProfileRequired(n.getBooleanValue()); });
-            this.put("osMaximumBuildVersion", (n) -> { currentObject.setOsMaximumBuildVersion(n.getStringValue()); });
-            this.put("osMaximumVersion", (n) -> { currentObject.setOsMaximumVersion(n.getStringValue()); });
-            this.put("osMinimumBuildVersion", (n) -> { currentObject.setOsMinimumBuildVersion(n.getStringValue()); });
-            this.put("osMinimumVersion", (n) -> { currentObject.setOsMinimumVersion(n.getStringValue()); });
-            this.put("passcodeBlockSimple", (n) -> { currentObject.setPasscodeBlockSimple(n.getBooleanValue()); });
-            this.put("passcodeExpirationDays", (n) -> { currentObject.setPasscodeExpirationDays(n.getIntegerValue()); });
-            this.put("passcodeMinimumCharacterSetCount", (n) -> { currentObject.setPasscodeMinimumCharacterSetCount(n.getIntegerValue()); });
-            this.put("passcodeMinimumLength", (n) -> { currentObject.setPasscodeMinimumLength(n.getIntegerValue()); });
-            this.put("passcodeMinutesOfInactivityBeforeLock", (n) -> { currentObject.setPasscodeMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
-            this.put("passcodeMinutesOfInactivityBeforeScreenTimeout", (n) -> { currentObject.setPasscodeMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
-            this.put("passcodePreviousPasscodeBlockCount", (n) -> { currentObject.setPasscodePreviousPasscodeBlockCount(n.getIntegerValue()); });
-            this.put("passcodeRequired", (n) -> { currentObject.setPasscodeRequired(n.getBooleanValue()); });
-            this.put("passcodeRequiredType", (n) -> { currentObject.setPasscodeRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
-            this.put("restrictedApps", (n) -> { currentObject.setRestrictedApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
-            this.put("securityBlockJailbrokenDevices", (n) -> { currentObject.setSecurityBlockJailbrokenDevices(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("advancedThreatProtectionRequiredSecurityLevel", (n) -> { this.setAdvancedThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
+        deserializerMap.put("deviceThreatProtectionEnabled", (n) -> { this.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { this.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel.class)); });
+        deserializerMap.put("managedEmailProfileRequired", (n) -> { this.setManagedEmailProfileRequired(n.getBooleanValue()); });
+        deserializerMap.put("osMaximumBuildVersion", (n) -> { this.setOsMaximumBuildVersion(n.getStringValue()); });
+        deserializerMap.put("osMaximumVersion", (n) -> { this.setOsMaximumVersion(n.getStringValue()); });
+        deserializerMap.put("osMinimumBuildVersion", (n) -> { this.setOsMinimumBuildVersion(n.getStringValue()); });
+        deserializerMap.put("osMinimumVersion", (n) -> { this.setOsMinimumVersion(n.getStringValue()); });
+        deserializerMap.put("passcodeBlockSimple", (n) -> { this.setPasscodeBlockSimple(n.getBooleanValue()); });
+        deserializerMap.put("passcodeExpirationDays", (n) -> { this.setPasscodeExpirationDays(n.getIntegerValue()); });
+        deserializerMap.put("passcodeMinimumCharacterSetCount", (n) -> { this.setPasscodeMinimumCharacterSetCount(n.getIntegerValue()); });
+        deserializerMap.put("passcodeMinimumLength", (n) -> { this.setPasscodeMinimumLength(n.getIntegerValue()); });
+        deserializerMap.put("passcodeMinutesOfInactivityBeforeLock", (n) -> { this.setPasscodeMinutesOfInactivityBeforeLock(n.getIntegerValue()); });
+        deserializerMap.put("passcodeMinutesOfInactivityBeforeScreenTimeout", (n) -> { this.setPasscodeMinutesOfInactivityBeforeScreenTimeout(n.getIntegerValue()); });
+        deserializerMap.put("passcodePreviousPasscodeBlockCount", (n) -> { this.setPasscodePreviousPasscodeBlockCount(n.getIntegerValue()); });
+        deserializerMap.put("passcodeRequired", (n) -> { this.setPasscodeRequired(n.getBooleanValue()); });
+        deserializerMap.put("passcodeRequiredType", (n) -> { this.setPasscodeRequiredType(n.getEnumValue(RequiredPasswordType.class)); });
+        deserializerMap.put("restrictedApps", (n) -> { this.setRestrictedApps(n.getCollectionOfObjectValues(AppListItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("securityBlockJailbrokenDevices", (n) -> { this.setSecurityBlockJailbrokenDevices(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedEmailProfileRequired property value. Indicates whether or not to require a managed email profile.
@@ -123,7 +122,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getManagedEmailProfileRequired() {
-        return this._managedEmailProfileRequired;
+        return this.managedEmailProfileRequired;
     }
     /**
      * Gets the osMaximumBuildVersion property value. Maximum IOS build version.
@@ -131,7 +130,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public String getOsMaximumBuildVersion() {
-        return this._osMaximumBuildVersion;
+        return this.osMaximumBuildVersion;
     }
     /**
      * Gets the osMaximumVersion property value. Maximum IOS version.
@@ -139,7 +138,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public String getOsMaximumVersion() {
-        return this._osMaximumVersion;
+        return this.osMaximumVersion;
     }
     /**
      * Gets the osMinimumBuildVersion property value. Minimum IOS build version.
@@ -147,7 +146,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public String getOsMinimumBuildVersion() {
-        return this._osMinimumBuildVersion;
+        return this.osMinimumBuildVersion;
     }
     /**
      * Gets the osMinimumVersion property value. Minimum IOS version.
@@ -155,7 +154,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public String getOsMinimumVersion() {
-        return this._osMinimumVersion;
+        return this.osMinimumVersion;
     }
     /**
      * Gets the passcodeBlockSimple property value. Indicates whether or not to block simple passcodes.
@@ -163,7 +162,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getPasscodeBlockSimple() {
-        return this._passcodeBlockSimple;
+        return this.passcodeBlockSimple;
     }
     /**
      * Gets the passcodeExpirationDays property value. Number of days before the passcode expires. Valid values 1 to 65535
@@ -171,7 +170,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public Integer getPasscodeExpirationDays() {
-        return this._passcodeExpirationDays;
+        return this.passcodeExpirationDays;
     }
     /**
      * Gets the passcodeMinimumCharacterSetCount property value. The number of character sets required in the password.
@@ -179,7 +178,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public Integer getPasscodeMinimumCharacterSetCount() {
-        return this._passcodeMinimumCharacterSetCount;
+        return this.passcodeMinimumCharacterSetCount;
     }
     /**
      * Gets the passcodeMinimumLength property value. Minimum length of passcode. Valid values 4 to 14
@@ -187,7 +186,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public Integer getPasscodeMinimumLength() {
-        return this._passcodeMinimumLength;
+        return this.passcodeMinimumLength;
     }
     /**
      * Gets the passcodeMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a passcode is required.
@@ -195,7 +194,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public Integer getPasscodeMinutesOfInactivityBeforeLock() {
-        return this._passcodeMinutesOfInactivityBeforeLock;
+        return this.passcodeMinutesOfInactivityBeforeLock;
     }
     /**
      * Gets the passcodeMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
@@ -203,7 +202,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public Integer getPasscodeMinutesOfInactivityBeforeScreenTimeout() {
-        return this._passcodeMinutesOfInactivityBeforeScreenTimeout;
+        return this.passcodeMinutesOfInactivityBeforeScreenTimeout;
     }
     /**
      * Gets the passcodePreviousPasscodeBlockCount property value. Number of previous passcodes to block. Valid values 1 to 24
@@ -211,7 +210,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public Integer getPasscodePreviousPasscodeBlockCount() {
-        return this._passcodePreviousPasscodeBlockCount;
+        return this.passcodePreviousPasscodeBlockCount;
     }
     /**
      * Gets the passcodeRequired property value. Indicates whether or not to require a passcode.
@@ -219,7 +218,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getPasscodeRequired() {
-        return this._passcodeRequired;
+        return this.passcodeRequired;
     }
     /**
      * Gets the passcodeRequiredType property value. Possible values of required passwords.
@@ -227,7 +226,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public RequiredPasswordType getPasscodeRequiredType() {
-        return this._passcodeRequiredType;
+        return this.passcodeRequiredType;
     }
     /**
      * Gets the restrictedApps property value. Require the device to not have the specified apps installed. This collection can contain a maximum of 100 elements.
@@ -235,7 +234,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public java.util.List<AppListItem> getRestrictedApps() {
-        return this._restrictedApps;
+        return this.restrictedApps;
     }
     /**
      * Gets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
@@ -243,13 +242,14 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      */
     @javax.annotation.Nullable
     public Boolean getSecurityBlockJailbrokenDevices() {
-        return this._securityBlockJailbrokenDevices;
+        return this.securityBlockJailbrokenDevices;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -278,151 +278,170 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
      * @param value Value to set for the advancedThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdvancedThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
-        this._advancedThreatProtectionRequiredSecurityLevel = value;
+        this.advancedThreatProtectionRequiredSecurityLevel = value;
     }
     /**
      * Sets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection .
      * @param value Value to set for the deviceThreatProtectionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceThreatProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._deviceThreatProtectionEnabled = value;
+        this.deviceThreatProtectionEnabled = value;
     }
     /**
      * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceThreatProtectionRequiredSecurityLevel(@javax.annotation.Nullable final DeviceThreatProtectionLevel value) {
-        this._deviceThreatProtectionRequiredSecurityLevel = value;
+        this.deviceThreatProtectionRequiredSecurityLevel = value;
     }
     /**
      * Sets the managedEmailProfileRequired property value. Indicates whether or not to require a managed email profile.
      * @param value Value to set for the managedEmailProfileRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedEmailProfileRequired(@javax.annotation.Nullable final Boolean value) {
-        this._managedEmailProfileRequired = value;
+        this.managedEmailProfileRequired = value;
     }
     /**
      * Sets the osMaximumBuildVersion property value. Maximum IOS build version.
      * @param value Value to set for the osMaximumBuildVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMaximumBuildVersion(@javax.annotation.Nullable final String value) {
-        this._osMaximumBuildVersion = value;
+        this.osMaximumBuildVersion = value;
     }
     /**
      * Sets the osMaximumVersion property value. Maximum IOS version.
      * @param value Value to set for the osMaximumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMaximumVersion(@javax.annotation.Nullable final String value) {
-        this._osMaximumVersion = value;
+        this.osMaximumVersion = value;
     }
     /**
      * Sets the osMinimumBuildVersion property value. Minimum IOS build version.
      * @param value Value to set for the osMinimumBuildVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMinimumBuildVersion(@javax.annotation.Nullable final String value) {
-        this._osMinimumBuildVersion = value;
+        this.osMinimumBuildVersion = value;
     }
     /**
      * Sets the osMinimumVersion property value. Minimum IOS version.
      * @param value Value to set for the osMinimumVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsMinimumVersion(@javax.annotation.Nullable final String value) {
-        this._osMinimumVersion = value;
+        this.osMinimumVersion = value;
     }
     /**
      * Sets the passcodeBlockSimple property value. Indicates whether or not to block simple passcodes.
      * @param value Value to set for the passcodeBlockSimple property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeBlockSimple(@javax.annotation.Nullable final Boolean value) {
-        this._passcodeBlockSimple = value;
+        this.passcodeBlockSimple = value;
     }
     /**
      * Sets the passcodeExpirationDays property value. Number of days before the passcode expires. Valid values 1 to 65535
      * @param value Value to set for the passcodeExpirationDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeExpirationDays(@javax.annotation.Nullable final Integer value) {
-        this._passcodeExpirationDays = value;
+        this.passcodeExpirationDays = value;
     }
     /**
      * Sets the passcodeMinimumCharacterSetCount property value. The number of character sets required in the password.
      * @param value Value to set for the passcodeMinimumCharacterSetCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeMinimumCharacterSetCount(@javax.annotation.Nullable final Integer value) {
-        this._passcodeMinimumCharacterSetCount = value;
+        this.passcodeMinimumCharacterSetCount = value;
     }
     /**
      * Sets the passcodeMinimumLength property value. Minimum length of passcode. Valid values 4 to 14
      * @param value Value to set for the passcodeMinimumLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeMinimumLength(@javax.annotation.Nullable final Integer value) {
-        this._passcodeMinimumLength = value;
+        this.passcodeMinimumLength = value;
     }
     /**
      * Sets the passcodeMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a passcode is required.
      * @param value Value to set for the passcodeMinutesOfInactivityBeforeLock property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeMinutesOfInactivityBeforeLock(@javax.annotation.Nullable final Integer value) {
-        this._passcodeMinutesOfInactivityBeforeLock = value;
+        this.passcodeMinutesOfInactivityBeforeLock = value;
     }
     /**
      * Sets the passcodeMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before the screen times out.
      * @param value Value to set for the passcodeMinutesOfInactivityBeforeScreenTimeout property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeMinutesOfInactivityBeforeScreenTimeout(@javax.annotation.Nullable final Integer value) {
-        this._passcodeMinutesOfInactivityBeforeScreenTimeout = value;
+        this.passcodeMinutesOfInactivityBeforeScreenTimeout = value;
     }
     /**
      * Sets the passcodePreviousPasscodeBlockCount property value. Number of previous passcodes to block. Valid values 1 to 24
      * @param value Value to set for the passcodePreviousPasscodeBlockCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodePreviousPasscodeBlockCount(@javax.annotation.Nullable final Integer value) {
-        this._passcodePreviousPasscodeBlockCount = value;
+        this.passcodePreviousPasscodeBlockCount = value;
     }
     /**
      * Sets the passcodeRequired property value. Indicates whether or not to require a passcode.
      * @param value Value to set for the passcodeRequired property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeRequired(@javax.annotation.Nullable final Boolean value) {
-        this._passcodeRequired = value;
+        this.passcodeRequired = value;
     }
     /**
      * Sets the passcodeRequiredType property value. Possible values of required passwords.
      * @param value Value to set for the passcodeRequiredType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPasscodeRequiredType(@javax.annotation.Nullable final RequiredPasswordType value) {
-        this._passcodeRequiredType = value;
+        this.passcodeRequiredType = value;
     }
     /**
      * Sets the restrictedApps property value. Require the device to not have the specified apps installed. This collection can contain a maximum of 100 elements.
      * @param value Value to set for the restrictedApps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRestrictedApps(@javax.annotation.Nullable final java.util.List<AppListItem> value) {
-        this._restrictedApps = value;
+        this.restrictedApps = value;
     }
     /**
      * Sets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
      * @param value Value to set for the securityBlockJailbrokenDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSecurityBlockJailbrokenDevices(@javax.annotation.Nullable final Boolean value) {
-        this._securityBlockJailbrokenDevices = value;
+        this.securityBlockJailbrokenDevices = value;
     }
 }

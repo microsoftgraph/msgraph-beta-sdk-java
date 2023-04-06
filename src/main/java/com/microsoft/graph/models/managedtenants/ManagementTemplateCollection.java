@@ -5,38 +5,36 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ManagementTemplateCollection extends Entity implements Parsable {
     /** The createdByUserId property */
-    private String _createdByUserId;
+    private String createdByUserId;
     /** The createdDateTime property */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The description property */
-    private String _description;
+    private String description;
     /** The displayName property */
-    private String _displayName;
+    private String displayName;
     /** The lastActionByUserId property */
-    private String _lastActionByUserId;
+    private String lastActionByUserId;
     /** The lastActionDateTime property */
-    private OffsetDateTime _lastActionDateTime;
+    private OffsetDateTime lastActionDateTime;
     /** The managementTemplates property */
-    private java.util.List<ManagementTemplate> _managementTemplates;
+    private java.util.List<ManagementTemplate> managementTemplates;
     /**
-     * Instantiates a new managementTemplateCollection and sets the default values.
+     * Instantiates a new ManagementTemplateCollection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagementTemplateCollection() {
         super();
-        this.setOdataType("#microsoft.graph.managedTenants.managementTemplateCollection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementTemplateCollection
+     * @return a ManagementTemplateCollection
      */
     @javax.annotation.Nonnull
     public static ManagementTemplateCollection createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -49,7 +47,7 @@ public class ManagementTemplateCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCreatedByUserId() {
-        return this._createdByUserId;
+        return this.createdByUserId;
     }
     /**
      * Gets the createdDateTime property value. The createdDateTime property
@@ -57,7 +55,7 @@ public class ManagementTemplateCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. The description property
@@ -65,7 +63,7 @@ public class ManagementTemplateCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The displayName property
@@ -73,24 +71,23 @@ public class ManagementTemplateCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagementTemplateCollection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdByUserId", (n) -> { currentObject.setCreatedByUserId(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastActionByUserId", (n) -> { currentObject.setLastActionByUserId(n.getStringValue()); });
-            this.put("lastActionDateTime", (n) -> { currentObject.setLastActionDateTime(n.getOffsetDateTimeValue()); });
-            this.put("managementTemplates", (n) -> { currentObject.setManagementTemplates(n.getCollectionOfObjectValues(ManagementTemplate::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdByUserId", (n) -> { this.setCreatedByUserId(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastActionByUserId", (n) -> { this.setLastActionByUserId(n.getStringValue()); });
+        deserializerMap.put("lastActionDateTime", (n) -> { this.setLastActionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managementTemplates", (n) -> { this.setManagementTemplates(n.getCollectionOfObjectValues(ManagementTemplate::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastActionByUserId property value. The lastActionByUserId property
@@ -98,7 +95,7 @@ public class ManagementTemplateCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getLastActionByUserId() {
-        return this._lastActionByUserId;
+        return this.lastActionByUserId;
     }
     /**
      * Gets the lastActionDateTime property value. The lastActionDateTime property
@@ -106,7 +103,7 @@ public class ManagementTemplateCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastActionDateTime() {
-        return this._lastActionDateTime;
+        return this.lastActionDateTime;
     }
     /**
      * Gets the managementTemplates property value. The managementTemplates property
@@ -114,13 +111,14 @@ public class ManagementTemplateCollection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ManagementTemplate> getManagementTemplates() {
-        return this._managementTemplates;
+        return this.managementTemplates;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -137,55 +135,62 @@ public class ManagementTemplateCollection extends Entity implements Parsable {
      * @param value Value to set for the createdByUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedByUserId(@javax.annotation.Nullable final String value) {
-        this._createdByUserId = value;
+        this.createdByUserId = value;
     }
     /**
      * Sets the createdDateTime property value. The createdDateTime property
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastActionByUserId property value. The lastActionByUserId property
      * @param value Value to set for the lastActionByUserId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActionByUserId(@javax.annotation.Nullable final String value) {
-        this._lastActionByUserId = value;
+        this.lastActionByUserId = value;
     }
     /**
      * Sets the lastActionDateTime property value. The lastActionDateTime property
      * @param value Value to set for the lastActionDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastActionDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastActionDateTime = value;
+        this.lastActionDateTime = value;
     }
     /**
      * Sets the managementTemplates property value. The managementTemplates property
      * @param value Value to set for the managementTemplates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementTemplates(@javax.annotation.Nullable final java.util.List<ManagementTemplate> value) {
-        this._managementTemplates = value;
+        this.managementTemplates = value;
     }
 }

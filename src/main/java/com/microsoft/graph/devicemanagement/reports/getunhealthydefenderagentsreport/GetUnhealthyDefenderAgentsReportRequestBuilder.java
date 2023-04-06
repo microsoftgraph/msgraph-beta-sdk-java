@@ -1,41 +1,33 @@
 package com.microsoft.graph.devicemanagement.reports.getunhealthydefenderagentsreport;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.kiota.BaseRequestBuilder;
+import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getUnhealthyDefenderAgentsReport method. */
-public class GetUnhealthyDefenderAgentsReportRequestBuilder {
-    /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
-    /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+/**
+ * Provides operations to call the getUnhealthyDefenderAgentsReport method.
+ */
+public class GetUnhealthyDefenderAgentsReportRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new GetUnhealthyDefenderAgentsReportRequestBuilder and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetUnhealthyDefenderAgentsReportRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        Objects.requireNonNull(pathParameters);
-        Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/deviceManagement/reports/microsoft.graph.getUnhealthyDefenderAgentsReport";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
+        super(requestAdapter, "{+baseurl}/deviceManagement/reports/getUnhealthyDefenderAgentsReport", pathParameters);
     }
     /**
      * Instantiates a new GetUnhealthyDefenderAgentsReportRequestBuilder and sets the default values.
@@ -43,113 +35,84 @@ public class GetUnhealthyDefenderAgentsReportRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetUnhealthyDefenderAgentsReportRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/deviceManagement/reports/microsoft.graph.getUnhealthyDefenderAgentsReport";
-        var urlTplParams = new HashMap<String, Object>();
-        urlTplParams.put("request-raw-url", rawUrl);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
+        super(requestAdapter, "{+baseurl}/deviceManagement/reports/getUnhealthyDefenderAgentsReport", rawUrl);
     }
     /**
      * Invoke action getUnhealthyDefenderAgentsReport
-     * @param body 
+     * @param body The request body
+     * @return a CompletableFuture of InputStream
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportPostRequestBody body) {
+        try {
+            final RequestInformation requestInfo = toPostRequestInformation(body, null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<InputStream> executionException = new java.util.concurrent.CompletableFuture<InputStream>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Invoke action getUnhealthyDefenderAgentsReport
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a CompletableFuture of InputStream
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        try {
+            final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<InputStream> executionException = new java.util.concurrent.CompletableFuture<InputStream>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Invoke action getUnhealthyDefenderAgentsReport
+     * @param body The request body
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportPostRequestBody body) throws URISyntaxException {
-        return createPostRequestInformation(body, null);
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportPostRequestBody body) throws URISyntaxException {
+        return toPostRequestInformation(body, null);
     }
     /**
      * Invoke action getUnhealthyDefenderAgentsReport
-     * @param body 
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createPostRequestInformation(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetUnhealthyDefenderAgentsReportRequestBuilderPostRequestConfiguration> requestConfiguration) throws URISyntaxException {
+    public RequestInformation toPostRequestInformation(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) throws URISyntaxException {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.POST;
-        }};
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.POST;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         if (requestConfiguration != null) {
-            final GetUnhealthyDefenderAgentsReportRequestBuilderPostRequestConfiguration requestConfig = new GetUnhealthyDefenderAgentsReportRequestBuilderPostRequestConfiguration();
+            final PostRequestConfiguration requestConfig = new PostRequestConfiguration();
             requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
+            requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
     }
     /**
-     * Invoke action getUnhealthyDefenderAgentsReport
-     * @param body 
-     * @return a CompletableFuture of InputStream
+     * Configuration for the request such as headers, query parameters, and middleware options.
      */
-    public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportPostRequestBody body) {
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Invoke action getUnhealthyDefenderAgentsReport
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of InputStream
-     */
-    public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetUnhealthyDefenderAgentsReportRequestBuilderPostRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Invoke action getUnhealthyDefenderAgentsReport
-     * @param body 
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of InputStream
-     */
-    public java.util.concurrent.CompletableFuture<InputStream> post(@javax.annotation.Nonnull final GetUnhealthyDefenderAgentsReportPostRequestBody body, @javax.annotation.Nullable final java.util.function.Consumer<GetUnhealthyDefenderAgentsReportRequestBuilderPostRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        Objects.requireNonNull(body);
-        try {
-            final RequestInformation requestInfo = createPostRequestInformation(body, requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendPrimitiveAsync(requestInfo, InputStream.class, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetUnhealthyDefenderAgentsReportRequestBuilderPostRequestConfiguration {
-        /** Request headers */
-        @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new getUnhealthyDefenderAgentsReportRequestBuilderPostRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        public GetUnhealthyDefenderAgentsReportRequestBuilderPostRequestConfiguration() {
-        }
+    public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

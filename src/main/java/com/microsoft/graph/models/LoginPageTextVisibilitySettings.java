@@ -4,34 +4,33 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form. */
-    private Boolean _hideAccountResetCredentials;
+    private Boolean hideAccountResetCredentials;
     /** Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form. */
-    private Boolean _hideCannotAccessYourAccount;
+    private Boolean hideCannotAccessYourAccount;
     /** Option to hide the self-service password reset (SSPR) 'Forgot my password' hyperlink on the sign-in form. */
-    private Boolean _hideForgotMyPassword;
+    private Boolean hideForgotMyPassword;
     /** Option to hide the 'Privacy & Cookies' hyperlink in the footer. */
-    private Boolean _hidePrivacyAndCookies;
+    private Boolean hidePrivacyAndCookies;
     /** Option to hide the self-service password reset (SSPR) 'reset it now' hyperlink on the sign-in form. */
-    private Boolean _hideResetItNow;
+    private Boolean hideResetItNow;
     /** Option to hide the 'Terms of Use' hyperlink in the footer. */
-    private Boolean _hideTermsOfUse;
+    private Boolean hideTermsOfUse;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new loginPageTextVisibilitySettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public LoginPageTextVisibilitySettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.loginPageTextVisibilitySettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,24 +48,23 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final LoginPageTextVisibilitySettings currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("hideAccountResetCredentials", (n) -> { currentObject.setHideAccountResetCredentials(n.getBooleanValue()); });
-            this.put("hideCannotAccessYourAccount", (n) -> { currentObject.setHideCannotAccessYourAccount(n.getBooleanValue()); });
-            this.put("hideForgotMyPassword", (n) -> { currentObject.setHideForgotMyPassword(n.getBooleanValue()); });
-            this.put("hidePrivacyAndCookies", (n) -> { currentObject.setHidePrivacyAndCookies(n.getBooleanValue()); });
-            this.put("hideResetItNow", (n) -> { currentObject.setHideResetItNow(n.getBooleanValue()); });
-            this.put("hideTermsOfUse", (n) -> { currentObject.setHideTermsOfUse(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("hideAccountResetCredentials", (n) -> { this.setHideAccountResetCredentials(n.getBooleanValue()); });
+        deserializerMap.put("hideCannotAccessYourAccount", (n) -> { this.setHideCannotAccessYourAccount(n.getBooleanValue()); });
+        deserializerMap.put("hideForgotMyPassword", (n) -> { this.setHideForgotMyPassword(n.getBooleanValue()); });
+        deserializerMap.put("hidePrivacyAndCookies", (n) -> { this.setHidePrivacyAndCookies(n.getBooleanValue()); });
+        deserializerMap.put("hideResetItNow", (n) -> { this.setHideResetItNow(n.getBooleanValue()); });
+        deserializerMap.put("hideTermsOfUse", (n) -> { this.setHideTermsOfUse(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hideAccountResetCredentials property value. Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
@@ -74,7 +72,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public Boolean getHideAccountResetCredentials() {
-        return this._hideAccountResetCredentials;
+        return this.hideAccountResetCredentials;
     }
     /**
      * Gets the hideCannotAccessYourAccount property value. Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
@@ -82,7 +80,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public Boolean getHideCannotAccessYourAccount() {
-        return this._hideCannotAccessYourAccount;
+        return this.hideCannotAccessYourAccount;
     }
     /**
      * Gets the hideForgotMyPassword property value. Option to hide the self-service password reset (SSPR) 'Forgot my password' hyperlink on the sign-in form.
@@ -90,7 +88,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public Boolean getHideForgotMyPassword() {
-        return this._hideForgotMyPassword;
+        return this.hideForgotMyPassword;
     }
     /**
      * Gets the hidePrivacyAndCookies property value. Option to hide the 'Privacy & Cookies' hyperlink in the footer.
@@ -98,7 +96,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public Boolean getHidePrivacyAndCookies() {
-        return this._hidePrivacyAndCookies;
+        return this.hidePrivacyAndCookies;
     }
     /**
      * Gets the hideResetItNow property value. Option to hide the self-service password reset (SSPR) 'reset it now' hyperlink on the sign-in form.
@@ -106,7 +104,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public Boolean getHideResetItNow() {
-        return this._hideResetItNow;
+        return this.hideResetItNow;
     }
     /**
      * Gets the hideTermsOfUse property value. Option to hide the 'Terms of Use' hyperlink in the footer.
@@ -114,7 +112,7 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public Boolean getHideTermsOfUse() {
-        return this._hideTermsOfUse;
+        return this.hideTermsOfUse;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -122,13 +120,14 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("hideAccountResetCredentials", this.getHideAccountResetCredentials());
@@ -145,63 +144,71 @@ public class LoginPageTextVisibilitySettings implements AdditionalDataHolder, Pa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the hideAccountResetCredentials property value. Option to hide the self-service password reset (SSPR) hyperlinks such as 'Can't access your account?', 'Forgot my password' and 'Reset it now' on the sign-in form.
      * @param value Value to set for the hideAccountResetCredentials property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideAccountResetCredentials(@javax.annotation.Nullable final Boolean value) {
-        this._hideAccountResetCredentials = value;
+        this.hideAccountResetCredentials = value;
     }
     /**
      * Sets the hideCannotAccessYourAccount property value. Option to hide the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in form.
      * @param value Value to set for the hideCannotAccessYourAccount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideCannotAccessYourAccount(@javax.annotation.Nullable final Boolean value) {
-        this._hideCannotAccessYourAccount = value;
+        this.hideCannotAccessYourAccount = value;
     }
     /**
      * Sets the hideForgotMyPassword property value. Option to hide the self-service password reset (SSPR) 'Forgot my password' hyperlink on the sign-in form.
      * @param value Value to set for the hideForgotMyPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideForgotMyPassword(@javax.annotation.Nullable final Boolean value) {
-        this._hideForgotMyPassword = value;
+        this.hideForgotMyPassword = value;
     }
     /**
      * Sets the hidePrivacyAndCookies property value. Option to hide the 'Privacy & Cookies' hyperlink in the footer.
      * @param value Value to set for the hidePrivacyAndCookies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHidePrivacyAndCookies(@javax.annotation.Nullable final Boolean value) {
-        this._hidePrivacyAndCookies = value;
+        this.hidePrivacyAndCookies = value;
     }
     /**
      * Sets the hideResetItNow property value. Option to hide the self-service password reset (SSPR) 'reset it now' hyperlink on the sign-in form.
      * @param value Value to set for the hideResetItNow property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideResetItNow(@javax.annotation.Nullable final Boolean value) {
-        this._hideResetItNow = value;
+        this.hideResetItNow = value;
     }
     /**
      * Sets the hideTermsOfUse property value. Option to hide the 'Terms of Use' hyperlink in the footer.
      * @param value Value to set for the hideTermsOfUse property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHideTermsOfUse(@javax.annotation.Nullable final Boolean value) {
-        this._hideTermsOfUse = value;
+        this.hideTermsOfUse = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

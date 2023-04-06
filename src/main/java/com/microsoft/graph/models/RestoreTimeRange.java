@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to call the bulkRestoreCloudPc method. */
 public enum RestoreTimeRange implements ValuedEnum {
     Before("before"),
     After("after"),

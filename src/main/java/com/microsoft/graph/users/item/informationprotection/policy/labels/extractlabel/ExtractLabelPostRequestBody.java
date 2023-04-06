@@ -5,20 +5,19 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the extractLabel method. */
 public class ExtractLabelPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The contentInfo property */
-    private ContentInfo _contentInfo;
+    private ContentInfo contentInfo;
     /**
      * Instantiates a new extractLabelPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ExtractLabelPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -38,7 +37,7 @@ public class ExtractLabelPostRequestBody implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the contentInfo property value. The contentInfo property
@@ -46,24 +45,24 @@ public class ExtractLabelPostRequestBody implements AdditionalDataHolder, Parsab
      */
     @javax.annotation.Nullable
     public ContentInfo getContentInfo() {
-        return this._contentInfo;
+        return this.contentInfo;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ExtractLabelPostRequestBody currentObject = this;
-        return new HashMap<>(1) {{
-            this.put("contentInfo", (n) -> { currentObject.setContentInfo(n.getObjectValue(ContentInfo::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        deserializerMap.put("contentInfo", (n) -> { this.setContentInfo(n.getObjectValue(ContentInfo::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("contentInfo", this.getContentInfo());
@@ -74,15 +73,17 @@ public class ExtractLabelPostRequestBody implements AdditionalDataHolder, Parsab
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the contentInfo property value. The contentInfo property
      * @param value Value to set for the contentInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentInfo(@javax.annotation.Nullable final ContentInfo value) {
-        this._contentInfo = value;
+        this.contentInfo = value;
     }
 }

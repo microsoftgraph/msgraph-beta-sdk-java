@@ -1,43 +1,39 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.Printer;
-import com.microsoft.graph.models.PrinterShare;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class PrinterBase extends Entity implements Parsable {
     /** The capabilities property */
-    private PrinterCapabilities _capabilities;
+    private PrinterCapabilities capabilities;
     /** The defaults property */
-    private PrinterDefaults _defaults;
+    private PrinterDefaults defaults;
     /** The displayName property */
-    private String _displayName;
+    private String displayName;
     /** The isAcceptingJobs property */
-    private Boolean _isAcceptingJobs;
+    private Boolean isAcceptingJobs;
     /** The jobs property */
-    private java.util.List<PrintJob> _jobs;
+    private java.util.List<PrintJob> jobs;
     /** The location property */
-    private PrinterLocation _location;
+    private PrinterLocation location;
     /** The manufacturer property */
-    private String _manufacturer;
+    private String manufacturer;
     /** The model property */
-    private String _model;
+    private String model;
     /** The name property */
-    private String _name;
+    private String name;
     /** The status property */
-    private PrinterStatus _status;
+    private PrinterStatus status;
     /**
      * Instantiates a new printerBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrinterBase() {
         super();
-        this.setOdataType("#microsoft.graph.printerBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -63,7 +59,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrinterCapabilities getCapabilities() {
-        return this._capabilities;
+        return this.capabilities;
     }
     /**
      * Gets the defaults property value. The defaults property
@@ -71,7 +67,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrinterDefaults getDefaults() {
-        return this._defaults;
+        return this.defaults;
     }
     /**
      * Gets the displayName property value. The displayName property
@@ -79,27 +75,26 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrinterBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("capabilities", (n) -> { currentObject.setCapabilities(n.getObjectValue(PrinterCapabilities::createFromDiscriminatorValue)); });
-            this.put("defaults", (n) -> { currentObject.setDefaults(n.getObjectValue(PrinterDefaults::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("isAcceptingJobs", (n) -> { currentObject.setIsAcceptingJobs(n.getBooleanValue()); });
-            this.put("jobs", (n) -> { currentObject.setJobs(n.getCollectionOfObjectValues(PrintJob::createFromDiscriminatorValue)); });
-            this.put("location", (n) -> { currentObject.setLocation(n.getObjectValue(PrinterLocation::createFromDiscriminatorValue)); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getObjectValue(PrinterStatus::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("capabilities", (n) -> { this.setCapabilities(n.getObjectValue(PrinterCapabilities::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaults", (n) -> { this.setDefaults(n.getObjectValue(PrinterDefaults::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isAcceptingJobs", (n) -> { this.setIsAcceptingJobs(n.getBooleanValue()); });
+        deserializerMap.put("jobs", (n) -> { this.setJobs(n.getCollectionOfObjectValues(PrintJob::createFromDiscriminatorValue)); });
+        deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(PrinterLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(PrinterStatus::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the isAcceptingJobs property value. The isAcceptingJobs property
@@ -107,7 +102,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsAcceptingJobs() {
-        return this._isAcceptingJobs;
+        return this.isAcceptingJobs;
     }
     /**
      * Gets the jobs property value. The jobs property
@@ -115,7 +110,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<PrintJob> getJobs() {
-        return this._jobs;
+        return this.jobs;
     }
     /**
      * Gets the location property value. The location property
@@ -123,7 +118,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrinterLocation getLocation() {
-        return this._location;
+        return this.location;
     }
     /**
      * Gets the manufacturer property value. The manufacturer property
@@ -131,7 +126,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getManufacturer() {
-        return this._manufacturer;
+        return this.manufacturer;
     }
     /**
      * Gets the model property value. The model property
@@ -139,7 +134,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getModel() {
-        return this._model;
+        return this.model;
     }
     /**
      * Gets the name property value. The name property
@@ -147,7 +142,7 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the status property value. The status property
@@ -155,13 +150,14 @@ public class PrinterBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrinterStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -181,79 +177,89 @@ public class PrinterBase extends Entity implements Parsable {
      * @param value Value to set for the capabilities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCapabilities(@javax.annotation.Nullable final PrinterCapabilities value) {
-        this._capabilities = value;
+        this.capabilities = value;
     }
     /**
      * Sets the defaults property value. The defaults property
      * @param value Value to set for the defaults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaults(@javax.annotation.Nullable final PrinterDefaults value) {
-        this._defaults = value;
+        this.defaults = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the isAcceptingJobs property value. The isAcceptingJobs property
      * @param value Value to set for the isAcceptingJobs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsAcceptingJobs(@javax.annotation.Nullable final Boolean value) {
-        this._isAcceptingJobs = value;
+        this.isAcceptingJobs = value;
     }
     /**
      * Sets the jobs property value. The jobs property
      * @param value Value to set for the jobs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJobs(@javax.annotation.Nullable final java.util.List<PrintJob> value) {
-        this._jobs = value;
+        this.jobs = value;
     }
     /**
      * Sets the location property value. The location property
      * @param value Value to set for the location property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocation(@javax.annotation.Nullable final PrinterLocation value) {
-        this._location = value;
+        this.location = value;
     }
     /**
      * Sets the manufacturer property value. The manufacturer property
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
-        this._manufacturer = value;
+        this.manufacturer = value;
     }
     /**
      * Sets the model property value. The model property
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
-        this._model = value;
+        this.model = value;
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final PrinterStatus value) {
-        this._status = value;
+        this.status = value;
     }
 }

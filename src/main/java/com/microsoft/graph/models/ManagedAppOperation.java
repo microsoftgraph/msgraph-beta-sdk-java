@@ -4,27 +4,28 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Represents an operation applied against an app registration. */
+/**
+ * Represents an operation applied against an app registration.
+ */
 public class ManagedAppOperation extends Entity implements Parsable {
     /** The operation name. */
-    private String _displayName;
+    private String displayName;
     /** The last time the app operation was modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The current state of the operation */
-    private String _state;
+    private String state;
     /** Version of the entity. */
-    private String _version;
+    private String version;
     /**
      * Instantiates a new managedAppOperation and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedAppOperation() {
         super();
-        this.setOdataType("#microsoft.graph.managedAppOperation");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,21 +43,20 @@ public class ManagedAppOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedAppOperation currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("state", (n) -> { currentObject.setState(n.getStringValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The last time the app operation was modified.
@@ -64,7 +64,7 @@ public class ManagedAppOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the state property value. The current state of the operation
@@ -72,7 +72,7 @@ public class ManagedAppOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Gets the version property value. Version of the entity.
@@ -80,13 +80,14 @@ public class ManagedAppOperation extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -100,31 +101,35 @@ public class ManagedAppOperation extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The last time the app operation was modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the state property value. The current state of the operation
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final String value) {
-        this._state = value;
+        this.state = value;
     }
     /**
      * Sets the version property value. Version of the entity.
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

@@ -3,7 +3,6 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum OpenIdConnectResponseTypes implements ValuedEnum {
     Code("code"),
     Id_token("id_token"),

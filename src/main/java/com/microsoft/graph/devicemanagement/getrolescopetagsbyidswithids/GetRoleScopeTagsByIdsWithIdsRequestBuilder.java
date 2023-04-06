@@ -1,27 +1,24 @@
 package com.microsoft.graph.devicemanagement.getrolescopetagsbyidswithids;
 
 import com.microsoft.graph.models.odataerrors.ODataError;
+import com.microsoft.kiota.BaseRequestBuilder;
+import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
+import com.microsoft.kiota.QueryParameter;
 import com.microsoft.kiota.RequestAdapter;
 import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
-import com.microsoft.kiota.ResponseHandler;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
 import java.net.URISyntaxException;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the getRoleScopeTagsByIds method. */
-public class GetRoleScopeTagsByIdsWithIdsRequestBuilder {
-    /** Path parameters for the request */
-    private final HashMap<String, Object> pathParameters;
-    /** The request adapter to use to execute the requests. */
-    private final RequestAdapter requestAdapter;
-    /** Url template to use to build the URL for the current request builder */
-    private final String urlTemplate;
+/**
+ * Provides operations to call the getRoleScopeTagsByIds method.
+ */
+public class GetRoleScopeTagsByIdsWithIdsRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new GetRoleScopeTagsByIdsWithIdsRequestBuilder and sets the default values.
      * @param ids Usage: ids={ids}
@@ -29,14 +26,10 @@ public class GetRoleScopeTagsByIdsWithIdsRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetRoleScopeTagsByIdsWithIdsRequestBuilder(@javax.annotation.Nonnull final HashMap<String, Object> pathParameters, @javax.annotation.Nonnull final RequestAdapter requestAdapter, @javax.annotation.Nullable final String ids) {
-        Objects.requireNonNull(pathParameters);
-        Objects.requireNonNull(requestAdapter);
-        this.urlTemplate = "{+baseurl}/deviceManagement/microsoft.graph.getRoleScopeTagsByIds(ids={ids})";
-        var urlTplParams = new HashMap<String, Object>(pathParameters);
-        urlTplParams.put("ids", ids);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
+        super(requestAdapter, "{+baseurl}/deviceManagement/getRoleScopeTagsByIds(ids={ids}){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", pathParameters);
+        this.pathParameters..put("ids", ids);
     }
     /**
      * Instantiates a new GetRoleScopeTagsByIdsWithIdsRequestBuilder and sets the default values.
@@ -44,20 +37,54 @@ public class GetRoleScopeTagsByIdsWithIdsRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GetRoleScopeTagsByIdsWithIdsRequestBuilder(@javax.annotation.Nonnull final String rawUrl, @javax.annotation.Nonnull final RequestAdapter requestAdapter) {
-        this.urlTemplate = "{+baseurl}/deviceManagement/microsoft.graph.getRoleScopeTagsByIds(ids={ids})";
-        var urlTplParams = new HashMap<String, Object>();
-        urlTplParams.put("request-raw-url", rawUrl);
-        this.pathParameters = urlTplParams;
-        this.requestAdapter = requestAdapter;
+        super(requestAdapter, "{+baseurl}/deviceManagement/getRoleScopeTagsByIds(ids={ids}){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}", rawUrl);
+    }
+    /**
+     * Invoke function getRoleScopeTagsByIds
+     * @return a CompletableFuture of getRoleScopeTagsByIdsWithIdsResponse
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<GetRoleScopeTagsByIdsWithIdsResponse> get() {
+        try {
+            final RequestInformation requestInfo = toGetRequestInformation(null);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, GetRoleScopeTagsByIdsWithIdsResponse::createFromDiscriminatorValue, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<GetRoleScopeTagsByIdsWithIdsResponse> executionException = new java.util.concurrent.CompletableFuture<GetRoleScopeTagsByIdsWithIdsResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
+    }
+    /**
+     * Invoke function getRoleScopeTagsByIds
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a CompletableFuture of getRoleScopeTagsByIdsWithIdsResponse
+     */
+    @javax.annotation.Nonnull
+    public java.util.concurrent.CompletableFuture<GetRoleScopeTagsByIdsWithIdsResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+        try {
+            final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
+            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+            errorMapping.put("4XX", ODataError::createFromDiscriminatorValue);
+            errorMapping.put("5XX", ODataError::createFromDiscriminatorValue);
+            return this.requestAdapter.sendAsync(requestInfo, GetRoleScopeTagsByIdsWithIdsResponse::createFromDiscriminatorValue, errorMapping);
+        } catch (URISyntaxException ex) {
+            final java.util.concurrent.CompletableFuture<GetRoleScopeTagsByIdsWithIdsResponse> executionException = new java.util.concurrent.CompletableFuture<GetRoleScopeTagsByIdsWithIdsResponse>();
+            executionException.completeExceptionally(ex);
+            return executionException;
+        }
     }
     /**
      * Invoke function getRoleScopeTagsByIds
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation() throws URISyntaxException {
-        return createGetRequestInformation(null);
+    public RequestInformation toGetRequestInformation() throws URISyntaxException {
+        return toGetRequestInformation(null);
     }
     /**
      * Invoke function getRoleScopeTagsByIds
@@ -65,85 +92,60 @@ public class GetRoleScopeTagsByIdsWithIdsRequestBuilder {
      * @return a RequestInformation
      */
     @javax.annotation.Nonnull
-    public RequestInformation createGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRoleScopeTagsByIdsWithIdsRequestBuilderGetRequestConfiguration> requestConfiguration) throws URISyntaxException {
-        final RequestInformation requestInfo = new RequestInformation() {{
-            httpMethod = HttpMethod.GET;
-        }};
+    public RequestInformation toGetRequestInformation(@javax.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) throws URISyntaxException {
+        final RequestInformation requestInfo = new RequestInformation();
+        requestInfo.httpMethod = HttpMethod.GET;
         requestInfo.urlTemplate = urlTemplate;
         requestInfo.pathParameters = pathParameters;
-        requestInfo.addRequestHeader("Accept", "application/json");
+        requestInfo.headers.add("Accept", "application/json");
         if (requestConfiguration != null) {
-            final GetRoleScopeTagsByIdsWithIdsRequestBuilderGetRequestConfiguration requestConfig = new GetRoleScopeTagsByIdsWithIdsRequestBuilderGetRequestConfiguration();
+            final GetRequestConfiguration requestConfig = new GetRequestConfiguration();
             requestConfiguration.accept(requestConfig);
-            requestInfo.addRequestHeaders(requestConfig.headers);
+            requestInfo.addQueryParameters(requestConfig.queryParameters);
+            requestInfo.headers.putAll(requestConfig.headers);
             requestInfo.addRequestOptions(requestConfig.options);
         }
         return requestInfo;
     }
     /**
      * Invoke function getRoleScopeTagsByIds
-     * @return a CompletableFuture of getRoleScopeTagsByIdsWithIdsResponse
      */
-    public java.util.concurrent.CompletableFuture<GetRoleScopeTagsByIdsWithIdsResponse> get() {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(null);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, GetRoleScopeTagsByIdsWithIdsResponse::createFromDiscriminatorValue, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
+    public class GetQueryParameters {
+        /** Include count of items */
+        @QueryParameter(name = "%24count")
+        @javax.annotation.Nullable
+        public Boolean count;
+        /** Filter items by property values */
+        @QueryParameter(name = "%24filter")
+        @javax.annotation.Nullable
+        public String filter;
+        /** Order items by property values */
+        @QueryParameter(name = "%24orderby")
+        @javax.annotation.Nullable
+        public String[] orderby;
+        /** Search items by search phrases */
+        @QueryParameter(name = "%24search")
+        @javax.annotation.Nullable
+        public String search;
+        /** Select properties to be returned */
+        @QueryParameter(name = "%24select")
+        @javax.annotation.Nullable
+        public String[] select;
+        /** Skip the first n items */
+        @QueryParameter(name = "%24skip")
+        @javax.annotation.Nullable
+        public Integer skip;
+        /** Show only the first n items */
+        @QueryParameter(name = "%24top")
+        @javax.annotation.Nullable
+        public Integer top;
     }
     /**
-     * Invoke function getRoleScopeTagsByIds
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a CompletableFuture of getRoleScopeTagsByIdsWithIdsResponse
+     * Configuration for the request such as headers, query parameters, and middleware options.
      */
-    public java.util.concurrent.CompletableFuture<GetRoleScopeTagsByIdsWithIdsResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRoleScopeTagsByIdsWithIdsRequestBuilderGetRequestConfiguration> requestConfiguration) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, GetRoleScopeTagsByIdsWithIdsResponse::createFromDiscriminatorValue, null, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /**
-     * Invoke function getRoleScopeTagsByIds
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @param responseHandler Response handler to use in place of the default response handling provided by the core service
-     * @return a CompletableFuture of getRoleScopeTagsByIdsWithIdsResponse
-     */
-    public java.util.concurrent.CompletableFuture<GetRoleScopeTagsByIdsWithIdsResponse> get(@javax.annotation.Nullable final java.util.function.Consumer<GetRoleScopeTagsByIdsWithIdsRequestBuilderGetRequestConfiguration> requestConfiguration, @javax.annotation.Nullable final ResponseHandler responseHandler) {
-        try {
-            final RequestInformation requestInfo = createGetRequestInformation(requestConfiguration);
-            final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<>(2) {{
-                put("4XX", ODataError::createFromDiscriminatorValue);
-                put("5XX", ODataError::createFromDiscriminatorValue);
-            }};
-            return this.requestAdapter.sendAsync(requestInfo, GetRoleScopeTagsByIdsWithIdsResponse::createFromDiscriminatorValue, responseHandler, errorMapping);
-        } catch (URISyntaxException ex) {
-            return java.util.concurrent.CompletableFuture.failedFuture(ex);
-        }
-    }
-    /** Configuration for the request such as headers, query parameters, and middleware options. */
-    public class GetRoleScopeTagsByIdsWithIdsRequestBuilderGetRequestConfiguration {
-        /** Request headers */
+    public class GetRequestConfiguration extends BaseRequestConfiguration {
+        /** Request query parameters */
         @javax.annotation.Nullable
-        public HashMap<String, String> headers = new HashMap<>();
-        /** Request options */
-        @javax.annotation.Nullable
-        public Collection<RequestOption> options = Collections.emptyList();
-        /**
-         * Instantiates a new getRoleScopeTagsByIdsWithIdsRequestBuilderGetRequestConfiguration and sets the default values.
-         * @return a void
-         */
-        public GetRoleScopeTagsByIdsWithIdsRequestBuilderGetRequestConfiguration() {
-        }
+        public GetQueryParameters queryParameters = new GetQueryParameters();
     }
 }

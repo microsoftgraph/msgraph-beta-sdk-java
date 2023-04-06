@@ -3,7 +3,6 @@ package com.microsoft.graph.models.tenantadmin;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
 public enum ImageTaggingChoice implements ValuedEnum {
     Disabled("disabled"),
     Basic("basic"),

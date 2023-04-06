@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** An enum representing the Android SafetyNet attestation evaluation types. */
 public enum AndroidSafetyNetEvaluationType implements ValuedEnum {
     /** Default value. Typical measurements and reference data were used. */
     Basic("basic"),

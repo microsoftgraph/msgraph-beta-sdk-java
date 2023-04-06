@@ -3,21 +3,21 @@ package com.microsoft.graph.models.security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserSource extends DataSource implements Parsable {
     /** Email address of the user's mailbox. */
-    private String _email;
+    private String email;
     /** Specifies which sources are included in this group. Possible values are: mailbox, site. */
-    private SourceType _includedSources;
+    private SourceType includedSources;
     /** The URL of the user's OneDrive for Business site. Read-only. */
-    private String _siteWebUrl;
+    private String siteWebUrl;
     /**
      * Instantiates a new UserSource and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserSource() {
         super();
         this.setOdataType("#microsoft.graph.security.userSource");
@@ -38,20 +38,19 @@ public class UserSource extends DataSource implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEmail() {
-        return this._email;
+        return this.email;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserSource currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("includedSources", (n) -> { currentObject.setIncludedSources(n.getEnumValue(SourceType.class)); });
-            this.put("siteWebUrl", (n) -> { currentObject.setSiteWebUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("includedSources", (n) -> { this.setIncludedSources(n.getEnumValue(SourceType.class)); });
+        deserializerMap.put("siteWebUrl", (n) -> { this.setSiteWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
@@ -59,7 +58,7 @@ public class UserSource extends DataSource implements Parsable {
      */
     @javax.annotation.Nullable
     public SourceType getIncludedSources() {
-        return this._includedSources;
+        return this.includedSources;
     }
     /**
      * Gets the siteWebUrl property value. The URL of the user's OneDrive for Business site. Read-only.
@@ -67,13 +66,14 @@ public class UserSource extends DataSource implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSiteWebUrl() {
-        return this._siteWebUrl;
+        return this.siteWebUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +86,26 @@ public class UserSource extends DataSource implements Parsable {
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
-        this._email = value;
+        this.email = value;
     }
     /**
      * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
      * @param value Value to set for the includedSources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludedSources(@javax.annotation.Nullable final SourceType value) {
-        this._includedSources = value;
+        this.includedSources = value;
     }
     /**
      * Sets the siteWebUrl property value. The URL of the user's OneDrive for Business site. Read-only.
      * @param value Value to set for the siteWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSiteWebUrl(@javax.annotation.Nullable final String value) {
-        this._siteWebUrl = value;
+        this.siteWebUrl = value;
     }
 }

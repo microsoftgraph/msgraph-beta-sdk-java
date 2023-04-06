@@ -3,20 +3,22 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Branding Options for the Message Template. Branding is defined in the Intune Admin Console. */
 public enum NotificationTemplateBrandingOptions implements ValuedEnum {
-    /** No Branding. */
+    /** Indicates that no branding options are set in the message template. */
     None("none"),
-    /** Include Company Logo. */
+    /** Indicates to include company logo in the message template. */
     IncludeCompanyLogo("includeCompanyLogo"),
-    /** Include Company Name. */
+    /** Indicates to include company name in the message template. */
     IncludeCompanyName("includeCompanyName"),
-    /** Include Contact Info. */
+    /** Indicates to include contact information in the message template. */
     IncludeContactInformation("includeContactInformation"),
-    /** Include Company Portal Link. */
+    /** Indicates to include company portal website link in the message template. */
     IncludeCompanyPortalLink("includeCompanyPortalLink"),
-    /** Include Device Details. */
-    IncludeDeviceDetails("includeDeviceDetails");
+    /** Indicates to include device details in the message template. */
+    IncludeDeviceDetails("includeDeviceDetails"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     NotificationTemplateBrandingOptions(final String value) {
         this.value = value;
@@ -33,6 +35,7 @@ public enum NotificationTemplateBrandingOptions implements ValuedEnum {
             case "includeContactInformation": return IncludeContactInformation;
             case "includeCompanyPortalLink": return IncludeCompanyPortalLink;
             case "includeDeviceDetails": return IncludeDeviceDetails;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

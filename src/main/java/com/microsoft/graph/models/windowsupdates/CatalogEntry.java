@@ -1,32 +1,27 @@
 package com.microsoft.graph.models.windowsupdates;
 
 import com.microsoft.graph.models.Entity;
-import com.microsoft.graph.models.windowsupdates.FeatureUpdateCatalogEntry;
-import com.microsoft.graph.models.windowsupdates.QualityUpdateCatalogEntry;
-import com.microsoft.graph.models.windowsupdates.SoftwareUpdateCatalogEntry;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the admin singleton. */
 public class CatalogEntry extends Entity implements Parsable {
-    /** The date on which the content is no longer available to deploy using the service. Read-only. */
-    private OffsetDateTime _deployableUntilDateTime;
+    /** The date on which the content is no longer available to deploy using the service. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    private OffsetDateTime deployableUntilDateTime;
     /** The display name of the content. Read-only. */
-    private String _displayName;
-    /** The release date for the content. Read-only. */
-    private OffsetDateTime _releaseDateTime;
+    private String displayName;
+    /** The release date for the content. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. */
+    private OffsetDateTime releaseDateTime;
     /**
      * Instantiates a new catalogEntry and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CatalogEntry() {
         super();
-        this.setOdataType("#microsoft.graph.windowsUpdates.catalogEntry");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -40,6 +35,7 @@ public class CatalogEntry extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.windowsUpdates.driverUpdateCatalogEntry": return new DriverUpdateCatalogEntry();
                 case "#microsoft.graph.windowsUpdates.featureUpdateCatalogEntry": return new FeatureUpdateCatalogEntry();
                 case "#microsoft.graph.windowsUpdates.qualityUpdateCatalogEntry": return new QualityUpdateCatalogEntry();
                 case "#microsoft.graph.windowsUpdates.softwareUpdateCatalogEntry": return new SoftwareUpdateCatalogEntry();
@@ -48,12 +44,12 @@ public class CatalogEntry extends Entity implements Parsable {
         return new CatalogEntry();
     }
     /**
-     * Gets the deployableUntilDateTime property value. The date on which the content is no longer available to deploy using the service. Read-only.
+     * Gets the deployableUntilDateTime property value. The date on which the content is no longer available to deploy using the service. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getDeployableUntilDateTime() {
-        return this._deployableUntilDateTime;
+        return this.deployableUntilDateTime;
     }
     /**
      * Gets the displayName property value. The display name of the content. Read-only.
@@ -61,34 +57,34 @@ public class CatalogEntry extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CatalogEntry currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deployableUntilDateTime", (n) -> { currentObject.setDeployableUntilDateTime(n.getOffsetDateTimeValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("releaseDateTime", (n) -> { currentObject.setReleaseDateTime(n.getOffsetDateTimeValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deployableUntilDateTime", (n) -> { this.setDeployableUntilDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("releaseDateTime", (n) -> { this.setReleaseDateTime(n.getOffsetDateTimeValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the releaseDateTime property value. The release date for the content. Read-only.
+     * Gets the releaseDateTime property value. The release date for the content. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getReleaseDateTime() {
-        return this._releaseDateTime;
+        return this.releaseDateTime;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -97,27 +93,30 @@ public class CatalogEntry extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("releaseDateTime", this.getReleaseDateTime());
     }
     /**
-     * Sets the deployableUntilDateTime property value. The date on which the content is no longer available to deploy using the service. Read-only.
+     * Sets the deployableUntilDateTime property value. The date on which the content is no longer available to deploy using the service. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the deployableUntilDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeployableUntilDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._deployableUntilDateTime = value;
+        this.deployableUntilDateTime = value;
     }
     /**
      * Sets the displayName property value. The display name of the content. Read-only.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
-     * Sets the releaseDateTime property value. The release date for the content. Read-only.
+     * Sets the releaseDateTime property value. The release date for the content. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the releaseDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReleaseDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._releaseDateTime = value;
+        this.releaseDateTime = value;
     }
 }

@@ -5,28 +5,27 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AlertComment implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The comment text. */
-    private String _comment;
+    private String comment;
     /** The person or app name that submitted the comment. */
-    private String _createdByDisplayName;
+    private String createdByDisplayName;
     /** The time when the comment was submitted. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new alertComment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AlertComment() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.security.alertComment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +43,7 @@ public class AlertComment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the comment property value. The comment text.
@@ -52,7 +51,7 @@ public class AlertComment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getComment() {
-        return this._comment;
+        return this.comment;
     }
     /**
      * Gets the createdByDisplayName property value. The person or app name that submitted the comment.
@@ -60,7 +59,7 @@ public class AlertComment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCreatedByDisplayName() {
-        return this._createdByDisplayName;
+        return this.createdByDisplayName;
     }
     /**
      * Gets the createdDateTime property value. The time when the comment was submitted.
@@ -68,21 +67,20 @@ public class AlertComment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AlertComment currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("comment", (n) -> { currentObject.setComment(n.getStringValue()); });
-            this.put("createdByDisplayName", (n) -> { currentObject.setCreatedByDisplayName(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("comment", (n) -> { this.setComment(n.getStringValue()); });
+        deserializerMap.put("createdByDisplayName", (n) -> { this.setCreatedByDisplayName(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -90,13 +88,14 @@ public class AlertComment implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("comment", this.getComment());
@@ -110,39 +109,44 @@ public class AlertComment implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the comment property value. The comment text.
      * @param value Value to set for the comment property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComment(@javax.annotation.Nullable final String value) {
-        this._comment = value;
+        this.comment = value;
     }
     /**
      * Sets the createdByDisplayName property value. The person or app name that submitted the comment.
      * @param value Value to set for the createdByDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedByDisplayName(@javax.annotation.Nullable final String value) {
-        this._createdByDisplayName = value;
+        this.createdByDisplayName = value;
     }
     /**
      * Sets the createdDateTime property value. The time when the comment was submitted.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

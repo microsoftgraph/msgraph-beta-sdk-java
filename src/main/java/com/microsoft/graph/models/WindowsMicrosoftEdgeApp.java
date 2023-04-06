@@ -3,19 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
     /** The enum to specify the channels for Microsoft Edge apps. */
-    private MicrosoftEdgeChannel _channel;
+    private MicrosoftEdgeChannel channel;
     /** The language locale to use when the Edge app displays text to the user. */
-    private String _displayLanguageLocale;
+    private String displayLanguageLocale;
     /**
      * Instantiates a new WindowsMicrosoftEdgeApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsMicrosoftEdgeApp() {
         super();
         this.setOdataType("#microsoft.graph.windowsMicrosoftEdgeApp");
@@ -36,7 +36,7 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public MicrosoftEdgeChannel getChannel() {
-        return this._channel;
+        return this.channel;
     }
     /**
      * Gets the displayLanguageLocale property value. The language locale to use when the Edge app displays text to the user.
@@ -44,25 +44,25 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayLanguageLocale() {
-        return this._displayLanguageLocale;
+        return this.displayLanguageLocale;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsMicrosoftEdgeApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("channel", (n) -> { currentObject.setChannel(n.getEnumValue(MicrosoftEdgeChannel.class)); });
-            this.put("displayLanguageLocale", (n) -> { currentObject.setDisplayLanguageLocale(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("channel", (n) -> { this.setChannel(n.getEnumValue(MicrosoftEdgeChannel.class)); });
+        deserializerMap.put("displayLanguageLocale", (n) -> { this.setDisplayLanguageLocale(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +74,17 @@ public class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable {
      * @param value Value to set for the channel property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChannel(@javax.annotation.Nullable final MicrosoftEdgeChannel value) {
-        this._channel = value;
+        this.channel = value;
     }
     /**
      * Sets the displayLanguageLocale property value. The language locale to use when the Edge app displays text to the user.
      * @param value Value to set for the displayLanguageLocale property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayLanguageLocale(@javax.annotation.Nullable final String value) {
-        this._displayLanguageLocale = value;
+        this.displayLanguageLocale = value;
     }
 }

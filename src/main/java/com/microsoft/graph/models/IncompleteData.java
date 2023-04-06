@@ -5,26 +5,25 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IncompleteData implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The service does not have source data before the specified time. */
-    private OffsetDateTime _missingDataBeforeDateTime;
+    private OffsetDateTime missingDataBeforeDateTime;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Some data was not recorded due to excessive activity. */
-    private Boolean _wasThrottled;
+    private Boolean wasThrottled;
     /**
      * Instantiates a new incompleteData and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IncompleteData() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.incompleteData");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,20 +41,19 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IncompleteData currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("missingDataBeforeDateTime", (n) -> { currentObject.setMissingDataBeforeDateTime(n.getOffsetDateTimeValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("wasThrottled", (n) -> { currentObject.setWasThrottled(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("missingDataBeforeDateTime", (n) -> { this.setMissingDataBeforeDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("wasThrottled", (n) -> { this.setWasThrottled(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the missingDataBeforeDateTime property value. The service does not have source data before the specified time.
@@ -63,7 +61,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getMissingDataBeforeDateTime() {
-        return this._missingDataBeforeDateTime;
+        return this.missingDataBeforeDateTime;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -71,7 +69,7 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the wasThrottled property value. Some data was not recorded due to excessive activity.
@@ -79,13 +77,14 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getWasThrottled() {
-        return this._wasThrottled;
+        return this.wasThrottled;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("missingDataBeforeDateTime", this.getMissingDataBeforeDateTime());
@@ -98,31 +97,35 @@ public class IncompleteData implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the missingDataBeforeDateTime property value. The service does not have source data before the specified time.
      * @param value Value to set for the missingDataBeforeDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMissingDataBeforeDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._missingDataBeforeDateTime = value;
+        this.missingDataBeforeDateTime = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the wasThrottled property value. Some data was not recorded due to excessive activity.
      * @param value Value to set for the wasThrottled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWasThrottled(@javax.annotation.Nullable final Boolean value) {
-        this._wasThrottled = value;
+        this.wasThrottled = value;
     }
 }

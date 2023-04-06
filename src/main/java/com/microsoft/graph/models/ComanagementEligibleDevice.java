@@ -3,56 +3,55 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ComanagementEligibleDevice extends Entity implements Parsable {
     /** Device registration status. */
-    private DeviceRegistrationState _clientRegistrationStatus;
+    private DeviceRegistrationState clientRegistrationStatus;
     /** DeviceName */
-    private String _deviceName;
+    private String deviceName;
     /** Device type. */
-    private DeviceType _deviceType;
+    private DeviceType deviceType;
     /** EntitySource */
-    private Integer _entitySource;
+    private Integer entitySource;
     /** Management agent type. */
-    private ManagementAgentType _managementAgents;
+    private ManagementAgentType managementAgents;
     /** Management state of device in Microsoft Intune. */
-    private ManagementState _managementState;
+    private ManagementState managementState;
     /** Manufacturer */
-    private String _manufacturer;
+    private String manufacturer;
     /** MDMStatus */
-    private String _mdmStatus;
+    private String mdmStatus;
     /** Model */
-    private String _model;
+    private String model;
     /** OSDescription */
-    private String _osDescription;
+    private String osDescription;
     /** OSVersion */
-    private String _osVersion;
+    private String osVersion;
     /** Owner type of device. */
-    private OwnerType _ownerType;
+    private OwnerType ownerType;
     /** ReferenceId */
-    private String _referenceId;
+    private String referenceId;
     /** SerialNumber */
-    private String _serialNumber;
+    private String serialNumber;
     /** The status property */
-    private ComanagementEligibleType _status;
+    private ComanagementEligibleType status;
     /** UPN */
-    private String _upn;
+    private String upn;
     /** UserEmail */
-    private String _userEmail;
+    private String userEmail;
     /** UserId */
-    private String _userId;
+    private String userId;
     /** UserName */
-    private String _userName;
+    private String userName;
     /**
      * Instantiates a new ComanagementEligibleDevice and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ComanagementEligibleDevice() {
         super();
-        this.setOdataType("#microsoft.graph.comanagementEligibleDevice");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -70,7 +69,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceRegistrationState getClientRegistrationStatus() {
-        return this._clientRegistrationStatus;
+        return this.clientRegistrationStatus;
     }
     /**
      * Gets the deviceName property value. DeviceName
@@ -78,7 +77,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDeviceName() {
-        return this._deviceName;
+        return this.deviceName;
     }
     /**
      * Gets the deviceType property value. Device type.
@@ -86,7 +85,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DeviceType getDeviceType() {
-        return this._deviceType;
+        return this.deviceType;
     }
     /**
      * Gets the entitySource property value. EntitySource
@@ -94,36 +93,35 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getEntitySource() {
-        return this._entitySource;
+        return this.entitySource;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ComanagementEligibleDevice currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("clientRegistrationStatus", (n) -> { currentObject.setClientRegistrationStatus(n.getEnumValue(DeviceRegistrationState.class)); });
-            this.put("deviceName", (n) -> { currentObject.setDeviceName(n.getStringValue()); });
-            this.put("deviceType", (n) -> { currentObject.setDeviceType(n.getEnumValue(DeviceType.class)); });
-            this.put("entitySource", (n) -> { currentObject.setEntitySource(n.getIntegerValue()); });
-            this.put("managementAgents", (n) -> { currentObject.setManagementAgents(n.getEnumValue(ManagementAgentType.class)); });
-            this.put("managementState", (n) -> { currentObject.setManagementState(n.getEnumValue(ManagementState.class)); });
-            this.put("manufacturer", (n) -> { currentObject.setManufacturer(n.getStringValue()); });
-            this.put("mdmStatus", (n) -> { currentObject.setMdmStatus(n.getStringValue()); });
-            this.put("model", (n) -> { currentObject.setModel(n.getStringValue()); });
-            this.put("osDescription", (n) -> { currentObject.setOsDescription(n.getStringValue()); });
-            this.put("osVersion", (n) -> { currentObject.setOsVersion(n.getStringValue()); });
-            this.put("ownerType", (n) -> { currentObject.setOwnerType(n.getEnumValue(OwnerType.class)); });
-            this.put("referenceId", (n) -> { currentObject.setReferenceId(n.getStringValue()); });
-            this.put("serialNumber", (n) -> { currentObject.setSerialNumber(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(ComanagementEligibleType.class)); });
-            this.put("upn", (n) -> { currentObject.setUpn(n.getStringValue()); });
-            this.put("userEmail", (n) -> { currentObject.setUserEmail(n.getStringValue()); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-            this.put("userName", (n) -> { currentObject.setUserName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("clientRegistrationStatus", (n) -> { this.setClientRegistrationStatus(n.getEnumValue(DeviceRegistrationState.class)); });
+        deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
+        deserializerMap.put("deviceType", (n) -> { this.setDeviceType(n.getEnumValue(DeviceType.class)); });
+        deserializerMap.put("entitySource", (n) -> { this.setEntitySource(n.getIntegerValue()); });
+        deserializerMap.put("managementAgents", (n) -> { this.setManagementAgents(n.getEnumValue(ManagementAgentType.class)); });
+        deserializerMap.put("managementState", (n) -> { this.setManagementState(n.getEnumValue(ManagementState.class)); });
+        deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
+        deserializerMap.put("mdmStatus", (n) -> { this.setMdmStatus(n.getStringValue()); });
+        deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("osDescription", (n) -> { this.setOsDescription(n.getStringValue()); });
+        deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getStringValue()); });
+        deserializerMap.put("ownerType", (n) -> { this.setOwnerType(n.getEnumValue(OwnerType.class)); });
+        deserializerMap.put("referenceId", (n) -> { this.setReferenceId(n.getStringValue()); });
+        deserializerMap.put("serialNumber", (n) -> { this.setSerialNumber(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ComanagementEligibleType.class)); });
+        deserializerMap.put("upn", (n) -> { this.setUpn(n.getStringValue()); });
+        deserializerMap.put("userEmail", (n) -> { this.setUserEmail(n.getStringValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        deserializerMap.put("userName", (n) -> { this.setUserName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managementAgents property value. Management agent type.
@@ -131,7 +129,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ManagementAgentType getManagementAgents() {
-        return this._managementAgents;
+        return this.managementAgents;
     }
     /**
      * Gets the managementState property value. Management state of device in Microsoft Intune.
@@ -139,7 +137,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ManagementState getManagementState() {
-        return this._managementState;
+        return this.managementState;
     }
     /**
      * Gets the manufacturer property value. Manufacturer
@@ -147,7 +145,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getManufacturer() {
-        return this._manufacturer;
+        return this.manufacturer;
     }
     /**
      * Gets the mdmStatus property value. MDMStatus
@@ -155,7 +153,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMdmStatus() {
-        return this._mdmStatus;
+        return this.mdmStatus;
     }
     /**
      * Gets the model property value. Model
@@ -163,7 +161,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getModel() {
-        return this._model;
+        return this.model;
     }
     /**
      * Gets the osDescription property value. OSDescription
@@ -171,7 +169,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOsDescription() {
-        return this._osDescription;
+        return this.osDescription;
     }
     /**
      * Gets the osVersion property value. OSVersion
@@ -179,7 +177,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getOsVersion() {
-        return this._osVersion;
+        return this.osVersion;
     }
     /**
      * Gets the ownerType property value. Owner type of device.
@@ -187,7 +185,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OwnerType getOwnerType() {
-        return this._ownerType;
+        return this.ownerType;
     }
     /**
      * Gets the referenceId property value. ReferenceId
@@ -195,7 +193,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getReferenceId() {
-        return this._referenceId;
+        return this.referenceId;
     }
     /**
      * Gets the serialNumber property value. SerialNumber
@@ -203,7 +201,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSerialNumber() {
-        return this._serialNumber;
+        return this.serialNumber;
     }
     /**
      * Gets the status property value. The status property
@@ -211,7 +209,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ComanagementEligibleType getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the upn property value. UPN
@@ -219,7 +217,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUpn() {
-        return this._upn;
+        return this.upn;
     }
     /**
      * Gets the userEmail property value. UserEmail
@@ -227,7 +225,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserEmail() {
-        return this._userEmail;
+        return this.userEmail;
     }
     /**
      * Gets the userId property value. UserId
@@ -235,7 +233,7 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Gets the userName property value. UserName
@@ -243,13 +241,14 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserName() {
-        return this._userName;
+        return this.userName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -278,151 +277,170 @@ public class ComanagementEligibleDevice extends Entity implements Parsable {
      * @param value Value to set for the clientRegistrationStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setClientRegistrationStatus(@javax.annotation.Nullable final DeviceRegistrationState value) {
-        this._clientRegistrationStatus = value;
+        this.clientRegistrationStatus = value;
     }
     /**
      * Sets the deviceName property value. DeviceName
      * @param value Value to set for the deviceName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceName(@javax.annotation.Nullable final String value) {
-        this._deviceName = value;
+        this.deviceName = value;
     }
     /**
      * Sets the deviceType property value. Device type.
      * @param value Value to set for the deviceType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceType(@javax.annotation.Nullable final DeviceType value) {
-        this._deviceType = value;
+        this.deviceType = value;
     }
     /**
      * Sets the entitySource property value. EntitySource
      * @param value Value to set for the entitySource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEntitySource(@javax.annotation.Nullable final Integer value) {
-        this._entitySource = value;
+        this.entitySource = value;
     }
     /**
      * Sets the managementAgents property value. Management agent type.
      * @param value Value to set for the managementAgents property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementAgents(@javax.annotation.Nullable final ManagementAgentType value) {
-        this._managementAgents = value;
+        this.managementAgents = value;
     }
     /**
      * Sets the managementState property value. Management state of device in Microsoft Intune.
      * @param value Value to set for the managementState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagementState(@javax.annotation.Nullable final ManagementState value) {
-        this._managementState = value;
+        this.managementState = value;
     }
     /**
      * Sets the manufacturer property value. Manufacturer
      * @param value Value to set for the manufacturer property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManufacturer(@javax.annotation.Nullable final String value) {
-        this._manufacturer = value;
+        this.manufacturer = value;
     }
     /**
      * Sets the mdmStatus property value. MDMStatus
      * @param value Value to set for the mdmStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMdmStatus(@javax.annotation.Nullable final String value) {
-        this._mdmStatus = value;
+        this.mdmStatus = value;
     }
     /**
      * Sets the model property value. Model
      * @param value Value to set for the model property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModel(@javax.annotation.Nullable final String value) {
-        this._model = value;
+        this.model = value;
     }
     /**
      * Sets the osDescription property value. OSDescription
      * @param value Value to set for the osDescription property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsDescription(@javax.annotation.Nullable final String value) {
-        this._osDescription = value;
+        this.osDescription = value;
     }
     /**
      * Sets the osVersion property value. OSVersion
      * @param value Value to set for the osVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOsVersion(@javax.annotation.Nullable final String value) {
-        this._osVersion = value;
+        this.osVersion = value;
     }
     /**
      * Sets the ownerType property value. Owner type of device.
      * @param value Value to set for the ownerType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOwnerType(@javax.annotation.Nullable final OwnerType value) {
-        this._ownerType = value;
+        this.ownerType = value;
     }
     /**
      * Sets the referenceId property value. ReferenceId
      * @param value Value to set for the referenceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReferenceId(@javax.annotation.Nullable final String value) {
-        this._referenceId = value;
+        this.referenceId = value;
     }
     /**
      * Sets the serialNumber property value. SerialNumber
      * @param value Value to set for the serialNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSerialNumber(@javax.annotation.Nullable final String value) {
-        this._serialNumber = value;
+        this.serialNumber = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final ComanagementEligibleType value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the upn property value. UPN
      * @param value Value to set for the upn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpn(@javax.annotation.Nullable final String value) {
-        this._upn = value;
+        this.upn = value;
     }
     /**
      * Sets the userEmail property value. UserEmail
      * @param value Value to set for the userEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserEmail(@javax.annotation.Nullable final String value) {
-        this._userEmail = value;
+        this.userEmail = value;
     }
     /**
      * Sets the userId property value. UserId
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
     /**
      * Sets the userName property value. UserName
      * @param value Value to set for the userName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserName(@javax.annotation.Nullable final String value) {
-        this._userName = value;
+        this.userName = value;
     }
 }

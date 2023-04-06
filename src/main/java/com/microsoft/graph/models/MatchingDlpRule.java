@@ -4,38 +4,37 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
     /** The actions property */
-    private java.util.List<DlpActionInfo> _actions;
+    private java.util.List<DlpActionInfo> actions;
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The isMostRestrictive property */
-    private Boolean _isMostRestrictive;
+    private Boolean isMostRestrictive;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The policyId property */
-    private String _policyId;
+    private String policyId;
     /** The policyName property */
-    private String _policyName;
+    private String policyName;
     /** The priority property */
-    private Integer _priority;
+    private Integer priority;
     /** The ruleId property */
-    private String _ruleId;
+    private String ruleId;
     /** The ruleMode property */
-    private RuleMode _ruleMode;
+    private RuleMode ruleMode;
     /** The ruleName property */
-    private String _ruleName;
+    private String ruleName;
     /**
      * Instantiates a new matchingDlpRule and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MatchingDlpRule() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.matchingDlpRule");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -53,7 +52,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DlpActionInfo> getActions() {
-        return this._actions;
+        return this.actions;
     }
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -61,26 +60,25 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MatchingDlpRule currentObject = this;
-        return new HashMap<>(9) {{
-            this.put("actions", (n) -> { currentObject.setActions(n.getCollectionOfObjectValues(DlpActionInfo::createFromDiscriminatorValue)); });
-            this.put("isMostRestrictive", (n) -> { currentObject.setIsMostRestrictive(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("policyId", (n) -> { currentObject.setPolicyId(n.getStringValue()); });
-            this.put("policyName", (n) -> { currentObject.setPolicyName(n.getStringValue()); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("ruleId", (n) -> { currentObject.setRuleId(n.getStringValue()); });
-            this.put("ruleMode", (n) -> { currentObject.setRuleMode(n.getEnumValue(RuleMode.class)); });
-            this.put("ruleName", (n) -> { currentObject.setRuleName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        deserializerMap.put("actions", (n) -> { this.setActions(n.getCollectionOfObjectValues(DlpActionInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("isMostRestrictive", (n) -> { this.setIsMostRestrictive(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("policyId", (n) -> { this.setPolicyId(n.getStringValue()); });
+        deserializerMap.put("policyName", (n) -> { this.setPolicyName(n.getStringValue()); });
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("ruleId", (n) -> { this.setRuleId(n.getStringValue()); });
+        deserializerMap.put("ruleMode", (n) -> { this.setRuleMode(n.getEnumValue(RuleMode.class)); });
+        deserializerMap.put("ruleName", (n) -> { this.setRuleName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isMostRestrictive property value. The isMostRestrictive property
@@ -88,7 +86,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsMostRestrictive() {
-        return this._isMostRestrictive;
+        return this.isMostRestrictive;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -96,7 +94,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the policyId property value. The policyId property
@@ -104,7 +102,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPolicyId() {
-        return this._policyId;
+        return this.policyId;
     }
     /**
      * Gets the policyName property value. The policyName property
@@ -112,7 +110,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPolicyName() {
-        return this._policyName;
+        return this.policyName;
     }
     /**
      * Gets the priority property value. The priority property
@@ -120,7 +118,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getPriority() {
-        return this._priority;
+        return this.priority;
     }
     /**
      * Gets the ruleId property value. The ruleId property
@@ -128,7 +126,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getRuleId() {
-        return this._ruleId;
+        return this.ruleId;
     }
     /**
      * Gets the ruleMode property value. The ruleMode property
@@ -136,7 +134,7 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public RuleMode getRuleMode() {
-        return this._ruleMode;
+        return this.ruleMode;
     }
     /**
      * Gets the ruleName property value. The ruleName property
@@ -144,13 +142,14 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getRuleName() {
-        return this._ruleName;
+        return this.ruleName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("actions", this.getActions());
@@ -169,79 +168,89 @@ public class MatchingDlpRule implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the actions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActions(@javax.annotation.Nullable final java.util.List<DlpActionInfo> value) {
-        this._actions = value;
+        this.actions = value;
     }
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the isMostRestrictive property value. The isMostRestrictive property
      * @param value Value to set for the isMostRestrictive property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsMostRestrictive(@javax.annotation.Nullable final Boolean value) {
-        this._isMostRestrictive = value;
+        this.isMostRestrictive = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the policyId property value. The policyId property
      * @param value Value to set for the policyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyId(@javax.annotation.Nullable final String value) {
-        this._policyId = value;
+        this.policyId = value;
     }
     /**
      * Sets the policyName property value. The policyName property
      * @param value Value to set for the policyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyName(@javax.annotation.Nullable final String value) {
-        this._policyName = value;
+        this.policyName = value;
     }
     /**
      * Sets the priority property value. The priority property
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
-        this._priority = value;
+        this.priority = value;
     }
     /**
      * Sets the ruleId property value. The ruleId property
      * @param value Value to set for the ruleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRuleId(@javax.annotation.Nullable final String value) {
-        this._ruleId = value;
+        this.ruleId = value;
     }
     /**
      * Sets the ruleMode property value. The ruleMode property
      * @param value Value to set for the ruleMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRuleMode(@javax.annotation.Nullable final RuleMode value) {
-        this._ruleMode = value;
+        this.ruleMode = value;
     }
     /**
      * Sets the ruleName property value. The ruleName property
      * @param value Value to set for the ruleName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRuleName(@javax.annotation.Nullable final String value) {
-        this._ruleName = value;
+        this.ruleName = value;
     }
 }

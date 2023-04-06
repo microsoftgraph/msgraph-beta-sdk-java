@@ -3,20 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class External extends Entity implements Parsable {
     /** The connections property */
-    private java.util.List<ExternalConnection> _connections;
+    private java.util.List<ExternalConnection> connections;
     /**
      * Instantiates a new External and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public External() {
         super();
-        this.setOdataType("#microsoft.graph.external");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,24 +33,24 @@ public class External extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ExternalConnection> getConnections() {
-        return this._connections;
+        return this.connections;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final External currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("connections", (n) -> { currentObject.setConnections(n.getCollectionOfObjectValues(ExternalConnection::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("connections", (n) -> { this.setConnections(n.getCollectionOfObjectValues(ExternalConnection::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +61,8 @@ public class External extends Entity implements Parsable {
      * @param value Value to set for the connections property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConnections(@javax.annotation.Nullable final java.util.List<ExternalConnection> value) {
-        this._connections = value;
+        this.connections = value;
     }
 }

@@ -3,31 +3,31 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfileCertificateProfileBase implements Parsable {
     /** Target store certificate. Possible values are: user, machine. */
-    private CertificateStore _certificateStore;
+    private CertificateStore certificateStore;
     /** PKCS Certificate Template Name */
-    private String _certificateTemplateName;
+    private String certificateTemplateName;
     /** PKCS Certification Authority */
-    private String _certificationAuthority;
+    private String certificationAuthority;
     /** PKCS Certification Authority Name */
-    private String _certificationAuthorityName;
+    private String certificationAuthorityName;
     /** Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements. */
-    private java.util.List<CustomSubjectAlternativeName> _customSubjectAlternativeNames;
+    private java.util.List<CustomSubjectAlternativeName> customSubjectAlternativeNames;
     /** Certificate state for devices. This collection can contain a maximum of 2147483647 elements. */
-    private java.util.List<ManagedDeviceCertificateState> _managedDeviceCertificateStates;
+    private java.util.List<ManagedDeviceCertificateState> managedDeviceCertificateStates;
     /** Custom String that defines the AAD Attribute. */
-    private String _subjectAlternativeNameFormatString;
+    private String subjectAlternativeNameFormatString;
     /** Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US */
-    private String _subjectNameFormatString;
+    private String subjectNameFormatString;
     /**
      * Instantiates a new AndroidWorkProfilePkcsCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidWorkProfilePkcsCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.androidWorkProfilePkcsCertificateProfile");
@@ -48,7 +48,7 @@ public class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfile
      */
     @javax.annotation.Nullable
     public CertificateStore getCertificateStore() {
-        return this._certificateStore;
+        return this.certificateStore;
     }
     /**
      * Gets the certificateTemplateName property value. PKCS Certificate Template Name
@@ -56,7 +56,7 @@ public class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfile
      */
     @javax.annotation.Nullable
     public String getCertificateTemplateName() {
-        return this._certificateTemplateName;
+        return this.certificateTemplateName;
     }
     /**
      * Gets the certificationAuthority property value. PKCS Certification Authority
@@ -64,7 +64,7 @@ public class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfile
      */
     @javax.annotation.Nullable
     public String getCertificationAuthority() {
-        return this._certificationAuthority;
+        return this.certificationAuthority;
     }
     /**
      * Gets the certificationAuthorityName property value. PKCS Certification Authority Name
@@ -72,7 +72,7 @@ public class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfile
      */
     @javax.annotation.Nullable
     public String getCertificationAuthorityName() {
-        return this._certificationAuthorityName;
+        return this.certificationAuthorityName;
     }
     /**
      * Gets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
@@ -80,25 +80,24 @@ public class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfile
      */
     @javax.annotation.Nullable
     public java.util.List<CustomSubjectAlternativeName> getCustomSubjectAlternativeNames() {
-        return this._customSubjectAlternativeNames;
+        return this.customSubjectAlternativeNames;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidWorkProfilePkcsCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("certificateStore", (n) -> { currentObject.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
-            this.put("certificateTemplateName", (n) -> { currentObject.setCertificateTemplateName(n.getStringValue()); });
-            this.put("certificationAuthority", (n) -> { currentObject.setCertificationAuthority(n.getStringValue()); });
-            this.put("certificationAuthorityName", (n) -> { currentObject.setCertificationAuthorityName(n.getStringValue()); });
-            this.put("customSubjectAlternativeNames", (n) -> { currentObject.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
-            this.put("managedDeviceCertificateStates", (n) -> { currentObject.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
-            this.put("subjectAlternativeNameFormatString", (n) -> { currentObject.setSubjectAlternativeNameFormatString(n.getStringValue()); });
-            this.put("subjectNameFormatString", (n) -> { currentObject.setSubjectNameFormatString(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore.class)); });
+        deserializerMap.put("certificateTemplateName", (n) -> { this.setCertificateTemplateName(n.getStringValue()); });
+        deserializerMap.put("certificationAuthority", (n) -> { this.setCertificationAuthority(n.getStringValue()); });
+        deserializerMap.put("certificationAuthorityName", (n) -> { this.setCertificationAuthorityName(n.getStringValue()); });
+        deserializerMap.put("customSubjectAlternativeNames", (n) -> { this.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedDeviceCertificateStates", (n) -> { this.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
+        deserializerMap.put("subjectAlternativeNameFormatString", (n) -> { this.setSubjectAlternativeNameFormatString(n.getStringValue()); });
+        deserializerMap.put("subjectNameFormatString", (n) -> { this.setSubjectNameFormatString(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
@@ -106,7 +105,7 @@ public class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfile
      */
     @javax.annotation.Nullable
     public java.util.List<ManagedDeviceCertificateState> getManagedDeviceCertificateStates() {
-        return this._managedDeviceCertificateStates;
+        return this.managedDeviceCertificateStates;
     }
     /**
      * Gets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
@@ -114,7 +113,7 @@ public class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfile
      */
     @javax.annotation.Nullable
     public String getSubjectAlternativeNameFormatString() {
-        return this._subjectAlternativeNameFormatString;
+        return this.subjectAlternativeNameFormatString;
     }
     /**
      * Gets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
@@ -122,13 +121,14 @@ public class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfile
      */
     @javax.annotation.Nullable
     public String getSubjectNameFormatString() {
-        return this._subjectNameFormatString;
+        return this.subjectNameFormatString;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -146,63 +146,71 @@ public class AndroidWorkProfilePkcsCertificateProfile extends AndroidWorkProfile
      * @param value Value to set for the certificateStore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateStore(@javax.annotation.Nullable final CertificateStore value) {
-        this._certificateStore = value;
+        this.certificateStore = value;
     }
     /**
      * Sets the certificateTemplateName property value. PKCS Certificate Template Name
      * @param value Value to set for the certificateTemplateName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateTemplateName(@javax.annotation.Nullable final String value) {
-        this._certificateTemplateName = value;
+        this.certificateTemplateName = value;
     }
     /**
      * Sets the certificationAuthority property value. PKCS Certification Authority
      * @param value Value to set for the certificationAuthority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationAuthority(@javax.annotation.Nullable final String value) {
-        this._certificationAuthority = value;
+        this.certificationAuthority = value;
     }
     /**
      * Sets the certificationAuthorityName property value. PKCS Certification Authority Name
      * @param value Value to set for the certificationAuthorityName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificationAuthorityName(@javax.annotation.Nullable final String value) {
-        this._certificationAuthorityName = value;
+        this.certificationAuthorityName = value;
     }
     /**
      * Sets the customSubjectAlternativeNames property value. Custom Subject Alternative Name Settings. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the customSubjectAlternativeNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomSubjectAlternativeNames(@javax.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
-        this._customSubjectAlternativeNames = value;
+        this.customSubjectAlternativeNames = value;
     }
     /**
      * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.
      * @param value Value to set for the managedDeviceCertificateStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedDeviceCertificateStates(@javax.annotation.Nullable final java.util.List<ManagedDeviceCertificateState> value) {
-        this._managedDeviceCertificateStates = value;
+        this.managedDeviceCertificateStates = value;
     }
     /**
      * Sets the subjectAlternativeNameFormatString property value. Custom String that defines the AAD Attribute.
      * @param value Value to set for the subjectAlternativeNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectAlternativeNameFormatString(@javax.annotation.Nullable final String value) {
-        this._subjectAlternativeNameFormatString = value;
+        this.subjectAlternativeNameFormatString = value;
     }
     /**
      * Sets the subjectNameFormatString property value. Custom format to use with SubjectNameFormat = Custom. Example: CN={{EmailAddress}},E={{EmailAddress}},OU=Enterprise Users,O=Contoso Corporation,L=Redmond,ST=WA,C=US
      * @param value Value to set for the subjectNameFormatString property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubjectNameFormatString(@javax.annotation.Nullable final String value) {
-        this._subjectNameFormatString = value;
+        this.subjectNameFormatString = value;
     }
 }
