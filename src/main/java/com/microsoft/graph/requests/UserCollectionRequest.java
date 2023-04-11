@@ -45,7 +45,9 @@ import com.microsoft.graph.requests.UserCollectionRequest;
 
 /**
  * The class for the User Collection Request.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserCollectionRequest extends BaseEntityCollectionRequest<User, UserCollectionResponse, UserCollectionPage> {
 
     /**

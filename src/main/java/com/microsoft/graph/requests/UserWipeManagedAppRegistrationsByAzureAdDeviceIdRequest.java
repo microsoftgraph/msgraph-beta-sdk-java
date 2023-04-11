@@ -19,7 +19,9 @@ import com.microsoft.graph.models.UserWipeManagedAppRegistrationsByAzureAdDevice
 
 /**
  * The class for the User Wipe Managed App Registrations By Azure Ad Device Id Request.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserWipeManagedAppRegistrationsByAzureAdDeviceIdRequest extends BaseRequest<Void> {
     /**
      * The request for this UserWipeManagedAppRegistrationsByAzureAdDeviceId

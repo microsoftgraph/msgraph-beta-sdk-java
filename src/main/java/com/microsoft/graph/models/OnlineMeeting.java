@@ -288,7 +288,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Watermark Protection.
-     * Specifies whether a watermark applies for different entities.
+     * Specifies whether a watermark should be applied to a content type by the client application.
      */
     @SerializedName(value = "watermarkProtection", alternate = {"WatermarkProtection"})
     @Expose

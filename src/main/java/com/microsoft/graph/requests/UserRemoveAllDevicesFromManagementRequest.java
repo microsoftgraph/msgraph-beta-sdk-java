@@ -18,7 +18,9 @@ import com.microsoft.graph.core.IBaseClient;
 
 /**
  * The class for the User Remove All Devices From Management Request.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserRemoveAllDevicesFromManagementRequest extends BaseRequest<Void> {
     /**
      * The request for this UserRemoveAllDevicesFromManagement

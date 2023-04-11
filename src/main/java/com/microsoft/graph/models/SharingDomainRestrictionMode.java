@@ -3,32 +3,32 @@
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
 
-package com.microsoft.graph.tenantadmin.models;
+package com.microsoft.graph.models;
 
 
 /**
- * The Enum Image Tagging Choice.
+ * The Enum Sharing Domain Restriction Mode.
 */
-public enum ImageTaggingChoice
+public enum SharingDomainRestrictionMode
 {
     /**
-    * disabled
+    * none
     */
-    DISABLED,
+    NONE,
     /**
-    * basic
+    * allow List
     */
-    BASIC,
+    ALLOW_LIST,
     /**
-    * enhanced
+    * block List
     */
-    ENHANCED,
+    BLOCK_LIST,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * For ImageTaggingChoice values that were not expected from the service
+    * For SharingDomainRestrictionMode values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

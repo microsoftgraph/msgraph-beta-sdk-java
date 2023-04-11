@@ -18,7 +18,9 @@ import java.util.ArrayList;
 
 /**
  * The class for the User Get Logged On Managed Devices Parameter Set.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserGetLoggedOnManagedDevicesParameterSet {
 
     /**

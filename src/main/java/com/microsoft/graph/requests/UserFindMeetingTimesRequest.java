@@ -20,7 +20,9 @@ import com.microsoft.graph.models.UserFindMeetingTimesParameterSet;
 
 /**
  * The class for the User Find Meeting Times Request.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserFindMeetingTimesRequest extends BaseRequest<MeetingTimeSuggestionsResult> {
     /**
      * The request for this UserFindMeetingTimes

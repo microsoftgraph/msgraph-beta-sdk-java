@@ -73,8 +73,8 @@ public class AdminRequestBuilder extends BaseRequestBuilder<Admin> {
      * @return the SharepointRequestBuilder instance
      */
     @Nonnull
-    public com.microsoft.graph.tenantadmin.requests.SharepointRequestBuilder sharepoint() {
-        return new com.microsoft.graph.tenantadmin.requests.SharepointRequestBuilder(getRequestUrlWithAdditionalSegment("sharepoint"), getClient(), null);
+    public com.microsoft.graph.requests.SharepointRequestBuilder sharepoint() {
+        return new com.microsoft.graph.requests.SharepointRequestBuilder(getRequestUrlWithAdditionalSegment("sharepoint"), getClient(), null);
     }
 
     /**

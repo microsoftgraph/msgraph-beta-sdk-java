@@ -24,7 +24,9 @@ import com.microsoft.graph.requests.UserGetMailTipsCollectionResponse;
 
 /**
  * The class for the User Get Mail Tips Collection Page.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserGetMailTipsCollectionPage extends BaseCollectionPage<MailTips, UserGetMailTipsCollectionRequestBuilder> {
 
     /**

@@ -248,6 +248,10 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType
     */
     INTERNAL_SERVER_ERROR_UNABLE_TO_RUN_DSC_SCRIPT,
     /**
+    * sso Check Kerberos Configuration Error
+    */
+    SSO_CHECK_KERBEROS_CONFIGURATION_ERROR,
+    /**
     * internal Server Unknown Error
     */
     INTERNAL_SERVER_UNKNOWN_ERROR,

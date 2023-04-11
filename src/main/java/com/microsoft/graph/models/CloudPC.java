@@ -15,6 +15,7 @@ import com.microsoft.graph.models.CloudPcLoginResult;
 import com.microsoft.graph.models.CloudPcRemoteActionResult;
 import com.microsoft.graph.models.CloudPcOperatingSystem;
 import com.microsoft.graph.models.CloudPcPartnerAgentInstallResult;
+import com.microsoft.graph.models.CloudPcPowerState;
 import com.microsoft.graph.models.CloudPcProvisioningType;
 import com.microsoft.graph.models.CloudPcServicePlanType;
 import com.microsoft.graph.models.CloudPcStatus;
@@ -162,6 +163,15 @@ public class CloudPC extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public java.util.List<CloudPcPartnerAgentInstallResult> partnerAgentInstallResults;
+
+    /**
+     * The Power State.
+     * 
+     */
+    @SerializedName(value = "powerState", alternate = {"PowerState"})
+    @Expose
+	@Nullable
+    public CloudPcPowerState powerState;
 
     /**
      * The Provisioning Policy Id.

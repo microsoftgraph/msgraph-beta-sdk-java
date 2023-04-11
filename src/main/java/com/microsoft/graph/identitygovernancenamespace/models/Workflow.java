@@ -70,7 +70,9 @@ public class Workflow extends WorkflowBase implements IJsonBackedObject {
     /**
      * The Execution Scope.
      * The unique identifier of the Azure AD identity that last modified the workflow object.
+     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
+    @Deprecated
 	@Nullable
     public com.microsoft.graph.requests.UserCollectionPage executionScope;
 

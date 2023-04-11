@@ -9,7 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.models.Edge;
-import com.microsoft.graph.tenantadmin.models.Sharepoint;
+import com.microsoft.graph.models.Sharepoint;
 import com.microsoft.graph.models.ServiceAnnouncement;
 import com.microsoft.graph.models.AdminReportSettings;
 import com.microsoft.graph.models.AdminWindows;

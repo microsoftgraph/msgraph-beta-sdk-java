@@ -24,6 +24,7 @@ import com.microsoft.graph.models.SignInAccessType;
 import com.microsoft.graph.models.DeviceDetail;
 import com.microsoft.graph.models.IncomingTokenType;
 import com.microsoft.graph.models.SignInLocation;
+import com.microsoft.graph.models.ManagedIdentity;
 import com.microsoft.graph.models.MfaDetail;
 import com.microsoft.graph.models.NetworkLocationDetail;
 import com.microsoft.graph.models.PrivateLinkDetails;
@@ -339,6 +340,15 @@ public class SignIn extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public SignInLocation location;
+
+    /**
+     * The Managed Service Identity.
+     * Contains information about the managed identity used for the sign in, including its type and associated Azure Resource Manager (ARM) resource ID.
+     */
+    @SerializedName(value = "managedServiceIdentity", alternate = {"ManagedServiceIdentity"})
+    @Expose
+	@Nullable
+    public ManagedIdentity managedServiceIdentity;
 
     /**
      * The Mfa Detail.

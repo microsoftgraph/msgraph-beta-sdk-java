@@ -8,6 +8,7 @@ import com.microsoft.graph.serializer.ISerializer;
 import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
+import com.microsoft.graph.models.CloudPcProvisioningType;
 import com.microsoft.graph.models.CloudPcManagementService;
 import com.microsoft.graph.models.CloudPcServicePlanType;
 import com.microsoft.graph.models.Entity;
@@ -35,6 +36,15 @@ public class CloudPcServicePlan extends Entity implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String displayName;
+
+    /**
+     * The Provisioning Type.
+     * Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. Possible values are: dedicated, shared, unknownFutureValue.
+     */
+    @SerializedName(value = "provisioningType", alternate = {"ProvisioningType"})
+    @Expose
+	@Nullable
+    public CloudPcProvisioningType provisioningType;
 
     /**
      * The Ram In GB.

@@ -19,7 +19,9 @@ import com.microsoft.graph.models.UserExportPersonalDataParameterSet;
 
 /**
  * The class for the User Export Personal Data Request.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserExportPersonalDataRequest extends BaseRequest<Void> {
     /**
      * The request for this UserExportPersonalData

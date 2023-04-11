@@ -22,7 +22,9 @@ import com.microsoft.graph.requests.UserGetManagedDevicesWithAppFailuresCollecti
 
 /**
  * The class for the User Get Managed Devices With App Failures Collection Page.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserGetManagedDevicesWithAppFailuresCollectionPage extends BaseCollectionPage<String, UserGetManagedDevicesWithAppFailuresCollectionRequestBuilder> {
 
     /**

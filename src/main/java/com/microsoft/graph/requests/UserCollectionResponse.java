@@ -12,7 +12,9 @@ import com.microsoft.graph.http.BaseCollectionResponse;
 
 /**
  * The class for the User Collection Response.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserCollectionResponse extends BaseCollectionResponse<User> {
 
 }

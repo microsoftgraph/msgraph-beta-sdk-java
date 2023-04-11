@@ -24,7 +24,9 @@ import com.microsoft.graph.http.PrimitiveRequestBuilder;
 
 /**
  * The class for the Notification Collection Request Builder.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class NotificationCollectionRequestBuilder extends BaseCollectionRequestBuilder<Notification, NotificationRequestBuilder, NotificationCollectionResponse, NotificationCollectionPage, NotificationCollectionRequest> {
 
     /**

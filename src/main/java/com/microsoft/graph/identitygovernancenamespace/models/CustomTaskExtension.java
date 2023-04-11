@@ -57,7 +57,9 @@ public class CustomTaskExtension extends CustomCalloutExtension implements IJson
     /**
      * The Created By.
      * The unique identifier of the Azure AD user that created the custom task extension.Supports $filter(eq, ne) and $expand.
+     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
+    @Deprecated
     @SerializedName(value = "createdBy", alternate = {"CreatedBy"})
     @Expose
 	@Nullable
@@ -66,7 +68,9 @@ public class CustomTaskExtension extends CustomCalloutExtension implements IJson
     /**
      * The Last Modified By.
      * The unique identifier of the Azure AD user that modified the custom task extension last.Supports $filter(eq, ne) and $expand.
+     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
+    @Deprecated
     @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
     @Expose
 	@Nullable

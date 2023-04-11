@@ -45,7 +45,9 @@ import com.google.gson.JsonObject;
 
 /**
  * The class for the User Reference Request.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserReferenceRequest extends BaseReferenceRequest<User> {
 
     /**
