@@ -164,6 +164,15 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
     public String mediaPathLocation;
 
     /**
+     * The Other Party Country Code.
+     * 
+     */
+    @SerializedName(value = "otherPartyCountryCode", alternate = {"OtherPartyCountryCode"})
+    @Expose
+	@Nullable
+    public String otherPartyCountryCode;
+
+    /**
      * The Signaling Location.
      * The datacenter used for signaling for both bypass and non-bypass calls.
      */
@@ -198,6 +207,15 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String trunkFullyQualifiedDomainName;
+
+    /**
+     * The User Country Code.
+     * 
+     */
+    @SerializedName(value = "userCountryCode", alternate = {"UserCountryCode"})
+    @Expose
+	@Nullable
+    public String userCountryCode;
 
     /**
      * The User Display Name.

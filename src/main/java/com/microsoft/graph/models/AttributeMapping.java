@@ -69,7 +69,7 @@ public class AttributeMapping implements IJsonBackedObject {
 
     /**
      * The Flow Type.
-     * Defines when this attribute should be updated in the target directory. Possible values are: Always (default) ObjectAddOnly - only when new object is created  MultiValueAddOnly - only when the change is adding new values to a multi-valued attribute  ValueAddOnly   AttributeAddOnly
+     * Defines when this attribute should be updated in the target directory. Possible values are: Always (default) ObjectAddOnly - only when new object is created  MultiValueAddOnly - only when the change is adding new values to a multi-valued attribute  ValueAddOnly - If there is a current value, only flows 'Add' operations; will not flow 'Remove' operations   AttributeAddOnly - Only propagates changes if no current value exists at all
      */
     @SerializedName(value = "flowType", alternate = {"FlowType"})
     @Expose

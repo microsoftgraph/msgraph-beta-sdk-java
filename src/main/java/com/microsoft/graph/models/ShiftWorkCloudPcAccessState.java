@@ -8,7 +8,9 @@ package com.microsoft.graph.models;
 
 /**
  * The Enum Shift Work Cloud Pc Access State.
+ * @deprecated The waitlisted value is deprecated and will stop returning on May 17, 2023.
 */
+@Deprecated
 public enum ShiftWorkCloudPcAccessState
 {
     /**
@@ -39,6 +41,10 @@ public enum ShiftWorkCloudPcAccessState
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
+    /**
+    * standby Mode
+    */
+    STANDBY_MODE,
     /**
     * For ShiftWorkCloudPcAccessState values that were not expected from the service
     */

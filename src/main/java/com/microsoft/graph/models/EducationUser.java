@@ -372,7 +372,9 @@ public class EducationUser extends Entity implements IJsonBackedObject {
     /**
      * The User.
      * 
+     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
+    @Deprecated
     @SerializedName(value = "user", alternate = {"User"})
     @Expose
 	@Nullable

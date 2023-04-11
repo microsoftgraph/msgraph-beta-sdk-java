@@ -873,7 +873,9 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
     /**
      * The Users.
      * The primary users associated with the managed device.
+     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
+    @Deprecated
 	@Nullable
     public com.microsoft.graph.requests.UserCollectionPage users;
 

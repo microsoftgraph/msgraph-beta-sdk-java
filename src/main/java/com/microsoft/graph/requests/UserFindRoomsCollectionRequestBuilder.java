@@ -25,7 +25,9 @@ import com.microsoft.graph.http.BaseFunctionCollectionRequestBuilder;
 
 /**
  * The class for the User Find Rooms Collection Request Builder.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserFindRoomsCollectionRequestBuilder extends BaseFunctionCollectionRequestBuilder<EmailAddress, UserFindRoomsCollectionRequestBuilder, UserFindRoomsCollectionResponse, UserFindRoomsCollectionPage, UserFindRoomsCollectionRequest> {
 
     /**

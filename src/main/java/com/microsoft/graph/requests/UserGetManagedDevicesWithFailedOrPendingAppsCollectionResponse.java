@@ -15,6 +15,8 @@ import com.microsoft.graph.http.BaseCollectionResponse;
 
 /**
  * The class for the User Get Managed Devices With Failed Or Pending Apps Collection Response.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserGetManagedDevicesWithFailedOrPendingAppsCollectionResponse extends BaseCollectionResponse<ManagedDeviceSummarizedAppState> {
 }

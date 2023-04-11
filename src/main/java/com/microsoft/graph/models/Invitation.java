@@ -111,7 +111,9 @@ public class Invitation extends Entity implements IJsonBackedObject {
     /**
      * The Invited User.
      * The user created as part of the invitation creation. Read-Only
+     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
+    @Deprecated
     @SerializedName(value = "invitedUser", alternate = {"InvitedUser"})
     @Expose
 	@Nullable

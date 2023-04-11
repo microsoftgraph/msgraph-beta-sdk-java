@@ -20,7 +20,9 @@ import com.microsoft.graph.http.HttpMethod;
 
 /**
  * The class for the Notification Request.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class NotificationRequest extends BaseRequest<Notification> {
 	
     /**

@@ -19,7 +19,9 @@ import com.microsoft.graph.models.UserWipeManagedAppRegistrationByDeviceTagParam
 
 /**
  * The class for the User Wipe Managed App Registration By Device Tag Request.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserWipeManagedAppRegistrationByDeviceTagRequest extends BaseRequest<Void> {
     /**
      * The request for this UserWipeManagedAppRegistrationByDeviceTag

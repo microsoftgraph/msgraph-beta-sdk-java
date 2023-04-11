@@ -112,7 +112,9 @@ public class BaseItem extends Entity implements IJsonBackedObject {
     /**
      * The Created By User.
      * 
+     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
+    @Deprecated
     @SerializedName(value = "createdByUser", alternate = {"CreatedByUser"})
     @Expose
 	@Nullable
@@ -121,7 +123,9 @@ public class BaseItem extends Entity implements IJsonBackedObject {
     /**
      * The Last Modified By User.
      * 
+     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
+    @Deprecated
     @SerializedName(value = "lastModifiedByUser", alternate = {"LastModifiedByUser"})
     @Expose
 	@Nullable

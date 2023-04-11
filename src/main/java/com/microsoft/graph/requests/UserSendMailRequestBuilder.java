@@ -18,7 +18,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the User Send Mail Request Builder.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserSendMailRequestBuilder extends BaseActionRequestBuilder<User> {
 
     /**

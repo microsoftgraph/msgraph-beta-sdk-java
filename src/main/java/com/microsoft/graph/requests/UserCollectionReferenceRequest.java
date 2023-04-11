@@ -51,7 +51,9 @@ import com.microsoft.graph.http.ReferenceRequestBody;
 
 /**
  * The class for the User Collection Reference Request.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserCollectionReferenceRequest extends BaseCollectionWithReferencesRequest<User, UserWithReferenceRequest, UserReferenceRequestBuilder, UserWithReferenceRequestBuilder, UserCollectionResponse, UserCollectionWithReferencesPage, UserCollectionWithReferencesRequest> {
 
     /**

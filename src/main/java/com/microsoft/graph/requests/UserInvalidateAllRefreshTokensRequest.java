@@ -18,7 +18,9 @@ import com.microsoft.graph.core.IBaseClient;
 
 /**
  * The class for the User Invalidate All Refresh Tokens Request.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserInvalidateAllRefreshTokensRequest extends BaseRequest<Boolean> {
     /**
      * The request for this UserInvalidateAllRefreshTokens

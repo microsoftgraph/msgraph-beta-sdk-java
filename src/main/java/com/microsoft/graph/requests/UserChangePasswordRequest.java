@@ -19,7 +19,9 @@ import com.microsoft.graph.models.UserChangePasswordParameterSet;
 
 /**
  * The class for the User Change Password Request.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserChangePasswordRequest extends BaseRequest<Void> {
     /**
      * The request for this UserChangePassword

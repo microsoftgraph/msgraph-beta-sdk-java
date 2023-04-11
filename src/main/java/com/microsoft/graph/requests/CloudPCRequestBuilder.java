@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CloudPC;
+import com.microsoft.graph.models.CloudPcRemoteActionResult;
+import com.microsoft.graph.models.CloudPcResizeValidationResult;
 import com.microsoft.graph.models.CloudPcUserAccountType;
 import com.microsoft.graph.models.CloudPcOperatingSystem;
 import com.microsoft.graph.models.CloudPcConnectivityEvent;
@@ -84,6 +86,24 @@ public class CloudPCRequestBuilder extends BaseRequestBuilder<CloudPC> {
     @Nonnull
     public CloudPCEndGracePeriodRequestBuilder endGracePeriod() {
         return new CloudPCEndGracePeriodRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.endGracePeriod"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public CloudPCPowerOffRequestBuilder powerOff() {
+        return new CloudPCPowerOffRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.powerOff"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
+    public CloudPCPowerOnRequestBuilder powerOn() {
+        return new CloudPCPowerOnRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.powerOn"), getClient(), null);
     }
 
     /**
@@ -182,7 +202,9 @@ public class CloudPCRequestBuilder extends BaseRequestBuilder<CloudPC> {
     /**
      * Gets a builder to execute the method
      * @return the request builder
+     * @deprecated The waitlisted value is deprecated and will stop returning on May 17, 2023.
      */
+    @Deprecated
     @Nonnull
     public CloudPCGetShiftWorkCloudPcAccessStateRequestBuilder getShiftWorkCloudPcAccessState() {
         return new CloudPCGetShiftWorkCloudPcAccessStateRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.getShiftWorkCloudPcAccessState"), getClient(), null);

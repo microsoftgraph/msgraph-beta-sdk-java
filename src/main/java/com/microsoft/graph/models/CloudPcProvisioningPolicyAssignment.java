@@ -40,7 +40,9 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements IJson
     /**
      * The Assigned Users.
      * 
+     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
      */
+    @Deprecated
 	@Nullable
     public com.microsoft.graph.requests.UserCollectionPage assignedUsers;
 

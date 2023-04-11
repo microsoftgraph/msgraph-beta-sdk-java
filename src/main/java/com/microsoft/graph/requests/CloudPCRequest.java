@@ -8,6 +8,8 @@ package com.microsoft.graph.requests;
 import com.microsoft.graph.http.IRequestBuilder;
 import com.microsoft.graph.core.ClientException;
 import com.microsoft.graph.models.CloudPC;
+import com.microsoft.graph.models.CloudPcRemoteActionResult;
+import com.microsoft.graph.models.CloudPcResizeValidationResult;
 import com.microsoft.graph.models.CloudPcUserAccountType;
 import com.microsoft.graph.models.CloudPcOperatingSystem;
 import com.microsoft.graph.models.CloudPcConnectivityEvent;

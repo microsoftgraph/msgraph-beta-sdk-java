@@ -17,7 +17,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the User Is Managed App User Blocked Request Builder.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserIsManagedAppUserBlockedRequestBuilder extends BaseFunctionRequestBuilder<Boolean> {
 
     /**

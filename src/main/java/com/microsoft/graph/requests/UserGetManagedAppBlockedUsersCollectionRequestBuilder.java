@@ -24,7 +24,9 @@ import com.microsoft.graph.http.BaseFunctionCollectionRequestBuilder;
 
 /**
  * The class for the User Get Managed App Blocked Users Collection Request Builder.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserGetManagedAppBlockedUsersCollectionRequestBuilder extends BaseFunctionCollectionRequestBuilder<String, UserGetManagedAppBlockedUsersCollectionRequestBuilder, UserGetManagedAppBlockedUsersCollectionResponse, UserGetManagedAppBlockedUsersCollectionPage, UserGetManagedAppBlockedUsersCollectionRequest> {
 
     /**

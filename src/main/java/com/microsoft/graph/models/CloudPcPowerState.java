@@ -3,32 +3,28 @@
 // Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
 
-package com.microsoft.graph.tenantadmin.models;
+package com.microsoft.graph.models;
 
 
 /**
- * The Enum Sharing Domain Restriction Mode.
+ * The Enum Cloud Pc Power State.
 */
-public enum SharingDomainRestrictionMode
+public enum CloudPcPowerState
 {
     /**
-    * none
+    * running
     */
-    NONE,
+    RUNNING,
     /**
-    * allow List
+    * powered Off
     */
-    ALLOW_LIST,
-    /**
-    * block List
-    */
-    BLOCK_LIST,
+    POWERED_OFF,
     /**
     * unknown Future Value
     */
     UNKNOWN_FUTURE_VALUE,
     /**
-    * For SharingDomainRestrictionMode values that were not expected from the service
+    * For CloudPcPowerState values that were not expected from the service
     */
     UNEXPECTED_VALUE
 }

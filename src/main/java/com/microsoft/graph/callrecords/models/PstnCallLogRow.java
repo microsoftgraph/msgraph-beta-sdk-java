@@ -192,6 +192,15 @@ public class PstnCallLogRow implements IJsonBackedObject {
     public String operator;
 
     /**
+     * The Other Party Country Code.
+     * 
+     */
+    @SerializedName(value = "otherPartyCountryCode", alternate = {"OtherPartyCountryCode"})
+    @Expose
+	@Nullable
+    public String otherPartyCountryCode;
+
+    /**
      * The Start Date Time.
      * Call start time.
      */

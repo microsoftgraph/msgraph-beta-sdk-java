@@ -23,7 +23,9 @@ import com.microsoft.graph.requests.UserTranslateExchangeIdsCollectionResponse;
 
 /**
  * The class for the User Translate Exchange Ids Collection Page.
+ * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
  */
+@Deprecated
 public class UserTranslateExchangeIdsCollectionPage extends BaseCollectionPage<ConvertIdResult, UserTranslateExchangeIdsCollectionRequestBuilder> {
 
     /**

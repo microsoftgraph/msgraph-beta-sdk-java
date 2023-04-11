@@ -56,6 +56,14 @@ public enum CloudPcStatus
     */
     UNKNOWN_FUTURE_VALUE,
     /**
+    * moving Region
+    */
+    MOVING_REGION,
+    /**
+    * resize Pending License
+    */
+    RESIZE_PENDING_LICENSE,
+    /**
     * For CloudPcStatus values that were not expected from the service
     */
     UNEXPECTED_VALUE
