@@ -4,55 +4,54 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class FileSecurityProfile extends Entity implements Parsable {
     /** The activityGroupNames property */
-    private java.util.List<String> _activityGroupNames;
+    private java.util.List<String> activityGroupNames;
     /** The azureSubscriptionId property */
-    private String _azureSubscriptionId;
+    private String azureSubscriptionId;
     /** The azureTenantId property */
-    private String _azureTenantId;
+    private String azureTenantId;
     /** The certificateThumbprint property */
-    private String _certificateThumbprint;
+    private String certificateThumbprint;
     /** The extensions property */
-    private java.util.List<String> _extensions;
+    private java.util.List<String> extensions;
     /** The fileType property */
-    private String _fileType;
+    private String fileType;
     /** The firstSeenDateTime property */
-    private OffsetDateTime _firstSeenDateTime;
+    private OffsetDateTime firstSeenDateTime;
     /** The hashes property */
-    private java.util.List<FileHash> _hashes;
+    private java.util.List<FileHash> hashes;
     /** The lastSeenDateTime property */
-    private OffsetDateTime _lastSeenDateTime;
+    private OffsetDateTime lastSeenDateTime;
     /** The malwareStates property */
-    private java.util.List<MalwareState> _malwareStates;
+    private java.util.List<MalwareState> malwareStates;
     /** The names property */
-    private java.util.List<String> _names;
+    private java.util.List<String> names;
     /** The riskScore property */
-    private String _riskScore;
+    private String riskScore;
     /** The size property */
-    private Long _size;
+    private Long size;
     /** The tags property */
-    private java.util.List<String> _tags;
+    private java.util.List<String> tags;
     /** The vendorInformation property */
-    private SecurityVendorInformation _vendorInformation;
+    private SecurityVendorInformation vendorInformation;
     /** The vulnerabilityStates property */
-    private java.util.List<VulnerabilityState> _vulnerabilityStates;
+    private java.util.List<VulnerabilityState> vulnerabilityStates;
     /**
-     * Instantiates a new FileSecurityProfile and sets the default values.
+     * Instantiates a new fileSecurityProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public FileSecurityProfile() {
         super();
-        this.setOdataType("#microsoft.graph.fileSecurityProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a FileSecurityProfile
+     * @return a fileSecurityProfile
      */
     @javax.annotation.Nonnull
     public static FileSecurityProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -65,7 +64,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getActivityGroupNames() {
-        return this._activityGroupNames;
+        return this.activityGroupNames;
     }
     /**
      * Gets the azureSubscriptionId property value. The azureSubscriptionId property
@@ -73,7 +72,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAzureSubscriptionId() {
-        return this._azureSubscriptionId;
+        return this.azureSubscriptionId;
     }
     /**
      * Gets the azureTenantId property value. The azureTenantId property
@@ -81,7 +80,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAzureTenantId() {
-        return this._azureTenantId;
+        return this.azureTenantId;
     }
     /**
      * Gets the certificateThumbprint property value. The certificateThumbprint property
@@ -89,7 +88,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCertificateThumbprint() {
-        return this._certificateThumbprint;
+        return this.certificateThumbprint;
     }
     /**
      * Gets the extensions property value. The extensions property
@@ -97,33 +96,32 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getExtensions() {
-        return this._extensions;
+        return this.extensions;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final FileSecurityProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activityGroupNames", (n) -> { currentObject.setActivityGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("azureSubscriptionId", (n) -> { currentObject.setAzureSubscriptionId(n.getStringValue()); });
-            this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
-            this.put("certificateThumbprint", (n) -> { currentObject.setCertificateThumbprint(n.getStringValue()); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("fileType", (n) -> { currentObject.setFileType(n.getStringValue()); });
-            this.put("firstSeenDateTime", (n) -> { currentObject.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("hashes", (n) -> { currentObject.setHashes(n.getCollectionOfObjectValues(FileHash::createFromDiscriminatorValue)); });
-            this.put("lastSeenDateTime", (n) -> { currentObject.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("malwareStates", (n) -> { currentObject.setMalwareStates(n.getCollectionOfObjectValues(MalwareState::createFromDiscriminatorValue)); });
-            this.put("names", (n) -> { currentObject.setNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
-            this.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("vendorInformation", (n) -> { currentObject.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
-            this.put("vulnerabilityStates", (n) -> { currentObject.setVulnerabilityStates(n.getCollectionOfObjectValues(VulnerabilityState::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activityGroupNames", (n) -> { this.setActivityGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("azureSubscriptionId", (n) -> { this.setAzureSubscriptionId(n.getStringValue()); });
+        deserializerMap.put("azureTenantId", (n) -> { this.setAzureTenantId(n.getStringValue()); });
+        deserializerMap.put("certificateThumbprint", (n) -> { this.setCertificateThumbprint(n.getStringValue()); });
+        deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("fileType", (n) -> { this.setFileType(n.getStringValue()); });
+        deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("hashes", (n) -> { this.setHashes(n.getCollectionOfObjectValues(FileHash::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastSeenDateTime", (n) -> { this.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("malwareStates", (n) -> { this.setMalwareStates(n.getCollectionOfObjectValues(MalwareState::createFromDiscriminatorValue)); });
+        deserializerMap.put("names", (n) -> { this.setNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getStringValue()); });
+        deserializerMap.put("size", (n) -> { this.setSize(n.getLongValue()); });
+        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("vendorInformation", (n) -> { this.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
+        deserializerMap.put("vulnerabilityStates", (n) -> { this.setVulnerabilityStates(n.getCollectionOfObjectValues(VulnerabilityState::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the fileType property value. The fileType property
@@ -131,7 +129,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getFileType() {
-        return this._fileType;
+        return this.fileType;
     }
     /**
      * Gets the firstSeenDateTime property value. The firstSeenDateTime property
@@ -139,7 +137,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
-        return this._firstSeenDateTime;
+        return this.firstSeenDateTime;
     }
     /**
      * Gets the hashes property value. The hashes property
@@ -147,7 +145,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<FileHash> getHashes() {
-        return this._hashes;
+        return this.hashes;
     }
     /**
      * Gets the lastSeenDateTime property value. The lastSeenDateTime property
@@ -155,7 +153,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this._lastSeenDateTime;
+        return this.lastSeenDateTime;
     }
     /**
      * Gets the malwareStates property value. The malwareStates property
@@ -163,7 +161,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MalwareState> getMalwareStates() {
-        return this._malwareStates;
+        return this.malwareStates;
     }
     /**
      * Gets the names property value. The names property
@@ -171,7 +169,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getNames() {
-        return this._names;
+        return this.names;
     }
     /**
      * Gets the riskScore property value. The riskScore property
@@ -179,7 +177,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRiskScore() {
-        return this._riskScore;
+        return this.riskScore;
     }
     /**
      * Gets the size property value. The size property
@@ -187,7 +185,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Long getSize() {
-        return this._size;
+        return this.size;
     }
     /**
      * Gets the tags property value. The tags property
@@ -195,7 +193,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getTags() {
-        return this._tags;
+        return this.tags;
     }
     /**
      * Gets the vendorInformation property value. The vendorInformation property
@@ -203,7 +201,7 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {
-        return this._vendorInformation;
+        return this.vendorInformation;
     }
     /**
      * Gets the vulnerabilityStates property value. The vulnerabilityStates property
@@ -211,13 +209,14 @@ public class FileSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<VulnerabilityState> getVulnerabilityStates() {
-        return this._vulnerabilityStates;
+        return this.vulnerabilityStates;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -243,127 +242,143 @@ public class FileSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the activityGroupNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityGroupNames(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._activityGroupNames = value;
+        this.activityGroupNames = value;
     }
     /**
      * Sets the azureSubscriptionId property value. The azureSubscriptionId property
      * @param value Value to set for the azureSubscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureSubscriptionId(@javax.annotation.Nullable final String value) {
-        this._azureSubscriptionId = value;
+        this.azureSubscriptionId = value;
     }
     /**
      * Sets the azureTenantId property value. The azureTenantId property
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
-        this._azureTenantId = value;
+        this.azureTenantId = value;
     }
     /**
      * Sets the certificateThumbprint property value. The certificateThumbprint property
      * @param value Value to set for the certificateThumbprint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCertificateThumbprint(@javax.annotation.Nullable final String value) {
-        this._certificateThumbprint = value;
+        this.certificateThumbprint = value;
     }
     /**
      * Sets the extensions property value. The extensions property
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._extensions = value;
+        this.extensions = value;
     }
     /**
      * Sets the fileType property value. The fileType property
      * @param value Value to set for the fileType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileType(@javax.annotation.Nullable final String value) {
-        this._fileType = value;
+        this.fileType = value;
     }
     /**
      * Sets the firstSeenDateTime property value. The firstSeenDateTime property
      * @param value Value to set for the firstSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._firstSeenDateTime = value;
+        this.firstSeenDateTime = value;
     }
     /**
      * Sets the hashes property value. The hashes property
      * @param value Value to set for the hashes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHashes(@javax.annotation.Nullable final java.util.List<FileHash> value) {
-        this._hashes = value;
+        this.hashes = value;
     }
     /**
      * Sets the lastSeenDateTime property value. The lastSeenDateTime property
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastSeenDateTime = value;
+        this.lastSeenDateTime = value;
     }
     /**
      * Sets the malwareStates property value. The malwareStates property
      * @param value Value to set for the malwareStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMalwareStates(@javax.annotation.Nullable final java.util.List<MalwareState> value) {
-        this._malwareStates = value;
+        this.malwareStates = value;
     }
     /**
      * Sets the names property value. The names property
      * @param value Value to set for the names property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNames(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._names = value;
+        this.names = value;
     }
     /**
      * Sets the riskScore property value. The riskScore property
      * @param value Value to set for the riskScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
-        this._riskScore = value;
+        this.riskScore = value;
     }
     /**
      * Sets the size property value. The size property
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Long value) {
-        this._size = value;
+        this.size = value;
     }
     /**
      * Sets the tags property value. The tags property
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._tags = value;
+        this.tags = value;
     }
     /**
      * Sets the vendorInformation property value. The vendorInformation property
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
-        this._vendorInformation = value;
+        this.vendorInformation = value;
     }
     /**
      * Sets the vulnerabilityStates property value. The vulnerabilityStates property
      * @param value Value to set for the vulnerabilityStates property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVulnerabilityStates(@javax.annotation.Nullable final java.util.List<VulnerabilityState> value) {
-        this._vulnerabilityStates = value;
+        this.vulnerabilityStates = value;
     }
 }

@@ -3,17 +3,17 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class EducationIdentityCreationConfiguration extends EducationIdentitySynchronizationConfiguration implements Parsable {
     /** The userDomains property */
-    private java.util.List<EducationIdentityDomain> _userDomains;
+    private java.util.List<EducationIdentityDomain> userDomains;
     /**
      * Instantiates a new EducationIdentityCreationConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public EducationIdentityCreationConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.educationIdentityCreationConfiguration");
@@ -30,14 +30,13 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final EducationIdentityCreationConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("userDomains", (n) -> { currentObject.setUserDomains(n.getCollectionOfObjectValues(EducationIdentityDomain::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("userDomains", (n) -> { this.setUserDomains(n.getCollectionOfObjectValues(EducationIdentityDomain::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the userDomains property value. The userDomains property
@@ -45,13 +44,14 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
      */
     @javax.annotation.Nullable
     public java.util.List<EducationIdentityDomain> getUserDomains() {
-        return this._userDomains;
+        return this.userDomains;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +62,8 @@ public class EducationIdentityCreationConfiguration extends EducationIdentitySyn
      * @param value Value to set for the userDomains property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserDomains(@javax.annotation.Nullable final java.util.List<EducationIdentityDomain> value) {
-        this._userDomains = value;
+        this.userDomains = value;
     }
 }

@@ -3,17 +3,17 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /** Whether or not to uninstall the app when device is removed from Intune. */
-    private Boolean _uninstallOnDeviceRemoval;
+    private Boolean uninstallOnDeviceRemoval;
     /**
      * Instantiates a new MacOsLobAppAssignmentSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOsLobAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.macOsLobAppAssignmentSettings");
@@ -30,14 +30,13 @@ public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings i
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOsLobAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("uninstallOnDeviceRemoval", (n) -> { currentObject.setUninstallOnDeviceRemoval(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("uninstallOnDeviceRemoval", (n) -> { this.setUninstallOnDeviceRemoval(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the uninstallOnDeviceRemoval property value. Whether or not to uninstall the app when device is removed from Intune.
@@ -45,13 +44,14 @@ public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     @javax.annotation.Nullable
     public Boolean getUninstallOnDeviceRemoval() {
-        return this._uninstallOnDeviceRemoval;
+        return this.uninstallOnDeviceRemoval;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +62,8 @@ public class MacOsLobAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param value Value to set for the uninstallOnDeviceRemoval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUninstallOnDeviceRemoval(@javax.annotation.Nullable final Boolean value) {
-        this._uninstallOnDeviceRemoval = value;
+        this.uninstallOnDeviceRemoval = value;
     }
 }

@@ -4,28 +4,27 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeploymentState implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
+    /** The effectiveValue property */
+    private DeploymentStateValue effectiveValue;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Specifies the reasons the deployment has its state value. Read-only. */
-    private java.util.List<DeploymentStateReason> _reasons;
+    private java.util.List<DeploymentStateReason> reasons;
     /** The requestedValue property */
-    private RequestedDeploymentStateValue _requestedValue;
-    /** The value property */
-    private DeploymentStateValue _value;
+    private RequestedDeploymentStateValue requestedValue;
     /**
      * Instantiates a new deploymentState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeploymentState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.windowsUpdates.deploymentState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,21 +42,28 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
+    }
+    /**
+     * Gets the effectiveValue property value. The effectiveValue property
+     * @return a deploymentStateValue
+     */
+    @javax.annotation.Nullable
+    public DeploymentStateValue getEffectiveValue() {
+        return this.effectiveValue;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeploymentState currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("reasons", (n) -> { currentObject.setReasons(n.getCollectionOfObjectValues(DeploymentStateReason::createFromDiscriminatorValue)); });
-            this.put("requestedValue", (n) -> { currentObject.setRequestedValue(n.getEnumValue(RequestedDeploymentStateValue.class)); });
-            this.put("value", (n) -> { currentObject.setValue(n.getEnumValue(DeploymentStateValue.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("effectiveValue", (n) -> { this.setEffectiveValue(n.getEnumValue(DeploymentStateValue.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("reasons", (n) -> { this.setReasons(n.getCollectionOfObjectValues(DeploymentStateReason::createFromDiscriminatorValue)); });
+        deserializerMap.put("requestedValue", (n) -> { this.setRequestedValue(n.getEnumValue(RequestedDeploymentStateValue.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -65,7 +71,7 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the reasons property value. Specifies the reasons the deployment has its state value. Read-only.
@@ -73,7 +79,7 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<DeploymentStateReason> getReasons() {
-        return this._reasons;
+        return this.reasons;
     }
     /**
      * Gets the requestedValue property value. The requestedValue property
@@ -81,27 +87,20 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public RequestedDeploymentStateValue getRequestedValue() {
-        return this._requestedValue;
-    }
-    /**
-     * Gets the value property value. The value property
-     * @return a deploymentStateValue
-     */
-    @javax.annotation.Nullable
-    public DeploymentStateValue getValue() {
-        return this._value;
+        return this.requestedValue;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("effectiveValue", this.getEffectiveValue());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("reasons", this.getReasons());
         writer.writeEnumValue("requestedValue", this.getRequestedValue());
-        writer.writeEnumValue("value", this.getValue());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -109,39 +108,44 @@ public class DeploymentState implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
+    }
+    /**
+     * Sets the effectiveValue property value. The effectiveValue property
+     * @param value Value to set for the effectiveValue property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setEffectiveValue(@javax.annotation.Nullable final DeploymentStateValue value) {
+        this.effectiveValue = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the reasons property value. Specifies the reasons the deployment has its state value. Read-only.
      * @param value Value to set for the reasons property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReasons(@javax.annotation.Nullable final java.util.List<DeploymentStateReason> value) {
-        this._reasons = value;
+        this.reasons = value;
     }
     /**
      * Sets the requestedValue property value. The requestedValue property
      * @param value Value to set for the requestedValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestedValue(@javax.annotation.Nullable final RequestedDeploymentStateValue value) {
-        this._requestedValue = value;
-    }
-    /**
-     * Sets the value property value. The value property
-     * @param value Value to set for the value property.
-     * @return a void
-     */
-    public void setValue(@javax.annotation.Nullable final DeploymentStateValue value) {
-        this._value = value;
+        this.requestedValue = value;
     }
 }

@@ -4,54 +4,53 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProvisioningObjectSummary extends Entity implements Parsable {
     /** The action property */
-    private String _action;
+    private String action;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _activityDateTime;
+    private OffsetDateTime activityDateTime;
     /** Unique ID of this change in this cycle. */
-    private String _changeId;
+    private String changeId;
     /** Unique ID per job iteration. */
-    private String _cycleId;
+    private String cycleId;
     /** Indicates how long this provisioning action took to finish. Measured in milliseconds. */
-    private Integer _durationInMilliseconds;
+    private Integer durationInMilliseconds;
     /** Details of who initiated this provisioning. */
-    private Initiator _initiatedBy;
+    private Initiator initiatedBy;
     /** The unique ID for the whole provisioning job. */
-    private String _jobId;
+    private String jobId;
     /** Details of each property that was modified in this provisioning action on this object. */
-    private java.util.List<ModifiedProperty> _modifiedProperties;
+    private java.util.List<ModifiedProperty> modifiedProperties;
     /** Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list. */
-    private ProvisioningAction _provisioningAction;
+    private ProvisioningAction provisioningAction;
     /** Details of provisioning status. */
-    private ProvisioningStatusInfo _provisioningStatusInfo;
+    private ProvisioningStatusInfo provisioningStatusInfo;
     /** Details of each step in provisioning. */
-    private java.util.List<ProvisioningStep> _provisioningSteps;
+    private java.util.List<ProvisioningStep> provisioningSteps;
     /** Represents the service principal used for provisioning. */
-    private ProvisioningServicePrincipal _servicePrincipal;
+    private ProvisioningServicePrincipal servicePrincipal;
     /** Details of source object being provisioned. */
-    private ProvisionedIdentity _sourceIdentity;
+    private ProvisionedIdentity sourceIdentity;
     /** Details of source system of the object being provisioned. */
-    private ProvisioningSystem _sourceSystem;
+    private ProvisioningSystem sourceSystem;
     /** The statusInfo property */
-    private StatusBase _statusInfo;
+    private StatusBase statusInfo;
     /** Details of target object being provisioned. */
-    private ProvisionedIdentity _targetIdentity;
+    private ProvisionedIdentity targetIdentity;
     /** Details of target system of the object being provisioned. */
-    private ProvisioningSystem _targetSystem;
+    private ProvisioningSystem targetSystem;
     /** Unique Azure AD tenant ID. */
-    private String _tenantId;
+    private String tenantId;
     /**
      * Instantiates a new ProvisioningObjectSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProvisioningObjectSummary() {
         super();
-        this.setOdataType("#microsoft.graph.provisioningObjectSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -69,7 +68,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAction() {
-        return this._action;
+        return this.action;
     }
     /**
      * Gets the activityDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -77,7 +76,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
-        return this._activityDateTime;
+        return this.activityDateTime;
     }
     /**
      * Gets the changeId property value. Unique ID of this change in this cycle.
@@ -85,7 +84,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getChangeId() {
-        return this._changeId;
+        return this.changeId;
     }
     /**
      * Gets the cycleId property value. Unique ID per job iteration.
@@ -93,7 +92,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCycleId() {
-        return this._cycleId;
+        return this.cycleId;
     }
     /**
      * Gets the durationInMilliseconds property value. Indicates how long this provisioning action took to finish. Measured in milliseconds.
@@ -101,35 +100,34 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getDurationInMilliseconds() {
-        return this._durationInMilliseconds;
+        return this.durationInMilliseconds;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ProvisioningObjectSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("action", (n) -> { currentObject.setAction(n.getStringValue()); });
-            this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
-            this.put("changeId", (n) -> { currentObject.setChangeId(n.getStringValue()); });
-            this.put("cycleId", (n) -> { currentObject.setCycleId(n.getStringValue()); });
-            this.put("durationInMilliseconds", (n) -> { currentObject.setDurationInMilliseconds(n.getIntegerValue()); });
-            this.put("initiatedBy", (n) -> { currentObject.setInitiatedBy(n.getObjectValue(Initiator::createFromDiscriminatorValue)); });
-            this.put("jobId", (n) -> { currentObject.setJobId(n.getStringValue()); });
-            this.put("modifiedProperties", (n) -> { currentObject.setModifiedProperties(n.getCollectionOfObjectValues(ModifiedProperty::createFromDiscriminatorValue)); });
-            this.put("provisioningAction", (n) -> { currentObject.setProvisioningAction(n.getEnumValue(ProvisioningAction.class)); });
-            this.put("provisioningStatusInfo", (n) -> { currentObject.setProvisioningStatusInfo(n.getObjectValue(ProvisioningStatusInfo::createFromDiscriminatorValue)); });
-            this.put("provisioningSteps", (n) -> { currentObject.setProvisioningSteps(n.getCollectionOfObjectValues(ProvisioningStep::createFromDiscriminatorValue)); });
-            this.put("servicePrincipal", (n) -> { currentObject.setServicePrincipal(n.getObjectValue(ProvisioningServicePrincipal::createFromDiscriminatorValue)); });
-            this.put("sourceIdentity", (n) -> { currentObject.setSourceIdentity(n.getObjectValue(ProvisionedIdentity::createFromDiscriminatorValue)); });
-            this.put("sourceSystem", (n) -> { currentObject.setSourceSystem(n.getObjectValue(ProvisioningSystem::createFromDiscriminatorValue)); });
-            this.put("statusInfo", (n) -> { currentObject.setStatusInfo(n.getObjectValue(StatusBase::createFromDiscriminatorValue)); });
-            this.put("targetIdentity", (n) -> { currentObject.setTargetIdentity(n.getObjectValue(ProvisionedIdentity::createFromDiscriminatorValue)); });
-            this.put("targetSystem", (n) -> { currentObject.setTargetSystem(n.getObjectValue(ProvisioningSystem::createFromDiscriminatorValue)); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("action", (n) -> { this.setAction(n.getStringValue()); });
+        deserializerMap.put("activityDateTime", (n) -> { this.setActivityDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("changeId", (n) -> { this.setChangeId(n.getStringValue()); });
+        deserializerMap.put("cycleId", (n) -> { this.setCycleId(n.getStringValue()); });
+        deserializerMap.put("durationInMilliseconds", (n) -> { this.setDurationInMilliseconds(n.getIntegerValue()); });
+        deserializerMap.put("initiatedBy", (n) -> { this.setInitiatedBy(n.getObjectValue(Initiator::createFromDiscriminatorValue)); });
+        deserializerMap.put("jobId", (n) -> { this.setJobId(n.getStringValue()); });
+        deserializerMap.put("modifiedProperties", (n) -> { this.setModifiedProperties(n.getCollectionOfObjectValues(ModifiedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("provisioningAction", (n) -> { this.setProvisioningAction(n.getEnumValue(ProvisioningAction.class)); });
+        deserializerMap.put("provisioningStatusInfo", (n) -> { this.setProvisioningStatusInfo(n.getObjectValue(ProvisioningStatusInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("provisioningSteps", (n) -> { this.setProvisioningSteps(n.getCollectionOfObjectValues(ProvisioningStep::createFromDiscriminatorValue)); });
+        deserializerMap.put("servicePrincipal", (n) -> { this.setServicePrincipal(n.getObjectValue(ProvisioningServicePrincipal::createFromDiscriminatorValue)); });
+        deserializerMap.put("sourceIdentity", (n) -> { this.setSourceIdentity(n.getObjectValue(ProvisionedIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("sourceSystem", (n) -> { this.setSourceSystem(n.getObjectValue(ProvisioningSystem::createFromDiscriminatorValue)); });
+        deserializerMap.put("statusInfo", (n) -> { this.setStatusInfo(n.getObjectValue(StatusBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("targetIdentity", (n) -> { this.setTargetIdentity(n.getObjectValue(ProvisionedIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("targetSystem", (n) -> { this.setTargetSystem(n.getObjectValue(ProvisioningSystem::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the initiatedBy property value. Details of who initiated this provisioning.
@@ -137,7 +135,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Initiator getInitiatedBy() {
-        return this._initiatedBy;
+        return this.initiatedBy;
     }
     /**
      * Gets the jobId property value. The unique ID for the whole provisioning job.
@@ -145,7 +143,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getJobId() {
-        return this._jobId;
+        return this.jobId;
     }
     /**
      * Gets the modifiedProperties property value. Details of each property that was modified in this provisioning action on this object.
@@ -153,7 +151,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ModifiedProperty> getModifiedProperties() {
-        return this._modifiedProperties;
+        return this.modifiedProperties;
     }
     /**
      * Gets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
@@ -161,7 +159,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ProvisioningAction getProvisioningAction() {
-        return this._provisioningAction;
+        return this.provisioningAction;
     }
     /**
      * Gets the provisioningStatusInfo property value. Details of provisioning status.
@@ -169,7 +167,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ProvisioningStatusInfo getProvisioningStatusInfo() {
-        return this._provisioningStatusInfo;
+        return this.provisioningStatusInfo;
     }
     /**
      * Gets the provisioningSteps property value. Details of each step in provisioning.
@@ -177,7 +175,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ProvisioningStep> getProvisioningSteps() {
-        return this._provisioningSteps;
+        return this.provisioningSteps;
     }
     /**
      * Gets the servicePrincipal property value. Represents the service principal used for provisioning.
@@ -185,7 +183,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ProvisioningServicePrincipal getServicePrincipal() {
-        return this._servicePrincipal;
+        return this.servicePrincipal;
     }
     /**
      * Gets the sourceIdentity property value. Details of source object being provisioned.
@@ -193,7 +191,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ProvisionedIdentity getSourceIdentity() {
-        return this._sourceIdentity;
+        return this.sourceIdentity;
     }
     /**
      * Gets the sourceSystem property value. Details of source system of the object being provisioned.
@@ -201,7 +199,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ProvisioningSystem getSourceSystem() {
-        return this._sourceSystem;
+        return this.sourceSystem;
     }
     /**
      * Gets the statusInfo property value. The statusInfo property
@@ -209,7 +207,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public StatusBase getStatusInfo() {
-        return this._statusInfo;
+        return this.statusInfo;
     }
     /**
      * Gets the targetIdentity property value. Details of target object being provisioned.
@@ -217,7 +215,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ProvisionedIdentity getTargetIdentity() {
-        return this._targetIdentity;
+        return this.targetIdentity;
     }
     /**
      * Gets the targetSystem property value. Details of target system of the object being provisioned.
@@ -225,7 +223,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ProvisioningSystem getTargetSystem() {
-        return this._targetSystem;
+        return this.targetSystem;
     }
     /**
      * Gets the tenantId property value. Unique Azure AD tenant ID.
@@ -233,13 +231,14 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -267,143 +266,161 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
      * @param value Value to set for the action property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAction(@javax.annotation.Nullable final String value) {
-        this._action = value;
+        this.action = value;
     }
     /**
      * Sets the activityDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the activityDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._activityDateTime = value;
+        this.activityDateTime = value;
     }
     /**
      * Sets the changeId property value. Unique ID of this change in this cycle.
      * @param value Value to set for the changeId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChangeId(@javax.annotation.Nullable final String value) {
-        this._changeId = value;
+        this.changeId = value;
     }
     /**
      * Sets the cycleId property value. Unique ID per job iteration.
      * @param value Value to set for the cycleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCycleId(@javax.annotation.Nullable final String value) {
-        this._cycleId = value;
+        this.cycleId = value;
     }
     /**
      * Sets the durationInMilliseconds property value. Indicates how long this provisioning action took to finish. Measured in milliseconds.
      * @param value Value to set for the durationInMilliseconds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationInMilliseconds(@javax.annotation.Nullable final Integer value) {
-        this._durationInMilliseconds = value;
+        this.durationInMilliseconds = value;
     }
     /**
      * Sets the initiatedBy property value. Details of who initiated this provisioning.
      * @param value Value to set for the initiatedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiatedBy(@javax.annotation.Nullable final Initiator value) {
-        this._initiatedBy = value;
+        this.initiatedBy = value;
     }
     /**
      * Sets the jobId property value. The unique ID for the whole provisioning job.
      * @param value Value to set for the jobId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJobId(@javax.annotation.Nullable final String value) {
-        this._jobId = value;
+        this.jobId = value;
     }
     /**
      * Sets the modifiedProperties property value. Details of each property that was modified in this provisioning action on this object.
      * @param value Value to set for the modifiedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedProperties(@javax.annotation.Nullable final java.util.List<ModifiedProperty> value) {
-        this._modifiedProperties = value;
+        this.modifiedProperties = value;
     }
     /**
      * Sets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Azure AD activity list.
      * @param value Value to set for the provisioningAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisioningAction(@javax.annotation.Nullable final ProvisioningAction value) {
-        this._provisioningAction = value;
+        this.provisioningAction = value;
     }
     /**
      * Sets the provisioningStatusInfo property value. Details of provisioning status.
      * @param value Value to set for the provisioningStatusInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisioningStatusInfo(@javax.annotation.Nullable final ProvisioningStatusInfo value) {
-        this._provisioningStatusInfo = value;
+        this.provisioningStatusInfo = value;
     }
     /**
      * Sets the provisioningSteps property value. Details of each step in provisioning.
      * @param value Value to set for the provisioningSteps property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProvisioningSteps(@javax.annotation.Nullable final java.util.List<ProvisioningStep> value) {
-        this._provisioningSteps = value;
+        this.provisioningSteps = value;
     }
     /**
      * Sets the servicePrincipal property value. Represents the service principal used for provisioning.
      * @param value Value to set for the servicePrincipal property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setServicePrincipal(@javax.annotation.Nullable final ProvisioningServicePrincipal value) {
-        this._servicePrincipal = value;
+        this.servicePrincipal = value;
     }
     /**
      * Sets the sourceIdentity property value. Details of source object being provisioned.
      * @param value Value to set for the sourceIdentity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceIdentity(@javax.annotation.Nullable final ProvisionedIdentity value) {
-        this._sourceIdentity = value;
+        this.sourceIdentity = value;
     }
     /**
      * Sets the sourceSystem property value. Details of source system of the object being provisioned.
      * @param value Value to set for the sourceSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSourceSystem(@javax.annotation.Nullable final ProvisioningSystem value) {
-        this._sourceSystem = value;
+        this.sourceSystem = value;
     }
     /**
      * Sets the statusInfo property value. The statusInfo property
      * @param value Value to set for the statusInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatusInfo(@javax.annotation.Nullable final StatusBase value) {
-        this._statusInfo = value;
+        this.statusInfo = value;
     }
     /**
      * Sets the targetIdentity property value. Details of target object being provisioned.
      * @param value Value to set for the targetIdentity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetIdentity(@javax.annotation.Nullable final ProvisionedIdentity value) {
-        this._targetIdentity = value;
+        this.targetIdentity = value;
     }
     /**
      * Sets the targetSystem property value. Details of target system of the object being provisioned.
      * @param value Value to set for the targetSystem property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTargetSystem(@javax.annotation.Nullable final ProvisioningSystem value) {
-        this._targetSystem = value;
+        this.targetSystem = value;
     }
     /**
      * Sets the tenantId property value. Unique Azure AD tenant ID.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
 }

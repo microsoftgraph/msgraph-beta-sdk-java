@@ -3,24 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsManagementAppHealthSummary extends Entity implements Parsable {
     /** Healthy device count. */
-    private Integer _healthyDeviceCount;
+    private Integer healthyDeviceCount;
     /** Unhealthy device count. */
-    private Integer _unhealthyDeviceCount;
+    private Integer unhealthyDeviceCount;
     /** Unknown device count. */
-    private Integer _unknownDeviceCount;
+    private Integer unknownDeviceCount;
     /**
      * Instantiates a new WindowsManagementAppHealthSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsManagementAppHealthSummary() {
         super();
-        this.setOdataType("#microsoft.graph.windowsManagementAppHealthSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -34,16 +33,15 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsManagementAppHealthSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("healthyDeviceCount", (n) -> { currentObject.setHealthyDeviceCount(n.getIntegerValue()); });
-            this.put("unhealthyDeviceCount", (n) -> { currentObject.setUnhealthyDeviceCount(n.getIntegerValue()); });
-            this.put("unknownDeviceCount", (n) -> { currentObject.setUnknownDeviceCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("healthyDeviceCount", (n) -> { this.setHealthyDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("unhealthyDeviceCount", (n) -> { this.setUnhealthyDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("unknownDeviceCount", (n) -> { this.setUnknownDeviceCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the healthyDeviceCount property value. Healthy device count.
@@ -51,7 +49,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public Integer getHealthyDeviceCount() {
-        return this._healthyDeviceCount;
+        return this.healthyDeviceCount;
     }
     /**
      * Gets the unhealthyDeviceCount property value. Unhealthy device count.
@@ -59,7 +57,7 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public Integer getUnhealthyDeviceCount() {
-        return this._unhealthyDeviceCount;
+        return this.unhealthyDeviceCount;
     }
     /**
      * Gets the unknownDeviceCount property value. Unknown device count.
@@ -67,13 +65,14 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      */
     @javax.annotation.Nullable
     public Integer getUnknownDeviceCount() {
-        return this._unknownDeviceCount;
+        return this.unknownDeviceCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +85,26 @@ public class WindowsManagementAppHealthSummary extends Entity implements Parsabl
      * @param value Value to set for the healthyDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHealthyDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._healthyDeviceCount = value;
+        this.healthyDeviceCount = value;
     }
     /**
      * Sets the unhealthyDeviceCount property value. Unhealthy device count.
      * @param value Value to set for the unhealthyDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnhealthyDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._unhealthyDeviceCount = value;
+        this.unhealthyDeviceCount = value;
     }
     /**
      * Sets the unknownDeviceCount property value. Unknown device count.
      * @param value Value to set for the unknownDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnknownDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._unknownDeviceCount = value;
+        this.unknownDeviceCount = value;
     }
 }

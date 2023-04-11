@@ -4,39 +4,37 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class AccessPackageResourceRequest extends Entity implements Parsable {
     /** The accessPackageResource property */
-    private AccessPackageResource _accessPackageResource;
+    private AccessPackageResource accessPackageResource;
     /** The unique ID of the access package catalog. */
-    private String _catalogId;
+    private String catalogId;
     /** The executeImmediately property */
-    private Boolean _executeImmediately;
+    private Boolean executeImmediately;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z */
-    private OffsetDateTime _expirationDateTime;
+    private OffsetDateTime expirationDateTime;
     /** If set, does not add the resource. */
-    private Boolean _isValidationOnly;
+    private Boolean isValidationOnly;
     /** The requestor's justification for adding or removing the resource. */
-    private String _justification;
+    private String justification;
     /** Read-only. Nullable. Supports $expand. */
-    private AccessPackageSubject _requestor;
+    private AccessPackageSubject requestor;
     /** The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added or removed. Read-Only. */
-    private String _requestState;
+    private String requestState;
     /** The requestStatus property */
-    private String _requestStatus;
-    /** Use AdminAdd to add a resource, if the caller is an administrator or resource owner, or AdminRemove to remove a resource. */
-    private String _requestType;
+    private String requestStatus;
+    /** Use AdminAdd to add a resource, if the caller is an administrator or resource owner, AdminUpdate to update a resource, or AdminRemove to remove a resource. */
+    private String requestType;
     /**
      * Instantiates a new accessPackageResourceRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessPackageResourceRequest() {
         super();
-        this.setOdataType("#microsoft.graph.accessPackageResourceRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -54,7 +52,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageResource getAccessPackageResource() {
-        return this._accessPackageResource;
+        return this.accessPackageResource;
     }
     /**
      * Gets the catalogId property value. The unique ID of the access package catalog.
@@ -62,7 +60,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCatalogId() {
-        return this._catalogId;
+        return this.catalogId;
     }
     /**
      * Gets the executeImmediately property value. The executeImmediately property
@@ -70,7 +68,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getExecuteImmediately() {
-        return this._executeImmediately;
+        return this.executeImmediately;
     }
     /**
      * Gets the expirationDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
@@ -78,27 +76,26 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this._expirationDateTime;
+        return this.expirationDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessPackageResourceRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessPackageResource", (n) -> { currentObject.setAccessPackageResource(n.getObjectValue(AccessPackageResource::createFromDiscriminatorValue)); });
-            this.put("catalogId", (n) -> { currentObject.setCatalogId(n.getStringValue()); });
-            this.put("executeImmediately", (n) -> { currentObject.setExecuteImmediately(n.getBooleanValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("isValidationOnly", (n) -> { currentObject.setIsValidationOnly(n.getBooleanValue()); });
-            this.put("justification", (n) -> { currentObject.setJustification(n.getStringValue()); });
-            this.put("requestor", (n) -> { currentObject.setRequestor(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
-            this.put("requestState", (n) -> { currentObject.setRequestState(n.getStringValue()); });
-            this.put("requestStatus", (n) -> { currentObject.setRequestStatus(n.getStringValue()); });
-            this.put("requestType", (n) -> { currentObject.setRequestType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessPackageResource", (n) -> { this.setAccessPackageResource(n.getObjectValue(AccessPackageResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("catalogId", (n) -> { this.setCatalogId(n.getStringValue()); });
+        deserializerMap.put("executeImmediately", (n) -> { this.setExecuteImmediately(n.getBooleanValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("isValidationOnly", (n) -> { this.setIsValidationOnly(n.getBooleanValue()); });
+        deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
+        deserializerMap.put("requestor", (n) -> { this.setRequestor(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
+        deserializerMap.put("requestState", (n) -> { this.setRequestState(n.getStringValue()); });
+        deserializerMap.put("requestStatus", (n) -> { this.setRequestStatus(n.getStringValue()); });
+        deserializerMap.put("requestType", (n) -> { this.setRequestType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isValidationOnly property value. If set, does not add the resource.
@@ -106,7 +103,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsValidationOnly() {
-        return this._isValidationOnly;
+        return this.isValidationOnly;
     }
     /**
      * Gets the justification property value. The requestor's justification for adding or removing the resource.
@@ -114,7 +111,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getJustification() {
-        return this._justification;
+        return this.justification;
     }
     /**
      * Gets the requestor property value. Read-only. Nullable. Supports $expand.
@@ -122,7 +119,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AccessPackageSubject getRequestor() {
-        return this._requestor;
+        return this.requestor;
     }
     /**
      * Gets the requestState property value. The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added or removed. Read-Only.
@@ -130,7 +127,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRequestState() {
-        return this._requestState;
+        return this.requestState;
     }
     /**
      * Gets the requestStatus property value. The requestStatus property
@@ -138,21 +135,22 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRequestStatus() {
-        return this._requestStatus;
+        return this.requestStatus;
     }
     /**
-     * Gets the requestType property value. Use AdminAdd to add a resource, if the caller is an administrator or resource owner, or AdminRemove to remove a resource.
+     * Gets the requestType property value. Use AdminAdd to add a resource, if the caller is an administrator or resource owner, AdminUpdate to update a resource, or AdminRemove to remove a resource.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getRequestType() {
-        return this._requestType;
+        return this.requestType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -172,79 +170,89 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
      * @param value Value to set for the accessPackageResource property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessPackageResource(@javax.annotation.Nullable final AccessPackageResource value) {
-        this._accessPackageResource = value;
+        this.accessPackageResource = value;
     }
     /**
      * Sets the catalogId property value. The unique ID of the access package catalog.
      * @param value Value to set for the catalogId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCatalogId(@javax.annotation.Nullable final String value) {
-        this._catalogId = value;
+        this.catalogId = value;
     }
     /**
      * Sets the executeImmediately property value. The executeImmediately property
      * @param value Value to set for the executeImmediately property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExecuteImmediately(@javax.annotation.Nullable final Boolean value) {
-        this._executeImmediately = value;
+        this.executeImmediately = value;
     }
     /**
      * Sets the expirationDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expirationDateTime = value;
+        this.expirationDateTime = value;
     }
     /**
      * Sets the isValidationOnly property value. If set, does not add the resource.
      * @param value Value to set for the isValidationOnly property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsValidationOnly(@javax.annotation.Nullable final Boolean value) {
-        this._isValidationOnly = value;
+        this.isValidationOnly = value;
     }
     /**
      * Sets the justification property value. The requestor's justification for adding or removing the resource.
      * @param value Value to set for the justification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJustification(@javax.annotation.Nullable final String value) {
-        this._justification = value;
+        this.justification = value;
     }
     /**
      * Sets the requestor property value. Read-only. Nullable. Supports $expand.
      * @param value Value to set for the requestor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestor(@javax.annotation.Nullable final AccessPackageSubject value) {
-        this._requestor = value;
+        this.requestor = value;
     }
     /**
      * Sets the requestState property value. The outcome of whether the service was able to add the resource to the catalog.  The value is Delivered if the resource was added or removed. Read-Only.
      * @param value Value to set for the requestState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestState(@javax.annotation.Nullable final String value) {
-        this._requestState = value;
+        this.requestState = value;
     }
     /**
      * Sets the requestStatus property value. The requestStatus property
      * @param value Value to set for the requestStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestStatus(@javax.annotation.Nullable final String value) {
-        this._requestStatus = value;
+        this.requestStatus = value;
     }
     /**
-     * Sets the requestType property value. Use AdminAdd to add a resource, if the caller is an administrator or resource owner, or AdminRemove to remove a resource.
+     * Sets the requestType property value. Use AdminAdd to add a resource, if the caller is an administrator or resource owner, AdminUpdate to update a resource, or AdminRemove to remove a resource.
      * @param value Value to set for the requestType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRequestType(@javax.annotation.Nullable final String value) {
-        this._requestType = value;
+        this.requestType = value;
     }
 }

@@ -3,17 +3,17 @@ package com.microsoft.graph.models.callrecords;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ServiceUserAgent extends UserAgent implements Parsable {
     /** The role property */
-    private ServiceRole _role;
+    private ServiceRole role;
     /**
      * Instantiates a new ServiceUserAgent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ServiceUserAgent() {
         super();
         this.setOdataType("#microsoft.graph.callRecords.serviceUserAgent");
@@ -30,14 +30,13 @@ public class ServiceUserAgent extends UserAgent implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ServiceUserAgent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("role", (n) -> { currentObject.setRole(n.getEnumValue(ServiceRole.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("role", (n) -> { this.setRole(n.getEnumValue(ServiceRole.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the role property value. The role property
@@ -45,13 +44,14 @@ public class ServiceUserAgent extends UserAgent implements Parsable {
      */
     @javax.annotation.Nullable
     public ServiceRole getRole() {
-        return this._role;
+        return this.role;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +62,8 @@ public class ServiceUserAgent extends UserAgent implements Parsable {
      * @param value Value to set for the role property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRole(@javax.annotation.Nullable final ServiceRole value) {
-        this._role = value;
+        this.role = value;
     }
 }

@@ -5,31 +5,29 @@ import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class Currency extends Entity implements Parsable {
     /** The amountDecimalPlaces property */
-    private String _amountDecimalPlaces;
+    private String amountDecimalPlaces;
     /** The amountRoundingPrecision property */
-    private BigDecimal _amountRoundingPrecision;
+    private BigDecimal amountRoundingPrecision;
     /** The code property */
-    private String _code;
+    private String code;
     /** The displayName property */
-    private String _displayName;
+    private String displayName;
     /** The lastModifiedDateTime property */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The symbol property */
-    private String _symbol;
+    private String symbol;
     /**
      * Instantiates a new currency and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Currency() {
         super();
-        this.setOdataType("#microsoft.graph.currency");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +45,7 @@ public class Currency extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAmountDecimalPlaces() {
-        return this._amountDecimalPlaces;
+        return this.amountDecimalPlaces;
     }
     /**
      * Gets the amountRoundingPrecision property value. The amountRoundingPrecision property
@@ -55,7 +53,7 @@ public class Currency extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public BigDecimal getAmountRoundingPrecision() {
-        return this._amountRoundingPrecision;
+        return this.amountRoundingPrecision;
     }
     /**
      * Gets the code property value. The code property
@@ -63,7 +61,7 @@ public class Currency extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCode() {
-        return this._code;
+        return this.code;
     }
     /**
      * Gets the displayName property value. The displayName property
@@ -71,23 +69,22 @@ public class Currency extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Currency currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("amountDecimalPlaces", (n) -> { currentObject.setAmountDecimalPlaces(n.getStringValue()); });
-            this.put("amountRoundingPrecision", (n) -> { currentObject.setAmountRoundingPrecision(n.getBigDecimalValue()); });
-            this.put("code", (n) -> { currentObject.setCode(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("symbol", (n) -> { currentObject.setSymbol(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("amountDecimalPlaces", (n) -> { this.setAmountDecimalPlaces(n.getStringValue()); });
+        deserializerMap.put("amountRoundingPrecision", (n) -> { this.setAmountRoundingPrecision(n.getBigDecimalValue()); });
+        deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("symbol", (n) -> { this.setSymbol(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -95,7 +92,7 @@ public class Currency extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the symbol property value. The symbol property
@@ -103,13 +100,14 @@ public class Currency extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSymbol() {
-        return this._symbol;
+        return this.symbol;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -125,47 +123,53 @@ public class Currency extends Entity implements Parsable {
      * @param value Value to set for the amountDecimalPlaces property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAmountDecimalPlaces(@javax.annotation.Nullable final String value) {
-        this._amountDecimalPlaces = value;
+        this.amountDecimalPlaces = value;
     }
     /**
      * Sets the amountRoundingPrecision property value. The amountRoundingPrecision property
      * @param value Value to set for the amountRoundingPrecision property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAmountRoundingPrecision(@javax.annotation.Nullable final BigDecimal value) {
-        this._amountRoundingPrecision = value;
+        this.amountRoundingPrecision = value;
     }
     /**
      * Sets the code property value. The code property
      * @param value Value to set for the code property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCode(@javax.annotation.Nullable final String value) {
-        this._code = value;
+        this.code = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the symbol property value. The symbol property
      * @param value Value to set for the symbol property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSymbol(@javax.annotation.Nullable final String value) {
-        this._symbol = value;
+        this.symbol = value;
     }
 }

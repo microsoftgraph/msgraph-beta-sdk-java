@@ -4,28 +4,27 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Settings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Specifies if the user's primary mailbox is hosted in the cloud and is enabled for Microsoft Graph. */
-    private Boolean _hasGraphMailbox;
+    private Boolean hasGraphMailbox;
     /** Specifies if the user has a MyAnalytics license assigned. */
-    private Boolean _hasLicense;
+    private Boolean hasLicense;
     /** Specifies if the user opted out of MyAnalytics. */
-    private Boolean _hasOptedOut;
+    private Boolean hasOptedOut;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new settings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Settings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.settings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,21 +42,20 @@ public class Settings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Settings currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("hasGraphMailbox", (n) -> { currentObject.setHasGraphMailbox(n.getBooleanValue()); });
-            this.put("hasLicense", (n) -> { currentObject.setHasLicense(n.getBooleanValue()); });
-            this.put("hasOptedOut", (n) -> { currentObject.setHasOptedOut(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("hasGraphMailbox", (n) -> { this.setHasGraphMailbox(n.getBooleanValue()); });
+        deserializerMap.put("hasLicense", (n) -> { this.setHasLicense(n.getBooleanValue()); });
+        deserializerMap.put("hasOptedOut", (n) -> { this.setHasOptedOut(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the hasGraphMailbox property value. Specifies if the user's primary mailbox is hosted in the cloud and is enabled for Microsoft Graph.
@@ -65,7 +63,7 @@ public class Settings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getHasGraphMailbox() {
-        return this._hasGraphMailbox;
+        return this.hasGraphMailbox;
     }
     /**
      * Gets the hasLicense property value. Specifies if the user has a MyAnalytics license assigned.
@@ -73,7 +71,7 @@ public class Settings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getHasLicense() {
-        return this._hasLicense;
+        return this.hasLicense;
     }
     /**
      * Gets the hasOptedOut property value. Specifies if the user opted out of MyAnalytics.
@@ -81,7 +79,7 @@ public class Settings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getHasOptedOut() {
-        return this._hasOptedOut;
+        return this.hasOptedOut;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -89,13 +87,14 @@ public class Settings implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("hasGraphMailbox", this.getHasGraphMailbox());
@@ -109,39 +108,44 @@ public class Settings implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the hasGraphMailbox property value. Specifies if the user's primary mailbox is hosted in the cloud and is enabled for Microsoft Graph.
      * @param value Value to set for the hasGraphMailbox property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasGraphMailbox(@javax.annotation.Nullable final Boolean value) {
-        this._hasGraphMailbox = value;
+        this.hasGraphMailbox = value;
     }
     /**
      * Sets the hasLicense property value. Specifies if the user has a MyAnalytics license assigned.
      * @param value Value to set for the hasLicense property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasLicense(@javax.annotation.Nullable final Boolean value) {
-        this._hasLicense = value;
+        this.hasLicense = value;
     }
     /**
      * Sets the hasOptedOut property value. Specifies if the user opted out of MyAnalytics.
      * @param value Value to set for the hasOptedOut property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasOptedOut(@javax.annotation.Nullable final Boolean value) {
-        this._hasOptedOut = value;
+        this.hasOptedOut = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

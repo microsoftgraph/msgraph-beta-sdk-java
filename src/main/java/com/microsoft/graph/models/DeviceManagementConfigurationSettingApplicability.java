@@ -1,35 +1,32 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DeviceManagementConfigurationExchangeOnlineSettingApplicability;
-import com.microsoft.graph.models.DeviceManagementConfigurationWindowsSettingApplicability;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DeviceManagementConfigurationSettingApplicability implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** description of the setting */
-    private String _description;
+    private String description;
     /** Describes applicability for the mode the device is in */
-    private DeviceManagementConfigurationDeviceMode _deviceMode;
+    private DeviceManagementConfigurationDeviceMode deviceMode;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Supported platform types. */
-    private DeviceManagementConfigurationPlatforms _platform;
+    private DeviceManagementConfigurationPlatforms platform;
     /** Describes which technology this setting can be deployed with */
-    private DeviceManagementConfigurationTechnologies _technologies;
+    private DeviceManagementConfigurationTechnologies technologies;
     /**
      * Instantiates a new deviceManagementConfigurationSettingApplicability and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingApplicability() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSettingApplicability");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -55,7 +52,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the description property value. description of the setting
@@ -63,7 +60,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the deviceMode property value. Describes applicability for the mode the device is in
@@ -71,22 +68,21 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      */
     @javax.annotation.Nullable
     public DeviceManagementConfigurationDeviceMode getDeviceMode() {
-        return this._deviceMode;
+        return this.deviceMode;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationSettingApplicability currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("deviceMode", (n) -> { currentObject.setDeviceMode(n.getEnumValue(DeviceManagementConfigurationDeviceMode.class)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("platform", (n) -> { currentObject.setPlatform(n.getEnumValue(DeviceManagementConfigurationPlatforms.class)); });
-            this.put("technologies", (n) -> { currentObject.setTechnologies(n.getEnumValue(DeviceManagementConfigurationTechnologies.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("deviceMode", (n) -> { this.setDeviceMode(n.getEnumValue(DeviceManagementConfigurationDeviceMode.class)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getEnumValue(DeviceManagementConfigurationPlatforms.class)); });
+        deserializerMap.put("technologies", (n) -> { this.setTechnologies(n.getEnumValue(DeviceManagementConfigurationTechnologies.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -94,7 +90,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the platform property value. Supported platform types.
@@ -102,7 +98,7 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      */
     @javax.annotation.Nullable
     public DeviceManagementConfigurationPlatforms getPlatform() {
-        return this._platform;
+        return this.platform;
     }
     /**
      * Gets the technologies property value. Describes which technology this setting can be deployed with
@@ -110,13 +106,14 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      */
     @javax.annotation.Nullable
     public DeviceManagementConfigurationTechnologies getTechnologies() {
-        return this._technologies;
+        return this.technologies;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("description", this.getDescription());
@@ -131,47 +128,53 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the description property value. description of the setting
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the deviceMode property value. Describes applicability for the mode the device is in
      * @param value Value to set for the deviceMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceMode(@javax.annotation.Nullable final DeviceManagementConfigurationDeviceMode value) {
-        this._deviceMode = value;
+        this.deviceMode = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the platform property value. Supported platform types.
      * @param value Value to set for the platform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPlatform(@javax.annotation.Nullable final DeviceManagementConfigurationPlatforms value) {
-        this._platform = value;
+        this.platform = value;
     }
     /**
      * Sets the technologies property value. Describes which technology this setting can be deployed with
      * @param value Value to set for the technologies property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTechnologies(@javax.annotation.Nullable final DeviceManagementConfigurationTechnologies value) {
-        this._technologies = value;
+        this.technologies = value;
     }
 }

@@ -4,25 +4,25 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.Period;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class CallEndedEventMessageDetail extends EventMessageDetail implements Parsable {
     /** Duration of the call. */
-    private Period _callDuration;
+    private Period callDuration;
     /** Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue. */
-    private TeamworkCallEventType _callEventType;
+    private TeamworkCallEventType callEventType;
     /** Unique identifier of the call. */
-    private String _callId;
+    private String callId;
     /** List of call participants. */
-    private java.util.List<CallParticipantInfo> _callParticipants;
+    private java.util.List<CallParticipantInfo> callParticipants;
     /** Initiator of the event. */
-    private IdentitySet _initiator;
+    private IdentitySet initiator;
     /**
      * Instantiates a new CallEndedEventMessageDetail and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CallEndedEventMessageDetail() {
         super();
         this.setOdataType("#microsoft.graph.callEndedEventMessageDetail");
@@ -43,7 +43,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
      */
     @javax.annotation.Nullable
     public Period getCallDuration() {
-        return this._callDuration;
+        return this.callDuration;
     }
     /**
      * Gets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
@@ -51,7 +51,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
      */
     @javax.annotation.Nullable
     public TeamworkCallEventType getCallEventType() {
-        return this._callEventType;
+        return this.callEventType;
     }
     /**
      * Gets the callId property value. Unique identifier of the call.
@@ -59,7 +59,7 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
      */
     @javax.annotation.Nullable
     public String getCallId() {
-        return this._callId;
+        return this.callId;
     }
     /**
      * Gets the callParticipants property value. List of call participants.
@@ -67,22 +67,21 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
      */
     @javax.annotation.Nullable
     public java.util.List<CallParticipantInfo> getCallParticipants() {
-        return this._callParticipants;
+        return this.callParticipants;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CallEndedEventMessageDetail currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("callDuration", (n) -> { currentObject.setCallDuration(n.getPeriodValue()); });
-            this.put("callEventType", (n) -> { currentObject.setCallEventType(n.getEnumValue(TeamworkCallEventType.class)); });
-            this.put("callId", (n) -> { currentObject.setCallId(n.getStringValue()); });
-            this.put("callParticipants", (n) -> { currentObject.setCallParticipants(n.getCollectionOfObjectValues(CallParticipantInfo::createFromDiscriminatorValue)); });
-            this.put("initiator", (n) -> { currentObject.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("callDuration", (n) -> { this.setCallDuration(n.getPeriodValue()); });
+        deserializerMap.put("callEventType", (n) -> { this.setCallEventType(n.getEnumValue(TeamworkCallEventType.class)); });
+        deserializerMap.put("callId", (n) -> { this.setCallId(n.getStringValue()); });
+        deserializerMap.put("callParticipants", (n) -> { this.setCallParticipants(n.getCollectionOfObjectValues(CallParticipantInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("initiator", (n) -> { this.setInitiator(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the initiator property value. Initiator of the event.
@@ -90,13 +89,14 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
      */
     @javax.annotation.Nullable
     public IdentitySet getInitiator() {
-        return this._initiator;
+        return this.initiator;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -111,39 +111,44 @@ public class CallEndedEventMessageDetail extends EventMessageDetail implements P
      * @param value Value to set for the callDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallDuration(@javax.annotation.Nullable final Period value) {
-        this._callDuration = value;
+        this.callDuration = value;
     }
     /**
      * Sets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
      * @param value Value to set for the callEventType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallEventType(@javax.annotation.Nullable final TeamworkCallEventType value) {
-        this._callEventType = value;
+        this.callEventType = value;
     }
     /**
      * Sets the callId property value. Unique identifier of the call.
      * @param value Value to set for the callId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallId(@javax.annotation.Nullable final String value) {
-        this._callId = value;
+        this.callId = value;
     }
     /**
      * Sets the callParticipants property value. List of call participants.
      * @param value Value to set for the callParticipants property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallParticipants(@javax.annotation.Nullable final java.util.List<CallParticipantInfo> value) {
-        this._callParticipants = value;
+        this.callParticipants = value;
     }
     /**
      * Sets the initiator property value. Initiator of the event.
      * @param value Value to set for the initiator property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInitiator(@javax.annotation.Nullable final IdentitySet value) {
-        this._initiator = value;
+        this.initiator = value;
     }
 }

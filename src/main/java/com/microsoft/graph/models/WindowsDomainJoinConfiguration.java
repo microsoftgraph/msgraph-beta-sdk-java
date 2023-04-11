@@ -3,25 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WindowsDomainJoinConfiguration extends DeviceConfiguration implements Parsable {
     /** Active Directory domain name to join. */
-    private String _activeDirectoryDomainName;
+    private String activeDirectoryDomainName;
     /** Fixed prefix to be used for computer name. */
-    private String _computerNameStaticPrefix;
+    private String computerNameStaticPrefix;
     /** Dynamically generated characters used as suffix for computer name. Valid values 3 to 14 */
-    private Integer _computerNameSuffixRandomCharCount;
+    private Integer computerNameSuffixRandomCharCount;
     /** Reference to device configurations required for network connectivity */
-    private java.util.List<DeviceConfiguration> _networkAccessConfigurations;
+    private java.util.List<DeviceConfiguration> networkAccessConfigurations;
     /** Organizational unit (OU) where the computer account will be created. If this parameter is NULL, the well known computer object container will be used as published in the domain. */
-    private String _organizationalUnit;
+    private String organizationalUnit;
     /**
      * Instantiates a new WindowsDomainJoinConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WindowsDomainJoinConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.windowsDomainJoinConfiguration");
@@ -42,7 +42,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      */
     @javax.annotation.Nullable
     public String getActiveDirectoryDomainName() {
-        return this._activeDirectoryDomainName;
+        return this.activeDirectoryDomainName;
     }
     /**
      * Gets the computerNameStaticPrefix property value. Fixed prefix to be used for computer name.
@@ -50,7 +50,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      */
     @javax.annotation.Nullable
     public String getComputerNameStaticPrefix() {
-        return this._computerNameStaticPrefix;
+        return this.computerNameStaticPrefix;
     }
     /**
      * Gets the computerNameSuffixRandomCharCount property value. Dynamically generated characters used as suffix for computer name. Valid values 3 to 14
@@ -58,22 +58,21 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      */
     @javax.annotation.Nullable
     public Integer getComputerNameSuffixRandomCharCount() {
-        return this._computerNameSuffixRandomCharCount;
+        return this.computerNameSuffixRandomCharCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WindowsDomainJoinConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activeDirectoryDomainName", (n) -> { currentObject.setActiveDirectoryDomainName(n.getStringValue()); });
-            this.put("computerNameStaticPrefix", (n) -> { currentObject.setComputerNameStaticPrefix(n.getStringValue()); });
-            this.put("computerNameSuffixRandomCharCount", (n) -> { currentObject.setComputerNameSuffixRandomCharCount(n.getIntegerValue()); });
-            this.put("networkAccessConfigurations", (n) -> { currentObject.setNetworkAccessConfigurations(n.getCollectionOfObjectValues(DeviceConfiguration::createFromDiscriminatorValue)); });
-            this.put("organizationalUnit", (n) -> { currentObject.setOrganizationalUnit(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeDirectoryDomainName", (n) -> { this.setActiveDirectoryDomainName(n.getStringValue()); });
+        deserializerMap.put("computerNameStaticPrefix", (n) -> { this.setComputerNameStaticPrefix(n.getStringValue()); });
+        deserializerMap.put("computerNameSuffixRandomCharCount", (n) -> { this.setComputerNameSuffixRandomCharCount(n.getIntegerValue()); });
+        deserializerMap.put("networkAccessConfigurations", (n) -> { this.setNetworkAccessConfigurations(n.getCollectionOfObjectValues(DeviceConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("organizationalUnit", (n) -> { this.setOrganizationalUnit(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the networkAccessConfigurations property value. Reference to device configurations required for network connectivity
@@ -81,7 +80,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceConfiguration> getNetworkAccessConfigurations() {
-        return this._networkAccessConfigurations;
+        return this.networkAccessConfigurations;
     }
     /**
      * Gets the organizationalUnit property value. Organizational unit (OU) where the computer account will be created. If this parameter is NULL, the well known computer object container will be used as published in the domain.
@@ -89,13 +88,14 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      */
     @javax.annotation.Nullable
     public String getOrganizationalUnit() {
-        return this._organizationalUnit;
+        return this.organizationalUnit;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,39 +110,44 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the activeDirectoryDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActiveDirectoryDomainName(@javax.annotation.Nullable final String value) {
-        this._activeDirectoryDomainName = value;
+        this.activeDirectoryDomainName = value;
     }
     /**
      * Sets the computerNameStaticPrefix property value. Fixed prefix to be used for computer name.
      * @param value Value to set for the computerNameStaticPrefix property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComputerNameStaticPrefix(@javax.annotation.Nullable final String value) {
-        this._computerNameStaticPrefix = value;
+        this.computerNameStaticPrefix = value;
     }
     /**
      * Sets the computerNameSuffixRandomCharCount property value. Dynamically generated characters used as suffix for computer name. Valid values 3 to 14
      * @param value Value to set for the computerNameSuffixRandomCharCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComputerNameSuffixRandomCharCount(@javax.annotation.Nullable final Integer value) {
-        this._computerNameSuffixRandomCharCount = value;
+        this.computerNameSuffixRandomCharCount = value;
     }
     /**
      * Sets the networkAccessConfigurations property value. Reference to device configurations required for network connectivity
      * @param value Value to set for the networkAccessConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNetworkAccessConfigurations(@javax.annotation.Nullable final java.util.List<DeviceConfiguration> value) {
-        this._networkAccessConfigurations = value;
+        this.networkAccessConfigurations = value;
     }
     /**
      * Sets the organizationalUnit property value. Organizational unit (OU) where the computer account will be created. If this parameter is NULL, the well known computer object container will be used as published in the domain.
      * @param value Value to set for the organizationalUnit property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganizationalUnit(@javax.annotation.Nullable final String value) {
-        this._organizationalUnit = value;
+        this.organizationalUnit = value;
     }
 }

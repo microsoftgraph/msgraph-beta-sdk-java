@@ -1,26 +1,23 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AddFooter;
-import com.microsoft.graph.models.AddHeader;
-import com.microsoft.graph.models.AddWatermark;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MarkContent extends LabelActionBase implements Parsable {
     /** The fontColor property */
-    private String _fontColor;
+    private String fontColor;
     /** The fontSize property */
-    private Long _fontSize;
+    private Long fontSize;
     /** The text property */
-    private String _text;
+    private String text;
     /**
      * Instantiates a new MarkContent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MarkContent() {
         super();
         this.setOdataType("#microsoft.graph.markContent");
@@ -46,16 +43,15 @@ public class MarkContent extends LabelActionBase implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MarkContent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("fontColor", (n) -> { currentObject.setFontColor(n.getStringValue()); });
-            this.put("fontSize", (n) -> { currentObject.setFontSize(n.getLongValue()); });
-            this.put("text", (n) -> { currentObject.setText(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fontColor", (n) -> { this.setFontColor(n.getStringValue()); });
+        deserializerMap.put("fontSize", (n) -> { this.setFontSize(n.getLongValue()); });
+        deserializerMap.put("text", (n) -> { this.setText(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fontColor property value. The fontColor property
@@ -63,7 +59,7 @@ public class MarkContent extends LabelActionBase implements Parsable {
      */
     @javax.annotation.Nullable
     public String getFontColor() {
-        return this._fontColor;
+        return this.fontColor;
     }
     /**
      * Gets the fontSize property value. The fontSize property
@@ -71,7 +67,7 @@ public class MarkContent extends LabelActionBase implements Parsable {
      */
     @javax.annotation.Nullable
     public Long getFontSize() {
-        return this._fontSize;
+        return this.fontSize;
     }
     /**
      * Gets the text property value. The text property
@@ -79,13 +75,14 @@ public class MarkContent extends LabelActionBase implements Parsable {
      */
     @javax.annotation.Nullable
     public String getText() {
-        return this._text;
+        return this.text;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,23 +95,26 @@ public class MarkContent extends LabelActionBase implements Parsable {
      * @param value Value to set for the fontColor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFontColor(@javax.annotation.Nullable final String value) {
-        this._fontColor = value;
+        this.fontColor = value;
     }
     /**
      * Sets the fontSize property value. The fontSize property
      * @param value Value to set for the fontSize property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFontSize(@javax.annotation.Nullable final Long value) {
-        this._fontSize = value;
+        this.fontSize = value;
     }
     /**
      * Sets the text property value. The text property
      * @param value Value to set for the text property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setText(@javax.annotation.Nullable final String value) {
-        this._text = value;
+        this.text = value;
     }
 }

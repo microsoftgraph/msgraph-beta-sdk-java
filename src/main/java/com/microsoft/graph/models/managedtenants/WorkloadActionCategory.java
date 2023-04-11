@@ -3,7 +3,6 @@ package com.microsoft.graph.models.managedtenants;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum WorkloadActionCategory implements ValuedEnum {
     Automated("automated"),
     Manual("manual"),

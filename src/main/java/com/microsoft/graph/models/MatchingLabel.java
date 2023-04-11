@@ -4,42 +4,41 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MatchingLabel implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The applicationMode property */
-    private ApplicationMode _applicationMode;
+    private ApplicationMode applicationMode;
     /** The description property */
-    private String _description;
+    private String description;
     /** The displayName property */
-    private String _displayName;
+    private String displayName;
     /** The id property */
-    private String _id;
+    private String id;
     /** The isEndpointProtectionEnabled property */
-    private Boolean _isEndpointProtectionEnabled;
+    private Boolean isEndpointProtectionEnabled;
     /** The labelActions property */
-    private java.util.List<LabelActionBase> _labelActions;
+    private java.util.List<LabelActionBase> labelActions;
     /** The name property */
-    private String _name;
+    private String name;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The policyTip property */
-    private String _policyTip;
+    private String policyTip;
     /** The priority property */
-    private Integer _priority;
+    private Integer priority;
     /** The toolTip property */
-    private String _toolTip;
+    private String toolTip;
     /**
      * Instantiates a new matchingLabel and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MatchingLabel() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.matchingLabel");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,7 +56,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the applicationMode property value. The applicationMode property
@@ -65,7 +64,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public ApplicationMode getApplicationMode() {
-        return this._applicationMode;
+        return this.applicationMode;
     }
     /**
      * Gets the description property value. The description property
@@ -73,7 +72,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The displayName property
@@ -81,28 +80,27 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MatchingLabel currentObject = this;
-        return new HashMap<>(11) {{
-            this.put("applicationMode", (n) -> { currentObject.setApplicationMode(n.getEnumValue(ApplicationMode.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("isEndpointProtectionEnabled", (n) -> { currentObject.setIsEndpointProtectionEnabled(n.getBooleanValue()); });
-            this.put("labelActions", (n) -> { currentObject.setLabelActions(n.getCollectionOfObjectValues(LabelActionBase::createFromDiscriminatorValue)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("policyTip", (n) -> { currentObject.setPolicyTip(n.getStringValue()); });
-            this.put("priority", (n) -> { currentObject.setPriority(n.getIntegerValue()); });
-            this.put("toolTip", (n) -> { currentObject.setToolTip(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
+        deserializerMap.put("applicationMode", (n) -> { this.setApplicationMode(n.getEnumValue(ApplicationMode.class)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("isEndpointProtectionEnabled", (n) -> { this.setIsEndpointProtectionEnabled(n.getBooleanValue()); });
+        deserializerMap.put("labelActions", (n) -> { this.setLabelActions(n.getCollectionOfObjectValues(LabelActionBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("policyTip", (n) -> { this.setPolicyTip(n.getStringValue()); });
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
+        deserializerMap.put("toolTip", (n) -> { this.setToolTip(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the id property value. The id property
@@ -110,7 +108,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getId() {
-        return this._id;
+        return this.id;
     }
     /**
      * Gets the isEndpointProtectionEnabled property value. The isEndpointProtectionEnabled property
@@ -118,7 +116,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsEndpointProtectionEnabled() {
-        return this._isEndpointProtectionEnabled;
+        return this.isEndpointProtectionEnabled;
     }
     /**
      * Gets the labelActions property value. The labelActions property
@@ -126,7 +124,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<LabelActionBase> getLabelActions() {
-        return this._labelActions;
+        return this.labelActions;
     }
     /**
      * Gets the name property value. The name property
@@ -134,7 +132,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -142,7 +140,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the policyTip property value. The policyTip property
@@ -150,7 +148,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getPolicyTip() {
-        return this._policyTip;
+        return this.policyTip;
     }
     /**
      * Gets the priority property value. The priority property
@@ -158,7 +156,7 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getPriority() {
-        return this._priority;
+        return this.priority;
     }
     /**
      * Gets the toolTip property value. The toolTip property
@@ -166,13 +164,14 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getToolTip() {
-        return this._toolTip;
+        return this.toolTip;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("applicationMode", this.getApplicationMode());
@@ -193,95 +192,107 @@ public class MatchingLabel implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the applicationMode property value. The applicationMode property
      * @param value Value to set for the applicationMode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationMode(@javax.annotation.Nullable final ApplicationMode value) {
-        this._applicationMode = value;
+        this.applicationMode = value;
     }
     /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the id property value. The id property
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+        this.id = value;
     }
     /**
      * Sets the isEndpointProtectionEnabled property value. The isEndpointProtectionEnabled property
      * @param value Value to set for the isEndpointProtectionEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEndpointProtectionEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isEndpointProtectionEnabled = value;
+        this.isEndpointProtectionEnabled = value;
     }
     /**
      * Sets the labelActions property value. The labelActions property
      * @param value Value to set for the labelActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLabelActions(@javax.annotation.Nullable final java.util.List<LabelActionBase> value) {
-        this._labelActions = value;
+        this.labelActions = value;
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the policyTip property value. The policyTip property
      * @param value Value to set for the policyTip property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyTip(@javax.annotation.Nullable final String value) {
-        this._policyTip = value;
+        this.policyTip = value;
     }
     /**
      * Sets the priority property value. The priority property
      * @param value Value to set for the priority property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPriority(@javax.annotation.Nullable final Integer value) {
-        this._priority = value;
+        this.priority = value;
     }
     /**
      * Sets the toolTip property value. The toolTip property
      * @param value Value to set for the toolTip property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setToolTip(@javax.annotation.Nullable final String value) {
-        this._toolTip = value;
+        this.toolTip = value;
     }
 }

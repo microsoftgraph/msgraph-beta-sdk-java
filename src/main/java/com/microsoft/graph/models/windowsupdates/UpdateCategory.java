@@ -3,11 +3,11 @@ package com.microsoft.graph.models.windowsupdates;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the admin singleton. */
 public enum UpdateCategory implements ValuedEnum {
     Feature("feature"),
     Quality("quality"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Driver("driver");
     public final String value;
     UpdateCategory(final String value) {
         this.value = value;
@@ -21,6 +21,7 @@ public enum UpdateCategory implements ValuedEnum {
             case "feature": return Feature;
             case "quality": return Quality;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "driver": return Driver;
             default: return null;
         }
     }

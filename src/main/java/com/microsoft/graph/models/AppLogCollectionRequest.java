@@ -4,27 +4,28 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** AppLogCollectionRequest Entity. */
+/**
+ * Entity for AppLogCollectionRequest contains all logs values.
+ */
 public class AppLogCollectionRequest extends Entity implements Parsable {
-    /** Time at which the upload log request reached a terminal state */
-    private OffsetDateTime _completedDateTime;
+    /** Time at which the upload log request reached a completed state if not completed yet NULL will be returned. */
+    private OffsetDateTime completedDateTime;
     /** List of log folders. */
-    private java.util.List<String> _customLogFolders;
-    /** Error message if any during the upload process */
-    private String _errorMessage;
+    private java.util.List<String> customLogFolders;
+    /** Indicates error message if any during the upload process. */
+    private String errorMessage;
     /** AppLogUploadStatus */
-    private AppLogUploadState _status;
+    private AppLogUploadState status;
     /**
      * Instantiates a new appLogCollectionRequest and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AppLogCollectionRequest() {
         super();
-        this.setOdataType("#microsoft.graph.appLogCollectionRequest");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -37,12 +38,12 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
         return new AppLogCollectionRequest();
     }
     /**
-     * Gets the completedDateTime property value. Time at which the upload log request reached a terminal state
+     * Gets the completedDateTime property value. Time at which the upload log request reached a completed state if not completed yet NULL will be returned.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCompletedDateTime() {
-        return this._completedDateTime;
+        return this.completedDateTime;
     }
     /**
      * Gets the customLogFolders property value. List of log folders.
@@ -50,29 +51,28 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getCustomLogFolders() {
-        return this._customLogFolders;
+        return this.customLogFolders;
     }
     /**
-     * Gets the errorMessage property value. Error message if any during the upload process
+     * Gets the errorMessage property value. Indicates error message if any during the upload process.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getErrorMessage() {
-        return this._errorMessage;
+        return this.errorMessage;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AppLogCollectionRequest currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("completedDateTime", (n) -> { currentObject.setCompletedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("customLogFolders", (n) -> { currentObject.setCustomLogFolders(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("errorMessage", (n) -> { currentObject.setErrorMessage(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(AppLogUploadState.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("customLogFolders", (n) -> { this.setCustomLogFolders(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("errorMessage", (n) -> { this.setErrorMessage(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AppLogUploadState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the status property value. AppLogUploadStatus
@@ -80,13 +80,14 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AppLogUploadState getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -96,35 +97,39 @@ public class AppLogCollectionRequest extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the completedDateTime property value. Time at which the upload log request reached a terminal state
+     * Sets the completedDateTime property value. Time at which the upload log request reached a completed state if not completed yet NULL will be returned.
      * @param value Value to set for the completedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._completedDateTime = value;
+        this.completedDateTime = value;
     }
     /**
      * Sets the customLogFolders property value. List of log folders.
      * @param value Value to set for the customLogFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomLogFolders(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._customLogFolders = value;
+        this.customLogFolders = value;
     }
     /**
-     * Sets the errorMessage property value. Error message if any during the upload process
+     * Sets the errorMessage property value. Indicates error message if any during the upload process.
      * @param value Value to set for the errorMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorMessage(@javax.annotation.Nullable final String value) {
-        this._errorMessage = value;
+        this.errorMessage = value;
     }
     /**
      * Sets the status property value. AppLogUploadStatus
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final AppLogUploadState value) {
-        this._status = value;
+        this.status = value;
     }
 }

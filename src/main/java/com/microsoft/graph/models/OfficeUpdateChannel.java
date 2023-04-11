@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** The Enum to specify the Office365 Updates Channel. */
 public enum OfficeUpdateChannel implements ValuedEnum {
     None("none"),
     Current("current"),

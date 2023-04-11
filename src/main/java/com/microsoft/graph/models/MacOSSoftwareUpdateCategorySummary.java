@@ -4,37 +4,38 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** MacOS software update category summary report for a device and user */
+/**
+ * MacOS software update category summary report for a device and user
+ */
 public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsable {
     /** The device ID. */
-    private String _deviceId;
+    private String deviceId;
     /** The name of the report */
-    private String _displayName;
+    private String displayName;
     /** Number of failed updates on the device */
-    private Integer _failedUpdateCount;
+    private Integer failedUpdateCount;
     /** Last date time the report for this device was updated. */
-    private OffsetDateTime _lastUpdatedDateTime;
+    private OffsetDateTime lastUpdatedDateTime;
     /** Number of successful updates on the device */
-    private Integer _successfulUpdateCount;
+    private Integer successfulUpdateCount;
     /** Number of total updates on the device */
-    private Integer _totalUpdateCount;
+    private Integer totalUpdateCount;
     /** MacOS Software Update Category */
-    private MacOSSoftwareUpdateCategory _updateCategory;
+    private MacOSSoftwareUpdateCategory updateCategory;
     /** Summary of the update states. */
-    private java.util.List<MacOSSoftwareUpdateStateSummary> _updateStateSummaries;
+    private java.util.List<MacOSSoftwareUpdateStateSummary> updateStateSummaries;
     /** The user ID. */
-    private String _userId;
+    private String userId;
     /**
      * Instantiates a new macOSSoftwareUpdateCategorySummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MacOSSoftwareUpdateCategorySummary() {
         super();
-        this.setOdataType("#microsoft.graph.macOSSoftwareUpdateCategorySummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +53,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public String getDeviceId() {
-        return this._deviceId;
+        return this.deviceId;
     }
     /**
      * Gets the displayName property value. The name of the report
@@ -60,7 +61,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the failedUpdateCount property value. Number of failed updates on the device
@@ -68,26 +69,25 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public Integer getFailedUpdateCount() {
-        return this._failedUpdateCount;
+        return this.failedUpdateCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MacOSSoftwareUpdateCategorySummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deviceId", (n) -> { currentObject.setDeviceId(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("failedUpdateCount", (n) -> { currentObject.setFailedUpdateCount(n.getIntegerValue()); });
-            this.put("lastUpdatedDateTime", (n) -> { currentObject.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("successfulUpdateCount", (n) -> { currentObject.setSuccessfulUpdateCount(n.getIntegerValue()); });
-            this.put("totalUpdateCount", (n) -> { currentObject.setTotalUpdateCount(n.getIntegerValue()); });
-            this.put("updateCategory", (n) -> { currentObject.setUpdateCategory(n.getEnumValue(MacOSSoftwareUpdateCategory.class)); });
-            this.put("updateStateSummaries", (n) -> { currentObject.setUpdateStateSummaries(n.getCollectionOfObjectValues(MacOSSoftwareUpdateStateSummary::createFromDiscriminatorValue)); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("failedUpdateCount", (n) -> { this.setFailedUpdateCount(n.getIntegerValue()); });
+        deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("successfulUpdateCount", (n) -> { this.setSuccessfulUpdateCount(n.getIntegerValue()); });
+        deserializerMap.put("totalUpdateCount", (n) -> { this.setTotalUpdateCount(n.getIntegerValue()); });
+        deserializerMap.put("updateCategory", (n) -> { this.setUpdateCategory(n.getEnumValue(MacOSSoftwareUpdateCategory.class)); });
+        deserializerMap.put("updateStateSummaries", (n) -> { this.setUpdateStateSummaries(n.getCollectionOfObjectValues(MacOSSoftwareUpdateStateSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastUpdatedDateTime property value. Last date time the report for this device was updated.
@@ -95,7 +95,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastUpdatedDateTime() {
-        return this._lastUpdatedDateTime;
+        return this.lastUpdatedDateTime;
     }
     /**
      * Gets the successfulUpdateCount property value. Number of successful updates on the device
@@ -103,7 +103,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public Integer getSuccessfulUpdateCount() {
-        return this._successfulUpdateCount;
+        return this.successfulUpdateCount;
     }
     /**
      * Gets the totalUpdateCount property value. Number of total updates on the device
@@ -111,7 +111,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public Integer getTotalUpdateCount() {
-        return this._totalUpdateCount;
+        return this.totalUpdateCount;
     }
     /**
      * Gets the updateCategory property value. MacOS Software Update Category
@@ -119,7 +119,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public MacOSSoftwareUpdateCategory getUpdateCategory() {
-        return this._updateCategory;
+        return this.updateCategory;
     }
     /**
      * Gets the updateStateSummaries property value. Summary of the update states.
@@ -127,7 +127,7 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public java.util.List<MacOSSoftwareUpdateStateSummary> getUpdateStateSummaries() {
-        return this._updateStateSummaries;
+        return this.updateStateSummaries;
     }
     /**
      * Gets the userId property value. The user ID.
@@ -135,13 +135,14 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -160,71 +161,80 @@ public class MacOSSoftwareUpdateCategorySummary extends Entity implements Parsab
      * @param value Value to set for the deviceId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceId(@javax.annotation.Nullable final String value) {
-        this._deviceId = value;
+        this.deviceId = value;
     }
     /**
      * Sets the displayName property value. The name of the report
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the failedUpdateCount property value. Number of failed updates on the device
      * @param value Value to set for the failedUpdateCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFailedUpdateCount(@javax.annotation.Nullable final Integer value) {
-        this._failedUpdateCount = value;
+        this.failedUpdateCount = value;
     }
     /**
      * Sets the lastUpdatedDateTime property value. Last date time the report for this device was updated.
      * @param value Value to set for the lastUpdatedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastUpdatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastUpdatedDateTime = value;
+        this.lastUpdatedDateTime = value;
     }
     /**
      * Sets the successfulUpdateCount property value. Number of successful updates on the device
      * @param value Value to set for the successfulUpdateCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSuccessfulUpdateCount(@javax.annotation.Nullable final Integer value) {
-        this._successfulUpdateCount = value;
+        this.successfulUpdateCount = value;
     }
     /**
      * Sets the totalUpdateCount property value. Number of total updates on the device
      * @param value Value to set for the totalUpdateCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalUpdateCount(@javax.annotation.Nullable final Integer value) {
-        this._totalUpdateCount = value;
+        this.totalUpdateCount = value;
     }
     /**
      * Sets the updateCategory property value. MacOS Software Update Category
      * @param value Value to set for the updateCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateCategory(@javax.annotation.Nullable final MacOSSoftwareUpdateCategory value) {
-        this._updateCategory = value;
+        this.updateCategory = value;
     }
     /**
      * Sets the updateStateSummaries property value. Summary of the update states.
      * @param value Value to set for the updateStateSummaries property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUpdateStateSummaries(@javax.annotation.Nullable final java.util.List<MacOSSoftwareUpdateStateSummary> value) {
-        this._updateStateSummaries = value;
+        this.updateStateSummaries = value;
     }
     /**
      * Sets the userId property value. The user ID.
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }
