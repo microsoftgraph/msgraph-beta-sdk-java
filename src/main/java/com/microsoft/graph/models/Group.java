@@ -13,6 +13,7 @@ import com.microsoft.graph.models.AssignedLabel;
 import com.microsoft.graph.models.AssignedLicense;
 import com.microsoft.graph.models.LicenseProcessingState;
 import com.microsoft.graph.models.OnPremisesProvisioningError;
+import com.microsoft.graph.models.ServiceProvisioningError;
 import com.microsoft.graph.models.GroupWritebackConfiguration;
 import com.microsoft.graph.models.GroupAccessType;
 import com.microsoft.graph.models.MembershipRuleProcessingStatus;
@@ -362,6 +363,15 @@ public class Group extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String securityIdentifier;
+
+    /**
+     * The Service Provisioning Errors.
+     * 
+     */
+    @SerializedName(value = "serviceProvisioningErrors", alternate = {"ServiceProvisioningErrors"})
+    @Expose
+	@Nullable
+    public java.util.List<ServiceProvisioningError> serviceProvisioningErrors;
 
     /**
      * The Theme.

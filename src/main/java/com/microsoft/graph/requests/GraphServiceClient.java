@@ -2133,16 +2133,6 @@ public class GraphServiceClient<nativeRequestType> extends BaseClient<nativeRequ
     /**
      * Gets the GraphServiceRequestBuilder
      *
-     * @return the Storage
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.StorageRequestBuilder storage() {
-        return new com.microsoft.graph.requests.StorageRequestBuilder(getServiceRoot() + "/storage", this, null);
-    }
-
-    /**
-     * Gets the GraphServiceRequestBuilder
-     *
      * @return the EmployeeExperience
      */
     @Nonnull

@@ -40,7 +40,7 @@ public class PstnBlockedUsersLogRow implements IJsonBackedObject {
 
     /**
      * The Block Date Time.
-     * 
+     * The date and time when the user was blocked/unblocked from making PSTN calls. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      */
     @SerializedName(value = "blockDateTime", alternate = {"BlockDateTime"})
     @Expose
@@ -49,7 +49,7 @@ public class PstnBlockedUsersLogRow implements IJsonBackedObject {
 
     /**
      * The Block Reason.
-     * 
+     * The reason why the user is blocked/unblocked from making calls.
      */
     @SerializedName(value = "blockReason", alternate = {"BlockReason"})
     @Expose
@@ -58,7 +58,7 @@ public class PstnBlockedUsersLogRow implements IJsonBackedObject {
 
     /**
      * The Remediation Id.
-     * 
+     * Unique identifier (GUID) for the blocking/unblocking action.
      */
     @SerializedName(value = "remediationId", alternate = {"RemediationId"})
     @Expose
@@ -67,7 +67,7 @@ public class PstnBlockedUsersLogRow implements IJsonBackedObject {
 
     /**
      * The User Block Mode.
-     * 
+     * Indicates whether the user is blocked or unblocked from making PSTN calls in Microsoft Teams. The possible values are: blocked, unblocked, unknownFutureValue.
      */
     @SerializedName(value = "userBlockMode", alternate = {"UserBlockMode"})
     @Expose
@@ -76,7 +76,7 @@ public class PstnBlockedUsersLogRow implements IJsonBackedObject {
 
     /**
      * The User Display Name.
-     * 
+     * Display name of the user.
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
@@ -85,7 +85,7 @@ public class PstnBlockedUsersLogRow implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * 
+     * The unique identifier (GUID) of the user in Azure Active Directory.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -94,7 +94,7 @@ public class PstnBlockedUsersLogRow implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose
@@ -103,7 +103,7 @@ public class PstnBlockedUsersLogRow implements IJsonBackedObject {
 
     /**
      * The User Telephone Number.
-     * 
+     * User's blocked number. For details, see E.164.
      */
     @SerializedName(value = "userTelephoneNumber", alternate = {"UserTelephoneNumber"})
     @Expose

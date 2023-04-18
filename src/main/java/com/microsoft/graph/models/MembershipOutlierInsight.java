@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.models.OutlierContainerType;
 import com.microsoft.graph.models.OutlierMemberType;
 import com.microsoft.graph.models.DirectoryObject;
+import com.microsoft.graph.models.User;
 import com.microsoft.graph.models.GovernanceInsight;
 
 
@@ -72,6 +73,17 @@ public class MembershipOutlierInsight extends GovernanceInsight implements IJson
     @Expose
 	@Nullable
     public DirectoryObject container;
+
+    /**
+     * The Last Modified By.
+     * 
+     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
+     */
+    @Deprecated
+    @SerializedName(value = "lastModifiedBy", alternate = {"LastModifiedBy"})
+    @Expose
+	@Nullable
+    public User lastModifiedBy;
 
     /**
      * The Member.

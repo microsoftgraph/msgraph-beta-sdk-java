@@ -1570,6 +1570,17 @@ public class UserRequestBuilder extends BaseRequestBuilder<User> {
      */
     @Deprecated
     @Nonnull
+    public UserRetryServiceProvisioningRequestBuilder retryServiceProvisioning() {
+        return new UserRetryServiceProvisioningRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.retryServiceProvisioning"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @deprecated The Graph Notification API is deprecated and will stop returning data on March 20, 2023.
+     */
+    @Deprecated
+    @Nonnull
     public UserRevokeSignInSessionsRequestBuilder revokeSignInSessions() {
         return new UserRevokeSignInSessionsRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.revokeSignInSessions"), getClient(), null);
     }

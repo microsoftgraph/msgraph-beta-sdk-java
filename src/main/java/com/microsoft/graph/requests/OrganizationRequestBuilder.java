@@ -91,6 +91,16 @@ public class OrganizationRequestBuilder extends BaseRequestBuilder<Organization>
     public com.microsoft.graph.requests.CertificateBasedAuthConfigurationWithReferenceRequestBuilder certificateBasedAuthConfiguration(@Nonnull final String id) {
         return new com.microsoft.graph.requests.CertificateBasedAuthConfigurationWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("certificateBasedAuthConfiguration") + "/" + id, getClient(), null);
     }
+
+    /**
+     * Gets the request builder for PartnerInformation
+     *
+     * @return the PartnerInformationRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.PartnerInformationRequestBuilder partnerInformation() {
+        return new com.microsoft.graph.requests.PartnerInformationRequestBuilder(getRequestUrlWithAdditionalSegment("partnerInformation"), getClient(), null);
+    }
     /**
      *  Gets a request builder for the Extension collection
      *

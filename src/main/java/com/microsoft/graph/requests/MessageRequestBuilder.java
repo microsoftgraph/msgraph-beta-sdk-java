@@ -21,6 +21,8 @@ import com.microsoft.graph.models.MessageMoveParameterSet;
 import com.microsoft.graph.models.MessageCreateForwardParameterSet;
 import com.microsoft.graph.models.MessageCreateReplyParameterSet;
 import com.microsoft.graph.models.MessageCreateReplyAllParameterSet;
+import com.microsoft.graph.models.MessageMarkAsJunkParameterSet;
+import com.microsoft.graph.models.MessageMarkAsNotJunkParameterSet;
 import com.microsoft.graph.models.MessageReplyParameterSet;
 import com.microsoft.graph.models.MessageReplyAllParameterSet;
 
@@ -233,6 +235,26 @@ public class MessageRequestBuilder extends BaseRequestBuilder<Message> {
     @Nonnull
     public MessageCreateReplyAllRequestBuilder createReplyAll(@Nonnull final MessageCreateReplyAllParameterSet parameters) {
         return new MessageCreateReplyAllRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.createReplyAll"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public MessageMarkAsJunkRequestBuilder markAsJunk(@Nonnull final MessageMarkAsJunkParameterSet parameters) {
+        return new MessageMarkAsJunkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.markAsJunk"), getClient(), null, parameters);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     * @param parameters the parameters for the service method
+     */
+    @Nonnull
+    public MessageMarkAsNotJunkRequestBuilder markAsNotJunk(@Nonnull final MessageMarkAsNotJunkParameterSet parameters) {
+        return new MessageMarkAsNotJunkRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.markAsNotJunk"), getClient(), null, parameters);
     }
 
     /**

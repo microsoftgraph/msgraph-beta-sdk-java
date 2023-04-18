@@ -39,7 +39,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The Call Charge.
-     * 
+     * Amount of money or cost of the SMS that is charged.
      */
     @SerializedName(value = "callCharge", alternate = {"CallCharge"})
     @Expose
@@ -48,7 +48,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The Currency.
-     * 
+     * Currency used to calculate the cost of the call. For details, see ISO 4217.
      */
     @SerializedName(value = "currency", alternate = {"Currency"})
     @Expose
@@ -57,7 +57,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The Destination Context.
-     * 
+     * Indicates whether the SMS was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
      */
     @SerializedName(value = "destinationContext", alternate = {"DestinationContext"})
     @Expose
@@ -66,7 +66,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The Destination Name.
-     * 
+     * Country or region of a phone number that received the SMS.
      */
     @SerializedName(value = "destinationName", alternate = {"DestinationName"})
     @Expose
@@ -75,7 +75,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The Destination Number.
-     * 
+     * Partially obfuscated phone number that received the SMS. For details, see E.164.
      */
     @SerializedName(value = "destinationNumber", alternate = {"DestinationNumber"})
     @Expose
@@ -84,7 +84,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The Id.
-     * 
+     * Unique identifier (GUID) for the SMS.
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -93,7 +93,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The License Capability.
-     * 
+     * The license used for the SMS.
      */
     @SerializedName(value = "licenseCapability", alternate = {"LicenseCapability"})
     @Expose
@@ -102,7 +102,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The Other Party Country Code.
-     * 
+     * For an outbound SMS, the country code of the receiver; otherwise (inbound SMS) the country code of the sender. For details, see ISO 3166-1 alpha-2.
      */
     @SerializedName(value = "otherPartyCountryCode", alternate = {"OtherPartyCountryCode"})
     @Expose
@@ -111,7 +111,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The Sent Date Time.
-     * 
+     * The date and time when the SMS was sent.
      */
     @SerializedName(value = "sentDateTime", alternate = {"SentDateTime"})
     @Expose
@@ -120,7 +120,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The Sms Id.
-     * 
+     * SMS identifier. Not guaranteed to be unique.
      */
     @SerializedName(value = "smsId", alternate = {"SmsId"})
     @Expose
@@ -129,7 +129,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The Sms Type.
-     * 
+     * Type of SMS such as outbound or inbound.
      */
     @SerializedName(value = "smsType", alternate = {"SmsType"})
     @Expose
@@ -138,7 +138,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The Sms Units.
-     * 
+     * Number of SMS units sent/received.
      */
     @SerializedName(value = "smsUnits", alternate = {"SmsUnits"})
     @Expose
@@ -147,7 +147,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The Source Number.
-     * 
+     * Partially obfuscated phone number that sent the SMS. For details, see E.164.
      */
     @SerializedName(value = "sourceNumber", alternate = {"SourceNumber"})
     @Expose
@@ -156,7 +156,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The Tenant Country Code.
-     * 
+     * Country code of the tenant. For details, see ISO 3166-1 alpha-2.
      */
     @SerializedName(value = "tenantCountryCode", alternate = {"TenantCountryCode"})
     @Expose
@@ -165,7 +165,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The User Country Code.
-     * 
+     * Country code of the user. For details, see ISO 3166-1 alpha-2.
      */
     @SerializedName(value = "userCountryCode", alternate = {"UserCountryCode"})
     @Expose
@@ -174,7 +174,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The User Display Name.
-     * 
+     * Display name of the user.
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
@@ -183,7 +183,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * 
+     * The unique identifier (GUID) of the user in Azure Active Directory.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -192,7 +192,7 @@ public class SmsLogRow implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

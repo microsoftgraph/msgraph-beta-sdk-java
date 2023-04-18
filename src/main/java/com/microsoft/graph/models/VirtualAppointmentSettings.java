@@ -20,7 +20,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Virtual Appointment Settings.
+ * @deprecated The Virtual appointment resource is deprecated and will stop returning data on May 31, 2023. Existing apps that use this feature should be updated to the new getVirtualAppointmentJoinWebUrl API.
  */
+@Deprecated
 public class VirtualAppointmentSettings implements IJsonBackedObject {
 
     /** the OData type of the object as returned by the service */

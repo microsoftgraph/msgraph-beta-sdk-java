@@ -148,7 +148,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
 
     /**
      * The Open Shift Change Requests.
-     * 
+     * The open shift requests in the schedule.
      */
     @SerializedName(value = "openShiftChangeRequests", alternate = {"OpenShiftChangeRequests"})
     @Expose
@@ -157,7 +157,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
 
     /**
      * The Open Shifts.
-     * 
+     * The set of open shifts in a scheduling group in the schedule.
      */
     @SerializedName(value = "openShifts", alternate = {"OpenShifts"})
     @Expose
@@ -184,7 +184,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
 
     /**
      * The Swap Shifts Change Requests.
-     * 
+     * The swap requests for shifts in the schedule.
      */
     @SerializedName(value = "swapShiftsChangeRequests", alternate = {"SwapShiftsChangeRequests"})
     @Expose
@@ -211,7 +211,7 @@ public class Schedule extends Entity implements IJsonBackedObject {
 
     /**
      * The Time Off Requests.
-     * 
+     * The time off requests in the schedule.
      */
     @SerializedName(value = "timeOffRequests", alternate = {"TimeOffRequests"})
     @Expose

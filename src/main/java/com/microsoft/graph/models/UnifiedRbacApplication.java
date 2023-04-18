@@ -30,7 +30,7 @@ public class UnifiedRbacApplication extends Entity implements IJsonBackedObject 
 
     /**
      * The Resource Namespaces.
-     * 
+     * Resource that represents a collection of related actions.
      */
     @SerializedName(value = "resourceNamespaces", alternate = {"ResourceNamespaces"})
     @Expose
@@ -39,7 +39,7 @@ public class UnifiedRbacApplication extends Entity implements IJsonBackedObject 
 
     /**
      * The Role Assignments.
-     * 
+     * Resource to grant access to users or groups.
      */
     @SerializedName(value = "roleAssignments", alternate = {"RoleAssignments"})
     @Expose
@@ -48,7 +48,7 @@ public class UnifiedRbacApplication extends Entity implements IJsonBackedObject 
 
     /**
      * The Role Definitions.
-     * 
+     * The roles allowed by RBAC providers and the permissions assigned to the roles.
      */
     @SerializedName(value = "roleDefinitions", alternate = {"RoleDefinitions"})
     @Expose
@@ -57,7 +57,7 @@ public class UnifiedRbacApplication extends Entity implements IJsonBackedObject 
 
     /**
      * The Transitive Role Assignments.
-     * 
+     * Resource to grant access to users or groups that are transitive.
      */
     @SerializedName(value = "transitiveRoleAssignments", alternate = {"TransitiveRoleAssignments"})
     @Expose
