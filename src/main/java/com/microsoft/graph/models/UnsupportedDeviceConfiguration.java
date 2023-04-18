@@ -3,19 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UnsupportedDeviceConfiguration extends DeviceConfiguration implements Parsable {
     /** Details describing why the entity is unsupported. This collection can contain a maximum of 1000 elements. */
-    private java.util.List<UnsupportedDeviceConfigurationDetail> _details;
+    private java.util.List<UnsupportedDeviceConfigurationDetail> details;
     /** The type of entity that would be returned otherwise. */
-    private String _originalEntityTypeName;
+    private String originalEntityTypeName;
     /**
      * Instantiates a new UnsupportedDeviceConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UnsupportedDeviceConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.unsupportedDeviceConfiguration");
@@ -36,19 +36,18 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
      */
     @javax.annotation.Nullable
     public java.util.List<UnsupportedDeviceConfigurationDetail> getDetails() {
-        return this._details;
+        return this.details;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UnsupportedDeviceConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("details", (n) -> { currentObject.setDetails(n.getCollectionOfObjectValues(UnsupportedDeviceConfigurationDetail::createFromDiscriminatorValue)); });
-            this.put("originalEntityTypeName", (n) -> { currentObject.setOriginalEntityTypeName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("details", (n) -> { this.setDetails(n.getCollectionOfObjectValues(UnsupportedDeviceConfigurationDetail::createFromDiscriminatorValue)); });
+        deserializerMap.put("originalEntityTypeName", (n) -> { this.setOriginalEntityTypeName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the originalEntityTypeName property value. The type of entity that would be returned otherwise.
@@ -56,13 +55,14 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
      */
     @javax.annotation.Nullable
     public String getOriginalEntityTypeName() {
-        return this._originalEntityTypeName;
+        return this.originalEntityTypeName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +74,17 @@ public class UnsupportedDeviceConfiguration extends DeviceConfiguration implemen
      * @param value Value to set for the details property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDetails(@javax.annotation.Nullable final java.util.List<UnsupportedDeviceConfigurationDetail> value) {
-        this._details = value;
+        this.details = value;
     }
     /**
      * Sets the originalEntityTypeName property value. The type of entity that would be returned otherwise.
      * @param value Value to set for the originalEntityTypeName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOriginalEntityTypeName(@javax.annotation.Nullable final String value) {
-        this._originalEntityTypeName = value;
+        this.originalEntityTypeName = value;
     }
 }

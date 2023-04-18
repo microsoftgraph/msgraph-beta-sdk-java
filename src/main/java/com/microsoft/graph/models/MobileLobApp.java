@@ -1,36 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AndroidLobApp;
-import com.microsoft.graph.models.IosLobApp;
-import com.microsoft.graph.models.MacOSDmgApp;
-import com.microsoft.graph.models.MacOSLobApp;
-import com.microsoft.graph.models.Win32LobApp;
-import com.microsoft.graph.models.WindowsAppX;
-import com.microsoft.graph.models.WindowsMobileMSI;
-import com.microsoft.graph.models.WindowsPhone81AppX;
-import com.microsoft.graph.models.WindowsPhone81AppXBundle;
-import com.microsoft.graph.models.WindowsPhoneXAP;
-import com.microsoft.graph.models.WindowsUniversalAppX;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MobileLobApp extends MobileApp implements Parsable {
     /** The internal committed content version. */
-    private String _committedContentVersion;
+    private String committedContentVersion;
     /** The list of content versions for this app. */
-    private java.util.List<MobileAppContent> _contentVersions;
+    private java.util.List<MobileAppContent> contentVersions;
     /** The name of the main Lob application file. */
-    private String _fileName;
+    private String fileName;
     /** The total size, including all uploaded files. */
-    private Long _size;
+    private Long size;
     /**
      * Instantiates a new MobileLobApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MobileLobApp() {
         super();
         this.setOdataType("#microsoft.graph.mobileLobApp");
@@ -68,7 +57,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCommittedContentVersion() {
-        return this._committedContentVersion;
+        return this.committedContentVersion;
     }
     /**
      * Gets the contentVersions property value. The list of content versions for this app.
@@ -76,21 +65,20 @@ public class MobileLobApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MobileAppContent> getContentVersions() {
-        return this._contentVersions;
+        return this.contentVersions;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MobileLobApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("committedContentVersion", (n) -> { currentObject.setCommittedContentVersion(n.getStringValue()); });
-            this.put("contentVersions", (n) -> { currentObject.setContentVersions(n.getCollectionOfObjectValues(MobileAppContent::createFromDiscriminatorValue)); });
-            this.put("fileName", (n) -> { currentObject.setFileName(n.getStringValue()); });
-            this.put("size", (n) -> { currentObject.setSize(n.getLongValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("committedContentVersion", (n) -> { this.setCommittedContentVersion(n.getStringValue()); });
+        deserializerMap.put("contentVersions", (n) -> { this.setContentVersions(n.getCollectionOfObjectValues(MobileAppContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("fileName", (n) -> { this.setFileName(n.getStringValue()); });
+        deserializerMap.put("size", (n) -> { this.setSize(n.getLongValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the fileName property value. The name of the main Lob application file.
@@ -98,7 +86,7 @@ public class MobileLobApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getFileName() {
-        return this._fileName;
+        return this.fileName;
     }
     /**
      * Gets the size property value. The total size, including all uploaded files.
@@ -106,13 +94,14 @@ public class MobileLobApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Long getSize() {
-        return this._size;
+        return this.size;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -126,31 +115,35 @@ public class MobileLobApp extends MobileApp implements Parsable {
      * @param value Value to set for the committedContentVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCommittedContentVersion(@javax.annotation.Nullable final String value) {
-        this._committedContentVersion = value;
+        this.committedContentVersion = value;
     }
     /**
      * Sets the contentVersions property value. The list of content versions for this app.
      * @param value Value to set for the contentVersions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentVersions(@javax.annotation.Nullable final java.util.List<MobileAppContent> value) {
-        this._contentVersions = value;
+        this.contentVersions = value;
     }
     /**
      * Sets the fileName property value. The name of the main Lob application file.
      * @param value Value to set for the fileName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFileName(@javax.annotation.Nullable final String value) {
-        this._fileName = value;
+        this.fileName = value;
     }
     /**
      * Sets the size property value. The total size, including all uploaded files.
      * @param value Value to set for the size property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSize(@javax.annotation.Nullable final Long value) {
-        this._size = value;
+        this.size = value;
     }
 }

@@ -5,26 +5,25 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the updateRequest method. */
 public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The assignmentState property */
-    private String _assignmentState;
+    private String assignmentState;
     /** The decision property */
-    private String _decision;
+    private String decision;
     /** The reason property */
-    private String _reason;
+    private String reason;
     /** The schedule property */
-    private GovernanceSchedule _schedule;
+    private GovernanceSchedule schedule;
     /**
      * Instantiates a new updateRequestPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UpdateRequestPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -44,7 +43,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the assignmentState property value. The assignmentState property
@@ -52,7 +51,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getAssignmentState() {
-        return this._assignmentState;
+        return this.assignmentState;
     }
     /**
      * Gets the decision property value. The decision property
@@ -60,21 +59,20 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getDecision() {
-        return this._decision;
+        return this.decision;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UpdateRequestPostRequestBody currentObject = this;
-        return new HashMap<>(4) {{
-            this.put("assignmentState", (n) -> { currentObject.setAssignmentState(n.getStringValue()); });
-            this.put("decision", (n) -> { currentObject.setDecision(n.getStringValue()); });
-            this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
-            this.put("schedule", (n) -> { currentObject.setSchedule(n.getObjectValue(GovernanceSchedule::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("assignmentState", (n) -> { this.setAssignmentState(n.getStringValue()); });
+        deserializerMap.put("decision", (n) -> { this.setDecision(n.getStringValue()); });
+        deserializerMap.put("reason", (n) -> { this.setReason(n.getStringValue()); });
+        deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(GovernanceSchedule::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the reason property value. The reason property
@@ -82,7 +80,7 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public String getReason() {
-        return this._reason;
+        return this.reason;
     }
     /**
      * Gets the schedule property value. The schedule property
@@ -90,13 +88,14 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      */
     @javax.annotation.Nullable
     public GovernanceSchedule getSchedule() {
-        return this._schedule;
+        return this.schedule;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("assignmentState", this.getAssignmentState());
@@ -110,39 +109,44 @@ public class UpdateRequestPostRequestBody implements AdditionalDataHolder, Parsa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the assignmentState property value. The assignmentState property
      * @param value Value to set for the assignmentState property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssignmentState(@javax.annotation.Nullable final String value) {
-        this._assignmentState = value;
+        this.assignmentState = value;
     }
     /**
      * Sets the decision property value. The decision property
      * @param value Value to set for the decision property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecision(@javax.annotation.Nullable final String value) {
-        this._decision = value;
+        this.decision = value;
     }
     /**
      * Sets the reason property value. The reason property
      * @param value Value to set for the reason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReason(@javax.annotation.Nullable final String value) {
-        this._reason = value;
+        this.reason = value;
     }
     /**
      * Sets the schedule property value. The schedule property
      * @param value Value to set for the schedule property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSchedule(@javax.annotation.Nullable final GovernanceSchedule value) {
-        this._schedule = value;
+        this.schedule = value;
     }
 }

@@ -5,59 +5,58 @@ import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Employee extends Entity implements Parsable {
     /** The address property */
-    private PostalAddressType _address;
+    private PostalAddressType address;
     /** The birthDate property */
-    private LocalDate _birthDate;
+    private LocalDate birthDate;
     /** The displayName property */
-    private String _displayName;
+    private String displayName;
     /** The email property */
-    private String _email;
+    private String email;
     /** The employmentDate property */
-    private LocalDate _employmentDate;
+    private LocalDate employmentDate;
     /** The givenName property */
-    private String _givenName;
+    private String givenName;
     /** The jobTitle property */
-    private String _jobTitle;
+    private String jobTitle;
     /** The lastModifiedDateTime property */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The middleName property */
-    private String _middleName;
+    private String middleName;
     /** The mobilePhone property */
-    private String _mobilePhone;
+    private String mobilePhone;
     /** The number property */
-    private String _number;
+    private String number;
     /** The personalEmail property */
-    private String _personalEmail;
+    private String personalEmail;
     /** The phoneNumber property */
-    private String _phoneNumber;
+    private String phoneNumber;
     /** The picture property */
-    private java.util.List<Picture> _picture;
+    private java.util.List<Picture> picture;
     /** The statisticsGroupCode property */
-    private String _statisticsGroupCode;
+    private String statisticsGroupCode;
     /** The status property */
-    private String _status;
+    private String status;
     /** The surname property */
-    private String _surname;
+    private String surname;
     /** The terminationDate property */
-    private LocalDate _terminationDate;
+    private LocalDate terminationDate;
     /**
-     * Instantiates a new Employee and sets the default values.
+     * Instantiates a new employee and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Employee() {
         super();
-        this.setOdataType("#microsoft.graph.employee");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a Employee
+     * @return a employee
      */
     @javax.annotation.Nonnull
     public static Employee createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -70,7 +69,7 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PostalAddressType getAddress() {
-        return this._address;
+        return this.address;
     }
     /**
      * Gets the birthDate property value. The birthDate property
@@ -78,7 +77,7 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getBirthDate() {
-        return this._birthDate;
+        return this.birthDate;
     }
     /**
      * Gets the displayName property value. The displayName property
@@ -86,7 +85,7 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the email property value. The email property
@@ -94,7 +93,7 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEmail() {
-        return this._email;
+        return this.email;
     }
     /**
      * Gets the employmentDate property value. The employmentDate property
@@ -102,35 +101,34 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getEmploymentDate() {
-        return this._employmentDate;
+        return this.employmentDate;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Employee currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("address", (n) -> { currentObject.setAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
-            this.put("birthDate", (n) -> { currentObject.setBirthDate(n.getLocalDateValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("employmentDate", (n) -> { currentObject.setEmploymentDate(n.getLocalDateValue()); });
-            this.put("givenName", (n) -> { currentObject.setGivenName(n.getStringValue()); });
-            this.put("jobTitle", (n) -> { currentObject.setJobTitle(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("middleName", (n) -> { currentObject.setMiddleName(n.getStringValue()); });
-            this.put("mobilePhone", (n) -> { currentObject.setMobilePhone(n.getStringValue()); });
-            this.put("number", (n) -> { currentObject.setNumber(n.getStringValue()); });
-            this.put("personalEmail", (n) -> { currentObject.setPersonalEmail(n.getStringValue()); });
-            this.put("phoneNumber", (n) -> { currentObject.setPhoneNumber(n.getStringValue()); });
-            this.put("picture", (n) -> { currentObject.setPicture(n.getCollectionOfObjectValues(Picture::createFromDiscriminatorValue)); });
-            this.put("statisticsGroupCode", (n) -> { currentObject.setStatisticsGroupCode(n.getStringValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getStringValue()); });
-            this.put("surname", (n) -> { currentObject.setSurname(n.getStringValue()); });
-            this.put("terminationDate", (n) -> { currentObject.setTerminationDate(n.getLocalDateValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PostalAddressType::createFromDiscriminatorValue)); });
+        deserializerMap.put("birthDate", (n) -> { this.setBirthDate(n.getLocalDateValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("employmentDate", (n) -> { this.setEmploymentDate(n.getLocalDateValue()); });
+        deserializerMap.put("givenName", (n) -> { this.setGivenName(n.getStringValue()); });
+        deserializerMap.put("jobTitle", (n) -> { this.setJobTitle(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("middleName", (n) -> { this.setMiddleName(n.getStringValue()); });
+        deserializerMap.put("mobilePhone", (n) -> { this.setMobilePhone(n.getStringValue()); });
+        deserializerMap.put("number", (n) -> { this.setNumber(n.getStringValue()); });
+        deserializerMap.put("personalEmail", (n) -> { this.setPersonalEmail(n.getStringValue()); });
+        deserializerMap.put("phoneNumber", (n) -> { this.setPhoneNumber(n.getStringValue()); });
+        deserializerMap.put("picture", (n) -> { this.setPicture(n.getCollectionOfObjectValues(Picture::createFromDiscriminatorValue)); });
+        deserializerMap.put("statisticsGroupCode", (n) -> { this.setStatisticsGroupCode(n.getStringValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
+        deserializerMap.put("surname", (n) -> { this.setSurname(n.getStringValue()); });
+        deserializerMap.put("terminationDate", (n) -> { this.setTerminationDate(n.getLocalDateValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the givenName property value. The givenName property
@@ -138,7 +136,7 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getGivenName() {
-        return this._givenName;
+        return this.givenName;
     }
     /**
      * Gets the jobTitle property value. The jobTitle property
@@ -146,7 +144,7 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getJobTitle() {
-        return this._jobTitle;
+        return this.jobTitle;
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -154,7 +152,7 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the middleName property value. The middleName property
@@ -162,7 +160,7 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMiddleName() {
-        return this._middleName;
+        return this.middleName;
     }
     /**
      * Gets the mobilePhone property value. The mobilePhone property
@@ -170,7 +168,7 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getMobilePhone() {
-        return this._mobilePhone;
+        return this.mobilePhone;
     }
     /**
      * Gets the number property value. The number property
@@ -178,7 +176,7 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getNumber() {
-        return this._number;
+        return this.number;
     }
     /**
      * Gets the personalEmail property value. The personalEmail property
@@ -186,7 +184,7 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPersonalEmail() {
-        return this._personalEmail;
+        return this.personalEmail;
     }
     /**
      * Gets the phoneNumber property value. The phoneNumber property
@@ -194,7 +192,7 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPhoneNumber() {
-        return this._phoneNumber;
+        return this.phoneNumber;
     }
     /**
      * Gets the picture property value. The picture property
@@ -202,7 +200,7 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Picture> getPicture() {
-        return this._picture;
+        return this.picture;
     }
     /**
      * Gets the statisticsGroupCode property value. The statisticsGroupCode property
@@ -210,7 +208,7 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStatisticsGroupCode() {
-        return this._statisticsGroupCode;
+        return this.statisticsGroupCode;
     }
     /**
      * Gets the status property value. The status property
@@ -218,7 +216,7 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the surname property value. The surname property
@@ -226,7 +224,7 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSurname() {
-        return this._surname;
+        return this.surname;
     }
     /**
      * Gets the terminationDate property value. The terminationDate property
@@ -234,13 +232,14 @@ public class Employee extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public LocalDate getTerminationDate() {
-        return this._terminationDate;
+        return this.terminationDate;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -268,143 +267,161 @@ public class Employee extends Entity implements Parsable {
      * @param value Value to set for the address property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAddress(@javax.annotation.Nullable final PostalAddressType value) {
-        this._address = value;
+        this.address = value;
     }
     /**
      * Sets the birthDate property value. The birthDate property
      * @param value Value to set for the birthDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBirthDate(@javax.annotation.Nullable final LocalDate value) {
-        this._birthDate = value;
+        this.birthDate = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the email property value. The email property
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
-        this._email = value;
+        this.email = value;
     }
     /**
      * Sets the employmentDate property value. The employmentDate property
      * @param value Value to set for the employmentDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmploymentDate(@javax.annotation.Nullable final LocalDate value) {
-        this._employmentDate = value;
+        this.employmentDate = value;
     }
     /**
      * Sets the givenName property value. The givenName property
      * @param value Value to set for the givenName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGivenName(@javax.annotation.Nullable final String value) {
-        this._givenName = value;
+        this.givenName = value;
     }
     /**
      * Sets the jobTitle property value. The jobTitle property
      * @param value Value to set for the jobTitle property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJobTitle(@javax.annotation.Nullable final String value) {
-        this._jobTitle = value;
+        this.jobTitle = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the middleName property value. The middleName property
      * @param value Value to set for the middleName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMiddleName(@javax.annotation.Nullable final String value) {
-        this._middleName = value;
+        this.middleName = value;
     }
     /**
      * Sets the mobilePhone property value. The mobilePhone property
      * @param value Value to set for the mobilePhone property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMobilePhone(@javax.annotation.Nullable final String value) {
-        this._mobilePhone = value;
+        this.mobilePhone = value;
     }
     /**
      * Sets the number property value. The number property
      * @param value Value to set for the number property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumber(@javax.annotation.Nullable final String value) {
-        this._number = value;
+        this.number = value;
     }
     /**
      * Sets the personalEmail property value. The personalEmail property
      * @param value Value to set for the personalEmail property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersonalEmail(@javax.annotation.Nullable final String value) {
-        this._personalEmail = value;
+        this.personalEmail = value;
     }
     /**
      * Sets the phoneNumber property value. The phoneNumber property
      * @param value Value to set for the phoneNumber property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPhoneNumber(@javax.annotation.Nullable final String value) {
-        this._phoneNumber = value;
+        this.phoneNumber = value;
     }
     /**
      * Sets the picture property value. The picture property
      * @param value Value to set for the picture property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPicture(@javax.annotation.Nullable final java.util.List<Picture> value) {
-        this._picture = value;
+        this.picture = value;
     }
     /**
      * Sets the statisticsGroupCode property value. The statisticsGroupCode property
      * @param value Value to set for the statisticsGroupCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatisticsGroupCode(@javax.annotation.Nullable final String value) {
-        this._statisticsGroupCode = value;
+        this.statisticsGroupCode = value;
     }
     /**
      * Sets the status property value. The status property
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final String value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the surname property value. The surname property
      * @param value Value to set for the surname property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSurname(@javax.annotation.Nullable final String value) {
-        this._surname = value;
+        this.surname = value;
     }
     /**
      * Sets the terminationDate property value. The terminationDate property
      * @param value Value to set for the terminationDate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTerminationDate(@javax.annotation.Nullable final LocalDate value) {
-        this._terminationDate = value;
+        this.terminationDate = value;
     }
 }

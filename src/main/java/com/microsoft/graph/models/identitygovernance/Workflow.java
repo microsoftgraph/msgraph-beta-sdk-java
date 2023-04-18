@@ -5,37 +5,33 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Workflow extends WorkflowBase implements Parsable {
-    /** The deletedDateTime property */
-    private OffsetDateTime _deletedDateTime;
-    /** The executionScope property */
-    private java.util.List<User> _executionScope;
-    /** The id property */
-    private String _id;
-    /** The isEnabled property */
-    private Boolean _isEnabled;
-    /** The isSchedulingEnabled property */
-    private Boolean _isSchedulingEnabled;
-    /** The nextScheduleRunDateTime property */
-    private OffsetDateTime _nextScheduleRunDateTime;
-    /** The runs property */
-    private java.util.List<Run> _runs;
-    /** The taskReports property */
-    private java.util.List<TaskReport> _taskReports;
-    /** The userProcessingResults property */
-    private java.util.List<UserProcessingResult> _userProcessingResults;
-    /** The version property */
-    private Integer _version;
-    /** The versions property */
-    private java.util.List<WorkflowVersion> _versions;
+    /** When the workflow was deleted.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby. */
+    private OffsetDateTime deletedDateTime;
+    /** The unique identifier of the Azure AD identity that last modified the workflow object. */
+    private java.util.List<User> executionScope;
+    /** Identifier used for individually addressing a specific workflow.Supports $filter(eq, ne) and $orderby. */
+    private String id;
+    /** The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderBy. */
+    private OffsetDateTime nextScheduleRunDateTime;
+    /** Workflow runs. */
+    private java.util.List<Run> runs;
+    /** Represents the aggregation of task execution data for tasks within a workflow object. */
+    private java.util.List<TaskReport> taskReports;
+    /** Per-user workflow execution results. */
+    private java.util.List<UserProcessingResult> userProcessingResults;
+    /** The current version number of the workflow. Value is 1 when the workflow is first created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby. */
+    private Integer version;
+    /** The workflow versions that are available. */
+    private java.util.List<WorkflowVersion> versions;
     /**
      * Instantiates a new Workflow and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Workflow() {
         super();
         this.setOdataType("#microsoft.graph.identityGovernance.workflow");
@@ -51,127 +47,107 @@ public class Workflow extends WorkflowBase implements Parsable {
         return new Workflow();
     }
     /**
-     * Gets the deletedDateTime property value. The deletedDateTime property
+     * Gets the deletedDateTime property value. When the workflow was deleted.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getDeletedDateTime() {
-        return this._deletedDateTime;
+        return this.deletedDateTime;
     }
     /**
-     * Gets the executionScope property value. The executionScope property
+     * Gets the executionScope property value. The unique identifier of the Azure AD identity that last modified the workflow object.
      * @return a user
      */
     @javax.annotation.Nullable
     public java.util.List<User> getExecutionScope() {
-        return this._executionScope;
+        return this.executionScope;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Workflow currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("deletedDateTime", (n) -> { currentObject.setDeletedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("executionScope", (n) -> { currentObject.setExecutionScope(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
-            this.put("id", (n) -> { currentObject.setId(n.getStringValue()); });
-            this.put("isEnabled", (n) -> { currentObject.setIsEnabled(n.getBooleanValue()); });
-            this.put("isSchedulingEnabled", (n) -> { currentObject.setIsSchedulingEnabled(n.getBooleanValue()); });
-            this.put("nextScheduleRunDateTime", (n) -> { currentObject.setNextScheduleRunDateTime(n.getOffsetDateTimeValue()); });
-            this.put("runs", (n) -> { currentObject.setRuns(n.getCollectionOfObjectValues(Run::createFromDiscriminatorValue)); });
-            this.put("taskReports", (n) -> { currentObject.setTaskReports(n.getCollectionOfObjectValues(TaskReport::createFromDiscriminatorValue)); });
-            this.put("userProcessingResults", (n) -> { currentObject.setUserProcessingResults(n.getCollectionOfObjectValues(UserProcessingResult::createFromDiscriminatorValue)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getIntegerValue()); });
-            this.put("versions", (n) -> { currentObject.setVersions(n.getCollectionOfObjectValues(WorkflowVersion::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deletedDateTime", (n) -> { this.setDeletedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("executionScope", (n) -> { this.setExecutionScope(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
+        deserializerMap.put("nextScheduleRunDateTime", (n) -> { this.setNextScheduleRunDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("runs", (n) -> { this.setRuns(n.getCollectionOfObjectValues(Run::createFromDiscriminatorValue)); });
+        deserializerMap.put("taskReports", (n) -> { this.setTaskReports(n.getCollectionOfObjectValues(TaskReport::createFromDiscriminatorValue)); });
+        deserializerMap.put("userProcessingResults", (n) -> { this.setUserProcessingResults(n.getCollectionOfObjectValues(UserProcessingResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getIntegerValue()); });
+        deserializerMap.put("versions", (n) -> { this.setVersions(n.getCollectionOfObjectValues(WorkflowVersion::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. Identifier used for individually addressing a specific workflow.Supports $filter(eq, ne) and $orderby.
      * @return a string
      */
     @javax.annotation.Nullable
     public String getId() {
-        return this._id;
+        return this.id;
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
-     * @return a boolean
-     */
-    @javax.annotation.Nullable
-    public Boolean getIsEnabled() {
-        return this._isEnabled;
-    }
-    /**
-     * Gets the isSchedulingEnabled property value. The isSchedulingEnabled property
-     * @return a boolean
-     */
-    @javax.annotation.Nullable
-    public Boolean getIsSchedulingEnabled() {
-        return this._isSchedulingEnabled;
-    }
-    /**
-     * Gets the nextScheduleRunDateTime property value. The nextScheduleRunDateTime property
+     * Gets the nextScheduleRunDateTime property value. The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderBy.
      * @return a OffsetDateTime
      */
     @javax.annotation.Nullable
     public OffsetDateTime getNextScheduleRunDateTime() {
-        return this._nextScheduleRunDateTime;
+        return this.nextScheduleRunDateTime;
     }
     /**
-     * Gets the runs property value. The runs property
+     * Gets the runs property value. Workflow runs.
      * @return a run
      */
     @javax.annotation.Nullable
     public java.util.List<Run> getRuns() {
-        return this._runs;
+        return this.runs;
     }
     /**
-     * Gets the taskReports property value. The taskReports property
+     * Gets the taskReports property value. Represents the aggregation of task execution data for tasks within a workflow object.
      * @return a taskReport
      */
     @javax.annotation.Nullable
     public java.util.List<TaskReport> getTaskReports() {
-        return this._taskReports;
+        return this.taskReports;
     }
     /**
-     * Gets the userProcessingResults property value. The userProcessingResults property
+     * Gets the userProcessingResults property value. Per-user workflow execution results.
      * @return a userProcessingResult
      */
     @javax.annotation.Nullable
     public java.util.List<UserProcessingResult> getUserProcessingResults() {
-        return this._userProcessingResults;
+        return this.userProcessingResults;
     }
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. The current version number of the workflow. Value is 1 when the workflow is first created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
-     * Gets the versions property value. The versions property
+     * Gets the versions property value. The workflow versions that are available.
      * @return a workflowVersion
      */
     @javax.annotation.Nullable
     public java.util.List<WorkflowVersion> getVersions() {
-        return this._versions;
+        return this.versions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("deletedDateTime", this.getDeletedDateTime());
         writer.writeCollectionOfObjectValues("executionScope", this.getExecutionScope());
         writer.writeStringValue("id", this.getId());
-        writer.writeBooleanValue("isEnabled", this.getIsEnabled());
-        writer.writeBooleanValue("isSchedulingEnabled", this.getIsSchedulingEnabled());
         writer.writeOffsetDateTimeValue("nextScheduleRunDateTime", this.getNextScheduleRunDateTime());
         writer.writeCollectionOfObjectValues("runs", this.getRuns());
         writer.writeCollectionOfObjectValues("taskReports", this.getTaskReports());
@@ -180,91 +156,84 @@ public class Workflow extends WorkflowBase implements Parsable {
         writer.writeCollectionOfObjectValues("versions", this.getVersions());
     }
     /**
-     * Sets the deletedDateTime property value. The deletedDateTime property
+     * Sets the deletedDateTime property value. When the workflow was deleted.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the deletedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeletedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._deletedDateTime = value;
+        this.deletedDateTime = value;
     }
     /**
-     * Sets the executionScope property value. The executionScope property
+     * Sets the executionScope property value. The unique identifier of the Azure AD identity that last modified the workflow object.
      * @param value Value to set for the executionScope property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExecutionScope(@javax.annotation.Nullable final java.util.List<User> value) {
-        this._executionScope = value;
+        this.executionScope = value;
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. Identifier used for individually addressing a specific workflow.Supports $filter(eq, ne) and $orderby.
      * @param value Value to set for the id property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setId(@javax.annotation.Nullable final String value) {
-        this._id = value;
+        this.id = value;
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
-     * @param value Value to set for the isEnabled property.
-     * @return a void
-     */
-    public void setIsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isEnabled = value;
-    }
-    /**
-     * Sets the isSchedulingEnabled property value. The isSchedulingEnabled property
-     * @param value Value to set for the isSchedulingEnabled property.
-     * @return a void
-     */
-    public void setIsSchedulingEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._isSchedulingEnabled = value;
-    }
-    /**
-     * Sets the nextScheduleRunDateTime property value. The nextScheduleRunDateTime property
+     * Sets the nextScheduleRunDateTime property value. The date time when the workflow is expected to run next based on the schedule interval, if there are any users matching the execution conditions. Supports $filter(lt,gt) and $orderBy.
      * @param value Value to set for the nextScheduleRunDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNextScheduleRunDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._nextScheduleRunDateTime = value;
+        this.nextScheduleRunDateTime = value;
     }
     /**
-     * Sets the runs property value. The runs property
+     * Sets the runs property value. Workflow runs.
      * @param value Value to set for the runs property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRuns(@javax.annotation.Nullable final java.util.List<Run> value) {
-        this._runs = value;
+        this.runs = value;
     }
     /**
-     * Sets the taskReports property value. The taskReports property
+     * Sets the taskReports property value. Represents the aggregation of task execution data for tasks within a workflow object.
      * @param value Value to set for the taskReports property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaskReports(@javax.annotation.Nullable final java.util.List<TaskReport> value) {
-        this._taskReports = value;
+        this.taskReports = value;
     }
     /**
-     * Sets the userProcessingResults property value. The userProcessingResults property
+     * Sets the userProcessingResults property value. Per-user workflow execution results.
      * @param value Value to set for the userProcessingResults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserProcessingResults(@javax.annotation.Nullable final java.util.List<UserProcessingResult> value) {
-        this._userProcessingResults = value;
+        this.userProcessingResults = value;
     }
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. The current version number of the workflow. Value is 1 when the workflow is first created.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final Integer value) {
-        this._version = value;
+        this.version = value;
     }
     /**
-     * Sets the versions property value. The versions property
+     * Sets the versions property value. The workflow versions that are available.
      * @param value Value to set for the versions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersions(@javax.annotation.Nullable final java.util.List<WorkflowVersion> value) {
-        this._versions = value;
+        this.versions = value;
     }
 }

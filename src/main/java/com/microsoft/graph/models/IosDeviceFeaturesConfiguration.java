@@ -3,45 +3,45 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigurationBase implements Parsable {
     /** Asset tag information for the device, displayed on the login window and lock screen. */
-    private String _assetTagTemplate;
+    private String assetTagTemplate;
     /** Gets or sets iOS Web Content Filter settings, supervised mode only */
-    private IosWebContentFilterBase _contentFilterSettings;
+    private IosWebContentFilterBase contentFilterSettings;
     /** A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements. */
-    private java.util.List<IosHomeScreenItem> _homeScreenDockIcons;
+    private java.util.List<IosHomeScreenItem> homeScreenDockIcons;
     /** Gets or sets the number of rows to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridWidth must be configured as well. */
-    private Integer _homeScreenGridHeight;
+    private Integer homeScreenGridHeight;
     /** Gets or sets the number of columns to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridHeight must be configured as well. */
-    private Integer _homeScreenGridWidth;
+    private Integer homeScreenGridWidth;
     /** A list of pages on the Home Screen. This collection can contain a maximum of 500 elements. */
-    private java.util.List<IosHomeScreenPage> _homeScreenPages;
+    private java.util.List<IosHomeScreenPage> homeScreenPages;
     /** Identity Certificate for the renewal of Kerberos ticket used in single sign-on settings. */
-    private IosCertificateProfileBase _identityCertificateForClientAuthentication;
+    private IosCertificateProfileBase identityCertificateForClientAuthentication;
     /** Gets or sets a single sign-on extension profile. */
-    private IosSingleSignOnExtension _iosSingleSignOnExtension;
+    private IosSingleSignOnExtension iosSingleSignOnExtension;
     /** A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later. */
-    private String _lockScreenFootnote;
+    private String lockScreenFootnote;
     /** Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements. */
-    private java.util.List<IosNotificationSettings> _notificationSettings;
+    private java.util.List<IosNotificationSettings> notificationSettings;
     /** Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead. */
-    private SingleSignOnExtension _singleSignOnExtension;
+    private SingleSignOnExtension singleSignOnExtension;
     /** PKINIT Certificate for the authentication with single sign-on extension settings. */
-    private IosCertificateProfileBase _singleSignOnExtensionPkinitCertificate;
+    private IosCertificateProfileBase singleSignOnExtensionPkinitCertificate;
     /** The Kerberos login settings that enable apps on receiving devices to authenticate smoothly. */
-    private IosSingleSignOnSettings _singleSignOnSettings;
+    private IosSingleSignOnSettings singleSignOnSettings;
     /** An enum type for wallpaper display location specifier. */
-    private IosWallpaperDisplayLocation _wallpaperDisplayLocation;
+    private IosWallpaperDisplayLocation wallpaperDisplayLocation;
     /** A wallpaper image must be in either PNG or JPEG format. It requires a supervised device with iOS 8 or later version. */
-    private MimeContent _wallpaperImage;
+    private MimeContent wallpaperImage;
     /**
      * Instantiates a new IosDeviceFeaturesConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosDeviceFeaturesConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.iosDeviceFeaturesConfiguration");
@@ -62,7 +62,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public String getAssetTagTemplate() {
-        return this._assetTagTemplate;
+        return this.assetTagTemplate;
     }
     /**
      * Gets the contentFilterSettings property value. Gets or sets iOS Web Content Filter settings, supervised mode only
@@ -70,32 +70,31 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public IosWebContentFilterBase getContentFilterSettings() {
-        return this._contentFilterSettings;
+        return this.contentFilterSettings;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosDeviceFeaturesConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("assetTagTemplate", (n) -> { currentObject.setAssetTagTemplate(n.getStringValue()); });
-            this.put("contentFilterSettings", (n) -> { currentObject.setContentFilterSettings(n.getObjectValue(IosWebContentFilterBase::createFromDiscriminatorValue)); });
-            this.put("homeScreenDockIcons", (n) -> { currentObject.setHomeScreenDockIcons(n.getCollectionOfObjectValues(IosHomeScreenItem::createFromDiscriminatorValue)); });
-            this.put("homeScreenGridHeight", (n) -> { currentObject.setHomeScreenGridHeight(n.getIntegerValue()); });
-            this.put("homeScreenGridWidth", (n) -> { currentObject.setHomeScreenGridWidth(n.getIntegerValue()); });
-            this.put("homeScreenPages", (n) -> { currentObject.setHomeScreenPages(n.getCollectionOfObjectValues(IosHomeScreenPage::createFromDiscriminatorValue)); });
-            this.put("identityCertificateForClientAuthentication", (n) -> { currentObject.setIdentityCertificateForClientAuthentication(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
-            this.put("iosSingleSignOnExtension", (n) -> { currentObject.setIosSingleSignOnExtension(n.getObjectValue(IosSingleSignOnExtension::createFromDiscriminatorValue)); });
-            this.put("lockScreenFootnote", (n) -> { currentObject.setLockScreenFootnote(n.getStringValue()); });
-            this.put("notificationSettings", (n) -> { currentObject.setNotificationSettings(n.getCollectionOfObjectValues(IosNotificationSettings::createFromDiscriminatorValue)); });
-            this.put("singleSignOnExtension", (n) -> { currentObject.setSingleSignOnExtension(n.getObjectValue(SingleSignOnExtension::createFromDiscriminatorValue)); });
-            this.put("singleSignOnExtensionPkinitCertificate", (n) -> { currentObject.setSingleSignOnExtensionPkinitCertificate(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
-            this.put("singleSignOnSettings", (n) -> { currentObject.setSingleSignOnSettings(n.getObjectValue(IosSingleSignOnSettings::createFromDiscriminatorValue)); });
-            this.put("wallpaperDisplayLocation", (n) -> { currentObject.setWallpaperDisplayLocation(n.getEnumValue(IosWallpaperDisplayLocation.class)); });
-            this.put("wallpaperImage", (n) -> { currentObject.setWallpaperImage(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assetTagTemplate", (n) -> { this.setAssetTagTemplate(n.getStringValue()); });
+        deserializerMap.put("contentFilterSettings", (n) -> { this.setContentFilterSettings(n.getObjectValue(IosWebContentFilterBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("homeScreenDockIcons", (n) -> { this.setHomeScreenDockIcons(n.getCollectionOfObjectValues(IosHomeScreenItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("homeScreenGridHeight", (n) -> { this.setHomeScreenGridHeight(n.getIntegerValue()); });
+        deserializerMap.put("homeScreenGridWidth", (n) -> { this.setHomeScreenGridWidth(n.getIntegerValue()); });
+        deserializerMap.put("homeScreenPages", (n) -> { this.setHomeScreenPages(n.getCollectionOfObjectValues(IosHomeScreenPage::createFromDiscriminatorValue)); });
+        deserializerMap.put("identityCertificateForClientAuthentication", (n) -> { this.setIdentityCertificateForClientAuthentication(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("iosSingleSignOnExtension", (n) -> { this.setIosSingleSignOnExtension(n.getObjectValue(IosSingleSignOnExtension::createFromDiscriminatorValue)); });
+        deserializerMap.put("lockScreenFootnote", (n) -> { this.setLockScreenFootnote(n.getStringValue()); });
+        deserializerMap.put("notificationSettings", (n) -> { this.setNotificationSettings(n.getCollectionOfObjectValues(IosNotificationSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("singleSignOnExtension", (n) -> { this.setSingleSignOnExtension(n.getObjectValue(SingleSignOnExtension::createFromDiscriminatorValue)); });
+        deserializerMap.put("singleSignOnExtensionPkinitCertificate", (n) -> { this.setSingleSignOnExtensionPkinitCertificate(n.getObjectValue(IosCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("singleSignOnSettings", (n) -> { this.setSingleSignOnSettings(n.getObjectValue(IosSingleSignOnSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("wallpaperDisplayLocation", (n) -> { this.setWallpaperDisplayLocation(n.getEnumValue(IosWallpaperDisplayLocation.class)); });
+        deserializerMap.put("wallpaperImage", (n) -> { this.setWallpaperImage(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the homeScreenDockIcons property value. A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
@@ -103,7 +102,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public java.util.List<IosHomeScreenItem> getHomeScreenDockIcons() {
-        return this._homeScreenDockIcons;
+        return this.homeScreenDockIcons;
     }
     /**
      * Gets the homeScreenGridHeight property value. Gets or sets the number of rows to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridWidth must be configured as well.
@@ -111,7 +110,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public Integer getHomeScreenGridHeight() {
-        return this._homeScreenGridHeight;
+        return this.homeScreenGridHeight;
     }
     /**
      * Gets the homeScreenGridWidth property value. Gets or sets the number of columns to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridHeight must be configured as well.
@@ -119,7 +118,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public Integer getHomeScreenGridWidth() {
-        return this._homeScreenGridWidth;
+        return this.homeScreenGridWidth;
     }
     /**
      * Gets the homeScreenPages property value. A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
@@ -127,7 +126,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public java.util.List<IosHomeScreenPage> getHomeScreenPages() {
-        return this._homeScreenPages;
+        return this.homeScreenPages;
     }
     /**
      * Gets the identityCertificateForClientAuthentication property value. Identity Certificate for the renewal of Kerberos ticket used in single sign-on settings.
@@ -135,7 +134,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public IosCertificateProfileBase getIdentityCertificateForClientAuthentication() {
-        return this._identityCertificateForClientAuthentication;
+        return this.identityCertificateForClientAuthentication;
     }
     /**
      * Gets the iosSingleSignOnExtension property value. Gets or sets a single sign-on extension profile.
@@ -143,7 +142,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public IosSingleSignOnExtension getIosSingleSignOnExtension() {
-        return this._iosSingleSignOnExtension;
+        return this.iosSingleSignOnExtension;
     }
     /**
      * Gets the lockScreenFootnote property value. A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
@@ -151,7 +150,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public String getLockScreenFootnote() {
-        return this._lockScreenFootnote;
+        return this.lockScreenFootnote;
     }
     /**
      * Gets the notificationSettings property value. Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
@@ -159,7 +158,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public java.util.List<IosNotificationSettings> getNotificationSettings() {
-        return this._notificationSettings;
+        return this.notificationSettings;
     }
     /**
      * Gets the singleSignOnExtension property value. Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead.
@@ -167,7 +166,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public SingleSignOnExtension getSingleSignOnExtension() {
-        return this._singleSignOnExtension;
+        return this.singleSignOnExtension;
     }
     /**
      * Gets the singleSignOnExtensionPkinitCertificate property value. PKINIT Certificate for the authentication with single sign-on extension settings.
@@ -175,7 +174,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public IosCertificateProfileBase getSingleSignOnExtensionPkinitCertificate() {
-        return this._singleSignOnExtensionPkinitCertificate;
+        return this.singleSignOnExtensionPkinitCertificate;
     }
     /**
      * Gets the singleSignOnSettings property value. The Kerberos login settings that enable apps on receiving devices to authenticate smoothly.
@@ -183,7 +182,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public IosSingleSignOnSettings getSingleSignOnSettings() {
-        return this._singleSignOnSettings;
+        return this.singleSignOnSettings;
     }
     /**
      * Gets the wallpaperDisplayLocation property value. An enum type for wallpaper display location specifier.
@@ -191,7 +190,7 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public IosWallpaperDisplayLocation getWallpaperDisplayLocation() {
-        return this._wallpaperDisplayLocation;
+        return this.wallpaperDisplayLocation;
     }
     /**
      * Gets the wallpaperImage property value. A wallpaper image must be in either PNG or JPEG format. It requires a supervised device with iOS 8 or later version.
@@ -199,13 +198,14 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      */
     @javax.annotation.Nullable
     public MimeContent getWallpaperImage() {
-        return this._wallpaperImage;
+        return this.wallpaperImage;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -230,119 +230,134 @@ public class IosDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigura
      * @param value Value to set for the assetTagTemplate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAssetTagTemplate(@javax.annotation.Nullable final String value) {
-        this._assetTagTemplate = value;
+        this.assetTagTemplate = value;
     }
     /**
      * Sets the contentFilterSettings property value. Gets or sets iOS Web Content Filter settings, supervised mode only
      * @param value Value to set for the contentFilterSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContentFilterSettings(@javax.annotation.Nullable final IosWebContentFilterBase value) {
-        this._contentFilterSettings = value;
+        this.contentFilterSettings = value;
     }
     /**
      * Sets the homeScreenDockIcons property value. A list of app and folders to appear on the Home Screen Dock. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the homeScreenDockIcons property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeScreenDockIcons(@javax.annotation.Nullable final java.util.List<IosHomeScreenItem> value) {
-        this._homeScreenDockIcons = value;
+        this.homeScreenDockIcons = value;
     }
     /**
      * Sets the homeScreenGridHeight property value. Gets or sets the number of rows to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridWidth must be configured as well.
      * @param value Value to set for the homeScreenGridHeight property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeScreenGridHeight(@javax.annotation.Nullable final Integer value) {
-        this._homeScreenGridHeight = value;
+        this.homeScreenGridHeight = value;
     }
     /**
      * Sets the homeScreenGridWidth property value. Gets or sets the number of columns to render when configuring iOS home screen layout settings. If this value is configured, homeScreenGridHeight must be configured as well.
      * @param value Value to set for the homeScreenGridWidth property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeScreenGridWidth(@javax.annotation.Nullable final Integer value) {
-        this._homeScreenGridWidth = value;
+        this.homeScreenGridWidth = value;
     }
     /**
      * Sets the homeScreenPages property value. A list of pages on the Home Screen. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the homeScreenPages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHomeScreenPages(@javax.annotation.Nullable final java.util.List<IosHomeScreenPage> value) {
-        this._homeScreenPages = value;
+        this.homeScreenPages = value;
     }
     /**
      * Sets the identityCertificateForClientAuthentication property value. Identity Certificate for the renewal of Kerberos ticket used in single sign-on settings.
      * @param value Value to set for the identityCertificateForClientAuthentication property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIdentityCertificateForClientAuthentication(@javax.annotation.Nullable final IosCertificateProfileBase value) {
-        this._identityCertificateForClientAuthentication = value;
+        this.identityCertificateForClientAuthentication = value;
     }
     /**
      * Sets the iosSingleSignOnExtension property value. Gets or sets a single sign-on extension profile.
      * @param value Value to set for the iosSingleSignOnExtension property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIosSingleSignOnExtension(@javax.annotation.Nullable final IosSingleSignOnExtension value) {
-        this._iosSingleSignOnExtension = value;
+        this.iosSingleSignOnExtension = value;
     }
     /**
      * Sets the lockScreenFootnote property value. A footnote displayed on the login window and lock screen. Available in iOS 9.3.1 and later.
      * @param value Value to set for the lockScreenFootnote property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLockScreenFootnote(@javax.annotation.Nullable final String value) {
-        this._lockScreenFootnote = value;
+        this.lockScreenFootnote = value;
     }
     /**
      * Sets the notificationSettings property value. Notification settings for each bundle id. Applicable to devices in supervised mode only (iOS 9.3 and later). This collection can contain a maximum of 500 elements.
      * @param value Value to set for the notificationSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotificationSettings(@javax.annotation.Nullable final java.util.List<IosNotificationSettings> value) {
-        this._notificationSettings = value;
+        this.notificationSettings = value;
     }
     /**
      * Sets the singleSignOnExtension property value. Gets or sets a single sign-on extension profile. Deprecated: use IOSSingleSignOnExtension instead.
      * @param value Value to set for the singleSignOnExtension property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleSignOnExtension(@javax.annotation.Nullable final SingleSignOnExtension value) {
-        this._singleSignOnExtension = value;
+        this.singleSignOnExtension = value;
     }
     /**
      * Sets the singleSignOnExtensionPkinitCertificate property value. PKINIT Certificate for the authentication with single sign-on extension settings.
      * @param value Value to set for the singleSignOnExtensionPkinitCertificate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleSignOnExtensionPkinitCertificate(@javax.annotation.Nullable final IosCertificateProfileBase value) {
-        this._singleSignOnExtensionPkinitCertificate = value;
+        this.singleSignOnExtensionPkinitCertificate = value;
     }
     /**
      * Sets the singleSignOnSettings property value. The Kerberos login settings that enable apps on receiving devices to authenticate smoothly.
      * @param value Value to set for the singleSignOnSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleSignOnSettings(@javax.annotation.Nullable final IosSingleSignOnSettings value) {
-        this._singleSignOnSettings = value;
+        this.singleSignOnSettings = value;
     }
     /**
      * Sets the wallpaperDisplayLocation property value. An enum type for wallpaper display location specifier.
      * @param value Value to set for the wallpaperDisplayLocation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWallpaperDisplayLocation(@javax.annotation.Nullable final IosWallpaperDisplayLocation value) {
-        this._wallpaperDisplayLocation = value;
+        this.wallpaperDisplayLocation = value;
     }
     /**
      * Sets the wallpaperImage property value. A wallpaper image must be in either PNG or JPEG format. It requires a supervised device with iOS 8 or later version.
      * @param value Value to set for the wallpaperImage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWallpaperImage(@javax.annotation.Nullable final MimeContent value) {
-        this._wallpaperImage = value;
+        this.wallpaperImage = value;
     }
 }

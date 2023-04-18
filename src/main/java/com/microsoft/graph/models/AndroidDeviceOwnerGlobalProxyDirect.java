@@ -3,21 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidDeviceOwnerGlobalProxyDirect extends AndroidDeviceOwnerGlobalProxy implements Parsable {
     /** The excluded hosts */
-    private java.util.List<String> _excludedHosts;
+    private java.util.List<String> excludedHosts;
     /** The host name */
-    private String _host;
+    private String host;
     /** The port */
-    private Integer _port;
+    private Integer port;
     /**
      * Instantiates a new AndroidDeviceOwnerGlobalProxyDirect and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidDeviceOwnerGlobalProxyDirect() {
         super();
         this.setOdataType("#microsoft.graph.androidDeviceOwnerGlobalProxyDirect");
@@ -38,20 +38,19 @@ public class AndroidDeviceOwnerGlobalProxyDirect extends AndroidDeviceOwnerGloba
      */
     @javax.annotation.Nullable
     public java.util.List<String> getExcludedHosts() {
-        return this._excludedHosts;
+        return this.excludedHosts;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidDeviceOwnerGlobalProxyDirect currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("excludedHosts", (n) -> { currentObject.setExcludedHosts(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("host", (n) -> { currentObject.setHost(n.getStringValue()); });
-            this.put("port", (n) -> { currentObject.setPort(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("excludedHosts", (n) -> { this.setExcludedHosts(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("host", (n) -> { this.setHost(n.getStringValue()); });
+        deserializerMap.put("port", (n) -> { this.setPort(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the host property value. The host name
@@ -59,7 +58,7 @@ public class AndroidDeviceOwnerGlobalProxyDirect extends AndroidDeviceOwnerGloba
      */
     @javax.annotation.Nullable
     public String getHost() {
-        return this._host;
+        return this.host;
     }
     /**
      * Gets the port property value. The port
@@ -67,13 +66,14 @@ public class AndroidDeviceOwnerGlobalProxyDirect extends AndroidDeviceOwnerGloba
      */
     @javax.annotation.Nullable
     public Integer getPort() {
-        return this._port;
+        return this.port;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -86,23 +86,26 @@ public class AndroidDeviceOwnerGlobalProxyDirect extends AndroidDeviceOwnerGloba
      * @param value Value to set for the excludedHosts property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExcludedHosts(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._excludedHosts = value;
+        this.excludedHosts = value;
     }
     /**
      * Sets the host property value. The host name
      * @param value Value to set for the host property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHost(@javax.annotation.Nullable final String value) {
-        this._host = value;
+        this.host = value;
     }
     /**
      * Sets the port property value. The port
      * @param value Value to set for the port property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPort(@javax.annotation.Nullable final Integer value) {
-        this._port = value;
+        this.port = value;
     }
 }

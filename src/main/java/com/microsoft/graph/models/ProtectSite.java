@@ -3,19 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProtectSite extends LabelActionBase implements Parsable {
     /** The accessType property */
-    private SiteAccessType _accessType;
+    private SiteAccessType accessType;
     /** The conditionalAccessProtectionLevelId property */
-    private String _conditionalAccessProtectionLevelId;
+    private String conditionalAccessProtectionLevelId;
     /**
      * Instantiates a new ProtectSite and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProtectSite() {
         super();
         this.setOdataType("#microsoft.graph.protectSite");
@@ -36,7 +36,7 @@ public class ProtectSite extends LabelActionBase implements Parsable {
      */
     @javax.annotation.Nullable
     public SiteAccessType getAccessType() {
-        return this._accessType;
+        return this.accessType;
     }
     /**
      * Gets the conditionalAccessProtectionLevelId property value. The conditionalAccessProtectionLevelId property
@@ -44,25 +44,25 @@ public class ProtectSite extends LabelActionBase implements Parsable {
      */
     @javax.annotation.Nullable
     public String getConditionalAccessProtectionLevelId() {
-        return this._conditionalAccessProtectionLevelId;
+        return this.conditionalAccessProtectionLevelId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ProtectSite currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessType", (n) -> { currentObject.setAccessType(n.getEnumValue(SiteAccessType.class)); });
-            this.put("conditionalAccessProtectionLevelId", (n) -> { currentObject.setConditionalAccessProtectionLevelId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessType", (n) -> { this.setAccessType(n.getEnumValue(SiteAccessType.class)); });
+        deserializerMap.put("conditionalAccessProtectionLevelId", (n) -> { this.setConditionalAccessProtectionLevelId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +74,17 @@ public class ProtectSite extends LabelActionBase implements Parsable {
      * @param value Value to set for the accessType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessType(@javax.annotation.Nullable final SiteAccessType value) {
-        this._accessType = value;
+        this.accessType = value;
     }
     /**
      * Sets the conditionalAccessProtectionLevelId property value. The conditionalAccessProtectionLevelId property
      * @param value Value to set for the conditionalAccessProtectionLevelId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditionalAccessProtectionLevelId(@javax.annotation.Nullable final String value) {
-        this._conditionalAccessProtectionLevelId = value;
+        this.conditionalAccessProtectionLevelId = value;
     }
 }

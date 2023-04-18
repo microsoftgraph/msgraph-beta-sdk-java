@@ -3,22 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartSeriesFormat extends Entity implements Parsable {
     /** Represents the fill format of a chart series, which includes background formating information. Read-only. */
-    private WorkbookChartFill _fill;
+    private WorkbookChartFill fill;
     /** Represents line formatting. Read-only. */
-    private WorkbookChartLineFormat _line;
+    private WorkbookChartLineFormat line;
     /**
      * Instantiates a new workbookChartSeriesFormat and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChartSeriesFormat() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartSeriesFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,15 +31,14 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChartSeriesFormat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("fill", (n) -> { currentObject.setFill(n.getObjectValue(WorkbookChartFill::createFromDiscriminatorValue)); });
-            this.put("line", (n) -> { currentObject.setLine(n.getObjectValue(WorkbookChartLineFormat::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fill", (n) -> { this.setFill(n.getObjectValue(WorkbookChartFill::createFromDiscriminatorValue)); });
+        deserializerMap.put("line", (n) -> { this.setLine(n.getObjectValue(WorkbookChartLineFormat::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the fill property value. Represents the fill format of a chart series, which includes background formating information. Read-only.
@@ -48,7 +46,7 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartFill getFill() {
-        return this._fill;
+        return this.fill;
     }
     /**
      * Gets the line property value. Represents line formatting. Read-only.
@@ -56,13 +54,14 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartLineFormat getLine() {
-        return this._line;
+        return this.line;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +73,17 @@ public class WorkbookChartSeriesFormat extends Entity implements Parsable {
      * @param value Value to set for the fill property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFill(@javax.annotation.Nullable final WorkbookChartFill value) {
-        this._fill = value;
+        this.fill = value;
     }
     /**
      * Sets the line property value. Represents line formatting. Read-only.
      * @param value Value to set for the line property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLine(@javax.annotation.Nullable final WorkbookChartLineFormat value) {
-        this._line = value;
+        this.line = value;
     }
 }

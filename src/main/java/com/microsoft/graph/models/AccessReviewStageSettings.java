@@ -5,40 +5,39 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.Period;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Indicate which decisions will go to the next stage. Can be a sub-set of Approve, Deny, Recommendation, or NotReviewed. If not provided, all decisions will go to the next stage. Optional. */
-    private java.util.List<String> _decisionsThatWillMoveToNextStage;
+    private java.util.List<String> decisionsThatWillMoveToNextStage;
     /** Defines the sequential or parallel order of the stages and depends on the stageId. Only sequential stages are currently supported. For example, if stageId is 2, then dependsOn must be 1. If stageId is 1, do not specify dependsOn. Required if stageId is not 1. */
-    private java.util.List<String> _dependsOn;
+    private java.util.List<String> dependsOn;
     /** The duration of the stage. Required.  NOTE: The cumulative value of this property across all stages  1. Will override the instanceDurationInDays setting on the accessReviewScheduleDefinition object. 2. Cannot exceed the length of one recurrence. That is, if the review recurs weekly, the cumulative durationInDays cannot exceed 7. */
-    private Integer _durationInDays;
+    private Integer durationInDays;
     /** If provided, the fallback reviewers are asked to complete a review if the primary reviewers do not exist. For example, if managers are selected as reviewers and a principal under review does not have a manager in Azure AD, the fallback reviewers are asked to review that principal. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition object. */
-    private java.util.List<AccessReviewReviewerScope> _fallbackReviewers;
+    private java.util.List<AccessReviewReviewerScope> fallbackReviewers;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The recommendationInsightSettings property */
-    private java.util.List<AccessReviewRecommendationInsightSetting> _recommendationInsightSettings;
+    private java.util.List<AccessReviewRecommendationInsightSetting> recommendationInsightSettings;
     /** Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition object. */
-    private Period _recommendationLookBackDuration;
+    private Period recommendationLookBackDuration;
     /** Indicates whether showing recommendations to reviewers is enabled. Required. NOTE: The value of this property will override override the corresponding setting on the accessReviewScheduleDefinition object. */
-    private Boolean _recommendationsEnabled;
+    private Boolean recommendationsEnabled;
     /** Defines who the reviewers are. If none are specified, the review is a self-review (users review their own access).  For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition. */
-    private java.util.List<AccessReviewReviewerScope> _reviewers;
+    private java.util.List<AccessReviewReviewerScope> reviewers;
     /** Unique identifier of the accessReviewStageSettings. The stageId will be used in dependsOn property to indicate the stage relationship. Required. */
-    private String _stageId;
+    private String stageId;
     /**
      * Instantiates a new accessReviewStageSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AccessReviewStageSettings() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.accessReviewStageSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -56,7 +55,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the decisionsThatWillMoveToNextStage property value. Indicate which decisions will go to the next stage. Can be a sub-set of Approve, Deny, Recommendation, or NotReviewed. If not provided, all decisions will go to the next stage. Optional.
@@ -64,7 +63,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDecisionsThatWillMoveToNextStage() {
-        return this._decisionsThatWillMoveToNextStage;
+        return this.decisionsThatWillMoveToNextStage;
     }
     /**
      * Gets the dependsOn property value. Defines the sequential or parallel order of the stages and depends on the stageId. Only sequential stages are currently supported. For example, if stageId is 2, then dependsOn must be 1. If stageId is 1, do not specify dependsOn. Required if stageId is not 1.
@@ -72,7 +71,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public java.util.List<String> getDependsOn() {
-        return this._dependsOn;
+        return this.dependsOn;
     }
     /**
      * Gets the durationInDays property value. The duration of the stage. Required.  NOTE: The cumulative value of this property across all stages  1. Will override the instanceDurationInDays setting on the accessReviewScheduleDefinition object. 2. Cannot exceed the length of one recurrence. That is, if the review recurs weekly, the cumulative durationInDays cannot exceed 7.
@@ -80,7 +79,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public Integer getDurationInDays() {
-        return this._durationInDays;
+        return this.durationInDays;
     }
     /**
      * Gets the fallbackReviewers property value. If provided, the fallback reviewers are asked to complete a review if the primary reviewers do not exist. For example, if managers are selected as reviewers and a principal under review does not have a manager in Azure AD, the fallback reviewers are asked to review that principal. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition object.
@@ -88,27 +87,26 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getFallbackReviewers() {
-        return this._fallbackReviewers;
+        return this.fallbackReviewers;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AccessReviewStageSettings currentObject = this;
-        return new HashMap<>(10) {{
-            this.put("decisionsThatWillMoveToNextStage", (n) -> { currentObject.setDecisionsThatWillMoveToNextStage(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("dependsOn", (n) -> { currentObject.setDependsOn(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("durationInDays", (n) -> { currentObject.setDurationInDays(n.getIntegerValue()); });
-            this.put("fallbackReviewers", (n) -> { currentObject.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("recommendationInsightSettings", (n) -> { currentObject.setRecommendationInsightSettings(n.getCollectionOfObjectValues(AccessReviewRecommendationInsightSetting::createFromDiscriminatorValue)); });
-            this.put("recommendationLookBackDuration", (n) -> { currentObject.setRecommendationLookBackDuration(n.getPeriodValue()); });
-            this.put("recommendationsEnabled", (n) -> { currentObject.setRecommendationsEnabled(n.getBooleanValue()); });
-            this.put("reviewers", (n) -> { currentObject.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
-            this.put("stageId", (n) -> { currentObject.setStageId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        deserializerMap.put("decisionsThatWillMoveToNextStage", (n) -> { this.setDecisionsThatWillMoveToNextStage(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("dependsOn", (n) -> { this.setDependsOn(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("durationInDays", (n) -> { this.setDurationInDays(n.getIntegerValue()); });
+        deserializerMap.put("fallbackReviewers", (n) -> { this.setFallbackReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recommendationInsightSettings", (n) -> { this.setRecommendationInsightSettings(n.getCollectionOfObjectValues(AccessReviewRecommendationInsightSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("recommendationLookBackDuration", (n) -> { this.setRecommendationLookBackDuration(n.getPeriodValue()); });
+        deserializerMap.put("recommendationsEnabled", (n) -> { this.setRecommendationsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("reviewers", (n) -> { this.setReviewers(n.getCollectionOfObjectValues(AccessReviewReviewerScope::createFromDiscriminatorValue)); });
+        deserializerMap.put("stageId", (n) -> { this.setStageId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -116,7 +114,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the recommendationInsightSettings property value. The recommendationInsightSettings property
@@ -124,7 +122,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public java.util.List<AccessReviewRecommendationInsightSetting> getRecommendationInsightSettings() {
-        return this._recommendationInsightSettings;
+        return this.recommendationInsightSettings;
     }
     /**
      * Gets the recommendationLookBackDuration property value. Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition object.
@@ -132,7 +130,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public Period getRecommendationLookBackDuration() {
-        return this._recommendationLookBackDuration;
+        return this.recommendationLookBackDuration;
     }
     /**
      * Gets the recommendationsEnabled property value. Indicates whether showing recommendations to reviewers is enabled. Required. NOTE: The value of this property will override override the corresponding setting on the accessReviewScheduleDefinition object.
@@ -140,7 +138,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public Boolean getRecommendationsEnabled() {
-        return this._recommendationsEnabled;
+        return this.recommendationsEnabled;
     }
     /**
      * Gets the reviewers property value. Defines who the reviewers are. If none are specified, the review is a self-review (users review their own access).  For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition.
@@ -148,7 +146,7 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public java.util.List<AccessReviewReviewerScope> getReviewers() {
-        return this._reviewers;
+        return this.reviewers;
     }
     /**
      * Gets the stageId property value. Unique identifier of the accessReviewStageSettings. The stageId will be used in dependsOn property to indicate the stage relationship. Required.
@@ -156,13 +154,14 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      */
     @javax.annotation.Nullable
     public String getStageId() {
-        return this._stageId;
+        return this.stageId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfPrimitiveValues("decisionsThatWillMoveToNextStage", this.getDecisionsThatWillMoveToNextStage());
@@ -182,87 +181,98 @@ public class AccessReviewStageSettings implements AdditionalDataHolder, Parsable
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the decisionsThatWillMoveToNextStage property value. Indicate which decisions will go to the next stage. Can be a sub-set of Approve, Deny, Recommendation, or NotReviewed. If not provided, all decisions will go to the next stage. Optional.
      * @param value Value to set for the decisionsThatWillMoveToNextStage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDecisionsThatWillMoveToNextStage(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._decisionsThatWillMoveToNextStage = value;
+        this.decisionsThatWillMoveToNextStage = value;
     }
     /**
      * Sets the dependsOn property value. Defines the sequential or parallel order of the stages and depends on the stageId. Only sequential stages are currently supported. For example, if stageId is 2, then dependsOn must be 1. If stageId is 1, do not specify dependsOn. Required if stageId is not 1.
      * @param value Value to set for the dependsOn property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDependsOn(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._dependsOn = value;
+        this.dependsOn = value;
     }
     /**
      * Sets the durationInDays property value. The duration of the stage. Required.  NOTE: The cumulative value of this property across all stages  1. Will override the instanceDurationInDays setting on the accessReviewScheduleDefinition object. 2. Cannot exceed the length of one recurrence. That is, if the review recurs weekly, the cumulative durationInDays cannot exceed 7.
      * @param value Value to set for the durationInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDurationInDays(@javax.annotation.Nullable final Integer value) {
-        this._durationInDays = value;
+        this.durationInDays = value;
     }
     /**
      * Sets the fallbackReviewers property value. If provided, the fallback reviewers are asked to complete a review if the primary reviewers do not exist. For example, if managers are selected as reviewers and a principal under review does not have a manager in Azure AD, the fallback reviewers are asked to review that principal. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition object.
      * @param value Value to set for the fallbackReviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFallbackReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
-        this._fallbackReviewers = value;
+        this.fallbackReviewers = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the recommendationInsightSettings property value. The recommendationInsightSettings property
      * @param value Value to set for the recommendationInsightSettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendationInsightSettings(@javax.annotation.Nullable final java.util.List<AccessReviewRecommendationInsightSetting> value) {
-        this._recommendationInsightSettings = value;
+        this.recommendationInsightSettings = value;
     }
     /**
      * Sets the recommendationLookBackDuration property value. Optional field. Indicates the time period of inactivity (with respect to the start date of the review instance) that recommendations will be configured from. The recommendation will be to deny if the user is inactive during the look back duration. For reviews of groups and Azure AD roles, any duration is accepted. For reviews of applications, 30 days is the maximum duration. If not specified, the duration is 30 days. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition object.
      * @param value Value to set for the recommendationLookBackDuration property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendationLookBackDuration(@javax.annotation.Nullable final Period value) {
-        this._recommendationLookBackDuration = value;
+        this.recommendationLookBackDuration = value;
     }
     /**
      * Sets the recommendationsEnabled property value. Indicates whether showing recommendations to reviewers is enabled. Required. NOTE: The value of this property will override override the corresponding setting on the accessReviewScheduleDefinition object.
      * @param value Value to set for the recommendationsEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendationsEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._recommendationsEnabled = value;
+        this.recommendationsEnabled = value;
     }
     /**
      * Sets the reviewers property value. Defines who the reviewers are. If none are specified, the review is a self-review (users review their own access).  For examples of options for assigning reviewers, see Assign reviewers to your access review definition using the Microsoft Graph API. NOTE: The value of this property will override the corresponding setting on the accessReviewScheduleDefinition.
      * @param value Value to set for the reviewers property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReviewers(@javax.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
-        this._reviewers = value;
+        this.reviewers = value;
     }
     /**
      * Sets the stageId property value. Unique identifier of the accessReviewStageSettings. The stageId will be used in dependsOn property to indicate the stage relationship. Required.
      * @param value Value to set for the stageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStageId(@javax.annotation.Nullable final String value) {
-        this._stageId = value;
+        this.stageId = value;
     }
 }

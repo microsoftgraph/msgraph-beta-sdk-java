@@ -4,22 +4,21 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to call the approveApps method. */
 public class ApproveAppsPostRequestBody implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The approveAllPermissions property */
-    private Boolean _approveAllPermissions;
+    private Boolean approveAllPermissions;
     /** The packageIds property */
-    private java.util.List<String> _packageIds;
+    private java.util.List<String> packageIds;
     /**
      * Instantiates a new approveAppsPostRequestBody and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ApproveAppsPostRequestBody() {
         this.setAdditionalData(new HashMap<>());
     }
@@ -39,7 +38,7 @@ public class ApproveAppsPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the approveAllPermissions property value. The approveAllPermissions property
@@ -47,19 +46,18 @@ public class ApproveAppsPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public Boolean getApproveAllPermissions() {
-        return this._approveAllPermissions;
+        return this.approveAllPermissions;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ApproveAppsPostRequestBody currentObject = this;
-        return new HashMap<>(2) {{
-            this.put("approveAllPermissions", (n) -> { currentObject.setApproveAllPermissions(n.getBooleanValue()); });
-            this.put("packageIds", (n) -> { currentObject.setPackageIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        deserializerMap.put("approveAllPermissions", (n) -> { this.setApproveAllPermissions(n.getBooleanValue()); });
+        deserializerMap.put("packageIds", (n) -> { this.setPackageIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the packageIds property value. The packageIds property
@@ -67,13 +65,14 @@ public class ApproveAppsPostRequestBody implements AdditionalDataHolder, Parsabl
      */
     @javax.annotation.Nullable
     public java.util.List<String> getPackageIds() {
-        return this._packageIds;
+        return this.packageIds;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("approveAllPermissions", this.getApproveAllPermissions());
@@ -85,23 +84,26 @@ public class ApproveAppsPostRequestBody implements AdditionalDataHolder, Parsabl
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the approveAllPermissions property value. The approveAllPermissions property
      * @param value Value to set for the approveAllPermissions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApproveAllPermissions(@javax.annotation.Nullable final Boolean value) {
-        this._approveAllPermissions = value;
+        this.approveAllPermissions = value;
     }
     /**
      * Sets the packageIds property value. The packageIds property
      * @param value Value to set for the packageIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackageIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._packageIds = value;
+        this.packageIds = value;
     }
 }

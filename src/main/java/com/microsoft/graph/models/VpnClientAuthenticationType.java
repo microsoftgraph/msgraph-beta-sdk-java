@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
+/** The type of VPN client authentication type */
 public enum VpnClientAuthenticationType implements ValuedEnum {
     /** User Authentication */
     UserAuthentication("userAuthentication"),

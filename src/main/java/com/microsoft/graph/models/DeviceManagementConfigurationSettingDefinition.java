@@ -1,64 +1,55 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.DeviceManagementConfigurationChoiceSettingCollectionDefinition;
-import com.microsoft.graph.models.DeviceManagementConfigurationChoiceSettingDefinition;
-import com.microsoft.graph.models.DeviceManagementConfigurationRedirectSettingDefinition;
-import com.microsoft.graph.models.DeviceManagementConfigurationSettingGroupCollectionDefinition;
-import com.microsoft.graph.models.DeviceManagementConfigurationSettingGroupDefinition;
-import com.microsoft.graph.models.DeviceManagementConfigurationSimpleSettingCollectionDefinition;
-import com.microsoft.graph.models.DeviceManagementConfigurationSimpleSettingDefinition;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class DeviceManagementConfigurationSettingDefinition extends Entity implements Parsable {
     /** The accessTypes property */
-    private DeviceManagementConfigurationSettingAccessTypes _accessTypes;
+    private DeviceManagementConfigurationSettingAccessTypes accessTypes;
     /** Details which device setting is applicable on */
-    private DeviceManagementConfigurationSettingApplicability _applicability;
+    private DeviceManagementConfigurationSettingApplicability applicability;
     /** Base CSP Path */
-    private String _baseUri;
+    private String baseUri;
     /** Specifies the area group under which the setting is configured in a specified configuration service provider (CSP) */
-    private String _categoryId;
+    private String categoryId;
     /** Description of the item */
-    private String _description;
+    private String description;
     /** Display name of the item */
-    private String _displayName;
+    private String displayName;
     /** Help text of the item */
-    private String _helpText;
+    private String helpText;
     /** List of links more info for the setting can be found at */
-    private java.util.List<String> _infoUrls;
+    private java.util.List<String> infoUrls;
     /** Tokens which to search settings on */
-    private java.util.List<String> _keywords;
+    private java.util.List<String> keywords;
     /** Name of the item */
-    private String _name;
+    private String name;
     /** Indicates whether the setting is required or not */
-    private DeviceManagementConfigurationSettingOccurrence _occurrence;
+    private DeviceManagementConfigurationSettingOccurrence occurrence;
     /** Offset CSP Path from Base */
-    private String _offsetUri;
+    private String offsetUri;
     /** List of referred setting information. */
-    private java.util.List<DeviceManagementConfigurationReferredSettingInformation> _referredSettingInformationList;
+    private java.util.List<DeviceManagementConfigurationReferredSettingInformation> referredSettingInformationList;
     /** Root setting definition if the setting is a child setting. */
-    private String _rootDefinitionId;
+    private String rootDefinitionId;
     /** Supported setting types */
-    private DeviceManagementConfigurationSettingUsage _settingUsage;
+    private DeviceManagementConfigurationSettingUsage settingUsage;
     /** Setting control type representation in the UX */
-    private DeviceManagementConfigurationControlType _uxBehavior;
+    private DeviceManagementConfigurationControlType uxBehavior;
     /** Item Version */
-    private String _version;
+    private String version;
     /** Supported setting types */
-    private DeviceManagementConfigurationSettingVisibility _visibility;
+    private DeviceManagementConfigurationSettingVisibility visibility;
     /**
      * Instantiates a new deviceManagementConfigurationSettingDefinition and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingDefinition() {
         super();
-        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSettingDefinition");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -89,7 +80,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingAccessTypes getAccessTypes() {
-        return this._accessTypes;
+        return this.accessTypes;
     }
     /**
      * Gets the applicability property value. Details which device setting is applicable on
@@ -97,7 +88,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingApplicability getApplicability() {
-        return this._applicability;
+        return this.applicability;
     }
     /**
      * Gets the baseUri property value. Base CSP Path
@@ -105,7 +96,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public String getBaseUri() {
-        return this._baseUri;
+        return this.baseUri;
     }
     /**
      * Gets the categoryId property value. Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
@@ -113,7 +104,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public String getCategoryId() {
-        return this._categoryId;
+        return this.categoryId;
     }
     /**
      * Gets the description property value. Description of the item
@@ -121,7 +112,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Display name of the item
@@ -129,35 +120,34 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationSettingDefinition currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accessTypes", (n) -> { currentObject.setAccessTypes(n.getEnumValue(DeviceManagementConfigurationSettingAccessTypes.class)); });
-            this.put("applicability", (n) -> { currentObject.setApplicability(n.getObjectValue(DeviceManagementConfigurationSettingApplicability::createFromDiscriminatorValue)); });
-            this.put("baseUri", (n) -> { currentObject.setBaseUri(n.getStringValue()); });
-            this.put("categoryId", (n) -> { currentObject.setCategoryId(n.getStringValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("helpText", (n) -> { currentObject.setHelpText(n.getStringValue()); });
-            this.put("infoUrls", (n) -> { currentObject.setInfoUrls(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("keywords", (n) -> { currentObject.setKeywords(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("occurrence", (n) -> { currentObject.setOccurrence(n.getObjectValue(DeviceManagementConfigurationSettingOccurrence::createFromDiscriminatorValue)); });
-            this.put("offsetUri", (n) -> { currentObject.setOffsetUri(n.getStringValue()); });
-            this.put("referredSettingInformationList", (n) -> { currentObject.setReferredSettingInformationList(n.getCollectionOfObjectValues(DeviceManagementConfigurationReferredSettingInformation::createFromDiscriminatorValue)); });
-            this.put("rootDefinitionId", (n) -> { currentObject.setRootDefinitionId(n.getStringValue()); });
-            this.put("settingUsage", (n) -> { currentObject.setSettingUsage(n.getEnumValue(DeviceManagementConfigurationSettingUsage.class)); });
-            this.put("uxBehavior", (n) -> { currentObject.setUxBehavior(n.getEnumValue(DeviceManagementConfigurationControlType.class)); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-            this.put("visibility", (n) -> { currentObject.setVisibility(n.getEnumValue(DeviceManagementConfigurationSettingVisibility.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accessTypes", (n) -> { this.setAccessTypes(n.getEnumValue(DeviceManagementConfigurationSettingAccessTypes.class)); });
+        deserializerMap.put("applicability", (n) -> { this.setApplicability(n.getObjectValue(DeviceManagementConfigurationSettingApplicability::createFromDiscriminatorValue)); });
+        deserializerMap.put("baseUri", (n) -> { this.setBaseUri(n.getStringValue()); });
+        deserializerMap.put("categoryId", (n) -> { this.setCategoryId(n.getStringValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("helpText", (n) -> { this.setHelpText(n.getStringValue()); });
+        deserializerMap.put("infoUrls", (n) -> { this.setInfoUrls(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("keywords", (n) -> { this.setKeywords(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("occurrence", (n) -> { this.setOccurrence(n.getObjectValue(DeviceManagementConfigurationSettingOccurrence::createFromDiscriminatorValue)); });
+        deserializerMap.put("offsetUri", (n) -> { this.setOffsetUri(n.getStringValue()); });
+        deserializerMap.put("referredSettingInformationList", (n) -> { this.setReferredSettingInformationList(n.getCollectionOfObjectValues(DeviceManagementConfigurationReferredSettingInformation::createFromDiscriminatorValue)); });
+        deserializerMap.put("rootDefinitionId", (n) -> { this.setRootDefinitionId(n.getStringValue()); });
+        deserializerMap.put("settingUsage", (n) -> { this.setSettingUsage(n.getEnumValue(DeviceManagementConfigurationSettingUsage.class)); });
+        deserializerMap.put("uxBehavior", (n) -> { this.setUxBehavior(n.getEnumValue(DeviceManagementConfigurationControlType.class)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getEnumValue(DeviceManagementConfigurationSettingVisibility.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the helpText property value. Help text of the item
@@ -165,7 +155,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public String getHelpText() {
-        return this._helpText;
+        return this.helpText;
     }
     /**
      * Gets the infoUrls property value. List of links more info for the setting can be found at
@@ -173,7 +163,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public java.util.List<String> getInfoUrls() {
-        return this._infoUrls;
+        return this.infoUrls;
     }
     /**
      * Gets the keywords property value. Tokens which to search settings on
@@ -181,7 +171,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public java.util.List<String> getKeywords() {
-        return this._keywords;
+        return this.keywords;
     }
     /**
      * Gets the name property value. Name of the item
@@ -189,7 +179,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the occurrence property value. Indicates whether the setting is required or not
@@ -197,7 +187,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingOccurrence getOccurrence() {
-        return this._occurrence;
+        return this.occurrence;
     }
     /**
      * Gets the offsetUri property value. Offset CSP Path from Base
@@ -205,7 +195,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public String getOffsetUri() {
-        return this._offsetUri;
+        return this.offsetUri;
     }
     /**
      * Gets the referredSettingInformationList property value. List of referred setting information.
@@ -213,7 +203,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public java.util.List<DeviceManagementConfigurationReferredSettingInformation> getReferredSettingInformationList() {
-        return this._referredSettingInformationList;
+        return this.referredSettingInformationList;
     }
     /**
      * Gets the rootDefinitionId property value. Root setting definition if the setting is a child setting.
@@ -221,7 +211,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public String getRootDefinitionId() {
-        return this._rootDefinitionId;
+        return this.rootDefinitionId;
     }
     /**
      * Gets the settingUsage property value. Supported setting types
@@ -229,7 +219,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingUsage getSettingUsage() {
-        return this._settingUsage;
+        return this.settingUsage;
     }
     /**
      * Gets the uxBehavior property value. Setting control type representation in the UX
@@ -237,7 +227,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public DeviceManagementConfigurationControlType getUxBehavior() {
-        return this._uxBehavior;
+        return this.uxBehavior;
     }
     /**
      * Gets the version property value. Item Version
@@ -245,7 +235,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Gets the visibility property value. Supported setting types
@@ -253,13 +243,14 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingVisibility getVisibility() {
-        return this._visibility;
+        return this.visibility;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -287,143 +278,161 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      * @param value Value to set for the accessTypes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccessTypes(@javax.annotation.Nullable final DeviceManagementConfigurationSettingAccessTypes value) {
-        this._accessTypes = value;
+        this.accessTypes = value;
     }
     /**
      * Sets the applicability property value. Details which device setting is applicable on
      * @param value Value to set for the applicability property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicability(@javax.annotation.Nullable final DeviceManagementConfigurationSettingApplicability value) {
-        this._applicability = value;
+        this.applicability = value;
     }
     /**
      * Sets the baseUri property value. Base CSP Path
      * @param value Value to set for the baseUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBaseUri(@javax.annotation.Nullable final String value) {
-        this._baseUri = value;
+        this.baseUri = value;
     }
     /**
      * Sets the categoryId property value. Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
      * @param value Value to set for the categoryId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategoryId(@javax.annotation.Nullable final String value) {
-        this._categoryId = value;
+        this.categoryId = value;
     }
     /**
      * Sets the description property value. Description of the item
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Display name of the item
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the helpText property value. Help text of the item
      * @param value Value to set for the helpText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHelpText(@javax.annotation.Nullable final String value) {
-        this._helpText = value;
+        this.helpText = value;
     }
     /**
      * Sets the infoUrls property value. List of links more info for the setting can be found at
      * @param value Value to set for the infoUrls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInfoUrls(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._infoUrls = value;
+        this.infoUrls = value;
     }
     /**
      * Sets the keywords property value. Tokens which to search settings on
      * @param value Value to set for the keywords property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeywords(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._keywords = value;
+        this.keywords = value;
     }
     /**
      * Sets the name property value. Name of the item
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the occurrence property value. Indicates whether the setting is required or not
      * @param value Value to set for the occurrence property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOccurrence(@javax.annotation.Nullable final DeviceManagementConfigurationSettingOccurrence value) {
-        this._occurrence = value;
+        this.occurrence = value;
     }
     /**
      * Sets the offsetUri property value. Offset CSP Path from Base
      * @param value Value to set for the offsetUri property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOffsetUri(@javax.annotation.Nullable final String value) {
-        this._offsetUri = value;
+        this.offsetUri = value;
     }
     /**
      * Sets the referredSettingInformationList property value. List of referred setting information.
      * @param value Value to set for the referredSettingInformationList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReferredSettingInformationList(@javax.annotation.Nullable final java.util.List<DeviceManagementConfigurationReferredSettingInformation> value) {
-        this._referredSettingInformationList = value;
+        this.referredSettingInformationList = value;
     }
     /**
      * Sets the rootDefinitionId property value. Root setting definition if the setting is a child setting.
      * @param value Value to set for the rootDefinitionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRootDefinitionId(@javax.annotation.Nullable final String value) {
-        this._rootDefinitionId = value;
+        this.rootDefinitionId = value;
     }
     /**
      * Sets the settingUsage property value. Supported setting types
      * @param value Value to set for the settingUsage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingUsage(@javax.annotation.Nullable final DeviceManagementConfigurationSettingUsage value) {
-        this._settingUsage = value;
+        this.settingUsage = value;
     }
     /**
      * Sets the uxBehavior property value. Setting control type representation in the UX
      * @param value Value to set for the uxBehavior property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUxBehavior(@javax.annotation.Nullable final DeviceManagementConfigurationControlType value) {
-        this._uxBehavior = value;
+        this.uxBehavior = value;
     }
     /**
      * Sets the version property value. Item Version
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
     /**
      * Sets the visibility property value. Supported setting types
      * @param value Value to set for the visibility property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVisibility(@javax.annotation.Nullable final DeviceManagementConfigurationSettingVisibility value) {
-        this._visibility = value;
+        this.visibility = value;
     }
 }

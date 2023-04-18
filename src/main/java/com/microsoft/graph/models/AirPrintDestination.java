@@ -4,31 +4,32 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Represents an AirPrint destination. */
+/**
+ * Represents an AirPrint destination.
+ */
 public class AirPrintDestination implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** If true AirPrint connections are secured by Transport Layer Security (TLS). Default is false. Available in iOS 11.0 and later. */
-    private Boolean _forceTls;
+    private Boolean forceTls;
     /** The IP Address of the AirPrint destination. */
-    private String _ipAddress;
+    private String ipAddress;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The listening port of the AirPrint destination. If this key is not specified AirPrint will use the default port. Available in iOS 11.0 and later. */
-    private Integer _port;
+    private Integer port;
     /** The Resource Path associated with the printer. This corresponds to the rp parameter of the ipps.tcp Bonjour record. For example: printers/Canon_MG5300_series, printers/Xerox_Phaser_7600, ipp/print, Epson_IPP_Printer. */
-    private String _resourcePath;
+    private String resourcePath;
     /**
      * Instantiates a new airPrintDestination and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AirPrintDestination() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.airPrintDestination");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,22 +47,21 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AirPrintDestination currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("forceTls", (n) -> { currentObject.setForceTls(n.getBooleanValue()); });
-            this.put("ipAddress", (n) -> { currentObject.setIpAddress(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("port", (n) -> { currentObject.setPort(n.getIntegerValue()); });
-            this.put("resourcePath", (n) -> { currentObject.setResourcePath(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("forceTls", (n) -> { this.setForceTls(n.getBooleanValue()); });
+        deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("port", (n) -> { this.setPort(n.getIntegerValue()); });
+        deserializerMap.put("resourcePath", (n) -> { this.setResourcePath(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the forceTls property value. If true AirPrint connections are secured by Transport Layer Security (TLS). Default is false. Available in iOS 11.0 and later.
@@ -69,7 +69,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getForceTls() {
-        return this._forceTls;
+        return this.forceTls;
     }
     /**
      * Gets the ipAddress property value. The IP Address of the AirPrint destination.
@@ -77,7 +77,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getIpAddress() {
-        return this._ipAddress;
+        return this.ipAddress;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -85,7 +85,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the port property value. The listening port of the AirPrint destination. If this key is not specified AirPrint will use the default port. Available in iOS 11.0 and later.
@@ -93,7 +93,7 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Integer getPort() {
-        return this._port;
+        return this.port;
     }
     /**
      * Gets the resourcePath property value. The Resource Path associated with the printer. This corresponds to the rp parameter of the ipps.tcp Bonjour record. For example: printers/Canon_MG5300_series, printers/Xerox_Phaser_7600, ipp/print, Epson_IPP_Printer.
@@ -101,13 +101,14 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getResourcePath() {
-        return this._resourcePath;
+        return this.resourcePath;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("forceTls", this.getForceTls());
@@ -122,47 +123,53 @@ public class AirPrintDestination implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the forceTls property value. If true AirPrint connections are secured by Transport Layer Security (TLS). Default is false. Available in iOS 11.0 and later.
      * @param value Value to set for the forceTls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setForceTls(@javax.annotation.Nullable final Boolean value) {
-        this._forceTls = value;
+        this.forceTls = value;
     }
     /**
      * Sets the ipAddress property value. The IP Address of the AirPrint destination.
      * @param value Value to set for the ipAddress property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIpAddress(@javax.annotation.Nullable final String value) {
-        this._ipAddress = value;
+        this.ipAddress = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the port property value. The listening port of the AirPrint destination. If this key is not specified AirPrint will use the default port. Available in iOS 11.0 and later.
      * @param value Value to set for the port property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPort(@javax.annotation.Nullable final Integer value) {
-        this._port = value;
+        this.port = value;
     }
     /**
      * Sets the resourcePath property value. The Resource Path associated with the printer. This corresponds to the rp parameter of the ipps.tcp Bonjour record. For example: printers/Canon_MG5300_series, printers/Xerox_Phaser_7600, ipp/print, Epson_IPP_Printer.
      * @param value Value to set for the resourcePath property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResourcePath(@javax.annotation.Nullable final String value) {
-        this._resourcePath = value;
+        this.resourcePath = value;
     }
 }

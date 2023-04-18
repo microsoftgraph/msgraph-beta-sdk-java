@@ -3,25 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class StatusDetails extends StatusBase implements Parsable {
     /** Additional details in case of error. */
-    private String _additionalDetails;
+    private String additionalDetails;
     /** Categorizes the error code. Possible values are Failure, NonServiceFailure, Success. */
-    private ProvisioningStatusErrorCategory _errorCategory;
+    private ProvisioningStatusErrorCategory errorCategory;
     /** Unique error code if any occurred. Learn more */
-    private String _errorCode;
+    private String errorCode;
     /** Summarizes the status and describes why the status happened. */
-    private String _reason;
+    private String reason;
     /** Provides the resolution for the corresponding error. */
-    private String _recommendedAction;
+    private String recommendedAction;
     /**
      * Instantiates a new StatusDetails and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public StatusDetails() {
         super();
         this.setOdataType("#microsoft.graph.statusDetails");
@@ -42,7 +42,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAdditionalDetails() {
-        return this._additionalDetails;
+        return this.additionalDetails;
     }
     /**
      * Gets the errorCategory property value. Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
@@ -50,7 +50,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      */
     @javax.annotation.Nullable
     public ProvisioningStatusErrorCategory getErrorCategory() {
-        return this._errorCategory;
+        return this.errorCategory;
     }
     /**
      * Gets the errorCode property value. Unique error code if any occurred. Learn more
@@ -58,22 +58,21 @@ public class StatusDetails extends StatusBase implements Parsable {
      */
     @javax.annotation.Nullable
     public String getErrorCode() {
-        return this._errorCode;
+        return this.errorCode;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final StatusDetails currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("additionalDetails", (n) -> { currentObject.setAdditionalDetails(n.getStringValue()); });
-            this.put("errorCategory", (n) -> { currentObject.setErrorCategory(n.getEnumValue(ProvisioningStatusErrorCategory.class)); });
-            this.put("errorCode", (n) -> { currentObject.setErrorCode(n.getStringValue()); });
-            this.put("reason", (n) -> { currentObject.setReason(n.getStringValue()); });
-            this.put("recommendedAction", (n) -> { currentObject.setRecommendedAction(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("additionalDetails", (n) -> { this.setAdditionalDetails(n.getStringValue()); });
+        deserializerMap.put("errorCategory", (n) -> { this.setErrorCategory(n.getEnumValue(ProvisioningStatusErrorCategory.class)); });
+        deserializerMap.put("errorCode", (n) -> { this.setErrorCode(n.getStringValue()); });
+        deserializerMap.put("reason", (n) -> { this.setReason(n.getStringValue()); });
+        deserializerMap.put("recommendedAction", (n) -> { this.setRecommendedAction(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the reason property value. Summarizes the status and describes why the status happened.
@@ -81,7 +80,7 @@ public class StatusDetails extends StatusBase implements Parsable {
      */
     @javax.annotation.Nullable
     public String getReason() {
-        return this._reason;
+        return this.reason;
     }
     /**
      * Gets the recommendedAction property value. Provides the resolution for the corresponding error.
@@ -89,13 +88,14 @@ public class StatusDetails extends StatusBase implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRecommendedAction() {
-        return this._recommendedAction;
+        return this.recommendedAction;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,39 +110,44 @@ public class StatusDetails extends StatusBase implements Parsable {
      * @param value Value to set for the additionalDetails property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalDetails(@javax.annotation.Nullable final String value) {
-        this._additionalDetails = value;
+        this.additionalDetails = value;
     }
     /**
      * Sets the errorCategory property value. Categorizes the error code. Possible values are Failure, NonServiceFailure, Success.
      * @param value Value to set for the errorCategory property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCategory(@javax.annotation.Nullable final ProvisioningStatusErrorCategory value) {
-        this._errorCategory = value;
+        this.errorCategory = value;
     }
     /**
      * Sets the errorCode property value. Unique error code if any occurred. Learn more
      * @param value Value to set for the errorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setErrorCode(@javax.annotation.Nullable final String value) {
-        this._errorCode = value;
+        this.errorCode = value;
     }
     /**
      * Sets the reason property value. Summarizes the status and describes why the status happened.
      * @param value Value to set for the reason property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReason(@javax.annotation.Nullable final String value) {
-        this._reason = value;
+        this.reason = value;
     }
     /**
      * Sets the recommendedAction property value. Provides the resolution for the corresponding error.
      * @param value Value to set for the recommendedAction property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRecommendedAction(@javax.annotation.Nullable final String value) {
-        this._recommendedAction = value;
+        this.recommendedAction = value;
     }
 }

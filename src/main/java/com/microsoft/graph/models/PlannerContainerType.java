@@ -3,11 +3,12 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public enum PlannerContainerType implements ValuedEnum {
     Group("group"),
     UnknownFutureValue("unknownFutureValue"),
-    Roster("roster");
+    Roster("roster"),
+    Project("project"),
+    DriveItem("driveItem");
     public final String value;
     PlannerContainerType(final String value) {
         this.value = value;
@@ -21,6 +22,8 @@ public enum PlannerContainerType implements ValuedEnum {
             case "group": return Group;
             case "unknownFutureValue": return UnknownFutureValue;
             case "roster": return Roster;
+            case "project": return Project;
+            case "driveItem": return DriveItem;
             default: return null;
         }
     }

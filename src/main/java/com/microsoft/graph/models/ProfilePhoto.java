@@ -3,22 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ProfilePhoto extends Entity implements Parsable {
     /** The height of the photo. Read-only. */
-    private Integer _height;
+    private Integer height;
     /** The width of the photo. Read-only. */
-    private Integer _width;
+    private Integer width;
     /**
      * Instantiates a new profilePhoto and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ProfilePhoto() {
         super();
-        this.setOdataType("#microsoft.graph.profilePhoto");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,15 +31,14 @@ public class ProfilePhoto extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ProfilePhoto currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("height", (n) -> { currentObject.setHeight(n.getIntegerValue()); });
-            this.put("width", (n) -> { currentObject.setWidth(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("height", (n) -> { this.setHeight(n.getIntegerValue()); });
+        deserializerMap.put("width", (n) -> { this.setWidth(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the height property value. The height of the photo. Read-only.
@@ -48,7 +46,7 @@ public class ProfilePhoto extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getHeight() {
-        return this._height;
+        return this.height;
     }
     /**
      * Gets the width property value. The width of the photo. Read-only.
@@ -56,13 +54,14 @@ public class ProfilePhoto extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getWidth() {
-        return this._width;
+        return this.width;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +73,17 @@ public class ProfilePhoto extends Entity implements Parsable {
      * @param value Value to set for the height property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHeight(@javax.annotation.Nullable final Integer value) {
-        this._height = value;
+        this.height = value;
     }
     /**
      * Sets the width property value. The width of the photo. Read-only.
      * @param value Value to set for the width property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWidth(@javax.annotation.Nullable final Integer value) {
-        this._width = value;
+        this.width = value;
     }
 }

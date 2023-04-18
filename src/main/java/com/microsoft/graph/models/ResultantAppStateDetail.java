@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Enum indicating additional details regarding why an application has a particular install state. */
 public enum ResultantAppStateDetail implements ValuedEnum {
     /** Device architecture (e.g. x86/amd64) is not applicable for the application. */
     ProcessorArchitectureNotApplicable("processorArchitectureNotApplicable"),
