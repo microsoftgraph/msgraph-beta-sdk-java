@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** An enum type to represent approval status of a driver. */
 public enum DriverApprovalStatus implements ValuedEnum {
     /** This indicates a driver needs IT admin's review. */
     NeedsReview("needsReview"),

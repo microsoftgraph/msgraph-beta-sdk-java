@@ -4,30 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Device error code reported by Device Directory Service(DDS). */
-    private Integer _deviceErrorCode;
+    private Integer deviceErrorCode;
     /** Device error name reported by Device Directory Service(DDS). */
-    private String _deviceErrorName;
+    private String deviceErrorName;
     /** The deviceImportStatus property */
-    private ImportedWindowsAutopilotDeviceIdentityImportStatus _deviceImportStatus;
+    private ImportedWindowsAutopilotDeviceIdentityImportStatus deviceImportStatus;
     /** Device Registration ID for successfully added device reported by Device Directory Service(DDS). */
-    private String _deviceRegistrationId;
+    private String deviceRegistrationId;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /**
      * Instantiates a new importedWindowsAutopilotDeviceIdentityState and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityState() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.importedWindowsAutopilotDeviceIdentityState");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +44,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the deviceErrorCode property value. Device error code reported by Device Directory Service(DDS).
@@ -53,7 +52,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      */
     @javax.annotation.Nullable
     public Integer getDeviceErrorCode() {
-        return this._deviceErrorCode;
+        return this.deviceErrorCode;
     }
     /**
      * Gets the deviceErrorName property value. Device error name reported by Device Directory Service(DDS).
@@ -61,7 +60,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      */
     @javax.annotation.Nullable
     public String getDeviceErrorName() {
-        return this._deviceErrorName;
+        return this.deviceErrorName;
     }
     /**
      * Gets the deviceImportStatus property value. The deviceImportStatus property
@@ -69,7 +68,7 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      */
     @javax.annotation.Nullable
     public ImportedWindowsAutopilotDeviceIdentityImportStatus getDeviceImportStatus() {
-        return this._deviceImportStatus;
+        return this.deviceImportStatus;
     }
     /**
      * Gets the deviceRegistrationId property value. Device Registration ID for successfully added device reported by Device Directory Service(DDS).
@@ -77,22 +76,21 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      */
     @javax.annotation.Nullable
     public String getDeviceRegistrationId() {
-        return this._deviceRegistrationId;
+        return this.deviceRegistrationId;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ImportedWindowsAutopilotDeviceIdentityState currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("deviceErrorCode", (n) -> { currentObject.setDeviceErrorCode(n.getIntegerValue()); });
-            this.put("deviceErrorName", (n) -> { currentObject.setDeviceErrorName(n.getStringValue()); });
-            this.put("deviceImportStatus", (n) -> { currentObject.setDeviceImportStatus(n.getEnumValue(ImportedWindowsAutopilotDeviceIdentityImportStatus.class)); });
-            this.put("deviceRegistrationId", (n) -> { currentObject.setDeviceRegistrationId(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("deviceErrorCode", (n) -> { this.setDeviceErrorCode(n.getIntegerValue()); });
+        deserializerMap.put("deviceErrorName", (n) -> { this.setDeviceErrorName(n.getStringValue()); });
+        deserializerMap.put("deviceImportStatus", (n) -> { this.setDeviceImportStatus(n.getEnumValue(ImportedWindowsAutopilotDeviceIdentityImportStatus.class)); });
+        deserializerMap.put("deviceRegistrationId", (n) -> { this.setDeviceRegistrationId(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -100,13 +98,14 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("deviceErrorCode", this.getDeviceErrorCode());
@@ -121,47 +120,53 @@ public class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDa
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the deviceErrorCode property value. Device error code reported by Device Directory Service(DDS).
      * @param value Value to set for the deviceErrorCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceErrorCode(@javax.annotation.Nullable final Integer value) {
-        this._deviceErrorCode = value;
+        this.deviceErrorCode = value;
     }
     /**
      * Sets the deviceErrorName property value. Device error name reported by Device Directory Service(DDS).
      * @param value Value to set for the deviceErrorName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceErrorName(@javax.annotation.Nullable final String value) {
-        this._deviceErrorName = value;
+        this.deviceErrorName = value;
     }
     /**
      * Sets the deviceImportStatus property value. The deviceImportStatus property
      * @param value Value to set for the deviceImportStatus property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceImportStatus(@javax.annotation.Nullable final ImportedWindowsAutopilotDeviceIdentityImportStatus value) {
-        this._deviceImportStatus = value;
+        this.deviceImportStatus = value;
     }
     /**
      * Sets the deviceRegistrationId property value. Device Registration ID for successfully added device reported by Device Directory Service(DDS).
      * @param value Value to set for the deviceRegistrationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDeviceRegistrationId(@javax.annotation.Nullable final String value) {
-        this._deviceRegistrationId = value;
+        this.deviceRegistrationId = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
 }

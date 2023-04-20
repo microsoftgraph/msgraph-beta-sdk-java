@@ -3,26 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookChartLegend extends Entity implements Parsable {
     /** Represents the formatting of a chart legend, which includes fill and font formatting. Read-only. */
-    private WorkbookChartLegendFormat _format;
+    private WorkbookChartLegendFormat format;
     /** Boolean value for whether the chart legend should overlap with the main body of the chart. */
-    private Boolean _overlay;
+    private Boolean overlay;
     /** Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom. */
-    private String _position;
+    private String position;
     /** A boolean value the represents the visibility of a ChartLegend object. */
-    private Boolean _visible;
+    private Boolean visible;
     /**
      * Instantiates a new workbookChartLegend and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookChartLegend() {
         super();
-        this.setOdataType("#microsoft.graph.workbookChartLegend");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,17 +35,16 @@ public class WorkbookChartLegend extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookChartLegend currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("format", (n) -> { currentObject.setFormat(n.getObjectValue(WorkbookChartLegendFormat::createFromDiscriminatorValue)); });
-            this.put("overlay", (n) -> { currentObject.setOverlay(n.getBooleanValue()); });
-            this.put("position", (n) -> { currentObject.setPosition(n.getStringValue()); });
-            this.put("visible", (n) -> { currentObject.setVisible(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("format", (n) -> { this.setFormat(n.getObjectValue(WorkbookChartLegendFormat::createFromDiscriminatorValue)); });
+        deserializerMap.put("overlay", (n) -> { this.setOverlay(n.getBooleanValue()); });
+        deserializerMap.put("position", (n) -> { this.setPosition(n.getStringValue()); });
+        deserializerMap.put("visible", (n) -> { this.setVisible(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the format property value. Represents the formatting of a chart legend, which includes fill and font formatting. Read-only.
@@ -54,7 +52,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public WorkbookChartLegendFormat getFormat() {
-        return this._format;
+        return this.format;
     }
     /**
      * Gets the overlay property value. Boolean value for whether the chart legend should overlap with the main body of the chart.
@@ -62,7 +60,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getOverlay() {
-        return this._overlay;
+        return this.overlay;
     }
     /**
      * Gets the position property value. Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
@@ -70,7 +68,7 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPosition() {
-        return this._position;
+        return this.position;
     }
     /**
      * Gets the visible property value. A boolean value the represents the visibility of a ChartLegend object.
@@ -78,13 +76,14 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getVisible() {
-        return this._visible;
+        return this.visible;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,31 +97,35 @@ public class WorkbookChartLegend extends Entity implements Parsable {
      * @param value Value to set for the format property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormat(@javax.annotation.Nullable final WorkbookChartLegendFormat value) {
-        this._format = value;
+        this.format = value;
     }
     /**
      * Sets the overlay property value. Boolean value for whether the chart legend should overlap with the main body of the chart.
      * @param value Value to set for the overlay property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOverlay(@javax.annotation.Nullable final Boolean value) {
-        this._overlay = value;
+        this.overlay = value;
     }
     /**
      * Sets the position property value. Represents the position of the legend on the chart. The possible values are: Top, Bottom, Left, Right, Corner, Custom.
      * @param value Value to set for the position property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPosition(@javax.annotation.Nullable final String value) {
-        this._position = value;
+        this.position = value;
     }
     /**
      * Sets the visible property value. A boolean value the represents the visibility of a ChartLegend object.
      * @param value Value to set for the visible property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVisible(@javax.annotation.Nullable final Boolean value) {
-        this._visible = value;
+        this.visible = value;
     }
 }

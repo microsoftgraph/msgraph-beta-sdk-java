@@ -1,90 +1,86 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.CalendarSharingMessage;
-import com.microsoft.graph.models.EventMessage;
-import com.microsoft.graph.models.EventMessageRequest;
-import com.microsoft.graph.models.EventMessageResponse;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class Message extends OutlookItem implements Parsable {
     /** The fileAttachment and itemAttachment attachments for the message. */
-    private java.util.List<Attachment> _attachments;
+    private java.util.List<Attachment> attachments;
     /** The Bcc: recipients for the message. */
-    private java.util.List<Recipient> _bccRecipients;
+    private java.util.List<Recipient> bccRecipients;
     /** The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body. */
-    private ItemBody _body;
+    private ItemBody body;
     /** The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well. */
-    private String _bodyPreview;
+    private String bodyPreview;
     /** The Cc: recipients for the message. */
-    private java.util.List<Recipient> _ccRecipients;
+    private java.util.List<Recipient> ccRecipients;
     /** The ID of the conversation the email belongs to. */
-    private String _conversationId;
+    private String conversationId;
     /** Indicates the position of the message within the conversation. */
-    private byte[] _conversationIndex;
+    private byte[] conversationIndex;
     /** The collection of open extensions defined for the message. Nullable. */
-    private java.util.List<Extension> _extensions;
+    private java.util.List<Extension> extensions;
     /** The flag value that indicates the status, start date, due date, or completion date for the message. */
-    private FollowupFlag _flag;
+    private FollowupFlag flag;
     /** The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message. */
-    private Recipient _from;
+    private Recipient from;
     /** Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>. */
-    private Boolean _hasAttachments;
+    private Boolean hasAttachments;
     /** The importance property */
-    private Importance _importance;
+    private Importance importance;
     /** The inferenceClassification property */
-    private InferenceClassificationType _inferenceClassification;
+    private InferenceClassificationType inferenceClassification;
     /** The internetMessageHeaders property */
-    private java.util.List<InternetMessageHeader> _internetMessageHeaders;
+    private java.util.List<InternetMessageHeader> internetMessageHeaders;
     /** The internetMessageId property */
-    private String _internetMessageId;
+    private String internetMessageId;
     /** The isDeliveryReceiptRequested property */
-    private Boolean _isDeliveryReceiptRequested;
+    private Boolean isDeliveryReceiptRequested;
     /** The isDraft property */
-    private Boolean _isDraft;
+    private Boolean isDraft;
     /** The isRead property */
-    private Boolean _isRead;
+    private Boolean isRead;
     /** The isReadReceiptRequested property */
-    private Boolean _isReadReceiptRequested;
+    private Boolean isReadReceiptRequested;
     /** A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property. */
-    private java.util.List<Mention> _mentions;
+    private java.util.List<Mention> mentions;
     /** The mentionsPreview property */
-    private MentionsPreview _mentionsPreview;
+    private MentionsPreview mentionsPreview;
     /** The collection of multi-value extended properties defined for the message. Nullable. */
-    private java.util.List<MultiValueLegacyExtendedProperty> _multiValueExtendedProperties;
+    private java.util.List<MultiValueLegacyExtendedProperty> multiValueExtendedProperties;
     /** The parentFolderId property */
-    private String _parentFolderId;
+    private String parentFolderId;
     /** The receivedDateTime property */
-    private OffsetDateTime _receivedDateTime;
+    private OffsetDateTime receivedDateTime;
     /** The replyTo property */
-    private java.util.List<Recipient> _replyTo;
+    private java.util.List<Recipient> replyTo;
     /** The sender property */
-    private Recipient _sender;
+    private Recipient sender;
     /** The sentDateTime property */
-    private OffsetDateTime _sentDateTime;
+    private OffsetDateTime sentDateTime;
     /** The collection of single-value extended properties defined for the message. Nullable. */
-    private java.util.List<SingleValueLegacyExtendedProperty> _singleValueExtendedProperties;
+    private java.util.List<SingleValueLegacyExtendedProperty> singleValueExtendedProperties;
     /** The subject property */
-    private String _subject;
+    private String subject;
     /** The toRecipients property */
-    private java.util.List<Recipient> _toRecipients;
+    private java.util.List<Recipient> toRecipients;
     /** The uniqueBody property */
-    private ItemBody _uniqueBody;
+    private ItemBody uniqueBody;
     /** The unsubscribeData property */
-    private java.util.List<String> _unsubscribeData;
+    private java.util.List<String> unsubscribeData;
     /** The unsubscribeEnabled property */
-    private Boolean _unsubscribeEnabled;
+    private Boolean unsubscribeEnabled;
     /** The webLink property */
-    private String _webLink;
+    private String webLink;
     /**
      * Instantiates a new Message and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Message() {
         super();
         this.setOdataType("#microsoft.graph.message");
@@ -103,8 +99,6 @@ public class Message extends OutlookItem implements Parsable {
             switch (mappingValue) {
                 case "#microsoft.graph.calendarSharingMessage": return new CalendarSharingMessage();
                 case "#microsoft.graph.eventMessage": return new EventMessage();
-                case "#microsoft.graph.eventMessageRequest": return new EventMessageRequest();
-                case "#microsoft.graph.eventMessageResponse": return new EventMessageResponse();
             }
         }
         return new Message();
@@ -115,7 +109,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Attachment> getAttachments() {
-        return this._attachments;
+        return this.attachments;
     }
     /**
      * Gets the bccRecipients property value. The Bcc: recipients for the message.
@@ -123,7 +117,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Recipient> getBccRecipients() {
-        return this._bccRecipients;
+        return this.bccRecipients;
     }
     /**
      * Gets the body property value. The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
@@ -131,7 +125,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public ItemBody getBody() {
-        return this._body;
+        return this.body;
     }
     /**
      * Gets the bodyPreview property value. The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
@@ -139,7 +133,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public String getBodyPreview() {
-        return this._bodyPreview;
+        return this.bodyPreview;
     }
     /**
      * Gets the ccRecipients property value. The Cc: recipients for the message.
@@ -147,7 +141,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Recipient> getCcRecipients() {
-        return this._ccRecipients;
+        return this.ccRecipients;
     }
     /**
      * Gets the conversationId property value. The ID of the conversation the email belongs to.
@@ -155,15 +149,15 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public String getConversationId() {
-        return this._conversationId;
+        return this.conversationId;
     }
     /**
      * Gets the conversationIndex property value. Indicates the position of the message within the conversation.
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getConversationIndex() {
-        return this._conversationIndex;
+        return this.conversationIndex;
     }
     /**
      * Gets the extensions property value. The collection of open extensions defined for the message. Nullable.
@@ -171,51 +165,50 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Extension> getExtensions() {
-        return this._extensions;
+        return this.extensions;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Message currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("attachments", (n) -> { currentObject.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
-            this.put("bccRecipients", (n) -> { currentObject.setBccRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("body", (n) -> { currentObject.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("bodyPreview", (n) -> { currentObject.setBodyPreview(n.getStringValue()); });
-            this.put("ccRecipients", (n) -> { currentObject.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("conversationId", (n) -> { currentObject.setConversationId(n.getStringValue()); });
-            this.put("conversationIndex", (n) -> { currentObject.setConversationIndex(n.getByteArrayValue()); });
-            this.put("extensions", (n) -> { currentObject.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
-            this.put("flag", (n) -> { currentObject.setFlag(n.getObjectValue(FollowupFlag::createFromDiscriminatorValue)); });
-            this.put("from", (n) -> { currentObject.setFrom(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
-            this.put("hasAttachments", (n) -> { currentObject.setHasAttachments(n.getBooleanValue()); });
-            this.put("importance", (n) -> { currentObject.setImportance(n.getEnumValue(Importance.class)); });
-            this.put("inferenceClassification", (n) -> { currentObject.setInferenceClassification(n.getEnumValue(InferenceClassificationType.class)); });
-            this.put("internetMessageHeaders", (n) -> { currentObject.setInternetMessageHeaders(n.getCollectionOfObjectValues(InternetMessageHeader::createFromDiscriminatorValue)); });
-            this.put("internetMessageId", (n) -> { currentObject.setInternetMessageId(n.getStringValue()); });
-            this.put("isDeliveryReceiptRequested", (n) -> { currentObject.setIsDeliveryReceiptRequested(n.getBooleanValue()); });
-            this.put("isDraft", (n) -> { currentObject.setIsDraft(n.getBooleanValue()); });
-            this.put("isRead", (n) -> { currentObject.setIsRead(n.getBooleanValue()); });
-            this.put("isReadReceiptRequested", (n) -> { currentObject.setIsReadReceiptRequested(n.getBooleanValue()); });
-            this.put("mentions", (n) -> { currentObject.setMentions(n.getCollectionOfObjectValues(Mention::createFromDiscriminatorValue)); });
-            this.put("mentionsPreview", (n) -> { currentObject.setMentionsPreview(n.getObjectValue(MentionsPreview::createFromDiscriminatorValue)); });
-            this.put("multiValueExtendedProperties", (n) -> { currentObject.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("parentFolderId", (n) -> { currentObject.setParentFolderId(n.getStringValue()); });
-            this.put("receivedDateTime", (n) -> { currentObject.setReceivedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("replyTo", (n) -> { currentObject.setReplyTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("sender", (n) -> { currentObject.setSender(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
-            this.put("sentDateTime", (n) -> { currentObject.setSentDateTime(n.getOffsetDateTimeValue()); });
-            this.put("singleValueExtendedProperties", (n) -> { currentObject.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
-            this.put("subject", (n) -> { currentObject.setSubject(n.getStringValue()); });
-            this.put("toRecipients", (n) -> { currentObject.setToRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
-            this.put("uniqueBody", (n) -> { currentObject.setUniqueBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
-            this.put("unsubscribeData", (n) -> { currentObject.setUnsubscribeData(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("unsubscribeEnabled", (n) -> { currentObject.setUnsubscribeEnabled(n.getBooleanValue()); });
-            this.put("webLink", (n) -> { currentObject.setWebLink(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("attachments", (n) -> { this.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
+        deserializerMap.put("bccRecipients", (n) -> { this.setBccRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("bodyPreview", (n) -> { this.setBodyPreview(n.getStringValue()); });
+        deserializerMap.put("ccRecipients", (n) -> { this.setCcRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("conversationId", (n) -> { this.setConversationId(n.getStringValue()); });
+        deserializerMap.put("conversationIndex", (n) -> { this.setConversationIndex(n.getByteArrayValue()); });
+        deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
+        deserializerMap.put("flag", (n) -> { this.setFlag(n.getObjectValue(FollowupFlag::createFromDiscriminatorValue)); });
+        deserializerMap.put("from", (n) -> { this.setFrom(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
+        deserializerMap.put("importance", (n) -> { this.setImportance(n.getEnumValue(Importance.class)); });
+        deserializerMap.put("inferenceClassification", (n) -> { this.setInferenceClassification(n.getEnumValue(InferenceClassificationType.class)); });
+        deserializerMap.put("internetMessageHeaders", (n) -> { this.setInternetMessageHeaders(n.getCollectionOfObjectValues(InternetMessageHeader::createFromDiscriminatorValue)); });
+        deserializerMap.put("internetMessageId", (n) -> { this.setInternetMessageId(n.getStringValue()); });
+        deserializerMap.put("isDeliveryReceiptRequested", (n) -> { this.setIsDeliveryReceiptRequested(n.getBooleanValue()); });
+        deserializerMap.put("isDraft", (n) -> { this.setIsDraft(n.getBooleanValue()); });
+        deserializerMap.put("isRead", (n) -> { this.setIsRead(n.getBooleanValue()); });
+        deserializerMap.put("isReadReceiptRequested", (n) -> { this.setIsReadReceiptRequested(n.getBooleanValue()); });
+        deserializerMap.put("mentions", (n) -> { this.setMentions(n.getCollectionOfObjectValues(Mention::createFromDiscriminatorValue)); });
+        deserializerMap.put("mentionsPreview", (n) -> { this.setMentionsPreview(n.getObjectValue(MentionsPreview::createFromDiscriminatorValue)); });
+        deserializerMap.put("multiValueExtendedProperties", (n) -> { this.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("parentFolderId", (n) -> { this.setParentFolderId(n.getStringValue()); });
+        deserializerMap.put("receivedDateTime", (n) -> { this.setReceivedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("replyTo", (n) -> { this.setReplyTo(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("sender", (n) -> { this.setSender(n.getObjectValue(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("sentDateTime", (n) -> { this.setSentDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
+        deserializerMap.put("toRecipients", (n) -> { this.setToRecipients(n.getCollectionOfObjectValues(Recipient::createFromDiscriminatorValue)); });
+        deserializerMap.put("uniqueBody", (n) -> { this.setUniqueBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("unsubscribeData", (n) -> { this.setUnsubscribeData(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("unsubscribeEnabled", (n) -> { this.setUnsubscribeEnabled(n.getBooleanValue()); });
+        deserializerMap.put("webLink", (n) -> { this.setWebLink(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the flag property value. The flag value that indicates the status, start date, due date, or completion date for the message.
@@ -223,7 +216,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public FollowupFlag getFlag() {
-        return this._flag;
+        return this.flag;
     }
     /**
      * Gets the from property value. The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
@@ -231,7 +224,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Recipient getFrom() {
-        return this._from;
+        return this.from;
     }
     /**
      * Gets the hasAttachments property value. Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>.
@@ -239,7 +232,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getHasAttachments() {
-        return this._hasAttachments;
+        return this.hasAttachments;
     }
     /**
      * Gets the importance property value. The importance property
@@ -247,7 +240,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Importance getImportance() {
-        return this._importance;
+        return this.importance;
     }
     /**
      * Gets the inferenceClassification property value. The inferenceClassification property
@@ -255,7 +248,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public InferenceClassificationType getInferenceClassification() {
-        return this._inferenceClassification;
+        return this.inferenceClassification;
     }
     /**
      * Gets the internetMessageHeaders property value. The internetMessageHeaders property
@@ -263,7 +256,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<InternetMessageHeader> getInternetMessageHeaders() {
-        return this._internetMessageHeaders;
+        return this.internetMessageHeaders;
     }
     /**
      * Gets the internetMessageId property value. The internetMessageId property
@@ -271,7 +264,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public String getInternetMessageId() {
-        return this._internetMessageId;
+        return this.internetMessageId;
     }
     /**
      * Gets the isDeliveryReceiptRequested property value. The isDeliveryReceiptRequested property
@@ -279,7 +272,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsDeliveryReceiptRequested() {
-        return this._isDeliveryReceiptRequested;
+        return this.isDeliveryReceiptRequested;
     }
     /**
      * Gets the isDraft property value. The isDraft property
@@ -287,7 +280,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsDraft() {
-        return this._isDraft;
+        return this.isDraft;
     }
     /**
      * Gets the isRead property value. The isRead property
@@ -295,7 +288,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsRead() {
-        return this._isRead;
+        return this.isRead;
     }
     /**
      * Gets the isReadReceiptRequested property value. The isReadReceiptRequested property
@@ -303,7 +296,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsReadReceiptRequested() {
-        return this._isReadReceiptRequested;
+        return this.isReadReceiptRequested;
     }
     /**
      * Gets the mentions property value. A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.
@@ -311,7 +304,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Mention> getMentions() {
-        return this._mentions;
+        return this.mentions;
     }
     /**
      * Gets the mentionsPreview property value. The mentionsPreview property
@@ -319,7 +312,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public MentionsPreview getMentionsPreview() {
-        return this._mentionsPreview;
+        return this.mentionsPreview;
     }
     /**
      * Gets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the message. Nullable.
@@ -327,7 +320,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
-        return this._multiValueExtendedProperties;
+        return this.multiValueExtendedProperties;
     }
     /**
      * Gets the parentFolderId property value. The parentFolderId property
@@ -335,7 +328,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public String getParentFolderId() {
-        return this._parentFolderId;
+        return this.parentFolderId;
     }
     /**
      * Gets the receivedDateTime property value. The receivedDateTime property
@@ -343,7 +336,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getReceivedDateTime() {
-        return this._receivedDateTime;
+        return this.receivedDateTime;
     }
     /**
      * Gets the replyTo property value. The replyTo property
@@ -351,7 +344,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Recipient> getReplyTo() {
-        return this._replyTo;
+        return this.replyTo;
     }
     /**
      * Gets the sender property value. The sender property
@@ -359,7 +352,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Recipient getSender() {
-        return this._sender;
+        return this.sender;
     }
     /**
      * Gets the sentDateTime property value. The sentDateTime property
@@ -367,7 +360,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getSentDateTime() {
-        return this._sentDateTime;
+        return this.sentDateTime;
     }
     /**
      * Gets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the message. Nullable.
@@ -375,7 +368,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<SingleValueLegacyExtendedProperty> getSingleValueExtendedProperties() {
-        return this._singleValueExtendedProperties;
+        return this.singleValueExtendedProperties;
     }
     /**
      * Gets the subject property value. The subject property
@@ -383,7 +376,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public String getSubject() {
-        return this._subject;
+        return this.subject;
     }
     /**
      * Gets the toRecipients property value. The toRecipients property
@@ -391,7 +384,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Recipient> getToRecipients() {
-        return this._toRecipients;
+        return this.toRecipients;
     }
     /**
      * Gets the uniqueBody property value. The uniqueBody property
@@ -399,7 +392,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public ItemBody getUniqueBody() {
-        return this._uniqueBody;
+        return this.uniqueBody;
     }
     /**
      * Gets the unsubscribeData property value. The unsubscribeData property
@@ -407,7 +400,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getUnsubscribeData() {
-        return this._unsubscribeData;
+        return this.unsubscribeData;
     }
     /**
      * Gets the unsubscribeEnabled property value. The unsubscribeEnabled property
@@ -415,7 +408,7 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getUnsubscribeEnabled() {
-        return this._unsubscribeEnabled;
+        return this.unsubscribeEnabled;
     }
     /**
      * Gets the webLink property value. The webLink property
@@ -423,13 +416,14 @@ public class Message extends OutlookItem implements Parsable {
      */
     @javax.annotation.Nullable
     public String getWebLink() {
-        return this._webLink;
+        return this.webLink;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -473,271 +467,305 @@ public class Message extends OutlookItem implements Parsable {
      * @param value Value to set for the attachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAttachments(@javax.annotation.Nullable final java.util.List<Attachment> value) {
-        this._attachments = value;
+        this.attachments = value;
     }
     /**
      * Sets the bccRecipients property value. The Bcc: recipients for the message.
      * @param value Value to set for the bccRecipients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBccRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
-        this._bccRecipients = value;
+        this.bccRecipients = value;
     }
     /**
      * Sets the body property value. The body of the message. It can be in HTML or text format. Find out about safe HTML in a message body.
      * @param value Value to set for the body property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBody(@javax.annotation.Nullable final ItemBody value) {
-        this._body = value;
+        this.body = value;
     }
     /**
      * Sets the bodyPreview property value. The first 255 characters of the message body. It is in text format. If the message contains instances of mention, this property would contain a concatenation of these mentions as well.
      * @param value Value to set for the bodyPreview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBodyPreview(@javax.annotation.Nullable final String value) {
-        this._bodyPreview = value;
+        this.bodyPreview = value;
     }
     /**
      * Sets the ccRecipients property value. The Cc: recipients for the message.
      * @param value Value to set for the ccRecipients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCcRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
-        this._ccRecipients = value;
+        this.ccRecipients = value;
     }
     /**
      * Sets the conversationId property value. The ID of the conversation the email belongs to.
      * @param value Value to set for the conversationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConversationId(@javax.annotation.Nullable final String value) {
-        this._conversationId = value;
+        this.conversationId = value;
     }
     /**
      * Sets the conversationIndex property value. Indicates the position of the message within the conversation.
      * @param value Value to set for the conversationIndex property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConversationIndex(@javax.annotation.Nullable final byte[] value) {
-        this._conversationIndex = value;
+        this.conversationIndex = value;
     }
     /**
      * Sets the extensions property value. The collection of open extensions defined for the message. Nullable.
      * @param value Value to set for the extensions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExtensions(@javax.annotation.Nullable final java.util.List<Extension> value) {
-        this._extensions = value;
+        this.extensions = value;
     }
     /**
      * Sets the flag property value. The flag value that indicates the status, start date, due date, or completion date for the message.
      * @param value Value to set for the flag property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFlag(@javax.annotation.Nullable final FollowupFlag value) {
-        this._flag = value;
+        this.flag = value;
     }
     /**
      * Sets the from property value. The owner of the mailbox from which the message is sent. In most cases, this value is the same as the sender property, except for sharing or delegation scenarios. The value must correspond to the actual mailbox used. Find out more about setting the from and sender properties of a message.
      * @param value Value to set for the from property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFrom(@javax.annotation.Nullable final Recipient value) {
-        this._from = value;
+        this.from = value;
     }
     /**
      * Sets the hasAttachments property value. Indicates whether the message has attachments. This property doesn't include inline attachments, so if a message contains only inline attachments, this property is false. To verify the existence of inline attachments, parse the body property to look for a src attribute, such as <IMG src='cid:image001.jpg@01D26CD8.6C05F070'>.
      * @param value Value to set for the hasAttachments property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHasAttachments(@javax.annotation.Nullable final Boolean value) {
-        this._hasAttachments = value;
+        this.hasAttachments = value;
     }
     /**
      * Sets the importance property value. The importance property
      * @param value Value to set for the importance property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setImportance(@javax.annotation.Nullable final Importance value) {
-        this._importance = value;
+        this.importance = value;
     }
     /**
      * Sets the inferenceClassification property value. The inferenceClassification property
      * @param value Value to set for the inferenceClassification property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInferenceClassification(@javax.annotation.Nullable final InferenceClassificationType value) {
-        this._inferenceClassification = value;
+        this.inferenceClassification = value;
     }
     /**
      * Sets the internetMessageHeaders property value. The internetMessageHeaders property
      * @param value Value to set for the internetMessageHeaders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInternetMessageHeaders(@javax.annotation.Nullable final java.util.List<InternetMessageHeader> value) {
-        this._internetMessageHeaders = value;
+        this.internetMessageHeaders = value;
     }
     /**
      * Sets the internetMessageId property value. The internetMessageId property
      * @param value Value to set for the internetMessageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInternetMessageId(@javax.annotation.Nullable final String value) {
-        this._internetMessageId = value;
+        this.internetMessageId = value;
     }
     /**
      * Sets the isDeliveryReceiptRequested property value. The isDeliveryReceiptRequested property
      * @param value Value to set for the isDeliveryReceiptRequested property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDeliveryReceiptRequested(@javax.annotation.Nullable final Boolean value) {
-        this._isDeliveryReceiptRequested = value;
+        this.isDeliveryReceiptRequested = value;
     }
     /**
      * Sets the isDraft property value. The isDraft property
      * @param value Value to set for the isDraft property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDraft(@javax.annotation.Nullable final Boolean value) {
-        this._isDraft = value;
+        this.isDraft = value;
     }
     /**
      * Sets the isRead property value. The isRead property
      * @param value Value to set for the isRead property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRead(@javax.annotation.Nullable final Boolean value) {
-        this._isRead = value;
+        this.isRead = value;
     }
     /**
      * Sets the isReadReceiptRequested property value. The isReadReceiptRequested property
      * @param value Value to set for the isReadReceiptRequested property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsReadReceiptRequested(@javax.annotation.Nullable final Boolean value) {
-        this._isReadReceiptRequested = value;
+        this.isReadReceiptRequested = value;
     }
     /**
      * Sets the mentions property value. A collection of mentions in the message, ordered by the createdDateTime from the newest to the oldest. By default, a GET /messages does not return this property unless you apply $expand on the property.
      * @param value Value to set for the mentions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMentions(@javax.annotation.Nullable final java.util.List<Mention> value) {
-        this._mentions = value;
+        this.mentions = value;
     }
     /**
      * Sets the mentionsPreview property value. The mentionsPreview property
      * @param value Value to set for the mentionsPreview property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMentionsPreview(@javax.annotation.Nullable final MentionsPreview value) {
-        this._mentionsPreview = value;
+        this.mentionsPreview = value;
     }
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the message. Nullable.
      * @param value Value to set for the multiValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMultiValueExtendedProperties(@javax.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
-        this._multiValueExtendedProperties = value;
+        this.multiValueExtendedProperties = value;
     }
     /**
      * Sets the parentFolderId property value. The parentFolderId property
      * @param value Value to set for the parentFolderId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setParentFolderId(@javax.annotation.Nullable final String value) {
-        this._parentFolderId = value;
+        this.parentFolderId = value;
     }
     /**
      * Sets the receivedDateTime property value. The receivedDateTime property
      * @param value Value to set for the receivedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReceivedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._receivedDateTime = value;
+        this.receivedDateTime = value;
     }
     /**
      * Sets the replyTo property value. The replyTo property
      * @param value Value to set for the replyTo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReplyTo(@javax.annotation.Nullable final java.util.List<Recipient> value) {
-        this._replyTo = value;
+        this.replyTo = value;
     }
     /**
      * Sets the sender property value. The sender property
      * @param value Value to set for the sender property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSender(@javax.annotation.Nullable final Recipient value) {
-        this._sender = value;
+        this.sender = value;
     }
     /**
      * Sets the sentDateTime property value. The sentDateTime property
      * @param value Value to set for the sentDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSentDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._sentDateTime = value;
+        this.sentDateTime = value;
     }
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the message. Nullable.
      * @param value Value to set for the singleValueExtendedProperties property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSingleValueExtendedProperties(@javax.annotation.Nullable final java.util.List<SingleValueLegacyExtendedProperty> value) {
-        this._singleValueExtendedProperties = value;
+        this.singleValueExtendedProperties = value;
     }
     /**
      * Sets the subject property value. The subject property
      * @param value Value to set for the subject property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSubject(@javax.annotation.Nullable final String value) {
-        this._subject = value;
+        this.subject = value;
     }
     /**
      * Sets the toRecipients property value. The toRecipients property
      * @param value Value to set for the toRecipients property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setToRecipients(@javax.annotation.Nullable final java.util.List<Recipient> value) {
-        this._toRecipients = value;
+        this.toRecipients = value;
     }
     /**
      * Sets the uniqueBody property value. The uniqueBody property
      * @param value Value to set for the uniqueBody property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUniqueBody(@javax.annotation.Nullable final ItemBody value) {
-        this._uniqueBody = value;
+        this.uniqueBody = value;
     }
     /**
      * Sets the unsubscribeData property value. The unsubscribeData property
      * @param value Value to set for the unsubscribeData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnsubscribeData(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._unsubscribeData = value;
+        this.unsubscribeData = value;
     }
     /**
      * Sets the unsubscribeEnabled property value. The unsubscribeEnabled property
      * @param value Value to set for the unsubscribeEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnsubscribeEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._unsubscribeEnabled = value;
+        this.unsubscribeEnabled = value;
     }
     /**
      * Sets the webLink property value. The webLink property
      * @param value Value to set for the webLink property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWebLink(@javax.annotation.Nullable final String value) {
-        this._webLink = value;
+        this.webLink = value;
     }
 }

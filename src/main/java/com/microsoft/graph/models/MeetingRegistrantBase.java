@@ -1,25 +1,21 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.ExternalMeetingRegistrant;
-import com.microsoft.graph.models.MeetingRegistrant;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class MeetingRegistrantBase extends Entity implements Parsable {
     /** A unique web URL for the registrant to join the meeting. Read-only. */
-    private String _joinWebUrl;
+    private String joinWebUrl;
     /**
      * Instantiates a new meetingRegistrantBase and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MeetingRegistrantBase() {
         super();
-        this.setOdataType("#microsoft.graph.meetingRegistrantBase");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -29,26 +25,17 @@ public class MeetingRegistrantBase extends Entity implements Parsable {
     @javax.annotation.Nonnull
     public static MeetingRegistrantBase createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.externalMeetingRegistrant": return new ExternalMeetingRegistrant();
-                case "#microsoft.graph.meetingRegistrant": return new MeetingRegistrant();
-            }
-        }
         return new MeetingRegistrantBase();
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MeetingRegistrantBase currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("joinWebUrl", (n) -> { currentObject.setJoinWebUrl(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("joinWebUrl", (n) -> { this.setJoinWebUrl(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the joinWebUrl property value. A unique web URL for the registrant to join the meeting. Read-only.
@@ -56,13 +43,14 @@ public class MeetingRegistrantBase extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getJoinWebUrl() {
-        return this._joinWebUrl;
+        return this.joinWebUrl;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -73,7 +61,8 @@ public class MeetingRegistrantBase extends Entity implements Parsable {
      * @param value Value to set for the joinWebUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setJoinWebUrl(@javax.annotation.Nullable final String value) {
-        this._joinWebUrl = value;
+        this.joinWebUrl = value;
     }
 }

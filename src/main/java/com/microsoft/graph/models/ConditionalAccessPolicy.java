@@ -4,35 +4,33 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ConditionalAccessPolicy extends Entity implements Parsable {
     /** The conditions property */
-    private ConditionalAccessConditionSet _conditions;
+    private ConditionalAccessConditionSet conditions;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Not used. */
-    private String _description;
+    private String description;
     /** Specifies a display name for the conditionalAccessPolicy object. */
-    private String _displayName;
+    private String displayName;
     /** Specifies the grant controls that must be fulfilled to pass the policy. */
-    private ConditionalAccessGrantControls _grantControls;
+    private ConditionalAccessGrantControls grantControls;
     /** The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly. */
-    private OffsetDateTime _modifiedDateTime;
+    private OffsetDateTime modifiedDateTime;
     /** Specifies the session controls that are enforced after sign-in. */
-    private ConditionalAccessSessionControls _sessionControls;
+    private ConditionalAccessSessionControls sessionControls;
     /** The state property */
-    private ConditionalAccessPolicyState _state;
+    private ConditionalAccessPolicyState state;
     /**
      * Instantiates a new conditionalAccessPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConditionalAccessPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.conditionalAccessPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -50,7 +48,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ConditionalAccessConditionSet getConditions() {
-        return this._conditions;
+        return this.conditions;
     }
     /**
      * Gets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
@@ -58,7 +56,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. Not used.
@@ -66,7 +64,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Specifies a display name for the conditionalAccessPolicy object.
@@ -74,25 +72,24 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConditionalAccessPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("conditions", (n) -> { currentObject.setConditions(n.getObjectValue(ConditionalAccessConditionSet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("grantControls", (n) -> { currentObject.setGrantControls(n.getObjectValue(ConditionalAccessGrantControls::createFromDiscriminatorValue)); });
-            this.put("modifiedDateTime", (n) -> { currentObject.setModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("sessionControls", (n) -> { currentObject.setSessionControls(n.getObjectValue(ConditionalAccessSessionControls::createFromDiscriminatorValue)); });
-            this.put("state", (n) -> { currentObject.setState(n.getEnumValue(ConditionalAccessPolicyState.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("conditions", (n) -> { this.setConditions(n.getObjectValue(ConditionalAccessConditionSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("grantControls", (n) -> { this.setGrantControls(n.getObjectValue(ConditionalAccessGrantControls::createFromDiscriminatorValue)); });
+        deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("sessionControls", (n) -> { this.setSessionControls(n.getObjectValue(ConditionalAccessSessionControls::createFromDiscriminatorValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(ConditionalAccessPolicyState.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the grantControls property value. Specifies the grant controls that must be fulfilled to pass the policy.
@@ -100,7 +97,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ConditionalAccessGrantControls getGrantControls() {
-        return this._grantControls;
+        return this.grantControls;
     }
     /**
      * Gets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
@@ -108,7 +105,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
-        return this._modifiedDateTime;
+        return this.modifiedDateTime;
     }
     /**
      * Gets the sessionControls property value. Specifies the session controls that are enforced after sign-in.
@@ -116,7 +113,7 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ConditionalAccessSessionControls getSessionControls() {
-        return this._sessionControls;
+        return this.sessionControls;
     }
     /**
      * Gets the state property value. The state property
@@ -124,13 +121,14 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ConditionalAccessPolicyState getState() {
-        return this._state;
+        return this.state;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -148,63 +146,71 @@ public class ConditionalAccessPolicy extends Entity implements Parsable {
      * @param value Value to set for the conditions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setConditions(@javax.annotation.Nullable final ConditionalAccessConditionSet value) {
-        this._conditions = value;
+        this.conditions = value;
     }
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Not used.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Specifies a display name for the conditionalAccessPolicy object.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the grantControls property value. Specifies the grant controls that must be fulfilled to pass the policy.
      * @param value Value to set for the grantControls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setGrantControls(@javax.annotation.Nullable final ConditionalAccessGrantControls value) {
-        this._grantControls = value;
+        this.grantControls = value;
     }
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Readonly.
      * @param value Value to set for the modifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._modifiedDateTime = value;
+        this.modifiedDateTime = value;
     }
     /**
      * Sets the sessionControls property value. Specifies the session controls that are enforced after sign-in.
      * @param value Value to set for the sessionControls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSessionControls(@javax.annotation.Nullable final ConditionalAccessSessionControls value) {
-        this._sessionControls = value;
+        this.sessionControls = value;
     }
     /**
      * Sets the state property value. The state property
      * @param value Value to set for the state property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setState(@javax.annotation.Nullable final ConditionalAccessPolicyState value) {
-        this._state = value;
+        this.state = value;
     }
 }

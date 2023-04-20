@@ -1,72 +1,79 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.OrganizationalBranding;
-import com.microsoft.graph.models.OrganizationalBrandingLocalization;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class OrganizationalBrandingProperties extends Entity implements Parsable {
     /** Color that appears in place of the background image in low-bandwidth connections. We recommend that you use the primary color of your banner logo or your organization color. Specify this in hexadecimal format, for example, white is #FFFFFF. */
-    private String _backgroundColor;
-    /** Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster. */
-    private byte[] _backgroundImage;
+    private String backgroundColor;
+    /** Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster. */
+    private byte[] backgroundImage;
     /** A relative URL for the backgroundImage property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only. */
-    private String _backgroundImageRelativeUrl;
-    /** A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG not larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo. */
-    private byte[] _bannerLogo;
+    private String backgroundImageRelativeUrl;
+    /** A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG not larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo. */
+    private byte[] bannerLogo;
     /** A relative URL for the bannerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only. */
-    private String _bannerLogoRelativeUrl;
+    private String bannerLogoRelativeUrl;
     /** A list of base URLs for all available CDN providers that are serving the assets of the current resource. Several CDN providers are used at the same time for high availability of read requests. Read-only. */
-    private java.util.List<String> _cdnList;
+    private java.util.List<String> cdnList;
     /** A custom URL for resetting account credentials. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters. */
-    private String _customAccountResetCredentialsUrl;
+    private String customAccountResetCredentialsUrl;
     /** A string to replace the default 'Can't access your account?' self-service password reset (SSPR) hyperlink text on the sign-in page. This text must be in Unicode format and not exceed 256 characters. */
-    private String _customCannotAccessYourAccountText;
+    private String customCannotAccessYourAccountText;
     /** A custom URL to replace the default URL of the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in page. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters. DO NOT USE. Use customAccountResetCredentialsUrl instead. */
-    private String _customCannotAccessYourAccountUrl;
+    private String customCannotAccessYourAccountUrl;
+    /** CSS styling that appears on the sign-in page. The allowed format is .css format only and not larger than 25 KB. */
+    private byte[] customCSS;
+    /** A relative URL for the customCSS property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only. */
+    private String customCSSRelativeUrl;
     /** A string to replace the default 'Forgot my password' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters. */
-    private String _customForgotMyPasswordText;
+    private String customForgotMyPasswordText;
     /** A string to replace the default 'Privacy and Cookies' hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters. */
-    private String _customPrivacyAndCookiesText;
+    private String customPrivacyAndCookiesText;
     /** A custom URL to replace the default URL of the 'Privacy and Cookies' hyperlink in the footer. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters. */
-    private String _customPrivacyAndCookiesUrl;
+    private String customPrivacyAndCookiesUrl;
     /** A string to replace the default 'reset it now' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters. DO NOT USE: Customization of the 'reset it now' hyperlink text is currently not supported. */
-    private String _customResetItNowText;
+    private String customResetItNowText;
     /** A string to replace the the default 'Terms of Use' hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters. */
-    private String _customTermsOfUseText;
+    private String customTermsOfUseText;
     /** A custom URL to replace the default URL of the 'Terms of Use' hyperlink in the footer. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128characters. */
-    private String _customTermsOfUseUrl;
+    private String customTermsOfUseUrl;
     /** A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant. */
-    private byte[] _favicon;
+    private byte[] favicon;
     /** A relative url for the favicon above that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only. */
-    private String _faviconRelativeUrl;
+    private String faviconRelativeUrl;
     /** The RGB color to apply to customize the color of the header. */
-    private String _headerBackgroundColor;
+    private String headerBackgroundColor;
+    /** A company logo that appears in the header of the sign-in page. The allowed types are PNG or JPEG not larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo. */
+    private byte[] headerLogo;
+    /** A relative URL for the headerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only. */
+    private String headerLogoRelativeUrl;
+    /** Represents the layout configuration to be displayed on the login page for a tenant. */
+    private LoginPageLayoutConfiguration loginPageLayoutConfiguration;
     /** Represents the various texts that can be hidden on the login page for a tenant. */
-    private LoginPageTextVisibilitySettings _loginPageTextVisibilitySettings;
+    private LoginPageTextVisibilitySettings loginPageTextVisibilitySettings;
     /** Text that appears at the bottom of the sign-in box. Use this to communicate additional information, such as the phone number to your help desk or a legal statement. This text must be in Unicode format and not exceed 1024 characters. */
-    private String _signInPageText;
+    private String signInPageText;
     /** A square version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo. */
-    private byte[] _squareLogo;
+    private byte[] squareLogo;
     /** A square dark version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo. */
-    private byte[] _squareLogoDark;
+    private byte[] squareLogoDark;
     /** A relative URL for the squareLogoDark property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only. */
-    private String _squareLogoDarkRelativeUrl;
+    private String squareLogoDarkRelativeUrl;
     /** A relative URL for the squareLogo property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only. */
-    private String _squareLogoRelativeUrl;
+    private String squareLogoRelativeUrl;
     /** A string that shows as the hint in the username textbox on the sign-in screen. This text must be a Unicode, without links or code, and can't exceed 64 characters. */
-    private String _usernameHintText;
+    private String usernameHintText;
     /**
      * Instantiates a new organizationalBrandingProperties and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OrganizationalBrandingProperties() {
         super();
-        this.setOdataType("#microsoft.graph.organizationalBrandingProperties");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -92,15 +99,15 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getBackgroundColor() {
-        return this._backgroundColor;
+        return this.backgroundColor;
     }
     /**
-     * Gets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
-     * @return a binary
+     * Gets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getBackgroundImage() {
-        return this._backgroundImage;
+        return this.backgroundImage;
     }
     /**
      * Gets the backgroundImageRelativeUrl property value. A relative URL for the backgroundImage property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
@@ -108,15 +115,15 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getBackgroundImageRelativeUrl() {
-        return this._backgroundImageRelativeUrl;
+        return this.backgroundImageRelativeUrl;
     }
     /**
-     * Gets the bannerLogo property value. A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG not larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
-     * @return a binary
+     * Gets the bannerLogo property value. A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG not larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo.
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getBannerLogo() {
-        return this._bannerLogo;
+        return this.bannerLogo;
     }
     /**
      * Gets the bannerLogoRelativeUrl property value. A relative URL for the bannerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only.
@@ -124,7 +131,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getBannerLogoRelativeUrl() {
-        return this._bannerLogoRelativeUrl;
+        return this.bannerLogoRelativeUrl;
     }
     /**
      * Gets the cdnList property value. A list of base URLs for all available CDN providers that are serving the assets of the current resource. Several CDN providers are used at the same time for high availability of read requests. Read-only.
@@ -132,7 +139,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public java.util.List<String> getCdnList() {
-        return this._cdnList;
+        return this.cdnList;
     }
     /**
      * Gets the customAccountResetCredentialsUrl property value. A custom URL for resetting account credentials. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters.
@@ -140,7 +147,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getCustomAccountResetCredentialsUrl() {
-        return this._customAccountResetCredentialsUrl;
+        return this.customAccountResetCredentialsUrl;
     }
     /**
      * Gets the customCannotAccessYourAccountText property value. A string to replace the default 'Can't access your account?' self-service password reset (SSPR) hyperlink text on the sign-in page. This text must be in Unicode format and not exceed 256 characters.
@@ -148,7 +155,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getCustomCannotAccessYourAccountText() {
-        return this._customCannotAccessYourAccountText;
+        return this.customCannotAccessYourAccountText;
     }
     /**
      * Gets the customCannotAccessYourAccountUrl property value. A custom URL to replace the default URL of the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in page. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters. DO NOT USE. Use customAccountResetCredentialsUrl instead.
@@ -156,7 +163,23 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getCustomCannotAccessYourAccountUrl() {
-        return this._customCannotAccessYourAccountUrl;
+        return this.customCannotAccessYourAccountUrl;
+    }
+    /**
+     * Gets the customCSS property value. CSS styling that appears on the sign-in page. The allowed format is .css format only and not larger than 25 KB.
+     * @return a base64url
+     */
+    @javax.annotation.Nullable
+    public byte[] getCustomCSS() {
+        return this.customCSS;
+    }
+    /**
+     * Gets the customCSSRelativeUrl property value. A relative URL for the customCSS property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getCustomCSSRelativeUrl() {
+        return this.customCSSRelativeUrl;
     }
     /**
      * Gets the customForgotMyPasswordText property value. A string to replace the default 'Forgot my password' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters.
@@ -164,7 +187,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getCustomForgotMyPasswordText() {
-        return this._customForgotMyPasswordText;
+        return this.customForgotMyPasswordText;
     }
     /**
      * Gets the customPrivacyAndCookiesText property value. A string to replace the default 'Privacy and Cookies' hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters.
@@ -172,7 +195,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getCustomPrivacyAndCookiesText() {
-        return this._customPrivacyAndCookiesText;
+        return this.customPrivacyAndCookiesText;
     }
     /**
      * Gets the customPrivacyAndCookiesUrl property value. A custom URL to replace the default URL of the 'Privacy and Cookies' hyperlink in the footer. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters.
@@ -180,7 +203,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getCustomPrivacyAndCookiesUrl() {
-        return this._customPrivacyAndCookiesUrl;
+        return this.customPrivacyAndCookiesUrl;
     }
     /**
      * Gets the customResetItNowText property value. A string to replace the default 'reset it now' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters. DO NOT USE: Customization of the 'reset it now' hyperlink text is currently not supported.
@@ -188,7 +211,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getCustomResetItNowText() {
-        return this._customResetItNowText;
+        return this.customResetItNowText;
     }
     /**
      * Gets the customTermsOfUseText property value. A string to replace the the default 'Terms of Use' hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters.
@@ -196,7 +219,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getCustomTermsOfUseText() {
-        return this._customTermsOfUseText;
+        return this.customTermsOfUseText;
     }
     /**
      * Gets the customTermsOfUseUrl property value. A custom URL to replace the default URL of the 'Terms of Use' hyperlink in the footer. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128characters.
@@ -204,15 +227,15 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getCustomTermsOfUseUrl() {
-        return this._customTermsOfUseUrl;
+        return this.customTermsOfUseUrl;
     }
     /**
      * Gets the favicon property value. A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getFavicon() {
-        return this._favicon;
+        return this.favicon;
     }
     /**
      * Gets the faviconRelativeUrl property value. A relative url for the favicon above that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
@@ -220,42 +243,46 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getFaviconRelativeUrl() {
-        return this._faviconRelativeUrl;
+        return this.faviconRelativeUrl;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OrganizationalBrandingProperties currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("backgroundColor", (n) -> { currentObject.setBackgroundColor(n.getStringValue()); });
-            this.put("backgroundImage", (n) -> { currentObject.setBackgroundImage(n.getByteArrayValue()); });
-            this.put("backgroundImageRelativeUrl", (n) -> { currentObject.setBackgroundImageRelativeUrl(n.getStringValue()); });
-            this.put("bannerLogo", (n) -> { currentObject.setBannerLogo(n.getByteArrayValue()); });
-            this.put("bannerLogoRelativeUrl", (n) -> { currentObject.setBannerLogoRelativeUrl(n.getStringValue()); });
-            this.put("cdnList", (n) -> { currentObject.setCdnList(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("customAccountResetCredentialsUrl", (n) -> { currentObject.setCustomAccountResetCredentialsUrl(n.getStringValue()); });
-            this.put("customCannotAccessYourAccountText", (n) -> { currentObject.setCustomCannotAccessYourAccountText(n.getStringValue()); });
-            this.put("customCannotAccessYourAccountUrl", (n) -> { currentObject.setCustomCannotAccessYourAccountUrl(n.getStringValue()); });
-            this.put("customForgotMyPasswordText", (n) -> { currentObject.setCustomForgotMyPasswordText(n.getStringValue()); });
-            this.put("customPrivacyAndCookiesText", (n) -> { currentObject.setCustomPrivacyAndCookiesText(n.getStringValue()); });
-            this.put("customPrivacyAndCookiesUrl", (n) -> { currentObject.setCustomPrivacyAndCookiesUrl(n.getStringValue()); });
-            this.put("customResetItNowText", (n) -> { currentObject.setCustomResetItNowText(n.getStringValue()); });
-            this.put("customTermsOfUseText", (n) -> { currentObject.setCustomTermsOfUseText(n.getStringValue()); });
-            this.put("customTermsOfUseUrl", (n) -> { currentObject.setCustomTermsOfUseUrl(n.getStringValue()); });
-            this.put("favicon", (n) -> { currentObject.setFavicon(n.getByteArrayValue()); });
-            this.put("faviconRelativeUrl", (n) -> { currentObject.setFaviconRelativeUrl(n.getStringValue()); });
-            this.put("headerBackgroundColor", (n) -> { currentObject.setHeaderBackgroundColor(n.getStringValue()); });
-            this.put("loginPageTextVisibilitySettings", (n) -> { currentObject.setLoginPageTextVisibilitySettings(n.getObjectValue(LoginPageTextVisibilitySettings::createFromDiscriminatorValue)); });
-            this.put("signInPageText", (n) -> { currentObject.setSignInPageText(n.getStringValue()); });
-            this.put("squareLogo", (n) -> { currentObject.setSquareLogo(n.getByteArrayValue()); });
-            this.put("squareLogoDark", (n) -> { currentObject.setSquareLogoDark(n.getByteArrayValue()); });
-            this.put("squareLogoDarkRelativeUrl", (n) -> { currentObject.setSquareLogoDarkRelativeUrl(n.getStringValue()); });
-            this.put("squareLogoRelativeUrl", (n) -> { currentObject.setSquareLogoRelativeUrl(n.getStringValue()); });
-            this.put("usernameHintText", (n) -> { currentObject.setUsernameHintText(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("backgroundColor", (n) -> { this.setBackgroundColor(n.getStringValue()); });
+        deserializerMap.put("backgroundImage", (n) -> { this.setBackgroundImage(n.getByteArrayValue()); });
+        deserializerMap.put("backgroundImageRelativeUrl", (n) -> { this.setBackgroundImageRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("bannerLogo", (n) -> { this.setBannerLogo(n.getByteArrayValue()); });
+        deserializerMap.put("bannerLogoRelativeUrl", (n) -> { this.setBannerLogoRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("cdnList", (n) -> { this.setCdnList(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("customAccountResetCredentialsUrl", (n) -> { this.setCustomAccountResetCredentialsUrl(n.getStringValue()); });
+        deserializerMap.put("customCannotAccessYourAccountText", (n) -> { this.setCustomCannotAccessYourAccountText(n.getStringValue()); });
+        deserializerMap.put("customCannotAccessYourAccountUrl", (n) -> { this.setCustomCannotAccessYourAccountUrl(n.getStringValue()); });
+        deserializerMap.put("customCSS", (n) -> { this.setCustomCSS(n.getByteArrayValue()); });
+        deserializerMap.put("customCSSRelativeUrl", (n) -> { this.setCustomCSSRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("customForgotMyPasswordText", (n) -> { this.setCustomForgotMyPasswordText(n.getStringValue()); });
+        deserializerMap.put("customPrivacyAndCookiesText", (n) -> { this.setCustomPrivacyAndCookiesText(n.getStringValue()); });
+        deserializerMap.put("customPrivacyAndCookiesUrl", (n) -> { this.setCustomPrivacyAndCookiesUrl(n.getStringValue()); });
+        deserializerMap.put("customResetItNowText", (n) -> { this.setCustomResetItNowText(n.getStringValue()); });
+        deserializerMap.put("customTermsOfUseText", (n) -> { this.setCustomTermsOfUseText(n.getStringValue()); });
+        deserializerMap.put("customTermsOfUseUrl", (n) -> { this.setCustomTermsOfUseUrl(n.getStringValue()); });
+        deserializerMap.put("favicon", (n) -> { this.setFavicon(n.getByteArrayValue()); });
+        deserializerMap.put("faviconRelativeUrl", (n) -> { this.setFaviconRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("headerBackgroundColor", (n) -> { this.setHeaderBackgroundColor(n.getStringValue()); });
+        deserializerMap.put("headerLogo", (n) -> { this.setHeaderLogo(n.getByteArrayValue()); });
+        deserializerMap.put("headerLogoRelativeUrl", (n) -> { this.setHeaderLogoRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("loginPageLayoutConfiguration", (n) -> { this.setLoginPageLayoutConfiguration(n.getObjectValue(LoginPageLayoutConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("loginPageTextVisibilitySettings", (n) -> { this.setLoginPageTextVisibilitySettings(n.getObjectValue(LoginPageTextVisibilitySettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("signInPageText", (n) -> { this.setSignInPageText(n.getStringValue()); });
+        deserializerMap.put("squareLogo", (n) -> { this.setSquareLogo(n.getByteArrayValue()); });
+        deserializerMap.put("squareLogoDark", (n) -> { this.setSquareLogoDark(n.getByteArrayValue()); });
+        deserializerMap.put("squareLogoDarkRelativeUrl", (n) -> { this.setSquareLogoDarkRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("squareLogoRelativeUrl", (n) -> { this.setSquareLogoRelativeUrl(n.getStringValue()); });
+        deserializerMap.put("usernameHintText", (n) -> { this.setUsernameHintText(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the headerBackgroundColor property value. The RGB color to apply to customize the color of the header.
@@ -263,7 +290,31 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getHeaderBackgroundColor() {
-        return this._headerBackgroundColor;
+        return this.headerBackgroundColor;
+    }
+    /**
+     * Gets the headerLogo property value. A company logo that appears in the header of the sign-in page. The allowed types are PNG or JPEG not larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo.
+     * @return a base64url
+     */
+    @javax.annotation.Nullable
+    public byte[] getHeaderLogo() {
+        return this.headerLogo;
+    }
+    /**
+     * Gets the headerLogoRelativeUrl property value. A relative URL for the headerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only.
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getHeaderLogoRelativeUrl() {
+        return this.headerLogoRelativeUrl;
+    }
+    /**
+     * Gets the loginPageLayoutConfiguration property value. Represents the layout configuration to be displayed on the login page for a tenant.
+     * @return a loginPageLayoutConfiguration
+     */
+    @javax.annotation.Nullable
+    public LoginPageLayoutConfiguration getLoginPageLayoutConfiguration() {
+        return this.loginPageLayoutConfiguration;
     }
     /**
      * Gets the loginPageTextVisibilitySettings property value. Represents the various texts that can be hidden on the login page for a tenant.
@@ -271,7 +322,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public LoginPageTextVisibilitySettings getLoginPageTextVisibilitySettings() {
-        return this._loginPageTextVisibilitySettings;
+        return this.loginPageTextVisibilitySettings;
     }
     /**
      * Gets the signInPageText property value. Text that appears at the bottom of the sign-in box. Use this to communicate additional information, such as the phone number to your help desk or a legal statement. This text must be in Unicode format and not exceed 1024 characters.
@@ -279,23 +330,23 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getSignInPageText() {
-        return this._signInPageText;
+        return this.signInPageText;
     }
     /**
      * Gets the squareLogo property value. A square version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getSquareLogo() {
-        return this._squareLogo;
+        return this.squareLogo;
     }
     /**
      * Gets the squareLogoDark property value. A square dark version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getSquareLogoDark() {
-        return this._squareLogoDark;
+        return this.squareLogoDark;
     }
     /**
      * Gets the squareLogoDarkRelativeUrl property value. A relative URL for the squareLogoDark property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
@@ -303,7 +354,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getSquareLogoDarkRelativeUrl() {
-        return this._squareLogoDarkRelativeUrl;
+        return this.squareLogoDarkRelativeUrl;
     }
     /**
      * Gets the squareLogoRelativeUrl property value. A relative URL for the squareLogo property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
@@ -311,7 +362,7 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getSquareLogoRelativeUrl() {
-        return this._squareLogoRelativeUrl;
+        return this.squareLogoRelativeUrl;
     }
     /**
      * Gets the usernameHintText property value. A string that shows as the hint in the username textbox on the sign-in screen. This text must be a Unicode, without links or code, and can't exceed 64 characters.
@@ -319,13 +370,14 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      */
     @javax.annotation.Nullable
     public String getUsernameHintText() {
-        return this._usernameHintText;
+        return this.usernameHintText;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -338,6 +390,8 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         writer.writeStringValue("customAccountResetCredentialsUrl", this.getCustomAccountResetCredentialsUrl());
         writer.writeStringValue("customCannotAccessYourAccountText", this.getCustomCannotAccessYourAccountText());
         writer.writeStringValue("customCannotAccessYourAccountUrl", this.getCustomCannotAccessYourAccountUrl());
+        writer.writeByteArrayValue("customCSS", this.getCustomCSS());
+        writer.writeStringValue("customCSSRelativeUrl", this.getCustomCSSRelativeUrl());
         writer.writeStringValue("customForgotMyPasswordText", this.getCustomForgotMyPasswordText());
         writer.writeStringValue("customPrivacyAndCookiesText", this.getCustomPrivacyAndCookiesText());
         writer.writeStringValue("customPrivacyAndCookiesUrl", this.getCustomPrivacyAndCookiesUrl());
@@ -347,6 +401,9 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
         writer.writeByteArrayValue("favicon", this.getFavicon());
         writer.writeStringValue("faviconRelativeUrl", this.getFaviconRelativeUrl());
         writer.writeStringValue("headerBackgroundColor", this.getHeaderBackgroundColor());
+        writer.writeByteArrayValue("headerLogo", this.getHeaderLogo());
+        writer.writeStringValue("headerLogoRelativeUrl", this.getHeaderLogoRelativeUrl());
+        writer.writeObjectValue("loginPageLayoutConfiguration", this.getLoginPageLayoutConfiguration());
         writer.writeObjectValue("loginPageTextVisibilitySettings", this.getLoginPageTextVisibilitySettings());
         writer.writeStringValue("signInPageText", this.getSignInPageText());
         writer.writeByteArrayValue("squareLogo", this.getSquareLogo());
@@ -360,199 +417,269 @@ public class OrganizationalBrandingProperties extends Entity implements Parsable
      * @param value Value to set for the backgroundColor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBackgroundColor(@javax.annotation.Nullable final String value) {
-        this._backgroundColor = value;
+        this.backgroundColor = value;
     }
     /**
-     * Sets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
+     * Sets the backgroundImage property value. Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920  1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
      * @param value Value to set for the backgroundImage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBackgroundImage(@javax.annotation.Nullable final byte[] value) {
-        this._backgroundImage = value;
+        this.backgroundImage = value;
     }
     /**
      * Sets the backgroundImageRelativeUrl property value. A relative URL for the backgroundImage property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
      * @param value Value to set for the backgroundImageRelativeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBackgroundImageRelativeUrl(@javax.annotation.Nullable final String value) {
-        this._backgroundImageRelativeUrl = value;
+        this.backgroundImageRelativeUrl = value;
     }
     /**
-     * Sets the bannerLogo property value. A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG not larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
+     * Sets the bannerLogo property value. A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG not larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo.
      * @param value Value to set for the bannerLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBannerLogo(@javax.annotation.Nullable final byte[] value) {
-        this._bannerLogo = value;
+        this.bannerLogo = value;
     }
     /**
      * Sets the bannerLogoRelativeUrl property value. A relative URL for the bannerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only.
      * @param value Value to set for the bannerLogoRelativeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBannerLogoRelativeUrl(@javax.annotation.Nullable final String value) {
-        this._bannerLogoRelativeUrl = value;
+        this.bannerLogoRelativeUrl = value;
     }
     /**
      * Sets the cdnList property value. A list of base URLs for all available CDN providers that are serving the assets of the current resource. Several CDN providers are used at the same time for high availability of read requests. Read-only.
      * @param value Value to set for the cdnList property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCdnList(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._cdnList = value;
+        this.cdnList = value;
     }
     /**
      * Sets the customAccountResetCredentialsUrl property value. A custom URL for resetting account credentials. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters.
      * @param value Value to set for the customAccountResetCredentialsUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomAccountResetCredentialsUrl(@javax.annotation.Nullable final String value) {
-        this._customAccountResetCredentialsUrl = value;
+        this.customAccountResetCredentialsUrl = value;
     }
     /**
      * Sets the customCannotAccessYourAccountText property value. A string to replace the default 'Can't access your account?' self-service password reset (SSPR) hyperlink text on the sign-in page. This text must be in Unicode format and not exceed 256 characters.
      * @param value Value to set for the customCannotAccessYourAccountText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomCannotAccessYourAccountText(@javax.annotation.Nullable final String value) {
-        this._customCannotAccessYourAccountText = value;
+        this.customCannotAccessYourAccountText = value;
     }
     /**
      * Sets the customCannotAccessYourAccountUrl property value. A custom URL to replace the default URL of the self-service password reset (SSPR) 'Can't access your account?' hyperlink on the sign-in page. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters. DO NOT USE. Use customAccountResetCredentialsUrl instead.
      * @param value Value to set for the customCannotAccessYourAccountUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomCannotAccessYourAccountUrl(@javax.annotation.Nullable final String value) {
-        this._customCannotAccessYourAccountUrl = value;
+        this.customCannotAccessYourAccountUrl = value;
+    }
+    /**
+     * Sets the customCSS property value. CSS styling that appears on the sign-in page. The allowed format is .css format only and not larger than 25 KB.
+     * @param value Value to set for the customCSS property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCustomCSS(@javax.annotation.Nullable final byte[] value) {
+        this.customCSS = value;
+    }
+    /**
+     * Sets the customCSSRelativeUrl property value. A relative URL for the customCSS property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
+     * @param value Value to set for the customCSSRelativeUrl property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setCustomCSSRelativeUrl(@javax.annotation.Nullable final String value) {
+        this.customCSSRelativeUrl = value;
     }
     /**
      * Sets the customForgotMyPasswordText property value. A string to replace the default 'Forgot my password' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters.
      * @param value Value to set for the customForgotMyPasswordText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomForgotMyPasswordText(@javax.annotation.Nullable final String value) {
-        this._customForgotMyPasswordText = value;
+        this.customForgotMyPasswordText = value;
     }
     /**
      * Sets the customPrivacyAndCookiesText property value. A string to replace the default 'Privacy and Cookies' hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters.
      * @param value Value to set for the customPrivacyAndCookiesText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomPrivacyAndCookiesText(@javax.annotation.Nullable final String value) {
-        this._customPrivacyAndCookiesText = value;
+        this.customPrivacyAndCookiesText = value;
     }
     /**
      * Sets the customPrivacyAndCookiesUrl property value. A custom URL to replace the default URL of the 'Privacy and Cookies' hyperlink in the footer. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters.
      * @param value Value to set for the customPrivacyAndCookiesUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomPrivacyAndCookiesUrl(@javax.annotation.Nullable final String value) {
-        this._customPrivacyAndCookiesUrl = value;
+        this.customPrivacyAndCookiesUrl = value;
     }
     /**
      * Sets the customResetItNowText property value. A string to replace the default 'reset it now' hyperlink text on the sign-in form. This text must be in Unicode format and not exceed 256 characters. DO NOT USE: Customization of the 'reset it now' hyperlink text is currently not supported.
      * @param value Value to set for the customResetItNowText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomResetItNowText(@javax.annotation.Nullable final String value) {
-        this._customResetItNowText = value;
+        this.customResetItNowText = value;
     }
     /**
      * Sets the customTermsOfUseText property value. A string to replace the the default 'Terms of Use' hyperlink text in the footer. This text must be in Unicode format and not exceed 256 characters.
      * @param value Value to set for the customTermsOfUseText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomTermsOfUseText(@javax.annotation.Nullable final String value) {
-        this._customTermsOfUseText = value;
+        this.customTermsOfUseText = value;
     }
     /**
      * Sets the customTermsOfUseUrl property value. A custom URL to replace the default URL of the 'Terms of Use' hyperlink in the footer. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128characters.
      * @param value Value to set for the customTermsOfUseUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCustomTermsOfUseUrl(@javax.annotation.Nullable final String value) {
-        this._customTermsOfUseUrl = value;
+        this.customTermsOfUseUrl = value;
     }
     /**
      * Sets the favicon property value. A custom icon (favicon) to replace a default Microsoft product favicon on an Azure AD tenant.
      * @param value Value to set for the favicon property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFavicon(@javax.annotation.Nullable final byte[] value) {
-        this._favicon = value;
+        this.favicon = value;
     }
     /**
      * Sets the faviconRelativeUrl property value. A relative url for the favicon above that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
      * @param value Value to set for the faviconRelativeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFaviconRelativeUrl(@javax.annotation.Nullable final String value) {
-        this._faviconRelativeUrl = value;
+        this.faviconRelativeUrl = value;
     }
     /**
      * Sets the headerBackgroundColor property value. The RGB color to apply to customize the color of the header.
      * @param value Value to set for the headerBackgroundColor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setHeaderBackgroundColor(@javax.annotation.Nullable final String value) {
-        this._headerBackgroundColor = value;
+        this.headerBackgroundColor = value;
+    }
+    /**
+     * Sets the headerLogo property value. A company logo that appears in the header of the sign-in page. The allowed types are PNG or JPEG not larger than 36  245 pixels. We recommend using a transparent image with no padding around the logo.
+     * @param value Value to set for the headerLogo property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setHeaderLogo(@javax.annotation.Nullable final byte[] value) {
+        this.headerLogo = value;
+    }
+    /**
+     * Sets the headerLogoRelativeUrl property value. A relative URL for the headerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only.
+     * @param value Value to set for the headerLogoRelativeUrl property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setHeaderLogoRelativeUrl(@javax.annotation.Nullable final String value) {
+        this.headerLogoRelativeUrl = value;
+    }
+    /**
+     * Sets the loginPageLayoutConfiguration property value. Represents the layout configuration to be displayed on the login page for a tenant.
+     * @param value Value to set for the loginPageLayoutConfiguration property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setLoginPageLayoutConfiguration(@javax.annotation.Nullable final LoginPageLayoutConfiguration value) {
+        this.loginPageLayoutConfiguration = value;
     }
     /**
      * Sets the loginPageTextVisibilitySettings property value. Represents the various texts that can be hidden on the login page for a tenant.
      * @param value Value to set for the loginPageTextVisibilitySettings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLoginPageTextVisibilitySettings(@javax.annotation.Nullable final LoginPageTextVisibilitySettings value) {
-        this._loginPageTextVisibilitySettings = value;
+        this.loginPageTextVisibilitySettings = value;
     }
     /**
      * Sets the signInPageText property value. Text that appears at the bottom of the sign-in box. Use this to communicate additional information, such as the phone number to your help desk or a legal statement. This text must be in Unicode format and not exceed 1024 characters.
      * @param value Value to set for the signInPageText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInPageText(@javax.annotation.Nullable final String value) {
-        this._signInPageText = value;
+        this.signInPageText = value;
     }
     /**
      * Sets the squareLogo property value. A square version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
      * @param value Value to set for the squareLogo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSquareLogo(@javax.annotation.Nullable final byte[] value) {
-        this._squareLogo = value;
+        this.squareLogo = value;
     }
     /**
      * Sets the squareLogoDark property value. A square dark version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG not larger than 240 x 240 pixels and not more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
      * @param value Value to set for the squareLogoDark property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSquareLogoDark(@javax.annotation.Nullable final byte[] value) {
-        this._squareLogoDark = value;
+        this.squareLogoDark = value;
     }
     /**
      * Sets the squareLogoDarkRelativeUrl property value. A relative URL for the squareLogoDark property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
      * @param value Value to set for the squareLogoDarkRelativeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSquareLogoDarkRelativeUrl(@javax.annotation.Nullable final String value) {
-        this._squareLogoDarkRelativeUrl = value;
+        this.squareLogoDarkRelativeUrl = value;
     }
     /**
      * Sets the squareLogoRelativeUrl property value. A relative URL for the squareLogo property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
      * @param value Value to set for the squareLogoRelativeUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSquareLogoRelativeUrl(@javax.annotation.Nullable final String value) {
-        this._squareLogoRelativeUrl = value;
+        this.squareLogoRelativeUrl = value;
     }
     /**
      * Sets the usernameHintText property value. A string that shows as the hint in the username textbox on the sign-in screen. This text must be a Unicode, without links or code, and can't exceed 64 characters.
      * @param value Value to set for the usernameHintText property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsernameHintText(@javax.annotation.Nullable final String value) {
-        this._usernameHintText = value;
+        this.usernameHintText = value;
     }
 }

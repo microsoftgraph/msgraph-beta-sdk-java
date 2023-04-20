@@ -4,42 +4,41 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserPFXCertificate extends Entity implements Parsable {
     /** Date/time when this PFX certificate was imported. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Encrypted PFX blob. */
-    private byte[] _encryptedPfxBlob;
+    private byte[] encryptedPfxBlob;
     /** Encrypted PFX password. */
-    private String _encryptedPfxPassword;
+    private String encryptedPfxPassword;
     /** Certificate's validity expiration date/time. */
-    private OffsetDateTime _expirationDateTime;
+    private OffsetDateTime expirationDateTime;
     /** Supported values for the intended purpose of a user PFX certificate. */
-    private UserPfxIntendedPurpose _intendedPurpose;
+    private UserPfxIntendedPurpose intendedPurpose;
     /** Name of the key (within the provider) used to encrypt the blob. */
-    private String _keyName;
+    private String keyName;
     /** Date/time when this PFX certificate was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** Supported values for the padding scheme used by encryption provider. */
-    private UserPfxPaddingScheme _paddingScheme;
+    private UserPfxPaddingScheme paddingScheme;
     /** Crypto provider used to encrypt this blob. */
-    private String _providerName;
+    private String providerName;
     /** Certificate's validity start date/time. */
-    private OffsetDateTime _startDateTime;
+    private OffsetDateTime startDateTime;
     /** SHA-1 thumbprint of the PFX certificate. */
-    private String _thumbprint;
+    private String thumbprint;
     /** User Principal Name of the PFX certificate. */
-    private String _userPrincipalName;
+    private String userPrincipalName;
     /**
      * Instantiates a new UserPFXCertificate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserPFXCertificate() {
         super();
-        this.setOdataType("#microsoft.graph.userPFXCertificate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,15 +56,15 @@ public class UserPFXCertificate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the encryptedPfxBlob property value. Encrypted PFX blob.
-     * @return a binary
+     * @return a base64url
      */
     @javax.annotation.Nullable
     public byte[] getEncryptedPfxBlob() {
-        return this._encryptedPfxBlob;
+        return this.encryptedPfxBlob;
     }
     /**
      * Gets the encryptedPfxPassword property value. Encrypted PFX password.
@@ -73,7 +72,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEncryptedPfxPassword() {
-        return this._encryptedPfxPassword;
+        return this.encryptedPfxPassword;
     }
     /**
      * Gets the expirationDateTime property value. Certificate's validity expiration date/time.
@@ -81,29 +80,28 @@ public class UserPFXCertificate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this._expirationDateTime;
+        return this.expirationDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserPFXCertificate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("encryptedPfxBlob", (n) -> { currentObject.setEncryptedPfxBlob(n.getByteArrayValue()); });
-            this.put("encryptedPfxPassword", (n) -> { currentObject.setEncryptedPfxPassword(n.getStringValue()); });
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("intendedPurpose", (n) -> { currentObject.setIntendedPurpose(n.getEnumValue(UserPfxIntendedPurpose.class)); });
-            this.put("keyName", (n) -> { currentObject.setKeyName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("paddingScheme", (n) -> { currentObject.setPaddingScheme(n.getEnumValue(UserPfxPaddingScheme.class)); });
-            this.put("providerName", (n) -> { currentObject.setProviderName(n.getStringValue()); });
-            this.put("startDateTime", (n) -> { currentObject.setStartDateTime(n.getOffsetDateTimeValue()); });
-            this.put("thumbprint", (n) -> { currentObject.setThumbprint(n.getStringValue()); });
-            this.put("userPrincipalName", (n) -> { currentObject.setUserPrincipalName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("encryptedPfxBlob", (n) -> { this.setEncryptedPfxBlob(n.getByteArrayValue()); });
+        deserializerMap.put("encryptedPfxPassword", (n) -> { this.setEncryptedPfxPassword(n.getStringValue()); });
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("intendedPurpose", (n) -> { this.setIntendedPurpose(n.getEnumValue(UserPfxIntendedPurpose.class)); });
+        deserializerMap.put("keyName", (n) -> { this.setKeyName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("paddingScheme", (n) -> { this.setPaddingScheme(n.getEnumValue(UserPfxPaddingScheme.class)); });
+        deserializerMap.put("providerName", (n) -> { this.setProviderName(n.getStringValue()); });
+        deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("thumbprint", (n) -> { this.setThumbprint(n.getStringValue()); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the intendedPurpose property value. Supported values for the intended purpose of a user PFX certificate.
@@ -111,7 +109,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public UserPfxIntendedPurpose getIntendedPurpose() {
-        return this._intendedPurpose;
+        return this.intendedPurpose;
     }
     /**
      * Gets the keyName property value. Name of the key (within the provider) used to encrypt the blob.
@@ -119,7 +117,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getKeyName() {
-        return this._keyName;
+        return this.keyName;
     }
     /**
      * Gets the lastModifiedDateTime property value. Date/time when this PFX certificate was last modified.
@@ -127,7 +125,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the paddingScheme property value. Supported values for the padding scheme used by encryption provider.
@@ -135,7 +133,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public UserPfxPaddingScheme getPaddingScheme() {
-        return this._paddingScheme;
+        return this.paddingScheme;
     }
     /**
      * Gets the providerName property value. Crypto provider used to encrypt this blob.
@@ -143,7 +141,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getProviderName() {
-        return this._providerName;
+        return this.providerName;
     }
     /**
      * Gets the startDateTime property value. Certificate's validity start date/time.
@@ -151,7 +149,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getStartDateTime() {
-        return this._startDateTime;
+        return this.startDateTime;
     }
     /**
      * Gets the thumbprint property value. SHA-1 thumbprint of the PFX certificate.
@@ -159,7 +157,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getThumbprint() {
-        return this._thumbprint;
+        return this.thumbprint;
     }
     /**
      * Gets the userPrincipalName property value. User Principal Name of the PFX certificate.
@@ -167,13 +165,14 @@ public class UserPFXCertificate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserPrincipalName() {
-        return this._userPrincipalName;
+        return this.userPrincipalName;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -195,95 +194,107 @@ public class UserPFXCertificate extends Entity implements Parsable {
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the encryptedPfxBlob property value. Encrypted PFX blob.
      * @param value Value to set for the encryptedPfxBlob property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptedPfxBlob(@javax.annotation.Nullable final byte[] value) {
-        this._encryptedPfxBlob = value;
+        this.encryptedPfxBlob = value;
     }
     /**
      * Sets the encryptedPfxPassword property value. Encrypted PFX password.
      * @param value Value to set for the encryptedPfxPassword property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEncryptedPfxPassword(@javax.annotation.Nullable final String value) {
-        this._encryptedPfxPassword = value;
+        this.encryptedPfxPassword = value;
     }
     /**
      * Sets the expirationDateTime property value. Certificate's validity expiration date/time.
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expirationDateTime = value;
+        this.expirationDateTime = value;
     }
     /**
      * Sets the intendedPurpose property value. Supported values for the intended purpose of a user PFX certificate.
      * @param value Value to set for the intendedPurpose property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIntendedPurpose(@javax.annotation.Nullable final UserPfxIntendedPurpose value) {
-        this._intendedPurpose = value;
+        this.intendedPurpose = value;
     }
     /**
      * Sets the keyName property value. Name of the key (within the provider) used to encrypt the blob.
      * @param value Value to set for the keyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setKeyName(@javax.annotation.Nullable final String value) {
-        this._keyName = value;
+        this.keyName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Date/time when this PFX certificate was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the paddingScheme property value. Supported values for the padding scheme used by encryption provider.
      * @param value Value to set for the paddingScheme property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPaddingScheme(@javax.annotation.Nullable final UserPfxPaddingScheme value) {
-        this._paddingScheme = value;
+        this.paddingScheme = value;
     }
     /**
      * Sets the providerName property value. Crypto provider used to encrypt this blob.
      * @param value Value to set for the providerName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setProviderName(@javax.annotation.Nullable final String value) {
-        this._providerName = value;
+        this.providerName = value;
     }
     /**
      * Sets the startDateTime property value. Certificate's validity start date/time.
      * @param value Value to set for the startDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStartDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._startDateTime = value;
+        this.startDateTime = value;
     }
     /**
      * Sets the thumbprint property value. SHA-1 thumbprint of the PFX certificate.
      * @param value Value to set for the thumbprint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setThumbprint(@javax.annotation.Nullable final String value) {
-        this._thumbprint = value;
+        this.thumbprint = value;
     }
     /**
      * Sets the userPrincipalName property value. User Principal Name of the PFX certificate.
      * @param value Value to set for the userPrincipalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserPrincipalName(@javax.annotation.Nullable final String value) {
-        this._userPrincipalName = value;
+        this.userPrincipalName = value;
     }
 }

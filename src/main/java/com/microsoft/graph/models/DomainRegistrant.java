@@ -4,30 +4,29 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DomainRegistrant implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The countryOrRegionCode property */
-    private String _countryOrRegionCode;
+    private String countryOrRegionCode;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The organization property */
-    private String _organization;
+    private String organization;
     /** The url property */
-    private String _url;
+    private String url;
     /** The vendor property */
-    private String _vendor;
+    private String vendor;
     /**
      * Instantiates a new domainRegistrant and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DomainRegistrant() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.domainRegistrant");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +44,7 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the countryOrRegionCode property value. The countryOrRegionCode property
@@ -53,22 +52,21 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getCountryOrRegionCode() {
-        return this._countryOrRegionCode;
+        return this.countryOrRegionCode;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DomainRegistrant currentObject = this;
-        return new HashMap<>(5) {{
-            this.put("countryOrRegionCode", (n) -> { currentObject.setCountryOrRegionCode(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("organization", (n) -> { currentObject.setOrganization(n.getStringValue()); });
-            this.put("url", (n) -> { currentObject.setUrl(n.getStringValue()); });
-            this.put("vendor", (n) -> { currentObject.setVendor(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("countryOrRegionCode", (n) -> { this.setCountryOrRegionCode(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("organization", (n) -> { this.setOrganization(n.getStringValue()); });
+        deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
+        deserializerMap.put("vendor", (n) -> { this.setVendor(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -76,7 +74,7 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the organization property value. The organization property
@@ -84,7 +82,7 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOrganization() {
-        return this._organization;
+        return this.organization;
     }
     /**
      * Gets the url property value. The url property
@@ -92,7 +90,7 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getUrl() {
-        return this._url;
+        return this.url;
     }
     /**
      * Gets the vendor property value. The vendor property
@@ -100,13 +98,14 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getVendor() {
-        return this._vendor;
+        return this.vendor;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("countryOrRegionCode", this.getCountryOrRegionCode());
@@ -121,47 +120,53 @@ public class DomainRegistrant implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the countryOrRegionCode property value. The countryOrRegionCode property
      * @param value Value to set for the countryOrRegionCode property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountryOrRegionCode(@javax.annotation.Nullable final String value) {
-        this._countryOrRegionCode = value;
+        this.countryOrRegionCode = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the organization property value. The organization property
      * @param value Value to set for the organization property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrganization(@javax.annotation.Nullable final String value) {
-        this._organization = value;
+        this.organization = value;
     }
     /**
      * Sets the url property value. The url property
      * @param value Value to set for the url property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUrl(@javax.annotation.Nullable final String value) {
-        this._url = value;
+        this.url = value;
     }
     /**
      * Sets the vendor property value. The vendor property
      * @param value Value to set for the vendor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendor(@javax.annotation.Nullable final String value) {
-        this._vendor = value;
+        this.vendor = value;
     }
 }

@@ -4,46 +4,45 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class DomainSecurityProfile extends Entity implements Parsable {
     /** The activityGroupNames property */
-    private java.util.List<String> _activityGroupNames;
+    private java.util.List<String> activityGroupNames;
     /** The azureSubscriptionId property */
-    private String _azureSubscriptionId;
+    private String azureSubscriptionId;
     /** The azureTenantId property */
-    private String _azureTenantId;
+    private String azureTenantId;
     /** The countHits property */
-    private Integer _countHits;
+    private Integer countHits;
     /** The countInOrg property */
-    private Integer _countInOrg;
+    private Integer countInOrg;
     /** The domainCategories property */
-    private java.util.List<ReputationCategory> _domainCategories;
+    private java.util.List<ReputationCategory> domainCategories;
     /** The domainRegisteredDateTime property */
-    private OffsetDateTime _domainRegisteredDateTime;
+    private OffsetDateTime domainRegisteredDateTime;
     /** The firstSeenDateTime property */
-    private OffsetDateTime _firstSeenDateTime;
+    private OffsetDateTime firstSeenDateTime;
     /** The lastSeenDateTime property */
-    private OffsetDateTime _lastSeenDateTime;
+    private OffsetDateTime lastSeenDateTime;
     /** The name property */
-    private String _name;
+    private String name;
     /** The registrant property */
-    private DomainRegistrant _registrant;
+    private DomainRegistrant registrant;
     /** The riskScore property */
-    private String _riskScore;
+    private String riskScore;
     /** The tags property */
-    private java.util.List<String> _tags;
+    private java.util.List<String> tags;
     /** The vendorInformation property */
-    private SecurityVendorInformation _vendorInformation;
+    private SecurityVendorInformation vendorInformation;
     /**
      * Instantiates a new DomainSecurityProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DomainSecurityProfile() {
         super();
-        this.setOdataType("#microsoft.graph.domainSecurityProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -61,7 +60,7 @@ public class DomainSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getActivityGroupNames() {
-        return this._activityGroupNames;
+        return this.activityGroupNames;
     }
     /**
      * Gets the azureSubscriptionId property value. The azureSubscriptionId property
@@ -69,7 +68,7 @@ public class DomainSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAzureSubscriptionId() {
-        return this._azureSubscriptionId;
+        return this.azureSubscriptionId;
     }
     /**
      * Gets the azureTenantId property value. The azureTenantId property
@@ -77,7 +76,7 @@ public class DomainSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAzureTenantId() {
-        return this._azureTenantId;
+        return this.azureTenantId;
     }
     /**
      * Gets the countHits property value. The countHits property
@@ -85,7 +84,7 @@ public class DomainSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getCountHits() {
-        return this._countHits;
+        return this.countHits;
     }
     /**
      * Gets the countInOrg property value. The countInOrg property
@@ -93,7 +92,7 @@ public class DomainSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getCountInOrg() {
-        return this._countInOrg;
+        return this.countInOrg;
     }
     /**
      * Gets the domainCategories property value. The domainCategories property
@@ -101,7 +100,7 @@ public class DomainSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ReputationCategory> getDomainCategories() {
-        return this._domainCategories;
+        return this.domainCategories;
     }
     /**
      * Gets the domainRegisteredDateTime property value. The domainRegisteredDateTime property
@@ -109,31 +108,30 @@ public class DomainSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getDomainRegisteredDateTime() {
-        return this._domainRegisteredDateTime;
+        return this.domainRegisteredDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DomainSecurityProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activityGroupNames", (n) -> { currentObject.setActivityGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("azureSubscriptionId", (n) -> { currentObject.setAzureSubscriptionId(n.getStringValue()); });
-            this.put("azureTenantId", (n) -> { currentObject.setAzureTenantId(n.getStringValue()); });
-            this.put("countHits", (n) -> { currentObject.setCountHits(n.getIntegerValue()); });
-            this.put("countInOrg", (n) -> { currentObject.setCountInOrg(n.getIntegerValue()); });
-            this.put("domainCategories", (n) -> { currentObject.setDomainCategories(n.getCollectionOfObjectValues(ReputationCategory::createFromDiscriminatorValue)); });
-            this.put("domainRegisteredDateTime", (n) -> { currentObject.setDomainRegisteredDateTime(n.getOffsetDateTimeValue()); });
-            this.put("firstSeenDateTime", (n) -> { currentObject.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("lastSeenDateTime", (n) -> { currentObject.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("registrant", (n) -> { currentObject.setRegistrant(n.getObjectValue(DomainRegistrant::createFromDiscriminatorValue)); });
-            this.put("riskScore", (n) -> { currentObject.setRiskScore(n.getStringValue()); });
-            this.put("tags", (n) -> { currentObject.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
-            this.put("vendorInformation", (n) -> { currentObject.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activityGroupNames", (n) -> { this.setActivityGroupNames(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("azureSubscriptionId", (n) -> { this.setAzureSubscriptionId(n.getStringValue()); });
+        deserializerMap.put("azureTenantId", (n) -> { this.setAzureTenantId(n.getStringValue()); });
+        deserializerMap.put("countHits", (n) -> { this.setCountHits(n.getIntegerValue()); });
+        deserializerMap.put("countInOrg", (n) -> { this.setCountInOrg(n.getIntegerValue()); });
+        deserializerMap.put("domainCategories", (n) -> { this.setDomainCategories(n.getCollectionOfObjectValues(ReputationCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("domainRegisteredDateTime", (n) -> { this.setDomainRegisteredDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastSeenDateTime", (n) -> { this.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("registrant", (n) -> { this.setRegistrant(n.getObjectValue(DomainRegistrant::createFromDiscriminatorValue)); });
+        deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getStringValue()); });
+        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("vendorInformation", (n) -> { this.setVendorInformation(n.getObjectValue(SecurityVendorInformation::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the firstSeenDateTime property value. The firstSeenDateTime property
@@ -141,7 +139,7 @@ public class DomainSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getFirstSeenDateTime() {
-        return this._firstSeenDateTime;
+        return this.firstSeenDateTime;
     }
     /**
      * Gets the lastSeenDateTime property value. The lastSeenDateTime property
@@ -149,7 +147,7 @@ public class DomainSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastSeenDateTime() {
-        return this._lastSeenDateTime;
+        return this.lastSeenDateTime;
     }
     /**
      * Gets the name property value. The name property
@@ -157,7 +155,7 @@ public class DomainSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the registrant property value. The registrant property
@@ -165,7 +163,7 @@ public class DomainSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public DomainRegistrant getRegistrant() {
-        return this._registrant;
+        return this.registrant;
     }
     /**
      * Gets the riskScore property value. The riskScore property
@@ -173,7 +171,7 @@ public class DomainSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRiskScore() {
-        return this._riskScore;
+        return this.riskScore;
     }
     /**
      * Gets the tags property value. The tags property
@@ -181,7 +179,7 @@ public class DomainSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getTags() {
-        return this._tags;
+        return this.tags;
     }
     /**
      * Gets the vendorInformation property value. The vendorInformation property
@@ -189,13 +187,14 @@ public class DomainSecurityProfile extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public SecurityVendorInformation getVendorInformation() {
-        return this._vendorInformation;
+        return this.vendorInformation;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -219,111 +218,125 @@ public class DomainSecurityProfile extends Entity implements Parsable {
      * @param value Value to set for the activityGroupNames property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityGroupNames(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._activityGroupNames = value;
+        this.activityGroupNames = value;
     }
     /**
      * Sets the azureSubscriptionId property value. The azureSubscriptionId property
      * @param value Value to set for the azureSubscriptionId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureSubscriptionId(@javax.annotation.Nullable final String value) {
-        this._azureSubscriptionId = value;
+        this.azureSubscriptionId = value;
     }
     /**
      * Sets the azureTenantId property value. The azureTenantId property
      * @param value Value to set for the azureTenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAzureTenantId(@javax.annotation.Nullable final String value) {
-        this._azureTenantId = value;
+        this.azureTenantId = value;
     }
     /**
      * Sets the countHits property value. The countHits property
      * @param value Value to set for the countHits property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountHits(@javax.annotation.Nullable final Integer value) {
-        this._countHits = value;
+        this.countHits = value;
     }
     /**
      * Sets the countInOrg property value. The countInOrg property
      * @param value Value to set for the countInOrg property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCountInOrg(@javax.annotation.Nullable final Integer value) {
-        this._countInOrg = value;
+        this.countInOrg = value;
     }
     /**
      * Sets the domainCategories property value. The domainCategories property
      * @param value Value to set for the domainCategories property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainCategories(@javax.annotation.Nullable final java.util.List<ReputationCategory> value) {
-        this._domainCategories = value;
+        this.domainCategories = value;
     }
     /**
      * Sets the domainRegisteredDateTime property value. The domainRegisteredDateTime property
      * @param value Value to set for the domainRegisteredDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDomainRegisteredDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._domainRegisteredDateTime = value;
+        this.domainRegisteredDateTime = value;
     }
     /**
      * Sets the firstSeenDateTime property value. The firstSeenDateTime property
      * @param value Value to set for the firstSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFirstSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._firstSeenDateTime = value;
+        this.firstSeenDateTime = value;
     }
     /**
      * Sets the lastSeenDateTime property value. The lastSeenDateTime property
      * @param value Value to set for the lastSeenDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastSeenDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastSeenDateTime = value;
+        this.lastSeenDateTime = value;
     }
     /**
      * Sets the name property value. The name property
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the registrant property value. The registrant property
      * @param value Value to set for the registrant property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistrant(@javax.annotation.Nullable final DomainRegistrant value) {
-        this._registrant = value;
+        this.registrant = value;
     }
     /**
      * Sets the riskScore property value. The riskScore property
      * @param value Value to set for the riskScore property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRiskScore(@javax.annotation.Nullable final String value) {
-        this._riskScore = value;
+        this.riskScore = value;
     }
     /**
      * Sets the tags property value. The tags property
      * @param value Value to set for the tags property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTags(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._tags = value;
+        this.tags = value;
     }
     /**
      * Sets the vendorInformation property value. The vendorInformation property
      * @param value Value to set for the vendorInformation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVendorInformation(@javax.annotation.Nullable final SecurityVendorInformation value) {
-        this._vendorInformation = value;
+        this.vendorInformation = value;
     }
 }

@@ -3,20 +3,19 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class UserExperienceAnalyticsOverview extends Entity implements Parsable {
     /** The user experience analytics insights. */
-    private java.util.List<UserExperienceAnalyticsInsight> _insights;
+    private java.util.List<UserExperienceAnalyticsInsight> insights;
     /**
      * Instantiates a new UserExperienceAnalyticsOverview and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public UserExperienceAnalyticsOverview() {
         super();
-        this.setOdataType("#microsoft.graph.userExperienceAnalyticsOverview");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,14 +29,13 @@ public class UserExperienceAnalyticsOverview extends Entity implements Parsable 
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final UserExperienceAnalyticsOverview currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("insights", (n) -> { currentObject.setInsights(n.getCollectionOfObjectValues(UserExperienceAnalyticsInsight::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("insights", (n) -> { this.setInsights(n.getCollectionOfObjectValues(UserExperienceAnalyticsInsight::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the insights property value. The user experience analytics insights.
@@ -45,13 +43,14 @@ public class UserExperienceAnalyticsOverview extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public java.util.List<UserExperienceAnalyticsInsight> getInsights() {
-        return this._insights;
+        return this.insights;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -62,7 +61,8 @@ public class UserExperienceAnalyticsOverview extends Entity implements Parsable 
      * @param value Value to set for the insights property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInsights(@javax.annotation.Nullable final java.util.List<UserExperienceAnalyticsInsight> value) {
-        this._insights = value;
+        this.insights = value;
     }
 }

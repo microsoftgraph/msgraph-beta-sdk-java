@@ -3,22 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class MicrosoftApplicationDataAccessSettings extends Entity implements Parsable {
     /** The ID of an Azure Active Directory (Azure AD) security group for which the members are allowed to access Microsoft 365 data using only Microsoft 365 apps, but not other Microsoft apps such as Edge.  This is only applicable if isEnabledForAllMicrosoftApplications is set to true. */
-    private String _disabledForGroup;
+    private String disabledForGroup;
     /** When set to true, all users in the organization can access in a Microsoft app any Microsoft 365 data that the user has been authorized to access. The Microsoft app can be a Microsoft 365 app (for example, Excel, Outlook) or non-Microsoft 365 app (for example, Edge). The default is true.  It is possible to disable this access for a subset of users in an Azure AD security group, by specifying the group in the disabledForGroup property.  When set to false, all users can access authorized Microsoft 365 data only in a Microsoft 365 app. */
-    private Boolean _isEnabledForAllMicrosoftApplications;
+    private Boolean isEnabledForAllMicrosoftApplications;
     /**
      * Instantiates a new microsoftApplicationDataAccessSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public MicrosoftApplicationDataAccessSettings() {
         super();
-        this.setOdataType("#microsoft.graph.microsoftApplicationDataAccessSettings");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,19 +35,18 @@ public class MicrosoftApplicationDataAccessSettings extends Entity implements Pa
      */
     @javax.annotation.Nullable
     public String getDisabledForGroup() {
-        return this._disabledForGroup;
+        return this.disabledForGroup;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final MicrosoftApplicationDataAccessSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("disabledForGroup", (n) -> { currentObject.setDisabledForGroup(n.getStringValue()); });
-            this.put("isEnabledForAllMicrosoftApplications", (n) -> { currentObject.setIsEnabledForAllMicrosoftApplications(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("disabledForGroup", (n) -> { this.setDisabledForGroup(n.getStringValue()); });
+        deserializerMap.put("isEnabledForAllMicrosoftApplications", (n) -> { this.setIsEnabledForAllMicrosoftApplications(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isEnabledForAllMicrosoftApplications property value. When set to true, all users in the organization can access in a Microsoft app any Microsoft 365 data that the user has been authorized to access. The Microsoft app can be a Microsoft 365 app (for example, Excel, Outlook) or non-Microsoft 365 app (for example, Edge). The default is true.  It is possible to disable this access for a subset of users in an Azure AD security group, by specifying the group in the disabledForGroup property.  When set to false, all users can access authorized Microsoft 365 data only in a Microsoft 365 app.
@@ -56,13 +54,14 @@ public class MicrosoftApplicationDataAccessSettings extends Entity implements Pa
      */
     @javax.annotation.Nullable
     public Boolean getIsEnabledForAllMicrosoftApplications() {
-        return this._isEnabledForAllMicrosoftApplications;
+        return this.isEnabledForAllMicrosoftApplications;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +73,17 @@ public class MicrosoftApplicationDataAccessSettings extends Entity implements Pa
      * @param value Value to set for the disabledForGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisabledForGroup(@javax.annotation.Nullable final String value) {
-        this._disabledForGroup = value;
+        this.disabledForGroup = value;
     }
     /**
      * Sets the isEnabledForAllMicrosoftApplications property value. When set to true, all users in the organization can access in a Microsoft app any Microsoft 365 data that the user has been authorized to access. The Microsoft app can be a Microsoft 365 app (for example, Excel, Outlook) or non-Microsoft 365 app (for example, Edge). The default is true.  It is possible to disable this access for a subset of users in an Azure AD security group, by specifying the group in the disabledForGroup property.  When set to false, all users can access authorized Microsoft 365 data only in a Microsoft 365 app.
      * @param value Value to set for the isEnabledForAllMicrosoftApplications property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsEnabledForAllMicrosoftApplications(@javax.annotation.Nullable final Boolean value) {
-        this._isEnabledForAllMicrosoftApplications = value;
+        this.isEnabledForAllMicrosoftApplications = value;
     }
 }

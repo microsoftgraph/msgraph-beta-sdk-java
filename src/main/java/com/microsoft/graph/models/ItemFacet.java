@@ -1,58 +1,36 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.EducationalActivity;
-import com.microsoft.graph.models.ItemAddress;
-import com.microsoft.graph.models.ItemEmail;
-import com.microsoft.graph.models.ItemPatent;
-import com.microsoft.graph.models.ItemPhone;
-import com.microsoft.graph.models.ItemPublication;
-import com.microsoft.graph.models.LanguageProficiency;
-import com.microsoft.graph.models.PersonAnnotation;
-import com.microsoft.graph.models.PersonAnnualEvent;
-import com.microsoft.graph.models.PersonAward;
-import com.microsoft.graph.models.PersonCertification;
-import com.microsoft.graph.models.PersonInterest;
-import com.microsoft.graph.models.PersonName;
-import com.microsoft.graph.models.PersonResponsibility;
-import com.microsoft.graph.models.PersonWebsite;
-import com.microsoft.graph.models.ProjectParticipation;
-import com.microsoft.graph.models.SkillProficiency;
-import com.microsoft.graph.models.UserAccountInformation;
-import com.microsoft.graph.models.WebAccount;
-import com.microsoft.graph.models.WorkPosition;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class ItemFacet extends Entity implements Parsable {
     /** The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue. */
-    private AllowedAudiences _allowedAudiences;
+    private AllowedAudiences allowedAudiences;
     /** The createdBy property */
-    private IdentitySet _createdBy;
+    private IdentitySet createdBy;
     /** Provides the dateTimeOffset for when the entity was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Contains inference detail if the entity is inferred by the creating or modifying application. */
-    private InferenceData _inference;
+    private InferenceData inference;
     /** The isSearchable property */
-    private Boolean _isSearchable;
+    private Boolean isSearchable;
     /** The lastModifiedBy property */
-    private IdentitySet _lastModifiedBy;
+    private IdentitySet lastModifiedBy;
     /** Provides the dateTimeOffset for when the entity was created. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** Where the values within an entity originated if synced from another service. */
-    private PersonDataSources _source;
+    private PersonDataSources source;
     /**
      * Instantiates a new itemFacet and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ItemFacet() {
         super();
-        this.setOdataType("#microsoft.graph.itemFacet");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,7 +57,6 @@ public class ItemFacet extends Entity implements Parsable {
                 case "#microsoft.graph.personCertification": return new PersonCertification();
                 case "#microsoft.graph.personInterest": return new PersonInterest();
                 case "#microsoft.graph.personName": return new PersonName();
-                case "#microsoft.graph.personResponsibility": return new PersonResponsibility();
                 case "#microsoft.graph.personWebsite": return new PersonWebsite();
                 case "#microsoft.graph.projectParticipation": return new ProjectParticipation();
                 case "#microsoft.graph.skillProficiency": return new SkillProficiency();
@@ -96,7 +73,7 @@ public class ItemFacet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AllowedAudiences getAllowedAudiences() {
-        return this._allowedAudiences;
+        return this.allowedAudiences;
     }
     /**
      * Gets the createdBy property value. The createdBy property
@@ -104,7 +81,7 @@ public class ItemFacet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getCreatedBy() {
-        return this._createdBy;
+        return this.createdBy;
     }
     /**
      * Gets the createdDateTime property value. Provides the dateTimeOffset for when the entity was created.
@@ -112,25 +89,24 @@ public class ItemFacet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ItemFacet currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("allowedAudiences", (n) -> { currentObject.setAllowedAudiences(n.getEnumValue(AllowedAudiences.class)); });
-            this.put("createdBy", (n) -> { currentObject.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("inference", (n) -> { currentObject.setInference(n.getObjectValue(InferenceData::createFromDiscriminatorValue)); });
-            this.put("isSearchable", (n) -> { currentObject.setIsSearchable(n.getBooleanValue()); });
-            this.put("lastModifiedBy", (n) -> { currentObject.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("source", (n) -> { currentObject.setSource(n.getObjectValue(PersonDataSources::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedAudiences", (n) -> { this.setAllowedAudiences(n.getEnumValue(AllowedAudiences.class)); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("inference", (n) -> { this.setInference(n.getObjectValue(InferenceData::createFromDiscriminatorValue)); });
+        deserializerMap.put("isSearchable", (n) -> { this.setIsSearchable(n.getBooleanValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getObjectValue(PersonDataSources::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the inference property value. Contains inference detail if the entity is inferred by the creating or modifying application.
@@ -138,7 +114,7 @@ public class ItemFacet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public InferenceData getInference() {
-        return this._inference;
+        return this.inference;
     }
     /**
      * Gets the isSearchable property value. The isSearchable property
@@ -146,7 +122,7 @@ public class ItemFacet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsSearchable() {
-        return this._isSearchable;
+        return this.isSearchable;
     }
     /**
      * Gets the lastModifiedBy property value. The lastModifiedBy property
@@ -154,7 +130,7 @@ public class ItemFacet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public IdentitySet getLastModifiedBy() {
-        return this._lastModifiedBy;
+        return this.lastModifiedBy;
     }
     /**
      * Gets the lastModifiedDateTime property value. Provides the dateTimeOffset for when the entity was created.
@@ -162,7 +138,7 @@ public class ItemFacet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the source property value. Where the values within an entity originated if synced from another service.
@@ -170,13 +146,14 @@ public class ItemFacet extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PersonDataSources getSource() {
-        return this._source;
+        return this.source;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -194,63 +171,71 @@ public class ItemFacet extends Entity implements Parsable {
      * @param value Value to set for the allowedAudiences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAllowedAudiences(@javax.annotation.Nullable final AllowedAudiences value) {
-        this._allowedAudiences = value;
+        this.allowedAudiences = value;
     }
     /**
      * Sets the createdBy property value. The createdBy property
      * @param value Value to set for the createdBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._createdBy = value;
+        this.createdBy = value;
     }
     /**
      * Sets the createdDateTime property value. Provides the dateTimeOffset for when the entity was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the inference property value. Contains inference detail if the entity is inferred by the creating or modifying application.
      * @param value Value to set for the inference property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setInference(@javax.annotation.Nullable final InferenceData value) {
-        this._inference = value;
+        this.inference = value;
     }
     /**
      * Sets the isSearchable property value. The isSearchable property
      * @param value Value to set for the isSearchable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSearchable(@javax.annotation.Nullable final Boolean value) {
-        this._isSearchable = value;
+        this.isSearchable = value;
     }
     /**
      * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param value Value to set for the lastModifiedBy property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedBy(@javax.annotation.Nullable final IdentitySet value) {
-        this._lastModifiedBy = value;
+        this.lastModifiedBy = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Provides the dateTimeOffset for when the entity was created.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the source property value. Where the values within an entity originated if synced from another service.
      * @param value Value to set for the source property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSource(@javax.annotation.Nullable final PersonDataSources value) {
-        this._source = value;
+        this.source = value;
     }
 }

@@ -3,22 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class WorkbookFormatProtection extends Entity implements Parsable {
     /** The formulaHidden property */
-    private Boolean _formulaHidden;
+    private Boolean formulaHidden;
     /** The locked property */
-    private Boolean _locked;
+    private Boolean locked;
     /**
      * Instantiates a new WorkbookFormatProtection and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public WorkbookFormatProtection() {
         super();
-        this.setOdataType("#microsoft.graph.workbookFormatProtection");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,15 +31,14 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final WorkbookFormatProtection currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("formulaHidden", (n) -> { currentObject.setFormulaHidden(n.getBooleanValue()); });
-            this.put("locked", (n) -> { currentObject.setLocked(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("formulaHidden", (n) -> { this.setFormulaHidden(n.getBooleanValue()); });
+        deserializerMap.put("locked", (n) -> { this.setLocked(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the formulaHidden property value. The formulaHidden property
@@ -48,7 +46,7 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getFormulaHidden() {
-        return this._formulaHidden;
+        return this.formulaHidden;
     }
     /**
      * Gets the locked property value. The locked property
@@ -56,13 +54,14 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getLocked() {
-        return this._locked;
+        return this.locked;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +73,17 @@ public class WorkbookFormatProtection extends Entity implements Parsable {
      * @param value Value to set for the formulaHidden property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setFormulaHidden(@javax.annotation.Nullable final Boolean value) {
-        this._formulaHidden = value;
+        this.formulaHidden = value;
     }
     /**
      * Sets the locked property value. The locked property
      * @param value Value to set for the locked property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocked(@javax.annotation.Nullable final Boolean value) {
-        this._locked = value;
+        this.locked = value;
     }
 }

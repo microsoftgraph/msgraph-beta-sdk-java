@@ -4,32 +4,31 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class RubricQuality implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The collection of criteria for this rubric quality. */
-    private java.util.List<RubricCriterion> _criteria;
+    private java.util.List<RubricCriterion> criteria;
     /** The description of this rubric quality. */
-    private EducationItemBody _description;
+    private EducationItemBody description;
     /** The name of this rubric quality. */
-    private String _displayName;
+    private String displayName;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** The ID of this resource. */
-    private String _qualityId;
+    private String qualityId;
     /** If present, a numerical weight for this quality.  Weights must add up to 100. */
-    private Float _weight;
+    private Float weight;
     /**
      * Instantiates a new rubricQuality and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public RubricQuality() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.rubricQuality");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +46,7 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the criteria property value. The collection of criteria for this rubric quality.
@@ -55,7 +54,7 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<RubricCriterion> getCriteria() {
-        return this._criteria;
+        return this.criteria;
     }
     /**
      * Gets the description property value. The description of this rubric quality.
@@ -63,7 +62,7 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public EducationItemBody getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The name of this rubric quality.
@@ -71,23 +70,22 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final RubricQuality currentObject = this;
-        return new HashMap<>(6) {{
-            this.put("criteria", (n) -> { currentObject.setCriteria(n.getCollectionOfObjectValues(RubricCriterion::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("qualityId", (n) -> { currentObject.setQualityId(n.getStringValue()); });
-            this.put("weight", (n) -> { currentObject.setWeight(n.getFloatValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("criteria", (n) -> { this.setCriteria(n.getCollectionOfObjectValues(RubricCriterion::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("qualityId", (n) -> { this.setQualityId(n.getStringValue()); });
+        deserializerMap.put("weight", (n) -> { this.setWeight(n.getFloatValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -95,7 +93,7 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the qualityId property value. The ID of this resource.
@@ -103,7 +101,7 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public String getQualityId() {
-        return this._qualityId;
+        return this.qualityId;
     }
     /**
      * Gets the weight property value. If present, a numerical weight for this quality.  Weights must add up to 100.
@@ -111,13 +109,14 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      */
     @javax.annotation.Nullable
     public Float getWeight() {
-        return this._weight;
+        return this.weight;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("criteria", this.getCriteria());
@@ -133,55 +132,62 @@ public class RubricQuality implements AdditionalDataHolder, Parsable {
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the criteria property value. The collection of criteria for this rubric quality.
      * @param value Value to set for the criteria property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCriteria(@javax.annotation.Nullable final java.util.List<RubricCriterion> value) {
-        this._criteria = value;
+        this.criteria = value;
     }
     /**
      * Sets the description property value. The description of this rubric quality.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final EducationItemBody value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The name of this rubric quality.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the qualityId property value. The ID of this resource.
      * @param value Value to set for the qualityId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQualityId(@javax.annotation.Nullable final String value) {
-        this._qualityId = value;
+        this.qualityId = value;
     }
     /**
      * Sets the weight property value. If present, a numerical weight for this quality.  Weights must add up to 100.
      * @param value Value to set for the weight property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWeight(@javax.annotation.Nullable final Float value) {
-        this._weight = value;
+        this.weight = value;
     }
 }

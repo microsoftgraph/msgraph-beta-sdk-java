@@ -1,29 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AssociatedTeamInfo;
-import com.microsoft.graph.models.SharedWithChannelTeamInfo;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class TeamInfo extends Entity implements Parsable {
     /** The name of the team. */
-    private String _displayName;
+    private String displayName;
     /** The team property */
-    private Team _team;
+    private Team team;
     /** The ID of the Azure Active Directory tenant. */
-    private String _tenantId;
+    private String tenantId;
     /**
      * Instantiates a new teamInfo and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TeamInfo() {
         super();
-        this.setOdataType("#microsoft.graph.teamInfo");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,20 +45,19 @@ public class TeamInfo extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TeamInfo currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("team", (n) -> { currentObject.setTeam(n.getObjectValue(Team::createFromDiscriminatorValue)); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("team", (n) -> { this.setTeam(n.getObjectValue(Team::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the team property value. The team property
@@ -70,7 +65,7 @@ public class TeamInfo extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Team getTeam() {
-        return this._team;
+        return this.team;
     }
     /**
      * Gets the tenantId property value. The ID of the Azure Active Directory tenant.
@@ -78,13 +73,14 @@ public class TeamInfo extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -97,23 +93,26 @@ public class TeamInfo extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the team property value. The team property
      * @param value Value to set for the team property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTeam(@javax.annotation.Nullable final Team value) {
-        this._team = value;
+        this.team = value;
     }
     /**
      * Sets the tenantId property value. The ID of the Azure Active Directory tenant.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
 }

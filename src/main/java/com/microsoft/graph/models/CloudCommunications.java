@@ -1,29 +1,33 @@
 package com.microsoft.graph.models;
 
 import com.microsoft.graph.models.callrecords.CallRecord;
+import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-public class CloudCommunications extends Entity implements Parsable {
+public class CloudCommunications implements AdditionalDataHolder, Parsable {
+    /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
+    private Map<String, Object> additionalData;
     /** The callRecords property */
-    private java.util.List<CallRecord> _callRecords;
+    private java.util.List<CallRecord> callRecords;
     /** The calls property */
-    private java.util.List<Call> _calls;
+    private java.util.List<Call> calls;
+    /** The OdataType property */
+    private String odataType;
     /** The onlineMeetings property */
-    private java.util.List<OnlineMeeting> _onlineMeetings;
+    private java.util.List<OnlineMeeting> onlineMeetings;
     /** The presences property */
-    private java.util.List<Presence> _presences;
+    private java.util.List<Presence> presences;
     /**
      * Instantiates a new CloudCommunications and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudCommunications() {
-        super();
-        this.setOdataType("#microsoft.graph.cloudCommunications");
+        this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -36,12 +40,20 @@ public class CloudCommunications extends Entity implements Parsable {
         return new CloudCommunications();
     }
     /**
+     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return a Map<String, Object>
+     */
+    @javax.annotation.Nonnull
+    public Map<String, Object> getAdditionalData() {
+        return this.additionalData;
+    }
+    /**
      * Gets the callRecords property value. The callRecords property
      * @return a callRecord
      */
     @javax.annotation.Nullable
     public java.util.List<CallRecord> getCallRecords() {
-        return this._callRecords;
+        return this.callRecords;
     }
     /**
      * Gets the calls property value. The calls property
@@ -49,21 +61,29 @@ public class CloudCommunications extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Call> getCalls() {
-        return this._calls;
+        return this.calls;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudCommunications currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("callRecords", (n) -> { currentObject.setCallRecords(n.getCollectionOfObjectValues(CallRecord::createFromDiscriminatorValue)); });
-            this.put("calls", (n) -> { currentObject.setCalls(n.getCollectionOfObjectValues(Call::createFromDiscriminatorValue)); });
-            this.put("onlineMeetings", (n) -> { currentObject.setOnlineMeetings(n.getCollectionOfObjectValues(OnlineMeeting::createFromDiscriminatorValue)); });
-            this.put("presences", (n) -> { currentObject.setPresences(n.getCollectionOfObjectValues(Presence::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("callRecords", (n) -> { this.setCallRecords(n.getCollectionOfObjectValues(CallRecord::createFromDiscriminatorValue)); });
+        deserializerMap.put("calls", (n) -> { this.setCalls(n.getCollectionOfObjectValues(Call::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("onlineMeetings", (n) -> { this.setOnlineMeetings(n.getCollectionOfObjectValues(OnlineMeeting::createFromDiscriminatorValue)); });
+        deserializerMap.put("presences", (n) -> { this.setPresences(n.getCollectionOfObjectValues(Presence::createFromDiscriminatorValue)); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a string
+     */
+    @javax.annotation.Nullable
+    public String getOdataType() {
+        return this.odataType;
     }
     /**
      * Gets the onlineMeetings property value. The onlineMeetings property
@@ -71,7 +91,7 @@ public class CloudCommunications extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<OnlineMeeting> getOnlineMeetings() {
-        return this._onlineMeetings;
+        return this.onlineMeetings;
     }
     /**
      * Gets the presences property value. The presences property
@@ -79,51 +99,75 @@ public class CloudCommunications extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<Presence> getPresences() {
-        return this._presences;
+        return this.presences;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        super.serialize(writer);
         writer.writeCollectionOfObjectValues("callRecords", this.getCallRecords());
         writer.writeCollectionOfObjectValues("calls", this.getCalls());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("onlineMeetings", this.getOnlineMeetings());
         writer.writeCollectionOfObjectValues("presences", this.getPresences());
+        writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
+        this.additionalData = value;
     }
     /**
      * Sets the callRecords property value. The callRecords property
      * @param value Value to set for the callRecords property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCallRecords(@javax.annotation.Nullable final java.util.List<CallRecord> value) {
-        this._callRecords = value;
+        this.callRecords = value;
     }
     /**
      * Sets the calls property value. The calls property
      * @param value Value to set for the calls property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCalls(@javax.annotation.Nullable final java.util.List<Call> value) {
-        this._calls = value;
+        this.calls = value;
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the OdataType property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setOdataType(@javax.annotation.Nullable final String value) {
+        this.odataType = value;
     }
     /**
      * Sets the onlineMeetings property value. The onlineMeetings property
      * @param value Value to set for the onlineMeetings property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOnlineMeetings(@javax.annotation.Nullable final java.util.List<OnlineMeeting> value) {
-        this._onlineMeetings = value;
+        this.onlineMeetings = value;
     }
     /**
      * Sets the presences property value. The presences property
      * @param value Value to set for the presences property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPresences(@javax.annotation.Nullable final java.util.List<Presence> value) {
-        this._presences = value;
+        this.presences = value;
     }
 }

@@ -1,10 +1,8 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.Windows10XSCEPCertificateProfile;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -13,6 +11,7 @@ public class Windows10XCertificateProfile extends DeviceManagementResourceAccess
      * Instantiates a new Windows10XCertificateProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Windows10XCertificateProfile() {
         super();
         this.setOdataType("#microsoft.graph.windows10XCertificateProfile");
@@ -25,30 +24,23 @@ public class Windows10XCertificateProfile extends DeviceManagementResourceAccess
     @javax.annotation.Nonnull
     public static Windows10XCertificateProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.windows10XSCEPCertificateProfile": return new Windows10XSCEPCertificateProfile();
-            }
-        }
         return new Windows10XCertificateProfile();
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Windows10XCertificateProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);

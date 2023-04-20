@@ -4,31 +4,29 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class PrivilegedRoleAssignment extends Entity implements Parsable {
     /** The UTC DateTime when the temporary privileged role assignment will be expired. For permanent role assignment, the value is null. */
-    private OffsetDateTime _expirationDateTime;
+    private OffsetDateTime expirationDateTime;
     /** true if the role assignment is activated. false if the role assignment is deactivated. */
-    private Boolean _isElevated;
+    private Boolean isElevated;
     /** Result message set by the service. */
-    private String _resultMessage;
+    private String resultMessage;
     /** Role identifier. In GUID string format. */
-    private String _roleId;
+    private String roleId;
     /** Read-only. Nullable. The associated role information. */
-    private PrivilegedRole _roleInfo;
+    private PrivilegedRole roleInfo;
     /** User identifier. In GUID string format. */
-    private String _userId;
+    private String userId;
     /**
      * Instantiates a new privilegedRoleAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrivilegedRoleAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.privilegedRoleAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,23 +44,22 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getExpirationDateTime() {
-        return this._expirationDateTime;
+        return this.expirationDateTime;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrivilegedRoleAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("expirationDateTime", (n) -> { currentObject.setExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("isElevated", (n) -> { currentObject.setIsElevated(n.getBooleanValue()); });
-            this.put("resultMessage", (n) -> { currentObject.setResultMessage(n.getStringValue()); });
-            this.put("roleId", (n) -> { currentObject.setRoleId(n.getStringValue()); });
-            this.put("roleInfo", (n) -> { currentObject.setRoleInfo(n.getObjectValue(PrivilegedRole::createFromDiscriminatorValue)); });
-            this.put("userId", (n) -> { currentObject.setUserId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("isElevated", (n) -> { this.setIsElevated(n.getBooleanValue()); });
+        deserializerMap.put("resultMessage", (n) -> { this.setResultMessage(n.getStringValue()); });
+        deserializerMap.put("roleId", (n) -> { this.setRoleId(n.getStringValue()); });
+        deserializerMap.put("roleInfo", (n) -> { this.setRoleInfo(n.getObjectValue(PrivilegedRole::createFromDiscriminatorValue)); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isElevated property value. true if the role assignment is activated. false if the role assignment is deactivated.
@@ -70,7 +67,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsElevated() {
-        return this._isElevated;
+        return this.isElevated;
     }
     /**
      * Gets the resultMessage property value. Result message set by the service.
@@ -78,7 +75,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getResultMessage() {
-        return this._resultMessage;
+        return this.resultMessage;
     }
     /**
      * Gets the roleId property value. Role identifier. In GUID string format.
@@ -86,7 +83,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getRoleId() {
-        return this._roleId;
+        return this.roleId;
     }
     /**
      * Gets the roleInfo property value. Read-only. Nullable. The associated role information.
@@ -94,7 +91,7 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public PrivilegedRole getRoleInfo() {
-        return this._roleInfo;
+        return this.roleInfo;
     }
     /**
      * Gets the userId property value. User identifier. In GUID string format.
@@ -102,13 +99,14 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getUserId() {
-        return this._userId;
+        return this.userId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -124,47 +122,53 @@ public class PrivilegedRoleAssignment extends Entity implements Parsable {
      * @param value Value to set for the expirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._expirationDateTime = value;
+        this.expirationDateTime = value;
     }
     /**
      * Sets the isElevated property value. true if the role assignment is activated. false if the role assignment is deactivated.
      * @param value Value to set for the isElevated property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsElevated(@javax.annotation.Nullable final Boolean value) {
-        this._isElevated = value;
+        this.isElevated = value;
     }
     /**
      * Sets the resultMessage property value. Result message set by the service.
      * @param value Value to set for the resultMessage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResultMessage(@javax.annotation.Nullable final String value) {
-        this._resultMessage = value;
+        this.resultMessage = value;
     }
     /**
      * Sets the roleId property value. Role identifier. In GUID string format.
      * @param value Value to set for the roleId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleId(@javax.annotation.Nullable final String value) {
-        this._roleId = value;
+        this.roleId = value;
     }
     /**
      * Sets the roleInfo property value. Read-only. Nullable. The associated role information.
      * @param value Value to set for the roleInfo property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleInfo(@javax.annotation.Nullable final PrivilegedRole value) {
-        this._roleInfo = value;
+        this.roleInfo = value;
     }
     /**
      * Sets the userId property value. User identifier. In GUID string format.
      * @param value Value to set for the userId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUserId(@javax.annotation.Nullable final String value) {
-        this._userId = value;
+        this.userId = value;
     }
 }

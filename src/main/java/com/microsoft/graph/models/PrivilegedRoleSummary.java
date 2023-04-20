@@ -3,33 +3,32 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PrivilegedRoleSummary extends Entity implements Parsable {
     /** The number of users that have the role assigned and the role is activated. */
-    private Integer _elevatedCount;
+    private Integer elevatedCount;
     /** The number of users that have the role assigned but the role is deactivated. */
-    private Integer _managedCount;
+    private Integer managedCount;
     /** true if the role activation requires MFA. false if the role activation doesn't require MFA. */
-    private Boolean _mfaEnabled;
+    private Boolean mfaEnabled;
     /** Possible values are: ok, bad. The value depends on the ratio of (managedCount / usersCount). If the ratio is less than a predefined threshold, ok is returned. Otherwise, bad is returned. */
-    private RoleSummaryStatus _status;
+    private RoleSummaryStatus status;
     /** The number of users that are assigned with the role. */
-    private Integer _usersCount;
+    private Integer usersCount;
     /**
-     * Instantiates a new privilegedRoleSummary and sets the default values.
+     * Instantiates a new PrivilegedRoleSummary and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PrivilegedRoleSummary() {
         super();
-        this.setOdataType("#microsoft.graph.privilegedRoleSummary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a privilegedRoleSummary
+     * @return a PrivilegedRoleSummary
      */
     @javax.annotation.Nonnull
     public static PrivilegedRoleSummary createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -42,22 +41,21 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getElevatedCount() {
-        return this._elevatedCount;
+        return this.elevatedCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PrivilegedRoleSummary currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("elevatedCount", (n) -> { currentObject.setElevatedCount(n.getIntegerValue()); });
-            this.put("managedCount", (n) -> { currentObject.setManagedCount(n.getIntegerValue()); });
-            this.put("mfaEnabled", (n) -> { currentObject.setMfaEnabled(n.getBooleanValue()); });
-            this.put("status", (n) -> { currentObject.setStatus(n.getEnumValue(RoleSummaryStatus.class)); });
-            this.put("usersCount", (n) -> { currentObject.setUsersCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("elevatedCount", (n) -> { this.setElevatedCount(n.getIntegerValue()); });
+        deserializerMap.put("managedCount", (n) -> { this.setManagedCount(n.getIntegerValue()); });
+        deserializerMap.put("mfaEnabled", (n) -> { this.setMfaEnabled(n.getBooleanValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(RoleSummaryStatus.class)); });
+        deserializerMap.put("usersCount", (n) -> { this.setUsersCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the managedCount property value. The number of users that have the role assigned but the role is deactivated.
@@ -65,7 +63,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getManagedCount() {
-        return this._managedCount;
+        return this.managedCount;
     }
     /**
      * Gets the mfaEnabled property value. true if the role activation requires MFA. false if the role activation doesn't require MFA.
@@ -73,7 +71,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getMfaEnabled() {
-        return this._mfaEnabled;
+        return this.mfaEnabled;
     }
     /**
      * Gets the status property value. Possible values are: ok, bad. The value depends on the ratio of (managedCount / usersCount). If the ratio is less than a predefined threshold, ok is returned. Otherwise, bad is returned.
@@ -81,7 +79,7 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RoleSummaryStatus getStatus() {
-        return this._status;
+        return this.status;
     }
     /**
      * Gets the usersCount property value. The number of users that are assigned with the role.
@@ -89,13 +87,14 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getUsersCount() {
-        return this._usersCount;
+        return this.usersCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -110,39 +109,44 @@ public class PrivilegedRoleSummary extends Entity implements Parsable {
      * @param value Value to set for the elevatedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setElevatedCount(@javax.annotation.Nullable final Integer value) {
-        this._elevatedCount = value;
+        this.elevatedCount = value;
     }
     /**
      * Sets the managedCount property value. The number of users that have the role assigned but the role is deactivated.
      * @param value Value to set for the managedCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setManagedCount(@javax.annotation.Nullable final Integer value) {
-        this._managedCount = value;
+        this.managedCount = value;
     }
     /**
      * Sets the mfaEnabled property value. true if the role activation requires MFA. false if the role activation doesn't require MFA.
      * @param value Value to set for the mfaEnabled property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMfaEnabled(@javax.annotation.Nullable final Boolean value) {
-        this._mfaEnabled = value;
+        this.mfaEnabled = value;
     }
     /**
      * Sets the status property value. Possible values are: ok, bad. The value depends on the ratio of (managedCount / usersCount). If the ratio is less than a predefined threshold, ok is returned. Otherwise, bad is returned.
      * @param value Value to set for the status property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setStatus(@javax.annotation.Nullable final RoleSummaryStatus value) {
-        this._status = value;
+        this.status = value;
     }
     /**
      * Sets the usersCount property value. The number of users that are assigned with the role.
      * @param value Value to set for the usersCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsersCount(@javax.annotation.Nullable final Integer value) {
-        this._usersCount = value;
+        this.usersCount = value;
     }
 }

@@ -3,23 +3,24 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 public class Contract extends DirectoryObject implements Parsable {
     /** The contractType property */
-    private String _contractType;
+    private String contractType;
     /** The customerId property */
-    private String _customerId;
+    private UUID customerId;
     /** The defaultDomainName property */
-    private String _defaultDomainName;
+    private String defaultDomainName;
     /** The displayName property */
-    private String _displayName;
+    private String displayName;
     /**
      * Instantiates a new Contract and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public Contract() {
         super();
         this.setOdataType("#microsoft.graph.contract");
@@ -40,15 +41,15 @@ public class Contract extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getContractType() {
-        return this._contractType;
+        return this.contractType;
     }
     /**
      * Gets the customerId property value. The customerId property
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getCustomerId() {
-        return this._customerId;
+    public UUID getCustomerId() {
+        return this.customerId;
     }
     /**
      * Gets the defaultDomainName property value. The defaultDomainName property
@@ -56,7 +57,7 @@ public class Contract extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDefaultDomainName() {
-        return this._defaultDomainName;
+        return this.defaultDomainName;
     }
     /**
      * Gets the displayName property value. The displayName property
@@ -64,32 +65,32 @@ public class Contract extends DirectoryObject implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final Contract currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("contractType", (n) -> { currentObject.setContractType(n.getStringValue()); });
-            this.put("customerId", (n) -> { currentObject.setCustomerId(n.getStringValue()); });
-            this.put("defaultDomainName", (n) -> { currentObject.setDefaultDomainName(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("contractType", (n) -> { this.setContractType(n.getStringValue()); });
+        deserializerMap.put("customerId", (n) -> { this.setCustomerId(n.getUUIDValue()); });
+        deserializerMap.put("defaultDomainName", (n) -> { this.setDefaultDomainName(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("contractType", this.getContractType());
-        writer.writeStringValue("customerId", this.getCustomerId());
+        writer.writeUUIDValue("customerId", this.getCustomerId());
         writer.writeStringValue("defaultDomainName", this.getDefaultDomainName());
         writer.writeStringValue("displayName", this.getDisplayName());
     }
@@ -98,31 +99,35 @@ public class Contract extends DirectoryObject implements Parsable {
      * @param value Value to set for the contractType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContractType(@javax.annotation.Nullable final String value) {
-        this._contractType = value;
+        this.contractType = value;
     }
     /**
      * Sets the customerId property value. The customerId property
      * @param value Value to set for the customerId property.
      * @return a void
      */
-    public void setCustomerId(@javax.annotation.Nullable final String value) {
-        this._customerId = value;
+    @javax.annotation.Nonnull
+    public void setCustomerId(@javax.annotation.Nullable final UUID value) {
+        this.customerId = value;
     }
     /**
      * Sets the defaultDomainName property value. The defaultDomainName property
      * @param value Value to set for the defaultDomainName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultDomainName(@javax.annotation.Nullable final String value) {
-        this._defaultDomainName = value;
+        this.defaultDomainName = value;
     }
     /**
      * Sets the displayName property value. The displayName property
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
 }

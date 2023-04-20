@@ -1,36 +1,35 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.AndroidManagedStoreWebApp;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     /** The Identity Name. */
-    private String _appIdentifier;
+    private String appIdentifier;
     /** The Play for Work Store app URL. */
-    private String _appStoreUrl;
+    private String appStoreUrl;
     /** The tracks that are visible to this enterprise. */
-    private java.util.List<AndroidManagedStoreAppTrack> _appTracks;
+    private java.util.List<AndroidManagedStoreAppTrack> appTracks;
     /** Indicates whether the app is only available to a given enterprise's users. */
-    private Boolean _isPrivate;
+    private Boolean isPrivate;
     /** Indicates whether the app is a preinstalled system app. */
-    private Boolean _isSystemApp;
+    private Boolean isSystemApp;
     /** The package identifier. */
-    private String _packageId;
+    private String packageId;
     /** Whether this app supports OEMConfig policy. */
-    private Boolean _supportsOemConfig;
+    private Boolean supportsOemConfig;
     /** The total number of VPP licenses. */
-    private Integer _totalLicenseCount;
+    private Integer totalLicenseCount;
     /** The number of VPP licenses in use. */
-    private Integer _usedLicenseCount;
+    private Integer usedLicenseCount;
     /**
      * Instantiates a new AndroidManagedStoreApp and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidManagedStoreApp() {
         super();
         this.setOdataType("#microsoft.graph.androidManagedStoreApp");
@@ -43,13 +42,6 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
     @javax.annotation.Nonnull
     public static AndroidManagedStoreApp createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.androidManagedStoreWebApp": return new AndroidManagedStoreWebApp();
-            }
-        }
         return new AndroidManagedStoreApp();
     }
     /**
@@ -58,7 +50,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppIdentifier() {
-        return this._appIdentifier;
+        return this.appIdentifier;
     }
     /**
      * Gets the appStoreUrl property value. The Play for Work Store app URL.
@@ -66,7 +58,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getAppStoreUrl() {
-        return this._appStoreUrl;
+        return this.appStoreUrl;
     }
     /**
      * Gets the appTracks property value. The tracks that are visible to this enterprise.
@@ -74,26 +66,25 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AndroidManagedStoreAppTrack> getAppTracks() {
-        return this._appTracks;
+        return this.appTracks;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidManagedStoreApp currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("appIdentifier", (n) -> { currentObject.setAppIdentifier(n.getStringValue()); });
-            this.put("appStoreUrl", (n) -> { currentObject.setAppStoreUrl(n.getStringValue()); });
-            this.put("appTracks", (n) -> { currentObject.setAppTracks(n.getCollectionOfObjectValues(AndroidManagedStoreAppTrack::createFromDiscriminatorValue)); });
-            this.put("isPrivate", (n) -> { currentObject.setIsPrivate(n.getBooleanValue()); });
-            this.put("isSystemApp", (n) -> { currentObject.setIsSystemApp(n.getBooleanValue()); });
-            this.put("packageId", (n) -> { currentObject.setPackageId(n.getStringValue()); });
-            this.put("supportsOemConfig", (n) -> { currentObject.setSupportsOemConfig(n.getBooleanValue()); });
-            this.put("totalLicenseCount", (n) -> { currentObject.setTotalLicenseCount(n.getIntegerValue()); });
-            this.put("usedLicenseCount", (n) -> { currentObject.setUsedLicenseCount(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appIdentifier", (n) -> { this.setAppIdentifier(n.getStringValue()); });
+        deserializerMap.put("appStoreUrl", (n) -> { this.setAppStoreUrl(n.getStringValue()); });
+        deserializerMap.put("appTracks", (n) -> { this.setAppTracks(n.getCollectionOfObjectValues(AndroidManagedStoreAppTrack::createFromDiscriminatorValue)); });
+        deserializerMap.put("isPrivate", (n) -> { this.setIsPrivate(n.getBooleanValue()); });
+        deserializerMap.put("isSystemApp", (n) -> { this.setIsSystemApp(n.getBooleanValue()); });
+        deserializerMap.put("packageId", (n) -> { this.setPackageId(n.getStringValue()); });
+        deserializerMap.put("supportsOemConfig", (n) -> { this.setSupportsOemConfig(n.getBooleanValue()); });
+        deserializerMap.put("totalLicenseCount", (n) -> { this.setTotalLicenseCount(n.getIntegerValue()); });
+        deserializerMap.put("usedLicenseCount", (n) -> { this.setUsedLicenseCount(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isPrivate property value. Indicates whether the app is only available to a given enterprise's users.
@@ -101,7 +92,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsPrivate() {
-        return this._isPrivate;
+        return this.isPrivate;
     }
     /**
      * Gets the isSystemApp property value. Indicates whether the app is a preinstalled system app.
@@ -109,7 +100,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsSystemApp() {
-        return this._isSystemApp;
+        return this.isSystemApp;
     }
     /**
      * Gets the packageId property value. The package identifier.
@@ -117,7 +108,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPackageId() {
-        return this._packageId;
+        return this.packageId;
     }
     /**
      * Gets the supportsOemConfig property value. Whether this app supports OEMConfig policy.
@@ -125,7 +116,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getSupportsOemConfig() {
-        return this._supportsOemConfig;
+        return this.supportsOemConfig;
     }
     /**
      * Gets the totalLicenseCount property value. The total number of VPP licenses.
@@ -133,7 +124,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getTotalLicenseCount() {
-        return this._totalLicenseCount;
+        return this.totalLicenseCount;
     }
     /**
      * Gets the usedLicenseCount property value. The number of VPP licenses in use.
@@ -141,13 +132,14 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getUsedLicenseCount() {
-        return this._usedLicenseCount;
+        return this.usedLicenseCount;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -166,71 +158,80 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
      * @param value Value to set for the appIdentifier property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppIdentifier(@javax.annotation.Nullable final String value) {
-        this._appIdentifier = value;
+        this.appIdentifier = value;
     }
     /**
      * Sets the appStoreUrl property value. The Play for Work Store app URL.
      * @param value Value to set for the appStoreUrl property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppStoreUrl(@javax.annotation.Nullable final String value) {
-        this._appStoreUrl = value;
+        this.appStoreUrl = value;
     }
     /**
      * Sets the appTracks property value. The tracks that are visible to this enterprise.
      * @param value Value to set for the appTracks property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAppTracks(@javax.annotation.Nullable final java.util.List<AndroidManagedStoreAppTrack> value) {
-        this._appTracks = value;
+        this.appTracks = value;
     }
     /**
      * Sets the isPrivate property value. Indicates whether the app is only available to a given enterprise's users.
      * @param value Value to set for the isPrivate property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsPrivate(@javax.annotation.Nullable final Boolean value) {
-        this._isPrivate = value;
+        this.isPrivate = value;
     }
     /**
      * Sets the isSystemApp property value. Indicates whether the app is a preinstalled system app.
      * @param value Value to set for the isSystemApp property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsSystemApp(@javax.annotation.Nullable final Boolean value) {
-        this._isSystemApp = value;
+        this.isSystemApp = value;
     }
     /**
      * Sets the packageId property value. The package identifier.
      * @param value Value to set for the packageId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPackageId(@javax.annotation.Nullable final String value) {
-        this._packageId = value;
+        this.packageId = value;
     }
     /**
      * Sets the supportsOemConfig property value. Whether this app supports OEMConfig policy.
      * @param value Value to set for the supportsOemConfig property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSupportsOemConfig(@javax.annotation.Nullable final Boolean value) {
-        this._supportsOemConfig = value;
+        this.supportsOemConfig = value;
     }
     /**
      * Sets the totalLicenseCount property value. The total number of VPP licenses.
      * @param value Value to set for the totalLicenseCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTotalLicenseCount(@javax.annotation.Nullable final Integer value) {
-        this._totalLicenseCount = value;
+        this.totalLicenseCount = value;
     }
     /**
      * Sets the usedLicenseCount property value. The number of VPP licenses in use.
      * @param value Value to set for the usedLicenseCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUsedLicenseCount(@javax.annotation.Nullable final Integer value) {
-        this._usedLicenseCount = value;
+        this.usedLicenseCount = value;
     }
 }

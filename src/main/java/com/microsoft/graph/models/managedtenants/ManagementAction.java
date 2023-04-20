@@ -4,36 +4,34 @@ import com.microsoft.graph.models.Entity;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class ManagementAction extends Entity implements Parsable {
     /** The category property */
-    private ManagementCategory _category;
+    private ManagementCategory category;
     /** The description for the management action. Optional. Read-only. */
-    private String _description;
+    private String description;
     /** The display name for the management action. Optional. Read-only. */
-    private String _displayName;
+    private String displayName;
     /** The reference for the management template used to generate the management action. Required. Read-only. */
-    private String _referenceTemplateId;
+    private String referenceTemplateId;
     /** The referenceTemplateVersion property */
-    private Integer _referenceTemplateVersion;
+    private Integer referenceTemplateVersion;
     /** The collection of workload actions associated with the management action. Required. Read-only. */
-    private java.util.List<WorkloadAction> _workloadActions;
+    private java.util.List<WorkloadAction> workloadActions;
     /**
-     * Instantiates a new managementAction and sets the default values.
+     * Instantiates a new ManagementAction and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagementAction() {
         super();
-        this.setOdataType("#microsoft.graph.managedTenants.managementAction");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a managementAction
+     * @return a ManagementAction
      */
     @javax.annotation.Nonnull
     public static ManagementAction createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -46,7 +44,7 @@ public class ManagementAction extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public ManagementCategory getCategory() {
-        return this._category;
+        return this.category;
     }
     /**
      * Gets the description property value. The description for the management action. Optional. Read-only.
@@ -54,7 +52,7 @@ public class ManagementAction extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The display name for the management action. Optional. Read-only.
@@ -62,23 +60,22 @@ public class ManagementAction extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagementAction currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("category", (n) -> { currentObject.setCategory(n.getEnumValue(ManagementCategory.class)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("referenceTemplateId", (n) -> { currentObject.setReferenceTemplateId(n.getStringValue()); });
-            this.put("referenceTemplateVersion", (n) -> { currentObject.setReferenceTemplateVersion(n.getIntegerValue()); });
-            this.put("workloadActions", (n) -> { currentObject.setWorkloadActions(n.getCollectionOfObjectValues(WorkloadAction::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(ManagementCategory.class)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("referenceTemplateId", (n) -> { this.setReferenceTemplateId(n.getStringValue()); });
+        deserializerMap.put("referenceTemplateVersion", (n) -> { this.setReferenceTemplateVersion(n.getIntegerValue()); });
+        deserializerMap.put("workloadActions", (n) -> { this.setWorkloadActions(n.getCollectionOfObjectValues(WorkloadAction::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the referenceTemplateId property value. The reference for the management template used to generate the management action. Required. Read-only.
@@ -86,7 +83,7 @@ public class ManagementAction extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getReferenceTemplateId() {
-        return this._referenceTemplateId;
+        return this.referenceTemplateId;
     }
     /**
      * Gets the referenceTemplateVersion property value. The referenceTemplateVersion property
@@ -94,7 +91,7 @@ public class ManagementAction extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Integer getReferenceTemplateVersion() {
-        return this._referenceTemplateVersion;
+        return this.referenceTemplateVersion;
     }
     /**
      * Gets the workloadActions property value. The collection of workload actions associated with the management action. Required. Read-only.
@@ -102,13 +99,14 @@ public class ManagementAction extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<WorkloadAction> getWorkloadActions() {
-        return this._workloadActions;
+        return this.workloadActions;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -124,47 +122,53 @@ public class ManagementAction extends Entity implements Parsable {
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final ManagementCategory value) {
-        this._category = value;
+        this.category = value;
     }
     /**
      * Sets the description property value. The description for the management action. Optional. Read-only.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The display name for the management action. Optional. Read-only.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the referenceTemplateId property value. The reference for the management template used to generate the management action. Required. Read-only.
      * @param value Value to set for the referenceTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReferenceTemplateId(@javax.annotation.Nullable final String value) {
-        this._referenceTemplateId = value;
+        this.referenceTemplateId = value;
     }
     /**
      * Sets the referenceTemplateVersion property value. The referenceTemplateVersion property
      * @param value Value to set for the referenceTemplateVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReferenceTemplateVersion(@javax.annotation.Nullable final Integer value) {
-        this._referenceTemplateVersion = value;
+        this.referenceTemplateVersion = value;
     }
     /**
      * Sets the workloadActions property value. The collection of workload actions associated with the management action. Required. Read-only.
      * @param value Value to set for the workloadActions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setWorkloadActions(@javax.annotation.Nullable final java.util.List<WorkloadAction> value) {
-        this._workloadActions = value;
+        this.workloadActions = value;
     }
 }

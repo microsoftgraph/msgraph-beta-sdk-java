@@ -4,30 +4,29 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class NotificationMessageTemplate extends Entity implements Parsable {
     /** Branding Options for the Message Template. Branding is defined in the Intune Admin Console. */
-    private NotificationTemplateBrandingOptions _brandingOptions;
+    private NotificationTemplateBrandingOptions brandingOptions;
     /** The default locale to fallback onto when the requested locale is not available. */
-    private String _defaultLocale;
+    private String defaultLocale;
     /** Display name for the Notification Message Template. */
-    private String _displayName;
+    private String displayName;
     /** DateTime the object was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** The list of localized messages for this Notification Message Template. */
-    private java.util.List<LocalizedNotificationMessage> _localizedNotificationMessages;
+    private java.util.List<LocalizedNotificationMessage> localizedNotificationMessages;
     /** List of Scope Tags for this Entity instance. */
-    private java.util.List<String> _roleScopeTagIds;
+    private java.util.List<String> roleScopeTagIds;
     /**
      * Instantiates a new NotificationMessageTemplate and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public NotificationMessageTemplate() {
         super();
-        this.setOdataType("#microsoft.graph.notificationMessageTemplate");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +44,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public NotificationTemplateBrandingOptions getBrandingOptions() {
-        return this._brandingOptions;
+        return this.brandingOptions;
     }
     /**
      * Gets the defaultLocale property value. The default locale to fallback onto when the requested locale is not available.
@@ -53,7 +52,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDefaultLocale() {
-        return this._defaultLocale;
+        return this.defaultLocale;
     }
     /**
      * Gets the displayName property value. Display name for the Notification Message Template.
@@ -61,23 +60,22 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final NotificationMessageTemplate currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("brandingOptions", (n) -> { currentObject.setBrandingOptions(n.getEnumValue(NotificationTemplateBrandingOptions.class)); });
-            this.put("defaultLocale", (n) -> { currentObject.setDefaultLocale(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("localizedNotificationMessages", (n) -> { currentObject.setLocalizedNotificationMessages(n.getCollectionOfObjectValues(LocalizedNotificationMessage::createFromDiscriminatorValue)); });
-            this.put("roleScopeTagIds", (n) -> { currentObject.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("brandingOptions", (n) -> { this.setBrandingOptions(n.getEnumValue(NotificationTemplateBrandingOptions.class)); });
+        deserializerMap.put("defaultLocale", (n) -> { this.setDefaultLocale(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("localizedNotificationMessages", (n) -> { this.setLocalizedNotificationMessages(n.getCollectionOfObjectValues(LocalizedNotificationMessage::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. DateTime the object was last modified.
@@ -85,7 +83,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the localizedNotificationMessages property value. The list of localized messages for this Notification Message Template.
@@ -93,7 +91,7 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<LocalizedNotificationMessage> getLocalizedNotificationMessages() {
-        return this._localizedNotificationMessages;
+        return this.localizedNotificationMessages;
     }
     /**
      * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
@@ -101,13 +99,14 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
-        return this._roleScopeTagIds;
+        return this.roleScopeTagIds;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -123,47 +122,53 @@ public class NotificationMessageTemplate extends Entity implements Parsable {
      * @param value Value to set for the brandingOptions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setBrandingOptions(@javax.annotation.Nullable final NotificationTemplateBrandingOptions value) {
-        this._brandingOptions = value;
+        this.brandingOptions = value;
     }
     /**
      * Sets the defaultLocale property value. The default locale to fallback onto when the requested locale is not available.
      * @param value Value to set for the defaultLocale property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultLocale(@javax.annotation.Nullable final String value) {
-        this._defaultLocale = value;
+        this.defaultLocale = value;
     }
     /**
      * Sets the displayName property value. Display name for the Notification Message Template.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the localizedNotificationMessages property value. The list of localized messages for this Notification Message Template.
      * @param value Value to set for the localizedNotificationMessages property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLocalizedNotificationMessages(@javax.annotation.Nullable final java.util.List<LocalizedNotificationMessage> value) {
-        this._localizedNotificationMessages = value;
+        this.localizedNotificationMessages = value;
     }
     /**
      * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
      * @param value Value to set for the roleScopeTagIds property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRoleScopeTagIds(@javax.annotation.Nullable final java.util.List<String> value) {
-        this._roleScopeTagIds = value;
+        this.roleScopeTagIds = value;
     }
 }

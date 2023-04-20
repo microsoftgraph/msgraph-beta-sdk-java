@@ -4,45 +4,48 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
+/**
+ * A class containing the properties for Audit Event.
+ */
 public class AuditEvent extends Entity implements Parsable {
     /** Friendly name of the activity. */
-    private String _activity;
+    private String activity;
     /** The date time in UTC when the activity was performed. */
-    private OffsetDateTime _activityDateTime;
+    private OffsetDateTime activityDateTime;
     /** The HTTP operation type of the activity. */
-    private String _activityOperationType;
+    private String activityOperationType;
     /** The result of the activity. */
-    private String _activityResult;
+    private String activityResult;
     /** The type of activity that was being performed. */
-    private String _activityType;
+    private String activityType;
     /** AAD user and application that are associated with the audit event. */
-    private AuditActor _actor;
+    private AuditActor actor;
     /** Audit category. */
-    private String _category;
+    private String category;
     /** Component name. */
-    private String _componentName;
+    private String componentName;
     /** The client request Id that is used to correlate activity within the system. */
-    private String _correlationId;
+    private UUID correlationId;
     /** Event display name. */
-    private String _displayName;
+    private String displayName;
     /** Resources being modified. */
-    private java.util.List<AuditResource> _resources;
+    private java.util.List<AuditResource> resources;
     /**
-     * Instantiates a new AuditEvent and sets the default values.
+     * Instantiates a new auditEvent and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuditEvent() {
         super();
-        this.setOdataType("#microsoft.graph.auditEvent");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AuditEvent
+     * @return a auditEvent
      */
     @javax.annotation.Nonnull
     public static AuditEvent createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -55,7 +58,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getActivity() {
-        return this._activity;
+        return this.activity;
     }
     /**
      * Gets the activityDateTime property value. The date time in UTC when the activity was performed.
@@ -63,7 +66,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getActivityDateTime() {
-        return this._activityDateTime;
+        return this.activityDateTime;
     }
     /**
      * Gets the activityOperationType property value. The HTTP operation type of the activity.
@@ -71,7 +74,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getActivityOperationType() {
-        return this._activityOperationType;
+        return this.activityOperationType;
     }
     /**
      * Gets the activityResult property value. The result of the activity.
@@ -79,7 +82,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getActivityResult() {
-        return this._activityResult;
+        return this.activityResult;
     }
     /**
      * Gets the activityType property value. The type of activity that was being performed.
@@ -87,7 +90,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getActivityType() {
-        return this._activityType;
+        return this.activityType;
     }
     /**
      * Gets the actor property value. AAD user and application that are associated with the audit event.
@@ -95,7 +98,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public AuditActor getActor() {
-        return this._actor;
+        return this.actor;
     }
     /**
      * Gets the category property value. Audit category.
@@ -103,7 +106,7 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCategory() {
-        return this._category;
+        return this.category;
     }
     /**
      * Gets the componentName property value. Component name.
@@ -111,15 +114,15 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getComponentName() {
-        return this._componentName;
+        return this.componentName;
     }
     /**
      * Gets the correlationId property value. The client request Id that is used to correlate activity within the system.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getCorrelationId() {
-        return this._correlationId;
+    public UUID getCorrelationId() {
+        return this.correlationId;
     }
     /**
      * Gets the displayName property value. Event display name.
@@ -127,28 +130,27 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuditEvent currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activity", (n) -> { currentObject.setActivity(n.getStringValue()); });
-            this.put("activityDateTime", (n) -> { currentObject.setActivityDateTime(n.getOffsetDateTimeValue()); });
-            this.put("activityOperationType", (n) -> { currentObject.setActivityOperationType(n.getStringValue()); });
-            this.put("activityResult", (n) -> { currentObject.setActivityResult(n.getStringValue()); });
-            this.put("activityType", (n) -> { currentObject.setActivityType(n.getStringValue()); });
-            this.put("actor", (n) -> { currentObject.setActor(n.getObjectValue(AuditActor::createFromDiscriminatorValue)); });
-            this.put("category", (n) -> { currentObject.setCategory(n.getStringValue()); });
-            this.put("componentName", (n) -> { currentObject.setComponentName(n.getStringValue()); });
-            this.put("correlationId", (n) -> { currentObject.setCorrelationId(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("resources", (n) -> { currentObject.setResources(n.getCollectionOfObjectValues(AuditResource::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getStringValue()); });
+        deserializerMap.put("activityDateTime", (n) -> { this.setActivityDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("activityOperationType", (n) -> { this.setActivityOperationType(n.getStringValue()); });
+        deserializerMap.put("activityResult", (n) -> { this.setActivityResult(n.getStringValue()); });
+        deserializerMap.put("activityType", (n) -> { this.setActivityType(n.getStringValue()); });
+        deserializerMap.put("actor", (n) -> { this.setActor(n.getObjectValue(AuditActor::createFromDiscriminatorValue)); });
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getStringValue()); });
+        deserializerMap.put("componentName", (n) -> { this.setComponentName(n.getStringValue()); });
+        deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getUUIDValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("resources", (n) -> { this.setResources(n.getCollectionOfObjectValues(AuditResource::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the resources property value. Resources being modified.
@@ -156,13 +158,14 @@ public class AuditEvent extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AuditResource> getResources() {
-        return this._resources;
+        return this.resources;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -174,7 +177,7 @@ public class AuditEvent extends Entity implements Parsable {
         writer.writeObjectValue("actor", this.getActor());
         writer.writeStringValue("category", this.getCategory());
         writer.writeStringValue("componentName", this.getComponentName());
-        writer.writeStringValue("correlationId", this.getCorrelationId());
+        writer.writeUUIDValue("correlationId", this.getCorrelationId());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("resources", this.getResources());
     }
@@ -183,87 +186,98 @@ public class AuditEvent extends Entity implements Parsable {
      * @param value Value to set for the activity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivity(@javax.annotation.Nullable final String value) {
-        this._activity = value;
+        this.activity = value;
     }
     /**
      * Sets the activityDateTime property value. The date time in UTC when the activity was performed.
      * @param value Value to set for the activityDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._activityDateTime = value;
+        this.activityDateTime = value;
     }
     /**
      * Sets the activityOperationType property value. The HTTP operation type of the activity.
      * @param value Value to set for the activityOperationType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityOperationType(@javax.annotation.Nullable final String value) {
-        this._activityOperationType = value;
+        this.activityOperationType = value;
     }
     /**
      * Sets the activityResult property value. The result of the activity.
      * @param value Value to set for the activityResult property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityResult(@javax.annotation.Nullable final String value) {
-        this._activityResult = value;
+        this.activityResult = value;
     }
     /**
      * Sets the activityType property value. The type of activity that was being performed.
      * @param value Value to set for the activityType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivityType(@javax.annotation.Nullable final String value) {
-        this._activityType = value;
+        this.activityType = value;
     }
     /**
      * Sets the actor property value. AAD user and application that are associated with the audit event.
      * @param value Value to set for the actor property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActor(@javax.annotation.Nullable final AuditActor value) {
-        this._actor = value;
+        this.actor = value;
     }
     /**
      * Sets the category property value. Audit category.
      * @param value Value to set for the category property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCategory(@javax.annotation.Nullable final String value) {
-        this._category = value;
+        this.category = value;
     }
     /**
      * Sets the componentName property value. Component name.
      * @param value Value to set for the componentName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setComponentName(@javax.annotation.Nullable final String value) {
-        this._componentName = value;
+        this.componentName = value;
     }
     /**
      * Sets the correlationId property value. The client request Id that is used to correlate activity within the system.
      * @param value Value to set for the correlationId property.
      * @return a void
      */
-    public void setCorrelationId(@javax.annotation.Nullable final String value) {
-        this._correlationId = value;
+    @javax.annotation.Nonnull
+    public void setCorrelationId(@javax.annotation.Nullable final UUID value) {
+        this.correlationId = value;
     }
     /**
      * Sets the displayName property value. Event display name.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the resources property value. Resources being modified.
      * @param value Value to set for the resources property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setResources(@javax.annotation.Nullable final java.util.List<AuditResource> value) {
-        this._resources = value;
+        this.resources = value;
     }
 }

@@ -1,25 +1,23 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.ManagedAppStatusRaw;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ManagedAppStatus extends Entity implements Parsable {
     /** Friendly name of the status report. */
-    private String _displayName;
+    private String displayName;
     /** Version of the entity. */
-    private String _version;
+    private String version;
     /**
      * Instantiates a new ManagedAppStatus and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ManagedAppStatus() {
         super();
-        this.setOdataType("#microsoft.graph.managedAppStatus");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -44,19 +42,18 @@ public class ManagedAppStatus extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ManagedAppStatus currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("version", (n) -> { currentObject.setVersion(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the version property value. Version of the entity.
@@ -64,13 +61,14 @@ public class ManagedAppStatus extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getVersion() {
-        return this._version;
+        return this.version;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -82,15 +80,17 @@ public class ManagedAppStatus extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the version property value. Version of the entity.
      * @param value Value to set for the version property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVersion(@javax.annotation.Nullable final String value) {
-        this._version = value;
+        this.version = value;
     }
 }

@@ -5,41 +5,39 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReviewDecision entities. */
 public class AggregatedPolicyCompliance extends Entity implements Parsable {
     /** Identifier for the device compliance policy. Optional. Read-only. */
-    private String _compliancePolicyId;
+    private String compliancePolicyId;
     /** Name of the device compliance policy. Optional. Read-only. */
-    private String _compliancePolicyName;
+    private String compliancePolicyName;
     /** Platform for the device compliance policy. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, androidAOSP, all. Optional. Read-only. */
-    private String _compliancePolicyPlatform;
+    private String compliancePolicyPlatform;
     /** The type of compliance policy. Optional. Read-only. */
-    private String _compliancePolicyType;
+    private String compliancePolicyType;
     /** Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only. */
-    private OffsetDateTime _lastRefreshedDateTime;
+    private OffsetDateTime lastRefreshedDateTime;
     /** The number of devices that are in a compliant status. Optional. Read-only. */
-    private Long _numberOfCompliantDevices;
+    private Long numberOfCompliantDevices;
     /** The number of devices that are in an error status. Optional. Read-only. */
-    private Long _numberOfErrorDevices;
+    private Long numberOfErrorDevices;
     /** The number of device that are in a non-compliant status. Optional. Read-only. */
-    private Long _numberOfNonCompliantDevices;
+    private Long numberOfNonCompliantDevices;
     /** The date and time the device policy was last modified. Optional. Read-only. */
-    private OffsetDateTime _policyModifiedDateTime;
+    private OffsetDateTime policyModifiedDateTime;
     /** The display name for the managed tenant. Optional. Read-only. */
-    private String _tenantDisplayName;
+    private String tenantDisplayName;
     /** The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only. */
-    private String _tenantId;
+    private String tenantId;
     /**
      * Instantiates a new aggregatedPolicyCompliance and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AggregatedPolicyCompliance() {
         super();
-        this.setOdataType("#microsoft.graph.managedTenants.aggregatedPolicyCompliance");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -57,7 +55,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCompliancePolicyId() {
-        return this._compliancePolicyId;
+        return this.compliancePolicyId;
     }
     /**
      * Gets the compliancePolicyName property value. Name of the device compliance policy. Optional. Read-only.
@@ -65,7 +63,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCompliancePolicyName() {
-        return this._compliancePolicyName;
+        return this.compliancePolicyName;
     }
     /**
      * Gets the compliancePolicyPlatform property value. Platform for the device compliance policy. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, androidAOSP, all. Optional. Read-only.
@@ -73,7 +71,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCompliancePolicyPlatform() {
-        return this._compliancePolicyPlatform;
+        return this.compliancePolicyPlatform;
     }
     /**
      * Gets the compliancePolicyType property value. The type of compliance policy. Optional. Read-only.
@@ -81,28 +79,27 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getCompliancePolicyType() {
-        return this._compliancePolicyType;
+        return this.compliancePolicyType;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AggregatedPolicyCompliance currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("compliancePolicyId", (n) -> { currentObject.setCompliancePolicyId(n.getStringValue()); });
-            this.put("compliancePolicyName", (n) -> { currentObject.setCompliancePolicyName(n.getStringValue()); });
-            this.put("compliancePolicyPlatform", (n) -> { currentObject.setCompliancePolicyPlatform(n.getStringValue()); });
-            this.put("compliancePolicyType", (n) -> { currentObject.setCompliancePolicyType(n.getStringValue()); });
-            this.put("lastRefreshedDateTime", (n) -> { currentObject.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("numberOfCompliantDevices", (n) -> { currentObject.setNumberOfCompliantDevices(n.getLongValue()); });
-            this.put("numberOfErrorDevices", (n) -> { currentObject.setNumberOfErrorDevices(n.getLongValue()); });
-            this.put("numberOfNonCompliantDevices", (n) -> { currentObject.setNumberOfNonCompliantDevices(n.getLongValue()); });
-            this.put("policyModifiedDateTime", (n) -> { currentObject.setPolicyModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("tenantDisplayName", (n) -> { currentObject.setTenantDisplayName(n.getStringValue()); });
-            this.put("tenantId", (n) -> { currentObject.setTenantId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("compliancePolicyId", (n) -> { this.setCompliancePolicyId(n.getStringValue()); });
+        deserializerMap.put("compliancePolicyName", (n) -> { this.setCompliancePolicyName(n.getStringValue()); });
+        deserializerMap.put("compliancePolicyPlatform", (n) -> { this.setCompliancePolicyPlatform(n.getStringValue()); });
+        deserializerMap.put("compliancePolicyType", (n) -> { this.setCompliancePolicyType(n.getStringValue()); });
+        deserializerMap.put("lastRefreshedDateTime", (n) -> { this.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("numberOfCompliantDevices", (n) -> { this.setNumberOfCompliantDevices(n.getLongValue()); });
+        deserializerMap.put("numberOfErrorDevices", (n) -> { this.setNumberOfErrorDevices(n.getLongValue()); });
+        deserializerMap.put("numberOfNonCompliantDevices", (n) -> { this.setNumberOfNonCompliantDevices(n.getLongValue()); });
+        deserializerMap.put("policyModifiedDateTime", (n) -> { this.setPolicyModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("tenantDisplayName", (n) -> { this.setTenantDisplayName(n.getStringValue()); });
+        deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
@@ -110,7 +107,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastRefreshedDateTime() {
-        return this._lastRefreshedDateTime;
+        return this.lastRefreshedDateTime;
     }
     /**
      * Gets the numberOfCompliantDevices property value. The number of devices that are in a compliant status. Optional. Read-only.
@@ -118,7 +115,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Long getNumberOfCompliantDevices() {
-        return this._numberOfCompliantDevices;
+        return this.numberOfCompliantDevices;
     }
     /**
      * Gets the numberOfErrorDevices property value. The number of devices that are in an error status. Optional. Read-only.
@@ -126,7 +123,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Long getNumberOfErrorDevices() {
-        return this._numberOfErrorDevices;
+        return this.numberOfErrorDevices;
     }
     /**
      * Gets the numberOfNonCompliantDevices property value. The number of device that are in a non-compliant status. Optional. Read-only.
@@ -134,7 +131,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Long getNumberOfNonCompliantDevices() {
-        return this._numberOfNonCompliantDevices;
+        return this.numberOfNonCompliantDevices;
     }
     /**
      * Gets the policyModifiedDateTime property value. The date and time the device policy was last modified. Optional. Read-only.
@@ -142,7 +139,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getPolicyModifiedDateTime() {
-        return this._policyModifiedDateTime;
+        return this.policyModifiedDateTime;
     }
     /**
      * Gets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
@@ -150,7 +147,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantDisplayName() {
-        return this._tenantDisplayName;
+        return this.tenantDisplayName;
     }
     /**
      * Gets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
@@ -158,13 +155,14 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getTenantId() {
-        return this._tenantId;
+        return this.tenantId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -185,87 +183,98 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
      * @param value Value to set for the compliancePolicyId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliancePolicyId(@javax.annotation.Nullable final String value) {
-        this._compliancePolicyId = value;
+        this.compliancePolicyId = value;
     }
     /**
      * Sets the compliancePolicyName property value. Name of the device compliance policy. Optional. Read-only.
      * @param value Value to set for the compliancePolicyName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliancePolicyName(@javax.annotation.Nullable final String value) {
-        this._compliancePolicyName = value;
+        this.compliancePolicyName = value;
     }
     /**
      * Sets the compliancePolicyPlatform property value. Platform for the device compliance policy. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, androidAOSP, all. Optional. Read-only.
      * @param value Value to set for the compliancePolicyPlatform property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliancePolicyPlatform(@javax.annotation.Nullable final String value) {
-        this._compliancePolicyPlatform = value;
+        this.compliancePolicyPlatform = value;
     }
     /**
      * Sets the compliancePolicyType property value. The type of compliance policy. Optional. Read-only.
      * @param value Value to set for the compliancePolicyType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCompliancePolicyType(@javax.annotation.Nullable final String value) {
-        this._compliancePolicyType = value;
+        this.compliancePolicyType = value;
     }
     /**
      * Sets the lastRefreshedDateTime property value. Date and time the entity was last updated in the multi-tenant management platform. Optional. Read-only.
      * @param value Value to set for the lastRefreshedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastRefreshedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastRefreshedDateTime = value;
+        this.lastRefreshedDateTime = value;
     }
     /**
      * Sets the numberOfCompliantDevices property value. The number of devices that are in a compliant status. Optional. Read-only.
      * @param value Value to set for the numberOfCompliantDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfCompliantDevices(@javax.annotation.Nullable final Long value) {
-        this._numberOfCompliantDevices = value;
+        this.numberOfCompliantDevices = value;
     }
     /**
      * Sets the numberOfErrorDevices property value. The number of devices that are in an error status. Optional. Read-only.
      * @param value Value to set for the numberOfErrorDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfErrorDevices(@javax.annotation.Nullable final Long value) {
-        this._numberOfErrorDevices = value;
+        this.numberOfErrorDevices = value;
     }
     /**
      * Sets the numberOfNonCompliantDevices property value. The number of device that are in a non-compliant status. Optional. Read-only.
      * @param value Value to set for the numberOfNonCompliantDevices property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNumberOfNonCompliantDevices(@javax.annotation.Nullable final Long value) {
-        this._numberOfNonCompliantDevices = value;
+        this.numberOfNonCompliantDevices = value;
     }
     /**
      * Sets the policyModifiedDateTime property value. The date and time the device policy was last modified. Optional. Read-only.
      * @param value Value to set for the policyModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._policyModifiedDateTime = value;
+        this.policyModifiedDateTime = value;
     }
     /**
      * Sets the tenantDisplayName property value. The display name for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantDisplayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantDisplayName(@javax.annotation.Nullable final String value) {
-        this._tenantDisplayName = value;
+        this.tenantDisplayName = value;
     }
     /**
      * Sets the tenantId property value. The Azure Active Directory tenant identifier for the managed tenant. Optional. Read-only.
      * @param value Value to set for the tenantId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTenantId(@javax.annotation.Nullable final String value) {
-        this._tenantId = value;
+        this.tenantId = value;
     }
 }

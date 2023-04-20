@@ -4,34 +4,35 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ConditionalAccessSessionControls implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control. */
-    private ApplicationEnforcedRestrictionsSessionControl _applicationEnforcedRestrictions;
+    private ApplicationEnforcedRestrictionsSessionControl applicationEnforcedRestrictions;
     /** Session control to apply cloud app security. */
-    private CloudAppSecuritySessionControl _cloudAppSecurity;
+    private CloudAppSecuritySessionControl cloudAppSecurity;
     /** Session control for continuous access evaluation settings. */
-    private ContinuousAccessEvaluationSessionControl _continuousAccessEvaluation;
+    private ContinuousAccessEvaluationSessionControl continuousAccessEvaluation;
     /** Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not. */
-    private Boolean _disableResilienceDefaults;
+    private Boolean disableResilienceDefaults;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly. */
-    private PersistentBrowserSessionControl _persistentBrowser;
+    private PersistentBrowserSessionControl persistentBrowser;
+    /** The secureSignInSession property */
+    private SecureSignInSessionControl secureSignInSession;
     /** Session control to enforce signin frequency. */
-    private SignInFrequencySessionControl _signInFrequency;
+    private SignInFrequencySessionControl signInFrequency;
     /**
      * Instantiates a new conditionalAccessSessionControls and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ConditionalAccessSessionControls() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.conditionalAccessSessionControls");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -49,7 +50,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * Gets the applicationEnforcedRestrictions property value. Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control.
@@ -57,7 +58,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nullable
     public ApplicationEnforcedRestrictionsSessionControl getApplicationEnforcedRestrictions() {
-        return this._applicationEnforcedRestrictions;
+        return this.applicationEnforcedRestrictions;
     }
     /**
      * Gets the cloudAppSecurity property value. Session control to apply cloud app security.
@@ -65,7 +66,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nullable
     public CloudAppSecuritySessionControl getCloudAppSecurity() {
-        return this._cloudAppSecurity;
+        return this.cloudAppSecurity;
     }
     /**
      * Gets the continuousAccessEvaluation property value. Session control for continuous access evaluation settings.
@@ -73,7 +74,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nullable
     public ContinuousAccessEvaluationSessionControl getContinuousAccessEvaluation() {
-        return this._continuousAccessEvaluation;
+        return this.continuousAccessEvaluation;
     }
     /**
      * Gets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
@@ -81,24 +82,24 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nullable
     public Boolean getDisableResilienceDefaults() {
-        return this._disableResilienceDefaults;
+        return this.disableResilienceDefaults;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ConditionalAccessSessionControls currentObject = this;
-        return new HashMap<>(7) {{
-            this.put("applicationEnforcedRestrictions", (n) -> { currentObject.setApplicationEnforcedRestrictions(n.getObjectValue(ApplicationEnforcedRestrictionsSessionControl::createFromDiscriminatorValue)); });
-            this.put("cloudAppSecurity", (n) -> { currentObject.setCloudAppSecurity(n.getObjectValue(CloudAppSecuritySessionControl::createFromDiscriminatorValue)); });
-            this.put("continuousAccessEvaluation", (n) -> { currentObject.setContinuousAccessEvaluation(n.getObjectValue(ContinuousAccessEvaluationSessionControl::createFromDiscriminatorValue)); });
-            this.put("disableResilienceDefaults", (n) -> { currentObject.setDisableResilienceDefaults(n.getBooleanValue()); });
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("persistentBrowser", (n) -> { currentObject.setPersistentBrowser(n.getObjectValue(PersistentBrowserSessionControl::createFromDiscriminatorValue)); });
-            this.put("signInFrequency", (n) -> { currentObject.setSignInFrequency(n.getObjectValue(SignInFrequencySessionControl::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
+        deserializerMap.put("applicationEnforcedRestrictions", (n) -> { this.setApplicationEnforcedRestrictions(n.getObjectValue(ApplicationEnforcedRestrictionsSessionControl::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudAppSecurity", (n) -> { this.setCloudAppSecurity(n.getObjectValue(CloudAppSecuritySessionControl::createFromDiscriminatorValue)); });
+        deserializerMap.put("continuousAccessEvaluation", (n) -> { this.setContinuousAccessEvaluation(n.getObjectValue(ContinuousAccessEvaluationSessionControl::createFromDiscriminatorValue)); });
+        deserializerMap.put("disableResilienceDefaults", (n) -> { this.setDisableResilienceDefaults(n.getBooleanValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("persistentBrowser", (n) -> { this.setPersistentBrowser(n.getObjectValue(PersistentBrowserSessionControl::createFromDiscriminatorValue)); });
+        deserializerMap.put("secureSignInSession", (n) -> { this.setSecureSignInSession(n.getObjectValue(SecureSignInSessionControl::createFromDiscriminatorValue)); });
+        deserializerMap.put("signInFrequency", (n) -> { this.setSignInFrequency(n.getObjectValue(SignInFrequencySessionControl::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -106,7 +107,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the persistentBrowser property value. Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
@@ -114,7 +115,15 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nullable
     public PersistentBrowserSessionControl getPersistentBrowser() {
-        return this._persistentBrowser;
+        return this.persistentBrowser;
+    }
+    /**
+     * Gets the secureSignInSession property value. The secureSignInSession property
+     * @return a secureSignInSessionControl
+     */
+    @javax.annotation.Nullable
+    public SecureSignInSessionControl getSecureSignInSession() {
+        return this.secureSignInSession;
     }
     /**
      * Gets the signInFrequency property value. Session control to enforce signin frequency.
@@ -122,13 +131,14 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      */
     @javax.annotation.Nullable
     public SignInFrequencySessionControl getSignInFrequency() {
-        return this._signInFrequency;
+        return this.signInFrequency;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("applicationEnforcedRestrictions", this.getApplicationEnforcedRestrictions());
@@ -137,6 +147,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
         writer.writeBooleanValue("disableResilienceDefaults", this.getDisableResilienceDefaults());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("persistentBrowser", this.getPersistentBrowser());
+        writer.writeObjectValue("secureSignInSession", this.getSecureSignInSession());
         writer.writeObjectValue("signInFrequency", this.getSignInFrequency());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -145,63 +156,80 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, P
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the applicationEnforcedRestrictions property value. Session control to enforce application restrictions. Only Exchange Online and Sharepoint Online support this session control.
      * @param value Value to set for the applicationEnforcedRestrictions property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setApplicationEnforcedRestrictions(@javax.annotation.Nullable final ApplicationEnforcedRestrictionsSessionControl value) {
-        this._applicationEnforcedRestrictions = value;
+        this.applicationEnforcedRestrictions = value;
     }
     /**
      * Sets the cloudAppSecurity property value. Session control to apply cloud app security.
      * @param value Value to set for the cloudAppSecurity property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCloudAppSecurity(@javax.annotation.Nullable final CloudAppSecuritySessionControl value) {
-        this._cloudAppSecurity = value;
+        this.cloudAppSecurity = value;
     }
     /**
      * Sets the continuousAccessEvaluation property value. Session control for continuous access evaluation settings.
      * @param value Value to set for the continuousAccessEvaluation property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setContinuousAccessEvaluation(@javax.annotation.Nullable final ContinuousAccessEvaluationSessionControl value) {
-        this._continuousAccessEvaluation = value;
+        this.continuousAccessEvaluation = value;
     }
     /**
      * Sets the disableResilienceDefaults property value. Session control that determines whether it is acceptable for Azure AD to extend existing sessions based on information collected prior to an outage or not.
      * @param value Value to set for the disableResilienceDefaults property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisableResilienceDefaults(@javax.annotation.Nullable final Boolean value) {
-        this._disableResilienceDefaults = value;
+        this.disableResilienceDefaults = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the persistentBrowser property value. Session control to define whether to persist cookies or not. All apps should be selected for this session control to work correctly.
      * @param value Value to set for the persistentBrowser property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPersistentBrowser(@javax.annotation.Nullable final PersistentBrowserSessionControl value) {
-        this._persistentBrowser = value;
+        this.persistentBrowser = value;
+    }
+    /**
+     * Sets the secureSignInSession property value. The secureSignInSession property
+     * @param value Value to set for the secureSignInSession property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSecureSignInSession(@javax.annotation.Nullable final SecureSignInSessionControl value) {
+        this.secureSignInSession = value;
     }
     /**
      * Sets the signInFrequency property value. Session control to enforce signin frequency.
      * @param value Value to set for the signInFrequency property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSignInFrequency(@javax.annotation.Nullable final SignInFrequencySessionControl value) {
-        this._signInFrequency = value;
+        this.signInFrequency = value;
     }
 }
