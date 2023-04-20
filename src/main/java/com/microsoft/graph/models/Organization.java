@@ -18,6 +18,7 @@ import com.microsoft.graph.models.VerifiedDomain;
 import com.microsoft.graph.models.CertificateConnectorSetting;
 import com.microsoft.graph.models.MdmAuthority;
 import com.microsoft.graph.models.OrganizationalBranding;
+import com.microsoft.graph.models.PartnerInformation;
 import com.microsoft.graph.models.OrganizationSettings;
 import com.microsoft.graph.models.DirectoryObject;
 import com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionPage;
@@ -287,6 +288,15 @@ public class Organization extends DirectoryObject implements IJsonBackedObject {
      */
 	@Nullable
     public com.microsoft.graph.requests.CertificateBasedAuthConfigurationCollectionPage certificateBasedAuthConfiguration;
+
+    /**
+     * The Partner Information.
+     * 
+     */
+    @SerializedName(value = "partnerInformation", alternate = {"PartnerInformation"})
+    @Expose
+	@Nullable
+    public PartnerInformation partnerInformation;
 
     /**
      * The Extensions.

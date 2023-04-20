@@ -68,6 +68,16 @@ public class MembershipOutlierInsightRequestBuilder extends BaseRequestBuilder<M
     }
 
     /**
+     * Gets the request builder for User
+     *
+     * @return the UserWithReferenceRequestBuilder instance
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.UserWithReferenceRequestBuilder lastModifiedBy() {
+        return new com.microsoft.graph.requests.UserWithReferenceRequestBuilder(getRequestUrlWithAdditionalSegment("lastModifiedBy"), getClient(), null);
+    }
+
+    /**
      * Gets the request builder for DirectoryObject
      *
      * @return the DirectoryObjectWithReferenceRequestBuilder instance

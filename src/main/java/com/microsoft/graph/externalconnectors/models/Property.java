@@ -10,6 +10,7 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.externalconnectors.models.Label;
+import com.microsoft.graph.externalconnectors.models.RankingHint;
 import com.microsoft.graph.externalconnectors.models.PropertyType;
 
 
@@ -111,6 +112,15 @@ public class Property implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String name;
+
+    /**
+     * The Ranking Hint.
+     * Specifies the property ranking hint. Developers can specify which properties are most important, allowing Microsoft Search to determine the search relevance of the content.
+     */
+    @SerializedName(value = "rankingHint", alternate = {"RankingHint"})
+    @Expose
+	@Nullable
+    public RankingHint rankingHint;
 
     /**
      * The Type.

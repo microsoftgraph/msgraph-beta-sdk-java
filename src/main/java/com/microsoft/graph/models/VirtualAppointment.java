@@ -24,7 +24,9 @@ import javax.annotation.Nonnull;
 
 /**
  * The class for the Virtual Appointment.
+ * @deprecated The Virtual appointment resource is deprecated and will stop returning data on May 31, 2023. Existing apps that use this feature should be updated to the new getVirtualAppointmentJoinWebUrl API.
  */
+@Deprecated
 public class VirtualAppointment extends Entity implements IJsonBackedObject {
 
 
@@ -40,7 +42,9 @@ public class VirtualAppointment extends Entity implements IJsonBackedObject {
     /**
      * The Appointment Clients.
      * The client information for the virtual appointment, including name, email, and SMS phone number. Optional.
+     * @deprecated The Virtual appointment resource is deprecated and will stop returning data on May 31, 2023. Existing apps that use this feature should be updated to the new getVirtualAppointmentJoinWebUrl API.
      */
+    @Deprecated
     @SerializedName(value = "appointmentClients", alternate = {"AppointmentClients"})
     @Expose
 	@Nullable
@@ -67,7 +71,9 @@ public class VirtualAppointment extends Entity implements IJsonBackedObject {
     /**
      * The Settings.
      * The settings associated with the virtual appointment resource. Optional.
+     * @deprecated The Virtual appointment resource is deprecated and will stop returning data on May 31, 2023. Existing apps that use this feature should be updated to the new getVirtualAppointmentJoinWebUrl API.
      */
+    @Deprecated
     @SerializedName(value = "settings", alternate = {"Settings"})
     @Expose
 	@Nullable

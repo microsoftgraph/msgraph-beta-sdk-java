@@ -49,7 +49,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Callee Number.
-     * Number dialed in E.164 format.
+     * Number of the user or bot who received the call (E.164).
      */
     @SerializedName(value = "calleeNumber", alternate = {"CalleeNumber"})
     @Expose
@@ -58,7 +58,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Caller Number.
-     * Number that received the call for inbound calls or the number dialed for outbound calls. E.164 format.
+     * Number of the user or bot who made the call (E.164).
      */
     @SerializedName(value = "callerNumber", alternate = {"CallerNumber"})
     @Expose
@@ -76,7 +76,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Call Type.
-     * Whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference.
+     * Indicates whether the call was a PSTN outbound or inbound call and the type of call such as a call placed by a user or an audio conference.
      */
     @SerializedName(value = "callType", alternate = {"CallType"})
     @Expose
@@ -112,7 +112,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Currency.
-     * Type of currency used to calculate the cost of the call. For details, see ISO 4217.
+     * Type of currency used to calculate the cost of the call (ISO 4217).
      */
     @SerializedName(value = "currency", alternate = {"Currency"})
     @Expose
@@ -121,7 +121,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Destination Context.
-     * Whether the call was domestic (within a country or region) or international (outside a country or region) based on the user's location.
+     * Indicates whether the call was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
      */
     @SerializedName(value = "destinationContext", alternate = {"DestinationContext"})
     @Expose
@@ -157,7 +157,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Id.
-     * Unique call identifier. GUID.
+     * Unique call identifier (GUID).
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -193,7 +193,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The Other Party Country Code.
-     * 
+     * Country code of the caller in case of an incoming call, or callee in case of an outgoing call. For details, see ISO 3166-1 alpha-2.
      */
     @SerializedName(value = "otherPartyCountryCode", alternate = {"OtherPartyCountryCode"})
     @Expose
@@ -238,7 +238,7 @@ public class PstnCallLogRow implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * Calling user's ID in Graph. GUID. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
+     * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types (ucap_in, ucap_out).
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose

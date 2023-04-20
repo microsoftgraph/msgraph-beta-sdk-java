@@ -22,6 +22,7 @@ import com.microsoft.graph.models.OnPremisesExtensionAttributes;
 import com.microsoft.graph.models.OnPremisesProvisioningError;
 import com.microsoft.graph.models.PasswordProfile;
 import com.microsoft.graph.models.ProvisionedPlan;
+import com.microsoft.graph.models.ServiceProvisioningError;
 import com.microsoft.graph.models.MailboxSettings;
 import com.microsoft.graph.models.UserPrint;
 import com.microsoft.graph.models.UserAnalytics;
@@ -91,7 +92,7 @@ public class User extends DirectoryObject implements IJsonBackedObject {
 
     /**
      * The Sign In Activity.
-     * Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note:  Details for this property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission.When you specify $select=signInActivity or $filter=signInActivity while listing users, the maximum page size is 120 users. Requests with $top set higher than 120 will fail.This property is not returned for a user who has never signed in or last signed in before April 2020.
+     * Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note:  Details for this property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission.When you specify $select=signInActivity or $filter=signInActivity while listing users, the maximum page size is 120 users. Requests with $top set higher than 120 will return pages with up to 120 users.This property is not returned for a user who has never signed in or last signed in before April 2020.
      */
     @SerializedName(value = "signInActivity", alternate = {"SignInActivity"})
     @Expose
@@ -619,6 +620,15 @@ public class User extends DirectoryObject implements IJsonBackedObject {
     @Expose
 	@Nullable
     public String securityIdentifier;
+
+    /**
+     * The Service Provisioning Errors.
+     * 
+     */
+    @SerializedName(value = "serviceProvisioningErrors", alternate = {"ServiceProvisioningErrors"})
+    @Expose
+	@Nullable
+    public java.util.List<ServiceProvisioningError> serviceProvisioningErrors;
 
     /**
      * The Show In Address List.

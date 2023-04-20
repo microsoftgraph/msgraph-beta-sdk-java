@@ -39,7 +39,7 @@ public class PstnOnlineMeetingDialoutReport implements IJsonBackedObject {
 
     /**
      * The Currency.
-     * 
+     * Currency used to calculate the cost of the call. For details, see ISO 4217.
      */
     @SerializedName(value = "currency", alternate = {"Currency"})
     @Expose
@@ -48,7 +48,7 @@ public class PstnOnlineMeetingDialoutReport implements IJsonBackedObject {
 
     /**
      * The Destination Context.
-     * 
+     * Indicates whether the call was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
      */
     @SerializedName(value = "destinationContext", alternate = {"DestinationContext"})
     @Expose
@@ -57,7 +57,7 @@ public class PstnOnlineMeetingDialoutReport implements IJsonBackedObject {
 
     /**
      * The Total Call Charge.
-     * 
+     * Total costs of all the calls within the selected time range, including call charges and connection fees.
      */
     @SerializedName(value = "totalCallCharge", alternate = {"TotalCallCharge"})
     @Expose
@@ -66,7 +66,7 @@ public class PstnOnlineMeetingDialoutReport implements IJsonBackedObject {
 
     /**
      * The Total Calls.
-     * 
+     * Total number of dial-out calls within the selected time range.
      */
     @SerializedName(value = "totalCalls", alternate = {"TotalCalls"})
     @Expose
@@ -75,7 +75,7 @@ public class PstnOnlineMeetingDialoutReport implements IJsonBackedObject {
 
     /**
      * The Total Call Seconds.
-     * 
+     * Total duration of all the calls within the selected time range, in seconds.
      */
     @SerializedName(value = "totalCallSeconds", alternate = {"TotalCallSeconds"})
     @Expose
@@ -84,7 +84,7 @@ public class PstnOnlineMeetingDialoutReport implements IJsonBackedObject {
 
     /**
      * The Usage Location.
-     * 
+     * Country code of the user. For details, see ISO 3166-1 alpha-2.
      */
     @SerializedName(value = "usageLocation", alternate = {"UsageLocation"})
     @Expose
@@ -93,7 +93,7 @@ public class PstnOnlineMeetingDialoutReport implements IJsonBackedObject {
 
     /**
      * The User Display Name.
-     * 
+     * Display name of the user.
      */
     @SerializedName(value = "userDisplayName", alternate = {"UserDisplayName"})
     @Expose
@@ -102,7 +102,7 @@ public class PstnOnlineMeetingDialoutReport implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * 
+     * The unique identifier (GUID) of the user in Azure Active Directory.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -111,7 +111,7 @@ public class PstnOnlineMeetingDialoutReport implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * 
+     * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

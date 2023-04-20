@@ -39,7 +39,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Callee Number.
-     * Number of the user or bot who received the call. E.164 format, but may include additional data.
+     * Number of the user or bot who received the call (E.164 format, but may include additional data).
      */
     @SerializedName(value = "calleeNumber", alternate = {"CalleeNumber"})
     @Expose
@@ -57,7 +57,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Caller Number.
-     * Number of the user or bot who made the call. E.164 format, but may include additional data.
+     * Number of the user or bot who made the call (E.164 format, but may include additional data).
      */
     @SerializedName(value = "callerNumber", alternate = {"CallerNumber"})
     @Expose
@@ -75,7 +75,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Correlation Id.
-     * Identifier for the call that you can use when calling Microsoft Support. GUID.
+     * Identifier (GUID) for the call that you can use when calling Microsoft Support.
      */
     @SerializedName(value = "correlationId", alternate = {"CorrelationId"})
     @Expose
@@ -111,7 +111,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Final Sip Code.
-     * The code with which the call ended, RFC 3261.
+     * The code with which the call ended (RFC 3261).
      */
     @SerializedName(value = "finalSipCode", alternate = {"FinalSipCode"})
     @Expose
@@ -129,7 +129,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Id.
-     * Unique call identifier. GUID.
+     * Unique call identifier (GUID).
      */
     @SerializedName(value = "id", alternate = {"Id"})
     @Expose
@@ -156,7 +156,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Media Path Location.
-     * The datacenter used for media path in non-bypass call.
+     * The data center used for media path in non-bypass call.
      */
     @SerializedName(value = "mediaPathLocation", alternate = {"MediaPathLocation"})
     @Expose
@@ -165,7 +165,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Other Party Country Code.
-     * 
+     * Country code of the caller in case of an incoming call, or callee in case of an outgoing call. For details, see ISO 3166-1 alpha-2.
      */
     @SerializedName(value = "otherPartyCountryCode", alternate = {"OtherPartyCountryCode"})
     @Expose
@@ -174,7 +174,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The Signaling Location.
-     * The datacenter used for signaling for both bypass and non-bypass calls.
+     * The data center used for signaling for both bypass and non-bypass calls.
      */
     @SerializedName(value = "signalingLocation", alternate = {"SignalingLocation"})
     @Expose
@@ -210,7 +210,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The User Country Code.
-     * 
+     * Country code of the user. For details, see ISO 3166-1 alpha-2.
      */
     @SerializedName(value = "userCountryCode", alternate = {"UserCountryCode"})
     @Expose
@@ -228,7 +228,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The User Id.
-     * Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
+     * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types.
      */
     @SerializedName(value = "userId", alternate = {"UserId"})
     @Expose
@@ -237,7 +237,7 @@ public class DirectRoutingLogRow implements IJsonBackedObject {
 
     /**
      * The User Principal Name.
-     * UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
+     * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
      */
     @SerializedName(value = "userPrincipalName", alternate = {"UserPrincipalName"})
     @Expose

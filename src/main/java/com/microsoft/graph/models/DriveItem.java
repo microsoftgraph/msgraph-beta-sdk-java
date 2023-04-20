@@ -33,6 +33,7 @@ import com.microsoft.graph.models.Video;
 import com.microsoft.graph.models.Workbook;
 import com.microsoft.graph.models.ItemAnalytics;
 import com.microsoft.graph.models.ListItem;
+import com.microsoft.graph.models.ItemRetentionLabel;
 import com.microsoft.graph.models.BaseItem;
 import com.microsoft.graph.requests.ItemActivityOLDCollectionPage;
 import com.microsoft.graph.requests.DriveItemCollectionPage;
@@ -334,6 +335,15 @@ public class DriveItem extends BaseItem implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.PermissionCollectionPage permissions;
+
+    /**
+     * The Retention Label.
+     * 
+     */
+    @SerializedName(value = "retentionLabel", alternate = {"RetentionLabel"})
+    @Expose
+	@Nullable
+    public ItemRetentionLabel retentionLabel;
 
     /**
      * The Subscriptions.

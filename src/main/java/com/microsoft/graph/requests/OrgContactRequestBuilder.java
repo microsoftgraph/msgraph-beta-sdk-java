@@ -277,6 +277,15 @@ public class OrgContactRequestBuilder extends BaseRequestBuilder<OrgContact> {
      * @return the request builder
      */
     @Nonnull
+    public OrgContactRetryServiceProvisioningRequestBuilder retryServiceProvisioning() {
+        return new OrgContactRetryServiceProvisioningRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.retryServiceProvisioning"), getClient(), null);
+    }
+
+    /**
+     * Gets a builder to execute the method
+     * @return the request builder
+     */
+    @Nonnull
     public DirectoryObjectRestoreRequestBuilder restore() {
         return new DirectoryObjectRestoreRequestBuilder(getRequestUrlWithAdditionalSegment("microsoft.graph.restore"), getClient(), null);
     }

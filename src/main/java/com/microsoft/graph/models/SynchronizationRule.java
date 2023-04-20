@@ -9,6 +9,8 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.ContainerFilter;
+import com.microsoft.graph.models.GroupFilter;
 import com.microsoft.graph.models.StringKeyStringValuePair;
 import com.microsoft.graph.models.ObjectMapping;
 
@@ -41,6 +43,15 @@ public class SynchronizationRule implements IJsonBackedObject {
     }
 
     /**
+     * The Container Filter.
+     * 
+     */
+    @SerializedName(value = "containerFilter", alternate = {"ContainerFilter"})
+    @Expose
+	@Nullable
+    public ContainerFilter containerFilter;
+
+    /**
      * The Editable.
      * true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
      */
@@ -48,6 +59,15 @@ public class SynchronizationRule implements IJsonBackedObject {
     @Expose
 	@Nullable
     public Boolean editable;
+
+    /**
+     * The Group Filter.
+     * 
+     */
+    @SerializedName(value = "groupFilter", alternate = {"GroupFilter"})
+    @Expose
+	@Nullable
+    public GroupFilter groupFilter;
 
     /**
      * The Id.

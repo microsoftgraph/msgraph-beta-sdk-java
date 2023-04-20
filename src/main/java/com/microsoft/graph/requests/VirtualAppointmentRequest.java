@@ -20,7 +20,9 @@ import com.microsoft.graph.http.HttpMethod;
 
 /**
  * The class for the Virtual Appointment Request.
+ * @deprecated The Virtual appointment resource is deprecated and will stop returning data on May 31, 2023. Existing apps that use this feature should be updated to the new getVirtualAppointmentJoinWebUrl API.
  */
+@Deprecated
 public class VirtualAppointmentRequest extends BaseRequest<VirtualAppointment> {
 	
     /**
