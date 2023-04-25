@@ -82,7 +82,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Activation Lock Bypass Code.
-     * The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. Individual GET call with select query options is needed to retrieve actual values. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * The code that allows the Activation Lock on managed device to be bypassed. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity in LIST call. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      */
     @SerializedName(value = "activationLockBypassCode", alternate = {"ActivationLockBypassCode"})
     @Expose
@@ -154,7 +154,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Chrome OSDevice Info.
-     * List of properties of the ChromeOS Device.
+     * List of properties of the ChromeOS Device. Default is an empty list. To retrieve actual values GET call needs to be made, with device id and included in select parameter.
      */
     @SerializedName(value = "chromeOSDeviceInfo", alternate = {"ChromeOSDeviceInfo"})
     @Expose
@@ -172,7 +172,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Compliance State.
-     * Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager.
+     * Compliance state of the device. Examples: Compliant, Conflict, Error, etc. Default is unknown. Supports $filter operator 'eq' and 'or'. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager.
      */
     @SerializedName(value = "complianceState", alternate = {"ComplianceState"})
     @Expose
@@ -217,7 +217,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Category Display Name.
-     * Device category display name. This property is read-only.
+     * Device category display name. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      */
     @SerializedName(value = "deviceCategoryDisplayName", alternate = {"DeviceCategoryDisplayName"})
     @Expose
@@ -271,7 +271,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Device Type.
-     * Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.
+     * Platform of the device. Examples: Desktop, WindowsRT, etc. Default is unknown. Supports $filter operator 'eq' and 'or'. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.
      */
     @SerializedName(value = "deviceType", alternate = {"DeviceType"})
     @Expose
@@ -316,7 +316,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Enrolled Date Time.
-     * Enrollment time of the device. This property is read-only.
+     * Enrollment time of the device. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      */
     @SerializedName(value = "enrolledDateTime", alternate = {"EnrolledDateTime"})
     @Expose
@@ -379,7 +379,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Hardware Information.
-     * The hardward details for the device.  Includes information such as storage space, manufacturer, serial number, etc. Return default value in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * The hardward details for the device. Includes information such as storage space, manufacturer, serial number, etc. By default most property of this type are set to null/0/false and enum defaults for associated types. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      */
     @SerializedName(value = "hardwareInformation", alternate = {"HardwareInformation"})
     @Expose
@@ -388,7 +388,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Iccid.
-     * Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Integrated Circuit Card Identifier, it is A SIM card's unique identification number. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      */
     @SerializedName(value = "iccid", alternate = {"Iccid"})
     @Expose
@@ -424,7 +424,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Jail Broken.
-     * whether the device is jail broken or rooted. This property is read-only.
+     * Whether the device is jail broken or rooted. Default is an empty string. Supports $filter operator 'eq' and 'or'. This property is read-only.
      */
     @SerializedName(value = "jailBroken", alternate = {"JailBroken"})
     @Expose
@@ -442,7 +442,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Last Sync Date Time.
-     * The date and time that the device last completed a successful sync with Intune. This property is read-only.
+     * The date and time that the device last completed a successful sync with Intune. Supports $filter operator 'lt' and 'gt'. This property is read-only.
      */
     @SerializedName(value = "lastSyncDateTime", alternate = {"LastSyncDateTime"})
     @Expose
@@ -478,7 +478,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Management Agent.
-     * Management channel of the device. Intune, EAS, etc. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense, intuneAosp.
+     * Management channel of the device. Examples: Intune, EAS, etc. Default is unknown. Supports $filter operator 'eq' and 'or'. This property is read-only. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController, microsoft365ManagedMdm, msSense, intuneAosp.
      */
     @SerializedName(value = "managementAgent", alternate = {"ManagementAgent"})
     @Expose
@@ -505,7 +505,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Management State.
-     * Management state of the device. This property is read-only. Possible values are: managed, retirePending, retireFailed, wipePending, wipeFailed, unhealthy, deletePending, retireIssued, wipeIssued, wipeCanceled, retireCanceled, discovered.
+     * Management state of the device. Examples: Managed, RetirePending, etc. Default is managed. Supports $filter operator 'eq' and 'or'. This property is read-only. Possible values are: managed, retirePending, retireFailed, wipePending, wipeFailed, unhealthy, deletePending, retireIssued, wipeIssued, wipeCanceled, retireCanceled, discovered.
      */
     @SerializedName(value = "managementState", alternate = {"ManagementState"})
     @Expose
@@ -541,7 +541,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Notes.
-     * Notes on the device created by IT Admin. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select.  $Search is not supported.
+     * Notes on the device created by IT Admin. Default is null. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported.
      */
     @SerializedName(value = "notes", alternate = {"Notes"})
     @Expose
@@ -568,7 +568,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Owner Type.
-     * Ownership of the device. Can be 'company' or 'personal'. Possible values are: unknown, company, personal.
+     * Ownership of the device. Possible values are, 'company' or 'personal'. Default is unknown. Supports $filter operator 'eq' and 'or'. Possible values are: unknown, company, personal.
      */
     @SerializedName(value = "ownerType", alternate = {"OwnerType"})
     @Expose
@@ -595,7 +595,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Physical Memory In Bytes.
-     * Total Memory in Bytes. Return default value 0 in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. Default value is 0. Read-only. This property is read-only.
+     * Total Memory in Bytes. Default is 0. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. Read-only. This property is read-only.
      */
     @SerializedName(value = "physicalMemoryInBytes", alternate = {"PhysicalMemoryInBytes"})
     @Expose
@@ -631,7 +631,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Remote Assistance Session Url.
-     * Url that allows a Remote Assistance session to be established with the device. This property is read-only.
+     * Url that allows a Remote Assistance session to be established with the device. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. This property is read-only.
      */
     @SerializedName(value = "remoteAssistanceSessionUrl", alternate = {"RemoteAssistanceSessionUrl"})
     @Expose
@@ -721,7 +721,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Udid.
-     * Unique Device Identifier for iOS and macOS devices. Return default value null in LIST managedDevices. Real value only returned in singel device GET call with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
+     * Unique Device Identifier for iOS and macOS devices. Default is an empty string. To retrieve actual values GET call needs to be made, with device id and included in select parameter. Supports: $select. $Search is not supported. Read-only. This property is read-only.
      */
     @SerializedName(value = "udid", alternate = {"Udid"})
     @Expose
@@ -775,7 +775,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Windows Active Malware Count.
-     * Count of active malware for this windows device. This property is read-only.
+     * Count of active malware for this windows device. Default is 0. To retrieve actual values GET call needs to be made, with device id and included in select parameter. This property is read-only.
      */
     @SerializedName(value = "windowsActiveMalwareCount", alternate = {"WindowsActiveMalwareCount"})
     @Expose
@@ -784,7 +784,7 @@ public class ManagedDevice extends Entity implements IJsonBackedObject {
 
     /**
      * The Windows Remediated Malware Count.
-     * Count of remediated malware for this windows device. This property is read-only.
+     * Count of remediated malware for this windows device. Default is 0. To retrieve actual values GET call needs to be made, with device id and included in select parameter. This property is read-only.
      */
     @SerializedName(value = "windowsRemediatedMalwareCount", alternate = {"WindowsRemediatedMalwareCount"})
     @Expose

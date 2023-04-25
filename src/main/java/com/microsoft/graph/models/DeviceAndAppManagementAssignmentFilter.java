@@ -30,7 +30,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
 
     /**
      * The Created Date Time.
-     * Creation time of the Assignment Filter.
+     * The creation time of the assignment filter. The value cannot be modified and is automatically populated during new assignment filter process. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
      */
     @SerializedName(value = "createdDateTime", alternate = {"CreatedDateTime"})
     @Expose
@@ -39,7 +39,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
 
     /**
      * The Description.
-     * Description of the Assignment Filter.
+     * Optional description of the Assignment Filter.
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -48,7 +48,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
 
     /**
      * The Display Name.
-     * DisplayName of the Assignment Filter.
+     * The name of the Assignment Filter.
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -57,7 +57,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
 
     /**
      * The Last Modified Date Time.
-     * Last modified time of the Assignment Filter.
+     * Last modified time of the Assignment Filter. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'
      */
     @SerializedName(value = "lastModifiedDateTime", alternate = {"LastModifiedDateTime"})
     @Expose
@@ -66,7 +66,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
 
     /**
      * The Payloads.
-     * Associated assignments for a specific filter
+     * Indicates associated assignments for a specific filter.
      */
     @SerializedName(value = "payloads", alternate = {"Payloads"})
     @Expose
@@ -75,7 +75,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
 
     /**
      * The Platform.
-     * Platform type of the devices on which the Assignment Filter will be applicable. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown, androidAOSP.
+     * Indicates filter is applied to which flatform. Possible values are android,androidForWork,iOS,macOS,windowsPhone81,windows81AndLater,windows10AndLater,androidWorkProfile, unknown, androidAOSP,androidMobileApplicationManagement, iOSMobileApplicationManagement. Default filter will be applied to 'unknown'. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown, androidAOSP, androidMobileApplicationManagement, iOSMobileApplicationManagement, unknownFutureValue.
      */
     @SerializedName(value = "platform", alternate = {"Platform"})
     @Expose
@@ -84,7 +84,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
 
     /**
      * The Role Scope Tags.
-     * RoleScopeTags of the Assignment Filter.
+     * Indicates role scope tags assigned for the assignment filter.
      */
     @SerializedName(value = "roleScopeTags", alternate = {"RoleScopeTags"})
     @Expose
@@ -93,7 +93,7 @@ public class DeviceAndAppManagementAssignmentFilter extends Entity implements IJ
 
     /**
      * The Rule.
-     * Rule definition of the Assignment Filter.
+     * Rule definition of the assignment filter.
      */
     @SerializedName(value = "rule", alternate = {"Rule"})
     @Expose

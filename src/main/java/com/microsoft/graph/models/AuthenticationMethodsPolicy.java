@@ -11,6 +11,7 @@ import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AuthenticationMethodsPolicyMigrationState;
 import com.microsoft.graph.models.RegistrationEnforcement;
+import com.microsoft.graph.models.SystemCredentialPreferences;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.AuthenticationMethodConfigurationCollectionPage;
 
@@ -91,6 +92,15 @@ public class AuthenticationMethodsPolicy extends Entity implements IJsonBackedOb
     @Expose
 	@Nullable
     public RegistrationEnforcement registrationEnforcement;
+
+    /**
+     * The System Credential Preferences.
+     * Prompt users with their most-preferred credential for multifactor authentication.
+     */
+    @SerializedName(value = "systemCredentialPreferences", alternate = {"SystemCredentialPreferences"})
+    @Expose
+	@Nullable
+    public SystemCredentialPreferences systemCredentialPreferences;
 
     /**
      * The Authentication Method Configurations.

@@ -13,6 +13,7 @@ import com.microsoft.graph.models.AssignmentReviewSettings;
 import com.microsoft.graph.models.AccessPackageQuestion;
 import com.microsoft.graph.models.ApprovalSettings;
 import com.microsoft.graph.models.RequestorSettings;
+import com.microsoft.graph.models.VerifiableCredentialSettings;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.AccessPackageCatalog;
 import com.microsoft.graph.models.Entity;
@@ -159,6 +160,15 @@ public class AccessPackageAssignmentPolicy extends Entity implements IJsonBacked
     @Expose
 	@Nullable
     public RequestorSettings requestorSettings;
+
+    /**
+     * The Verifiable Credential Settings.
+     * Settings for verifiable credentials set up through the Azure AD Verified ID service. These settings represent the verifiable credentials that a requestor of an access package in this policy can present to be assigned the access package.
+     */
+    @SerializedName(value = "verifiableCredentialSettings", alternate = {"VerifiableCredentialSettings"})
+    @Expose
+	@Nullable
+    public VerifiableCredentialSettings verifiableCredentialSettings;
 
     /**
      * The Access Package.

@@ -29,7 +29,7 @@ public class CustomTaskExtension extends CustomCalloutExtension implements IJson
 
     /**
      * The Callback Configuration.
-     * The callback configuration for a custom extension.
+     * The callback configuration for a custom task extension.
      */
     @SerializedName(value = "callbackConfiguration", alternate = {"CallbackConfiguration"})
     @Expose

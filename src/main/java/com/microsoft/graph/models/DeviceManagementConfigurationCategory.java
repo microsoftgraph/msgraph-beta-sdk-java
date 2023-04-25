@@ -31,7 +31,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements IJs
 
     /**
      * The Category Description.
-     * Description of the category header
+     * Description of the category header in policy summary.
      */
     @SerializedName(value = "categoryDescription", alternate = {"CategoryDescription"})
     @Expose
@@ -49,7 +49,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements IJs
 
     /**
      * The Description.
-     * Description of the item
+     * Description of the category. For example: Display
      */
     @SerializedName(value = "description", alternate = {"Description"})
     @Expose
@@ -58,7 +58,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements IJs
 
     /**
      * The Display Name.
-     * Display name of the item
+     * Name of the category. For example: Device Lock
      */
     @SerializedName(value = "displayName", alternate = {"DisplayName"})
     @Expose
@@ -67,7 +67,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements IJs
 
     /**
      * The Help Text.
-     * Help text of the item
+     * Help text of the category. Give more details of the category.
      */
     @SerializedName(value = "helpText", alternate = {"HelpText"})
     @Expose
@@ -85,7 +85,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements IJs
 
     /**
      * The Parent Category Id.
-     * Parent id of the category.
+     * Direct parent id of the category. If the category is the root, the parent id is same as its id.
      */
     @SerializedName(value = "parentCategoryId", alternate = {"ParentCategoryId"})
     @Expose
@@ -94,7 +94,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements IJs
 
     /**
      * The Platforms.
-     * Platforms types, which settings in the category have. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
+     * Platforms types, which settings in the category have. Possible values are: none. android, androidEnterprise, iOs, macOs, windows10X, windows10, aosp, and linux. If this property is not set, or set to none, returns categories in all platforms. Supports: $filters, $select. Read-only. Possible values are: none, android, iOS, macOS, windows10X, windows10, linux, unknownFutureValue.
      */
     @SerializedName(value = "platforms", alternate = {"Platforms"})
     @Expose
@@ -112,7 +112,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements IJs
 
     /**
      * The Setting Usage.
-     * Indicates that the category contains settings that are used for Compliance or Configuration. Possible values are: none, configuration, compliance.
+     * Indicates that the category contains settings that are used for compliance, configuration, or reusable settings. Possible values are: configuration, compliance, reusableSetting. Each setting usage has separate API end-point to call. Read-only. Possible values are: none, configuration, compliance, unknownFutureValue.
      */
     @SerializedName(value = "settingUsage", alternate = {"SettingUsage"})
     @Expose
@@ -121,7 +121,7 @@ public class DeviceManagementConfigurationCategory extends Entity implements IJs
 
     /**
      * The Technologies.
-     * Technologies types, which settings in the category have. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, edgeMAM, linuxMdm, enrollment, endpointPrivilegeManagement, unknownFutureValue.
+     * Technologies types, which settings in the category have. Possible values are: none, mdm, configManager, intuneManagementExtension, thirdParty, documentGateway, appleRemoteManagement, microsoftSense, exchangeOnline, edgeMam, linuxMdm, extensibility, enrollment, endpointPrivilegeManagement. If this property is not set, or set to none, returns categories in all platforms. Supports: $filters, $select. Read-only. Possible values are: none, mdm, windows10XManagement, configManager, appleRemoteManagement, microsoftSense, exchangeOnline, mobileApplicationManagement, linuxMdm, enrollment, endpointPrivilegeManagement, unknownFutureValue.
      */
     @SerializedName(value = "technologies", alternate = {"Technologies"})
     @Expose

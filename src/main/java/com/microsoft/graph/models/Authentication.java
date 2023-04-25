@@ -9,6 +9,7 @@ import com.microsoft.graph.serializer.IJsonBackedObject;
 import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
+import com.microsoft.graph.models.SignInPreferences;
 import com.microsoft.graph.models.Entity;
 import com.microsoft.graph.requests.EmailAuthenticationMethodCollectionPage;
 import com.microsoft.graph.requests.Fido2AuthenticationMethodCollectionPage;
@@ -36,6 +37,15 @@ import javax.annotation.Nonnull;
  */
 public class Authentication extends Entity implements IJsonBackedObject {
 
+
+    /**
+     * The Sign In Preferences.
+     * The settings and preferences for to the sign-in experience of a user.
+     */
+    @SerializedName(value = "signInPreferences", alternate = {"SignInPreferences"})
+    @Expose
+	@Nullable
+    public SignInPreferences signInPreferences;
 
     /**
      * The Email Methods.

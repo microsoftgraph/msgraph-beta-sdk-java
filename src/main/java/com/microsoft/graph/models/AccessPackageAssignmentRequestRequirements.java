@@ -12,6 +12,7 @@ import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.AccessPackageAnswer;
 import com.microsoft.graph.models.AccessPackageQuestion;
 import com.microsoft.graph.models.RequestSchedule;
+import com.microsoft.graph.models.VerifiableCredentialRequirementStatus;
 
 
 import com.google.gson.JsonObject;
@@ -130,6 +131,15 @@ public class AccessPackageAssignmentRequestRequirements implements IJsonBackedOb
     @Expose
 	@Nullable
     public RequestSchedule schedule;
+
+    /**
+     * The Verifiable Credential Requirement Status.
+     * The status of the process to process the verifiable credential, if any.
+     */
+    @SerializedName(value = "verifiableCredentialRequirementStatus", alternate = {"VerifiableCredentialRequirementStatus"})
+    @Expose
+	@Nullable
+    public VerifiableCredentialRequirementStatus verifiableCredentialRequirementStatus;
 
 
     /**
