@@ -3,26 +3,25 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class GovernanceSubject extends Entity implements Parsable {
     /** The display name of the subject. */
-    private String _displayName;
+    private String displayName;
     /** The email address of the user subject. If the subject is in other types, it is empty. */
-    private String _email;
+    private String email;
     /** The principal name of the user subject. If the subject is in other types, it is empty. */
-    private String _principalName;
+    private String principalName;
     /** The type of the subject. The value can be User, Group, and ServicePrincipal. */
-    private String _type;
+    private String type;
     /**
      * Instantiates a new governanceSubject and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public GovernanceSubject() {
         super();
-        this.setOdataType("#microsoft.graph.governanceSubject");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -40,7 +39,7 @@ public class GovernanceSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the email property value. The email address of the user subject. If the subject is in other types, it is empty.
@@ -48,21 +47,20 @@ public class GovernanceSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getEmail() {
-        return this._email;
+        return this.email;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final GovernanceSubject currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("email", (n) -> { currentObject.setEmail(n.getStringValue()); });
-            this.put("principalName", (n) -> { currentObject.setPrincipalName(n.getStringValue()); });
-            this.put("type", (n) -> { currentObject.setType(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("principalName", (n) -> { this.setPrincipalName(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the principalName property value. The principal name of the user subject. If the subject is in other types, it is empty.
@@ -70,7 +68,7 @@ public class GovernanceSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPrincipalName() {
-        return this._principalName;
+        return this.principalName;
     }
     /**
      * Gets the type property value. The type of the subject. The value can be User, Group, and ServicePrincipal.
@@ -78,13 +76,14 @@ public class GovernanceSubject extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getType() {
-        return this._type;
+        return this.type;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -98,31 +97,35 @@ public class GovernanceSubject extends Entity implements Parsable {
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the email property value. The email address of the user subject. If the subject is in other types, it is empty.
      * @param value Value to set for the email property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEmail(@javax.annotation.Nullable final String value) {
-        this._email = value;
+        this.email = value;
     }
     /**
      * Sets the principalName property value. The principal name of the user subject. If the subject is in other types, it is empty.
      * @param value Value to set for the principalName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPrincipalName(@javax.annotation.Nullable final String value) {
-        this._principalName = value;
+        this.principalName = value;
     }
     /**
      * Sets the type property value. The type of the subject. The value can be User, Group, and ServicePrincipal.
      * @param value Value to set for the type property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setType(@javax.annotation.Nullable final String value) {
-        this._type = value;
+        this.type = value;
     }
 }

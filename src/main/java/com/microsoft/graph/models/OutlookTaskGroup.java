@@ -3,29 +3,28 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
+import java.util.UUID;
 public class OutlookTaskGroup extends Entity implements Parsable {
     /** The version of the task group. */
-    private String _changeKey;
+    private String changeKey;
     /** The unique GUID identifier for the task group. */
-    private String _groupKey;
+    private UUID groupKey;
     /** True if the task group is the default task group. */
-    private Boolean _isDefaultGroup;
+    private Boolean isDefaultGroup;
     /** The name of the task group. */
-    private String _name;
+    private String name;
     /** The collection of task folders in the task group. Read-only. Nullable. */
-    private java.util.List<OutlookTaskFolder> _taskFolders;
+    private java.util.List<OutlookTaskFolder> taskFolders;
     /**
      * Instantiates a new outlookTaskGroup and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public OutlookTaskGroup() {
         super();
-        this.setOdataType("#microsoft.graph.outlookTaskGroup");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -43,30 +42,29 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getChangeKey() {
-        return this._changeKey;
+        return this.changeKey;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final OutlookTaskGroup currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("changeKey", (n) -> { currentObject.setChangeKey(n.getStringValue()); });
-            this.put("groupKey", (n) -> { currentObject.setGroupKey(n.getStringValue()); });
-            this.put("isDefaultGroup", (n) -> { currentObject.setIsDefaultGroup(n.getBooleanValue()); });
-            this.put("name", (n) -> { currentObject.setName(n.getStringValue()); });
-            this.put("taskFolders", (n) -> { currentObject.setTaskFolders(n.getCollectionOfObjectValues(OutlookTaskFolder::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("changeKey", (n) -> { this.setChangeKey(n.getStringValue()); });
+        deserializerMap.put("groupKey", (n) -> { this.setGroupKey(n.getUUIDValue()); });
+        deserializerMap.put("isDefaultGroup", (n) -> { this.setIsDefaultGroup(n.getBooleanValue()); });
+        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
+        deserializerMap.put("taskFolders", (n) -> { this.setTaskFolders(n.getCollectionOfObjectValues(OutlookTaskFolder::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the groupKey property value. The unique GUID identifier for the task group.
-     * @return a string
+     * @return a UUID
      */
     @javax.annotation.Nullable
-    public String getGroupKey() {
-        return this._groupKey;
+    public UUID getGroupKey() {
+        return this.groupKey;
     }
     /**
      * Gets the isDefaultGroup property value. True if the task group is the default task group.
@@ -74,7 +72,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public Boolean getIsDefaultGroup() {
-        return this._isDefaultGroup;
+        return this.isDefaultGroup;
     }
     /**
      * Gets the name property value. The name of the task group.
@@ -82,7 +80,7 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getName() {
-        return this._name;
+        return this.name;
     }
     /**
      * Gets the taskFolders property value. The collection of task folders in the task group. Read-only. Nullable.
@@ -90,18 +88,19 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<OutlookTaskFolder> getTaskFolders() {
-        return this._taskFolders;
+        return this.taskFolders;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("changeKey", this.getChangeKey());
-        writer.writeStringValue("groupKey", this.getGroupKey());
+        writer.writeUUIDValue("groupKey", this.getGroupKey());
         writer.writeBooleanValue("isDefaultGroup", this.getIsDefaultGroup());
         writer.writeStringValue("name", this.getName());
         writer.writeCollectionOfObjectValues("taskFolders", this.getTaskFolders());
@@ -111,39 +110,44 @@ public class OutlookTaskGroup extends Entity implements Parsable {
      * @param value Value to set for the changeKey property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setChangeKey(@javax.annotation.Nullable final String value) {
-        this._changeKey = value;
+        this.changeKey = value;
     }
     /**
      * Sets the groupKey property value. The unique GUID identifier for the task group.
      * @param value Value to set for the groupKey property.
      * @return a void
      */
-    public void setGroupKey(@javax.annotation.Nullable final String value) {
-        this._groupKey = value;
+    @javax.annotation.Nonnull
+    public void setGroupKey(@javax.annotation.Nullable final UUID value) {
+        this.groupKey = value;
     }
     /**
      * Sets the isDefaultGroup property value. True if the task group is the default task group.
      * @param value Value to set for the isDefaultGroup property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsDefaultGroup(@javax.annotation.Nullable final Boolean value) {
-        this._isDefaultGroup = value;
+        this.isDefaultGroup = value;
     }
     /**
      * Sets the name property value. The name of the task group.
      * @param value Value to set for the name property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setName(@javax.annotation.Nullable final String value) {
-        this._name = value;
+        this.name = value;
     }
     /**
      * Sets the taskFolders property value. The collection of task folders in the task group. Read-only. Nullable.
      * @param value Value to set for the taskFolders property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTaskFolders(@javax.annotation.Nullable final java.util.List<OutlookTaskFolder> value) {
-        this._taskFolders = value;
+        this.taskFolders = value;
     }
 }

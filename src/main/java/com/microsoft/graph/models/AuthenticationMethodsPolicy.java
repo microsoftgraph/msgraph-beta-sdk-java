@@ -4,32 +4,35 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     /** Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy. */
-    private java.util.List<AuthenticationMethodConfiguration> _authenticationMethodConfigurations;
+    private java.util.List<AuthenticationMethodConfiguration> authenticationMethodConfigurations;
     /** A description of the policy. */
-    private String _description;
+    private String description;
     /** The name of the policy. */
-    private String _displayName;
+    private String displayName;
     /** The date and time of the last update to the policy. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
+    /** The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authenication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use. */
+    private AuthenticationMethodsPolicyMigrationState policyMigrationState;
     /** The version of the policy in use. */
-    private String _policyVersion;
-    /** The reconfirmationInDays property */
-    private Integer _reconfirmationInDays;
+    private String policyVersion;
+    /** Days before the user will be asked to reconfirm their method. */
+    private Integer reconfirmationInDays;
     /** Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods. */
-    private RegistrationEnforcement _registrationEnforcement;
+    private RegistrationEnforcement registrationEnforcement;
+    /** Prompt users with their most-preferred credential for multifactor authentication. */
+    private SystemCredentialPreferences systemCredentialPreferences;
     /**
      * Instantiates a new AuthenticationMethodsPolicy and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AuthenticationMethodsPolicy() {
         super();
-        this.setOdataType("#microsoft.graph.authenticationMethodsPolicy");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -47,7 +50,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<AuthenticationMethodConfiguration> getAuthenticationMethodConfigurations() {
-        return this._authenticationMethodConfigurations;
+        return this.authenticationMethodConfigurations;
     }
     /**
      * Gets the description property value. A description of the policy.
@@ -55,7 +58,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. The name of the policy.
@@ -63,24 +66,25 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AuthenticationMethodsPolicy currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("authenticationMethodConfigurations", (n) -> { currentObject.setAuthenticationMethodConfigurations(n.getCollectionOfObjectValues(AuthenticationMethodConfiguration::createFromDiscriminatorValue)); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("policyVersion", (n) -> { currentObject.setPolicyVersion(n.getStringValue()); });
-            this.put("reconfirmationInDays", (n) -> { currentObject.setReconfirmationInDays(n.getIntegerValue()); });
-            this.put("registrationEnforcement", (n) -> { currentObject.setRegistrationEnforcement(n.getObjectValue(RegistrationEnforcement::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationMethodConfigurations", (n) -> { this.setAuthenticationMethodConfigurations(n.getCollectionOfObjectValues(AuthenticationMethodConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("policyMigrationState", (n) -> { this.setPolicyMigrationState(n.getEnumValue(AuthenticationMethodsPolicyMigrationState.class)); });
+        deserializerMap.put("policyVersion", (n) -> { this.setPolicyVersion(n.getStringValue()); });
+        deserializerMap.put("reconfirmationInDays", (n) -> { this.setReconfirmationInDays(n.getIntegerValue()); });
+        deserializerMap.put("registrationEnforcement", (n) -> { this.setRegistrationEnforcement(n.getObjectValue(RegistrationEnforcement::createFromDiscriminatorValue)); });
+        deserializerMap.put("systemCredentialPreferences", (n) -> { this.setSystemCredentialPreferences(n.getObjectValue(SystemCredentialPreferences::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time of the last update to the policy.
@@ -88,7 +92,15 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
+    }
+    /**
+     * Gets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authenication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
+     * @return a authenticationMethodsPolicyMigrationState
+     */
+    @javax.annotation.Nullable
+    public AuthenticationMethodsPolicyMigrationState getPolicyMigrationState() {
+        return this.policyMigrationState;
     }
     /**
      * Gets the policyVersion property value. The version of the policy in use.
@@ -96,15 +108,15 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getPolicyVersion() {
-        return this._policyVersion;
+        return this.policyVersion;
     }
     /**
-     * Gets the reconfirmationInDays property value. The reconfirmationInDays property
+     * Gets the reconfirmationInDays property value. Days before the user will be asked to reconfirm their method.
      * @return a integer
      */
     @javax.annotation.Nullable
     public Integer getReconfirmationInDays() {
-        return this._reconfirmationInDays;
+        return this.reconfirmationInDays;
     }
     /**
      * Gets the registrationEnforcement property value. Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
@@ -112,13 +124,22 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     @javax.annotation.Nullable
     public RegistrationEnforcement getRegistrationEnforcement() {
-        return this._registrationEnforcement;
+        return this.registrationEnforcement;
+    }
+    /**
+     * Gets the systemCredentialPreferences property value. Prompt users with their most-preferred credential for multifactor authentication.
+     * @return a systemCredentialPreferences
+     */
+    @javax.annotation.Nullable
+    public SystemCredentialPreferences getSystemCredentialPreferences() {
+        return this.systemCredentialPreferences;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -126,64 +147,91 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeEnumValue("policyMigrationState", this.getPolicyMigrationState());
         writer.writeStringValue("policyVersion", this.getPolicyVersion());
         writer.writeIntegerValue("reconfirmationInDays", this.getReconfirmationInDays());
         writer.writeObjectValue("registrationEnforcement", this.getRegistrationEnforcement());
+        writer.writeObjectValue("systemCredentialPreferences", this.getSystemCredentialPreferences());
     }
     /**
      * Sets the authenticationMethodConfigurations property value. Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
      * @param value Value to set for the authenticationMethodConfigurations property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAuthenticationMethodConfigurations(@javax.annotation.Nullable final java.util.List<AuthenticationMethodConfiguration> value) {
-        this._authenticationMethodConfigurations = value;
+        this.authenticationMethodConfigurations = value;
     }
     /**
      * Sets the description property value. A description of the policy.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. The name of the policy.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time of the last update to the policy.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
+    }
+    /**
+     * Sets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authenication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
+     * @param value Value to set for the policyMigrationState property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPolicyMigrationState(@javax.annotation.Nullable final AuthenticationMethodsPolicyMigrationState value) {
+        this.policyMigrationState = value;
     }
     /**
      * Sets the policyVersion property value. The version of the policy in use.
      * @param value Value to set for the policyVersion property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setPolicyVersion(@javax.annotation.Nullable final String value) {
-        this._policyVersion = value;
+        this.policyVersion = value;
     }
     /**
-     * Sets the reconfirmationInDays property value. The reconfirmationInDays property
+     * Sets the reconfirmationInDays property value. Days before the user will be asked to reconfirm their method.
      * @param value Value to set for the reconfirmationInDays property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setReconfirmationInDays(@javax.annotation.Nullable final Integer value) {
-        this._reconfirmationInDays = value;
+        this.reconfirmationInDays = value;
     }
     /**
      * Sets the registrationEnforcement property value. Enforce registration at sign-in time. This property can be used to remind users to set up targeted authentication methods.
      * @param value Value to set for the registrationEnforcement property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setRegistrationEnforcement(@javax.annotation.Nullable final RegistrationEnforcement value) {
-        this._registrationEnforcement = value;
+        this.registrationEnforcement = value;
+    }
+    /**
+     * Sets the systemCredentialPreferences property value. Prompt users with their most-preferred credential for multifactor authentication.
+     * @param value Value to set for the systemCredentialPreferences property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setSystemCredentialPreferences(@javax.annotation.Nullable final SystemCredentialPreferences value) {
+        this.systemCredentialPreferences = value;
     }
 }

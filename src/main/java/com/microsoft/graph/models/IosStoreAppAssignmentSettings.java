@@ -3,21 +3,23 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings implements Parsable {
     /** Whether or not the app can be removed by the user. */
-    private Boolean _isRemovable;
+    private Boolean isRemovable;
+    /** When TRUE, indicates that the app should not be backed up to iCloud. When FALSE, indicates that the app may be backed up to iCloud. By default, this property is set to null which internally is treated as FALSE. */
+    private Boolean preventManagedAppBackup;
     /** Whether or not to uninstall the app when device is removed from Intune. */
-    private Boolean _uninstallOnDeviceRemoval;
+    private Boolean uninstallOnDeviceRemoval;
     /** The VPN Configuration Id to apply for this app. */
-    private String _vpnConfigurationId;
+    private String vpnConfigurationId;
     /**
      * Instantiates a new IosStoreAppAssignmentSettings and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public IosStoreAppAssignmentSettings() {
         super();
         this.setOdataType("#microsoft.graph.iosStoreAppAssignmentSettings");
@@ -34,16 +36,16 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final IosStoreAppAssignmentSettings currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("isRemovable", (n) -> { currentObject.setIsRemovable(n.getBooleanValue()); });
-            this.put("uninstallOnDeviceRemoval", (n) -> { currentObject.setUninstallOnDeviceRemoval(n.getBooleanValue()); });
-            this.put("vpnConfigurationId", (n) -> { currentObject.setVpnConfigurationId(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isRemovable", (n) -> { this.setIsRemovable(n.getBooleanValue()); });
+        deserializerMap.put("preventManagedAppBackup", (n) -> { this.setPreventManagedAppBackup(n.getBooleanValue()); });
+        deserializerMap.put("uninstallOnDeviceRemoval", (n) -> { this.setUninstallOnDeviceRemoval(n.getBooleanValue()); });
+        deserializerMap.put("vpnConfigurationId", (n) -> { this.setVpnConfigurationId(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the isRemovable property value. Whether or not the app can be removed by the user.
@@ -51,7 +53,15 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     @javax.annotation.Nullable
     public Boolean getIsRemovable() {
-        return this._isRemovable;
+        return this.isRemovable;
+    }
+    /**
+     * Gets the preventManagedAppBackup property value. When TRUE, indicates that the app should not be backed up to iCloud. When FALSE, indicates that the app may be backed up to iCloud. By default, this property is set to null which internally is treated as FALSE.
+     * @return a boolean
+     */
+    @javax.annotation.Nullable
+    public Boolean getPreventManagedAppBackup() {
+        return this.preventManagedAppBackup;
     }
     /**
      * Gets the uninstallOnDeviceRemoval property value. Whether or not to uninstall the app when device is removed from Intune.
@@ -59,7 +69,7 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     @javax.annotation.Nullable
     public Boolean getUninstallOnDeviceRemoval() {
-        return this._uninstallOnDeviceRemoval;
+        return this.uninstallOnDeviceRemoval;
     }
     /**
      * Gets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
@@ -67,17 +77,19 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
      */
     @javax.annotation.Nullable
     public String getVpnConfigurationId() {
-        return this._vpnConfigurationId;
+        return this.vpnConfigurationId;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("isRemovable", this.getIsRemovable());
+        writer.writeBooleanValue("preventManagedAppBackup", this.getPreventManagedAppBackup());
         writer.writeBooleanValue("uninstallOnDeviceRemoval", this.getUninstallOnDeviceRemoval());
         writer.writeStringValue("vpnConfigurationId", this.getVpnConfigurationId());
     }
@@ -86,23 +98,35 @@ public class IosStoreAppAssignmentSettings extends MobileAppAssignmentSettings i
      * @param value Value to set for the isRemovable property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsRemovable(@javax.annotation.Nullable final Boolean value) {
-        this._isRemovable = value;
+        this.isRemovable = value;
+    }
+    /**
+     * Sets the preventManagedAppBackup property value. When TRUE, indicates that the app should not be backed up to iCloud. When FALSE, indicates that the app may be backed up to iCloud. By default, this property is set to null which internally is treated as FALSE.
+     * @param value Value to set for the preventManagedAppBackup property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setPreventManagedAppBackup(@javax.annotation.Nullable final Boolean value) {
+        this.preventManagedAppBackup = value;
     }
     /**
      * Sets the uninstallOnDeviceRemoval property value. Whether or not to uninstall the app when device is removed from Intune.
      * @param value Value to set for the uninstallOnDeviceRemoval property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUninstallOnDeviceRemoval(@javax.annotation.Nullable final Boolean value) {
-        this._uninstallOnDeviceRemoval = value;
+        this.uninstallOnDeviceRemoval = value;
     }
     /**
      * Sets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
      * @param value Value to set for the vpnConfigurationId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setVpnConfigurationId(@javax.annotation.Nullable final String value) {
-        this._vpnConfigurationId = value;
+        this.vpnConfigurationId = value;
     }
 }

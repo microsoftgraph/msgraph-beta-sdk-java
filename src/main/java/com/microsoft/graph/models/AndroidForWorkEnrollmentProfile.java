@@ -4,43 +4,45 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Enrollment Profile used to enroll COSU devices using Google's Cloud Management.
+ */
 public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable {
     /** Tenant GUID the enrollment profile belongs to. */
-    private String _accountId;
+    private String accountId;
     /** Date time the enrollment profile was created. */
-    private OffsetDateTime _createdDateTime;
+    private OffsetDateTime createdDateTime;
     /** Description for the enrollment profile. */
-    private String _description;
+    private String description;
     /** Display name for the enrollment profile. */
-    private String _displayName;
+    private String displayName;
     /** Total number of Android devices that have enrolled using this enrollment profile. */
-    private Integer _enrolledDeviceCount;
+    private Integer enrolledDeviceCount;
     /** Date time the enrollment profile was last modified. */
-    private OffsetDateTime _lastModifiedDateTime;
+    private OffsetDateTime lastModifiedDateTime;
     /** String used to generate a QR code for the token. */
-    private String _qrCodeContent;
+    private String qrCodeContent;
     /** String used to generate a QR code for the token. */
-    private MimeContent _qrCodeImage;
+    private MimeContent qrCodeImage;
     /** Date time the most recently created token will expire. */
-    private OffsetDateTime _tokenExpirationDateTime;
+    private OffsetDateTime tokenExpirationDateTime;
     /** Value of the most recently created token for this enrollment profile. */
-    private String _tokenValue;
+    private String tokenValue;
     /**
-     * Instantiates a new AndroidForWorkEnrollmentProfile and sets the default values.
+     * Instantiates a new androidForWorkEnrollmentProfile and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public AndroidForWorkEnrollmentProfile() {
         super();
-        this.setOdataType("#microsoft.graph.androidForWorkEnrollmentProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a AndroidForWorkEnrollmentProfile
+     * @return a androidForWorkEnrollmentProfile
      */
     @javax.annotation.Nonnull
     public static AndroidForWorkEnrollmentProfile createFromDiscriminatorValue(@javax.annotation.Nonnull final ParseNode parseNode) {
@@ -53,7 +55,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getAccountId() {
-        return this._accountId;
+        return this.accountId;
     }
     /**
      * Gets the createdDateTime property value. Date time the enrollment profile was created.
@@ -61,7 +63,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public OffsetDateTime getCreatedDateTime() {
-        return this._createdDateTime;
+        return this.createdDateTime;
     }
     /**
      * Gets the description property value. Description for the enrollment profile.
@@ -69,7 +71,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getDescription() {
-        return this._description;
+        return this.description;
     }
     /**
      * Gets the displayName property value. Display name for the enrollment profile.
@@ -77,7 +79,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * Gets the enrolledDeviceCount property value. Total number of Android devices that have enrolled using this enrollment profile.
@@ -85,27 +87,26 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public Integer getEnrolledDeviceCount() {
-        return this._enrolledDeviceCount;
+        return this.enrolledDeviceCount;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final AndroidForWorkEnrollmentProfile currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("accountId", (n) -> { currentObject.setAccountId(n.getStringValue()); });
-            this.put("createdDateTime", (n) -> { currentObject.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("description", (n) -> { currentObject.setDescription(n.getStringValue()); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("enrolledDeviceCount", (n) -> { currentObject.setEnrolledDeviceCount(n.getIntegerValue()); });
-            this.put("lastModifiedDateTime", (n) -> { currentObject.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
-            this.put("qrCodeContent", (n) -> { currentObject.setQrCodeContent(n.getStringValue()); });
-            this.put("qrCodeImage", (n) -> { currentObject.setQrCodeImage(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
-            this.put("tokenExpirationDateTime", (n) -> { currentObject.setTokenExpirationDateTime(n.getOffsetDateTimeValue()); });
-            this.put("tokenValue", (n) -> { currentObject.setTokenValue(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("accountId", (n) -> { this.setAccountId(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("enrolledDeviceCount", (n) -> { this.setEnrolledDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("qrCodeContent", (n) -> { this.setQrCodeContent(n.getStringValue()); });
+        deserializerMap.put("qrCodeImage", (n) -> { this.setQrCodeImage(n.getObjectValue(MimeContent::createFromDiscriminatorValue)); });
+        deserializerMap.put("tokenExpirationDateTime", (n) -> { this.setTokenExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("tokenValue", (n) -> { this.setTokenValue(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the lastModifiedDateTime property value. Date time the enrollment profile was last modified.
@@ -113,7 +114,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
-        return this._lastModifiedDateTime;
+        return this.lastModifiedDateTime;
     }
     /**
      * Gets the qrCodeContent property value. String used to generate a QR code for the token.
@@ -121,7 +122,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getQrCodeContent() {
-        return this._qrCodeContent;
+        return this.qrCodeContent;
     }
     /**
      * Gets the qrCodeImage property value. String used to generate a QR code for the token.
@@ -129,7 +130,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public MimeContent getQrCodeImage() {
-        return this._qrCodeImage;
+        return this.qrCodeImage;
     }
     /**
      * Gets the tokenExpirationDateTime property value. Date time the most recently created token will expire.
@@ -137,7 +138,7 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public OffsetDateTime getTokenExpirationDateTime() {
-        return this._tokenExpirationDateTime;
+        return this.tokenExpirationDateTime;
     }
     /**
      * Gets the tokenValue property value. Value of the most recently created token for this enrollment profile.
@@ -145,13 +146,14 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
      */
     @javax.annotation.Nullable
     public String getTokenValue() {
-        return this._tokenValue;
+        return this.tokenValue;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -171,79 +173,89 @@ public class AndroidForWorkEnrollmentProfile extends Entity implements Parsable 
      * @param value Value to set for the accountId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAccountId(@javax.annotation.Nullable final String value) {
-        this._accountId = value;
+        this.accountId = value;
     }
     /**
      * Sets the createdDateTime property value. Date time the enrollment profile was created.
      * @param value Value to set for the createdDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setCreatedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._createdDateTime = value;
+        this.createdDateTime = value;
     }
     /**
      * Sets the description property value. Description for the enrollment profile.
      * @param value Value to set for the description property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDescription(@javax.annotation.Nullable final String value) {
-        this._description = value;
+        this.description = value;
     }
     /**
      * Sets the displayName property value. Display name for the enrollment profile.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the enrolledDeviceCount property value. Total number of Android devices that have enrolled using this enrollment profile.
      * @param value Value to set for the enrolledDeviceCount property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setEnrolledDeviceCount(@javax.annotation.Nullable final Integer value) {
-        this._enrolledDeviceCount = value;
+        this.enrolledDeviceCount = value;
     }
     /**
      * Sets the lastModifiedDateTime property value. Date time the enrollment profile was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setLastModifiedDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._lastModifiedDateTime = value;
+        this.lastModifiedDateTime = value;
     }
     /**
      * Sets the qrCodeContent property value. String used to generate a QR code for the token.
      * @param value Value to set for the qrCodeContent property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQrCodeContent(@javax.annotation.Nullable final String value) {
-        this._qrCodeContent = value;
+        this.qrCodeContent = value;
     }
     /**
      * Sets the qrCodeImage property value. String used to generate a QR code for the token.
      * @param value Value to set for the qrCodeImage property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setQrCodeImage(@javax.annotation.Nullable final MimeContent value) {
-        this._qrCodeImage = value;
+        this.qrCodeImage = value;
     }
     /**
      * Sets the tokenExpirationDateTime property value. Date time the most recently created token will expire.
      * @param value Value to set for the tokenExpirationDateTime property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenExpirationDateTime(@javax.annotation.Nullable final OffsetDateTime value) {
-        this._tokenExpirationDateTime = value;
+        this.tokenExpirationDateTime = value;
     }
     /**
      * Sets the tokenValue property value. Value of the most recently created token for this enrollment profile.
      * @param value Value to set for the tokenValue property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTokenValue(@javax.annotation.Nullable final String value) {
-        this._tokenValue = value;
+        this.tokenValue = value;
     }
 }

@@ -3,27 +3,27 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class TemporaryAccessPassAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable {
     /** Default length in characters of a Temporary Access Pass object. Must be between 8 and 48 characters. */
-    private Integer _defaultLength;
+    private Integer defaultLength;
     /** Default lifetime in minutes for a Temporary Access Pass. Value can be any integer between the minimumLifetimeInMinutes and maximumLifetimeInMinutes. */
-    private Integer _defaultLifetimeInMinutes;
-    /** A collection of users or groups who are enabled to use the authentication method. */
-    private java.util.List<AuthenticationMethodTarget> _includeTargets;
+    private Integer defaultLifetimeInMinutes;
+    /** A collection of groups that are enabled to use the authentication method. */
+    private java.util.List<AuthenticationMethodTarget> includeTargets;
     /** If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or reusable. */
-    private Boolean _isUsableOnce;
+    private Boolean isUsableOnce;
     /** Maximum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days). */
-    private Integer _maximumLifetimeInMinutes;
+    private Integer maximumLifetimeInMinutes;
     /** Minimum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days). */
-    private Integer _minimumLifetimeInMinutes;
+    private Integer minimumLifetimeInMinutes;
     /**
      * Instantiates a new TemporaryAccessPassAuthenticationMethodConfiguration and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public TemporaryAccessPassAuthenticationMethodConfiguration() {
         super();
         this.setOdataType("#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration");
@@ -44,7 +44,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      */
     @javax.annotation.Nullable
     public Integer getDefaultLength() {
-        return this._defaultLength;
+        return this.defaultLength;
     }
     /**
      * Gets the defaultLifetimeInMinutes property value. Default lifetime in minutes for a Temporary Access Pass. Value can be any integer between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
@@ -52,31 +52,30 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      */
     @javax.annotation.Nullable
     public Integer getDefaultLifetimeInMinutes() {
-        return this._defaultLifetimeInMinutes;
+        return this.defaultLifetimeInMinutes;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final TemporaryAccessPassAuthenticationMethodConfiguration currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("defaultLength", (n) -> { currentObject.setDefaultLength(n.getIntegerValue()); });
-            this.put("defaultLifetimeInMinutes", (n) -> { currentObject.setDefaultLifetimeInMinutes(n.getIntegerValue()); });
-            this.put("includeTargets", (n) -> { currentObject.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
-            this.put("isUsableOnce", (n) -> { currentObject.setIsUsableOnce(n.getBooleanValue()); });
-            this.put("maximumLifetimeInMinutes", (n) -> { currentObject.setMaximumLifetimeInMinutes(n.getIntegerValue()); });
-            this.put("minimumLifetimeInMinutes", (n) -> { currentObject.setMinimumLifetimeInMinutes(n.getIntegerValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("defaultLength", (n) -> { this.setDefaultLength(n.getIntegerValue()); });
+        deserializerMap.put("defaultLifetimeInMinutes", (n) -> { this.setDefaultLifetimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
+        deserializerMap.put("isUsableOnce", (n) -> { this.setIsUsableOnce(n.getBooleanValue()); });
+        deserializerMap.put("maximumLifetimeInMinutes", (n) -> { this.setMaximumLifetimeInMinutes(n.getIntegerValue()); });
+        deserializerMap.put("minimumLifetimeInMinutes", (n) -> { this.setMinimumLifetimeInMinutes(n.getIntegerValue()); });
+        return deserializerMap;
     }
     /**
-     * Gets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method.
+     * Gets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
      * @return a authenticationMethodTarget
      */
     @javax.annotation.Nullable
     public java.util.List<AuthenticationMethodTarget> getIncludeTargets() {
-        return this._includeTargets;
+        return this.includeTargets;
     }
     /**
      * Gets the isUsableOnce property value. If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or reusable.
@@ -84,7 +83,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      */
     @javax.annotation.Nullable
     public Boolean getIsUsableOnce() {
-        return this._isUsableOnce;
+        return this.isUsableOnce;
     }
     /**
      * Gets the maximumLifetimeInMinutes property value. Maximum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
@@ -92,7 +91,7 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      */
     @javax.annotation.Nullable
     public Integer getMaximumLifetimeInMinutes() {
-        return this._maximumLifetimeInMinutes;
+        return this.maximumLifetimeInMinutes;
     }
     /**
      * Gets the minimumLifetimeInMinutes property value. Minimum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
@@ -100,13 +99,14 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      */
     @javax.annotation.Nullable
     public Integer getMinimumLifetimeInMinutes() {
-        return this._minimumLifetimeInMinutes;
+        return this.minimumLifetimeInMinutes;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -122,47 +122,53 @@ public class TemporaryAccessPassAuthenticationMethodConfiguration extends Authen
      * @param value Value to set for the defaultLength property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultLength(@javax.annotation.Nullable final Integer value) {
-        this._defaultLength = value;
+        this.defaultLength = value;
     }
     /**
      * Sets the defaultLifetimeInMinutes property value. Default lifetime in minutes for a Temporary Access Pass. Value can be any integer between the minimumLifetimeInMinutes and maximumLifetimeInMinutes.
      * @param value Value to set for the defaultLifetimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDefaultLifetimeInMinutes(@javax.annotation.Nullable final Integer value) {
-        this._defaultLifetimeInMinutes = value;
+        this.defaultLifetimeInMinutes = value;
     }
     /**
-     * Sets the includeTargets property value. A collection of users or groups who are enabled to use the authentication method.
+     * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
      * @param value Value to set for the includeTargets property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIncludeTargets(@javax.annotation.Nullable final java.util.List<AuthenticationMethodTarget> value) {
-        this._includeTargets = value;
+        this.includeTargets = value;
     }
     /**
      * Sets the isUsableOnce property value. If true, all the passes in the tenant will be restricted to one-time use. If false, passes in the tenant can be created to be either one-time use or reusable.
      * @param value Value to set for the isUsableOnce property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setIsUsableOnce(@javax.annotation.Nullable final Boolean value) {
-        this._isUsableOnce = value;
+        this.isUsableOnce = value;
     }
     /**
      * Sets the maximumLifetimeInMinutes property value. Maximum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
      * @param value Value to set for the maximumLifetimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMaximumLifetimeInMinutes(@javax.annotation.Nullable final Integer value) {
-        this._maximumLifetimeInMinutes = value;
+        this.maximumLifetimeInMinutes = value;
     }
     /**
      * Sets the minimumLifetimeInMinutes property value. Minimum lifetime in minutes for any Temporary Access Pass created in the tenant. Value can be between 10 and 43200 minutes (equivalent to 30 days).
      * @param value Value to set for the minimumLifetimeInMinutes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setMinimumLifetimeInMinutes(@javax.annotation.Nullable final Integer value) {
-        this._minimumLifetimeInMinutes = value;
+        this.minimumLifetimeInMinutes = value;
     }
 }

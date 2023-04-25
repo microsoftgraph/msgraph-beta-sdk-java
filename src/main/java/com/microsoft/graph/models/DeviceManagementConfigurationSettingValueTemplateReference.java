@@ -4,27 +4,28 @@ import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Setting value template reference information */
+/**
+ * Setting value template reference information
+ */
 public class DeviceManagementConfigurationSettingValueTemplateReference implements AdditionalDataHolder, Parsable {
     /** Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well. */
-    private Map<String, Object> _additionalData;
+    private Map<String, Object> additionalData;
     /** The OdataType property */
-    private String _odataType;
+    private String odataType;
     /** Setting value template id */
-    private String _settingValueTemplateId;
+    private String settingValueTemplateId;
     /** Indicates whether to update policy setting value to match template setting default value */
-    private Boolean _useTemplateDefault;
+    private Boolean useTemplateDefault;
     /**
      * Instantiates a new deviceManagementConfigurationSettingValueTemplateReference and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public DeviceManagementConfigurationSettingValueTemplateReference() {
         this.setAdditionalData(new HashMap<>());
-        this.setOdataType("#microsoft.graph.deviceManagementConfigurationSettingValueTemplateReference");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -42,20 +43,19 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
      */
     @javax.annotation.Nonnull
     public Map<String, Object> getAdditionalData() {
-        return this._additionalData;
+        return this.additionalData;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final DeviceManagementConfigurationSettingValueTemplateReference currentObject = this;
-        return new HashMap<>(3) {{
-            this.put("@odata.type", (n) -> { currentObject.setOdataType(n.getStringValue()); });
-            this.put("settingValueTemplateId", (n) -> { currentObject.setSettingValueTemplateId(n.getStringValue()); });
-            this.put("useTemplateDefault", (n) -> { currentObject.setUseTemplateDefault(n.getBooleanValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("settingValueTemplateId", (n) -> { this.setSettingValueTemplateId(n.getStringValue()); });
+        deserializerMap.put("useTemplateDefault", (n) -> { this.setUseTemplateDefault(n.getBooleanValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -63,7 +63,7 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
      */
     @javax.annotation.Nullable
     public String getOdataType() {
-        return this._odataType;
+        return this.odataType;
     }
     /**
      * Gets the settingValueTemplateId property value. Setting value template id
@@ -71,7 +71,7 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
      */
     @javax.annotation.Nullable
     public String getSettingValueTemplateId() {
-        return this._settingValueTemplateId;
+        return this.settingValueTemplateId;
     }
     /**
      * Gets the useTemplateDefault property value. Indicates whether to update policy setting value to match template setting default value
@@ -79,13 +79,14 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
      */
     @javax.annotation.Nullable
     public Boolean getUseTemplateDefault() {
-        return this._useTemplateDefault;
+        return this.useTemplateDefault;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -98,31 +99,35 @@ public class DeviceManagementConfigurationSettingValueTemplateReference implemen
      * @param value Value to set for the AdditionalData property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setAdditionalData(@javax.annotation.Nullable final Map<String, Object> value) {
-        this._additionalData = value;
+        this.additionalData = value;
     }
     /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the OdataType property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOdataType(@javax.annotation.Nullable final String value) {
-        this._odataType = value;
+        this.odataType = value;
     }
     /**
      * Sets the settingValueTemplateId property value. Setting value template id
      * @param value Value to set for the settingValueTemplateId property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setSettingValueTemplateId(@javax.annotation.Nullable final String value) {
-        this._settingValueTemplateId = value;
+        this.settingValueTemplateId = value;
     }
     /**
      * Sets the useTemplateDefault property value. Indicates whether to update policy setting value to match template setting default value
      * @param value Value to set for the useTemplateDefault property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUseTemplateDefault(@javax.annotation.Nullable final Boolean value) {
-        this._useTemplateDefault = value;
+        this.useTemplateDefault = value;
     }
 }

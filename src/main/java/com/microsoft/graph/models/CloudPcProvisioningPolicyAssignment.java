@@ -3,21 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/** Provides operations to manage the collection of accessReview entities. */
 public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsable {
+    /** The assignedUsers property */
+    private java.util.List<User> assignedUsers;
     /** The assignment target for the provisioning policy. Currently, the only target supported for this policy is a user group. For details, see cloudPcManagementGroupAssignmentTarget. */
-    private CloudPcManagementAssignmentTarget _target;
+    private CloudPcManagementAssignmentTarget target;
     /**
      * Instantiates a new cloudPcProvisioningPolicyAssignment and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public CloudPcProvisioningPolicyAssignment() {
         super();
-        this.setOdataType("#microsoft.graph.cloudPcProvisioningPolicyAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -30,15 +30,23 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
         return new CloudPcProvisioningPolicyAssignment();
     }
     /**
+     * Gets the assignedUsers property value. The assignedUsers property
+     * @return a user
+     */
+    @javax.annotation.Nullable
+    public java.util.List<User> getAssignedUsers() {
+        return this.assignedUsers;
+    }
+    /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final CloudPcProvisioningPolicyAssignment currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("target", (n) -> { currentObject.setTarget(n.getObjectValue(CloudPcManagementAssignmentTarget::createFromDiscriminatorValue)); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assignedUsers", (n) -> { this.setAssignedUsers(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
+        deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(CloudPcManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        return deserializerMap;
     }
     /**
      * Gets the target property value. The assignment target for the provisioning policy. Currently, the only target supported for this policy is a user group. For details, see cloudPcManagementGroupAssignmentTarget.
@@ -46,24 +54,36 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
      */
     @javax.annotation.Nullable
     public CloudPcManagementAssignmentTarget getTarget() {
-        return this._target;
+        return this.target;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("assignedUsers", this.getAssignedUsers());
         writer.writeObjectValue("target", this.getTarget());
+    }
+    /**
+     * Sets the assignedUsers property value. The assignedUsers property
+     * @param value Value to set for the assignedUsers property.
+     * @return a void
+     */
+    @javax.annotation.Nonnull
+    public void setAssignedUsers(@javax.annotation.Nullable final java.util.List<User> value) {
+        this.assignedUsers = value;
     }
     /**
      * Sets the target property value. The assignment target for the provisioning policy. Currently, the only target supported for this policy is a user group. For details, see cloudPcManagementGroupAssignmentTarget.
      * @param value Value to set for the target property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setTarget(@javax.annotation.Nullable final CloudPcManagementAssignmentTarget value) {
-        this._target = value;
+        this.target = value;
     }
 }

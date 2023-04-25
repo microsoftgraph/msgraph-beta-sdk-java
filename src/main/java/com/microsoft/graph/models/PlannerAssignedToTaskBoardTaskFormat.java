@@ -3,22 +3,21 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class PlannerAssignedToTaskBoardTaskFormat extends PlannerDelta implements Parsable {
     /** Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here. */
-    private PlannerOrderHintsByAssignee _orderHintsByAssignee;
+    private PlannerOrderHintsByAssignee orderHintsByAssignee;
     /** Hint value used to order the task on the AssignedTo view of the Task Board when the task is not assigned to anyone, or if the orderHintsByAssignee dictionary does not provide an order hint for the user the task is assigned to. The format is defined as outlined here. */
-    private String _unassignedOrderHint;
+    private String unassignedOrderHint;
     /**
      * Instantiates a new plannerAssignedToTaskBoardTaskFormat and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public PlannerAssignedToTaskBoardTaskFormat() {
         super();
-        this.setOdataType("#microsoft.graph.plannerAssignedToTaskBoardTaskFormat");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -32,15 +31,14 @@ public class PlannerAssignedToTaskBoardTaskFormat extends PlannerDelta implement
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final PlannerAssignedToTaskBoardTaskFormat currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("orderHintsByAssignee", (n) -> { currentObject.setOrderHintsByAssignee(n.getObjectValue(PlannerOrderHintsByAssignee::createFromDiscriminatorValue)); });
-            this.put("unassignedOrderHint", (n) -> { currentObject.setUnassignedOrderHint(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("orderHintsByAssignee", (n) -> { this.setOrderHintsByAssignee(n.getObjectValue(PlannerOrderHintsByAssignee::createFromDiscriminatorValue)); });
+        deserializerMap.put("unassignedOrderHint", (n) -> { this.setUnassignedOrderHint(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the orderHintsByAssignee property value. Dictionary of hints used to order tasks on the AssignedTo view of the Task Board. The key of each entry is one of the users the task is assigned to and the value is the order hint. The format of each value is defined as outlined here.
@@ -48,7 +46,7 @@ public class PlannerAssignedToTaskBoardTaskFormat extends PlannerDelta implement
      */
     @javax.annotation.Nullable
     public PlannerOrderHintsByAssignee getOrderHintsByAssignee() {
-        return this._orderHintsByAssignee;
+        return this.orderHintsByAssignee;
     }
     /**
      * Gets the unassignedOrderHint property value. Hint value used to order the task on the AssignedTo view of the Task Board when the task is not assigned to anyone, or if the orderHintsByAssignee dictionary does not provide an order hint for the user the task is assigned to. The format is defined as outlined here.
@@ -56,13 +54,14 @@ public class PlannerAssignedToTaskBoardTaskFormat extends PlannerDelta implement
      */
     @javax.annotation.Nullable
     public String getUnassignedOrderHint() {
-        return this._unassignedOrderHint;
+        return this.unassignedOrderHint;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -74,15 +73,17 @@ public class PlannerAssignedToTaskBoardTaskFormat extends PlannerDelta implement
      * @param value Value to set for the orderHintsByAssignee property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setOrderHintsByAssignee(@javax.annotation.Nullable final PlannerOrderHintsByAssignee value) {
-        this._orderHintsByAssignee = value;
+        this.orderHintsByAssignee = value;
     }
     /**
      * Sets the unassignedOrderHint property value. Hint value used to order the task on the AssignedTo view of the Task Board when the task is not assigned to anyone, or if the orderHintsByAssignee dictionary does not provide an order hint for the user the task is assigned to. The format is defined as outlined here.
      * @param value Value to set for the unassignedOrderHint property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setUnassignedOrderHint(@javax.annotation.Nullable final String value) {
-        this._unassignedOrderHint = value;
+        this.unassignedOrderHint = value;
     }
 }

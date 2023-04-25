@@ -3,7 +3,7 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReviewDecision entities. */
+/** Indicates the supersedence type associated with a relationship between two mobile apps. */
 public enum MobileAppSupersedenceType implements ValuedEnum {
     /** Indicates that the child app should be updated by the internal logic of the parent app. */
     Update("update"),

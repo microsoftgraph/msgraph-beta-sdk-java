@@ -1,27 +1,25 @@
 package com.microsoft.graph.models;
 
-import com.microsoft.graph.models.OpenShiftItem;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.util.function.Consumer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 public class ShiftItem extends ScheduleEntity implements Parsable {
     /** An incremental part of a shift which can cover details of when and where an employee is during their shift. For example, an assignment or a scheduled break or lunch. Required. */
-    private java.util.List<ShiftActivity> _activities;
+    private java.util.List<ShiftActivity> activities;
     /** The shift label of the shiftItem. */
-    private String _displayName;
+    private String displayName;
     /** The shift notes for the shiftItem. */
-    private String _notes;
+    private String notes;
     /**
      * Instantiates a new ShiftItem and sets the default values.
      * @return a void
      */
+    @javax.annotation.Nullable
     public ShiftItem() {
         super();
-        this.setOdataType("#microsoft.graph.shiftItem");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -46,7 +44,7 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public java.util.List<ShiftActivity> getActivities() {
-        return this._activities;
+        return this.activities;
     }
     /**
      * Gets the displayName property value. The shift label of the shiftItem.
@@ -54,20 +52,19 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getDisplayName() {
-        return this._displayName;
+        return this.displayName;
     }
     /**
      * The deserialization information for the current model
-     * @return a Map<String, Consumer<ParseNode>>
+     * @return a Map<String, java.util.function.Consumer<ParseNode>>
      */
     @javax.annotation.Nonnull
-    public Map<String, Consumer<ParseNode>> getFieldDeserializers() {
-        final ShiftItem currentObject = this;
-        return new HashMap<>(super.getFieldDeserializers()) {{
-            this.put("activities", (n) -> { currentObject.setActivities(n.getCollectionOfObjectValues(ShiftActivity::createFromDiscriminatorValue)); });
-            this.put("displayName", (n) -> { currentObject.setDisplayName(n.getStringValue()); });
-            this.put("notes", (n) -> { currentObject.setNotes(n.getStringValue()); });
-        }};
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activities", (n) -> { this.setActivities(n.getCollectionOfObjectValues(ShiftActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("notes", (n) -> { this.setNotes(n.getStringValue()); });
+        return deserializerMap;
     }
     /**
      * Gets the notes property value. The shift notes for the shiftItem.
@@ -75,13 +72,14 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      */
     @javax.annotation.Nullable
     public String getNotes() {
-        return this._notes;
+        return this.notes;
     }
     /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void serialize(@javax.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
@@ -94,23 +92,26 @@ public class ShiftItem extends ScheduleEntity implements Parsable {
      * @param value Value to set for the activities property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setActivities(@javax.annotation.Nullable final java.util.List<ShiftActivity> value) {
-        this._activities = value;
+        this.activities = value;
     }
     /**
      * Sets the displayName property value. The shift label of the shiftItem.
      * @param value Value to set for the displayName property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setDisplayName(@javax.annotation.Nullable final String value) {
-        this._displayName = value;
+        this.displayName = value;
     }
     /**
      * Sets the notes property value. The shift notes for the shiftItem.
      * @param value Value to set for the notes property.
      * @return a void
      */
+    @javax.annotation.Nonnull
     public void setNotes(@javax.annotation.Nullable final String value) {
-        this._notes = value;
+        this.notes = value;
     }
 }

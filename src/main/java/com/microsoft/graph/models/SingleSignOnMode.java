@@ -3,13 +3,13 @@ package com.microsoft.graph.models;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
-/** Provides operations to manage the collection of accessReview entities. */
 public enum SingleSignOnMode implements ValuedEnum {
     None("none"),
     OnPremisesKerberos("onPremisesKerberos"),
     Saml("saml"),
     PingHeaderBased("pingHeaderBased"),
     AadHeaderBased("aadHeaderBased"),
+    OAuthToken("oAuthToken"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     SingleSignOnMode(final String value) {
@@ -26,6 +26,7 @@ public enum SingleSignOnMode implements ValuedEnum {
             case "saml": return Saml;
             case "pingHeaderBased": return PingHeaderBased;
             case "aadHeaderBased": return AadHeaderBased;
+            case "oAuthToken": return OAuthToken;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
