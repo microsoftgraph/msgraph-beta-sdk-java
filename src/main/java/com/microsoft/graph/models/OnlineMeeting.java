@@ -252,7 +252,7 @@ public class OnlineMeeting extends Entity implements IJsonBackedObject {
 
     /**
      * The Share Meeting Chat History Default.
-     * 
+     * Specifies whether meeting chat history is shared with participants.  Possible values are: all, none, unknownFutureValue.
      */
     @SerializedName(value = "shareMeetingChatHistoryDefault", alternate = {"ShareMeetingChatHistoryDefault"})
     @Expose

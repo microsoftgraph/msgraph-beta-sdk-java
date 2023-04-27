@@ -57,6 +57,26 @@ public class PrivilegedAccessGroupRequestBuilder extends BaseRequestBuilder<Priv
 
 
     /**
+     *  Gets a request builder for the Approval collection
+     *
+     * @return the collection request builder
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ApprovalCollectionRequestBuilder assignmentApprovals() {
+        return new com.microsoft.graph.requests.ApprovalCollectionRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentApprovals"), getClient(), null);
+    }
+
+    /**
+     * Gets a request builder for the Approval item
+     *
+     * @return the request builder
+     * @param id the item identifier
+     */
+    @Nonnull
+    public com.microsoft.graph.requests.ApprovalRequestBuilder assignmentApprovals(@Nonnull final String id) {
+        return new com.microsoft.graph.requests.ApprovalRequestBuilder(getRequestUrlWithAdditionalSegment("assignmentApprovals") + "/" + id, getClient(), null);
+    }
+    /**
      *  Gets a request builder for the PrivilegedAccessGroupAssignmentScheduleInstance collection
      *
      * @return the collection request builder

@@ -13,6 +13,7 @@ import com.microsoft.graph.models.AccessPackageAnswer;
 import com.microsoft.graph.models.CustomExtensionCalloutInstance;
 import com.microsoft.graph.models.CustomExtensionHandlerInstance;
 import com.microsoft.graph.models.RequestSchedule;
+import com.microsoft.graph.models.VerifiedCredentialData;
 import com.microsoft.graph.models.AccessPackage;
 import com.microsoft.graph.models.AccessPackageAssignment;
 import com.microsoft.graph.models.AccessPackageSubject;
@@ -142,6 +143,15 @@ public class AccessPackageAssignmentRequest extends Entity implements IJsonBacke
     @Expose
 	@Nullable
     public RequestSchedule schedule;
+
+    /**
+     * The Verified Credentials Data.
+     * The details of the verifiable credential that was presented by the requestor, such as the issuer and claims. Read-only.
+     */
+    @SerializedName(value = "verifiedCredentialsData", alternate = {"VerifiedCredentialsData"})
+    @Expose
+	@Nullable
+    public java.util.List<VerifiedCredentialData> verifiedCredentialsData;
 
     /**
      * The Access Package.

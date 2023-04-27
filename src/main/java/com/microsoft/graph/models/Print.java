@@ -10,7 +10,6 @@ import com.microsoft.graph.serializer.AdditionalDataManager;
 import java.util.EnumSet;
 import com.microsoft.graph.http.BaseCollectionPage;
 import com.microsoft.graph.models.PrintSettings;
-import com.microsoft.graph.models.ReportRoot;
 import com.microsoft.graph.requests.PrintConnectorCollectionPage;
 import com.microsoft.graph.requests.PrintOperationCollectionPage;
 import com.microsoft.graph.requests.PrinterCollectionPage;
@@ -89,15 +88,6 @@ public class Print implements IJsonBackedObject {
     @Expose
 	@Nullable
     public com.microsoft.graph.requests.PrinterShareCollectionPage printerShares;
-
-    /**
-     * The Reports.
-     * 
-     */
-    @SerializedName(value = "reports", alternate = {"Reports"})
-    @Expose
-	@Nullable
-    public ReportRoot reports;
 
     /**
      * The Services.

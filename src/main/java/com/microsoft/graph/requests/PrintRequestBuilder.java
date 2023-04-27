@@ -136,16 +136,6 @@ public class PrintRequestBuilder extends BaseRequestBuilder<Print> {
     public com.microsoft.graph.requests.PrinterShareRequestBuilder printerShares(@Nonnull final String id) {
         return new com.microsoft.graph.requests.PrinterShareRequestBuilder(getRequestUrlWithAdditionalSegment("printerShares") + "/" + id, getClient(), null);
     }
-
-    /**
-     * Gets the request builder for ReportRoot
-     *
-     * @return the ReportRootRequestBuilder instance
-     */
-    @Nonnull
-    public com.microsoft.graph.requests.ReportRootRequestBuilder reports() {
-        return new com.microsoft.graph.requests.ReportRootRequestBuilder(getRequestUrlWithAdditionalSegment("reports"), getClient(), null);
-    }
     /**
      *  Gets a request builder for the PrintService collection
      *

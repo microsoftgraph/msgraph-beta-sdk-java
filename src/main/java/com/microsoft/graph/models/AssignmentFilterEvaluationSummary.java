@@ -71,7 +71,7 @@ public class AssignmentFilterEvaluationSummary implements IJsonBackedObject {
 
     /**
      * The Assignment Filter Platform.
-     * The platform for which this assignment filter is created. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown, androidAOSP.
+     * The platform for which this assignment filter is created. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown, androidAOSP, androidMobileApplicationManagement, iOSMobileApplicationManagement, unknownFutureValue.
      */
     @SerializedName(value = "assignmentFilterPlatform", alternate = {"AssignmentFilterPlatform"})
     @Expose

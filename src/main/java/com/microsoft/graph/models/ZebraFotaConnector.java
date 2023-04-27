@@ -64,7 +64,7 @@ public class ZebraFotaConnector extends Entity implements IJsonBackedObject {
 
     /**
      * The State.
-     * The Zebra connector state. Possible values are: none, connected, disconnected, unknownFutureValue.
+     * The Zebra connector state.
      */
     @SerializedName(value = "state", alternate = {"State"})
     @Expose
